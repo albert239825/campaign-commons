@@ -558,6 +558,85 @@
       "medium": "other"
     }
   ],
-  "ads": [],
+  "ads": [
+    {
+      "ad_id": "CR05367732770854404097",
+      "sponsor_entity_id": "C00486845",
+      "basis": {
+        "basis": "adjacent",
+        "rule": "Ran Oct 2, 2024 – Oct 22, 2024. In that window (buys dated up to 7 days before first shown through last shown) LCV VICTORY FUND reported other buys to OTG STRATEGIES ($1,177,322); the FEC does not record which buy placed which ad.",
+        "source_urls": [
+          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00486845&payee_name=OTG+STRATEGIES"
+        ],
+        "checked_by": null,
+        "checked_at": null
+      }
+    },
+    {
+      "ad_id": "CR16821231048187707393",
+      "sponsor_entity_id": "C00486845",
+      "basis": {
+        "basis": "adjacent",
+        "rule": "Ran Oct 2, 2024 – Oct 22, 2024. In that window (buys dated up to 7 days before first shown through last shown) LCV VICTORY FUND reported other buys to OTG STRATEGIES ($1,177,322); the FEC does not record which buy placed which ad.",
+        "source_urls": [
+          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00486845&payee_name=OTG+STRATEGIES"
+        ],
+        "checked_by": null,
+        "checked_at": null
+      }
+    },
+    {
+      "ad_id": "CR13687442314241245185",
+      "sponsor_entity_id": "C00609388",
+      "basis": {
+        "basis": "adjacent",
+        "rule": "Ran Oct 26, 2024 – Nov 5, 2024. In that window (buys dated up to 7 days before first shown through last shown) BLACKPAC reported other buys to OTG STRATEGIES ($1,472,500); the FEC does not record which buy placed which ad.",
+        "source_urls": [
+          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00609388&payee_name=OTG+STRATEGIES"
+        ],
+        "checked_by": null,
+        "checked_at": null
+      }
+    },
+    {
+      "ad_id": "CR05194561888502939649",
+      "sponsor_entity_id": "C00486845",
+      "basis": {
+        "basis": "adjacent",
+        "rule": "Ran Oct 8, 2024 – Nov 5, 2024. In that window (buys dated up to 7 days before first shown through last shown) LCV VICTORY FUND reported other buys to OTG STRATEGIES ($1,786,775); the FEC does not record which buy placed which ad.",
+        "source_urls": [
+          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00486845&payee_name=OTG+STRATEGIES"
+        ],
+        "checked_by": null,
+        "checked_at": null
+      }
+    },
+    {
+      "ad_id": "CR03582804286020517889",
+      "sponsor_entity_id": "C00609388",
+      "basis": {
+        "basis": "adjacent",
+        "rule": "Ran Oct 18, 2024 – Nov 5, 2024. In that window (buys dated up to 7 days before first shown through last shown) BLACKPAC reported other buys to OTG STRATEGIES ($1,597,500); the FEC does not record which buy placed which ad.",
+        "source_urls": [
+          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00609388&payee_name=OTG+STRATEGIES"
+        ],
+        "checked_by": null,
+        "checked_at": null
+      }
+    },
+    {
+      "ad_id": "CR17060952070833569793",
+      "sponsor_entity_id": "C00609388",
+      "basis": {
+        "basis": "adjacent",
+        "rule": "Ran Oct 18, 2024 – Nov 5, 2024. In that window (buys dated up to 7 days before first shown through last shown) BLACKPAC reported other buys to OTG STRATEGIES ($1,597,500); the FEC does not record which buy placed which ad.",
+        "source_urls": [
+          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00609388&payee_name=OTG+STRATEGIES"
+        ],
+        "checked_by": null,
+        "checked_at": null
+      }
+    }
+  ],
   "method": "Every Schedule E independent expenditure names a payee. Payee strings are normalised (case, punctuation, legal suffixes, token order), near-duplicates are folded with a difflib ratio ≥ 0.92 when their numeric tokens match, and hand alias rows from data/hand/<race>/vendor_aliases.json override the rule. Medium is classified from the purpose the spender filed (ordered keyword table in gotham/vendors.py); the FEC does not record which buy placed which ad, so vendor ↔ ad links are empty until a human verifies one. Totals are the filed amounts, grouped, never re-estimated."
 }

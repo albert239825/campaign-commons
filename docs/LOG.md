@@ -335,3 +335,58 @@ run; the stage says so in `notes`); pipeline tests 67 → 79; static pages 2,147
 became client-only); reading `window.location.search` in an effect keeps the 500 cards in the prerendered HTML. `yt-dlp --print`
 silently implies `--simulate` and skips writing subtitle files — needs `--no-simulate`. `patch_vendor_ads` first implemented
 as delete-then-append, which reordered `ads[]` on the second run and broke idempotence; replaced in place instead.
+
+## 2026-09-05 ~23:00 — Block 2: the chain now has a spending side (master)
+
+**What changed.** `chains_out.py` patches every `chains/<id>.json` with out-side nodes and edges: root → vendor (`money`, Schedule
+E as filed), vendor → ad (`placement`, Basis verified/inferred/adjacent), root → ad (`placement`, Basis = how the sponsor was
+matched), root/ad → candidate (`targeting`, support/oppose). Idempotent; no-ops on vendor nodes until `vendors.json` exists. The
+web graph was rebuilt around it: side-aware layout (funding left, spending right), evidence-styled spines, a Vertex-style node
+panel, and hide/expand/fold controls. 105 targeting and 140 placement edges across 86 chains (135 inferred, 5 verified);
+AMERICA PAC, WINSENATE and 24 other spenders now draw their ads and targets.
+
+**Challenge.** Two things fought each other: a Sankey wants every edge to be a dollar ribbon, and the new edges are not dollars
+(an ad's spend is Google's range midpoint; a targeting edge is money aimed *at* someone, none of which reaches them). Drawing
+them as ribbons would have said "money flows to the candidate" — exactly the claim the product must not make. Also, the
+first-click panel had to say *why* every link exists, per node kind, without a backend.
+
+**How we solved it.** `ChainEdge.kind` decides the geometry: `money` → ribbon, `placement`/`targeting` → thin spine with an
+arrowhead and a Basis dash pattern. Each `ViewNode`/`ViewEdge` carries a compact `[basis, rule, source_urls]` tuple so the panel
+renders the sentence and links client-side from the same wire the SVG uses. Copy in the panel and the edge table is explicit:
+"est. ad spend, range midpoint; no dollars move on this edge", "IE dollars aimed at the candidate; none reach them". The
+assumptions paragraph under the graph states the midpoint, the adjacent/inferred/verified rules and "FEC does not record which
+buy placed which ad". D-61.
+
+**Numbers.** Largest chain page 562KB → 764KB (the ad nodes and Basis tuples); pipeline tests 67 → 78; contracts 17 schemas,
+2,142 + 5 files validate; web build 2,147 pages.
+
+**Next.** Merge the four children (vendors · media wall · issue focus · search) into this branch so vendor nodes appear between the
+spender and its ads; critic round 3.
+
+## 2026-09-06 ~00:30 — Block 2 integration: four children + the spending side in one pipeline (master)
+
+**What changed.** PRs #6 (search), #7 (vendors), #10 (media wall), #9 (issue focus) merged into the chain branch (PR #8), in that
+order, and every stage re-run against the others' real output. Stage order is now `ingest ledger vendors chains ads ads-enrich
+issues dossier chains-out search validate`: `ads-enrich` needs `vendors[]` on the sponsor to draw vendor↔ad links, `chains-out`
+needs those links to hang ads off vendor nodes, `search` indexes whatever exists last.
+
+**Challenge.** Each child branched from the contracts branch and appended its own `D-57..`, its own `LOG.md` entry, its own
+`Makefile all:` line and its own imports on the shared entity/ledger pages — four-way conflicts on four files, plus 23 generated
+`entities/*.json` where vendors (`vendors[]`, `vendor_id`) and issues (`issue_focus`) both patched the same files.
+
+**How solved.** Docs: keep master's numbering, renumber each child on merge (media wall → D-63..65, issues → D-66..69; LOG entries
+placed by their timestamps; cross-references in the entries and `search.py` fixed). Code: union of imports, both sections kept
+on the entity page ("Where the money went" + "Ads this committee ran"). Generated JSON: take the vendors side, then re-run
+`make issues` so the issue patch is applied on top rather than hand-merging JSON. The vendors test asserted `Vendor.ads == []`
+(true before the media wall existed); it now checks every linked ad's sponsor is one of that vendor's spenders and its basis is
+verified/inferred/adjacent — the invariant that matters.
+
+**Numbers.** With vendors present the media wall produced 1,090 vendor↔ad links (115 inferred, 975 adjacent; 26 sponsors with
+vendor rows, 2 without). In the chain graph: 314 vendor nodes, 132 ad nodes; vendor→ad 42 inferred + 295 adjacent, sponsor→ad
+96 inferred + 2 verified, 347 targeting edges, across 86 chains. Issues: 23/98 spenders focus-tagged covering $227.3M of
+$233.4M, 42/500 ads tagged, 0 IE notices (see the issue-focus entry). Search 2,363 items (310 vendors), 514 KB. Largest chain
+JSON 644 KB; chain page HTML 692 KB; ads page 4.0 MB (the thumbnails' data, not a regression to leave — Q for the design pass).
+Pipeline tests 137 → 159; web build 2,455 static pages.
+
+**Next.** Critic round 3 on the integrated branch; FCC political files as the TV leg of vendor→ad; fill `ie_issues.json` once
+docquery is reachable.
