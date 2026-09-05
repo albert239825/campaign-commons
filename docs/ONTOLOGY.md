@@ -5,12 +5,58 @@ which surface answers them today; the ER diagram of the data model (what exists,
 tables with where each field comes from or could come from. Status legend: **have** (real data on `main`), **partial**,
 **missing**. Source legend: *(A)* actual, in the pipeline today; *(C)* candidate, checked to exist; *(?)* speculative.
 
+## 0. Scope by version
+
+Where we are: **V0 is done and on `main`** (PA Senate 2024, real data, browser-tested). Nothing from V1 has started.
+Each version is a coherent demo on its own; V1 is the hackathon target, V2 is what we'd say "next" on stage.
+
+### Data model
+
+| Entity / edge | V0 (on `main`) | V1 (hackathon) | V2 (after) |
+| --- | --- | --- | --- |
+| Race, Candidate | ✓ 1 real + 1 stub | + `bioguide_id`; 2nd real race if a child has time | all 2024 Senate races; 2026 live refresh |
+| Committee | ✓ master, receipts, transfers, IEs, visibility, flags, chain | + `issue_focus[]` self-described, hand-tagged top 20 with `source_url` | + `ie_pattern` (share of IEs supporting candidates by party / by vote on issue X, across all races, from FEC) — factual pattern, not stance |
+| Funding source | ✓ individual / org class / aggregate; forward view top 50 | + `issue_focus` for named orgs in top termini | + industry code (OpenSecrets), EIN + 990 officers for c4 walls, LLC registry lookups |
+| Transfer | ✓ aggregated, deduped, dated, counted | — | — |
+| Independent expenditure | ✓ rows with payee/purpose (not surfaced) | + `vendor_id`, `medium` (from purpose) | — |
+| **Vendor** | — | **new**: normalised payee, kind, total per race, aliases | + Schedule B (campaign side) so campaign vs PAC media is one table |
+| Disbursement (Schedule B) | — | campaign media lines only, top 2 committees | full Schedule B for the neighborhood |
+| Ad | ✓ 500 Google, sponsor match, 5 verified | + `sponsor_dark_share`, + `issue_ids` hand-tagged top ~40, + `vendor_id` inferred by sponsor+date window (labelled inferred) | + Meta Ad Library (paid-for-by line, demographics) |
+| **TV buy, Station** | — | — (unless a teammate takes FCC by hand: ~50 orders, 6–8 PA stations, top 5 spenders) | FCC political files, OCR pipeline, all PA stations |
+| Evidence, Issue | ✓ hand-written dossiers, 10 issues | — | + statements/press; House clerk XML for House races |
+| Chain | ✓ reverse walk, traceability, unwalked | + forward extension spender → vendor → ad → candidate | + cross-race chains (same PAC in many races) |
+
+### Product surfaces
+
+| Surface | V0 (on `main`) | V1 (hackathon) | V2 |
+| --- | --- | --- | --- |
+| Race list | ✓ table, 1 real | + search box (client-side index) | many races, filters by state/office |
+| Ledger | ✓ campaign vs outside, spenders, traceability, stories, nav | + "$ by self-described focus" card (needs `issue_focus`) + "traceable per focus" | + campaign-vs-PAC media split |
+| Entity page | ✓ in/out/IEs/flags | + "Where the money went": vendors by medium/target + this committee's ads beside them | + Schedule B overhead/consultants |
+| Chain graph | ✓ reverse, interactive, pruned | + rightward: vendor nodes, ad thumbnails, dashed targeting edge → full Funder → PAC → Vendor → Ad → Candidate | + cross-race view |
+| Ads / media wall | ✓ gallery, sponsor + verified filters | + dark-share badge and sort, issue filter, vendor line ("aired during N buys via X") | + Meta ads, TV buys with station/flight |
+| Dossier | ✓ votes, bills, positions, asymmetry | + **alignment quiz**: 10 issues, client-side, "matches / differs / no record" against *stated* positions | + inferred alignment from voting pattern (needs careful copy) |
+| Stories | ✓ ranked, `verified:false` | human verifies 5, flips flag | — |
+| Design | system fonts, grey | DESIGN.md steps 1–10 + 12 (tokens, chips, hues, tables) | dark theme |
+
+### V1 build order (proposed; roadmap doc will refine)
+
+1. Vendor node + `medium` from Schedule E payees → entity "Where the money went" section. *(pipeline + web, ½ session)*
+2. Ad `sponsor_dark_share` + issue tags (hand, top 40) → media wall badges/filters. *(½)*
+3. Chain rightward extension (vendor, ad, candidate). *(½–1)*
+4. `issue_focus` hand-tag top 20 spenders → ledger "$ by focus" cards. *(hand ½ + web ¼)*
+5. Alignment quiz on dossier. *(½)*
+6. Search. *(¼)*
+7. UI design pass (DESIGN.md 1–10 + 12). *(1, parallel with 1–6 once tokens are agreed)*
+8. Campaign Schedule B media lines. *(½)*
+9. FCC TV subset by hand — teammate, parallel. Meta — depends on developer-account verification.
+
 ## 1. Questions × surfaces
 
 | # | Question (whiteboard) | Surface today | Status | Gap → what closes it |
 | --- | --- | --- | --- | --- |
 | Q1 | Who are the major funders of this race? | Ledger spenders table; chain termini; donor pages | have | — |
-| Q2 | What is each funder's stance (single policy / multi)? | none | missing | `issue_focus[]` on committees + named org funders, hand-tagged from the org's own materials + IE targets + lobbying filings. Top-20 spenders ≈ 90% of dollars. |
+| Q2 | What is each funder's stance (single policy / multi)? | none | missing | V1: `issue_focus[]` self-described, hand-tagged from the org's own materials, top 20 (≈ 90% of dollars). V2: inferred — `ie_pattern` = how the PAC's IEs across all 2024 races split by the supported candidates' party and recorded votes on each issue. Factual and sourced; shown as a pattern, never as "the PAC wants X". |
 | Q3 | What are the candidates' stances? | Dossier (votes, bills, stated positions on 10 issues) | have | McCormick side is thin (stated positions only); stated on page. |
 | Q4 | How do they align with mine? | none | missing | Client-side 10-issue quiz → per-candidate "stated position matches / differs / no record". Static, no server. Language: "aligned with", never "endorsed". |
 | Q5 | What % of the money is untraceable? | Ledger traceability card; per spender; per chain | have | Preliminary; `unwalked` separated from `dark`. |
@@ -27,7 +73,7 @@ tables with where each field comes from or could come from. Status legend: **hav
 ## 2. ER diagram
 
 Solid = money edge (dollars move). Targeting, production and tagging edges carry no dollars to the target and are never
-drawn as money. `*` marks proposed entities/fields not yet in `contracts/`.
+drawn as money. `*` marks proposed entities/fields not yet in `contracts/` (V1 unless §0 places them in V2).
 
 ```mermaid
 erDiagram
