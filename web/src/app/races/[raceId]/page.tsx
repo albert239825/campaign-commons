@@ -34,6 +34,8 @@ export default async function RaceLedgerPage({ params }: { params: Promise<{ rac
   const stories = getStories(raceId);
   const topStories = stories.stories.slice(0, START_HERE_COUNT);
   const parties = Array.from(new Set(race.candidates.map((c) => c.party)));
+  const officeName = { S: "US Senate", H: "US House", P: "US President" }[race.office];
+  const stateName = race.label.split("·")[0].trim();
 
   return (
     <div className="race-dashboard">
@@ -53,7 +55,10 @@ export default async function RaceLedgerPage({ params }: { params: Promise<{ rac
               />
             )}
             <div className="race-banner-heading">
-              <h1 className="race-title">{race.label}</h1>
+              <h1 className="race-title">
+                <span className="block">{officeName} {race.cycle}</span>
+                <span className="block">{stateName}</span>
+              </h1>
               <p className="race-election-date">
                 {race.status === "complete" ? "Election held" : "Election day"}
                 {" · "}<time dateTime={race.election_date}>{date(race.election_date)}</time>
