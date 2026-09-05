@@ -17,6 +17,48 @@ const SKIP_REASON: Record<"no_record" | "no_coded_position" | "no_opinion", stri
   no_opinion: "you skipped this",
 };
 
+const SCALE: { value: 1 | 2 | 3 | 4 | 5; label: string }[] = [
+  { value: 1, label: "Strongly" },
+  { value: 2, label: "Lean" },
+  { value: 3, label: "Neutral" },
+  { value: 4, label: "Lean" },
+  { value: 5, label: "Strongly" },
+];
+
+function Segmented<T extends string | number>({
+  options,
+  value,
+  onChange,
+  label,
+}: {
+  options: { value: T; label: string }[];
+  value: T;
+  onChange: (value: T) => void;
+  label: string;
+}) {
+  return (
+    <div role="radiogroup" aria-label={label} className="inline-flex overflow-hidden rounded-md border border-neutral-300 bg-white text-sm">
+      {options.map((option) => {
+        const selected = option.value === value;
+        return (
+          <button
+            key={String(option.value)}
+            type="button"
+            role="radio"
+            aria-checked={selected}
+            onClick={() => onChange(option.value)}
+            className={`px-3 py-1.5 transition-colors ${
+              selected ? "bg-neutral-900 text-white" : "text-neutral-700 hover:bg-neutral-100"
+            } border-l border-neutral-300 first:border-l-0`}
+          >
+            {option.label}
+          </button>
+        );
+      })}
+    </div>
+  );
+}
+
 function issueLabel(issueId: IssueId): string {
   return ISSUES.find((issue) => issue.id === issueId)?.label ?? issueId;
 }
@@ -127,21 +169,22 @@ export function PersonalizeClient({ races, dossiers }: { races: RaceSummary[]; d
   }
 
   return (
-    <div className="space-y-6">
-      <header>
-        <h1 className="text-2xl font-semibold tracking-tight">Personalize</h1>
-        <p className="mt-2 max-w-3xl text-sm text-neutral-600">
-          Set your issue positions to compare them with the coded public record. Your answers stay in this browser.
+    <div className="space-y-8">
+      <header className="py-4">
+        <h1 className="text-4xl font-semibold tracking-tight sm:text-5xl">Where do you stand?</h1>
+        <p className="mt-4 max-w-2xl text-lg leading-relaxed text-neutral-600">
+          Set your positions on ten issues and see how closely each candidate&apos;s public record aligns with them. Your answers
+          stay in this browser.
         </p>
       </header>
 
       <Card title="Where should we look?">
         <label className="block text-sm font-medium" htmlFor="state">
-          State
+          State where you are registered
         </label>
         <select
           id="state"
-          className="mt-2 rounded border border-neutral-300 bg-white px-2 py-1.5 text-sm"
+          className="mt-2 rounded-md border border-neutral-300 bg-white px-3 py-2 text-base"
           value={prefs.state ?? ""}
           onChange={(event) => updatePrefs((current) => ({ ...current, state: event.target.value || null }))}
         >
@@ -155,89 +198,131 @@ export function PersonalizeClient({ races, dossiers }: { races: RaceSummary[]; d
         <p className="mt-2 text-xs text-neutral-500">Only states with loaded race dossiers appear here.</p>
       </Card>
 
-      <Card title="Your issue positions">
-        <div className="space-y-5">
-          {ISSUES.map((issue) => {
+      <section className="space-y-4">
+        <div className="flex flex-wrap items-baseline justify-between gap-2">
+          <h2 className="text-2xl font-semibold tracking-tight">Your issue positions</h2>
+          <p className="text-sm text-neutral-500">
+            {answered} of {ISSUES.length} answered · pick the side you lean toward, or leave an issue unanswered
+          </p>
+        </div>
+        <div className="space-y-4">
+          {ISSUES.map((issue, index) => {
             const opinion = prefs.opinions[issue.id];
+            const axis = ISSUE_AXES[issue.id];
             return (
-              <div key={issue.id} className="border-t border-neutral-100 pt-4 first:border-t-0 first:pt-0">
-                <div className="flex flex-wrap items-baseline justify-between gap-2">
-                  <div>
-                    <h2 className="text-sm font-semibold">{issue.label}</h2>
-                    <p className="text-xs text-neutral-500">{issue.description}</p>
+              <section key={issue.id} className="rounded-lg border border-neutral-200 bg-white p-6 sm:p-8" aria-labelledby={`issue-${issue.id}`}>
+                <div className="flex flex-wrap items-start justify-between gap-4">
+                  <div className="max-w-2xl">
+                    <p className="text-xs font-medium uppercase tracking-wider text-neutral-400">
+                      Issue {index + 1} of {ISSUES.length}
+                    </p>
+                    <h3 id={`issue-${issue.id}`} className="mt-1 text-2xl font-semibold tracking-tight">
+                      {issue.label}
+                    </h3>
+                    <p className="mt-1 text-base text-neutral-500">{issue.description}</p>
                   </div>
-                  <label className="text-xs text-neutral-600">
-                    Importance{" "}
-                    <select
-                      className="ml-1 rounded border border-neutral-300 bg-white px-1.5 py-1"
+                  <div className="flex flex-col items-start gap-1.5 sm:items-end">
+                    <span className="text-xs font-medium uppercase tracking-wider text-neutral-400">How much this matters to you</span>
+                    <Segmented
+                      label={`${issue.label} importance`}
                       value={prefs.importance[issue.id] ?? 2}
-                      onChange={(event) =>
-                        updatePrefs((current) => ({
-                          ...current,
-                          importance: { ...current.importance, [issue.id]: Number(event.target.value) as 1 | 2 | 3 },
-                        }))
+                      onChange={(value) =>
+                        updatePrefs((current) => ({ ...current, importance: { ...current.importance, [issue.id]: value } }))
                       }
-                    >
-                      <option value={1}>low</option>
-                      <option value={2}>normal</option>
-                      <option value={3}>high</option>
-                    </select>
-                  </label>
-                </div>
-                <div className="mt-3 grid grid-cols-[minmax(0,1fr)_auto_minmax(0,1fr)] items-center gap-2 text-xs text-neutral-600">
-                  <span>{ISSUE_AXES[issue.id].minus}</span>
-                  <span className="text-neutral-400">neutral</span>
-                  <span className="text-right">{ISSUE_AXES[issue.id].plus}</span>
-                </div>
-                <div className="mt-2 flex flex-wrap items-center gap-2" role="radiogroup" aria-label={`${issue.label} position`}>
-                  {[1, 2, 3, 4, 5].map((value) => (
-                    <label key={value} className="flex cursor-pointer items-center gap-1 text-sm">
-                      <input
-                        type="radio"
-                        name={`opinion-${issue.id}`}
-                        value={value}
-                        checked={opinion === value}
-                        onChange={(event) => setOpinion(issue.id, event.target.value)}
-                      />
-                      {value}
-                    </label>
-                  ))}
-                  <label className="ml-2 flex cursor-pointer items-center gap-1 text-sm text-neutral-500">
-                    <input
-                      type="radio"
-                      name={`opinion-${issue.id}`}
-                      value={SKIP}
-                      checked={opinion === undefined}
-                      onChange={(event) => setOpinion(issue.id, event.target.value)}
+                      options={[
+                        { value: 1 as const, label: "Less" },
+                        { value: 2 as const, label: "Normal" },
+                        { value: 3 as const, label: "More" },
+                      ]}
                     />
-                    skip
-                  </label>
+                  </div>
                 </div>
-              </div>
+
+                <div className="mt-6 grid gap-4 md:grid-cols-[minmax(0,1fr)_auto_minmax(0,1fr)] md:items-start">
+                  <p className={`text-lg font-medium leading-snug ${opinion !== undefined && opinion < 3 ? "text-neutral-900" : "text-neutral-600"}`}>
+                    {axis.minus}
+                  </p>
+                  <div role="radiogroup" aria-label={`${issue.label} position`} className="flex items-start justify-center gap-2 sm:gap-3">
+                    {SCALE.map((step) => {
+                      const selected = opinion === step.value;
+                      return (
+                        <button
+                          key={step.value}
+                          type="button"
+                          role="radio"
+                          aria-checked={selected}
+                          aria-label={`${step.label} ${step.value < 3 ? axis.minus : step.value > 3 ? axis.plus : "neutral"}`}
+                          onClick={() => setOpinion(issue.id, String(step.value))}
+                          className={`flex w-14 flex-col items-center gap-1 text-xs sm:w-16 ${selected ? "text-neutral-900" : "text-neutral-500"}`}
+                        >
+                          <span
+                            className={`flex h-11 w-11 items-center justify-center rounded-full border text-base font-semibold tabular-nums transition-colors sm:h-12 sm:w-12 ${
+                              selected
+                                ? "border-neutral-900 bg-neutral-900 text-white"
+                                : "border-neutral-300 bg-white text-neutral-700 hover:border-neutral-900"
+                            }`}
+                          >
+                            {step.value}
+                          </span>
+                          {step.label}
+                        </button>
+                      );
+                    })}
+                  </div>
+                  <p
+                    className={`text-lg font-medium leading-snug md:text-right ${opinion !== undefined && opinion > 3 ? "text-neutral-900" : "text-neutral-600"}`}
+                  >
+                    {axis.plus}
+                  </p>
+                </div>
+
+                <div className="mt-4 flex flex-wrap items-center justify-between gap-2 text-sm">
+                  <p className="text-neutral-500">
+                    {opinion === undefined ? (
+                      <>Not answered — this issue won&apos;t count.</>
+                    ) : (
+                      <>
+                        Your position: <span className="font-medium text-neutral-900">{userLabel(issue.id, opinion)}</span>
+                      </>
+                    )}
+                  </p>
+                  {opinion !== undefined && (
+                    <button
+                      type="button"
+                      onClick={() => setOpinion(issue.id, SKIP)}
+                      className="text-neutral-500 underline decoration-dotted underline-offset-2 hover:text-neutral-900"
+                    >
+                      Clear answer
+                    </button>
+                  )}
+                </div>
+              </section>
             );
           })}
         </div>
-      </Card>
+      </section>
 
       <Card title="Evidence mix">
-        <label className="block text-sm font-medium" htmlFor="statement-weight">
+        <p className="text-sm font-medium">
           How much should stated positions (campaign statements) count relative to votes and bills?
-        </label>
-        <select
-          id="statement-weight"
-          className="mt-2 rounded border border-neutral-300 bg-white px-2 py-1.5 text-sm"
-          value={prefs.statement_weight}
-          onChange={(event) => updatePrefs((current) => ({ ...current, statement_weight: Number(event.target.value) }))}
-        >
-          <option value={0.25}>0.25</option>
-          <option value={0.5}>0.5</option>
-          <option value={1}>1</option>
-        </select>
+        </p>
+        <div className="mt-3">
+          <Segmented
+            label="Statement weight"
+            value={prefs.statement_weight}
+            onChange={(value) => updatePrefs((current) => ({ ...current, statement_weight: value }))}
+            options={[
+              { value: 0.25, label: "A quarter" },
+              { value: 0.5, label: "Half" },
+              { value: 1, label: "The same" },
+            ]}
+          />
+        </div>
         <p className="mt-3 text-xs text-neutral-500">Saved on this device only; nothing leaves your browser.</p>
       </Card>
 
       <section className="space-y-4">
-        <h2 className="text-lg font-semibold">Results</h2>
+        <h2 className="text-2xl font-semibold tracking-tight">Alignment estimates</h2>
         {prefs.state === null ? (
           <Card>
             <p className="text-sm text-neutral-600">Choose a state above to see alignment estimates.</p>
