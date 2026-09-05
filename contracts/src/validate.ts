@@ -1,13 +1,14 @@
 /**
  * Validate every JSON file under data/out/ against the contracts.
  *
- *   npm run validate            # validates ../data/out
- *   npm run validate -- <dir>   # validates another directory
+ *   npm run validate                   # validates ../data/out then ../data/hand
+ *   npm run validate -- <dir>          # validates another directory as a data/out layout
+ *   npm run validate -- <dir> --hand   # validates another directory as a data/hand layout
  *
  * Exit code 1 on any failure. Pipeline children: run this before opening a PR.
  */
 import { existsSync, readdirSync, readFileSync, statSync } from "node:fs";
-import { join, relative, sep } from "node:path";
+import { basename, join, relative, resolve, sep } from "node:path";
 import type { ZodTypeAny } from "zod";
 import {
   AdGallerySchema,
@@ -27,7 +28,9 @@ import {
 
 const dataDir = join(__dirname, "..", "..", "data");
 /** default: data/out then data/hand (same as `make validate`); data/hand holds human-maintained inputs (HAND_FILE_SCHEMAS) */
-const roots = process.argv[2] ? [process.argv[2]] : [join(dataDir, "out"), join(dataDir, "hand")].filter(existsSync);
+const args = process.argv.slice(2).filter((a) => a !== "--hand");
+const forceHand = process.argv.includes("--hand");
+const roots = args[0] ? [resolve(args[0])] : [join(dataDir, "out"), join(dataDir, "hand")].filter(existsSync);
 
 function schemaFor(rel: string, isHand: boolean): ZodTypeAny | null {
   const parts = rel.split(sep);
@@ -66,7 +69,7 @@ function walk(dir: string, out: string[] = []): string[] {
 let totalFailed = 0;
 
 for (const root of roots) {
-  const isHand = root.split(sep).at(-1) === "hand";
+  const isHand = forceHand || basename(root) === "hand";
   let ok = 0;
   let failed = 0;
   let skipped = 0;

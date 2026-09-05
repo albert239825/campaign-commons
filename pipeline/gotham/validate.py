@@ -2,6 +2,7 @@
 
 python -m gotham.validate            # all of data/out, then data/hand
 python -m gotham.validate <dir>      # one root; a root named `hand` uses the hand-file schemas
+python -m gotham.validate <dir> --hand   # one root, forced to the hand-file schemas (fixtures, temp copies)
 """
 
 from __future__ import annotations
@@ -51,8 +52,10 @@ def _schema_name(rel: Path, hand: bool = False) -> str | None:
     return None
 
 
-def validate_dir(root: Path = OUT) -> int:
-    hand = root.name == "hand"
+def validate_dir(root: Path = OUT, hand: bool | None = None) -> int:
+    root = root.resolve()
+    if hand is None:
+        hand = root.name == "hand"
     validators: dict[str, Draft7Validator] = {}
     ok = failed = skipped = 0
     for file in sorted(root.rglob("*.json")):
@@ -78,8 +81,9 @@ def validate_dir(root: Path = OUT) -> int:
 
 
 def main() -> int:
-    if len(sys.argv) > 1:
-        return validate_dir(Path(sys.argv[1]))
+    args = [a for a in sys.argv[1:] if a != "--hand"]
+    if args:
+        return validate_dir(Path(args[0]), hand=True if "--hand" in sys.argv else None)
     rc = validate_dir(OUT)
     if HAND.exists():
         rc |= validate_dir(HAND)

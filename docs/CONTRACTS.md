@@ -43,11 +43,17 @@ a filed record: vendor normalisation, vendor→ad links, issue tags, out-side ch
 record · `verified` = a human found a source naming both sides · `inferred` = an explicit rule (stated in `rule`) ·
 `adjacent` = co-occurrence (date window) only. `verified` is a discriminated variant: it requires ≥1 `source_urls` and
 non-null `checked_by`/`checked_at`, so an unsupported verification claim fails validation. Issue tags always travel as
-`issues: {issue_ids, basis}`; a `placement` chain edge (vendor → ad) requires `basis`. The UI must render `rule` wherever the
-relationship appears; chain edges style by basis (solid / solid+check / dashed / dotted).
+`issues: {issue_ids, basis}`; a `placement` chain edge (vendor → ad) requires `basis`; every out-side chain node (`vendor` /
+`ad` / `candidate`) requires `basis`; `vendors.json.medium_basis` states the one rule by which every `medium` (IE rows,
+vendors, `by_medium`) was classified from `purpose`, so per-row mediums stay small and the UI renders that rule once per
+section. Focus kinds split by whether they *are* an issue: `single_issue` / `multi_issue` rows must name ≥1 `issue_ids` and
+their `by_spender_focus` buckets carry a non-null `issue_id`; `general_partisan` / `candidate_aligned` / `business_trade` /
+`labor` may have none. The UI must render `rule` wherever the relationship appears; chain edges style by basis (solid /
+solid+check / dashed / dotted).
 
 Validate: `cd contracts && npm run validate` or `cd pipeline && make validate` — both check `data/out` then `data/hand` by
-default (pass a directory to check one root); same schemas, via `contracts/jsonschema/`.
+default. Pass a directory to check one root; add `--hand` to validate a directory that is not literally named `hand`
+(fixtures, temp copies) with the hand-file schemas. Same schemas, via `contracts/jsonschema/`.
 
 ## IDs
 

@@ -27,244 +27,479 @@
         "nodes": {
           "type": "array",
           "items": {
-            "type": "object",
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "name": {
-                "type": "string"
-              },
-              "kind": {
-                "type": "string",
-                "enum": [
-                  "committee",
-                  "individual",
-                  "organization",
-                  "conduit",
-                  "aggregate",
-                  "vendor",
-                  "ad",
-                  "candidate"
-                ]
-              },
-              "committee_type": {
-                "anyOf": [
-                  {
-                    "type": "string",
-                    "enum": [
-                      "H",
-                      "S",
-                      "P",
-                      "X",
-                      "Y",
-                      "Z",
-                      "N",
-                      "Q",
-                      "O",
-                      "U",
-                      "V",
-                      "W",
-                      "D",
-                      "E",
-                      "I",
-                      "C"
-                    ]
+            "anyOf": [
+              {
+                "type": "object",
+                "properties": {
+                  "id": {
+                    "type": "string"
                   },
-                  {
-                    "type": "null"
-                  }
-                ]
-              },
-              "depth": {
-                "type": "integer",
-                "minimum": 0
-              },
-              "side": {
-                "type": "string",
-                "enum": [
-                  "in",
-                  "out"
-                ]
-              },
-              "visibility": {
-                "type": "string",
-                "enum": [
-                  "disclosed",
-                  "inferable",
-                  "dark"
-                ]
-              },
-              "amount_in": {
-                "type": "number"
-              },
-              "is_terminus": {
-                "type": "boolean"
-              },
-              "terminus_reason": {
-                "anyOf": [
-                  {
-                    "type": "string",
-                    "enum": [
-                      "individual",
-                      "organization",
-                      "dark",
-                      "inferable",
-                      "cycle",
-                      "depth_cap",
-                      "pruned"
-                    ]
+                  "name": {
+                    "type": "string"
                   },
-                  {
-                    "type": "null"
-                  }
-                ]
-              },
-              "source_url": {
-                "anyOf": [
-                  {
-                    "type": "string",
-                    "format": "uri"
-                  },
-                  {
-                    "type": "null"
-                  }
-                ]
-              },
-              "contributor_count": {
-                "type": "integer"
-              },
-              "organization_class": {
-                "type": "string",
-                "enum": [
-                  "union",
-                  "business",
-                  "llc",
-                  "nonprofit",
-                  "unknown"
-                ]
-              },
-              "medium": {
-                "type": "string",
-                "enum": [
-                  "tv",
-                  "radio",
-                  "digital",
-                  "mail",
-                  "phones",
-                  "production",
-                  "consulting",
-                  "other"
-                ]
-              },
-              "thumbnail_path": {
-                "type": [
-                  "string",
-                  "null"
-                ]
-              },
-              "href": {
-                "type": "string"
-              },
-              "basis": {
-                "anyOf": [
-                  {
-                    "type": "object",
-                    "properties": {
-                      "basis": {
-                        "type": "string",
-                        "const": "verified"
-                      },
-                      "rule": {
-                        "type": "string",
-                        "minLength": 1
-                      },
-                      "source_urls": {
-                        "type": "array",
-                        "items": {
-                          "type": "string",
-                          "format": "uri"
-                        },
-                        "minItems": 1
-                      },
-                      "checked_by": {
-                        "type": "string",
-                        "minLength": 1
-                      },
-                      "checked_at": {
-                        "type": "string",
-                        "minLength": 1
-                      }
-                    },
-                    "required": [
-                      "basis",
-                      "rule",
-                      "source_urls",
-                      "checked_by",
-                      "checked_at"
-                    ],
-                    "additionalProperties": false
-                  },
-                  {
-                    "type": "object",
-                    "properties": {
-                      "basis": {
+                  "committee_type": {
+                    "anyOf": [
+                      {
                         "type": "string",
                         "enum": [
-                          "filed",
-                          "inferred",
-                          "adjacent"
+                          "H",
+                          "S",
+                          "P",
+                          "X",
+                          "Y",
+                          "Z",
+                          "N",
+                          "Q",
+                          "O",
+                          "U",
+                          "V",
+                          "W",
+                          "D",
+                          "E",
+                          "I",
+                          "C"
                         ]
                       },
-                      "rule": {
-                        "type": "string",
-                        "minLength": 1
-                      },
-                      "source_urls": {
-                        "type": "array",
-                        "items": {
-                          "type": "string",
-                          "format": "uri"
-                        }
-                      },
-                      "checked_by": {
-                        "type": [
-                          "string",
-                          "null"
-                        ]
-                      },
-                      "checked_at": {
-                        "type": [
-                          "string",
-                          "null"
-                        ]
+                      {
+                        "type": "null"
                       }
-                    },
-                    "required": [
-                      "basis",
-                      "rule",
-                      "source_urls",
-                      "checked_by",
-                      "checked_at"
-                    ],
-                    "additionalProperties": false
+                    ]
+                  },
+                  "depth": {
+                    "type": "integer",
+                    "minimum": 0
+                  },
+                  "side": {
+                    "type": "string",
+                    "const": "out"
+                  },
+                  "visibility": {
+                    "type": "string",
+                    "enum": [
+                      "disclosed",
+                      "inferable",
+                      "dark"
+                    ]
+                  },
+                  "amount_in": {
+                    "type": "number"
+                  },
+                  "is_terminus": {
+                    "type": "boolean"
+                  },
+                  "terminus_reason": {
+                    "anyOf": [
+                      {
+                        "type": "string",
+                        "enum": [
+                          "individual",
+                          "organization",
+                          "dark",
+                          "inferable",
+                          "cycle",
+                          "depth_cap",
+                          "pruned"
+                        ]
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ]
+                  },
+                  "source_url": {
+                    "anyOf": [
+                      {
+                        "type": "string",
+                        "format": "uri"
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ]
+                  },
+                  "contributor_count": {
+                    "type": "integer"
+                  },
+                  "organization_class": {
+                    "type": "string",
+                    "enum": [
+                      "union",
+                      "business",
+                      "llc",
+                      "nonprofit",
+                      "unknown"
+                    ]
+                  },
+                  "medium": {
+                    "type": "string",
+                    "enum": [
+                      "tv",
+                      "radio",
+                      "digital",
+                      "mail",
+                      "phones",
+                      "production",
+                      "consulting",
+                      "other"
+                    ]
+                  },
+                  "thumbnail_path": {
+                    "type": [
+                      "string",
+                      "null"
+                    ]
+                  },
+                  "href": {
+                    "type": "string"
+                  },
+                  "kind": {
+                    "type": "string",
+                    "enum": [
+                      "vendor",
+                      "ad",
+                      "candidate"
+                    ]
+                  },
+                  "basis": {
+                    "anyOf": [
+                      {
+                        "type": "object",
+                        "properties": {
+                          "basis": {
+                            "type": "string",
+                            "const": "verified"
+                          },
+                          "rule": {
+                            "type": "string",
+                            "minLength": 1
+                          },
+                          "source_urls": {
+                            "type": "array",
+                            "items": {
+                              "type": "string",
+                              "format": "uri"
+                            },
+                            "minItems": 1
+                          },
+                          "checked_by": {
+                            "type": "string",
+                            "minLength": 1
+                          },
+                          "checked_at": {
+                            "type": "string",
+                            "minLength": 1
+                          }
+                        },
+                        "required": [
+                          "basis",
+                          "rule",
+                          "source_urls",
+                          "checked_by",
+                          "checked_at"
+                        ],
+                        "additionalProperties": false
+                      },
+                      {
+                        "type": "object",
+                        "properties": {
+                          "basis": {
+                            "type": "string",
+                            "enum": [
+                              "filed",
+                              "inferred",
+                              "adjacent"
+                            ]
+                          },
+                          "rule": {
+                            "type": "string",
+                            "minLength": 1
+                          },
+                          "source_urls": {
+                            "type": "array",
+                            "items": {
+                              "type": "string",
+                              "format": "uri"
+                            }
+                          },
+                          "checked_by": {
+                            "type": [
+                              "string",
+                              "null"
+                            ]
+                          },
+                          "checked_at": {
+                            "type": [
+                              "string",
+                              "null"
+                            ]
+                          }
+                        },
+                        "required": [
+                          "basis",
+                          "rule",
+                          "source_urls",
+                          "checked_by",
+                          "checked_at"
+                        ],
+                        "additionalProperties": false
+                      }
+                    ]
                   }
-                ]
+                },
+                "required": [
+                  "id",
+                  "name",
+                  "committee_type",
+                  "depth",
+                  "side",
+                  "visibility",
+                  "amount_in",
+                  "is_terminus",
+                  "terminus_reason",
+                  "source_url",
+                  "kind",
+                  "basis"
+                ],
+                "additionalProperties": false
+              },
+              {
+                "type": "object",
+                "properties": {
+                  "id": {
+                    "type": "string"
+                  },
+                  "name": {
+                    "type": "string"
+                  },
+                  "committee_type": {
+                    "anyOf": [
+                      {
+                        "type": "string",
+                        "enum": [
+                          "H",
+                          "S",
+                          "P",
+                          "X",
+                          "Y",
+                          "Z",
+                          "N",
+                          "Q",
+                          "O",
+                          "U",
+                          "V",
+                          "W",
+                          "D",
+                          "E",
+                          "I",
+                          "C"
+                        ]
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ]
+                  },
+                  "depth": {
+                    "type": "integer",
+                    "minimum": 0
+                  },
+                  "side": {
+                    "type": "string",
+                    "enum": [
+                      "in",
+                      "out"
+                    ]
+                  },
+                  "visibility": {
+                    "type": "string",
+                    "enum": [
+                      "disclosed",
+                      "inferable",
+                      "dark"
+                    ]
+                  },
+                  "amount_in": {
+                    "type": "number"
+                  },
+                  "is_terminus": {
+                    "type": "boolean"
+                  },
+                  "terminus_reason": {
+                    "anyOf": [
+                      {
+                        "type": "string",
+                        "enum": [
+                          "individual",
+                          "organization",
+                          "dark",
+                          "inferable",
+                          "cycle",
+                          "depth_cap",
+                          "pruned"
+                        ]
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ]
+                  },
+                  "source_url": {
+                    "anyOf": [
+                      {
+                        "type": "string",
+                        "format": "uri"
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ]
+                  },
+                  "contributor_count": {
+                    "type": "integer"
+                  },
+                  "organization_class": {
+                    "type": "string",
+                    "enum": [
+                      "union",
+                      "business",
+                      "llc",
+                      "nonprofit",
+                      "unknown"
+                    ]
+                  },
+                  "medium": {
+                    "type": "string",
+                    "enum": [
+                      "tv",
+                      "radio",
+                      "digital",
+                      "mail",
+                      "phones",
+                      "production",
+                      "consulting",
+                      "other"
+                    ]
+                  },
+                  "thumbnail_path": {
+                    "type": [
+                      "string",
+                      "null"
+                    ]
+                  },
+                  "href": {
+                    "type": "string"
+                  },
+                  "kind": {
+                    "type": "string",
+                    "enum": [
+                      "committee",
+                      "individual",
+                      "organization",
+                      "conduit",
+                      "aggregate"
+                    ]
+                  },
+                  "basis": {
+                    "anyOf": [
+                      {
+                        "type": "object",
+                        "properties": {
+                          "basis": {
+                            "type": "string",
+                            "const": "verified"
+                          },
+                          "rule": {
+                            "type": "string",
+                            "minLength": 1
+                          },
+                          "source_urls": {
+                            "type": "array",
+                            "items": {
+                              "type": "string",
+                              "format": "uri"
+                            },
+                            "minItems": 1
+                          },
+                          "checked_by": {
+                            "type": "string",
+                            "minLength": 1
+                          },
+                          "checked_at": {
+                            "type": "string",
+                            "minLength": 1
+                          }
+                        },
+                        "required": [
+                          "basis",
+                          "rule",
+                          "source_urls",
+                          "checked_by",
+                          "checked_at"
+                        ],
+                        "additionalProperties": false
+                      },
+                      {
+                        "type": "object",
+                        "properties": {
+                          "basis": {
+                            "type": "string",
+                            "enum": [
+                              "filed",
+                              "inferred",
+                              "adjacent"
+                            ]
+                          },
+                          "rule": {
+                            "type": "string",
+                            "minLength": 1
+                          },
+                          "source_urls": {
+                            "type": "array",
+                            "items": {
+                              "type": "string",
+                              "format": "uri"
+                            }
+                          },
+                          "checked_by": {
+                            "type": [
+                              "string",
+                              "null"
+                            ]
+                          },
+                          "checked_at": {
+                            "type": [
+                              "string",
+                              "null"
+                            ]
+                          }
+                        },
+                        "required": [
+                          "basis",
+                          "rule",
+                          "source_urls",
+                          "checked_by",
+                          "checked_at"
+                        ],
+                        "additionalProperties": false
+                      }
+                    ]
+                  }
+                },
+                "required": [
+                  "id",
+                  "name",
+                  "committee_type",
+                  "depth",
+                  "visibility",
+                  "amount_in",
+                  "is_terminus",
+                  "terminus_reason",
+                  "source_url",
+                  "kind"
+                ],
+                "additionalProperties": false
               }
-            },
-            "required": [
-              "id",
-              "name",
-              "kind",
-              "committee_type",
-              "depth",
-              "visibility",
-              "amount_in",
-              "is_terminus",
-              "terminus_reason",
-              "source_url"
-            ],
-            "additionalProperties": false
+            ]
           }
         },
         "edges": {
