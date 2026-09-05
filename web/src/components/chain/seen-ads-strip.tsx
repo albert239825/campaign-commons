@@ -3,7 +3,7 @@ import type { Ad } from "@citizen-gotham/contracts";
 import { range, routes } from "@/lib/format";
 import { Chip, SourceLink } from "@/components/ui";
 
-/** Hand-verified ads paid for by this chain's root committee; the link back lands on the card in the gallery. */
+/** Ads whose advertiser a person matched to this chain's root committee; the link back lands on the card in the gallery. */
 export function SeenAdsStrip({ ads, raceId }: { ads: Ad[]; raceId: string }) {
   if (ads.length === 0) return null;
   return (

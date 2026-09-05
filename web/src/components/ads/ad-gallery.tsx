@@ -47,7 +47,7 @@ export function AdGallery({
           <input type="checkbox" checked={matchedOnly} onChange={(e) => setMatchedOnly(e.target.checked)} className="h-3.5 w-3.5 accent-neutral-900" />
           Only ads with a matched FEC sponsor
         </label>
-        <label className="inline-flex cursor-pointer items-center gap-2" title="Paid-for-by checked by a person against adstransparency.google.com and fec.gov">
+        <label className="inline-flex cursor-pointer items-center gap-2" title="Advertiser matched to its FEC committee by a person, using adstransparency.google.com and fec.gov">
           <input type="checkbox" checked={verifiedOnly} onChange={(e) => setVerifiedOnly(e.target.checked)} className="h-3.5 w-3.5 accent-neutral-900" />
           Verified ({verifiedCount})
         </label>
