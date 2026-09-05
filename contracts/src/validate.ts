@@ -24,6 +24,7 @@ import {
   StoriesSchema,
   VendorIndexSchema,
   VendorSchema,
+  TrailsSchema,
 } from "./schemas";
 
 const dataDir = join(__dirname, "..", "..", "data");
@@ -46,6 +47,7 @@ function schemaFor(rel: string, isHand: boolean): ZodTypeAny | null {
     if (parts[1] === "stories.json") return StoriesSchema;
     if (parts[1] === "vendors.json") return VendorIndexSchema;
     if (parts[1] === "issues.json") return IssueSpendingSchema;
+    if (parts[1] === "trails.json") return TrailsSchema;
   }
   if (parts.length === 3) {
     if (parts[1] === "entities") return EntitySchema;

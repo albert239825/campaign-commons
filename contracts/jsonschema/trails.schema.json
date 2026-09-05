@@ -1,0 +1,1128 @@
+{
+  "$ref": "#/definitions/trails",
+  "definitions": {
+    "trails": {
+      "type": "object",
+      "properties": {
+        "race_id": {
+          "type": "string"
+        },
+        "generated_at": {
+          "type": "string"
+        },
+        "data_status": {
+          "type": "string",
+          "enum": [
+            "real",
+            "mock",
+            "partial"
+          ]
+        },
+        "subjects": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "kind": {
+                "type": "string",
+                "enum": [
+                  "candidate",
+                  "committee"
+                ]
+              },
+              "name": {
+                "type": "string"
+              },
+              "aliases": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "type_label": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "principal_committee_id": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              }
+            },
+            "required": [
+              "id",
+              "kind",
+              "name",
+              "aliases",
+              "type_label",
+              "principal_committee_id"
+            ],
+            "additionalProperties": false
+          }
+        },
+        "answers": {
+          "type": "array",
+          "items": {
+            "anyOf": [
+              {
+                "type": "object",
+                "properties": {
+                  "subject_id": {
+                    "type": "string"
+                  },
+                  "subject_name": {
+                    "type": "string"
+                  },
+                  "headline": {
+                    "type": "string"
+                  },
+                  "caveats": {
+                    "type": "array",
+                    "items": {
+                      "type": "string"
+                    }
+                  },
+                  "intent": {
+                    "type": "string",
+                    "const": "candidate_spender"
+                  },
+                  "candidate_id": {
+                    "type": "string"
+                  },
+                  "support": {
+                    "type": "object",
+                    "properties": {
+                      "amount": {
+                        "type": "number"
+                      },
+                      "source_url": {
+                        "type": "string",
+                        "format": "uri"
+                      }
+                    },
+                    "required": [
+                      "amount",
+                      "source_url"
+                    ],
+                    "additionalProperties": false
+                  },
+                  "oppose": {
+                    "type": "object",
+                    "properties": {
+                      "amount": {
+                        "type": "number"
+                      },
+                      "source_url": {
+                        "type": "string",
+                        "format": "uri"
+                      }
+                    },
+                    "required": [
+                      "amount",
+                      "source_url"
+                    ],
+                    "additionalProperties": false
+                  },
+                  "total": {
+                    "type": "object",
+                    "properties": {
+                      "amount": {
+                        "type": "number"
+                      },
+                      "source_url": {
+                        "type": "string",
+                        "format": "uri"
+                      }
+                    },
+                    "required": [
+                      "amount",
+                      "source_url"
+                    ],
+                    "additionalProperties": false
+                  },
+                  "spenders": {
+                    "type": "array",
+                    "items": {
+                      "type": "object",
+                      "properties": {
+                        "kind": {
+                          "type": "string",
+                          "const": "targeting"
+                        },
+                        "spender_id": {
+                          "type": "string"
+                        },
+                        "spender_name": {
+                          "type": "string"
+                        },
+                        "spender_type_label": {
+                          "type": "string"
+                        },
+                        "candidate_id": {
+                          "type": "string"
+                        },
+                        "candidate_name": {
+                          "type": "string"
+                        },
+                        "support_oppose": {
+                          "type": "string",
+                          "enum": [
+                            "S",
+                            "O"
+                          ]
+                        },
+                        "amount": {
+                          "type": "number"
+                        },
+                        "has_chain": {
+                          "type": "boolean"
+                        },
+                        "source_url": {
+                          "type": "string",
+                          "format": "uri"
+                        }
+                      },
+                      "required": [
+                        "kind",
+                        "spender_id",
+                        "spender_name",
+                        "spender_type_label",
+                        "candidate_id",
+                        "candidate_name",
+                        "support_oppose",
+                        "amount",
+                        "has_chain",
+                        "source_url"
+                      ],
+                      "additionalProperties": false
+                    }
+                  }
+                },
+                "required": [
+                  "subject_id",
+                  "subject_name",
+                  "headline",
+                  "caveats",
+                  "intent",
+                  "candidate_id",
+                  "support",
+                  "oppose",
+                  "total",
+                  "spenders"
+                ],
+                "additionalProperties": false
+              },
+              {
+                "type": "object",
+                "properties": {
+                  "subject_id": {
+                    "type": "string"
+                  },
+                  "subject_name": {
+                    "type": "string"
+                  },
+                  "headline": {
+                    "type": "string"
+                  },
+                  "caveats": {
+                    "type": "array",
+                    "items": {
+                      "type": "string"
+                    }
+                  },
+                  "intent": {
+                    "type": "string",
+                    "const": "candidate_ad_funding"
+                  },
+                  "candidate_id": {
+                    "type": "string"
+                  },
+                  "sponsors": {
+                    "type": "array",
+                    "items": {
+                      "type": "object",
+                      "properties": {
+                        "sponsor_id": {
+                          "type": "string"
+                        },
+                        "sponsor_name": {
+                          "type": "string"
+                        },
+                        "sponsor_type_label": {
+                          "type": "string"
+                        },
+                        "is_candidate_committee": {
+                          "type": "boolean"
+                        },
+                        "ads": {
+                          "type": "object",
+                          "properties": {
+                            "sponsor_id": {
+                              "type": "string"
+                            },
+                            "sponsor_name": {
+                              "type": "string"
+                            },
+                            "platform": {
+                              "type": "string",
+                              "enum": [
+                                "google",
+                                "meta"
+                              ]
+                            },
+                            "ad_count": {
+                              "type": "integer",
+                              "minimum": 1
+                            },
+                            "spend": {
+                              "type": "object",
+                              "properties": {
+                                "min": {
+                                  "type": "number"
+                                },
+                                "max": {
+                                  "type": [
+                                    "number",
+                                    "null"
+                                  ]
+                                },
+                                "source_url": {
+                                  "type": "string",
+                                  "format": "uri"
+                                }
+                              },
+                              "required": [
+                                "min",
+                                "max",
+                                "source_url"
+                              ],
+                              "additionalProperties": false
+                            },
+                            "first_shown": {
+                              "type": [
+                                "string",
+                                "null"
+                              ]
+                            },
+                            "last_shown": {
+                              "type": [
+                                "string",
+                                "null"
+                              ]
+                            },
+                            "match_confidence": {
+                              "type": "string",
+                              "enum": [
+                                "verified",
+                                "auto"
+                              ]
+                            },
+                            "source_url": {
+                              "type": "string",
+                              "format": "uri"
+                            }
+                          },
+                          "required": [
+                            "sponsor_id",
+                            "sponsor_name",
+                            "platform",
+                            "ad_count",
+                            "spend",
+                            "first_shown",
+                            "last_shown",
+                            "match_confidence",
+                            "source_url"
+                          ],
+                          "additionalProperties": false
+                        },
+                        "targeting": {
+                          "anyOf": [
+                            {
+                              "type": "object",
+                              "properties": {
+                                "kind": {
+                                  "type": "string",
+                                  "const": "targeting"
+                                },
+                                "spender_id": {
+                                  "type": "string"
+                                },
+                                "spender_name": {
+                                  "type": "string"
+                                },
+                                "spender_type_label": {
+                                  "type": "string"
+                                },
+                                "candidate_id": {
+                                  "type": "string"
+                                },
+                                "candidate_name": {
+                                  "type": "string"
+                                },
+                                "support_oppose": {
+                                  "type": "string",
+                                  "enum": [
+                                    "S",
+                                    "O"
+                                  ]
+                                },
+                                "amount": {
+                                  "type": "number"
+                                },
+                                "has_chain": {
+                                  "type": "boolean"
+                                },
+                                "source_url": {
+                                  "type": "string",
+                                  "format": "uri"
+                                }
+                              },
+                              "required": [
+                                "kind",
+                                "spender_id",
+                                "spender_name",
+                                "spender_type_label",
+                                "candidate_id",
+                                "candidate_name",
+                                "support_oppose",
+                                "amount",
+                                "has_chain",
+                                "source_url"
+                              ],
+                              "additionalProperties": false
+                            },
+                            {
+                              "type": "null"
+                            }
+                          ]
+                        },
+                        "funded_by": {
+                          "type": "array",
+                          "items": {
+                            "type": "object",
+                            "properties": {
+                              "kind": {
+                                "type": "string",
+                                "const": "money"
+                              },
+                              "from_id": {
+                                "type": "string"
+                              },
+                              "from_name": {
+                                "type": "string"
+                              },
+                              "from_kind": {
+                                "type": "string",
+                                "enum": [
+                                  "committee",
+                                  "individual",
+                                  "organization",
+                                  "conduit",
+                                  "aggregate"
+                                ]
+                              },
+                              "from_committee_type": {
+                                "anyOf": [
+                                  {
+                                    "type": "string",
+                                    "enum": [
+                                      "H",
+                                      "S",
+                                      "P",
+                                      "X",
+                                      "Y",
+                                      "Z",
+                                      "N",
+                                      "Q",
+                                      "O",
+                                      "U",
+                                      "V",
+                                      "W",
+                                      "D",
+                                      "E",
+                                      "I",
+                                      "C"
+                                    ]
+                                  },
+                                  {
+                                    "type": "null"
+                                  }
+                                ]
+                              },
+                              "to_id": {
+                                "type": "string"
+                              },
+                              "to_name": {
+                                "type": "string"
+                              },
+                              "amount": {
+                                "type": "number"
+                              },
+                              "visibility": {
+                                "type": "string",
+                                "enum": [
+                                  "disclosed",
+                                  "inferable",
+                                  "dark"
+                                ]
+                              },
+                              "depth": {
+                                "type": "integer",
+                                "minimum": 1
+                              },
+                              "contributor_count": {
+                                "type": "integer"
+                              },
+                              "source_url": {
+                                "type": "string",
+                                "format": "uri"
+                              }
+                            },
+                            "required": [
+                              "kind",
+                              "from_id",
+                              "from_name",
+                              "from_kind",
+                              "from_committee_type",
+                              "to_id",
+                              "to_name",
+                              "amount",
+                              "visibility",
+                              "depth",
+                              "source_url"
+                            ],
+                            "additionalProperties": false
+                          }
+                        },
+                        "shares": {
+                          "anyOf": [
+                            {
+                              "type": "object",
+                              "properties": {
+                                "total_in": {
+                                  "type": "number"
+                                },
+                                "disclosed": {
+                                  "type": "number",
+                                  "minimum": 0,
+                                  "maximum": 1
+                                },
+                                "inferable": {
+                                  "type": "number",
+                                  "minimum": 0,
+                                  "maximum": 1
+                                },
+                                "unwalked": {
+                                  "type": "number",
+                                  "minimum": 0,
+                                  "maximum": 1
+                                },
+                                "dark": {
+                                  "type": "number",
+                                  "minimum": 0,
+                                  "maximum": 1
+                                },
+                                "max_depth": {
+                                  "type": "integer"
+                                },
+                                "source_url": {
+                                  "type": "string",
+                                  "format": "uri"
+                                }
+                              },
+                              "required": [
+                                "total_in",
+                                "disclosed",
+                                "inferable",
+                                "unwalked",
+                                "dark",
+                                "max_depth",
+                                "source_url"
+                              ],
+                              "additionalProperties": false
+                            },
+                            {
+                              "type": "null"
+                            }
+                          ]
+                        },
+                        "campaign_receipts": {
+                          "anyOf": [
+                            {
+                              "type": "object",
+                              "properties": {
+                                "receipts": {
+                                  "type": "object",
+                                  "properties": {
+                                    "amount": {
+                                      "type": "number"
+                                    },
+                                    "source_url": {
+                                      "type": "string",
+                                      "format": "uri"
+                                    }
+                                  },
+                                  "required": [
+                                    "amount",
+                                    "source_url"
+                                  ],
+                                  "additionalProperties": false
+                                },
+                                "from_individuals": {
+                                  "type": "object",
+                                  "properties": {
+                                    "amount": {
+                                      "type": "number"
+                                    },
+                                    "source_url": {
+                                      "type": "string",
+                                      "format": "uri"
+                                    }
+                                  },
+                                  "required": [
+                                    "amount",
+                                    "source_url"
+                                  ],
+                                  "additionalProperties": false
+                                },
+                                "from_committees": {
+                                  "type": "object",
+                                  "properties": {
+                                    "amount": {
+                                      "type": "number"
+                                    },
+                                    "source_url": {
+                                      "type": "string",
+                                      "format": "uri"
+                                    }
+                                  },
+                                  "required": [
+                                    "amount",
+                                    "source_url"
+                                  ],
+                                  "additionalProperties": false
+                                }
+                              },
+                              "required": [
+                                "receipts",
+                                "from_individuals",
+                                "from_committees"
+                              ],
+                              "additionalProperties": false
+                            },
+                            {
+                              "type": "null"
+                            }
+                          ]
+                        }
+                      },
+                      "required": [
+                        "sponsor_id",
+                        "sponsor_name",
+                        "sponsor_type_label",
+                        "is_candidate_committee",
+                        "ads",
+                        "targeting",
+                        "funded_by",
+                        "shares",
+                        "campaign_receipts"
+                      ],
+                      "additionalProperties": false
+                    }
+                  },
+                  "spenders_without_ads": {
+                    "type": "integer"
+                  }
+                },
+                "required": [
+                  "subject_id",
+                  "subject_name",
+                  "headline",
+                  "caveats",
+                  "intent",
+                  "candidate_id",
+                  "sponsors",
+                  "spenders_without_ads"
+                ],
+                "additionalProperties": false
+              },
+              {
+                "type": "object",
+                "properties": {
+                  "subject_id": {
+                    "type": "string"
+                  },
+                  "subject_name": {
+                    "type": "string"
+                  },
+                  "headline": {
+                    "type": "string"
+                  },
+                  "caveats": {
+                    "type": "array",
+                    "items": {
+                      "type": "string"
+                    }
+                  },
+                  "intent": {
+                    "type": "string",
+                    "const": "committee_funding"
+                  },
+                  "committee_id": {
+                    "type": "string"
+                  },
+                  "committee_type_label": {
+                    "type": [
+                      "string",
+                      "null"
+                    ]
+                  },
+                  "committee_source_url": {
+                    "type": "string",
+                    "format": "uri"
+                  },
+                  "total_in": {
+                    "type": "object",
+                    "properties": {
+                      "amount": {
+                        "type": "number"
+                      },
+                      "source_url": {
+                        "type": "string",
+                        "format": "uri"
+                      }
+                    },
+                    "required": [
+                      "amount",
+                      "source_url"
+                    ],
+                    "additionalProperties": false
+                  },
+                  "funders": {
+                    "type": "array",
+                    "items": {
+                      "type": "object",
+                      "properties": {
+                        "kind": {
+                          "type": "string",
+                          "const": "money"
+                        },
+                        "from_id": {
+                          "type": "string"
+                        },
+                        "from_name": {
+                          "type": "string"
+                        },
+                        "from_kind": {
+                          "type": "string",
+                          "enum": [
+                            "committee",
+                            "individual",
+                            "organization",
+                            "conduit",
+                            "aggregate"
+                          ]
+                        },
+                        "from_committee_type": {
+                          "anyOf": [
+                            {
+                              "type": "string",
+                              "enum": [
+                                "H",
+                                "S",
+                                "P",
+                                "X",
+                                "Y",
+                                "Z",
+                                "N",
+                                "Q",
+                                "O",
+                                "U",
+                                "V",
+                                "W",
+                                "D",
+                                "E",
+                                "I",
+                                "C"
+                              ]
+                            },
+                            {
+                              "type": "null"
+                            }
+                          ]
+                        },
+                        "to_id": {
+                          "type": "string"
+                        },
+                        "to_name": {
+                          "type": "string"
+                        },
+                        "amount": {
+                          "type": "number"
+                        },
+                        "visibility": {
+                          "type": "string",
+                          "enum": [
+                            "disclosed",
+                            "inferable",
+                            "dark"
+                          ]
+                        },
+                        "depth": {
+                          "type": "integer",
+                          "minimum": 1
+                        },
+                        "contributor_count": {
+                          "type": "integer"
+                        },
+                        "source_url": {
+                          "type": "string",
+                          "format": "uri"
+                        }
+                      },
+                      "required": [
+                        "kind",
+                        "from_id",
+                        "from_name",
+                        "from_kind",
+                        "from_committee_type",
+                        "to_id",
+                        "to_name",
+                        "amount",
+                        "visibility",
+                        "depth",
+                        "source_url"
+                      ],
+                      "additionalProperties": false
+                    }
+                  },
+                  "next_hop": {
+                    "type": "array",
+                    "items": {
+                      "type": "object",
+                      "properties": {
+                        "kind": {
+                          "type": "string",
+                          "const": "money"
+                        },
+                        "from_id": {
+                          "type": "string"
+                        },
+                        "from_name": {
+                          "type": "string"
+                        },
+                        "from_kind": {
+                          "type": "string",
+                          "enum": [
+                            "committee",
+                            "individual",
+                            "organization",
+                            "conduit",
+                            "aggregate"
+                          ]
+                        },
+                        "from_committee_type": {
+                          "anyOf": [
+                            {
+                              "type": "string",
+                              "enum": [
+                                "H",
+                                "S",
+                                "P",
+                                "X",
+                                "Y",
+                                "Z",
+                                "N",
+                                "Q",
+                                "O",
+                                "U",
+                                "V",
+                                "W",
+                                "D",
+                                "E",
+                                "I",
+                                "C"
+                              ]
+                            },
+                            {
+                              "type": "null"
+                            }
+                          ]
+                        },
+                        "to_id": {
+                          "type": "string"
+                        },
+                        "to_name": {
+                          "type": "string"
+                        },
+                        "amount": {
+                          "type": "number"
+                        },
+                        "visibility": {
+                          "type": "string",
+                          "enum": [
+                            "disclosed",
+                            "inferable",
+                            "dark"
+                          ]
+                        },
+                        "depth": {
+                          "type": "integer",
+                          "minimum": 1
+                        },
+                        "contributor_count": {
+                          "type": "integer"
+                        },
+                        "source_url": {
+                          "type": "string",
+                          "format": "uri"
+                        }
+                      },
+                      "required": [
+                        "kind",
+                        "from_id",
+                        "from_name",
+                        "from_kind",
+                        "from_committee_type",
+                        "to_id",
+                        "to_name",
+                        "amount",
+                        "visibility",
+                        "depth",
+                        "source_url"
+                      ],
+                      "additionalProperties": false
+                    }
+                  },
+                  "ultimate": {
+                    "type": "array",
+                    "items": {
+                      "type": "object",
+                      "properties": {
+                        "id": {
+                          "type": "string"
+                        },
+                        "name": {
+                          "type": "string"
+                        },
+                        "kind": {
+                          "type": "string",
+                          "enum": [
+                            "committee",
+                            "individual",
+                            "organization",
+                            "conduit",
+                            "aggregate"
+                          ]
+                        },
+                        "organization_class": {
+                          "type": "string",
+                          "enum": [
+                            "union",
+                            "business",
+                            "llc",
+                            "nonprofit",
+                            "unknown"
+                          ]
+                        },
+                        "visibility": {
+                          "type": "string",
+                          "enum": [
+                            "disclosed",
+                            "inferable",
+                            "dark"
+                          ]
+                        },
+                        "gave_to_id": {
+                          "type": "string"
+                        },
+                        "gave_to_name": {
+                          "type": "string"
+                        },
+                        "amount": {
+                          "type": "number"
+                        },
+                        "depth": {
+                          "type": "integer",
+                          "minimum": 1
+                        },
+                        "source_url": {
+                          "type": "string",
+                          "format": "uri"
+                        }
+                      },
+                      "required": [
+                        "id",
+                        "name",
+                        "kind",
+                        "visibility",
+                        "gave_to_id",
+                        "gave_to_name",
+                        "amount",
+                        "depth",
+                        "source_url"
+                      ],
+                      "additionalProperties": false
+                    }
+                  },
+                  "shares": {
+                    "anyOf": [
+                      {
+                        "type": "object",
+                        "properties": {
+                          "total_in": {
+                            "type": "number"
+                          },
+                          "disclosed": {
+                            "type": "number",
+                            "minimum": 0,
+                            "maximum": 1
+                          },
+                          "inferable": {
+                            "type": "number",
+                            "minimum": 0,
+                            "maximum": 1
+                          },
+                          "unwalked": {
+                            "type": "number",
+                            "minimum": 0,
+                            "maximum": 1
+                          },
+                          "dark": {
+                            "type": "number",
+                            "minimum": 0,
+                            "maximum": 1
+                          },
+                          "max_depth": {
+                            "type": "integer"
+                          },
+                          "source_url": {
+                            "type": "string",
+                            "format": "uri"
+                          }
+                        },
+                        "required": [
+                          "total_in",
+                          "disclosed",
+                          "inferable",
+                          "unwalked",
+                          "dark",
+                          "max_depth",
+                          "source_url"
+                        ],
+                        "additionalProperties": false
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ]
+                  },
+                  "spent_on": {
+                    "type": "array",
+                    "items": {
+                      "type": "object",
+                      "properties": {
+                        "kind": {
+                          "type": "string",
+                          "const": "targeting"
+                        },
+                        "spender_id": {
+                          "type": "string"
+                        },
+                        "spender_name": {
+                          "type": "string"
+                        },
+                        "spender_type_label": {
+                          "type": "string"
+                        },
+                        "candidate_id": {
+                          "type": "string"
+                        },
+                        "candidate_name": {
+                          "type": "string"
+                        },
+                        "support_oppose": {
+                          "type": "string",
+                          "enum": [
+                            "S",
+                            "O"
+                          ]
+                        },
+                        "amount": {
+                          "type": "number"
+                        },
+                        "has_chain": {
+                          "type": "boolean"
+                        },
+                        "source_url": {
+                          "type": "string",
+                          "format": "uri"
+                        }
+                      },
+                      "required": [
+                        "kind",
+                        "spender_id",
+                        "spender_name",
+                        "spender_type_label",
+                        "candidate_id",
+                        "candidate_name",
+                        "support_oppose",
+                        "amount",
+                        "has_chain",
+                        "source_url"
+                      ],
+                      "additionalProperties": false
+                    }
+                  }
+                },
+                "required": [
+                  "subject_id",
+                  "subject_name",
+                  "headline",
+                  "caveats",
+                  "intent",
+                  "committee_id",
+                  "committee_type_label",
+                  "committee_source_url",
+                  "total_in",
+                  "funders",
+                  "next_hop",
+                  "ultimate",
+                  "shares",
+                  "spent_on"
+                ],
+                "additionalProperties": false
+              }
+            ]
+          }
+        },
+        "examples": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "method": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "race_id",
+        "generated_at",
+        "data_status",
+        "subjects",
+        "answers",
+        "examples",
+        "method"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "$schema": "http://json-schema.org/draft-07/schema#"
+}

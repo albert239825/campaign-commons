@@ -25,6 +25,7 @@ import {
   StoriesSchema,
   VendorIndexSchema,
   VendorSchema,
+  TrailsSchema,
 } from "./schemas";
 
 const out = join(__dirname, "..", "jsonschema");
@@ -49,6 +50,7 @@ const all: Record<string, ZodTypeAny> = {
   hand_ie_issues: HandIeIssuesFileSchema,
   hand_vendor_aliases: HandVendorAliasesFileSchema,
   hand_vendor_ad_links: HandVendorAdLinksFileSchema,
+  trails: TrailsSchema,
 };
 
 // zod-to-json-schema's overloads make tsc recurse too deeply on large schemas; pin a simple signature.

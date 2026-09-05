@@ -1,7 +1,7 @@
 RACE ?= pa-sen-2024
 PY ?= python3
 
-.PHONY: setup mock ingest ledger chains vendors ads ads-enrich issues search dossier validate all lint test
+.PHONY: setup mock ingest ledger chains vendors ads ads-enrich issues search dossier chains-out trails validate all lint test
 
 setup:            ## install pipeline deps (creates .venv)
 	$(PY) -m venv .venv && . .venv/bin/activate && pip install -q -e ".[dev]"
@@ -39,12 +39,15 @@ dossier:          ## congress.gov -> dossiers/*.json
 chains-out:       ## Block 2: spending side of chains/*.json (root -> vendor -> ad -> candidate); runs after vendors/ads/dossier
 	$(PY) -m campaign_commons.chains_out $(RACE)
 
+trails:           ## ledger + ads + chains + entities -> trails.json (Money Trails answers; no new downloads)
+	$(PY) -m campaign_commons.trails $(RACE)
+
 validate:         ## validate data/out and data/hand against contracts/jsonschema
 	$(PY) -m campaign_commons.validate
 
 # Stage order: chains before vendors (vendors reconciles against ledger.traceability, which chains writes);
-# ads-enrich and issues read vendors/ads; chains-out reads all of them; search last
-all: ingest ledger chains vendors ads ads-enrich issues dossier chains-out search validate
+# ads-enrich and issues read vendors/ads; chains-out reads all of them; trails reads ledger/ads/chains/entities; search last
+all: ingest ledger chains vendors ads ads-enrich issues dossier chains-out trails search validate
 
 lint:
 	ruff check . && ruff format --check .

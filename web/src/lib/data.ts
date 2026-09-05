@@ -20,6 +20,7 @@ import {
   RacesIndexSchema,
   SearchIndexSchema,
   StoriesSchema,
+  TrailsSchema,
   VendorIndexSchema,
   VendorSchema,
 } from "@campaign-commons/contracts";
@@ -81,6 +82,8 @@ export const getSearchIndex = () => load(SearchIndexSchema, "search.json");
 /** Block 2 issue layers; null when the stage has not run so the ledger still builds. */
 export const getIssues = (raceId: string) =>
   existsSync(join(DATA_OUT, raceId, "issues.json")) ? load(IssueSpendingSchema, raceId, "issues.json") : null;
+export const getTrails = (raceId: string) => load(TrailsSchema, raceId, "trails.json");
+export const hasTrails = (raceId: string) => existsSync(join(DATA_OUT, raceId, "trails.json"));
 
 /** Race ids that have a data directory (stub races have none). */
 export const listRaceIds = () => getRaces().races.filter((r) => existsSync(join(DATA_OUT, r.race_id))).map((r) => r.race_id);

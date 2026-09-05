@@ -31,6 +31,7 @@ it came from.
 | 16:30 | Critic round 2 (child) | 16 findings; 2 P0 |
 | 16:30–17:30 | Repo move + round-2 fixes (master) | Single "Initial commit" on `DN-Hacks-2026`; PR #1 closes C-29..C-36; outside total $235.7M → $233.4M |
 | 17:30–18:30 | Whiteboard → ontology | Race nav, docs wiki (FAQ / QUESTIONS / DECISIONS), `ONTOLOGY.md` (questions × surfaces, ER diagram, sources, V0/V1/V2 scope) |
+| 20:30–21:30 | Money Trails (`feature/ask-money-trails`) | `TrailsSchema` + `trails.json`, deterministic question resolver, `/races/<race>/ask` answer pages (D-73) |
 
 ## Challenges and how we overcame them
 
@@ -127,6 +128,25 @@ exactly 38 rows.
 **Problem.** Pre-hackathon prototype work existed on another repo with 60+ commits.
 **Decision.** Copy the tree to `DN-Hacks-2026` as a single "Initial commit" — no history rewriting, no backdating, no fake
 authorship. Disclose pre-built work if asked rather than hide it.
+
+### 13. Money Trails — plain-English answers without a model (D-73)
+**Ask.** "Who is spending against Casey?", "Who paid for the ads about McCormick?", "Who funds WinSenate?" — typed, answered
+in one sourced sentence, weekend scope, no LLM and no graph database.
+**Problem.** Free text invites either a model (unauditable, can invent) or a brittle parser. And the ad question is a trap:
+Google records a sponsor and a spend *range* per ad, the FEC records the sponsor's for/against dollars and its funders, and
+nothing joins a funder to an ad — pooled money cannot be allocated.
+**How.** Precompute every answer the parser can reach (`pipeline/gotham/trails.py`, from the existing ledger/ads/chains/entities;
+no downloads) into `trails.json` under a new `TrailsSchema`, then resolve the typed question in the browser by whole-word alias
+matching over the emitted `subjects[].aliases` plus ordered keyword lists (ads > stance > funding). Money and targeting are
+separate schema types and separate visual rows; the ad answer shows *ads it ran* / *what it declared about the candidate* /
+*money into the sponsor* as three columns with a pooled-funds line under the third. Anything the parser cannot place returns a
+typed refusal with the questions it *can* answer.
+**Dead ends.** Committee names carry intent words ("… Independent Expenditure Committee", "… Fund") and hijacked the intent;
+fixed by removing the matched alias before detecting intent. The first WINSENATE headline named "Other contributors" as the
+largest funder — aggregate nodes are now excluded from prose but kept as sourced rows. A `method` string inside the shares
+object failed validation and was moved to answer caveats.
+**Numbers.** PA-Sen: 102 subjects, 104 answers (2 + 2 candidate, 100 committee), 1,937 FEC + 76 Google source links in one
+file, 1.2 MB; 14 pipeline tests + 23 resolver tests; static pages 2,147 → 2,252; validated files 2,142 → 2,143.
 
 ## Research and dead ends worth mentioning
 

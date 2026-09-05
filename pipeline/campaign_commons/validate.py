@@ -40,6 +40,7 @@ def _schema_name(rel: Path, hand: bool = False) -> str | None:
             "stories.json": "stories",
             "vendors.json": "vendors",
             "issues.json": "issues",
+            "trails.json": "trails",
         }.get(parts[1])
     if len(parts) == 3:
         return {
