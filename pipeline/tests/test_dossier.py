@@ -1,3 +1,4 @@
+import json
 from pathlib import Path
 
 import pytest
@@ -69,6 +70,37 @@ def test_statement_stance_requires_verbatim_excerpt() -> None:
     assert stance["issue_id"] == statement.issue_id
     with pytest.raises(ValueError, match="verbatim"):
         statement_stance(statement, "unrelated page", "https://web.archive.org/web/x/y", "2024-11-01")
+
+
+def test_statement_stance_emits_direction_only_when_coded() -> None:
+    statement = curated.Statement("guns", "Heading", "Excerpt", "Position", direction=-2)
+    page = normalise("Heading\n\nExcerpt")
+    assert statement_stance(statement, page, "https://web.archive.org/web/x/y", "2024-11-01")["direction"] == -2
+    uncoded = curated.Statement("healthcare", "Heading", "Excerpt", "Position")
+    assert "direction" not in statement_stance(uncoded, page, "https://web.archive.org/web/x/y", "2024-11-01")
+
+
+def test_committed_dossiers_match_curated_directions() -> None:
+    root = Path(__file__).resolve().parents[2]
+    casey_path = root / "data" / "out" / "pa-sen-2024" / "dossiers" / "S6PA00217.json"
+    mccormick_path = root / "data" / "out" / "pa-sen-2024" / "dossiers" / "S2PA00661.json"
+    if not casey_path.exists() or not mccormick_path.exists():
+        pytest.skip("committed PA dossiers are absent")
+
+    casey = json.loads(casey_path.read_text())
+    mccormick = json.loads(mccormick_path.read_text())
+    assert {stance["issue_id"] for stance in casey["stances"]} == set(curated.CASEY_DIRECTIONS)
+    for stance in casey["stances"]:
+        assert stance["direction"] == curated.CASEY_DIRECTIONS[stance["issue_id"]]
+
+    statement_directions = {statement.issue_id: statement.direction for statement in curated.MCCORMICK_STATEMENTS}
+    assert {stance["issue_id"] for stance in mccormick["stances"]} == set(statement_directions)
+    for stance in mccormick["stances"]:
+        expected = statement_directions[stance["issue_id"]]
+        if expected is None:
+            assert "direction" not in stance
+        else:
+            assert stance["direction"] == expected
 
 
 def test_confidence_and_summary_come_only_from_stances() -> None:

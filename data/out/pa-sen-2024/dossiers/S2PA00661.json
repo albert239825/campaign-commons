@@ -36,6 +36,7 @@
     {
       "issue_id": "energy_climate",
       "position": "States support for a market-driven, all-of-the-above energy agenda including Pennsylvania natural gas, and for addressing climate change through adaptation rather than government spending.",
+      "direction": -2,
       "confidence": "medium",
       "needs_review": true,
       "evidence": [
@@ -56,6 +57,7 @@
     {
       "issue_id": "defense",
       "position": "States support for a larger defense budget, a stronger defense industrial base and deterrence of adversaries.",
+      "direction": 2,
       "confidence": "medium",
       "needs_review": true,
       "evidence": [
@@ -76,6 +78,7 @@
     {
       "issue_id": "crypto_fintech",
       "position": "States that U.S. leadership in blockchain and crypto is an economic and national security priority that policymakers should support.",
+      "direction": -2,
       "confidence": "medium",
       "needs_review": true,
       "evidence": [
@@ -96,6 +99,7 @@
     {
       "issue_id": "immigration",
       "position": "States he would work to secure the southern border, end drug and human trafficking and increase resources for Border Patrol agents.",
+      "direction": 2,
       "confidence": "medium",
       "needs_review": true,
       "evidence": [
@@ -116,6 +120,7 @@
     {
       "issue_id": "abortion",
       "position": "States he is pro-life, opposes a national abortion ban and supports exceptions for rape, incest and the life of the mother.",
+      "direction": -1,
       "confidence": "medium",
       "needs_review": true,
       "evidence": [
@@ -136,6 +141,7 @@
     {
       "issue_id": "guns",
       "position": "States support for an individual right to own firearms, alongside school security funding, mental health programs, enforcement of existing gun laws and background check systems.",
+      "direction": -2,
       "confidence": "medium",
       "needs_review": true,
       "evidence": [
@@ -156,6 +162,7 @@
     {
       "issue_id": "tax_budget",
       "position": "States he would work to reduce government spending, oppose tax increases and exercise fiscal responsibility.",
+      "direction": -2,
       "confidence": "medium",
       "needs_review": true,
       "evidence": [
@@ -196,6 +203,7 @@
     {
       "issue_id": "labor_trade",
       "position": "States support for a plan of six bans aimed at reducing U.S. economic dependence on China, including for lithium batteries and solar panels.",
+      "direction": 1,
       "confidence": "medium",
       "needs_review": true,
       "evidence": [

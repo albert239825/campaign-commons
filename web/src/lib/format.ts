@@ -35,5 +35,6 @@ export const routes = {
   candidate: (raceId: string, candidateId: string) => `/races/${raceId}/candidates/${candidateId}`,
   ask: (raceId: string) => `/races/${raceId}/ask`,
   answer: (raceId: string, intent: string, subjectId: string) => `/races/${raceId}/ask/${intent}/${subjectId}`,
+  personalize: () => "/personalize",
   methodology: () => "/methodology",
 };

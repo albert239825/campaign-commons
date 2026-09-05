@@ -632,6 +632,7 @@ def main() -> None:
             {
                 "issue_id": "healthcare",
                 "position": "Voted for the Inflation Reduction Act, which included Medicare drug-price negotiation provisions.",
+                "direction": 2,
                 "confidence": "high",
                 "needs_review": True,
                 "evidence": [
@@ -652,6 +653,7 @@ def main() -> None:
             {
                 "issue_id": "crypto_fintech",
                 "position": "Voted against the resolution to overturn SEC Staff Accounting Bulletin 121 on crypto custody.",
+                "direction": 1,
                 "confidence": "medium",
                 "needs_review": True,
                 "evidence": [
@@ -691,6 +693,7 @@ def main() -> None:
             {
                 "issue_id": "energy_climate",
                 "position": "Campaign website stated support for expanding Pennsylvania natural-gas production and pipeline permitting.",
+                "direction": -2,
                 "confidence": "medium",
                 "needs_review": True,
                 "evidence": [
