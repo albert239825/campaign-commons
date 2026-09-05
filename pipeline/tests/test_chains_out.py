@@ -236,7 +236,8 @@ def test_verified_ad_gets_verified_root_edge():
     assert p["basis"]["basis"] == "verified" and p["basis"]["checked_at"] == "2026-09-05"
 
 
-def test_vendor_links_pick_the_parent_and_draw_adjacent_thin():
+def test_only_verified_or_inferred_links_become_placement_edges():
+    """D-74: a stale `adjacent` link in an old ads.json must not become an edge; the inferred one is the parent."""
     links = [
         {
             "vendor_id": "gambit-strategies",
@@ -261,17 +262,15 @@ def test_vendor_links_pick_the_parent_and_draw_adjacent_thin():
     nodes, edges, _ = build_out_side(RACE, SPENDER, entity(True), ads, set())
     assert by_id(nodes)["CR1"]["depth"] == 2
     placement = {e["from"]: e for e in edges_of(edges, "placement")}
-    assert set(placement) == {"vendor:gambit-strategies", "vendor:waterfront"}
+    assert set(placement) == {"vendor:gambit-strategies"}
     assert (
         placement["vendor:gambit-strategies"]["amount"] == 150.0
         and placement["vendor:gambit-strategies"]["basis"]["basis"] == "inferred"
     )
-    assert (
-        placement["vendor:waterfront"]["amount"] == 0 and placement["vendor:waterfront"]["basis"]["basis"] == "adjacent"
-    )
+    assert all(e["basis"]["basis"] != "adjacent" for e in edges if e.get("basis"))
 
 
-def test_adjacent_only_links_keep_root_edge_too():
+def test_ad_with_no_qualifying_link_hangs_off_the_spender_with_no_vendor_edge():
     links = [
         {
             "vendor_id": "gambit-strategies",
@@ -285,7 +284,7 @@ def test_adjacent_only_links_keep_root_edge_too():
     ]
     _, edges, _ = build_out_side(RACE, SPENDER, entity(True), [ad("CR1", 100, 200, vendor_links=links)], set())
     froms = sorted(e["from"] for e in edges_of(edges, "placement"))
-    assert froms == [SPENDER, "vendor:gambit-strategies"]
+    assert froms == [SPENDER]
 
 
 def test_campaign_ad_targets_candidate_and_candidate_basis_says_midpoint():

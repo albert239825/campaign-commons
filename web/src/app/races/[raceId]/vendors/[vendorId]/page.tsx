@@ -1,6 +1,6 @@
 // OWNER: Block 2 — vendors.
 import Link from "next/link";
-import { getAds, getEntity, getRace, getStories, getVendor, getVendors, listRaceIds, listVendorIds } from "@/lib/data";
+import { getAds, getEntity, getRace, getStories, getVendor, getVendors, listEntityIds, listRaceIds, listVendorIds } from "@/lib/data";
 import { BASIS_LABELS, BASIS_MEANING } from "@/lib/evidence";
 import { date, pct, routes } from "@/lib/format";
 import { AdjacencyNote, Breadcrumbs, Card, Chip, DataStatusBanner, Money, SourceLink, Stat } from "@/components/ui";
@@ -23,10 +23,10 @@ export default async function VendorPage({ params }: { params: Promise<{ raceId:
   const rows = [...v.expenditures].sort((a, b) => (b.date ?? "").localeCompare(a.date ?? "") || b.amount - a.amount);
   const n = v.normalization;
   const gallery = getAds(raceId);
-  const adsById = new Map(gallery.ads.map((a) => [a.ad_id, a]));
   const sponsorNames: Record<string, string> = Object.fromEntries(v.spenders.map((s) => [s.entity_id, s.name]));
-  for (const id of new Set(v.ads.map((a) => a.sponsor_entity_id))) {
-    if (!(id in sponsorNames)) sponsorNames[id] = getEntity(raceId, id).name;
+  const entityIds = new Set(listEntityIds(raceId));
+  for (const id of new Set([...v.ads.map((a) => a.sponsor_entity_id), ...gallery.ads.flatMap((a) => (a.matched_entity_id ? [a.matched_entity_id] : []))])) {
+    if (!(id in sponsorNames) && entityIds.has(id)) sponsorNames[id] = getEntity(raceId, id).name;
   }
 
   return (
@@ -141,7 +141,7 @@ export default async function VendorPage({ params }: { params: Promise<{ raceId:
         </Card>
       </div>
 
-      <VendorAds raceId={raceId} vendor={v} adsById={adsById} sponsorNames={sponsorNames} />
+      <VendorAds raceId={raceId} vendor={v} ads={gallery.ads} sponsorNames={sponsorNames} />
 
       <Card title="Every buy">
         <Table>

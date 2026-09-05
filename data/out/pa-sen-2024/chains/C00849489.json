@@ -3426,30 +3426,6 @@
       }
     },
     {
-      "from": "vendor:V-srcp-media",
-      "to": "CR06215613208334434305",
-      "kind": "placement",
-      "amount": 0,
-      "visibility": "disclosed",
-      "depth": 2,
-      "transaction_types": [],
-      "count": 13,
-      "date_range": [
-        "2023-09-25",
-        "2024-09-10"
-      ],
-      "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00849489&payee_name=SRCP+MEDIA+INC.",
-      "basis": {
-        "basis": "adjacent",
-        "rule": "Ran Sep 25, 2023 – Sep 10, 2024. In that window (buys dated up to 7 days before first shown through last shown) KEYSTONE RENEWAL PAC reported production buys to SRCP MEDIA INC. ($291,152); the FEC does not record which buy placed which ad. Same-window buys in media that cannot place a Google ad (TV, radio, mail, phones, field, consulting) are not listed.",
-        "source_urls": [
-          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00849489&payee_name=SRCP+MEDIA+INC."
-        ],
-        "checked_by": null,
-        "checked_at": null
-      }
-    },
-    {
       "from": "vendor:V-creative-strategic-solutions",
       "to": "CR00337131121437310977",
       "kind": "placement",
@@ -3468,30 +3444,6 @@
         "rule": "Only digital vendor KEYSTONE RENEWAL PAC paid during this ad's run window (ran aug 19, 2024 – aug 28, 2024, counting buys dated up to 7 days before first shown) — inferred, not filed. KEYSTONE RENEWAL PAC reported $302,764 in digital buys to CREATIVE STRATEGIC SOLUTIONS LLC; Google ads are digital placements.",
         "source_urls": [
           "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00849489&payee_name=CREATIVE+STRATEGIC+SOLUTIONS+LLC"
-        ],
-        "checked_by": null,
-        "checked_at": null
-      }
-    },
-    {
-      "from": "vendor:V-srcp-media",
-      "to": "CR00337131121437310977",
-      "kind": "placement",
-      "amount": 0,
-      "visibility": "disclosed",
-      "depth": 2,
-      "transaction_types": [],
-      "count": 2,
-      "date_range": [
-        "2024-08-19",
-        "2024-08-28"
-      ],
-      "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00849489&payee_name=SRCP+MEDIA+INC.",
-      "basis": {
-        "basis": "adjacent",
-        "rule": "Ran Aug 19, 2024 – Aug 28, 2024. In that window (buys dated up to 7 days before first shown through last shown) KEYSTONE RENEWAL PAC reported production buys to SRCP MEDIA INC. ($76,065); the FEC does not record which buy placed which ad. Same-window buys in media that cannot place a Google ad (TV, radio, mail, phones, field, consulting) are not listed.",
-        "source_urls": [
-          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00849489&payee_name=SRCP+MEDIA+INC."
         ],
         "checked_by": null,
         "checked_at": null
@@ -3522,54 +3474,6 @@
       }
     },
     {
-      "from": "vendor:V-srcp-media",
-      "to": "CR08459320822597681153",
-      "kind": "placement",
-      "amount": 0,
-      "visibility": "disclosed",
-      "depth": 2,
-      "transaction_types": [],
-      "count": 1,
-      "date_range": [
-        "2024-08-03",
-        "2024-08-14"
-      ],
-      "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00849489&payee_name=SRCP+MEDIA+INC.",
-      "basis": {
-        "basis": "adjacent",
-        "rule": "Ran Aug 3, 2024 – Aug 14, 2024. In that window (buys dated up to 7 days before first shown through last shown) KEYSTONE RENEWAL PAC reported production buys to SRCP MEDIA INC. ($11,455); the FEC does not record which buy placed which ad. Same-window buys in media that cannot place a Google ad (TV, radio, mail, phones, field, consulting) are not listed.",
-        "source_urls": [
-          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00849489&payee_name=SRCP+MEDIA+INC."
-        ],
-        "checked_by": null,
-        "checked_at": null
-      }
-    },
-    {
-      "from": "vendor:V-srcp-media",
-      "to": "CR15126906667989467137",
-      "kind": "placement",
-      "amount": 0,
-      "visibility": "disclosed",
-      "depth": 2,
-      "transaction_types": [],
-      "count": 2,
-      "date_range": [
-        "2024-07-26",
-        "2024-08-03"
-      ],
-      "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00849489&payee_name=SRCP+MEDIA+INC.",
-      "basis": {
-        "basis": "adjacent",
-        "rule": "Ran Jul 26, 2024 – Aug 3, 2024. In that window (buys dated up to 7 days before first shown through last shown) KEYSTONE RENEWAL PAC reported production buys to SRCP MEDIA INC. ($22,231); the FEC does not record which buy placed which ad. Same-window buys in media that cannot place a Google ad (TV, radio, mail, phones, field, consulting) are not listed.",
-        "source_urls": [
-          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00849489&payee_name=SRCP+MEDIA+INC."
-        ],
-        "checked_by": null,
-        "checked_at": null
-      }
-    },
-    {
       "from": "C00849489",
       "to": "CR15126906667989467137",
       "kind": "placement",
@@ -3585,54 +3489,6 @@
         "rule": "Advertiser name matched to this committee by normalized name; Google's bulk data names the advertiser and carries no paid-for-by field for US ads",
         "source_urls": [
           "https://adstransparency.google.com/advertiser/AR05305140614721961985/creative/CR15126906667989467137?political=&region=US"
-        ],
-        "checked_by": null,
-        "checked_at": null
-      }
-    },
-    {
-      "from": "vendor:V-invictus-advertising",
-      "to": "CR02513366500287447041",
-      "kind": "placement",
-      "amount": 0,
-      "visibility": "disclosed",
-      "depth": 2,
-      "transaction_types": [],
-      "count": 2,
-      "date_range": [
-        "2024-10-16",
-        "2024-11-06"
-      ],
-      "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00849489&payee_name=INVICTUS+ADVERTISING",
-      "basis": {
-        "basis": "adjacent",
-        "rule": "Ran Oct 16, 2024 – Nov 6, 2024. In that window (buys dated up to 7 days before first shown through last shown) KEYSTONE RENEWAL PAC reported production buys to INVICTUS ADVERTISING ($531,500); the FEC does not record which buy placed which ad. Same-window buys in media that cannot place a Google ad (TV, radio, mail, phones, field, consulting) are not listed.",
-        "source_urls": [
-          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00849489&payee_name=INVICTUS+ADVERTISING"
-        ],
-        "checked_by": null,
-        "checked_at": null
-      }
-    },
-    {
-      "from": "vendor:V-srcp-media",
-      "to": "CR02513366500287447041",
-      "kind": "placement",
-      "amount": 0,
-      "visibility": "disclosed",
-      "depth": 2,
-      "transaction_types": [],
-      "count": 1,
-      "date_range": [
-        "2024-10-16",
-        "2024-11-06"
-      ],
-      "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00849489&payee_name=SRCP+MEDIA+INC.",
-      "basis": {
-        "basis": "adjacent",
-        "rule": "Ran Oct 16, 2024 – Nov 6, 2024. In that window (buys dated up to 7 days before first shown through last shown) KEYSTONE RENEWAL PAC reported production buys to SRCP MEDIA INC. ($18,606); the FEC does not record which buy placed which ad. Same-window buys in media that cannot place a Google ad (TV, radio, mail, phones, field, consulting) are not listed.",
-        "source_urls": [
-          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00849489&payee_name=SRCP+MEDIA+INC."
         ],
         "checked_by": null,
         "checked_at": null
@@ -3660,30 +3516,6 @@
       }
     },
     {
-      "from": "vendor:V-srcp-media",
-      "to": "CR02005452000099041281",
-      "kind": "placement",
-      "amount": 0,
-      "visibility": "disclosed",
-      "depth": 2,
-      "transaction_types": [],
-      "count": 1,
-      "date_range": [
-        "2024-08-29",
-        "2024-09-04"
-      ],
-      "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00849489&payee_name=SRCP+MEDIA+INC.",
-      "basis": {
-        "basis": "adjacent",
-        "rule": "Ran Aug 29, 2024 – Sep 4, 2024. In that window (buys dated up to 7 days before first shown through last shown) KEYSTONE RENEWAL PAC reported production buys to SRCP MEDIA INC. ($60,955); the FEC does not record which buy placed which ad. Same-window buys in media that cannot place a Google ad (TV, radio, mail, phones, field, consulting) are not listed.",
-        "source_urls": [
-          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00849489&payee_name=SRCP+MEDIA+INC."
-        ],
-        "checked_by": null,
-        "checked_at": null
-      }
-    },
-    {
       "from": "C00849489",
       "to": "CR02005452000099041281",
       "kind": "placement",
@@ -3699,30 +3531,6 @@
         "rule": "Advertiser name matched to this committee by normalized name; Google's bulk data names the advertiser and carries no paid-for-by field for US ads",
         "source_urls": [
           "https://adstransparency.google.com/advertiser/AR05305140614721961985/creative/CR02005452000099041281?political=&region=US"
-        ],
-        "checked_by": null,
-        "checked_at": null
-      }
-    },
-    {
-      "from": "vendor:V-srcp-media",
-      "to": "CR15369039469390856193",
-      "kind": "placement",
-      "amount": 0,
-      "visibility": "disclosed",
-      "depth": 2,
-      "transaction_types": [],
-      "count": 1,
-      "date_range": [
-        "2024-08-29",
-        "2024-09-04"
-      ],
-      "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00849489&payee_name=SRCP+MEDIA+INC.",
-      "basis": {
-        "basis": "adjacent",
-        "rule": "Ran Aug 29, 2024 – Sep 4, 2024. In that window (buys dated up to 7 days before first shown through last shown) KEYSTONE RENEWAL PAC reported production buys to SRCP MEDIA INC. ($60,955); the FEC does not record which buy placed which ad. Same-window buys in media that cannot place a Google ad (TV, radio, mail, phones, field, consulting) are not listed.",
-        "source_urls": [
-          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00849489&payee_name=SRCP+MEDIA+INC."
         ],
         "checked_by": null,
         "checked_at": null
@@ -3774,30 +3582,6 @@
       }
     },
     {
-      "from": "vendor:V-srcp-media",
-      "to": "CR11512100013710770177",
-      "kind": "placement",
-      "amount": 0,
-      "visibility": "disclosed",
-      "depth": 2,
-      "transaction_types": [],
-      "count": 2,
-      "date_range": [
-        "2024-08-23",
-        "2024-08-28"
-      ],
-      "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00849489&payee_name=SRCP+MEDIA+INC.",
-      "basis": {
-        "basis": "adjacent",
-        "rule": "Ran Aug 23, 2024 – Aug 28, 2024. In that window (buys dated up to 7 days before first shown through last shown) KEYSTONE RENEWAL PAC reported production buys to SRCP MEDIA INC. ($76,065); the FEC does not record which buy placed which ad. Same-window buys in media that cannot place a Google ad (TV, radio, mail, phones, field, consulting) are not listed.",
-        "source_urls": [
-          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00849489&payee_name=SRCP+MEDIA+INC."
-        ],
-        "checked_by": null,
-        "checked_at": null
-      }
-    },
-    {
       "from": "vendor:V-creative-strategic-solutions",
       "to": "CR02987728750319239169",
       "kind": "placement",
@@ -3816,78 +3600,6 @@
         "rule": "Only digital vendor KEYSTONE RENEWAL PAC paid during this ad's run window (ran aug 3, 2024 – aug 14, 2024, counting buys dated up to 7 days before first shown) — inferred, not filed. KEYSTONE RENEWAL PAC reported $520,855 in digital buys to CREATIVE STRATEGIC SOLUTIONS LLC; Google ads are digital placements.",
         "source_urls": [
           "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00849489&payee_name=CREATIVE+STRATEGIC+SOLUTIONS+LLC"
-        ],
-        "checked_by": null,
-        "checked_at": null
-      }
-    },
-    {
-      "from": "vendor:V-srcp-media",
-      "to": "CR02987728750319239169",
-      "kind": "placement",
-      "amount": 0,
-      "visibility": "disclosed",
-      "depth": 2,
-      "transaction_types": [],
-      "count": 1,
-      "date_range": [
-        "2024-08-03",
-        "2024-08-14"
-      ],
-      "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00849489&payee_name=SRCP+MEDIA+INC.",
-      "basis": {
-        "basis": "adjacent",
-        "rule": "Ran Aug 3, 2024 – Aug 14, 2024. In that window (buys dated up to 7 days before first shown through last shown) KEYSTONE RENEWAL PAC reported production buys to SRCP MEDIA INC. ($11,455); the FEC does not record which buy placed which ad. Same-window buys in media that cannot place a Google ad (TV, radio, mail, phones, field, consulting) are not listed.",
-        "source_urls": [
-          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00849489&payee_name=SRCP+MEDIA+INC."
-        ],
-        "checked_by": null,
-        "checked_at": null
-      }
-    },
-    {
-      "from": "vendor:V-invictus-advertising",
-      "to": "CR14516585407136661505",
-      "kind": "placement",
-      "amount": 0,
-      "visibility": "disclosed",
-      "depth": 2,
-      "transaction_types": [],
-      "count": 2,
-      "date_range": [
-        "2024-10-16",
-        "2024-11-06"
-      ],
-      "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00849489&payee_name=INVICTUS+ADVERTISING",
-      "basis": {
-        "basis": "adjacent",
-        "rule": "Ran Oct 16, 2024 – Nov 6, 2024. In that window (buys dated up to 7 days before first shown through last shown) KEYSTONE RENEWAL PAC reported production buys to INVICTUS ADVERTISING ($531,500); the FEC does not record which buy placed which ad. Same-window buys in media that cannot place a Google ad (TV, radio, mail, phones, field, consulting) are not listed.",
-        "source_urls": [
-          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00849489&payee_name=INVICTUS+ADVERTISING"
-        ],
-        "checked_by": null,
-        "checked_at": null
-      }
-    },
-    {
-      "from": "vendor:V-srcp-media",
-      "to": "CR14516585407136661505",
-      "kind": "placement",
-      "amount": 0,
-      "visibility": "disclosed",
-      "depth": 2,
-      "transaction_types": [],
-      "count": 1,
-      "date_range": [
-        "2024-10-16",
-        "2024-11-06"
-      ],
-      "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00849489&payee_name=SRCP+MEDIA+INC.",
-      "basis": {
-        "basis": "adjacent",
-        "rule": "Ran Oct 16, 2024 – Nov 6, 2024. In that window (buys dated up to 7 days before first shown through last shown) KEYSTONE RENEWAL PAC reported production buys to SRCP MEDIA INC. ($18,606); the FEC does not record which buy placed which ad. Same-window buys in media that cannot place a Google ad (TV, radio, mail, phones, field, consulting) are not listed.",
-        "source_urls": [
-          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00849489&payee_name=SRCP+MEDIA+INC."
         ],
         "checked_by": null,
         "checked_at": null

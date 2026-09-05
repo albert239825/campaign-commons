@@ -41,8 +41,9 @@ vendor's `normalization.checked_at`, which a `verified` Basis requires (D-60).
 
 `Basis {basis, rule, source_urls, checked_by, checked_at}` sits on every relationship or number that is not read straight off
 a filed record: vendor normalisation, vendor→ad links, issue tags, out-side chain nodes/edges. `filed` = on a government
-record · `verified` = a human found a source naming both sides · `inferred` = an explicit rule (stated in `rule`) ·
-`adjacent` = co-occurrence (date window) only. `verified` is a discriminated variant: it requires ≥1 `source_urls` and
+record · `verified` = a human found a source naming both sides · `inferred` = an explicit rule (stated in `rule`).
+Co-occurrence alone is not a basis (the former `adjacent`, dropped in D-74): an ad carries the vendors its sponsor paid in
+its run window as `same_window_buys[]` context, which has no `basis` and is never an edge. `verified` is a discriminated variant: it requires ≥1 `source_urls` and
 non-null `checked_by`/`checked_at`, so an unsupported verification claim fails validation. Issue tags always travel as
 `issues: {issue_ids, basis}`; a `placement` chain edge (vendor → ad) requires `basis`; every out-side chain node (`vendor` /
 `ad` / `candidate`) requires `basis`; `vendors.json.medium_basis` states the one rule by which every `medium` (IE rows,
