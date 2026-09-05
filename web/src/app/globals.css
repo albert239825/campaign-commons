@@ -1,5 +1,29 @@
 @import "tailwindcss";
 
+@font-face {
+  font-family: "Scto Grotesk A";
+  src: url("/fonts/scto-grotesk-a-regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Scto Grotesk A";
+  src: url("/fonts/scto-grotesk-a-medium.woff2") format("woff2");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Cinzel";
+  src: url("/fonts/cinzel-regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
 @theme inline {
   --color-disclosed: #1d9e75;
   --color-inferable: #ef9f27;
@@ -71,7 +95,7 @@ body {
 body:has(.landing-page) {
   background: #f2efeb;
   color: #1b1b1a;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Scto Grotesk A", Arial, sans-serif;
 }
 
 body:has(.landing-page) .site-main {
@@ -108,6 +132,7 @@ body:has(.landing-page) .site-header nav {
   gap: 32px;
   color: #f2efeb;
   font-size: 14px;
+  font-weight: 500;
 }
 
 body:has(.landing-page) .site-header nav a:hover {
@@ -151,16 +176,18 @@ body:has(.landing-page) .site-header nav a:hover {
 
 .landing-eyebrow {
   margin-bottom: 24px;
-  font-size: 12px;
-  letter-spacing: .11em;
+  font-family: "Cinzel", Georgia, serif;
+  font-size: 13px;
+  font-weight: 400;
+  letter-spacing: normal;
   text-transform: uppercase;
 }
 
 .landing-intro h1 {
-  font-size: clamp(42px, 5.1vw, 74px);
-  line-height: 1.02;
+  font-size: clamp(40px, calc(29.3333px + 2.963vw), 72px);
+  line-height: 1;
   font-weight: 400;
-  letter-spacing: -.055em;
+  letter-spacing: -.05em;
   text-wrap: balance;
 }
 
@@ -168,7 +195,7 @@ body:has(.landing-page) .site-header nav a:hover {
   max-width: 610px;
   margin: 26px auto 0;
   font-size: 18px;
-  line-height: 1.55;
+  line-height: 1.5;
   text-wrap: pretty;
 }
 
@@ -179,6 +206,7 @@ body:has(.landing-page) .site-header nav a:hover {
   gap: 28px;
   margin-top: 30px;
   font-size: 14px;
+  font-weight: 500;
 }
 
 .landing-primary {
@@ -241,17 +269,19 @@ body:has(.landing-page) .site-header nav a:hover {
 
 .landing-section-label {
   margin-bottom: 20px;
-  font-size: 11px;
-  letter-spacing: .1em;
+  font-family: "Cinzel", Georgia, serif;
+  font-size: 13px;
+  font-weight: 400;
+  letter-spacing: normal;
   text-transform: uppercase;
   color: #6f6d69;
 }
 
 .landing-races-heading h2 {
-  font-size: clamp(32px, 3.4vw, 48px);
+  font-size: clamp(32px, calc(26.6667px + 1.4815vw), 48px);
   font-weight: 400;
   line-height: 1.1;
-  letter-spacing: -.04em;
+  letter-spacing: -.03em;
 }
 
 .landing-races-heading > p {
@@ -297,8 +327,7 @@ body:has(.landing-page) a:focus-visible {
   body:has(.landing-page) .site-brand { font-size: 19px; }
   body:has(.landing-page) .site-header nav { gap: 16px; font-size: 12px; }
   .landing-intro { padding-inline: 24px; text-align: left; }
-  .landing-eyebrow { font-size: 10px; margin-bottom: 22px; }
-  .landing-intro h1 { font-size: clamp(38px, 7.9vw, 52px); }
+  .landing-eyebrow { margin-bottom: 22px; }
   .landing-description { font-size: 16px; margin-top: 22px; }
   .landing-actions { justify-content: flex-start; flex-wrap: wrap; gap: 8px 24px; margin-top: 24px; }
   .landing-art { margin-top: 42px; }
