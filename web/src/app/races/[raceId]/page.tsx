@@ -4,7 +4,7 @@ import Image from "next/image";
 import type { Party } from "@citizen-gotham/contracts";
 import { getLedger, getRace, getStories, hasChain, listRaceIds } from "@/lib/data";
 import { date, pct, routes } from "@/lib/format";
-import { AdjacencyNote, Breadcrumbs, Card, DataStatusBanner, Money } from "@/components/ui";
+import { AdjacencyNote, Card, DataStatusBanner, Money } from "@/components/ui";
 import { CandidatePanel } from "@/components/ledger/candidate-panel";
 import { TraceabilityCard } from "@/components/ledger/traceability-card";
 import { SpendersTable } from "@/components/ledger/spenders-table";
@@ -38,7 +38,6 @@ export default async function RaceLedgerPage({ params }: { params: Promise<{ rac
   return (
     <div className="race-dashboard">
       <div>
-        <Breadcrumbs items={[{ href: routes.home(), label: "Races" }, { label: race.label }]} />
         <DataStatusBanner status={ledger.data_status} />
         <header className="race-overview">
           <div className={`race-banner ${race.office === "S" ? "race-banner--senate" : ""}`}>

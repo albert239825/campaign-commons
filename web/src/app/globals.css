@@ -370,13 +370,13 @@ body:has(.race-dashboard) .site-header-inner { max-width: 1440px; min-height: 80
 body:has(.race-dashboard) .site-brand { font-size: 21px; font-weight: 400; letter-spacing: -.045em; }
 body:has(.race-dashboard) .site-tagline { display: none; }
 body:has(.race-dashboard) .site-header nav { gap: 32px; font-size: 14px; font-weight: 500; }
-body:has(.race-dashboard) .site-main { max-width: 1440px; padding: 52px clamp(24px, 4.2vw, 60px) 0; }
+body:has(.race-dashboard) .site-main { max-width: none; padding: 0; container-type: inline-size; }
 body:has(.race-dashboard) .site-footer { max-width: 1440px; padding: 32px clamp(24px, 4.2vw, 60px) 48px; color: #6f6d69; line-height: 1.65; }
 body:has(.race-dashboard) :is(a, button):focus-visible { outline: 2px solid currentColor; outline-offset: 4px; }
-.race-dashboard { --race-rule: rgb(155 151 146 / 25%); display: grid; gap: 88px; min-width: 0; line-height: 1.6; }
+.race-dashboard { max-width: 1440px; margin-inline: auto; padding-inline: clamp(24px, 4.2vw, 60px); --race-rule: rgb(155 151 146 / 25%); display: grid; gap: 88px; min-width: 0; line-height: 1.6; }
 .race-dashboard > *, .race-dashboard .ui-card { min-width: 0; }
 .race-dashboard :where(.font-semibold, .font-bold) { font-weight: 500; }
-.race-overview { margin-top: 28px; }
+.race-overview { margin-top: 0; }
 .race-title { max-width: 640px; font-size: clamp(30px, 3vw, 42px); font-weight: 400; line-height: 1.1; letter-spacing: -.045em; text-wrap: balance; }
 
 .race-totals { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 32px; margin-top: 56px; padding-block: 32px; border-block: 1px solid var(--race-rule); }
@@ -429,9 +429,7 @@ body:has(.race-dashboard) :is(a, button):focus-visible { outline: 2px solid curr
   body:has(.race-dashboard) .site-header-inner { min-height: 72px; padding: 20px 24px; }
   body:has(.race-dashboard) .site-brand { font-size: 19px; }
   body:has(.race-dashboard) .site-header nav { gap: 16px; font-size: 12px; }
-  body:has(.race-dashboard) .site-main { padding-top: 32px; }
   .race-dashboard { gap: 56px; }
-  .race-overview { margin-top: 32px; }
   .race-totals { grid-template-columns: 1fr; gap: 24px; margin-top: 32px; padding-block: 24px; }
   .race-totals > div { display: flex; justify-content: space-between; align-items: baseline; gap: 16px; }
   .race-totals dd { margin: 0; font-size: 36px; }
@@ -445,13 +443,15 @@ body:has(.race-dashboard) :is(a, button):focus-visible { outline: 2px solid curr
 .race-dashboard .flags-legend { gap: 20px 32px; margin-top: 16px; }
 .race-dashboard .flags-legend > div { flex-direction: column; gap: 4px; }
 
-/* Compact race identity banner; party affiliation uses the same neutral ink. */
+/* Full-width race banner. Container units exclude the scrollbar width. */
 .race-banner {
+  width: 100cqw;
+  margin-inline: calc((100% - 100cqw) / 2);
   display: grid;
   grid-template-columns: minmax(0, 1fr) minmax(240px, .7fr);
   align-items: center;
   gap: 32px;
-  padding: 36px;
+  padding: 36px max(clamp(24px, 4.2vw, 60px), calc((100cqw - 1320px) / 2));
   background: linear-gradient(115deg, #dce5eb 0%, #e9e7e2 53%, #efe1cf 100%);
 }
 .race-banner--senate { grid-template-columns: 140px minmax(0, 1fr) minmax(240px, .7fr); }
@@ -469,13 +469,13 @@ body:has(.race-dashboard) :is(a, button):focus-visible { outline: 2px solid curr
 .race-candidate-role { font-size: 11px; color: #555550; }
 .race-dashboard .party-tag { color: #555550; background: transparent; border-color: var(--race-rule); }
 @media (min-width: 681px) and (max-width: 1050px) {
-  .race-banner { grid-template-columns: minmax(0, 1fr); gap: 24px; padding: 28px; }
+  .race-banner { grid-template-columns: minmax(0, 1fr); gap: 24px; padding-block: 28px; }
   .race-banner--senate { grid-template-columns: 140px minmax(0, 1fr); }
   .race-banner-candidates { grid-column: 1 / -1; border-left: 0; border-top: 1px solid var(--race-rule); padding: 20px 0 0; }
   .race-banner-candidates dl { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 }
 @media (max-width: 680px) {
-  .race-banner { grid-template-columns: minmax(0, 1fr); padding: 24px; gap: 24px; }
+  .race-banner { grid-template-columns: minmax(0, 1fr); padding-block: 24px; gap: 24px; }
   .race-banner-seal { width: 88px; height: 88px; }
   .race-title { font-size: 32px; text-wrap: initial; }
   .race-election-date { margin-top: 16px; }
