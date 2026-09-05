@@ -9,6 +9,12 @@ const nextConfig: NextConfig = {
   outputFileTracingIncludes: {
     "/**": ["../data/out/**/*"],
   },
+  // contracts is symlinked (file:../contracts) and has no node_modules of its own;
+  // resolve its imports (zod) through web/node_modules instead of the realpath
+  webpack: (config) => {
+    config.resolve.symlinks = false;
+    return config;
+  },
 };
 
 export default nextConfig;
