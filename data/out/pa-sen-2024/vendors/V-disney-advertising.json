@@ -1,0 +1,80 @@
+{
+  "vendor_id": "V-disney-advertising",
+  "name": "DISNEY ADVERTISING",
+  "aliases": [
+    "DISNEY ADVERTISING"
+  ],
+  "normalization": {
+    "basis": "inferred",
+    "rule": "case/punctuation/suffix normalisation + token-set ≥0.92 (numeric tokens must match); aliases file",
+    "source_urls": [
+      "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&payee_name=DISNEY+ADVERTISING"
+    ],
+    "checked_by": null,
+    "checked_at": null
+  },
+  "total": 20000.0,
+  "count": 2,
+  "media_mix": [
+    {
+      "medium": "tv",
+      "amount": 20000.0,
+      "count": 2
+    }
+  ],
+  "spenders": [
+    {
+      "entity_id": "C00747121",
+      "name": "RED SENATE",
+      "amount": 20000.0,
+      "count": 2
+    }
+  ],
+  "targets": [
+    {
+      "candidate_id": "S6PA00217",
+      "support_oppose": "O",
+      "amount": 20000.0
+    }
+  ],
+  "first_date": "2024-10-17",
+  "last_date": "2024-10-24",
+  "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&payee_name=DISNEY+ADVERTISING",
+  "race_id": "pa-sen-2024",
+  "generated_at": "2026-09-05T19:33:04+00:00",
+  "data_status": "real",
+  "expenditures": [
+    {
+      "ie_id": "C00747121-ie-1856632-EC4FC4EDE49CD4DCBA09",
+      "spender_entity_id": "C00747121",
+      "spender_name": "RED SENATE",
+      "candidate_id": "S6PA00217",
+      "candidate_name": "Bob Casey",
+      "support_oppose": "O",
+      "amount": 10000.0,
+      "date": "2024-10-24",
+      "purpose": "MEDIA PLACEMENT/VIDEO ADS",
+      "payee": "DISNEY ADVERTISING",
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202412059721255559",
+      "vendor_id": "V-disney-advertising",
+      "medium": "tv"
+    },
+    {
+      "ie_id": "C00747121-ie-1856632-E66D009E6CE994D86AC9",
+      "spender_entity_id": "C00747121",
+      "spender_name": "RED SENATE",
+      "candidate_id": "S6PA00217",
+      "candidate_name": "Bob Casey",
+      "support_oppose": "O",
+      "amount": 10000.0,
+      "date": "2024-10-17",
+      "purpose": "MEDIA PLACEMENT/VIDEO ADS",
+      "payee": "DISNEY ADVERTISING",
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202412059721255484",
+      "vendor_id": "V-disney-advertising",
+      "medium": "tv"
+    }
+  ],
+  "ads": [],
+  "method": "Every Schedule E independent expenditure names a payee. Payee strings are normalised (case, punctuation, legal suffixes, token order), near-duplicates are folded with a difflib ratio ≥ 0.92 when their numeric tokens match, and hand alias rows from data/hand/<race>/vendor_aliases.json override the rule. Medium is classified from the purpose the spender filed (ordered keyword table in gotham/vendors.py); the FEC does not record which buy placed which ad, so vendor ↔ ad links are empty until a human verifies one. Totals are the filed amounts, grouped, never re-estimated."
+}

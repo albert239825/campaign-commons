@@ -1,0 +1,160 @@
+{
+  "vendor_id": "V-c2-imaging",
+  "name": "C2 IMAGING LLC",
+  "aliases": [
+    "C2 IMAGING LLC"
+  ],
+  "normalization": {
+    "basis": "inferred",
+    "rule": "case/punctuation/suffix normalisation + token-set ≥0.92 (numeric tokens must match); aliases file",
+    "source_urls": [
+      "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&payee_name=C2+IMAGING+LLC"
+    ],
+    "checked_by": null,
+    "checked_at": null
+  },
+  "total": 13562.04,
+  "count": 7,
+  "media_mix": [
+    {
+      "medium": "mail",
+      "amount": 13562.04,
+      "count": 7
+    }
+  ],
+  "spenders": [
+    {
+      "entity_id": "C00053553",
+      "name": "NATIONAL RIFLE ASSOCIATION OF AMERICA POLITICAL VICTORY FUND",
+      "amount": 13562.04,
+      "count": 7
+    }
+  ],
+  "targets": [
+    {
+      "candidate_id": "S2PA00661",
+      "support_oppose": "S",
+      "amount": 12334.65
+    },
+    {
+      "candidate_id": "S6PA00217",
+      "support_oppose": "O",
+      "amount": 1227.39
+    }
+  ],
+  "first_date": "2024-09-10",
+  "last_date": "2024-10-22",
+  "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&payee_name=C2+IMAGING+LLC",
+  "race_id": "pa-sen-2024",
+  "generated_at": "2026-09-05T19:33:04+00:00",
+  "data_status": "real",
+  "expenditures": [
+    {
+      "ie_id": "C00053553-ie-1859893-SE.90",
+      "spender_entity_id": "C00053553",
+      "spender_name": "NATIONAL RIFLE ASSOCIATION OF AMERICA POLITICAL VICTORY FUND",
+      "candidate_id": "S2PA00661",
+      "candidate_name": "Dave McCormick",
+      "support_oppose": "S",
+      "amount": 4159.22,
+      "date": "2024-10-22",
+      "purpose": "PRINTING / POSTAGE",
+      "payee": "C2 IMAGING LLC",
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202412129739890377",
+      "vendor_id": "V-c2-imaging",
+      "medium": "mail"
+    },
+    {
+      "ie_id": "C00053553-ie-1859893-SE.38",
+      "spender_entity_id": "C00053553",
+      "spender_name": "NATIONAL RIFLE ASSOCIATION OF AMERICA POLITICAL VICTORY FUND",
+      "candidate_id": "S2PA00661",
+      "candidate_name": "Dave McCormick",
+      "support_oppose": "S",
+      "amount": 443.4,
+      "date": "2024-10-17",
+      "purpose": "PRINTING / POSTAGE",
+      "payee": "C2 IMAGING LLC",
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202412129739890351",
+      "vendor_id": "V-c2-imaging",
+      "medium": "mail"
+    },
+    {
+      "ie_id": "C00053553-ie-1849414-SE.274",
+      "spender_entity_id": "C00053553",
+      "spender_name": "NATIONAL RIFLE ASSOCIATION OF AMERICA POLITICAL VICTORY FUND",
+      "candidate_id": "S2PA00661",
+      "candidate_name": "Dave McCormick",
+      "support_oppose": "S",
+      "amount": 817.53,
+      "date": "2024-10-11",
+      "purpose": "PRINTING / POSTAGE",
+      "payee": "C2 IMAGING LLC",
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202411219720014931",
+      "vendor_id": "V-c2-imaging",
+      "medium": "mail"
+    },
+    {
+      "ie_id": "C00053553-ie-1849413-SE.87",
+      "spender_entity_id": "C00053553",
+      "spender_name": "NATIONAL RIFLE ASSOCIATION OF AMERICA POLITICAL VICTORY FUND",
+      "candidate_id": "S2PA00661",
+      "candidate_name": "Dave McCormick",
+      "support_oppose": "S",
+      "amount": 5673.77,
+      "date": "2024-09-27",
+      "purpose": "PRINTING / POSTAGE",
+      "payee": "C2 IMAGING LLC",
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202411219720014380",
+      "vendor_id": "V-c2-imaging",
+      "medium": "mail"
+    },
+    {
+      "ie_id": "C00053553-ie-1849413-SE.61",
+      "spender_entity_id": "C00053553",
+      "spender_name": "NATIONAL RIFLE ASSOCIATION OF AMERICA POLITICAL VICTORY FUND",
+      "candidate_id": "S2PA00661",
+      "candidate_name": "Dave McCormick",
+      "support_oppose": "S",
+      "amount": 13.33,
+      "date": "2024-09-19",
+      "purpose": "PRINTING / POSTAGE",
+      "payee": "C2 IMAGING LLC",
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202411219720014368",
+      "vendor_id": "V-c2-imaging",
+      "medium": "mail"
+    },
+    {
+      "ie_id": "C00053553-ie-1849413-SE.48",
+      "spender_entity_id": "C00053553",
+      "spender_name": "NATIONAL RIFLE ASSOCIATION OF AMERICA POLITICAL VICTORY FUND",
+      "candidate_id": "S6PA00217",
+      "candidate_name": "Bob Casey",
+      "support_oppose": "O",
+      "amount": 1227.39,
+      "date": "2024-09-10",
+      "purpose": "PRINTING / POSTAGE",
+      "payee": "C2 IMAGING LLC",
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202411219720014361",
+      "vendor_id": "V-c2-imaging",
+      "medium": "mail"
+    },
+    {
+      "ie_id": "C00053553-ie-1849413-SE.46",
+      "spender_entity_id": "C00053553",
+      "spender_name": "NATIONAL RIFLE ASSOCIATION OF AMERICA POLITICAL VICTORY FUND",
+      "candidate_id": "S2PA00661",
+      "candidate_name": "Dave McCormick",
+      "support_oppose": "S",
+      "amount": 1227.4,
+      "date": "2024-09-10",
+      "purpose": "PRINTING / POSTAGE",
+      "payee": "C2 IMAGING LLC",
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202411219720014360",
+      "vendor_id": "V-c2-imaging",
+      "medium": "mail"
+    }
+  ],
+  "ads": [],
+  "method": "Every Schedule E independent expenditure names a payee. Payee strings are normalised (case, punctuation, legal suffixes, token order), near-duplicates are folded with a difflib ratio ≥ 0.92 when their numeric tokens match, and hand alias rows from data/hand/<race>/vendor_aliases.json override the rule. Medium is classified from the purpose the spender filed (ordered keyword table in gotham/vendors.py); the FEC does not record which buy placed which ad, so vendor ↔ ad links are empty until a human verifies one. Totals are the filed amounts, grouped, never re-estimated."
+}

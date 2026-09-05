@@ -432,7 +432,9 @@
       "date": "2024-09-27",
       "purpose": "DIGITAL ADVERTISING",
       "payee": "THE NEW MEDIA FIRM",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202501319748875427"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202501319748875427",
+      "vendor_id": "V-the-new-media-firm",
+      "medium": "digital"
     },
     {
       "ie_id": "C00752691-ie-1871369-500707864",
@@ -445,7 +447,9 @@
       "date": "2024-10-08",
       "purpose": "DIGITAL ADVERTISING",
       "payee": "THE NEW MEDIA FIRM",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202501319748876955"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202501319748876955",
+      "vendor_id": "V-the-new-media-firm",
+      "medium": "digital"
     },
     {
       "ie_id": "C00752691-ie-1871335-500696269",
@@ -458,7 +462,9 @@
       "date": "2024-09-06",
       "purpose": "DIGITAL ADVERTISING",
       "payee": "THE NEW MEDIA FIRM",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202501319748875416"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202501319748875416",
+      "vendor_id": "V-the-new-media-firm",
+      "medium": "digital"
     },
     {
       "ie_id": "C00752691-ie-1871335-500696282",
@@ -471,7 +477,9 @@
       "date": "2024-08-01",
       "purpose": "ADVERTISING PRODUCTION",
       "payee": "LUMENATI PRODUCTIONS",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202501319748875410"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202501319748875410",
+      "vendor_id": "V-lumenati-productions",
+      "medium": "production"
     },
     {
       "ie_id": "C00752691-ie-1871335-500693386",
@@ -484,7 +492,9 @@
       "date": "2024-09-06",
       "purpose": "DIGITAL ADVERTISING",
       "payee": "THE NEW MEDIA FIRM",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202501319748875414"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202501319748875414",
+      "vendor_id": "V-the-new-media-firm",
+      "medium": "digital"
     },
     {
       "ie_id": "C00752691-ie-1871335-500698198",
@@ -497,7 +507,9 @@
       "date": "2024-09-13",
       "purpose": "DIGITAL ADVERTISING",
       "payee": "THE NEW MEDIA FIRM",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202501319748875420"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202501319748875420",
+      "vendor_id": "V-the-new-media-firm",
+      "medium": "digital"
     },
     {
       "ie_id": "C00752691-ie-1871335-500693352",
@@ -510,11 +522,84 @@
       "date": "2024-09-13",
       "purpose": "DIGITAL ADVERTISING",
       "payee": "FUTURISTIC FILMS, INC.",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202501319748875405"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202501319748875405",
+      "vendor_id": "V-futuristic-films",
+      "medium": "digital"
     }
   ],
   "flags": [],
   "has_chain": true,
   "source_url": "https://www.fec.gov/data/committee/C00752691/?cycle=2024",
-  "data_status": "real"
+  "data_status": "real",
+  "vendors": [
+    {
+      "vendor_id": "V-the-new-media-firm",
+      "name": "THE NEW MEDIA FIRM",
+      "amount": 1269606.48,
+      "count": 5,
+      "media_mix": [
+        {
+          "medium": "digital",
+          "amount": 1269606.48,
+          "count": 5
+        }
+      ],
+      "targets": [
+        {
+          "candidate_id": "S6PA00217",
+          "support_oppose": "S",
+          "amount": 1269606.48
+        }
+      ],
+      "first_date": "2024-09-06",
+      "last_date": "2024-10-08",
+      "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00752691&payee_name=THE+NEW+MEDIA+FIRM"
+    },
+    {
+      "vendor_id": "V-lumenati-productions",
+      "name": "LUMENATI PRODUCTIONS",
+      "amount": 18480.76,
+      "count": 1,
+      "media_mix": [
+        {
+          "medium": "production",
+          "amount": 18480.76,
+          "count": 1
+        }
+      ],
+      "targets": [
+        {
+          "candidate_id": "S6PA00217",
+          "support_oppose": "S",
+          "amount": 18480.76
+        }
+      ],
+      "first_date": "2024-08-01",
+      "last_date": "2024-08-01",
+      "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00752691&payee_name=LUMENATI+PRODUCTIONS"
+    },
+    {
+      "vendor_id": "V-futuristic-films",
+      "name": "FUTURISTIC FILMS, INC.",
+      "amount": 12422.54,
+      "count": 1,
+      "media_mix": [
+        {
+          "medium": "digital",
+          "amount": 12422.54,
+          "count": 1
+        }
+      ],
+      "targets": [
+        {
+          "candidate_id": "S6PA00217",
+          "support_oppose": "S",
+          "amount": 12422.54
+        }
+      ],
+      "first_date": "2024-09-13",
+      "last_date": "2024-09-13",
+      "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00752691&payee_name=FUTURISTIC+FILMS%2C+INC."
+    }
+  ]
 }

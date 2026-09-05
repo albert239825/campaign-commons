@@ -40,11 +40,38 @@
       "date": "2024-10-14",
       "purpose": "GOTV TELECONFERENCING",
       "payee": "TMONE LLC",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202501139740164892"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202501139740164892",
+      "vendor_id": "V-tmone",
+      "medium": "phones"
     }
   ],
   "flags": [],
   "has_chain": false,
   "source_url": "https://www.fec.gov/data/committee/C90022757/?cycle=2024",
-  "data_status": "real"
+  "data_status": "real",
+  "vendors": [
+    {
+      "vendor_id": "V-tmone",
+      "name": "TMONE LLC",
+      "amount": 33253.35,
+      "count": 1,
+      "media_mix": [
+        {
+          "medium": "phones",
+          "amount": 33253.35,
+          "count": 1
+        }
+      ],
+      "targets": [
+        {
+          "candidate_id": "S2PA00661",
+          "support_oppose": "S",
+          "amount": 33253.35
+        }
+      ],
+      "first_date": "2024-10-14",
+      "last_date": "2024-10-14",
+      "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C90022757&payee_name=TMONE+LLC"
+    }
+  ]
 }

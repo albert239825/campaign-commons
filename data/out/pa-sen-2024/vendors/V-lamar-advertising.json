@@ -1,0 +1,95 @@
+{
+  "vendor_id": "V-lamar-advertising",
+  "name": "LAMAR ADVERTISING COMPANY",
+  "aliases": [
+    "LAMAR ADVERTISING COMPANY"
+  ],
+  "normalization": {
+    "basis": "inferred",
+    "rule": "case/punctuation/suffix normalisation + token-set ≥0.92 (numeric tokens must match); aliases file",
+    "source_urls": [
+      "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&payee_name=LAMAR+ADVERTISING+COMPANY"
+    ],
+    "checked_by": null,
+    "checked_at": null
+  },
+  "total": 10947.83,
+  "count": 3,
+  "media_mix": [
+    {
+      "medium": "other",
+      "amount": 10947.83,
+      "count": 3
+    }
+  ],
+  "spenders": [
+    {
+      "entity_id": "C00756791",
+      "name": "VOTEBLUE",
+      "amount": 10947.83,
+      "count": 3
+    }
+  ],
+  "targets": [
+    {
+      "candidate_id": "S6PA00217",
+      "support_oppose": "S",
+      "amount": 10947.83
+    }
+  ],
+  "first_date": "2024-09-03",
+  "last_date": "2024-10-01",
+  "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&payee_name=LAMAR+ADVERTISING+COMPANY",
+  "race_id": "pa-sen-2024",
+  "generated_at": "2026-09-05T19:33:04+00:00",
+  "data_status": "real",
+  "expenditures": [
+    {
+      "ie_id": "C00756791-ie-1833911-SE.5780",
+      "spender_entity_id": "C00756791",
+      "spender_name": "VOTEBLUE",
+      "candidate_id": "S6PA00217",
+      "candidate_name": "Bob Casey",
+      "support_oppose": "S",
+      "amount": 3151.0,
+      "date": "2024-10-01",
+      "purpose": "PITTSBURGH BILLBOARD",
+      "payee": "LAMAR ADVERTISING COMPANY",
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202410209709511775",
+      "vendor_id": "V-lamar-advertising",
+      "medium": "other"
+    },
+    {
+      "ie_id": "C00756791-ie-1820042-SE.5782",
+      "spender_entity_id": "C00756791",
+      "spender_name": "VOTEBLUE",
+      "candidate_id": "S6PA00217",
+      "candidate_name": "Bob Casey",
+      "support_oppose": "S",
+      "amount": 2160.0,
+      "date": "2024-09-05",
+      "purpose": "ALLENTOWN BILLBOARD",
+      "payee": "LAMAR ADVERTISING COMPANY",
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202410039684788348",
+      "vendor_id": "V-lamar-advertising",
+      "medium": "other"
+    },
+    {
+      "ie_id": "C00756791-ie-1820042-SE.5781",
+      "spender_entity_id": "C00756791",
+      "spender_name": "VOTEBLUE",
+      "candidate_id": "S6PA00217",
+      "candidate_name": "Bob Casey",
+      "support_oppose": "S",
+      "amount": 5636.83,
+      "date": "2024-09-03",
+      "purpose": "PHILADELPHIA BILLBOARD",
+      "payee": "LAMAR ADVERTISING COMPANY",
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202410039684788348",
+      "vendor_id": "V-lamar-advertising",
+      "medium": "other"
+    }
+  ],
+  "ads": [],
+  "method": "Every Schedule E independent expenditure names a payee. Payee strings are normalised (case, punctuation, legal suffixes, token order), near-duplicates are folded with a difflib ratio ≥ 0.92 when their numeric tokens match, and hand alias rows from data/hand/<race>/vendor_aliases.json override the rule. Medium is classified from the purpose the spender filed (ordered keyword table in gotham/vendors.py); the FEC does not record which buy placed which ad, so vendor ↔ ad links are empty until a human verifies one. Totals are the filed amounts, grouped, never re-estimated."
+}

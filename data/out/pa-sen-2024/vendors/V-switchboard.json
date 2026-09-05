@@ -1,0 +1,125 @@
+{
+  "vendor_id": "V-switchboard",
+  "name": "SWITCHBOARD",
+  "aliases": [
+    "SWITCHBOARD"
+  ],
+  "normalization": {
+    "basis": "inferred",
+    "rule": "case/punctuation/suffix normalisation + token-set ≥0.92 (numeric tokens must match); aliases file",
+    "source_urls": [
+      "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&payee_name=SWITCHBOARD"
+    ],
+    "checked_by": null,
+    "checked_at": null
+  },
+  "total": 7861.93,
+  "count": 5,
+  "media_mix": [
+    {
+      "medium": "phones",
+      "amount": 7861.93,
+      "count": 5
+    }
+  ],
+  "spenders": [
+    {
+      "entity_id": "C00835041",
+      "name": "FORWARD BLUE",
+      "amount": 7861.93,
+      "count": 5
+    }
+  ],
+  "targets": [
+    {
+      "candidate_id": "S6PA00217",
+      "support_oppose": "S",
+      "amount": 7861.93
+    }
+  ],
+  "first_date": "2024-10-08",
+  "last_date": "2024-11-13",
+  "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&payee_name=SWITCHBOARD",
+  "race_id": "pa-sen-2024",
+  "generated_at": "2026-09-05T19:33:04+00:00",
+  "data_status": "real",
+  "expenditures": [
+    {
+      "ie_id": "C00835041-ie-1855961-500127186",
+      "spender_entity_id": "C00835041",
+      "spender_name": "FORWARD BLUE",
+      "candidate_id": "S6PA00217",
+      "candidate_name": "Bob Casey",
+      "support_oppose": "S",
+      "amount": 625.55,
+      "date": "2024-11-13",
+      "purpose": "VOTER OUTREACH TEXTING (ACTUAL COST OF IE REPORTED ON 10/26)",
+      "payee": "SWITCHBOARD",
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202412059720865713",
+      "vendor_id": "V-switchboard",
+      "medium": "phones"
+    },
+    {
+      "ie_id": "C00835041-ie-1855961-500117764",
+      "spender_entity_id": "C00835041",
+      "spender_name": "FORWARD BLUE",
+      "candidate_id": "S6PA00217",
+      "candidate_name": "Bob Casey",
+      "support_oppose": "S",
+      "amount": 1680.89,
+      "date": "2024-11-13",
+      "purpose": "VOTER OUTREACH TEXTING (ACTUAL COST OF IE REPORTED ON 10/19)",
+      "payee": "SWITCHBOARD",
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202412059720865711",
+      "vendor_id": "V-switchboard",
+      "medium": "phones"
+    },
+    {
+      "ie_id": "C00835041-ie-1855961-500129731",
+      "spender_entity_id": "C00835041",
+      "spender_name": "FORWARD BLUE",
+      "candidate_id": "S6PA00217",
+      "candidate_name": "Bob Casey",
+      "support_oppose": "S",
+      "amount": 1805.81,
+      "date": "2024-11-13",
+      "purpose": "VOTER OUTREACH TEXTING (ACTUAL COST OF IE REPORTED ON 11/05)",
+      "payee": "SWITCHBOARD",
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202412059720865722",
+      "vendor_id": "V-switchboard",
+      "medium": "phones"
+    },
+    {
+      "ie_id": "C00835041-ie-1855961-500136994",
+      "spender_entity_id": "C00835041",
+      "spender_name": "FORWARD BLUE",
+      "candidate_id": "S6PA00217",
+      "candidate_name": "Bob Casey",
+      "support_oppose": "S",
+      "amount": 1874.84,
+      "date": "2024-11-13",
+      "purpose": "VOTER OUTREACH TEXTING (ACTUAL COST OF IE REPORTED ON 10/10)",
+      "payee": "SWITCHBOARD",
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202412059720865726",
+      "vendor_id": "V-switchboard",
+      "medium": "phones"
+    },
+    {
+      "ie_id": "C00835041-ie-1838202-500110884",
+      "spender_entity_id": "C00835041",
+      "spender_name": "FORWARD BLUE",
+      "candidate_id": "S6PA00217",
+      "candidate_name": "Bob Casey",
+      "support_oppose": "S",
+      "amount": 1874.84,
+      "date": "2024-10-08",
+      "purpose": "VOTER OUTREACH TEXTING - ESTIMATED COST",
+      "payee": "SWITCHBOARD",
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202410249710201908",
+      "vendor_id": "V-switchboard",
+      "medium": "phones"
+    }
+  ],
+  "ads": [],
+  "method": "Every Schedule E independent expenditure names a payee. Payee strings are normalised (case, punctuation, legal suffixes, token order), near-duplicates are folded with a difflib ratio ≥ 0.92 when their numeric tokens match, and hand alias rows from data/hand/<race>/vendor_aliases.json override the rule. Medium is classified from the purpose the spender filed (ordered keyword table in gotham/vendors.py); the FEC does not record which buy placed which ad, so vendor ↔ ad links are empty until a human verifies one. Totals are the filed amounts, grouped, never re-estimated."
+}

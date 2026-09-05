@@ -181,3 +181,42 @@ not record which buy placed which ad"). Issues became two separate arrays in `is
 
 **Next.** Four children in parallel (vendors · media wall · issue focus · search), then the chain extension and the
 Vertex-style node panel on master, then critic round 3.
+
+## 2026-09-05 ~20:00 — Block 2 child 1: vendors ("Where the money went")
+
+**What changed.** `pipeline/gotham/vendors.py` (`make vendors`, in `all:` before `chains`) turns the 2,235 deduped Schedule E
+rows into 310 `Vendor` records: `data/out/pa-sen-2024/vendors.json` (index, `by_medium`, `medium_basis`, notes) and
+`vendors/<V-slug>.json` (every buy, spenders, targets, `ads: []`), and patches all 98 spender entities in place with
+`vendors[]` plus `vendor_id`/`medium` on each IE row (nothing else in those files changes — asserted). Hand file
+`data/hand/pa-sen-2024/vendor_aliases.json`: 13 rows / 25 strings. Web: `components/entity/where-money-went.tsx` on the entity
+page, `/races/[raceId]/vendors` and `/races/[raceId]/vendors/[vendorId]` (311 new static pages), `components/vendors/`
+(medium chips/bar, basis note, targets line), `getVendors/getVendor/listVendorIds/countVendors`, `routes.vendors/vendor`, a
+"Vendors" tab in `RaceNav` (optional count). Tests: `tests/test_vendors.py`, 48 cases (normalisation table, threshold,
+alias precedence, medium table, and the artifact invariants). D-57…D-60.
+
+**Challenge.** (1) The plan estimated ~150 payee strings; there are 337, and the obvious near-duplicates are *not* typos but
+different unions (`UNITE HERE LOCAL 23/25/26/34/74/878/…`, ratio 0.93–0.97 to each other) — a plain ≥0.92 fold would have
+merged six locals into one vendor. (2) A hand alias row has no date, but a `verified` Basis must carry `checked_at`.
+(3) fec.gov's IE browse ignores `committee_id` and returns nothing with `is_notice=false`.
+
+**How we solved it.** (1) Fuzzy folds additionally require identical numeric-token sets; the run log prints every fold
+(exactly one fires: `GENRIS RUMALDO → GENRRIS RUMALDO`, 0.966). Semantic folds the rule cannot see (META/FACEBOOK/META
+PLATFORMS, GOOGLE/GOOGLEADS, USPS/U.S. POSTMASTER/UNITED STATES POSTAL SERVICE, CAMPAIGNHQ/CAMPAIGN HEADQUARTERS, KOREA
+TIMES/KOREAN PHILA TIMES, IHEARTMEDIA/WRNB-FM IHEART RADIO, MIDDLE SEAT) are hand rows with sources. (2) Optional
+`tagged_at` on the hand row (D-60). (3) `q_spender=<id>&payee_name=<raw>` on `data_type=processed`, verified in a browser
+(WINSENATE × WATERFRONT STRATEGIES → 176 rows).
+
+**Numbers.** 337 payee strings → 310 vendors (27 folded: exact-key, 1 fuzzy, 25 by hand). Σ vendor totals = Σ IE rows =
+ledger outside total = **$233,396,761.46** to the cent; per spender Σ `vendors[].amount` = Σ that entity's IE rows (98/98).
+0 rows with an empty payee. Medium ≠ other on **93.9%** of dollars (tv $149.2M · digital $41.2M · other $14.2M · production
+$12.9M · mail $9.5M · radio $3.4M · phones $2.9M · consulting $63K). Contract-validated files 2,142 → 2,453 (+310 vendors,
++1 index); hand files 5/5. Pipeline tests 67 → 115. Static pages 2,147 → 2,458.
+
+**Dead ends.** Treating the alias row's `source_url` as the vendor's `source_url` (Meta's page pointed at about.fb.com, not a
+filing) — now the fec.gov payee view is always first and the row's source is appended to `normalization.source_urls`.
+`is_notice=false` in the fec.gov URL (zero results). Stripping `GROUP` (the brief says no; `MAIN STREET MEDIA GROUP` stays
+distinct from any "MAIN STREET MEDIA").
+
+**Gaps.** `Vendor.ads[]` is empty until the media-wall child links creatives; `other` still holds $14.2M, ~$12M of it
+`CANVASSING` / field payroll (door-knocking is not a medium in the enum) plus bare `ADVERTISING`/`BILLBOARD` — left
+unclassified on purpose rather than guessed.

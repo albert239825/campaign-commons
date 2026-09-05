@@ -34,7 +34,8 @@ Block 2 also *patches* existing files in place: `gotham.vendors` adds `vendors[]
 | `vendor_ad_links.json` | `HandVendorAdLinksFile` | anyone with a source | `gotham.ads` → `Ad.vendor_links[]` with `basis: verified` |
 
 Every file is `{race_id, method, rows[]}`; every row carries `source_url(s)` and `tagged_by`/`verified_by`. Empty `rows: []`
-is valid. Never hand-edit `data/out`.
+is valid. Never hand-edit `data/out`. `vendor_aliases.json` rows may carry an optional `tagged_at` (ISO date); it becomes the
+vendor's `normalization.checked_at`, which a `verified` Basis requires (D-60).
 
 ## Evidence basis (Block 2)
 

@@ -1,0 +1,151 @@
+{
+  "vendor_id": "V-staples",
+  "name": "STAPLES",
+  "aliases": [
+    "STAPLES"
+  ],
+  "normalization": {
+    "basis": "inferred",
+    "rule": "case/punctuation/suffix normalisation + token-set ≥0.92 (numeric tokens must match); aliases file",
+    "source_urls": [
+      "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&payee_name=STAPLES"
+    ],
+    "checked_by": null,
+    "checked_at": null
+  },
+  "total": 732.72,
+  "count": 6,
+  "media_mix": [
+    {
+      "medium": "mail",
+      "amount": 595.29,
+      "count": 4
+    },
+    {
+      "medium": "other",
+      "amount": 137.43,
+      "count": 2
+    }
+  ],
+  "spenders": [
+    {
+      "entity_id": "C00685693",
+      "name": "CASA IN ACTION PAC",
+      "amount": 599.39,
+      "count": 5
+    },
+    {
+      "entity_id": "C00620971",
+      "name": "FOR OUR FUTURE",
+      "amount": 133.33,
+      "count": 1
+    }
+  ],
+  "targets": [
+    {
+      "candidate_id": "S6PA00217",
+      "support_oppose": "S",
+      "amount": 732.72
+    }
+  ],
+  "first_date": "2024-07-27",
+  "last_date": "2024-10-30",
+  "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&payee_name=STAPLES",
+  "race_id": "pa-sen-2024",
+  "generated_at": "2026-09-05T19:33:04+00:00",
+  "data_status": "real",
+  "expenditures": [
+    {
+      "ie_id": "C00620971-ie-1931997-500724981",
+      "spender_entity_id": "C00620971",
+      "spender_name": "FOR OUR FUTURE",
+      "candidate_id": "S6PA00217",
+      "candidate_name": "Bob Casey",
+      "support_oppose": "S",
+      "amount": 133.33,
+      "date": "2024-10-30",
+      "purpose": "CANVASSING LITERATURE (ESTIMATE)",
+      "payee": "STAPLES",
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202601129793941694",
+      "vendor_id": "V-staples",
+      "medium": "other"
+    },
+    {
+      "ie_id": "C00685693-ie-1859744-500010686",
+      "spender_entity_id": "C00685693",
+      "spender_name": "CASA IN ACTION PAC",
+      "candidate_id": "S6PA00217",
+      "candidate_name": "Bob Casey",
+      "support_oppose": "S",
+      "amount": 4.1,
+      "date": "2024-10-02",
+      "purpose": "DOOR LITERATURE",
+      "payee": "STAPLES",
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202412109739858317",
+      "vendor_id": "V-staples",
+      "medium": "other"
+    },
+    {
+      "ie_id": "C00685693-ie-1835901-500009897",
+      "spender_entity_id": "C00685693",
+      "spender_name": "CASA IN ACTION PAC",
+      "candidate_id": "S6PA00217",
+      "candidate_name": "Bob Casey",
+      "support_oppose": "S",
+      "amount": 134.67,
+      "date": "2024-07-27",
+      "purpose": "PRINTING & COPYING - DOOR LIT - ESTIMATE",
+      "payee": "STAPLES",
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202410229710099393",
+      "vendor_id": "V-staples",
+      "medium": "mail"
+    },
+    {
+      "ie_id": "C00685693-ie-1835901-500009900",
+      "spender_entity_id": "C00685693",
+      "spender_name": "CASA IN ACTION PAC",
+      "candidate_id": "S6PA00217",
+      "candidate_name": "Bob Casey",
+      "support_oppose": "S",
+      "amount": 142.6,
+      "date": "2024-07-27",
+      "purpose": "PRINTING & COPYING - DOOR LIT - ESTIMATE",
+      "payee": "STAPLES",
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202410229710099395",
+      "vendor_id": "V-staples",
+      "medium": "mail"
+    },
+    {
+      "ie_id": "C00685693-ie-1835901-500009898",
+      "spender_entity_id": "C00685693",
+      "spender_name": "CASA IN ACTION PAC",
+      "candidate_id": "S6PA00217",
+      "candidate_name": "Bob Casey",
+      "support_oppose": "S",
+      "amount": 142.6,
+      "date": "2024-07-27",
+      "purpose": "PRINTING & COPYING - DOOR LIT - ESTIMATE",
+      "payee": "STAPLES",
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202410229710099394",
+      "vendor_id": "V-staples",
+      "medium": "mail"
+    },
+    {
+      "ie_id": "C00685693-ie-1835901-500009899",
+      "spender_entity_id": "C00685693",
+      "spender_name": "CASA IN ACTION PAC",
+      "candidate_id": "S6PA00217",
+      "candidate_name": "Bob Casey",
+      "support_oppose": "S",
+      "amount": 175.42,
+      "date": "2024-07-27",
+      "purpose": "PRINTING & COPYING - DOOR LIT - ESTIMATE",
+      "payee": "STAPLES",
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202410229710099394",
+      "vendor_id": "V-staples",
+      "medium": "mail"
+    }
+  ],
+  "ads": [],
+  "method": "Every Schedule E independent expenditure names a payee. Payee strings are normalised (case, punctuation, legal suffixes, token order), near-duplicates are folded with a difflib ratio ≥ 0.92 when their numeric tokens match, and hand alias rows from data/hand/<race>/vendor_aliases.json override the rule. Medium is classified from the purpose the spender filed (ordered keyword table in gotham/vendors.py); the FEC does not record which buy placed which ad, so vendor ↔ ad links are empty until a human verifies one. Totals are the filed amounts, grouped, never re-estimated."
+}

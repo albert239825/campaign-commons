@@ -416,7 +416,9 @@
       "date": "2024-10-15",
       "purpose": "IE-MCCORMICK-MEDIA BUY",
       "payee": "THE HERALD GROUP",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202501309748179267"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202501309748179267",
+      "vendor_id": "V-the-herald-group",
+      "medium": "tv"
     },
     {
       "ie_id": "C00851410-ie-1868535-VBC827B221DE30AE5683",
@@ -429,7 +431,9 @@
       "date": "2024-10-10",
       "purpose": "IE-MCCORMICK-MEDIA PRODUCTION",
       "payee": "THE HERALD GROUP",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202501309748179267"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202501309748179267",
+      "vendor_id": "V-the-herald-group",
+      "medium": "production"
     }
   ],
   "flags": [
@@ -442,5 +446,35 @@
   ],
   "has_chain": true,
   "source_url": "https://www.fec.gov/data/committee/C00851410/?cycle=2024",
-  "data_status": "real"
+  "data_status": "real",
+  "vendors": [
+    {
+      "vendor_id": "V-the-herald-group",
+      "name": "THE HERALD GROUP",
+      "amount": 108876.84,
+      "count": 2,
+      "media_mix": [
+        {
+          "medium": "tv",
+          "amount": 99962.5,
+          "count": 1
+        },
+        {
+          "medium": "production",
+          "amount": 8914.34,
+          "count": 1
+        }
+      ],
+      "targets": [
+        {
+          "candidate_id": "S2PA00661",
+          "support_oppose": "S",
+          "amount": 108876.84
+        }
+      ],
+      "first_date": "2024-10-10",
+      "last_date": "2024-10-15",
+      "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00851410&payee_name=THE+HERALD+GROUP"
+    }
+  ]
 }

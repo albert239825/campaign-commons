@@ -1,0 +1,85 @@
+{
+  "vendor_id": "V-impact-360",
+  "name": "IMPACT 360",
+  "aliases": [
+    "IMPACT 360"
+  ],
+  "normalization": {
+    "basis": "inferred",
+    "rule": "case/punctuation/suffix normalisation + token-set ≥0.92 (numeric tokens must match); aliases file",
+    "source_urls": [
+      "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&payee_name=IMPACT+360"
+    ],
+    "checked_by": null,
+    "checked_at": null
+  },
+  "total": 199948.0,
+  "count": 2,
+  "media_mix": [
+    {
+      "medium": "tv",
+      "amount": 194448.0,
+      "count": 1
+    },
+    {
+      "medium": "production",
+      "amount": 5500.0,
+      "count": 1
+    }
+  ],
+  "spenders": [
+    {
+      "entity_id": "C00865444",
+      "name": "WINSENATE",
+      "amount": 199948.0,
+      "count": 2
+    }
+  ],
+  "targets": [
+    {
+      "candidate_id": "S6PA00217",
+      "support_oppose": "S",
+      "amount": 199948.0
+    }
+  ],
+  "first_date": "2024-10-04",
+  "last_date": "2024-10-04",
+  "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&payee_name=IMPACT+360",
+  "race_id": "pa-sen-2024",
+  "generated_at": "2026-09-05T19:33:04+00:00",
+  "data_status": "real",
+  "expenditures": [
+    {
+      "ie_id": "C00865444-ie-1866233-500172624",
+      "spender_entity_id": "C00865444",
+      "spender_name": "WINSENATE",
+      "candidate_id": "S6PA00217",
+      "candidate_name": "Bob Casey",
+      "support_oppose": "S",
+      "amount": 5500.0,
+      "date": "2024-10-04",
+      "purpose": "MEDIA PRODUCTION COSTS",
+      "payee": "IMPACT 360",
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202501279747798065",
+      "vendor_id": "V-impact-360",
+      "medium": "production"
+    },
+    {
+      "ie_id": "C00865444-ie-1866233-500172623",
+      "spender_entity_id": "C00865444",
+      "spender_name": "WINSENATE",
+      "candidate_id": "S6PA00217",
+      "candidate_name": "Bob Casey",
+      "support_oppose": "S",
+      "amount": 194448.0,
+      "date": "2024-10-04",
+      "purpose": "MEDIA BUY",
+      "payee": "IMPACT 360",
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202501279747798065",
+      "vendor_id": "V-impact-360",
+      "medium": "tv"
+    }
+  ],
+  "ads": [],
+  "method": "Every Schedule E independent expenditure names a payee. Payee strings are normalised (case, punctuation, legal suffixes, token order), near-duplicates are folded with a difflib ratio ≥ 0.92 when their numeric tokens match, and hand alias rows from data/hand/<race>/vendor_aliases.json override the rule. Medium is classified from the purpose the spender filed (ordered keyword table in gotham/vendors.py); the FEC does not record which buy placed which ad, so vendor ↔ ad links are empty until a human verifies one. Totals are the filed amounts, grouped, never re-estimated."
+}

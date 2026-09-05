@@ -1,0 +1,140 @@
+{
+  "vendor_id": "V-great-american-media",
+  "name": "GREAT AMERICAN MEDIA",
+  "aliases": [
+    "GREAT AMERICAN MEDIA"
+  ],
+  "normalization": {
+    "basis": "inferred",
+    "rule": "case/punctuation/suffix normalisation + token-set ≥0.92 (numeric tokens must match); aliases file",
+    "source_urls": [
+      "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&payee_name=GREAT+AMERICAN+MEDIA"
+    ],
+    "checked_by": null,
+    "checked_at": null
+  },
+  "total": 8309269.0,
+  "count": 6,
+  "media_mix": [
+    {
+      "medium": "tv",
+      "amount": 8309269.0,
+      "count": 6
+    }
+  ],
+  "spenders": [
+    {
+      "entity_id": "C00042366",
+      "name": "DSCC",
+      "amount": 8309269.0,
+      "count": 6
+    }
+  ],
+  "targets": [
+    {
+      "candidate_id": "S2PA00661",
+      "support_oppose": "O",
+      "amount": 8309269.0
+    }
+  ],
+  "first_date": "2024-08-01",
+  "last_date": "2024-09-05",
+  "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&payee_name=GREAT+AMERICAN+MEDIA",
+  "race_id": "pa-sen-2024",
+  "generated_at": "2026-09-05T19:33:04+00:00",
+  "data_status": "real",
+  "expenditures": [
+    {
+      "ie_id": "C00042366-ie-1833435-SE-253942",
+      "spender_entity_id": "C00042366",
+      "spender_name": "DSCC",
+      "candidate_id": "S2PA00661",
+      "candidate_name": "Dave McCormick",
+      "support_oppose": "O",
+      "amount": 729320.0,
+      "date": "2024-09-05",
+      "purpose": "MEDIA BUY",
+      "payee": "GREAT AMERICAN MEDIA",
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202410209699361882",
+      "vendor_id": "V-great-american-media",
+      "medium": "tv"
+    },
+    {
+      "ie_id": "C00042366-ie-1817683-SE-252868",
+      "spender_entity_id": "C00042366",
+      "spender_name": "DSCC",
+      "candidate_id": "S2PA00661",
+      "candidate_name": "Dave McCormick",
+      "support_oppose": "O",
+      "amount": 1841636.0,
+      "date": "2024-08-29",
+      "purpose": "MEDIA BUY",
+      "payee": "GREAT AMERICAN MEDIA",
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202409209675757235",
+      "vendor_id": "V-great-american-media",
+      "medium": "tv"
+    },
+    {
+      "ie_id": "C00042366-ie-1817683-SE-252492",
+      "spender_entity_id": "C00042366",
+      "spender_name": "DSCC",
+      "candidate_id": "S2PA00661",
+      "candidate_name": "Dave McCormick",
+      "support_oppose": "O",
+      "amount": 1420331.0,
+      "date": "2024-08-23",
+      "purpose": "MEDIA BUY",
+      "payee": "GREAT AMERICAN MEDIA",
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202409209675757229",
+      "vendor_id": "V-great-american-media",
+      "medium": "tv"
+    },
+    {
+      "ie_id": "C00042366-ie-1817683-SE-251995",
+      "spender_entity_id": "C00042366",
+      "spender_name": "DSCC",
+      "candidate_id": "S2PA00661",
+      "candidate_name": "Dave McCormick",
+      "support_oppose": "O",
+      "amount": 1324543.0,
+      "date": "2024-08-16",
+      "purpose": "MEDIA BUY",
+      "payee": "GREAT AMERICAN MEDIA",
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202409209675757221",
+      "vendor_id": "V-great-american-media",
+      "medium": "tv"
+    },
+    {
+      "ie_id": "C00042366-ie-1817683-SE-251561",
+      "spender_entity_id": "C00042366",
+      "spender_name": "DSCC",
+      "candidate_id": "S2PA00661",
+      "candidate_name": "Dave McCormick",
+      "support_oppose": "O",
+      "amount": 1334412.0,
+      "date": "2024-08-09",
+      "purpose": "MEDIA BUY",
+      "payee": "GREAT AMERICAN MEDIA",
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202409209675757218",
+      "vendor_id": "V-great-american-media",
+      "medium": "tv"
+    },
+    {
+      "ie_id": "C00042366-ie-1817683-SE-251414",
+      "spender_entity_id": "C00042366",
+      "spender_name": "DSCC",
+      "candidate_id": "S2PA00661",
+      "candidate_name": "Dave McCormick",
+      "support_oppose": "O",
+      "amount": 1659027.0,
+      "date": "2024-08-01",
+      "purpose": "MEDIA BUY",
+      "payee": "GREAT AMERICAN MEDIA",
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202409209675757207",
+      "vendor_id": "V-great-american-media",
+      "medium": "tv"
+    }
+  ],
+  "ads": [],
+  "method": "Every Schedule E independent expenditure names a payee. Payee strings are normalised (case, punctuation, legal suffixes, token order), near-duplicates are folded with a difflib ratio ≥ 0.92 when their numeric tokens match, and hand alias rows from data/hand/<race>/vendor_aliases.json override the rule. Medium is classified from the purpose the spender filed (ordered keyword table in gotham/vendors.py); the FEC does not record which buy placed which ad, so vendor ↔ ad links are empty until a human verifies one. Totals are the filed amounts, grouped, never re-estimated."
+}

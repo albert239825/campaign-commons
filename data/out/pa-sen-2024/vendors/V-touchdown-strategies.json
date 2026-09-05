@@ -1,0 +1,65 @@
+{
+  "vendor_id": "V-touchdown-strategies",
+  "name": "TOUCHDOWN STRATEGIES LLC",
+  "aliases": [
+    "TOUCHDOWN STRATEGIES LLC"
+  ],
+  "normalization": {
+    "basis": "inferred",
+    "rule": "case/punctuation/suffix normalisation + token-set ≥0.92 (numeric tokens must match); aliases file",
+    "source_urls": [
+      "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&payee_name=TOUCHDOWN+STRATEGIES+LLC"
+    ],
+    "checked_by": null,
+    "checked_at": null
+  },
+  "total": 9500.0,
+  "count": 1,
+  "media_mix": [
+    {
+      "medium": "production",
+      "amount": 9500.0,
+      "count": 1
+    }
+  ],
+  "spenders": [
+    {
+      "entity_id": "C00687103",
+      "name": "AMERICANS FOR PROSPERITY ACTION, INC. (AFP ACTION) DBA CVA ACTION AND DBA LIBRE ACTION",
+      "amount": 9500.0,
+      "count": 1
+    }
+  ],
+  "targets": [
+    {
+      "candidate_id": "S2PA00661",
+      "support_oppose": "S",
+      "amount": 9500.0
+    }
+  ],
+  "first_date": "2024-05-07",
+  "last_date": "2024-05-07",
+  "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&payee_name=TOUCHDOWN+STRATEGIES+LLC",
+  "race_id": "pa-sen-2024",
+  "generated_at": "2026-09-05T19:33:04+00:00",
+  "data_status": "real",
+  "expenditures": [
+    {
+      "ie_id": "C00687103-ie-1791790-SE24.28025",
+      "spender_entity_id": "C00687103",
+      "spender_name": "AMERICANS FOR PROSPERITY ACTION, INC. (AFP ACTION) DBA CVA ACTION AND DBA LIBRE ACTION",
+      "candidate_id": "S2PA00661",
+      "candidate_name": "Dave McCormick",
+      "support_oppose": "S",
+      "amount": 9500.0,
+      "date": "2024-05-07",
+      "purpose": "MEDIA PRODUCTION",
+      "payee": "TOUCHDOWN STRATEGIES LLC",
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202406209652364747",
+      "vendor_id": "V-touchdown-strategies",
+      "medium": "production"
+    }
+  ],
+  "ads": [],
+  "method": "Every Schedule E independent expenditure names a payee. Payee strings are normalised (case, punctuation, legal suffixes, token order), near-duplicates are folded with a difflib ratio ≥ 0.92 when their numeric tokens match, and hand alias rows from data/hand/<race>/vendor_aliases.json override the rule. Medium is classified from the purpose the spender filed (ordered keyword table in gotham/vendors.py); the FEC does not record which buy placed which ad, so vendor ↔ ad links are empty until a human verifies one. Totals are the filed amounts, grouped, never re-estimated."
+}

@@ -1,0 +1,130 @@
+{
+  "vendor_id": "V-allegheny-commercial-printing",
+  "name": "ALLEGHENY COMMERCIAL PRINTING",
+  "aliases": [
+    "ALLEGHENY COMMERCIAL PRINTING"
+  ],
+  "normalization": {
+    "basis": "inferred",
+    "rule": "case/punctuation/suffix normalisation + token-set ≥0.92 (numeric tokens must match); aliases file",
+    "source_urls": [
+      "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&payee_name=ALLEGHENY+COMMERCIAL+PRINTING"
+    ],
+    "checked_by": null,
+    "checked_at": null
+  },
+  "total": 5895.12,
+  "count": 5,
+  "media_mix": [
+    {
+      "medium": "mail",
+      "amount": 5895.12,
+      "count": 5
+    }
+  ],
+  "spenders": [
+    {
+      "entity_id": "C90011156",
+      "name": "WORKING AMERICA",
+      "amount": 5895.12,
+      "count": 5
+    }
+  ],
+  "targets": [
+    {
+      "candidate_id": "S6PA00217",
+      "support_oppose": "S",
+      "amount": 5875.06
+    },
+    {
+      "candidate_id": "S2PA00661",
+      "support_oppose": "O",
+      "amount": 20.06
+    }
+  ],
+  "first_date": "2024-05-15",
+  "last_date": "2024-10-07",
+  "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&payee_name=ALLEGHENY+COMMERCIAL+PRINTING",
+  "race_id": "pa-sen-2024",
+  "generated_at": "2026-09-05T19:33:04+00:00",
+  "data_status": "real",
+  "expenditures": [
+    {
+      "ie_id": "C90011156-ie-1956102-501212149",
+      "spender_entity_id": "C90011156",
+      "spender_name": "WORKING AMERICA",
+      "candidate_id": "S2PA00661",
+      "candidate_name": "Dave McCormick",
+      "support_oppose": "O",
+      "amount": 20.06,
+      "date": "2024-10-07",
+      "purpose": "PRINTING/LITERATURE",
+      "payee": "ALLEGHENY COMMERCIAL PRINTING",
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202603249856839679",
+      "vendor_id": "V-allegheny-commercial-printing",
+      "medium": "mail"
+    },
+    {
+      "ie_id": "C90011156-ie-1956102-501212147",
+      "spender_entity_id": "C90011156",
+      "spender_name": "WORKING AMERICA",
+      "candidate_id": "S6PA00217",
+      "candidate_name": "Bob Casey",
+      "support_oppose": "S",
+      "amount": 20.06,
+      "date": "2024-10-07",
+      "purpose": "PRINTING/LITERATURE",
+      "payee": "ALLEGHENY COMMERCIAL PRINTING",
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202603249856839678",
+      "vendor_id": "V-allegheny-commercial-printing",
+      "medium": "mail"
+    },
+    {
+      "ie_id": "C90011156-ie-1956103-501196899",
+      "spender_entity_id": "C90011156",
+      "spender_name": "WORKING AMERICA",
+      "candidate_id": "S6PA00217",
+      "candidate_name": "Bob Casey",
+      "support_oppose": "S",
+      "amount": 2750.0,
+      "date": "2024-09-19",
+      "purpose": "PRINTING/LITERATURE",
+      "payee": "ALLEGHENY COMMERCIAL PRINTING",
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202603249856839890",
+      "vendor_id": "V-allegheny-commercial-printing",
+      "medium": "mail"
+    },
+    {
+      "ie_id": "C90011156-ie-1956103-501193439",
+      "spender_entity_id": "C90011156",
+      "spender_name": "WORKING AMERICA",
+      "candidate_id": "S6PA00217",
+      "candidate_name": "Bob Casey",
+      "support_oppose": "S",
+      "amount": 3077.5,
+      "date": "2024-08-30",
+      "purpose": "LITERATURE PRINTING",
+      "payee": "ALLEGHENY COMMERCIAL PRINTING",
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202603249856839889",
+      "vendor_id": "V-allegheny-commercial-printing",
+      "medium": "mail"
+    },
+    {
+      "ie_id": "C90011156-ie-1796322-501181617",
+      "spender_entity_id": "C90011156",
+      "spender_name": "WORKING AMERICA",
+      "candidate_id": "S6PA00217",
+      "candidate_name": "Bob Casey",
+      "support_oppose": "S",
+      "amount": 27.5,
+      "date": "2024-05-15",
+      "purpose": "PRINTING/LITERATURE",
+      "payee": "ALLEGHENY COMMERCIAL PRINTING",
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202407119653118202",
+      "vendor_id": "V-allegheny-commercial-printing",
+      "medium": "mail"
+    }
+  ],
+  "ads": [],
+  "method": "Every Schedule E independent expenditure names a payee. Payee strings are normalised (case, punctuation, legal suffixes, token order), near-duplicates are folded with a difflib ratio ≥ 0.92 when their numeric tokens match, and hand alias rows from data/hand/<race>/vendor_aliases.json override the rule. Medium is classified from the purpose the spender filed (ordered keyword table in gotham/vendors.py); the FEC does not record which buy placed which ad, so vendor ↔ ad links are empty until a human verifies one. Totals are the filed amounts, grouped, never re-estimated."
+}

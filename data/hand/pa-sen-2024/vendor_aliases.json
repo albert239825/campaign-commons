@@ -1,5 +1,123 @@
 {
   "race_id": "pa-sen-2024",
-  "rows": [],
-  "method": "Human-confirmed folds of raw Schedule E payee strings into one vendor when the automatic normalisation (case, punctuation, INC/LLC suffixes, fuzzy token match) did not catch them."
+  "rows": [
+    {
+      "vendor_id": "V-meta-platforms",
+      "name": "Meta Platforms",
+      "aliases": ["META", "META, INC", "META PLATFORMS INC.", "META PLATFORMS", "FACEBOOK"],
+      "medium_override": "digital",
+      "source_url": "https://about.fb.com/news/2021/10/facebook-company-is-now-meta/",
+      "tagged_by": "devin-block2-vendors",
+      "tagged_at": "2026-09-05"
+    },
+    {
+      "vendor_id": "V-google",
+      "name": "Google",
+      "aliases": ["GOOGLE", "GOOGLEADS"],
+      "medium_override": "digital",
+      "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&payee_name=GOOGLE&payee_name=GOOGLEADS",
+      "tagged_by": "devin-block2-vendors",
+      "tagged_at": "2026-09-05"
+    },
+    {
+      "vendor_id": "V-united-states-postal-service",
+      "name": "United States Postal Service",
+      "aliases": ["UNITED STATES POSTAL SERVICE", "USPS", "U.S. POSTMASTER"],
+      "medium_override": "mail",
+      "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&payee_name=UNITED+STATES+POSTAL+SERVICE&payee_name=USPS&payee_name=U.S.+POSTMASTER",
+      "tagged_by": "devin-block2-vendors",
+      "tagged_at": "2026-09-05"
+    },
+    {
+      "vendor_id": "V-campaignhq",
+      "name": "CampaignHQ",
+      "aliases": ["CAMPAIGNHQ", "CAMPAIGN HEADQUARTERS"],
+      "medium_override": null,
+      "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&payee_name=CAMPAIGNHQ&payee_name=CAMPAIGN+HEADQUARTERS",
+      "tagged_by": "devin-block2-vendors",
+      "tagged_at": "2026-09-05"
+    },
+    {
+      "vendor_id": "V-middle-seat-consulting",
+      "name": "Middle Seat Consulting",
+      "aliases": ["MIDDLE SEAT", "MIDDLE SEAT  CONSULTING LLC"],
+      "medium_override": null,
+      "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&payee_name=MIDDLE+SEAT&payee_name=MIDDLE+SEAT++CONSULTING+LLC",
+      "tagged_by": "devin-block2-vendors",
+      "tagged_at": "2026-09-05"
+    },
+    {
+      "vendor_id": "V-iheartmedia",
+      "name": "iHeartMedia",
+      "aliases": ["IHEARTMEDIA", "WRNB-FM IHEART RADIO"],
+      "medium_override": "radio",
+      "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&payee_name=IHEARTMEDIA&payee_name=WRNB-FM+IHEART+RADIO",
+      "tagged_by": "devin-block2-vendors",
+      "tagged_at": "2026-09-05"
+    },
+    {
+      "vendor_id": "V-the-korea-times-philadelphia",
+      "name": "The Korea Times Philadelphia",
+      "aliases": ["THE KOREA TIMES PHILADELPHIA", "KOREAN PHILA TIMES", "KOREAN PHILA TIMES INC."],
+      "medium_override": null,
+      "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&payee_name=THE+KOREA+TIMES+PHILADELPHIA&payee_name=KOREAN+PHILA+TIMES&payee_name=KOREAN+PHILA+TIMES+INC.",
+      "tagged_by": "devin-block2-vendors",
+      "tagged_at": "2026-09-05"
+    },
+    {
+      "vendor_id": "V-hulu",
+      "name": "Hulu",
+      "aliases": ["HULU, LLC"],
+      "medium_override": "digital",
+      "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&payee_name=HULU%2C+LLC",
+      "tagged_by": "devin-block2-vendors",
+      "tagged_at": "2026-09-05"
+    },
+    {
+      "vendor_id": "V-unite-here-local-23",
+      "name": "UNITE HERE Local 23",
+      "aliases": ["LOCAL 23 UNITE HERE"],
+      "medium_override": null,
+      "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&payee_name=LOCAL+23+UNITE+HERE",
+      "tagged_by": "devin-block2-vendors",
+      "tagged_at": "2026-09-05"
+    },
+    {
+      "vendor_id": "V-unite-here-local-25",
+      "name": "UNITE HERE Local 25",
+      "aliases": ["LOCAL 25 UNITE HERE"],
+      "medium_override": null,
+      "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&payee_name=LOCAL+25+UNITE+HERE",
+      "tagged_by": "devin-block2-vendors",
+      "tagged_at": "2026-09-05"
+    },
+    {
+      "vendor_id": "V-unite-here-local-878",
+      "name": "UNITE HERE Local 878",
+      "aliases": ["LOCAL 878 UNITE HERE"],
+      "medium_override": null,
+      "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&payee_name=LOCAL+878+UNITE+HERE",
+      "tagged_by": "devin-block2-vendors",
+      "tagged_at": "2026-09-05"
+    },
+    {
+      "vendor_id": "V-unite-here-local-75",
+      "name": "UNITE HERE Local 75 (Toronto)",
+      "aliases": ["LOCAL 75 TORONTO ONTARIO"],
+      "medium_override": null,
+      "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00754051&payee_name=LOCAL+75+TORONTO+ONTARIO",
+      "tagged_by": "devin-block2-vendors",
+      "tagged_at": "2026-09-05"
+    },
+    {
+      "vendor_id": "V-the-lukens-company",
+      "name": "The Lukens Company",
+      "aliases": ["THE LUKENS COMPANY"],
+      "medium_override": null,
+      "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&payee_name=THE+LUKENS+COMPANY",
+      "tagged_by": "devin-block2-vendors",
+      "tagged_at": "2026-09-05"
+    }
+  ],
+  "method": "Human-confirmed folds of raw Schedule E payee strings into one vendor when the automatic normalisation (case, punctuation, INC/LLC suffixes, fuzzy token match) did not catch them, plus canonical names/ids for token-order variants (LOCAL 23 UNITE HERE -> UNITE HERE Local 23) and medium overrides for payees that sell exactly one medium (Meta/Facebook, Google, Hulu -> digital; USPS -> mail; iHeartMedia -> radio). Confirmed by reading the payee's fec.gov Schedule E rows (same spender, same purpose, same window) and, for Meta, the company's rename announcement. tagged_by devin-block2-vendors, 2026-09-05."
 }

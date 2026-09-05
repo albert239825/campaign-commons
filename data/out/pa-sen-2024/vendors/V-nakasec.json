@@ -1,0 +1,235 @@
+{
+  "vendor_id": "V-nakasec",
+  "name": "NAKASEC",
+  "aliases": [
+    "NAKASEC"
+  ],
+  "normalization": {
+    "basis": "inferred",
+    "rule": "case/punctuation/suffix normalisation + token-set ≥0.92 (numeric tokens must match); aliases file",
+    "source_urls": [
+      "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&payee_name=NAKASEC"
+    ],
+    "checked_by": null,
+    "checked_at": null
+  },
+  "total": 19903.52,
+  "count": 12,
+  "media_mix": [
+    {
+      "medium": "other",
+      "amount": 17029.86,
+      "count": 8
+    },
+    {
+      "medium": "phones",
+      "amount": 2873.66,
+      "count": 4
+    }
+  ],
+  "spenders": [
+    {
+      "entity_id": "C90020363",
+      "name": "NAKASEC ACTION FUND",
+      "amount": 19903.52,
+      "count": 12
+    }
+  ],
+  "targets": [
+    {
+      "candidate_id": "S6PA00217",
+      "support_oppose": "S",
+      "amount": 19903.52
+    }
+  ],
+  "first_date": "2024-09-11",
+  "last_date": "2024-10-15",
+  "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&payee_name=NAKASEC",
+  "race_id": "pa-sen-2024",
+  "generated_at": "2026-09-05T19:33:04+00:00",
+  "data_status": "real",
+  "expenditures": [
+    {
+      "ie_id": "C90020363-ie-1878963-F57.4171",
+      "spender_entity_id": "C90020363",
+      "spender_name": "NAKASEC ACTION FUND",
+      "candidate_id": "S6PA00217",
+      "candidate_name": "Bob Casey",
+      "support_oppose": "S",
+      "amount": 4257.0,
+      "date": "2024-10-15",
+      "purpose": "WAGES, TAXES, AND BENEFITS - CANVASSING (ESTIMATE)",
+      "payee": "NAKASEC",
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202502289754006641",
+      "vendor_id": "V-nakasec",
+      "medium": "other"
+    },
+    {
+      "ie_id": "C90020363-ie-1878963-F57.4173",
+      "spender_entity_id": "C90020363",
+      "spender_name": "NAKASEC ACTION FUND",
+      "candidate_id": "S6PA00217",
+      "candidate_name": "Bob Casey",
+      "support_oppose": "S",
+      "amount": 10255.2,
+      "date": "2024-10-15",
+      "purpose": "WAGES, TAXES, AND BENEFITS - CANVASSING (ESTIMATE)",
+      "payee": "NAKASEC",
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202502289754006641",
+      "vendor_id": "V-nakasec",
+      "medium": "other"
+    },
+    {
+      "ie_id": "C90020363-ie-1878963-F57.4170",
+      "spender_entity_id": "C90020363",
+      "spender_name": "NAKASEC ACTION FUND",
+      "candidate_id": "S6PA00217",
+      "candidate_name": "Bob Casey",
+      "support_oppose": "S",
+      "amount": 345.09,
+      "date": "2024-10-10",
+      "purpose": "WAGES, TAXES, AND BENEFITS - CANVASSING",
+      "payee": "NAKASEC",
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202502289754006640",
+      "vendor_id": "V-nakasec",
+      "medium": "other"
+    },
+    {
+      "ie_id": "C90020363-ie-1878963-F57.4168",
+      "spender_entity_id": "C90020363",
+      "spender_name": "NAKASEC ACTION FUND",
+      "candidate_id": "S6PA00217",
+      "candidate_name": "Bob Casey",
+      "support_oppose": "S",
+      "amount": 245.94,
+      "date": "2024-10-09",
+      "purpose": "WAGES, TAXES, AND BENEFITS - PHONEBANKING",
+      "payee": "NAKASEC",
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202502289754006639",
+      "vendor_id": "V-nakasec",
+      "medium": "phones"
+    },
+    {
+      "ie_id": "C90020363-ie-1878963-F57.4178",
+      "spender_entity_id": "C90020363",
+      "spender_name": "NAKASEC ACTION FUND",
+      "candidate_id": "S6PA00217",
+      "candidate_name": "Bob Casey",
+      "support_oppose": "S",
+      "amount": 345.09,
+      "date": "2024-10-09",
+      "purpose": "WAGES, TAXES, AND BENEFITS - CANVASSING",
+      "payee": "NAKASEC",
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202502289754006640",
+      "vendor_id": "V-nakasec",
+      "medium": "other"
+    },
+    {
+      "ie_id": "C90020363-ie-1878963-F57.4167",
+      "spender_entity_id": "C90020363",
+      "spender_name": "NAKASEC ACTION FUND",
+      "candidate_id": "S6PA00217",
+      "candidate_name": "Bob Casey",
+      "support_oppose": "S",
+      "amount": 456.87,
+      "date": "2024-10-06",
+      "purpose": "WAGES, TAXES, AND BENEFITS - CANVASSING",
+      "payee": "NAKASEC",
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202502289754006638",
+      "vendor_id": "V-nakasec",
+      "medium": "other"
+    },
+    {
+      "ie_id": "C90020363-ie-1878963-F57.4181",
+      "spender_entity_id": "C90020363",
+      "spender_name": "NAKASEC ACTION FUND",
+      "candidate_id": "S6PA00217",
+      "candidate_name": "Bob Casey",
+      "support_oppose": "S",
+      "amount": 33.77,
+      "date": "2024-10-05",
+      "purpose": "WAGES, TAXES, AND BENEFITS - PHONEBANKING",
+      "payee": "NAKASEC",
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202502289754006638",
+      "vendor_id": "V-nakasec",
+      "medium": "phones"
+    },
+    {
+      "ie_id": "C90020363-ie-1878963-F57.4166",
+      "spender_entity_id": "C90020363",
+      "spender_name": "NAKASEC ACTION FUND",
+      "candidate_id": "S6PA00217",
+      "candidate_name": "Bob Casey",
+      "support_oppose": "S",
+      "amount": 456.87,
+      "date": "2024-10-05",
+      "purpose": "WAGES, TAXES, AND BENEFITS - CANVASSING",
+      "payee": "NAKASEC",
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202502289754006637",
+      "vendor_id": "V-nakasec",
+      "medium": "other"
+    },
+    {
+      "ie_id": "C90020363-ie-1878963-F57.4163",
+      "spender_entity_id": "C90020363",
+      "spender_name": "NAKASEC ACTION FUND",
+      "candidate_id": "S6PA00217",
+      "candidate_name": "Bob Casey",
+      "support_oppose": "S",
+      "amount": 456.87,
+      "date": "2024-10-04",
+      "purpose": "WAGES, TAXES, AND BENEFITS - CANVASSING",
+      "payee": "NAKASEC",
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202502289754006636",
+      "vendor_id": "V-nakasec",
+      "medium": "other"
+    },
+    {
+      "ie_id": "C90020363-ie-1878963-F57.4162",
+      "spender_entity_id": "C90020363",
+      "spender_name": "NAKASEC ACTION FUND",
+      "candidate_id": "S6PA00217",
+      "candidate_name": "Bob Casey",
+      "support_oppose": "S",
+      "amount": 456.87,
+      "date": "2024-10-03",
+      "purpose": "WAGES, TAXES, AND BENEFITS - CANVASSING",
+      "payee": "NAKASEC",
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202502289754006636",
+      "vendor_id": "V-nakasec",
+      "medium": "other"
+    },
+    {
+      "ie_id": "C90020363-ie-1878963-F57.4161",
+      "spender_entity_id": "C90020363",
+      "spender_name": "NAKASEC ACTION FUND",
+      "candidate_id": "S6PA00217",
+      "candidate_name": "Bob Casey",
+      "support_oppose": "S",
+      "amount": 634.71,
+      "date": "2024-10-02",
+      "purpose": "WAGES, TAXES, AND BENEFITS - PHONEBANKING AND CANVASSING",
+      "payee": "NAKASEC",
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202502289754006635",
+      "vendor_id": "V-nakasec",
+      "medium": "phones"
+    },
+    {
+      "ie_id": "C90020363-ie-1825077-F57.4108",
+      "spender_entity_id": "C90020363",
+      "spender_name": "NAKASEC ACTION FUND",
+      "candidate_id": "S6PA00217",
+      "candidate_name": "Bob Casey",
+      "support_oppose": "S",
+      "amount": 1959.24,
+      "date": "2024-09-11",
+      "purpose": "WAGES, TAXES, AND BENEFITS - PHONEBANKING",
+      "payee": "NAKASEC",
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202410149685245776",
+      "vendor_id": "V-nakasec",
+      "medium": "phones"
+    }
+  ],
+  "ads": [],
+  "method": "Every Schedule E independent expenditure names a payee. Payee strings are normalised (case, punctuation, legal suffixes, token order), near-duplicates are folded with a difflib ratio ≥ 0.92 when their numeric tokens match, and hand alias rows from data/hand/<race>/vendor_aliases.json override the rule. Medium is classified from the purpose the spender filed (ordered keyword table in gotham/vendors.py); the FEC does not record which buy placed which ad, so vendor ↔ ad links are empty until a human verifies one. Totals are the filed amounts, grouped, never re-estimated."
+}

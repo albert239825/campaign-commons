@@ -895,6 +895,7 @@ export const HandVendorAliasRowSchema = z.object({
   medium_override: MediumSchema.nullable(), // when the purpose strings misclassify a known vendor
   source_url: z.string().url().nullable(), // vendor site, if used to confirm the alias
   tagged_by: z.string(),
+  tagged_at: z.string().optional(), // ISO date; becomes `checked_at` on the vendor's verified `normalization` basis
 });
 export const HandVendorAliasesFileSchema = HandFileBase.extend({ rows: z.array(HandVendorAliasRowSchema) });
 

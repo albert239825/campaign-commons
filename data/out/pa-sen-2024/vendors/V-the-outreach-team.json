@@ -1,0 +1,206 @@
+{
+  "vendor_id": "V-the-outreach-team",
+  "name": "THE OUTREACH TEAM",
+  "aliases": [
+    "THE OUTREACH TEAM"
+  ],
+  "normalization": {
+    "basis": "inferred",
+    "rule": "case/punctuation/suffix normalisation + token-set ≥0.92 (numeric tokens must match); aliases file",
+    "source_urls": [
+      "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&payee_name=THE+OUTREACH+TEAM"
+    ],
+    "checked_by": null,
+    "checked_at": null
+  },
+  "total": 701732.73,
+  "count": 10,
+  "media_mix": [
+    {
+      "medium": "other",
+      "amount": 701732.73,
+      "count": 10
+    }
+  ],
+  "spenders": [
+    {
+      "entity_id": "C00620971",
+      "name": "FOR OUR FUTURE",
+      "amount": 501732.73,
+      "count": 8
+    },
+    {
+      "entity_id": "C00486845",
+      "name": "LCV VICTORY FUND",
+      "amount": 200000.0,
+      "count": 2
+    }
+  ],
+  "targets": [
+    {
+      "candidate_id": "S6PA00217",
+      "support_oppose": "S",
+      "amount": 701732.73
+    }
+  ],
+  "first_date": "2024-10-10",
+  "last_date": "2024-10-25",
+  "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&payee_name=THE+OUTREACH+TEAM",
+  "race_id": "pa-sen-2024",
+  "generated_at": "2026-09-05T19:33:04+00:00",
+  "data_status": "real",
+  "expenditures": [
+    {
+      "ie_id": "C00620971-ie-1931997-500733505",
+      "spender_entity_id": "C00620971",
+      "spender_name": "FOR OUR FUTURE",
+      "candidate_id": "S6PA00217",
+      "candidate_name": "Bob Casey",
+      "support_oppose": "S",
+      "amount": 4000.0,
+      "date": "2024-10-25",
+      "purpose": "FIELD CANVASSING",
+      "payee": "THE OUTREACH TEAM",
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202601129793941794",
+      "vendor_id": "V-the-outreach-team",
+      "medium": "other"
+    },
+    {
+      "ie_id": "C00620971-ie-1931997-500734949",
+      "spender_entity_id": "C00620971",
+      "spender_name": "FOR OUR FUTURE",
+      "candidate_id": "S6PA00217",
+      "candidate_name": "Bob Casey",
+      "support_oppose": "S",
+      "amount": 136817.28,
+      "date": "2024-10-25",
+      "purpose": "FIELD CANVASSING",
+      "payee": "THE OUTREACH TEAM",
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202601129793941929",
+      "vendor_id": "V-the-outreach-team",
+      "medium": "other"
+    },
+    {
+      "ie_id": "C00620971-ie-1931997-500720593",
+      "spender_entity_id": "C00620971",
+      "spender_name": "FOR OUR FUTURE",
+      "candidate_id": "S6PA00217",
+      "candidate_name": "Bob Casey",
+      "support_oppose": "S",
+      "amount": 30723.09,
+      "date": "2024-10-21",
+      "purpose": "FIELD CANVASSING",
+      "payee": "THE OUTREACH TEAM",
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202601129793941759",
+      "vendor_id": "V-the-outreach-team",
+      "medium": "other"
+    },
+    {
+      "ie_id": "C00620971-ie-1931997-500720533",
+      "spender_entity_id": "C00620971",
+      "spender_name": "FOR OUR FUTURE",
+      "candidate_id": "S6PA00217",
+      "candidate_name": "Bob Casey",
+      "support_oppose": "S",
+      "amount": 30723.09,
+      "date": "2024-10-21",
+      "purpose": "FIELD CANVASSING",
+      "payee": "THE OUTREACH TEAM",
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202601129793941742",
+      "vendor_id": "V-the-outreach-team",
+      "medium": "other"
+    },
+    {
+      "ie_id": "C00620971-ie-1931997-500724988",
+      "spender_entity_id": "C00620971",
+      "spender_name": "FOR OUR FUTURE",
+      "candidate_id": "S6PA00217",
+      "candidate_name": "Bob Casey",
+      "support_oppose": "S",
+      "amount": 55044.47,
+      "date": "2024-10-21",
+      "purpose": "FIELD CANVASSING",
+      "payee": "THE OUTREACH TEAM",
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202601129793941909",
+      "vendor_id": "V-the-outreach-team",
+      "medium": "other"
+    },
+    {
+      "ie_id": "C00620971-ie-1931997-500720596",
+      "spender_entity_id": "C00620971",
+      "spender_name": "FOR OUR FUTURE",
+      "candidate_id": "S6PA00217",
+      "candidate_name": "Bob Casey",
+      "support_oppose": "S",
+      "amount": 61091.47,
+      "date": "2024-10-21",
+      "purpose": "FIELD CANVASSING",
+      "payee": "THE OUTREACH TEAM",
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202601129793941857",
+      "vendor_id": "V-the-outreach-team",
+      "medium": "other"
+    },
+    {
+      "ie_id": "C00486845-ie-1945886-500471707",
+      "spender_entity_id": "C00486845",
+      "spender_name": "LCV VICTORY FUND",
+      "candidate_id": "S6PA00217",
+      "candidate_name": "Bob Casey",
+      "support_oppose": "S",
+      "amount": 100000.0,
+      "date": "2024-10-17",
+      "purpose": "CANVASSING SERVICES",
+      "payee": "THE OUTREACH TEAM",
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202602119834308772",
+      "vendor_id": "V-the-outreach-team",
+      "medium": "other"
+    },
+    {
+      "ie_id": "C00620971-ie-1909400-500712914",
+      "spender_entity_id": "C00620971",
+      "spender_name": "FOR OUR FUTURE",
+      "candidate_id": "S6PA00217",
+      "candidate_name": "Bob Casey",
+      "support_oppose": "S",
+      "amount": 90933.33,
+      "date": "2024-10-11",
+      "purpose": "FIELD CANVASSING AND LITERATURE (ESTIMATE)",
+      "payee": "THE OUTREACH TEAM",
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202507319779669452",
+      "vendor_id": "V-the-outreach-team",
+      "medium": "other"
+    },
+    {
+      "ie_id": "C00620971-ie-1909400-500718686",
+      "spender_entity_id": "C00620971",
+      "spender_name": "FOR OUR FUTURE",
+      "candidate_id": "S6PA00217",
+      "candidate_name": "Bob Casey",
+      "support_oppose": "S",
+      "amount": 92400.0,
+      "date": "2024-10-10",
+      "purpose": "FIELD CANVASSING AND LITERATURE",
+      "payee": "THE OUTREACH TEAM",
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202507319779669478",
+      "vendor_id": "V-the-outreach-team",
+      "medium": "other"
+    },
+    {
+      "ie_id": "C00486845-ie-1841516-500459308",
+      "spender_entity_id": "C00486845",
+      "spender_name": "LCV VICTORY FUND",
+      "candidate_id": "S6PA00217",
+      "candidate_name": "Bob Casey",
+      "support_oppose": "S",
+      "amount": 100000.0,
+      "date": "2024-10-10",
+      "purpose": "CANVASSING SERVICES",
+      "payee": "THE OUTREACH TEAM",
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202410249713455167",
+      "vendor_id": "V-the-outreach-team",
+      "medium": "other"
+    }
+  ],
+  "ads": [],
+  "method": "Every Schedule E independent expenditure names a payee. Payee strings are normalised (case, punctuation, legal suffixes, token order), near-duplicates are folded with a difflib ratio ≥ 0.92 when their numeric tokens match, and hand alias rows from data/hand/<race>/vendor_aliases.json override the rule. Medium is classified from the purpose the spender filed (ordered keyword table in gotham/vendors.py); the FEC does not record which buy placed which ad, so vendor ↔ ad links are empty until a human verifies one. Totals are the filed amounts, grouped, never re-estimated."
+}

@@ -1,0 +1,139 @@
+{
+  "vendor_id": "V-the-korea-times-philadelphia",
+  "name": "The Korea Times Philadelphia",
+  "aliases": [
+    "THE KOREA TIMES PHILADELPHIA",
+    "KOREAN PHILA TIMES INC.",
+    "KOREAN PHILA TIMES"
+  ],
+  "normalization": {
+    "basis": "verified",
+    "rule": "case/punctuation/suffix normalisation + token-set ≥0.92 (numeric tokens must match); aliases file — hand alias row folds 3 filed payee string(s) into one vendor",
+    "source_urls": [
+      "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&payee_name=THE+KOREA+TIMES+PHILADELPHIA&payee_name=KOREAN+PHILA+TIMES+INC.&payee_name=KOREAN+PHILA+TIMES",
+      "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&payee_name=THE+KOREA+TIMES+PHILADELPHIA&payee_name=KOREAN+PHILA+TIMES&payee_name=KOREAN+PHILA+TIMES+INC."
+    ],
+    "checked_by": "devin-block2-vendors",
+    "checked_at": "2026-09-05"
+  },
+  "total": 5475.0,
+  "count": 5,
+  "media_mix": [
+    {
+      "medium": "other",
+      "amount": 4075.0,
+      "count": 4
+    },
+    {
+      "medium": "mail",
+      "amount": 1400.0,
+      "count": 1
+    }
+  ],
+  "spenders": [
+    {
+      "entity_id": "C00821611",
+      "name": "ASIAN AMERICANS FOR CHANGE FUND",
+      "amount": 4075.0,
+      "count": 4
+    },
+    {
+      "entity_id": "C00430280",
+      "name": "IMMIGRANTS' LIST",
+      "amount": 1400.0,
+      "count": 1
+    }
+  ],
+  "targets": [
+    {
+      "candidate_id": "S6PA00217",
+      "support_oppose": "S",
+      "amount": 5475.0
+    }
+  ],
+  "first_date": "2024-09-13",
+  "last_date": "2024-12-11",
+  "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&payee_name=THE+KOREA+TIMES+PHILADELPHIA&payee_name=KOREAN+PHILA+TIMES+INC.&payee_name=KOREAN+PHILA+TIMES",
+  "race_id": "pa-sen-2024",
+  "generated_at": "2026-09-05T19:33:04+00:00",
+  "data_status": "real",
+  "expenditures": [
+    {
+      "ie_id": "C00821611-ie-1873070-500412324",
+      "spender_entity_id": "C00821611",
+      "spender_name": "ASIAN AMERICANS FOR CHANGE FUND",
+      "candidate_id": "S6PA00217",
+      "candidate_name": "Bob Casey",
+      "support_oppose": "S",
+      "amount": 675.0,
+      "date": "2024-12-11",
+      "purpose": "NEWSPAPER ADVERTISEMENT",
+      "payee": "KOREAN PHILA TIMES INC.",
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202501319752382182",
+      "vendor_id": "V-the-korea-times-philadelphia",
+      "medium": "other"
+    },
+    {
+      "ie_id": "C00821611-ie-1858504-500412320",
+      "spender_entity_id": "C00821611",
+      "spender_name": "ASIAN AMERICANS FOR CHANGE FUND",
+      "candidate_id": "S6PA00217",
+      "candidate_name": "Bob Casey",
+      "support_oppose": "S",
+      "amount": 900.0,
+      "date": "2024-10-22",
+      "purpose": "NEWSPAPER ADVERTISEMENT",
+      "payee": "THE KOREA TIMES PHILADELPHIA",
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202412059739340722",
+      "vendor_id": "V-the-korea-times-philadelphia",
+      "medium": "other"
+    },
+    {
+      "ie_id": "C00821611-ie-1841431-500412324",
+      "spender_entity_id": "C00821611",
+      "spender_name": "ASIAN AMERICANS FOR CHANGE FUND",
+      "candidate_id": "S6PA00217",
+      "candidate_name": "Bob Casey",
+      "support_oppose": "S",
+      "amount": 1250.0,
+      "date": "2024-10-16",
+      "purpose": "NEWSPAPER ADVERTISEMENT (ESTIMATE)",
+      "payee": "KOREAN PHILA TIMES INC.",
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202410249713190474",
+      "vendor_id": "V-the-korea-times-philadelphia",
+      "medium": "other"
+    },
+    {
+      "ie_id": "C00821611-ie-1841431-500412320",
+      "spender_entity_id": "C00821611",
+      "spender_name": "ASIAN AMERICANS FOR CHANGE FUND",
+      "candidate_id": "S6PA00217",
+      "candidate_name": "Bob Casey",
+      "support_oppose": "S",
+      "amount": 1250.0,
+      "date": "2024-10-16",
+      "purpose": "NEWSPAPER ADVERTISEMENT (ESTIMATE)",
+      "payee": "THE KOREA TIMES PHILADELPHIA",
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202410249713190476",
+      "vendor_id": "V-the-korea-times-philadelphia",
+      "medium": "other"
+    },
+    {
+      "ie_id": "C00430280-ie-1822404-501436993",
+      "spender_entity_id": "C00430280",
+      "spender_name": "IMMIGRANTS' LIST",
+      "candidate_id": "S6PA00217",
+      "candidate_name": "Bob Casey",
+      "support_oppose": "S",
+      "amount": 1400.0,
+      "date": "2024-09-13",
+      "purpose": "1/2 PAGE PRINT ADS",
+      "payee": "KOREAN PHILA TIMES",
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202410109684858801",
+      "vendor_id": "V-the-korea-times-philadelphia",
+      "medium": "mail"
+    }
+  ],
+  "ads": [],
+  "method": "Every Schedule E independent expenditure names a payee. Payee strings are normalised (case, punctuation, legal suffixes, token order), near-duplicates are folded with a difflib ratio ≥ 0.92 when their numeric tokens match, and hand alias rows from data/hand/<race>/vendor_aliases.json override the rule. Medium is classified from the purpose the spender filed (ordered keyword table in gotham/vendors.py); the FEC does not record which buy placed which ad, so vendor ↔ ad links are empty until a human verifies one. Totals are the filed amounts, grouped, never re-estimated."
+}

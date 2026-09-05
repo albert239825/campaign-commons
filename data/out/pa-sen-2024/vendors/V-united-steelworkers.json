@@ -1,0 +1,101 @@
+{
+  "vendor_id": "V-united-steelworkers",
+  "name": "UNITED STEELWORKERS",
+  "aliases": [
+    "UNITED STEELWORKERS"
+  ],
+  "normalization": {
+    "basis": "inferred",
+    "rule": "case/punctuation/suffix normalisation + token-set ≥0.92 (numeric tokens must match); aliases file",
+    "source_urls": [
+      "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&payee_name=UNITED+STEELWORKERS"
+    ],
+    "checked_by": null,
+    "checked_at": null
+  },
+  "total": 941.96,
+  "count": 3,
+  "media_mix": [
+    {
+      "medium": "other",
+      "amount": 941.96,
+      "count": 3
+    }
+  ],
+  "spenders": [
+    {
+      "entity_id": "C00556274",
+      "name": "USW WORKS",
+      "amount": 762.96,
+      "count": 1
+    },
+    {
+      "entity_id": "C00003590",
+      "name": "UNITED STEELWORKERS POLITICAL ACTION FUND",
+      "amount": 179.0,
+      "count": 2
+    }
+  ],
+  "targets": [
+    {
+      "candidate_id": "S6PA00217",
+      "support_oppose": "S",
+      "amount": 941.96
+    }
+  ],
+  "first_date": "2023-10-17",
+  "last_date": "2024-09-27",
+  "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&payee_name=UNITED+STEELWORKERS",
+  "race_id": "pa-sen-2024",
+  "generated_at": "2026-09-05T19:33:04+00:00",
+  "data_status": "real",
+  "expenditures": [
+    {
+      "ie_id": "C00556274-ie-1831364-E109172B7494B4449B9A",
+      "spender_entity_id": "C00556274",
+      "spender_name": "USW WORKS",
+      "candidate_id": "S6PA00217",
+      "candidate_name": "Bob Casey",
+      "support_oppose": "S",
+      "amount": 762.96,
+      "date": "2024-09-27",
+      "purpose": "REIMBURSE STAFF SALARIES & OUTDOOR PROJECTOR COSTS",
+      "payee": "UNITED STEELWORKERS",
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202410189698641646",
+      "vendor_id": "V-united-steelworkers",
+      "medium": "other"
+    },
+    {
+      "ie_id": "C00003590-ie-1816542-E0E894E63FAFC46BB84F",
+      "spender_entity_id": "C00003590",
+      "spender_name": "UNITED STEELWORKERS POLITICAL ACTION FUND",
+      "candidate_id": "S6PA00217",
+      "candidate_name": "Bob Casey",
+      "support_oppose": "S",
+      "amount": 132.0,
+      "date": "2024-08-29",
+      "purpose": "REIMBURSE FEDERAL PUBLIC COMMUNICATION COSTS",
+      "payee": "UNITED STEELWORKERS",
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202409199675529266",
+      "vendor_id": "V-united-steelworkers",
+      "medium": "other"
+    },
+    {
+      "ie_id": "C00003590-ie-1737904-E927909D452DA4316A8F",
+      "spender_entity_id": "C00003590",
+      "spender_name": "UNITED STEELWORKERS POLITICAL ACTION FUND",
+      "candidate_id": "S6PA00217",
+      "candidate_name": "Bob Casey",
+      "support_oppose": "S",
+      "amount": 47.0,
+      "date": "2023-10-17",
+      "purpose": "REIMBURSE FEDERAL PUBLIC COMMUNICATION COSTS",
+      "payee": "UNITED STEELWORKERS",
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202312079599392280",
+      "vendor_id": "V-united-steelworkers",
+      "medium": "other"
+    }
+  ],
+  "ads": [],
+  "method": "Every Schedule E independent expenditure names a payee. Payee strings are normalised (case, punctuation, legal suffixes, token order), near-duplicates are folded with a difflib ratio ≥ 0.92 when their numeric tokens match, and hand alias rows from data/hand/<race>/vendor_aliases.json override the rule. Medium is classified from the purpose the spender filed (ordered keyword table in gotham/vendors.py); the FEC does not record which buy placed which ad, so vendor ↔ ad links are empty until a human verifies one. Totals are the filed amounts, grouped, never re-estimated."
+}

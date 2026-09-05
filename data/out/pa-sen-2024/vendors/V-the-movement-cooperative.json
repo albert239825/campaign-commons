@@ -1,0 +1,185 @@
+{
+  "vendor_id": "V-the-movement-cooperative",
+  "name": "THE MOVEMENT COOPERATIVE",
+  "aliases": [
+    "THE MOVEMENT COOPERATIVE"
+  ],
+  "normalization": {
+    "basis": "inferred",
+    "rule": "case/punctuation/suffix normalisation + token-set ≥0.92 (numeric tokens must match); aliases file",
+    "source_urls": [
+      "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&payee_name=THE+MOVEMENT+COOPERATIVE"
+    ],
+    "checked_by": null,
+    "checked_at": null
+  },
+  "total": 1331.31,
+  "count": 9,
+  "media_mix": [
+    {
+      "medium": "phones",
+      "amount": 1331.31,
+      "count": 9
+    }
+  ],
+  "spenders": [
+    {
+      "entity_id": "C90020363",
+      "name": "NAKASEC ACTION FUND",
+      "amount": 1331.31,
+      "count": 9
+    }
+  ],
+  "targets": [
+    {
+      "candidate_id": "S6PA00217",
+      "support_oppose": "S",
+      "amount": 1331.31
+    }
+  ],
+  "first_date": "2024-09-30",
+  "last_date": "2024-11-02",
+  "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&payee_name=THE+MOVEMENT+COOPERATIVE",
+  "race_id": "pa-sen-2024",
+  "generated_at": "2026-09-05T19:33:04+00:00",
+  "data_status": "real",
+  "expenditures": [
+    {
+      "ie_id": "C90020363-ie-1878963-F57.4309",
+      "spender_entity_id": "C90020363",
+      "spender_name": "NAKASEC ACTION FUND",
+      "candidate_id": "S6PA00217",
+      "candidate_name": "Bob Casey",
+      "support_oppose": "S",
+      "amount": 30.0,
+      "date": "2024-11-02",
+      "purpose": "PHONEBANKING SOFTWARE",
+      "payee": "THE MOVEMENT COOPERATIVE",
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202502289754006647",
+      "vendor_id": "V-the-movement-cooperative",
+      "medium": "phones"
+    },
+    {
+      "ie_id": "C90020363-ie-1878963-F57.4198",
+      "spender_entity_id": "C90020363",
+      "spender_name": "NAKASEC ACTION FUND",
+      "candidate_id": "S6PA00217",
+      "candidate_name": "Bob Casey",
+      "support_oppose": "S",
+      "amount": 253.13,
+      "date": "2024-10-15",
+      "purpose": "PHONEBANKING SOFTWARE (ESTIMATE)",
+      "payee": "THE MOVEMENT COOPERATIVE",
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202502289754006647",
+      "vendor_id": "V-the-movement-cooperative",
+      "medium": "phones"
+    },
+    {
+      "ie_id": "C90020363-ie-1878963-F57.4199",
+      "spender_entity_id": "C90020363",
+      "spender_name": "NAKASEC ACTION FUND",
+      "candidate_id": "S6PA00217",
+      "candidate_name": "Bob Casey",
+      "support_oppose": "S",
+      "amount": 101.25,
+      "date": "2024-10-11",
+      "purpose": "PHONEBANKING SOFTWARE (ESTIMATE)",
+      "payee": "THE MOVEMENT COOPERATIVE",
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202502289754006646",
+      "vendor_id": "V-the-movement-cooperative",
+      "medium": "phones"
+    },
+    {
+      "ie_id": "C90020363-ie-1878963-F57.4200",
+      "spender_entity_id": "C90020363",
+      "spender_name": "NAKASEC ACTION FUND",
+      "candidate_id": "S6PA00217",
+      "candidate_name": "Bob Casey",
+      "support_oppose": "S",
+      "amount": 97.94,
+      "date": "2024-10-09",
+      "purpose": "PHONEBANKING SOFTWARE (ESTIMATE)",
+      "payee": "THE MOVEMENT COOPERATIVE",
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202502289754006645",
+      "vendor_id": "V-the-movement-cooperative",
+      "medium": "phones"
+    },
+    {
+      "ie_id": "C90020363-ie-1878963-F57.4201",
+      "spender_entity_id": "C90020363",
+      "spender_name": "NAKASEC ACTION FUND",
+      "candidate_id": "S6PA00217",
+      "candidate_name": "Bob Casey",
+      "support_oppose": "S",
+      "amount": 90.74,
+      "date": "2024-10-05",
+      "purpose": "PHONEBANKING SOFTWARE (ESTIMATE)",
+      "payee": "THE MOVEMENT COOPERATIVE",
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202502289754006645",
+      "vendor_id": "V-the-movement-cooperative",
+      "medium": "phones"
+    },
+    {
+      "ie_id": "C90020363-ie-1878963-F57.4202",
+      "spender_entity_id": "C90020363",
+      "spender_name": "NAKASEC ACTION FUND",
+      "candidate_id": "S6PA00217",
+      "candidate_name": "Bob Casey",
+      "support_oppose": "S",
+      "amount": 45.55,
+      "date": "2024-10-04",
+      "purpose": "PHONEBANKING SOFTWARE (ESTIMATE)",
+      "payee": "THE MOVEMENT COOPERATIVE",
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202502289754006644",
+      "vendor_id": "V-the-movement-cooperative",
+      "medium": "phones"
+    },
+    {
+      "ie_id": "C90020363-ie-1878963-F57.4204",
+      "spender_entity_id": "C90020363",
+      "spender_name": "NAKASEC ACTION FUND",
+      "candidate_id": "S6PA00217",
+      "candidate_name": "Bob Casey",
+      "support_oppose": "S",
+      "amount": 83.97,
+      "date": "2024-10-03",
+      "purpose": "PHONEBANKING SOFTWARE (ESTIMATE)",
+      "payee": "THE MOVEMENT COOPERATIVE",
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202502289754006643",
+      "vendor_id": "V-the-movement-cooperative",
+      "medium": "phones"
+    },
+    {
+      "ie_id": "C90020363-ie-1878963-F57.4203",
+      "spender_entity_id": "C90020363",
+      "spender_name": "NAKASEC ACTION FUND",
+      "candidate_id": "S6PA00217",
+      "candidate_name": "Bob Casey",
+      "support_oppose": "S",
+      "amount": 86.38,
+      "date": "2024-10-03",
+      "purpose": "PHONEBANKING SOFTWARE (ESTIMATE)",
+      "payee": "THE MOVEMENT COOPERATIVE",
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202502289754006643",
+      "vendor_id": "V-the-movement-cooperative",
+      "medium": "phones"
+    },
+    {
+      "ie_id": "C90020363-ie-1825077-F57.4129",
+      "spender_entity_id": "C90020363",
+      "spender_name": "NAKASEC ACTION FUND",
+      "candidate_id": "S6PA00217",
+      "candidate_name": "Bob Casey",
+      "support_oppose": "S",
+      "amount": 542.35,
+      "date": "2024-09-30",
+      "purpose": "PHONEBANKING SOFTWARE",
+      "payee": "THE MOVEMENT COOPERATIVE",
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202410149685245778",
+      "vendor_id": "V-the-movement-cooperative",
+      "medium": "phones"
+    }
+  ],
+  "ads": [],
+  "method": "Every Schedule E independent expenditure names a payee. Payee strings are normalised (case, punctuation, legal suffixes, token order), near-duplicates are folded with a difflib ratio ≥ 0.92 when their numeric tokens match, and hand alias rows from data/hand/<race>/vendor_aliases.json override the rule. Medium is classified from the purpose the spender filed (ordered keyword table in gotham/vendors.py); the FEC does not record which buy placed which ad, so vendor ↔ ad links are empty until a human verifies one. Totals are the filed amounts, grouped, never re-estimated."
+}

@@ -1,0 +1,215 @@
+{
+  "vendor_id": "V-planned-parenthood-action-fund",
+  "name": "PLANNED PARENTHOOD ACTION FUND, INC.",
+  "aliases": [
+    "PLANNED PARENTHOOD ACTION FUND, INC."
+  ],
+  "normalization": {
+    "basis": "inferred",
+    "rule": "case/punctuation/suffix normalisation + token-set ≥0.92 (numeric tokens must match); aliases file",
+    "source_urls": [
+      "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&payee_name=PLANNED+PARENTHOOD+ACTION+FUND%2C+INC."
+    ],
+    "checked_by": null,
+    "checked_at": null
+  },
+  "total": 2900.86,
+  "count": 11,
+  "media_mix": [
+    {
+      "medium": "other",
+      "amount": 2900.86,
+      "count": 11
+    }
+  ],
+  "spenders": [
+    {
+      "entity_id": "C00489799",
+      "name": "PLANNED PARENTHOOD VOTES",
+      "amount": 2900.86,
+      "count": 11
+    }
+  ],
+  "targets": [
+    {
+      "candidate_id": "S2PA00661",
+      "support_oppose": "O",
+      "amount": 2900.86
+    }
+  ],
+  "first_date": "2024-03-29",
+  "last_date": "2024-11-02",
+  "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&payee_name=PLANNED+PARENTHOOD+ACTION+FUND%2C+INC.",
+  "race_id": "pa-sen-2024",
+  "generated_at": "2026-09-05T19:33:04+00:00",
+  "data_status": "real",
+  "expenditures": [
+    {
+      "ie_id": "C00489799-ie-1878167-500694267",
+      "spender_entity_id": "C00489799",
+      "spender_name": "PLANNED PARENTHOOD VOTES",
+      "candidate_id": "S2PA00661",
+      "candidate_name": "Dave McCormick",
+      "support_oppose": "O",
+      "amount": 198.47,
+      "date": "2024-11-02",
+      "purpose": "STAFF TIME FOR VOTER COMMUNICATIONS",
+      "payee": "PLANNED PARENTHOOD ACTION FUND, INC.",
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202502209753716929",
+      "vendor_id": "V-planned-parenthood-action-fund",
+      "medium": "other"
+    },
+    {
+      "ie_id": "C00489799-ie-1878167-500691007",
+      "spender_entity_id": "C00489799",
+      "spender_name": "PLANNED PARENTHOOD VOTES",
+      "candidate_id": "S2PA00661",
+      "candidate_name": "Dave McCormick",
+      "support_oppose": "O",
+      "amount": 1090.89,
+      "date": "2024-11-01",
+      "purpose": "ACTUAL COST FOR STAFF TIME FOR VOTER COMMUNICATIONS AS DISCLOSED ON 11/2 24-HR REPORT",
+      "payee": "PLANNED PARENTHOOD ACTION FUND, INC.",
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202502209753716924",
+      "vendor_id": "V-planned-parenthood-action-fund",
+      "medium": "other"
+    },
+    {
+      "ie_id": "C00489799-ie-1878167-500690310",
+      "spender_entity_id": "C00489799",
+      "spender_name": "PLANNED PARENTHOOD VOTES",
+      "candidate_id": "S2PA00661",
+      "candidate_name": "Dave McCormick",
+      "support_oppose": "O",
+      "amount": 285.21,
+      "date": "2024-10-27",
+      "purpose": "ACTUAL COST FOR STAFF TIME FOR VOTER COMMUNICATIONS AS DISCLOSED ON 10/28 24-HR REPORT",
+      "payee": "PLANNED PARENTHOOD ACTION FUND, INC.",
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202502209753716922",
+      "vendor_id": "V-planned-parenthood-action-fund",
+      "medium": "other"
+    },
+    {
+      "ie_id": "C00489799-ie-1878167-500688631",
+      "spender_entity_id": "C00489799",
+      "spender_name": "PLANNED PARENTHOOD VOTES",
+      "candidate_id": "S2PA00661",
+      "candidate_name": "Dave McCormick",
+      "support_oppose": "O",
+      "amount": 1090.89,
+      "date": "2024-10-21",
+      "purpose": "ACTUAL COST FOR STAFF TIME FOR VOTER COMMUNICATIONS AS DISCLOSED ON 10/22 24-HR REPORT",
+      "payee": "PLANNED PARENTHOOD ACTION FUND, INC.",
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202502209753716915",
+      "vendor_id": "V-planned-parenthood-action-fund",
+      "medium": "other"
+    },
+    {
+      "ie_id": "C00489799-ie-1804477-500671862",
+      "spender_entity_id": "C00489799",
+      "spender_name": "PLANNED PARENTHOOD VOTES",
+      "candidate_id": "S2PA00661",
+      "candidate_name": "Dave McCormick",
+      "support_oppose": "O",
+      "amount": 43.3,
+      "date": "2024-06-03",
+      "purpose": "STAFF TIME FOR VOTER COMMUNICATIONS",
+      "payee": "PLANNED PARENTHOOD ACTION FUND, INC.",
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202407199661341888",
+      "vendor_id": "V-planned-parenthood-action-fund",
+      "medium": "other"
+    },
+    {
+      "ie_id": "C00489799-ie-1791090-500668033",
+      "spender_entity_id": "C00489799",
+      "spender_name": "PLANNED PARENTHOOD VOTES",
+      "candidate_id": "S2PA00661",
+      "candidate_name": "Dave McCormick",
+      "support_oppose": "O",
+      "amount": 7.16,
+      "date": "2024-05-31",
+      "purpose": "STAFF TIME FOR VOTER COMMUNICATIONS",
+      "payee": "PLANNED PARENTHOOD ACTION FUND, INC.",
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202406209649327373",
+      "vendor_id": "V-planned-parenthood-action-fund",
+      "medium": "other"
+    },
+    {
+      "ie_id": "C00489799-ie-1791090-500667677",
+      "spender_entity_id": "C00489799",
+      "spender_name": "PLANNED PARENTHOOD VOTES",
+      "candidate_id": "S2PA00661",
+      "candidate_name": "Dave McCormick",
+      "support_oppose": "O",
+      "amount": 60.1,
+      "date": "2024-05-13",
+      "purpose": "STAFF TIME FOR VOTER COMMUNICATIONS",
+      "payee": "PLANNED PARENTHOOD ACTION FUND, INC.",
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202406209649327368",
+      "vendor_id": "V-planned-parenthood-action-fund",
+      "medium": "other"
+    },
+    {
+      "ie_id": "C00489799-ie-1791090-500667676",
+      "spender_entity_id": "C00489799",
+      "spender_name": "PLANNED PARENTHOOD VOTES",
+      "candidate_id": "S2PA00661",
+      "candidate_name": "Dave McCormick",
+      "support_oppose": "O",
+      "amount": 19.36,
+      "date": "2024-05-02",
+      "purpose": "STAFF TIME FOR VOTER COMMUNICATIONS",
+      "payee": "PLANNED PARENTHOOD ACTION FUND, INC.",
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202406209649327365",
+      "vendor_id": "V-planned-parenthood-action-fund",
+      "medium": "other"
+    },
+    {
+      "ie_id": "C00489799-ie-1784827-500665474",
+      "spender_entity_id": "C00489799",
+      "spender_name": "PLANNED PARENTHOOD VOTES",
+      "candidate_id": "S2PA00661",
+      "candidate_name": "Dave McCormick",
+      "support_oppose": "O",
+      "amount": 55.3,
+      "date": "2024-04-23",
+      "purpose": "STAFF TIME FOR VOTER COMMUNICATIONS",
+      "payee": "PLANNED PARENTHOOD ACTION FUND, INC.",
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202405209646188120",
+      "vendor_id": "V-planned-parenthood-action-fund",
+      "medium": "other"
+    },
+    {
+      "ie_id": "C00489799-ie-1784827-500665473",
+      "spender_entity_id": "C00489799",
+      "spender_name": "PLANNED PARENTHOOD VOTES",
+      "candidate_id": "S2PA00661",
+      "candidate_name": "Dave McCormick",
+      "support_oppose": "O",
+      "amount": 34.95,
+      "date": "2024-04-03",
+      "purpose": "STAFF TIME FOR VOTER COMMUNICATIONS",
+      "payee": "PLANNED PARENTHOOD ACTION FUND, INC.",
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202405209646188114",
+      "vendor_id": "V-planned-parenthood-action-fund",
+      "medium": "other"
+    },
+    {
+      "ie_id": "C00489799-ie-1778567-500664060",
+      "spender_entity_id": "C00489799",
+      "spender_name": "PLANNED PARENTHOOD VOTES",
+      "candidate_id": "S2PA00661",
+      "candidate_name": "Dave McCormick",
+      "support_oppose": "O",
+      "amount": 15.23,
+      "date": "2024-03-29",
+      "purpose": "STAFF TIME FOR VOTER COMMUNICATIONS",
+      "payee": "PLANNED PARENTHOOD ACTION FUND, INC.",
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202404199633550121",
+      "vendor_id": "V-planned-parenthood-action-fund",
+      "medium": "other"
+    }
+  ],
+  "ads": [],
+  "method": "Every Schedule E independent expenditure names a payee. Payee strings are normalised (case, punctuation, legal suffixes, token order), near-duplicates are folded with a difflib ratio ≥ 0.92 when their numeric tokens match, and hand alias rows from data/hand/<race>/vendor_aliases.json override the rule. Medium is classified from the purpose the spender filed (ordered keyword table in gotham/vendors.py); the FEC does not record which buy placed which ad, so vendor ↔ ad links are empty until a human verifies one. Totals are the filed amounts, grouped, never re-estimated."
+}
