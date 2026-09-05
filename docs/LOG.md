@@ -220,3 +220,36 @@ distinct from any "MAIN STREET MEDIA").
 **Gaps.** `Vendor.ads[]` is empty until the media-wall child links creatives; `other` still holds $14.2M, ~$12M of it
 `CANVASSING` / field payroll (door-knocking is not a medium in the enum) plus bare `ADVERTISING`/`BILLBOARD` — left
 unclassified on purpose rather than guessed.
+
+
+## 2026-09-05 ~19:40 — Block 2 child 4: static search ("type a name → jump to its page")
+
+**What changed.** `pipeline/gotham/search.py` (`make search`, no race arg) walks every race under `data/out` and writes one
+`data/out/search.json` (`SearchIndex`): 2,053 rows — 1 race, 2 candidates, 2,000 committees, 23 organizations, 27 donors,
+0 vendors (`vendors.json` not there yet; indexed when it is, one-line note when it is not). `search` is the last stage before
+`validate` in `make all`. Web: `getSearchIndex()` in `lib/data.ts`, a `force-static` route handler at `app/search.json/route.ts`
+so `next build` emits the index as a static asset, and a header `SearchBox` (client component, `components/search/`) with a
+plain-TypeScript matcher in `components/search/match.ts`. No new dependency; contracts untouched.
+
+**Challenge.** Two thousand FEC names people type in a dozen ways ("Senate Leadership Fund", "SLF", "C00571703", "sen lead"),
+delivered without a backend and without shipping a fuzzy-search library. And the header `<nav>` was the only place we could put
+the box.
+
+**How we solved it.** One index, one fetch on first focus (cached in module state), `⌘K`/`Ctrl+K` to focus. Matcher: normalise
+(lowercase, collapse whitespace), then a row matches if the query is a substring of its label or any alias, OR every query token is
+a prefix of some label/alias token. Rank by match quality (exact > prefix > substring > token-prefix), then `weight`, then label;
+top 8, grouped by kind in the order their best hit ranked. `weight` is the row's dollars (race: campaign + outside; committee:
+receipts + IEs, or the largest available total; organization/donor: itemized total given), rounded to whole dollars — it is a
+tiebreak, never rendered. Candidate rows link to the dossier when `dossiers/<id>.json` exists, else the race page. Candidate
+aliases carry the last name and "Sen. X" for incumbents; committee aliases carry `Entity.aliases` plus the FEC id so the id
+itself is searchable. Manual check in the built site: "Senate Leadership Fund", "sen lead", "C00571703", "Casey", "Adelson"
+all resolve and Enter navigates.
+
+**Numbers.** Index 446 KB compact JSON (70 KB gzipped; indented it was 452 KB), 2,053 rows; static pages 2,147 → 2,148
+(`/search.json`); pipeline tests 67 → 78; contract-validated files 2,142 → 2,143. Target was ≤400 KB: the labels + hrefs +
+aliases for 2,000 committees are the floor, so we took the ~11% overshoot rather than dropping aliases (which is what makes
+"SLF" work).
+
+**Dead ends.** `KIND_ORDER` for a fixed group ordering — worse than "group by kind in rank order" because the best hit should
+always be first. Copying `search.json` into `public/` — needs a copy step and drifts from `data/out`; the route handler reads the
+same file the pages read.

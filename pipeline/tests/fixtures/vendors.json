@@ -1,0 +1,63 @@
+{
+  "race_id": "pa-sen-2024",
+  "generated_at": "2026-09-05T00:00:00+00:00",
+  "data_status": "mock",
+  "vendors": [
+    {
+      "vendor_id": "vendor:waterfront-strategies",
+      "name": "Waterfront Strategies",
+      "aliases": ["WATERFRONT STRATEGIES", "WATERFRONT STRATEGIES, INC.", "Waterfront Strategies Inc"],
+      "normalization": {
+        "basis": "inferred",
+        "rule": "Case, punctuation and INC suffix stripped; three raw payee spellings fold to one name.",
+        "source_urls": [],
+        "checked_by": null,
+        "checked_at": null
+      },
+      "total": 1500000.0,
+      "count": 12,
+      "media_mix": [
+        { "medium": "tv", "amount": 1200000.0, "count": 8 },
+        { "medium": "digital", "amount": 300000.0, "count": 4 }
+      ],
+      "spenders": [{ "entity_id": "C00571703", "name": "SENATE LEADERSHIP FUND", "amount": 1500000.0, "count": 12 }],
+      "targets": [{ "candidate_id": "S6PA00217", "support_oppose": "O", "amount": 1500000.0 }],
+      "first_date": "2024-09-01",
+      "last_date": "2024-11-01",
+      "source_url": "https://www.fec.gov/data/independent-expenditures/?payee_name=WATERFRONT+STRATEGIES&cycle=2024"
+    },
+    {
+      "vendor_id": "vendor:mentzer-media",
+      "name": "Mentzer Media",
+      "aliases": ["MENTZER MEDIA SERVICES"],
+      "normalization": {
+        "basis": "filed",
+        "rule": "Single raw payee string as filed on Schedule E.",
+        "source_urls": [],
+        "checked_by": null,
+        "checked_at": null
+      },
+      "total": 500000.0,
+      "count": 3,
+      "media_mix": [{ "medium": "tv", "amount": 500000.0, "count": 3 }],
+      "spenders": [{ "entity_id": "C00571703", "name": "SENATE LEADERSHIP FUND", "amount": 500000.0, "count": 3 }],
+      "targets": [{ "candidate_id": "S6PA00217", "support_oppose": "O", "amount": 500000.0 }],
+      "first_date": "2024-10-01",
+      "last_date": "2024-10-20",
+      "source_url": "https://www.fec.gov/data/independent-expenditures/?payee_name=MENTZER+MEDIA&cycle=2024"
+    }
+  ],
+  "total": 2000000.0,
+  "by_medium": [
+    { "medium": "tv", "amount": 1700000.0, "count": 11 },
+    { "medium": "digital", "amount": 300000.0, "count": 4 }
+  ],
+  "medium_basis": {
+    "basis": "inferred",
+    "rule": "Medium classified from the Schedule E purpose text by keyword (TV/broadcast -> tv, digital/online -> digital); unmatched purposes fall to other.",
+    "source_urls": [],
+    "checked_by": null,
+    "checked_at": null
+  },
+  "notes": ["Fixture for tests only; not pipeline output."]
+}
