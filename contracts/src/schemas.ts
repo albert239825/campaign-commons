@@ -119,13 +119,33 @@ export const SourceRefSchema = z.object({
  */
 export const EvidenceBasisSchema = z.enum(["filed", "verified", "inferred", "adjacent"]);
 
-export const BasisSchema = z.object({
-  basis: EvidenceBasisSchema,
+const basisFields = {
   /** one plain-English sentence shown to the user: what the record says, or how this was derived and why it is uncertain */
   rule: z.string().min(1),
-  source_urls: z.array(z.string().url()),
-  checked_by: z.string().nullable(), // verified: initials/handle of the human; otherwise null
-  checked_at: z.string().nullable(), // verified: ISO date; otherwise null
+};
+
+/** `verified` is the only basis that asserts a human checked a source, so it is the only one that must name the source and the human. */
+export const BasisSchema = z.discriminatedUnion("basis", [
+  z.object({
+    basis: z.literal("verified"),
+    ...basisFields,
+    source_urls: z.array(z.string().url()).min(1),
+    checked_by: z.string().min(1), // initials/handle of the human
+    checked_at: z.string().min(1), // ISO date
+  }),
+  z.object({
+    basis: z.enum(["filed", "inferred", "adjacent"]),
+    ...basisFields,
+    source_urls: z.array(z.string().url()),
+    checked_by: z.string().nullable(),
+    checked_at: z.string().nullable(),
+  }),
+]);
+
+/** Issue tags always travel with the basis that says who tagged them and from what. */
+export const IssueTagsSchema = z.object({
+  issue_ids: z.array(IssueIdSchema).min(1).max(3), // first is primary
+  basis: BasisSchema,
 });
 
 /** What an independent expenditure paid for, classified from the filed `purpose` string. Raw purpose is always kept. */
@@ -294,7 +314,7 @@ export const IndependentExpenditureSchema = z.object({
   vendor_id: z.string().nullable().optional(),
   medium: MediumSchema.optional(),
   // Block 2 (gotham.issues, from data/hand/<race>/ie_issues.json): what the notice says the ad was about
-  issue_ids: z.array(IssueIdSchema).optional(), // first is primary
+  issues: IssueTagsSchema.optional(),
 });
 
 /** One vendor row on an entity page ("Where the money went"): the entity's IEs paid to this vendor, aggregated. */
@@ -425,7 +445,7 @@ export const ChainEdgeKindSchema = z.enum([
   "targeting", // ad or root → candidate: for/against; no dollars reach the candidate
 ]);
 
-export const ChainEdgeSchema = z.object({
+const chainEdgeFields = {
   from: z.string(),
   to: z.string(),
   amount: z.number(),
@@ -436,11 +456,22 @@ export const ChainEdgeSchema = z.object({
   count: z.number().int(), // number of underlying transactions aggregated
   date_range: z.tuple([z.string(), z.string()]).nullable(),
   source_url: z.string().url().nullable(),
-  // Block 2: absent = "money"
-  kind: ChainEdgeKindSchema.optional(),
   support_oppose: SupportOpposeSchema.nullable().optional(), // targeting edges
-  basis: BasisSchema.optional(), // required on placement edges; UI draws dashed/dotted from basis.basis
-});
+};
+
+/** A placement (vendor → ad) edge is never filed anywhere, so it cannot exist without saying how it was derived. */
+export const ChainEdgeSchema = z.union([
+  z.object({
+    ...chainEdgeFields,
+    kind: z.literal("placement"),
+    basis: BasisSchema, // UI draws solid+check / dashed / dotted from basis.basis
+  }),
+  z.object({
+    ...chainEdgeFields,
+    kind: z.enum(["money", "targeting"]).optional(), // Block 2: absent = "money"
+    basis: BasisSchema.optional(),
+  }),
+]);
 
 export const ChainSchema = z.object({
   root_entity_id: z.string(),
@@ -519,9 +550,8 @@ export const AdSchema = z.object({
   /** the sponsor committee's chain summary shares (chains/<matched_entity_id>.json); null when unmatched or no chain.
    *  UI shows `dark` as a number ("34% of this sponsor's traced money is dark"), never a binary badge. */
   sponsor_visibility_shares: VisibilitySharesSchema.nullable().optional(),
-  /** what the ad's content is about (data/hand/<race>/ad_issues.json); first is primary */
-  issue_ids: z.array(IssueIdSchema).optional(),
-  issue_basis: BasisSchema.optional(), // verified by the tagger; source_urls = [creative_url]
+  /** what the ad's content is about (data/hand/<race>/ad_issues.json); basis.source_urls = [creative_url], checked_by = tagger */
+  issues: IssueTagsSchema.optional(),
   /** vendors the sponsor paid whose buys relate to this ad. Each link says how (adjacent / inferred / verified). */
   vendor_links: z.array(AdVendorLinkSchema).optional(),
 });
@@ -856,6 +886,7 @@ export const HandVendorAdLinksFileSchema = HandFileBase.extend({ rows: z.array(H
 
 export type EvidenceBasis = z.infer<typeof EvidenceBasisSchema>;
 export type Basis = z.infer<typeof BasisSchema>;
+export type IssueTags = z.infer<typeof IssueTagsSchema>;
 export type Medium = z.infer<typeof MediumSchema>;
 export type EntityVendorRow = z.infer<typeof EntityVendorRowSchema>;
 export type FocusKind = z.infer<typeof FocusKindSchema>;

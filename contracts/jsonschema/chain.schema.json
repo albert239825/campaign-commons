@@ -167,49 +167,89 @@
                 "type": "string"
               },
               "basis": {
-                "type": "object",
-                "properties": {
-                  "basis": {
-                    "type": "string",
-                    "enum": [
-                      "filed",
-                      "verified",
-                      "inferred",
-                      "adjacent"
-                    ]
+                "anyOf": [
+                  {
+                    "type": "object",
+                    "properties": {
+                      "basis": {
+                        "type": "string",
+                        "const": "verified"
+                      },
+                      "rule": {
+                        "type": "string",
+                        "minLength": 1
+                      },
+                      "source_urls": {
+                        "type": "array",
+                        "items": {
+                          "type": "string",
+                          "format": "uri"
+                        },
+                        "minItems": 1
+                      },
+                      "checked_by": {
+                        "type": "string",
+                        "minLength": 1
+                      },
+                      "checked_at": {
+                        "type": "string",
+                        "minLength": 1
+                      }
+                    },
+                    "required": [
+                      "basis",
+                      "rule",
+                      "source_urls",
+                      "checked_by",
+                      "checked_at"
+                    ],
+                    "additionalProperties": false
                   },
-                  "rule": {
-                    "type": "string",
-                    "minLength": 1
-                  },
-                  "source_urls": {
-                    "type": "array",
-                    "items": {
-                      "type": "string",
-                      "format": "uri"
-                    }
-                  },
-                  "checked_by": {
-                    "type": [
-                      "string",
-                      "null"
-                    ]
-                  },
-                  "checked_at": {
-                    "type": [
-                      "string",
-                      "null"
-                    ]
+                  {
+                    "type": "object",
+                    "properties": {
+                      "basis": {
+                        "type": "string",
+                        "enum": [
+                          "filed",
+                          "inferred",
+                          "adjacent"
+                        ]
+                      },
+                      "rule": {
+                        "type": "string",
+                        "minLength": 1
+                      },
+                      "source_urls": {
+                        "type": "array",
+                        "items": {
+                          "type": "string",
+                          "format": "uri"
+                        }
+                      },
+                      "checked_by": {
+                        "type": [
+                          "string",
+                          "null"
+                        ]
+                      },
+                      "checked_at": {
+                        "type": [
+                          "string",
+                          "null"
+                        ]
+                      }
+                    },
+                    "required": [
+                      "basis",
+                      "rule",
+                      "source_urls",
+                      "checked_by",
+                      "checked_at"
+                    ],
+                    "additionalProperties": false
                   }
-                },
-                "required": [
-                  "basis",
-                  "rule",
-                  "source_urls",
-                  "checked_by",
-                  "checked_at"
-                ],
-                "additionalProperties": false
+                ]
               }
             },
             "required": [
@@ -230,149 +270,375 @@
         "edges": {
           "type": "array",
           "items": {
-            "type": "object",
-            "properties": {
-              "from": {
-                "type": "string"
-              },
-              "to": {
-                "type": "string"
-              },
-              "amount": {
-                "type": "number"
-              },
-              "visibility": {
-                "type": "string",
-                "enum": [
-                  "disclosed",
-                  "inferable",
-                  "dark"
-                ]
-              },
-              "depth": {
-                "type": "integer",
-                "minimum": 1
-              },
-              "transaction_types": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              },
-              "count": {
-                "type": "integer"
-              },
-              "date_range": {
-                "anyOf": [
-                  {
+            "anyOf": [
+              {
+                "type": "object",
+                "properties": {
+                  "from": {
+                    "type": "string"
+                  },
+                  "to": {
+                    "type": "string"
+                  },
+                  "amount": {
+                    "type": "number"
+                  },
+                  "visibility": {
+                    "type": "string",
+                    "enum": [
+                      "disclosed",
+                      "inferable",
+                      "dark"
+                    ]
+                  },
+                  "depth": {
+                    "type": "integer",
+                    "minimum": 1
+                  },
+                  "transaction_types": {
                     "type": "array",
-                    "minItems": 2,
-                    "maxItems": 2,
-                    "items": [
+                    "items": {
+                      "type": "string"
+                    }
+                  },
+                  "count": {
+                    "type": "integer"
+                  },
+                  "date_range": {
+                    "anyOf": [
                       {
-                        "type": "string"
+                        "type": "array",
+                        "minItems": 2,
+                        "maxItems": 2,
+                        "items": [
+                          {
+                            "type": "string"
+                          },
+                          {
+                            "type": "string"
+                          }
+                        ]
                       },
                       {
-                        "type": "string"
+                        "type": "null"
                       }
                     ]
                   },
-                  {
-                    "type": "null"
-                  }
-                ]
-              },
-              "source_url": {
-                "anyOf": [
-                  {
-                    "type": "string",
-                    "format": "uri"
-                  },
-                  {
-                    "type": "null"
-                  }
-                ]
-              },
-              "kind": {
-                "type": "string",
-                "enum": [
-                  "money",
-                  "placement",
-                  "targeting"
-                ]
-              },
-              "support_oppose": {
-                "anyOf": [
-                  {
-                    "type": "string",
-                    "enum": [
-                      "S",
-                      "O"
+                  "source_url": {
+                    "anyOf": [
+                      {
+                        "type": "string",
+                        "format": "uri"
+                      },
+                      {
+                        "type": "null"
+                      }
                     ]
                   },
-                  {
-                    "type": "null"
-                  }
-                ]
-              },
-              "basis": {
-                "type": "object",
-                "properties": {
+                  "support_oppose": {
+                    "anyOf": [
+                      {
+                        "type": "string",
+                        "enum": [
+                          "S",
+                          "O"
+                        ]
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ]
+                  },
+                  "kind": {
+                    "type": "string",
+                    "const": "placement"
+                  },
                   "basis": {
-                    "type": "string",
-                    "enum": [
-                      "filed",
-                      "verified",
-                      "inferred",
-                      "adjacent"
-                    ]
-                  },
-                  "rule": {
-                    "type": "string",
-                    "minLength": 1
-                  },
-                  "source_urls": {
-                    "type": "array",
-                    "items": {
-                      "type": "string",
-                      "format": "uri"
-                    }
-                  },
-                  "checked_by": {
-                    "type": [
-                      "string",
-                      "null"
-                    ]
-                  },
-                  "checked_at": {
-                    "type": [
-                      "string",
-                      "null"
+                    "anyOf": [
+                      {
+                        "type": "object",
+                        "properties": {
+                          "basis": {
+                            "type": "string",
+                            "const": "verified"
+                          },
+                          "rule": {
+                            "type": "string",
+                            "minLength": 1
+                          },
+                          "source_urls": {
+                            "type": "array",
+                            "items": {
+                              "type": "string",
+                              "format": "uri"
+                            },
+                            "minItems": 1
+                          },
+                          "checked_by": {
+                            "type": "string",
+                            "minLength": 1
+                          },
+                          "checked_at": {
+                            "type": "string",
+                            "minLength": 1
+                          }
+                        },
+                        "required": [
+                          "basis",
+                          "rule",
+                          "source_urls",
+                          "checked_by",
+                          "checked_at"
+                        ],
+                        "additionalProperties": false
+                      },
+                      {
+                        "type": "object",
+                        "properties": {
+                          "basis": {
+                            "type": "string",
+                            "enum": [
+                              "filed",
+                              "inferred",
+                              "adjacent"
+                            ]
+                          },
+                          "rule": {
+                            "type": "string",
+                            "minLength": 1
+                          },
+                          "source_urls": {
+                            "type": "array",
+                            "items": {
+                              "type": "string",
+                              "format": "uri"
+                            }
+                          },
+                          "checked_by": {
+                            "type": [
+                              "string",
+                              "null"
+                            ]
+                          },
+                          "checked_at": {
+                            "type": [
+                              "string",
+                              "null"
+                            ]
+                          }
+                        },
+                        "required": [
+                          "basis",
+                          "rule",
+                          "source_urls",
+                          "checked_by",
+                          "checked_at"
+                        ],
+                        "additionalProperties": false
+                      }
                     ]
                   }
                 },
                 "required": [
-                  "basis",
-                  "rule",
-                  "source_urls",
-                  "checked_by",
-                  "checked_at"
+                  "from",
+                  "to",
+                  "amount",
+                  "visibility",
+                  "depth",
+                  "transaction_types",
+                  "count",
+                  "date_range",
+                  "source_url",
+                  "kind",
+                  "basis"
+                ],
+                "additionalProperties": false
+              },
+              {
+                "type": "object",
+                "properties": {
+                  "from": {
+                    "type": "string"
+                  },
+                  "to": {
+                    "type": "string"
+                  },
+                  "amount": {
+                    "type": "number"
+                  },
+                  "visibility": {
+                    "type": "string",
+                    "enum": [
+                      "disclosed",
+                      "inferable",
+                      "dark"
+                    ]
+                  },
+                  "depth": {
+                    "type": "integer",
+                    "minimum": 1
+                  },
+                  "transaction_types": {
+                    "type": "array",
+                    "items": {
+                      "type": "string"
+                    }
+                  },
+                  "count": {
+                    "type": "integer"
+                  },
+                  "date_range": {
+                    "anyOf": [
+                      {
+                        "type": "array",
+                        "minItems": 2,
+                        "maxItems": 2,
+                        "items": [
+                          {
+                            "type": "string"
+                          },
+                          {
+                            "type": "string"
+                          }
+                        ]
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ]
+                  },
+                  "source_url": {
+                    "anyOf": [
+                      {
+                        "type": "string",
+                        "format": "uri"
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ]
+                  },
+                  "support_oppose": {
+                    "anyOf": [
+                      {
+                        "type": "string",
+                        "enum": [
+                          "S",
+                          "O"
+                        ]
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ]
+                  },
+                  "kind": {
+                    "type": "string",
+                    "enum": [
+                      "money",
+                      "targeting"
+                    ]
+                  },
+                  "basis": {
+                    "anyOf": [
+                      {
+                        "type": "object",
+                        "properties": {
+                          "basis": {
+                            "type": "string",
+                            "const": "verified"
+                          },
+                          "rule": {
+                            "type": "string",
+                            "minLength": 1
+                          },
+                          "source_urls": {
+                            "type": "array",
+                            "items": {
+                              "type": "string",
+                              "format": "uri"
+                            },
+                            "minItems": 1
+                          },
+                          "checked_by": {
+                            "type": "string",
+                            "minLength": 1
+                          },
+                          "checked_at": {
+                            "type": "string",
+                            "minLength": 1
+                          }
+                        },
+                        "required": [
+                          "basis",
+                          "rule",
+                          "source_urls",
+                          "checked_by",
+                          "checked_at"
+                        ],
+                        "additionalProperties": false
+                      },
+                      {
+                        "type": "object",
+                        "properties": {
+                          "basis": {
+                            "type": "string",
+                            "enum": [
+                              "filed",
+                              "inferred",
+                              "adjacent"
+                            ]
+                          },
+                          "rule": {
+                            "type": "string",
+                            "minLength": 1
+                          },
+                          "source_urls": {
+                            "type": "array",
+                            "items": {
+                              "type": "string",
+                              "format": "uri"
+                            }
+                          },
+                          "checked_by": {
+                            "type": [
+                              "string",
+                              "null"
+                            ]
+                          },
+                          "checked_at": {
+                            "type": [
+                              "string",
+                              "null"
+                            ]
+                          }
+                        },
+                        "required": [
+                          "basis",
+                          "rule",
+                          "source_urls",
+                          "checked_by",
+                          "checked_at"
+                        ],
+                        "additionalProperties": false
+                      }
+                    ]
+                  }
+                },
+                "required": [
+                  "from",
+                  "to",
+                  "amount",
+                  "visibility",
+                  "depth",
+                  "transaction_types",
+                  "count",
+                  "date_range",
+                  "source_url"
                 ],
                 "additionalProperties": false
               }
-            },
-            "required": [
-              "from",
-              "to",
-              "amount",
-              "visibility",
-              "depth",
-              "transaction_types",
-              "count",
-              "date_range",
-              "source_url"
-            ],
-            "additionalProperties": false
+            ]
           }
         },
         "summary": {
