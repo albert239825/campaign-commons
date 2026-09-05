@@ -3,10 +3,10 @@ import Link from "next/link";
 import Image from "next/image";
 import type { Party } from "@citizen-gotham/contracts";
 import { getLedger, getRace, getStories, hasChain, listRaceIds } from "@/lib/data";
-import { date, pct, routes } from "@/lib/format";
-import { AdjacencyNote, Card, DataStatusBanner, Money } from "@/components/ui";
-import { CandidatePanel } from "@/components/ledger/candidate-panel";
-import { TraceabilityCard } from "@/components/ledger/traceability-card";
+import { date, routes } from "@/lib/format";
+import { AdjacencyNote, Card, DataStatusBanner } from "@/components/ui";
+import { FundingExplorer } from "@/components/ledger/funding-explorer";
+import { buildFundingViews } from "@/lib/funding-view";
 import { SpendersTable } from "@/components/ledger/spenders-table";
 import { FlagsLegend } from "@/components/ledger/flags-legend";
 import { StoryCard } from "@/components/ledger/story-card";
@@ -28,8 +28,6 @@ export default async function RaceLedgerPage({ params }: { params: Promise<{ rac
   const { raceId } = await params;
   const race = getRace(raceId);
   const ledger = getLedger(raceId);
-  const campaignTotal = ledger.candidates.reduce((s, c) => s + c.campaign.receipts, 0);
-  const outsideTotal = ledger.candidates.reduce((s, c) => s + c.outside.total, 0);
   const allFlags = ledger.top_outside_spenders.flatMap((s) => s.flags);
   const stories = getStories(raceId);
   const topStories = stories.stories.slice(0, START_HERE_COUNT);
@@ -87,26 +85,10 @@ export default async function RaceLedgerPage({ params }: { params: Promise<{ rac
               ) : <p>Candidate information has not been added yet.</p>}
             </section>
           </div>
-          <dl className="race-totals">
-            <div>
-              <dt className="text-[11px] uppercase tracking-wide text-neutral-500">Campaign receipts</dt>
-              <dd className="text-xl font-semibold tabular-nums">
-                <Money amount={campaignTotal} />
-              </dd>
-            </div>
-            <div>
-              <dt className="text-[11px] uppercase tracking-wide text-neutral-500">Outside spending</dt>
-              <dd className="text-xl font-semibold tabular-nums">
-                <Money amount={outsideTotal} />
-              </dd>
-            </div>
-            <div>
-              <dt className="text-[11px] uppercase tracking-wide text-neutral-500">Outside share</dt>
-              <dd className="text-xl font-semibold tabular-nums">{campaignTotal + outsideTotal > 0 ? pct(outsideTotal / (campaignTotal + outsideTotal)) : "—"}</dd>
-            </div>
-          </dl>
         </header>
       </div>
+
+      <FundingExplorer views={buildFundingViews(ledger)} raceId={raceId} />
 
       {topStories.length > 0 && (
         <Card
@@ -128,22 +110,6 @@ export default async function RaceLedgerPage({ params }: { params: Promise<{ rac
           </div>
         </Card>
       )}
-
-      {ledger.candidates.length === 0 ? (
-        <Card>
-          <p className="text-sm text-neutral-500">No candidate committees loaded for this race yet.</p>
-        </Card>
-      ) : (
-        <div className="race-candidates">
-          {ledger.candidates.map((c) => (
-            <CandidatePanel key={c.candidate_id} raceId={raceId} c={c} />
-          ))}
-        </div>
-      )}
-
-      <div className="race-traceability">
-        <TraceabilityCard t={ledger.traceability} />
-      </div>
 
       <Card
         title="Top outside spenders"

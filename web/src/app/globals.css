@@ -481,3 +481,70 @@ body:has(.race-dashboard) :is(a, button):focus-visible { outline: 2px solid curr
   .race-election-date { margin-top: 16px; }
   .race-banner-candidates { border-left: 0; border-top: 1px solid var(--race-rule); padding: 20px 0 0; }
 }
+
+/* A single, candidate-selectable view of campaign and outside dollars. */
+.funding-explorer { margin-top: -56px; }
+.funding-tabs { display: flex; border-bottom: 1px solid var(--race-rule); gap: 32px; margin-bottom: 24px; }
+.funding-tabs button { padding: 16px 0; border-bottom: 2px solid transparent; text-align: left; color: #6f6d69; cursor: pointer; font-size: 15px; }
+.funding-tabs button[aria-selected="true"] { color: #1b1b1a; border-color: currentColor; }
+.funding-tabs small { display: block; margin-top: 4px; font-size: 12px; }
+.funding-panel { display: grid; grid-template-columns: minmax(0, .85fr) minmax(0, 1.15fr); gap: 64px; align-items: start; }
+.funding-chart-column { position: sticky; top: 32px; min-width: 0; }
+.funding-view-name { font-size: 18px; text-align: center; }
+.funding-pie { display: block; width: min(100%, 340px); margin: 12px auto; overflow: visible; }
+.funding-pie [role="button"] { cursor: pointer; transition: opacity 160ms ease; }
+.funding-pie [role="button"]:hover { opacity: .8; }
+.funding-pie [role="button"]:focus-visible { outline: none; stroke: #1b1b1a; stroke-width: 5; }
+.funding-chart-total { text-align: center; font-size: 40px; line-height: 1.2; letter-spacing: -.035em; }
+.funding-chart-total > span:last-child { display: block; margin-top: 8px; color: #6f6d69; font-size: 12px; letter-spacing: 0; }
+.funding-slice-controls { display: grid; gap: 8px; margin-top: 32px; }
+.funding-slice-controls button { display: grid; grid-template-columns: 10px 1fr auto 40px; align-items: center; gap: 12px; padding: 14px 12px; text-align: left; font-size: 14px; cursor: pointer; border: 1px solid transparent; }
+.funding-slice-controls button[aria-pressed="true"] { background: #e9e5df; border-color: var(--race-rule); }
+.funding-slice-controls strong { font-weight: 500; }
+.funding-slice-controls button > span:last-child { text-align: right; color: #6f6d69; font-size: 12px; }
+.funding-swatch { display: inline-block; width: 9px; height: 9px; flex-shrink: 0; }
+.funding-caption { margin-top: 16px; font-size: 12px; color: #6f6d69; line-height: 1.7; }
+.funding-detail { min-width: 0; background: #e9e5df; padding: 32px; }
+.funding-detail-heading h3 { font-size: 28px; letter-spacing: -.035em; line-height: 1.2; }
+.funding-detail-heading p { font-size: 13px; margin-top: 8px; color: #6f6d69; }
+.funding-detail-amount { font-size: clamp(28px, 3vw, 40px); letter-spacing: -.04em; line-height: 1.2; margin: 24px 0; }
+.funding-lines > div { display: flex; justify-content: space-between; align-items: baseline; gap: 12px 24px; border-top: 1px solid var(--race-rule); padding: 12px 0; font-size: 13px; }
+.funding-lines dd { white-space: nowrap; }
+.funding-lines > .funding-line-nested { padding-left: 16px; color: #6f6d69; }
+.funding-detail h4 { font-size: 16px; margin-top: 28px; }
+.funding-detail h4 + .funding-caption { margin-top: 4px; }
+.funding-visibility-bar { display: flex; height: 12px; background: #d4d0c9; margin-block: 20px; }
+.funding-visibility-lines > div { display: flex; align-items: baseline; justify-content: space-between; gap: 24px; margin-top: 12px; font-size: 13px; }
+.funding-visibility-lines dt > .funding-swatch { margin-right: 8px; }
+.funding-visibility-lines dt small { display: block; max-width: 330px; margin-top: 2px; font-size: 11px; color: #6f6d69; }
+.funding-visibility-lines dd { display: flex; justify-content: flex-end; gap: 12px; min-width: 110px; white-space: nowrap; font-variant-numeric: tabular-nums; }
+.funding-visibility-lines dd > span:last-child { width: 32px; text-align: right; color: #6f6d69; }
+.funding-method { border-top: 1px solid var(--race-rule); margin-top: 24px; padding-top: 16px; font-size: 12px; }
+.funding-method summary { cursor: pointer; }
+.funding-method p { margin-block: 12px; color: #6f6d69; line-height: 1.8; overflow-wrap: anywhere; }
+.funding-method a { text-decoration: underline; text-underline-offset: 3px; }
+.funding-sources { border-top: 1px solid var(--race-rule); margin-top: 24px; padding-top: 16px; }
+.funding-sources h4 { margin: 0 0 12px; font-size: 12px; color: #6f6d69; }
+.funding-sources > div { display: flex; justify-content: space-between; gap: 16px; font-size: 13px; margin-top: 8px; }
+.funding-sources a:hover { text-decoration: underline; }
+@media (max-width: 1050px) {
+  .funding-panel { gap: 32px; }
+  .funding-detail { padding: 24px; }
+  .funding-slice-controls button { gap: 8px; padding-inline: 8px; font-size: 12px; }
+  .funding-lines > div { flex-wrap: wrap; gap: 4px 12px; }
+  .funding-visibility-lines > div { flex-wrap: wrap; gap: 4px; }
+  .funding-visibility-lines dd { margin-left: auto; }
+}
+@media (max-width: 680px) {
+  .funding-explorer { margin-top: -32px; }
+  .funding-tabs { gap: 16px; }
+  .funding-tabs button { flex: 1; min-width: 0; font-size: 12px; }
+  .funding-tabs small { font-size: 11px; }
+  .funding-panel { grid-template-columns: minmax(0, 1fr); }
+  .funding-chart-column { position: static; }
+  .funding-pie { max-width: 280px; }
+  .funding-detail-amount { font-size: 32px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .funding-pie [role="button"] { transition: none; }
+}
