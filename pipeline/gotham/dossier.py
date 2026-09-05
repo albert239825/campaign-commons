@@ -26,6 +26,7 @@ from .config import RACES, ROOT, Candidate, Race
 from .dossier_curated import (
     CASEY_BILLS,
     CASEY_CONGRESS_URL,
+    CASEY_DIRECTIONS,
     CASEY_POSITIONS,
     CASEY_ROLL_CALLS,
     MCCORMICK_SNAPSHOT,
@@ -128,6 +129,7 @@ def incumbent_stances(candidate: Candidate, known: list[str]) -> list[Stance]:
         {
             "issue_id": issue,
             "position": CASEY_POSITIONS[issue],
+            **({"direction": CASEY_DIRECTIONS[issue]} if issue in CASEY_DIRECTIONS else {}),
             "confidence": record_confidence(items),
             "needs_review": True,
             "evidence": sorted(items, key=lambda e: str(e["date"])),
@@ -178,6 +180,7 @@ def statement_stance(statement: Statement, page_text: str, url: str, date: str) 
     return {
         "issue_id": statement.issue_id,
         "position": statement.position,
+        **({"direction": statement.direction} if statement.direction is not None else {}),
         "confidence": "medium",
         "needs_review": True,
         "evidence": [evidence],

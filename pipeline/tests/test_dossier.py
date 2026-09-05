@@ -71,6 +71,14 @@ def test_statement_stance_requires_verbatim_excerpt() -> None:
         statement_stance(statement, "unrelated page", "https://web.archive.org/web/x/y", "2024-11-01")
 
 
+def test_statement_stance_emits_direction_only_when_coded() -> None:
+    statement = curated.Statement("guns", "Heading", "Excerpt", "Position", direction=-2)
+    page = normalise("Heading\n\nExcerpt")
+    assert statement_stance(statement, page, "https://web.archive.org/web/x/y", "2024-11-01")["direction"] == -2
+    uncoded = curated.Statement("healthcare", "Heading", "Excerpt", "Position")
+    assert "direction" not in statement_stance(uncoded, page, "https://web.archive.org/web/x/y", "2024-11-01")
+
+
 def test_confidence_and_summary_come_only_from_stances() -> None:
     votes = [{"kind": "roll_call_vote"}] * 3
     assert record_confidence(votes) == "high"

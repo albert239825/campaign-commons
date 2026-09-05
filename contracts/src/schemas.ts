@@ -32,6 +32,7 @@ import { ISSUE_IDS } from "./issues";
 // ---------------------------------------------------------------------------
 
 export const IssueIdSchema = z.enum(ISSUE_IDS);
+export const DirectionSchema = z.number().int().min(-2).max(2);
 
 /** Visibility of a money edge / node. Color language: disclosed=#1D9E75, inferable=#EF9F27, dark=#E24B4A. */
 export const VisibilitySchema = z.enum(["disclosed", "inferable", "dark"]);
@@ -423,6 +424,7 @@ export const EvidenceSchema = z.object({
 export const StanceSchema = z.object({
   issue_id: IssueIdSchema,
   position: z.string(), // one sentence, descriptive, no causal language
+  direction: DirectionSchema.optional(), // human-coded against ISSUE_AXES[issue_id]; absent = no coded position
   confidence: z.enum(["high", "medium", "low"]),
   needs_review: z.boolean(), // true until a human has verified position + evidence
   evidence: z.array(EvidenceSchema),
@@ -553,6 +555,7 @@ export type Ad = z.infer<typeof AdSchema>;
 export type AdGallery = z.infer<typeof AdGallerySchema>;
 export type EvidenceKind = z.infer<typeof EvidenceKindSchema>;
 export type Evidence = z.infer<typeof EvidenceSchema>;
+export type Direction = z.infer<typeof DirectionSchema>;
 export type Stance = z.infer<typeof StanceSchema>;
 export type Dossier = z.infer<typeof DossierSchema>;
 export type Story = z.infer<typeof StorySchema>;

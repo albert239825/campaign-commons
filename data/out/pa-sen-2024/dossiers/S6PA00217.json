@@ -16,6 +16,7 @@
     {
       "issue_id": "healthcare",
       "position": "Voted for the Inflation Reduction Act and the PACT Act, and sponsored bills on prescription drug costs, home- and community-based care, rural hospitals, and Medicare dental, vision and hearing coverage.",
+      "direction": 2,
       "confidence": "medium",
       "needs_review": true,
       "evidence": [
@@ -108,6 +109,7 @@
     {
       "issue_id": "energy_climate",
       "position": "Voted for the Inflation Reduction Act, voted against measures blocking EPA vehicle-emission and highway greenhouse-gas rules, voted to disapprove a DOE efficiency-standards rule and the solar-import duty moratorium, voted against requiring offshore lease sales, and sponsored bills on abandoned mine reclamation and super pollutants.",
+      "direction": 1,
       "confidence": "high",
       "needs_review": true,
       "evidence": [
@@ -236,6 +238,7 @@
     {
       "issue_id": "defense",
       "position": "Voted for the FY2024 NDAA conference report, the 2022 Ukraine supplemental and the 2024 national security supplemental, and sponsored bills on TRICARE copays, veterans' accessibility and port security.",
+      "direction": 2,
       "confidence": "high",
       "needs_review": true,
       "evidence": [
@@ -328,6 +331,7 @@
     {
       "issue_id": "crypto_fintech",
       "position": "Voted to disapprove the SEC's crypto-custody bulletin SAB 121, voted against disapproving the CFPB small-business lending rule, and sponsored a bill on disclosing investments in foreign adversaries.",
+      "direction": 0,
       "confidence": "medium",
       "needs_review": true,
       "evidence": [
@@ -372,6 +376,7 @@
     {
       "issue_id": "immigration",
       "position": "Voted to advance the February 2024 H.R. 815 border and national security package and the Border Act, voted against the Title 42, public-charge and Marshall border amendments, and sponsored the Stop Fentanyl at the Border Act.",
+      "direction": 1,
       "confidence": "high",
       "needs_review": true,
       "evidence": [
@@ -452,6 +457,7 @@
     {
       "issue_id": "abortion",
       "position": "Voted to advance the Women's Health Protection Act, the Reproductive Freedom for Women Act, the Right to Contraception Act and the Right to IVF Act.",
+      "direction": 2,
       "confidence": "high",
       "needs_review": true,
       "evidence": [
@@ -520,6 +526,7 @@
     {
       "issue_id": "guns",
       "position": "Voted for the Bipartisan Safer Communities Act, voted against disapproving the ATF stabilizing-brace rule, and sponsored the Disarm Hate Act and the Resources for Victims of Gun Violence Act.",
+      "direction": 2,
       "confidence": "medium",
       "needs_review": true,
       "evidence": [
@@ -576,6 +583,7 @@
     {
       "issue_id": "tax_budget",
       "position": "Voted for the Inflation Reduction Act, the Fiscal Responsibility Act and FY2024 continuing appropriations, voted to advance the Tax Relief for American Families and Workers Act, and sponsored bills on worker tax deductions, the child and dependent care credit and children's savings accounts.",
+      "direction": 1,
       "confidence": "high",
       "needs_review": true,
       "evidence": [
@@ -748,6 +756,7 @@
     {
       "issue_id": "labor_trade",
       "position": "Voted to advance a federal minimum wage increase amendment, voted against disapproving the NLRB joint-employer rule, voted to disapprove the solar-import duty moratorium, and sponsored bills on union-busting tax deductions, call-center offshoring, pregnant workers and black lung benefits.",
+      "direction": 2,
       "confidence": "high",
       "needs_review": true,
       "evidence": [
