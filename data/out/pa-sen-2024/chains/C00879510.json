@@ -430,30 +430,6 @@
       }
     },
     {
-      "from": "vendor:V-red-maverick-media",
-      "to": "CR14211677638614843393",
-      "kind": "placement",
-      "amount": 0,
-      "visibility": "disclosed",
-      "depth": 2,
-      "transaction_types": [],
-      "count": 1,
-      "date_range": [
-        "2024-10-16",
-        "2024-10-26"
-      ],
-      "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00879510&payee_name=RED+MAVERICK+MEDIA+LLC",
-      "basis": {
-        "basis": "adjacent",
-        "rule": "Ran Oct 16, 2024 – Oct 26, 2024. In that window (buys dated up to 7 days before first shown through last shown) AMERICA PAC reported mail buys to RED MAVERICK MEDIA LLC ($6,693); the FEC does not record which buy placed which ad.",
-        "source_urls": [
-          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00879510&payee_name=RED+MAVERICK+MEDIA+LLC"
-        ],
-        "checked_by": null,
-        "checked_at": null
-      }
-    },
-    {
       "from": "C00879510",
       "to": "CR14211677638614843393",
       "kind": "placement",
@@ -511,30 +487,6 @@
         "rule": "Advertiser name matched to this committee by normalized name; Google shows the advertiser, not the paid-for-by line",
         "source_urls": [
           "https://adstransparency.google.com/advertiser/AR12671102917130846209/creative/CR10983275104464535553?political=&region=US"
-        ],
-        "checked_by": null,
-        "checked_at": null
-      }
-    },
-    {
-      "from": "vendor:V-red-maverick-media",
-      "to": "CR08536016208221175809",
-      "kind": "placement",
-      "amount": 0,
-      "visibility": "disclosed",
-      "depth": 2,
-      "transaction_types": [],
-      "count": 1,
-      "date_range": [
-        "2024-10-16",
-        "2024-10-26"
-      ],
-      "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00879510&payee_name=RED+MAVERICK+MEDIA+LLC",
-      "basis": {
-        "basis": "adjacent",
-        "rule": "Ran Oct 16, 2024 – Oct 26, 2024. In that window (buys dated up to 7 days before first shown through last shown) AMERICA PAC reported mail buys to RED MAVERICK MEDIA LLC ($6,693); the FEC does not record which buy placed which ad.",
-        "source_urls": [
-          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00879510&payee_name=RED+MAVERICK+MEDIA+LLC"
         ],
         "checked_by": null,
         "checked_at": null

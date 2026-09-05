@@ -801,81 +801,9 @@
       "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00053553&payee_name=CREATIVE+STRATEGIC+SOLUTIONS+LLC",
       "basis": {
         "basis": "adjacent",
-        "rule": "Ran Oct 7, 2024 – Nov 5, 2024. In that window (buys dated up to 7 days before first shown through last shown) NATIONAL RIFLE ASSOCIATION OF AMERICA POLITICAL VICTORY FUND reported production buys to CREATIVE STRATEGIC SOLUTIONS LLC ($1,000,000); the FEC does not record which buy placed which ad.",
+        "rule": "Ran Oct 7, 2024 – Nov 5, 2024. In that window (buys dated up to 7 days before first shown through last shown) NATIONAL RIFLE ASSOCIATION OF AMERICA POLITICAL VICTORY FUND reported production buys to CREATIVE STRATEGIC SOLUTIONS LLC ($1,000,000); the FEC does not record which buy placed which ad. Same-window buys in media that cannot place a Google ad (TV, radio, mail, phones, field, consulting) are not listed.",
         "source_urls": [
           "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00053553&payee_name=CREATIVE+STRATEGIC+SOLUTIONS+LLC"
-        ],
-        "checked_by": null,
-        "checked_at": null
-      }
-    },
-    {
-      "from": "vendor:V-hbp-marketing",
-      "to": "CR16237396970908418049",
-      "kind": "placement",
-      "amount": 0,
-      "visibility": "disclosed",
-      "depth": 2,
-      "transaction_types": [],
-      "count": 1,
-      "date_range": [
-        "2024-10-07",
-        "2024-11-05"
-      ],
-      "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00053553&payee_name=HBP+MARKETING+LLC",
-      "basis": {
-        "basis": "adjacent",
-        "rule": "Ran Oct 7, 2024 – Nov 5, 2024. In that window (buys dated up to 7 days before first shown through last shown) NATIONAL RIFLE ASSOCIATION OF AMERICA POLITICAL VICTORY FUND reported mail buys to HBP MARKETING LLC ($76,146); the FEC does not record which buy placed which ad.",
-        "source_urls": [
-          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00053553&payee_name=HBP+MARKETING+LLC"
-        ],
-        "checked_by": null,
-        "checked_at": null
-      }
-    },
-    {
-      "from": "vendor:V-i360",
-      "to": "CR16237396970908418049",
-      "kind": "placement",
-      "amount": 0,
-      "visibility": "disclosed",
-      "depth": 2,
-      "transaction_types": [],
-      "count": 2,
-      "date_range": [
-        "2024-10-07",
-        "2024-11-05"
-      ],
-      "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00053553&payee_name=I360+LLC",
-      "basis": {
-        "basis": "adjacent",
-        "rule": "Ran Oct 7, 2024 – Nov 5, 2024. In that window (buys dated up to 7 days before first shown through last shown) NATIONAL RIFLE ASSOCIATION OF AMERICA POLITICAL VICTORY FUND reported phones buys to I360 LLC ($19,881); the FEC does not record which buy placed which ad.",
-        "source_urls": [
-          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00053553&payee_name=I360+LLC"
-        ],
-        "checked_by": null,
-        "checked_at": null
-      }
-    },
-    {
-      "from": "vendor:V-c2-imaging",
-      "to": "CR16237396970908418049",
-      "kind": "placement",
-      "amount": 0,
-      "visibility": "disclosed",
-      "depth": 2,
-      "transaction_types": [],
-      "count": 3,
-      "date_range": [
-        "2024-10-07",
-        "2024-11-05"
-      ],
-      "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00053553&payee_name=C2+IMAGING+LLC",
-      "basis": {
-        "basis": "adjacent",
-        "rule": "Ran Oct 7, 2024 – Nov 5, 2024. In that window (buys dated up to 7 days before first shown through last shown) NATIONAL RIFLE ASSOCIATION OF AMERICA POLITICAL VICTORY FUND reported mail buys to C2 IMAGING LLC ($5,420); the FEC does not record which buy placed which ad.",
-        "source_urls": [
-          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00053553&payee_name=C2+IMAGING+LLC"
         ],
         "checked_by": null,
         "checked_at": null
@@ -897,7 +825,7 @@
       "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00053553&payee_name=NATIONAL+RIFLE+ASSOCIATION+OF+AMERICA+INSTITUTE+FOR+LEGISLATIVE+ACTION",
       "basis": {
         "basis": "adjacent",
-        "rule": "Ran Oct 7, 2024 – Nov 5, 2024. In that window (buys dated up to 7 days before first shown through last shown) NATIONAL RIFLE ASSOCIATION OF AMERICA POLITICAL VICTORY FUND reported other buys to NATIONAL RIFLE ASSOCIATION OF AMERICA INSTITUTE FOR LEGISLATIVE ACTION ($2,771); the FEC does not record which buy placed which ad.",
+        "rule": "Ran Oct 7, 2024 – Nov 5, 2024. In that window (buys dated up to 7 days before first shown through last shown) NATIONAL RIFLE ASSOCIATION OF AMERICA POLITICAL VICTORY FUND reported other buys to NATIONAL RIFLE ASSOCIATION OF AMERICA INSTITUTE FOR LEGISLATIVE ACTION ($2,771); the FEC does not record which buy placed which ad. Same-window buys in media that cannot place a Google ad (TV, radio, mail, phones, field, consulting) are not listed.",
         "source_urls": [
           "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00053553&payee_name=NATIONAL+RIFLE+ASSOCIATION+OF+AMERICA+INSTITUTE+FOR+LEGISLATIVE+ACTION"
         ],
@@ -921,7 +849,7 @@
       "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00053553&payee_name=DERIVE+TECHNOLOGIES+LLC",
       "basis": {
         "basis": "adjacent",
-        "rule": "Ran Oct 7, 2024 – Nov 5, 2024. In that window (buys dated up to 7 days before first shown through last shown) NATIONAL RIFLE ASSOCIATION OF AMERICA POLITICAL VICTORY FUND reported production buys to DERIVE TECHNOLOGIES LLC ($143); the FEC does not record which buy placed which ad.",
+        "rule": "Ran Oct 7, 2024 – Nov 5, 2024. In that window (buys dated up to 7 days before first shown through last shown) NATIONAL RIFLE ASSOCIATION OF AMERICA POLITICAL VICTORY FUND reported production buys to DERIVE TECHNOLOGIES LLC ($143); the FEC does not record which buy placed which ad. Same-window buys in media that cannot place a Google ad (TV, radio, mail, phones, field, consulting) are not listed.",
         "source_urls": [
           "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00053553&payee_name=DERIVE+TECHNOLOGIES+LLC"
         ],
@@ -966,81 +894,9 @@
       "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00053553&payee_name=CREATIVE+STRATEGIC+SOLUTIONS+LLC",
       "basis": {
         "basis": "adjacent",
-        "rule": "Ran Oct 7, 2024 – Nov 5, 2024. In that window (buys dated up to 7 days before first shown through last shown) NATIONAL RIFLE ASSOCIATION OF AMERICA POLITICAL VICTORY FUND reported production buys to CREATIVE STRATEGIC SOLUTIONS LLC ($1,000,000); the FEC does not record which buy placed which ad.",
+        "rule": "Ran Oct 7, 2024 – Nov 5, 2024. In that window (buys dated up to 7 days before first shown through last shown) NATIONAL RIFLE ASSOCIATION OF AMERICA POLITICAL VICTORY FUND reported production buys to CREATIVE STRATEGIC SOLUTIONS LLC ($1,000,000); the FEC does not record which buy placed which ad. Same-window buys in media that cannot place a Google ad (TV, radio, mail, phones, field, consulting) are not listed.",
         "source_urls": [
           "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00053553&payee_name=CREATIVE+STRATEGIC+SOLUTIONS+LLC"
-        ],
-        "checked_by": null,
-        "checked_at": null
-      }
-    },
-    {
-      "from": "vendor:V-hbp-marketing",
-      "to": "CR05604116775709966337",
-      "kind": "placement",
-      "amount": 0,
-      "visibility": "disclosed",
-      "depth": 2,
-      "transaction_types": [],
-      "count": 1,
-      "date_range": [
-        "2024-10-07",
-        "2024-11-05"
-      ],
-      "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00053553&payee_name=HBP+MARKETING+LLC",
-      "basis": {
-        "basis": "adjacent",
-        "rule": "Ran Oct 7, 2024 – Nov 5, 2024. In that window (buys dated up to 7 days before first shown through last shown) NATIONAL RIFLE ASSOCIATION OF AMERICA POLITICAL VICTORY FUND reported mail buys to HBP MARKETING LLC ($76,146); the FEC does not record which buy placed which ad.",
-        "source_urls": [
-          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00053553&payee_name=HBP+MARKETING+LLC"
-        ],
-        "checked_by": null,
-        "checked_at": null
-      }
-    },
-    {
-      "from": "vendor:V-i360",
-      "to": "CR05604116775709966337",
-      "kind": "placement",
-      "amount": 0,
-      "visibility": "disclosed",
-      "depth": 2,
-      "transaction_types": [],
-      "count": 2,
-      "date_range": [
-        "2024-10-07",
-        "2024-11-05"
-      ],
-      "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00053553&payee_name=I360+LLC",
-      "basis": {
-        "basis": "adjacent",
-        "rule": "Ran Oct 7, 2024 – Nov 5, 2024. In that window (buys dated up to 7 days before first shown through last shown) NATIONAL RIFLE ASSOCIATION OF AMERICA POLITICAL VICTORY FUND reported phones buys to I360 LLC ($19,881); the FEC does not record which buy placed which ad.",
-        "source_urls": [
-          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00053553&payee_name=I360+LLC"
-        ],
-        "checked_by": null,
-        "checked_at": null
-      }
-    },
-    {
-      "from": "vendor:V-c2-imaging",
-      "to": "CR05604116775709966337",
-      "kind": "placement",
-      "amount": 0,
-      "visibility": "disclosed",
-      "depth": 2,
-      "transaction_types": [],
-      "count": 3,
-      "date_range": [
-        "2024-10-07",
-        "2024-11-05"
-      ],
-      "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00053553&payee_name=C2+IMAGING+LLC",
-      "basis": {
-        "basis": "adjacent",
-        "rule": "Ran Oct 7, 2024 – Nov 5, 2024. In that window (buys dated up to 7 days before first shown through last shown) NATIONAL RIFLE ASSOCIATION OF AMERICA POLITICAL VICTORY FUND reported mail buys to C2 IMAGING LLC ($5,420); the FEC does not record which buy placed which ad.",
-        "source_urls": [
-          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00053553&payee_name=C2+IMAGING+LLC"
         ],
         "checked_by": null,
         "checked_at": null
@@ -1062,7 +918,7 @@
       "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00053553&payee_name=NATIONAL+RIFLE+ASSOCIATION+OF+AMERICA+INSTITUTE+FOR+LEGISLATIVE+ACTION",
       "basis": {
         "basis": "adjacent",
-        "rule": "Ran Oct 7, 2024 – Nov 5, 2024. In that window (buys dated up to 7 days before first shown through last shown) NATIONAL RIFLE ASSOCIATION OF AMERICA POLITICAL VICTORY FUND reported other buys to NATIONAL RIFLE ASSOCIATION OF AMERICA INSTITUTE FOR LEGISLATIVE ACTION ($2,771); the FEC does not record which buy placed which ad.",
+        "rule": "Ran Oct 7, 2024 – Nov 5, 2024. In that window (buys dated up to 7 days before first shown through last shown) NATIONAL RIFLE ASSOCIATION OF AMERICA POLITICAL VICTORY FUND reported other buys to NATIONAL RIFLE ASSOCIATION OF AMERICA INSTITUTE FOR LEGISLATIVE ACTION ($2,771); the FEC does not record which buy placed which ad. Same-window buys in media that cannot place a Google ad (TV, radio, mail, phones, field, consulting) are not listed.",
         "source_urls": [
           "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00053553&payee_name=NATIONAL+RIFLE+ASSOCIATION+OF+AMERICA+INSTITUTE+FOR+LEGISLATIVE+ACTION"
         ],
@@ -1086,7 +942,7 @@
       "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00053553&payee_name=DERIVE+TECHNOLOGIES+LLC",
       "basis": {
         "basis": "adjacent",
-        "rule": "Ran Oct 7, 2024 – Nov 5, 2024. In that window (buys dated up to 7 days before first shown through last shown) NATIONAL RIFLE ASSOCIATION OF AMERICA POLITICAL VICTORY FUND reported production buys to DERIVE TECHNOLOGIES LLC ($143); the FEC does not record which buy placed which ad.",
+        "rule": "Ran Oct 7, 2024 – Nov 5, 2024. In that window (buys dated up to 7 days before first shown through last shown) NATIONAL RIFLE ASSOCIATION OF AMERICA POLITICAL VICTORY FUND reported production buys to DERIVE TECHNOLOGIES LLC ($143); the FEC does not record which buy placed which ad. Same-window buys in media that cannot place a Google ad (TV, radio, mail, phones, field, consulting) are not listed.",
         "source_urls": [
           "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00053553&payee_name=DERIVE+TECHNOLOGIES+LLC"
         ],
@@ -1131,81 +987,9 @@
       "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00053553&payee_name=CREATIVE+STRATEGIC+SOLUTIONS+LLC",
       "basis": {
         "basis": "adjacent",
-        "rule": "Ran Sep 5, 2024 – Nov 4, 2024. In that window (buys dated up to 7 days before first shown through last shown) NATIONAL RIFLE ASSOCIATION OF AMERICA POLITICAL VICTORY FUND reported production buys to CREATIVE STRATEGIC SOLUTIONS LLC ($1,000,000); the FEC does not record which buy placed which ad.",
+        "rule": "Ran Sep 5, 2024 – Nov 4, 2024. In that window (buys dated up to 7 days before first shown through last shown) NATIONAL RIFLE ASSOCIATION OF AMERICA POLITICAL VICTORY FUND reported production buys to CREATIVE STRATEGIC SOLUTIONS LLC ($1,000,000); the FEC does not record which buy placed which ad. Same-window buys in media that cannot place a Google ad (TV, radio, mail, phones, field, consulting) are not listed.",
         "source_urls": [
           "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00053553&payee_name=CREATIVE+STRATEGIC+SOLUTIONS+LLC"
-        ],
-        "checked_by": null,
-        "checked_at": null
-      }
-    },
-    {
-      "from": "vendor:V-hbp-marketing",
-      "to": "CR15651442485454962689",
-      "kind": "placement",
-      "amount": 0,
-      "visibility": "disclosed",
-      "depth": 2,
-      "transaction_types": [],
-      "count": 3,
-      "date_range": [
-        "2024-09-05",
-        "2024-11-04"
-      ],
-      "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00053553&payee_name=HBP+MARKETING+LLC",
-      "basis": {
-        "basis": "adjacent",
-        "rule": "Ran Sep 5, 2024 – Nov 4, 2024. In that window (buys dated up to 7 days before first shown through last shown) NATIONAL RIFLE ASSOCIATION OF AMERICA POLITICAL VICTORY FUND reported mail buys to HBP MARKETING LLC ($183,758); the FEC does not record which buy placed which ad.",
-        "source_urls": [
-          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00053553&payee_name=HBP+MARKETING+LLC"
-        ],
-        "checked_by": null,
-        "checked_at": null
-      }
-    },
-    {
-      "from": "vendor:V-i360",
-      "to": "CR15651442485454962689",
-      "kind": "placement",
-      "amount": 0,
-      "visibility": "disclosed",
-      "depth": 2,
-      "transaction_types": [],
-      "count": 3,
-      "date_range": [
-        "2024-09-05",
-        "2024-11-04"
-      ],
-      "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00053553&payee_name=I360+LLC",
-      "basis": {
-        "basis": "adjacent",
-        "rule": "Ran Sep 5, 2024 – Nov 4, 2024. In that window (buys dated up to 7 days before first shown through last shown) NATIONAL RIFLE ASSOCIATION OF AMERICA POLITICAL VICTORY FUND reported phones buys to I360 LLC ($58,583); the FEC does not record which buy placed which ad.",
-        "source_urls": [
-          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00053553&payee_name=I360+LLC"
-        ],
-        "checked_by": null,
-        "checked_at": null
-      }
-    },
-    {
-      "from": "vendor:V-c2-imaging",
-      "to": "CR15651442485454962689",
-      "kind": "placement",
-      "amount": 0,
-      "visibility": "disclosed",
-      "depth": 2,
-      "transaction_types": [],
-      "count": 7,
-      "date_range": [
-        "2024-09-05",
-        "2024-11-04"
-      ],
-      "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00053553&payee_name=C2+IMAGING+LLC",
-      "basis": {
-        "basis": "adjacent",
-        "rule": "Ran Sep 5, 2024 – Nov 4, 2024. In that window (buys dated up to 7 days before first shown through last shown) NATIONAL RIFLE ASSOCIATION OF AMERICA POLITICAL VICTORY FUND reported mail buys to C2 IMAGING LLC ($13,562); the FEC does not record which buy placed which ad.",
-        "source_urls": [
-          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00053553&payee_name=C2+IMAGING+LLC"
         ],
         "checked_by": null,
         "checked_at": null
@@ -1227,7 +1011,7 @@
       "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00053553&payee_name=NATIONAL+RIFLE+ASSOCIATION+OF+AMERICA+INSTITUTE+FOR+LEGISLATIVE+ACTION",
       "basis": {
         "basis": "adjacent",
-        "rule": "Ran Sep 5, 2024 – Nov 4, 2024. In that window (buys dated up to 7 days before first shown through last shown) NATIONAL RIFLE ASSOCIATION OF AMERICA POLITICAL VICTORY FUND reported other buys to NATIONAL RIFLE ASSOCIATION OF AMERICA INSTITUTE FOR LEGISLATIVE ACTION ($2,771); the FEC does not record which buy placed which ad.",
+        "rule": "Ran Sep 5, 2024 – Nov 4, 2024. In that window (buys dated up to 7 days before first shown through last shown) NATIONAL RIFLE ASSOCIATION OF AMERICA POLITICAL VICTORY FUND reported other buys to NATIONAL RIFLE ASSOCIATION OF AMERICA INSTITUTE FOR LEGISLATIVE ACTION ($2,771); the FEC does not record which buy placed which ad. Same-window buys in media that cannot place a Google ad (TV, radio, mail, phones, field, consulting) are not listed.",
         "source_urls": [
           "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00053553&payee_name=NATIONAL+RIFLE+ASSOCIATION+OF+AMERICA+INSTITUTE+FOR+LEGISLATIVE+ACTION"
         ],
@@ -1251,7 +1035,7 @@
       "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00053553&payee_name=DERIVE+TECHNOLOGIES+LLC",
       "basis": {
         "basis": "adjacent",
-        "rule": "Ran Sep 5, 2024 – Nov 4, 2024. In that window (buys dated up to 7 days before first shown through last shown) NATIONAL RIFLE ASSOCIATION OF AMERICA POLITICAL VICTORY FUND reported production buys to DERIVE TECHNOLOGIES LLC ($228); the FEC does not record which buy placed which ad.",
+        "rule": "Ran Sep 5, 2024 – Nov 4, 2024. In that window (buys dated up to 7 days before first shown through last shown) NATIONAL RIFLE ASSOCIATION OF AMERICA POLITICAL VICTORY FUND reported production buys to DERIVE TECHNOLOGIES LLC ($228); the FEC does not record which buy placed which ad. Same-window buys in media that cannot place a Google ad (TV, radio, mail, phones, field, consulting) are not listed.",
         "source_urls": [
           "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00053553&payee_name=DERIVE+TECHNOLOGIES+LLC"
         ],
@@ -1275,7 +1059,7 @@
       "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00053553&payee_name=FAMILY+SHOOTING+CENTERS+INC",
       "basis": {
         "basis": "adjacent",
-        "rule": "Ran Sep 5, 2024 – Nov 4, 2024. In that window (buys dated up to 7 days before first shown through last shown) NATIONAL RIFLE ASSOCIATION OF AMERICA POLITICAL VICTORY FUND reported other buys to FAMILY SHOOTING CENTERS INC ($125); the FEC does not record which buy placed which ad.",
+        "rule": "Ran Sep 5, 2024 – Nov 4, 2024. In that window (buys dated up to 7 days before first shown through last shown) NATIONAL RIFLE ASSOCIATION OF AMERICA POLITICAL VICTORY FUND reported other buys to FAMILY SHOOTING CENTERS INC ($125); the FEC does not record which buy placed which ad. Same-window buys in media that cannot place a Google ad (TV, radio, mail, phones, field, consulting) are not listed.",
         "source_urls": [
           "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00053553&payee_name=FAMILY+SHOOTING+CENTERS+INC"
         ],
@@ -1299,7 +1083,7 @@
       "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00053553&payee_name=CYWB+OPERATOR+LLC",
       "basis": {
         "basis": "adjacent",
-        "rule": "Ran Sep 5, 2024 – Nov 4, 2024. In that window (buys dated up to 7 days before first shown through last shown) NATIONAL RIFLE ASSOCIATION OF AMERICA POLITICAL VICTORY FUND reported other buys to CYWB OPERATOR LLC ($33); the FEC does not record which buy placed which ad.",
+        "rule": "Ran Sep 5, 2024 – Nov 4, 2024. In that window (buys dated up to 7 days before first shown through last shown) NATIONAL RIFLE ASSOCIATION OF AMERICA POLITICAL VICTORY FUND reported other buys to CYWB OPERATOR LLC ($33); the FEC does not record which buy placed which ad. Same-window buys in media that cannot place a Google ad (TV, radio, mail, phones, field, consulting) are not listed.",
         "source_urls": [
           "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00053553&payee_name=CYWB+OPERATOR+LLC"
         ],

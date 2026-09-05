@@ -232,8 +232,9 @@ export default async function ChainPage({
             <p className="mt-1 text-xs text-neutral-500">
               <span className="font-medium text-neutral-700">Assumptions on the spending side.</span>{" "}
               Vendor dollars are Schedule E payments as filed. Ad dollars are the midpoint of the range Google reports, not a filed figure. A vendor →
-              ad link means the ad ran while the spender was paying that vendor (adjacent), or the vendor was the only digital vendor paid in that
-              window (inferred), unless a person verified it from a source naming both. FEC does not record which buy placed which ad. Targeting edges
+              ad link means the ad ran while the spender was paying that vendor for digital, production or unclassified work (adjacent; TV, mail,
+              phone and field buys are not linked to Google ads), or the vendor was the only digital vendor paid in that window (inferred), unless
+              a person verified it from a source naming both. FEC does not record which buy placed which ad. Targeting edges
               never carry money to the candidate.
             </p>
           )}

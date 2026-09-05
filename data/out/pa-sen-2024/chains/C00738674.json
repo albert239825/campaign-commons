@@ -13564,54 +13564,6 @@
       }
     },
     {
-      "from": "vendor:V-winning-connections",
-      "to": "CR16898073441951809537",
-      "kind": "placement",
-      "amount": 0,
-      "visibility": "disclosed",
-      "depth": 2,
-      "transaction_types": [],
-      "count": 2,
-      "date_range": [
-        "2024-10-30",
-        "2024-11-04"
-      ],
-      "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00738674&payee_name=WINNING+CONNECTIONS",
-      "basis": {
-        "basis": "adjacent",
-        "rule": "Ran Oct 30, 2024 – Nov 4, 2024. In that window (buys dated up to 7 days before first shown through last shown) REPRODUCTIVE FREEDOM FOR ALL FREEDOM FUND reported phones buys to WINNING CONNECTIONS ($86,672); the FEC does not record which buy placed which ad.",
-        "source_urls": [
-          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00738674&payee_name=WINNING+CONNECTIONS"
-        ],
-        "checked_by": null,
-        "checked_at": null
-      }
-    },
-    {
-      "from": "vendor:V-scale-to-win",
-      "to": "CR16898073441951809537",
-      "kind": "placement",
-      "amount": 0,
-      "visibility": "disclosed",
-      "depth": 2,
-      "transaction_types": [],
-      "count": 3,
-      "date_range": [
-        "2024-10-30",
-        "2024-11-04"
-      ],
-      "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00738674&payee_name=SCALE+TO+WIN",
-      "basis": {
-        "basis": "adjacent",
-        "rule": "Ran Oct 30, 2024 – Nov 4, 2024. In that window (buys dated up to 7 days before first shown through last shown) REPRODUCTIVE FREEDOM FOR ALL FREEDOM FUND reported phones buys to SCALE TO WIN ($3,240); the FEC does not record which buy placed which ad.",
-        "source_urls": [
-          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00738674&payee_name=SCALE+TO+WIN"
-        ],
-        "checked_by": null,
-        "checked_at": null
-      }
-    },
-    {
       "from": "vendor:V-reproductive-freedom-for-all-pac",
       "to": "CR16898073441951809537",
       "kind": "placement",
@@ -13627,33 +13579,9 @@
       "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00738674&payee_name=REPRODUCTIVE+FREEDOM+FOR+ALL+PAC",
       "basis": {
         "basis": "adjacent",
-        "rule": "Ran Oct 30, 2024 – Nov 4, 2024. In that window (buys dated up to 7 days before first shown through last shown) REPRODUCTIVE FREEDOM FOR ALL FREEDOM FUND reported other buys to REPRODUCTIVE FREEDOM FOR ALL PAC ($2,040); the FEC does not record which buy placed which ad.",
+        "rule": "Ran Oct 30, 2024 – Nov 4, 2024. In that window (buys dated up to 7 days before first shown through last shown) REPRODUCTIVE FREEDOM FOR ALL FREEDOM FUND reported other buys to REPRODUCTIVE FREEDOM FOR ALL PAC ($2,040); the FEC does not record which buy placed which ad. Same-window buys in media that cannot place a Google ad (TV, radio, mail, phones, field, consulting) are not listed.",
         "source_urls": [
           "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00738674&payee_name=REPRODUCTIVE+FREEDOM+FOR+ALL+PAC"
-        ],
-        "checked_by": null,
-        "checked_at": null
-      }
-    },
-    {
-      "from": "vendor:V-hubdialer",
-      "to": "CR16898073441951809537",
-      "kind": "placement",
-      "amount": 0,
-      "visibility": "disclosed",
-      "depth": 2,
-      "transaction_types": [],
-      "count": 5,
-      "date_range": [
-        "2024-10-30",
-        "2024-11-04"
-      ],
-      "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00738674&payee_name=HUBDIALER",
-      "basis": {
-        "basis": "adjacent",
-        "rule": "Ran Oct 30, 2024 – Nov 4, 2024. In that window (buys dated up to 7 days before first shown through last shown) REPRODUCTIVE FREEDOM FOR ALL FREEDOM FUND reported phones buys to HUBDIALER LLC ($183); the FEC does not record which buy placed which ad.",
-        "source_urls": [
-          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00738674&payee_name=HUBDIALER"
         ],
         "checked_by": null,
         "checked_at": null
