@@ -376,9 +376,9 @@ body:has(.race-dashboard) :is(a, button):focus-visible { outline: 2px solid curr
 .race-dashboard { --race-rule: rgb(155 151 146 / 25%); display: grid; gap: 88px; min-width: 0; line-height: 1.6; }
 .race-dashboard > *, .race-dashboard .ui-card { min-width: 0; }
 .race-dashboard :where(.font-semibold, .font-bold) { font-weight: 500; }
-.race-overview { margin-top: 48px; }
-.race-title { max-width: 1050px; font-size: clamp(40px, 5vw, 72px); font-weight: 400; line-height: 1.05; letter-spacing: -.05em; text-wrap: balance; }
-.race-metadata { display: flex; flex-wrap: wrap; align-items: center; gap: 16px 32px; margin-top: 28px; font-size: 14px; color: #6f6d69; }
+.race-overview { margin-top: 28px; }
+.race-title { max-width: 640px; font-size: clamp(30px, 3vw, 42px); font-weight: 400; line-height: 1.1; letter-spacing: -.045em; text-wrap: balance; }
+
 .race-totals { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 32px; margin-top: 56px; padding-block: 32px; border-block: 1px solid var(--race-rule); }
 .race-totals dt { font-size: 14px; text-transform: none; letter-spacing: 0; color: #6f6d69; }
 .race-totals dd { margin-top: 12px; font-size: clamp(32px, 3.5vw, 48px); font-weight: 400; line-height: 1.1; letter-spacing: -.04em; }
@@ -432,7 +432,6 @@ body:has(.race-dashboard) :is(a, button):focus-visible { outline: 2px solid curr
   body:has(.race-dashboard) .site-main { padding-top: 32px; }
   .race-dashboard { gap: 56px; }
   .race-overview { margin-top: 32px; }
-  .race-metadata { gap: 16px; margin-top: 24px; }
   .race-totals { grid-template-columns: 1fr; gap: 24px; margin-top: 32px; padding-block: 24px; }
   .race-totals > div { display: flex; justify-content: space-between; align-items: baseline; gap: 16px; }
   .race-totals dd { margin: 0; font-size: 36px; }
@@ -445,3 +444,40 @@ body:has(.race-dashboard) :is(a, button):focus-visible { outline: 2px solid curr
 
 .race-dashboard .flags-legend { gap: 20px 32px; margin-top: 16px; }
 .race-dashboard .flags-legend > div { flex-direction: column; gap: 4px; }
+
+/* Compact race identity banner; party affiliation uses the same neutral ink. */
+.race-banner {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(240px, .7fr);
+  align-items: center;
+  gap: 32px;
+  padding: 36px;
+  background: linear-gradient(115deg, #dce5eb 0%, #e9e7e2 53%, #efe1cf 100%);
+}
+.race-banner--senate { grid-template-columns: 140px minmax(0, 1fr) minmax(240px, .7fr); }
+.race-banner-seal { width: 140px; height: 140px; object-fit: contain; }
+.race-banner-heading { min-width: 0; }
+.race-election-date { margin-top: 20px; font-size: 14px; color: #555550; }
+.race-banner-candidates { border-left: 1px solid var(--race-rule); padding-left: 32px; }
+.race-banner-candidates h2 { margin-bottom: 16px; font-size: 15px; font-weight: 500; }
+.race-banner-candidates dl { display: grid; gap: 16px; }
+.race-banner-candidates dt { font-size: 12px; color: #555550; }
+.race-banner-candidates ul { display: grid; gap: 8px; margin-top: 3px; }
+.race-banner-candidates li { display: flex; align-items: baseline; flex-wrap: wrap; gap: 2px 12px; }
+.race-banner-candidates a { font-size: 17px; text-underline-offset: 4px; }
+.race-banner-candidates a:hover { text-decoration: underline; }
+.race-candidate-role { font-size: 11px; color: #555550; }
+.race-dashboard .party-tag { color: #555550; background: transparent; border-color: var(--race-rule); }
+@media (min-width: 681px) and (max-width: 1050px) {
+  .race-banner { grid-template-columns: minmax(0, 1fr); gap: 24px; padding: 28px; }
+  .race-banner--senate { grid-template-columns: 140px minmax(0, 1fr); }
+  .race-banner-candidates { grid-column: 1 / -1; border-left: 0; border-top: 1px solid var(--race-rule); padding: 20px 0 0; }
+  .race-banner-candidates dl { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (max-width: 680px) {
+  .race-banner { grid-template-columns: minmax(0, 1fr); padding: 24px; gap: 24px; }
+  .race-banner-seal { width: 88px; height: 88px; }
+  .race-title { font-size: 32px; text-wrap: initial; }
+  .race-election-date { margin-top: 16px; }
+  .race-banner-candidates { border-left: 0; border-top: 1px solid var(--race-rule); padding: 20px 0 0; }
+}
