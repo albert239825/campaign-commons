@@ -7,9 +7,14 @@ import type { TrailSubject } from "@citizen-gotham/contracts";
 import { canonicalQuestion, resolveQuestion, type Resolution } from "@/lib/ask";
 import { routes } from "@/lib/format";
 
+/** Client-side budget for /api/ask-route; the server's own LLM timeout is shorter, so this only trips on a stalled network. */
+const ASK_ROUTE_TIMEOUT_MS = 8000;
+
 /**
- * Plain-English question box. Resolution happens in the browser by whole-word alias + keyword matching
- * (src/lib/ask.ts) and lands on a statically generated answer page; there is nothing to call.
+ * Plain-English question box. A typed question is POSTed to /api/ask-route, where an LLM may pick the route
+ * (intent, subject) from the closed set before the deterministic resolver (src/lib/ask.ts) has the final say; if the
+ * call fails for any reason the same resolver runs here in the browser. Either way the result is a link to a statically
+ * generated answer page — nothing the model writes is shown.
  */
 export function AskBox({
   raceId,
@@ -27,10 +32,20 @@ export function AskBox({
   const router = useRouter();
   const [question, setQuestion] = useState(initial);
   const [result, setResult] = useState<Resolution | null>(null);
+  const [pending, setPending] = useState(false);
 
-  const submit = (e: FormEvent) => {
+  const submit = async (e: FormEvent) => {
     e.preventDefault();
-    const r = resolveQuestion(question, subjects, examples);
+    if (pending) return;
+    setPending(true);
+    setResult(null);
+    let r: Resolution;
+    try {
+      r = question.trim() === "" ? resolveQuestion(question, subjects, examples) : await askRoute(raceId, question);
+    } catch {
+      r = resolveQuestion(question, subjects, examples);
+    }
+    setPending(false);
     setResult(r);
     if (r.kind === "answer") router.push(routes.answer(raceId, r.intent, r.subject.id));
   };
@@ -50,10 +65,16 @@ export function AskBox({
           aria-label="Ask a money question about this race"
           className="w-full rounded-md border border-neutral-300 bg-white px-3 py-2 text-sm shadow-sm outline-none focus:border-neutral-900"
         />
-        <button type="submit" className="rounded-md bg-neutral-900 px-4 py-2 text-sm font-medium text-white hover:bg-neutral-700">
+        <button
+          type="submit"
+          disabled={pending}
+          className="rounded-md bg-neutral-900 px-4 py-2 text-sm font-medium text-white hover:bg-neutral-700 disabled:opacity-50"
+        >
           Ask
         </button>
       </form>
+
+      {pending && <p className="text-xs text-neutral-500">Looking up…</p>}
 
       {result?.kind === "answer" && (
         <p className="text-xs text-neutral-500">
@@ -80,7 +101,27 @@ export function AskBox({
   );
 }
 
-/** A suggested question rendered as a real link to its answer page when it resolves, else as text. */
+/** Asks the server to route the question; throws on any transport, timeout, or shape problem so the caller can resolve locally. */
+async function askRoute(raceId: string, question: string): Promise<Resolution> {
+  const controller = new AbortController();
+  const timer = setTimeout(() => controller.abort(), ASK_ROUTE_TIMEOUT_MS);
+  try {
+    const res = await fetch("/api/ask-route", {
+      method: "POST",
+      headers: { "content-type": "application/json" },
+      body: JSON.stringify({ raceId, question }),
+      signal: controller.signal,
+    });
+    if (!res.ok) throw new Error(`ask-route ${res.status}`);
+    const body: unknown = await res.json();
+    if (typeof body !== "object" || body === null || !("kind" in body)) throw new Error("ask-route: unexpected body");
+    return body as Resolution;
+  } finally {
+    clearTimeout(timer);
+  }
+}
+
+/** A suggested question rendered as a real link to its answer page when it resolves deterministically, else as text. */
 export function SuggestionLink({ raceId, subjects, question }: { raceId: string; subjects: TrailSubject[]; question: string }) {
   const r = resolveQuestion(question, subjects);
   if (r.kind !== "answer") return <span className="text-xs text-neutral-500">{question}</span>;
