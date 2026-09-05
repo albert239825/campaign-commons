@@ -573,7 +573,7 @@ body:has(.race-dashboard) :is(a, button):focus-visible { outline: 2px solid curr
 .story-slideshow-controls button { min-height: 44px; padding: 10px 16px; border: 1px solid var(--race-rule); cursor: pointer; }
 .story-slideshow-controls button:hover:not(:disabled) { background: #e9e5df; }
 .story-slideshow-controls button:disabled { opacity: .35; cursor: default; }
-.story-slideshow-track { display: flex; overflow-x: auto; scroll-snap-type: x mandatory; overscroll-behavior-x: contain; scrollbar-width: thin; scrollbar-color: #b7ab98 #e9e5df; }
+.story-slideshow-track { display: flex; gap: 20px; overflow-x: auto; scroll-snap-type: x mandatory; overscroll-behavior-x: contain; scrollbar-width: thin; scrollbar-color: #b7ab98 #e9e5df; }
 .story-slideshow-track:focus-visible { outline: 2px solid currentColor; outline-offset: 4px; }
 .story-page { flex: 0 0 100%; min-width: 0; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; scroll-snap-align: start; scroll-snap-stop: always; }
 .story-slide { min-width: 0; }

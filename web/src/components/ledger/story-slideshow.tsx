@@ -18,8 +18,10 @@ export function StorySlideshow({ slides }: { slides: ReactNode[] }) {
   function goTo(index: number) {
     const element = track.current;
     if (!element) return;
+    const page = element.children[Math.max(0, Math.min(last, index))];
+    if (!page) return;
     element.scrollTo({
-      left: Math.max(0, Math.min(last, index)) * element.getBoundingClientRect().width,
+      left: element.scrollLeft + page.getBoundingClientRect().left - element.getBoundingClientRect().left,
       behavior: window.matchMedia("(prefers-reduced-motion: reduce)").matches ? "instant" : "smooth",
     });
   }
@@ -59,8 +61,19 @@ export function StorySlideshow({ slides }: { slides: ReactNode[] }) {
           aria-label={grid ? "All funding stories" : "Stories. Swipe or use left and right arrow keys to navigate."} onKeyDown={navigate}
           onScroll={event => {
             const element = event.currentTarget;
-            const width = element.getBoundingClientRect().width;
-            if (!grid && width > 0) setActive(Math.max(0, Math.min(last, Math.round(element.scrollLeft / width))));
+            const bounds = element.getBoundingClientRect();
+            if (grid || bounds.width === 0) return;
+            // Use actual page positions so the gap between groups is included.
+            let nearest = 0;
+            let distance = Infinity;
+            Array.from(element.children).forEach((page, index) => {
+              const offset = Math.abs(page.getBoundingClientRect().left - bounds.left);
+              if (offset < distance) {
+                nearest = index;
+                distance = offset;
+              }
+            });
+            setActive(nearest);
           }}>
           {pages.map((page, index) => (
             <div key={index} className="story-page" role="group" aria-roledescription={grid ? undefined : "slide"}
