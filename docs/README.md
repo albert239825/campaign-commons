@@ -10,6 +10,7 @@ Start here. One document per job; don't duplicate content across them — link.
 | [QUESTIONS.md](QUESTIONS.md) | Open questions and proposed changes that nobody has decided yet. | A question is raised; when it's decided, move it to DECISIONS.md and delete it here. |
 | [DECISIONS.md](DECISIONS.md) | Append-only log of decisions (`D-nn`): what, why, who. | Any choice that constrains later work — data semantics, scope, stack, copy rules. |
 | [PLAN.md](PLAN.md) | How the system is built: architecture, pipeline stages, data sources. | Architecture or a stage changes. |
+| [plans/](plans/) | One file per work block: what is landing, which child builds what, ownership, sequence. Merged to `main` before the block starts. | A new block is scoped. |
 | [CONTRACTS.md](CONTRACTS.md) | The JSON files the app reads and the schemas they must satisfy. | `contracts/src/schemas.ts` changes. |
 | [DESIGN.md](DESIGN.md) | UI design research, tokens, ranked UI fixes. | Design direction changes. |
 | [CRITIQUE.md](CRITIQUE.md) | Critic findings (`C-nn`) with status. | A critic round runs; a finding is closed. |
