@@ -737,5 +737,20 @@
       "last_date": "2024-07-24",
       "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00811166&payee_name=ON+MESSAGE+INC."
     }
-  ]
+  ],
+  "issue_focus": {
+    "kind": "general_partisan",
+    "issue_ids": [],
+    "description": "Sentinel Action Fund's 2024 site: 'We back conservative champions. Help retake the Senate Majority in 2024.' It calls itself 'the only conservative Super PAC with a year-round ground game committed to turning out absentee, early vote, and \"day of\" voters.' No issue named.",
+    "basis": {
+      "basis": "verified",
+      "rule": "Self-described focus from the organisation's own material; says what the org is for, not what its dollars bought",
+      "source_urls": [
+        "https://web.archive.org/web/20241015000000/https://sentinelactionfund.com/",
+        "https://sentinelactionfund.com/"
+      ],
+      "checked_by": "devin-block2-issues",
+      "checked_at": "2026-09-05"
+    }
+  }
 }

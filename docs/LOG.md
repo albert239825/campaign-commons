@@ -182,6 +182,81 @@ not record which buy placed which ad"). Issues became two separate arrays in `is
 **Next.** Four children in parallel (vendors · media wall · issue focus · search), then the chain extension and the
 Vertex-style node panel on master, then critic round 3.
 
+## 2026-09-05 ~19:30 — Block 2 child 3: issue focus (two layers, never summed)
+
+**What changed.** `data/hand/pa-sen-2024/issue_focus.json` — 34 sourced rows (23 of the 98 outside spenders incl. the whole top
+20, plus 11 organisation funders that appear as chain termini: Majority Forward, LCV Inc., Everytown Action Fund, Future Forward
+USA Action, Carpenters, EDF Action, IUOE, Climate Power, UFCW, One Nation, America Votes), each with the org's own words, a verbatim
+quote where one fit, and ≥1 primary URL (org site, Wayback 2024 snapshot, or fec.gov committee page). `pipeline/gotham/issues.py`
+(`make issues`, now in `all` between `ads` and `dossier`): patches `Entity.issue_focus` and `IndependentExpenditure.issues` in place
+with a `verified` Basis, joins `ad_issues.json × ads.json` on `ad_id` without writing `ads.json`, emits `issues.json`
+(`by_ad_issue`, `by_spender_focus` primary-only and all-tags, `coverage`, `notes`). 10 tests on a fixture race (merge, midpoint
+sums, candidate split, dollar-weighted traceability/dark share, general_partisan null bucket, coverage arithmetic, reconciliation
+to per-spender totals, idempotence, missing hand file → no-op). Web: `getIssues()` (null when absent), two side-by-side cards on
+the ledger with the non-summability note between them, `FocusChip` on the entity page (kind · primary issue, description, source
+links, `basis.rule` as title and footer).
+
+**Numbers.** Layer A covers 23/98 spenders and $227.3M of $233.4M outside (97.4%). Primary-only buckets: general partisan /
+leadership committees that name no issue **$138.8M (59.5%)**, 7 committees, weighted traceability 0.73 / dark 0.26;
+candidate-aligned $48.2M (Keystone Renewal, 1); taxes & budget (multi-issue: AFP Action, Club for Growth Action) $21.4M;
+energy & climate (LCV Victory Fund, NRDC Action Votes) $7.1M, dark 0.78; healthcare (multi-issue) $5.5M; guns $2.8M (3 committees
+on both sides); labor $2.3M (4); healthcare single-issue $0.7M; business/trade $0.45M. Layer B: **0 of 500 ads and 0 IEs tagged**
+— `by_ad_issue` is empty and the card says so. Static pages unchanged at 2,147; contract-validated files 2,143 + 5 hand files;
+pipeline tests 67 → 77.
+
+**Challenge.** The IE half of Layer B needs the "purpose" line of each 24/48-hour notice. The local FEC rows carry only generic
+purposes (`MEDIA BUY`, `TV ADVERTISING`, `DIGITAL ADVERTISING`, `PRODUCTION`) for all of the ~60 largest IEs, and every
+docquery.fec.gov filing image returned HTTP 403 from this box (webfetch and curl). Under rule 8 (tags only from the source) and
+the assignment ("never tag from the spender's name or from Layer A") the honest result is zero IE rows; `ie_issues.json.method`
+records what was tried. `ad_issues.json` belongs to child 2 and was empty at build time; the join code is exercised by tests.
+
+**How solved / decided.** D-66..D-69: two layers never summed; midpoint of the Google range, never added to FEC dollars;
+multi-tag records count in full under every tag (primary-only partitions, all-tags overlaps); `general_partisan` = names an
+electoral/ideological goal and no policy area (SLF, WinSenate, DSCC, NRSC-aligned Sentinel, American Crossroads, One Nation,
+America Votes, Somos). Descriptions that fit no frozen id (Future Forward USA Action "rebuild the middle class", American
+Principles Project "the family") take the closest id and say "loose fit" in the description rather than inventing a taxonomy
+entry. Copy discipline: every Layer A sentence is "spenders who describe themselves as … account for $Y", never "spent on".
+
+**Dead ends.** OpenFEC with `DEMO_KEY` rate-limited within minutes — used the local parquet committee table and fec.gov pages
+instead. WinSenate's own 2024 site is gone and no Wayback capture rendered; its row cites the FEC committee page and the Senate
+Majority PAC parent. Defend Our Constitution PAC, Persephone LLC, Geosor Corp., Fund for Policy Reform, Evidence for Impact have
+no self-description anywhere primary — omitted and counted in coverage. Planned Parenthood Votes' About page returned 500.
+
+**Next.** Once docquery is reachable (or from a different network), read the top ~50 notices into `ie_issues.json`; Layer B fills
+in with no code change. Child 2's `ad_issues.json` rows will populate `by_ad_issue` on the next `make issues`.
+
+## 2026-09-05 ~19:40 — Block 2 child 4: static search ("type a name → jump to its page")
+
+**What changed.** `pipeline/gotham/search.py` (`make search`, no race arg) walks every race under `data/out` and writes one
+`data/out/search.json` (`SearchIndex`): 2,053 rows — 1 race, 2 candidates, 2,000 committees, 23 organizations, 27 donors,
+0 vendors (`vendors.json` not there yet; indexed when it is, one-line note when it is not). `search` is the last stage before
+`validate` in `make all`. Web: `getSearchIndex()` in `lib/data.ts`, a `force-static` route handler at `app/search.json/route.ts`
+so `next build` emits the index as a static asset, and a header `SearchBox` (client component, `components/search/`) with a
+plain-TypeScript matcher in `components/search/match.ts`. No new dependency; contracts untouched.
+
+**Challenge.** Two thousand FEC names people type in a dozen ways ("Senate Leadership Fund", "SLF", "C00571703", "sen lead"),
+delivered without a backend and without shipping a fuzzy-search library. And the header `<nav>` was the only place we could put
+the box.
+
+**How we solved it.** One index, one fetch on first focus (cached in module state), `⌘K`/`Ctrl+K` to focus. Matcher: normalise
+(lowercase, collapse whitespace), then a row matches if the query is a substring of its label or any alias, OR every query token is
+a prefix of some label/alias token. Rank by match quality (exact > prefix > substring > token-prefix), then `weight`, then label;
+top 8, grouped by kind in the order their best hit ranked. `weight` is the row's dollars (race: campaign + outside; committee:
+receipts + IEs, or the largest available total; organization/donor: itemized total given), rounded to whole dollars — it is a
+tiebreak, never rendered. Candidate rows link to the dossier when `dossiers/<id>.json` exists, else the race page. Candidate
+aliases carry the last name and "Sen. X" for incumbents; committee aliases carry `Entity.aliases` plus the FEC id so the id
+itself is searchable. Manual check in the built site: "Senate Leadership Fund", "sen lead", "C00571703", "Casey", "Adelson"
+all resolve and Enter navigates.
+
+**Numbers.** Index 446 KB compact JSON (70 KB gzipped; indented it was 452 KB), 2,053 rows; static pages 2,147 → 2,148
+(`/search.json`); pipeline tests 67 → 78; contract-validated files 2,142 → 2,143. Target was ≤400 KB: the labels + hrefs +
+aliases for 2,000 committees are the floor, so we took the ~11% overshoot rather than dropping aliases (which is what makes
+"SLF" work).
+
+**Dead ends.** `KIND_ORDER` for a fixed group ordering — worse than "group by kind in rank order" because the best hit should
+always be first. Copying `search.json` into `public/` — needs a copy step and drifts from `data/out`; the route handler reads the
+same file the pages read.
+
 ## 2026-09-05 ~20:00 — Block 2 child 1: vendors ("Where the money went")
 
 **What changed.** `pipeline/gotham/vendors.py` (`make vendors`, in `all:` before `chains`) turns the 2,235 deduped Schedule E
@@ -220,40 +295,6 @@ distinct from any "MAIN STREET MEDIA").
 **Gaps.** `Vendor.ads[]` is empty until the media-wall child links creatives; `other` still holds $14.2M, ~$12M of it
 `CANVASSING` / field payroll (door-knocking is not a medium in the enum) plus bare `ADVERTISING`/`BILLBOARD` — left
 unclassified on purpose rather than guessed.
-
-
-## 2026-09-05 ~19:40 — Block 2 child 4: static search ("type a name → jump to its page")
-
-**What changed.** `pipeline/gotham/search.py` (`make search`, no race arg) walks every race under `data/out` and writes one
-`data/out/search.json` (`SearchIndex`): 2,053 rows — 1 race, 2 candidates, 2,000 committees, 23 organizations, 27 donors,
-0 vendors (`vendors.json` not there yet; indexed when it is, one-line note when it is not). `search` is the last stage before
-`validate` in `make all`. Web: `getSearchIndex()` in `lib/data.ts`, a `force-static` route handler at `app/search.json/route.ts`
-so `next build` emits the index as a static asset, and a header `SearchBox` (client component, `components/search/`) with a
-plain-TypeScript matcher in `components/search/match.ts`. No new dependency; contracts untouched.
-
-**Challenge.** Two thousand FEC names people type in a dozen ways ("Senate Leadership Fund", "SLF", "C00571703", "sen lead"),
-delivered without a backend and without shipping a fuzzy-search library. And the header `<nav>` was the only place we could put
-the box.
-
-**How we solved it.** One index, one fetch on first focus (cached in module state), `⌘K`/`Ctrl+K` to focus. Matcher: normalise
-(lowercase, collapse whitespace), then a row matches if the query is a substring of its label or any alias, OR every query token is
-a prefix of some label/alias token. Rank by match quality (exact > prefix > substring > token-prefix), then `weight`, then label;
-top 8, grouped by kind in the order their best hit ranked. `weight` is the row's dollars (race: campaign + outside; committee:
-receipts + IEs, or the largest available total; organization/donor: itemized total given), rounded to whole dollars — it is a
-tiebreak, never rendered. Candidate rows link to the dossier when `dossiers/<id>.json` exists, else the race page. Candidate
-aliases carry the last name and "Sen. X" for incumbents; committee aliases carry `Entity.aliases` plus the FEC id so the id
-itself is searchable. Manual check in the built site: "Senate Leadership Fund", "sen lead", "C00571703", "Casey", "Adelson"
-all resolve and Enter navigates.
-
-**Numbers.** Index 446 KB compact JSON (70 KB gzipped; indented it was 452 KB), 2,053 rows; static pages 2,147 → 2,148
-(`/search.json`); pipeline tests 67 → 78; contract-validated files 2,142 → 2,143. Target was ≤400 KB: the labels + hrefs +
-aliases for 2,000 committees are the floor, so we took the ~11% overshoot rather than dropping aliases (which is what makes
-"SLF" work).
-
-**Dead ends.** `KIND_ORDER` for a fixed group ordering — worse than "group by kind in rank order" because the best hit should
-always be first. Copying `search.json` into `public/` — needs a copy step and drifts from `data/out`; the route handler reads the
-same file the pages read.
-
 
 ## 2026-09-05 ~21:00 — Block 2 media wall: dark share as a number, hand-tagged issues, vendor links with a basis (media-wall child)
 

@@ -15,6 +15,7 @@ import {
   DonorViewSchema,
   DossierSchema,
   EntitySchema,
+  IssueSpendingSchema,
   LedgerSchema,
   RacesIndexSchema,
   SearchIndexSchema,
@@ -77,6 +78,9 @@ export const getVendors = (raceId: string) => load(VendorIndexSchema, raceId, "v
 export const getVendor = (raceId: string, vendorId: string) => load(VendorSchema, raceId, "vendors", `${vendorId}.json`);
 /** Cross-race client index (`make search`); served to the browser by app/search.json/route.ts. */
 export const getSearchIndex = () => load(SearchIndexSchema, "search.json");
+/** Block 2 issue layers; null when the stage has not run so the ledger still builds. */
+export const getIssues = (raceId: string) =>
+  existsSync(join(DATA_OUT, raceId, "issues.json")) ? load(IssueSpendingSchema, raceId, "issues.json") : null;
 
 /** Race ids that have a data directory (stub races have none). */
 export const listRaceIds = () => getRaces().races.filter((r) => existsSync(join(DATA_OUT, r.race_id))).map((r) => r.race_id);

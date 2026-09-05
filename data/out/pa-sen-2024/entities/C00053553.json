@@ -1431,5 +1431,21 @@
       "last_date": "2024-09-05",
       "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00053553&payee_name=CYWB+OPERATOR+LLC"
     }
-  ]
+  ],
+  "issue_focus": {
+    "kind": "single_issue",
+    "issue_ids": [
+      "guns"
+    ],
+    "description": "The NRA Political Victory Fund 'is NRA's political action committee' and 'ranks political candidates - irrespective of party affiliation - based on voting records, public statements and their responses to an NRA-PVF questionnaire'; the NRA's stated premise is that 'gun control' schemes are an infringement on the Second Amendment.",
+    "basis": {
+      "basis": "verified",
+      "rule": "Self-described focus from the organisation's own material; says what the org is for, not what its dollars bought",
+      "source_urls": [
+        "https://www.nrapvf.org/about-pvf.aspx"
+      ],
+      "checked_by": "devin-block2-issues",
+      "checked_at": "2026-09-05"
+    }
+  }
 }
