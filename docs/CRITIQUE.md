@@ -90,3 +90,83 @@ Casey `campaign.source_url` = `.../candidate/S6PA00217/?cycle=2024` opens on "Al
 Conservation: holds (Do-not-change). Traceability definition: C-06 (depth_cap ⇒ disclosed; unchained ⇒ dark) and C-01 (ORG ⇒ dark)
 make the 64.2% both over- and under-stated in ways that don't cancel. Flag logic: C-03, C-04, C-09, C-17. Story ranking: C-28;
 stories are unrendered and `verified:false` — keep them out of the demo.
+
+## Review 2
+
+Reviewed at b66aa5d (`main`) after PR #11 and #12. Checks run clean: `contracts` typecheck+validate, `pipeline` lint/test/validate,
+`web` lint/typecheck/build (2,147 static pages, 621 MB `.next`), dev server sweep over `/`, `/methodology`, ledger, `/stories`, `/ads`,
+entity, chain, candidate and donor routes (all 200 except the two 404s below). All `data/out` files are `data_status: "real"` (2,141 files).
+`FEC_API_KEY` was **not** present in this session's environment, so OpenFEC cross-checks ran on `DEMO_KEY` and hit rate limits; C-29's
+dollar figures are computed from the repo's own `independent_expenditures.parquet`, which is sufficient to prove the double count.
+
+**Verdict: demo it, but pull the two P0 claims off screen first.** The money model itself is sound — memo rows excluded, `15E`
+attributed to individuals with conduits as pipes, refunds dropped, conservation holds at every expanded node (re-verified: 0
+mismatches over 86 chains), and no super PAC → candidate money edge exists anywhere (4 `one_way_valve_violation` flags, none
+traversed). PR #11 delivers what it claims: chain HTML is down to 567 KB, `unwalked` is a real fourth bucket ($1,855,716, excluded
+from the score), evidence URLs are pair-filtered, own-JFC mismatches are exempt. PR #12's donor view is the most careful thing in the
+repo: targeting edges are a separate `kind`, dashed, chipped "targeting edge — no money to the candidate", and never summed into
+`total_given` — a targeting edge is **never** drawn as money. The biggest risk is unchanged from round 1 and now measurable: the
+name-only organization classifier calls **$13.1M of registered-committee money "dark"** (C-30), and Schedule E still double-counts
+**$2.28M across 42 re-reported transactions** (C-29, a C-02 regression). Both are single-number claims a judge can check on fec.gov in
+one minute, and both sit in the headline: `$63.87M dark`, `0.7211 traceability`, `$235.67M outside`.
+
+### Round-1 "fixed" re-verification (C-01..C-13)
+
+| ID | Verdict | Evidence |
+| --- | --- | --- |
+| C-01 | **partially fixed → P0 (C-30, C-31)** | `unknown`→dark and `organization_class` shipped, but `_NONPROFIT` matches `PAC`/`COMMITTEE`/`AMERICAN`, so registered PACs (RESTORATION PAC, MOVEMENT VOTER PAC) are dark |
+| C-02 | **not fixed → P0 (C-29)** | `is_notice=false&most_recent=true` does not dedupe rows re-reported in a later filing; 42 pairs sharing `tran_id`+payee+amount+dissemination date across two filings, $2,275,688 |
+| C-03 | fixed | `POPUP_AFTER = 2024-10-17`, 6 popups, no negative-day text |
+| C-04 | fixed (residual P2) | 0 shell flags on `P`/`A`/`J` committees; 107 remain, all `U`/`D`/`B`/leadership — the *name* `shell_cluster` is still overclaiming |
+| C-05 | fixed | `?cycle=2024&election_full=false` on candidate URLs |
+| C-06 | fixed (see C-37) | `unwalked_share`, `traceability.unwalked`, 4-segment bars; score excludes it |
+| C-07 | fixed | `spenderVisibility()` gone; spenders table uses chain shares |
+| C-08 | fixed | `contributor_name=<committee id>` pair filters on inflow/outflow URLs |
+| C-09 | fixed | `is_own_jfc_pair` (designation+cand id+connected org+surname); Casey/McCormick committees carry no `transfer_mismatch` |
+| C-10 | fixed | wire-format `view.ts` + client `visibleGraph`; largest chain page 567 KB (was ~3 MB) |
+| C-11 | **not fixed → P1 (C-34)** | 3 ads link to `/entities/C30003529`, which does not exist |
+| C-12 | fixed | "Total receipts (FEC summary)" vs "itemized" labels on entity/candidate panels |
+| C-13 | fixed | `top_contributors`, `currency`, `issue_ids`, `paid_for_by` gone; JSON Schema mirror regenerates with no diff |
+
+### New findings
+
+| ID | Severity | Area | File:line | Finding | Suggested fix |
+| --- | --- | --- | --- | --- | --- |
+| C-29 | **P0 blocker** | Money model | `pipeline/gotham/fec_ie.py:45-87`, `data/fec/pa-sen-2024/independent_expenditures.parquet` | `most_recent=true` filters *notices*, not rows re-reported in a later periodic filing: 42 pairs (84 rows) share committee, candidate, support/oppose, FEC `tran_id`, payee, amount **and** dissemination date across two `file_num`s, and both copies are summed. They are not byte-identical — 38 pairs also carry a revised `expenditure_date` and 34 a revised `purpose`, i.e. the same FEC-identified transaction re-reported in a later filing — **$2,275,688** double-counted (~1.0% of `outside_total`). Worst: AFP Action `SE24.31605` support McCormick and `SE24.31673` oppose Casey, $1,000,000 each, `file_num` 1841778 vs 1858497. Also inflates donor-view IE amounts. | Dedupe on `(committee_id, candidate_id, support_oppose, tran_id, payee_name, expenditure_amount, dissemination_date)`, keep the highest `file_num`. Do **not** dedupe on `tran_id` alone — 24 further groups share a `tran_id` across genuinely different payees/amounts, and collapsing those would wrongly drop ~$4.5M. |
+| C-30 | **P0 blocker** | Provenance | `pipeline/gotham/orgs.py:34-39`, `web/src/components/chain/terminus.ts:4,15` | Rule 5 violation: 5 chain termini classified `dark` are FEC-registered committees present in the loaded committee table — RESTORATION PAC **$9.0M** (C00571588, super PAC), STRATEGIC VICTORY FUND IE PAC $2.46M, PEOPLE POWER PENNSYLVANIA $0.80M, MOVEMENT VOTER PAC $0.66M, MONTANA DEMOCRATIC PARTY $0.20M ≈ **$13.1M**. UI prints "Advocacy nonprofit — funders not on file" under a legend reading "dark wall (no disclosure)" over money whose donors *are* published (browser-verified on `/chains/C00530766`, where a **green disclosed RESTORATION PAC committee node coexists with the red dark RESTORATION PAC org node in the same graph**). | Before classifying an ORG name, exact/normalized-match it against `committees.parquet`; if it hits, emit a committee node (or `unwalked`), never `dark`. |
+| C-31 | P1 should-fix | Data quality | `pipeline/gotham/orgs.py:37-38` | `_NONPROFIT` matches on any one of `AMERICANS?\|AMERICA`, `COMMITTEE`, `PAC`, `CHAMBER`, `ACTION`, `FUND`, `VICTORY`, …, and it is tested before `_LLC`/`_BUSINESS`, so `REPUBLICAN STATE LEADERSHIP COMMITTEE` (a 527 filing IRS 8872), `STAND TOGETHER CHAMBER OF COMMERCE` and `RESTORATION PAC` all return `nonprofit`→dark (verified by calling `classify_organization`). A single generic token decides the disclosure claim shown to the user. | Require a nonprofit *suffix/marker* (`501(C)`, `ACTION FUND`, `FOUNDATION`) and run `_LLC`/`_BUSINESS` before the generic-token pass. |
+| C-32 | P1 should-fix | Provenance | `pipeline/gotham/donors.py:126,273`, `web/src/app/races/[raceId]/donors/[donorId]/page.tsx` | `allocation_note` is emitted only when `via_intermediary`. For a donor that gave **directly** to the spender there is no note, yet the page — headed "Where {donor}'s money went" — puts the spender's entire IE total under it: KOCH INDUSTRIES INC. gave $27,000,000 and the tree shows "supported with $13,610,480 in IEs"; same for STAND TOGETHER CHAMBER OF COMMERCE. The Method footer does say "once pooled, a donor's money is fungible, so no allocation is made past the first hop" — but the amber `allocation_note` callout is absent exactly where the tree is most allocation-like (browser-verified). | Emit `ALLOCATION_NOTE` whenever any depth ≥ 2 node or any targeting edge is rendered, not just for intermediaries. |
+| C-33 | P1 should-fix | Provenance | `pipeline/gotham/data/ad_verifications.json`, `web/src/components/chain/seen-ads-strip.tsx:24`, `web/src/components/ads/ad-card.tsx` | Copy claims a disclaimer that does not exist in the data: "Paid for by this committee; the link was checked by a person" and "Verified paid-for-by → chain", while `ads.json.notes` states Google publishes **no US declared paid-for-by** and `paid_for_by` was deleted (D-44). The 5 verifications match advertiser *legal name* → FEC committee, which is weaker than a disclaimer. | Reword to "Advertiser name matched to this committee by hand" and cite the matched FEC record only. |
+| C-34 | P1 should-fix | Web | `web/src/components/ads/ad-card.tsx:56-63`, `data/out/pa-sen-2024/ads.json` | The Sponsor link renders whenever `matched_entity_id` is set; 3 ads point at `C30003529`, which has no entity file — `/races/pa-sen-2024/entities/C30003529` returns **404** in dev and is absent from the build manifest. C-11's fix only gated the *chain* link. | Gate both links on membership in `listEntityIds(raceId)`. |
+| C-35 | P1 should-fix | Provenance | `web/src/components/entity/entity-header.tsx`, `pipeline/gotham/ledger.py` (`entity_totals`) | Entity "Independent expenditures" uses the FEC summary `IND_EXP` from `webk24` (all races in the 2024 cycle) while the table below it lists this race only: WINSENATE shows **$311.3M** above a $63.0M race table, with no `source_url` on the header figure. A judge reads it as PA spending. | Label "all races (FEC summary)" and link the committee's fec.gov Schedule E page. |
+| C-36 | P1 should-fix | Provenance | `pipeline/gotham/ledger.py:_top_counterparties` | Aggregated flow rows show one date and one transaction type for many transactions: WINSENATE's inflow renders "$312,850,000 · 2024-11-07 · 18G" for 100+ transfers, and `source_url` resolves to a filtered list, not that row. Nothing says the row is an aggregate. | Add `count` + `first_dt` to the flow contract and render "n transfers, date range". |
+| C-37 | P2 nice | Money model | `pipeline/gotham/chains_graph.py`, `web/src/components/chain/view.ts:12` | D-41 added the `unwalked` bucket for nodes but not for edges: 832 edges terminating at `depth_cap` nodes still carry `visibility: "disclosed"`, so the diagram draws a green ribbon into a grey "not walked" box. Only node/summary shares know about `unwalked`. | Add `unwalked` to the edge visibility enum (additive) or colour ribbons from the target node's bucket. |
+| C-38 | P2 nice | Design (DESIGN.md) | `docs/DESIGN.md:312-366` | Plan predates what shipped: step 11 (chain top-N rendering) is PR #11's `visibleGraph`, §4's component inventory has no donor tree or stories card (PR #12), it proposes issue chips on ad cards after `issue_ids` was deleted (D-44), and §3.3 assigns one grey token to both `unwalked` and targeting edges — the two things most worth keeping distinct. Steps 13–14 (shadcn/Radix, dark mode) add dependencies for two client components. | Re-baseline against `main`; keep steps 1–5 (tokens, fonts, tabular numerals, chips, source links); drop 13–14. |
+| C-39 | P2 nice | Design (DESIGN.md) | `docs/DESIGN.md:18,26` | "Every number has a link" and "mobile does not break" are stated as *current* properties; C-35/C-36 and the horizontally-scrolling flow tables contradict both. A design doc that mis-states the baseline will plan the wrong work. | Replace the "already correct" claims with the audit result. |
+| C-40 | P2 nice | Contracts | `pipeline/gotham/ads_verify.py`, `contracts/src/schemas.ts` (`AdVerification`) | `note` is parsed from `ad_verifications.json` and never emitted or rendered, so the human caveat ("advertiser legal name matches committee name; Google shows no disclaimer") exists only in the repo. Also dead: `StorySchema.kind:"ad_to_chain"` is never generated and `Story.ad_ids` is `[]` in all 17 stories. | Emit `note` into `ads.json` and render it in the ad card; delete the unused kind/field. |
+| C-41 | P2 nice | Architecture | `web/src/lib/format.ts:24`, `pipeline/gotham/donors.py` (`donor_key`) | The donor-key slug is implemented twice (TS regex mirroring a Python one, per the comment). A change on either side silently 404s the 50 donor pages — already visible in that `KOCH INDUSTRIES INC.` becomes `org-KOCH_INDUSTRIES_INC-`. | Emit `donor_key` on the chain node and have the web layer read it. |
+| C-42 | P2 nice | Contracts | `contracts/src/schemas.ts` (`DonorNodeSchema.amount`) | One field carries two meanings by depth ("money received from the parent (depth 1-2); IE dollars aimed at the candidate (depth 3)"). The tree only stays honest because `DonorTree` branches on `via.kind`; any other consumer will sum them. | Add `ie_amount` and keep `amount` money-only. |
+| C-43 | P2 nice | Demo data | `data/out/pa-sen-2024/donors/*` | Entity resolution splits one donor across pages: "BLOOMBERG, MICHAEL" ($4.5M) and "BLOOMBERG, MICHAEL R." ($13.0M) occupy two of the 50 top-donor slots (C-16 residual). Donor pages are also reachable only from chain node names — no index. | Normalise middle initials in `donor_key`; add a top-donors list to the ledger page. |
+| C-44 | P2 nice | Docs drift | `docs/SATURDAY.md:38-40` | Ad counts disagree with the data they describe: SATURDAY says "1,292 PA-relevant … 26 video posters", `ads.json.notes` says 1,849 matched the rule and 29 posters. Stories row says "17 … all `verified: false`" while 5 ads (not stories) are now hand-verified. | Regenerate the table from `notes` fields at handoff time. |
+
+### Delete list
+
+- `AdVerification.note` **or** its silent drop (C-40) — pick one; a hand-written caveat that never renders is worse than none.
+- `StorySchema.kind:"ad_to_chain"` and `Story.ad_ids` — never populated (C-40).
+- `spenders-table.tsx:219` `unwalked: 1` sentinel — a share bar built from a literal; use the chain summary or omit the bar.
+- `docs/DESIGN.md` steps 13–14 (shadcn/Radix, dark mode) — dependencies for two client components (C-38).
+- Duplicate `donorKey` in `web/src/lib/format.ts` (C-41).
+- Still open from round 1: mock-data generator branches, `python-dotenv`, `/entities/C00401224` (ActBlue) still 404s (C-27).
+
+### Do not change
+
+- Targeting edges in the donor view: dashed border, `⇢`, "opposed/supported with $X in IEs", explicit "no money to the candidate"
+  chip, excluded from `total_given`. This is the correct rendering; C-32 is about the *missing note*, not about this.
+- `total_in_chains` double-counts a donor appearing in several chains — documented, and it is not summed against `total_given`.
+- Candidate nodes in the donor walk start at `amount = 0.0` and receive only IE dollars. Intentional (D-47).
+- `unwalked` is excluded from the traceability numerator *and* does not lower it — correct; it is an unknown, not a dark dollar.
+- `traceability.method` already discloses "classified by name; no IRS lookup". Keep that sentence when fixing C-30/C-31.
+- Chain conservation, valve flags, memo/refund/`15E`/conduit handling, FEC-summary-vs-itemized labelling: all re-verified correct.
+- `DataStatusBanner` returning null for `"real"`, and `validate.*` printing `SKIP`: intentional.
+- fec.gov spot-checks that match: Casey receipts $58,147,345.34 (exact), McCormick $35,970,836.83 (exact), SLF oppose-Casey
+  $52,791,239.86 vs $52,799,239.86 (−$8,000, amendment lag). Do not "fix" these.
