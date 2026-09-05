@@ -159,7 +159,7 @@ authorship. Disclose pre-built work if asked rather than hide it.
 ## 2026-09-05 ~19:00 — Block 2 kickoff: contracts first, again (master)
 
 **What changed.** The whiteboard session turned into an ontology (ONTOLOGY.md §0: V0/V1/V2 tables) and a Block 2 plan
-(PLAN.md). Before any child starts, the shared data model is frozen: `Basis` (evidence basis on every non-filed
+(plans/2026-09-05-block2.md). Before any child starts, the shared data model is frozen: `Basis` (evidence basis on every non-filed
 relationship), `Vendor`/`VendorIndex`, `IssueSpending` (two layers), `SearchIndex`, IE/Entity/Ad/Chain extensions
 (`vendor_id`, `medium`, `issue_focus`, `sponsor_visibility_shares`, `vendor_links`, out-side chain nodes `vendor|ad|candidate`
 with `placement|targeting` edges). Five hand-maintained input files under `data/hand/pa-sen-2024/` with their own schemas; both
