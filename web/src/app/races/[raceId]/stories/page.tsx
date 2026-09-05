@@ -17,7 +17,6 @@ export default async function StoriesPage({ params }: { params: Promise<{ raceId
     <div className="detail-page stories-page">
       <Breadcrumbs items={[{ href: routes.home(), label: "Races" }, { href: routes.race(raceId), label: race.label }, { label: "Stories" }]} />
       <DataStatusBanner status={stories.data_status} />
-      <RaceNav race={race} counts={{ ads: getAds(raceId).ads.length, stories: stories.stories.length }} active={routes.stories(raceId)} />
       <DetailHeader label={race.label} title="Funding highlights">
         <p className="max-w-3xl text-sm text-neutral-600">
           {stories.stories.length} outside spenders the pipeline ranked as worth a look: the largest by independent expenditures, the largest whose
@@ -25,6 +24,7 @@ export default async function StoriesPage({ params }: { params: Promise<{ raceId
           chain data; {verified} of {stories.stories.length} have been checked by a person against fec.gov.
         </p>
       </DetailHeader>
+      <RaceNav race={race} counts={{ ads: getAds(raceId).ads.length, stories: stories.stories.length }} active={routes.stories(raceId)} />
       {stories.stories.length === 0 && <p className="detail-empty">No funding highlights are available for this race yet.</p>}
       <div className="detail-stories-grid">
         {stories.stories.map((s) => (

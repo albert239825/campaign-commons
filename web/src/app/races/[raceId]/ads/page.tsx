@@ -26,8 +26,6 @@ export default async function AdsPage({ params }: { params: Promise<{ raceId: st
     <div className="detail-page ads-page">
       <Breadcrumbs items={[{ href: routes.home(), label: "Races" }, { href: routes.race(raceId), label: race.label }, { label: "Ads" }]} />
       <DataStatusBanner status={gallery.data_status} />
-      <RaceNav race={race} counts={{ ads: gallery.ads.length, stories: getStories(raceId).stories.length }} active={routes.ads(raceId)} />
-
       <DetailHeader label={race.label} title="Political ads">
         <p className="max-w-3xl text-sm text-neutral-600">
           Ads about this race from platform transparency libraries ({gallery.sources.join(", ") || "none loaded"}). Spend and impressions are the ranges the
@@ -38,6 +36,7 @@ export default async function AdsPage({ params }: { params: Promise<{ raceId: st
           and funding chain.
         </p>
       </DetailHeader>
+      <RaceNav race={race} counts={{ ads: gallery.ads.length, stories: getStories(raceId).stories.length }} active={routes.ads(raceId)} />
 
       <Card>
         <div className="grid grid-cols-2 gap-4 md:grid-cols-4">
