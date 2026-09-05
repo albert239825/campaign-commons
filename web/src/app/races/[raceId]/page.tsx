@@ -111,7 +111,7 @@ export default async function RaceLedgerPage({ params }: { params: Promise<{ rac
             <SpendersTable raceId={raceId} spenders={ledger.top_outside_spenders} candidates={race.candidates} />
             {allFlags.length > 0 && (
               <div className="mt-4 border-t border-neutral-100 pt-3">
-                <div className="mb-1.5 text-[11px] font-medium uppercase tracking-wide text-neutral-500">Flags</div>
+                <div className="mb-1.5 text-[11px] font-medium tracking-wide text-neutral-500">Flags</div>
                 <FlagsLegend flags={allFlags} />
               </div>
             )}

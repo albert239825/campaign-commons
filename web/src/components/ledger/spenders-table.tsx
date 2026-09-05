@@ -19,6 +19,17 @@ import { EmptyRow, Table, Td, Th } from "@/components/ui/table";
 
 type SortKey = "total" | "name" | "traceability";
 
+// Normalize all-cap filing names for display while preserving acronyms and the source name.
+const NAME_ACRONYMS = new Set([
+  "PAC", "FEC", "LLC", "USA", "US", "DSCC", "LCV", "CFFE", "NRDC", "AFP", "DBA", "CVA",
+  "DMFI", "SEIU", "COPE", "RJC", "JDCA", "API", "PA", "NAKASEC", "NEPA", "USW", "RSLC", "HAF", "CASA",
+]);
+function displayName(name: string) {
+  if (name !== name.toUpperCase()) return name;
+  return name.replace(/[A-Z]+(?:\.[A-Z]+)+\.?|[A-Z]+/g, word =>
+    NAME_ACRONYMS.has(word) || word.includes(".") ? word : word[0] + word.slice(1).toLowerCase());
+}
+
 export function SpendersTable({
   raceId,
   spenders,
@@ -62,7 +73,7 @@ export function SpendersTable({
   return (
     <div className="race-spenders">
       <Table>
-        <thead>
+        <thead className="[&_th]:normal-case">
           <tr>
             <Th
               className={sortable}
@@ -120,8 +131,9 @@ export function SpendersTable({
                   <Link
                     href={routes.entity(raceId, s.entity_id)}
                     className="font-medium hover:underline"
+                    title={`FEC filing name: ${s.name}`}
                   >
-                    {s.name}
+                    {displayName(s.name)}
                   </Link>
                   <div className="font-mono text-[10px] text-neutral-400">
                     {s.entity_id}
@@ -170,7 +182,7 @@ export function SpendersTable({
                       className="text-xs text-neutral-400"
                       title="No chain: this filer reports no receipts to walk"
                     >
-                      no chain
+                      No chain
                     </span>
                   )}
                 </Td>
@@ -193,7 +205,7 @@ export function SpendersTable({
                     href={routes.entity(raceId, s.entity_id)}
                     className="hover:underline"
                   >
-                    entity
+                    Entity
                   </Link>
                   {s.has_chain && (
                     <>
@@ -202,7 +214,7 @@ export function SpendersTable({
                         href={routes.chain(raceId, s.entity_id)}
                         className="hover:underline"
                       >
-                        chain
+                        Chain
                       </Link>
                     </>
                   )}
