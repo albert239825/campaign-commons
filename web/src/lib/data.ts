@@ -17,6 +17,7 @@ import {
   EntitySchema,
   LedgerSchema,
   RacesIndexSchema,
+  SearchIndexSchema,
   StoriesSchema,
   VendorIndexSchema,
   VendorSchema,
@@ -58,6 +59,8 @@ export const getStories = (raceId: string) => load(StoriesSchema, raceId, "stori
 export const getDonor = (raceId: string, donorKey: string) => load(DonorViewSchema, raceId, "donors", `${donorKey}.json`);
 export const getVendors = (raceId: string) => load(VendorIndexSchema, raceId, "vendors.json");
 export const getVendor = (raceId: string, vendorId: string) => load(VendorSchema, raceId, "vendors", `${vendorId}.json`);
+/** Cross-race client index (`make search`); served to the browser by app/search.json/route.ts. */
+export const getSearchIndex = () => load(SearchIndexSchema, "search.json");
 
 /** Race ids that have a data directory (stub races have none). */
 export const listRaceIds = () => getRaces().races.filter((r) => existsSync(join(DATA_OUT, r.race_id))).map((r) => r.race_id);
