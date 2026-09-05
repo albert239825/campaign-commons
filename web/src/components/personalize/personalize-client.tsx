@@ -9,6 +9,7 @@ import { pct, routes } from "@/lib/format";
 import { Card, Chip } from "@/components/ui";
 import { PartyTag } from "@/components/ui/party-tag";
 import { EvidenceList } from "@/components/dossier/evidence-list";
+import { AlignmentMatrix } from "@/components/personalize/alignment-matrix";
 
 const SKIP = "skip";
 const SKIP_REASON: Record<"no_record" | "no_coded_position" | "no_opinion", string> = {
@@ -127,10 +128,14 @@ function CandidateResult({ result, answered }: { result: CandidateAlignment; ans
   );
 }
 
-function RaceResults({ result, answered }: { result: RaceAlignment; answered: number }) {
+function RaceResults({ result, answered, opinions }: { result: RaceAlignment; answered: number; opinions: UserPrefs["opinions"] }) {
   return (
     <Card title={`${result.race.label} · alignment estimate`}>
-      <div className="space-y-5">
+      <div className="mb-6">
+        <h3 className="mb-2 text-sm font-medium text-neutral-700">Issue by issue</h3>
+        <AlignmentMatrix result={result} opinions={opinions} />
+      </div>
+      <div className="space-y-5 border-t border-neutral-100 pt-5">
         {result.candidates.map((candidate) => (
           <CandidateResult key={candidate.candidate_id} result={candidate} answered={answered} />
         ))}
@@ -318,7 +323,7 @@ export function PersonalizeClient({ races, dossiers }: { races: RaceSummary[]; d
             <p className="text-sm text-neutral-600">No races with dossiers loaded for {prefs.state.toUpperCase()} yet.</p>
           </Card>
         ) : (
-          results.map((result) => <RaceResults key={result.race.race_id} result={result} answered={answered} />)
+          results.map((result) => <RaceResults key={result.race.race_id} result={result} answered={answered} opinions={prefs.opinions} />)
         )}
       </section>
 
