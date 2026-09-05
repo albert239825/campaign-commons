@@ -86,7 +86,7 @@ export function VendorAds({
                 ) : (
                   g.rows.map(({ link, ad }) => (
                     <li key={ad.ad_id}>
-                      <Link href={`${routes.ads(raceId)}#${ad.ad_id}`} className="font-medium text-neutral-900 hover:underline">
+                      <Link href={routes.ad(raceId, ad.ad_id)} className="font-medium text-neutral-900 hover:underline">
                         {sponsorNames[link.sponsor_entity_id] ?? link.sponsor_entity_id}
                       </Link>
                       {ad.first_shown && (

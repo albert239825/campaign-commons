@@ -13,7 +13,7 @@ export function spendRangeSum(ads: Ad[]): { min: number; max: number | null } {
 }
 
 export function AdThumb({ ad, raceId }: { ad: Ad; raceId: string }) {
-  const href = `${routes.ads(raceId)}?sponsor=${encodeURIComponent(ad.matched_entity_id ?? "")}#${ad.ad_id}`;
+  const href = routes.ad(raceId, ad.ad_id);
   const title = `${ad.ad_type} ad, ${range(ad.spend_range.min, ad.spend_range.max, (n) => money(n, { compact: false }))}, first shown ${ad.first_shown ?? "—"}`;
   return (
     <Link href={href} title={title} className="block h-20 w-28 shrink-0 overflow-hidden rounded-sm border border-neutral-200 bg-neutral-50 hover:ring-2 hover:ring-neutral-900">
