@@ -253,3 +253,44 @@ aliases for 2,000 committees are the floor, so we took the ~11% overshoot rather
 **Dead ends.** `KIND_ORDER` for a fixed group ordering — worse than "group by kind in rank order" because the best hit should
 always be first. Copying `search.json` into `public/` — needs a copy step and drifts from `data/out`; the route handler reads the
 same file the pages read.
+
+
+## 2026-09-05 ~21:00 — Block 2 media wall: dark share as a number, hand-tagged issues, vendor links with a basis (media-wall child)
+
+**What changed.** New stage `gotham.ads_enrich` (`make ads-enrich`, in `all` after `ads`) patches `data/out/pa-sen-2024/ads.json`
+in place: `sponsor_visibility_shares` copied from the sponsor's chain summary (366 of 500 ads), `issues` from the hand file
+`data/hand/pa-sen-2024/ad_issues.json` (42 of 500 ads, basis `verified` "Tagged by a person from the creative"), `vendor_links[]`
+from the sponsor's `vendors[]` + IE rows under a 7-day-lead inclusive window (D-63, D-64), reverse `vendors/<id>.json.ads[]`, and
+three `Enrichment (…)` notes with the counts. 79 pipeline tests (was 67); 12 new ones cover the share join, both window
+boundaries, single-digital inference vs two digital vendors, verified override + ordering, no-op without `vendors[]`, reverse
+dedupe, idempotence, and that `amount_in_window`/`buys_in_window` reconcile to the fixture's IE rows. Web: ad cards show
+"N% of this sponsor's traced money is dark" (linked to the chain page), issue chips titled with `issues.basis.rule`, and a
+"Vendors in this window" block that prints each `basis.rule` verbatim with an `adjacent` / `inferred` / `verified ✓` label and
+source links; the gallery sorts by dark share, filters by issue and by vendor-link basis, accepts `?sponsor=<committee_id>`, and
+says "42 of 500 ads tagged by a person". Entity pages get an ads strip (count, spend-range sum, thumbnails → `#<ad_id>`, "Google
+shows the advertiser, not the paid-for-by line"); donor pages list committees in the forward walk that ran ads ("{committee},
+which received $x from this donor, ran N ads →"; past the first hop the copy says the amount is a pooled total).
+
+**Challenge.** (1) Child 1's `vendors[]`/IE `vendor_id` rows do not exist yet, so the vendor-link step had nothing real to
+run on. (2) Hand-tagging 40+ creatives without an LLM: Google's ad page renders the creative inside a `googlesyndication`
+frame that the browser's ad blocker refused, and the video ads have no visible text.
+
+**How we solved it.** (1) A fixture under `pipeline/tests/fixtures/block2_sponsor_vendors.json` shaped exactly like
+`EntityVendorRow` + `IndependentExpenditure` (one digital, one TV, one streaming vendor, dated around a fixed ad window) drives
+the tests; on real data the stage detects that no sponsor carries `vendors[]`, writes empty `vendor_links` and a note saying
+so. (2) Pulled the YouTube embed id out of the frame URL and read YouTube's auto-captions with `yt-dlp` (one ad, a text-message
+style video hosted on googlevideo, was read from ffmpeg frame tiles instead); text ads were read off the page. 60 top ads by
+`spend_range.min` reviewed, 42 tagged (abortion 13, tax_budget 13, labor_trade 10, immigration 6, healthcare 3,
+energy_climate 2, guns 1; sponsors: WinSenate 20, SLF 11, DSCC 3, LCV 2, Casey 2, McCormick 1, NRDC Action Votes 1, NRA-PVF 1,
+Future Pennsylvania PAC 1). 18 read but left untagged because the creative names no issue in the frozen taxonomy: 11 fundraising
+/ biography / residency / values spots, 5 SLF "Bring Back" trans-athlete spots, WinSenate "Addicted" (fentanyl / China
+investments), Casey "Fleeced" (price gouging / FTC). 0 unavailable after retrying the 429s. Every `note` quotes the line in the
+creative that supports the tag.
+
+**Numbers.** ads with sponsor shares 0 → 366 / 500; tagged 0 → 42; vendor links 0 → 0 (expected: `gotham.vendors` has not
+run; the stage says so in `notes`); pipeline tests 67 → 79; static pages 2,147 → 2,147; validated files 2,142 + 5 hand.
+
+**Dead ends.** `useSearchParams` for `?sponsor=` forced a Suspense fallback into the static `ads.html` (the whole gallery
+became client-only); reading `window.location.search` in an effect keeps the 500 cards in the prerendered HTML. `yt-dlp --print`
+silently implies `--simulate` and skips writing subtitle files — needs `--no-simulate`. `patch_vendor_ads` first implemented
+as delete-then-append, which reordered `ads[]` on the second run and broke idempotence; replaced in place instead.

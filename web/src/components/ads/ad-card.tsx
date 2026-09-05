@@ -1,7 +1,8 @@
 import Link from "next/link";
-import type { Ad } from "@citizen-gotham/contracts";
-import { date, money, range, routes } from "@/lib/format";
+import { ISSUE_BY_ID, type Ad, type AdVendorLink } from "@citizen-gotham/contracts";
+import { date, money, pct, range, routes } from "@/lib/format";
 import { Chip, SourceLink } from "@/components/ui";
+import type { ChipTone } from "@/components/ui";
 
 const CONFIDENCE: Record<Ad["match_confidence"], { label: string; tone: "green" | "amber" | "muted"; title: string }> = {
   verified: { label: "sponsor verified", tone: "green", title: "Advertiser → FEC committee match checked by a human" },
@@ -27,6 +28,80 @@ function Creative({ ad }: { ad: Ad }) {
 }
 
 export const isVerified = (ad: Ad) => ad.verification?.status === "verified";
+export const darkShare = (ad: Ad): number | null => ad.sponsor_visibility_shares?.dark ?? null;
+
+const BASIS_LABEL: Record<AdVendorLink["basis"]["basis"], { label: string; tone: ChipTone }> = {
+  verified: { label: "verified ✓", tone: "green" },
+  inferred: { label: "inferred", tone: "amber" },
+  adjacent: { label: "adjacent", tone: "muted" },
+  filed: { label: "filed", tone: "neutral" },
+};
+
+function DarkShareLine({ ad, raceId, sponsorHasChain }: { ad: Ad; raceId: string; sponsorHasChain: boolean }) {
+  const dark = darkShare(ad);
+  if (dark === null || !ad.matched_entity_id) return null;
+  const text = `${pct(dark)} of this sponsor's traced money is dark`;
+  const title = "Share of the sponsor committee's traced receipts that stopped at an organization with no donor-disclosure obligation. Describes the sponsor's funding, not this ad.";
+  return (
+    <p className="text-xs text-neutral-700" title={title}>
+      {sponsorHasChain ? (
+        <Link href={routes.chain(raceId, ad.matched_entity_id)} className="font-medium text-neutral-900 underline decoration-dotted underline-offset-2 hover:decoration-solid">
+          {text}
+        </Link>
+      ) : (
+        <span className="font-medium text-neutral-900">{text}</span>
+      )}
+    </p>
+  );
+}
+
+function IssueChips({ ad }: { ad: Ad }) {
+  if (!ad.issues) return null;
+  const title = `${ad.issues.basis.rule} (${ad.issues.basis.checked_by ?? "unknown"}, ${ad.issues.basis.checked_at ?? "—"})`;
+  return (
+    <div className="flex flex-wrap gap-1">
+      {ad.issues.issue_ids.map((id, i) => (
+        <Chip key={id} tone={i === 0 ? "neutral" : "muted"} title={title}>
+          {ISSUE_BY_ID[id].label}
+        </Chip>
+      ))}
+    </div>
+  );
+}
+
+function VendorLines({ links }: { links: AdVendorLink[] }) {
+  if (links.length === 0) return null;
+  return (
+    <div className="space-y-1.5 border-t border-neutral-100 pt-2">
+      <h4 className="text-[11px] font-semibold uppercase tracking-wide text-neutral-500">Vendors in this window</h4>
+      <ul className="space-y-1.5">
+        {links.map((link) => {
+          const label = BASIS_LABEL[link.basis.basis];
+          return (
+            <li key={link.vendor_id} className="text-xs text-neutral-700">
+              <div className="flex flex-wrap items-center gap-1.5">
+                <span className="font-medium text-neutral-900">{link.vendor_name}</span>
+                <Chip tone="muted">{link.medium}</Chip>
+                <Chip tone={label.tone}>{label.label}</Chip>
+                <span className="tabular-nums text-neutral-500">
+                  {money(link.amount_in_window, { compact: false })} · {link.buys_in_window} {link.buys_in_window === 1 ? "buy" : "buys"}
+                </span>
+              </div>
+              <p className="mt-0.5 text-neutral-600">{link.basis.rule}</p>
+              {link.basis.source_urls.length > 0 && (
+                <span className="flex flex-wrap gap-2">
+                  {link.basis.source_urls.map((u, i) => (
+                    <SourceLink key={u} href={u} label={link.basis.source_urls.length > 1 ? `source ${i + 1}` : "source"} />
+                  ))}
+                </span>
+              )}
+            </li>
+          );
+        })}
+      </ul>
+    </div>
+  );
+}
 
 export function AdCard({
   ad,
@@ -77,6 +152,9 @@ export function AdCard({
           )}
         </div>
 
+        <DarkShareLine ad={ad} raceId={raceId} sponsorHasChain={sponsorHasChain} />
+        <IssueChips ad={ad} />
+
         <dl className="grid grid-cols-2 gap-x-3 gap-y-1 text-xs">
           <dt className="text-neutral-500">Spend</dt>
           <dd className="text-right tabular-nums">{range(ad.spend_range.min, ad.spend_range.max, (n) => money(n, { compact: false }))}</dd>
@@ -93,6 +171,8 @@ export function AdCard({
             </>
           )}
         </dl>
+
+        <VendorLines links={ad.vendor_links ?? []} />
 
         <footer className="mt-auto flex flex-wrap items-center justify-between gap-2 border-t border-neutral-100 pt-2 text-xs">
           <span className="flex gap-3">

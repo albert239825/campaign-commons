@@ -1,7 +1,7 @@
 RACE ?= pa-sen-2024
 PY ?= python3
 
-.PHONY: setup mock ingest ledger chains vendors ads issues search dossier validate all lint test
+.PHONY: setup mock ingest ledger chains vendors ads ads-enrich issues search dossier validate all lint test
 
 setup:            ## install pipeline deps (creates .venv)
 	$(PY) -m venv .venv && . .venv/bin/activate && pip install -q -e ".[dev]"
@@ -21,8 +21,11 @@ chains:           ## parquet -> chains/*.json, traceability, flags, stories.json
 vendors:          ## Block 2: Schedule E payees -> vendors.json, vendors/*.json; patches entities/*.json (vendors, IE vendor_id/medium)
 	$(PY) -m gotham.vendors $(RACE)
 
-ads:              ## Google political ads -> ads.json + cached creatives (Block 2: + sponsor shares, issue tags, vendor links)
+ads:              ## Google political ads -> ads.json + cached creatives (downloads the bundle)
 	$(PY) -m gotham.ads $(RACE)
+
+ads-enrich:       ## Block 2: patch ads.json in place with sponsor shares, hand issue tags, vendor links (+ vendors/*.json ads[]); no download
+	$(PY) -m gotham.ads_enrich $(RACE)
 
 issues:           ## Block 2: data/hand/$(RACE)/{issue_focus,ad_issues,ie_issues}.json -> issues.json; patches entities + ads
 	$(PY) -m gotham.issues $(RACE)
@@ -37,7 +40,7 @@ validate:         ## validate data/out and data/hand against contracts/jsonschem
 	$(PY) -m gotham.validate
 
 # Block 2 children add their stage (vendors, issues, search) here when the module lands
-all: ingest ledger vendors chains ads dossier search validate
+all: ingest ledger vendors chains ads ads-enrich dossier search validate
 
 lint:
 	ruff check . && ruff format --check .
