@@ -342,8 +342,9 @@ as delete-then-append, which reordered `ads[]` on the second run and broke idemp
 E as filed), vendor → ad (`placement`, Basis verified/inferred/adjacent), root → ad (`placement`, Basis = how the sponsor was
 matched), root/ad → candidate (`targeting`, support/oppose). Idempotent; no-ops on vendor nodes until `vendors.json` exists. The
 web graph was rebuilt around it: side-aware layout (funding left, spending right), evidence-styled spines, a Vertex-style node
-panel, and hide/expand/fold controls. 105 targeting and 140 placement edges across 86 chains (135 inferred, 5 verified);
-AMERICA PAC, WINSENATE and 24 other spenders now draw their ads and targets.
+panel, and hide/expand/fold controls. 105 targeting and 140 placement edges across 86 chains (135 inferred, 5 verified) —
+numbers from before the vendors stage landed; superseded by the integration entry below. AMERICA PAC, WINSENATE and 24 other
+spenders now draw their ads and targets.
 
 **Challenge.** Two things fought each other: a Sankey wants every edge to be a dollar ribbon, and the new edges are not dollars
 (an ad's spend is Google's range midpoint; a targeting edge is money aimed *at* someone, none of which reaches them). Drawing
@@ -366,9 +367,10 @@ spender and its ads; critic round 3.
 ## 2026-09-06 ~00:30 — Block 2 integration: four children + the spending side in one pipeline (master)
 
 **What changed.** PRs #6 (search), #7 (vendors), #10 (media wall), #9 (issue focus) merged into the chain branch (PR #8), in that
-order, and every stage re-run against the others' real output. Stage order is now `ingest ledger vendors chains ads ads-enrich
-issues dossier chains-out search validate`: `ads-enrich` needs `vendors[]` on the sponsor to draw vendor↔ad links, `chains-out`
-needs those links to hang ads off vendor nodes, `search` indexes whatever exists last.
+order, and every stage re-run against the others' real output. Stage order is now `ingest ledger chains vendors ads ads-enrich
+issues dossier chains-out search validate` (`chains` before `vendors` since D-70: vendors reconciles against
+`ledger.traceability.outside_total`, which `chains` writes): `ads-enrich` needs `vendors[]` on the sponsor to draw vendor↔ad
+links, `chains-out` needs those links to hang ads off vendor nodes, `search` indexes whatever exists last.
 
 **Challenge.** Each child branched from the contracts branch and appended its own `D-57..`, its own `LOG.md` entry, its own
 `Makefile all:` line and its own imports on the shared entity/ledger pages — four-way conflicts on four files, plus 23 generated
@@ -401,3 +403,62 @@ strings in generated JSON (`campaign_commons.vendors`, `campaign_commons.ads_enr
 
 **Not renamed.** The GitHub repo (Albert's; old URLs redirect), and history: earlier LOG entries, CRITIQUE rounds 1–2, and the
 design mockups keep "Citizen Gotham" as written at the time.
+
+**Gotcha for existing checkouts.** `.gitignore` hides `pipeline/gotham/__pycache__`, which survives the branch switch and makes
+`pip install -e .` fail with "Multiple top-level packages discovered in a flat-layout". `pyproject.toml` now pins
+`[tool.setuptools] packages = ["campaign_commons"]`; `rm -rf pipeline/gotham` also clears it.
+
+## 2026-09-06 ~02:30 — Critic round 3: the vendor page shows its receipts, the graph stops drawing Google ranges as dollars (master)
+
+**What changed.** Round 3 of the read-only critic (`docs/CRITIQUE.md` § Round 3, 15 findings, 0 P0 / 3 P1 / 12 P2) reviewed the
+integrated Block 2 stack. Fixes, in one stacked PR on top of the rename:
+
+- *C-45 (P1)* The vendor page never rendered `Vendor.ads[]` even though 74 vendor files carried links, and its `method` footer
+  said links "are empty until a human verifies one". New `VendorAds` card: thumbnails, sponsor, dates, basis label + meaning +
+  rule + source links, grouped by basis, with a "see in the ads wall" link that opens the gallery filtered by `?vendor=<id>`.
+  The card says in words that the FEC does not record which buy placed which ad.
+- *C-46 (P1)* `layout.ts` sized ad nodes and `agg:ads` on the same dollar scale as Schedule E payments — a $550k Google
+  midpoint drawn as tall as a $550k filed payment, under copy that says the two are never added. Out-side `ad`/`aggregate`
+  nodes are now fixed-height; the `$` range stays in the panel text only.
+- *C-47 (P1)* `ads_enrich` popped `issues` then re-assigned it, so the key moved after `vendor_links` on the second run: 1,226
+  reordered lines, zero semantic diffs, dirty `git status` after one re-run. Enrichment keys are now rebuilt in a fixed order and
+  the test compares `json.dumps` with key order intact.
+- *C-48* `generated_at` churned on `issues.json`, `search.json` and all 311 vendor files with no content change. `util.write_json`
+  (and search's compact writer) now keep the previous stamp when everything else is byte-equal; a changed file still gets a fresh
+  one. Tests cover unchanged / changed / corrupt-previous / non-dict.
+- *C-49* `make vendors` wrote `"ads": []` unconditionally, wiping the reverse links until `ads-enrich` re-ran. It now preserves
+  the existing file's `ads[]`; `ads_enrich` remains the only writer of that field and now also prunes rows whose ad no longer
+  links to the vendor.
+- *C-50* Two midpoint conventions and a latent `float(None)` on Google's open top bucket (`max: null`). One `range_midpoint` in
+  `util.py` (open top → floor); `issues.py` counts `open_ended` in coverage and says so in its basis rule.
+- *C-51* Adjacent links paired a Google creative with *any* same-window buy, so an NRA ad card listed a mail vendor, a phone
+  vendor and "other" as if they were its vendors. Adjacent is now offered only for `digital`/`production`/`other` media
+  (`ADJACENT_MEDIA`); verified and inferred links are never dropped; the rule text says what was excluded.
+- *C-52* No `field` medium: OTG STRATEGIES ($8.6M, "CANVASSING" ×24), Second Street, The Outreach Team and 79% of CampaignHQ
+  sat in `other`, the 4th-largest medium in the race. `field` (CANVASS / DOOR / FIELD / GOTV) added to the contract, the
+  classifier, `MEDIUM_LABELS` and the chain node-panel.
+- *C-53* Vendor page per-medium chips always read "100%" (`MediumMix mix={[m]}`); now `pct(m.amount / v.total)`.
+- *C-54* Three spellings of the same evidence basis (ads wall, chain, raw enum on issue cards and focus chips). One vocabulary
+  in `web/src/lib/evidence.ts` (`BASIS_LABELS`, `BASIS_MEANING`, `BASIS_TONE`, `BASIS_DASH`); chain `basis.ts` re-exports it.
+- *C-55* Docs drift: README `make` example, LOG stage order, CONTRACTS `ads[]` writer, superseded edge counts — corrected.
+- *C-56* `[tool.setuptools] packages` pinned (see the rename entry's gotcha).
+- *C-57* "Google shows the advertiser, not the paid-for-by line" was false at the source (the Transparency Center renders
+  "Paid for by …" inside the creative). Reworded everywhere to what is true: Google's *bulk data* carries no paid-for-by field
+  for US ads; the match is on advertiser name.
+- Delete list: the always-empty "verified vendor link" gallery filter is hidden until a row exists (basis options with zero ads
+  are not rendered).
+
+**Challenge.** Proving idempotence. After the fixes a re-run still showed `generated_at` changes on 75 vendor files and
+`search.json` — a real content change (`other` → `field` in the vendor sublabels and `media_mix`), not the bug. The check that
+settled it: stage all output, run `vendors ads-enrich issues chains-out search` again, `git diff --stat data/out` empty. That
+is now the acceptance test for every pipeline PR. Second gotcha: Next's persistent webpack cache served a stale copy of
+`contracts/src/schemas.ts` (symlinked package, `resolve.symlinks = false`) and failed the build on `medium: "field"` until
+`.next/cache` was removed — Vercel clones fresh, so it does not see this.
+
+**Numbers.** Vendor↔ad links 1,090 → 612 (115 inferred unchanged, adjacent 975 → 497); ads with any link 280; vendor files
+carrying `ads[]` 74 → 38 (the rest only had TV/mail/phone adjacency). Medium `other` $14.2M → $0.3M; `field` $13.9M. Pipeline
+tests 159 → 167; 2,459 static pages; ads page HTML 4.0 MB → 3.3 MB (fewer serialised links; C-58 proper is still open). Second
+run of every Block 2 stage: 0 files changed.
+
+**Left open (P2).** C-58 wire size (server-render the ad cards, template the `rule` prose); C-59 duplicate `_date_range` and
+`visibility: "disclosed"` on out-side nodes (midpoint half is done).
