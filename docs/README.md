@@ -5,6 +5,7 @@ Start here. One document per job; don't duplicate content across them — link.
 | Doc | Job | Update when |
 | --- | --- | --- |
 | [FAQ.md](FAQ.md) | Glossary + questions a teammate/judge asks and the answer we give. | Someone asks a question we had to think about. |
+| [ONTOLOGY.md](ONTOLOGY.md) | Questions × surfaces matrix, ER diagram of the data model, field-level sources (actual and candidate). | A question, entity, field or source is added. |
 | [QUESTIONS.md](QUESTIONS.md) | Open questions and proposed changes that nobody has decided yet. | A question is raised; when it's decided, move it to DECISIONS.md and delete it here. |
 | [DECISIONS.md](DECISIONS.md) | Append-only log of decisions (`D-nn`): what, why, who. | Any choice that constrains later work — data semantics, scope, stack, copy rules. |
 | [PLAN.md](PLAN.md) | How the system is built: architecture, pipeline stages, data sources. | Architecture or a stage changes. |
