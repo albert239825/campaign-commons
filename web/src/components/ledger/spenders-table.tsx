@@ -1,5 +1,7 @@
 "use client";
 
+import "./spenders-table.css";
+
 import Link from "next/link";
 import { useMemo, useState } from "react";
 import {
@@ -18,6 +20,17 @@ import {
 import { EmptyRow, Table, Td, Th } from "@/components/ui/table";
 
 type SortKey = "total" | "name" | "traceability";
+
+// Filing names remain unchanged in the data and are available on hover.
+const NAME_ACRONYMS = new Set([
+  "PAC", "FEC", "LLC", "USA", "US", "DSCC", "LCV", "CFFE", "NRDC", "AFP", "DBA", "CVA",
+  "DMFI", "SEIU", "COPE", "RJC", "JDCA", "API", "PA", "NAKASEC", "NEPA", "USW", "RSLC", "HAF", "CASA",
+]);
+function displayName(name: string) {
+  if (name !== name.toUpperCase()) return name;
+  return name.replace(/[A-Z]+(?:\.[A-Z]+)+\.?|[A-Z]+/g, word =>
+    NAME_ACRONYMS.has(word) || word.includes(".") ? word : word[0] + word.slice(1).toLowerCase());
+}
 
 export function SpendersTable({
   raceId,
@@ -61,7 +74,9 @@ export function SpendersTable({
 
   return (
     <div className="race-spenders">
+      <div className="spenders-table-summary">{spenders.length} spenders <span>Independent expenditures</span></div>
       <Table>
+        <caption className="sr-only">Outside spending by committee, candidate, and funding visibility. Sort using the column buttons.</caption>
         <thead>
           <tr>
             <Th
@@ -74,8 +89,7 @@ export function SpendersTable({
                 Spender{arrow("name")}
               </button>
             </Th>
-            <Th>Type</Th>
-            <Th>Supports / opposes</Th>
+            <Th>Candidate spending</Th>
             <Th
               align="right"
               className={sortable}
@@ -84,10 +98,9 @@ export function SpendersTable({
               }
             >
               <button type="button" className="cursor-pointer" onClick={() => toggle("total")}>
-                In race{arrow("total")}
+                Total spending{arrow("total")}
               </button>
             </Th>
-            <Th>Visibility of receipts</Th>
             <Th
               align="right"
               className={sortable}
@@ -100,16 +113,16 @@ export function SpendersTable({
               }
             >
               <button type="button" className="cursor-pointer" onClick={() => toggle("traceability")}>
-                Traceability{arrow("traceability")}
+                Funding visibility{arrow("traceability")}
               </button>
             </Th>
             <Th>Flags</Th>
-            <Th align="right">Links</Th>
+            <Th align="right">Records</Th>
           </tr>
         </thead>
         <tbody>
           {rows.length === 0 && (
-            <EmptyRow colSpan={8}>
+            <EmptyRow colSpan={6}>
               No independent expenditures reported in this race yet.
             </EmptyRow>
           )}
@@ -119,37 +132,32 @@ export function SpendersTable({
                 <Td>
                   <Link
                     href={routes.entity(raceId, s.entity_id)}
-                    className="font-medium hover:underline"
+                    className="spender-name font-medium hover:underline"
+                    title={`FEC filing name: ${s.name}`}
                   >
-                    {s.name}
+                    {displayName(s.name)}
                   </Link>
-                  <div className="font-mono text-[10px] text-neutral-400">
-                    {s.entity_id}
+                  <div className="spender-type">
+                    {s.committee_type ? COMMITTEE_TYPE_LABELS[s.committee_type] : s.committee_type_label}
                   </div>
-                </Td>
-                <Td className="text-xs text-neutral-600">
-                  {s.committee_type
-                    ? COMMITTEE_TYPE_LABELS[s.committee_type]
-                    : s.committee_type_label}
+                  <div className="spender-id font-mono">{s.entity_id}</div>
                 </Td>
                 <Td>
                   <ul className="space-y-0.5 text-xs">
                     {s.by_candidate.map((bc) => (
                       <li
                         key={`${bc.candidate_id}-${bc.support_oppose}`}
-                        className="flex items-baseline gap-1.5 whitespace-nowrap"
+                        className="spender-candidate"
                       >
-                        <span
-                          className={`w-3 font-semibold ${bc.support_oppose === "S" ? "text-neutral-900" : "text-dark"}`}
-                        >
-                          {bc.support_oppose}
+                        <span className="spender-direction">
+                          {bc.support_oppose === "S" ? "Supports" : "Opposes"}
                         </span>
-                        <span className="text-neutral-700">
+                        <span className="spender-candidate-name">
                           {byId.get(bc.candidate_id)?.name ?? bc.candidate_id}
                         </span>
                         <Money
                           amount={bc.amount}
-                          className="text-neutral-500"
+                          className="spender-candidate-amount"
                         />
                       </li>
                     ))}
@@ -158,34 +166,22 @@ export function SpendersTable({
                 <Td align="right" className="font-semibold">
                   <Money amount={s.total} />
                 </Td>
-                <Td>
-                  {s.visibility_shares ? (
-                    <div className="w-24">
-                      <StackedBar
-                        segments={visibilitySegments(s.visibility_shares)}
-                      />
-                    </div>
-                  ) : (
-                    <span
-                      className="text-xs text-neutral-400"
-                      title="No chain: this filer reports no receipts to walk"
-                    >
-                      no chain
-                    </span>
-                  )}
-                </Td>
                 <Td align="right">
-                  {s.traceability_score === null ? (
-                    <span className="text-xs text-neutral-400">—</span>
-                  ) : (
-                    pct(s.traceability_score)
-                  )}
+                  <div className="spender-visibility">
+                    {s.traceability_score !== null && <span className="spender-disclosed">{pct(s.traceability_score)} <small>disclosed</small></span>}
+                    {s.visibility_shares ? (
+                      <StackedBar segments={visibilitySegments(s.visibility_shares)} />
+                    ) : (
+                      <span className="spender-missing" title="No funding chain is available in the loaded records">No chain</span>
+                    )}
+                    {s.traceability_score === null && <span className="spender-missing">Not computed</span>}
+                  </div>
                 </Td>
                 <Td>
                   <div className="flex flex-wrap gap-1">
-                    {s.flags.map((f) => (
+                    {s.flags.length > 0 ? s.flags.map((f) => (
                       <FlagBadge key={f} flag={f} />
-                    ))}
+                    )) : <span className="spender-missing">None</span>}
                   </div>
                 </Td>
                 <Td align="right" className="whitespace-nowrap text-xs">
@@ -193,7 +189,7 @@ export function SpendersTable({
                     href={routes.entity(raceId, s.entity_id)}
                     className="hover:underline"
                   >
-                    entity
+                    Entity
                   </Link>
                   {s.has_chain && (
                     <>
@@ -202,7 +198,7 @@ export function SpendersTable({
                         href={routes.chain(raceId, s.entity_id)}
                         className="hover:underline"
                       >
-                        chain
+                        Chain
                       </Link>
                     </>
                   )}
@@ -215,7 +211,7 @@ export function SpendersTable({
         </tbody>
       </Table>
       <BarLegend
-        className="mt-2"
+        className="spenders-legend mt-2"
         segments={visibilitySegments({
           disclosed: 1,
           inferable: 1,
