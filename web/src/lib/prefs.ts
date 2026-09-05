@@ -1,5 +1,5 @@
 import { z } from "zod";
-import { IssueIdSchema } from "@citizen-gotham/contracts";
+import { IssueIdSchema } from "@campaign-commons/contracts";
 
 export const OpinionSchema = z.number().int().min(1).max(5);
 export const ImportanceSchema = z.number().int().min(1).max(3);

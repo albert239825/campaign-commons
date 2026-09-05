@@ -1,6 +1,6 @@
 """Hand-verified ad -> committee links, merged into ads.json by the ads stage.
 
-gotham/data/ad_verifications.json is maintained by a person: for each entry someone opened the Google Ads
+campaign_commons/data/ad_verifications.json is maintained by a person: for each entry someone opened the Google Ads
 Transparency page, read the advertiser's legal name / FEC ID, and confirmed on fec.gov that the committee with that
 exact ID filed independent expenditures in this race. The pipeline never writes that file. Merging is additive: every
 ad gets a `verification` block; only ads whose (ad_id, entity_id) pair appears in the file and whose name match

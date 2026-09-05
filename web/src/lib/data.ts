@@ -22,7 +22,7 @@ import {
   StoriesSchema,
   VendorIndexSchema,
   VendorSchema,
-} from "@citizen-gotham/contracts";
+} from "@campaign-commons/contracts";
 
 const DATA_OUT = process.env.GOTHAM_DATA_DIR ?? join(process.cwd(), "..", "data", "out");
 

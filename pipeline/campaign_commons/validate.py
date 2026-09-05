@@ -1,8 +1,8 @@
 """Validate data/out/**/*.json against contracts/jsonschema/*.schema.json (no Node required).
 
-python -m gotham.validate            # all of data/out, then data/hand
-python -m gotham.validate <dir>      # one root; a root named `hand` uses the hand-file schemas
-python -m gotham.validate <dir> --hand   # one root, forced to the hand-file schemas (fixtures, temp copies)
+python -m campaign_commons.validate            # all of data/out, then data/hand
+python -m campaign_commons.validate <dir>      # one root; a root named `hand` uses the hand-file schemas
+python -m campaign_commons.validate <dir> --hand   # one root, forced to the hand-file schemas (fixtures, temp copies)
 """
 
 from __future__ import annotations

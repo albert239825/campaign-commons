@@ -2,7 +2,7 @@
   "root_entity_id": "C00740225",
   "root_name": "NRDC ACTION VOTES",
   "race_id": "pa-sen-2024",
-  "generated_at": "2026-09-05T15:46:45+00:00",
+  "generated_at": "2026-09-05T19:53:48+00:00",
   "data_status": "real",
   "nodes": [
     {
@@ -46,7 +46,7 @@
       "medium": "digital",
       "basis": {
         "basis": "filed",
-        "rule": "Schedule E payee, grouped by normalized vendor name (gotham.vendors)",
+        "rule": "Schedule E payee, grouped by normalized vendor name (campaign_commons.vendors)",
         "source_urls": [
           "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00740225&payee_name=GAMBIT+STRATEGIES+LLC"
         ],
@@ -101,29 +101,6 @@
       }
     },
     {
-      "id": "CR00445732358813908993",
-      "name": "Video ad · 2024-06-11 – 2024-08-07",
-      "kind": "ad",
-      "committee_type": null,
-      "depth": 2,
-      "side": "out",
-      "visibility": "disclosed",
-      "amount_in": 47500.0,
-      "is_terminus": false,
-      "terminus_reason": null,
-      "source_url": "https://adstransparency.google.com/advertiser/AR07472449934839513089/creative/CR00445732358813908993?political=&region=US",
-      "href": "/races/pa-sen-2024/ads#CR00445732358813908993",
-      "basis": {
-        "basis": "inferred",
-        "rule": "Google reports spend as a range ($45,000–$50,000); the midpoint is drawn",
-        "source_urls": [
-          "https://adstransparency.google.com/advertiser/AR07472449934839513089/creative/CR00445732358813908993?political=&region=US"
-        ],
-        "checked_by": null,
-        "checked_at": null
-      }
-    },
-    {
       "id": "CR16084482064857956353",
       "name": "Video ad · 2024-06-11 – 2024-08-07",
       "kind": "ad",
@@ -141,6 +118,29 @@
         "rule": "Google reports spend as a range ($45,000–$50,000); the midpoint is drawn",
         "source_urls": [
           "https://adstransparency.google.com/advertiser/AR07472449934839513089/creative/CR16084482064857956353?political=&region=US"
+        ],
+        "checked_by": null,
+        "checked_at": null
+      }
+    },
+    {
+      "id": "CR00445732358813908993",
+      "name": "Video ad · 2024-06-11 – 2024-08-07",
+      "kind": "ad",
+      "committee_type": null,
+      "depth": 2,
+      "side": "out",
+      "visibility": "disclosed",
+      "amount_in": 47500.0,
+      "is_terminus": false,
+      "terminus_reason": null,
+      "source_url": "https://adstransparency.google.com/advertiser/AR07472449934839513089/creative/CR00445732358813908993?political=&region=US",
+      "href": "/races/pa-sen-2024/ads#CR00445732358813908993",
+      "basis": {
+        "basis": "inferred",
+        "rule": "Google reports spend as a range ($45,000–$50,000); the midpoint is drawn",
+        "source_urls": [
+          "https://adstransparency.google.com/advertiser/AR07472449934839513089/creative/CR00445732358813908993?political=&region=US"
         ],
         "checked_by": null,
         "checked_at": null
@@ -193,6 +193,29 @@
       }
     },
     {
+      "id": "CR13224696301477691393",
+      "name": "Video ad · 2024-06-11 – 2024-08-07",
+      "kind": "ad",
+      "committee_type": null,
+      "depth": 2,
+      "side": "out",
+      "visibility": "disclosed",
+      "amount_in": 27500.0,
+      "is_terminus": false,
+      "terminus_reason": null,
+      "source_url": "https://adstransparency.google.com/advertiser/AR07472449934839513089/creative/CR13224696301477691393?political=&region=US",
+      "href": "/races/pa-sen-2024/ads#CR13224696301477691393",
+      "basis": {
+        "basis": "inferred",
+        "rule": "Google reports spend as a range ($25,000–$30,000); the midpoint is drawn",
+        "source_urls": [
+          "https://adstransparency.google.com/advertiser/AR07472449934839513089/creative/CR13224696301477691393?political=&region=US"
+        ],
+        "checked_by": null,
+        "checked_at": null
+      }
+    },
+    {
       "id": "CR01850292492600082433",
       "name": "Video ad · 2024-06-11 – 2024-08-07",
       "kind": "ad",
@@ -233,29 +256,6 @@
         "rule": "Google reports spend as a range ($25,000–$30,000); the midpoint is drawn",
         "source_urls": [
           "https://adstransparency.google.com/advertiser/AR07472449934839513089/creative/CR15891043111577583617?political=&region=US"
-        ],
-        "checked_by": null,
-        "checked_at": null
-      }
-    },
-    {
-      "id": "CR13224696301477691393",
-      "name": "Video ad · 2024-06-11 – 2024-08-07",
-      "kind": "ad",
-      "committee_type": null,
-      "depth": 2,
-      "side": "out",
-      "visibility": "disclosed",
-      "amount_in": 27500.0,
-      "is_terminus": false,
-      "terminus_reason": null,
-      "source_url": "https://adstransparency.google.com/advertiser/AR07472449934839513089/creative/CR13224696301477691393?political=&region=US",
-      "href": "/races/pa-sen-2024/ads#CR13224696301477691393",
-      "basis": {
-        "basis": "inferred",
-        "rule": "Google reports spend as a range ($25,000–$30,000); the midpoint is drawn",
-        "source_urls": [
-          "https://adstransparency.google.com/advertiser/AR07472449934839513089/creative/CR13224696301477691393?political=&region=US"
         ],
         "checked_by": null,
         "checked_at": null
@@ -303,10 +303,10 @@
         "rule": "Sum of Google spend-range midpoints for the ads not drawn individually",
         "source_urls": [
           "https://adstransparency.google.com/advertiser/AR07472449934839513089/creative/CR14141389931880120321?political=&region=US",
-          "https://adstransparency.google.com/advertiser/AR07472449934839513089/creative/CR16267268502811836417?political=&region=US",
           "https://adstransparency.google.com/advertiser/AR07472449934839513089/creative/CR16006340099889430529?political=&region=US",
-          "https://adstransparency.google.com/advertiser/AR07472449934839513089/creative/CR14030363773148069889?political=&region=US",
-          "https://adstransparency.google.com/advertiser/AR07472449934839513089/creative/CR11086297144963891201?political=&region=US"
+          "https://adstransparency.google.com/advertiser/AR07472449934839513089/creative/CR16267268502811836417?political=&region=US",
+          "https://adstransparency.google.com/advertiser/AR07472449934839513089/creative/CR15789472649765191681?political=&region=US",
+          "https://adstransparency.google.com/advertiser/AR07472449934839513089/creative/CR00507887527793786881?political=&region=US"
         ],
         "checked_by": null,
         "checked_at": null
@@ -451,7 +451,7 @@
     },
     {
       "from": "vendor:V-gambit-strategies",
-      "to": "CR00445732358813908993",
+      "to": "CR16084482064857956353",
       "kind": "placement",
       "amount": 47500.0,
       "visibility": "disclosed",
@@ -475,7 +475,7 @@
     },
     {
       "from": "vendor:V-gambit-strategies",
-      "to": "CR16084482064857956353",
+      "to": "CR00445732358813908993",
       "kind": "placement",
       "amount": 47500.0,
       "visibility": "disclosed",
@@ -547,6 +547,30 @@
     },
     {
       "from": "vendor:V-gambit-strategies",
+      "to": "CR13224696301477691393",
+      "kind": "placement",
+      "amount": 27500.0,
+      "visibility": "disclosed",
+      "depth": 2,
+      "transaction_types": [],
+      "count": 2,
+      "date_range": [
+        "2024-06-11",
+        "2024-08-07"
+      ],
+      "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00740225&payee_name=GAMBIT+STRATEGIES+LLC",
+      "basis": {
+        "basis": "inferred",
+        "rule": "Only digital vendor NRDC ACTION VOTES paid during this ad's run window (ran jun 11, 2024 – aug 7, 2024, counting buys dated up to 7 days before first shown) — inferred, not filed. NRDC ACTION VOTES reported $1,200,000 in digital buys to GAMBIT STRATEGIES; Google ads are digital placements.",
+        "source_urls": [
+          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00740225&payee_name=GAMBIT+STRATEGIES+LLC"
+        ],
+        "checked_by": null,
+        "checked_at": null
+      }
+    },
+    {
+      "from": "vendor:V-gambit-strategies",
       "to": "CR01850292492600082433",
       "kind": "placement",
       "amount": 27500.0,
@@ -595,30 +619,6 @@
     },
     {
       "from": "vendor:V-gambit-strategies",
-      "to": "CR13224696301477691393",
-      "kind": "placement",
-      "amount": 27500.0,
-      "visibility": "disclosed",
-      "depth": 2,
-      "transaction_types": [],
-      "count": 2,
-      "date_range": [
-        "2024-06-11",
-        "2024-08-07"
-      ],
-      "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00740225&payee_name=GAMBIT+STRATEGIES+LLC",
-      "basis": {
-        "basis": "inferred",
-        "rule": "Only digital vendor NRDC ACTION VOTES paid during this ad's run window (ran jun 11, 2024 – aug 7, 2024, counting buys dated up to 7 days before first shown) — inferred, not filed. NRDC ACTION VOTES reported $1,200,000 in digital buys to GAMBIT STRATEGIES; Google ads are digital placements.",
-        "source_urls": [
-          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00740225&payee_name=GAMBIT+STRATEGIES+LLC"
-        ],
-        "checked_by": null,
-        "checked_at": null
-      }
-    },
-    {
-      "from": "vendor:V-gambit-strategies",
       "to": "CR03773329533487284225",
       "kind": "placement",
       "amount": 22500.0,
@@ -657,10 +657,10 @@
         "rule": "Advertiser name matched to this committee by normalized name",
         "source_urls": [
           "https://adstransparency.google.com/advertiser/AR07472449934839513089/creative/CR14141389931880120321?political=&region=US",
-          "https://adstransparency.google.com/advertiser/AR07472449934839513089/creative/CR16267268502811836417?political=&region=US",
           "https://adstransparency.google.com/advertiser/AR07472449934839513089/creative/CR16006340099889430529?political=&region=US",
-          "https://adstransparency.google.com/advertiser/AR07472449934839513089/creative/CR14030363773148069889?political=&region=US",
-          "https://adstransparency.google.com/advertiser/AR07472449934839513089/creative/CR11086297144963891201?political=&region=US"
+          "https://adstransparency.google.com/advertiser/AR07472449934839513089/creative/CR16267268502811836417?political=&region=US",
+          "https://adstransparency.google.com/advertiser/AR07472449934839513089/creative/CR15789472649765191681?political=&region=US",
+          "https://adstransparency.google.com/advertiser/AR07472449934839513089/creative/CR00507887527793786881?political=&region=US"
         ],
         "checked_by": null,
         "checked_at": null

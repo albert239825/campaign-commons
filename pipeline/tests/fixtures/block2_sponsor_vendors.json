@@ -1,5 +1,5 @@
 {
-  "_comment": "Stand-in for what gotham.vendors (Block 2 child 1) writes onto entities/<sponsor>.json: `vendors[]` rows shaped like EntityVendorRow and `independent_expenditures[]` rows shaped like IndependentExpenditure with vendor_id/medium filled. Test data only; never copied into data/out.",
+  "_comment": "Stand-in for what campaign_commons.vendors (Block 2 child 1) writes onto entities/<sponsor>.json: `vendors[]` rows shaped like EntityVendorRow and `independent_expenditures[]` rows shaped like IndependentExpenditure with vendor_id/medium filled. Test data only; never copied into data/out.",
   "entity_id": "C00000001",
   "name": "EXAMPLE VICTORY FUND",
   "vendors": [

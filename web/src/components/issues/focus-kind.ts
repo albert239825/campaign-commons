@@ -1,4 +1,4 @@
-import type { FocusKind } from "@citizen-gotham/contracts";
+import type { FocusKind } from "@campaign-commons/contracts";
 
 /** Labels for a spender's self-described focus kind (Layer A). About the spender, never about its dollars. */
 export const FOCUS_KIND_LABELS: Record<FocusKind, string> = {

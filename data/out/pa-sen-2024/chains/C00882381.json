@@ -2,7 +2,7 @@
   "root_entity_id": "C00882381",
   "root_name": "PEOPLE POWER PENNSYLVANIA",
   "race_id": "pa-sen-2024",
-  "generated_at": "2026-09-05T15:46:46+00:00",
+  "generated_at": "2026-09-05T19:53:48+00:00",
   "data_status": "real",
   "nodes": [
     {
@@ -1861,7 +1861,7 @@
       "medium": "production",
       "basis": {
         "basis": "filed",
-        "rule": "Schedule E payee, grouped by normalized vendor name (gotham.vendors)",
+        "rule": "Schedule E payee, grouped by normalized vendor name (campaign_commons.vendors)",
         "source_urls": [
           "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00882381&payee_name=FUSE+WASHINGTON"
         ],
@@ -1885,7 +1885,7 @@
       "medium": "production",
       "basis": {
         "basis": "filed",
-        "rule": "Schedule E payee, grouped by normalized vendor name (gotham.vendors)",
+        "rule": "Schedule E payee, grouped by normalized vendor name (campaign_commons.vendors)",
         "source_urls": [
           "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00882381&payee_name=COMMONWEALTH+COMMUNICATIONS"
         ],
@@ -1906,6 +1906,7 @@
       "terminus_reason": null,
       "source_url": "https://adstransparency.google.com/advertiser/AR14015309208400953345/creative/CR08646937088714866689?political=&region=US",
       "href": "/races/pa-sen-2024/ads#CR08646937088714866689",
+      "thumbnail_path": "/creatives/pa-sen-2024/CR08646937088714866689.jpg",
       "basis": {
         "basis": "inferred",
         "rule": "Google reports spend as a range ($100,000–$125,000); the midpoint is drawn",
@@ -2032,29 +2033,6 @@
       }
     },
     {
-      "id": "CR10545524890830635009",
-      "name": "Video ad · 2024-09-25 – 2024-10-01",
-      "kind": "ad",
-      "committee_type": null,
-      "depth": 2,
-      "side": "out",
-      "visibility": "disclosed",
-      "amount_in": 27500.0,
-      "is_terminus": false,
-      "terminus_reason": null,
-      "source_url": "https://adstransparency.google.com/advertiser/AR14015309208400953345/creative/CR10545524890830635009?political=&region=US",
-      "href": "/races/pa-sen-2024/ads#CR10545524890830635009",
-      "basis": {
-        "basis": "inferred",
-        "rule": "Google reports spend as a range ($25,000–$30,000); the midpoint is drawn",
-        "source_urls": [
-          "https://adstransparency.google.com/advertiser/AR14015309208400953345/creative/CR10545524890830635009?political=&region=US"
-        ],
-        "checked_by": null,
-        "checked_at": null
-      }
-    },
-    {
       "id": "CR16744409218727018497",
       "name": "Video ad · 2024-08-06 – 2024-08-15",
       "kind": "ad",
@@ -2072,29 +2050,6 @@
         "rule": "Google reports spend as a range ($25,000–$30,000); the midpoint is drawn",
         "source_urls": [
           "https://adstransparency.google.com/advertiser/AR14015309208400953345/creative/CR16744409218727018497?political=&region=US"
-        ],
-        "checked_by": null,
-        "checked_at": null
-      }
-    },
-    {
-      "id": "CR01449120608460734465",
-      "name": "Video ad · 2024-10-25 – 2024-11-05",
-      "kind": "ad",
-      "committee_type": null,
-      "depth": 2,
-      "side": "out",
-      "visibility": "disclosed",
-      "amount_in": 27500.0,
-      "is_terminus": false,
-      "terminus_reason": null,
-      "source_url": "https://adstransparency.google.com/advertiser/AR14015309208400953345/creative/CR01449120608460734465?political=&region=US",
-      "href": "/races/pa-sen-2024/ads#CR01449120608460734465",
-      "basis": {
-        "basis": "inferred",
-        "rule": "Google reports spend as a range ($25,000–$30,000); the midpoint is drawn",
-        "source_urls": [
-          "https://adstransparency.google.com/advertiser/AR14015309208400953345/creative/CR01449120608460734465?political=&region=US"
         ],
         "checked_by": null,
         "checked_at": null
@@ -2124,6 +2079,52 @@
       }
     },
     {
+      "id": "CR01449120608460734465",
+      "name": "Video ad · 2024-10-25 – 2024-11-05",
+      "kind": "ad",
+      "committee_type": null,
+      "depth": 2,
+      "side": "out",
+      "visibility": "disclosed",
+      "amount_in": 27500.0,
+      "is_terminus": false,
+      "terminus_reason": null,
+      "source_url": "https://adstransparency.google.com/advertiser/AR14015309208400953345/creative/CR01449120608460734465?political=&region=US",
+      "href": "/races/pa-sen-2024/ads#CR01449120608460734465",
+      "basis": {
+        "basis": "inferred",
+        "rule": "Google reports spend as a range ($25,000–$30,000); the midpoint is drawn",
+        "source_urls": [
+          "https://adstransparency.google.com/advertiser/AR14015309208400953345/creative/CR01449120608460734465?political=&region=US"
+        ],
+        "checked_by": null,
+        "checked_at": null
+      }
+    },
+    {
+      "id": "CR10545524890830635009",
+      "name": "Video ad · 2024-09-25 – 2024-10-01",
+      "kind": "ad",
+      "committee_type": null,
+      "depth": 2,
+      "side": "out",
+      "visibility": "disclosed",
+      "amount_in": 27500.0,
+      "is_terminus": false,
+      "terminus_reason": null,
+      "source_url": "https://adstransparency.google.com/advertiser/AR14015309208400953345/creative/CR10545524890830635009?political=&region=US",
+      "href": "/races/pa-sen-2024/ads#CR10545524890830635009",
+      "basis": {
+        "basis": "inferred",
+        "rule": "Google reports spend as a range ($25,000–$30,000); the midpoint is drawn",
+        "source_urls": [
+          "https://adstransparency.google.com/advertiser/AR14015309208400953345/creative/CR10545524890830635009?political=&region=US"
+        ],
+        "checked_by": null,
+        "checked_at": null
+      }
+    },
+    {
       "id": "agg:ads@C00882381",
       "name": "28 more ads",
       "kind": "aggregate",
@@ -2141,11 +2142,11 @@
         "basis": "inferred",
         "rule": "Sum of Google spend-range midpoints for the ads not drawn individually",
         "source_urls": [
-          "https://adstransparency.google.com/advertiser/AR14015309208400953345/creative/CR14812426602775838721?political=&region=US",
-          "https://adstransparency.google.com/advertiser/AR14015309208400953345/creative/CR10506681344044564481?political=&region=US",
-          "https://adstransparency.google.com/advertiser/AR14015309208400953345/creative/CR07019206382599536641?political=&region=US",
           "https://adstransparency.google.com/advertiser/AR14015309208400953345/creative/CR16104092730912669697?political=&region=US",
-          "https://adstransparency.google.com/advertiser/AR14015309208400953345/creative/CR10387335953919246337?political=&region=US"
+          "https://adstransparency.google.com/advertiser/AR14015309208400953345/creative/CR10387335953919246337?political=&region=US",
+          "https://adstransparency.google.com/advertiser/AR14015309208400953345/creative/CR10506681344044564481?political=&region=US",
+          "https://adstransparency.google.com/advertiser/AR14015309208400953345/creative/CR14812426602775838721?political=&region=US",
+          "https://adstransparency.google.com/advertiser/AR14015309208400953345/creative/CR07019206382599536641?political=&region=US"
         ],
         "checked_by": null,
         "checked_at": null
@@ -4823,27 +4824,6 @@
     },
     {
       "from": "C00882381",
-      "to": "CR10545524890830635009",
-      "kind": "placement",
-      "amount": 27500.0,
-      "visibility": "disclosed",
-      "depth": 2,
-      "transaction_types": [],
-      "count": 1,
-      "date_range": null,
-      "source_url": "https://adstransparency.google.com/advertiser/AR14015309208400953345/creative/CR10545524890830635009?political=&region=US",
-      "basis": {
-        "basis": "inferred",
-        "rule": "Advertiser name matched to this committee by normalized name; Google shows the advertiser, not the paid-for-by line",
-        "source_urls": [
-          "https://adstransparency.google.com/advertiser/AR14015309208400953345/creative/CR10545524890830635009?political=&region=US"
-        ],
-        "checked_by": null,
-        "checked_at": null
-      }
-    },
-    {
-      "from": "C00882381",
       "to": "CR16744409218727018497",
       "kind": "placement",
       "amount": 27500.0,
@@ -4858,27 +4838,6 @@
         "rule": "Advertiser name matched to this committee by normalized name; Google shows the advertiser, not the paid-for-by line",
         "source_urls": [
           "https://adstransparency.google.com/advertiser/AR14015309208400953345/creative/CR16744409218727018497?political=&region=US"
-        ],
-        "checked_by": null,
-        "checked_at": null
-      }
-    },
-    {
-      "from": "C00882381",
-      "to": "CR01449120608460734465",
-      "kind": "placement",
-      "amount": 27500.0,
-      "visibility": "disclosed",
-      "depth": 2,
-      "transaction_types": [],
-      "count": 1,
-      "date_range": null,
-      "source_url": "https://adstransparency.google.com/advertiser/AR14015309208400953345/creative/CR01449120608460734465?political=&region=US",
-      "basis": {
-        "basis": "inferred",
-        "rule": "Advertiser name matched to this committee by normalized name; Google shows the advertiser, not the paid-for-by line",
-        "source_urls": [
-          "https://adstransparency.google.com/advertiser/AR14015309208400953345/creative/CR01449120608460734465?political=&region=US"
         ],
         "checked_by": null,
         "checked_at": null
@@ -4907,6 +4866,48 @@
     },
     {
       "from": "C00882381",
+      "to": "CR01449120608460734465",
+      "kind": "placement",
+      "amount": 27500.0,
+      "visibility": "disclosed",
+      "depth": 2,
+      "transaction_types": [],
+      "count": 1,
+      "date_range": null,
+      "source_url": "https://adstransparency.google.com/advertiser/AR14015309208400953345/creative/CR01449120608460734465?political=&region=US",
+      "basis": {
+        "basis": "inferred",
+        "rule": "Advertiser name matched to this committee by normalized name; Google shows the advertiser, not the paid-for-by line",
+        "source_urls": [
+          "https://adstransparency.google.com/advertiser/AR14015309208400953345/creative/CR01449120608460734465?political=&region=US"
+        ],
+        "checked_by": null,
+        "checked_at": null
+      }
+    },
+    {
+      "from": "C00882381",
+      "to": "CR10545524890830635009",
+      "kind": "placement",
+      "amount": 27500.0,
+      "visibility": "disclosed",
+      "depth": 2,
+      "transaction_types": [],
+      "count": 1,
+      "date_range": null,
+      "source_url": "https://adstransparency.google.com/advertiser/AR14015309208400953345/creative/CR10545524890830635009?political=&region=US",
+      "basis": {
+        "basis": "inferred",
+        "rule": "Advertiser name matched to this committee by normalized name; Google shows the advertiser, not the paid-for-by line",
+        "source_urls": [
+          "https://adstransparency.google.com/advertiser/AR14015309208400953345/creative/CR10545524890830635009?political=&region=US"
+        ],
+        "checked_by": null,
+        "checked_at": null
+      }
+    },
+    {
+      "from": "C00882381",
       "to": "agg:ads@C00882381",
       "kind": "placement",
       "amount": 425000.0,
@@ -4920,11 +4921,11 @@
         "basis": "inferred",
         "rule": "Advertiser name matched to this committee by normalized name",
         "source_urls": [
-          "https://adstransparency.google.com/advertiser/AR14015309208400953345/creative/CR14812426602775838721?political=&region=US",
-          "https://adstransparency.google.com/advertiser/AR14015309208400953345/creative/CR10506681344044564481?political=&region=US",
-          "https://adstransparency.google.com/advertiser/AR14015309208400953345/creative/CR07019206382599536641?political=&region=US",
           "https://adstransparency.google.com/advertiser/AR14015309208400953345/creative/CR16104092730912669697?political=&region=US",
-          "https://adstransparency.google.com/advertiser/AR14015309208400953345/creative/CR10387335953919246337?political=&region=US"
+          "https://adstransparency.google.com/advertiser/AR14015309208400953345/creative/CR10387335953919246337?political=&region=US",
+          "https://adstransparency.google.com/advertiser/AR14015309208400953345/creative/CR10506681344044564481?political=&region=US",
+          "https://adstransparency.google.com/advertiser/AR14015309208400953345/creative/CR14812426602775838721?political=&region=US",
+          "https://adstransparency.google.com/advertiser/AR14015309208400953345/creative/CR07019206382599536641?political=&region=US"
         ],
         "checked_by": null,
         "checked_at": null

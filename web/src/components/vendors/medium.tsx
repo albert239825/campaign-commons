@@ -1,4 +1,4 @@
-import type { Basis, Medium } from "@citizen-gotham/contracts";
+import type { Basis, Medium } from "@campaign-commons/contracts";
 import { pct } from "@/lib/format";
 import { Chip, SourceLink } from "@/components/ui";
 import { BarLegend, StackedBar, type BarSegment } from "@/components/ui/stacked-bar";

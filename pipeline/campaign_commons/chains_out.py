@@ -1,8 +1,8 @@
 """Spending side of a funding chain: root → vendor → ad ⇢ candidate.
 
 Patches every ``chains/<entity>.json`` with ``side: "out"`` nodes and ``money`` / ``placement`` / ``targeting`` edges
-built from the root's own IE rows (``entities/<id>.json``), its vendor roll-up when ``gotham.vendors`` has run, and its
-Google ads (``ads.json``, with ``vendor_links`` when ``gotham.ads_enrich`` has run). Runs after those stages; safe to
+built from the root's own IE rows (``entities/<id>.json``), its vendor roll-up when ``campaign_commons.vendors`` has run, and its
+Google ads (``ads.json``, with ``vendor_links`` when ``campaign_commons.ads_enrich`` has run). Runs after those stages; safe to
 re-run (it strips the previous spending side first) and safe when vendor / ad enrichment is absent.
 
 Evidence: root → vendor money edges and every targeting edge are read off Schedule E (``filed``). Vendor → ad edges
@@ -146,7 +146,7 @@ def _ad_parent_edge(ad: dict, ad_node_id: str, root: str, vendor_ids: set[str], 
             "basis": "verified",
             "rule": "A person matched this ad's advertiser to the committee using the ad library and fec.gov records",
             "source_urls": list(verification["evidence_urls"]),
-            "checked_by": "hand (pipeline/gotham/data/ad_verifications.json)",
+            "checked_by": "hand (pipeline/campaign_commons/data/ad_verifications.json)",
             "checked_at": verification["verified_at"],
         }
     else:
@@ -195,7 +195,9 @@ def build_out_side(
                 v["source_url"],
                 f"/races/{race.race_id}/vendors/{v['vendor_id']}",
                 medium=mix[0]["medium"] if mix else None,
-                basis=_filed("Schedule E payee, grouped by normalized vendor name (gotham.vendors)", [v["source_url"]]),
+                basis=_filed(
+                    "Schedule E payee, grouped by normalized vendor name (campaign_commons.vendors)", [v["source_url"]]
+                ),
             )
         )
         edges.append(

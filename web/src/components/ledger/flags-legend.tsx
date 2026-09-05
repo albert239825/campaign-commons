@@ -1,4 +1,4 @@
-import { FLAG_LABELS, type FlagId } from "@citizen-gotham/contracts";
+import { FLAG_LABELS, type FlagId } from "@campaign-commons/contracts";
 
 const FLAG_MEANINGS: Record<FlagId, string> = {
   popup: "Registered within ~60 days of the election, reported independent expenditures, and had filed no donor report at the time.",

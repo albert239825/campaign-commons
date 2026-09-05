@@ -381,7 +381,7 @@ METHOD = (
     "Every Schedule E independent expenditure names a payee. Payee strings are normalised (case, punctuation, legal "
     "suffixes, token order), near-duplicates are folded with a difflib ratio ≥ 0.92 when their numeric tokens match, and "
     "hand alias rows from data/hand/<race>/vendor_aliases.json override the rule. Medium is classified from the purpose "
-    "the spender filed (ordered keyword table in gotham/vendors.py); the FEC does not record which buy placed which ad, so "
+    "the spender filed (ordered keyword table in campaign_commons/vendors.py); the FEC does not record which buy placed which ad, so "
     "vendor ↔ ad links are empty until a human verifies one. Totals are the filed amounts, grouped, never re-estimated."
 )
 

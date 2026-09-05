@@ -4,7 +4,7 @@
   "name": "UIHLEIN, RICHARD E.",
   "kind": "individual",
   "race_id": "pa-sen-2024",
-  "generated_at": "2026-09-05T15:46:47+00:00",
+  "generated_at": "2026-09-05T19:53:49+00:00",
   "data_status": "real",
   "total_given": 80115401.0,
   "total_in_chains": 240264003.0,
@@ -109,17 +109,6 @@
       "source_url": "https://www.fec.gov/data/committee/C00883322/?cycle=2024"
     },
     {
-      "id": "S2PA00661",
-      "name": "Dave McCormick",
-      "kind": "candidate",
-      "committee_type": null,
-      "depth": 3,
-      "amount": 791282.83,
-      "is_spender": false,
-      "has_chain": false,
-      "source_url": "https://www.fec.gov/data/candidate/S2PA00661/?cycle=2024&election_full=false"
-    },
-    {
       "id": "S6PA00217",
       "name": "Bob Casey",
       "kind": "candidate",
@@ -129,6 +118,17 @@
       "is_spender": false,
       "has_chain": false,
       "source_url": "https://www.fec.gov/data/candidate/S6PA00217/?cycle=2024&election_full=false"
+    },
+    {
+      "id": "S2PA00661",
+      "name": "Dave McCormick",
+      "kind": "candidate",
+      "committee_type": null,
+      "depth": 3,
+      "amount": 791282.83,
+      "is_spender": false,
+      "has_chain": false,
+      "source_url": "https://www.fec.gov/data/candidate/S2PA00661/?cycle=2024&election_full=false"
     }
   ],
   "edges": [
@@ -198,19 +198,19 @@
     },
     {
       "from": "C00530766",
-      "to": "S2PA00661",
-      "kind": "targeting",
-      "amount": 177032.83,
-      "support_oppose": "S",
-      "source_url": "https://www.fec.gov/data/independent-expenditures/?committee_id=C00530766&cycle=2024&candidate_id=S2PA00661"
-    },
-    {
-      "from": "C00530766",
       "to": "S6PA00217",
       "kind": "targeting",
       "amount": 177032.83,
       "support_oppose": "O",
       "source_url": "https://www.fec.gov/data/independent-expenditures/?committee_id=C00530766&cycle=2024&candidate_id=S6PA00217"
+    },
+    {
+      "from": "C00530766",
+      "to": "S2PA00661",
+      "kind": "targeting",
+      "amount": 177032.83,
+      "support_oppose": "S",
+      "source_url": "https://www.fec.gov/data/independent-expenditures/?committee_id=C00530766&cycle=2024&candidate_id=S2PA00661"
     },
     {
       "from": "C00544387",

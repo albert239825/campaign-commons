@@ -1,5 +1,5 @@
 import Link from "next/link";
-import type { Ad } from "@citizen-gotham/contracts";
+import type { Ad } from "@campaign-commons/contracts";
 import { money, range, routes } from "@/lib/format";
 import { Card, Chip, SourceLink } from "@/components/ui";
 

@@ -5,7 +5,7 @@ import type {
   ChainNode,
   Medium,
   SupportOppose,
-} from "@citizen-gotham/contracts";
+} from "@campaign-commons/contracts";
 import { toBasisWire, type BasisWire } from "./basis";
 import { pageHref, type NodeLinks } from "./links";
 

@@ -1,4 +1,4 @@
-# Citizen Gotham
+# Campaign Commons
 
 Political money & policy provenance engine. DNHacks 2026 (Sept 5–6), Station DC. Team: Eric, Albert, Patrick.
 

@@ -1,5 +1,5 @@
 import Link from "next/link";
-import type { Ad, DonorView } from "@citizen-gotham/contracts";
+import type { Ad, DonorView } from "@campaign-commons/contracts";
 import { money, routes } from "@/lib/format";
 import { Card } from "@/components/ui";
 

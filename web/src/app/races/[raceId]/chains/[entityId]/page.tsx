@@ -7,7 +7,7 @@ import {
   UNWALKED_COLOR,
   VISIBILITY_COLORS,
   type TerminusReason,
-} from "@citizen-gotham/contracts";
+} from "@campaign-commons/contracts";
 import {
   getAds,
   getChain,

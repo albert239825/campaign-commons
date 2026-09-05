@@ -1,6 +1,6 @@
 """transfer_mismatch suppression for a campaign's own joint fundraising committee (D-41)."""
 
-from gotham.chains_flags import CommitteeMeta, is_own_jfc_pair
+from campaign_commons.chains_flags import CommitteeMeta, is_own_jfc_pair
 
 CASEY, CASEY_JFC = "C00431056", "C00545830"
 MCCORMICK, MCCORMICK_JFC, THUNE_JFC = "C00851980", "C00828202", "C00700000"

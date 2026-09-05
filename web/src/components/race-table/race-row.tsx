@@ -1,5 +1,5 @@
 import Link from "next/link";
-import type { RaceSummary } from "@citizen-gotham/contracts";
+import type { RaceSummary } from "@campaign-commons/contracts";
 import { date, pct, routes } from "@/lib/format";
 import { Money } from "@/components/ui";
 import { PartyTag } from "@/components/ui/party-tag";

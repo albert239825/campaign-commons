@@ -20,7 +20,7 @@ export function date(iso: string | null): string {
   return d.toLocaleDateString("en-US", { year: "numeric", month: "short", day: "numeric", timeZone: "UTC" });
 }
 
-/** File stem of a donor view for a chain-node id; mirrors pipeline/gotham/donors.py `donor_key`. */
+/** File stem of a donor view for a chain-node id; mirrors pipeline/campaign_commons/donors.py `donor_key`. */
 export const donorKey = (nodeId: string) => nodeId.split("@")[0].replace(/[^A-Za-z0-9_-]/g, "-");
 
 /** Routes, in one place so children don't drift. */
