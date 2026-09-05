@@ -20,7 +20,7 @@ Source of truth: [`contracts/src/schemas.ts`](../contracts/src/schemas.ts). This
 | `search.json` | `SearchIndex` | `gotham.search` (Block 2) | header search box (client) |
 
 Block 2 also *patches* existing files in place: `gotham.vendors` adds `vendors[]` and per-IE `vendor_id`/`medium` to
-`entities/*.json`; `gotham.issues` adds `issue_focus` to entities and `issue_ids`/`issue_basis` to ads; `gotham.ads` adds
+`entities/*.json`; `gotham.issues` adds `issue_focus` to entities and `issues` (`{issue_ids, basis}`) to ads and IE rows; `gotham.ads` adds
 `sponsor_visibility_shares` and `vendor_links[]` to ads. All additive optional fields — V0 files stay valid.
 
 ## Hand-maintained inputs (`data/hand/<race_id>/`)
@@ -28,8 +28,8 @@ Block 2 also *patches* existing files in place: `gotham.vendors` adds `vendors[]
 | File | Schema | Edited by | Consumed by |
 | --- | --- | --- | --- |
 | `issue_focus.json` | `HandIssueFocusFile` | issue-focus child, teammates | `gotham.issues` → `Entity.issue_focus`, `issues.json.by_spender_focus` |
-| `ad_issues.json` | `HandAdIssuesFile` | media-wall child, teammates | `gotham.issues` → `Ad.issue_ids`, `issues.json.by_ad_issue` |
-| `ie_issues.json` | `HandIeIssuesFile` | issue-focus child | `gotham.issues` → IE `issue_ids`, `issues.json.by_ad_issue.ie_*` |
+| `ad_issues.json` | `HandAdIssuesFile` | media-wall child, teammates | `gotham.issues` → `Ad.issues`, `issues.json.by_ad_issue` |
+| `ie_issues.json` | `HandIeIssuesFile` | issue-focus child | `gotham.issues` → IE `issues`, `issues.json.by_ad_issue.ie_*` |
 | `vendor_aliases.json` | `HandVendorAliasesFile` | vendors child | `gotham.vendors` (folds after automatic normalisation) |
 | `vendor_ad_links.json` | `HandVendorAdLinksFile` | anyone with a source | `gotham.ads` → `Ad.vendor_links[]` with `basis: verified` |
 
@@ -41,11 +41,13 @@ is valid. Never hand-edit `data/out`.
 `Basis {basis, rule, source_urls, checked_by, checked_at}` sits on every relationship or number that is not read straight off
 a filed record: vendor normalisation, vendor→ad links, issue tags, out-side chain nodes/edges. `filed` = on a government
 record · `verified` = a human found a source naming both sides · `inferred` = an explicit rule (stated in `rule`) ·
-`adjacent` = co-occurrence (date window) only. The UI must render `rule` wherever the relationship appears; chain edges
-style by basis (solid / solid+check / dashed / dotted).
+`adjacent` = co-occurrence (date window) only. `verified` is a discriminated variant: it requires ≥1 `source_urls` and
+non-null `checked_by`/`checked_at`, so an unsupported verification claim fails validation. Issue tags always travel as
+`issues: {issue_ids, basis}`; a `placement` chain edge (vendor → ad) requires `basis`. The UI must render `rule` wherever the
+relationship appears; chain edges style by basis (solid / solid+check / dashed / dotted).
 
-Validate: `cd contracts && npm run validate` (add `../data/hand` as the argument for hand files) or `cd pipeline && make
-validate` (both roots; same schemas, via `contracts/jsonschema/`).
+Validate: `cd contracts && npm run validate` or `cd pipeline && make validate` — both check `data/out` then `data/hand` by
+default (pass a directory to check one root); same schemas, via `contracts/jsonschema/`.
 
 ## IDs
 

@@ -36,49 +36,89 @@
                 }
               },
               "normalization": {
-                "type": "object",
-                "properties": {
-                  "basis": {
-                    "type": "string",
-                    "enum": [
-                      "filed",
-                      "verified",
-                      "inferred",
-                      "adjacent"
-                    ]
+                "anyOf": [
+                  {
+                    "type": "object",
+                    "properties": {
+                      "basis": {
+                        "type": "string",
+                        "const": "verified"
+                      },
+                      "rule": {
+                        "type": "string",
+                        "minLength": 1
+                      },
+                      "source_urls": {
+                        "type": "array",
+                        "items": {
+                          "type": "string",
+                          "format": "uri"
+                        },
+                        "minItems": 1
+                      },
+                      "checked_by": {
+                        "type": "string",
+                        "minLength": 1
+                      },
+                      "checked_at": {
+                        "type": "string",
+                        "minLength": 1
+                      }
+                    },
+                    "required": [
+                      "basis",
+                      "rule",
+                      "source_urls",
+                      "checked_by",
+                      "checked_at"
+                    ],
+                    "additionalProperties": false
                   },
-                  "rule": {
-                    "type": "string",
-                    "minLength": 1
-                  },
-                  "source_urls": {
-                    "type": "array",
-                    "items": {
-                      "type": "string",
-                      "format": "uri"
-                    }
-                  },
-                  "checked_by": {
-                    "type": [
-                      "string",
-                      "null"
-                    ]
-                  },
-                  "checked_at": {
-                    "type": [
-                      "string",
-                      "null"
-                    ]
+                  {
+                    "type": "object",
+                    "properties": {
+                      "basis": {
+                        "type": "string",
+                        "enum": [
+                          "filed",
+                          "inferred",
+                          "adjacent"
+                        ]
+                      },
+                      "rule": {
+                        "type": "string",
+                        "minLength": 1
+                      },
+                      "source_urls": {
+                        "type": "array",
+                        "items": {
+                          "type": "string",
+                          "format": "uri"
+                        }
+                      },
+                      "checked_by": {
+                        "type": [
+                          "string",
+                          "null"
+                        ]
+                      },
+                      "checked_at": {
+                        "type": [
+                          "string",
+                          "null"
+                        ]
+                      }
+                    },
+                    "required": [
+                      "basis",
+                      "rule",
+                      "source_urls",
+                      "checked_by",
+                      "checked_at"
+                    ],
+                    "additionalProperties": false
                   }
-                },
-                "required": [
-                  "basis",
-                  "rule",
-                  "source_urls",
-                  "checked_by",
-                  "checked_at"
-                ],
-                "additionalProperties": false
+                ]
               },
               "total": {
                 "type": "number"

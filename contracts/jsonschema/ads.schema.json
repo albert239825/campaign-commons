@@ -232,66 +232,118 @@
                   }
                 ]
               },
-              "issue_ids": {
-                "type": "array",
-                "items": {
-                  "type": "string",
-                  "enum": [
-                    "healthcare",
-                    "energy_climate",
-                    "defense",
-                    "crypto_fintech",
-                    "immigration",
-                    "abortion",
-                    "guns",
-                    "tax_budget",
-                    "tech_ai",
-                    "labor_trade"
-                  ]
-                }
-              },
-              "issue_basis": {
+              "issues": {
                 "type": "object",
                 "properties": {
-                  "basis": {
-                    "type": "string",
-                    "enum": [
-                      "filed",
-                      "verified",
-                      "inferred",
-                      "adjacent"
-                    ]
-                  },
-                  "rule": {
-                    "type": "string",
-                    "minLength": 1
-                  },
-                  "source_urls": {
+                  "issue_ids": {
                     "type": "array",
                     "items": {
                       "type": "string",
-                      "format": "uri"
-                    }
+                      "enum": [
+                        "healthcare",
+                        "energy_climate",
+                        "defense",
+                        "crypto_fintech",
+                        "immigration",
+                        "abortion",
+                        "guns",
+                        "tax_budget",
+                        "tech_ai",
+                        "labor_trade"
+                      ]
+                    },
+                    "minItems": 1,
+                    "maxItems": 3
                   },
-                  "checked_by": {
-                    "type": [
-                      "string",
-                      "null"
-                    ]
-                  },
-                  "checked_at": {
-                    "type": [
-                      "string",
-                      "null"
+                  "basis": {
+                    "anyOf": [
+                      {
+                        "type": "object",
+                        "properties": {
+                          "basis": {
+                            "type": "string",
+                            "const": "verified"
+                          },
+                          "rule": {
+                            "type": "string",
+                            "minLength": 1
+                          },
+                          "source_urls": {
+                            "type": "array",
+                            "items": {
+                              "type": "string",
+                              "format": "uri"
+                            },
+                            "minItems": 1
+                          },
+                          "checked_by": {
+                            "type": "string",
+                            "minLength": 1
+                          },
+                          "checked_at": {
+                            "type": "string",
+                            "minLength": 1
+                          }
+                        },
+                        "required": [
+                          "basis",
+                          "rule",
+                          "source_urls",
+                          "checked_by",
+                          "checked_at"
+                        ],
+                        "additionalProperties": false
+                      },
+                      {
+                        "type": "object",
+                        "properties": {
+                          "basis": {
+                            "type": "string",
+                            "enum": [
+                              "filed",
+                              "inferred",
+                              "adjacent"
+                            ]
+                          },
+                          "rule": {
+                            "type": "string",
+                            "minLength": 1
+                          },
+                          "source_urls": {
+                            "type": "array",
+                            "items": {
+                              "type": "string",
+                              "format": "uri"
+                            }
+                          },
+                          "checked_by": {
+                            "type": [
+                              "string",
+                              "null"
+                            ]
+                          },
+                          "checked_at": {
+                            "type": [
+                              "string",
+                              "null"
+                            ]
+                          }
+                        },
+                        "required": [
+                          "basis",
+                          "rule",
+                          "source_urls",
+                          "checked_by",
+                          "checked_at"
+                        ],
+                        "additionalProperties": false
+                      }
                     ]
                   }
                 },
                 "required": [
-                  "basis",
-                  "rule",
-                  "source_urls",
-                  "checked_by",
-                  "checked_at"
+                  "issue_ids",
+                  "basis"
                 ],
                 "additionalProperties": false
               },
@@ -339,49 +391,89 @@
                       "type": "integer"
                     },
                     "basis": {
-                      "type": "object",
-                      "properties": {
-                        "basis": {
-                          "type": "string",
-                          "enum": [
-                            "filed",
-                            "verified",
-                            "inferred",
-                            "adjacent"
-                          ]
+                      "anyOf": [
+                        {
+                          "type": "object",
+                          "properties": {
+                            "basis": {
+                              "type": "string",
+                              "const": "verified"
+                            },
+                            "rule": {
+                              "type": "string",
+                              "minLength": 1
+                            },
+                            "source_urls": {
+                              "type": "array",
+                              "items": {
+                                "type": "string",
+                                "format": "uri"
+                              },
+                              "minItems": 1
+                            },
+                            "checked_by": {
+                              "type": "string",
+                              "minLength": 1
+                            },
+                            "checked_at": {
+                              "type": "string",
+                              "minLength": 1
+                            }
+                          },
+                          "required": [
+                            "basis",
+                            "rule",
+                            "source_urls",
+                            "checked_by",
+                            "checked_at"
+                          ],
+                          "additionalProperties": false
                         },
-                        "rule": {
-                          "type": "string",
-                          "minLength": 1
-                        },
-                        "source_urls": {
-                          "type": "array",
-                          "items": {
-                            "type": "string",
-                            "format": "uri"
-                          }
-                        },
-                        "checked_by": {
-                          "type": [
-                            "string",
-                            "null"
-                          ]
-                        },
-                        "checked_at": {
-                          "type": [
-                            "string",
-                            "null"
-                          ]
+                        {
+                          "type": "object",
+                          "properties": {
+                            "basis": {
+                              "type": "string",
+                              "enum": [
+                                "filed",
+                                "inferred",
+                                "adjacent"
+                              ]
+                            },
+                            "rule": {
+                              "type": "string",
+                              "minLength": 1
+                            },
+                            "source_urls": {
+                              "type": "array",
+                              "items": {
+                                "type": "string",
+                                "format": "uri"
+                              }
+                            },
+                            "checked_by": {
+                              "type": [
+                                "string",
+                                "null"
+                              ]
+                            },
+                            "checked_at": {
+                              "type": [
+                                "string",
+                                "null"
+                              ]
+                            }
+                          },
+                          "required": [
+                            "basis",
+                            "rule",
+                            "source_urls",
+                            "checked_by",
+                            "checked_at"
+                          ],
+                          "additionalProperties": false
                         }
-                      },
-                      "required": [
-                        "basis",
-                        "rule",
-                        "source_urls",
-                        "checked_by",
-                        "checked_at"
-                      ],
-                      "additionalProperties": false
+                      ]
                     }
                   },
                   "required": [
