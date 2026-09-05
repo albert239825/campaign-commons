@@ -36,10 +36,6 @@ export function directionLabel(issueId: IssueId, direction: number): string {
     : `${Math.abs(direction) === 2 ? "strongly" : "leans"}: ${axis.minus}`;
 }
 
-function hasRecordEvidence(stance: Stance): boolean {
-  return stance.evidence.some((e) => e.kind === "roll_call_vote" || e.kind === "sponsored_bill" || e.kind === "cosponsored_bill");
-}
-
 export function scoreCandidate(prefs: UserPrefs, dossier: Dossier): CandidateAlignment {
   const byIssue = new Map(dossier.stances.map((stance) => [stance.issue_id, stance]));
   const compared: IssueAlignment[] = [];
@@ -56,8 +52,7 @@ export function scoreCandidate(prefs: UserPrefs, dossier: Dossier): CandidateAli
     } else {
       const user = opinionToDirection(opinion);
       const agreement = 1 - Math.abs(user - stance.direction) / 4;
-      const evidenceWeight = hasRecordEvidence(stance) ? 1 : prefs.statement_weight;
-      const weight = (prefs.importance[issue.id] ?? 2) * CONFIDENCE_WEIGHT[stance.confidence] * evidenceWeight;
+      const weight = (prefs.importance[issue.id] ?? 2) * CONFIDENCE_WEIGHT[stance.confidence];
       compared.push({ issue_id: issue.id, user, candidate: stance.direction, agreement, weight, stance });
     }
   }

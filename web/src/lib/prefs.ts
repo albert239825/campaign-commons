@@ -8,10 +8,9 @@ export const UserPrefsSchema = z.object({
   state: z.string().length(2).nullable(),
   opinions: z.record(IssueIdSchema, OpinionSchema).default({}),
   importance: z.record(IssueIdSchema, ImportanceSchema).default({}),
-  statement_weight: z.number().min(0).max(1).default(0.5),
 });
 export type UserPrefs = z.infer<typeof UserPrefsSchema>;
-export const EMPTY_PREFS: UserPrefs = { version: 1, state: null, opinions: {}, importance: {}, statement_weight: 0.5 };
+export const EMPTY_PREFS: UserPrefs = { version: 1, state: null, opinions: {}, importance: {} };
 export const PREFS_KEY = "citizen-gotham:prefs:v1";
 
 export function loadPrefs(): UserPrefs {

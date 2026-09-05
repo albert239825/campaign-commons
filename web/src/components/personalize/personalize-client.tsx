@@ -196,6 +196,7 @@ export function PersonalizeClient({ races, dossiers }: { races: RaceSummary[]; d
           ))}
         </select>
         <p className="mt-2 text-xs text-neutral-500">Only states with loaded race dossiers appear here.</p>
+        <p className="mt-3 text-xs text-neutral-500">Saved on this device only; nothing leaves your browser.</p>
       </Card>
 
       <section className="space-y-4">
@@ -302,25 +303,6 @@ export function PersonalizeClient({ races, dossiers }: { races: RaceSummary[]; d
         </div>
       </section>
 
-      <Card title="Evidence mix">
-        <p className="text-sm font-medium">
-          How much should stated positions (campaign statements) count relative to votes and bills?
-        </p>
-        <div className="mt-3">
-          <Segmented
-            label="Statement weight"
-            value={prefs.statement_weight}
-            onChange={(value) => updatePrefs((current) => ({ ...current, statement_weight: value }))}
-            options={[
-              { value: 0.25, label: "A quarter" },
-              { value: 0.5, label: "Half" },
-              { value: 1, label: "The same" },
-            ]}
-          />
-        </div>
-        <p className="mt-3 text-xs text-neutral-500">Saved on this device only; nothing leaves your browser.</p>
-      </Card>
-
       <section className="space-y-4">
         <h2 className="text-2xl font-semibold tracking-tight">Alignment estimates</h2>
         {prefs.state === null ? (
@@ -344,7 +326,7 @@ export function PersonalizeClient({ races, dossiers }: { races: RaceSummary[]; d
         <div className="space-y-2 text-sm text-neutral-600">
           <p>
             Each comparable issue gets an agreement from 0 to 1: 1 minus the distance between your direction and the record direction divided by 4.
-            Importance, confidence, and the evidence mix weight each issue before a weighted mean becomes the alignment estimate.
+            Your importance rating and the record&apos;s confidence weight each issue before a weighted mean becomes the alignment estimate.
           </p>
           <p>
             Issues are skipped when there is no record, no coded position, or you skipped the issue. Directions are human-coded against a published
