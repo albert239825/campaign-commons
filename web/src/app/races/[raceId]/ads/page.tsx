@@ -1,10 +1,11 @@
 // OWNER: Frontend B (ad gallery).
 import Link from "next/link";
 import { DetailHeader } from "@/components/ui/detail-layout";
-import { getAds, getRace, listChainIds, listEntityIds, listRaceIds } from "@/lib/data";
+import { getAds, getRace, getStories, listChainIds, listEntityIds, listRaceIds } from "@/lib/data";
 import { money, range, routes } from "@/lib/format";
 import { Breadcrumbs, Card, DataStatusBanner, Stat } from "@/components/ui";
 import { AdGallery } from "@/components/ads/ad-gallery";
+import { RaceNav } from "@/components/ui/race-nav";
 
 export const generateStaticParams = () => listRaceIds().map((raceId) => ({ raceId }));
 
@@ -25,6 +26,7 @@ export default async function AdsPage({ params }: { params: Promise<{ raceId: st
     <div className="detail-page ads-page">
       <Breadcrumbs items={[{ href: routes.home(), label: "Races" }, { href: routes.race(raceId), label: race.label }, { label: "Ads" }]} />
       <DataStatusBanner status={gallery.data_status} />
+      <RaceNav race={race} counts={{ ads: gallery.ads.length, stories: getStories(raceId).stories.length }} active={routes.ads(raceId)} />
 
       <DetailHeader label={race.label} title="Political ads">
         <p className="max-w-3xl text-sm text-neutral-600">
