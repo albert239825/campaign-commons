@@ -14,7 +14,7 @@ const DESIGNATIONS: Record<string, string> = {
 
 const fecReceipts = (id: string) => `https://www.fec.gov/data/receipts/?committee_id=${id}&two_year_transaction_period=2024`;
 const fecDisbursements = (id: string) => `https://www.fec.gov/data/disbursements/?committee_id=${id}&two_year_transaction_period=2024`;
-const fecIndependentExpenditures = (id: string) => `https://www.fec.gov/data/independent-expenditures/?committee_id=${id}&two_year_transaction_period=2024&is_notice=false`;
+const fecIndependentExpenditures = (id: string) => `https://www.fec.gov/data/independent-expenditures/?q_spender=${id}&cycle=2024&data_type=processed&is_notice=false`;
 
 function Field({ label, children }: { label: string; children: React.ReactNode }) {
   return (
