@@ -39,8 +39,7 @@ dossier:          ## congress.gov -> dossiers/*.json
 validate:         ## validate data/out and data/hand against contracts/jsonschema
 	$(PY) -m gotham.validate
 
-# Block 2 children add their stage (vendors, issues, search) here when the module lands
-all: ingest ledger vendors chains ads ads-enrich dossier search validate
+all: ingest ledger vendors chains ads ads-enrich issues dossier search validate
 
 lint:
 	ruff check . && ruff format --check .

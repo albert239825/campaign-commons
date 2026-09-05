@@ -1817,5 +1817,21 @@
       "last_date": "2024-10-10",
       "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00865444&payee_name=PETERS+CONSULTING+LLC"
     }
-  ]
+  ],
+  "issue_focus": {
+    "kind": "general_partisan",
+    "issue_ids": [],
+    "description": "WinSenate reports Senate Majority PAC (SMP) as its connected organization; SMP describes itself as founded 'with one mission: To win Senate races' and 'solely dedicated to building a Democratic majority in the U.S. Senate.'",
+    "basis": {
+      "basis": "verified",
+      "rule": "Self-described focus from the organisation's own material; says what the org is for, not what its dollars bought",
+      "source_urls": [
+        "https://www.fec.gov/data/committee/C00865444/",
+        "https://web.archive.org/web/20241014000000/https://www.senatemajority.com/about/",
+        "https://www.senatemajority.com/about/"
+      ],
+      "checked_by": "devin-block2-issues",
+      "checked_at": "2026-09-05"
+    }
+  }
 }

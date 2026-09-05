@@ -7,6 +7,7 @@ import { AdjacencyNote, Breadcrumbs, Card, DataStatusBanner, Money } from "@/com
 import { VISIBILITY_COLORS } from "@citizen-gotham/contracts";
 import { BarLegend, MONEY_COLORS, StackedBar, visibilitySegments } from "@/components/ui/stacked-bar";
 import { EntityHeader } from "@/components/entity/entity-header";
+import { FocusChip } from "@/components/entity/focus-chip";
 import { FlowsTable } from "@/components/entity/flows-table";
 import { IeTable } from "@/components/entity/ie-table";
 import { WhereMoneyWent } from "@/components/entity/where-money-went";
@@ -40,6 +41,7 @@ export default async function EntityPage({ params }: { params: Promise<{ raceId:
         <Breadcrumbs items={[{ href: routes.home(), label: "Races" }, { href: routes.race(raceId), label: race.label }, { label: e.name }]} />
         <DataStatusBanner status={e.data_status} />
         <EntityHeader raceId={raceId} e={e} chain={chain} />
+        {e.issue_focus && <FocusChip focus={e.issue_focus} />}
       </div>
 
       <div className="detail-sections">

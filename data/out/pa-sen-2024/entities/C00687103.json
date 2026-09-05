@@ -3280,5 +3280,22 @@
       "last_date": "2024-05-07",
       "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00687103&payee_name=TOUCHDOWN+STRATEGIES+LLC"
     }
-  ]
+  ],
+  "issue_focus": {
+    "kind": "multi_issue",
+    "issue_ids": [
+      "tax_budget"
+    ],
+    "description": "AFP Action says it is 'committed to electing candidates who will drive policy change and facilitate the building of broad policy coalitions that remove barriers to opportunity'. Its About page names no specific policy area; tax_budget is the closest frozen id to its stated economic-opportunity agenda and is a loose fit.",
+    "basis": {
+      "basis": "verified",
+      "rule": "Self-described focus from the organisation's own material; says what the org is for, not what its dollars bought",
+      "source_urls": [
+        "https://afpaction.com/about/",
+        "https://web.archive.org/web/20241013000000/https://afpaction.com/"
+      ],
+      "checked_by": "devin-block2-issues",
+      "checked_at": "2026-09-05"
+    }
+  }
 }
