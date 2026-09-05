@@ -1,12 +1,14 @@
 // OWNER: Block 2 — vendors.
 import Link from "next/link";
-import { getAds, getRace, getStories, getVendor, getVendors, listRaceIds, listVendorIds } from "@/lib/data";
+import { getAds, getEntity, getRace, getStories, getVendor, getVendors, listRaceIds, listVendorIds } from "@/lib/data";
+import { BASIS_LABELS, BASIS_MEANING } from "@/lib/evidence";
 import { date, pct, routes } from "@/lib/format";
 import { AdjacencyNote, Breadcrumbs, Card, Chip, DataStatusBanner, Money, SourceLink, Stat } from "@/components/ui";
 import { RaceNav } from "@/components/ui/race-nav";
 import { Table, Td, Th } from "@/components/ui/table";
-import { MEDIUM_LABELS, MediumBar, MediumBasisNote, MediumMix } from "@/components/vendors/medium";
+import { MEDIUM_LABELS, MediumBar, MediumBasisNote } from "@/components/vendors/medium";
 import { TargetsLine } from "@/components/vendors/targets-line";
+import { VendorAds } from "@/components/vendors/vendor-ads";
 
 export const generateStaticParams = () => listRaceIds().flatMap((raceId) => listVendorIds(raceId).map((vendorId) => ({ raceId, vendorId })));
 
@@ -20,6 +22,12 @@ export default async function VendorPage({ params }: { params: Promise<{ raceId:
   const share = index.total > 0 ? v.total / index.total : 0;
   const rows = [...v.expenditures].sort((a, b) => (b.date ?? "").localeCompare(a.date ?? "") || b.amount - a.amount);
   const n = v.normalization;
+  const gallery = getAds(raceId);
+  const adsById = new Map(gallery.ads.map((a) => [a.ad_id, a]));
+  const sponsorNames: Record<string, string> = Object.fromEntries(v.spenders.map((s) => [s.entity_id, s.name]));
+  for (const id of new Set(v.ads.map((a) => a.sponsor_entity_id))) {
+    if (!(id in sponsorNames)) sponsorNames[id] = getEntity(raceId, id).name;
+  }
 
   return (
     <div className="space-y-6">
@@ -49,7 +57,10 @@ export default async function VendorPage({ params }: { params: Promise<{ raceId:
           ))}
         </div>
         <p className="max-w-3xl text-[11px] text-neutral-500">
-          <span className="font-medium uppercase tracking-wide text-neutral-400">{n.basis} · rule</span> {n.rule}
+          <span className="font-medium uppercase tracking-wide text-neutral-400" title={BASIS_MEANING[n.basis]}>
+            {BASIS_LABELS[n.basis]} · rule
+          </span>{" "}
+          {n.rule}
           {n.basis === "verified" && (
             <>
               {" "}
@@ -61,7 +72,7 @@ export default async function VendorPage({ params }: { params: Promise<{ raceId:
           ))}
         </p>
       </header>
-      <RaceNav race={race} counts={{ ads: getAds(raceId).ads.length, stories: getStories(raceId).stories.length, vendors: index.vendors.length }} active={routes.vendors(raceId)} />
+      <RaceNav race={race} counts={{ ads: gallery.ads.length, stories: getStories(raceId).stories.length, vendors: index.vendors.length }} active={routes.vendors(raceId)} />
 
       <Card>
         <div className="grid grid-cols-2 gap-4 md:grid-cols-4">
@@ -81,7 +92,9 @@ export default async function VendorPage({ params }: { params: Promise<{ raceId:
         <div className="mt-3 grid grid-cols-2 gap-2 text-xs sm:grid-cols-4">
           {v.media_mix.map((m) => (
             <div key={m.medium}>
-              <MediumMix mix={[m]} max={1} />
+              <Chip tone={m.medium === "other" ? "muted" : "neutral"}>
+                {MEDIUM_LABELS[m.medium]} {pct(v.total > 0 ? m.amount / v.total : 0)}
+              </Chip>
               <div className="font-medium tabular-nums">
                 <Money amount={m.amount} /> <span className="text-neutral-500">{m.count.toLocaleString("en-US")} buys</span>
               </div>
@@ -125,9 +138,10 @@ export default async function VendorPage({ params }: { params: Promise<{ raceId:
           <div className="text-sm">
             <TargetsLine raceId={raceId} targets={v.targets} candidateNames={candidateNames} />
           </div>
-          {v.ads.length === 0 && <p className="mt-4 text-xs text-neutral-400">No ad-library creatives have been linked to this vendor&apos;s buys yet.</p>}
         </Card>
       </div>
+
+      <VendorAds raceId={raceId} vendor={v} adsById={adsById} sponsorNames={sponsorNames} />
 
       <Card title="Every buy">
         <Table>

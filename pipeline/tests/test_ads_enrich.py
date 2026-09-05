@@ -287,11 +287,11 @@ def test_vendor_files_get_reverse_ads_deduped_and_enrich_is_idempotent() -> None
     _validate_gallery(gallery)
     _validate_vendor_ads(vendors["vendor:broadcast-buyers"])
 
-    first_pass = json.dumps(gallery, sort_keys=True)
-    first_vendors = json.dumps(vendors, sort_keys=True)
+    first_pass = json.dumps(gallery)  # key order included: a rerun must not reorder ads.json on disk
+    first_vendors = json.dumps(vendors)
     counts2, changed2 = enrich(gallery, {SPONSOR: CHAIN}, entities, vendors, hand_tags, hand_links)
-    assert json.dumps(gallery, sort_keys=True) == first_pass
-    assert json.dumps(vendors, sort_keys=True) == first_vendors
+    assert json.dumps(gallery) == first_pass
+    assert json.dumps(vendors) == first_vendors
     assert changed2 == set() and counts2.links_by_basis == counts.links_by_basis
     notes = gallery["notes"]
     assert isinstance(notes, list)

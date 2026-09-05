@@ -4,15 +4,17 @@ import type { ViewEdge, VisibleNode } from "./view";
  * Layered left-to-right layout for the drawn subgraph of a chain (see view.ts for what is drawn).
  * Funding side: column = depth, deepest sources on the left, the spender at depth 0 in the middle.
  * Spending side: columns continue to the right (vendors, then ads, then the candidate targeted).
- * Node height and ribbon thickness share one dollar scale, so a ribbon visually fills its node.
+ * Node height and ribbon thickness share one dollar scale, so a ribbon visually fills its node. Only nodes whose
+ * amount is filed money (funding side, vendors) are on that scale; ads, folded ads and targeted candidates carry
+ * platform spend-range midpoints or targeting totals, so they get fixed heights instead of pretending to be dollars.
  */
 
 export const NODE_W = 210;
 const COL_GAP = 130;
 const NODE_PAD = 14;
 const MIN_NODE_H = 28;
-/** Ad nodes carry a thumbnail, so they never shrink below this. */
-const MIN_AD_H = 58;
+/** Ad nodes carry a thumbnail; every ad is drawn at this height regardless of its spend range. */
+const AD_H = 58;
 const PLOT_H = 380;
 const MARGIN_Y = 8;
 /** Short chains are centred inside a three-column canvas so they don't scale up to poster size. */
@@ -80,23 +82,31 @@ export function layoutChain(
   for (const col of columns)
     col.nodes.sort((a, b) => b.amount_in - a.amount_in);
 
-  const minH = (n: VisibleNode) => (n.kind === "ad" ? MIN_AD_H : MIN_NODE_H);
-  // One dollar scale for every column: the tallest column (in dollars + padding) must fit PLOT_H.
+  const fixedH = (n: VisibleNode): number | null => {
+    if (n.kind === "ad") return AD_H;
+    if (n.side === "out" && n.kind !== "vendor") return MIN_NODE_H;
+    return null;
+  };
+  const dollars = (n: VisibleNode) => (fixedH(n) === null ? n.amount_in : 0);
+  // One dollar scale for every column: the tallest column (in dollars + fixed nodes + padding) must fit PLOT_H.
   const tallest = Math.max(...columns.map((c) => c.nodes.length));
   const plotH = Math.max(PLOT_H, tallest * (MIN_NODE_H + NODE_PAD));
   const scale = Math.min(
     ...columns
-      .filter((c) => c.nodes.length > 0)
+      .filter((c) => c.nodes.some((n) => fixedH(n) === null))
       .map(
         (c) =>
-          (plotH - (c.nodes.length - 1) * NODE_PAD) /
+          (plotH -
+            (c.nodes.length - 1) * NODE_PAD -
+            c.nodes.reduce((s, n) => s + (fixedH(n) ?? 0), 0)) /
           Math.max(
             1,
-            c.nodes.reduce((s, n) => s + n.amount_in, 0),
+            c.nodes.reduce((s, n) => s + dollars(n), 0),
           ),
       ),
   );
-  const heightOf = (n: VisibleNode) => Math.max(minH(n), n.amount_in * scale);
+  const heightOf = (n: VisibleNode) =>
+    fixedH(n) ?? Math.max(MIN_NODE_H, n.amount_in * scale);
   // Minimum heights can push a crowded column past plotH; grow the plot so nothing is clipped.
   const columnH = (col: VisibleNode[]) =>
     col.reduce((s, n) => s + heightOf(n), 0) +

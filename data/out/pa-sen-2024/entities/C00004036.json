@@ -794,7 +794,7 @@
       "payee": "PENNSYLVANIA STATE COUNCIL SEIU",
       "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202410209709586922",
       "vendor_id": "V-pennsylvania-state-council-seiu",
-      "medium": "other"
+      "medium": "field"
     },
     {
       "ie_id": "C00004036-ie-1859747-500020105",
@@ -809,7 +809,7 @@
       "payee": "SEIU GENERAL FUND",
       "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202412119739859529",
       "vendor_id": "V-seiu-general-fund",
-      "medium": "other"
+      "medium": "field"
     },
     {
       "ie_id": "C00004036-ie-1833953-500019714",
@@ -824,7 +824,7 @@
       "payee": "PENNSYLVANIA STATE COUNCIL SEIU",
       "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202410209709586923",
       "vendor_id": "V-pennsylvania-state-council-seiu",
-      "medium": "other"
+      "medium": "field"
     },
     {
       "ie_id": "C00004036-ie-1833953-500019715",
@@ -839,7 +839,7 @@
       "payee": "PENNSYLVANIA STATE COUNCIL SEIU",
       "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202410209709586922",
       "vendor_id": "V-pennsylvania-state-council-seiu",
-      "medium": "other"
+      "medium": "field"
     },
     {
       "ie_id": "C00004036-ie-1859747-500020363",
@@ -854,7 +854,7 @@
       "payee": "RESONANCE CAMPAIGNS LLC",
       "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202412119739859516",
       "vendor_id": "V-resonance-campaigns",
-      "medium": "other"
+      "medium": "field"
     },
     {
       "ie_id": "C00004036-ie-1859747-500020404",
@@ -869,7 +869,7 @@
       "payee": "RESONANCE CAMPAIGNS LLC",
       "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202412119739859521",
       "vendor_id": "V-resonance-campaigns",
-      "medium": "other"
+      "medium": "field"
     }
   ],
   "flags": [
@@ -891,7 +891,7 @@
       "count": 3,
       "media_mix": [
         {
-          "medium": "other",
+          "medium": "field",
           "amount": 148911.67,
           "count": 3
         }
@@ -914,7 +914,7 @@
       "count": 1,
       "media_mix": [
         {
-          "medium": "other",
+          "medium": "field",
           "amount": 25500.0,
           "count": 1
         }
@@ -937,7 +937,7 @@
       "count": 2,
       "media_mix": [
         {
-          "medium": "other",
+          "medium": "field",
           "amount": 5338.27,
           "count": 2
         }

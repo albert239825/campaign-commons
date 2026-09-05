@@ -527,7 +527,7 @@
       "terminus_reason": null,
       "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00760801&payee_name=SECOND+STREET+ASSOCIATES+LLC",
       "href": "/races/pa-sen-2024/vendors/V-second-street-associates",
-      "medium": "other",
+      "medium": "field",
       "basis": {
         "basis": "filed",
         "rule": "Schedule E payee, grouped by normalized vendor name (campaign_commons.vendors)",
@@ -551,7 +551,7 @@
       "terminus_reason": null,
       "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00760801&payee_name=HIGHPOINT+CAMPAIGNS",
       "href": "/races/pa-sen-2024/vendors/V-highpoint-campaigns",
-      "medium": "other",
+      "medium": "field",
       "basis": {
         "basis": "filed",
         "rule": "Schedule E payee, grouped by normalized vendor name (campaign_commons.vendors)",

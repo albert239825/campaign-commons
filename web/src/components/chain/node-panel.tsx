@@ -7,6 +7,7 @@ import {
   VISIBILITY_LABELS,
 } from "@campaign-commons/contracts";
 import { money } from "@/lib/format";
+import { MEDIUM_LABELS } from "@/components/vendors/medium";
 import { BASIS_LABELS, BASIS_MEANING, type BasisWire } from "./basis";
 import { terminusLabel } from "./terminus";
 import type { ViewEdge, ViewNode, VisibleNode } from "./view";
@@ -25,17 +26,6 @@ export type PanelActions = {
   /** Spending side: collapse / expand what hangs off this node. Null when nothing does. */
   onToggleChildren: (() => void) | null;
   onHide: () => void;
-};
-
-const MEDIUM_LABELS: Record<NonNullable<ViewNode["medium"]>, string> = {
-  tv: "TV / cable",
-  radio: "radio",
-  digital: "digital",
-  mail: "mail",
-  phones: "phones / text",
-  production: "production",
-  consulting: "consulting / research",
-  other: "other",
 };
 
 export function kindLabel(n: ViewNode): string {

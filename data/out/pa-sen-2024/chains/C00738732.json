@@ -321,7 +321,7 @@
       "terminus_reason": null,
       "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00738732&payee_name=CLEAN+WATER+ACTION",
       "href": "/races/pa-sen-2024/vendors/V-clean-water-action",
-      "medium": "other",
+      "medium": "field",
       "basis": {
         "basis": "filed",
         "rule": "Schedule E payee, grouped by normalized vendor name (campaign_commons.vendors)",

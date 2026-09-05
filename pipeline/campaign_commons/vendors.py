@@ -22,9 +22,11 @@ Medium classification (ordered; first match on the filed `purpose` wins; keyword
   mail         MAIL-, POSTAGE, POSTCARD-, PRINT-
   phones       PHONE-, TEXT-, SMS, ROBOCALL-, CALL-, DIAL-, TELECONFERENC-
   consulting   POLL-, RESEARCH, CONSULT-, STRATEG-, LIST, TARGETING, "VOTER FILE"
-  other        everything else (canvassing, staff time, events, ...)
+  field        CANVASS-, DOOR, FIELD, GOTV
+  other        everything else (staff time, events, billboards, ...)
 A hand alias row's `medium_override` replaces the classified medium for every IE of that vendor. Raw `purpose` is never
-changed. The FEC does not record which buy placed which ad; `Vendor.ads` stays empty until a hand-verified link exists.
+changed. The FEC does not record which buy placed which ad; `Vendor.ads` is written by campaign_commons.ads_enrich (date-window
+links with a Basis) and preserved here, so `make vendors` after `make ads-enrich` does not wipe it.
 """
 
 from __future__ import annotations
@@ -73,6 +75,7 @@ MEDIUM_RULES: tuple[tuple[str, tuple[str, ...]], ...] = (
     ("mail", ("MAIL", "POSTAGE", "POSTCARD", "PRINT")),
     ("phones", ("PHONE", "TEXT", "SMS", "ROBOCALL", "CALL", "DIAL", "TELECONFERENC")),
     ("consulting", ("POLL", "RESEARCH", "CONSULT", "STRATEG", "LIST", "TARGETING", "VOTER FILE")),
+    ("field", ("CANVASS", "DOOR", "FIELD", "GOTV")),
 )
 # Stems that must end at a word boundary (otherwise "META" would match "METADATA" or "LIST" would match "LISTED").
 _WHOLE_WORD = frozenset({"TV", "META", "GIF", "SMS", "LIST"})
@@ -381,8 +384,10 @@ METHOD = (
     "Every Schedule E independent expenditure names a payee. Payee strings are normalised (case, punctuation, legal "
     "suffixes, token order), near-duplicates are folded with a difflib ratio ≥ 0.92 when their numeric tokens match, and "
     "hand alias rows from data/hand/<race>/vendor_aliases.json override the rule. Medium is classified from the purpose "
-    "the spender filed (ordered keyword table in campaign_commons/vendors.py); the FEC does not record which buy placed which ad, so "
-    "vendor ↔ ad links are empty until a human verifies one. Totals are the filed amounts, grouped, never re-estimated."
+    "the spender filed (ordered keyword table in campaign_commons/vendors.py). The FEC does not record which buy placed which ad: "
+    "vendor ↔ ad links are date-window adjacency (or single-digital-vendor inference) from campaign_commons.ads_enrich, each with "
+    "its basis, and are only `verified` when a person found a source naming both. Totals are the filed amounts, grouped, never "
+    "re-estimated."
 )
 
 
@@ -479,15 +484,17 @@ def run(race_id: str) -> dict:
         if stale.name not in keep:
             stale.unlink()
     for g, s in zip(groups, summaries, strict=True):
+        path = vendors_dir / f"{g.vendor_id}.json"
+        previous_ads = read_json(path).get("ads") or [] if path.exists() else []
         write_json(
-            vendors_dir / f"{g.vendor_id}.json",
+            path,
             {
                 **s,
                 "race_id": race_id,
                 "generated_at": generated_at,
                 "data_status": "real",
                 "expenditures": sorted(g.rows, key=_row_sort_key, reverse=True),
-                "ads": [],
+                "ads": previous_ads,
                 "method": METHOD,
             },
         )

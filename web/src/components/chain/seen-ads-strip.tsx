@@ -13,8 +13,8 @@ export function SeenAdsStrip({ ads, raceId }: { ads: Ad[]; raceId: string }) {
           You may have seen this ad
         </div>
         <div>
-          Advertiser matched to this committee by a person (Google shows the
-          advertiser, not the paid-for-by line).
+          Advertiser matched to this committee by a person (Google&apos;s bulk
+          data names the advertiser; it carries no paid-for-by field for US ads).
         </div>
       </div>
       {ads.map((ad) => (

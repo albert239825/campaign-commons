@@ -19,7 +19,7 @@ from collections import defaultdict
 from pathlib import Path
 
 from .config import RACES, Race
-from .util import fec_candidate_url, fec_ie_candidate_url, read_json, write_json
+from .util import fec_candidate_url, fec_ie_candidate_url, range_midpoint, read_json, write_json
 
 OUT = "out"
 MAX_AD_NODES = 10
@@ -40,10 +40,7 @@ def _inferred(rule: str, source_urls: list[str]) -> dict:
     return {"basis": "inferred", "rule": rule, "source_urls": source_urls, "checked_by": None, "checked_at": None}
 
 
-def midpoint(spend_range: dict) -> float:
-    lo = float(spend_range.get("min") or 0)
-    hi = spend_range.get("max")
-    return lo if hi is None else (lo + float(hi)) / 2
+midpoint = range_midpoint
 
 
 def _date_range(dates: list[str | None]) -> list[str] | None:

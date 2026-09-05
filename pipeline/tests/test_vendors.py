@@ -2,9 +2,11 @@
 
 import json
 from pathlib import Path
+from types import SimpleNamespace
 
 import pytest
 
+from campaign_commons import vendors as vendors_mod
 from campaign_commons.config import PA_SEN_2024
 from campaign_commons.vendors import (
     SIMILARITY_THRESHOLD,
@@ -161,7 +163,9 @@ def test_payee_url_encodes_and_scopes_to_spender() -> None:
         ("LIST PURCHASE", "consulting"),
         ("LISTED EVENT", "other"),  # LIST is whole-word
         ("VOTER FILE", "consulting"),
-        ("CANVASSING", "other"),
+        ("CANVASSING", "field"),
+        ("FIELD CANVASSING AND LITERATURE", "field"),
+        ("DOOR KNOCKING", "field"),
         ("BILLBOARD RENTAL", "other"),
         ("", "other"),
         (None, "other"),
@@ -284,3 +288,38 @@ def test_entity_vendor_rows_group_one_spenders_rows() -> None:
         {"medium": "digital", "amount": 4.0, "count": 1},
     ]
     assert out[1]["first_date"] is None and "q_spender=C1" in out[1]["source_url"]
+
+
+def test_rerun_keeps_reverse_ads_written_by_ads_enrich(tmp_path: Path, monkeypatch: pytest.MonkeyPatch) -> None:
+    out = tmp_path / "out"
+    monkeypatch.setitem(vendors_mod.RACES, "pa-sen-2024", SimpleNamespace(out_dir=out, cycle=2024))
+    monkeypatch.setattr(vendors_mod, "HAND", tmp_path / "hand")
+    ie = {
+        "ie_id": "C1-ie-1",
+        "spender_entity_id": "C1",
+        "spender_name": "C1",
+        "candidate_id": "S1",
+        "candidate_name": "S. One",
+        "support_oppose": "O",
+        "amount": 100.0,
+        "date": "2024-10-01",
+        "payee": "PIXEL PLACEMENT LLC",
+        "purpose": "DIGITAL MEDIA BUY",
+        "source_url": "https://example.org/ie",
+    }
+    (out / "entities").mkdir(parents=True)
+    (out / "entities" / "C1.json").write_text(
+        json.dumps({"entity_id": "C1", "name": "C1", "independent_expenditures": [ie], "flags": []})
+    )
+    (out / "ledger.json").write_text(json.dumps({"traceability": {"outside_total": 100.0}}))
+
+    vendors_mod.run("pa-sen-2024")
+    vendor_path = next((out / "vendors").glob("*.json"))
+    assert _load(vendor_path)["ads"] == []
+
+    link = {"ad_id": "CR1", "sponsor_entity_id": "C1", "basis": {"basis": "adjacent", "rule": "r", "source_urls": []}}
+    v = _load(vendor_path)
+    v["ads"] = [link]
+    vendor_path.write_text(json.dumps(v))
+    vendors_mod.run("pa-sen-2024")
+    assert _load(vendor_path)["ads"] == [link]

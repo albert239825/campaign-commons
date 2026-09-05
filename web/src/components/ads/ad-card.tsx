@@ -1,8 +1,9 @@
 import Link from "next/link";
 import { ISSUE_BY_ID, type Ad, type AdVendorLink } from "@campaign-commons/contracts";
+import { BASIS_LABELS, BASIS_MEANING, BASIS_TONE } from "@/lib/evidence";
 import { date, money, pct, range, routes } from "@/lib/format";
 import { Chip, SourceLink } from "@/components/ui";
-import type { ChipTone } from "@/components/ui";
+import { MEDIUM_LABELS } from "@/components/vendors/medium";
 
 const CONFIDENCE: Record<Ad["match_confidence"], { label: string; tone: "green" | "amber" | "muted"; title: string }> = {
   verified: { label: "sponsor verified", tone: "green", title: "Advertiser → FEC committee match checked by a human" },
@@ -29,13 +30,6 @@ function Creative({ ad }: { ad: Ad }) {
 
 export const isVerified = (ad: Ad) => ad.verification?.status === "verified";
 export const darkShare = (ad: Ad): number | null => ad.sponsor_visibility_shares?.dark ?? null;
-
-const BASIS_LABEL: Record<AdVendorLink["basis"]["basis"], { label: string; tone: ChipTone }> = {
-  verified: { label: "verified ✓", tone: "green" },
-  inferred: { label: "inferred", tone: "amber" },
-  adjacent: { label: "adjacent", tone: "muted" },
-  filed: { label: "filed", tone: "neutral" },
-};
 
 function DarkShareLine({ ad, raceId, sponsorHasChain }: { ad: Ad; raceId: string; sponsorHasChain: boolean }) {
   const dark = darkShare(ad);
@@ -69,20 +63,24 @@ function IssueChips({ ad }: { ad: Ad }) {
   );
 }
 
-function VendorLines({ links }: { links: AdVendorLink[] }) {
+function VendorLines({ links, raceId }: { links: AdVendorLink[]; raceId: string }) {
   if (links.length === 0) return null;
   return (
     <div className="space-y-1.5 border-t border-neutral-100 pt-2">
       <h4 className="text-[11px] font-semibold uppercase tracking-wide text-neutral-500">Vendors in this window</h4>
       <ul className="space-y-1.5">
         {links.map((link) => {
-          const label = BASIS_LABEL[link.basis.basis];
+          const basis = link.basis.basis;
           return (
             <li key={link.vendor_id} className="text-xs text-neutral-700">
               <div className="flex flex-wrap items-center gap-1.5">
-                <span className="font-medium text-neutral-900">{link.vendor_name}</span>
-                <Chip tone="muted">{link.medium}</Chip>
-                <Chip tone={label.tone}>{label.label}</Chip>
+                <Link href={routes.vendor(raceId, link.vendor_id)} className="font-medium text-neutral-900 hover:underline">
+                  {link.vendor_name}
+                </Link>
+                <Chip tone="muted">{MEDIUM_LABELS[link.medium]}</Chip>
+                <Chip tone={BASIS_TONE[basis]} title={BASIS_MEANING[basis]}>
+                  {BASIS_LABELS[basis]}
+                </Chip>
                 <span className="tabular-nums text-neutral-500">
                   {money(link.amount_in_window, { compact: false })} · {link.buys_in_window} {link.buys_in_window === 1 ? "buy" : "buys"}
                 </span>
@@ -172,7 +170,7 @@ export function AdCard({
           )}
         </dl>
 
-        <VendorLines links={ad.vendor_links ?? []} />
+        <VendorLines links={ad.vendor_links ?? []} raceId={raceId} />
 
         <footer className="mt-auto flex flex-wrap items-center justify-between gap-2 border-t border-neutral-100 pt-2 text-xs">
           <span className="flex gap-3">

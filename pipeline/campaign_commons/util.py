@@ -15,14 +15,39 @@ def now_iso() -> str:
     return datetime.now(timezone.utc).isoformat(timespec="seconds")
 
 
+def keep_generated_at(path: Path, obj: Any) -> Any:
+    """Return `obj` carrying the existing file's top-level `generated_at` when nothing else differs, so a rerun that
+    changes no content leaves no diff. Any other change lets the fresh timestamp through."""
+    if not (isinstance(obj, dict) and "generated_at" in obj and path.exists()):
+        return obj
+    try:
+        prev = json.loads(path.read_text())
+    except json.JSONDecodeError:
+        return obj
+    if not (isinstance(prev, dict) and "generated_at" in prev):
+        return obj
+    if {k: v for k, v in prev.items() if k != "generated_at"} != {k: v for k, v in obj.items() if k != "generated_at"}:
+        return obj
+    return {**obj, "generated_at": prev["generated_at"]}
+
+
 def write_json(path: Path, obj: Any) -> None:
+    """Write `obj` as pretty JSON; see `keep_generated_at` for the timestamp rule."""
     path.parent.mkdir(parents=True, exist_ok=True)
+    obj = keep_generated_at(path, obj)
     path.write_text(json.dumps(obj, indent=2, ensure_ascii=False) + "\n")
     print(f"wrote {path}")
 
 
 def read_json(path: Path) -> Any:
     return json.loads(path.read_text())
+
+
+def range_midpoint(rng: dict[str, Any]) -> float:
+    """Midpoint of a Google `{min, max}` bucket. `max: null` is Google's open top bucket: the midpoint is then the floor."""
+    lo = float(rng.get("min") or 0)
+    hi = rng.get("max")
+    return lo if hi is None else (lo + float(hi)) / 2
 
 
 def fec_committee_url(committee_id: str, cycle: int) -> str:
