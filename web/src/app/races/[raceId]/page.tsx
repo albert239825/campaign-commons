@@ -91,21 +91,9 @@ export default async function RaceLedgerPage({ params }: { params: Promise<{ rac
       <RaceSections
         funding={<FundingExplorer views={buildFundingViews(ledger)} raceId={raceId} />}
         stories={stories.stories.length > 0 ? (
-          <Card
-            title="Funding highlights"
-            action={
-              <Link href={routes.stories(raceId)} className="text-xs text-neutral-600 hover:underline">
-                All {stories.stories.length} stories →
-              </Link>
-            }
-          >
-            <p className="mb-3 text-xs text-neutral-500">
-              Funding summaries drawn from FEC filings. Titles and narratives are generated from the records; follow the source links to explore the details.
-            </p>
-            <StorySlideshow slides={stories.stories.map((s) => (
-              <StoryCard key={s.story_id} story={s} raceId={raceId} hasChain={hasChain(raceId, s.root_entity_id)} full />
-            ))} />
-          </Card>
+          <StorySlideshow slides={stories.stories.map((s) => (
+            <StoryCard key={s.story_id} story={s} raceId={raceId} hasChain={hasChain(raceId, s.root_entity_id)} expandable />
+          ))} />
         ) : <Card title="Funding highlights"><p>No stories are available for this race yet.</p></Card>}
         spenders={
           <Card

@@ -575,11 +575,24 @@ body:has(.race-dashboard) :is(a, button):focus-visible { outline: 2px solid curr
 .story-slideshow-controls button:disabled { opacity: .35; cursor: default; }
 .story-slideshow-track { display: flex; overflow-x: auto; scroll-snap-type: x mandatory; overscroll-behavior-x: contain; scrollbar-width: thin; scrollbar-color: #b7ab98 #e9e5df; }
 .story-slideshow-track:focus-visible { outline: 2px solid currentColor; outline-offset: 4px; }
-.story-slide { flex: 0 0 100%; min-width: 0; scroll-snap-align: start; scroll-snap-stop: always; }
-.story-slide > article { height: 100%; padding: clamp(24px, 4vw, 48px); gap: 28px; border: 0; border-radius: 0; background: #e9e5df; }
-.story-slide h3 { max-width: 850px; font-size: clamp(26px, 3vw, 40px); font-weight: 400; line-height: 1.15; letter-spacing: -.035em; }
-.story-slide > article > .tabular-nums { font-size: clamp(36px, 4vw, 56px); font-weight: 400; line-height: 1.1; letter-spacing: -.04em; }
+.story-page { flex: 0 0 100%; min-width: 0; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; scroll-snap-align: start; scroll-snap-stop: always; }
+.story-slide { min-width: 0; }
+.story-slide > article { height: 100%; padding: 24px; gap: 20px; border: 0; border-radius: 0; background: #e9e5df; }
+.story-slide h3 { max-width: 850px; font-size: 23px; font-weight: 400; line-height: 1.15; letter-spacing: -.035em; }
+.story-slide > article > .tabular-nums { font-size: 36px; font-weight: 400; line-height: 1.1; letter-spacing: -.04em; }
 .story-slide > article > .tabular-nums > span:last-child { display: block; margin: 10px 0 0; font-size: 13px; letter-spacing: 0; }
-.story-slide p { max-width: 850px; font-size: 15px; line-height: 1.8; }
+.story-slide p { max-width: 850px; font-size: 13px; line-height: 1.8; }
 .story-slide footer { border-color: var(--race-rule); padding-top: 24px; font-size: 13px; }
 .story-slideshow-hint { margin-top: 16px; font-size: 12px; color: #6f6d69; }
+
+.story-change-view { min-height: 44px; padding: 10px 16px; border: 1px solid var(--race-rule); font-size: 13px; cursor: pointer; }
+.story-change-view:hover { background: #e9e5df; }
+.story-slideshow-track[data-view="grid"] { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; overflow: visible; }
+.story-slideshow-track[data-view="grid"] .story-page { display: contents; }
+.story-narrative { font-size: 13px; }
+.story-narrative summary { cursor: pointer; text-underline-offset: 3px; }
+.story-narrative p { margin-top: 12px; }
+@media (max-width: 1050px) {
+  .story-page { grid-template-columns: minmax(0, 1fr); }
+  .story-slideshow-track[data-view="grid"] { grid-template-columns: minmax(0, 1fr); }
+}
