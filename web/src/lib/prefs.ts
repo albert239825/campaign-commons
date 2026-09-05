@@ -16,9 +16,9 @@ export const PREFS_KEY = "citizen-gotham:prefs:v1";
 
 export function loadPrefs(): UserPrefs {
   if (typeof window === "undefined") return EMPTY_PREFS;
-  const raw = window.localStorage.getItem(PREFS_KEY);
-  if (!raw) return EMPTY_PREFS;
   try {
+    const raw = window.localStorage.getItem(PREFS_KEY);
+    if (!raw) return EMPTY_PREFS;
     const parsed = UserPrefsSchema.safeParse(JSON.parse(raw));
     return parsed.success ? parsed.data : EMPTY_PREFS;
   } catch {
@@ -28,5 +28,9 @@ export function loadPrefs(): UserPrefs {
 
 export function savePrefs(p: UserPrefs): void {
   if (typeof window === "undefined") return;
-  window.localStorage.setItem(PREFS_KEY, JSON.stringify(p));
+  try {
+    window.localStorage.setItem(PREFS_KEY, JSON.stringify(p));
+  } catch {
+    // Keep the in-memory preferences usable when browser storage is blocked.
+  }
 }
