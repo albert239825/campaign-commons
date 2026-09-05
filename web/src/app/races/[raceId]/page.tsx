@@ -93,7 +93,7 @@ export default async function RaceLedgerPage({ params }: { params: Promise<{ rac
         funding={<FundingExplorer views={buildFundingViews(ledger)} raceId={raceId} />}
         stories={topStories.length > 0 ? (
           <Card
-            title="Start here"
+            title="Funding highlights"
             action={
               <Link href={routes.stories(raceId)} className="text-xs text-neutral-600 hover:underline">
                 All {stories.stories.length} stories →
@@ -110,7 +110,7 @@ export default async function RaceLedgerPage({ params }: { params: Promise<{ rac
               ))}
             </div>
           </Card>
-        ) : <Card title="Start here"><p>No stories are available for this race yet.</p></Card>}
+        ) : <Card title="Funding highlights"><p>No stories are available for this race yet.</p></Card>}
         spenders={
           <Card
             title="Top outside spenders"

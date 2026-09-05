@@ -4,7 +4,7 @@ import { useId, useState, type KeyboardEvent, type ReactNode } from "react";
 
 const SECTIONS = [
   { id: "funding", label: "Funding overview" },
-  { id: "stories", label: "Start here" },
+  { id: "stories", label: "Funding highlights" },
   { id: "spenders", label: "Top outside spenders" },
 ] as const;
 type Section = (typeof SECTIONS)[number]["id"];
