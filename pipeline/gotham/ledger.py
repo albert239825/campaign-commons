@@ -280,7 +280,7 @@ def entity_inflows(t: Tables, cid: str, name: str, cycle: int) -> list[dict]:
     """Top counterparties paying into `cid`: committees (transfers), individuals and organizations (Sched A)."""
     limit = "unlimited" if t.committee_type(cid) in UNLIMITED_RECEIVER_TYPES else None
     rows: list[dict] = []
-    cmtes = _top_counterparties(t.transfers_in(cid), ["from_id"], "amt", "dt", "tt", "from_name")
+    cmtes = _top_counterparties(t.transfers_in(cid), ["from_id"], "amt", "dt", "tt", "from_name", n="count")
     for r in cmtes.itertuples():
         from_id = str(r.from_id)
         rows.append(
@@ -379,7 +379,7 @@ def entity_inflows(t: Tables, cid: str, name: str, cycle: int) -> list[dict]:
 def entity_outflows(t: Tables, cid: str, name: str, cycle: int) -> list[dict]:
     disb_url = fec_disbursements_url(cid, cycle)
     rows = []
-    for r in _top_counterparties(t.transfers_out(cid), ["to_id"], "amt", "dt", "tt", "to_name").itertuples():
+    for r in _top_counterparties(t.transfers_out(cid), ["to_id"], "amt", "dt", "tt", "to_name", n="count").itertuples():
         to_id = str(r.to_id)
         limit = "unlimited" if t.committee_type(to_id) in UNLIMITED_RECEIVER_TYPES else None
         rows.append(
