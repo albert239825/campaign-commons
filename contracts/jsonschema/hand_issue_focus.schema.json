@@ -1,0 +1,102 @@
+{
+  "$ref": "#/definitions/hand_issue_focus",
+  "definitions": {
+    "hand_issue_focus": {
+      "type": "object",
+      "properties": {
+        "race_id": {
+          "type": "string"
+        },
+        "method": {
+          "type": "string"
+        },
+        "rows": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "entity_id": {
+                "type": "string"
+              },
+              "name": {
+                "type": "string"
+              },
+              "kind": {
+                "type": "string",
+                "enum": [
+                  "single_issue",
+                  "multi_issue",
+                  "general_partisan",
+                  "candidate_aligned",
+                  "business_trade",
+                  "labor"
+                ]
+              },
+              "issue_ids": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "enum": [
+                    "healthcare",
+                    "energy_climate",
+                    "defense",
+                    "crypto_fintech",
+                    "immigration",
+                    "abortion",
+                    "guns",
+                    "tax_budget",
+                    "tech_ai",
+                    "labor_trade"
+                  ]
+                },
+                "maxItems": 3
+              },
+              "description": {
+                "type": "string"
+              },
+              "source_urls": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "format": "uri"
+                },
+                "minItems": 1
+              },
+              "quote": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "tagged_by": {
+                "type": "string"
+              },
+              "tagged_at": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "entity_id",
+              "name",
+              "kind",
+              "issue_ids",
+              "description",
+              "source_urls",
+              "quote",
+              "tagged_by",
+              "tagged_at"
+            ],
+            "additionalProperties": false
+          }
+        }
+      },
+      "required": [
+        "race_id",
+        "method",
+        "rows"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "$schema": "http://json-schema.org/draft-07/schema#"
+}

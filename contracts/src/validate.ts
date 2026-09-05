@@ -15,26 +15,41 @@ import {
   DonorViewSchema,
   DossierSchema,
   EntitySchema,
+  HAND_FILE_SCHEMAS,
+  IssueSpendingSchema,
   LedgerSchema,
   RacesIndexSchema,
+  SearchIndexSchema,
   StoriesSchema,
+  VendorIndexSchema,
+  VendorSchema,
 } from "./schemas";
 
 const root = process.argv[2] ?? join(__dirname, "..", "..", "data", "out");
+/** data/hand/ holds human-maintained inputs with their own schemas (HAND_FILE_SCHEMAS) */
+const isHand = root.split(sep).at(-1) === "hand";
 
 function schemaFor(rel: string): ZodTypeAny | null {
   const parts = rel.split(sep);
+  if (isHand) {
+    if (parts.length === 2) return HAND_FILE_SCHEMAS[parts[1] as keyof typeof HAND_FILE_SCHEMAS] ?? null;
+    return null;
+  }
   if (parts.length === 1 && parts[0] === "races.json") return RacesIndexSchema;
+  if (parts.length === 1 && parts[0] === "search.json") return SearchIndexSchema;
   if (parts.length === 2) {
     if (parts[1] === "ledger.json") return LedgerSchema;
     if (parts[1] === "ads.json") return AdGallerySchema;
     if (parts[1] === "stories.json") return StoriesSchema;
+    if (parts[1] === "vendors.json") return VendorIndexSchema;
+    if (parts[1] === "issues.json") return IssueSpendingSchema;
   }
   if (parts.length === 3) {
     if (parts[1] === "entities") return EntitySchema;
     if (parts[1] === "chains") return ChainSchema;
     if (parts[1] === "dossiers") return DossierSchema;
     if (parts[1] === "donors") return DonorViewSchema;
+    if (parts[1] === "vendors") return VendorSchema;
   }
   return null;
 }

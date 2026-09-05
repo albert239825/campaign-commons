@@ -1,0 +1,87 @@
+{
+  "$ref": "#/definitions/hand_vendor_aliases",
+  "definitions": {
+    "hand_vendor_aliases": {
+      "type": "object",
+      "properties": {
+        "race_id": {
+          "type": "string"
+        },
+        "method": {
+          "type": "string"
+        },
+        "rows": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "vendor_id": {
+                "type": "string"
+              },
+              "name": {
+                "type": "string"
+              },
+              "aliases": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                },
+                "minItems": 1
+              },
+              "medium_override": {
+                "anyOf": [
+                  {
+                    "type": "string",
+                    "enum": [
+                      "tv",
+                      "radio",
+                      "digital",
+                      "mail",
+                      "phones",
+                      "production",
+                      "consulting",
+                      "other"
+                    ]
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "source_url": {
+                "anyOf": [
+                  {
+                    "type": "string",
+                    "format": "uri"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "tagged_by": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "vendor_id",
+              "name",
+              "aliases",
+              "medium_override",
+              "source_url",
+              "tagged_by"
+            ],
+            "additionalProperties": false
+          }
+        }
+      },
+      "required": [
+        "race_id",
+        "method",
+        "rows"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "$schema": "http://json-schema.org/draft-07/schema#"
+}

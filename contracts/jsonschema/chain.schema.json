@@ -42,7 +42,10 @@
                   "individual",
                   "organization",
                   "conduit",
-                  "aggregate"
+                  "aggregate",
+                  "vendor",
+                  "ad",
+                  "candidate"
                 ]
               },
               "committee_type": {
@@ -76,6 +79,13 @@
               "depth": {
                 "type": "integer",
                 "minimum": 0
+              },
+              "side": {
+                "type": "string",
+                "enum": [
+                  "in",
+                  "out"
+                ]
               },
               "visibility": {
                 "type": "string",
@@ -133,6 +143,73 @@
                   "nonprofit",
                   "unknown"
                 ]
+              },
+              "medium": {
+                "type": "string",
+                "enum": [
+                  "tv",
+                  "radio",
+                  "digital",
+                  "mail",
+                  "phones",
+                  "production",
+                  "consulting",
+                  "other"
+                ]
+              },
+              "thumbnail_path": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "href": {
+                "type": "string"
+              },
+              "basis": {
+                "type": "object",
+                "properties": {
+                  "basis": {
+                    "type": "string",
+                    "enum": [
+                      "filed",
+                      "verified",
+                      "inferred",
+                      "adjacent"
+                    ]
+                  },
+                  "rule": {
+                    "type": "string",
+                    "minLength": 1
+                  },
+                  "source_urls": {
+                    "type": "array",
+                    "items": {
+                      "type": "string",
+                      "format": "uri"
+                    }
+                  },
+                  "checked_by": {
+                    "type": [
+                      "string",
+                      "null"
+                    ]
+                  },
+                  "checked_at": {
+                    "type": [
+                      "string",
+                      "null"
+                    ]
+                  }
+                },
+                "required": [
+                  "basis",
+                  "rule",
+                  "source_urls",
+                  "checked_by",
+                  "checked_at"
+                ],
+                "additionalProperties": false
               }
             },
             "required": [
@@ -215,6 +292,73 @@
                     "type": "null"
                   }
                 ]
+              },
+              "kind": {
+                "type": "string",
+                "enum": [
+                  "money",
+                  "placement",
+                  "targeting"
+                ]
+              },
+              "support_oppose": {
+                "anyOf": [
+                  {
+                    "type": "string",
+                    "enum": [
+                      "S",
+                      "O"
+                    ]
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "basis": {
+                "type": "object",
+                "properties": {
+                  "basis": {
+                    "type": "string",
+                    "enum": [
+                      "filed",
+                      "verified",
+                      "inferred",
+                      "adjacent"
+                    ]
+                  },
+                  "rule": {
+                    "type": "string",
+                    "minLength": 1
+                  },
+                  "source_urls": {
+                    "type": "array",
+                    "items": {
+                      "type": "string",
+                      "format": "uri"
+                    }
+                  },
+                  "checked_by": {
+                    "type": [
+                      "string",
+                      "null"
+                    ]
+                  },
+                  "checked_at": {
+                    "type": [
+                      "string",
+                      "null"
+                    ]
+                  }
+                },
+                "required": [
+                  "basis",
+                  "rule",
+                  "source_urls",
+                  "checked_by",
+                  "checked_at"
+                ],
+                "additionalProperties": false
               }
             },
             "required": [
@@ -276,6 +420,12 @@
                   "pruned"
                 ]
               }
+            },
+            "out_total": {
+              "type": "number"
+            },
+            "max_out_depth": {
+              "type": "integer"
             }
           },
           "required": [
