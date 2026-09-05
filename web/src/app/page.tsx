@@ -5,8 +5,7 @@ import { getRaces } from "@/lib/data";
 import { date, routes } from "@/lib/format";
 import { DataStatusBanner } from "@/components/ui";
 import { BarLegend, MONEY_COLORS } from "@/components/ui/stacked-bar";
-import { Table, Th } from "@/components/ui/table";
-import { RaceRow } from "@/components/race-table/race-row";
+import { RaceTable } from "@/components/race-table/race-table";
 
 export default function RaceTablePage() {
   const { races, generated_at } = getRaces();
@@ -16,7 +15,6 @@ export default function RaceTablePage() {
     <div className="landing-page">
       <section className="landing-hero" aria-labelledby="landing-title">
         <div className="landing-intro">
-          <p className="landing-eyebrow">Public records. A clearer picture.</p>
           <h1 id="landing-title">
             Follow the money.<br />See the whole picture.
           </h1>
@@ -44,10 +42,7 @@ export default function RaceTablePage() {
 
       <section id="races" className="landing-races" aria-labelledby="races-title">
         <div className="landing-races-heading">
-          <div>
-            <p className="landing-section-label">01 / The public record</p>
-            <h2 id="races-title">Start with a race.</h2>
-          </div>
+          <h2 id="races-title">Start with a race.</h2>
           <p>Campaign finances, outside spending, and the sources behind them. Choose a race to explore the records.</p>
         </div>
         <DataStatusBanner status={worst} />
@@ -60,24 +55,7 @@ export default function RaceTablePage() {
             ]}
           />
         </div>
-        <Table>
-          <thead>
-            <tr>
-              <Th>Race</Th>
-              <Th>Candidates</Th>
-              <Th align="right">Campaign</Th>
-              <Th align="right">Outside</Th>
-              <Th>Outside share</Th>
-              <Th align="right">Traceability</Th>
-              <Th align="right">Status</Th>
-            </tr>
-          </thead>
-          <tbody>
-            {races.map((r) => (
-              <RaceRow key={r.race_id} race={r} />
-            ))}
-          </tbody>
-        </Table>
+        <RaceTable races={races} />
         <p className="landing-method-note">
           Traceability is the share of outside dollars that resolve to a named source (an individual, business or union) after
           walking committee-to-committee transfers backward. Preliminary; see <Link href={routes.methodology()}>methodology</Link>.

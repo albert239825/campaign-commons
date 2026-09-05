@@ -174,15 +174,6 @@ body:has(.landing-page) .site-header nav a:hover {
   text-align: center;
 }
 
-.landing-eyebrow {
-  margin-bottom: 24px;
-  font-family: "Cinzel", Georgia, serif;
-  font-size: 13px;
-  font-weight: 400;
-  letter-spacing: normal;
-  text-transform: uppercase;
-}
-
 .landing-intro h1 {
   font-size: clamp(40px, calc(29.3333px + 2.963vw), 72px);
   line-height: 1;
@@ -256,7 +247,6 @@ body:has(.landing-page) .site-header nav a:hover {
   margin-inline: auto;
   padding: 76px 40px 60px;
   scroll-margin-top: 32px;
-  border-inline: 1px solid var(--landing-rule);
 }
 
 .landing-races-heading {
@@ -265,16 +255,6 @@ body:has(.landing-page) .site-header nav a:hover {
   align-items: end;
   gap: 64px;
   padding-bottom: 60px;
-}
-
-.landing-section-label {
-  margin-bottom: 20px;
-  font-family: "Cinzel", Georgia, serif;
-  font-size: 13px;
-  font-weight: 400;
-  letter-spacing: normal;
-  text-transform: uppercase;
-  color: #6f6d69;
 }
 
 .landing-races-heading h2 {
@@ -309,6 +289,46 @@ body:has(.landing-page) .site-header nav a:hover {
 .landing-method-note { margin-top: 24px; font-size: 12px; line-height: 1.65; color: #6f6d69; }
 .landing-method-note a { text-decoration: underline; text-underline-offset: 3px; }
 
+.race-table-container { scroll-margin-top: 32px; }
+.race-list-table tr[data-reveal="pending"] { opacity: 0; }
+.race-list-table tr[data-reveal="visible"] {
+  animation: race-row-enter 600ms cubic-bezier(.22, 1, .36, 1) both;
+  animation-delay: var(--race-reveal-delay, 0ms);
+}
+/* Keyboard users can reach a row before its scroll observer fires. */
+.race-list-table tr:focus-within { opacity: 1; animation: none; }
+@keyframes race-row-enter {
+  from { opacity: 0; transform: translateY(14px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.race-pagination {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 16px;
+  padding-top: 24px;
+  font-size: 13px;
+  color: #6f6d69;
+}
+.race-pagination-controls { display: flex; gap: 12px; }
+.race-pagination button {
+  min-height: 44px;
+  padding: 10px 16px;
+  border: 1px solid var(--landing-rule);
+  color: var(--landing-ink);
+  cursor: pointer;
+}
+.race-pagination button:hover:not(:disabled) { background: #e9e5df; }
+.race-pagination button:disabled { opacity: .4; cursor: default; }
+.race-pagination :focus-visible { outline: 2px solid currentColor; outline-offset: 4px; }
+@media (prefers-reduced-motion: reduce) {
+  .race-list-table tr[data-reveal] { opacity: 1; animation: none; }
+}
+@media print {
+  .race-list-table tr[data-reveal] { opacity: 1; animation: none; }
+}
+
 body:has(.landing-page) .site-footer {
   max-width: 1360px;
   padding: 30px 40px 48px;
@@ -327,7 +347,6 @@ body:has(.landing-page) a:focus-visible {
   body:has(.landing-page) .site-brand { font-size: 19px; }
   body:has(.landing-page) .site-header nav { gap: 16px; font-size: 12px; }
   .landing-intro { padding-inline: 24px; text-align: left; }
-  .landing-eyebrow { margin-bottom: 22px; }
   .landing-description { font-size: 16px; margin-top: 22px; }
   .landing-actions { justify-content: flex-start; flex-wrap: wrap; gap: 8px 24px; margin-top: 24px; }
   .landing-art { margin-top: 42px; }
