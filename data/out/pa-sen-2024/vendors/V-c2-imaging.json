@@ -155,6 +155,46 @@
       "medium": "mail"
     }
   ],
-  "ads": [],
+  "ads": [
+    {
+      "ad_id": "CR16237396970908418049",
+      "sponsor_entity_id": "C00053553",
+      "basis": {
+        "basis": "adjacent",
+        "rule": "Ran Oct 7, 2024 – Nov 5, 2024. In that window (buys dated up to 7 days before first shown through last shown) NATIONAL RIFLE ASSOCIATION OF AMERICA POLITICAL VICTORY FUND reported mail buys to C2 IMAGING LLC ($5,420); the FEC does not record which buy placed which ad.",
+        "source_urls": [
+          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00053553&payee_name=C2+IMAGING+LLC"
+        ],
+        "checked_by": null,
+        "checked_at": null
+      }
+    },
+    {
+      "ad_id": "CR05604116775709966337",
+      "sponsor_entity_id": "C00053553",
+      "basis": {
+        "basis": "adjacent",
+        "rule": "Ran Oct 7, 2024 – Nov 5, 2024. In that window (buys dated up to 7 days before first shown through last shown) NATIONAL RIFLE ASSOCIATION OF AMERICA POLITICAL VICTORY FUND reported mail buys to C2 IMAGING LLC ($5,420); the FEC does not record which buy placed which ad.",
+        "source_urls": [
+          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00053553&payee_name=C2+IMAGING+LLC"
+        ],
+        "checked_by": null,
+        "checked_at": null
+      }
+    },
+    {
+      "ad_id": "CR15651442485454962689",
+      "sponsor_entity_id": "C00053553",
+      "basis": {
+        "basis": "adjacent",
+        "rule": "Ran Sep 5, 2024 – Nov 4, 2024. In that window (buys dated up to 7 days before first shown through last shown) NATIONAL RIFLE ASSOCIATION OF AMERICA POLITICAL VICTORY FUND reported mail buys to C2 IMAGING LLC ($13,562); the FEC does not record which buy placed which ad.",
+        "source_urls": [
+          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00053553&payee_name=C2+IMAGING+LLC"
+        ],
+        "checked_by": null,
+        "checked_at": null
+      }
+    }
+  ],
   "method": "Every Schedule E independent expenditure names a payee. Payee strings are normalised (case, punctuation, legal suffixes, token order), near-duplicates are folded with a difflib ratio ≥ 0.92 when their numeric tokens match, and hand alias rows from data/hand/<race>/vendor_aliases.json override the rule. Medium is classified from the purpose the spender filed (ordered keyword table in gotham/vendors.py); the FEC does not record which buy placed which ad, so vendor ↔ ad links are empty until a human verifies one. Totals are the filed amounts, grouped, never re-estimated."
 }

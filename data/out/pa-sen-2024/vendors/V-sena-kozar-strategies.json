@@ -60,6 +60,20 @@
       "medium": "production"
     }
   ],
-  "ads": [],
+  "ads": [
+    {
+      "ad_id": "CR13699676855001415681",
+      "sponsor_entity_id": "C00804823",
+      "basis": {
+        "basis": "adjacent",
+        "rule": "Ran Oct 23, 2024 – Nov 5, 2024. In that window (buys dated up to 7 days before first shown through last shown) MAINSTREAM DEMOCRATS PAC reported production buys to SENA KOZAR STRATEGIES ($6,582); the FEC does not record which buy placed which ad.",
+        "source_urls": [
+          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00804823&payee_name=SENA+KOZAR+STRATEGIES"
+        ],
+        "checked_by": null,
+        "checked_at": null
+      }
+    }
+  ],
   "method": "Every Schedule E independent expenditure names a payee. Payee strings are normalised (case, punctuation, legal suffixes, token order), near-duplicates are folded with a difflib ratio ≥ 0.92 when their numeric tokens match, and hand alias rows from data/hand/<race>/vendor_aliases.json override the rule. Medium is classified from the purpose the spender filed (ordered keyword table in gotham/vendors.py); the FEC does not record which buy placed which ad, so vendor ↔ ad links are empty until a human verifies one. Totals are the filed amounts, grouped, never re-estimated."
 }

@@ -918,6 +918,7 @@ export type EvidenceBasis = z.infer<typeof EvidenceBasisSchema>;
 export type Basis = z.infer<typeof BasisSchema>;
 export type IssueTags = z.infer<typeof IssueTagsSchema>;
 export type Medium = z.infer<typeof MediumSchema>;
+export type SupportOppose = z.infer<typeof SupportOpposeSchema>;
 export type EntityVendorRow = z.infer<typeof EntityVendorRowSchema>;
 export type FocusKind = z.infer<typeof FocusKindSchema>;
 export type IssueFocus = z.infer<typeof IssueFocusSchema>;

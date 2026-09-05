@@ -135,6 +135,20 @@
       "medium": "production"
     }
   ],
-  "ads": [],
+  "ads": [
+    {
+      "ad_id": "CR17561041844983300097",
+      "sponsor_entity_id": "C00490375",
+      "basis": {
+        "basis": "inferred",
+        "rule": "Only digital vendor NATIONAL NURSES UNITED FOR PATIENT PROTECTION paid during this ad's run window (ran oct 9, 2024 – nov 6, 2024, counting buys dated up to 7 days before first shown) — inferred, not filed. NATIONAL NURSES UNITED FOR PATIENT PROTECTION reported $20,138 in phones buys to CALIFORNIA NURSES ASSOCIATION; Google ads are digital placements.",
+        "source_urls": [
+          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00490375&payee_name=CALIFORNIA+NURSES+ASSOCIATION"
+        ],
+        "checked_by": null,
+        "checked_at": null
+      }
+    }
+  ],
   "method": "Every Schedule E independent expenditure names a payee. Payee strings are normalised (case, punctuation, legal suffixes, token order), near-duplicates are folded with a difflib ratio ≥ 0.92 when their numeric tokens match, and hand alias rows from data/hand/<race>/vendor_aliases.json override the rule. Medium is classified from the purpose the spender filed (ordered keyword table in gotham/vendors.py); the FEC does not record which buy placed which ad, so vendor ↔ ad links are empty until a human verifies one. Totals are the filed amounts, grouped, never re-estimated."
 }

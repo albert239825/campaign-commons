@@ -36,10 +36,14 @@ search:           ## Block 2: every page -> data/out/search.json (client-side in
 dossier:          ## congress.gov -> dossiers/*.json
 	$(PY) -m gotham.dossier $(RACE)
 
+chains-out:       ## Block 2: spending side of chains/*.json (root -> vendor -> ad -> candidate); runs after vendors/ads/dossier
+	$(PY) -m gotham.chains_out $(RACE)
+
 validate:         ## validate data/out and data/hand against contracts/jsonschema
 	$(PY) -m gotham.validate
 
-all: ingest ledger vendors chains ads ads-enrich issues dossier search validate
+# Stage order: vendors before chains; ads-enrich and issues read vendors/ads; chains-out reads all of them; search last
+all: ingest ledger vendors chains ads ads-enrich issues dossier chains-out search validate
 
 lint:
 	ruff check . && ruff format --check .
