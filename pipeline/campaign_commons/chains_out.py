@@ -148,7 +148,8 @@ def _ad_parent_edge(ad: dict, ad_node_id: str, root: str, vendor_ids: set[str], 
         }
     else:
         basis = _inferred(
-            "Advertiser name matched to this committee by normalized name; Google shows the advertiser, not the paid-for-by line",
+            "Advertiser name matched to this committee by normalized name; Google's bulk data names the advertiser and carries no "
+            "paid-for-by field for US ads",
             [ad["source_url"]],
         )
     edges.append(_edge(root, ad_node_id, "placement", amount, depth, count=1, source_url=ad["source_url"], basis=basis))
