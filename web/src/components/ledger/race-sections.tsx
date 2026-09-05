@@ -16,8 +16,8 @@ export function RaceSections({ funding, stories, spenders }: Record<Section, Rea
 
   function navigate(event: KeyboardEvent<HTMLButtonElement>, index: number) {
     let next = index;
-    if (event.key === "ArrowRight") next = (index + 1) % SECTIONS.length;
-    else if (event.key === "ArrowLeft") next = (index - 1 + SECTIONS.length) % SECTIONS.length;
+    if (event.key === "ArrowDown") next = (index + 1) % SECTIONS.length;
+    else if (event.key === "ArrowUp") next = (index - 1 + SECTIONS.length) % SECTIONS.length;
     else if (event.key === "Home") next = 0;
     else if (event.key === "End") next = SECTIONS.length - 1;
     else return;
@@ -28,7 +28,7 @@ export function RaceSections({ funding, stories, spenders }: Record<Section, Rea
 
   return (
     <div className="race-sections">
-      <div className="race-section-tabs" role="tablist" aria-label="Race dashboard sections">
+      <div className="race-section-tabs" role="tablist" aria-label="Race dashboard sections" aria-orientation="vertical">
         {SECTIONS.map((section, index) => (
           <button key={section.id} type="button" role="tab" id={`${prefix}-${section.id}-tab`}
             aria-controls={`${prefix}-${section.id}-panel`} aria-selected={selected === section.id}

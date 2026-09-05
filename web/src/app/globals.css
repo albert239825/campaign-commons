@@ -483,7 +483,7 @@ body:has(.race-dashboard) :is(a, button):focus-visible { outline: 2px solid curr
 }
 
 /* A single, candidate-selectable view of campaign and outside dollars. */
-.race-sections { margin-top: -56px; min-width: 0; }
+.race-sections { display: grid; grid-template-columns: 180px minmax(0, 1fr); gap: 40px; align-items: start; margin-top: -56px; min-width: 0; }
 .funding-tabs { display: flex; border-bottom: 1px solid var(--race-rule); gap: 32px; margin-bottom: 24px; }
 .funding-tabs button { padding: 16px 0; border-bottom: 2px solid transparent; text-align: left; color: #6f6d69; cursor: pointer; font-size: 15px; }
 .funding-tabs button[aria-selected="true"] { color: #1b1b1a; border-color: currentColor; }
@@ -547,13 +547,21 @@ body:has(.race-dashboard) :is(a, button):focus-visible { outline: 2px solid curr
   .funding-pie [role="button"] { transition: none; }
 }
 
-.race-section-tabs { display: flex; gap: 32px; margin-bottom: 24px; border-bottom: 1px solid var(--race-rule); }
-.race-section-tabs button { min-height: 48px; padding: 12px 0; text-align: left; font-size: 16px; color: #6f6d69; cursor: pointer; border-bottom: 2px solid transparent; }
-.race-section-tabs button[aria-selected="true"] { color: #1b1b1a; border-color: currentColor; }
-.race-section-panel { min-width: 0; }
+.race-section-tabs { display: flex; flex-direction: column; gap: 4px; position: sticky; top: 32px; padding-right: 20px; border-right: 1px solid var(--race-rule); }
+.race-section-tabs button { min-height: 48px; padding: 12px; text-align: left; font-size: 14px; color: #6f6d69; cursor: pointer; border-left: 2px solid transparent; }
+.race-section-tabs button[aria-selected="true"] { color: #1b1b1a; border-color: currentColor; background: #e9e5df; }
+.race-section-panel { grid-column: 2; grid-row: 1; min-width: 0; }
 .race-section-panel[hidden] { display: none; }
 .race-section-panel:focus-visible { outline: 2px solid currentColor; outline-offset: 6px; }
+@media (min-width: 681px) and (max-width: 1050px) {
+  .race-sections { grid-template-columns: 150px minmax(0, 1fr); gap: 24px; }
+  .race-section-tabs { padding-right: 12px; }
+  .race-sections .funding-panel { grid-template-columns: minmax(0, 1fr); }
+  .race-sections .funding-chart-column { position: static; }
+}
 @media (max-width: 680px) {
-  .race-section-tabs { gap: 20px; }
-  .race-section-tabs button { flex: 1; font-size: 13px; }
+  .race-sections { grid-template-columns: minmax(0, 1fr); gap: 24px; }
+  .race-section-tabs { position: static; padding-right: 0; border-right: 0; }
+  .race-section-tabs button { font-size: 13px; }
+  .race-section-panel { grid-column: 1; grid-row: auto; }
 }
