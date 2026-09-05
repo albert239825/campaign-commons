@@ -12,7 +12,7 @@ export function spendRangeSum(ads: Ad[]): { min: number; max: number | null } {
   return { min, max };
 }
 
-function Thumb({ ad, raceId }: { ad: Ad; raceId: string }) {
+export function AdThumb({ ad, raceId }: { ad: Ad; raceId: string }) {
   const href = `${routes.ads(raceId)}?sponsor=${encodeURIComponent(ad.matched_entity_id ?? "")}#${ad.ad_id}`;
   const title = `${ad.ad_type} ad, ${range(ad.spend_range.min, ad.spend_range.max, (n) => money(n, { compact: false }))}, first shown ${ad.first_shown ?? "—"}`;
   return (
@@ -65,7 +65,7 @@ export function AdsSection({ raceId, entityId, ads }: { raceId: string; entityId
       </div>
       <div className="flex gap-2 overflow-x-auto pb-1">
         {sorted.slice(0, THUMBS).map((ad) => (
-          <Thumb key={ad.ad_id} ad={ad} raceId={raceId} />
+          <AdThumb key={ad.ad_id} ad={ad} raceId={raceId} />
         ))}
         {sorted.length > THUMBS && (
           <Link href={galleryHref} className="flex h-20 w-28 shrink-0 items-center justify-center rounded-sm border border-dashed border-neutral-300 text-xs text-neutral-600 hover:text-neutral-900">
@@ -74,8 +74,8 @@ export function AdsSection({ raceId, entityId, ads }: { raceId: string; entityId
         )}
       </div>
       <p className="mt-2 text-[11px] text-neutral-500">
-        Google shows the advertiser, not the paid-for-by line; these ads are attached to this committee because the advertiser&apos;s name matched its FEC
-        registration{verified > 0 ? ` (${verified} checked by a person)` : ""}. Spend is the range Google publishes, not a filed figure.{" "}
+        Google&apos;s bulk data names the advertiser but carries no paid-for-by field for US ads; these ads are attached to this committee because the
+        advertiser&apos;s name matched its FEC registration{verified > 0 ? ` (${verified} checked by a person)` : ""}. Spend is the range Google publishes, not a filed figure.{" "}
         <SourceLink href={advertiserUrl} label="advertiser page" />
       </p>
     </Card>

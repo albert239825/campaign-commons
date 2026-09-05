@@ -224,7 +224,7 @@
       "payee": "WU, WEIWEI",
       "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202412319740048527",
       "vendor_id": "V-wu-weiwei",
-      "medium": "other"
+      "medium": "field"
     },
     {
       "ie_id": "C00891473-ie-1860935-SE.4187",
@@ -239,7 +239,7 @@
       "payee": "QIAN, JOSEPH",
       "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202412319740048520",
       "vendor_id": "V-qian-joseph",
-      "medium": "other"
+      "medium": "field"
     },
     {
       "ie_id": "C00891473-ie-1860935-SE.4177",
@@ -254,7 +254,7 @@
       "payee": "QIU, HELEN",
       "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202412319740048523",
       "vendor_id": "V-qiu-helen",
-      "medium": "other"
+      "medium": "field"
     },
     {
       "ie_id": "C00891473-ie-1860935-SE.4176",
@@ -269,7 +269,7 @@
       "payee": "QIU, HELEN",
       "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202412319740048520",
       "vendor_id": "V-qiu-helen",
-      "medium": "other"
+      "medium": "field"
     },
     {
       "ie_id": "C00891473-ie-1860935-SE.4188",
@@ -284,7 +284,7 @@
       "payee": "WU, WEIWEI",
       "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202412319740048525",
       "vendor_id": "V-wu-weiwei",
-      "medium": "other"
+      "medium": "field"
     },
     {
       "ie_id": "C00891473-ie-1860935-SE.4189",
@@ -299,7 +299,7 @@
       "payee": "WU, WEIWEI",
       "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202412319740048526",
       "vendor_id": "V-wu-weiwei",
-      "medium": "other"
+      "medium": "field"
     },
     {
       "ie_id": "C00891473-ie-1860935-SE.4186",
@@ -314,7 +314,7 @@
       "payee": "LU, SHUPING",
       "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202412319740048517",
       "vendor_id": "V-lu-shuping",
-      "medium": "other"
+      "medium": "field"
     },
     {
       "ie_id": "C00891473-ie-1860935-SE.4305",
@@ -329,7 +329,7 @@
       "payee": "QIU, HELEN",
       "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202412319740048523",
       "vendor_id": "V-qiu-helen",
-      "medium": "other"
+      "medium": "field"
     }
   ],
   "flags": [
@@ -351,7 +351,7 @@
       "count": 3,
       "media_mix": [
         {
-          "medium": "other",
+          "medium": "field",
           "amount": 2100.0,
           "count": 3
         }
@@ -374,7 +374,7 @@
       "count": 3,
       "media_mix": [
         {
-          "medium": "other",
+          "medium": "field",
           "amount": 1450.0,
           "count": 3
         }
@@ -397,7 +397,7 @@
       "count": 1,
       "media_mix": [
         {
-          "medium": "other",
+          "medium": "field",
           "amount": 1000.0,
           "count": 1
         }
@@ -420,7 +420,7 @@
       "count": 1,
       "media_mix": [
         {
-          "medium": "other",
+          "medium": "field",
           "amount": 375.0,
           "count": 1
         }

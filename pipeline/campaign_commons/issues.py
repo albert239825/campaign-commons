@@ -24,7 +24,7 @@ from dataclasses import dataclass, field
 from pathlib import Path
 
 from .config import DATA, RACES
-from .util import now_iso, read_json, write_json
+from .util import now_iso, range_midpoint, read_json, write_json
 
 HAND = DATA / "hand"
 
@@ -77,12 +77,12 @@ class TaggedRecord:
     tagged_by: str
     tagged_at: str
     spend_min: float = 0.0
-    spend_max: float = 0.0
+    spend_max: float | None = 0.0  # None: Google's open top bucket
     ie_amount: float = 0.0
 
     @property
     def spend_midpoint(self) -> float:
-        return (self.spend_min + self.spend_max) / 2
+        return range_midpoint({"min": self.spend_min, "max": self.spend_max})
 
 
 @dataclass
@@ -91,6 +91,7 @@ class IssueAcc:
     spend_min: float = 0.0
     spend_max: float = 0.0
     spend_midpoint: float = 0.0
+    open_ended: int = 0  # ads whose Google spend bucket has no upper bound; spend_max counts their floor
     ie_amount: float = 0.0
     ie_count: int = 0
     by_candidate: dict[tuple[str, str], list[float]] = field(default_factory=dict)
@@ -105,7 +106,11 @@ class IssueAcc:
         else:
             self.ad_count += 1
             self.spend_min += rec.spend_min
-            self.spend_max += rec.spend_max
+            if rec.spend_max is None:
+                self.open_ended += 1
+                self.spend_max += rec.spend_min
+            else:
+                self.spend_max += rec.spend_max
             self.spend_midpoint += rec.spend_midpoint
         for cand in rec.candidate_ids:
             cell = self.by_candidate.setdefault((cand, rec.support_oppose), [0.0, 0.0])
@@ -258,7 +263,7 @@ def tagged_ads(refs: RowRefs, rows: list[dict]) -> tuple[list[TaggedRecord], int
                 tagged_by=row["tagged_by"],
                 tagged_at=row["tagged_at"],
                 spend_min=float(spend["min"]),
-                spend_max=float(spend["max"]),
+                spend_max=None if spend["max"] is None else float(spend["max"]),
             )
         )
     return tagged, len(ads)
@@ -291,7 +296,13 @@ def by_ad_issue(records: list[TaggedRecord]) -> list[dict]:
                 ],
                 "basis": {
                     "basis": "verified",
-                    "rule": AD_ISSUE_RULE,
+                    "rule": AD_ISSUE_RULE
+                    + (
+                        f" {acc.open_ended} ad(s) sit in Google's open-ended top spend bucket; their floor stands in for"
+                        f" max and midpoint."
+                        if acc.open_ended
+                        else ""
+                    ),
                     "source_urls": acc.source_urls,
                     "checked_by": ", ".join(sorted(acc.taggers)) or TAGGER_FALLBACK,
                     "checked_at": acc.checked_at,

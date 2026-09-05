@@ -509,7 +509,7 @@
       "payee": "MINUTEMAN PRESS",
       "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202502169753435139",
       "vendor_id": "V-minuteman-press",
-      "medium": "other"
+      "medium": "field"
     }
   ],
   "flags": [
@@ -531,7 +531,7 @@
       "count": 1,
       "media_mix": [
         {
-          "medium": "other",
+          "medium": "field",
           "amount": 546.42,
           "count": 1
         }

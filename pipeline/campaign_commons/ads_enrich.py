@@ -302,6 +302,7 @@ def enrich(
             counts.with_shares += 1
         row = issue_rows.get(str(ad["ad_id"]))
         ad.pop("issues", None)
+        ad.pop("vendor_links", None)
         if row is not None:
             ad["issues"] = issue_tags(row, str(ad["creative_url"]))
             counts.tagged += 1

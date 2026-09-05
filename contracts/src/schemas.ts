@@ -157,6 +157,7 @@ export const MediumSchema = z.enum([
   "phones", // phone, text, robocall
   "production", // creative production, not placement
   "consulting", // strategy, research, polling, list acquisition
+  "field", // canvassing, door-knocking, GOTV
   "other",
 ]);
 

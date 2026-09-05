@@ -539,7 +539,7 @@
       "payee": "NORTHERN LIBERTY PRESS",
       "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202502039753240270",
       "vendor_id": "V-northern-liberty-press",
-      "medium": "other"
+      "medium": "field"
     },
     {
       "ie_id": "C00162818-ie-1874244-E14E0525B5C224435BC2",
@@ -569,7 +569,7 @@
       "payee": "KENNEDY PRINTING CO., INC.",
       "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202502039753240271",
       "vendor_id": "V-kennedy-printing",
-      "medium": "other"
+      "medium": "field"
     }
   ],
   "flags": [],
@@ -584,7 +584,7 @@
       "count": 1,
       "media_mix": [
         {
-          "medium": "other",
+          "medium": "field",
           "amount": 1337.58,
           "count": 1
         }
@@ -630,7 +630,7 @@
       "count": 1,
       "media_mix": [
         {
-          "medium": "other",
+          "medium": "field",
           "amount": 102.87,
           "count": 1
         }

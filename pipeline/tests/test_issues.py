@@ -309,3 +309,18 @@ def test_missing_ads_json_is_a_noop_for_ads(race: RowRefs) -> None:
     _hand(race, [], [], ADS)
     issues = build("t", race)
     assert issues["coverage"]["ads_tagged"] == 0 and issues["coverage"]["ads_total"] == 0
+
+
+def test_open_ended_spend_bucket_uses_floor_and_is_disclosed_in_rule(race: RowRefs) -> None:
+    ads_path = race.out_dir / "ads.json"
+    gallery = _read(ads_path)
+    gallery["ads"][0]["spend_range"] = {"min": 100, "max": None}  # AD1: Google's top bucket has no ceiling
+    _write(ads_path, gallery)
+    _hand(race, [], IES, ADS)
+    issues = build("t", race)
+    health = _row(issues, "healthcare")
+    # AD1 floor 100 stands in for max and midpoint; AD2 1000..3000 (mid 2000)
+    assert (health["spend_min"], health["spend_max"], health["spend_midpoint"]) == (1100, 3100, 2100)
+    assert "1 ad(s) sit in Google's open-ended top spend bucket" in health["basis"]["rule"]
+    guns = _row(issues, "guns")
+    assert "open-ended" not in guns["basis"]["rule"]

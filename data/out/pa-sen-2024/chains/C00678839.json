@@ -7523,7 +7523,7 @@
       "terminus_reason": null,
       "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00678839&payee_name=MINUTEMAN+PRESS",
       "href": "/races/pa-sen-2024/vendors/V-minuteman-press",
-      "medium": "other",
+      "medium": "field",
       "basis": {
         "basis": "filed",
         "rule": "Schedule E payee, grouped by normalized vendor name (campaign_commons.vendors)",
