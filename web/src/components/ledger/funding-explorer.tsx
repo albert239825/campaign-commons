@@ -58,7 +58,6 @@ export function FundingExplorer({ views, raceId }: { views: FundingView[]; raceI
       </div>
       <div id="funding-panel" className="funding-panel" role="tabpanel" aria-labelledby={`funding-tab-${index}`}>
         <div className="funding-chart-column">
-          <p className="funding-view-name">{view.id === "all" ? "All candidates" : view.names}</p>
           <svg className="funding-pie" viewBox="0 0 320 320" role="group" aria-label={`Campaign receipts and outside spending for ${view.names || "this race"}`}>
             {total <= 0 && <circle cx="160" cy="160" r="144" fill="#d4d0c9"><title>No funding data available</title></circle>}
             {slices.filter(s => s.amount > 0).map(s => {
@@ -88,7 +87,6 @@ export function FundingExplorer({ views, raceId }: { views: FundingView[]; raceI
         <div className="funding-detail" aria-live="polite" aria-atomic="false">
           <div className="funding-detail-heading">
             <h3>{slice === "campaign" ? "Campaign receipts" : "Outside spending"}</h3>
-            <p>{view.id === "all" ? "Across the candidates in this race" : view.names}</p>
             <div className="funding-detail-amount"><Money amount={slice === "campaign" ? view.campaign.receipts : view.outside.total} compact={false} /></div>
           </div>
           {slice === "campaign" ? (

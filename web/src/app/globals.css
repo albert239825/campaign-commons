@@ -490,7 +490,6 @@ body:has(.race-dashboard) :is(a, button):focus-visible { outline: 2px solid curr
 .funding-tabs small { display: block; margin-top: 4px; font-size: 12px; }
 .funding-panel { display: grid; grid-template-columns: minmax(0, .85fr) minmax(0, 1.15fr); gap: 64px; align-items: start; }
 .funding-chart-column { position: sticky; top: 32px; min-width: 0; }
-.funding-view-name { font-size: 18px; text-align: center; }
 .funding-pie { display: block; width: min(100%, 340px); margin: 12px auto; overflow: visible; }
 .funding-pie [role="button"] { cursor: pointer; transition: opacity 160ms ease; }
 .funding-pie [role="button"]:hover { opacity: .8; }
@@ -506,7 +505,6 @@ body:has(.race-dashboard) :is(a, button):focus-visible { outline: 2px solid curr
 .funding-caption { margin-top: 16px; font-size: 12px; color: #6f6d69; line-height: 1.7; }
 .funding-detail { min-width: 0; background: #e9e5df; padding: 32px; }
 .funding-detail-heading h3 { font-size: 28px; letter-spacing: -.035em; line-height: 1.2; }
-.funding-detail-heading p { font-size: 13px; margin-top: 8px; color: #6f6d69; }
 .funding-detail-amount { font-size: clamp(28px, 3vw, 40px); letter-spacing: -.04em; line-height: 1.2; margin: 24px 0; }
 .funding-lines > div { display: flex; justify-content: space-between; align-items: baseline; gap: 12px 24px; border-top: 1px solid var(--race-rule); padding: 12px 0; font-size: 13px; }
 .funding-lines dd { white-space: nowrap; }
