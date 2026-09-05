@@ -13,9 +13,18 @@ import {
   DonorViewSchema,
   DossierSchema,
   EntitySchema,
+  HandAdIssuesFileSchema,
+  HandIeIssuesFileSchema,
+  HandIssueFocusFileSchema,
+  HandVendorAdLinksFileSchema,
+  HandVendorAliasesFileSchema,
+  IssueSpendingSchema,
   LedgerSchema,
   RacesIndexSchema,
+  SearchIndexSchema,
   StoriesSchema,
+  VendorIndexSchema,
+  VendorSchema,
 } from "./schemas";
 
 const out = join(__dirname, "..", "jsonschema");
@@ -30,6 +39,16 @@ const all: Record<string, ZodTypeAny> = {
   dossier: DossierSchema,
   stories: StoriesSchema,
   donor: DonorViewSchema,
+  vendors: VendorIndexSchema,
+  vendor: VendorSchema,
+  issues: IssueSpendingSchema,
+  search: SearchIndexSchema,
+  // data/hand/<race>/
+  hand_issue_focus: HandIssueFocusFileSchema,
+  hand_ad_issues: HandAdIssuesFileSchema,
+  hand_ie_issues: HandIeIssuesFileSchema,
+  hand_vendor_aliases: HandVendorAliasesFileSchema,
+  hand_vendor_ad_links: HandVendorAdLinksFileSchema,
 };
 
 // zod-to-json-schema's overloads make tsc recurse too deeply on large schemas; pin a simple signature.

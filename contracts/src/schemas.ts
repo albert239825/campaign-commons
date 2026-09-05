@@ -17,6 +17,18 @@ import { ISSUE_IDS } from "./issues";
  *   <race_id>/ads.json                  -> AdGallery
  *   <race_id>/dossiers/<candidate_id>.json -> Dossier
  *   <race_id>/stories.json              -> Stories
+ *   <race_id>/donors/<donor_key>.json   -> DonorView
+ *   <race_id>/vendors.json              -> VendorIndex        (Block 2)
+ *   <race_id>/vendors/<vendor_id>.json  -> Vendor             (Block 2)
+ *   <race_id>/issues.json               -> IssueSpending      (Block 2)
+ *   search.json                         -> SearchIndex        (Block 2)
+ *
+ * Hand-maintained inputs (data/hand/<race_id>/, validated by the same tooling, merged in by the pipeline):
+ *   issue_focus.json                    -> HandIssueFocusFile
+ *   ad_issues.json                      -> HandAdIssuesFile
+ *   ie_issues.json                      -> HandIeIssuesFile
+ *   vendor_aliases.json                 -> HandVendorAliasesFile
+ *   vendor_ad_links.json                -> HandVendorAdLinksFile
  *
  * Conventions:
  *   - Money is in US dollars as a plain number (no cents rounding required).
@@ -25,6 +37,8 @@ import { ISSUE_IDS } from "./issues";
  *     "Receipts, not conclusions": every number a user can see must have one.
  *   - `data_status` says whether a file is real pipeline output or a hand-written mock.
  *   - Copy in any string field must use adjacency language. Never "influenced", "bought", "exposed".
+ *   - Anything that is not read straight off a government record carries a `Basis` (below) and the UI must
+ *     show it. No unlabelled inference reaches the screen.
  */
 
 // ---------------------------------------------------------------------------
@@ -93,6 +107,38 @@ export const SourceRefSchema = z.object({
   label: z.string(),
   url: z.string().url(),
 });
+
+/**
+ * How a relationship or number reached the UI. Edge styling in the graph and the label on every card derive from this:
+ *   filed     solid   — read directly off a government record (FEC row, ad-library entry). `rule` names the record.
+ *   verified  solid   — a human checked a source that states the relationship (vendor portfolio, FCC form, Meta
+ *                       paid-for-by, the org's own site). `source_urls` + `checked_by` required.
+ *   inferred  dashed  — derived by an explicit rule stated in `rule` (e.g. "only digital vendor this sponsor paid
+ *                       during the ad's run window"). Never presented as fact.
+ *   adjacent  dotted  — co-occurrence only (date-window overlap, shared sponsor). `rule` must say what is NOT known.
+ */
+export const EvidenceBasisSchema = z.enum(["filed", "verified", "inferred", "adjacent"]);
+
+export const BasisSchema = z.object({
+  basis: EvidenceBasisSchema,
+  /** one plain-English sentence shown to the user: what the record says, or how this was derived and why it is uncertain */
+  rule: z.string().min(1),
+  source_urls: z.array(z.string().url()),
+  checked_by: z.string().nullable(), // verified: initials/handle of the human; otherwise null
+  checked_at: z.string().nullable(), // verified: ISO date; otherwise null
+});
+
+/** What an independent expenditure paid for, classified from the filed `purpose` string. Raw purpose is always kept. */
+export const MediumSchema = z.enum([
+  "tv", // broadcast / cable placement
+  "radio",
+  "digital", // online / streaming / social placement
+  "mail",
+  "phones", // phone, text, robocall
+  "production", // creative production, not placement
+  "consulting", // strategy, research, polling, list acquisition
+  "other",
+]);
 
 // ---------------------------------------------------------------------------
 // races.json
@@ -244,6 +290,42 @@ export const IndependentExpenditureSchema = z.object({
   purpose: z.string().nullable(),
   payee: z.string().nullable(),
   source_url: z.string().url(),
+  // Block 2 (gotham.vendors): normalized payee and classified medium; null when payee is empty
+  vendor_id: z.string().nullable().optional(),
+  medium: MediumSchema.optional(),
+  // Block 2 (gotham.issues, from data/hand/<race>/ie_issues.json): what the notice says the ad was about
+  issue_ids: z.array(IssueIdSchema).optional(), // first is primary
+});
+
+/** One vendor row on an entity page ("Where the money went"): the entity's IEs paid to this vendor, aggregated. */
+export const EntityVendorRowSchema = z.object({
+  vendor_id: z.string(),
+  name: z.string(),
+  amount: z.number(),
+  count: z.number().int(),
+  media_mix: z.array(z.object({ medium: MediumSchema, amount: z.number(), count: z.number().int() })),
+  targets: z.array(z.object({ candidate_id: z.string(), support_oppose: SupportOpposeSchema, amount: z.number() })),
+  first_date: z.string().nullable(),
+  last_date: z.string().nullable(),
+  source_url: z.string().url(), // fec.gov IE view filtered to spender + payee
+});
+
+/** A committee's / funder's self-described focus, hand-tagged from the org's own material (data/hand/<race>/issue_focus.json). */
+export const FocusKindSchema = z.enum([
+  "single_issue", // exists for one issue (e.g. crypto policy)
+  "multi_issue", // an ideological/advocacy org with a stated agenda across issues
+  "general_partisan", // party committee / leadership super PAC: exists to win seats, not for an issue
+  "candidate_aligned", // single-candidate vehicle
+  "business_trade", // trade association / corporate PAC
+  "labor", // union PAC
+]);
+
+export const IssueFocusSchema = z.object({
+  kind: FocusKindSchema,
+  issue_ids: z.array(IssueIdSchema).max(3), // first is primary; empty for general_partisan / candidate_aligned
+  /** one sentence in the org's own words (quote or close paraphrase); never our characterization */
+  description: z.string(),
+  basis: BasisSchema, // verified (org site / Wayback / FEC Form 1 connected org) with source_urls
 });
 
 export const EntitySchema = z.object({
@@ -283,6 +365,10 @@ export const EntitySchema = z.object({
   has_chain: z.boolean(),
   source_url: z.string().url(), // FEC committee page
   data_status: DataStatusSchema,
+  // Block 2 (gotham.vendors): IEs grouped by normalized payee; sum equals sum(independent_expenditures.amount)
+  vendors: z.array(EntityVendorRowSchema).optional(),
+  // Block 2 (gotham.issues): present only for hand-tagged committees
+  issue_focus: IssueFocusSchema.optional(),
 });
 
 // ---------------------------------------------------------------------------
@@ -302,31 +388,58 @@ export const TerminusReasonSchema = z.enum([
   "pruned", // below materiality threshold, rolled into an aggregate node
 ]);
 
+/**
+ * Node kinds in a chain. The five EntityKinds sit on the funding side (left of the root); the three Block 2 kinds sit on
+ * the spending side (right of the root): vendor = Schedule E payee, ad = ad-library creative, candidate = IE target.
+ */
+export const ChainNodeKindSchema = z.enum([...EntityKindSchema.options, "vendor", "ad", "candidate"]);
+
 export const ChainNodeSchema = z.object({
   id: z.string(),
   name: z.string(),
-  kind: EntityKindSchema,
+  kind: ChainNodeKindSchema,
   committee_type: CommitteeTypeSchema.nullable(),
-  depth: z.number().int().min(0), // 0 = the root spender
+  /** hops from the root on either side; 0 = the root spender. `side` says which direction. */
+  depth: z.number().int().min(0),
+  /** absent/"in" = funding side (money toward the root); "out" = spending side (root → vendor → ad ⇢ candidate) */
+  side: z.enum(["in", "out"]).optional(),
   visibility: VisibilitySchema,
-  amount_in: z.number(), // dollars flowing through this node toward the root
+  /** funding side: dollars flowing through this node toward the root. spending side: dollars from the root reaching it
+   *  (vendor: IE paid; ad: spend-range midpoint, see `basis`; candidate: IE dollars aimed at them) */
+  amount_in: z.number(),
   is_terminus: z.boolean(),
   terminus_reason: TerminusReasonSchema.nullable(),
   source_url: z.string().url().nullable(),
   contributor_count: z.number().int().optional(), // pruned aggregates: how many counterparties were rolled up
   organization_class: OrganizationClassSchema.optional(), // kind === "organization": how the name was classified
+  // spending-side extras
+  medium: MediumSchema.optional(), // kind === "vendor": dominant medium
+  thumbnail_path: z.string().nullable().optional(), // kind === "ad": cached creative under web/public
+  href: z.string().optional(), // in-app page for this node (entity / vendor / ad-card anchor / dossier)
+  basis: BasisSchema.optional(), // how the amount on a spending-side node was derived (e.g. ad spend midpoint)
 });
+
+export const ChainEdgeKindSchema = z.enum([
+  "money", // dollars move from → to (transfer, contribution, IE payment to a vendor)
+  "placement", // vendor → ad: produced/placed; no dollars; carries a Basis (verified / inferred / adjacent)
+  "targeting", // ad or root → candidate: for/against; no dollars reach the candidate
+]);
 
 export const ChainEdgeSchema = z.object({
   from: z.string(),
   to: z.string(),
   amount: z.number(),
   visibility: VisibilitySchema,
-  depth: z.number().int().min(1), // depth of `from`
+  /** funding side: depth of `from`. spending side: depth of `to` (so the root's outgoing edges are depth 1). */
+  depth: z.number().int().min(1),
   transaction_types: z.array(z.string()),
   count: z.number().int(), // number of underlying transactions aggregated
   date_range: z.tuple([z.string(), z.string()]).nullable(),
   source_url: z.string().url().nullable(),
+  // Block 2: absent = "money"
+  kind: ChainEdgeKindSchema.optional(),
+  support_oppose: SupportOpposeSchema.nullable().optional(), // targeting edges
+  basis: BasisSchema.optional(), // required on placement edges; UI draws dashed/dotted from basis.basis
 });
 
 export const ChainSchema = z.object({
@@ -346,6 +459,9 @@ export const ChainSchema = z.object({
     dark_share: z.number().min(0).max(1),
     max_depth: z.number().int(),
     terminus_counts: z.record(TerminusReasonSchema, z.number().int()),
+    /** Block 2: spending side totals; absent when the chain has no `side: "out"` nodes */
+    out_total: z.number().optional(), // sum of root → vendor money edges (= the root's IEs in this race)
+    max_out_depth: z.number().int().optional(),
   }),
   flags: z.array(FlagSchema),
   method: z.string(),
@@ -354,6 +470,23 @@ export const ChainSchema = z.object({
 // ---------------------------------------------------------------------------
 // <race_id>/ads.json
 // ---------------------------------------------------------------------------
+
+/**
+ * Ad ⇠ vendor relationship. FEC records sponsor → vendor → $; the ad library records sponsor → creative. Nothing filed
+ * joins the two, so every link carries a Basis:
+ *   adjacent — the ad's run window overlaps this vendor's buys for the same sponsor (rule must say the pair is unknown)
+ *   inferred — the sponsor paid exactly one vendor of this medium during the window
+ *   verified — a source names both (vendor portfolio, FCC PB-18, Meta paid-for-by), via data/hand/<race>/vendor_ad_links.json
+ */
+export const AdVendorLinkSchema = z.object({
+  vendor_id: z.string(),
+  vendor_name: z.string(),
+  medium: MediumSchema,
+  window: z.tuple([z.string(), z.string()]), // the ad's [first_shown, last_shown] used for the overlap
+  amount_in_window: z.number(), // sponsor → vendor IE dollars whose date falls in the window
+  buys_in_window: z.number().int(),
+  basis: BasisSchema,
+});
 
 export const AdVerificationSchema = z.object({
   status: z.enum(["verified", "unverified"]),
@@ -382,7 +515,17 @@ export const AdSchema = z.object({
   source_url: z.string().url(),
   // hand-checked ad -> committee link (pipeline/gotham/data/ad_verifications.json); absent on older files
   verification: AdVerificationSchema.optional(),
+  // ---- Block 2 ----
+  /** the sponsor committee's chain summary shares (chains/<matched_entity_id>.json); null when unmatched or no chain.
+   *  UI shows `dark` as a number ("34% of this sponsor's traced money is dark"), never a binary badge. */
+  sponsor_visibility_shares: VisibilitySharesSchema.nullable().optional(),
+  /** what the ad's content is about (data/hand/<race>/ad_issues.json); first is primary */
+  issue_ids: z.array(IssueIdSchema).optional(),
+  issue_basis: BasisSchema.optional(), // verified by the tagger; source_urls = [creative_url]
+  /** vendors the sponsor paid whose buys relate to this ad. Each link says how (adjacent / inferred / verified). */
+  vendor_links: z.array(AdVendorLinkSchema).optional(),
 });
+
 
 export const AdGallerySchema = z.object({
   race_id: z.string(),
@@ -523,8 +666,217 @@ export const DonorViewSchema = z.object({
 });
 
 // ---------------------------------------------------------------------------
+// <race_id>/vendors.json + <race_id>/vendors/<vendor_id>.json — Schedule E payees (pipeline/gotham/vendors.py, Block 2)
+// ---------------------------------------------------------------------------
+
+export const VendorSummarySchema = z.object({
+  vendor_id: z.string(), // "vendor:<slug>" — slug of the normalized name, e.g. vendor:waterfront-strategies
+  name: z.string(), // normalized display name
+  aliases: z.array(z.string()), // every raw payee string folded into this vendor
+  /** how aliases were folded: filed = single raw string; inferred = case/punctuation/suffix rule or fuzzy match;
+   *  verified = data/hand/<race>/vendor_aliases.json */
+  normalization: BasisSchema,
+  total: z.number(), // sum of IE rows in this race paid to this vendor (sums across spenders; never changes IE totals)
+  count: z.number().int(),
+  media_mix: z.array(z.object({ medium: MediumSchema, amount: z.number(), count: z.number().int() })),
+  spenders: z.array(z.object({ entity_id: z.string(), name: z.string(), amount: z.number(), count: z.number().int() })),
+  targets: z.array(z.object({ candidate_id: z.string(), support_oppose: SupportOpposeSchema, amount: z.number() })),
+  first_date: z.string().nullable(),
+  last_date: z.string().nullable(),
+  source_url: z.string().url(), // fec.gov IE search filtered to this payee
+});
+
+export const VendorSchema = VendorSummarySchema.extend({
+  race_id: z.string(),
+  generated_at: z.string(),
+  data_status: DataStatusSchema,
+  expenditures: z.array(IndependentExpenditureSchema), // every IE row, all spenders
+  /** ads (by sponsor) whose run window overlaps this vendor's buys — the reverse of Ad.vendor_links */
+  ads: z.array(
+    z.object({
+      ad_id: z.string(),
+      sponsor_entity_id: z.string(),
+      basis: BasisSchema,
+    }),
+  ),
+  method: z.string(),
+});
+
+export const VendorIndexSchema = z.object({
+  race_id: z.string(),
+  generated_at: z.string(),
+  data_status: DataStatusSchema,
+  vendors: z.array(VendorSummarySchema), // sorted by total desc
+  total: z.number(), // sum over vendors; must equal the race's outside total
+  by_medium: z.array(z.object({ medium: MediumSchema, amount: z.number(), count: z.number().int() })),
+  notes: z.array(z.string()),
+});
+
+// ---------------------------------------------------------------------------
+// <race_id>/issues.json — outside spending by issue (pipeline/gotham/issues.py, Block 2)
+// Two layers, never merged: what the ADS were about (attributable — the ad is the spending) vs what the SPENDERS say
+// they are for (not attributable — a party PAC's dollars are not "about" anything).
+// ---------------------------------------------------------------------------
+
+export const AdIssueSpendingSchema = z.object({
+  issue_id: IssueIdSchema,
+  ad_count: z.number().int(),
+  /** Google reports spend as a range per ad; these sum the range bounds and midpoints over tagged ads */
+  spend_min: z.number(),
+  spend_max: z.number(),
+  spend_midpoint: z.number(),
+  /** FEC IE dollars whose 24/48-hour notice was hand-tagged to this issue (ie_issues.json) */
+  ie_amount: z.number(),
+  ie_count: z.number().int(),
+  by_candidate: z.array(
+    z.object({ candidate_id: z.string(), support_oppose: SupportOpposeSchema, spend_midpoint: z.number(), ie_amount: z.number() }),
+  ),
+  basis: BasisSchema, // verified — the tags are human; rule states midpoint use and coverage
+});
+
+export const SpenderFocusSpendingSchema = z.object({
+  kind: FocusKindSchema,
+  issue_id: IssueIdSchema.nullable(), // null for kinds with no issue (general_partisan, candidate_aligned)
+  primary_only: z.boolean(), // true: counts a spender under its primary issue only; false: under every tag (overlaps)
+  amount: z.number(), // outside dollars in this race spent by spenders with this focus
+  spender_ids: z.array(z.string()),
+  traceability_score: z.number().min(0).max(1).nullable(), // dollar-weighted over these spenders' chains
+  dark_share: z.number().min(0).max(1).nullable(),
+});
+
+export const IssueSpendingSchema = z.object({
+  race_id: z.string(),
+  generated_at: z.string(),
+  data_status: DataStatusSchema,
+  by_ad_issue: z.array(AdIssueSpendingSchema),
+  by_spender_focus: z.array(SpenderFocusSpendingSchema),
+  coverage: z.object({
+    spenders_tagged: z.number().int(),
+    spenders_total: z.number().int(),
+    dollars_tagged: z.number(), // outside dollars from tagged spenders
+    dollars_total: z.number(),
+    ads_tagged: z.number().int(),
+    ads_total: z.number().int(),
+    ies_tagged: z.number().int(),
+    ie_dollars_tagged: z.number(),
+  }),
+  notes: z.array(z.string()), // shown under the cards: coverage, midpoint caveat, "focus is the spender's, not the dollars'"
+});
+
+// ---------------------------------------------------------------------------
+// search.json — static client-side index over every page (pipeline/gotham/search.py, Block 2)
+// ---------------------------------------------------------------------------
+
+export const SearchItemKindSchema = z.enum(["race", "candidate", "committee", "vendor", "donor", "organization"]);
+
+export const SearchItemSchema = z.object({
+  id: z.string(),
+  kind: SearchItemKindSchema,
+  race_id: z.string().nullable(), // null for cross-race items (none in V1)
+  label: z.string(),
+  sublabel: z.string().nullable(), // "Super PAC · $52.4M outside", "Senator (D) · incumbent", "Media vendor · TV"
+  aliases: z.array(z.string()), // extra strings to match (raw payee spellings, committee abbreviations)
+  href: z.string(), // in-app path
+  weight: z.number(), // ranking tiebreak, dollars where meaningful
+});
+
+export const SearchIndexSchema = z.object({
+  generated_at: z.string(),
+  data_status: DataStatusSchema,
+  items: z.array(SearchItemSchema),
+});
+
+// ---------------------------------------------------------------------------
+// data/hand/<race_id>/*.json — human-maintained inputs. Every row needs a source and a tagger.
+// ---------------------------------------------------------------------------
+
+const HandFileBase = z.object({
+  race_id: z.string(),
+  /** who maintains this file and how rows were produced; shown on the methodology page */
+  method: z.string(),
+});
+
+export const HandIssueFocusRowSchema = z.object({
+  entity_id: z.string(), // FEC committee id, or org:<NAME> chain-node id for a non-committee funder
+  name: z.string(), // as filed, for humans reading the file
+  kind: FocusKindSchema,
+  issue_ids: z.array(IssueIdSchema).max(3), // first is primary
+  description: z.string(), // the org's own words
+  source_urls: z.array(z.string().url()).min(1), // org site / Wayback / FEC Form 1
+  quote: z.string().nullable(), // verbatim excerpt supporting `description`
+  tagged_by: z.string(),
+  tagged_at: z.string(),
+});
+export const HandIssueFocusFileSchema = HandFileBase.extend({ rows: z.array(HandIssueFocusRowSchema) });
+
+export const HandAdIssueRowSchema = z.object({
+  ad_id: z.string(),
+  issue_ids: z.array(IssueIdSchema).min(1).max(3), // first is primary
+  note: z.string().nullable(), // what in the creative supports the tag
+  tagged_by: z.string(),
+  tagged_at: z.string(),
+});
+export const HandAdIssuesFileSchema = HandFileBase.extend({ rows: z.array(HandAdIssueRowSchema) });
+
+export const HandIeIssueRowSchema = z.object({
+  ie_id: z.string(),
+  issue_ids: z.array(IssueIdSchema).min(1).max(3),
+  ad_title: z.string().nullable(), // as named in the 24/48-hour notice, if any
+  source_url: z.string().url(), // the notice PDF the tagger read
+  note: z.string().nullable(),
+  tagged_by: z.string(),
+  tagged_at: z.string(),
+});
+export const HandIeIssuesFileSchema = HandFileBase.extend({ rows: z.array(HandIeIssueRowSchema) });
+
+export const HandVendorAliasRowSchema = z.object({
+  vendor_id: z.string(),
+  name: z.string(), // canonical display name
+  aliases: z.array(z.string()).min(1), // raw payee strings to fold in (exact, case-insensitive)
+  medium_override: MediumSchema.nullable(), // when the purpose strings misclassify a known vendor
+  source_url: z.string().url().nullable(), // vendor site, if used to confirm the alias
+  tagged_by: z.string(),
+});
+export const HandVendorAliasesFileSchema = HandFileBase.extend({ rows: z.array(HandVendorAliasRowSchema) });
+
+export const HandVendorAdLinkRowSchema = z.object({
+  ad_id: z.string(),
+  vendor_id: z.string(),
+  role: z.enum(["produced", "placed", "produced_and_placed"]),
+  source_urls: z.array(z.string().url()).min(1), // the page that names both sponsor and vendor
+  quote: z.string().nullable(),
+  tagged_by: z.string(),
+  tagged_at: z.string(),
+});
+export const HandVendorAdLinksFileSchema = HandFileBase.extend({ rows: z.array(HandVendorAdLinkRowSchema) });
+
+// ---------------------------------------------------------------------------
 // Types
 // ---------------------------------------------------------------------------
+
+export type EvidenceBasis = z.infer<typeof EvidenceBasisSchema>;
+export type Basis = z.infer<typeof BasisSchema>;
+export type Medium = z.infer<typeof MediumSchema>;
+export type EntityVendorRow = z.infer<typeof EntityVendorRowSchema>;
+export type FocusKind = z.infer<typeof FocusKindSchema>;
+export type IssueFocus = z.infer<typeof IssueFocusSchema>;
+export type ChainNodeKind = z.infer<typeof ChainNodeKindSchema>;
+export type ChainEdgeKind = z.infer<typeof ChainEdgeKindSchema>;
+export type AdVendorLink = z.infer<typeof AdVendorLinkSchema>;
+export type VendorSummary = z.infer<typeof VendorSummarySchema>;
+export type Vendor = z.infer<typeof VendorSchema>;
+export type VendorIndex = z.infer<typeof VendorIndexSchema>;
+export type AdIssueSpending = z.infer<typeof AdIssueSpendingSchema>;
+export type SpenderFocusSpending = z.infer<typeof SpenderFocusSpendingSchema>;
+export type IssueSpending = z.infer<typeof IssueSpendingSchema>;
+export type SearchItemKind = z.infer<typeof SearchItemKindSchema>;
+export type SearchItem = z.infer<typeof SearchItemSchema>;
+export type SearchIndex = z.infer<typeof SearchIndexSchema>;
+export type HandIssueFocusFile = z.infer<typeof HandIssueFocusFileSchema>;
+export type HandAdIssuesFile = z.infer<typeof HandAdIssuesFileSchema>;
+export type HandIeIssuesFile = z.infer<typeof HandIeIssuesFileSchema>;
+export type HandVendorAliasesFile = z.infer<typeof HandVendorAliasesFileSchema>;
+export type HandVendorAdLinksFile = z.infer<typeof HandVendorAdLinksFileSchema>;
 
 export type Visibility = z.infer<typeof VisibilitySchema>;
 export type DataStatus = z.infer<typeof DataStatusSchema>;
@@ -571,4 +923,17 @@ export const FILE_SCHEMAS = {
   "dossiers/*.json": DossierSchema,
   "stories.json": StoriesSchema,
   "donors/*.json": DonorViewSchema,
+  "vendors.json": VendorIndexSchema,
+  "vendors/*.json": VendorSchema,
+  "issues.json": IssueSpendingSchema,
+  "search.json": SearchIndexSchema,
+} as const;
+
+/** data/hand/<race_id>/<file> → schema */
+export const HAND_FILE_SCHEMAS = {
+  "issue_focus.json": HandIssueFocusFileSchema,
+  "ad_issues.json": HandAdIssuesFileSchema,
+  "ie_issues.json": HandIeIssuesFileSchema,
+  "vendor_aliases.json": HandVendorAliasesFileSchema,
+  "vendor_ad_links.json": HandVendorAdLinksFileSchema,
 } as const;

@@ -1,0 +1,5 @@
+{
+  "race_id": "pa-sen-2024",
+  "rows": [],
+  "method": "Human-confirmed folds of raw Schedule E payee strings into one vendor when the automatic normalisation (case, punctuation, INC/LLC suffixes, fuzzy token match) did not catch them."
+}

@@ -1,0 +1,297 @@
+{
+  "$ref": "#/definitions/issues",
+  "definitions": {
+    "issues": {
+      "type": "object",
+      "properties": {
+        "race_id": {
+          "type": "string"
+        },
+        "generated_at": {
+          "type": "string"
+        },
+        "data_status": {
+          "type": "string",
+          "enum": [
+            "real",
+            "mock",
+            "partial"
+          ]
+        },
+        "by_ad_issue": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "issue_id": {
+                "type": "string",
+                "enum": [
+                  "healthcare",
+                  "energy_climate",
+                  "defense",
+                  "crypto_fintech",
+                  "immigration",
+                  "abortion",
+                  "guns",
+                  "tax_budget",
+                  "tech_ai",
+                  "labor_trade"
+                ]
+              },
+              "ad_count": {
+                "type": "integer"
+              },
+              "spend_min": {
+                "type": "number"
+              },
+              "spend_max": {
+                "type": "number"
+              },
+              "spend_midpoint": {
+                "type": "number"
+              },
+              "ie_amount": {
+                "type": "number"
+              },
+              "ie_count": {
+                "type": "integer"
+              },
+              "by_candidate": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "candidate_id": {
+                      "type": "string"
+                    },
+                    "support_oppose": {
+                      "type": "string",
+                      "enum": [
+                        "S",
+                        "O"
+                      ]
+                    },
+                    "spend_midpoint": {
+                      "type": "number"
+                    },
+                    "ie_amount": {
+                      "type": "number"
+                    }
+                  },
+                  "required": [
+                    "candidate_id",
+                    "support_oppose",
+                    "spend_midpoint",
+                    "ie_amount"
+                  ],
+                  "additionalProperties": false
+                }
+              },
+              "basis": {
+                "type": "object",
+                "properties": {
+                  "basis": {
+                    "type": "string",
+                    "enum": [
+                      "filed",
+                      "verified",
+                      "inferred",
+                      "adjacent"
+                    ]
+                  },
+                  "rule": {
+                    "type": "string",
+                    "minLength": 1
+                  },
+                  "source_urls": {
+                    "type": "array",
+                    "items": {
+                      "type": "string",
+                      "format": "uri"
+                    }
+                  },
+                  "checked_by": {
+                    "type": [
+                      "string",
+                      "null"
+                    ]
+                  },
+                  "checked_at": {
+                    "type": [
+                      "string",
+                      "null"
+                    ]
+                  }
+                },
+                "required": [
+                  "basis",
+                  "rule",
+                  "source_urls",
+                  "checked_by",
+                  "checked_at"
+                ],
+                "additionalProperties": false
+              }
+            },
+            "required": [
+              "issue_id",
+              "ad_count",
+              "spend_min",
+              "spend_max",
+              "spend_midpoint",
+              "ie_amount",
+              "ie_count",
+              "by_candidate",
+              "basis"
+            ],
+            "additionalProperties": false
+          }
+        },
+        "by_spender_focus": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "kind": {
+                "type": "string",
+                "enum": [
+                  "single_issue",
+                  "multi_issue",
+                  "general_partisan",
+                  "candidate_aligned",
+                  "business_trade",
+                  "labor"
+                ]
+              },
+              "issue_id": {
+                "anyOf": [
+                  {
+                    "type": "string",
+                    "enum": [
+                      "healthcare",
+                      "energy_climate",
+                      "defense",
+                      "crypto_fintech",
+                      "immigration",
+                      "abortion",
+                      "guns",
+                      "tax_budget",
+                      "tech_ai",
+                      "labor_trade"
+                    ]
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "primary_only": {
+                "type": "boolean"
+              },
+              "amount": {
+                "type": "number"
+              },
+              "spender_ids": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "traceability_score": {
+                "anyOf": [
+                  {
+                    "type": "number",
+                    "minimum": 0,
+                    "maximum": 1
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "dark_share": {
+                "anyOf": [
+                  {
+                    "type": "number",
+                    "minimum": 0,
+                    "maximum": 1
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              }
+            },
+            "required": [
+              "kind",
+              "issue_id",
+              "primary_only",
+              "amount",
+              "spender_ids",
+              "traceability_score",
+              "dark_share"
+            ],
+            "additionalProperties": false
+          }
+        },
+        "coverage": {
+          "type": "object",
+          "properties": {
+            "spenders_tagged": {
+              "type": "integer"
+            },
+            "spenders_total": {
+              "type": "integer"
+            },
+            "dollars_tagged": {
+              "type": "number"
+            },
+            "dollars_total": {
+              "type": "number"
+            },
+            "ads_tagged": {
+              "type": "integer"
+            },
+            "ads_total": {
+              "type": "integer"
+            },
+            "ies_tagged": {
+              "type": "integer"
+            },
+            "ie_dollars_tagged": {
+              "type": "number"
+            }
+          },
+          "required": [
+            "spenders_tagged",
+            "spenders_total",
+            "dollars_tagged",
+            "dollars_total",
+            "ads_tagged",
+            "ads_total",
+            "ies_tagged",
+            "ie_dollars_tagged"
+          ],
+          "additionalProperties": false
+        },
+        "notes": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      },
+      "required": [
+        "race_id",
+        "generated_at",
+        "data_status",
+        "by_ad_issue",
+        "by_spender_focus",
+        "coverage",
+        "notes"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "$schema": "http://json-schema.org/draft-07/schema#"
+}
