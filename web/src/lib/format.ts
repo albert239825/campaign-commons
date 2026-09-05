@@ -33,5 +33,6 @@ export const routes = {
   stories: (raceId: string) => `/races/${raceId}/stories`,
   donor: (raceId: string, donorKey: string) => `/races/${raceId}/donors/${donorKey}`,
   candidate: (raceId: string, candidateId: string) => `/races/${raceId}/candidates/${candidateId}`,
+  personalize: () => "/personalize",
   methodology: () => "/methodology",
 };

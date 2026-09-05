@@ -62,3 +62,17 @@ export const ISSUE_IDS = ISSUES.map((i) => i.id) as [IssueId, ...IssueId[]];
 export const ISSUE_BY_ID: Record<IssueId, (typeof ISSUES)[number]> = Object.fromEntries(
   ISSUES.map((i) => [i.id, i]),
 ) as Record<IssueId, (typeof ISSUES)[number]>;
+
+/** Directional axis per issue. Stance `direction` and user opinions are both coded against these poles. +2 = strongly `plus`, -2 = strongly `minus`. */
+export const ISSUE_AXES: Record<IssueId, { plus: string; minus: string }> = {
+  healthcare: { plus: "Larger federal role in health coverage and drug-price regulation", minus: "Smaller federal role; market-based coverage" },
+  energy_climate: { plus: "Emissions rules and clean-energy policy first", minus: "Fossil-fuel production and fewer energy regulations first" },
+  defense: { plus: "Higher defense spending and more foreign military aid", minus: "Lower defense spending and fewer foreign military commitments" },
+  crypto_fintech: { plus: "Tighter regulation of crypto and financial firms", minus: "Lighter regulation of crypto and financial firms" },
+  immigration: { plus: "Stricter border enforcement and immigration limits", minus: "Broader legal pathways and less enforcement" },
+  abortion: { plus: "Protect abortion access in federal law", minus: "Restrict abortion access" },
+  guns: { plus: "Stricter firearms regulation", minus: "Fewer restrictions on firearms" },
+  tax_budget: { plus: "More federal revenue and program spending", minus: "Lower taxes and less federal spending" },
+  tech_ai: { plus: "Stronger regulation of large tech and AI", minus: "Lighter regulation of tech and AI" },
+  labor_trade: { plus: "Stronger union protections and trade enforcement", minus: "Fewer labor rules and freer trade" },
+};

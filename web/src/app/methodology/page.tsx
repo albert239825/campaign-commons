@@ -1,7 +1,8 @@
 import { routes } from "@/lib/format";
 import { DetailHeader, SectionNav } from "@/components/ui/detail-layout";
 // OWNER: master session. Plain-English methodology; keep in sync with docs/DECISIONS.md.
-import { UNWALKED_COLOR, UNWALKED_LABEL, VISIBILITY_COLORS, VISIBILITY_LABELS } from "@citizen-gotham/contracts";
+import { ISSUES, ISSUE_AXES, UNWALKED_COLOR, UNWALKED_LABEL, VISIBILITY_COLORS, VISIBILITY_LABELS } from "@citizen-gotham/contracts";
+import Link from "next/link";
 import { Breadcrumbs, Card } from "@/components/ui";
 
 export default function MethodologyPage() {
@@ -16,6 +17,7 @@ export default function MethodologyPage() {
           { id: "what-we-show", label: "What we show" }, { id: "visibility", label: "Visibility" },
           { id: "money-and-targeting", label: "Money & targeting" }, { id: "traceability", label: "Traceability" },
           { id: "conduits", label: "Conduits" }, { id: "dossiers", label: "Candidate records" },
+          { id: "alignment", label: "Alignment" },
         ]} /></aside>
         <div className="detail-content">
           <div id="what-we-show" className="detail-section">
@@ -88,6 +90,31 @@ export default function MethodologyPage() {
                 different kinds of evidence and are labeled as such. Position summaries are written by a person from the linked record, and
                 are marked &quot;needs review&quot; until a second person has checked them.
               </p>
+            </Card>
+          </div>
+          <div id="alignment" className="detail-section">
+            <Card title="Alignment (personalize)">
+              <div className="space-y-3 text-sm">
+                <p>
+                  Alignment is a user-driven estimate over human-coded stance directions. Each direction is coded against a published per-issue axis and
+                  marked needs review until a second person checks it.
+                </p>
+                <p>
+                  The estimate is computed entirely in the browser from the same dossier files. It is not an instruction about how to vote and makes no
+                  claim about why a candidate voted. Every issue in the score links to every source record it was built from.
+                </p>
+                <p>The issue poles used for the estimate are:</p>
+                <ul className="list-disc space-y-1 pl-5 text-xs text-neutral-600">
+                  {ISSUES.map((issue) => (
+                    <li key={issue.id}>
+                      {issue.label}: {ISSUE_AXES[issue.id].plus} ↔ {ISSUE_AXES[issue.id].minus}
+                    </li>
+                  ))}
+                </ul>
+                <Link href="/personalize" className="inline-block underline decoration-dotted underline-offset-2">
+                  Set your issue positions →
+                </Link>
+              </div>
             </Card>
           </div>
         </div>

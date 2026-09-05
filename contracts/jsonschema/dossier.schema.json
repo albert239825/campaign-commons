@@ -92,6 +92,11 @@
               "position": {
                 "type": "string"
               },
+              "direction": {
+                "type": "integer",
+                "minimum": -2,
+                "maximum": 2
+              },
               "confidence": {
                 "type": "string",
                 "enum": [

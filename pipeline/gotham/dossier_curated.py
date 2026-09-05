@@ -5,6 +5,7 @@
 - CASEY_BILLS: congress.gov bill id ("S.<n>-<congress>") -> issue ids. Title/introduced date/latest action come from the
   congress.gov API; a bill id that the API does not return for Casey is an error.
 - CASEY_POSITIONS: one hand-written descriptive sentence per issue, written from the fetched record.
+- CASEY_DIRECTIONS and Statement.direction: human-coded against ISSUE_AXES in contracts/src/issues.ts.
 - MCCORMICK_SNAPSHOT / MCCORMICK_STATEMENTS: a 2024 Wayback snapshot of the campaign issues page and, per issue, the
   section heading, a verbatim excerpt (<= 40 words; dossier.py verifies it appears in the archived page) and a neutral
   one-sentence paraphrase.
@@ -142,6 +143,19 @@ CASEY_POSITIONS: dict[str, str] = {
     ),
 }
 
+CASEY_DIRECTIONS: dict[str, int] = {
+    "healthcare": 2,  # Inflation Reduction Act and PACT Act votes
+    "energy_climate": 1,  # Inflation Reduction Act and EPA-rule votes
+    "defense": 2,  # Ukraine supplemental and NDAA votes
+    "crypto_fintech": 0,  # SAB 121 and CFPB-rule votes
+    "immigration": 1,  # Border Act and border-amendment votes
+    "abortion": 2,  # Women's Health Protection and IVF votes
+    "guns": 2,  # Bipartisan Safer Communities Act vote
+    "tax_budget": 1,  # Inflation Reduction Act and budget votes
+    "tech_ai": 1,  # CHIPS and Science Act vote
+    "labor_trade": 2,  # minimum-wage and NLRB-rule votes
+}
+
 
 @dataclass(frozen=True)
 class Statement:
@@ -149,6 +163,7 @@ class Statement:
     heading: str
     excerpt: str
     position: str
+    direction: int | None = None
 
 
 MCCORMICK_SNAPSHOT = ("20241101231854", "https://www.davemccormickpa.com/issues/")
@@ -167,6 +182,7 @@ MCCORMICK_STATEMENTS: tuple[Statement, ...] = (
         "inflation.",
         "States support for a market-driven, all-of-the-above energy agenda including Pennsylvania natural gas, and "
         "for addressing climate change through adaptation rather than government spending.",
+        direction=-2,
     ),
     Statement(
         "defense",
@@ -175,6 +191,7 @@ MCCORMICK_STATEMENTS: tuple[Statement, ...] = (
         "reestablish deterrence of our adversaries, and make sure the world knows we're not planning to relinquish "
         "our superpower status anytime soon.",
         "States support for a larger defense budget, a stronger defense industrial base and deterrence of adversaries.",
+        direction=2,
     ),
     Statement(
         "crypto_fintech",
@@ -184,6 +201,7 @@ MCCORMICK_STATEMENTS: tuple[Statement, ...] = (
         "opportunity will slip away.",
         "States that U.S. leadership in blockchain and crypto is an economic and national security priority that "
         "policymakers should support.",
+        direction=-2,
     ),
     Statement(
         "immigration",
@@ -192,6 +210,7 @@ MCCORMICK_STATEMENTS: tuple[Statement, ...] = (
         "border patrol agents with the resources they need to do their jobs.",
         "States he would work to secure the southern border, end drug and human trafficking and increase resources "
         "for Border Patrol agents.",
+        direction=2,
     ),
     Statement(
         "abortion",
@@ -200,6 +219,7 @@ MCCORMICK_STATEMENTS: tuple[Statement, ...] = (
         "incest, and saving the life of the mother.",
         "States he is pro-life, opposes a national abortion ban and supports exceptions for rape, incest and the "
         "life of the mother.",
+        direction=-1,
     ),
     Statement(
         "guns",
@@ -208,6 +228,7 @@ MCCORMICK_STATEMENTS: tuple[Statement, ...] = (
         "right to own firearms for self-defense, hunting, collecting, and sport-shooting, for any lawful reason",
         "States support for an individual right to own firearms, alongside school security funding, mental health "
         "programs, enforcement of existing gun laws and background check systems.",
+        direction=-2,
     ),
     Statement(
         "tax_budget",
@@ -215,6 +236,7 @@ MCCORMICK_STATEMENTS: tuple[Statement, ...] = (
         "in the Senate he'll work to rein in government spending, oppose tax increases, and exercise fiscal "
         "responsibility to lessen the burden on the people of the commonwealth.",
         "States he would work to reduce government spending, oppose tax increases and exercise fiscal responsibility.",
+        direction=-2,
     ),
     Statement(
         "tech_ai",
@@ -231,5 +253,6 @@ MCCORMICK_STATEMENTS: tuple[Statement, ...] = (
         "ambitions and protect the homeland through six bans to end China's free ride.",
         "States support for a plan of six bans aimed at reducing U.S. economic dependence on China, including for "
         "lithium batteries and solar panels.",
+        direction=1,
     ),
 )
