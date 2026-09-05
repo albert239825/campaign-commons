@@ -1309,7 +1309,7 @@
       "source_url": "https://adstransparency.google.com/advertiser/AR13520281482706288641/creative/CR05413392190221058049?political=&region=US",
       "basis": {
         "basis": "inferred",
-        "rule": "Advertiser name matched to this committee by normalized name; Google shows the advertiser, not the paid-for-by line",
+        "rule": "Advertiser name matched to this committee by normalized name; Google's bulk data names the advertiser and carries no paid-for-by field for US ads",
         "source_urls": [
           "https://adstransparency.google.com/advertiser/AR13520281482706288641/creative/CR05413392190221058049?political=&region=US"
         ],

@@ -135,7 +135,7 @@ export function AdCard({
 
         <div className="flex flex-wrap gap-1">
           {verified ? (
-            <Chip tone="green" title="A person matched the advertiser's legal name on adstransparency.google.com to this committee's fec.gov record. Google's page shows the advertiser, not the ad's paid-for-by line.">
+            <Chip tone="green" title="A person matched the advertiser's legal name on adstransparency.google.com to this committee's fec.gov record. Google's bulk data names the advertiser and carries no paid-for-by field for US ads.">
               sponsor verified by hand
             </Chip>
           ) : (
