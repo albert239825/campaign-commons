@@ -30,10 +30,10 @@ export function EntityHeader({ raceId, e, chain }: { raceId: string; e: Entity; 
   const addrLine = addr && [addr.street, [addr.city, addr.state].filter(Boolean).join(", "), addr.zip].filter(Boolean).join(" · ");
   const typeLabel = e.committee_type ? COMMITTEE_TYPE_LABELS[e.committee_type] : e.committee_type_label;
   return (
-    <header className="border-b border-neutral-300 pb-4">
-      <div className="flex flex-wrap items-start justify-between gap-4">
+    <header className="entity-profile">
+      <div className="detail-banner">
         <div>
-          <div className="text-[11px] uppercase tracking-wide text-neutral-500">
+          <div className="detail-eyebrow">
             {e.kind}
             {typeLabel ? ` · ${typeLabel}` : ""}
             {e.is_conduit ? " · conduit" : ""}
@@ -54,14 +54,14 @@ export function EntityHeader({ raceId, e, chain }: { raceId: string; e: Entity; 
         {chain && (
           <Link
             href={routes.chain(raceId, e.entity_id)}
-            className="rounded-md border border-neutral-900 bg-neutral-900 px-3 py-1.5 text-sm font-medium text-white hover:bg-neutral-700"
+            className="detail-primary-action"
           >
             Follow the money chain →
           </Link>
         )}
       </div>
 
-      <dl className="mt-4 grid grid-cols-2 gap-x-6 gap-y-3 md:grid-cols-4">
+      <dl className="entity-fields">
         <Field label="FEC ID">
           <span className="font-mono">{e.entity_id}</span>
         </Field>

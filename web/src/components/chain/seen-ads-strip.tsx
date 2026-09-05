@@ -7,7 +7,7 @@ import { Chip, SourceLink } from "@/components/ui";
 export function SeenAdsStrip({ ads, raceId }: { ads: Ad[]; raceId: string }) {
   if (ads.length === 0) return null;
   return (
-    <div className="flex flex-wrap items-center gap-3 rounded-lg border border-neutral-200 bg-white p-2">
+    <div className="seen-ads-strip flex flex-wrap items-center gap-3 rounded-lg border border-neutral-200 bg-white p-2">
       <div className="px-1 text-xs text-neutral-600">
         <div className="font-medium text-neutral-900">You may have seen this ad</div>
         <div>Advertiser matched to this committee by a person (Google shows the advertiser, not the paid-for-by line).</div>

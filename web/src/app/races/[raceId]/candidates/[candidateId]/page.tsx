@@ -1,5 +1,6 @@
 // OWNER: Frontend B (candidate dossier).
 import Link from "next/link";
+import { DetailHeader } from "@/components/ui/detail-layout";
 import { notFound } from "next/navigation";
 import { ISSUES, type Dossier, type IssueId } from "@citizen-gotham/contracts";
 import { getDossier, getRace, listDossierIds, listRaceIds } from "@/lib/data";
@@ -38,16 +39,12 @@ export default async function DossierPage({ params }: { params: Promise<{ raceId
   const others = race.candidates.filter((c) => c.candidate_id !== candidateId && listDossierIds(raceId).includes(c.candidate_id));
 
   return (
-    <div className="space-y-6">
+    <div className="detail-page candidate-page">
       <Breadcrumbs items={[{ href: routes.home(), label: "Races" }, { href: routes.race(raceId), label: race.label }, { label: d.name }]} />
       <DataStatusBanner status={d.data_status} />
 
-      <header className="space-y-3">
-        <div className="flex flex-wrap items-baseline justify-between gap-x-6 gap-y-2">
-          <h1 className="text-2xl font-semibold tracking-tight">
-            {d.name} <span className="text-base font-normal text-neutral-500">{PARTY[d.party]} · {d.role}</span>
-          </h1>
-          <div className="flex flex-wrap gap-x-4 gap-y-1 text-sm">
+      <DetailHeader label={`Candidate profile · ${race.label}`} title={d.name} actions={
+        <div className="flex flex-wrap gap-x-4 gap-y-1 text-sm">
             <Link href={routes.race(raceId)} className="underline decoration-dotted underline-offset-2 hover:text-neutral-900">
               Race ledger →
             </Link>
@@ -57,7 +54,8 @@ export default async function DossierPage({ params }: { params: Promise<{ raceId
               </Link>
             ))}
           </div>
-        </div>
+      }>
+        <p className="detail-candidate-role">{PARTY[d.party]} · {d.role}</p>
         <p className="text-sm text-neutral-600">
           {BASIS[d.evidence_basis]} {covered.size} of {ISSUES.length} issues have a record · {evidenceCount} evidence records · generated {date(d.generated_at.slice(0, 10))}.
         </p>
@@ -66,14 +64,14 @@ export default async function DossierPage({ params }: { params: Promise<{ raceId
           {d.links.congress_url && <SourceLink href={d.links.congress_url} label="congress.gov member page" />}
           {d.links.campaign_site && <SourceLink href={d.links.campaign_site} label="campaign website" />}
         </div>
-      </header>
+      </DetailHeader>
 
-      <aside className="rounded-lg border-l-4 border-neutral-900 bg-neutral-50 px-4 py-3 text-sm">
+      <aside className="detail-callout">
         <div className="text-xs font-semibold uppercase tracking-wide text-neutral-500">Read this first</div>
         <p className="mt-1 leading-relaxed">{d.asymmetry_note}</p>
       </aside>
 
-      <section className="rounded-lg border border-neutral-200 bg-white p-4">
+      <section className="detail-summary">
         <div className="flex items-baseline justify-between gap-4">
           <h2 className="text-xs uppercase tracking-wide text-neutral-500">Summary</h2>
           {d.summary_needs_review && <Chip tone="amber" title="Summary not yet checked by a human">needs review</Chip>}
@@ -82,11 +80,11 @@ export default async function DossierPage({ params }: { params: Promise<{ raceId
         <p className="mt-2 text-xs text-neutral-500">Written from the structured record below only; every claim traces to an evidence record.</p>
       </section>
 
-      <div className="grid gap-6 lg:grid-cols-[13rem_1fr]">
-        <div className="hidden lg:block">
+      <div className="detail-sections">
+        <div className="detail-sidebar">
           <IssueNav covered={covered} />
         </div>
-        <div className="space-y-3">
+        <div className="detail-content">
           {ISSUES.map((issue) => (
             <IssueSection key={issue.id} issue={issue} stance={byIssue.get(issue.id)} />
           ))}

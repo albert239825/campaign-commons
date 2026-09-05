@@ -7,7 +7,7 @@ const CONFIDENCE_TONE: Record<Stance["confidence"], ChipTone> = { high: "green",
 
 export function IssueSection({ issue, stance }: { issue: (typeof ISSUES)[number]; stance: Stance | undefined }) {
   return (
-    <section id={issue.id} className="scroll-mt-20 rounded-lg border border-neutral-200 bg-white p-4">
+    <section id={issue.id} className="issue-record scroll-mt-20 rounded-lg border border-neutral-200 bg-white p-4">
       <header className="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-1">
         <h2 className="text-base font-semibold tracking-tight">{issue.label}</h2>
         <span className="text-xs text-neutral-500">{issue.description}</span>
@@ -16,7 +16,7 @@ export function IssueSection({ issue, stance }: { issue: (typeof ISSUES)[number]
         <p className="mt-3 text-sm text-neutral-400">No record loaded for this issue.</p>
       ) : (
         <>
-          <div className="mt-3 flex flex-wrap items-start gap-2">
+          <div className="issue-position mt-3 flex flex-wrap items-start gap-2">
             <p className="min-w-0 flex-1 text-sm leading-relaxed">{stance.position}</p>
             <div className="flex shrink-0 gap-1">
               <Chip tone={CONFIDENCE_TONE[stance.confidence]} title="How well the evidence below supports the one-line position">

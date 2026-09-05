@@ -23,14 +23,10 @@ export function VerificationChip({ story }: { story: Story }) {
       </Chip>
     );
   }
-  return (
-    <Chip tone="amber" title="Ranked and phrased by the pipeline from FEC filings; no human has checked the chain yet">
-      Unverified — pipeline-generated
-    </Chip>
-  );
+  return null;
 }
 
-export function StoryCard({ story, raceId, hasChain, full = false }: { story: Story; raceId: string; hasChain: boolean; full?: boolean }) {
+export function StoryCard({ story, raceId, hasChain, full = false, expandable = false }: { story: Story; raceId: string; hasChain: boolean; full?: boolean; expandable?: boolean }) {
   const { amount, dark_share } = story.headline_numbers;
   return (
     <article className="flex flex-col gap-2 rounded-lg border border-neutral-200 bg-white p-3">
@@ -55,6 +51,12 @@ export function StoryCard({ story, raceId, hasChain, full = false }: { story: St
         </div>
       )}
       <p className="text-xs leading-relaxed text-neutral-700">{full ? story.narrative : firstSentence(story.narrative)}</p>
+      {expandable && !full && (
+        <details className="story-narrative">
+          <summary>Read full story</summary>
+          <p>{story.narrative}</p>
+        </details>
+      )}
       <footer className="mt-auto flex flex-wrap items-center gap-3 border-t border-neutral-100 pt-2 text-xs">
         <Link href={routes.entity(raceId, story.root_entity_id)} className="font-medium text-neutral-900 hover:underline">
           Entity

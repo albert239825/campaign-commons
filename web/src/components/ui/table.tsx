@@ -3,7 +3,7 @@ import type { ReactNode, TdHTMLAttributes, ThHTMLAttributes } from "react";
 /** Dense editorial table. Wrap in an overflow container; header row is uppercase small caps. */
 export function Table({ children, className = "" }: { children: ReactNode; className?: string }) {
   return (
-    <div className="-mx-4 overflow-x-auto px-4">
+    <div className="data-table-scroll -mx-4 overflow-x-auto px-4" tabIndex={0} role="region" aria-label="Scrollable records table">
       <table className={`w-full border-collapse text-sm ${className}`}>{children}</table>
     </div>
   );
