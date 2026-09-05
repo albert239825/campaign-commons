@@ -203,8 +203,12 @@ def test_vendor_totals_reconcile_to_ie_rows_and_ledger_to_the_cent() -> None:
     for v in index["vendors"]:
         detail = _load(OUT / "vendors" / f"{v['vendor_id']}.json")
         assert _cents(detail["total"]) == sum(_cents(r["amount"]) for r in detail["expenditures"]) == _cents(v["total"])
-        assert detail["ads"] == []
         assert all(r["vendor_id"] == v["vendor_id"] for r in detail["expenditures"])
+        # ads are linked only to vendors the ad's sponsor actually paid, never as fact
+        spender_ids = {s["entity_id"] for s in detail["spenders"]}
+        for ad in detail["ads"]:
+            assert ad["sponsor_entity_id"] in spender_ids
+            assert ad["basis"]["basis"] in {"verified", "inferred", "adjacent"}
 
 
 @needs_data

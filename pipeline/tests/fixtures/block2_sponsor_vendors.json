@@ -1,0 +1,132 @@
+{
+  "_comment": "Stand-in for what gotham.vendors (Block 2 child 1) writes onto entities/<sponsor>.json: `vendors[]` rows shaped like EntityVendorRow and `independent_expenditures[]` rows shaped like IndependentExpenditure with vendor_id/medium filled. Test data only; never copied into data/out.",
+  "entity_id": "C00000001",
+  "name": "EXAMPLE VICTORY FUND",
+  "vendors": [
+    {
+      "vendor_id": "vendor:pixel-placement",
+      "name": "Pixel Placement",
+      "amount": 150000.0,
+      "count": 3,
+      "media_mix": [{ "medium": "digital", "amount": 150000.0, "count": 3 }],
+      "targets": [{ "candidate_id": "S6PA00217", "support_oppose": "O", "amount": 150000.0 }],
+      "first_date": "2024-09-10",
+      "last_date": "2024-10-20",
+      "source_url": "https://www.fec.gov/data/independent-expenditures/?committee_id=C00000001&cycle=2024&payee_name=PIXEL+PLACEMENT"
+    },
+    {
+      "vendor_id": "vendor:broadcast-buyers",
+      "name": "Broadcast Buyers",
+      "amount": 2000000.0,
+      "count": 2,
+      "media_mix": [{ "medium": "tv", "amount": 2000000.0, "count": 2 }],
+      "targets": [{ "candidate_id": "S6PA00217", "support_oppose": "O", "amount": 2000000.0 }],
+      "first_date": "2024-09-01",
+      "last_date": "2024-10-01",
+      "source_url": "https://www.fec.gov/data/independent-expenditures/?committee_id=C00000001&cycle=2024&payee_name=BROADCAST+BUYERS"
+    },
+    {
+      "vendor_id": "vendor:stream-ads",
+      "name": "Stream Ads",
+      "amount": 40000.0,
+      "count": 1,
+      "media_mix": [{ "medium": "digital", "amount": 40000.0, "count": 1 }],
+      "targets": [{ "candidate_id": "S6PA00217", "support_oppose": "O", "amount": 40000.0 }],
+      "first_date": "2024-10-25",
+      "last_date": "2024-10-25",
+      "source_url": "https://www.fec.gov/data/independent-expenditures/?committee_id=C00000001&cycle=2024&payee_name=STREAM+ADS"
+    }
+  ],
+  "independent_expenditures": [
+    {
+      "ie_id": "C00000001-ie-1",
+      "spender_entity_id": "C00000001",
+      "spender_name": "EXAMPLE VICTORY FUND",
+      "candidate_id": "S6PA00217",
+      "candidate_name": "Bob Casey",
+      "support_oppose": "O",
+      "amount": 50000.0,
+      "date": "2024-09-10",
+      "purpose": "DIGITAL ADVERTISING",
+      "payee": "PIXEL PLACEMENT LLC",
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202409109000000001",
+      "vendor_id": "vendor:pixel-placement",
+      "medium": "digital"
+    },
+    {
+      "ie_id": "C00000001-ie-2",
+      "spender_entity_id": "C00000001",
+      "spender_name": "EXAMPLE VICTORY FUND",
+      "candidate_id": "S6PA00217",
+      "candidate_name": "Bob Casey",
+      "support_oppose": "O",
+      "amount": 60000.0,
+      "date": "2024-10-01",
+      "purpose": "DIGITAL ADVERTISING",
+      "payee": "PIXEL PLACEMENT",
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202410019000000002",
+      "vendor_id": "vendor:pixel-placement",
+      "medium": "digital"
+    },
+    {
+      "ie_id": "C00000001-ie-3",
+      "spender_entity_id": "C00000001",
+      "spender_name": "EXAMPLE VICTORY FUND",
+      "candidate_id": "S6PA00217",
+      "candidate_name": "Bob Casey",
+      "support_oppose": "O",
+      "amount": 40000.0,
+      "date": "2024-10-20",
+      "purpose": "DIGITAL ADVERTISING",
+      "payee": "PIXEL PLACEMENT",
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202410209000000003",
+      "vendor_id": "vendor:pixel-placement",
+      "medium": "digital"
+    },
+    {
+      "ie_id": "C00000001-ie-4",
+      "spender_entity_id": "C00000001",
+      "spender_name": "EXAMPLE VICTORY FUND",
+      "candidate_id": "S6PA00217",
+      "candidate_name": "Bob Casey",
+      "support_oppose": "O",
+      "amount": 1500000.0,
+      "date": "2024-09-01",
+      "purpose": "TV/MEDIA PLACEMENT",
+      "payee": "BROADCAST BUYERS INC",
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202409019000000004",
+      "vendor_id": "vendor:broadcast-buyers",
+      "medium": "tv"
+    },
+    {
+      "ie_id": "C00000001-ie-5",
+      "spender_entity_id": "C00000001",
+      "spender_name": "EXAMPLE VICTORY FUND",
+      "candidate_id": "S6PA00217",
+      "candidate_name": "Bob Casey",
+      "support_oppose": "O",
+      "amount": 500000.0,
+      "date": "2024-10-01",
+      "purpose": "TV/MEDIA PLACEMENT",
+      "payee": "BROADCAST BUYERS INC",
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202410019000000005",
+      "vendor_id": "vendor:broadcast-buyers",
+      "medium": "tv"
+    },
+    {
+      "ie_id": "C00000001-ie-6",
+      "spender_entity_id": "C00000001",
+      "spender_name": "EXAMPLE VICTORY FUND",
+      "candidate_id": "S6PA00217",
+      "candidate_name": "Bob Casey",
+      "support_oppose": "O",
+      "amount": 40000.0,
+      "date": "2024-10-25",
+      "purpose": "STREAMING VIDEO PLACEMENT",
+      "payee": "STREAM ADS",
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202410259000000006",
+      "vendor_id": "vendor:stream-ads",
+      "medium": "digital"
+    }
+  ]
+}
