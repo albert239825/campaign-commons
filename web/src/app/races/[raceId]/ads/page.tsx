@@ -1,5 +1,6 @@
 // OWNER: Frontend B (ad gallery).
 import Link from "next/link";
+import { DetailHeader } from "@/components/ui/detail-layout";
 import { getAds, getRace, listChainIds, listEntityIds, listRaceIds } from "@/lib/data";
 import { money, range, routes } from "@/lib/format";
 import { Breadcrumbs, Card, DataStatusBanner, Stat } from "@/components/ui";
@@ -21,12 +22,11 @@ export default async function AdsPage({ params }: { params: Promise<{ raceId: st
   const sponsors = new Set(gallery.ads.map((a) => a.advertiser_id)).size;
 
   return (
-    <div className="space-y-6">
+    <div className="detail-page ads-page">
       <Breadcrumbs items={[{ href: routes.home(), label: "Races" }, { href: routes.race(raceId), label: race.label }, { label: "Ads" }]} />
       <DataStatusBanner status={gallery.data_status} />
 
-      <header className="space-y-2">
-        <h1 className="text-2xl font-semibold tracking-tight">Political ads · {race.label}</h1>
+      <DetailHeader label={race.label} title="Political ads">
         <p className="max-w-3xl text-sm text-neutral-600">
           Ads about this race from platform transparency libraries ({gallery.sources.join(", ") || "none loaded"}). Spend and impressions are the ranges the
           platform publishes, not exact figures. Where the advertiser resolves to an FEC committee, the card links to its{" "}
@@ -35,7 +35,7 @@ export default async function AdsPage({ params }: { params: Promise<{ raceId: st
           </Link>{" "}
           and funding chain.
         </p>
-      </header>
+      </DetailHeader>
 
       <Card>
         <div className="grid grid-cols-2 gap-4 md:grid-cols-4">

@@ -1,16 +1,27 @@
 // OWNER: Frontend A (race ledger).
 import Link from "next/link";
+import Image from "next/image";
+import type { Party } from "@citizen-gotham/contracts";
 import { getLedger, getRace, getStories, hasChain, listRaceIds } from "@/lib/data";
-import { date, pct, routes } from "@/lib/format";
-import { AdjacencyNote, Breadcrumbs, Card, DataStatusBanner, Money } from "@/components/ui";
-import { PartyTag } from "@/components/ui/party-tag";
-import { CandidatePanel } from "@/components/ledger/candidate-panel";
-import { TraceabilityCard } from "@/components/ledger/traceability-card";
+import { date, routes } from "@/lib/format";
+import { AdjacencyNote, Card, DataStatusBanner } from "@/components/ui";
+import { RaceSections } from "@/components/ledger/race-sections";
+import { FundingExplorer } from "@/components/ledger/funding-explorer";
+import { buildFundingViews } from "@/lib/funding-view";
 import { SpendersTable } from "@/components/ledger/spenders-table";
 import { FlagsLegend } from "@/components/ledger/flags-legend";
+import { StorySlideshow } from "@/components/ledger/story-slideshow";
 import { StoryCard } from "@/components/ledger/story-card";
 
-const START_HERE_COUNT = 5;
+const PARTY_NAMES: Record<Party, string> = {
+  DEM: "Democratic Party",
+  REP: "Republican Party",
+  LIB: "Libertarian Party",
+  GRE: "Green Party",
+  IND: "Independent",
+  CON: "Constitution Party",
+  OTH: "Other",
+};
 
 export const generateStaticParams = () => listRaceIds().map((raceId) => ({ raceId }));
 
@@ -18,113 +29,97 @@ export default async function RaceLedgerPage({ params }: { params: Promise<{ rac
   const { raceId } = await params;
   const race = getRace(raceId);
   const ledger = getLedger(raceId);
-  const campaignTotal = ledger.candidates.reduce((s, c) => s + c.campaign.receipts, 0);
-  const outsideTotal = ledger.candidates.reduce((s, c) => s + c.outside.total, 0);
   const allFlags = ledger.top_outside_spenders.flatMap((s) => s.flags);
   const stories = getStories(raceId);
-  const topStories = stories.stories.slice(0, START_HERE_COUNT);
+  const parties = Array.from(new Set(race.candidates.map((c) => c.party)));
+  const officeName = { S: "US Senate", H: "US House", P: "US President" }[race.office];
+  const stateName = race.label.split("·")[0].trim();
 
   return (
-    <div className="space-y-8">
+    <div className="race-dashboard">
       <div>
-        <Breadcrumbs items={[{ href: routes.home(), label: "Races" }, { label: race.label }]} />
         <DataStatusBanner status={ledger.data_status} />
-        <header className="flex flex-wrap items-end justify-between gap-4 border-b border-neutral-300 pb-4">
-          <div>
-            <h1 className="text-3xl font-semibold tracking-tight">{race.label}</h1>
-            <div className="mt-1 flex flex-wrap items-center gap-x-4 gap-y-1 text-sm text-neutral-600">
-              <span>Election {date(race.election_date)}</span>
-              <span className="flex flex-wrap gap-3">
-                {race.candidates.map((c) => (
-                  <span key={c.candidate_id} className="inline-flex items-center gap-1.5">
-                    <PartyTag party={c.party} />
-                    <Link href={routes.candidate(raceId, c.candidate_id)} className="hover:underline">
-                      {c.name}
-                    </Link>
-                    {c.incumbent && <span className="text-[10px] uppercase tracking-wide text-neutral-400">inc.</span>}
-                  </span>
-                ))}
-              </span>
+        <header className="race-overview">
+          <div className={`race-banner ${race.office === "S" ? "race-banner--senate" : ""}`}>
+            {race.office === "S" && (
+              <Image
+                className="race-banner-seal"
+                src="/images/united-states-senate.webp"
+                alt="United States Senate seal"
+                width={160}
+                height={160}
+                sizes="(max-width: 680px) 88px, 140px"
+                priority
+              />
+            )}
+            <div className="race-banner-heading">
+              <h1 className="race-title">
+                <span className="block">{officeName} {race.cycle}</span>
+                <span className="block">{stateName}</span>
+              </h1>
+              <p className="race-election-date">
+                {race.status === "complete" ? "Election held" : "Election day"}
+                {" · "}<time dateTime={race.election_date}>{date(race.election_date)}</time>
+              </p>
             </div>
+            <section className="race-banner-candidates" aria-labelledby="notable-candidates-title">
+              <h2 id="notable-candidates-title">Notable candidates</h2>
+              {parties.length > 0 ? (
+                <dl>
+                  {parties.map((party) => (
+                    <div key={party}>
+                      <dt>{PARTY_NAMES[party]}</dt>
+                      <dd>
+                        <ul>
+                          {race.candidates.filter((c) => c.party === party).map((c) => (
+                            <li key={c.candidate_id}>
+                              <Link href={routes.candidate(raceId, c.candidate_id)}>{c.name}</Link>
+                              {c.incumbent && <span className="race-candidate-role">{race.status === "complete" ? "Incumbent at election" : "Incumbent"}</span>}
+                            </li>
+                          ))}
+                        </ul>
+                      </dd>
+                    </div>
+                  ))}
+                </dl>
+              ) : <p>Candidate information has not been added yet.</p>}
+            </section>
           </div>
-          <dl className="flex gap-6 text-sm">
-            <div>
-              <dt className="text-[11px] uppercase tracking-wide text-neutral-500">Campaign</dt>
-              <dd className="text-xl font-semibold tabular-nums">
-                <Money amount={campaignTotal} />
-              </dd>
-            </div>
-            <div>
-              <dt className="text-[11px] uppercase tracking-wide text-neutral-500">Outside</dt>
-              <dd className="text-xl font-semibold tabular-nums">
-                <Money amount={outsideTotal} />
-              </dd>
-            </div>
-            <div>
-              <dt className="text-[11px] uppercase tracking-wide text-neutral-500">Outside share</dt>
-              <dd className="text-xl font-semibold tabular-nums">{campaignTotal + outsideTotal > 0 ? pct(outsideTotal / (campaignTotal + outsideTotal)) : "—"}</dd>
-            </div>
-          </dl>
         </header>
       </div>
 
-      {topStories.length > 0 && (
-        <Card
-          title="Start here"
-          action={
-            <Link href={routes.stories(raceId)} className="text-xs text-neutral-600 hover:underline">
-              All {stories.stories.length} stories →
-            </Link>
-          }
-        >
-          <p className="mb-3 text-xs text-neutral-500">
-            Spenders ranked by the pipeline (amount, dark share, structural flags). The text is templated from FEC filings, not written by a person;
-            each card says whether a human has checked it.
-          </p>
-          <div className="grid gap-3 md:grid-cols-2 lg:grid-cols-5">
-            {topStories.map((s) => (
-              <StoryCard key={s.story_id} story={s} raceId={raceId} hasChain={hasChain(raceId, s.root_entity_id)} />
-            ))}
-          </div>
-        </Card>
-      )}
-
-      {ledger.candidates.length === 0 ? (
-        <Card>
-          <p className="text-sm text-neutral-500">No candidate committees loaded for this race yet.</p>
-        </Card>
-      ) : (
-        <div className="grid gap-4 md:grid-cols-2">
-          {ledger.candidates.map((c) => (
-            <CandidatePanel key={c.candidate_id} raceId={raceId} c={c} />
-          ))}
-        </div>
-      )}
-
-      <TraceabilityCard t={ledger.traceability} />
-
-      <Card
-        title="Top outside spenders"
-        action={
-          <Link href={routes.ads(raceId)} className="text-xs text-neutral-600 hover:underline">
-            Ad gallery →
-          </Link>
+      <RaceSections
+        funding={<FundingExplorer views={buildFundingViews(ledger)} raceId={raceId} />}
+        stories={stories.stories.length > 0 ? (
+          <StorySlideshow slides={stories.stories.map((s) => (
+            <StoryCard key={s.story_id} story={s} raceId={raceId} hasChain={hasChain(raceId, s.root_entity_id)} expandable />
+          ))} />
+        ) : <Card title="Funding highlights"><p>No stories are available for this race yet.</p></Card>}
+        spenders={
+          <Card
+            title="Top outside spenders"
+            action={
+              <Link href={routes.ads(raceId)} className="text-xs text-neutral-600 hover:underline">
+                Ad gallery →
+              </Link>
+            }
+          >
+            <p className="mb-3 text-xs text-neutral-500">
+              Committees reporting independent expenditures (Schedule E) about candidates in this race. S = supports, O = opposes, as
+              declared by the spender. Dot = how visible the spender&apos;s own funding is. Click a column to sort.
+            </p>
+            <SpendersTable raceId={raceId} spenders={ledger.top_outside_spenders} candidates={race.candidates} />
+            {allFlags.length > 0 && (
+              <div className="mt-4 border-t border-neutral-100 pt-3">
+                <div className="mb-1.5 text-[11px] font-medium tracking-wide text-neutral-500">Flags</div>
+                <FlagsLegend flags={allFlags} />
+              </div>
+            )}
+          </Card>
         }
-      >
-        <p className="mb-3 text-xs text-neutral-500">
-          Committees reporting independent expenditures (Schedule E) about candidates in this race. S = supports, O = opposes, as
-          declared by the spender. Dot = how visible the spender&apos;s own funding is. Click a column to sort.
-        </p>
-        <SpendersTable raceId={raceId} spenders={ledger.top_outside_spenders} candidates={race.candidates} />
-        {allFlags.length > 0 && (
-          <div className="mt-4 border-t border-neutral-100 pt-3">
-            <div className="mb-1.5 text-[11px] font-medium uppercase tracking-wide text-neutral-500">Flags</div>
-            <FlagsLegend flags={allFlags} />
-          </div>
-        )}
-      </Card>
+      />
 
-      <footer className="space-y-3 border-t border-neutral-200 pt-4">
+      <footer className="race-notes space-y-3">
         {ledger.notes.length > 0 && (
           <ul className="list-disc space-y-0.5 pl-5 text-xs text-neutral-500">
             {ledger.notes.map((n, i) => (

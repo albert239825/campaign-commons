@@ -7,7 +7,7 @@ import { BarLegend, MONEY_COLORS, StackedBar } from "@/components/ui/stacked-bar
 
 function Line({ label, amount, href, indent = false, strong = false }: { label: string; amount: number; href: string; indent?: boolean; strong?: boolean }) {
   return (
-    <div className={`flex items-baseline justify-between gap-3 py-1 ${indent ? "pl-4 text-neutral-600" : ""} ${strong ? "font-semibold" : ""}`}>
+    <div className={`candidate-line flex items-baseline justify-between gap-3 py-1 ${indent ? "pl-4 text-neutral-600" : ""} ${strong ? "font-semibold" : ""}`}>
       <span className="truncate">{label}</span>
       <span className="flex shrink-0 items-baseline gap-2">
         <Money amount={amount} compact={false} />
@@ -28,7 +28,7 @@ export function CandidatePanel({ raceId, c }: { raceId: string; c: CandidateLedg
   return (
     <Card
       title={
-        <span className="flex items-center gap-2 normal-case tracking-normal">
+        <span className="candidate-heading flex items-center gap-2 normal-case tracking-normal">
           <PartyTag party={c.party} />
           <Link href={routes.candidate(raceId, c.candidate_id)} className="text-base font-semibold text-neutral-900 hover:underline">
             {c.name}
@@ -42,7 +42,7 @@ export function CandidatePanel({ raceId, c }: { raceId: string; c: CandidateLedg
       action={<SourceLink href={campaign.source_url} label="FEC candidate page" />}
     >
       <div className="text-sm">
-        <div className="mb-1 text-[11px] font-medium uppercase tracking-wide text-neutral-500">Campaign committee</div>
+        <div className="candidate-subheading mb-1 text-[11px] font-medium uppercase tracking-wide text-neutral-500">Campaign committee</div>
         <Line label="Receipts" amount={campaign.receipts} href={campaign.source_url} strong />
         <Line label="Individuals (FEC summary, incl. unitemized)" amount={campaign.from_individuals} href={campaign.source_url} indent />
         <Line label="of which via conduits (ActBlue/WinRed)" amount={campaign.via_conduit_total} href={campaign.source_url} indent />
@@ -51,7 +51,7 @@ export function CandidatePanel({ raceId, c }: { raceId: string; c: CandidateLedg
         <Line label="Disbursements" amount={campaign.disbursements} href={campaign.source_url} strong />
         {campaign.cash_on_hand !== undefined && <Line label="cash on hand" amount={campaign.cash_on_hand} href={campaign.source_url} indent />}
 
-        <div className="mb-1 mt-4 text-[11px] font-medium uppercase tracking-wide text-neutral-500">Outside spending (independent expenditures)</div>
+        <div className="candidate-subheading mb-1 mt-4 text-[11px] font-medium uppercase tracking-wide text-neutral-500">Outside spending (independent expenditures)</div>
         <Line label="Supporting" amount={outside.support} href={outside.source_url} />
         <Line label="Opposing" amount={outside.oppose} href={outside.source_url} />
         <Line label="Total" amount={outsideTotal} href={outside.source_url} strong />
@@ -68,7 +68,7 @@ export function CandidatePanel({ raceId, c }: { raceId: string; c: CandidateLedg
           <BarLegend segments={compare} className="mt-1" />
         </div>
 
-        <div className="mt-4 flex items-baseline justify-between border-t border-neutral-100 pt-3 text-xs text-neutral-600">
+        <div className="candidate-traceability mt-4 flex items-baseline justify-between border-t border-neutral-100 pt-3 text-xs text-neutral-600">
           <span>Traceability of outside money about this candidate</span>
           <span className="tabular-nums">
             {c.traceability_score === null ? "not yet computed" : `${pct(c.traceability_score)} preliminary`}

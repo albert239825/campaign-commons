@@ -1,3 +1,4 @@
+import { DetailHeader, SectionNav } from "@/components/ui/detail-layout";
 // OWNER: Frontend B (chain view).
 import Link from "next/link";
 import { notFound } from "next/navigation";
@@ -37,7 +38,7 @@ export default async function ChainPage({ params }: { params: Promise<{ raceId: 
   const verifiedAds = getAds(raceId).ads.filter((a) => a.matched_entity_id === entityId && a.verification?.status === "verified");
 
   return (
-    <div className="space-y-6">
+    <div className="detail-page chain-page">
       <Breadcrumbs
         items={[
           { href: routes.home(), label: "Races" },
@@ -47,11 +48,9 @@ export default async function ChainPage({ params }: { params: Promise<{ raceId: 
         ]}
       />
       <DataStatusBanner status={chain.data_status} />
-      <SeenAdsStrip ads={verifiedAds} raceId={raceId} />
 
-      <header className="space-y-3">
+      <DetailHeader label={`Funding chain · ${race.label}`} title={<>Where {chain.root_name}&apos;s money came from</>}>
         <div className="flex flex-wrap items-center gap-3">
-          <h1 className="text-2xl font-semibold tracking-tight">Where {chain.root_name}&apos;s money came from</h1>
           {chain.flags.map((f) => (
             <FlagBadge key={f.id} flag={f} />
           ))}
@@ -66,38 +65,42 @@ export default async function ChainPage({ params }: { params: Promise<{ raceId: 
             expenditures are not drawn.
           </span>
         </div>
-      </header>
+      </DetailHeader>
 
-      <Card>
-        <div className="grid gap-6 md:grid-cols-[1fr_2fr]">
-          <div className="grid grid-cols-2 gap-4">
-            <Stat label="Total receipts traced" value={<Money amount={chain.summary.total_in} />} sub={money(chain.summary.total_in, { compact: false })} />
-            <Stat label="Depth" value={chain.summary.max_depth} sub={`${chain.nodes.length} nodes · ${chain.edges.length} edges`} />
-          </div>
-          <div>
-            <div className="mb-1 text-xs uppercase tracking-wide text-neutral-500">Visibility of traced dollars</div>
-            <ShareBar
-              shares={{
-                disclosed: chain.summary.disclosed_share,
-                inferable: chain.summary.inferable_share,
-                unwalked: chain.summary.unwalked_share,
-                dark: chain.summary.dark_share,
-              }}
-            />
-            <div className="mt-2 text-xs text-neutral-500">
-              Ends in{" "}
-              {terminusCounts
-                .filter(([, c]) => c > 0)
-                .map(([k, c]) => `${c} ${TERMINUS_LABELS[k]}`)
-                .join(", ") || "—"}
-              .
+      <SeenAdsStrip ads={verifiedAds} raceId={raceId} />
+      <div className="detail-jump-nav"><SectionNav items={[{ id: "overview", label: "Overview" }, { id: "funding-map", label: "Funding map" }, { id: "receipts", label: "Every receipt" }]} /></div>
+      <div id="overview" className="detail-section">
+        <Card>
+          <div className="grid gap-6 md:grid-cols-[1fr_2fr]">
+            <div className="grid grid-cols-2 gap-4">
+              <Stat label="Total receipts traced" value={<Money amount={chain.summary.total_in} />} sub={money(chain.summary.total_in, { compact: false })} />
+              <Stat label="Depth" value={chain.summary.max_depth} sub={`${chain.nodes.length} nodes · ${chain.edges.length} edges`} />
+            </div>
+            <div>
+              <div className="mb-1 text-xs uppercase tracking-wide text-neutral-500">Visibility of traced dollars</div>
+              <ShareBar
+                shares={{
+                  disclosed: chain.summary.disclosed_share,
+                  inferable: chain.summary.inferable_share,
+                  unwalked: chain.summary.unwalked_share,
+                  dark: chain.summary.dark_share,
+                }}
+              />
+              <div className="mt-2 text-xs text-neutral-500">
+                Ends in{" "}
+                {terminusCounts
+                  .filter(([, c]) => c > 0)
+                  .map(([k, c]) => `${c} ${TERMINUS_LABELS[k]}`)
+                  .join(", ") || "—"}
+                .
+              </div>
             </div>
           </div>
-        </div>
-      </Card>
+        </Card>
+      </div>
 
       {chain.flags.length > 0 && (
-        <ul className="space-y-1 text-sm">
+        <ul className="chain-findings space-y-1 text-sm">
           {chain.flags.map((f) => (
             <li key={f.id} className="flex flex-wrap items-baseline gap-2">
               <span className="font-medium text-amber-900">⚑ {f.label}.</span>
@@ -107,40 +110,42 @@ export default async function ChainPage({ params }: { params: Promise<{ raceId: 
           ))}
         </ul>
       )}
-
-      <Card
-        title="Flow of money into the spender"
-        action={
-          <Legend
-            items={[
-              { swatch: <Swatch color={VISIBILITY_COLORS.disclosed} />, label: "disclosed (FEC)" },
-              { swatch: <Swatch color={VISIBILITY_COLORS.inferable} />, label: "inferable (990, lagged)" },
-              { swatch: <Swatch color={UNWALKED_COLOR} />, label: "not walked (FEC committee, receipts outside this race's neighborhood)" },
-              { swatch: <Swatch color={VISIBILITY_COLORS.dark} className="bg-[repeating-linear-gradient(45deg,#e24b4a_0_2px,#fdecec_2px_4px)]" />, label: "dark wall (no disclosure)" },
-              { swatch: <Swatch color="#f5f5f5" className="border border-dashed border-neutral-400" />, label: "other (aggregated)" },
-            ]}
-          />
-        }
-      >
-        {darkOnly && (
-          <p className="mb-3 rounded-sm border border-red-200 bg-red-50 px-3 py-2 text-sm text-red-900">
-            Every traced source for this spender is a layer with no donor-disclosure obligation. The public record stops here.
+      <div id="funding-map" className="detail-section">
+        <Card
+          title="Flow of money into the spender"
+          action={
+            <Legend
+              items={[
+                { swatch: <Swatch color={VISIBILITY_COLORS.disclosed} />, label: "disclosed (FEC)" },
+                { swatch: <Swatch color={VISIBILITY_COLORS.inferable} />, label: "inferable (990, lagged)" },
+                { swatch: <Swatch color={UNWALKED_COLOR} />, label: "not walked (FEC committee, receipts outside this race's neighborhood)" },
+                { swatch: <Swatch color={VISIBILITY_COLORS.dark} className="bg-[repeating-linear-gradient(45deg,#e24b4a_0_2px,#fdecec_2px_4px)]" />, label: "dark wall (no disclosure)" },
+                { swatch: <Swatch color="#f5f5f5" className="border border-dashed border-neutral-400" />, label: "other (aggregated)" },
+              ]}
+            />
+          }
+        >
+          {darkOnly && (
+            <p className="mb-3 rounded-sm border border-red-200 bg-red-50 px-3 py-2 text-sm text-red-900">
+              Every traced source for this spender is a layer with no donor-disclosure obligation. The public record stops here.
+            </p>
+          )}
+          {chain.edges.length === 0 ? (
+            <p className="text-sm text-neutral-500">No receipts were traced for this spender in the 2024 cycle.</p>
+          ) : (
+            <ChainDiagram wire={toWire(chain, links)} maxDepth={chain.summary.max_depth} />
+          )}
+          <p className="mt-2 text-xs text-neutral-500">
+            Ribbon width is proportional to dollars; color is how the money is disclosed. Read left to right: sources → intermediaries → spender. Linked source
+            names open that donor&apos;s forward view.
           </p>
-        )}
-        {chain.edges.length === 0 ? (
-          <p className="text-sm text-neutral-500">No receipts were traced for this spender in the 2024 cycle.</p>
-        ) : (
-          <ChainDiagram wire={toWire(chain, links)} maxDepth={chain.summary.max_depth} />
-        )}
-        <p className="mt-2 text-xs text-neutral-500">
-          Ribbon width is proportional to dollars; color is how the money is disclosed. Read left to right: sources → intermediaries → spender. Linked source
-          names open that donor&apos;s forward view.
-        </p>
-      </Card>
-
-      <Card title="Receipts — every edge, with its record">
-        <EdgeTable chain={chain} links={links} />
-      </Card>
+        </Card>
+      </div>
+      <div id="receipts" className="detail-section">
+        <Card title="Receipts — every edge, with its record">
+          <EdgeTable chain={chain} links={links} />
+        </Card>
+      </div>
 
       <p className="text-xs text-neutral-500">
         <span className="font-medium text-neutral-700">Method.</span> {chain.method}

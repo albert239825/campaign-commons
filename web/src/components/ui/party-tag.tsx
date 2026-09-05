@@ -11,5 +11,5 @@ const PARTY_STYLES: Record<Party, string> = {
 };
 
 export function PartyTag({ party }: { party: Party }) {
-  return <span className={`inline-block rounded-sm border px-1 py-px text-[10px] font-semibold leading-tight ${PARTY_STYLES[party]}`}>{party}</span>;
+  return <span className={`party-tag inline-block rounded-sm border px-1 py-px text-[10px] font-semibold leading-tight ${PARTY_STYLES[party]}`}>{party}</span>;
 }

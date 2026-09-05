@@ -19,7 +19,7 @@ export function sortEvidence(evidence: Evidence[]): Evidence[] {
 
 export function EvidenceList({ evidence }: { evidence: Evidence[] }) {
   return (
-    <ol className="divide-y divide-neutral-100">
+    <ol className="evidence-list divide-y divide-neutral-100">
       {sortEvidence(evidence).map((ev, i) => (
         <li key={i} className="grid gap-x-4 gap-y-1 py-2 text-sm sm:grid-cols-[7.5rem_1fr_auto]">
           <div className="flex flex-col items-start gap-1">
