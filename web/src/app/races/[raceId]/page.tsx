@@ -105,13 +105,13 @@ export default async function RaceLedgerPage({ params }: { params: Promise<{ rac
             }
           >
             <p className="mb-3 text-xs text-neutral-500">
-              Independent spending supporting or opposing candidates in this race, as reported in FEC Schedule E filings.
-              Funding visibility describes the spender’s own funding sources. Use the column headings to sort.
+              Committees reporting independent expenditures (Schedule E) about candidates in this race. S = supports, O = opposes, as
+              declared by the spender. Dot = how visible the spender&apos;s own funding is. Click a column to sort.
             </p>
             <SpendersTable raceId={raceId} spenders={ledger.top_outside_spenders} candidates={race.candidates} />
             {allFlags.length > 0 && (
               <div className="mt-4 border-t border-neutral-100 pt-3">
-                <div className="mb-1.5 text-sm font-medium text-neutral-500">Flags</div>
+                <div className="mb-1.5 text-[11px] font-medium uppercase tracking-wide text-neutral-500">Flags</div>
                 <FlagsLegend flags={allFlags} />
               </div>
             )}
