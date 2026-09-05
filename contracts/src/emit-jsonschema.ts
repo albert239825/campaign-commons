@@ -16,6 +16,7 @@ import {
   LedgerSchema,
   RacesIndexSchema,
   StoriesSchema,
+  TrailsSchema,
 } from "./schemas";
 
 const out = join(__dirname, "..", "jsonschema");
@@ -30,6 +31,7 @@ const all: Record<string, ZodTypeAny> = {
   dossier: DossierSchema,
   stories: StoriesSchema,
   donor: DonorViewSchema,
+  trails: TrailsSchema,
 };
 
 // zod-to-json-schema's overloads make tsc recurse too deeply on large schemas; pin a simple signature.

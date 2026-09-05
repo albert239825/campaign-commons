@@ -18,6 +18,7 @@ import {
   LedgerSchema,
   RacesIndexSchema,
   StoriesSchema,
+  TrailsSchema,
 } from "./schemas";
 
 const root = process.argv[2] ?? join(__dirname, "..", "..", "data", "out");
@@ -29,6 +30,7 @@ function schemaFor(rel: string): ZodTypeAny | null {
     if (parts[1] === "ledger.json") return LedgerSchema;
     if (parts[1] === "ads.json") return AdGallerySchema;
     if (parts[1] === "stories.json") return StoriesSchema;
+    if (parts[1] === "trails.json") return TrailsSchema;
   }
   if (parts.length === 3) {
     if (parts[1] === "entities") return EntitySchema;

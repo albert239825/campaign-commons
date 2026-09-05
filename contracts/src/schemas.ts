@@ -17,6 +17,7 @@ import { ISSUE_IDS } from "./issues";
  *   <race_id>/ads.json                  -> AdGallery
  *   <race_id>/dossiers/<candidate_id>.json -> Dossier
  *   <race_id>/stories.json              -> Stories
+ *   <race_id>/trails.json               -> Trails (Money Trails: precomputed plain-English answers)
  *
  * Conventions:
  *   - Money is in US dollars as a plain number (no cents rounding required).
@@ -523,6 +524,185 @@ export const DonorViewSchema = z.object({
 });
 
 // ---------------------------------------------------------------------------
+// <race_id>/trails.json — precomputed plain-English "Money Trails" answers (pipeline/gotham/trails.py)
+//
+// A question is resolved on the client by deterministic keyword + name matching (no LLM, no graph database) to one
+// of three intents and one subject, then the matching precomputed answer is rendered. Every number is a `Figure`
+// carrying the government/platform record it came from; money edges and targeting edges are separate types so an
+// independent expenditure can never be rendered as dollars reaching a candidate, and no structure exists that ties
+// an upstream funder to a particular ad.
+// ---------------------------------------------------------------------------
+
+export const TrailIntentSchema = z.enum([
+  "candidate_ad_funding", // "who paid for the ads about X?"  -> sponsors that ran ads, their targeting of X, and who funds each sponsor
+  "candidate_spender", // "who is spending against X?"      -> Schedule E spenders for/against X
+  "committee_funding", // "who funds Y?"                     -> Y's receipts, hop by hop, and where the trail ends
+]);
+
+/** A displayed dollar amount with the record it was read from. */
+export const FigureSchema = z.object({
+  amount: z.number(),
+  source_url: z.string().url(),
+});
+
+/** A platform-reported spend or impressions range (Google buckets). Never added to FEC dollars. */
+export const RangeFigureSchema = z.object({
+  min: z.number(),
+  max: z.number().nullable(), // null = open-ended top bucket
+  source_url: z.string().url(),
+});
+
+/** Dollars moved from `from` to `to` (Schedule A receipt or committee-to-committee transfer). */
+export const TrailMoneyEdgeSchema = z.object({
+  kind: z.literal("money"),
+  from_id: z.string(),
+  from_name: z.string(),
+  from_kind: EntityKindSchema,
+  from_committee_type: CommitteeTypeSchema.nullable(),
+  to_id: z.string(),
+  to_name: z.string(),
+  amount: z.number(),
+  visibility: VisibilitySchema, // of `from`: whether its own funding is on file
+  depth: z.number().int().min(1), // 1 = gave directly to the subject committee; 2 = gave to a depth-1 funder; ...
+  contributor_count: z.number().int().optional(), // aggregate "other contributors" nodes
+  source_url: z.string().url(),
+});
+
+/** An independent expenditure: the spender's own for/against declaration about a candidate. No money reaches the candidate. */
+export const TrailTargetingEdgeSchema = z.object({
+  kind: z.literal("targeting"),
+  spender_id: z.string(),
+  spender_name: z.string(),
+  spender_type_label: z.string(),
+  candidate_id: z.string(),
+  candidate_name: z.string(),
+  support_oppose: SupportOpposeSchema,
+  amount: z.number(),
+  has_chain: z.boolean(),
+  source_url: z.string().url(),
+});
+
+/** Ads a sponsor ran, as a platform library reports them. Not an edge: the platform does not record who paid the platform or which candidate an ad is about. */
+export const TrailAdRunSchema = z.object({
+  sponsor_id: z.string(),
+  sponsor_name: z.string(),
+  platform: z.enum(["google", "meta"]),
+  ad_count: z.number().int().min(1),
+  spend: RangeFigureSchema, // per-ad buckets summed; max null if any ad's top bucket is open
+  first_shown: z.string().nullable(),
+  last_shown: z.string().nullable(),
+  match_confidence: z.enum(["verified", "auto"]), // how the advertiser name was tied to the FEC committee
+  source_url: z.string().url(), // platform advertiser page
+});
+
+/** Where a committee's traced receipts stopped (chain summary), with the receipts they were computed from. */
+export const TrailSharesSchema = z.object({
+  total_in: z.number(),
+  disclosed: z.number().min(0).max(1),
+  inferable: z.number().min(0).max(1),
+  unwalked: z.number().min(0).max(1),
+  dark: z.number().min(0).max(1),
+  max_depth: z.number().int(),
+  source_url: z.string().url(), // the committee's Schedule A on fec.gov; the walk's method is on the chain page
+});
+
+/** A named source the backward walk ended at, and the committee it gave to. */
+export const TrailTerminusSchema = z.object({
+  id: z.string(),
+  name: z.string(),
+  kind: EntityKindSchema,
+  organization_class: OrganizationClassSchema.optional(),
+  visibility: VisibilitySchema,
+  gave_to_id: z.string(),
+  gave_to_name: z.string(),
+  amount: z.number(), // what it gave to `gave_to`, per that committee's Schedule A
+  depth: z.number().int().min(1),
+  source_url: z.string().url(),
+});
+
+export const TrailSubjectSchema = z.object({
+  id: z.string(), // candidate id or committee id
+  kind: z.enum(["candidate", "committee"]),
+  name: z.string(),
+  aliases: z.array(z.string()), // lower-cased match strings the client parser accepts for this subject
+  type_label: z.string().nullable(), // committee type label; null for candidates
+  principal_committee_id: z.string().nullable(), // candidates only
+});
+
+const answerBase = {
+  subject_id: z.string(),
+  subject_name: z.string(),
+  headline: z.string(), // one plain-English sentence, numbers included, adjacency language only
+  caveats: z.array(z.string()), // every assumption the reader needs, in order
+};
+
+export const CandidateSpenderAnswerSchema = z.object({
+  ...answerBase,
+  intent: z.literal("candidate_spender"),
+  candidate_id: z.string(),
+  support: FigureSchema,
+  oppose: FigureSchema,
+  total: FigureSchema,
+  spenders: z.array(TrailTargetingEdgeSchema), // largest first
+});
+
+export const AdSponsorTrailSchema = z.object({
+  sponsor_id: z.string(),
+  sponsor_name: z.string(),
+  sponsor_type_label: z.string(),
+  is_candidate_committee: z.boolean(), // the candidate's own principal committee
+  ads: TrailAdRunSchema,
+  targeting: TrailTargetingEdgeSchema.nullable(), // the sponsor's Schedule E about this candidate; null for the candidate's own committee
+  funded_by: z.array(TrailMoneyEdgeSchema), // depth-1 money edges into the sponsor, largest first
+  shares: TrailSharesSchema.nullable(),
+  campaign_receipts: z
+    .object({
+      receipts: FigureSchema,
+      from_individuals: FigureSchema,
+      from_committees: FigureSchema,
+    })
+    .nullable(), // candidate committees only (FEC candidate summary)
+});
+
+export const CandidateAdFundingAnswerSchema = z.object({
+  ...answerBase,
+  intent: z.literal("candidate_ad_funding"),
+  candidate_id: z.string(),
+  sponsors: z.array(AdSponsorTrailSchema), // candidate's own committee first, then by Schedule E dollars about the candidate
+  spenders_without_ads: z.number().int(), // Schedule E spenders about this candidate with no ads in the library
+});
+
+export const CommitteeFundingAnswerSchema = z.object({
+  ...answerBase,
+  intent: z.literal("committee_funding"),
+  committee_id: z.string(),
+  committee_type_label: z.string().nullable(),
+  committee_source_url: z.string().url(),
+  total_in: FigureSchema,
+  funders: z.array(TrailMoneyEdgeSchema), // depth 1, largest first
+  next_hop: z.array(TrailMoneyEdgeSchema), // depth 2: who funded the largest depth-1 committees
+  ultimate: z.array(TrailTerminusSchema), // largest named people / organizations the walk ended at
+  shares: TrailSharesSchema.nullable(), // null when no chain was walked (entity inflows only)
+  spent_on: z.array(TrailTargetingEdgeSchema), // this committee's Schedule E in the race; shown apart from the money
+});
+
+export const TrailAnswerSchema = z.discriminatedUnion("intent", [
+  CandidateSpenderAnswerSchema,
+  CandidateAdFundingAnswerSchema,
+  CommitteeFundingAnswerSchema,
+]);
+
+export const TrailsSchema = z.object({
+  race_id: z.string(),
+  generated_at: z.string(),
+  data_status: DataStatusSchema,
+  subjects: z.array(TrailSubjectSchema),
+  answers: z.array(TrailAnswerSchema),
+  examples: z.array(z.string()), // questions the parser is known to resolve, for the empty state
+  method: z.string(),
+});
+
+// ---------------------------------------------------------------------------
 // Types
 // ---------------------------------------------------------------------------
 
@@ -560,6 +740,21 @@ export type Stories = z.infer<typeof StoriesSchema>;
 export type DonorNode = z.infer<typeof DonorNodeSchema>;
 export type DonorEdge = z.infer<typeof DonorEdgeSchema>;
 export type DonorView = z.infer<typeof DonorViewSchema>;
+export type TrailIntent = z.infer<typeof TrailIntentSchema>;
+export type Figure = z.infer<typeof FigureSchema>;
+export type RangeFigure = z.infer<typeof RangeFigureSchema>;
+export type TrailMoneyEdge = z.infer<typeof TrailMoneyEdgeSchema>;
+export type TrailTargetingEdge = z.infer<typeof TrailTargetingEdgeSchema>;
+export type TrailAdRun = z.infer<typeof TrailAdRunSchema>;
+export type TrailShares = z.infer<typeof TrailSharesSchema>;
+export type TrailTerminus = z.infer<typeof TrailTerminusSchema>;
+export type TrailSubject = z.infer<typeof TrailSubjectSchema>;
+export type CandidateSpenderAnswer = z.infer<typeof CandidateSpenderAnswerSchema>;
+export type AdSponsorTrail = z.infer<typeof AdSponsorTrailSchema>;
+export type CandidateAdFundingAnswer = z.infer<typeof CandidateAdFundingAnswerSchema>;
+export type CommitteeFundingAnswer = z.infer<typeof CommitteeFundingAnswerSchema>;
+export type TrailAnswer = z.infer<typeof TrailAnswerSchema>;
+export type Trails = z.infer<typeof TrailsSchema>;
 
 /** Map from file pattern to schema, used by the validator. */
 export const FILE_SCHEMAS = {
@@ -571,4 +766,5 @@ export const FILE_SCHEMAS = {
   "dossiers/*.json": DossierSchema,
   "stories.json": StoriesSchema,
   "donors/*.json": DonorViewSchema,
+  "trails.json": TrailsSchema,
 } as const;

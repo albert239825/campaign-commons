@@ -18,6 +18,7 @@ import {
   LedgerSchema,
   RacesIndexSchema,
   StoriesSchema,
+  TrailsSchema,
 } from "@citizen-gotham/contracts";
 
 const DATA_OUT = process.env.GOTHAM_DATA_DIR ?? join(process.cwd(), "..", "data", "out");
@@ -54,6 +55,8 @@ export const getDossier = (raceId: string, candidateId: string) =>
   load(DossierSchema, raceId, "dossiers", `${candidateId}.json`);
 export const getStories = (raceId: string) => load(StoriesSchema, raceId, "stories.json");
 export const getDonor = (raceId: string, donorKey: string) => load(DonorViewSchema, raceId, "donors", `${donorKey}.json`);
+export const getTrails = (raceId: string) => load(TrailsSchema, raceId, "trails.json");
+export const hasTrails = (raceId: string) => existsSync(join(DATA_OUT, raceId, "trails.json"));
 
 /** Race ids that have a data directory (stub races have none). */
 export const listRaceIds = () => getRaces().races.filter((r) => existsSync(join(DATA_OUT, r.race_id))).map((r) => r.race_id);

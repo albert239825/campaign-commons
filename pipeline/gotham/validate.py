@@ -22,7 +22,7 @@ def _schema_name(rel: Path) -> str | None:
     if len(parts) == 1 and parts[0] == "races.json":
         return "races"
     if len(parts) == 2:
-        return {"ledger.json": "ledger", "ads.json": "ads", "stories.json": "stories"}.get(parts[1])
+        return {"ledger.json": "ledger", "ads.json": "ads", "stories.json": "stories", "trails.json": "trails"}.get(parts[1])
     if len(parts) == 3:
         return {"entities": "entity", "chains": "chain", "dossiers": "dossier", "donors": "donor"}.get(parts[1])
     return None
