@@ -9,9 +9,11 @@ What this does (reads data/fec/<race_id>/*.parquet written by ingest.py):
   - top_outside_spenders: every committee with Sched E in the race, sorted by total desc.
   - entities/<id>.json for every neighborhood committee. Totals come from the PAC/party summary (webk) when the
     committee has one, else the candidate summary (weball) for authorized committees, else itemized sums.
-    Itemized Sched A dollars from ENTITY_TP='ORG' are split by orgs.py: from_organizations = named businesses and
-    unions giving from their own treasuries (disclosed); from_undisclosed = LLCs, trusts, advocacy nonprofits and
-    unclassifiable organizations (dark). A summary row with no breakdown (Form 5 filers) falls back to itemized
+    Itemized Sched A dollars from non-individual entity types are split by orgs.py: from_organizations = named
+    businesses and unions giving from their own treasuries (disclosed); from_undisclosed = LLCs, trusts, advocacy
+    nonprofits and unclassifiable organizations (dark). Rows that name a registered committee (a PAC's transfer
+    the receiver filed on Schedule A as ORG/PAC) are committee money: dropped when the sender's own filing is
+    already in transfers, otherwise shown as a committee inflow (C-30). A summary row with no breakdown (Form 5 filers) falls back to itemized
     sums for the split. inflows/outflows aggregated per counterparty, top 25 by amount; transfers
     were deduped across Sched A/B in ingest (`transfer_mismatch` flag when both sides disagree by >1%).
   - traceability: null; traceability_score: null; has_chain: false — chains.py fills them in.
@@ -28,7 +30,7 @@ from pathlib import Path
 import pandas as pd
 
 from .config import FEC_WEB, KNOWN_CONDUITS, OUT, RACES, Candidate, Race
-from .orgs import classify_organization, organization_visibility
+from .orgs import classify_organization, committee_name_index, match_committee, organization_visibility
 from .util import (
     fec_candidate_url,
     fec_committee_url,
@@ -64,6 +66,8 @@ COMMITTEE_TYPE_LABELS = {
     "C": "Communication cost",
 }
 UNLIMITED_RECEIVER_TYPES = {"O", "U"}  # independent-expenditure-only committees may accept unlimited sums
+INDIVIDUAL_ENTITY_TYPES = {"IND", "CAN"}
+COMMITTEE_ENTITY_TYPES = {"PAC", "COM", "PTY", "CCM"}
 
 
 def _num(value: float | int | None) -> float:
@@ -91,9 +95,28 @@ class Tables:
         self._in_by_cmte = dict(tuple(self.transfers.groupby("to_id")))
         self._out_by_cmte = dict(tuple(self.transfers.groupby("from_id")))
         self._ies_by_cmte = dict(tuple(self.ies.groupby("committee_id")))
+        self._by_name = committee_name_index(zip(self.committees["CMTE_ID"], self.committees["CMTE_NM"], strict=True))
 
     def sched_a(self, cid: str) -> pd.DataFrame:
         return self._ind_by_cmte.get(cid, self.individuals.iloc[0:0])
+
+    def sched_a_split(self, cid: str) -> tuple[pd.DataFrame, pd.DataFrame, pd.DataFrame]:
+        """`cid`'s Schedule A as (individuals, organizations, committees). A committee row is a non-individual row
+        that names a registered committee, or is typed PAC/COM/PTY/CCM by the filer; it carries `FROM_ID` (the
+        master id when the name resolves, else a name id) and `covered` = the sender's own filing is already in
+        transfers, making the row the receiver-side copy of that money (C-30)."""
+        sched_a = self.sched_a(cid)
+        is_person = sched_a["ENTITY_TP"].isin(INDIVIDUAL_ENTITY_TYPES)
+        others = sched_a[~is_person]
+        matched = others["NAME"].map(lambda n: match_committee(str(n), self._by_name))
+        is_committee = (matched.notna() & (matched != cid)) | (
+            matched.isna() & others["ENTITY_TP"].isin(COMMITTEE_ENTITY_TYPES)
+        )
+        from_id = matched.where(matched.notna(), others["NAME"].map(lambda n: organization_id(str(n))))
+        senders = set(self.transfers_in(cid)["from_id"])
+        committees = others[is_committee].assign(FROM_ID=from_id[is_committee])
+        committees = committees.assign(covered=committees["FROM_ID"].isin(senders))
+        return sched_a[is_person], others[~is_committee], committees
 
     def transfers_in(self, cid: str) -> pd.DataFrame:
         return self._in_by_cmte.get(cid, self.transfers.iloc[0:0])
@@ -211,6 +234,8 @@ def _transfer(
     tt: str | None,
     limit: str | None,
     source_url: str,
+    count: int,
+    first_date: str | None,
 ) -> dict:
     return {
         "transfer_id": transfer_id,
@@ -220,6 +245,8 @@ def _transfer(
         "to_name": to_name,
         "amount": _num(amount),
         "date": date,
+        "first_date": first_date,
+        "count": count,
         "visibility": visibility,
         "transaction_type": tt,
         "limit": limit,
@@ -227,11 +254,17 @@ def _transfer(
     }
 
 
-def _top_counterparties(frame: pd.DataFrame, keys: list[str], amt: str, dt: str, tt: str, name: str) -> pd.DataFrame:
-    """Aggregate a flow frame per counterparty and keep the TOP_N_FLOWS largest by dollars."""
+def _top_counterparties(
+    frame: pd.DataFrame, keys: list[str], amt: str, dt: str, tt: str, name: str, first_dt: str = "", n: str = ""
+) -> pd.DataFrame:
+    """Aggregate a flow frame per counterparty and keep the TOP_N_FLOWS largest by dollars, with the transaction
+    count and date range (`first_dt`/`n` name pre-aggregated columns; by default each row is one transaction)."""
     if frame.empty:
-        return pd.DataFrame(columns=[*keys, "amount", "last_dt", "tt", "name"])
-    agg = frame.groupby(keys, dropna=False).agg(amount=(amt, "sum"), last_dt=(dt, "max"))
+        return pd.DataFrame(columns=[*keys, "amount", "first_dt", "last_dt", "n", "tt", "name"])
+    frame = frame.assign(_first=frame[first_dt] if first_dt else frame[dt], _n=frame[n] if n else 1)
+    agg = frame.groupby(keys, dropna=False).agg(
+        amount=(amt, "sum"), first_dt=("_first", "min"), last_dt=(dt, "max"), n=("_n", "sum")
+    )
     top = agg.sort_values("amount", ascending=False).head(TOP_N_FLOWS).reset_index()
     sub = frame.merge(top[keys], on=keys)
     if name in keys:
@@ -247,7 +280,7 @@ def entity_inflows(t: Tables, cid: str, name: str, cycle: int) -> list[dict]:
     """Top counterparties paying into `cid`: committees (transfers), individuals and organizations (Sched A)."""
     limit = "unlimited" if t.committee_type(cid) in UNLIMITED_RECEIVER_TYPES else None
     rows: list[dict] = []
-    cmtes = _top_counterparties(t.transfers_in(cid), ["from_id"], "amt", "dt", "tt", "from_name")
+    cmtes = _top_counterparties(t.transfers_in(cid), ["from_id"], "amt", "dt", "tt", "from_name", n="count")
     for r in cmtes.itertuples():
         from_id = str(r.from_id)
         rows.append(
@@ -263,11 +296,20 @@ def entity_inflows(t: Tables, cid: str, name: str, cycle: int) -> list[dict]:
                 _str(r.tt),
                 limit,
                 fec_pair_receipts_url(cid, from_id, cycle),
+                int(r.n),
+                _date(r.first_dt),
             )
         )
-    sched_a = t.sched_a(cid)
+    person_rows, org_rows, misfiled = t.sched_a_split(cid)
     people = _top_counterparties(
-        sched_a[sched_a["ENTITY_TP"] != "ORG"], ["NAME", "ZIP5"], "TRANSACTION_AMT", "LAST_DT", "TRANSACTION_TP", "NAME"
+        person_rows,
+        ["NAME", "ZIP5"],
+        "TRANSACTION_AMT",
+        "LAST_DT",
+        "TRANSACTION_TP",
+        "NAME",
+        "FIRST_DT",
+        "N_TRANSACTIONS",
     )
     for r in people.itertuples():
         donor_id = individual_id(str(r.NAME), _str(r.ZIP5))
@@ -284,10 +326,34 @@ def entity_inflows(t: Tables, cid: str, name: str, cycle: int) -> list[dict]:
                 _str(r.tt),
                 limit,
                 fec_contributor_receipts_url(cid, str(r.NAME), cycle),
+                int(r.n),
+                _date(r.first_dt),
+            )
+        )
+    uncovered = misfiled[~misfiled["covered"]]
+    for r in _top_counterparties(
+        uncovered, ["FROM_ID"], "TRANSACTION_AMT", "LAST_DT", "TRANSACTION_TP", "NAME", "FIRST_DT", "N_TRANSACTIONS"
+    ).itertuples():
+        from_id = str(r.FROM_ID)
+        rows.append(
+            _transfer(
+                f"{cid}-in-{from_id}",
+                from_id,
+                str(r.name),
+                cid,
+                name,
+                r.amount,
+                _date(r.last_dt),
+                "disclosed",
+                _str(r.tt),
+                limit,
+                fec_contributor_receipts_url(cid, str(r.name), cycle),
+                int(r.n),
+                _date(r.first_dt),
             )
         )
     orgs = _top_counterparties(
-        sched_a[sched_a["ENTITY_TP"] == "ORG"], ["NAME"], "TRANSACTION_AMT", "LAST_DT", "TRANSACTION_TP", "NAME"
+        org_rows, ["NAME"], "TRANSACTION_AMT", "LAST_DT", "TRANSACTION_TP", "NAME", "FIRST_DT", "N_TRANSACTIONS"
     )
     for r in orgs.itertuples():
         rows.append(
@@ -303,6 +369,8 @@ def entity_inflows(t: Tables, cid: str, name: str, cycle: int) -> list[dict]:
                 _str(r.tt),
                 limit,
                 fec_contributor_receipts_url(cid, str(r.NAME), cycle),
+                int(r.n),
+                _date(r.first_dt),
             )
         )
     return sorted(rows, key=lambda r: r["amount"], reverse=True)[:TOP_N_FLOWS]
@@ -311,7 +379,7 @@ def entity_inflows(t: Tables, cid: str, name: str, cycle: int) -> list[dict]:
 def entity_outflows(t: Tables, cid: str, name: str, cycle: int) -> list[dict]:
     disb_url = fec_disbursements_url(cid, cycle)
     rows = []
-    for r in _top_counterparties(t.transfers_out(cid), ["to_id"], "amt", "dt", "tt", "to_name").itertuples():
+    for r in _top_counterparties(t.transfers_out(cid), ["to_id"], "amt", "dt", "tt", "to_name", n="count").itertuples():
         to_id = str(r.to_id)
         limit = "unlimited" if t.committee_type(to_id) in UNLIMITED_RECEIVER_TYPES else None
         rows.append(
@@ -327,6 +395,8 @@ def entity_outflows(t: Tables, cid: str, name: str, cycle: int) -> list[dict]:
                 _str(r.tt),
                 limit,
                 disb_url,
+                int(r.n),
+                _date(r.first_dt),
             )
         )
     return rows
@@ -356,7 +426,9 @@ def entity_ies(t: Tables, cid: str, name: str, race: Race) -> list[dict]:
 def entity_totals(t: Tables, cid: str, ies: list[dict]) -> dict:
     """Summary-file totals when the FEC publishes them for this committee, else itemized sums."""
     sched_a = t.sched_a(cid)
-    orgs = sched_a.loc[sched_a["ENTITY_TP"] == "ORG"]
+    _, orgs, misfiled = t.sched_a_split(cid)
+    misfiled_covered = _num(misfiled.loc[misfiled["covered"], "TRANSACTION_AMT"].sum())
+    misfiled_uncovered = _num(misfiled.loc[~misfiled["covered"], "TRANSACTION_AMT"].sum())
     org_dark = orgs["NAME"].map(lambda n: organization_visibility(classify_organization(str(n))) == "dark").astype(bool)
     from_undisclosed = _num(orgs.loc[org_dark, "TRANSACTION_AMT"].sum())
     from_orgs = _num(orgs.loc[~org_dark, "TRANSACTION_AMT"].sum())
@@ -374,13 +446,13 @@ def entity_totals(t: Tables, cid: str, ies: list[dict]) -> dict:
         from_ind = _num(s["TTL_INDIV_CONTRIB"])
         from_cmte = _num(s["OTHER_POL_CMTE_CONTRIB"]) + _num(s["POL_PTY_CONTRIB"])
     else:
-        from_cmte = _num(t.transfers_in(cid)["amt"].sum())
-        from_ind = _num(sched_a["TRANSACTION_AMT"].sum())
+        from_cmte = _num(t.transfers_in(cid)["amt"].sum() + misfiled_uncovered)
+        from_ind = _num(sched_a["TRANSACTION_AMT"].sum() - misfiled_covered - misfiled_uncovered)
         receipts = round(from_ind + from_cmte, 2)
         disb = _num(t.transfers_out(cid)["amt"].sum())
     if from_ind == 0 and from_cmte == 0:
-        from_ind = _num(sched_a["TRANSACTION_AMT"].sum())
-        from_cmte = _num(t.transfers_in(cid)["amt"].sum())
+        from_ind = _num(sched_a["TRANSACTION_AMT"].sum() - misfiled_covered - misfiled_uncovered)
+        from_cmte = _num(t.transfers_in(cid)["amt"].sum() + misfiled_uncovered)
     return {
         "receipts": receipts,
         "disbursements": disb,

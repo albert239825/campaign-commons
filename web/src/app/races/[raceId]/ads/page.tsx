@@ -1,6 +1,6 @@
 // OWNER: Frontend B (ad gallery).
 import Link from "next/link";
-import { getAds, getRace, listChainIds, listRaceIds } from "@/lib/data";
+import { getAds, getRace, listChainIds, listEntityIds, listRaceIds } from "@/lib/data";
 import { money, range, routes } from "@/lib/format";
 import { Breadcrumbs, Card, DataStatusBanner, Stat } from "@/components/ui";
 import { AdGallery } from "@/components/ads/ad-gallery";
@@ -11,6 +11,7 @@ export default async function AdsPage({ params }: { params: Promise<{ raceId: st
   const { raceId } = await params;
   const race = getRace(raceId);
   const gallery = getAds(raceId);
+  const entityIds = listEntityIds(raceId);
   const chainIds = listChainIds(raceId);
   const candidateNames = Object.fromEntries(race.candidates.map((c) => [c.candidate_id, c.name]));
 
@@ -45,7 +46,7 @@ export default async function AdsPage({ params }: { params: Promise<{ raceId: st
         </div>
       </Card>
 
-      <AdGallery ads={gallery.ads} raceId={raceId} chainIds={chainIds} candidateNames={candidateNames} />
+      <AdGallery ads={gallery.ads} raceId={raceId} entityIds={entityIds} chainIds={chainIds} candidateNames={candidateNames} />
 
       {gallery.notes.length > 0 && (
         <ul className="list-disc space-y-0.5 pl-5 text-xs text-neutral-500">

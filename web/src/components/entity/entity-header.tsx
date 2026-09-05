@@ -14,6 +14,7 @@ const DESIGNATIONS: Record<string, string> = {
 
 const fecReceipts = (id: string) => `https://www.fec.gov/data/receipts/?committee_id=${id}&two_year_transaction_period=2024`;
 const fecDisbursements = (id: string) => `https://www.fec.gov/data/disbursements/?committee_id=${id}&two_year_transaction_period=2024`;
+const fecIndependentExpenditures = (id: string) => `https://www.fec.gov/data/independent-expenditures/?q_spender=${id}&cycle=2024&data_type=processed&is_notice=false`;
 
 function Field({ label, children }: { label: string; children: React.ReactNode }) {
   return (
@@ -78,8 +79,8 @@ export function EntityHeader({ raceId, e, chain }: { raceId: string; e: Entity; 
         <Field label="Disbursements">
           <Money amount={e.totals.disbursements} compact={false} /> <SourceLink href={fecDisbursements(e.entity_id)} label="FEC" />
         </Field>
-        <Field label="Independent expenditures">
-          <Money amount={e.totals.independent_expenditures} compact={false} />
+        <Field label="Independent expenditures (all races, 2024 cycle)">
+          <Money amount={e.totals.independent_expenditures} compact={false} /> <SourceLink href={fecIndependentExpenditures(e.entity_id)} label="FEC" />
         </Field>
       </dl>
 

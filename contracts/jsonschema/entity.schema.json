@@ -199,6 +199,15 @@
                   "null"
                 ]
               },
+              "first_date": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "count": {
+                "type": "integer"
+              },
               "visibility": {
                 "type": "string",
                 "enum": [
@@ -280,6 +289,15 @@
                   "string",
                   "null"
                 ]
+              },
+              "first_date": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "count": {
+                "type": "integer"
               },
               "visibility": {
                 "type": "string",

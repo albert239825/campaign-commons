@@ -5,6 +5,10 @@ fec.gov's candidate IE totals (`/schedules/schedule_e/by_candidate/`): periodic-
 each amended line replaced by its latest version. 24/48-hour notices (Form 24) are excluded at the source instead of
 being reconciled afterwards; every notice is re-reported on the next periodic report, so this loses nothing.
 
+`most_recent` only collapses amendments of the same filing. A transaction the filer carries into a later periodic
+report under the same `tran_id` (same payee, amount and dissemination date; often a revised expenditure date or
+purpose) comes back once per `file_num`, so `dedupe_reported` keeps the latest filing per transaction (C-29).
+
 Fetching all rows for two candidates is ~25 requests; the DEMO_KEY tier (40/hour) still works for a single race.
 """
 
@@ -40,6 +44,15 @@ IE_COLUMNS = [
 
 PER_PAGE = 100
 RETRIES = 5
+TRANSACTION_KEY = [
+    "committee_id",
+    "candidate_id",
+    "support_oppose_indicator",
+    "tran_id",
+    "payee_name",
+    "expenditure_amount",
+    "dissemination_date",
+]
 
 
 def schedule_e_source_url(candidate_ids: set[str], cycle: int) -> str:
@@ -113,7 +126,17 @@ def schedule_e_frame(rows: list[dict]) -> pd.DataFrame:
     frame["committee_name"] = frame["committee_name"].str.strip()
     frame["pdf_url"] = frame["image_num"].map(lambda i: fec_filing_url(i) if i else None)
     frame = frame[frame["expenditure_amount"].fillna(0) > 0]
-    return frame.reset_index(drop=True)[IE_COLUMNS]
+    return dedupe_reported(frame).reset_index(drop=True)[IE_COLUMNS]
+
+
+def dedupe_reported(frame: pd.DataFrame) -> pd.DataFrame:
+    """One row per FEC-identified transaction: the copy from the highest `file_num` wins. Rows without a `tran_id`
+    are never merged, and `tran_id` alone is not a key (filers reuse it across different payees/amounts)."""
+    keyed = frame["tran_id"].notna()
+    ordered = frame[keyed].assign(_file=pd.to_numeric(frame.loc[keyed, "file_num"], errors="coerce"))
+    ordered = ordered.sort_values("_file", ascending=False, na_position="last")
+    kept = ordered.drop_duplicates(TRANSACTION_KEY, keep="first").drop(columns="_file")
+    return pd.concat([kept, frame[~keyed]]).sort_index()
 
 
 def load_schedule_e(cycle: int, candidate_ids: set[str]) -> pd.DataFrame:

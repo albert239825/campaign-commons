@@ -2,7 +2,7 @@
   "root_entity_id": "C00849489",
   "root_name": "KEYSTONE RENEWAL PAC",
   "race_id": "pa-sen-2024",
-  "generated_at": "2026-09-05T13:41:28+00:00",
+  "generated_at": "2026-09-05T15:46:45+00:00",
   "data_status": "real",
   "nodes": [
     {
@@ -241,12 +241,12 @@
       "kind": "organization",
       "committee_type": null,
       "depth": 1,
-      "visibility": "dark",
+      "visibility": "disclosed",
       "amount_in": 1000000.0,
       "is_terminus": true,
-      "terminus_reason": "dark",
+      "terminus_reason": "organization",
       "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00849489&two_year_transaction_period=2024&contributor_name=AMERICAN+ADVANCEMENT+INC.",
-      "organization_class": "nonprofit"
+      "organization_class": "business"
     },
     {
       "id": "C00884262",
@@ -1314,7 +1314,7 @@
       "from": "org:AMERICAN_ADVANCEMENT_INC.",
       "to": "C00849489",
       "amount": 1000000.0,
-      "visibility": "dark",
+      "visibility": "disclosed",
       "depth": 1,
       "transaction_types": [
         "10"
@@ -2325,16 +2325,16 @@
   ],
   "summary": {
     "total_in": 58905691.0,
-    "disclosed_share": 0.8488,
+    "disclosed_share": 0.8659,
     "inferable_share": 0.0,
     "unwalked_share": 0.0,
-    "dark_share": 0.1512,
+    "dark_share": 0.1341,
     "max_depth": 3,
     "terminus_counts": {
       "individual": 42,
-      "dark": 15,
-      "pruned": 7,
-      "organization": 9
+      "dark": 14,
+      "organization": 10,
+      "pruned": 7
     }
   },
   "flags": [],

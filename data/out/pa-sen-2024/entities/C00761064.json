@@ -28,19 +28,6 @@
   },
   "inflows": [
     {
-      "transfer_id": "C00761064-in-ind:MOVEMENT_VOTER_PAC|01061",
-      "from_entity_id": "ind:MOVEMENT_VOTER_PAC|01061",
-      "from_name": "MOVEMENT VOTER PAC",
-      "to_entity_id": "C00761064",
-      "to_name": "API PA VOTES",
-      "amount": 818000.0,
-      "date": "2024-11-20",
-      "visibility": "disclosed",
-      "transaction_type": "10",
-      "limit": "unlimited",
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00761064&two_year_transaction_period=2024&contributor_name=MOVEMENT+VOTER+PAC"
-    },
-    {
       "transfer_id": "C00761064-in-org:ASIAN_PACIFIC_ISLANDER_POLITICAL_ALLIANCE",
       "from_entity_id": "org:ASIAN_PACIFIC_ISLANDER_POLITICAL_ALLIANCE",
       "from_name": "ASIAN PACIFIC ISLANDER POLITICAL ALLIANCE",
@@ -48,6 +35,8 @@
       "to_name": "API PA VOTES",
       "amount": 529500.0,
       "date": "2024-01-26",
+      "first_date": "2023-01-17",
+      "count": 7,
       "visibility": "dark",
       "transaction_type": "10",
       "limit": "unlimited",
@@ -61,6 +50,8 @@
       "to_name": "API PA VOTES",
       "amount": 290200.0,
       "date": "2024-06-06",
+      "first_date": "2023-10-02",
+      "count": 7,
       "visibility": "disclosed",
       "transaction_type": "18K",
       "limit": "unlimited",
@@ -74,6 +65,8 @@
       "to_name": "API PA VOTES",
       "amount": 250000.0,
       "date": "2024-10-08",
+      "first_date": "2024-10-08",
+      "count": 1,
       "visibility": "disclosed",
       "transaction_type": "10",
       "limit": "unlimited",
@@ -87,6 +80,8 @@
       "to_name": "API PA VOTES",
       "amount": 250000.0,
       "date": "2024-10-08",
+      "first_date": "2024-10-08",
+      "count": 1,
       "visibility": "disclosed",
       "transaction_type": "10",
       "limit": "unlimited",
@@ -100,6 +95,8 @@
       "to_name": "API PA VOTES",
       "amount": 148500.0,
       "date": "2024-11-04",
+      "first_date": "2024-05-22",
+      "count": 5,
       "visibility": "disclosed",
       "transaction_type": "24K",
       "limit": "unlimited",
@@ -113,6 +110,8 @@
       "to_name": "API PA VOTES",
       "amount": 125000.0,
       "date": "2024-09-27",
+      "first_date": "2024-09-27",
+      "count": 1,
       "visibility": "disclosed",
       "transaction_type": "10",
       "limit": "unlimited",
@@ -126,19 +125,23 @@
       "to_name": "API PA VOTES",
       "amount": 100000.0,
       "date": "2024-10-09",
+      "first_date": "2024-10-09",
+      "count": 1,
       "visibility": "dark",
       "transaction_type": "10",
       "limit": "unlimited",
       "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00761064&two_year_transaction_period=2024&contributor_name=SIXTEEN+THIRTY+FUND"
     },
     {
-      "transfer_id": "C00761064-in-ind:WORKING_FAMILIES_PARTY_NATIONAL_PAC|11201",
-      "from_entity_id": "ind:WORKING_FAMILIES_PARTY_NATIONAL_PAC|11201",
+      "transfer_id": "C00761064-in-org:WORKING_FAMILIES_PARTY_NATIONAL_PAC",
+      "from_entity_id": "org:WORKING_FAMILIES_PARTY_NATIONAL_PAC",
       "from_name": "WORKING FAMILIES PARTY NATIONAL PAC",
       "to_entity_id": "C00761064",
       "to_name": "API PA VOTES",
       "amount": 60000.0,
       "date": "2023-05-01",
+      "first_date": "2023-05-01",
+      "count": 1,
       "visibility": "disclosed",
       "transaction_type": "10",
       "limit": "unlimited",
@@ -152,6 +155,8 @@
       "to_name": "API PA VOTES",
       "amount": 57500.0,
       "date": "2024-12-30",
+      "first_date": "2023-04-20",
+      "count": 26,
       "visibility": "disclosed",
       "transaction_type": "10",
       "limit": "unlimited",
@@ -165,6 +170,8 @@
       "to_name": "API PA VOTES",
       "amount": 55000.0,
       "date": "2024-10-09",
+      "first_date": "2023-10-30",
+      "count": 2,
       "visibility": "dark",
       "transaction_type": "10",
       "limit": "unlimited",
@@ -178,36 +185,27 @@
       "to_name": "API PA VOTES",
       "amount": 50000.0,
       "date": "2024-10-08",
+      "first_date": "2024-10-08",
+      "count": 1,
       "visibility": "disclosed",
       "transaction_type": "24K",
       "limit": "unlimited",
       "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00761064&two_year_transaction_period=2024&contributor_name=C00486845"
     },
     {
-      "transfer_id": "C00761064-in-ind:WAY_TO_LEAD_PAC|85004",
-      "from_entity_id": "ind:WAY_TO_LEAD_PAC|85004",
+      "transfer_id": "C00761064-in-C00686832",
+      "from_entity_id": "C00686832",
       "from_name": "WAY TO LEAD PAC",
       "to_entity_id": "C00761064",
       "to_name": "API PA VOTES",
       "amount": 50000.0,
       "date": "2023-03-14",
+      "first_date": "2023-03-14",
+      "count": 1,
       "visibility": "disclosed",
       "transaction_type": "10",
       "limit": "unlimited",
       "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00761064&two_year_transaction_period=2024&contributor_name=WAY+TO+LEAD+PAC"
-    },
-    {
-      "transfer_id": "C00761064-in-ind:LCV_VICTORY_FUND|20005",
-      "from_entity_id": "ind:LCV_VICTORY_FUND|20005",
-      "from_name": "LCV VICTORY FUND",
-      "to_entity_id": "C00761064",
-      "to_name": "API PA VOTES",
-      "amount": 50000.0,
-      "date": "2024-10-08",
-      "visibility": "disclosed",
-      "transaction_type": "10",
-      "limit": "unlimited",
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00761064&two_year_transaction_period=2024&contributor_name=LCV+VICTORY+FUND"
     },
     {
       "transfer_id": "C00761064-in-org:PRO-DEMOCRACY_CAMPAIGN",
@@ -217,19 +215,23 @@
       "to_name": "API PA VOTES",
       "amount": 50000.0,
       "date": "2024-10-08",
+      "first_date": "2024-10-08",
+      "count": 1,
       "visibility": "dark",
       "transaction_type": "10",
       "limit": "unlimited",
       "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00761064&two_year_transaction_period=2024&contributor_name=PRO-DEMOCRACY+CAMPAIGN"
     },
     {
-      "transfer_id": "C00761064-in-ind:CAPA21|95841",
-      "from_entity_id": "ind:CAPA21|95841",
+      "transfer_id": "C00761064-in-org:CAPA21",
+      "from_entity_id": "org:CAPA21",
       "from_name": "CAPA21",
       "to_entity_id": "C00761064",
       "to_name": "API PA VOTES",
       "amount": 48500.0,
       "date": "2024-11-04",
+      "first_date": "2024-09-17",
+      "count": 4,
       "visibility": "disclosed",
       "transaction_type": "10",
       "limit": "unlimited",
@@ -243,19 +245,23 @@
       "to_name": "API PA VOTES",
       "amount": 36694.0,
       "date": "2024-10-31",
+      "first_date": "2024-09-30",
+      "count": 11,
       "visibility": "disclosed",
       "transaction_type": "24K",
       "limit": "unlimited",
       "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00761064&two_year_transaction_period=2024&contributor_name=C00720029"
     },
     {
-      "transfer_id": "C00761064-in-ind:FF_PAC|20003",
-      "from_entity_id": "ind:FF_PAC|20003",
+      "transfer_id": "C00761064-in-C00669259",
+      "from_entity_id": "C00669259",
       "from_name": "FF PAC",
       "to_entity_id": "C00761064",
       "to_name": "API PA VOTES",
       "amount": 30000.0,
       "date": "2024-10-04",
+      "first_date": "2024-10-04",
+      "count": 1,
       "visibility": "disclosed",
       "transaction_type": "10",
       "limit": "unlimited",
@@ -269,6 +275,8 @@
       "to_name": "API PA VOTES",
       "amount": 25000.0,
       "date": "2023-05-04",
+      "first_date": "2023-05-04",
+      "count": 1,
       "visibility": "dark",
       "transaction_type": "10",
       "limit": "unlimited",
@@ -282,6 +290,8 @@
       "to_name": "API PA VOTES",
       "amount": 20000.0,
       "date": "2023-05-01",
+      "first_date": "2023-05-01",
+      "count": 1,
       "visibility": "disclosed",
       "transaction_type": "10",
       "limit": "unlimited",
@@ -295,19 +305,23 @@
       "to_name": "API PA VOTES",
       "amount": 15000.0,
       "date": "2023-05-10",
+      "first_date": "2023-05-10",
+      "count": 1,
       "visibility": "disclosed",
       "transaction_type": "24K",
       "limit": "unlimited",
       "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00761064&two_year_transaction_period=2024&contributor_name=C00754051"
     },
     {
-      "transfer_id": "C00761064-in-ind:WORKERS_VOTE_PAC|98104",
-      "from_entity_id": "ind:WORKERS_VOTE_PAC|98104",
+      "transfer_id": "C00761064-in-org:WORKERS_VOTE_PAC",
+      "from_entity_id": "org:WORKERS_VOTE_PAC",
       "from_name": "WORKERS VOTE PAC",
       "to_entity_id": "C00761064",
       "to_name": "API PA VOTES",
       "amount": 15000.0,
       "date": "2023-05-10",
+      "first_date": "2023-05-10",
+      "count": 1,
       "visibility": "disclosed",
       "transaction_type": "10",
       "limit": "unlimited",
@@ -321,6 +335,8 @@
       "to_name": "API PA VOTES",
       "amount": 15000.0,
       "date": "2023-05-04",
+      "first_date": "2023-05-04",
+      "count": 1,
       "visibility": "dark",
       "transaction_type": "10",
       "limit": "unlimited",
@@ -334,6 +350,8 @@
       "to_name": "API PA VOTES",
       "amount": 10000.0,
       "date": "2023-10-20",
+      "first_date": "2023-10-20",
+      "count": 1,
       "visibility": "disclosed",
       "transaction_type": "18K",
       "limit": "unlimited",
@@ -347,10 +365,42 @@
       "to_name": "API PA VOTES",
       "amount": 10000.0,
       "date": "2023-05-11",
+      "first_date": "2023-04-14",
+      "count": 2,
       "visibility": "disclosed",
       "transaction_type": "10",
       "limit": "unlimited",
       "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00761064&two_year_transaction_period=2024&contributor_name=WILES%2C+BRENDAN"
+    },
+    {
+      "transfer_id": "C00761064-in-org:MOSBERGER-TANG_TRUST",
+      "from_entity_id": "org:MOSBERGER-TANG_TRUST",
+      "from_name": "MOSBERGER-TANG TRUST",
+      "to_entity_id": "C00761064",
+      "to_name": "API PA VOTES",
+      "amount": 10000.0,
+      "date": "2023-05-22",
+      "first_date": "2023-05-22",
+      "count": 1,
+      "visibility": "dark",
+      "transaction_type": "10",
+      "limit": "unlimited",
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00761064&two_year_transaction_period=2024&contributor_name=MOSBERGER-TANG+TRUST"
+    },
+    {
+      "transfer_id": "C00761064-in-ind:WITTY_JOANNE|10507",
+      "from_entity_id": "ind:WITTY_JOANNE|10507",
+      "from_name": "WITTY, JOANNE",
+      "to_entity_id": "C00761064",
+      "to_name": "API PA VOTES",
+      "amount": 5000.0,
+      "date": "2023-05-01",
+      "first_date": "2023-05-01",
+      "count": 1,
+      "visibility": "disclosed",
+      "transaction_type": "10",
+      "limit": "unlimited",
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00761064&two_year_transaction_period=2024&contributor_name=WITTY%2C+JOANNE"
     }
   ],
   "outflows": [
@@ -362,6 +412,8 @@
       "to_name": "MAKE THE ROAD ACTION INDEPENDENT EXPENDITURE COMMITTEE",
       "amount": 20500.0,
       "date": "2023-05-12",
+      "first_date": "2023-05-05",
+      "count": 2,
       "visibility": "disclosed",
       "transaction_type": "24K",
       "limit": "unlimited",
@@ -375,6 +427,8 @@
       "to_name": "AGENDA PAC",
       "amount": 10000.0,
       "date": "2024-11-01",
+      "first_date": "2024-11-01",
+      "count": 1,
       "visibility": "disclosed",
       "transaction_type": "24K",
       "limit": null,
@@ -388,6 +442,8 @@
       "to_name": "WORKING FAMILIES PARTY PAC",
       "amount": 5000.0,
       "date": "2023-05-15",
+      "first_date": "2023-05-15",
+      "count": 1,
       "visibility": "disclosed",
       "transaction_type": "24K",
       "limit": null,
@@ -435,19 +491,6 @@
       "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202607289894482405"
     },
     {
-      "ie_id": "C00761064-ie-1867738-500085183",
-      "spender_entity_id": "C00761064",
-      "spender_name": "API PA VOTES",
-      "candidate_id": "S6PA00217",
-      "candidate_name": "Bob Casey",
-      "support_oppose": "S",
-      "amount": 2410.14,
-      "date": "2024-10-01",
-      "purpose": "PHONE CALLS (ESTIMATE)",
-      "payee": "SCALE TO WIN",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202501299748072218"
-    },
-    {
       "ie_id": "C00761064-ie-2002533-500085183",
       "spender_entity_id": "C00761064",
       "spender_name": "API PA VOTES",
@@ -472,19 +515,6 @@
       "purpose": "PHONE CALLS",
       "payee": "SCALE TO WIN",
       "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202607289894482478"
-    },
-    {
-      "ie_id": "C00761064-ie-1860897-500085187",
-      "spender_entity_id": "C00761064",
-      "spender_name": "API PA VOTES",
-      "candidate_id": "S6PA00217",
-      "candidate_name": "Bob Casey",
-      "support_oppose": "S",
-      "amount": 1307.51,
-      "date": "2024-09-28",
-      "purpose": "PRINTING",
-      "payee": "NORTHERN LIBERTY PRESS",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202412309740032171"
     },
     {
       "ie_id": "C00761064-ie-2002532-500085187",
@@ -576,19 +606,6 @@
       "purpose": "PHONE CALLS",
       "payee": "SCALE TO WIN",
       "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202607289894482496"
-    },
-    {
-      "ie_id": "C00761064-ie-1867738-500085835",
-      "spender_entity_id": "C00761064",
-      "spender_name": "API PA VOTES",
-      "candidate_id": "S6PA00217",
-      "candidate_name": "Bob Casey",
-      "support_oppose": "S",
-      "amount": 506.21,
-      "date": "2024-10-14",
-      "purpose": "PHONE CALLS (ESTIMATE)",
-      "payee": "SCALE TO WIN",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202501299748072224"
     },
     {
       "ie_id": "C00761064-ie-2002533-500086013",
@@ -968,19 +985,6 @@
       "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202607289894482448"
     },
     {
-      "ie_id": "C00761064-ie-1860897-500085128",
-      "spender_entity_id": "C00761064",
-      "spender_name": "API PA VOTES",
-      "candidate_id": "S6PA00217",
-      "candidate_name": "Bob Casey",
-      "support_oppose": "S",
-      "amount": 303.2,
-      "date": "2024-09-11",
-      "purpose": "CANVASSING (ESTIMATE)",
-      "payee": "BASE BUILDER",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202412309740032173"
-    },
-    {
       "ie_id": "C00761064-ie-1867738-500085313",
       "spender_entity_id": "C00761064",
       "spender_name": "API PA VOTES",
@@ -1018,19 +1022,6 @@
       "purpose": "PHONEBANKING (ESTIMATE)",
       "payee": "BASE BUILDER",
       "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202501299748072233"
-    },
-    {
-      "ie_id": "C00761064-ie-1860897-500085126",
-      "spender_entity_id": "C00761064",
-      "spender_name": "API PA VOTES",
-      "candidate_id": "S6PA00217",
-      "candidate_name": "Bob Casey",
-      "support_oppose": "S",
-      "amount": 297.2,
-      "date": "2024-09-09",
-      "purpose": "CANVASSING (ESTIMATE)",
-      "payee": "BASE BUILDER",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202412309740032159"
     },
     {
       "ie_id": "C00761064-ie-2002532-500085126",
@@ -1137,32 +1128,6 @@
       "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202607289894482411"
     },
     {
-      "ie_id": "C00761064-ie-1860897-500085151",
-      "spender_entity_id": "C00761064",
-      "spender_name": "API PA VOTES",
-      "candidate_id": "S6PA00217",
-      "candidate_name": "Bob Casey",
-      "support_oppose": "S",
-      "amount": 280.0,
-      "date": "2024-09-12",
-      "purpose": "PHONEBANKING (ESTIMATE)",
-      "payee": "BASE BUILDER",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202412309740032127"
-    },
-    {
-      "ie_id": "C00761064-ie-1860897-500085150",
-      "spender_entity_id": "C00761064",
-      "spender_name": "API PA VOTES",
-      "candidate_id": "S6PA00217",
-      "candidate_name": "Bob Casey",
-      "support_oppose": "S",
-      "amount": 279.0,
-      "date": "2024-09-11",
-      "purpose": "PHONEBANKING (ESTIMATE)",
-      "payee": "BASE BUILDER",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202412309740032121"
-    },
-    {
       "ie_id": "C00761064-ie-2002532-500085150",
       "spender_entity_id": "C00761064",
       "spender_name": "API PA VOTES",
@@ -1187,19 +1152,6 @@
       "purpose": "PHONEBANKING (ESTIMATE)",
       "payee": "BASE BUILDER",
       "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202412309740032149"
-    },
-    {
-      "ie_id": "C00761064-ie-1860897-500085148",
-      "spender_entity_id": "C00761064",
-      "spender_name": "API PA VOTES",
-      "candidate_id": "S6PA00217",
-      "candidate_name": "Bob Casey",
-      "support_oppose": "S",
-      "amount": 273.4,
-      "date": "2024-09-09",
-      "purpose": "PHONEBANKING (ESTIMATE)",
-      "payee": "BASE BUILDER",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202412309740032174"
     },
     {
       "ie_id": "C00761064-ie-2002532-500085148",
@@ -1228,19 +1180,6 @@
       "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202607289894482442"
     },
     {
-      "ie_id": "C00761064-ie-1860897-500085127",
-      "spender_entity_id": "C00761064",
-      "spender_name": "API PA VOTES",
-      "candidate_id": "S6PA00217",
-      "candidate_name": "Bob Casey",
-      "support_oppose": "S",
-      "amount": 269.2,
-      "date": "2024-09-10",
-      "purpose": "CANVASSING (ESTIMATE)",
-      "payee": "BASE BUILDER",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202412309740032166"
-    },
-    {
       "ie_id": "C00761064-ie-1867738-500085164",
       "spender_entity_id": "C00761064",
       "spender_name": "API PA VOTES",
@@ -1267,19 +1206,6 @@
       "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202607289894482428"
     },
     {
-      "ie_id": "C00761064-ie-1860897-500085174",
-      "spender_entity_id": "C00761064",
-      "spender_name": "API PA VOTES",
-      "candidate_id": "S6PA00217",
-      "candidate_name": "Bob Casey",
-      "support_oppose": "S",
-      "amount": 266.17,
-      "date": "2024-09-18",
-      "purpose": "PHONE CALLS (ESTIMATE)",
-      "payee": "SCALE TO WIN",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202412309740032150"
-    },
-    {
       "ie_id": "C00761064-ie-1860897-500085141",
       "spender_entity_id": "C00761064",
       "spender_name": "API PA VOTES",
@@ -1304,19 +1230,6 @@
       "purpose": "CANVASSING (ESTIMATE)",
       "payee": "BASE BUILDER",
       "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202412309740032180"
-    },
-    {
-      "ie_id": "C00761064-ie-1860897-500084461",
-      "spender_entity_id": "C00761064",
-      "spender_name": "API PA VOTES",
-      "candidate_id": "S6PA00217",
-      "candidate_name": "Bob Casey",
-      "support_oppose": "S",
-      "amount": 258.4,
-      "date": "2024-09-04",
-      "purpose": "PHONEBANKING (ESTIMATE)",
-      "payee": "BASE BUILDER",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202412309740032128"
     },
     {
       "ie_id": "C00761064-ie-2002532-500084461",
@@ -1397,19 +1310,6 @@
       "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202607289894482455"
     },
     {
-      "ie_id": "C00761064-ie-1860897-500084459",
-      "spender_entity_id": "C00761064",
-      "spender_name": "API PA VOTES",
-      "candidate_id": "S6PA00217",
-      "candidate_name": "Bob Casey",
-      "support_oppose": "S",
-      "amount": 252.6,
-      "date": "2024-09-05",
-      "purpose": "PHONE CALLS (ESTIMATE)",
-      "payee": "SCALE TO WIN",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202412309740032182"
-    },
-    {
       "ie_id": "C00761064-ie-1860897-500085160",
       "spender_entity_id": "C00761064",
       "spender_name": "API PA VOTES",
@@ -1447,19 +1347,6 @@
       "purpose": "PHONEBANKING (ESTIMATE)",
       "payee": "BASE BUILDER",
       "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202501299748072225"
-    },
-    {
-      "ie_id": "C00761064-ie-1860897-500084458",
-      "spender_entity_id": "C00761064",
-      "spender_name": "API PA VOTES",
-      "candidate_id": "S6PA00217",
-      "candidate_name": "Bob Casey",
-      "support_oppose": "S",
-      "amount": 247.2,
-      "date": "2024-09-04",
-      "purpose": "PHONE CALLS (ESTIMATE)",
-      "payee": "SCALE TO WIN",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202412309740032175"
     },
     {
       "ie_id": "C00761064-ie-2002532-500084458",
@@ -1501,19 +1388,6 @@
       "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202607289894482422"
     },
     {
-      "ie_id": "C00761064-ie-1860897-500085173",
-      "spender_entity_id": "C00761064",
-      "spender_name": "API PA VOTES",
-      "candidate_id": "S6PA00217",
-      "candidate_name": "Bob Casey",
-      "support_oppose": "S",
-      "amount": 239.56,
-      "date": "2024-09-17",
-      "purpose": "PHONE CALLS (ESTIMATE)",
-      "payee": "SCALE TO WIN",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202412309740032144"
-    },
-    {
       "ie_id": "C00761064-ie-2002533-500085939",
       "spender_entity_id": "C00761064",
       "spender_name": "API PA VOTES",
@@ -1538,19 +1412,6 @@
       "purpose": "PHONE CALLS",
       "payee": "SCALE TO WIN",
       "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202607289894482490"
-    },
-    {
-      "ie_id": "C00761064-ie-1860897-500085175",
-      "spender_entity_id": "C00761064",
-      "spender_name": "API PA VOTES",
-      "candidate_id": "S6PA00217",
-      "candidate_name": "Bob Casey",
-      "support_oppose": "S",
-      "amount": 238.2,
-      "date": "2024-09-19",
-      "purpose": "PHONE CALLS (ESTIMATE)",
-      "payee": "SCALE TO WIN",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202412309740032155"
     },
     {
       "ie_id": "C00761064-ie-2002532-500085175",
@@ -1579,19 +1440,6 @@
       "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202607289894482416"
     },
     {
-      "ie_id": "C00761064-ie-1860897-500084462",
-      "spender_entity_id": "C00761064",
-      "spender_name": "API PA VOTES",
-      "candidate_id": "S6PA00217",
-      "candidate_name": "Bob Casey",
-      "support_oppose": "S",
-      "amount": 237.2,
-      "date": "2024-09-05",
-      "purpose": "PHONEBANKING (ESTIMATE)",
-      "payee": "BASE BUILDER",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202412309740032136"
-    },
-    {
       "ie_id": "C00761064-ie-1860897-500085142",
       "spender_entity_id": "C00761064",
       "spender_name": "API PA VOTES",
@@ -1603,19 +1451,6 @@
       "purpose": "CANVASSING (ESTIMATE)",
       "payee": "BASE BUILDER",
       "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202412309740032134"
-    },
-    {
-      "ie_id": "C00761064-ie-1860897-500084460",
-      "spender_entity_id": "C00761064",
-      "spender_name": "API PA VOTES",
-      "candidate_id": "S6PA00217",
-      "candidate_name": "Bob Casey",
-      "support_oppose": "S",
-      "amount": 235.6,
-      "date": "2024-09-03",
-      "purpose": "PHONEBANKING (ESTIMATE)",
-      "payee": "BASE BUILDER",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202412309740032122"
     },
     {
       "ie_id": "C00761064-ie-2002532-500084460",
@@ -1696,19 +1531,6 @@
       "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202607289894482455"
     },
     {
-      "ie_id": "C00761064-ie-1860897-500085169",
-      "spender_entity_id": "C00761064",
-      "spender_name": "API PA VOTES",
-      "candidate_id": "S6PA00217",
-      "candidate_name": "Bob Casey",
-      "support_oppose": "S",
-      "amount": 221.37,
-      "date": "2024-09-11",
-      "purpose": "PHONE CALLS (ESTIMATE)",
-      "payee": "SCALE TO WIN",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202412309740032182"
-    },
-    {
       "ie_id": "C00761064-ie-2002532-500085129",
       "spender_entity_id": "C00761064",
       "spender_name": "API PA VOTES",
@@ -1720,19 +1542,6 @@
       "purpose": "CANVASSING",
       "payee": "BASE BUILDER",
       "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202607289894482452"
-    },
-    {
-      "ie_id": "C00761064-ie-1860897-500085129",
-      "spender_entity_id": "C00761064",
-      "spender_name": "API PA VOTES",
-      "candidate_id": "S6PA00217",
-      "candidate_name": "Bob Casey",
-      "support_oppose": "S",
-      "amount": 217.6,
-      "date": "2024-09-12",
-      "purpose": "CANVASSING (ESTIMATE)",
-      "payee": "BASE BUILDER",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202412309740032179"
     },
     {
       "ie_id": "C00761064-ie-1860897-500085161",
@@ -1761,32 +1570,6 @@
       "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202607289894482456"
     },
     {
-      "ie_id": "C00761064-ie-1860897-500085179",
-      "spender_entity_id": "C00761064",
-      "spender_name": "API PA VOTES",
-      "candidate_id": "S6PA00217",
-      "candidate_name": "Bob Casey",
-      "support_oppose": "S",
-      "amount": 213.56,
-      "date": "2024-09-25",
-      "purpose": "PHONE CALLS (ESTIMATE)",
-      "payee": "SCALE TO WIN",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202412309740032183"
-    },
-    {
-      "ie_id": "C00761064-ie-1860897-500084457",
-      "spender_entity_id": "C00761064",
-      "spender_name": "API PA VOTES",
-      "candidate_id": "S6PA00217",
-      "candidate_name": "Bob Casey",
-      "support_oppose": "S",
-      "amount": 212.2,
-      "date": "2024-09-03",
-      "purpose": "PHONE CALLS (ESTIMATE)",
-      "payee": "SCALE TO WIN",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202412309740032168"
-    },
-    {
       "ie_id": "C00761064-ie-2002532-500084457",
       "spender_entity_id": "C00761064",
       "spender_name": "API PA VOTES",
@@ -1811,19 +1594,6 @@
       "purpose": "PHONEBANKING (ESTIMATE)",
       "payee": "BASE BUILDER",
       "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202412309740032181"
-    },
-    {
-      "ie_id": "C00761064-ie-1860897-500085170",
-      "spender_entity_id": "C00761064",
-      "spender_name": "API PA VOTES",
-      "candidate_id": "S6PA00217",
-      "candidate_name": "Bob Casey",
-      "support_oppose": "S",
-      "amount": 208.07,
-      "date": "2024-09-12",
-      "purpose": "PHONE CALLS (ESTIMATE)",
-      "payee": "SCALE TO WIN",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202412309740032123"
     },
     {
       "ie_id": "C00761064-ie-2002532-500085170",
@@ -1865,19 +1635,6 @@
       "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202607289894482450"
     },
     {
-      "ie_id": "C00761064-ie-1860897-500085168",
-      "spender_entity_id": "C00761064",
-      "spender_name": "API PA VOTES",
-      "candidate_id": "S6PA00217",
-      "candidate_name": "Bob Casey",
-      "support_oppose": "S",
-      "amount": 203.17,
-      "date": "2024-09-09",
-      "purpose": "PHONE CALLS (ESTIMATE)",
-      "payee": "SCALE TO WIN",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202412309740032176"
-    },
-    {
       "ie_id": "C00761064-ie-1860897-500085163",
       "spender_entity_id": "C00761064",
       "spender_name": "API PA VOTES",
@@ -1891,19 +1648,6 @@
       "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202412309740032143"
     },
     {
-      "ie_id": "C00761064-ie-1860897-500085167",
-      "spender_entity_id": "C00761064",
-      "spender_name": "API PA VOTES",
-      "candidate_id": "S6PA00217",
-      "candidate_name": "Bob Casey",
-      "support_oppose": "S",
-      "amount": 199.6,
-      "date": "2024-09-08",
-      "purpose": "PHONE CALLS (ESTIMATE)",
-      "payee": "SCALE TO WIN",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202412309740032168"
-    },
-    {
       "ie_id": "C00761064-ie-2002532-500085167",
       "spender_entity_id": "C00761064",
       "spender_name": "API PA VOTES",
@@ -1915,19 +1659,6 @@
       "purpose": "PHONE CALLS",
       "payee": "SCALE TO WIN",
       "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202607289894482444"
-    },
-    {
-      "ie_id": "C00761064-ie-1860897-500085172",
-      "spender_entity_id": "C00761064",
-      "spender_name": "API PA VOTES",
-      "candidate_id": "S6PA00217",
-      "candidate_name": "Bob Casey",
-      "support_oppose": "S",
-      "amount": 198.61,
-      "date": "2024-09-16",
-      "purpose": "PHONE CALLS (ESTIMATE)",
-      "payee": "SCALE TO WIN",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202412309740032137"
     },
     {
       "ie_id": "C00761064-ie-2002532-500085172",
@@ -1954,19 +1685,6 @@
       "purpose": "PHONE CALLS",
       "payee": "SCALE TO WIN",
       "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202607289894482440"
-    },
-    {
-      "ie_id": "C00761064-ie-1860897-500085176",
-      "spender_entity_id": "C00761064",
-      "spender_name": "API PA VOTES",
-      "candidate_id": "S6PA00217",
-      "candidate_name": "Bob Casey",
-      "support_oppose": "S",
-      "amount": 191.09,
-      "date": "2024-09-22",
-      "purpose": "PHONE CALLS (ESTIMATE)",
-      "payee": "SCALE TO WIN",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202412309740032162"
     },
     {
       "ie_id": "C00761064-ie-1867738-500085826",
@@ -2021,19 +1739,6 @@
       "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202412309740032135"
     },
     {
-      "ie_id": "C00761064-ie-1860897-500085130",
-      "spender_entity_id": "C00761064",
-      "spender_name": "API PA VOTES",
-      "candidate_id": "S6PA00217",
-      "candidate_name": "Bob Casey",
-      "support_oppose": "S",
-      "amount": 163.6,
-      "date": "2024-09-14",
-      "purpose": "CANVASSING (ESTIMATE)",
-      "payee": "BASE BUILDER",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202412309740032120"
-    },
-    {
       "ie_id": "C00761064-ie-2002532-500085130",
       "spender_entity_id": "C00761064",
       "spender_name": "API PA VOTES",
@@ -2060,19 +1765,6 @@
       "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202607289894482445"
     },
     {
-      "ie_id": "C00761064-ie-1860897-500085177",
-      "spender_entity_id": "C00761064",
-      "spender_name": "API PA VOTES",
-      "candidate_id": "S6PA00217",
-      "candidate_name": "Bob Casey",
-      "support_oppose": "S",
-      "amount": 162.18,
-      "date": "2024-09-23",
-      "purpose": "PHONE CALLS (ESTIMATE)",
-      "payee": "SCALE TO WIN",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202412309740032169"
-    },
-    {
       "ie_id": "C00761064-ie-2002532-500085149",
       "spender_entity_id": "C00761064",
       "spender_name": "API PA VOTES",
@@ -2084,32 +1776,6 @@
       "purpose": "PHONEBANKING",
       "payee": "BASE BUILDER",
       "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202607289894482454"
-    },
-    {
-      "ie_id": "C00761064-ie-1860897-500085149",
-      "spender_entity_id": "C00761064",
-      "spender_name": "API PA VOTES",
-      "candidate_id": "S6PA00217",
-      "candidate_name": "Bob Casey",
-      "support_oppose": "S",
-      "amount": 161.8,
-      "date": "2024-09-10",
-      "purpose": "PHONEBANKING (ESTIMATE)",
-      "payee": "BASE BUILDER",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202412309740032180"
-    },
-    {
-      "ie_id": "C00761064-ie-1860897-500085181",
-      "spender_entity_id": "C00761064",
-      "spender_name": "API PA VOTES",
-      "candidate_id": "S6PA00217",
-      "candidate_name": "Bob Casey",
-      "support_oppose": "S",
-      "amount": 152.42,
-      "date": "2024-09-29",
-      "purpose": "PHONE CALLS (ESTIMATE)",
-      "payee": "SCALE TO WIN",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202412309740032131"
     },
     {
       "ie_id": "C00761064-ie-2002532-500085181",
@@ -2151,32 +1817,6 @@
       "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202607289894482412"
     },
     {
-      "ie_id": "C00761064-ie-1860897-500085171",
-      "spender_entity_id": "C00761064",
-      "spender_name": "API PA VOTES",
-      "candidate_id": "S6PA00217",
-      "candidate_name": "Bob Casey",
-      "support_oppose": "S",
-      "amount": 151.18,
-      "date": "2024-09-15",
-      "purpose": "PHONE CALLS (ESTIMATE)",
-      "payee": "SCALE TO WIN",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202412309740032130"
-    },
-    {
-      "ie_id": "C00761064-ie-1860897-500085182",
-      "spender_entity_id": "C00761064",
-      "spender_name": "API PA VOTES",
-      "candidate_id": "S6PA00217",
-      "candidate_name": "Bob Casey",
-      "support_oppose": "S",
-      "amount": 149.02,
-      "date": "2024-09-30",
-      "purpose": "PHONE CALLS (ESTIMATE)",
-      "payee": "SCALE TO WIN",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202412309740032138"
-    },
-    {
       "ie_id": "C00761064-ie-2002532-500085182",
       "spender_entity_id": "C00761064",
       "spender_name": "API PA VOTES",
@@ -2201,32 +1841,6 @@
       "purpose": "PHONE CALLS",
       "payee": "SCALE TO WIN",
       "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202607289894482451"
-    },
-    {
-      "ie_id": "C00761064-ie-1860897-500085178",
-      "spender_entity_id": "C00761064",
-      "spender_name": "API PA VOTES",
-      "candidate_id": "S6PA00217",
-      "candidate_name": "Bob Casey",
-      "support_oppose": "S",
-      "amount": 146.91,
-      "date": "2024-09-24",
-      "purpose": "PHONE CALLS (ESTIMATE)",
-      "payee": "SCALE TO WIN",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202412309740032176"
-    },
-    {
-      "ie_id": "C00761064-ie-1860897-500085180",
-      "spender_entity_id": "C00761064",
-      "spender_name": "API PA VOTES",
-      "candidate_id": "S6PA00217",
-      "candidate_name": "Bob Casey",
-      "support_oppose": "S",
-      "amount": 143.56,
-      "date": "2024-09-26",
-      "purpose": "PHONE CALLS (ESTIMATE)",
-      "payee": "SCALE TO WIN",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202412309740032124"
     },
     {
       "ie_id": "C00761064-ie-2002532-500085180",

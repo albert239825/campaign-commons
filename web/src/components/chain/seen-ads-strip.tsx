@@ -3,14 +3,14 @@ import type { Ad } from "@citizen-gotham/contracts";
 import { range, routes } from "@/lib/format";
 import { Chip, SourceLink } from "@/components/ui";
 
-/** Hand-verified ads paid for by this chain's root committee; the link back lands on the card in the gallery. */
+/** Ads whose advertiser a person matched to this chain's root committee; the link back lands on the card in the gallery. */
 export function SeenAdsStrip({ ads, raceId }: { ads: Ad[]; raceId: string }) {
   if (ads.length === 0) return null;
   return (
     <div className="flex flex-wrap items-center gap-3 rounded-lg border border-neutral-200 bg-white p-2">
       <div className="px-1 text-xs text-neutral-600">
         <div className="font-medium text-neutral-900">You may have seen this ad</div>
-        <div>Paid for by this committee; the link was checked by a person.</div>
+        <div>Advertiser matched to this committee by a person (Google shows the advertiser, not the paid-for-by line).</div>
       </div>
       {ads.map((ad) => (
         <Link

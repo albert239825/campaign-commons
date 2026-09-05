@@ -35,6 +35,8 @@
       "to_name": "SAG PAC INC.",
       "amount": 15000000.0,
       "date": "2024-07-18",
+      "first_date": "2024-07-18",
+      "count": 1,
       "visibility": "dark",
       "transaction_type": "10",
       "limit": "unlimited",
@@ -48,23 +50,12 @@
       "to_name": "SAG PAC INC.",
       "amount": 425000.0,
       "date": "2024-10-29",
+      "first_date": "2024-10-29",
+      "count": 1,
       "visibility": "disclosed",
       "transaction_type": "24K",
       "limit": "unlimited",
       "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00881805&two_year_transaction_period=2024&contributor_name=C00825851"
-    },
-    {
-      "transfer_id": "C00881805-in-ind:MAKE_AMERICA_GREAT_AGAIN_INC.|01915",
-      "from_entity_id": "ind:MAKE_AMERICA_GREAT_AGAIN_INC.|01915",
-      "from_name": "MAKE AMERICA GREAT AGAIN INC.",
-      "to_entity_id": "C00881805",
-      "to_name": "SAG PAC INC.",
-      "amount": 425000.0,
-      "date": "2024-10-29",
-      "visibility": "disclosed",
-      "transaction_type": "10",
-      "limit": "unlimited",
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00881805&two_year_transaction_period=2024&contributor_name=MAKE+AMERICA+GREAT+AGAIN+INC."
     }
   ],
   "outflows": [
@@ -76,6 +67,8 @@
       "to_name": "MAKE AMERICA GREAT AGAIN INC.",
       "amount": 9422000.0,
       "date": "2024-10-18",
+      "first_date": "2024-10-18",
+      "count": 1,
       "visibility": "disclosed",
       "transaction_type": "24K",
       "limit": "unlimited",

@@ -2,7 +2,7 @@
   "root_entity_id": "C00530766",
   "root_name": "WOMEN SPEAK OUT PAC",
   "race_id": "pa-sen-2024",
-  "generated_at": "2026-09-05T13:41:28+00:00",
+  "generated_at": "2026-09-05T15:46:45+00:00",
   "data_status": "real",
   "nodes": [
     {
@@ -12,7 +12,7 @@
       "committee_type": "O",
       "depth": 0,
       "visibility": "disclosed",
-      "amount_in": 20830622.0,
+      "amount_in": 11830622.0,
       "is_terminus": false,
       "terminus_reason": null,
       "source_url": "https://www.fec.gov/data/committee/C00530766/?cycle=2024"
@@ -30,17 +30,16 @@
       "source_url": "https://www.fec.gov/data/committee/C00571588/?cycle=2024"
     },
     {
-      "id": "org:RESTORATION_PAC",
-      "name": "RESTORATION PAC",
-      "kind": "organization",
+      "id": "ind:JAMES_VIRGINIA|08530",
+      "name": "JAMES, VIRGINIA",
+      "kind": "individual",
       "committee_type": null,
       "depth": 1,
-      "visibility": "dark",
-      "amount_in": 9000000.0,
+      "visibility": "disclosed",
+      "amount_in": 200000.0,
       "is_terminus": true,
-      "terminus_reason": "dark",
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00530766&two_year_transaction_period=2024&contributor_name=RESTORATION+PAC",
-      "organization_class": "nonprofit"
+      "terminus_reason": "individual",
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00530766&two_year_transaction_period=2024&contributor_name=JAMES%2C+VIRGINIA"
     },
     {
       "id": "agg:other@C00530766",
@@ -49,11 +48,11 @@
       "committee_type": null,
       "depth": 1,
       "visibility": "disclosed",
-      "amount_in": 358122.0,
+      "amount_in": 158122.0,
       "is_terminus": true,
       "terminus_reason": "pruned",
       "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00530766&two_year_transaction_period=2024",
-      "contributor_count": 29
+      "contributor_count": 28
     },
     {
       "id": "ind:UIHLEIN_RICHARD_E.|60044",
@@ -137,25 +136,25 @@
       "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00530766&two_year_transaction_period=2024&contributor_name=C00571588"
     },
     {
-      "from": "org:RESTORATION_PAC",
+      "from": "ind:JAMES_VIRGINIA|08530",
       "to": "C00530766",
-      "amount": 9000000.0,
-      "visibility": "dark",
+      "amount": 200000.0,
+      "visibility": "disclosed",
       "depth": 1,
       "transaction_types": [
         "10"
       ],
-      "count": 6,
+      "count": 1,
       "date_range": [
-        "2024-07-01",
-        "2024-10-18"
+        "2024-10-22",
+        "2024-10-22"
       ],
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00530766&two_year_transaction_period=2024&contributor_name=RESTORATION+PAC"
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00530766&two_year_transaction_period=2024&contributor_name=JAMES%2C+VIRGINIA"
     },
     {
       "from": "agg:other@C00530766",
       "to": "C00530766",
-      "amount": 358122.0,
+      "amount": 158122.0,
       "visibility": "disclosed",
       "depth": 1,
       "transaction_types": [
@@ -163,7 +162,7 @@
         "18G",
         "18K"
       ],
-      "count": 100,
+      "count": 99,
       "date_range": [
         "2023-02-01",
         "2024-12-31"
@@ -253,24 +252,24 @@
     }
   ],
   "summary": {
-    "total_in": 20830622.0,
-    "disclosed_share": 0.5445,
+    "total_in": 11830622.0,
+    "disclosed_share": 0.9587,
     "inferable_share": 0.0,
     "unwalked_share": 0.0,
-    "dark_share": 0.4555,
+    "dark_share": 0.0413,
     "max_depth": 2,
     "terminus_counts": {
-      "dark": 3,
+      "individual": 3,
       "pruned": 2,
-      "individual": 2
+      "dark": 2
     }
   },
   "flags": [
     {
-      "id": "dead_end_dark",
-      "label": "Chain ends at undisclosed donors",
-      "detail": "46% of WOMEN SPEAK OUT PAC's receipts stop at organizations whose own funding is not on file (advocacy nonprofits, LLCs, trusts) rather than at named individuals, businesses or unions.",
-      "evidence_url": "https://www.fec.gov/data/committee/C00530766/?cycle=2024"
+      "id": "single_transfer_funded",
+      "label": "Funded by a single source",
+      "detail": "RESTORATION PAC supplied $11,472,500 of WOMEN SPEAK OUT PAC's $11,830,622 itemized receipts (97%).",
+      "evidence_url": "https://www.fec.gov/data/receipts/?committee_id=C00530766&two_year_transaction_period=2024"
     },
     {
       "id": "shell_cluster",
@@ -279,5 +278,5 @@
       "evidence_url": "https://www.fec.gov/data/committee/C00530766/?cycle=2024"
     }
   ],
-  "method": "Backward walk over money edges only (Schedule A receipts from individuals and organizations, committee-to-committee transfers) into WOMEN SPEAK OUT PAC, 2 hop(s) deep; independent expenditures are targeting edges and never appear. The walk starts from $20,830,622 of itemized 2023–2024 receipts as loaded from FEC bulk data (unitemized receipts, loans and offsets are not edges), and every expanded committee conserves dollars: its inbound edges sum to its receipts. Inbound edges under 1% of a committee's receipts are rolled into one 'other contributors' node, which counts as disclosed except for the organization dollars inside it. Each dollar takes the visibility of where the walk stopped: named individuals (including earmarks through ActBlue/WinRed, attributed to the person) are disclosed. Organizations that are not registered committees are classified from their name alone (no IRS lookup): a union or a business giving from its own treasury is disclosed — the named entity is the source; an LLC, trust, advocacy nonprofit (501(c)(4)-style names) or unclassifiable organization is dark, because whoever funds it is not on file with the FEC. Visibility shares are preliminary; no 990 lookups were performed, so nothing is marked inferable."
+  "method": "Backward walk over money edges only (Schedule A receipts from individuals and organizations, committee-to-committee transfers) into WOMEN SPEAK OUT PAC, 2 hop(s) deep; independent expenditures are targeting edges and never appear. The walk starts from $11,830,622 of itemized 2023–2024 receipts as loaded from FEC bulk data (unitemized receipts, loans and offsets are not edges), and every expanded committee conserves dollars: its inbound edges sum to its receipts. Inbound edges under 1% of a committee's receipts are rolled into one 'other contributors' node, which counts as disclosed except for the organization dollars inside it. Each dollar takes the visibility of where the walk stopped: named individuals (including earmarks through ActBlue/WinRed, attributed to the person) are disclosed. Organizations that are not registered committees are classified from their name alone (no IRS lookup): a union or a business giving from its own treasury is disclosed — the named entity is the source; an LLC, trust, advocacy nonprofit (501(c)(4)-style names) or unclassifiable organization is dark, because whoever funds it is not on file with the FEC. Visibility shares are preliminary; no 990 lookups were performed, so nothing is marked inferable."
 }

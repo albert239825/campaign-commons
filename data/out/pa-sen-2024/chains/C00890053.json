@@ -2,7 +2,7 @@
   "root_entity_id": "C00890053",
   "root_name": "FUTURE PENNSYLVANIA PAC",
   "race_id": "pa-sen-2024",
-  "generated_at": "2026-09-05T13:41:28+00:00",
+  "generated_at": "2026-09-05T15:46:45+00:00",
   "data_status": "real",
   "nodes": [
     {
@@ -12,7 +12,7 @@
       "committee_type": "O",
       "depth": 0,
       "visibility": "disclosed",
-      "amount_in": 6993486.0,
+      "amount_in": 3731486.0,
       "is_terminus": false,
       "terminus_reason": null,
       "source_url": "https://www.fec.gov/data/committee/C00890053/?cycle=2024"
@@ -30,19 +30,6 @@
       "source_url": "https://www.fec.gov/data/committee/C00741769/?cycle=2024"
     },
     {
-      "id": "org:STRATEGIC_VICTORY_FUND_IE_PAC",
-      "name": "STRATEGIC VICTORY FUND IE PAC",
-      "kind": "organization",
-      "committee_type": null,
-      "depth": 1,
-      "visibility": "dark",
-      "amount_in": 2462000.0,
-      "is_terminus": true,
-      "terminus_reason": "dark",
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00890053&two_year_transaction_period=2024&contributor_name=STRATEGIC+VICTORY+FUND+IE+PAC",
-      "organization_class": "nonprofit"
-    },
-    {
       "id": "C00882381",
       "name": "PEOPLE POWER PENNSYLVANIA",
       "kind": "committee",
@@ -53,19 +40,6 @@
       "is_terminus": false,
       "terminus_reason": null,
       "source_url": "https://www.fec.gov/data/committee/C00882381/?cycle=2024"
-    },
-    {
-      "id": "org:PEOPLE_POWER_PENNSYLVANIA",
-      "name": "PEOPLE POWER PENNSYLVANIA",
-      "kind": "organization",
-      "committee_type": null,
-      "depth": 1,
-      "visibility": "dark",
-      "amount_in": 800000.0,
-      "is_terminus": true,
-      "terminus_reason": "dark",
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00890053&two_year_transaction_period=2024&contributor_name=PEOPLE+POWER+PENNSYLVANIA",
-      "organization_class": "unknown"
     },
     {
       "id": "org:PROJECT_26_PENNSYLVANIA",
@@ -3167,22 +3141,6 @@
       "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00890053&two_year_transaction_period=2024&contributor_name=C00741769"
     },
     {
-      "from": "org:STRATEGIC_VICTORY_FUND_IE_PAC",
-      "to": "C00890053",
-      "amount": 2462000.0,
-      "visibility": "dark",
-      "depth": 1,
-      "transaction_types": [
-        "10"
-      ],
-      "count": 1,
-      "date_range": [
-        "2024-10-08",
-        "2024-10-08"
-      ],
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00890053&two_year_transaction_period=2024&contributor_name=STRATEGIC+VICTORY+FUND+IE+PAC"
-    },
-    {
       "from": "C00882381",
       "to": "C00890053",
       "amount": 800000.0,
@@ -3197,22 +3155,6 @@
         "2024-10-03"
       ],
       "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00890053&two_year_transaction_period=2024&contributor_name=C00882381"
-    },
-    {
-      "from": "org:PEOPLE_POWER_PENNSYLVANIA",
-      "to": "C00890053",
-      "amount": 800000.0,
-      "visibility": "dark",
-      "depth": 1,
-      "transaction_types": [
-        "10"
-      ],
-      "count": 1,
-      "date_range": [
-        "2024-10-03",
-        "2024-10-03"
-      ],
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00890053&two_year_transaction_period=2024&contributor_name=PEOPLE+POWER+PENNSYLVANIA"
     },
     {
       "from": "org:PROJECT_26_PENNSYLVANIA",
@@ -7295,14 +7237,14 @@
     }
   ],
   "summary": {
-    "total_in": 6993486.0,
-    "disclosed_share": 0.1977,
+    "total_in": 3731486.0,
+    "disclosed_share": 0.3705,
     "inferable_share": 0.0,
-    "unwalked_share": 0.0002,
-    "dark_share": 0.8021,
+    "unwalked_share": 0.0004,
+    "dark_share": 0.6291,
     "max_depth": 6,
     "terminus_counts": {
-      "dark": 13,
+      "dark": 11,
       "pruned": 14,
       "organization": 8,
       "individual": 200,
@@ -7314,9 +7256,9 @@
     {
       "id": "dead_end_dark",
       "label": "Chain ends at undisclosed donors",
-      "detail": "80% of FUTURE PENNSYLVANIA PAC's receipts stop at organizations whose own funding is not on file (advocacy nonprofits, LLCs, trusts) rather than at named individuals, businesses or unions.",
+      "detail": "63% of FUTURE PENNSYLVANIA PAC's receipts stop at organizations whose own funding is not on file (advocacy nonprofits, LLCs, trusts) rather than at named individuals, businesses or unions.",
       "evidence_url": "https://www.fec.gov/data/committee/C00890053/?cycle=2024"
     }
   ],
-  "method": "Backward walk over money edges only (Schedule A receipts from individuals and organizations, committee-to-committee transfers) into FUTURE PENNSYLVANIA PAC, 6 hop(s) deep; independent expenditures are targeting edges and never appear. The walk starts from $6,993,486 of itemized 2023–2024 receipts as loaded from FEC bulk data (unitemized receipts, loans and offsets are not edges), and every expanded committee conserves dollars: its inbound edges sum to its receipts. Inbound edges under 1% of a committee's receipts are rolled into one 'other contributors' node, which counts as disclosed except for the organization dollars inside it. Each dollar takes the visibility of where the walk stopped: named individuals (including earmarks through ActBlue/WinRed, attributed to the person) are disclosed. Organizations that are not registered committees are classified from their name alone (no IRS lookup): a union or a business giving from its own treasury is disclosed — the named entity is the source; an LLC, trust, advocacy nonprofit (501(c)(4)-style names) or unclassifiable organization is dark, because whoever funds it is not on file with the FEC. 2 committee node(s) stop with reason depth_cap: they are FEC-registered committees whose own receipts were not loaded into this race's neighborhood (or the hop or node cap was reached). The committee files donor lists with the FEC, but this walk did not read them, so its dollars are counted as 'not walked' — neither disclosed nor dark — and a dark layer behind such a committee would not show here. 5 edge(s) point at a committee already expanded elsewhere in this chain and reuse its visibility mix instead of being walked twice. Visibility shares are preliminary; no 990 lookups were performed, so nothing is marked inferable."
+  "method": "Backward walk over money edges only (Schedule A receipts from individuals and organizations, committee-to-committee transfers) into FUTURE PENNSYLVANIA PAC, 6 hop(s) deep; independent expenditures are targeting edges and never appear. The walk starts from $3,731,486 of itemized 2023–2024 receipts as loaded from FEC bulk data (unitemized receipts, loans and offsets are not edges), and every expanded committee conserves dollars: its inbound edges sum to its receipts. Inbound edges under 1% of a committee's receipts are rolled into one 'other contributors' node, which counts as disclosed except for the organization dollars inside it. Each dollar takes the visibility of where the walk stopped: named individuals (including earmarks through ActBlue/WinRed, attributed to the person) are disclosed. Organizations that are not registered committees are classified from their name alone (no IRS lookup): a union or a business giving from its own treasury is disclosed — the named entity is the source; an LLC, trust, advocacy nonprofit (501(c)(4)-style names) or unclassifiable organization is dark, because whoever funds it is not on file with the FEC. 2 committee node(s) stop with reason depth_cap: they are FEC-registered committees whose own receipts were not loaded into this race's neighborhood (or the hop or node cap was reached). The committee files donor lists with the FEC, but this walk did not read them, so its dollars are counted as 'not walked' — neither disclosed nor dark — and a dark layer behind such a committee would not show here. 5 edge(s) point at a committee already expanded elsewhere in this chain and reuse its visibility mix instead of being walked twice. Visibility shares are preliminary; no 990 lookups were performed, so nothing is marked inferable."
 }
