@@ -91,7 +91,7 @@ body {
   @apply hover:underline;
 }
 
-/* Bayshore-inspired landing experiment. Other routes retain the existing shell. */
+/* Bayshore-inspired landing experiment. */
 body:has(.landing-page) {
   background: #f2efeb;
   color: #1b1b1a;
@@ -358,3 +358,90 @@ body:has(.landing-page) a:focus-visible {
   .landing-table-label { align-items: flex-start; }
   body:has(.landing-page) .site-footer { padding: 28px 24px; margin-inline: 20px; }
 }
+
+/* Race dashboards share the landing page's typography and warm editorial shell. */
+body:has(.race-dashboard) {
+  background: #f2efeb;
+  color: #1b1b1a;
+  font-family: "Scto Grotesk A", Arial, sans-serif;
+}
+body:has(.race-dashboard) .site-header { background: transparent; border-color: rgb(155 151 146 / 22%); }
+body:has(.race-dashboard) .site-header-inner { max-width: 1440px; min-height: 80px; padding: 20px clamp(20px, 4.2vw, 60px); }
+body:has(.race-dashboard) .site-brand { font-size: 21px; font-weight: 400; letter-spacing: -.045em; }
+body:has(.race-dashboard) .site-tagline { display: none; }
+body:has(.race-dashboard) .site-header nav { gap: 32px; font-size: 14px; font-weight: 500; }
+body:has(.race-dashboard) .site-main { max-width: 1440px; padding: 52px clamp(24px, 4.2vw, 60px) 0; }
+body:has(.race-dashboard) .site-footer { max-width: 1440px; padding: 32px clamp(24px, 4.2vw, 60px) 48px; color: #6f6d69; line-height: 1.65; }
+body:has(.race-dashboard) :is(a, button):focus-visible { outline: 2px solid currentColor; outline-offset: 4px; }
+.race-dashboard { --race-rule: rgb(155 151 146 / 25%); display: grid; gap: 88px; min-width: 0; line-height: 1.6; }
+.race-dashboard > *, .race-dashboard .ui-card { min-width: 0; }
+.race-dashboard :where(.font-semibold, .font-bold) { font-weight: 500; }
+.race-overview { margin-top: 48px; }
+.race-title { max-width: 1050px; font-size: clamp(40px, 5vw, 72px); font-weight: 400; line-height: 1.05; letter-spacing: -.05em; text-wrap: balance; }
+.race-metadata { display: flex; flex-wrap: wrap; align-items: center; gap: 16px 32px; margin-top: 28px; font-size: 14px; color: #6f6d69; }
+.race-totals { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 32px; margin-top: 56px; padding-block: 32px; border-block: 1px solid var(--race-rule); }
+.race-totals dt { font-size: 14px; text-transform: none; letter-spacing: 0; color: #6f6d69; }
+.race-totals dd { margin-top: 12px; font-size: clamp(32px, 3.5vw, 48px); font-weight: 400; line-height: 1.1; letter-spacing: -.04em; }
+.race-dashboard .ui-card { padding: 0; border: 0; border-radius: 0; background: transparent; }
+.race-dashboard .ui-card > header { flex-wrap: wrap; align-items: baseline; gap: 16px 24px; margin-bottom: 28px; }
+.race-dashboard .ui-card > header > h2 { font-size: clamp(28px, 2.8vw, 40px); font-weight: 400; text-transform: none; letter-spacing: -.035em; line-height: 1.15; color: #1b1b1a; }
+.race-dashboard .ui-card > header > a { font-size: 13px; font-weight: 500; }
+.race-dashboard .ui-card > p { max-width: 850px; margin-bottom: 32px; font-size: 14px; line-height: 1.7; }
+.race-stories { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px; }
+.race-stories > article { gap: 20px; padding: 28px; border: 0; border-radius: 0; background: #e9e5df; }
+.race-stories > article > div:first-child { flex-wrap: wrap; gap: 8px; }
+.race-stories h3 { font-size: 22px; font-weight: 400; letter-spacing: -.025em; line-height: 1.25; }
+.race-stories > article > .tabular-nums { font-size: 32px; font-weight: 400; line-height: 1.15; letter-spacing: -.035em; }
+.race-stories > article > .tabular-nums > span:last-child { display: block; margin: 8px 0 0; font-size: 12px; letter-spacing: 0; }
+.race-stories p { font-size: 13px; line-height: 1.7; }
+.race-stories footer { padding-top: 20px; border-color: var(--race-rule); }
+.race-candidates { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 48px; }
+.race-candidates .ui-card { border-top: 1px solid var(--race-rule); padding-top: 32px; }
+.race-candidates .ui-card > header { align-items: flex-start; flex-direction: column; gap: 12px; margin-bottom: 32px; }
+.race-dashboard .candidate-heading { flex-wrap: wrap; gap: 8px 12px; }
+.race-dashboard .candidate-heading > a { font-size: 28px; font-weight: 400; letter-spacing: -.035em; }
+.race-dashboard .candidate-subheading { margin-block: 32px 14px; font-size: 12px; letter-spacing: .04em; }
+.race-dashboard .candidate-subheading:first-child { margin-top: 0; }
+.race-dashboard .candidate-line { padding-block: 10px; border-bottom: 1px solid var(--race-rule); font-size: 14px; }
+.race-dashboard .candidate-line > span:first-child { overflow: visible; white-space: normal; }
+.race-dashboard .candidate-traceability { flex-wrap: wrap; gap: 8px 20px; margin-top: 24px; padding-top: 20px; border-color: var(--race-rule); }
+.race-traceability { padding: 40px; background: #e9e5df; }
+.race-dashboard .traceability-summary { align-items: center; gap: 40px 64px; margin-block: 40px; }
+.race-dashboard .traceability-score { font-size: clamp(56px, 6vw, 80px); font-weight: 400; letter-spacing: -.05em; }
+.race-dashboard .traceability-breakdown { min-width: min(100%, 440px); }
+.race-dashboard .traceability-breakdown > .grid { margin-top: 20px; gap: 16px; line-height: 1.8; }
+.race-dashboard .race-traceability .ui-card > p { max-width: none; margin-bottom: 24px; }
+.race-spenders table { min-width: 1120px; font-size: 13px; }
+.race-spenders thead { background: #e9e5df; }
+.race-spenders th { padding: 16px 12px; border-color: var(--race-rule); font-size: 11px; white-space: nowrap; }
+.race-spenders th button { min-height: 24px; }
+.race-spenders td { padding: 22px 12px; border-color: var(--race-rule); }
+.race-spenders tbody tr:hover { background: rgb(233 229 223 / 55%); }
+.race-spenders td:first-child { min-width: 210px; }
+.race-notes { padding-top: 32px; border-top: 1px solid var(--race-rule); line-height: 1.8; }
+@media (max-width: 1050px) {
+  .race-stories { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .race-candidates { gap: 32px; }
+  .race-dashboard .candidate-line { flex-wrap: wrap; gap: 4px 12px; }
+  .race-dashboard .candidate-line > span:last-child { margin-left: auto; }
+}
+@media (max-width: 680px) {
+  body:has(.race-dashboard) .site-header-inner { min-height: 72px; padding: 20px 24px; }
+  body:has(.race-dashboard) .site-brand { font-size: 19px; }
+  body:has(.race-dashboard) .site-header nav { gap: 16px; font-size: 12px; }
+  body:has(.race-dashboard) .site-main { padding-top: 32px; }
+  .race-dashboard { gap: 56px; }
+  .race-overview { margin-top: 32px; }
+  .race-metadata { gap: 16px; margin-top: 24px; }
+  .race-totals { grid-template-columns: 1fr; gap: 24px; margin-top: 32px; padding-block: 24px; }
+  .race-totals > div { display: flex; justify-content: space-between; align-items: baseline; gap: 16px; }
+  .race-totals dd { margin: 0; font-size: 36px; }
+  .race-stories, .race-candidates { grid-template-columns: 1fr; }
+  .race-stories > article { padding: 24px; }
+  .race-traceability { padding: 28px 24px; }
+  .race-dashboard .traceability-breakdown { min-width: 0; flex-basis: 100%; }
+  .race-dashboard .traceability-breakdown > .grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+
+.race-dashboard .flags-legend { gap: 20px 32px; margin-top: 16px; }
+.race-dashboard .flags-legend > div { flex-direction: column; gap: 4px; }

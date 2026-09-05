@@ -91,7 +91,7 @@ export function DataStatusBanner({ status }: { status: DataStatus }) {
 
 export function Card({ title, children, action }: { title?: ReactNode; children: ReactNode; action?: ReactNode }) {
   return (
-    <section className="rounded-lg border border-neutral-200 bg-white p-4">
+    <section className="ui-card rounded-lg border border-neutral-200 bg-white p-4">
       {(title || action) && (
         <header className="mb-3 flex items-baseline justify-between gap-4">
           {title && <h2 className="text-sm font-semibold uppercase tracking-wide text-neutral-600">{title}</h2>}

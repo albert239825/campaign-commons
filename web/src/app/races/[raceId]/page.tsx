@@ -25,14 +25,14 @@ export default async function RaceLedgerPage({ params }: { params: Promise<{ rac
   const topStories = stories.stories.slice(0, START_HERE_COUNT);
 
   return (
-    <div className="space-y-8">
+    <div className="race-dashboard">
       <div>
         <Breadcrumbs items={[{ href: routes.home(), label: "Races" }, { label: race.label }]} />
         <DataStatusBanner status={ledger.data_status} />
-        <header className="flex flex-wrap items-end justify-between gap-4 border-b border-neutral-300 pb-4">
+        <header className="race-overview">
           <div>
-            <h1 className="text-3xl font-semibold tracking-tight">{race.label}</h1>
-            <div className="mt-1 flex flex-wrap items-center gap-x-4 gap-y-1 text-sm text-neutral-600">
+            <h1 className="race-title">{race.label}</h1>
+            <div className="race-metadata">
               <span>Election {date(race.election_date)}</span>
               <span className="flex flex-wrap gap-3">
                 {race.candidates.map((c) => (
@@ -47,15 +47,15 @@ export default async function RaceLedgerPage({ params }: { params: Promise<{ rac
               </span>
             </div>
           </div>
-          <dl className="flex gap-6 text-sm">
+          <dl className="race-totals">
             <div>
-              <dt className="text-[11px] uppercase tracking-wide text-neutral-500">Campaign</dt>
+              <dt className="text-[11px] uppercase tracking-wide text-neutral-500">Campaign receipts</dt>
               <dd className="text-xl font-semibold tabular-nums">
                 <Money amount={campaignTotal} />
               </dd>
             </div>
             <div>
-              <dt className="text-[11px] uppercase tracking-wide text-neutral-500">Outside</dt>
+              <dt className="text-[11px] uppercase tracking-wide text-neutral-500">Outside spending</dt>
               <dd className="text-xl font-semibold tabular-nums">
                 <Money amount={outsideTotal} />
               </dd>
@@ -81,7 +81,7 @@ export default async function RaceLedgerPage({ params }: { params: Promise<{ rac
             Spenders ranked by the pipeline (amount, dark share, structural flags). The text is templated from FEC filings, not written by a person;
             each card says whether a human has checked it.
           </p>
-          <div className="grid gap-3 md:grid-cols-2 lg:grid-cols-5">
+          <div className="race-stories">
             {topStories.map((s) => (
               <StoryCard key={s.story_id} story={s} raceId={raceId} hasChain={hasChain(raceId, s.root_entity_id)} />
             ))}
@@ -94,14 +94,16 @@ export default async function RaceLedgerPage({ params }: { params: Promise<{ rac
           <p className="text-sm text-neutral-500">No candidate committees loaded for this race yet.</p>
         </Card>
       ) : (
-        <div className="grid gap-4 md:grid-cols-2">
+        <div className="race-candidates">
           {ledger.candidates.map((c) => (
             <CandidatePanel key={c.candidate_id} raceId={raceId} c={c} />
           ))}
         </div>
       )}
 
-      <TraceabilityCard t={ledger.traceability} />
+      <div className="race-traceability">
+        <TraceabilityCard t={ledger.traceability} />
+      </div>
 
       <Card
         title="Top outside spenders"
@@ -124,7 +126,7 @@ export default async function RaceLedgerPage({ params }: { params: Promise<{ rac
         )}
       </Card>
 
-      <footer className="space-y-3 border-t border-neutral-200 pt-4">
+      <footer className="race-notes space-y-3">
         {ledger.notes.length > 0 && (
           <ul className="list-disc space-y-0.5 pl-5 text-xs text-neutral-500">
             {ledger.notes.map((n, i) => (

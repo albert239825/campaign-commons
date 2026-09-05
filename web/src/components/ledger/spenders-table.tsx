@@ -60,36 +60,37 @@ export function SpendersTable({
   const sortable = "cursor-pointer select-none hover:text-neutral-900";
 
   return (
-    <div>
+    <div className="race-spenders">
       <Table>
         <thead>
           <tr>
             <Th
               className={sortable}
-              onClick={() => toggle("name")}
               aria-sort={
                 sort === "name" ? (desc ? "descending" : "ascending") : "none"
               }
             >
-              Spender{arrow("name")}
+              <button type="button" className="cursor-pointer" onClick={() => toggle("name")}>
+                Spender{arrow("name")}
+              </button>
             </Th>
             <Th>Type</Th>
             <Th>Supports / opposes</Th>
             <Th
               align="right"
               className={sortable}
-              onClick={() => toggle("total")}
               aria-sort={
                 sort === "total" ? (desc ? "descending" : "ascending") : "none"
               }
             >
-              In race{arrow("total")}
+              <button type="button" className="cursor-pointer" onClick={() => toggle("total")}>
+                In race{arrow("total")}
+              </button>
             </Th>
             <Th>Visibility of receipts</Th>
             <Th
               align="right"
               className={sortable}
-              onClick={() => toggle("traceability")}
               aria-sort={
                 sort === "traceability"
                   ? desc
@@ -98,7 +99,9 @@ export function SpendersTable({
                   : "none"
               }
             >
-              Traceability{arrow("traceability")}
+              <button type="button" className="cursor-pointer" onClick={() => toggle("traceability")}>
+                Traceability{arrow("traceability")}
+              </button>
             </Th>
             <Th>Flags</Th>
             <Th align="right">Links</Th>

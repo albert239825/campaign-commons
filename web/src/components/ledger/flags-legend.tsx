@@ -13,7 +13,7 @@ export function FlagsLegend({ flags }: { flags: FlagId[] }) {
   const ids = Array.from(new Set(flags));
   if (ids.length === 0) return null;
   return (
-    <dl className="grid gap-x-6 gap-y-1.5 text-xs sm:grid-cols-2">
+    <dl className="flags-legend grid gap-x-6 gap-y-1.5 text-xs sm:grid-cols-2">
       {ids.map((id) => (
         <div key={id} className="flex gap-2">
           <dt className="shrink-0 font-medium text-amber-900">⚑ {FLAG_LABELS[id]}</dt>

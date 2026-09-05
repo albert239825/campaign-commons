@@ -21,14 +21,14 @@ export function TraceabilityCard({ t }: { t: Traceability | null }) {
   const segs = visibilitySegments({ disclosed: t.traced_to_individuals, inferable: t.inferable, unwalked: t.unwalked, dark: t.dark });
   return (
     <Card title="Traceability of outside money">
-      <div className="flex flex-wrap items-end gap-x-8 gap-y-4">
+      <div className="traceability-summary flex flex-wrap items-end gap-x-8 gap-y-4">
         <div>
-          <div className="text-5xl font-semibold leading-none tabular-nums">{pct(t.score)}</div>
+          <div className="traceability-score text-5xl font-semibold leading-none tabular-nums">{pct(t.score)}</div>
           <div className="mt-1 text-[11px] uppercase tracking-wide text-neutral-500">
             {t.preliminary ? "preliminary · " : ""}disclosed share of <Money amount={t.outside_total} /> outside
           </div>
         </div>
-        <div className="min-w-64 flex-1">
+        <div className="traceability-breakdown min-w-64 flex-1">
           <StackedBar segments={segs} height="h-4" />
           <div className={`mt-1.5 grid gap-2 text-xs ${segs.length === 4 ? "grid-cols-4" : "grid-cols-3"}`}>
             {segs.map((s) => (
