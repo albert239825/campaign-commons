@@ -9,7 +9,7 @@
   section heading, a verbatim excerpt (<= 40 words; dossier.py verifies it appears in the archived page) and a neutral
   one-sentence paraphrase.
 
-Issue ids must be members of contracts/src/issues.ts (mirrored in gotham.config.ISSUE_IDS).
+Issue ids must be members of contracts/src/issues.ts (mirrored in campaign_commons.config.ISSUE_IDS).
 """
 
 from __future__ import annotations

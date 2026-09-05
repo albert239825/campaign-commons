@@ -4,7 +4,7 @@ from pathlib import Path
 
 from jsonschema import Draft7Validator
 
-from gotham.ads_enrich import (
+from campaign_commons.ads_enrich import (
     NOTE_PREFIX,
     WINDOW_LEAD_DAYS,
     JsonDict,
@@ -14,7 +14,7 @@ from gotham.ads_enrich import (
     sponsor_shares,
     vendor_links,
 )
-from gotham.config import ROOT
+from campaign_commons.config import ROOT
 
 FIXTURE = json.loads((Path(__file__).parent / "fixtures" / "block2_sponsor_vendors.json").read_text())
 SPONSOR = str(FIXTURE["entity_id"])
@@ -86,7 +86,7 @@ def _gallery(*ads: JsonDict) -> JsonDict:
         "data_status": "real",
         "sources": ["google"],
         "ads": list(ads),
-        "notes": ["Base note from gotham.ads."],
+        "notes": ["Base note from campaign_commons.ads."],
     }
 
 
@@ -245,7 +245,7 @@ def test_no_vendor_rows_means_no_links_and_a_note_saying_so() -> None:
     assert counts.links_by_basis == {} and counts.sponsors_without_vendors == 1 and not changed
     notes = gallery["notes"]
     assert isinstance(notes, list)
-    assert any(n.startswith(NOTE_PREFIX) and "gotham.vendors has not run" in n for n in notes)
+    assert any(n.startswith(NOTE_PREFIX) and "campaign_commons.vendors has not run" in n for n in notes)
     _validate_gallery(gallery)
 
 
@@ -295,7 +295,7 @@ def test_vendor_files_get_reverse_ads_deduped_and_enrich_is_idempotent() -> None
     assert changed2 == set() and counts2.links_by_basis == counts.links_by_basis
     notes = gallery["notes"]
     assert isinstance(notes, list)
-    assert notes[0] == "Base note from gotham.ads." and sum(n.startswith(NOTE_PREFIX) for n in notes) == 3
+    assert notes[0] == "Base note from campaign_commons.ads." and sum(n.startswith(NOTE_PREFIX) for n in notes) == 3
 
 
 def test_patch_vendor_ads_replaces_same_ad_and_reports_change() -> None:

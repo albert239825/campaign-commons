@@ -1,12 +1,12 @@
-"""Payee normalisation, medium classification and the grouping-never-changes-totals invariant for `gotham.vendors`."""
+"""Payee normalisation, medium classification and the grouping-never-changes-totals invariant for `campaign_commons.vendors`."""
 
 import json
 from pathlib import Path
 
 import pytest
 
-from gotham.config import PA_SEN_2024
-from gotham.vendors import (
+from campaign_commons.config import PA_SEN_2024
+from campaign_commons.vendors import (
     SIMILARITY_THRESHOLD,
     HandAlias,
     classify_medium,

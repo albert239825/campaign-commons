@@ -1,7 +1,7 @@
 import { routes } from "@/lib/format";
 import { DetailHeader, SectionNav } from "@/components/ui/detail-layout";
 // OWNER: master session. Plain-English methodology; keep in sync with docs/DECISIONS.md.
-import { UNWALKED_COLOR, UNWALKED_LABEL, VISIBILITY_COLORS, VISIBILITY_LABELS } from "@citizen-gotham/contracts";
+import { UNWALKED_COLOR, UNWALKED_LABEL, VISIBILITY_COLORS, VISIBILITY_LABELS } from "@campaign-commons/contracts";
 import { Breadcrumbs, Card } from "@/components/ui";
 
 export default function MethodologyPage() {

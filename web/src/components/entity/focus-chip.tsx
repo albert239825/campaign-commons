@@ -1,4 +1,4 @@
-import { ISSUE_BY_ID, type IssueFocus } from "@citizen-gotham/contracts";
+import { ISSUE_BY_ID, type IssueFocus } from "@campaign-commons/contracts";
 import { Chip, SourceLink } from "@/components/ui";
 import { FOCUS_KIND_LABELS } from "@/components/issues/focus-kind";
 

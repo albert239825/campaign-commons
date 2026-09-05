@@ -58,7 +58,7 @@
   "last_date": "2024-11-13",
   "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&payee_name=WATERFRONT+STRATEGIES&payee_name=WATERFRONT+STRATEGIES+INC.",
   "race_id": "pa-sen-2024",
-  "generated_at": "2026-09-05T19:33:04+00:00",
+  "generated_at": "2026-09-05T19:53:50+00:00",
   "data_status": "real",
   "expenditures": [
     {
@@ -819,19 +819,6 @@
       }
     },
     {
-      "ad_id": "CR12341671143046905857",
-      "sponsor_entity_id": "C00865444",
-      "basis": {
-        "basis": "adjacent",
-        "rule": "Ran Oct 5, 2024 – Oct 29, 2024. In that window (buys dated up to 7 days before first shown through last shown) WINSENATE reported tv buys to WATERFRONT STRATEGIES ($25,161,866); the FEC does not record which buy placed which ad.",
-        "source_urls": [
-          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00865444&payee_name=WATERFRONT+STRATEGIES"
-        ],
-        "checked_by": null,
-        "checked_at": null
-      }
-    },
-    {
       "ad_id": "CR03071815602860457985",
       "sponsor_entity_id": "C00865444",
       "basis": {
@@ -845,37 +832,11 @@
       }
     },
     {
-      "ad_id": "CR14004507606169681921",
+      "ad_id": "CR12341671143046905857",
       "sponsor_entity_id": "C00865444",
       "basis": {
         "basis": "adjacent",
-        "rule": "Ran Jul 25, 2024 – Sep 3, 2024. In that window (buys dated up to 7 days before first shown through last shown) WINSENATE reported tv buys to WATERFRONT STRATEGIES ($6,806,941); the FEC does not record which buy placed which ad.",
-        "source_urls": [
-          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00865444&payee_name=WATERFRONT+STRATEGIES"
-        ],
-        "checked_by": null,
-        "checked_at": null
-      }
-    },
-    {
-      "ad_id": "CR15884613992212070401",
-      "sponsor_entity_id": "C00865444",
-      "basis": {
-        "basis": "adjacent",
-        "rule": "Ran Nov 2, 2024 – Nov 5, 2024. In that window (buys dated up to 7 days before first shown through last shown) WINSENATE reported tv buys to WATERFRONT STRATEGIES ($489,162); the FEC does not record which buy placed which ad.",
-        "source_urls": [
-          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00865444&payee_name=WATERFRONT+STRATEGIES"
-        ],
-        "checked_by": null,
-        "checked_at": null
-      }
-    },
-    {
-      "ad_id": "CR03840237839694430209",
-      "sponsor_entity_id": "C00865444",
-      "basis": {
-        "basis": "adjacent",
-        "rule": "Ran Aug 27, 2024 – Sep 3, 2024. In that window (buys dated up to 7 days before first shown through last shown) WINSENATE reported tv buys to WATERFRONT STRATEGIES ($4,267,612); the FEC does not record which buy placed which ad.",
+        "rule": "Ran Oct 5, 2024 – Oct 29, 2024. In that window (buys dated up to 7 days before first shown through last shown) WINSENATE reported tv buys to WATERFRONT STRATEGIES ($25,161,866); the FEC does not record which buy placed which ad.",
         "source_urls": [
           "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00865444&payee_name=WATERFRONT+STRATEGIES"
         ],
@@ -897,11 +858,37 @@
       }
     },
     {
-      "ad_id": "CR05179166475151212545",
+      "ad_id": "CR15884613992212070401",
       "sponsor_entity_id": "C00865444",
       "basis": {
         "basis": "adjacent",
-        "rule": "Ran Jul 12, 2024 – Jul 23, 2024. In that window (buys dated up to 7 days before first shown through last shown) WINSENATE reported tv buys to WATERFRONT STRATEGIES ($953,156); the FEC does not record which buy placed which ad.",
+        "rule": "Ran Nov 2, 2024 – Nov 5, 2024. In that window (buys dated up to 7 days before first shown through last shown) WINSENATE reported tv buys to WATERFRONT STRATEGIES ($489,162); the FEC does not record which buy placed which ad.",
+        "source_urls": [
+          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00865444&payee_name=WATERFRONT+STRATEGIES"
+        ],
+        "checked_by": null,
+        "checked_at": null
+      }
+    },
+    {
+      "ad_id": "CR14004507606169681921",
+      "sponsor_entity_id": "C00865444",
+      "basis": {
+        "basis": "adjacent",
+        "rule": "Ran Jul 25, 2024 – Sep 3, 2024. In that window (buys dated up to 7 days before first shown through last shown) WINSENATE reported tv buys to WATERFRONT STRATEGIES ($6,806,941); the FEC does not record which buy placed which ad.",
+        "source_urls": [
+          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00865444&payee_name=WATERFRONT+STRATEGIES"
+        ],
+        "checked_by": null,
+        "checked_at": null
+      }
+    },
+    {
+      "ad_id": "CR03840237839694430209",
+      "sponsor_entity_id": "C00865444",
+      "basis": {
+        "basis": "adjacent",
+        "rule": "Ran Aug 27, 2024 – Sep 3, 2024. In that window (buys dated up to 7 days before first shown through last shown) WINSENATE reported tv buys to WATERFRONT STRATEGIES ($4,267,612); the FEC does not record which buy placed which ad.",
         "source_urls": [
           "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00865444&payee_name=WATERFRONT+STRATEGIES"
         ],
@@ -923,11 +910,24 @@
       }
     },
     {
-      "ad_id": "CR07452900497838571521",
+      "ad_id": "CR05179166475151212545",
       "sponsor_entity_id": "C00865444",
       "basis": {
         "basis": "adjacent",
-        "rule": "Ran Oct 16, 2024 – Nov 5, 2024. In that window (buys dated up to 7 days before first shown through last shown) WINSENATE reported tv buys to WATERFRONT STRATEGIES ($16,551,796); the FEC does not record which buy placed which ad.",
+        "rule": "Ran Jul 12, 2024 – Jul 23, 2024. In that window (buys dated up to 7 days before first shown through last shown) WINSENATE reported tv buys to WATERFRONT STRATEGIES ($953,156); the FEC does not record which buy placed which ad.",
+        "source_urls": [
+          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00865444&payee_name=WATERFRONT+STRATEGIES"
+        ],
+        "checked_by": null,
+        "checked_at": null
+      }
+    },
+    {
+      "ad_id": "CR17444495536584392705",
+      "sponsor_entity_id": "C00865444",
+      "basis": {
+        "basis": "adjacent",
+        "rule": "Ran Oct 31, 2024 – Nov 5, 2024. In that window (buys dated up to 7 days before first shown through last shown) WINSENATE reported tv buys to WATERFRONT STRATEGIES ($5,689,039); the FEC does not record which buy placed which ad.",
         "source_urls": [
           "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00865444&payee_name=WATERFRONT+STRATEGIES"
         ],
@@ -949,6 +949,19 @@
       }
     },
     {
+      "ad_id": "CR07452900497838571521",
+      "sponsor_entity_id": "C00865444",
+      "basis": {
+        "basis": "adjacent",
+        "rule": "Ran Oct 16, 2024 – Nov 5, 2024. In that window (buys dated up to 7 days before first shown through last shown) WINSENATE reported tv buys to WATERFRONT STRATEGIES ($16,551,796); the FEC does not record which buy placed which ad.",
+        "source_urls": [
+          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00865444&payee_name=WATERFRONT+STRATEGIES"
+        ],
+        "checked_by": null,
+        "checked_at": null
+      }
+    },
+    {
       "ad_id": "CR01871250335276728321",
       "sponsor_entity_id": "C00865444",
       "basis": {
@@ -962,7 +975,20 @@
       }
     },
     {
-      "ad_id": "CR17444495536584392705",
+      "ad_id": "CR00279342491088453633",
+      "sponsor_entity_id": "C00865444",
+      "basis": {
+        "basis": "adjacent",
+        "rule": "Ran Oct 5, 2024 – Oct 8, 2024. In that window (buys dated up to 7 days before first shown through last shown) WINSENATE reported tv buys to WATERFRONT STRATEGIES ($9,099,233); the FEC does not record which buy placed which ad.",
+        "source_urls": [
+          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00865444&payee_name=WATERFRONT+STRATEGIES"
+        ],
+        "checked_by": null,
+        "checked_at": null
+      }
+    },
+    {
+      "ad_id": "CR05421010431412011009",
       "sponsor_entity_id": "C00865444",
       "basis": {
         "basis": "adjacent",
@@ -988,19 +1014,6 @@
       }
     },
     {
-      "ad_id": "CR00279342491088453633",
-      "sponsor_entity_id": "C00865444",
-      "basis": {
-        "basis": "adjacent",
-        "rule": "Ran Oct 5, 2024 – Oct 8, 2024. In that window (buys dated up to 7 days before first shown through last shown) WINSENATE reported tv buys to WATERFRONT STRATEGIES ($9,099,233); the FEC does not record which buy placed which ad.",
-        "source_urls": [
-          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00865444&payee_name=WATERFRONT+STRATEGIES"
-        ],
-        "checked_by": null,
-        "checked_at": null
-      }
-    },
-    {
       "ad_id": "CR13008203887897739265",
       "sponsor_entity_id": "C00865444",
       "basis": {
@@ -1014,11 +1027,11 @@
       }
     },
     {
-      "ad_id": "CR05421010431412011009",
+      "ad_id": "CR11668932204813090817",
       "sponsor_entity_id": "C00865444",
       "basis": {
         "basis": "adjacent",
-        "rule": "Ran Oct 31, 2024 – Nov 5, 2024. In that window (buys dated up to 7 days before first shown through last shown) WINSENATE reported tv buys to WATERFRONT STRATEGIES ($5,689,039); the FEC does not record which buy placed which ad.",
+        "rule": "Ran Sep 3, 2024 – Sep 19, 2024. In that window (buys dated up to 7 days before first shown through last shown) WINSENATE reported tv buys to WATERFRONT STRATEGIES ($13,119,442); the FEC does not record which buy placed which ad.",
         "source_urls": [
           "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00865444&payee_name=WATERFRONT+STRATEGIES"
         ],
@@ -1032,19 +1045,6 @@
       "basis": {
         "basis": "adjacent",
         "rule": "Ran Oct 29, 2024 – Nov 5, 2024. In that window (buys dated up to 7 days before first shown through last shown) WINSENATE reported tv buys to WATERFRONT STRATEGIES ($5,689,039); the FEC does not record which buy placed which ad.",
-        "source_urls": [
-          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00865444&payee_name=WATERFRONT+STRATEGIES"
-        ],
-        "checked_by": null,
-        "checked_at": null
-      }
-    },
-    {
-      "ad_id": "CR11668932204813090817",
-      "sponsor_entity_id": "C00865444",
-      "basis": {
-        "basis": "adjacent",
-        "rule": "Ran Sep 3, 2024 – Sep 19, 2024. In that window (buys dated up to 7 days before first shown through last shown) WINSENATE reported tv buys to WATERFRONT STRATEGIES ($13,119,442); the FEC does not record which buy placed which ad.",
         "source_urls": [
           "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00865444&payee_name=WATERFRONT+STRATEGIES"
         ],
@@ -1092,37 +1092,24 @@
       }
     },
     {
+      "ad_id": "CR00706205890339930113",
+      "sponsor_entity_id": "C00865444",
+      "basis": {
+        "basis": "adjacent",
+        "rule": "Ran Oct 8, 2024 – Oct 15, 2024. In that window (buys dated up to 7 days before first shown through last shown) WINSENATE reported tv buys to WATERFRONT STRATEGIES ($14,044,700); the FEC does not record which buy placed which ad.",
+        "source_urls": [
+          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00865444&payee_name=WATERFRONT+STRATEGIES"
+        ],
+        "checked_by": null,
+        "checked_at": null
+      }
+    },
+    {
       "ad_id": "CR06943381861724848129",
       "sponsor_entity_id": "C00865444",
       "basis": {
         "basis": "adjacent",
         "rule": "Ran Sep 18, 2024 – Oct 8, 2024. In that window (buys dated up to 7 days before first shown through last shown) WINSENATE reported tv buys to WATERFRONT STRATEGIES ($16,335,233); the FEC does not record which buy placed which ad.",
-        "source_urls": [
-          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00865444&payee_name=WATERFRONT+STRATEGIES"
-        ],
-        "checked_by": null,
-        "checked_at": null
-      }
-    },
-    {
-      "ad_id": "CR08113297418050600961",
-      "sponsor_entity_id": "C00865444",
-      "basis": {
-        "basis": "adjacent",
-        "rule": "Ran Sep 18, 2024 – Oct 1, 2024. In that window (buys dated up to 7 days before first shown through last shown) WINSENATE reported tv buys to WATERFRONT STRATEGIES ($11,604,514); the FEC does not record which buy placed which ad.",
-        "source_urls": [
-          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00865444&payee_name=WATERFRONT+STRATEGIES"
-        ],
-        "checked_by": null,
-        "checked_at": null
-      }
-    },
-    {
-      "ad_id": "CR00605536529846108161",
-      "sponsor_entity_id": "C00865444",
-      "basis": {
-        "basis": "adjacent",
-        "rule": "Ran Oct 31, 2024 – Nov 5, 2024. In that window (buys dated up to 7 days before first shown through last shown) WINSENATE reported tv buys to WATERFRONT STRATEGIES ($5,689,039); the FEC does not record which buy placed which ad.",
         "source_urls": [
           "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00865444&payee_name=WATERFRONT+STRATEGIES"
         ],
@@ -1144,11 +1131,11 @@
       }
     },
     {
-      "ad_id": "CR00706205890339930113",
+      "ad_id": "CR00605536529846108161",
       "sponsor_entity_id": "C00865444",
       "basis": {
         "basis": "adjacent",
-        "rule": "Ran Oct 8, 2024 – Oct 15, 2024. In that window (buys dated up to 7 days before first shown through last shown) WINSENATE reported tv buys to WATERFRONT STRATEGIES ($14,044,700); the FEC does not record which buy placed which ad.",
+        "rule": "Ran Oct 31, 2024 – Nov 5, 2024. In that window (buys dated up to 7 days before first shown through last shown) WINSENATE reported tv buys to WATERFRONT STRATEGIES ($5,689,039); the FEC does not record which buy placed which ad.",
         "source_urls": [
           "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00865444&payee_name=WATERFRONT+STRATEGIES"
         ],
@@ -1157,11 +1144,11 @@
       }
     },
     {
-      "ad_id": "CR13525409708017451009",
+      "ad_id": "CR08113297418050600961",
       "sponsor_entity_id": "C00865444",
       "basis": {
         "basis": "adjacent",
-        "rule": "Ran Jul 12, 2024 – Jul 23, 2024. In that window (buys dated up to 7 days before first shown through last shown) WINSENATE reported tv buys to WATERFRONT STRATEGIES ($953,156); the FEC does not record which buy placed which ad.",
+        "rule": "Ran Sep 18, 2024 – Oct 1, 2024. In that window (buys dated up to 7 days before first shown through last shown) WINSENATE reported tv buys to WATERFRONT STRATEGIES ($11,604,514); the FEC does not record which buy placed which ad.",
         "source_urls": [
           "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00865444&payee_name=WATERFRONT+STRATEGIES"
         ],
@@ -1183,11 +1170,11 @@
       }
     },
     {
-      "ad_id": "CR13755576026157547521",
+      "ad_id": "CR15759935094518710273",
       "sponsor_entity_id": "C00865444",
       "basis": {
         "basis": "adjacent",
-        "rule": "Ran Oct 25, 2024 – Nov 5, 2024. In that window (buys dated up to 7 days before first shown through last shown) WINSENATE reported tv buys to WATERFRONT STRATEGIES ($5,958,543); the FEC does not record which buy placed which ad.",
+        "rule": "Ran Jul 27, 2024 – Aug 13, 2024. In that window (buys dated up to 7 days before first shown through last shown) WINSENATE reported tv buys to WATERFRONT STRATEGIES ($1,561,875); the FEC does not record which buy placed which ad.",
         "source_urls": [
           "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00865444&payee_name=WATERFRONT+STRATEGIES"
         ],
@@ -1196,11 +1183,11 @@
       }
     },
     {
-      "ad_id": "CR02761561407508971521",
+      "ad_id": "CR13755576026157547521",
       "sponsor_entity_id": "C00865444",
       "basis": {
         "basis": "adjacent",
-        "rule": "Ran Jul 26, 2024 – Aug 13, 2024. In that window (buys dated up to 7 days before first shown through last shown) WINSENATE reported tv buys to WATERFRONT STRATEGIES ($2,515,030); the FEC does not record which buy placed which ad.",
+        "rule": "Ran Oct 25, 2024 – Nov 5, 2024. In that window (buys dated up to 7 days before first shown through last shown) WINSENATE reported tv buys to WATERFRONT STRATEGIES ($5,958,543); the FEC does not record which buy placed which ad.",
         "source_urls": [
           "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00865444&payee_name=WATERFRONT+STRATEGIES"
         ],
@@ -1222,19 +1209,6 @@
       }
     },
     {
-      "ad_id": "CR12649963758114832385",
-      "sponsor_entity_id": "C00865444",
-      "basis": {
-        "basis": "adjacent",
-        "rule": "Ran Sep 24, 2024 – Oct 1, 2024. In that window (buys dated up to 7 days before first shown through last shown) WINSENATE reported tv buys to WATERFRONT STRATEGIES ($8,154,773); the FEC does not record which buy placed which ad.",
-        "source_urls": [
-          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00865444&payee_name=WATERFRONT+STRATEGIES"
-        ],
-        "checked_by": null,
-        "checked_at": null
-      }
-    },
-    {
       "ad_id": "CR08551849175661150209",
       "sponsor_entity_id": "C00865444",
       "basis": {
@@ -1248,11 +1222,37 @@
       }
     },
     {
-      "ad_id": "CR15759935094518710273",
+      "ad_id": "CR13525409708017451009",
       "sponsor_entity_id": "C00865444",
       "basis": {
         "basis": "adjacent",
-        "rule": "Ran Jul 27, 2024 – Aug 13, 2024. In that window (buys dated up to 7 days before first shown through last shown) WINSENATE reported tv buys to WATERFRONT STRATEGIES ($1,561,875); the FEC does not record which buy placed which ad.",
+        "rule": "Ran Jul 12, 2024 – Jul 23, 2024. In that window (buys dated up to 7 days before first shown through last shown) WINSENATE reported tv buys to WATERFRONT STRATEGIES ($953,156); the FEC does not record which buy placed which ad.",
+        "source_urls": [
+          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00865444&payee_name=WATERFRONT+STRATEGIES"
+        ],
+        "checked_by": null,
+        "checked_at": null
+      }
+    },
+    {
+      "ad_id": "CR12649963758114832385",
+      "sponsor_entity_id": "C00865444",
+      "basis": {
+        "basis": "adjacent",
+        "rule": "Ran Sep 24, 2024 – Oct 1, 2024. In that window (buys dated up to 7 days before first shown through last shown) WINSENATE reported tv buys to WATERFRONT STRATEGIES ($8,154,773); the FEC does not record which buy placed which ad.",
+        "source_urls": [
+          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00865444&payee_name=WATERFRONT+STRATEGIES"
+        ],
+        "checked_by": null,
+        "checked_at": null
+      }
+    },
+    {
+      "ad_id": "CR02761561407508971521",
+      "sponsor_entity_id": "C00865444",
+      "basis": {
+        "basis": "adjacent",
+        "rule": "Ran Jul 26, 2024 – Aug 13, 2024. In that window (buys dated up to 7 days before first shown through last shown) WINSENATE reported tv buys to WATERFRONT STRATEGIES ($2,515,030); the FEC does not record which buy placed which ad.",
         "source_urls": [
           "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00865444&payee_name=WATERFRONT+STRATEGIES"
         ],
@@ -1313,6 +1313,45 @@
       }
     },
     {
+      "ad_id": "CR04678071249157488641",
+      "sponsor_entity_id": "C00865444",
+      "basis": {
+        "basis": "adjacent",
+        "rule": "Ran Sep 18, 2024 – Sep 24, 2024. In that window (buys dated up to 7 days before first shown through last shown) WINSENATE reported tv buys to WATERFRONT STRATEGIES ($7,149,998); the FEC does not record which buy placed which ad.",
+        "source_urls": [
+          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00865444&payee_name=WATERFRONT+STRATEGIES"
+        ],
+        "checked_by": null,
+        "checked_at": null
+      }
+    },
+    {
+      "ad_id": "CR10695007070039572481",
+      "sponsor_entity_id": "C00865444",
+      "basis": {
+        "basis": "adjacent",
+        "rule": "Ran Oct 31, 2024 – Nov 5, 2024. In that window (buys dated up to 7 days before first shown through last shown) WINSENATE reported tv buys to WATERFRONT STRATEGIES ($5,689,039); the FEC does not record which buy placed which ad.",
+        "source_urls": [
+          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00865444&payee_name=WATERFRONT+STRATEGIES"
+        ],
+        "checked_by": null,
+        "checked_at": null
+      }
+    },
+    {
+      "ad_id": "CR17456537387931795457",
+      "sponsor_entity_id": "C00865444",
+      "basis": {
+        "basis": "adjacent",
+        "rule": "Ran Oct 30, 2024 – Nov 5, 2024. In that window (buys dated up to 7 days before first shown through last shown) WINSENATE reported tv buys to WATERFRONT STRATEGIES ($5,689,039); the FEC does not record which buy placed which ad.",
+        "source_urls": [
+          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00865444&payee_name=WATERFRONT+STRATEGIES"
+        ],
+        "checked_by": null,
+        "checked_at": null
+      }
+    },
+    {
       "ad_id": "CR12128375233107197953",
       "sponsor_entity_id": "C00865444",
       "basis": {
@@ -1352,63 +1391,11 @@
       }
     },
     {
-      "ad_id": "CR10695007070039572481",
+      "ad_id": "CR01146283220334018561",
       "sponsor_entity_id": "C00865444",
       "basis": {
         "basis": "adjacent",
-        "rule": "Ran Oct 31, 2024 – Nov 5, 2024. In that window (buys dated up to 7 days before first shown through last shown) WINSENATE reported tv buys to WATERFRONT STRATEGIES ($5,689,039); the FEC does not record which buy placed which ad.",
-        "source_urls": [
-          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00865444&payee_name=WATERFRONT+STRATEGIES"
-        ],
-        "checked_by": null,
-        "checked_at": null
-      }
-    },
-    {
-      "ad_id": "CR04678071249157488641",
-      "sponsor_entity_id": "C00865444",
-      "basis": {
-        "basis": "adjacent",
-        "rule": "Ran Sep 18, 2024 – Sep 24, 2024. In that window (buys dated up to 7 days before first shown through last shown) WINSENATE reported tv buys to WATERFRONT STRATEGIES ($7,149,998); the FEC does not record which buy placed which ad.",
-        "source_urls": [
-          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00865444&payee_name=WATERFRONT+STRATEGIES"
-        ],
-        "checked_by": null,
-        "checked_at": null
-      }
-    },
-    {
-      "ad_id": "CR17456537387931795457",
-      "sponsor_entity_id": "C00865444",
-      "basis": {
-        "basis": "adjacent",
-        "rule": "Ran Oct 30, 2024 – Nov 5, 2024. In that window (buys dated up to 7 days before first shown through last shown) WINSENATE reported tv buys to WATERFRONT STRATEGIES ($5,689,039); the FEC does not record which buy placed which ad.",
-        "source_urls": [
-          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00865444&payee_name=WATERFRONT+STRATEGIES"
-        ],
-        "checked_by": null,
-        "checked_at": null
-      }
-    },
-    {
-      "ad_id": "CR08077905513142026241",
-      "sponsor_entity_id": "C00865444",
-      "basis": {
-        "basis": "adjacent",
-        "rule": "Ran Nov 2, 2024 – Nov 5, 2024. In that window (buys dated up to 7 days before first shown through last shown) WINSENATE reported tv buys to WATERFRONT STRATEGIES ($489,162); the FEC does not record which buy placed which ad.",
-        "source_urls": [
-          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00865444&payee_name=WATERFRONT+STRATEGIES"
-        ],
-        "checked_by": null,
-        "checked_at": null
-      }
-    },
-    {
-      "ad_id": "CR04013292500230864897",
-      "sponsor_entity_id": "C00865444",
-      "basis": {
-        "basis": "adjacent",
-        "rule": "Ran Oct 30, 2024 – Nov 5, 2024. In that window (buys dated up to 7 days before first shown through last shown) WINSENATE reported tv buys to WATERFRONT STRATEGIES ($5,689,039); the FEC does not record which buy placed which ad.",
+        "rule": "Ran Oct 8, 2024 – Oct 15, 2024. In that window (buys dated up to 7 days before first shown through last shown) WINSENATE reported tv buys to WATERFRONT STRATEGIES ($14,044,700); the FEC does not record which buy placed which ad.",
         "source_urls": [
           "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00865444&payee_name=WATERFRONT+STRATEGIES"
         ],
@@ -1430,6 +1417,19 @@
       }
     },
     {
+      "ad_id": "CR08077905513142026241",
+      "sponsor_entity_id": "C00865444",
+      "basis": {
+        "basis": "adjacent",
+        "rule": "Ran Nov 2, 2024 – Nov 5, 2024. In that window (buys dated up to 7 days before first shown through last shown) WINSENATE reported tv buys to WATERFRONT STRATEGIES ($489,162); the FEC does not record which buy placed which ad.",
+        "source_urls": [
+          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00865444&payee_name=WATERFRONT+STRATEGIES"
+        ],
+        "checked_by": null,
+        "checked_at": null
+      }
+    },
+    {
       "ad_id": "CR12472098510868578305",
       "sponsor_entity_id": "C00865444",
       "basis": {
@@ -1443,11 +1443,11 @@
       }
     },
     {
-      "ad_id": "CR01146283220334018561",
+      "ad_id": "CR04013292500230864897",
       "sponsor_entity_id": "C00865444",
       "basis": {
         "basis": "adjacent",
-        "rule": "Ran Oct 8, 2024 – Oct 15, 2024. In that window (buys dated up to 7 days before first shown through last shown) WINSENATE reported tv buys to WATERFRONT STRATEGIES ($14,044,700); the FEC does not record which buy placed which ad.",
+        "rule": "Ran Oct 30, 2024 – Nov 5, 2024. In that window (buys dated up to 7 days before first shown through last shown) WINSENATE reported tv buys to WATERFRONT STRATEGIES ($5,689,039); the FEC does not record which buy placed which ad.",
         "source_urls": [
           "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00865444&payee_name=WATERFRONT+STRATEGIES"
         ],
@@ -1456,11 +1456,11 @@
       }
     },
     {
-      "ad_id": "CR11600169022489886721",
+      "ad_id": "CR04236317713686855681",
       "sponsor_entity_id": "C00865444",
       "basis": {
         "basis": "adjacent",
-        "rule": "Ran Oct 30, 2024 – Nov 5, 2024. In that window (buys dated up to 7 days before first shown through last shown) WINSENATE reported tv buys to WATERFRONT STRATEGIES ($5,689,039); the FEC does not record which buy placed which ad.",
+        "rule": "Ran Oct 5, 2024 – Oct 17, 2024. In that window (buys dated up to 7 days before first shown through last shown) WINSENATE reported tv buys to WATERFRONT STRATEGIES ($19,692,485); the FEC does not record which buy placed which ad.",
         "source_urls": [
           "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00865444&payee_name=WATERFRONT+STRATEGIES"
         ],
@@ -1482,6 +1482,19 @@
       }
     },
     {
+      "ad_id": "CR01401037590588555265",
+      "sponsor_entity_id": "C00865444",
+      "basis": {
+        "basis": "adjacent",
+        "rule": "Ran Nov 2, 2024 – Nov 5, 2024. In that window (buys dated up to 7 days before first shown through last shown) WINSENATE reported tv buys to WATERFRONT STRATEGIES ($489,162); the FEC does not record which buy placed which ad.",
+        "source_urls": [
+          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00865444&payee_name=WATERFRONT+STRATEGIES"
+        ],
+        "checked_by": null,
+        "checked_at": null
+      }
+    },
+    {
       "ad_id": "CR14221923987474087937",
       "sponsor_entity_id": "C00865444",
       "basis": {
@@ -1495,20 +1508,7 @@
       }
     },
     {
-      "ad_id": "CR00238872216849088513",
-      "sponsor_entity_id": "C00865444",
-      "basis": {
-        "basis": "adjacent",
-        "rule": "Ran Sep 19, 2024 – Oct 1, 2024. In that window (buys dated up to 7 days before first shown through last shown) WINSENATE reported tv buys to WATERFRONT STRATEGIES ($11,604,514); the FEC does not record which buy placed which ad.",
-        "source_urls": [
-          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00865444&payee_name=WATERFRONT+STRATEGIES"
-        ],
-        "checked_by": null,
-        "checked_at": null
-      }
-    },
-    {
-      "ad_id": "CR04236317713686855681",
+      "ad_id": "CR03118299106192130049",
       "sponsor_entity_id": "C00865444",
       "basis": {
         "basis": "adjacent",
@@ -1534,6 +1534,19 @@
       }
     },
     {
+      "ad_id": "CR00238872216849088513",
+      "sponsor_entity_id": "C00865444",
+      "basis": {
+        "basis": "adjacent",
+        "rule": "Ran Sep 19, 2024 – Oct 1, 2024. In that window (buys dated up to 7 days before first shown through last shown) WINSENATE reported tv buys to WATERFRONT STRATEGIES ($11,604,514); the FEC does not record which buy placed which ad.",
+        "source_urls": [
+          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00865444&payee_name=WATERFRONT+STRATEGIES"
+        ],
+        "checked_by": null,
+        "checked_at": null
+      }
+    },
+    {
       "ad_id": "CR14972508847170650113",
       "sponsor_entity_id": "C00865444",
       "basis": {
@@ -1547,59 +1560,7 @@
       }
     },
     {
-      "ad_id": "CR01401037590588555265",
-      "sponsor_entity_id": "C00865444",
-      "basis": {
-        "basis": "adjacent",
-        "rule": "Ran Nov 2, 2024 – Nov 5, 2024. In that window (buys dated up to 7 days before first shown through last shown) WINSENATE reported tv buys to WATERFRONT STRATEGIES ($489,162); the FEC does not record which buy placed which ad.",
-        "source_urls": [
-          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00865444&payee_name=WATERFRONT+STRATEGIES"
-        ],
-        "checked_by": null,
-        "checked_at": null
-      }
-    },
-    {
-      "ad_id": "CR03118299106192130049",
-      "sponsor_entity_id": "C00865444",
-      "basis": {
-        "basis": "adjacent",
-        "rule": "Ran Oct 5, 2024 – Oct 17, 2024. In that window (buys dated up to 7 days before first shown through last shown) WINSENATE reported tv buys to WATERFRONT STRATEGIES ($19,692,485); the FEC does not record which buy placed which ad.",
-        "source_urls": [
-          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00865444&payee_name=WATERFRONT+STRATEGIES"
-        ],
-        "checked_by": null,
-        "checked_at": null
-      }
-    },
-    {
-      "ad_id": "CR17102582604718145537",
-      "sponsor_entity_id": "C00865444",
-      "basis": {
-        "basis": "adjacent",
-        "rule": "Ran Oct 30, 2024 – Nov 6, 2024. In that window (buys dated up to 7 days before first shown through last shown) WINSENATE reported tv buys to WATERFRONT STRATEGIES ($5,689,039); the FEC does not record which buy placed which ad.",
-        "source_urls": [
-          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00865444&payee_name=WATERFRONT+STRATEGIES"
-        ],
-        "checked_by": null,
-        "checked_at": null
-      }
-    },
-    {
-      "ad_id": "CR15859783995999911937",
-      "sponsor_entity_id": "C00865444",
-      "basis": {
-        "basis": "adjacent",
-        "rule": "Ran Oct 16, 2024 – Oct 29, 2024. In that window (buys dated up to 7 days before first shown through last shown) WINSENATE reported tv buys to WATERFRONT STRATEGIES ($16,062,633); the FEC does not record which buy placed which ad.",
-        "source_urls": [
-          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00865444&payee_name=WATERFRONT+STRATEGIES"
-        ],
-        "checked_by": null,
-        "checked_at": null
-      }
-    },
-    {
-      "ad_id": "CR01428789264073621505",
+      "ad_id": "CR11600169022489886721",
       "sponsor_entity_id": "C00865444",
       "basis": {
         "basis": "adjacent",
@@ -1612,24 +1573,11 @@
       }
     },
     {
-      "ad_id": "CR07331196105515859969",
+      "ad_id": "CR13560923710256316417",
       "sponsor_entity_id": "C00865444",
       "basis": {
         "basis": "adjacent",
-        "rule": "Ran Sep 6, 2024 – Sep 19, 2024. In that window (buys dated up to 7 days before first shown through last shown) WINSENATE reported tv buys to WATERFRONT STRATEGIES ($13,092,138); the FEC does not record which buy placed which ad.",
-        "source_urls": [
-          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00865444&payee_name=WATERFRONT+STRATEGIES"
-        ],
-        "checked_by": null,
-        "checked_at": null
-      }
-    },
-    {
-      "ad_id": "CR09197140455374979073",
-      "sponsor_entity_id": "C00865444",
-      "basis": {
-        "basis": "adjacent",
-        "rule": "Ran Oct 11, 2024 – Oct 15, 2024. In that window (buys dated up to 7 days before first shown through last shown) WINSENATE reported tv buys to WATERFRONT STRATEGIES ($9,676,187); the FEC does not record which buy placed which ad.",
+        "rule": "Ran Oct 30, 2024 – Nov 5, 2024. In that window (buys dated up to 7 days before first shown through last shown) WINSENATE reported tv buys to WATERFRONT STRATEGIES ($5,689,039); the FEC does not record which buy placed which ad.",
         "source_urls": [
           "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00865444&payee_name=WATERFRONT+STRATEGIES"
         ],
@@ -1651,11 +1599,24 @@
       }
     },
     {
-      "ad_id": "CR13560923710256316417",
+      "ad_id": "CR13375204376574951425",
       "sponsor_entity_id": "C00865444",
       "basis": {
         "basis": "adjacent",
-        "rule": "Ran Oct 30, 2024 – Nov 5, 2024. In that window (buys dated up to 7 days before first shown through last shown) WINSENATE reported tv buys to WATERFRONT STRATEGIES ($5,689,039); the FEC does not record which buy placed which ad.",
+        "rule": "Ran Oct 16, 2024 – Oct 29, 2024. In that window (buys dated up to 7 days before first shown through last shown) WINSENATE reported tv buys to WATERFRONT STRATEGIES ($16,062,633); the FEC does not record which buy placed which ad.",
+        "source_urls": [
+          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00865444&payee_name=WATERFRONT+STRATEGIES"
+        ],
+        "checked_by": null,
+        "checked_at": null
+      }
+    },
+    {
+      "ad_id": "CR07331196105515859969",
+      "sponsor_entity_id": "C00865444",
+      "basis": {
+        "basis": "adjacent",
+        "rule": "Ran Sep 6, 2024 – Sep 19, 2024. In that window (buys dated up to 7 days before first shown through last shown) WINSENATE reported tv buys to WATERFRONT STRATEGIES ($13,092,138); the FEC does not record which buy placed which ad.",
         "source_urls": [
           "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00865444&payee_name=WATERFRONT+STRATEGIES"
         ],
@@ -1690,11 +1651,37 @@
       }
     },
     {
-      "ad_id": "CR13375204376574951425",
+      "ad_id": "CR17102582604718145537",
       "sponsor_entity_id": "C00865444",
       "basis": {
         "basis": "adjacent",
-        "rule": "Ran Oct 16, 2024 – Oct 29, 2024. In that window (buys dated up to 7 days before first shown through last shown) WINSENATE reported tv buys to WATERFRONT STRATEGIES ($16,062,633); the FEC does not record which buy placed which ad.",
+        "rule": "Ran Oct 30, 2024 – Nov 6, 2024. In that window (buys dated up to 7 days before first shown through last shown) WINSENATE reported tv buys to WATERFRONT STRATEGIES ($5,689,039); the FEC does not record which buy placed which ad.",
+        "source_urls": [
+          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00865444&payee_name=WATERFRONT+STRATEGIES"
+        ],
+        "checked_by": null,
+        "checked_at": null
+      }
+    },
+    {
+      "ad_id": "CR09197140455374979073",
+      "sponsor_entity_id": "C00865444",
+      "basis": {
+        "basis": "adjacent",
+        "rule": "Ran Oct 11, 2024 – Oct 15, 2024. In that window (buys dated up to 7 days before first shown through last shown) WINSENATE reported tv buys to WATERFRONT STRATEGIES ($9,676,187); the FEC does not record which buy placed which ad.",
+        "source_urls": [
+          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00865444&payee_name=WATERFRONT+STRATEGIES"
+        ],
+        "checked_by": null,
+        "checked_at": null
+      }
+    },
+    {
+      "ad_id": "CR01428789264073621505",
+      "sponsor_entity_id": "C00865444",
+      "basis": {
+        "basis": "adjacent",
+        "rule": "Ran Oct 30, 2024 – Nov 5, 2024. In that window (buys dated up to 7 days before first shown through last shown) WINSENATE reported tv buys to WATERFRONT STRATEGIES ($5,689,039); the FEC does not record which buy placed which ad.",
         "source_urls": [
           "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00865444&payee_name=WATERFRONT+STRATEGIES"
         ],
@@ -1714,7 +1701,20 @@
         "checked_by": null,
         "checked_at": null
       }
+    },
+    {
+      "ad_id": "CR15859783995999911937",
+      "sponsor_entity_id": "C00865444",
+      "basis": {
+        "basis": "adjacent",
+        "rule": "Ran Oct 16, 2024 – Oct 29, 2024. In that window (buys dated up to 7 days before first shown through last shown) WINSENATE reported tv buys to WATERFRONT STRATEGIES ($16,062,633); the FEC does not record which buy placed which ad.",
+        "source_urls": [
+          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00865444&payee_name=WATERFRONT+STRATEGIES"
+        ],
+        "checked_by": null,
+        "checked_at": null
+      }
     }
   ],
-  "method": "Every Schedule E independent expenditure names a payee. Payee strings are normalised (case, punctuation, legal suffixes, token order), near-duplicates are folded with a difflib ratio ≥ 0.92 when their numeric tokens match, and hand alias rows from data/hand/<race>/vendor_aliases.json override the rule. Medium is classified from the purpose the spender filed (ordered keyword table in gotham/vendors.py); the FEC does not record which buy placed which ad, so vendor ↔ ad links are empty until a human verifies one. Totals are the filed amounts, grouped, never re-estimated."
+  "method": "Every Schedule E independent expenditure names a payee. Payee strings are normalised (case, punctuation, legal suffixes, token order), near-duplicates are folded with a difflib ratio ≥ 0.92 when their numeric tokens match, and hand alias rows from data/hand/<race>/vendor_aliases.json override the rule. Medium is classified from the purpose the spender filed (ordered keyword table in campaign_commons/vendors.py); the FEC does not record which buy placed which ad, so vendor ↔ ad links are empty until a human verifies one. Totals are the filed amounts, grouped, never re-estimated."
 }

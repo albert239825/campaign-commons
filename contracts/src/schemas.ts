@@ -2,7 +2,7 @@ import { z } from "zod";
 import { ISSUE_IDS } from "./issues";
 
 /**
- * Citizen Gotham data contracts.
+ * Campaign Commons data contracts.
  *
  * The pipeline (Python) writes JSON files under data/out/ that MUST validate against
  * these schemas (`npm run validate` in contracts/). The web app (Next.js) imports the
@@ -310,10 +310,10 @@ export const IndependentExpenditureSchema = z.object({
   purpose: z.string().nullable(),
   payee: z.string().nullable(),
   source_url: z.string().url(),
-  // Block 2 (gotham.vendors): normalized payee and classified medium; null when payee is empty
+  // Block 2 (campaign_commons.vendors): normalized payee and classified medium; null when payee is empty
   vendor_id: z.string().nullable().optional(),
   medium: MediumSchema.optional(),
-  // Block 2 (gotham.issues, from data/hand/<race>/ie_issues.json): what the notice says the ad was about
+  // Block 2 (campaign_commons.issues, from data/hand/<race>/ie_issues.json): what the notice says the ad was about
   issues: IssueTagsSchema.optional(),
 });
 
@@ -396,9 +396,9 @@ export const EntitySchema = z.object({
   has_chain: z.boolean(),
   source_url: z.string().url(), // FEC committee page
   data_status: DataStatusSchema,
-  // Block 2 (gotham.vendors): IEs grouped by normalized payee; sum equals sum(independent_expenditures.amount)
+  // Block 2 (campaign_commons.vendors): IEs grouped by normalized payee; sum equals sum(independent_expenditures.amount)
   vendors: z.array(EntityVendorRowSchema).optional(),
-  // Block 2 (gotham.issues): present only for hand-tagged committees
+  // Block 2 (campaign_commons.issues): present only for hand-tagged committees
   issue_focus: IssueFocusSchema.optional(),
 });
 
@@ -406,7 +406,7 @@ export const EntitySchema = z.object({
 // <race_id>/chains/<entity_id>.json
 // ---------------------------------------------------------------------------
 
-// Name-based classification of a Schedule A ENTITY_TP=ORG contributor (pipeline/gotham/orgs.py, D-38).
+// Name-based classification of a Schedule A ENTITY_TP=ORG contributor (pipeline/campaign_commons/orgs.py, D-38).
 export const OrganizationClassSchema = z.enum(["union", "business", "llc", "nonprofit", "unknown"]);
 
 export const TerminusReasonSchema = z.enum([
@@ -569,7 +569,7 @@ export const AdSchema = z.object({
   cached_creative_path: z.string().nullable(), // path under web/public/, e.g. /creatives/pa-sen-2024/CR123.png
   regions: z.array(z.string()),
   source_url: z.string().url(),
-  // hand-checked ad -> committee link (pipeline/gotham/data/ad_verifications.json); absent on older files
+  // hand-checked ad -> committee link (pipeline/campaign_commons/data/ad_verifications.json); absent on older files
   verification: AdVerificationSchema.optional(),
   // ---- Block 2 ----
   /** the sponsor committee's chain summary shares (chains/<matched_entity_id>.json); null when unmatched or no chain.
@@ -678,7 +678,7 @@ export const StoriesSchema = z.object({
 });
 
 // ---------------------------------------------------------------------------
-// <race_id>/donors/<donor_key>.json — forward walk from one of the largest chain sources (pipeline/gotham/donors.py)
+// <race_id>/donors/<donor_key>.json — forward walk from one of the largest chain sources (pipeline/campaign_commons/donors.py)
 // ---------------------------------------------------------------------------
 
 export const DonorNodeSchema = z.object({
@@ -721,7 +721,7 @@ export const DonorViewSchema = z.object({
 });
 
 // ---------------------------------------------------------------------------
-// <race_id>/vendors.json + <race_id>/vendors/<vendor_id>.json — Schedule E payees (pipeline/gotham/vendors.py, Block 2)
+// <race_id>/vendors.json + <race_id>/vendors/<vendor_id>.json — Schedule E payees (pipeline/campaign_commons/vendors.py, Block 2)
 // ---------------------------------------------------------------------------
 
 export const VendorSummarySchema = z.object({
@@ -771,7 +771,7 @@ export const VendorIndexSchema = z.object({
 });
 
 // ---------------------------------------------------------------------------
-// <race_id>/issues.json — outside spending by issue (pipeline/gotham/issues.py, Block 2)
+// <race_id>/issues.json — outside spending by issue (pipeline/campaign_commons/issues.py, Block 2)
 // Two layers, never merged: what the ADS were about (attributable — the ad is the spending) vs what the SPENDERS say
 // they are for (not attributable — a party PAC's dollars are not "about" anything).
 // ---------------------------------------------------------------------------
@@ -825,7 +825,7 @@ export const IssueSpendingSchema = z.object({
 });
 
 // ---------------------------------------------------------------------------
-// search.json — static client-side index over every page (pipeline/gotham/search.py, Block 2)
+// search.json — static client-side index over every page (pipeline/campaign_commons/search.py, Block 2)
 // ---------------------------------------------------------------------------
 
 export const SearchItemKindSchema = z.enum(["race", "candidate", "committee", "vendor", "donor", "organization"]);

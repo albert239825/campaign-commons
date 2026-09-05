@@ -6,32 +6,32 @@ Source of truth: [`contracts/src/schemas.ts`](../contracts/src/schemas.ts). This
 
 | Path | Schema | Written by | Read by |
 | --- | --- | --- | --- |
-| `races.json` | `RacesIndex` | `gotham.ledger` | `/` |
-| `<race_id>/ledger.json` | `Ledger` | `gotham.ledger`, then `gotham.chains` fills `traceability` + spender `flags`/`traceability_score` | `/races/[raceId]` |
-| `<race_id>/entities/<entity_id>.json` | `Entity` | `gotham.ledger`, then `gotham.chains` fills `flags` | `/races/[raceId]/entities/[entityId]` |
-| `<race_id>/chains/<entity_id>.json` | `Chain` | `gotham.chains` | `/races/[raceId]/chains/[entityId]` |
-| `<race_id>/ads.json` | `AdGallery` | `gotham.ads` | `/races/[raceId]/ads` |
-| `<race_id>/dossiers/<candidate_id>.json` | `Dossier` | `gotham.dossier` | `/races/[raceId]/candidates/[candidateId]` |
-| `<race_id>/stories.json` | `Stories` | `gotham.chains` | `/races/[raceId]/stories`, ledger strip |
-| `<race_id>/donors/<donor_key>.json` | `DonorView` | `gotham.donors` | `/races/[raceId]/donors/[key]` |
-| `<race_id>/vendors.json` | `VendorIndex` | `gotham.vendors` (Block 2) | entity page, vendor pages |
-| `<race_id>/vendors/<vendor_id>.json` | `Vendor` | `gotham.vendors`; `gotham.ads` fills `ads[]` | `/races/[raceId]/vendors/[vendorId]` |
-| `<race_id>/issues.json` | `IssueSpending` | `gotham.issues` (Block 2) | ledger issue cards |
-| `search.json` | `SearchIndex` | `gotham.search` (Block 2) | header search box (client) |
+| `races.json` | `RacesIndex` | `campaign_commons.ledger` | `/` |
+| `<race_id>/ledger.json` | `Ledger` | `campaign_commons.ledger`, then `campaign_commons.chains` fills `traceability` + spender `flags`/`traceability_score` | `/races/[raceId]` |
+| `<race_id>/entities/<entity_id>.json` | `Entity` | `campaign_commons.ledger`, then `campaign_commons.chains` fills `flags` | `/races/[raceId]/entities/[entityId]` |
+| `<race_id>/chains/<entity_id>.json` | `Chain` | `campaign_commons.chains` | `/races/[raceId]/chains/[entityId]` |
+| `<race_id>/ads.json` | `AdGallery` | `campaign_commons.ads` | `/races/[raceId]/ads` |
+| `<race_id>/dossiers/<candidate_id>.json` | `Dossier` | `campaign_commons.dossier` | `/races/[raceId]/candidates/[candidateId]` |
+| `<race_id>/stories.json` | `Stories` | `campaign_commons.chains` | `/races/[raceId]/stories`, ledger strip |
+| `<race_id>/donors/<donor_key>.json` | `DonorView` | `campaign_commons.donors` | `/races/[raceId]/donors/[key]` |
+| `<race_id>/vendors.json` | `VendorIndex` | `campaign_commons.vendors` (Block 2) | entity page, vendor pages |
+| `<race_id>/vendors/<vendor_id>.json` | `Vendor` | `campaign_commons.vendors`; `campaign_commons.ads` fills `ads[]` | `/races/[raceId]/vendors/[vendorId]` |
+| `<race_id>/issues.json` | `IssueSpending` | `campaign_commons.issues` (Block 2) | ledger issue cards |
+| `search.json` | `SearchIndex` | `campaign_commons.search` (Block 2) | header search box (client) |
 
-Block 2 also *patches* existing files in place: `gotham.vendors` adds `vendors[]` and per-IE `vendor_id`/`medium` to
-`entities/*.json`; `gotham.issues` adds `issue_focus` to entities and `issues` (`{issue_ids, basis}`) to ads and IE rows; `gotham.ads` adds
+Block 2 also *patches* existing files in place: `campaign_commons.vendors` adds `vendors[]` and per-IE `vendor_id`/`medium` to
+`entities/*.json`; `campaign_commons.issues` adds `issue_focus` to entities and `issues` (`{issue_ids, basis}`) to ads and IE rows; `campaign_commons.ads` adds
 `sponsor_visibility_shares` and `vendor_links[]` to ads. All additive optional fields — V0 files stay valid.
 
 ## Hand-maintained inputs (`data/hand/<race_id>/`)
 
 | File | Schema | Edited by | Consumed by |
 | --- | --- | --- | --- |
-| `issue_focus.json` | `HandIssueFocusFile` | issue-focus child, teammates | `gotham.issues` → `Entity.issue_focus`, `issues.json.by_spender_focus` |
-| `ad_issues.json` | `HandAdIssuesFile` | media-wall child, teammates | `gotham.issues` → `Ad.issues`, `issues.json.by_ad_issue` |
-| `ie_issues.json` | `HandIeIssuesFile` | issue-focus child | `gotham.issues` → IE `issues`, `issues.json.by_ad_issue.ie_*` |
-| `vendor_aliases.json` | `HandVendorAliasesFile` | vendors child | `gotham.vendors` (folds after automatic normalisation) |
-| `vendor_ad_links.json` | `HandVendorAdLinksFile` | anyone with a source | `gotham.ads` → `Ad.vendor_links[]` with `basis: verified` |
+| `issue_focus.json` | `HandIssueFocusFile` | issue-focus child, teammates | `campaign_commons.issues` → `Entity.issue_focus`, `issues.json.by_spender_focus` |
+| `ad_issues.json` | `HandAdIssuesFile` | media-wall child, teammates | `campaign_commons.issues` → `Ad.issues`, `issues.json.by_ad_issue` |
+| `ie_issues.json` | `HandIeIssuesFile` | issue-focus child | `campaign_commons.issues` → IE `issues`, `issues.json.by_ad_issue.ie_*` |
+| `vendor_aliases.json` | `HandVendorAliasesFile` | vendors child | `campaign_commons.vendors` (folds after automatic normalisation) |
+| `vendor_ad_links.json` | `HandVendorAdLinksFile` | anyone with a source | `campaign_commons.ads` → `Ad.vendor_links[]` with `basis: verified` |
 
 Every file is `{race_id, method, rows[]}`; every row carries `source_url(s)` and `tagged_by`/`verified_by`. Empty `rows: []`
 is valid. Never hand-edit `data/out`. `vendor_aliases.json` rows may carry an optional `tagged_at` (ISO date); it becomes the

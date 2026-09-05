@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useMemo, useRef, useState } from "react";
-import { ISSUE_BY_ID, type Ad, type IssueId } from "@citizen-gotham/contracts";
+import { ISSUE_BY_ID, type Ad, type IssueId } from "@campaign-commons/contracts";
 import { AdCard, darkShare, isVerified } from "./ad-card";
 
 type Sort = "spend_desc" | "spend_asc" | "recent" | "dark_desc";

@@ -1,7 +1,7 @@
 [project]
-name = "citizen-gotham-pipeline"
+name = "campaign-commons-pipeline"
 version = "0.1.0"
-description = "Offline pipeline: FEC bulk -> DuckDB -> static JSON for the Citizen Gotham web app"
+description = "Offline pipeline: FEC bulk -> DuckDB -> static JSON for the Campaign Commons web app"
 requires-python = ">=3.10"
 dependencies = [
   "duckdb>=1.1",

@@ -8,8 +8,8 @@ from pathlib import Path
 import pytest
 from jsonschema import Draft7Validator
 
-from gotham.config import ROOT
-from gotham.search import (
+from campaign_commons.config import ROOT
+from campaign_commons.search import (
     MAX_ALIASES,
     build_index,
     build_items,

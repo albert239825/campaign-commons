@@ -1,5 +1,5 @@
 /**
- * The Issue Taxonomy — the spine of Citizen Gotham.
+ * The Issue Taxonomy — the spine of Campaign Commons.
  *
  * FROZEN for the hackathon. Every stance, bill, vote, donor industry, and ad tags
  * against exactly these IDs. Do not add/rename without updating docs/DECISIONS.md.

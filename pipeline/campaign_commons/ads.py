@@ -12,16 +12,16 @@ Filter: Regions contains "US" AND served range overlaps 2024-01-01..2024-11-05 A
   (b) advertiser matches another seed/ledger committee, or its name contains a candidate surname ("Casey",
       "McCormick") -> keep only ads whose Geo_Targeting_Included names Pennsylvania (state, PA DMA, "City, PA").
   Region granularity in the bundle is country-level; PA targeting comes from the ad-level geo column.
-Matching (gotham/ads_match.py): exact match on a normalized name against a hand-verified seed list of PA-2024 Senate
+Matching (campaign_commons/ads_match.py): exact match on a normalized name against a hand-verified seed list of PA-2024 Senate
   advertisers (FEC ids from cm24) plus `top_outside_spenders[].name -> entity_id` from the current ledger.json.
   Exact => match_confidence "auto"; anything else => "none" with matched_entity_id null. Nothing fuzzy, no guesses.
   `candidate_ids`/`support_oppose` are set only for candidate committees (supporting themselves); V0 does not infer
   stance or issues from creatives.
-Creatives (gotham/ads_creatives.py): for the top 50 ads by spend upper bound, VIDEO ads get their YouTube poster
+Creatives (campaign_commons/ads_creatives.py): for the top 50 ads by spend upper bound, VIDEO ads get their YouTube poster
   frame (JPEG) cached to web/public/creatives/<race_id>/<ad_id>.jpg via the site's lookup RPC; TEXT/IMAGE ads have no
   static asset reachable without a headless browser and keep cached_creative_path null. Total budget 20MB. Hand-verified
-  ads (gotham/ads_verify.py) are always attempted so the chain page can show the creative.
-Verification (gotham/ads_verify.py): gotham/data/ad_verifications.json is hand-maintained; each ad gets an additive
+  ads (campaign_commons/ads_verify.py) are always attempted so the chain page can show the creative.
+Verification (campaign_commons/ads_verify.py): campaign_commons/data/ad_verifications.json is hand-maintained; each ad gets an additive
   `verification` block, "verified" only for ads listed there (and only if the name match agrees on the committee).
 Sort: matched first, then spend upper bound desc (open-ended bucket sorts first), cap 500. Output passes `make validate`.
 """

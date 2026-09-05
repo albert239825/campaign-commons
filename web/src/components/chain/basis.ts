@@ -1,4 +1,4 @@
-import type { Basis, EvidenceBasis } from "@citizen-gotham/contracts";
+import type { Basis, EvidenceBasis } from "@campaign-commons/contracts";
 
 /** Compact wire form of a Basis: [basis, rule, source_urls]. checked_by/at stay server-side. */
 export type BasisWire = [EvidenceBasis, string, string[]];

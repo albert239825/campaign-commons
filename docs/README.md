@@ -1,4 +1,4 @@
-# Citizen Gotham docs
+# Campaign Commons docs
 
 Start here. One document per job; don't duplicate content across them — link.
 

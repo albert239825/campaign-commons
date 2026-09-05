@@ -1,4 +1,4 @@
-import type { SearchItem, SearchItemKind } from "@citizen-gotham/contracts";
+import type { SearchItem, SearchItemKind } from "@campaign-commons/contracts";
 
 /**
  * Plain-TypeScript matcher over search.json (~2,000 rows; no fuzzy library).

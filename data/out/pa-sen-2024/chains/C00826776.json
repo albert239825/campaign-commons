@@ -2,7 +2,7 @@
   "root_entity_id": "C00826776",
   "root_name": "FRONTIERS OF FREEDOM ACTION, INC.",
   "race_id": "pa-sen-2024",
-  "generated_at": "2026-09-05T15:46:46+00:00",
+  "generated_at": "2026-09-05T19:53:48+00:00",
   "data_status": "real",
   "nodes": [
     {
@@ -94,7 +94,7 @@
       "medium": "digital",
       "basis": {
         "basis": "filed",
-        "rule": "Schedule E payee, grouped by normalized vendor name (gotham.vendors)",
+        "rule": "Schedule E payee, grouped by normalized vendor name (campaign_commons.vendors)",
         "source_urls": [
           "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00826776&payee_name=LAGNIAPPE+COMMUNICATIONS+GROUP"
         ],
@@ -118,7 +118,7 @@
       "medium": "digital",
       "basis": {
         "basis": "filed",
-        "rule": "Schedule E payee, grouped by normalized vendor name (gotham.vendors)",
+        "rule": "Schedule E payee, grouped by normalized vendor name (campaign_commons.vendors)",
         "source_urls": [
           "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00826776&payee_name=HANCO+PRODUCTIONS"
         ],

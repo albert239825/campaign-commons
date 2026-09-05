@@ -46,7 +46,7 @@
   "last_date": "2024-10-25",
   "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&payee_name=TARGETED+VICTORY+LLC",
   "race_id": "pa-sen-2024",
-  "generated_at": "2026-09-05T19:33:04+00:00",
+  "generated_at": "2026-09-05T19:53:50+00:00",
   "data_status": "real",
   "expenditures": [
     {
@@ -633,6 +633,19 @@
       }
     },
     {
+      "ad_id": "CR03308517864792653825",
+      "sponsor_entity_id": "C00687103",
+      "basis": {
+        "basis": "adjacent",
+        "rule": "Ran Aug 6, 2024 – Sep 4, 2024. In that window (buys dated up to 7 days before first shown through last shown) AMERICANS FOR PROSPERITY ACTION, INC. (AFP ACTION) DBA CVA ACTION AND DBA LIBRE ACTION reported production buys to TARGETED VICTORY LLC ($23,246); the FEC does not record which buy placed which ad.",
+        "source_urls": [
+          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00687103&payee_name=TARGETED+VICTORY+LLC"
+        ],
+        "checked_by": null,
+        "checked_at": null
+      }
+    },
+    {
       "ad_id": "CR14071576217736183809",
       "sponsor_entity_id": "C00687103",
       "basis": {
@@ -651,19 +664,6 @@
       "basis": {
         "basis": "adjacent",
         "rule": "Ran Sep 4, 2024 – Oct 1, 2024. In that window (buys dated up to 7 days before first shown through last shown) AMERICANS FOR PROSPERITY ACTION, INC. (AFP ACTION) DBA CVA ACTION AND DBA LIBRE ACTION reported production buys to TARGETED VICTORY LLC ($7,000); the FEC does not record which buy placed which ad.",
-        "source_urls": [
-          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00687103&payee_name=TARGETED+VICTORY+LLC"
-        ],
-        "checked_by": null,
-        "checked_at": null
-      }
-    },
-    {
-      "ad_id": "CR03308517864792653825",
-      "sponsor_entity_id": "C00687103",
-      "basis": {
-        "basis": "adjacent",
-        "rule": "Ran Aug 6, 2024 – Sep 4, 2024. In that window (buys dated up to 7 days before first shown through last shown) AMERICANS FOR PROSPERITY ACTION, INC. (AFP ACTION) DBA CVA ACTION AND DBA LIBRE ACTION reported production buys to TARGETED VICTORY LLC ($23,246); the FEC does not record which buy placed which ad.",
         "source_urls": [
           "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00687103&payee_name=TARGETED+VICTORY+LLC"
         ],
@@ -724,6 +724,19 @@
       }
     },
     {
+      "ad_id": "CR03075334589825155073",
+      "sponsor_entity_id": "C00687103",
+      "basis": {
+        "basis": "adjacent",
+        "rule": "Ran Oct 1, 2024 – Oct 16, 2024. In that window (buys dated up to 7 days before first shown through last shown) AMERICANS FOR PROSPERITY ACTION, INC. (AFP ACTION) DBA CVA ACTION AND DBA LIBRE ACTION reported production buys to TARGETED VICTORY LLC ($13,750); the FEC does not record which buy placed which ad.",
+        "source_urls": [
+          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00687103&payee_name=TARGETED+VICTORY+LLC"
+        ],
+        "checked_by": null,
+        "checked_at": null
+      }
+    },
+    {
       "ad_id": "CR18084280736944226305",
       "sponsor_entity_id": "C00687103",
       "basis": {
@@ -737,11 +750,11 @@
       }
     },
     {
-      "ad_id": "CR03075334589825155073",
+      "ad_id": "CR16050704655335817217",
       "sponsor_entity_id": "C00687103",
       "basis": {
         "basis": "adjacent",
-        "rule": "Ran Oct 1, 2024 – Oct 16, 2024. In that window (buys dated up to 7 days before first shown through last shown) AMERICANS FOR PROSPERITY ACTION, INC. (AFP ACTION) DBA CVA ACTION AND DBA LIBRE ACTION reported production buys to TARGETED VICTORY LLC ($13,750); the FEC does not record which buy placed which ad.",
+        "rule": "Ran May 7, 2024 – Jun 1, 2024. In that window (buys dated up to 7 days before first shown through last shown) AMERICANS FOR PROSPERITY ACTION, INC. (AFP ACTION) DBA CVA ACTION AND DBA LIBRE ACTION reported production buys to TARGETED VICTORY LLC ($2,500); the FEC does not record which buy placed which ad.",
         "source_urls": [
           "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00687103&payee_name=TARGETED+VICTORY+LLC"
         ],
@@ -781,19 +794,6 @@
       "basis": {
         "basis": "adjacent",
         "rule": "Ran Sep 12, 2024 – Oct 1, 2024. In that window (buys dated up to 7 days before first shown through last shown) AMERICANS FOR PROSPERITY ACTION, INC. (AFP ACTION) DBA CVA ACTION AND DBA LIBRE ACTION reported production buys to TARGETED VICTORY LLC ($7,000); the FEC does not record which buy placed which ad.",
-        "source_urls": [
-          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00687103&payee_name=TARGETED+VICTORY+LLC"
-        ],
-        "checked_by": null,
-        "checked_at": null
-      }
-    },
-    {
-      "ad_id": "CR16050704655335817217",
-      "sponsor_entity_id": "C00687103",
-      "basis": {
-        "basis": "adjacent",
-        "rule": "Ran May 7, 2024 – Jun 1, 2024. In that window (buys dated up to 7 days before first shown through last shown) AMERICANS FOR PROSPERITY ACTION, INC. (AFP ACTION) DBA CVA ACTION AND DBA LIBRE ACTION reported production buys to TARGETED VICTORY LLC ($2,500); the FEC does not record which buy placed which ad.",
         "source_urls": [
           "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00687103&payee_name=TARGETED+VICTORY+LLC"
         ],
@@ -854,11 +854,11 @@
       }
     },
     {
-      "ad_id": "CR03750941604140023809",
+      "ad_id": "CR15976598860113903617",
       "sponsor_entity_id": "C00687103",
       "basis": {
         "basis": "adjacent",
-        "rule": "Ran Oct 16, 2024 – Nov 5, 2024. In that window (buys dated up to 7 days before first shown through last shown) AMERICANS FOR PROSPERITY ACTION, INC. (AFP ACTION) DBA CVA ACTION AND DBA LIBRE ACTION reported production buys to TARGETED VICTORY LLC ($15,625); the FEC does not record which buy placed which ad.",
+        "rule": "Ran Sep 4, 2024 – Sep 11, 2024. In that window (buys dated up to 7 days before first shown through last shown) AMERICANS FOR PROSPERITY ACTION, INC. (AFP ACTION) DBA CVA ACTION AND DBA LIBRE ACTION reported production buys to TARGETED VICTORY LLC ($7,000); the FEC does not record which buy placed which ad.",
         "source_urls": [
           "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00687103&payee_name=TARGETED+VICTORY+LLC"
         ],
@@ -867,11 +867,24 @@
       }
     },
     {
-      "ad_id": "CR15976598860113903617",
+      "ad_id": "CR12185100687251603457",
       "sponsor_entity_id": "C00687103",
       "basis": {
         "basis": "adjacent",
-        "rule": "Ran Sep 4, 2024 – Sep 11, 2024. In that window (buys dated up to 7 days before first shown through last shown) AMERICANS FOR PROSPERITY ACTION, INC. (AFP ACTION) DBA CVA ACTION AND DBA LIBRE ACTION reported production buys to TARGETED VICTORY LLC ($7,000); the FEC does not record which buy placed which ad.",
+        "rule": "Ran Oct 4, 2024 – Oct 16, 2024. In that window (buys dated up to 7 days before first shown through last shown) AMERICANS FOR PROSPERITY ACTION, INC. (AFP ACTION) DBA CVA ACTION AND DBA LIBRE ACTION reported production buys to TARGETED VICTORY LLC ($13,750); the FEC does not record which buy placed which ad.",
+        "source_urls": [
+          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00687103&payee_name=TARGETED+VICTORY+LLC"
+        ],
+        "checked_by": null,
+        "checked_at": null
+      }
+    },
+    {
+      "ad_id": "CR03750941604140023809",
+      "sponsor_entity_id": "C00687103",
+      "basis": {
+        "basis": "adjacent",
+        "rule": "Ran Oct 16, 2024 – Nov 5, 2024. In that window (buys dated up to 7 days before first shown through last shown) AMERICANS FOR PROSPERITY ACTION, INC. (AFP ACTION) DBA CVA ACTION AND DBA LIBRE ACTION reported production buys to TARGETED VICTORY LLC ($15,625); the FEC does not record which buy placed which ad.",
         "source_urls": [
           "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00687103&payee_name=TARGETED+VICTORY+LLC"
         ],
@@ -904,20 +917,7 @@
         "checked_by": null,
         "checked_at": null
       }
-    },
-    {
-      "ad_id": "CR12185100687251603457",
-      "sponsor_entity_id": "C00687103",
-      "basis": {
-        "basis": "adjacent",
-        "rule": "Ran Oct 4, 2024 – Oct 16, 2024. In that window (buys dated up to 7 days before first shown through last shown) AMERICANS FOR PROSPERITY ACTION, INC. (AFP ACTION) DBA CVA ACTION AND DBA LIBRE ACTION reported production buys to TARGETED VICTORY LLC ($13,750); the FEC does not record which buy placed which ad.",
-        "source_urls": [
-          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00687103&payee_name=TARGETED+VICTORY+LLC"
-        ],
-        "checked_by": null,
-        "checked_at": null
-      }
     }
   ],
-  "method": "Every Schedule E independent expenditure names a payee. Payee strings are normalised (case, punctuation, legal suffixes, token order), near-duplicates are folded with a difflib ratio ≥ 0.92 when their numeric tokens match, and hand alias rows from data/hand/<race>/vendor_aliases.json override the rule. Medium is classified from the purpose the spender filed (ordered keyword table in gotham/vendors.py); the FEC does not record which buy placed which ad, so vendor ↔ ad links are empty until a human verifies one. Totals are the filed amounts, grouped, never re-estimated."
+  "method": "Every Schedule E independent expenditure names a payee. Payee strings are normalised (case, punctuation, legal suffixes, token order), near-duplicates are folded with a difflib ratio ≥ 0.92 when their numeric tokens match, and hand alias rows from data/hand/<race>/vendor_aliases.json override the rule. Medium is classified from the purpose the spender filed (ordered keyword table in campaign_commons/vendors.py); the FEC does not record which buy placed which ad, so vendor ↔ ad links are empty until a human verifies one. Totals are the filed amounts, grouped, never re-estimated."
 }

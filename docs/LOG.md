@@ -390,3 +390,14 @@ Pipeline tests 137 → 159; web build 2,455 static pages.
 
 **Next.** Critic round 3 on the integrated branch; FCC political files as the TV leg of vendor→ad; fill `ie_issues.json` once
 docquery is reachable.
+
+## 2026-09-06 ~01:00 — Rename: Citizen Gotham → Campaign Commons (master)
+
+**What changed.** Albert renamed the project: the data of campaigns brought to the masses, into the "commons". Mechanical
+refactor on its own branch (stacked on PR #8): `@citizen-gotham/contracts` → `@campaign-commons/contracts` (49 import sites,
+`next.config.ts` `transpilePackages`, lockfiles), `pipeline/gotham` → `pipeline/campaign_commons` (Makefile `-m` targets,
+tests, docs references), pyproject `campaign-commons-pipeline`, README/site title. Every stage re-run so the `method` / `rule`
+strings in generated JSON (`campaign_commons.vendors`, `campaign_commons.ads_enrich`, …) name the real modules. D-70.
+
+**Not renamed.** The GitHub repo (Albert's; old URLs redirect), and history: earlier LOG entries, CRITIQUE rounds 1–2, and the
+design mockups keep "Citizen Gotham" as written at the time.

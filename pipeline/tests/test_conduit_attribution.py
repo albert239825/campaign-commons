@@ -1,7 +1,7 @@
 import duckdb
 import pandas as pd
 
-from gotham.ingest import individuals_frame
+from campaign_commons.ingest import individuals_frame
 
 PCC = "C00431056"
 ACTBLUE = "C00401224"

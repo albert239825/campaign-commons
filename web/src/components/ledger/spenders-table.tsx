@@ -7,7 +7,7 @@ import {
   UNWALKED_LABEL,
   type OutsideSpender,
   type RaceCandidate,
-} from "@citizen-gotham/contracts";
+} from "@campaign-commons/contracts";
 import { pct, routes } from "@/lib/format";
 import { FlagBadge, Money, SourceLink } from "@/components/ui";
 import {

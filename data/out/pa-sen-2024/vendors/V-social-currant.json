@@ -41,7 +41,7 @@
   "last_date": "2024-11-13",
   "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&payee_name=SOCIAL+CURRANT",
   "race_id": "pa-sen-2024",
-  "generated_at": "2026-09-05T19:33:04+00:00",
+  "generated_at": "2026-09-05T19:53:50+00:00",
   "data_status": "real",
   "expenditures": [
     {
@@ -129,11 +129,11 @@
       }
     },
     {
-      "ad_id": "CR16672726609693769729",
+      "ad_id": "CR00279342491088453633",
       "sponsor_entity_id": "C00865444",
       "basis": {
         "basis": "adjacent",
-        "rule": "Ran Oct 5, 2024 – Oct 29, 2024. In that window (buys dated up to 7 days before first shown through last shown) WINSENATE reported production buys to SOCIAL CURRANT ($4,200); the FEC does not record which buy placed which ad.",
+        "rule": "Ran Oct 5, 2024 – Oct 8, 2024. In that window (buys dated up to 7 days before first shown through last shown) WINSENATE reported production buys to SOCIAL CURRANT ($4,200); the FEC does not record which buy placed which ad.",
         "source_urls": [
           "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00865444&payee_name=SOCIAL+CURRANT"
         ],
@@ -142,11 +142,11 @@
       }
     },
     {
-      "ad_id": "CR00279342491088453633",
+      "ad_id": "CR16672726609693769729",
       "sponsor_entity_id": "C00865444",
       "basis": {
         "basis": "adjacent",
-        "rule": "Ran Oct 5, 2024 – Oct 8, 2024. In that window (buys dated up to 7 days before first shown through last shown) WINSENATE reported production buys to SOCIAL CURRANT ($4,200); the FEC does not record which buy placed which ad.",
+        "rule": "Ran Oct 5, 2024 – Oct 29, 2024. In that window (buys dated up to 7 days before first shown through last shown) WINSENATE reported production buys to SOCIAL CURRANT ($4,200); the FEC does not record which buy placed which ad.",
         "source_urls": [
           "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00865444&payee_name=SOCIAL+CURRANT"
         ],
@@ -181,6 +181,19 @@
       }
     },
     {
+      "ad_id": "CR00706205890339930113",
+      "sponsor_entity_id": "C00865444",
+      "basis": {
+        "basis": "adjacent",
+        "rule": "Ran Oct 8, 2024 – Oct 15, 2024. In that window (buys dated up to 7 days before first shown through last shown) WINSENATE reported production buys to SOCIAL CURRANT ($4,200); the FEC does not record which buy placed which ad.",
+        "source_urls": [
+          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00865444&payee_name=SOCIAL+CURRANT"
+        ],
+        "checked_by": null,
+        "checked_at": null
+      }
+    },
+    {
       "ad_id": "CR06943381861724848129",
       "sponsor_entity_id": "C00865444",
       "basis": {
@@ -207,19 +220,6 @@
       }
     },
     {
-      "ad_id": "CR00706205890339930113",
-      "sponsor_entity_id": "C00865444",
-      "basis": {
-        "basis": "adjacent",
-        "rule": "Ran Oct 8, 2024 – Oct 15, 2024. In that window (buys dated up to 7 days before first shown through last shown) WINSENATE reported production buys to SOCIAL CURRANT ($4,200); the FEC does not record which buy placed which ad.",
-        "source_urls": [
-          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00865444&payee_name=SOCIAL+CURRANT"
-        ],
-        "checked_by": null,
-        "checked_at": null
-      }
-    },
-    {
       "ad_id": "CR01146283220334018561",
       "sponsor_entity_id": "C00865444",
       "basis": {
@@ -233,7 +233,7 @@
       }
     },
     {
-      "ad_id": "CR14221923987474087937",
+      "ad_id": "CR04236317713686855681",
       "sponsor_entity_id": "C00865444",
       "basis": {
         "basis": "adjacent",
@@ -246,7 +246,7 @@
       }
     },
     {
-      "ad_id": "CR04236317713686855681",
+      "ad_id": "CR14221923987474087937",
       "sponsor_entity_id": "C00865444",
       "basis": {
         "basis": "adjacent",
@@ -285,5 +285,5 @@
       }
     }
   ],
-  "method": "Every Schedule E independent expenditure names a payee. Payee strings are normalised (case, punctuation, legal suffixes, token order), near-duplicates are folded with a difflib ratio ≥ 0.92 when their numeric tokens match, and hand alias rows from data/hand/<race>/vendor_aliases.json override the rule. Medium is classified from the purpose the spender filed (ordered keyword table in gotham/vendors.py); the FEC does not record which buy placed which ad, so vendor ↔ ad links are empty until a human verifies one. Totals are the filed amounts, grouped, never re-estimated."
+  "method": "Every Schedule E independent expenditure names a payee. Payee strings are normalised (case, punctuation, legal suffixes, token order), near-duplicates are folded with a difflib ratio ≥ 0.92 when their numeric tokens match, and hand alias rows from data/hand/<race>/vendor_aliases.json override the rule. Medium is classified from the purpose the spender filed (ordered keyword table in campaign_commons/vendors.py); the FEC does not record which buy placed which ad, so vendor ↔ ad links are empty until a human verifies one. Totals are the filed amounts, grouped, never re-estimated."
 }

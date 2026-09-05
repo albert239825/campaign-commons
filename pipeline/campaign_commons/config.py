@@ -15,7 +15,7 @@ DATA = ROOT / "data"
 RAW = DATA / "raw"  # gitignored: full FEC bulk downloads
 FEC_FILTERED = DATA / "fec"  # committed: filtered Parquet per race
 OUT = DATA / "out"  # committed: JSON the web app reads
-DUCKDB_PATH = DATA / "gotham.duckdb"  # gitignored
+DUCKDB_PATH = DATA / "campaign_commons.duckdb"  # gitignored
 
 FEC_API_KEY = os.environ.get("FEC_API_KEY", "DEMO_KEY")
 CONGRESS_GOV_API_KEY = os.environ.get("CONGRESS_GOV_API_KEY", "DEMO_KEY")

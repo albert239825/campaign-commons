@@ -2,7 +2,7 @@
   "root_entity_id": "C00724203",
   "root_name": "SOMOS PAC",
   "race_id": "pa-sen-2024",
-  "generated_at": "2026-09-05T15:46:45+00:00",
+  "generated_at": "2026-09-05T19:53:48+00:00",
   "data_status": "real",
   "nodes": [
     {
@@ -7526,7 +7526,7 @@
       "medium": "other",
       "basis": {
         "basis": "filed",
-        "rule": "Schedule E payee, grouped by normalized vendor name (gotham.vendors)",
+        "rule": "Schedule E payee, grouped by normalized vendor name (campaign_commons.vendors)",
         "source_urls": [
           "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00724203&payee_name=OTG+STRATEGIES"
         ],
@@ -7550,7 +7550,7 @@
       "medium": "other",
       "basis": {
         "basis": "filed",
-        "rule": "Schedule E payee, grouped by normalized vendor name (gotham.vendors)",
+        "rule": "Schedule E payee, grouped by normalized vendor name (campaign_commons.vendors)",
         "source_urls": [
           "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00724203&payee_name=SECOND+STREET+ASSOCIATES"
         ],
@@ -7574,7 +7574,7 @@
       "medium": "mail",
       "basis": {
         "basis": "filed",
-        "rule": "Schedule E payee, grouped by normalized vendor name (gotham.vendors)",
+        "rule": "Schedule E payee, grouped by normalized vendor name (campaign_commons.vendors)",
         "source_urls": [
           "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00724203&payee_name=THE+PIVOT+GROUP%2C+INC."
         ],
@@ -7598,7 +7598,7 @@
       "medium": "phones",
       "basis": {
         "basis": "filed",
-        "rule": "Schedule E payee, grouped by normalized vendor name (gotham.vendors)",
+        "rule": "Schedule E payee, grouped by normalized vendor name (campaign_commons.vendors)",
         "source_urls": [
           "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00724203&payee_name=STONES%27+PHONES"
         ],

@@ -1,7 +1,7 @@
 // OWNER: Frontend A (race ledger).
 import Link from "next/link";
 import Image from "next/image";
-import type { Party } from "@citizen-gotham/contracts";
+import type { Party } from "@campaign-commons/contracts";
 import { countVendors, getAds, getIssues, getLedger, getRace, getStories, hasChain, listRaceIds } from "@/lib/data";
 import { date, routes } from "@/lib/format";
 import { AdjacencyNote, Card, DataStatusBanner } from "@/components/ui";

@@ -2,7 +2,7 @@
   "root_entity_id": "C00849489",
   "root_name": "KEYSTONE RENEWAL PAC",
   "race_id": "pa-sen-2024",
-  "generated_at": "2026-09-05T15:46:45+00:00",
+  "generated_at": "2026-09-05T19:53:48+00:00",
   "data_status": "real",
   "nodes": [
     {
@@ -1036,7 +1036,7 @@
       "medium": "tv",
       "basis": {
         "basis": "filed",
-        "rule": "Schedule E payee, grouped by normalized vendor name (gotham.vendors)",
+        "rule": "Schedule E payee, grouped by normalized vendor name (campaign_commons.vendors)",
         "source_urls": [
           "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00849489&payee_name=DEL+CIELO+MEDIA+LLC"
         ],
@@ -1060,7 +1060,7 @@
       "medium": "tv",
       "basis": {
         "basis": "filed",
-        "rule": "Schedule E payee, grouped by normalized vendor name (gotham.vendors)",
+        "rule": "Schedule E payee, grouped by normalized vendor name (campaign_commons.vendors)",
         "source_urls": [
           "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00849489&payee_name=INVICTUS+ADVERTISING"
         ],
@@ -1084,7 +1084,7 @@
       "medium": "digital",
       "basis": {
         "basis": "filed",
-        "rule": "Schedule E payee, grouped by normalized vendor name (gotham.vendors)",
+        "rule": "Schedule E payee, grouped by normalized vendor name (campaign_commons.vendors)",
         "source_urls": [
           "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00849489&payee_name=CREATIVE+STRATEGIC+SOLUTIONS+LLC"
         ],
@@ -1108,7 +1108,7 @@
       "medium": "production",
       "basis": {
         "basis": "filed",
-        "rule": "Schedule E payee, grouped by normalized vendor name (gotham.vendors)",
+        "rule": "Schedule E payee, grouped by normalized vendor name (campaign_commons.vendors)",
         "source_urls": [
           "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00849489&payee_name=SRCP+MEDIA+INC."
         ],
@@ -1132,7 +1132,7 @@
       "medium": "tv",
       "basis": {
         "basis": "filed",
-        "rule": "Schedule E payee, grouped by normalized vendor name (gotham.vendors)",
+        "rule": "Schedule E payee, grouped by normalized vendor name (campaign_commons.vendors)",
         "source_urls": [
           "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00849489&payee_name=RYFF+INC"
         ],
@@ -1156,7 +1156,7 @@
       "medium": "phones",
       "basis": {
         "basis": "filed",
-        "rule": "Schedule E payee, grouped by normalized vendor name (gotham.vendors)",
+        "rule": "Schedule E payee, grouped by normalized vendor name (campaign_commons.vendors)",
         "source_urls": [
           "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00849489&payee_name=EXCELSIOR+GSC+LLC"
         ],
@@ -1180,7 +1180,7 @@
       "medium": "phones",
       "basis": {
         "basis": "filed",
-        "rule": "Schedule E payee, grouped by normalized vendor name (gotham.vendors)",
+        "rule": "Schedule E payee, grouped by normalized vendor name (campaign_commons.vendors)",
         "source_urls": [
           "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00849489&payee_name=RED+MAVERICK+MEDIA+LLC"
         ],
@@ -1204,7 +1204,7 @@
       "medium": "other",
       "basis": {
         "basis": "filed",
-        "rule": "Schedule E payee, grouped by normalized vendor name (gotham.vendors)",
+        "rule": "Schedule E payee, grouped by normalized vendor name (campaign_commons.vendors)",
         "source_urls": [
           "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00849489&payee_name=SPECTRUM+MARKETING+COMPANIES"
         ],
@@ -1329,29 +1329,6 @@
       }
     },
     {
-      "id": "CR15369039469390856193",
-      "name": "Video ad · 2024-08-29 – 2024-09-04",
-      "kind": "ad",
-      "committee_type": null,
-      "depth": 2,
-      "side": "out",
-      "visibility": "disclosed",
-      "amount_in": 27500.0,
-      "is_terminus": false,
-      "terminus_reason": null,
-      "source_url": "https://adstransparency.google.com/advertiser/AR05305140614721961985/creative/CR15369039469390856193?political=&region=US",
-      "href": "/races/pa-sen-2024/ads#CR15369039469390856193",
-      "basis": {
-        "basis": "inferred",
-        "rule": "Google reports spend as a range ($25,000–$30,000); the midpoint is drawn",
-        "source_urls": [
-          "https://adstransparency.google.com/advertiser/AR05305140614721961985/creative/CR15369039469390856193?political=&region=US"
-        ],
-        "checked_by": null,
-        "checked_at": null
-      }
-    },
-    {
       "id": "CR02005452000099041281",
       "name": "Video ad · 2024-08-29 – 2024-09-04",
       "kind": "ad",
@@ -1375,8 +1352,8 @@
       }
     },
     {
-      "id": "CR02987728750319239169",
-      "name": "Video ad · 2024-08-03 – 2024-08-14",
+      "id": "CR15369039469390856193",
+      "name": "Video ad · 2024-08-29 – 2024-09-04",
       "kind": "ad",
       "committee_type": null,
       "depth": 2,
@@ -1385,13 +1362,13 @@
       "amount_in": 27500.0,
       "is_terminus": false,
       "terminus_reason": null,
-      "source_url": "https://adstransparency.google.com/advertiser/AR05305140614721961985/creative/CR02987728750319239169?political=&region=US",
-      "href": "/races/pa-sen-2024/ads#CR02987728750319239169",
+      "source_url": "https://adstransparency.google.com/advertiser/AR05305140614721961985/creative/CR15369039469390856193?political=&region=US",
+      "href": "/races/pa-sen-2024/ads#CR15369039469390856193",
       "basis": {
         "basis": "inferred",
         "rule": "Google reports spend as a range ($25,000–$30,000); the midpoint is drawn",
         "source_urls": [
-          "https://adstransparency.google.com/advertiser/AR05305140614721961985/creative/CR02987728750319239169?political=&region=US"
+          "https://adstransparency.google.com/advertiser/AR05305140614721961985/creative/CR15369039469390856193?political=&region=US"
         ],
         "checked_by": null,
         "checked_at": null
@@ -1421,8 +1398,31 @@
       }
     },
     {
-      "id": "CR08283124084246577153",
-      "name": "Video ad · 2024-07-26 – 2024-08-03",
+      "id": "CR02987728750319239169",
+      "name": "Video ad · 2024-08-03 – 2024-08-14",
+      "kind": "ad",
+      "committee_type": null,
+      "depth": 2,
+      "side": "out",
+      "visibility": "disclosed",
+      "amount_in": 27500.0,
+      "is_terminus": false,
+      "terminus_reason": null,
+      "source_url": "https://adstransparency.google.com/advertiser/AR05305140614721961985/creative/CR02987728750319239169?political=&region=US",
+      "href": "/races/pa-sen-2024/ads#CR02987728750319239169",
+      "basis": {
+        "basis": "inferred",
+        "rule": "Google reports spend as a range ($25,000–$30,000); the midpoint is drawn",
+        "source_urls": [
+          "https://adstransparency.google.com/advertiser/AR05305140614721961985/creative/CR02987728750319239169?political=&region=US"
+        ],
+        "checked_by": null,
+        "checked_at": null
+      }
+    },
+    {
+      "id": "CR14516585407136661505",
+      "name": "Text ad · 2024-10-16 – 2024-11-06",
       "kind": "ad",
       "committee_type": null,
       "depth": 2,
@@ -1431,13 +1431,13 @@
       "amount_in": 22500.0,
       "is_terminus": false,
       "terminus_reason": null,
-      "source_url": "https://adstransparency.google.com/advertiser/AR05305140614721961985/creative/CR08283124084246577153?political=&region=US",
-      "href": "/races/pa-sen-2024/ads#CR08283124084246577153",
+      "source_url": "https://adstransparency.google.com/advertiser/AR05305140614721961985/creative/CR14516585407136661505?political=&region=US",
+      "href": "/races/pa-sen-2024/ads#CR14516585407136661505",
       "basis": {
         "basis": "inferred",
         "rule": "Google reports spend as a range ($20,000–$25,000); the midpoint is drawn",
         "source_urls": [
-          "https://adstransparency.google.com/advertiser/AR05305140614721961985/creative/CR08283124084246577153?political=&region=US"
+          "https://adstransparency.google.com/advertiser/AR05305140614721961985/creative/CR14516585407136661505?political=&region=US"
         ],
         "checked_by": null,
         "checked_at": null
@@ -1461,11 +1461,11 @@
         "basis": "inferred",
         "rule": "Sum of Google spend-range midpoints for the ads not drawn individually",
         "source_urls": [
-          "https://adstransparency.google.com/advertiser/AR05305140614721961985/creative/CR14516585407136661505?political=&region=US",
+          "https://adstransparency.google.com/advertiser/AR05305140614721961985/creative/CR08283124084246577153?political=&region=US",
           "https://adstransparency.google.com/advertiser/AR05305140614721961985/creative/CR18357413444057038849?political=&region=US",
+          "https://adstransparency.google.com/advertiser/AR05305140614721961985/creative/CR17358786079758483457?political=&region=US",
           "https://adstransparency.google.com/advertiser/AR05305140614721961985/creative/CR02015697249446658049?political=&region=US",
-          "https://adstransparency.google.com/advertiser/AR05305140614721961985/creative/CR06925071643047886849?political=&region=US",
-          "https://adstransparency.google.com/advertiser/AR05305140614721961985/creative/CR17358786079758483457?political=&region=US"
+          "https://adstransparency.google.com/advertiser/AR05305140614721961985/creative/CR06925071643047886849?political=&region=US"
         ],
         "checked_by": null,
         "checked_at": null
@@ -3973,99 +3973,6 @@
     },
     {
       "from": "vendor:V-del-cielo-media",
-      "to": "CR15369039469390856193",
-      "kind": "placement",
-      "amount": 0,
-      "visibility": "disclosed",
-      "depth": 2,
-      "transaction_types": [],
-      "count": 2,
-      "date_range": [
-        "2024-08-29",
-        "2024-09-04"
-      ],
-      "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00849489&payee_name=DEL+CIELO+MEDIA+LLC",
-      "basis": {
-        "basis": "adjacent",
-        "rule": "Ran Aug 29, 2024 – Sep 4, 2024. In that window (buys dated up to 7 days before first shown through last shown) KEYSTONE RENEWAL PAC reported tv buys to DEL CIELO MEDIA LLC ($6,164,288); the FEC does not record which buy placed which ad.",
-        "source_urls": [
-          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00849489&payee_name=DEL+CIELO+MEDIA+LLC"
-        ],
-        "checked_by": null,
-        "checked_at": null
-      }
-    },
-    {
-      "from": "vendor:V-invictus-advertising",
-      "to": "CR15369039469390856193",
-      "kind": "placement",
-      "amount": 0,
-      "visibility": "disclosed",
-      "depth": 2,
-      "transaction_types": [],
-      "count": 2,
-      "date_range": [
-        "2024-08-29",
-        "2024-09-04"
-      ],
-      "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00849489&payee_name=INVICTUS+ADVERTISING",
-      "basis": {
-        "basis": "adjacent",
-        "rule": "Ran Aug 29, 2024 – Sep 4, 2024. In that window (buys dated up to 7 days before first shown through last shown) KEYSTONE RENEWAL PAC reported tv buys to INVICTUS ADVERTISING ($901,750); the FEC does not record which buy placed which ad.",
-        "source_urls": [
-          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00849489&payee_name=INVICTUS+ADVERTISING"
-        ],
-        "checked_by": null,
-        "checked_at": null
-      }
-    },
-    {
-      "from": "vendor:V-srcp-media",
-      "to": "CR15369039469390856193",
-      "kind": "placement",
-      "amount": 0,
-      "visibility": "disclosed",
-      "depth": 2,
-      "transaction_types": [],
-      "count": 1,
-      "date_range": [
-        "2024-08-29",
-        "2024-09-04"
-      ],
-      "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00849489&payee_name=SRCP+MEDIA+INC.",
-      "basis": {
-        "basis": "adjacent",
-        "rule": "Ran Aug 29, 2024 – Sep 4, 2024. In that window (buys dated up to 7 days before first shown through last shown) KEYSTONE RENEWAL PAC reported production buys to SRCP MEDIA INC. ($60,955); the FEC does not record which buy placed which ad.",
-        "source_urls": [
-          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00849489&payee_name=SRCP+MEDIA+INC."
-        ],
-        "checked_by": null,
-        "checked_at": null
-      }
-    },
-    {
-      "from": "C00849489",
-      "to": "CR15369039469390856193",
-      "kind": "placement",
-      "amount": 27500.0,
-      "visibility": "disclosed",
-      "depth": 2,
-      "transaction_types": [],
-      "count": 1,
-      "date_range": null,
-      "source_url": "https://adstransparency.google.com/advertiser/AR05305140614721961985/creative/CR15369039469390856193?political=&region=US",
-      "basis": {
-        "basis": "inferred",
-        "rule": "Advertiser name matched to this committee by normalized name; Google shows the advertiser, not the paid-for-by line",
-        "source_urls": [
-          "https://adstransparency.google.com/advertiser/AR05305140614721961985/creative/CR15369039469390856193?political=&region=US"
-        ],
-        "checked_by": null,
-        "checked_at": null
-      }
-    },
-    {
-      "from": "vendor:V-del-cielo-media",
       "to": "CR02005452000099041281",
       "kind": "placement",
       "amount": 0,
@@ -4158,32 +4065,8 @@
       }
     },
     {
-      "from": "vendor:V-creative-strategic-solutions",
-      "to": "CR02987728750319239169",
-      "kind": "placement",
-      "amount": 27500.0,
-      "visibility": "disclosed",
-      "depth": 2,
-      "transaction_types": [],
-      "count": 2,
-      "date_range": [
-        "2024-08-03",
-        "2024-08-14"
-      ],
-      "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00849489&payee_name=CREATIVE+STRATEGIC+SOLUTIONS+LLC",
-      "basis": {
-        "basis": "inferred",
-        "rule": "Only digital vendor KEYSTONE RENEWAL PAC paid during this ad's run window (ran aug 3, 2024 – aug 14, 2024, counting buys dated up to 7 days before first shown) — inferred, not filed. KEYSTONE RENEWAL PAC reported $520,855 in digital buys to CREATIVE STRATEGIC SOLUTIONS LLC; Google ads are digital placements.",
-        "source_urls": [
-          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00849489&payee_name=CREATIVE+STRATEGIC+SOLUTIONS+LLC"
-        ],
-        "checked_by": null,
-        "checked_at": null
-      }
-    },
-    {
       "from": "vendor:V-del-cielo-media",
-      "to": "CR02987728750319239169",
+      "to": "CR15369039469390856193",
       "kind": "placement",
       "amount": 0,
       "visibility": "disclosed",
@@ -4191,13 +4074,13 @@
       "transaction_types": [],
       "count": 2,
       "date_range": [
-        "2024-08-03",
-        "2024-08-14"
+        "2024-08-29",
+        "2024-09-04"
       ],
       "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00849489&payee_name=DEL+CIELO+MEDIA+LLC",
       "basis": {
         "basis": "adjacent",
-        "rule": "Ran Aug 3, 2024 – Aug 14, 2024. In that window (buys dated up to 7 days before first shown through last shown) KEYSTONE RENEWAL PAC reported tv buys to DEL CIELO MEDIA LLC ($3,926,430); the FEC does not record which buy placed which ad.",
+        "rule": "Ran Aug 29, 2024 – Sep 4, 2024. In that window (buys dated up to 7 days before first shown through last shown) KEYSTONE RENEWAL PAC reported tv buys to DEL CIELO MEDIA LLC ($6,164,288); the FEC does not record which buy placed which ad.",
         "source_urls": [
           "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00849489&payee_name=DEL+CIELO+MEDIA+LLC"
         ],
@@ -4207,21 +4090,21 @@
     },
     {
       "from": "vendor:V-invictus-advertising",
-      "to": "CR02987728750319239169",
+      "to": "CR15369039469390856193",
       "kind": "placement",
       "amount": 0,
       "visibility": "disclosed",
       "depth": 2,
       "transaction_types": [],
-      "count": 3,
+      "count": 2,
       "date_range": [
-        "2024-08-03",
-        "2024-08-14"
+        "2024-08-29",
+        "2024-09-04"
       ],
       "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00849489&payee_name=INVICTUS+ADVERTISING",
       "basis": {
         "basis": "adjacent",
-        "rule": "Ran Aug 3, 2024 – Aug 14, 2024. In that window (buys dated up to 7 days before first shown through last shown) KEYSTONE RENEWAL PAC reported tv buys to INVICTUS ADVERTISING ($1,341,500); the FEC does not record which buy placed which ad.",
+        "rule": "Ran Aug 29, 2024 – Sep 4, 2024. In that window (buys dated up to 7 days before first shown through last shown) KEYSTONE RENEWAL PAC reported tv buys to INVICTUS ADVERTISING ($901,750); the FEC does not record which buy placed which ad.",
         "source_urls": [
           "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00849489&payee_name=INVICTUS+ADVERTISING"
         ],
@@ -4231,7 +4114,7 @@
     },
     {
       "from": "vendor:V-srcp-media",
-      "to": "CR02987728750319239169",
+      "to": "CR15369039469390856193",
       "kind": "placement",
       "amount": 0,
       "visibility": "disclosed",
@@ -4239,15 +4122,36 @@
       "transaction_types": [],
       "count": 1,
       "date_range": [
-        "2024-08-03",
-        "2024-08-14"
+        "2024-08-29",
+        "2024-09-04"
       ],
       "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00849489&payee_name=SRCP+MEDIA+INC.",
       "basis": {
         "basis": "adjacent",
-        "rule": "Ran Aug 3, 2024 – Aug 14, 2024. In that window (buys dated up to 7 days before first shown through last shown) KEYSTONE RENEWAL PAC reported production buys to SRCP MEDIA INC. ($11,455); the FEC does not record which buy placed which ad.",
+        "rule": "Ran Aug 29, 2024 – Sep 4, 2024. In that window (buys dated up to 7 days before first shown through last shown) KEYSTONE RENEWAL PAC reported production buys to SRCP MEDIA INC. ($60,955); the FEC does not record which buy placed which ad.",
         "source_urls": [
           "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00849489&payee_name=SRCP+MEDIA+INC."
+        ],
+        "checked_by": null,
+        "checked_at": null
+      }
+    },
+    {
+      "from": "C00849489",
+      "to": "CR15369039469390856193",
+      "kind": "placement",
+      "amount": 27500.0,
+      "visibility": "disclosed",
+      "depth": 2,
+      "transaction_types": [],
+      "count": 1,
+      "date_range": null,
+      "source_url": "https://adstransparency.google.com/advertiser/AR05305140614721961985/creative/CR15369039469390856193?political=&region=US",
+      "basis": {
+        "basis": "inferred",
+        "rule": "Advertiser name matched to this committee by normalized name; Google shows the advertiser, not the paid-for-by line",
+        "source_urls": [
+          "https://adstransparency.google.com/advertiser/AR05305140614721961985/creative/CR15369039469390856193?political=&region=US"
         ],
         "checked_by": null,
         "checked_at": null
@@ -4350,22 +4254,46 @@
       }
     },
     {
+      "from": "vendor:V-creative-strategic-solutions",
+      "to": "CR02987728750319239169",
+      "kind": "placement",
+      "amount": 27500.0,
+      "visibility": "disclosed",
+      "depth": 2,
+      "transaction_types": [],
+      "count": 2,
+      "date_range": [
+        "2024-08-03",
+        "2024-08-14"
+      ],
+      "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00849489&payee_name=CREATIVE+STRATEGIC+SOLUTIONS+LLC",
+      "basis": {
+        "basis": "inferred",
+        "rule": "Only digital vendor KEYSTONE RENEWAL PAC paid during this ad's run window (ran aug 3, 2024 – aug 14, 2024, counting buys dated up to 7 days before first shown) — inferred, not filed. KEYSTONE RENEWAL PAC reported $520,855 in digital buys to CREATIVE STRATEGIC SOLUTIONS LLC; Google ads are digital placements.",
+        "source_urls": [
+          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00849489&payee_name=CREATIVE+STRATEGIC+SOLUTIONS+LLC"
+        ],
+        "checked_by": null,
+        "checked_at": null
+      }
+    },
+    {
       "from": "vendor:V-del-cielo-media",
-      "to": "CR08283124084246577153",
+      "to": "CR02987728750319239169",
       "kind": "placement",
       "amount": 0,
       "visibility": "disclosed",
       "depth": 2,
       "transaction_types": [],
-      "count": 3,
+      "count": 2,
       "date_range": [
-        "2024-07-26",
-        "2024-08-03"
+        "2024-08-03",
+        "2024-08-14"
       ],
       "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00849489&payee_name=DEL+CIELO+MEDIA+LLC",
       "basis": {
         "basis": "adjacent",
-        "rule": "Ran Jul 26, 2024 – Aug 3, 2024. In that window (buys dated up to 7 days before first shown through last shown) KEYSTONE RENEWAL PAC reported tv buys to DEL CIELO MEDIA LLC ($6,653,664); the FEC does not record which buy placed which ad.",
+        "rule": "Ran Aug 3, 2024 – Aug 14, 2024. In that window (buys dated up to 7 days before first shown through last shown) KEYSTONE RENEWAL PAC reported tv buys to DEL CIELO MEDIA LLC ($3,926,430); the FEC does not record which buy placed which ad.",
         "source_urls": [
           "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00849489&payee_name=DEL+CIELO+MEDIA+LLC"
         ],
@@ -4375,21 +4303,21 @@
     },
     {
       "from": "vendor:V-invictus-advertising",
-      "to": "CR08283124084246577153",
+      "to": "CR02987728750319239169",
       "kind": "placement",
       "amount": 0,
       "visibility": "disclosed",
       "depth": 2,
       "transaction_types": [],
-      "count": 2,
+      "count": 3,
       "date_range": [
-        "2024-07-26",
-        "2024-08-03"
+        "2024-08-03",
+        "2024-08-14"
       ],
       "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00849489&payee_name=INVICTUS+ADVERTISING",
       "basis": {
         "basis": "adjacent",
-        "rule": "Ran Jul 26, 2024 – Aug 3, 2024. In that window (buys dated up to 7 days before first shown through last shown) KEYSTONE RENEWAL PAC reported tv buys to INVICTUS ADVERTISING ($1,000,000); the FEC does not record which buy placed which ad.",
+        "rule": "Ran Aug 3, 2024 – Aug 14, 2024. In that window (buys dated up to 7 days before first shown through last shown) KEYSTONE RENEWAL PAC reported tv buys to INVICTUS ADVERTISING ($1,341,500); the FEC does not record which buy placed which ad.",
         "source_urls": [
           "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00849489&payee_name=INVICTUS+ADVERTISING"
         ],
@@ -4399,7 +4327,55 @@
     },
     {
       "from": "vendor:V-srcp-media",
-      "to": "CR08283124084246577153",
+      "to": "CR02987728750319239169",
+      "kind": "placement",
+      "amount": 0,
+      "visibility": "disclosed",
+      "depth": 2,
+      "transaction_types": [],
+      "count": 1,
+      "date_range": [
+        "2024-08-03",
+        "2024-08-14"
+      ],
+      "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00849489&payee_name=SRCP+MEDIA+INC.",
+      "basis": {
+        "basis": "adjacent",
+        "rule": "Ran Aug 3, 2024 – Aug 14, 2024. In that window (buys dated up to 7 days before first shown through last shown) KEYSTONE RENEWAL PAC reported production buys to SRCP MEDIA INC. ($11,455); the FEC does not record which buy placed which ad.",
+        "source_urls": [
+          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00849489&payee_name=SRCP+MEDIA+INC."
+        ],
+        "checked_by": null,
+        "checked_at": null
+      }
+    },
+    {
+      "from": "vendor:V-del-cielo-media",
+      "to": "CR14516585407136661505",
+      "kind": "placement",
+      "amount": 0,
+      "visibility": "disclosed",
+      "depth": 2,
+      "transaction_types": [],
+      "count": 1,
+      "date_range": [
+        "2024-10-16",
+        "2024-11-06"
+      ],
+      "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00849489&payee_name=DEL+CIELO+MEDIA+LLC",
+      "basis": {
+        "basis": "adjacent",
+        "rule": "Ran Oct 16, 2024 – Nov 6, 2024. In that window (buys dated up to 7 days before first shown through last shown) KEYSTONE RENEWAL PAC reported tv buys to DEL CIELO MEDIA LLC ($1,594,474); the FEC does not record which buy placed which ad.",
+        "source_urls": [
+          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00849489&payee_name=DEL+CIELO+MEDIA+LLC"
+        ],
+        "checked_by": null,
+        "checked_at": null
+      }
+    },
+    {
+      "from": "vendor:V-invictus-advertising",
+      "to": "CR14516585407136661505",
       "kind": "placement",
       "amount": 0,
       "visibility": "disclosed",
@@ -4407,13 +4383,109 @@
       "transaction_types": [],
       "count": 2,
       "date_range": [
-        "2024-07-26",
-        "2024-08-03"
+        "2024-10-16",
+        "2024-11-06"
+      ],
+      "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00849489&payee_name=INVICTUS+ADVERTISING",
+      "basis": {
+        "basis": "adjacent",
+        "rule": "Ran Oct 16, 2024 – Nov 6, 2024. In that window (buys dated up to 7 days before first shown through last shown) KEYSTONE RENEWAL PAC reported production buys to INVICTUS ADVERTISING ($531,500); the FEC does not record which buy placed which ad.",
+        "source_urls": [
+          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00849489&payee_name=INVICTUS+ADVERTISING"
+        ],
+        "checked_by": null,
+        "checked_at": null
+      }
+    },
+    {
+      "from": "vendor:V-ryff",
+      "to": "CR14516585407136661505",
+      "kind": "placement",
+      "amount": 0,
+      "visibility": "disclosed",
+      "depth": 2,
+      "transaction_types": [],
+      "count": 1,
+      "date_range": [
+        "2024-10-16",
+        "2024-11-06"
+      ],
+      "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00849489&payee_name=RYFF+INC",
+      "basis": {
+        "basis": "adjacent",
+        "rule": "Ran Oct 16, 2024 – Nov 6, 2024. In that window (buys dated up to 7 days before first shown through last shown) KEYSTONE RENEWAL PAC reported tv buys to RYFF INC ($390,000); the FEC does not record which buy placed which ad.",
+        "source_urls": [
+          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00849489&payee_name=RYFF+INC"
+        ],
+        "checked_by": null,
+        "checked_at": null
+      }
+    },
+    {
+      "from": "vendor:V-excelsior-gsc",
+      "to": "CR14516585407136661505",
+      "kind": "placement",
+      "amount": 0,
+      "visibility": "disclosed",
+      "depth": 2,
+      "transaction_types": [],
+      "count": 2,
+      "date_range": [
+        "2024-10-16",
+        "2024-11-06"
+      ],
+      "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00849489&payee_name=EXCELSIOR+GSC+LLC",
+      "basis": {
+        "basis": "adjacent",
+        "rule": "Ran Oct 16, 2024 – Nov 6, 2024. In that window (buys dated up to 7 days before first shown through last shown) KEYSTONE RENEWAL PAC reported phones buys to EXCELSIOR GSC LLC ($250,000); the FEC does not record which buy placed which ad.",
+        "source_urls": [
+          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00849489&payee_name=EXCELSIOR+GSC+LLC"
+        ],
+        "checked_by": null,
+        "checked_at": null
+      }
+    },
+    {
+      "from": "vendor:V-red-maverick-media",
+      "to": "CR14516585407136661505",
+      "kind": "placement",
+      "amount": 0,
+      "visibility": "disclosed",
+      "depth": 2,
+      "transaction_types": [],
+      "count": 1,
+      "date_range": [
+        "2024-10-16",
+        "2024-11-06"
+      ],
+      "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00849489&payee_name=RED+MAVERICK+MEDIA+LLC",
+      "basis": {
+        "basis": "adjacent",
+        "rule": "Ran Oct 16, 2024 – Nov 6, 2024. In that window (buys dated up to 7 days before first shown through last shown) KEYSTONE RENEWAL PAC reported phones buys to RED MAVERICK MEDIA LLC ($120,000); the FEC does not record which buy placed which ad.",
+        "source_urls": [
+          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00849489&payee_name=RED+MAVERICK+MEDIA+LLC"
+        ],
+        "checked_by": null,
+        "checked_at": null
+      }
+    },
+    {
+      "from": "vendor:V-srcp-media",
+      "to": "CR14516585407136661505",
+      "kind": "placement",
+      "amount": 0,
+      "visibility": "disclosed",
+      "depth": 2,
+      "transaction_types": [],
+      "count": 1,
+      "date_range": [
+        "2024-10-16",
+        "2024-11-06"
       ],
       "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00849489&payee_name=SRCP+MEDIA+INC.",
       "basis": {
         "basis": "adjacent",
-        "rule": "Ran Jul 26, 2024 – Aug 3, 2024. In that window (buys dated up to 7 days before first shown through last shown) KEYSTONE RENEWAL PAC reported production buys to SRCP MEDIA INC. ($22,231); the FEC does not record which buy placed which ad.",
+        "rule": "Ran Oct 16, 2024 – Nov 6, 2024. In that window (buys dated up to 7 days before first shown through last shown) KEYSTONE RENEWAL PAC reported production buys to SRCP MEDIA INC. ($18,606); the FEC does not record which buy placed which ad.",
         "source_urls": [
           "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00849489&payee_name=SRCP+MEDIA+INC."
         ],
@@ -4423,7 +4495,7 @@
     },
     {
       "from": "C00849489",
-      "to": "CR08283124084246577153",
+      "to": "CR14516585407136661505",
       "kind": "placement",
       "amount": 22500.0,
       "visibility": "disclosed",
@@ -4431,12 +4503,12 @@
       "transaction_types": [],
       "count": 1,
       "date_range": null,
-      "source_url": "https://adstransparency.google.com/advertiser/AR05305140614721961985/creative/CR08283124084246577153?political=&region=US",
+      "source_url": "https://adstransparency.google.com/advertiser/AR05305140614721961985/creative/CR14516585407136661505?political=&region=US",
       "basis": {
         "basis": "inferred",
         "rule": "Advertiser name matched to this committee by normalized name; Google shows the advertiser, not the paid-for-by line",
         "source_urls": [
-          "https://adstransparency.google.com/advertiser/AR05305140614721961985/creative/CR08283124084246577153?political=&region=US"
+          "https://adstransparency.google.com/advertiser/AR05305140614721961985/creative/CR14516585407136661505?political=&region=US"
         ],
         "checked_by": null,
         "checked_at": null
@@ -4457,11 +4529,11 @@
         "basis": "inferred",
         "rule": "Advertiser name matched to this committee by normalized name",
         "source_urls": [
-          "https://adstransparency.google.com/advertiser/AR05305140614721961985/creative/CR14516585407136661505?political=&region=US",
+          "https://adstransparency.google.com/advertiser/AR05305140614721961985/creative/CR08283124084246577153?political=&region=US",
           "https://adstransparency.google.com/advertiser/AR05305140614721961985/creative/CR18357413444057038849?political=&region=US",
+          "https://adstransparency.google.com/advertiser/AR05305140614721961985/creative/CR17358786079758483457?political=&region=US",
           "https://adstransparency.google.com/advertiser/AR05305140614721961985/creative/CR02015697249446658049?political=&region=US",
-          "https://adstransparency.google.com/advertiser/AR05305140614721961985/creative/CR06925071643047886849?political=&region=US",
-          "https://adstransparency.google.com/advertiser/AR05305140614721961985/creative/CR17358786079758483457?political=&region=US"
+          "https://adstransparency.google.com/advertiser/AR05305140614721961985/creative/CR06925071643047886849?political=&region=US"
         ],
         "checked_by": null,
         "checked_at": null

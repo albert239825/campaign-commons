@@ -1,4 +1,4 @@
-import type { ISSUES, Stance } from "@citizen-gotham/contracts";
+import type { ISSUES, Stance } from "@campaign-commons/contracts";
 import { Chip, type ChipTone } from "@/components/ui";
 import { EvidenceList } from "./evidence-list";
 
