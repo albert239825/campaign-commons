@@ -13869,30 +13869,6 @@
       }
     },
     {
-      "from": "vendor:V-social-currant",
-      "to": "CR10478813122326953985",
-      "kind": "placement",
-      "amount": 0,
-      "visibility": "disclosed",
-      "depth": 2,
-      "transaction_types": [],
-      "count": 1,
-      "date_range": [
-        "2024-09-18",
-        "2024-10-08"
-      ],
-      "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00865444&payee_name=SOCIAL+CURRANT",
-      "basis": {
-        "basis": "adjacent",
-        "rule": "Ran Sep 18, 2024 – Oct 8, 2024. In that window (buys dated up to 7 days before first shown through last shown) WINSENATE reported production buys to SOCIAL CURRANT ($4,200); the FEC does not record which buy placed which ad. Same-window buys in media that cannot place a Google ad (TV, radio, mail, phones, field, consulting) are not listed.",
-        "source_urls": [
-          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00865444&payee_name=SOCIAL+CURRANT"
-        ],
-        "checked_by": null,
-        "checked_at": null
-      }
-    },
-    {
       "from": "vendor:V-gambit-strategies",
       "to": "CR05870211732231684097",
       "kind": "placement",
@@ -13911,30 +13887,6 @@
         "rule": "Only digital vendor WINSENATE paid during this ad's run window (ran jul 23, 2024 – aug 14, 2024, counting buys dated up to 7 days before first shown) — inferred, not filed. WINSENATE reported $4,489,059 in digital buys to GAMBIT STRATEGIES; Google ads are digital placements.",
         "source_urls": [
           "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00865444&payee_name=GAMBIT+STRATEGIES"
-        ],
-        "checked_by": null,
-        "checked_at": null
-      }
-    },
-    {
-      "from": "vendor:V-al-media",
-      "to": "CR05870211732231684097",
-      "kind": "placement",
-      "amount": 0,
-      "visibility": "disclosed",
-      "depth": 2,
-      "transaction_types": [],
-      "count": 1,
-      "date_range": [
-        "2024-07-23",
-        "2024-08-14"
-      ],
-      "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00865444&payee_name=AL+MEDIA+LLC",
-      "basis": {
-        "basis": "adjacent",
-        "rule": "Ran Jul 23, 2024 – Aug 14, 2024. In that window (buys dated up to 7 days before first shown through last shown) WINSENATE reported production buys to AL MEDIA LLC ($18,507); the FEC does not record which buy placed which ad. Same-window buys in media that cannot place a Google ad (TV, radio, mail, phones, field, consulting) are not listed.",
-        "source_urls": [
-          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00865444&payee_name=AL+MEDIA+LLC"
         ],
         "checked_by": null,
         "checked_at": null
@@ -13989,30 +13941,6 @@
       }
     },
     {
-      "from": "vendor:V-peters-consulting",
-      "to": "CR16164832502010085377",
-      "kind": "placement",
-      "amount": 0,
-      "visibility": "disclosed",
-      "depth": 2,
-      "transaction_types": [],
-      "count": 1,
-      "date_range": [
-        "2024-10-16",
-        "2024-10-30"
-      ],
-      "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00865444&payee_name=PETERS+CONSULTING+LLC",
-      "basis": {
-        "basis": "adjacent",
-        "rule": "Ran Oct 16, 2024 – Oct 30, 2024. In that window (buys dated up to 7 days before first shown through last shown) WINSENATE reported production buys to PETERS CONSULTING LLC ($100); the FEC does not record which buy placed which ad. Same-window buys in media that cannot place a Google ad (TV, radio, mail, phones, field, consulting) are not listed.",
-        "source_urls": [
-          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00865444&payee_name=PETERS+CONSULTING+LLC"
-        ],
-        "checked_by": null,
-        "checked_at": null
-      }
-    },
-    {
       "from": "vendor:V-gambit-strategies",
       "to": "CR15747662947024896001",
       "kind": "placement",
@@ -14031,54 +13959,6 @@
         "rule": "Only digital vendor WINSENATE paid during this ad's run window (ran sep 4, 2024 – nov 5, 2024, counting buys dated up to 7 days before first shown) — inferred, not filed. WINSENATE reported $13,687,209 in digital buys to GAMBIT STRATEGIES; Google ads are digital placements.",
         "source_urls": [
           "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00865444&payee_name=GAMBIT+STRATEGIES"
-        ],
-        "checked_by": null,
-        "checked_at": null
-      }
-    },
-    {
-      "from": "vendor:V-social-currant",
-      "to": "CR15747662947024896001",
-      "kind": "placement",
-      "amount": 0,
-      "visibility": "disclosed",
-      "depth": 2,
-      "transaction_types": [],
-      "count": 1,
-      "date_range": [
-        "2024-09-04",
-        "2024-11-05"
-      ],
-      "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00865444&payee_name=SOCIAL+CURRANT",
-      "basis": {
-        "basis": "adjacent",
-        "rule": "Ran Sep 4, 2024 – Nov 5, 2024. In that window (buys dated up to 7 days before first shown through last shown) WINSENATE reported production buys to SOCIAL CURRANT ($4,200); the FEC does not record which buy placed which ad. Same-window buys in media that cannot place a Google ad (TV, radio, mail, phones, field, consulting) are not listed.",
-        "source_urls": [
-          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00865444&payee_name=SOCIAL+CURRANT"
-        ],
-        "checked_by": null,
-        "checked_at": null
-      }
-    },
-    {
-      "from": "vendor:V-peters-consulting",
-      "to": "CR15747662947024896001",
-      "kind": "placement",
-      "amount": 0,
-      "visibility": "disclosed",
-      "depth": 2,
-      "transaction_types": [],
-      "count": 1,
-      "date_range": [
-        "2024-09-04",
-        "2024-11-05"
-      ],
-      "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00865444&payee_name=PETERS+CONSULTING+LLC",
-      "basis": {
-        "basis": "adjacent",
-        "rule": "Ran Sep 4, 2024 – Nov 5, 2024. In that window (buys dated up to 7 days before first shown through last shown) WINSENATE reported production buys to PETERS CONSULTING LLC ($100); the FEC does not record which buy placed which ad. Same-window buys in media that cannot place a Google ad (TV, radio, mail, phones, field, consulting) are not listed.",
-        "source_urls": [
-          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00865444&payee_name=PETERS+CONSULTING+LLC"
         ],
         "checked_by": null,
         "checked_at": null
@@ -14133,54 +14013,6 @@
       }
     },
     {
-      "from": "vendor:V-social-currant",
-      "to": "CR12341671143046905857",
-      "kind": "placement",
-      "amount": 0,
-      "visibility": "disclosed",
-      "depth": 2,
-      "transaction_types": [],
-      "count": 1,
-      "date_range": [
-        "2024-10-05",
-        "2024-10-29"
-      ],
-      "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00865444&payee_name=SOCIAL+CURRANT",
-      "basis": {
-        "basis": "adjacent",
-        "rule": "Ran Oct 5, 2024 – Oct 29, 2024. In that window (buys dated up to 7 days before first shown through last shown) WINSENATE reported production buys to SOCIAL CURRANT ($4,200); the FEC does not record which buy placed which ad. Same-window buys in media that cannot place a Google ad (TV, radio, mail, phones, field, consulting) are not listed.",
-        "source_urls": [
-          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00865444&payee_name=SOCIAL+CURRANT"
-        ],
-        "checked_by": null,
-        "checked_at": null
-      }
-    },
-    {
-      "from": "vendor:V-peters-consulting",
-      "to": "CR12341671143046905857",
-      "kind": "placement",
-      "amount": 0,
-      "visibility": "disclosed",
-      "depth": 2,
-      "transaction_types": [],
-      "count": 1,
-      "date_range": [
-        "2024-10-05",
-        "2024-10-29"
-      ],
-      "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00865444&payee_name=PETERS+CONSULTING+LLC",
-      "basis": {
-        "basis": "adjacent",
-        "rule": "Ran Oct 5, 2024 – Oct 29, 2024. In that window (buys dated up to 7 days before first shown through last shown) WINSENATE reported production buys to PETERS CONSULTING LLC ($100); the FEC does not record which buy placed which ad. Same-window buys in media that cannot place a Google ad (TV, radio, mail, phones, field, consulting) are not listed.",
-        "source_urls": [
-          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00865444&payee_name=PETERS+CONSULTING+LLC"
-        ],
-        "checked_by": null,
-        "checked_at": null
-      }
-    },
-    {
       "from": "vendor:V-gambit-strategies",
       "to": "CR14255135835702689793",
       "kind": "placement",
@@ -14199,54 +14031,6 @@
         "rule": "Only digital vendor WINSENATE paid during this ad's run window (ran oct 8, 2024 – oct 16, 2024, counting buys dated up to 7 days before first shown) — inferred, not filed. WINSENATE reported $3,822,033 in digital buys to GAMBIT STRATEGIES; Google ads are digital placements.",
         "source_urls": [
           "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00865444&payee_name=GAMBIT+STRATEGIES"
-        ],
-        "checked_by": null,
-        "checked_at": null
-      }
-    },
-    {
-      "from": "vendor:V-social-currant",
-      "to": "CR14255135835702689793",
-      "kind": "placement",
-      "amount": 0,
-      "visibility": "disclosed",
-      "depth": 2,
-      "transaction_types": [],
-      "count": 1,
-      "date_range": [
-        "2024-10-08",
-        "2024-10-16"
-      ],
-      "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00865444&payee_name=SOCIAL+CURRANT",
-      "basis": {
-        "basis": "adjacent",
-        "rule": "Ran Oct 8, 2024 – Oct 16, 2024. In that window (buys dated up to 7 days before first shown through last shown) WINSENATE reported production buys to SOCIAL CURRANT ($4,200); the FEC does not record which buy placed which ad. Same-window buys in media that cannot place a Google ad (TV, radio, mail, phones, field, consulting) are not listed.",
-        "source_urls": [
-          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00865444&payee_name=SOCIAL+CURRANT"
-        ],
-        "checked_by": null,
-        "checked_at": null
-      }
-    },
-    {
-      "from": "vendor:V-peters-consulting",
-      "to": "CR14255135835702689793",
-      "kind": "placement",
-      "amount": 0,
-      "visibility": "disclosed",
-      "depth": 2,
-      "transaction_types": [],
-      "count": 1,
-      "date_range": [
-        "2024-10-08",
-        "2024-10-16"
-      ],
-      "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00865444&payee_name=PETERS+CONSULTING+LLC",
-      "basis": {
-        "basis": "adjacent",
-        "rule": "Ran Oct 8, 2024 – Oct 16, 2024. In that window (buys dated up to 7 days before first shown through last shown) WINSENATE reported production buys to PETERS CONSULTING LLC ($100); the FEC does not record which buy placed which ad. Same-window buys in media that cannot place a Google ad (TV, radio, mail, phones, field, consulting) are not listed.",
-        "source_urls": [
-          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00865444&payee_name=PETERS+CONSULTING+LLC"
         ],
         "checked_by": null,
         "checked_at": null
@@ -14295,30 +14079,6 @@
         "rule": "Only digital vendor WINSENATE paid during this ad's run window (ran jul 25, 2024 – sep 3, 2024, counting buys dated up to 7 days before first shown) — inferred, not filed. WINSENATE reported $6,535,403 in digital buys to GAMBIT STRATEGIES; Google ads are digital placements.",
         "source_urls": [
           "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00865444&payee_name=GAMBIT+STRATEGIES"
-        ],
-        "checked_by": null,
-        "checked_at": null
-      }
-    },
-    {
-      "from": "vendor:V-al-media",
-      "to": "CR14004507606169681921",
-      "kind": "placement",
-      "amount": 0,
-      "visibility": "disclosed",
-      "depth": 2,
-      "transaction_types": [],
-      "count": 1,
-      "date_range": [
-        "2024-07-25",
-        "2024-09-03"
-      ],
-      "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00865444&payee_name=AL+MEDIA+LLC",
-      "basis": {
-        "basis": "adjacent",
-        "rule": "Ran Jul 25, 2024 – Sep 3, 2024. In that window (buys dated up to 7 days before first shown through last shown) WINSENATE reported production buys to AL MEDIA LLC ($18,507); the FEC does not record which buy placed which ad. Same-window buys in media that cannot place a Google ad (TV, radio, mail, phones, field, consulting) are not listed.",
-        "source_urls": [
-          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00865444&payee_name=AL+MEDIA+LLC"
         ],
         "checked_by": null,
         "checked_at": null

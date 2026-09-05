@@ -212,7 +212,7 @@ def test_vendor_totals_reconcile_to_ie_rows_and_ledger_to_the_cent() -> None:
         spender_ids = {s["entity_id"] for s in detail["spenders"]}
         for ad in detail["ads"]:
             assert ad["sponsor_entity_id"] in spender_ids
-            assert ad["basis"]["basis"] in {"verified", "inferred", "adjacent"}
+            assert ad["basis"]["basis"] in {"verified", "inferred"}  # D-74: date overlap alone is not a link
 
 
 @needs_data
@@ -317,7 +317,7 @@ def test_rerun_keeps_reverse_ads_written_by_ads_enrich(tmp_path: Path, monkeypat
     vendor_path = next((out / "vendors").glob("*.json"))
     assert _load(vendor_path)["ads"] == []
 
-    link = {"ad_id": "CR1", "sponsor_entity_id": "C1", "basis": {"basis": "adjacent", "rule": "r", "source_urls": []}}
+    link = {"ad_id": "CR1", "sponsor_entity_id": "C1", "basis": {"basis": "inferred", "rule": "r", "source_urls": []}}
     v = _load(vendor_path)
     v["ads"] = [link]
     vendor_path.write_text(json.dumps(v))

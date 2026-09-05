@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { ISSUE_BY_ID, type Ad, type AdVendorLink } from "@campaign-commons/contracts";
+import { ISSUE_BY_ID, type Ad, type AdVendorLink, type SameWindowBuy } from "@campaign-commons/contracts";
 import { BASIS_LABELS, BASIS_MEANING, BASIS_TONE } from "@/lib/evidence";
 import { date, money, pct, range, routes } from "@/lib/format";
 import { Chip, SourceLink } from "@/components/ui";
@@ -101,6 +101,34 @@ export function VendorLines({ links, raceId }: { links: AdVendorLink[]; raceId: 
   );
 }
 
+/**
+ * The date-overlap fact as a sentence, never as a relationship: who the sponsor paid for placeable media while the ad ran.
+ * Vendors already named in `vendor_links` are left out so the reader is not shown the same firm twice.
+ */
+export function SameWindowBuys({ ad, raceId, sponsorName }: { ad: Ad; raceId: string; sponsorName: string }) {
+  const linked = new Set((ad.vendor_links ?? []).map((l) => l.vendor_id));
+  const buys: SameWindowBuy[] = (ad.same_window_buys ?? []).filter((b) => !linked.has(b.vendor_id));
+  if (buys.length === 0) return null;
+  return (
+    <p className="text-xs text-neutral-600">
+      While this ad ran, {sponsorName} reported{" "}
+      {buys.map((b, i) => (
+        <span key={b.vendor_id}>
+          {i > 0 && (i === buys.length - 1 ? " and " : ", ")}
+          {MEDIUM_LABELS[b.medium].toLowerCase()} buys to{" "}
+          <Link href={routes.vendor(raceId, b.vendor_id)} className="font-medium text-neutral-900 hover:underline">
+            {b.vendor_name}
+          </Link>{" "}
+          (<span className="tabular-nums">{money(b.amount_in_window, { compact: false })}</span>
+          {" "}
+          <SourceLink href={b.source_url} label="FEC" />)
+        </span>
+      ))}
+      . FEC records do not identify which vendor placed this ad, so these are not drawn as links.
+    </p>
+  );
+}
+
 /** One line per card: vendor names with their basis; the rules and sources live on the ad page. */
 function VendorSummary({ ad, raceId }: { ad: Ad; raceId: string }) {
   const links = ad.vendor_links ?? [];
@@ -108,9 +136,9 @@ function VendorSummary({ ad, raceId }: { ad: Ad; raceId: string }) {
   return (
     <p
       className="border-t border-neutral-100 pt-2 text-xs text-neutral-600"
-      title="Vendors the sponsor paid whose buys fall in this ad's run window. The FEC does not record which buy placed which ad; the label says how each link was derived."
+      title="A vendor is linked only when a person verified it from a source naming both, or it was the only digital vendor the sponsor paid while the ad ran. Overlapping dates alone never make a link."
     >
-      <span className="text-neutral-500">Vendors in window: </span>
+      <span className="text-neutral-500">Linked vendors: </span>
       {links.map((link, i) => (
         <span key={link.vendor_id}>
           {i > 0 && ", "}

@@ -1,17 +1,20 @@
 """Stage: patch <race>/ads.json in place with everything Block 2 adds to an ad (runs after campaign_commons.ads and campaign_commons.vendors).
 
 This module owns every field written to ads.json after the ads stage: `sponsor_visibility_shares`, `issues`,
-`vendor_links[]`, and the enrichment notes. It never re-downloads the Google bundle; it reads what is already in data/out
+`same_window_buys[]`, `vendor_links[]`, and the enrichment notes. It never re-downloads the Google bundle; it reads what is already in data/out
 and data/hand and rewrites ads.json. Re-running yields the same file (fields are recomputed from scratch, enrichment
 notes are replaced, `generated_at` is untouched).
 
 1. sponsor_visibility_shares <- chains/<matched_entity_id>.json summary shares; null when unmatched or no chain.
 2. issues <- data/hand/<race>/ad_issues.json (a person tagged the creative); absent when untagged.
-3. vendor_links[] <- the sponsor's `vendors[]` rows (entities/<sponsor>.json, written by campaign_commons.vendors) whose IE rows are
-   dated inside the ad's window [first_shown - 7 days, last_shown]. Basis: `adjacent` by default; `inferred` when exactly one
-   vendor with digital buys sits in the window (Google ads are digital placements); `verified` only from
-   data/hand/<race>/vendor_ad_links.json. Reverse side: vendors/<vendor_id>.json.ads[] gets {ad_id, sponsor_entity_id, basis}.
-   Without `vendors[]` on the sponsor (campaign_commons.vendors not run yet) the step is a no-op and says so in the notes.
+3. same_window_buys[] <- the sponsor's `vendors[]` rows (entities/<sponsor>.json, written by campaign_commons.vendors) whose IE rows
+   are dated inside the ad's window [first_shown - 7 days, last_shown], limited to media that could place or produce a Google
+   creative. Context only: the FEC does not say which buy placed which ad, so this is never a link or an edge.
+4. vendor_links[] <- the subset of those vendors joined to the ad by a rule or a person: `inferred` when exactly one vendor with
+   digital buys sits in the window (Google ads are digital placements); `verified` only from data/hand/<race>/vendor_ad_links.json.
+   Date overlap alone (the former `adjacent` basis) is not a link (D-74). Reverse side: vendors/<vendor_id>.json.ads[] gets
+   {ad_id, sponsor_entity_id, basis}. Without `vendors[]` on the sponsor (campaign_commons.vendors not run yet) steps 3-4 are
+   no-ops and say so in the notes.
 """
 
 from __future__ import annotations
@@ -29,7 +32,7 @@ WINDOW_LEAD_DAYS = 7
 NOTE_PREFIX = "Enrichment (campaign_commons.ads_enrich): "
 TAGGING_RULE = "Tagged by a person from the creative"
 WINDOW_RULE = (
-    f"A vendor is linked to an ad when any of the sponsor's independent-expenditure rows paid to that vendor is dated from "
+    f"A vendor is 'in the window' of an ad when any of the sponsor's independent-expenditure rows paid to that vendor is dated from "
     f"{WINDOW_LEAD_DAYS} days before the ad was first shown through the day it was last shown."
 )
 
@@ -50,6 +53,8 @@ class EnrichCounts:
     with_shares: int = 0
     tagged: int = 0
     links_by_basis: Counter[str] = field(default_factory=Counter)
+    same_window_buys: int = 0
+    ads_with_same_window_buys: int = 0
     sponsors_with_vendors: int = 0
     sponsors_without_vendors: int = 0
     vendor_files_patched: int = 0
@@ -148,23 +153,59 @@ def _dominant_medium(buys: list[Buy], vendor: JsonDict) -> str:
 
 
 # Media that can have placed or produced a Google creative. A same-window TV, mail or phone buy cannot have, so it is not
-# offered as an `adjacent` link; `other` is kept because it means "purpose string unclassified", not "not digital".
-ADJACENT_MEDIA = frozenset({"digital", "production", "other"})
+# listed next to the ad at all; `other` is kept because it means "purpose string unclassified", not "not digital".
+PLACEABLE_MEDIA = frozenset({"digital", "production", "other"})
 
 
-def vendor_links(ad: JsonDict, entity: JsonDict, hand_links: dict[tuple[str, str], JsonDict]) -> list[JsonDict]:
-    """One link per vendor the sponsor paid inside the ad's window, verified first, then by dollars in the window.
-    Adjacent (co-occurrence only) links are limited to ADJACENT_MEDIA; verified and inferred links are never dropped."""
+def _buys_in_window(ad: JsonDict, entity: JsonDict) -> tuple[dict[str, list[Buy]], date, date] | None:
     first, last = _iso(ad.get("first_shown")), _iso(ad.get("last_shown"))
     vendors = _vendor_rows(entity)
     if first is None or last is None or not vendors:
-        return []
-    sponsor = str(entity.get("name") or ad["advertiser_name"])
-    ad_id = str(ad["ad_id"])
+        return None
     in_win: dict[str, list[Buy]] = {}
     for b in sponsor_buys(entity):
         if b.vendor_id in vendors and in_window(b.day, first, last):
             in_win.setdefault(b.vendor_id, []).append(b)
+    return in_win, first, last
+
+
+def same_window_buys(ad: JsonDict, entity: JsonDict) -> list[JsonDict]:
+    """Every PLACEABLE_MEDIA vendor the sponsor paid inside the ad's window, by dollars in the window. Context for the reader
+    ("while this ad ran, the sponsor reported digital buys to A and B"); carries no basis because it asserts no relationship."""
+    found = _buys_in_window(ad, entity)
+    if found is None:
+        return []
+    in_win, _, _ = found
+    vendors = _vendor_rows(entity)
+    rows: list[JsonDict] = []
+    for vendor_id, buys in in_win.items():
+        vendor = vendors[vendor_id]
+        medium = _dominant_medium(buys, vendor)
+        if medium not in PLACEABLE_MEDIA:
+            continue
+        rows.append(
+            {
+                "vendor_id": vendor_id,
+                "vendor_name": str(vendor["name"]),
+                "medium": medium,
+                "amount_in_window": round(sum(b.amount for b in buys), 2),
+                "buys_in_window": len(buys),
+                "source_url": str(vendor["source_url"]),
+            }
+        )
+    return sorted(rows, key=lambda r: (-float(str(r["amount_in_window"])), str(r["vendor_id"])))
+
+
+def vendor_links(ad: JsonDict, entity: JsonDict, hand_links: dict[tuple[str, str], JsonDict]) -> list[JsonDict]:
+    """One link per vendor joined to the ad by a person (verified) or by the only-digital-vendor rule (inferred), verified
+    first, then by dollars in the window. A vendor that merely overlaps the ad in time gets no link (D-74)."""
+    found = _buys_in_window(ad, entity)
+    if found is None:
+        return []
+    in_win, first, last = found
+    vendors = _vendor_rows(entity)
+    sponsor = str(entity.get("name") or ad["advertiser_name"])
+    ad_id = str(ad["ad_id"])
     digital_vendors = {vid for vid, buys in in_win.items() if any(b.medium == "digital" for b in buys)}
     window_text = f"Ran {_human(first)} – {_human(last)}"
     links: list[JsonDict] = []
@@ -198,19 +239,8 @@ def vendor_links(ad: JsonDict, entity: JsonDict, hand_links: dict[tuple[str, str
                 "checked_by": None,
                 "checked_at": None,
             }
-        elif medium not in ADJACENT_MEDIA:
-            continue
         else:
-            basis = {
-                "basis": "adjacent",
-                "rule": f"{window_text}. In that window (buys dated up to {WINDOW_LEAD_DAYS} days before first shown through "
-                f"last shown) {sponsor} reported {medium} buys to {vendor_name} (${amount:,.0f}); the FEC does not record "
-                "which buy placed which ad. Same-window buys in media that cannot place a Google ad (TV, radio, mail, "
-                "phones, field, consulting) are not listed.",
-                "source_urls": source_urls,
-                "checked_by": None,
-                "checked_at": None,
-            }
+            continue
         links.append(
             {
                 "vendor_id": vendor_id,
@@ -225,7 +255,7 @@ def vendor_links(ad: JsonDict, entity: JsonDict, hand_links: dict[tuple[str, str
     return sorted(links, key=_link_order)
 
 
-_BASIS_ORDER = {"verified": 0, "inferred": 1, "adjacent": 2}
+_BASIS_ORDER = {"verified": 0, "inferred": 1}
 
 
 def _link_order(link: JsonDict) -> tuple[int, float]:
@@ -270,7 +300,7 @@ def _strip_enrich_notes(notes: object) -> list[str]:
 
 def enrich_notes(c: EnrichCounts, tagger_count: int) -> list[str]:
     links_total = sum(c.links_by_basis.values())
-    by_basis = ", ".join(f"{c.links_by_basis[b]} {b}" for b in ("verified", "inferred", "adjacent"))
+    by_basis = ", ".join(f"{c.links_by_basis[b]} {b}" for b in ("verified", "inferred"))
     vendor_note = (
         f"{c.sponsors_with_vendors} sponsor committees carry vendor rows (campaign_commons.vendors); {c.sponsors_without_vendors} do not, "
         "so their ads have no vendor links yet."
@@ -288,11 +318,12 @@ def enrich_notes(c: EnrichCounts, tagger_count: int) -> list[str]:
         "has tagged them.",
         NOTE_PREFIX
         + WINDOW_RULE
-        + f" {links_total} vendor links ({by_basis}). 'adjacent' means only that the buy and the ad "
-        "overlap in time, and is offered only for digital, production or unclassified buys (a TV, mail or phone buy cannot "
-        "have placed a Google ad); 'inferred' means the sponsor paid exactly one digital vendor in the window; 'verified' means a person "
-        "found a source naming both the sponsor and the vendor for this creative. The FEC does not record which buy placed "
-        "which ad. " + vendor_note,
+        + f" {c.ads_with_same_window_buys} of {c.ads} ads list same_window_buys ({c.same_window_buys} vendor rows): digital, "
+        "production or unclassified buys in the window (a TV, mail or phone buy cannot have placed a Google ad). These are "
+        "context, not links; the FEC does not record which buy placed which ad, so date overlap alone is never drawn as a "
+        f"vendor-to-ad relationship (D-74). {links_total} vendor links ({by_basis}): 'inferred' means the sponsor paid exactly "
+        "one digital vendor in the window; 'verified' means a person found a source naming both the sponsor and the vendor "
+        "for this creative. " + vendor_note,
     ]
 
 
@@ -326,9 +357,15 @@ def enrich(
         row = issue_rows.get(str(ad["ad_id"]))
         ad.pop("issues", None)
         ad.pop("vendor_links", None)
+        ad.pop("same_window_buys", None)
         if row is not None:
             ad["issues"] = issue_tags(row, str(ad["creative_url"]))
             counts.tagged += 1
+        buys = same_window_buys(ad, entity) if entity is not None else []
+        ad["same_window_buys"] = buys
+        if buys:
+            counts.ads_with_same_window_buys += 1
+            counts.same_window_buys += len(buys)
         links = vendor_links(ad, entity, hand_links) if entity is not None else []
         ad["vendor_links"] = links
         if isinstance(sponsor_id, str) and entity is not None:
@@ -389,6 +426,7 @@ def run(race_id: str) -> None:
         print(f"WARN ad_issues.json row {ad_id} matches no ad in ads.json")
     print(
         f"{counts.ads} ads: {counts.with_shares} with sponsor shares, {counts.tagged} tagged, "
+        f"{counts.ads_with_same_window_buys} with same-window buys ({counts.same_window_buys} rows), "
         f"links {dict(counts.links_by_basis)} ({counts.sponsors_with_vendors} sponsors with vendor rows, "
         f"{counts.sponsors_without_vendors} without), {counts.vendor_files_patched} vendor files patched"
     )

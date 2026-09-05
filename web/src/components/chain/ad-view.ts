@@ -50,8 +50,9 @@ export const adTitle = (ad: Ad): string => {
  * The sponsor's chain re-rooted around one ad: the whole funding side (folded by `visibleGraph` as on the chain page),
  * then on the spending side only what touches this creative — the vendors its `vendor_links` name (with the filed
  * root → vendor payment from the chain), the ad itself, and the candidates it is about. Every spending-side node and
- * edge carries the Basis the data already has, so the picture says "adjacent"/"inferred"/"verified" the same way the
- * chain page does. Vendors the sponsor paid that do not link to this ad are left out — that is the point of the page.
+ * edge carries the Basis the data already has, so the picture says "inferred"/"verified" the same way the chain page
+ * does. Vendors the sponsor paid that do not link to this ad are left out — that is the point of the page; the ad page
+ * names same-window buys in a sentence instead.
  */
 export function adFocusWire(chain: Chain, ad: Ad, links: NodeLinks, candidateNames: Record<string, string>, dossierIds: ReadonlySet<string>): ChainViewWire {
   const root = chain.root_entity_id;
@@ -64,7 +65,10 @@ export function adFocusWire(chain: Chain, ad: Ad, links: NodeLinks, candidateNam
   const edges: ChainEdge[] = [...inEdges];
   const amount = spendMidpoint(ad.spend_range);
 
-  const vendorLinks = (ad.vendor_links ?? []).filter((l) => byId.has(`vendor:${l.vendor_id}`));
+  // Mirrors chains_out._ad_parent_edge: only verified / inferred links are edges; same-window buys are context on the ad, not drawn.
+  const vendorLinks = (ad.vendor_links ?? []).filter(
+    (l) => byId.has(`vendor:${l.vendor_id}`) && (l.basis.basis === "verified" || l.basis.basis === "inferred"),
+  );
   const depthAd = vendorLinks.length > 0 ? 2 : 1;
   for (const link of vendorLinks) {
     const vid = `vendor:${link.vendor_id}`;
@@ -72,9 +76,8 @@ export function adFocusWire(chain: Chain, ad: Ad, links: NodeLinks, candidateNam
     if (!vendor) continue;
     nodes.push(vendor);
     edges.push(...chain.edges.filter((e) => e.from === root && e.to === vid && (e.kind ?? "money") === "money"));
-    const strong = link.basis.basis === "verified" || link.basis.basis === "inferred";
     edges.push(
-      placement(vid, ad.ad_id, strong ? amount : 0, depthAd, link.basis, {
+      placement(vid, ad.ad_id, amount, depthAd, link.basis, {
         count: link.buys_in_window,
         date_range: link.window,
         source_url: link.basis.source_urls[0] ?? null,
@@ -99,8 +102,7 @@ export function adFocusWire(chain: Chain, ad: Ad, links: NodeLinks, candidateNam
     basis: inferred(`Google reports spend as a range (${rng}); the midpoint is drawn`, [ad.source_url]),
   });
 
-  const strongLink = vendorLinks.some((l) => l.basis.basis === "verified" || l.basis.basis === "inferred");
-  if (!strongLink) {
+  if (vendorLinks.length === 0) {
     const v = ad.verification;
     const basis: Basis =
       v?.status === "verified" && v.verified_at && v.evidence_urls.length > 0

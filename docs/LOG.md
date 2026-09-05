@@ -485,3 +485,23 @@ implementations of one rule is a maintenance risk, noted in D-72 for the next cr
 
 **Numbers.** Ads wall HTML 3.0 MB → 2.8 MB (the card is still dense; C-58 server-rendered compact cards stays open). Ad page
 ~24 KB HTML + the sponsor's chain wire.
+
+## 2026-09-06 ~05:00 — D-74: adjacent vendor→ad links dropped; date overlap becomes a sentence (master)
+
+**What changed.** Albert, reviewing the three link kinds: "it's more confusing now to have the implied links." The `adjacent`
+basis (any digital/production/other buy overlapping the ad's run dates, drawn as a dotted edge) asserted nothing beyond
+co-occurrence, but drawn as an edge it read as a relationship. Removed it end to end: `adjacent` is gone from `Basis`,
+`AdVendorLink.basis` and the JSON schemas; `ads_enrich.vendor_links` emits only `verified` (hand file) and `inferred` (exactly
+one digital vendor in the window, D-64); `chains_out._ad_parent_edge` and the ad page's `ad-view.ts` both filter to those two so
+a stale record can never become an edge. The date fact is kept as **context**: `Ad.same_window_buys[]` — vendor, medium, dollars
+and buy count inside the window, source URL, deliberately no `basis` — rendered as one sentence on the ad page ("While this ad
+ran, WINSENATE reported digital buys to Gambit ($…) and Waterfront ($…). FEC records do not identify which vendor placed this
+ad, so these are not drawn as links.") and, in reverse, on the vendor page ("N ads by X ran during this vendor's buys; not linked").
+Legends read `solid = filed or verified · dashed = inferred`; the wall filter lost "adjacent"; every assumptions block says
+the same-window vendors are listed as prose, not edges. D-74; Q-12 closed.
+
+**Challenge.** Regenerated artifacts still carried `adjacent` until `make`-order was respected (ads-enrich → chains-out → search);
+the contract test on vendor detail files caught the stale values first, which is what it is for. Second run byte-identical.
+
+**Numbers.** Vendor→ad links 612 → 115 (497 adjacent removed, 115 inferred kept, 0 verified in PA yet); 280 of 500 ads carry
+same-window context (611 rows); 169 pipeline tests, 2,455 out + 5 hand files validate.
