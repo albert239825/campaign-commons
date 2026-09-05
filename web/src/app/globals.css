@@ -483,7 +483,7 @@ body:has(.race-dashboard) :is(a, button):focus-visible { outline: 2px solid curr
 }
 
 /* A single, candidate-selectable view of campaign and outside dollars. */
-.funding-explorer { margin-top: -56px; }
+.race-sections { margin-top: -56px; min-width: 0; }
 .funding-tabs { display: flex; border-bottom: 1px solid var(--race-rule); gap: 32px; margin-bottom: 24px; }
 .funding-tabs button { padding: 16px 0; border-bottom: 2px solid transparent; text-align: left; color: #6f6d69; cursor: pointer; font-size: 15px; }
 .funding-tabs button[aria-selected="true"] { color: #1b1b1a; border-color: currentColor; }
@@ -534,7 +534,7 @@ body:has(.race-dashboard) :is(a, button):focus-visible { outline: 2px solid curr
   .funding-visibility-lines dd { margin-left: auto; }
 }
 @media (max-width: 680px) {
-  .funding-explorer { margin-top: -32px; }
+  .race-sections { margin-top: -32px; }
   .funding-tabs { gap: 16px; }
   .funding-tabs button { flex: 1; min-width: 0; font-size: 12px; }
   .funding-tabs small { font-size: 11px; }
@@ -545,4 +545,15 @@ body:has(.race-dashboard) :is(a, button):focus-visible { outline: 2px solid curr
 }
 @media (prefers-reduced-motion: reduce) {
   .funding-pie [role="button"] { transition: none; }
+}
+
+.race-section-tabs { display: flex; gap: 32px; margin-bottom: 24px; border-bottom: 1px solid var(--race-rule); }
+.race-section-tabs button { min-height: 48px; padding: 12px 0; text-align: left; font-size: 16px; color: #6f6d69; cursor: pointer; border-bottom: 2px solid transparent; }
+.race-section-tabs button[aria-selected="true"] { color: #1b1b1a; border-color: currentColor; }
+.race-section-panel { min-width: 0; }
+.race-section-panel[hidden] { display: none; }
+.race-section-panel:focus-visible { outline: 2px solid currentColor; outline-offset: 6px; }
+@media (max-width: 680px) {
+  .race-section-tabs { gap: 20px; }
+  .race-section-tabs button { flex: 1; font-size: 13px; }
 }

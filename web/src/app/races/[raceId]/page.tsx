@@ -5,6 +5,7 @@ import type { Party } from "@citizen-gotham/contracts";
 import { getLedger, getRace, getStories, hasChain, listRaceIds } from "@/lib/data";
 import { date, routes } from "@/lib/format";
 import { AdjacencyNote, Card, DataStatusBanner } from "@/components/ui";
+import { RaceSections } from "@/components/ledger/race-sections";
 import { FundingExplorer } from "@/components/ledger/funding-explorer";
 import { buildFundingViews } from "@/lib/funding-view";
 import { SpendersTable } from "@/components/ledger/spenders-table";
@@ -88,49 +89,51 @@ export default async function RaceLedgerPage({ params }: { params: Promise<{ rac
         </header>
       </div>
 
-      <FundingExplorer views={buildFundingViews(ledger)} raceId={raceId} />
-
-      {topStories.length > 0 && (
-        <Card
-          title="Start here"
-          action={
-            <Link href={routes.stories(raceId)} className="text-xs text-neutral-600 hover:underline">
-              All {stories.stories.length} stories →
-            </Link>
-          }
-        >
-          <p className="mb-3 text-xs text-neutral-500">
-            Spenders ranked by the pipeline (amount, dark share, structural flags). The text is templated from FEC filings, not written by a person;
-            each card says whether a human has checked it.
-          </p>
-          <div className="race-stories">
-            {topStories.map((s) => (
-              <StoryCard key={s.story_id} story={s} raceId={raceId} hasChain={hasChain(raceId, s.root_entity_id)} />
-            ))}
-          </div>
-        </Card>
-      )}
-
-      <Card
-        title="Top outside spenders"
-        action={
-          <Link href={routes.ads(raceId)} className="text-xs text-neutral-600 hover:underline">
-            Ad gallery →
-          </Link>
+      <RaceSections
+        funding={<FundingExplorer views={buildFundingViews(ledger)} raceId={raceId} />}
+        stories={topStories.length > 0 ? (
+          <Card
+            title="Start here"
+            action={
+              <Link href={routes.stories(raceId)} className="text-xs text-neutral-600 hover:underline">
+                All {stories.stories.length} stories →
+              </Link>
+            }
+          >
+            <p className="mb-3 text-xs text-neutral-500">
+              Spenders ranked by the pipeline (amount, dark share, structural flags). The text is templated from FEC filings, not written by a person;
+              each card says whether a human has checked it.
+            </p>
+            <div className="race-stories">
+              {topStories.map((s) => (
+                <StoryCard key={s.story_id} story={s} raceId={raceId} hasChain={hasChain(raceId, s.root_entity_id)} />
+              ))}
+            </div>
+          </Card>
+        ) : <Card title="Start here"><p>No stories are available for this race yet.</p></Card>}
+        spenders={
+          <Card
+            title="Top outside spenders"
+            action={
+              <Link href={routes.ads(raceId)} className="text-xs text-neutral-600 hover:underline">
+                Ad gallery →
+              </Link>
+            }
+          >
+            <p className="mb-3 text-xs text-neutral-500">
+              Committees reporting independent expenditures (Schedule E) about candidates in this race. S = supports, O = opposes, as
+              declared by the spender. Dot = how visible the spender&apos;s own funding is. Click a column to sort.
+            </p>
+            <SpendersTable raceId={raceId} spenders={ledger.top_outside_spenders} candidates={race.candidates} />
+            {allFlags.length > 0 && (
+              <div className="mt-4 border-t border-neutral-100 pt-3">
+                <div className="mb-1.5 text-[11px] font-medium uppercase tracking-wide text-neutral-500">Flags</div>
+                <FlagsLegend flags={allFlags} />
+              </div>
+            )}
+          </Card>
         }
-      >
-        <p className="mb-3 text-xs text-neutral-500">
-          Committees reporting independent expenditures (Schedule E) about candidates in this race. S = supports, O = opposes, as
-          declared by the spender. Dot = how visible the spender&apos;s own funding is. Click a column to sort.
-        </p>
-        <SpendersTable raceId={raceId} spenders={ledger.top_outside_spenders} candidates={race.candidates} />
-        {allFlags.length > 0 && (
-          <div className="mt-4 border-t border-neutral-100 pt-3">
-            <div className="mb-1.5 text-[11px] font-medium uppercase tracking-wide text-neutral-500">Flags</div>
-            <FlagsLegend flags={allFlags} />
-          </div>
-        )}
-      </Card>
+      />
 
       <footer className="race-notes space-y-3">
         {ledger.notes.length > 0 && (
