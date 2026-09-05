@@ -15,17 +15,20 @@ const SORTS: Record<Sort, { label: string; cmp: (a: Ad, b: Ad) => number }> = {
 export function AdGallery({
   ads,
   raceId,
+  entityIds,
   chainIds,
   candidateNames,
 }: {
   ads: Ad[];
   raceId: string;
+  entityIds: string[];
   chainIds: string[];
   candidateNames: Record<string, string>;
 }) {
   const [matchedOnly, setMatchedOnly] = useState(false);
   const [verifiedOnly, setVerifiedOnly] = useState(false);
   const [sort, setSort] = useState<Sort>("spend_desc");
+  const entities = useMemo(() => new Set(entityIds), [entityIds]);
   const chains = useMemo(() => new Set(chainIds), [chainIds]);
   const verifiedCount = useMemo(() => ads.filter(isVerified).length, [ads]);
   const shown = useMemo(
@@ -69,7 +72,8 @@ export function AdGallery({
       ) : (
         <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
           {shown.map((ad) => (
-            <AdCard key={ad.ad_id} ad={ad} raceId={raceId} sponsorHasChain={ad.matched_entity_id !== null && chains.has(ad.matched_entity_id)} candidateNames={candidateNames} />
+            <AdCard key={ad.ad_id} ad={ad} raceId={raceId} sponsorHasPage={ad.matched_entity_id !== null && entities.has(ad.matched_entity_id)}
+              sponsorHasChain={ad.matched_entity_id !== null && chains.has(ad.matched_entity_id)} candidateNames={candidateNames} />
           ))}
         </div>
       )}

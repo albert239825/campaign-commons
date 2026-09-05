@@ -222,9 +222,11 @@ export const TransferSchema = z.object({
   to_entity_id: z.string(),
   to_name: z.string(),
   amount: z.number(),
-  date: z.string().nullable(),
+  date: z.string().nullable(), // latest transaction date in the aggregate
+  first_date: z.string().nullable().optional(), // earliest transaction date; equals `date` for a single transaction
+  count: z.number().int().optional(), // underlying transactions rolled into this row
   visibility: VisibilitySchema,
-  transaction_type: z.string().nullable(), // FEC transaction type code (15, 15E, 18G, 18K, 24K, ...)
+  transaction_type: z.string().nullable(), // modal FEC transaction type code (15, 15E, 18G, 18K, 24K, ...)
   limit: z.union([z.number(), z.literal("unlimited")]).nullable(), // statutory cap
   source_url: z.string().url(),
 });
@@ -268,7 +270,7 @@ export const EntitySchema = z.object({
   totals: z.object({
     receipts: z.number(),
     disbursements: z.number(),
-    independent_expenditures: z.number(),
+    independent_expenditures: z.number(), // 2024-cycle total across all races (FEC summary), not just this race
     from_individuals: z.number(),
     from_committees: z.number(),
     from_organizations: z.number().optional(), // named businesses / unions giving from their own treasury (disclosed)
@@ -514,7 +516,7 @@ export const DonorViewSchema = z.object({
   total_in_chains: z.number(), // ranking weight: summed amount_in across every chain the donor appears in (double counts)
   nodes: z.array(DonorNodeSchema).max(200),
   edges: z.array(DonorEdgeSchema),
-  /** set whenever a spender is reached through an intermediate committee: dollars are fungible once pooled */
+  /** set whenever any amount past the donor's own gifts is shown (a transfer or an IE): those are pooled totals, not the donor's share */
   allocation_note: z.string().nullable(),
   truncated: z.boolean(),
   method: z.string(),

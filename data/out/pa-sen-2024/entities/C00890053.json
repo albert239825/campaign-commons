@@ -24,7 +24,7 @@
     "from_individuals": 0.0,
     "from_committees": 3262000.0,
     "from_organizations": 0.0,
-    "from_undisclosed": 3731486.0
+    "from_undisclosed": 469486.0
   },
   "inflows": [
     {
@@ -35,23 +35,12 @@
       "to_name": "FUTURE PENNSYLVANIA PAC",
       "amount": 2462000.0,
       "date": "2024-10-08",
+      "first_date": "2024-10-08",
+      "count": 1,
       "visibility": "disclosed",
       "transaction_type": "24K",
       "limit": "unlimited",
       "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00890053&two_year_transaction_period=2024&contributor_name=C00741769"
-    },
-    {
-      "transfer_id": "C00890053-in-org:STRATEGIC_VICTORY_FUND_IE_PAC",
-      "from_entity_id": "org:STRATEGIC_VICTORY_FUND_IE_PAC",
-      "from_name": "STRATEGIC VICTORY FUND IE PAC",
-      "to_entity_id": "C00890053",
-      "to_name": "FUTURE PENNSYLVANIA PAC",
-      "amount": 2462000.0,
-      "date": "2024-10-08",
-      "visibility": "dark",
-      "transaction_type": "10",
-      "limit": "unlimited",
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00890053&two_year_transaction_period=2024&contributor_name=STRATEGIC+VICTORY+FUND+IE+PAC"
     },
     {
       "transfer_id": "C00890053-in-C00882381",
@@ -61,23 +50,12 @@
       "to_name": "FUTURE PENNSYLVANIA PAC",
       "amount": 800000.0,
       "date": "2024-10-03",
+      "first_date": "2024-10-03",
+      "count": 1,
       "visibility": "disclosed",
       "transaction_type": "24K",
       "limit": "unlimited",
       "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00890053&two_year_transaction_period=2024&contributor_name=C00882381"
-    },
-    {
-      "transfer_id": "C00890053-in-org:PEOPLE_POWER_PENNSYLVANIA",
-      "from_entity_id": "org:PEOPLE_POWER_PENNSYLVANIA",
-      "from_name": "PEOPLE POWER PENNSYLVANIA",
-      "to_entity_id": "C00890053",
-      "to_name": "FUTURE PENNSYLVANIA PAC",
-      "amount": 800000.0,
-      "date": "2024-10-03",
-      "visibility": "dark",
-      "transaction_type": "10",
-      "limit": "unlimited",
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00890053&two_year_transaction_period=2024&contributor_name=PEOPLE+POWER+PENNSYLVANIA"
     },
     {
       "transfer_id": "C00890053-in-org:PROJECT_26_PENNSYLVANIA",
@@ -87,6 +65,8 @@
       "to_name": "FUTURE PENNSYLVANIA PAC",
       "amount": 465276.0,
       "date": "2024-11-25",
+      "first_date": "2024-10-13",
+      "count": 114,
       "visibility": "dark",
       "transaction_type": "10",
       "limit": "unlimited",
@@ -100,6 +80,8 @@
       "to_name": "FUTURE PENNSYLVANIA PAC",
       "amount": 4210.0,
       "date": "2024-11-25",
+      "first_date": "2024-11-25",
+      "count": 1,
       "visibility": "dark",
       "transaction_type": "10",
       "limit": "unlimited",
@@ -815,7 +797,7 @@
     {
       "id": "dead_end_dark",
       "label": "Chain ends at undisclosed donors",
-      "detail": "80% of FUTURE PENNSYLVANIA PAC's receipts stop at organizations whose own funding is not on file (advocacy nonprofits, LLCs, trusts) rather than at named individuals, businesses or unions.",
+      "detail": "63% of FUTURE PENNSYLVANIA PAC's receipts stop at organizations whose own funding is not on file (advocacy nonprofits, LLCs, trusts) rather than at named individuals, businesses or unions.",
       "evidence_url": "https://www.fec.gov/data/committee/C00890053/?cycle=2024"
     }
   ],

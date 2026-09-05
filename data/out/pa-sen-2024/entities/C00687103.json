@@ -35,6 +35,8 @@
       "to_name": "AMERICANS FOR PROSPERITY ACTION, INC. (AFP ACTION) DBA CVA ACTION AND DBA LIBRE ACTION",
       "amount": 44800000.0,
       "date": "2024-11-22",
+      "first_date": "2023-05-11",
+      "count": 4,
       "visibility": "dark",
       "transaction_type": "10",
       "limit": null,
@@ -48,6 +50,8 @@
       "to_name": "AMERICANS FOR PROSPERITY ACTION, INC. (AFP ACTION) DBA CVA ACTION AND DBA LIBRE ACTION",
       "amount": 25000000.0,
       "date": "2023-05-19",
+      "first_date": "2023-05-19",
+      "count": 1,
       "visibility": "disclosed",
       "transaction_type": "10",
       "limit": null,
@@ -61,6 +65,8 @@
       "to_name": "AMERICANS FOR PROSPERITY ACTION, INC. (AFP ACTION) DBA CVA ACTION AND DBA LIBRE ACTION",
       "amount": 15000000.0,
       "date": "2024-07-31",
+      "first_date": "2024-07-31",
+      "count": 1,
       "visibility": "disclosed",
       "transaction_type": "10",
       "limit": null,
@@ -74,6 +80,8 @@
       "to_name": "AMERICANS FOR PROSPERITY ACTION, INC. (AFP ACTION) DBA CVA ACTION AND DBA LIBRE ACTION",
       "amount": 10000000.0,
       "date": "2024-06-17",
+      "first_date": "2023-04-04",
+      "count": 2,
       "visibility": "disclosed",
       "transaction_type": "10",
       "limit": null,
@@ -87,36 +95,12 @@
       "to_name": "AMERICANS FOR PROSPERITY ACTION, INC. (AFP ACTION) DBA CVA ACTION AND DBA LIBRE ACTION",
       "amount": 8509184.0,
       "date": "2024-11-24",
+      "first_date": "2024-05-14",
+      "count": 3,
       "visibility": "dark",
       "transaction_type": "10",
       "limit": null,
       "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00687103&two_year_transaction_period=2024&contributor_name=IN+PURSUIT+OF+LLC"
-    },
-    {
-      "transfer_id": "C00687103-in-ind:WALTON_ALICE_L.|72745",
-      "from_entity_id": "ind:WALTON_ALICE_L.|72745",
-      "from_name": "WALTON, ALICE L.",
-      "to_entity_id": "C00687103",
-      "to_name": "AMERICANS FOR PROSPERITY ACTION, INC. (AFP ACTION) DBA CVA ACTION AND DBA LIBRE ACTION",
-      "amount": 5000000.0,
-      "date": "2023-12-04",
-      "visibility": "disclosed",
-      "transaction_type": "10",
-      "limit": null,
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00687103&two_year_transaction_period=2024&contributor_name=WALTON%2C+ALICE+L."
-    },
-    {
-      "transfer_id": "C00687103-in-ind:WALTON_ROB|72712",
-      "from_entity_id": "ind:WALTON_ROB|72712",
-      "from_name": "WALTON, ROB",
-      "to_entity_id": "C00687103",
-      "to_name": "AMERICANS FOR PROSPERITY ACTION, INC. (AFP ACTION) DBA CVA ACTION AND DBA LIBRE ACTION",
-      "amount": 5000000.0,
-      "date": "2023-04-06",
-      "visibility": "disclosed",
-      "transaction_type": "10",
-      "limit": null,
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00687103&two_year_transaction_period=2024&contributor_name=WALTON%2C+ROB"
     },
     {
       "transfer_id": "C00687103-in-ind:WALTON_ROBERT_S.|72712",
@@ -126,23 +110,42 @@
       "to_name": "AMERICANS FOR PROSPERITY ACTION, INC. (AFP ACTION) DBA CVA ACTION AND DBA LIBRE ACTION",
       "amount": 5000000.0,
       "date": "2024-06-17",
+      "first_date": "2024-06-17",
+      "count": 1,
       "visibility": "disclosed",
       "transaction_type": "10",
       "limit": null,
       "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00687103&two_year_transaction_period=2024&contributor_name=WALTON%2C+ROBERT+S."
     },
     {
-      "transfer_id": "C00687103-in-ind:HAWORTH_ETHELYN_L.|49423",
-      "from_entity_id": "ind:HAWORTH_ETHELYN_L.|49423",
-      "from_name": "HAWORTH, ETHELYN L.",
+      "transfer_id": "C00687103-in-ind:WALTON_ROB|72712",
+      "from_entity_id": "ind:WALTON_ROB|72712",
+      "from_name": "WALTON, ROB",
       "to_entity_id": "C00687103",
       "to_name": "AMERICANS FOR PROSPERITY ACTION, INC. (AFP ACTION) DBA CVA ACTION AND DBA LIBRE ACTION",
-      "amount": 3500000.0,
-      "date": "2024-09-30",
+      "amount": 5000000.0,
+      "date": "2023-04-06",
+      "first_date": "2023-04-06",
+      "count": 1,
       "visibility": "disclosed",
       "transaction_type": "10",
       "limit": null,
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00687103&two_year_transaction_period=2024&contributor_name=HAWORTH%2C+ETHELYN+L."
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00687103&two_year_transaction_period=2024&contributor_name=WALTON%2C+ROB"
+    },
+    {
+      "transfer_id": "C00687103-in-ind:WALTON_ALICE_L.|72745",
+      "from_entity_id": "ind:WALTON_ALICE_L.|72745",
+      "from_name": "WALTON, ALICE L.",
+      "to_entity_id": "C00687103",
+      "to_name": "AMERICANS FOR PROSPERITY ACTION, INC. (AFP ACTION) DBA CVA ACTION AND DBA LIBRE ACTION",
+      "amount": 5000000.0,
+      "date": "2023-12-04",
+      "first_date": "2023-12-04",
+      "count": 1,
+      "visibility": "disclosed",
+      "transaction_type": "10",
+      "limit": null,
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00687103&two_year_transaction_period=2024&contributor_name=WALTON%2C+ALICE+L."
     },
     {
       "transfer_id": "C00687103-in-ind:HAWORTH_RICHARD_G.|49423",
@@ -152,10 +155,27 @@
       "to_name": "AMERICANS FOR PROSPERITY ACTION, INC. (AFP ACTION) DBA CVA ACTION AND DBA LIBRE ACTION",
       "amount": 3500000.0,
       "date": "2024-09-30",
+      "first_date": "2023-06-30",
+      "count": 7,
       "visibility": "disclosed",
       "transaction_type": "10",
       "limit": null,
       "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00687103&two_year_transaction_period=2024&contributor_name=HAWORTH%2C+RICHARD+G."
+    },
+    {
+      "transfer_id": "C00687103-in-ind:HAWORTH_ETHELYN_L.|49423",
+      "from_entity_id": "ind:HAWORTH_ETHELYN_L.|49423",
+      "from_name": "HAWORTH, ETHELYN L.",
+      "to_entity_id": "C00687103",
+      "to_name": "AMERICANS FOR PROSPERITY ACTION, INC. (AFP ACTION) DBA CVA ACTION AND DBA LIBRE ACTION",
+      "amount": 3500000.0,
+      "date": "2024-09-30",
+      "first_date": "2023-06-30",
+      "count": 7,
+      "visibility": "disclosed",
+      "transaction_type": "10",
+      "limit": null,
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00687103&two_year_transaction_period=2024&contributor_name=HAWORTH%2C+ETHELYN+L."
     },
     {
       "transfer_id": "C00687103-in-ind:BUNTROCK_DEAN_L.|60181",
@@ -165,6 +185,8 @@
       "to_name": "AMERICANS FOR PROSPERITY ACTION, INC. (AFP ACTION) DBA CVA ACTION AND DBA LIBRE ACTION",
       "amount": 3250000.0,
       "date": "2024-03-01",
+      "first_date": "2023-02-17",
+      "count": 5,
       "visibility": "disclosed",
       "transaction_type": "10",
       "limit": null,
@@ -178,6 +200,8 @@
       "to_name": "AMERICANS FOR PROSPERITY ACTION, INC. (AFP ACTION) DBA CVA ACTION AND DBA LIBRE ACTION",
       "amount": 3072643.0,
       "date": "2024-10-31",
+      "first_date": "2023-07-31",
+      "count": 26,
       "visibility": "dark",
       "transaction_type": "10",
       "limit": null,
@@ -191,6 +215,8 @@
       "to_name": "AMERICANS FOR PROSPERITY ACTION, INC. (AFP ACTION) DBA CVA ACTION AND DBA LIBRE ACTION",
       "amount": 2860000.0,
       "date": "2024-11-14",
+      "first_date": "2024-11-14",
+      "count": 1,
       "visibility": "dark",
       "transaction_type": "10",
       "limit": null,
@@ -204,6 +230,8 @@
       "to_name": "AMERICANS FOR PROSPERITY ACTION, INC. (AFP ACTION) DBA CVA ACTION AND DBA LIBRE ACTION",
       "amount": 2600000.0,
       "date": "2024-10-16",
+      "first_date": "2023-05-05",
+      "count": 4,
       "visibility": "disclosed",
       "transaction_type": "10",
       "limit": null,
@@ -217,6 +245,8 @@
       "to_name": "AMERICANS FOR PROSPERITY ACTION, INC. (AFP ACTION) DBA CVA ACTION AND DBA LIBRE ACTION",
       "amount": 2000000.0,
       "date": "2023-11-30",
+      "first_date": "2023-02-28",
+      "count": 3,
       "visibility": "disclosed",
       "transaction_type": "10",
       "limit": null,
@@ -230,6 +260,8 @@
       "to_name": "AMERICANS FOR PROSPERITY ACTION, INC. (AFP ACTION) DBA CVA ACTION AND DBA LIBRE ACTION",
       "amount": 2000000.0,
       "date": "2024-06-06",
+      "first_date": "2023-04-07",
+      "count": 2,
       "visibility": "disclosed",
       "transaction_type": "10",
       "limit": null,
@@ -243,23 +275,12 @@
       "to_name": "AMERICANS FOR PROSPERITY ACTION, INC. (AFP ACTION) DBA CVA ACTION AND DBA LIBRE ACTION",
       "amount": 1640304.0,
       "date": "2024-11-21",
+      "first_date": "2024-05-03",
+      "count": 8,
       "visibility": "dark",
       "transaction_type": "10",
       "limit": null,
       "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00687103&two_year_transaction_period=2024&contributor_name=CANVASS+AMERICA+LLC"
-    },
-    {
-      "transfer_id": "C00687103-in-ind:RYAN_SHIRLEY_W.|60601",
-      "from_entity_id": "ind:RYAN_SHIRLEY_W.|60601",
-      "from_name": "RYAN, SHIRLEY W.",
-      "to_entity_id": "C00687103",
-      "to_name": "AMERICANS FOR PROSPERITY ACTION, INC. (AFP ACTION) DBA CVA ACTION AND DBA LIBRE ACTION",
-      "amount": 1500000.0,
-      "date": "2024-08-29",
-      "visibility": "disclosed",
-      "transaction_type": "10",
-      "limit": null,
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00687103&two_year_transaction_period=2024&contributor_name=RYAN%2C+SHIRLEY+W."
     },
     {
       "transfer_id": "C00687103-in-ind:RYAN_PATRICK_G.|60601",
@@ -269,23 +290,27 @@
       "to_name": "AMERICANS FOR PROSPERITY ACTION, INC. (AFP ACTION) DBA CVA ACTION AND DBA LIBRE ACTION",
       "amount": 1500000.0,
       "date": "2024-08-29",
+      "first_date": "2023-12-08",
+      "count": 3,
       "visibility": "disclosed",
       "transaction_type": "10",
       "limit": null,
       "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00687103&two_year_transaction_period=2024&contributor_name=RYAN%2C+PATRICK+G."
     },
     {
-      "transfer_id": "C00687103-in-ind:DRUCKENMILLER_STANLEY_F.|10065",
-      "from_entity_id": "ind:DRUCKENMILLER_STANLEY_F.|10065",
-      "from_name": "DRUCKENMILLER, STANLEY F.",
+      "transfer_id": "C00687103-in-ind:RYAN_SHIRLEY_W.|60601",
+      "from_entity_id": "ind:RYAN_SHIRLEY_W.|60601",
+      "from_name": "RYAN, SHIRLEY W.",
       "to_entity_id": "C00687103",
       "to_name": "AMERICANS FOR PROSPERITY ACTION, INC. (AFP ACTION) DBA CVA ACTION AND DBA LIBRE ACTION",
       "amount": 1500000.0,
-      "date": "2023-12-19",
+      "date": "2024-08-29",
+      "first_date": "2023-12-08",
+      "count": 3,
       "visibility": "disclosed",
       "transaction_type": "10",
       "limit": null,
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00687103&two_year_transaction_period=2024&contributor_name=DRUCKENMILLER%2C+STANLEY+F."
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00687103&two_year_transaction_period=2024&contributor_name=RYAN%2C+SHIRLEY+W."
     },
     {
       "transfer_id": "C00687103-in-ind:CAMERON_RONALD_M.|72201",
@@ -295,10 +320,27 @@
       "to_name": "AMERICANS FOR PROSPERITY ACTION, INC. (AFP ACTION) DBA CVA ACTION AND DBA LIBRE ACTION",
       "amount": 1500000.0,
       "date": "2024-09-23",
+      "first_date": "2024-08-30",
+      "count": 2,
       "visibility": "disclosed",
       "transaction_type": "10",
       "limit": null,
       "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00687103&two_year_transaction_period=2024&contributor_name=CAMERON%2C+RONALD+M."
+    },
+    {
+      "transfer_id": "C00687103-in-ind:DRUCKENMILLER_STANLEY_F.|10065",
+      "from_entity_id": "ind:DRUCKENMILLER_STANLEY_F.|10065",
+      "from_name": "DRUCKENMILLER, STANLEY F.",
+      "to_entity_id": "C00687103",
+      "to_name": "AMERICANS FOR PROSPERITY ACTION, INC. (AFP ACTION) DBA CVA ACTION AND DBA LIBRE ACTION",
+      "amount": 1500000.0,
+      "date": "2023-12-19",
+      "first_date": "2023-07-27",
+      "count": 2,
+      "visibility": "disclosed",
+      "transaction_type": "10",
+      "limit": null,
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00687103&two_year_transaction_period=2024&contributor_name=DRUCKENMILLER%2C+STANLEY+F."
     },
     {
       "transfer_id": "C00687103-in-ind:POPE_JAMES_A.|27609",
@@ -308,6 +350,8 @@
       "to_name": "AMERICANS FOR PROSPERITY ACTION, INC. (AFP ACTION) DBA CVA ACTION AND DBA LIBRE ACTION",
       "amount": 1200000.0,
       "date": "2024-09-11",
+      "first_date": "2023-02-24",
+      "count": 2,
       "visibility": "disclosed",
       "transaction_type": "10",
       "limit": null,
@@ -321,6 +365,8 @@
       "to_name": "AMERICANS FOR PROSPERITY ACTION, INC. (AFP ACTION) DBA CVA ACTION AND DBA LIBRE ACTION",
       "amount": 1000000.0,
       "date": "2024-10-16",
+      "first_date": "2024-10-16",
+      "count": 1,
       "visibility": "disclosed",
       "transaction_type": "10",
       "limit": null,
@@ -334,23 +380,27 @@
       "to_name": "AMERICANS FOR PROSPERITY ACTION, INC. (AFP ACTION) DBA CVA ACTION AND DBA LIBRE ACTION",
       "amount": 1000000.0,
       "date": "2024-03-27",
+      "first_date": "2024-03-27",
+      "count": 1,
       "visibility": "disclosed",
       "transaction_type": "10",
       "limit": null,
       "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00687103&two_year_transaction_period=2024&contributor_name=CAMERON%2C+RONALD+M."
     },
     {
-      "transfer_id": "C00687103-in-ind:SWORTWOOD_DONALD_R.|92037",
-      "from_entity_id": "ind:SWORTWOOD_DONALD_R.|92037",
-      "from_name": "SWORTWOOD, DONALD R.",
+      "transfer_id": "C00687103-in-ind:TROTT_BYRON_D.|33480",
+      "from_entity_id": "ind:TROTT_BYRON_D.|33480",
+      "from_name": "TROTT, BYRON D.",
       "to_entity_id": "C00687103",
       "to_name": "AMERICANS FOR PROSPERITY ACTION, INC. (AFP ACTION) DBA CVA ACTION AND DBA LIBRE ACTION",
       "amount": 1000000.0,
-      "date": "2024-09-30",
+      "date": "2024-10-29",
+      "first_date": "2023-10-20",
+      "count": 2,
       "visibility": "disclosed",
       "transaction_type": "10",
       "limit": null,
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00687103&two_year_transaction_period=2024&contributor_name=SWORTWOOD%2C+DONALD+R."
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00687103&two_year_transaction_period=2024&contributor_name=TROTT%2C+BYRON+D."
     }
   ],
   "outflows": [],
@@ -380,32 +430,6 @@
       "purpose": "MEDIA PLACEMENT",
       "payee": "IN PURSUIT OF LLC",
       "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202412059739339425"
-    },
-    {
-      "ie_id": "C00687103-ie-1841778-SE24.31673",
-      "spender_entity_id": "C00687103",
-      "spender_name": "AMERICANS FOR PROSPERITY ACTION, INC. (AFP ACTION) DBA CVA ACTION AND DBA LIBRE ACTION",
-      "candidate_id": "S6PA00217",
-      "candidate_name": "Bob Casey",
-      "support_oppose": "O",
-      "amount": 1000000.0,
-      "date": "2024-10-01",
-      "purpose": "MEDIA PLACEMENT",
-      "payee": "IN PURSUIT OF LLC",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202410249713957724"
-    },
-    {
-      "ie_id": "C00687103-ie-1841778-SE24.31605",
-      "spender_entity_id": "C00687103",
-      "spender_name": "AMERICANS FOR PROSPERITY ACTION, INC. (AFP ACTION) DBA CVA ACTION AND DBA LIBRE ACTION",
-      "candidate_id": "S2PA00661",
-      "candidate_name": "Dave McCormick",
-      "support_oppose": "S",
-      "amount": 1000000.0,
-      "date": "2024-10-01",
-      "purpose": "MEDIA PLACEMENT",
-      "payee": "IN PURSUIT OF LLC",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202410249713957727"
     },
     {
       "ie_id": "C00687103-ie-1833909-SE24.31067",
@@ -616,19 +640,6 @@
       "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202412059739339630"
     },
     {
-      "ie_id": "C00687103-ie-1818089-SE24.31003",
-      "spender_entity_id": "C00687103",
-      "spender_name": "AMERICANS FOR PROSPERITY ACTION, INC. (AFP ACTION) DBA CVA ACTION AND DBA LIBRE ACTION",
-      "candidate_id": "S2PA00661",
-      "candidate_name": "Dave McCormick",
-      "support_oppose": "S",
-      "amount": 276035.18,
-      "date": "2024-08-26",
-      "purpose": "MAILER POSTAGE",
-      "payee": "UNITED STATES POSTAL SERVICE",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202409209684604314"
-    },
-    {
       "ie_id": "C00687103-ie-1818089-SE24.30938",
       "spender_entity_id": "C00687103",
       "spender_name": "AMERICANS FOR PROSPERITY ACTION, INC. (AFP ACTION) DBA CVA ACTION AND DBA LIBRE ACTION",
@@ -640,6 +651,19 @@
       "purpose": "MAILER POSTAGE",
       "payee": "UNITED STATES POSTAL SERVICE",
       "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202409209684604308"
+    },
+    {
+      "ie_id": "C00687103-ie-1818089-SE24.31003",
+      "spender_entity_id": "C00687103",
+      "spender_name": "AMERICANS FOR PROSPERITY ACTION, INC. (AFP ACTION) DBA CVA ACTION AND DBA LIBRE ACTION",
+      "candidate_id": "S2PA00661",
+      "candidate_name": "Dave McCormick",
+      "support_oppose": "S",
+      "amount": 276035.18,
+      "date": "2024-08-26",
+      "purpose": "MAILER POSTAGE",
+      "payee": "UNITED STATES POSTAL SERVICE",
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202409209684604314"
     },
     {
       "ie_id": "C00687103-ie-1833909-SE24.31516",
@@ -681,6 +705,19 @@
       "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202410249713957922"
     },
     {
+      "ie_id": "C00687103-ie-1812320-SE24.29478",
+      "spender_entity_id": "C00687103",
+      "spender_name": "AMERICANS FOR PROSPERITY ACTION, INC. (AFP ACTION) DBA CVA ACTION AND DBA LIBRE ACTION",
+      "candidate_id": "S6PA00217",
+      "candidate_name": "Bob Casey",
+      "support_oppose": "O",
+      "amount": 250000.0,
+      "date": "2024-07-11",
+      "purpose": "MEDIA PLACEMENT",
+      "payee": "IN PURSUIT OF LLC",
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202408209674341982"
+    },
+    {
       "ie_id": "C00687103-ie-1858497-SE24.32849",
       "spender_entity_id": "C00687103",
       "spender_name": "AMERICANS FOR PROSPERITY ACTION, INC. (AFP ACTION) DBA CVA ACTION AND DBA LIBRE ACTION",
@@ -692,32 +729,6 @@
       "purpose": "CANVASSING",
       "payee": "CAMPAIGN HEADQUARTERS",
       "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202412059739339398"
-    },
-    {
-      "ie_id": "C00687103-ie-1791790-SE24.27989",
-      "spender_entity_id": "C00687103",
-      "spender_name": "AMERICANS FOR PROSPERITY ACTION, INC. (AFP ACTION) DBA CVA ACTION AND DBA LIBRE ACTION",
-      "candidate_id": "S2PA00661",
-      "candidate_name": "Dave McCormick",
-      "support_oppose": "S",
-      "amount": 250000.0,
-      "date": "2024-05-01",
-      "purpose": "DIGITAL AD PLACEMENT",
-      "payee": "IN PURSUIT OF LLC",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202406209652364728"
-    },
-    {
-      "ie_id": "C00687103-ie-1805180-SE24.29179",
-      "spender_entity_id": "C00687103",
-      "spender_name": "AMERICANS FOR PROSPERITY ACTION, INC. (AFP ACTION) DBA CVA ACTION AND DBA LIBRE ACTION",
-      "candidate_id": "S2PA00661",
-      "candidate_name": "Dave McCormick",
-      "support_oppose": "S",
-      "amount": 250000.0,
-      "date": "2024-06-28",
-      "purpose": "DIGITAL AD PLACEMENT",
-      "payee": "IN PURSUIT OF LLC",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202407209665370812"
     },
     {
       "ie_id": "C00687103-ie-1805180-SE24.29180",
@@ -746,30 +757,30 @@
       "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202405209648569219"
     },
     {
-      "ie_id": "C00687103-ie-1812320-SE24.29478",
-      "spender_entity_id": "C00687103",
-      "spender_name": "AMERICANS FOR PROSPERITY ACTION, INC. (AFP ACTION) DBA CVA ACTION AND DBA LIBRE ACTION",
-      "candidate_id": "S6PA00217",
-      "candidate_name": "Bob Casey",
-      "support_oppose": "O",
-      "amount": 250000.0,
-      "date": "2024-07-11",
-      "purpose": "MEDIA PLACEMENT",
-      "payee": "IN PURSUIT OF LLC",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202408209674341982"
-    },
-    {
-      "ie_id": "C00687103-ie-1833909-SE24.31450",
+      "ie_id": "C00687103-ie-1791790-SE24.27989",
       "spender_entity_id": "C00687103",
       "spender_name": "AMERICANS FOR PROSPERITY ACTION, INC. (AFP ACTION) DBA CVA ACTION AND DBA LIBRE ACTION",
       "candidate_id": "S2PA00661",
       "candidate_name": "Dave McCormick",
       "support_oppose": "S",
-      "amount": 239312.47,
-      "date": "2024-09-19",
-      "purpose": "MAILER POSTAGE",
-      "payee": "UNITED STATES POSTAL SERVICE",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202410209709511735"
+      "amount": 250000.0,
+      "date": "2024-05-01",
+      "purpose": "DIGITAL AD PLACEMENT",
+      "payee": "IN PURSUIT OF LLC",
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202406209652364728"
+    },
+    {
+      "ie_id": "C00687103-ie-1805180-SE24.29179",
+      "spender_entity_id": "C00687103",
+      "spender_name": "AMERICANS FOR PROSPERITY ACTION, INC. (AFP ACTION) DBA CVA ACTION AND DBA LIBRE ACTION",
+      "candidate_id": "S2PA00661",
+      "candidate_name": "Dave McCormick",
+      "support_oppose": "S",
+      "amount": 250000.0,
+      "date": "2024-06-28",
+      "purpose": "DIGITAL AD PLACEMENT",
+      "payee": "IN PURSUIT OF LLC",
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202407209665370812"
     },
     {
       "ie_id": "C00687103-ie-1833909-SE24.31228",
@@ -785,17 +796,17 @@
       "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202410209709511722"
     },
     {
-      "ie_id": "C00687103-ie-1833909-SE24.31226",
+      "ie_id": "C00687103-ie-1833909-SE24.31450",
       "spender_entity_id": "C00687103",
       "spender_name": "AMERICANS FOR PROSPERITY ACTION, INC. (AFP ACTION) DBA CVA ACTION AND DBA LIBRE ACTION",
       "candidate_id": "S2PA00661",
       "candidate_name": "Dave McCormick",
       "support_oppose": "S",
-      "amount": 239312.46,
-      "date": "2024-09-13",
+      "amount": 239312.47,
+      "date": "2024-09-19",
       "purpose": "MAILER POSTAGE",
       "payee": "UNITED STATES POSTAL SERVICE",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202410209709511723"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202410209709511735"
     },
     {
       "ie_id": "C00687103-ie-1833909-SE24.31452",
@@ -809,6 +820,19 @@
       "purpose": "MAILER POSTAGE",
       "payee": "UNITED STATES POSTAL SERVICE",
       "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202410209709511734"
+    },
+    {
+      "ie_id": "C00687103-ie-1833909-SE24.31226",
+      "spender_entity_id": "C00687103",
+      "spender_name": "AMERICANS FOR PROSPERITY ACTION, INC. (AFP ACTION) DBA CVA ACTION AND DBA LIBRE ACTION",
+      "candidate_id": "S2PA00661",
+      "candidate_name": "Dave McCormick",
+      "support_oppose": "S",
+      "amount": 239312.46,
+      "date": "2024-09-13",
+      "purpose": "MAILER POSTAGE",
+      "payee": "UNITED STATES POSTAL SERVICE",
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202410209709511723"
     },
     {
       "ie_id": "C00687103-ie-1833909-SE24.31539",
@@ -876,6 +900,19 @@
       "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202412059739339437"
     },
     {
+      "ie_id": "C00687103-ie-1841778-SE24.31971",
+      "spender_entity_id": "C00687103",
+      "spender_name": "AMERICANS FOR PROSPERITY ACTION, INC. (AFP ACTION) DBA CVA ACTION AND DBA LIBRE ACTION",
+      "candidate_id": "S2PA00661",
+      "candidate_name": "Dave McCormick",
+      "support_oppose": "S",
+      "amount": 164448.79,
+      "date": "2024-10-16",
+      "purpose": "MAILER PRODUCTION",
+      "payee": "PEOPLE WHO THINK",
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202410249713957792"
+    },
+    {
       "ie_id": "C00687103-ie-1841778-SE24.31831",
       "spender_entity_id": "C00687103",
       "spender_name": "AMERICANS FOR PROSPERITY ACTION, INC. (AFP ACTION) DBA CVA ACTION AND DBA LIBRE ACTION",
@@ -889,17 +926,17 @@
       "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202410249713957771"
     },
     {
-      "ie_id": "C00687103-ie-1841778-SE24.31971",
+      "ie_id": "C00687103-ie-1833909-SE24.31464",
       "spender_entity_id": "C00687103",
       "spender_name": "AMERICANS FOR PROSPERITY ACTION, INC. (AFP ACTION) DBA CVA ACTION AND DBA LIBRE ACTION",
-      "candidate_id": "S2PA00661",
-      "candidate_name": "Dave McCormick",
-      "support_oppose": "S",
-      "amount": 164448.79,
-      "date": "2024-10-16",
-      "purpose": "MAILER PRODUCTION",
-      "payee": "PEOPLE WHO THINK",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202410249713957792"
+      "candidate_id": "S6PA00217",
+      "candidate_name": "Bob Casey",
+      "support_oppose": "O",
+      "amount": 138017.59,
+      "date": "2024-09-20",
+      "purpose": "MAILER POSTAGE",
+      "payee": "UNITED STATES POSTAL SERVICE",
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202410209709511739"
     },
     {
       "ie_id": "C00687103-ie-1833909-SE24.31462",
@@ -915,17 +952,17 @@
       "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202410209709511739"
     },
     {
-      "ie_id": "C00687103-ie-1833909-SE24.31464",
+      "ie_id": "C00687103-ie-1841778-SE24.31838",
       "spender_entity_id": "C00687103",
       "spender_name": "AMERICANS FOR PROSPERITY ACTION, INC. (AFP ACTION) DBA CVA ACTION AND DBA LIBRE ACTION",
       "candidate_id": "S6PA00217",
       "candidate_name": "Bob Casey",
       "support_oppose": "O",
-      "amount": 138017.59,
-      "date": "2024-09-20",
+      "amount": 132446.79,
+      "date": "2024-10-08",
       "purpose": "MAILER POSTAGE",
       "payee": "UNITED STATES POSTAL SERVICE",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202410209709511739"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202410249713957928"
     },
     {
       "ie_id": "C00687103-ie-1858497-SE24.32646",
@@ -954,32 +991,6 @@
       "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202412059739339562"
     },
     {
-      "ie_id": "C00687103-ie-1841778-SE24.31838",
-      "spender_entity_id": "C00687103",
-      "spender_name": "AMERICANS FOR PROSPERITY ACTION, INC. (AFP ACTION) DBA CVA ACTION AND DBA LIBRE ACTION",
-      "candidate_id": "S6PA00217",
-      "candidate_name": "Bob Casey",
-      "support_oppose": "O",
-      "amount": 132446.79,
-      "date": "2024-10-08",
-      "purpose": "MAILER POSTAGE",
-      "payee": "UNITED STATES POSTAL SERVICE",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202410249713957928"
-    },
-    {
-      "ie_id": "C00687103-ie-1841778-SE24.32473",
-      "spender_entity_id": "C00687103",
-      "spender_name": "AMERICANS FOR PROSPERITY ACTION, INC. (AFP ACTION) DBA CVA ACTION AND DBA LIBRE ACTION",
-      "candidate_id": "S2PA00661",
-      "candidate_name": "Dave McCormick",
-      "support_oppose": "S",
-      "amount": 132446.79,
-      "date": "2024-10-15",
-      "purpose": "MAILER POSTAGE",
-      "payee": "UNITED STATES POSTAL SERVICE",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202410249713957959"
-    },
-    {
       "ie_id": "C00687103-ie-1841778-SE24.31836",
       "spender_entity_id": "C00687103",
       "spender_name": "AMERICANS FOR PROSPERITY ACTION, INC. (AFP ACTION) DBA CVA ACTION AND DBA LIBRE ACTION",
@@ -1004,6 +1015,19 @@
       "purpose": "MAILER POSTAGE",
       "payee": "UNITED STATES POSTAL SERVICE",
       "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202410249713957958"
+    },
+    {
+      "ie_id": "C00687103-ie-1841778-SE24.32473",
+      "spender_entity_id": "C00687103",
+      "spender_name": "AMERICANS FOR PROSPERITY ACTION, INC. (AFP ACTION) DBA CVA ACTION AND DBA LIBRE ACTION",
+      "candidate_id": "S2PA00661",
+      "candidate_name": "Dave McCormick",
+      "support_oppose": "S",
+      "amount": 132446.79,
+      "date": "2024-10-15",
+      "purpose": "MAILER POSTAGE",
+      "payee": "UNITED STATES POSTAL SERVICE",
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202410249713957959"
     },
     {
       "ie_id": "C00687103-ie-1791790-SE24.28131",
@@ -1045,19 +1069,6 @@
       "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202412059739339483"
     },
     {
-      "ie_id": "C00687103-ie-1833909-SE24.31395",
-      "spender_entity_id": "C00687103",
-      "spender_name": "AMERICANS FOR PROSPERITY ACTION, INC. (AFP ACTION) DBA CVA ACTION AND DBA LIBRE ACTION",
-      "candidate_id": "S2PA00661",
-      "candidate_name": "Dave McCormick",
-      "support_oppose": "S",
-      "amount": 88320.98,
-      "date": "2024-09-20",
-      "purpose": "MAILER PRODUCTION",
-      "payee": "PEOPLE WHO THINK",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202410209709511604"
-    },
-    {
       "ie_id": "C00687103-ie-1833909-SE24.31515",
       "spender_entity_id": "C00687103",
       "spender_name": "AMERICANS FOR PROSPERITY ACTION, INC. (AFP ACTION) DBA CVA ACTION AND DBA LIBRE ACTION",
@@ -1069,6 +1080,19 @@
       "purpose": "MAILER PRODUCTION",
       "payee": "PEOPLE WHO THINK",
       "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202410209709511626"
+    },
+    {
+      "ie_id": "C00687103-ie-1833909-SE24.31395",
+      "spender_entity_id": "C00687103",
+      "spender_name": "AMERICANS FOR PROSPERITY ACTION, INC. (AFP ACTION) DBA CVA ACTION AND DBA LIBRE ACTION",
+      "candidate_id": "S2PA00661",
+      "candidate_name": "Dave McCormick",
+      "support_oppose": "S",
+      "amount": 88320.98,
+      "date": "2024-09-20",
+      "purpose": "MAILER PRODUCTION",
+      "payee": "PEOPLE WHO THINK",
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202410209709511604"
     },
     {
       "ie_id": "C00687103-ie-1841778-SE24.31732",
@@ -1084,6 +1108,19 @@
       "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202410249713957764"
     },
     {
+      "ie_id": "C00687103-ie-1818089-SE24.30937",
+      "spender_entity_id": "C00687103",
+      "spender_name": "AMERICANS FOR PROSPERITY ACTION, INC. (AFP ACTION) DBA CVA ACTION AND DBA LIBRE ACTION",
+      "candidate_id": "S2PA00661",
+      "candidate_name": "Dave McCormick",
+      "support_oppose": "S",
+      "amount": 88120.98,
+      "date": "2024-08-22",
+      "purpose": "MAILER PRODUCTION",
+      "payee": "PEOPLE WHO THINK",
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202409209684604245"
+    },
+    {
       "ie_id": "C00687103-ie-1818089-SE24.31002",
       "spender_entity_id": "C00687103",
       "spender_name": "AMERICANS FOR PROSPERITY ACTION, INC. (AFP ACTION) DBA CVA ACTION AND DBA LIBRE ACTION",
@@ -1097,19 +1134,6 @@
       "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202409209684604252"
     },
     {
-      "ie_id": "C00687103-ie-1818089-SE24.31018",
-      "spender_entity_id": "C00687103",
-      "spender_name": "AMERICANS FOR PROSPERITY ACTION, INC. (AFP ACTION) DBA CVA ACTION AND DBA LIBRE ACTION",
-      "candidate_id": "S6PA00217",
-      "candidate_name": "Bob Casey",
-      "support_oppose": "O",
-      "amount": 88120.98,
-      "date": "2024-08-29",
-      "purpose": "MAILER PRODUCTION",
-      "payee": "PEOPLE WHO THINK",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202409209684604256"
-    },
-    {
       "ie_id": "C00687103-ie-1833909-SE24.31018",
       "spender_entity_id": "C00687103",
       "spender_name": "AMERICANS FOR PROSPERITY ACTION, INC. (AFP ACTION) DBA CVA ACTION AND DBA LIBRE ACTION",
@@ -1121,19 +1145,6 @@
       "purpose": "MAILER PRODUCTION",
       "payee": "PEOPLE WHO THINK",
       "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202410209709511587"
-    },
-    {
-      "ie_id": "C00687103-ie-1818089-SE24.30937",
-      "spender_entity_id": "C00687103",
-      "spender_name": "AMERICANS FOR PROSPERITY ACTION, INC. (AFP ACTION) DBA CVA ACTION AND DBA LIBRE ACTION",
-      "candidate_id": "S2PA00661",
-      "candidate_name": "Dave McCormick",
-      "support_oppose": "S",
-      "amount": 88120.98,
-      "date": "2024-08-22",
-      "purpose": "MAILER PRODUCTION",
-      "payee": "PEOPLE WHO THINK",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202409209684604245"
     },
     {
       "ie_id": "C00687103-ie-1858497-SE24.33062",
@@ -1175,43 +1186,17 @@
       "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202409209684604317"
     },
     {
-      "ie_id": "C00687103-ie-1833909-SE24.31449",
-      "spender_entity_id": "C00687103",
-      "spender_name": "AMERICANS FOR PROSPERITY ACTION, INC. (AFP ACTION) DBA CVA ACTION AND DBA LIBRE ACTION",
-      "candidate_id": "S2PA00661",
-      "candidate_name": "Dave McCormick",
-      "support_oppose": "S",
-      "amount": 72097.8,
-      "date": "2024-09-26",
-      "purpose": "MAILER PRODUCTION",
-      "payee": "PEOPLE WHO THINK",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202410209709511611"
-    },
-    {
-      "ie_id": "C00687103-ie-1833909-SE24.31540",
+      "ie_id": "C00687103-ie-1833909-SE24.31451",
       "spender_entity_id": "C00687103",
       "spender_name": "AMERICANS FOR PROSPERITY ACTION, INC. (AFP ACTION) DBA CVA ACTION AND DBA LIBRE ACTION",
       "candidate_id": "S6PA00217",
       "candidate_name": "Bob Casey",
       "support_oppose": "O",
       "amount": 72097.8,
-      "date": "2024-09-27",
+      "date": "2024-09-26",
       "purpose": "MAILER PRODUCTION",
       "payee": "PEOPLE WHO THINK",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202410209709511617"
-    },
-    {
-      "ie_id": "C00687103-ie-1833909-SE24.31225",
-      "spender_entity_id": "C00687103",
-      "spender_name": "AMERICANS FOR PROSPERITY ACTION, INC. (AFP ACTION) DBA CVA ACTION AND DBA LIBRE ACTION",
-      "candidate_id": "S2PA00661",
-      "candidate_name": "Dave McCormick",
-      "support_oppose": "S",
-      "amount": 72097.8,
-      "date": "2024-09-18",
-      "purpose": "MAILER PRODUCTION",
-      "payee": "PEOPLE WHO THINK",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202410209709511600"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202410209709511611"
     },
     {
       "ie_id": "C00687103-ie-1833909-SE24.31538",
@@ -1227,6 +1212,32 @@
       "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202410209709511617"
     },
     {
+      "ie_id": "C00687103-ie-1833909-SE24.31540",
+      "spender_entity_id": "C00687103",
+      "spender_name": "AMERICANS FOR PROSPERITY ACTION, INC. (AFP ACTION) DBA CVA ACTION AND DBA LIBRE ACTION",
+      "candidate_id": "S6PA00217",
+      "candidate_name": "Bob Casey",
+      "support_oppose": "O",
+      "amount": 72097.8,
+      "date": "2024-09-27",
+      "purpose": "MAILER PRODUCTION",
+      "payee": "PEOPLE WHO THINK",
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202410209709511617"
+    },
+    {
+      "ie_id": "C00687103-ie-1833909-SE24.31449",
+      "spender_entity_id": "C00687103",
+      "spender_name": "AMERICANS FOR PROSPERITY ACTION, INC. (AFP ACTION) DBA CVA ACTION AND DBA LIBRE ACTION",
+      "candidate_id": "S2PA00661",
+      "candidate_name": "Dave McCormick",
+      "support_oppose": "S",
+      "amount": 72097.8,
+      "date": "2024-09-26",
+      "purpose": "MAILER PRODUCTION",
+      "payee": "PEOPLE WHO THINK",
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202410209709511611"
+    },
+    {
       "ie_id": "C00687103-ie-1833909-SE24.31227",
       "spender_entity_id": "C00687103",
       "spender_name": "AMERICANS FOR PROSPERITY ACTION, INC. (AFP ACTION) DBA CVA ACTION AND DBA LIBRE ACTION",
@@ -1240,17 +1251,17 @@
       "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202410209709511601"
     },
     {
-      "ie_id": "C00687103-ie-1833909-SE24.31451",
+      "ie_id": "C00687103-ie-1833909-SE24.31225",
       "spender_entity_id": "C00687103",
       "spender_name": "AMERICANS FOR PROSPERITY ACTION, INC. (AFP ACTION) DBA CVA ACTION AND DBA LIBRE ACTION",
-      "candidate_id": "S6PA00217",
-      "candidate_name": "Bob Casey",
-      "support_oppose": "O",
+      "candidate_id": "S2PA00661",
+      "candidate_name": "Dave McCormick",
+      "support_oppose": "S",
       "amount": 72097.8,
-      "date": "2024-09-26",
+      "date": "2024-09-18",
       "purpose": "MAILER PRODUCTION",
       "payee": "PEOPLE WHO THINK",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202410209709511611"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202410209709511600"
     },
     {
       "ie_id": "C00687103-ie-1785282-SE24.26807",
@@ -1266,19 +1277,6 @@
       "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202405209648569206"
     },
     {
-      "ie_id": "C00687103-ie-1818089-SE24.30970",
-      "spender_entity_id": "C00687103",
-      "spender_name": "AMERICANS FOR PROSPERITY ACTION, INC. (AFP ACTION) DBA CVA ACTION AND DBA LIBRE ACTION",
-      "candidate_id": "S6PA00217",
-      "candidate_name": "Bob Casey",
-      "support_oppose": "O",
-      "amount": 49575.0,
-      "date": "2024-08-27",
-      "purpose": "MEDIA PRODUCTION",
-      "payee": "PEOPLE WHO THINK",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202409209684604249"
-    },
-    {
       "ie_id": "C00687103-ie-1818089-SE24.30969",
       "spender_entity_id": "C00687103",
       "spender_name": "AMERICANS FOR PROSPERITY ACTION, INC. (AFP ACTION) DBA CVA ACTION AND DBA LIBRE ACTION",
@@ -1290,6 +1288,19 @@
       "purpose": "MEDIA PRODUCTION",
       "payee": "PEOPLE WHO THINK",
       "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202409209684604248"
+    },
+    {
+      "ie_id": "C00687103-ie-1818089-SE24.30970",
+      "spender_entity_id": "C00687103",
+      "spender_name": "AMERICANS FOR PROSPERITY ACTION, INC. (AFP ACTION) DBA CVA ACTION AND DBA LIBRE ACTION",
+      "candidate_id": "S6PA00217",
+      "candidate_name": "Bob Casey",
+      "support_oppose": "O",
+      "amount": 49575.0,
+      "date": "2024-08-27",
+      "purpose": "MEDIA PRODUCTION",
+      "payee": "PEOPLE WHO THINK",
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202409209684604249"
     },
     {
       "ie_id": "C00687103-ie-1841778-SE24.32474",
@@ -1318,17 +1329,17 @@
       "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202410249713957809"
     },
     {
-      "ie_id": "C00687103-ie-1841778-SE24.31837",
+      "ie_id": "C00687103-ie-1833909-SE24.31463",
       "spender_entity_id": "C00687103",
       "spender_name": "AMERICANS FOR PROSPERITY ACTION, INC. (AFP ACTION) DBA CVA ACTION AND DBA LIBRE ACTION",
       "candidate_id": "S6PA00217",
       "candidate_name": "Bob Casey",
       "support_oppose": "O",
       "amount": 44160.49,
-      "date": "2024-10-16",
+      "date": "2024-09-27",
       "purpose": "MAILER PRODUCTION",
       "payee": "PEOPLE WHO THINK",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202410249713957772"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202410209709511621"
     },
     {
       "ie_id": "C00687103-ie-1833909-SE24.31461",
@@ -1344,17 +1355,17 @@
       "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202410209709511620"
     },
     {
-      "ie_id": "C00687103-ie-1833909-SE24.31463",
+      "ie_id": "C00687103-ie-1841778-SE24.31837",
       "spender_entity_id": "C00687103",
       "spender_name": "AMERICANS FOR PROSPERITY ACTION, INC. (AFP ACTION) DBA CVA ACTION AND DBA LIBRE ACTION",
       "candidate_id": "S6PA00217",
       "candidate_name": "Bob Casey",
       "support_oppose": "O",
       "amount": 44160.49,
-      "date": "2024-09-27",
+      "date": "2024-10-16",
       "purpose": "MAILER PRODUCTION",
       "payee": "PEOPLE WHO THINK",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202410209709511621"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202410249713957772"
     },
     {
       "ie_id": "C00687103-ie-1841778-SE24.31835",
@@ -1370,19 +1381,6 @@
       "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202410249713957772"
     },
     {
-      "ie_id": "C00687103-ie-1858497-SE24.32643",
-      "spender_entity_id": "C00687103",
-      "spender_name": "AMERICANS FOR PROSPERITY ACTION, INC. (AFP ACTION) DBA CVA ACTION AND DBA LIBRE ACTION",
-      "candidate_id": "S2PA00661",
-      "candidate_name": "Dave McCormick",
-      "support_oppose": "S",
-      "amount": 44160.49,
-      "date": "2024-10-22",
-      "purpose": "MAILER PRODUCTION",
-      "payee": "PEOPLE WHO THINK LLC",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202412059739339454"
-    },
-    {
       "ie_id": "C00687103-ie-1858497-SE24.32645",
       "spender_entity_id": "C00687103",
       "spender_name": "AMERICANS FOR PROSPERITY ACTION, INC. (AFP ACTION) DBA CVA ACTION AND DBA LIBRE ACTION",
@@ -1394,6 +1392,19 @@
       "purpose": "MAILER PRODUCTION",
       "payee": "PEOPLE WHO THINK LLC",
       "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202412059739339456"
+    },
+    {
+      "ie_id": "C00687103-ie-1858497-SE24.32643",
+      "spender_entity_id": "C00687103",
+      "spender_name": "AMERICANS FOR PROSPERITY ACTION, INC. (AFP ACTION) DBA CVA ACTION AND DBA LIBRE ACTION",
+      "candidate_id": "S2PA00661",
+      "candidate_name": "Dave McCormick",
+      "support_oppose": "S",
+      "amount": 44160.49,
+      "date": "2024-10-22",
+      "purpose": "MAILER PRODUCTION",
+      "payee": "PEOPLE WHO THINK LLC",
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202412059739339454"
     },
     {
       "ie_id": "C00687103-ie-1841778-SE24.31642",
@@ -1591,6 +1602,19 @@
       "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202406209652364733"
     },
     {
+      "ie_id": "C00687103-ie-1858497-SE24.32628",
+      "spender_entity_id": "C00687103",
+      "spender_name": "AMERICANS FOR PROSPERITY ACTION, INC. (AFP ACTION) DBA CVA ACTION AND DBA LIBRE ACTION",
+      "candidate_id": "S2PA00661",
+      "candidate_name": "Dave McCormick",
+      "support_oppose": "S",
+      "amount": 15327.14,
+      "date": "2024-10-19",
+      "purpose": "MAILER POSTAGE",
+      "payee": "UNITED STATES POSTAL SERVICE",
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202412059739339566"
+    },
+    {
       "ie_id": "C00687103-ie-1858497-SE24.33036",
       "spender_entity_id": "C00687103",
       "spender_name": "AMERICANS FOR PROSPERITY ACTION, INC. (AFP ACTION) DBA CVA ACTION AND DBA LIBRE ACTION",
@@ -1602,19 +1626,6 @@
       "purpose": "MAILER POSTAGE",
       "payee": "UNITED STATES POSTAL SERVICE",
       "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202412059739339619"
-    },
-    {
-      "ie_id": "C00687103-ie-1858497-SE24.32630",
-      "spender_entity_id": "C00687103",
-      "spender_name": "AMERICANS FOR PROSPERITY ACTION, INC. (AFP ACTION) DBA CVA ACTION AND DBA LIBRE ACTION",
-      "candidate_id": "S6PA00217",
-      "candidate_name": "Bob Casey",
-      "support_oppose": "O",
-      "amount": 15327.14,
-      "date": "2024-10-19",
-      "purpose": "MAILER POSTAGE",
-      "payee": "UNITED STATES POSTAL SERVICE",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202412059739339561"
     },
     {
       "ie_id": "C00687103-ie-1858497-SE24.33034",
@@ -1630,17 +1641,17 @@
       "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202412059739339620"
     },
     {
-      "ie_id": "C00687103-ie-1858497-SE24.32628",
+      "ie_id": "C00687103-ie-1858497-SE24.32630",
       "spender_entity_id": "C00687103",
       "spender_name": "AMERICANS FOR PROSPERITY ACTION, INC. (AFP ACTION) DBA CVA ACTION AND DBA LIBRE ACTION",
-      "candidate_id": "S2PA00661",
-      "candidate_name": "Dave McCormick",
-      "support_oppose": "S",
+      "candidate_id": "S6PA00217",
+      "candidate_name": "Bob Casey",
+      "support_oppose": "O",
       "amount": 15327.14,
       "date": "2024-10-19",
       "purpose": "MAILER POSTAGE",
       "payee": "UNITED STATES POSTAL SERVICE",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202412059739339566"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202412059739339561"
     },
     {
       "ie_id": "C00687103-ie-1841778-SE24.32029",
@@ -1786,19 +1797,6 @@
       "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202407209665370806"
     },
     {
-      "ie_id": "C00687103-ie-1858497-SE24.32604",
-      "spender_entity_id": "C00687103",
-      "spender_name": "AMERICANS FOR PROSPERITY ACTION, INC. (AFP ACTION) DBA CVA ACTION AND DBA LIBRE ACTION",
-      "candidate_id": "S2PA00661",
-      "candidate_name": "Dave McCormick",
-      "support_oppose": "S",
-      "amount": 10366.6,
-      "date": "2024-10-21",
-      "purpose": "DOOR HANGER PRODUCTION",
-      "payee": "PEOPLE WHO THINK LLC",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202412059739339450"
-    },
-    {
       "ie_id": "C00687103-ie-1858497-SE24.32605",
       "spender_entity_id": "C00687103",
       "spender_name": "AMERICANS FOR PROSPERITY ACTION, INC. (AFP ACTION) DBA CVA ACTION AND DBA LIBRE ACTION",
@@ -1810,6 +1808,19 @@
       "purpose": "DOOR HANGER PRODUCTION",
       "payee": "PEOPLE WHO THINK LLC",
       "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202412059739339451"
+    },
+    {
+      "ie_id": "C00687103-ie-1858497-SE24.32604",
+      "spender_entity_id": "C00687103",
+      "spender_name": "AMERICANS FOR PROSPERITY ACTION, INC. (AFP ACTION) DBA CVA ACTION AND DBA LIBRE ACTION",
+      "candidate_id": "S2PA00661",
+      "candidate_name": "Dave McCormick",
+      "support_oppose": "S",
+      "amount": 10366.6,
+      "date": "2024-10-21",
+      "purpose": "DOOR HANGER PRODUCTION",
+      "payee": "PEOPLE WHO THINK LLC",
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202412059739339450"
     },
     {
       "ie_id": "C00687103-ie-1818089-SE24.29717",
@@ -1916,17 +1927,17 @@
       "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202409209684604277"
     },
     {
-      "ie_id": "C00687103-ie-1841778-SE24.32416",
+      "ie_id": "C00687103-ie-1841778-SE24.32415",
       "spender_entity_id": "C00687103",
       "spender_name": "AMERICANS FOR PROSPERITY ACTION, INC. (AFP ACTION) DBA CVA ACTION AND DBA LIBRE ACTION",
-      "candidate_id": "S6PA00217",
-      "candidate_name": "Bob Casey",
-      "support_oppose": "O",
+      "candidate_id": "S2PA00661",
+      "candidate_name": "Dave McCormick",
+      "support_oppose": "S",
       "amount": 8625.0,
       "date": "2024-10-16",
       "purpose": "MEDIA PRODUCTION",
       "payee": "FP1 STRATEGIES LLC",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202410249713957712"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202410249713957711"
     },
     {
       "ie_id": "C00687103-ie-1841778-SE24.32413",
@@ -1955,7 +1966,7 @@
       "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202410209709511549"
     },
     {
-      "ie_id": "C00687103-ie-1841778-SE24.32414",
+      "ie_id": "C00687103-ie-1841778-SE24.32416",
       "spender_entity_id": "C00687103",
       "spender_name": "AMERICANS FOR PROSPERITY ACTION, INC. (AFP ACTION) DBA CVA ACTION AND DBA LIBRE ACTION",
       "candidate_id": "S6PA00217",
@@ -1965,7 +1976,7 @@
       "date": "2024-10-16",
       "purpose": "MEDIA PRODUCTION",
       "payee": "FP1 STRATEGIES LLC",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202410249713957711"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202410249713957712"
     },
     {
       "ie_id": "C00687103-ie-1833909-SE24.31066",
@@ -1981,12 +1992,12 @@
       "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202410209709511549"
     },
     {
-      "ie_id": "C00687103-ie-1841778-SE24.32415",
+      "ie_id": "C00687103-ie-1841778-SE24.32414",
       "spender_entity_id": "C00687103",
       "spender_name": "AMERICANS FOR PROSPERITY ACTION, INC. (AFP ACTION) DBA CVA ACTION AND DBA LIBRE ACTION",
-      "candidate_id": "S2PA00661",
-      "candidate_name": "Dave McCormick",
-      "support_oppose": "S",
+      "candidate_id": "S6PA00217",
+      "candidate_name": "Bob Casey",
+      "support_oppose": "O",
       "amount": 8625.0,
       "date": "2024-10-16",
       "purpose": "MEDIA PRODUCTION",
@@ -2345,12 +2356,12 @@
       "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202407209665370830"
     },
     {
-      "ie_id": "C00687103-ie-1833909-SE24.31063",
+      "ie_id": "C00687103-ie-1833909-SE24.31064",
       "spender_entity_id": "C00687103",
       "spender_name": "AMERICANS FOR PROSPERITY ACTION, INC. (AFP ACTION) DBA CVA ACTION AND DBA LIBRE ACTION",
-      "candidate_id": "S2PA00661",
-      "candidate_name": "Dave McCormick",
-      "support_oppose": "S",
+      "candidate_id": "S6PA00217",
+      "candidate_name": "Bob Casey",
+      "support_oppose": "O",
       "amount": 2500.0,
       "date": "2024-09-09",
       "purpose": "MEDIA PRODUCTION",
@@ -2358,12 +2369,12 @@
       "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202410209709511659"
     },
     {
-      "ie_id": "C00687103-ie-1833909-SE24.31064",
+      "ie_id": "C00687103-ie-1833909-SE24.31063",
       "spender_entity_id": "C00687103",
       "spender_name": "AMERICANS FOR PROSPERITY ACTION, INC. (AFP ACTION) DBA CVA ACTION AND DBA LIBRE ACTION",
-      "candidate_id": "S6PA00217",
-      "candidate_name": "Bob Casey",
-      "support_oppose": "O",
+      "candidate_id": "S2PA00661",
+      "candidate_name": "Dave McCormick",
+      "support_oppose": "S",
       "amount": 2500.0,
       "date": "2024-09-09",
       "purpose": "MEDIA PRODUCTION",
@@ -2488,17 +2499,17 @@
       "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202401319619445669"
     },
     {
-      "ie_id": "C00687103-ie-1858497-SE24.32661",
+      "ie_id": "C00687103-ie-1841778-SE24.31695",
       "spender_entity_id": "C00687103",
       "spender_name": "AMERICANS FOR PROSPERITY ACTION, INC. (AFP ACTION) DBA CVA ACTION AND DBA LIBRE ACTION",
-      "candidate_id": "S2PA00661",
-      "candidate_name": "Dave McCormick",
-      "support_oppose": "S",
+      "candidate_id": "S6PA00217",
+      "candidate_name": "Bob Casey",
+      "support_oppose": "O",
       "amount": 625.0,
-      "date": "2024-10-25",
+      "date": "2024-10-16",
       "purpose": "MEDIA PRODUCTION",
       "payee": "TARGETED VICTORY LLC",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202412059739339520"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202410249713957832"
     },
     {
       "ie_id": "C00687103-ie-1858497-SE24.32662",
@@ -2527,6 +2538,19 @@
       "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202410249713957832"
     },
     {
+      "ie_id": "C00687103-ie-1858497-SE24.32661",
+      "spender_entity_id": "C00687103",
+      "spender_name": "AMERICANS FOR PROSPERITY ACTION, INC. (AFP ACTION) DBA CVA ACTION AND DBA LIBRE ACTION",
+      "candidate_id": "S2PA00661",
+      "candidate_name": "Dave McCormick",
+      "support_oppose": "S",
+      "amount": 625.0,
+      "date": "2024-10-25",
+      "purpose": "MEDIA PRODUCTION",
+      "payee": "TARGETED VICTORY LLC",
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202412059739339520"
+    },
+    {
       "ie_id": "C00687103-ie-1841778-SE24.32431",
       "spender_entity_id": "C00687103",
       "spender_name": "AMERICANS FOR PROSPERITY ACTION, INC. (AFP ACTION) DBA CVA ACTION AND DBA LIBRE ACTION",
@@ -2538,19 +2562,6 @@
       "purpose": "MEDIA PRODUCTION",
       "payee": "TARGETED VICTORY LLC",
       "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202410249713957897"
-    },
-    {
-      "ie_id": "C00687103-ie-1841778-SE24.31695",
-      "spender_entity_id": "C00687103",
-      "spender_name": "AMERICANS FOR PROSPERITY ACTION, INC. (AFP ACTION) DBA CVA ACTION AND DBA LIBRE ACTION",
-      "candidate_id": "S6PA00217",
-      "candidate_name": "Bob Casey",
-      "support_oppose": "O",
-      "amount": 625.0,
-      "date": "2024-10-16",
-      "purpose": "MEDIA PRODUCTION",
-      "payee": "TARGETED VICTORY LLC",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202410249713957832"
     },
     {
       "ie_id": "C00687103-ie-1858497-SE24.32664",
@@ -2579,32 +2590,6 @@
       "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202410249713957833"
     },
     {
-      "ie_id": "C00687103-ie-1841778-SE24.32433",
-      "spender_entity_id": "C00687103",
-      "spender_name": "AMERICANS FOR PROSPERITY ACTION, INC. (AFP ACTION) DBA CVA ACTION AND DBA LIBRE ACTION",
-      "candidate_id": "S2PA00661",
-      "candidate_name": "Dave McCormick",
-      "support_oppose": "S",
-      "amount": 312.5,
-      "date": "2024-10-16",
-      "purpose": "MEDIA PRODUCTION",
-      "payee": "TARGETED VICTORY LLC",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202410249713957898"
-    },
-    {
-      "ie_id": "C00687103-ie-1841778-SE24.32430",
-      "spender_entity_id": "C00687103",
-      "spender_name": "AMERICANS FOR PROSPERITY ACTION, INC. (AFP ACTION) DBA CVA ACTION AND DBA LIBRE ACTION",
-      "candidate_id": "S2PA00661",
-      "candidate_name": "Dave McCormick",
-      "support_oppose": "S",
-      "amount": 312.5,
-      "date": "2024-10-16",
-      "purpose": "MEDIA PRODUCTION",
-      "payee": "TARGETED VICTORY LLC",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202410249713957896"
-    },
-    {
       "ie_id": "C00687103-ie-1841778-SE24.31764",
       "spender_entity_id": "C00687103",
       "spender_name": "AMERICANS FOR PROSPERITY ACTION, INC. (AFP ACTION) DBA CVA ACTION AND DBA LIBRE ACTION",
@@ -2629,6 +2614,32 @@
       "purpose": "MEDIA PRODUCTION",
       "payee": "TARGETED VICTORY LLC",
       "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202410249713957897"
+    },
+    {
+      "ie_id": "C00687103-ie-1841778-SE24.32430",
+      "spender_entity_id": "C00687103",
+      "spender_name": "AMERICANS FOR PROSPERITY ACTION, INC. (AFP ACTION) DBA CVA ACTION AND DBA LIBRE ACTION",
+      "candidate_id": "S2PA00661",
+      "candidate_name": "Dave McCormick",
+      "support_oppose": "S",
+      "amount": 312.5,
+      "date": "2024-10-16",
+      "purpose": "MEDIA PRODUCTION",
+      "payee": "TARGETED VICTORY LLC",
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202410249713957896"
+    },
+    {
+      "ie_id": "C00687103-ie-1841778-SE24.32433",
+      "spender_entity_id": "C00687103",
+      "spender_name": "AMERICANS FOR PROSPERITY ACTION, INC. (AFP ACTION) DBA CVA ACTION AND DBA LIBRE ACTION",
+      "candidate_id": "S2PA00661",
+      "candidate_name": "Dave McCormick",
+      "support_oppose": "S",
+      "amount": 312.5,
+      "date": "2024-10-16",
+      "purpose": "MEDIA PRODUCTION",
+      "payee": "TARGETED VICTORY LLC",
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202410249713957898"
     },
     {
       "ie_id": "C00687103-ie-1858497-SE24.32663",

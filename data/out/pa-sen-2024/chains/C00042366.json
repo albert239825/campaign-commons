@@ -2,7 +2,7 @@
   "root_entity_id": "C00042366",
   "root_name": "DSCC",
   "race_id": "pa-sen-2024",
-  "generated_at": "2026-09-05T13:41:28+00:00",
+  "generated_at": "2026-09-05T15:24:50+00:00",
   "data_status": "real",
   "nodes": [
     {
@@ -193,7 +193,7 @@
       "committee_type": "Y",
       "depth": 2,
       "visibility": "disclosed",
-      "amount_in": 11611365.0,
+      "amount_in": 11411365.0,
       "is_terminus": false,
       "terminus_reason": null,
       "source_url": "https://www.fec.gov/data/committee/C00114439/?cycle=2024"
@@ -1844,19 +1844,6 @@
       "source_url": "https://www.fec.gov/data/committee/C00010033/?cycle=2024"
     },
     {
-      "id": "org:MONTANA_DEMOCRATIC_PARTY",
-      "name": "MONTANA DEMOCRATIC PARTY",
-      "kind": "organization",
-      "committee_type": null,
-      "depth": 3,
-      "visibility": "dark",
-      "amount_in": 200000.0,
-      "is_terminus": true,
-      "terminus_reason": "dark",
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00114439&two_year_transaction_period=2024&contributor_name=MONTANA+DEMOCRATIC+PARTY",
-      "organization_class": "unknown"
-    },
-    {
       "id": "C00732826",
       "name": "STRICKLAND FOR WASHINGTON",
       "kind": "committee",
@@ -2872,18 +2859,6 @@
       "source_url": "https://www.fec.gov/data/committee/C00002089/?cycle=2024"
     },
     {
-      "id": "C00029504",
-      "name": "ENGINEERS POLITICAL EDUCATION COMMITTEE (EPEC)/INTERNATIONAL UNION OF OPERATING ENGINEERS",
-      "kind": "committee",
-      "committee_type": "Q",
-      "depth": 4,
-      "visibility": "disclosed",
-      "amount_in": 10000.0,
-      "is_terminus": true,
-      "terminus_reason": "depth_cap",
-      "source_url": "https://www.fec.gov/data/committee/C00029504/?cycle=2024"
-    },
-    {
       "id": "C00003251",
       "name": "NEA FUND FOR CHILDREN AND PUBLIC EDUCATION",
       "kind": "committee",
@@ -2894,6 +2869,18 @@
       "is_terminus": true,
       "terminus_reason": "depth_cap",
       "source_url": "https://www.fec.gov/data/committee/C00003251/?cycle=2024"
+    },
+    {
+      "id": "C00029504",
+      "name": "ENGINEERS POLITICAL EDUCATION COMMITTEE (EPEC)/INTERNATIONAL UNION OF OPERATING ENGINEERS",
+      "kind": "committee",
+      "committee_type": "Q",
+      "depth": 4,
+      "visibility": "disclosed",
+      "amount_in": 10000.0,
+      "is_terminus": true,
+      "terminus_reason": "depth_cap",
+      "source_url": "https://www.fec.gov/data/committee/C00029504/?cycle=2024"
     },
     {
       "id": "C00007542",
@@ -4584,18 +4571,6 @@
       "source_url": "https://www.fec.gov/data/committee/C00493700/?cycle=2024"
     },
     {
-      "id": "C00685297",
-      "name": "ELECT DEMOCRATIC WOMEN",
-      "kind": "committee",
-      "committee_type": "Q",
-      "depth": 4,
-      "visibility": "disclosed",
-      "amount_in": 20000.0,
-      "is_terminus": true,
-      "terminus_reason": "depth_cap",
-      "source_url": "https://www.fec.gov/data/committee/C00685297/?cycle=2024"
-    },
-    {
       "id": "C00519413",
       "name": "L PAC",
       "kind": "committee",
@@ -4608,16 +4583,16 @@
       "source_url": "https://www.fec.gov/data/committee/C00519413/?cycle=2024"
     },
     {
-      "id": "C00716423",
-      "name": "THE NEXT 50 PAC",
+      "id": "C00685297",
+      "name": "ELECT DEMOCRATIC WOMEN",
       "kind": "committee",
-      "committee_type": null,
+      "committee_type": "Q",
       "depth": 4,
       "visibility": "disclosed",
       "amount_in": 20000.0,
       "is_terminus": true,
       "terminus_reason": "depth_cap",
-      "source_url": "https://www.fec.gov/data/committee/C00716423/?cycle=2024"
+      "source_url": "https://www.fec.gov/data/committee/C00685297/?cycle=2024"
     },
     {
       "id": "C00550970",
@@ -4632,16 +4607,16 @@
       "source_url": "https://www.fec.gov/data/committee/C00550970/?cycle=2024"
     },
     {
-      "id": "C00797670",
-      "name": "AMERICAN ISRAEL PUBLIC AFFAIRS COMMITTEE POLITICAL ACTION COMMITTEE",
+      "id": "C00716423",
+      "name": "THE NEXT 50 PAC",
       "kind": "committee",
-      "committee_type": "Q",
+      "committee_type": null,
       "depth": 4,
       "visibility": "disclosed",
       "amount_in": 20000.0,
       "is_terminus": true,
       "terminus_reason": "depth_cap",
-      "source_url": "https://www.fec.gov/data/committee/C00797670/?cycle=2024"
+      "source_url": "https://www.fec.gov/data/committee/C00716423/?cycle=2024"
     },
     {
       "id": "C00633156",
@@ -4654,6 +4629,18 @@
       "is_terminus": true,
       "terminus_reason": "depth_cap",
       "source_url": "https://www.fec.gov/data/committee/C00633156/?cycle=2024"
+    },
+    {
+      "id": "C00797670",
+      "name": "AMERICAN ISRAEL PUBLIC AFFAIRS COMMITTEE POLITICAL ACTION COMMITTEE",
+      "kind": "committee",
+      "committee_type": "Q",
+      "depth": 4,
+      "visibility": "disclosed",
+      "amount_in": 20000.0,
+      "is_terminus": true,
+      "terminus_reason": "depth_cap",
+      "source_url": "https://www.fec.gov/data/committee/C00797670/?cycle=2024"
     },
     {
       "id": "C00785899",
@@ -7166,30 +7153,6 @@
       "source_url": "https://www.fec.gov/data/committee/C00002766/?cycle=2024"
     },
     {
-      "id": "C00032979",
-      "name": "D.R.I.V.E. - DEMOCRAT, REPUBLICAN, INDEPENDENT VOTER EDUCATION (THE PAC OF THE INTERNATIONAL BROTHERHOOD OF TEAMSTERS)",
-      "kind": "committee",
-      "committee_type": "Q",
-      "depth": 4,
-      "visibility": "disclosed",
-      "amount_in": 20000.0,
-      "is_terminus": true,
-      "terminus_reason": "depth_cap",
-      "source_url": "https://www.fec.gov/data/committee/C00032979/?cycle=2024"
-    },
-    {
-      "id": "cycle:C00032995@C00605592",
-      "name": "AMALGAMATED TRANSIT UNION - COPE",
-      "kind": "committee",
-      "committee_type": "Q",
-      "depth": 4,
-      "visibility": "disclosed",
-      "amount_in": 20000.0,
-      "is_terminus": true,
-      "terminus_reason": "cycle",
-      "source_url": "https://www.fec.gov/data/committee/C00032995/?cycle=2024"
-    },
-    {
       "id": "cycle:C00003632@C00605592",
       "name": "INT'L UNION OF BRICKLAYERS AND ALLIED CRAFTWORKERS",
       "kind": "committee",
@@ -7212,6 +7175,30 @@
       "is_terminus": true,
       "terminus_reason": "depth_cap",
       "source_url": "https://www.fec.gov/data/committee/C00004036/?cycle=2024"
+    },
+    {
+      "id": "C00032979",
+      "name": "D.R.I.V.E. - DEMOCRAT, REPUBLICAN, INDEPENDENT VOTER EDUCATION (THE PAC OF THE INTERNATIONAL BROTHERHOOD OF TEAMSTERS)",
+      "kind": "committee",
+      "committee_type": "Q",
+      "depth": 4,
+      "visibility": "disclosed",
+      "amount_in": 20000.0,
+      "is_terminus": true,
+      "terminus_reason": "depth_cap",
+      "source_url": "https://www.fec.gov/data/committee/C00032979/?cycle=2024"
+    },
+    {
+      "id": "cycle:C00032995@C00605592",
+      "name": "AMALGAMATED TRANSIT UNION - COPE",
+      "kind": "committee",
+      "committee_type": "Q",
+      "depth": 4,
+      "visibility": "disclosed",
+      "amount_in": 20000.0,
+      "is_terminus": true,
+      "terminus_reason": "cycle",
+      "source_url": "https://www.fec.gov/data/committee/C00032995/?cycle=2024"
     },
     {
       "id": "C00008268",
@@ -9928,22 +9915,6 @@
       "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00114439&two_year_transaction_period=2024&contributor_name=C00010033"
     },
     {
-      "from": "org:MONTANA_DEMOCRATIC_PARTY",
-      "to": "C00114439",
-      "amount": 200000.0,
-      "visibility": "dark",
-      "depth": 3,
-      "transaction_types": [
-        "15"
-      ],
-      "count": 1,
-      "date_range": [
-        "2024-11-05",
-        "2024-11-05"
-      ],
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00114439&two_year_transaction_period=2024&contributor_name=MONTANA+DEMOCRATIC+PARTY"
-    },
-    {
       "from": "C00732826",
       "to": "C00114439",
       "amount": 189437.0,
@@ -11321,22 +11292,6 @@
       "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00847400&two_year_transaction_period=2024&contributor_name=C00002089"
     },
     {
-      "from": "C00029504",
-      "to": "C00847400",
-      "amount": 10000.0,
-      "visibility": "disclosed",
-      "depth": 4,
-      "transaction_types": [
-        "24K"
-      ],
-      "count": 2,
-      "date_range": [
-        "2024-06-12",
-        "2024-06-12"
-      ],
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00847400&two_year_transaction_period=2024&contributor_name=C00029504"
-    },
-    {
       "from": "C00003251",
       "to": "C00847400",
       "amount": 10000.0,
@@ -11351,6 +11306,22 @@
         "2023-12-13"
       ],
       "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00847400&two_year_transaction_period=2024&contributor_name=C00003251"
+    },
+    {
+      "from": "C00029504",
+      "to": "C00847400",
+      "amount": 10000.0,
+      "visibility": "disclosed",
+      "depth": 4,
+      "transaction_types": [
+        "24K"
+      ],
+      "count": 2,
+      "date_range": [
+        "2024-06-12",
+        "2024-06-12"
+      ],
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00847400&two_year_transaction_period=2024&contributor_name=C00029504"
     },
     {
       "from": "C00007542",
@@ -13645,22 +13616,6 @@
       "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00843763&two_year_transaction_period=2024&contributor_name=C00493700"
     },
     {
-      "from": "C00685297",
-      "to": "C00843763",
-      "amount": 20000.0,
-      "visibility": "disclosed",
-      "depth": 4,
-      "transaction_types": [
-        "24K"
-      ],
-      "count": 4,
-      "date_range": [
-        "2023-12-20",
-        "2024-11-01"
-      ],
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00843763&two_year_transaction_period=2024&contributor_name=C00685297"
-    },
-    {
       "from": "C00519413",
       "to": "C00843763",
       "amount": 20000.0,
@@ -13677,7 +13632,7 @@
       "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00843763&two_year_transaction_period=2024&contributor_name=C00519413"
     },
     {
-      "from": "C00716423",
+      "from": "C00685297",
       "to": "C00843763",
       "amount": 20000.0,
       "visibility": "disclosed",
@@ -13685,12 +13640,12 @@
       "transaction_types": [
         "24K"
       ],
-      "count": 6,
+      "count": 4,
       "date_range": [
-        "2023-06-26",
-        "2024-10-28"
+        "2023-12-20",
+        "2024-11-01"
       ],
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00843763&two_year_transaction_period=2024&contributor_name=C00716423"
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00843763&two_year_transaction_period=2024&contributor_name=C00685297"
     },
     {
       "from": "C00550970",
@@ -13709,7 +13664,7 @@
       "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00843763&two_year_transaction_period=2024&contributor_name=C00550970"
     },
     {
-      "from": "C00797670",
+      "from": "C00716423",
       "to": "C00843763",
       "amount": 20000.0,
       "visibility": "disclosed",
@@ -13717,12 +13672,12 @@
       "transaction_types": [
         "24K"
       ],
-      "count": 4,
+      "count": 6,
       "date_range": [
-        "2024-08-29",
-        "2024-10-16"
+        "2023-06-26",
+        "2024-10-28"
       ],
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00843763&two_year_transaction_period=2024&contributor_name=C00797670"
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00843763&two_year_transaction_period=2024&contributor_name=C00716423"
     },
     {
       "from": "C00633156",
@@ -13739,6 +13694,22 @@
         "2024-09-10"
       ],
       "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00843763&two_year_transaction_period=2024&contributor_name=C00633156"
+    },
+    {
+      "from": "C00797670",
+      "to": "C00843763",
+      "amount": 20000.0,
+      "visibility": "disclosed",
+      "depth": 4,
+      "transaction_types": [
+        "24K"
+      ],
+      "count": 4,
+      "date_range": [
+        "2024-08-29",
+        "2024-10-16"
+      ],
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00843763&two_year_transaction_period=2024&contributor_name=C00797670"
     },
     {
       "from": "C00785899",
@@ -17174,38 +17145,6 @@
       "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00605592&two_year_transaction_period=2024&contributor_name=C00002766"
     },
     {
-      "from": "C00032979",
-      "to": "C00605592",
-      "amount": 20000.0,
-      "visibility": "disclosed",
-      "depth": 4,
-      "transaction_types": [
-        "24K"
-      ],
-      "count": 4,
-      "date_range": [
-        "2023-03-30",
-        "2023-10-31"
-      ],
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00605592&two_year_transaction_period=2024&contributor_name=C00032979"
-    },
-    {
-      "from": "cycle:C00032995@C00605592",
-      "to": "C00605592",
-      "amount": 20000.0,
-      "visibility": "disclosed",
-      "depth": 4,
-      "transaction_types": [
-        "24K"
-      ],
-      "count": 8,
-      "date_range": [
-        "2023-03-23",
-        "2024-10-08"
-      ],
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00605592&two_year_transaction_period=2024&contributor_name=C00032995"
-    },
-    {
       "from": "cycle:C00003632@C00605592",
       "to": "C00605592",
       "amount": 20000.0,
@@ -17236,6 +17175,38 @@
         "2024-05-20"
       ],
       "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00605592&two_year_transaction_period=2024&contributor_name=C00004036"
+    },
+    {
+      "from": "C00032979",
+      "to": "C00605592",
+      "amount": 20000.0,
+      "visibility": "disclosed",
+      "depth": 4,
+      "transaction_types": [
+        "24K"
+      ],
+      "count": 4,
+      "date_range": [
+        "2023-03-30",
+        "2023-10-31"
+      ],
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00605592&two_year_transaction_period=2024&contributor_name=C00032979"
+    },
+    {
+      "from": "cycle:C00032995@C00605592",
+      "to": "C00605592",
+      "amount": 20000.0,
+      "visibility": "disclosed",
+      "depth": 4,
+      "transaction_types": [
+        "24K"
+      ],
+      "count": 8,
+      "date_range": [
+        "2023-03-23",
+        "2024-10-08"
+      ],
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00605592&two_year_transaction_period=2024&contributor_name=C00032995"
     },
     {
       "from": "C00008268",
@@ -17432,7 +17403,7 @@
       "individual": 310,
       "organization": 1,
       "depth_cap": 127,
-      "dark": 3
+      "dark": 2
     }
   },
   "flags": [],

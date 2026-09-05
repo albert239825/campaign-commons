@@ -5,8 +5,9 @@ table and walks forward from a donor: donor -> committees it gave to -> outside 
 committees transferred to -> independent expenditures (targeting edges, never money into a candidate).
 
 Dollars are not conserved past the first hop: once a donor's money is pooled in a committee it is fungible, so the
-view never allocates a donor's dollars to a spender. Every reached spender behind an intermediate committee carries
-`ALLOCATION_NOTE` instead (D-47).
+view never allocates a donor's dollars to a spender. Every edge past the donor's own gifts (committee-to-committee
+transfers and independent expenditures) shows the reported total between the two parties, so any view that reaches
+a spender carries `ALLOCATION_NOTE` (D-47, C-32).
 """
 
 from __future__ import annotations
@@ -32,7 +33,8 @@ TOP_DONORS = 50
 MAX_NODES = 200
 SOURCE_KINDS = ("individual", "organization")
 ALLOCATION_NOTE = (
-    "share of donor's dollars reaching this spender is not determinable; showing the committees in between"
+    "Amounts past this donor's own gifts are the reported totals between the two parties, not this donor's share. "
+    "Once money is pooled in a committee it is fungible, so how much of it reached any spender or ad is not determinable."
 )
 
 
@@ -123,8 +125,8 @@ class ForwardWalk:
     truncated: bool = False
 
     @property
-    def via_intermediary(self) -> bool:
-        return any(n.depth == 2 for n in self.nodes.values())
+    def shows_pooled_totals(self) -> bool:
+        return any(n.depth == 2 for n in self.nodes.values()) or any(e.kind == "targeting" for e in self.edges)
 
 
 def forward_walk(
@@ -270,7 +272,7 @@ def donor_json(race: Race, fw: ForwardWalk, chained: set[str]) -> dict:
         "total_in_chains": d.total,
         "nodes": nodes,
         "edges": edges,
-        "allocation_note": ALLOCATION_NOTE if fw.via_intermediary else None,
+        "allocation_note": ALLOCATION_NOTE if fw.shows_pooled_totals else None,
         "truncated": fw.truncated,
         "method": (
             f"Forward walk over the same money edges as the chain walk (Schedule A receipts and committee-to-committee "

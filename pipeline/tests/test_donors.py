@@ -42,7 +42,7 @@ def test_forward_walk_reaches_spender_through_intermediary_and_targets_candidate
     assert money == [("ind:bob", PAC, 200.0), (PAC, ROOT, 600.0)]
     targeting = {(e.src, e.dst, e.support_oppose, e.amount) for e in fw.edges if e.kind == "targeting"}
     assert targeting == {(ROOT, CASEY, "O", 70.0), (ROOT, MCCORMICK, "S", 30.0)}
-    assert fw.via_intermediary and not fw.truncated
+    assert fw.shows_pooled_totals and not fw.truncated
     doc = donor_json(RACE, fw, chained={ROOT})
     assert doc["allocation_note"] == ALLOCATION_NOTE
     assert doc["total_given"] == 200.0
@@ -59,17 +59,18 @@ def test_never_a_money_edge_into_a_candidate() -> None:
     assert {n.id for n in fw.nodes.values()} == {"ind:carol", CAND}
     assert all(fw.nodes[e.dst].kind == "committee" for e in fw.edges if e.kind == "money")
     assert all(fw.nodes[e.dst].kind == "candidate" for e in fw.edges if e.kind == "targeting")
-    assert not fw.via_intermediary
+    assert not fw.shows_pooled_totals  # only the donor's own gift is shown
     assert donor_json(RACE, fw, chained=set())["allocation_note"] is None
 
 
-def test_direct_gift_to_spender_needs_no_allocation_note() -> None:
+def test_direct_gift_to_spender_still_shows_pooled_ie_totals() -> None:
     g = graph()
     alice = next(d for d in top_donors({ROOT: walk(g, ROOT, 8, 0.01)}) if d.id == "ind:alice")
     fw = forward_walk(g, outbound_index(g), ies(), RACE, alice, spenders={ROOT})
     assert fw.nodes[ROOT].depth == 1 and fw.nodes[ROOT].is_spender
     assert {n.kind for n in fw.nodes.values()} == {"individual", "committee", "candidate"}
-    assert not fw.via_intermediary
+    assert fw.shows_pooled_totals  # the IE amounts are the spender's, not alice's share
+    assert donor_json(RACE, fw, chained={ROOT})["allocation_note"] == ALLOCATION_NOTE
 
 
 def test_node_cap_truncates_largest_first() -> None:

@@ -16,6 +16,18 @@ export function Counterparty({ raceId, id, name, linkable }: { raceId: string; i
 
 const limitLabel = (l: Transfer["limit"]) => (l === null ? "—" : l === "unlimited" ? "unlimited" : money(l, { compact: false }));
 
+/** One row is the sum over a counterparty; show the span and count when it rolls up more than one transaction. */
+function Dates({ t }: { t: Transfer }) {
+  const count = t.count ?? 1;
+  const first = t.first_date ?? t.date;
+  return (
+    <span className="block">
+      {first && first !== t.date ? `${date(first)} – ${date(t.date)}` : date(t.date)}
+      {count > 1 && <span className="block text-[11px] text-neutral-500">{count.toLocaleString("en-US")} transactions</span>}
+    </span>
+  );
+}
+
 /** Money edges into or out of the entity. `direction` picks which side is the counterparty. */
 export function FlowsTable({
   raceId,
@@ -35,8 +47,8 @@ export function FlowsTable({
       <thead>
         <tr>
           <Th>{direction === "in" ? "From" : "To"}</Th>
-          <Th>Date</Th>
-          <Th>Type</Th>
+          <Th>Date(s)</Th>
+          <Th title="Most common FEC transaction type among the rolled-up transactions">Type</Th>
           <Th align="right">Limit</Th>
           <Th align="right">Amount</Th>
           <Th align="right">Source</Th>
@@ -55,7 +67,9 @@ export function FlowsTable({
                   <Counterparty raceId={raceId} id={id} name={name} linkable={raceEntityIds.has(id)} />
                 </span>
               </Td>
-              <Td className="whitespace-nowrap text-xs text-neutral-600">{date(t.date)}</Td>
+              <Td className="whitespace-nowrap text-xs text-neutral-600">
+                <Dates t={t} />
+              </Td>
               <Td className="font-mono text-xs text-neutral-600">{t.transaction_type ?? "—"}</Td>
               <Td align="right" className="text-xs text-neutral-600">
                 {limitLabel(t.limit)}

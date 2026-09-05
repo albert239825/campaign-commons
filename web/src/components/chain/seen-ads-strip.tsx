@@ -10,7 +10,7 @@ export function SeenAdsStrip({ ads, raceId }: { ads: Ad[]; raceId: string }) {
     <div className="flex flex-wrap items-center gap-3 rounded-lg border border-neutral-200 bg-white p-2">
       <div className="px-1 text-xs text-neutral-600">
         <div className="font-medium text-neutral-900">You may have seen this ad</div>
-        <div>Paid for by this committee; the link was checked by a person.</div>
+        <div>Advertiser matched to this committee by a person (Google shows the advertiser, not the paid-for-by line).</div>
       </div>
       {ads.map((ad) => (
         <Link

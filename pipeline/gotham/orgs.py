@@ -10,12 +10,19 @@ the name (D-38), and the classifier is deliberately conservative: only unions an
   unknown    no signal either way                                                        -> dark
 
 Corporate suffixes lose to advocacy words: "LEAGUE OF CONSERVATION VOTERS, INC." and "EVERYTOWN FOR GUN SAFETY
-ACTION FUND INC" are 501(c)(4)s that happen to be incorporated, so "INC" alone never makes a business.
+ACTION FUND INC" are 501(c)(4)s that happen to be incorporated, so "INC" alone never makes a business. Generic
+tokens that also appear in company and committee names (PAC, COMMITTEE, FUND, ACTION, AMERICA...) only decide the
+class when nothing else does (C-31).
+
+Before any of this, a name that is exactly a registered committee's name is a committee, not an organization: filers
+sometimes report a PAC's transfer on Schedule A as `ENTITY_TP='ORG'`, and calling that dark would contradict the
+sender's own public filing (C-30). `committee_name_index` / `match_committee` do that lookup.
 """
 
 from __future__ import annotations
 
 import re
+from collections.abc import Iterable
 
 ORGANIZATION_CLASSES = ("union", "business", "llc", "nonprofit", "unknown")
 DISCLOSED_CLASSES = {"union", "business"}
@@ -32,11 +39,12 @@ _BUSINESS = re.compile(
     r"MANAGEMENT|TRIBE|NATION OF|RANCHERIA|CRYPTO|EXCHANGE)\b"
 )
 _NONPROFIT = re.compile(
-    r"\b(ACTION|FUND|ALLIANCE|COALITION|COMMITTEE|PROJECT|NETWORK|VOTERS?|VOTE|LEAGUE|INSTITUTE|ASSOCIATION|SOCIETY|"
-    r"FOUNDATION|CENTER|POLICIES|POLICY|FORWARD|FUTURE|VICTORY|MAJORITY|PROSPERITY|FREEDOM|LIBERTY|PATRIOTS?|"
-    r"AMERICANS?|AMERICA|CITIZENS|VALUES|FAMILIES|PRIORITIES|SECURING|GREATNESS|RESTORATION|ADVOCACY|ADVOCATES?|"
-    r"CONSERVATION|CLIMATE|ENVIRONMENTAL|DEFENSE|IMPACT|EVIDENCE|TURNOUT|ENGAGEMENT|527|PAC|ISSUES|CHAMBER)\b"
+    r"\b(ALLIANCE|COALITION|PROJECT|NETWORK|VOTERS?|VOTE|LEAGUE|INSTITUTE|ASSOCIATION|SOCIETY|"
+    r"FOUNDATION|CENTER|POLICIES|POLICY|FORWARD|FUTURE|MAJORITY|PROSPERITY|FREEDOM|LIBERTY|PATRIOTS?|"
+    r"CITIZENS|VALUES|FAMILIES|PRIORITIES|SECURING|GREATNESS|ADVOCACY|ADVOCATES?|"
+    r"CONSERVATION|CLIMATE|ENVIRONMENTAL|DEFENSE|IMPACT|EVIDENCE|TURNOUT|ENGAGEMENT|ISSUES|501\(C\)|ACTION FUND)\b"
 )
+_NONPROFIT_WEAK = re.compile(r"\b(ACTION|FUND|COMMITTEE|VICTORY|AMERICANS?|AMERICA|RESTORATION|527|PAC|CHAMBER)\b")
 
 
 def _norm(name: str) -> str:
@@ -53,7 +61,24 @@ def classify_organization(name: str) -> str:
         return "llc"
     if _BUSINESS.search(n):
         return "business"
+    if _NONPROFIT_WEAK.search(n):
+        return "nonprofit"
     return "unknown"
+
+
+def committee_name_index(committees: Iterable[tuple[str, str]]) -> dict[str, str]:
+    """normalized committee name -> committee id, for names that belong to exactly one committee."""
+    seen: dict[str, str | None] = {}
+    for cid, name in committees:
+        key = _norm(name or "")
+        if not key:
+            continue
+        seen[key] = None if key in seen and seen[key] != cid else cid
+    return {k: v for k, v in seen.items() if v is not None}
+
+
+def match_committee(name: str, index: dict[str, str]) -> str | None:
+    return index.get(_norm(name))
 
 
 def organization_visibility(org_class: str) -> str:

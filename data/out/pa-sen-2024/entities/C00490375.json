@@ -35,19 +35,23 @@
       "to_name": "NATIONAL NURSES UNITED FOR PATIENT PROTECTION",
       "amount": 5020000.0,
       "date": "2024-09-25",
+      "first_date": "2024-07-19",
+      "count": 3,
       "visibility": "disclosed",
       "transaction_type": "24K",
       "limit": "unlimited",
       "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00490375&two_year_transaction_period=2024&contributor_name=C00731372"
     },
     {
-      "transfer_id": "C00490375-in-ind:VOTE_NURSES_VALUES_PAC|94612",
-      "from_entity_id": "ind:VOTE_NURSES_VALUES_PAC|94612",
+      "transfer_id": "C00490375-in-org:VOTE_NURSES_VALUES_PAC",
+      "from_entity_id": "org:VOTE_NURSES_VALUES_PAC",
       "from_name": "VOTE NURSES VALUES PAC",
       "to_entity_id": "C00490375",
       "to_name": "NATIONAL NURSES UNITED FOR PATIENT PROTECTION",
       "amount": 5020000.0,
       "date": "2024-09-25",
+      "first_date": "2024-07-19",
+      "count": 3,
       "visibility": "disclosed",
       "transaction_type": "10",
       "limit": "unlimited",
@@ -61,6 +65,8 @@
       "to_name": "NATIONAL NURSES UNITED FOR PATIENT PROTECTION",
       "amount": 500000.0,
       "date": "2024-06-27",
+      "first_date": "2024-06-27",
+      "count": 1,
       "visibility": "dark",
       "transaction_type": "10",
       "limit": "unlimited",
@@ -76,6 +82,8 @@
       "to_name": "BATTLEGROUND NEW YORK",
       "amount": 250000.0,
       "date": "2024-08-05",
+      "first_date": "2024-08-05",
+      "count": 1,
       "visibility": "disclosed",
       "transaction_type": "18K",
       "limit": null,
@@ -136,19 +144,6 @@
       "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202507299764308521"
     },
     {
-      "ie_id": "C00490375-ie-1841338-B884306",
-      "spender_entity_id": "C00490375",
-      "spender_name": "NATIONAL NURSES UNITED FOR PATIENT PROTECTION",
-      "candidate_id": "S6PA00217",
-      "candidate_name": "Bob Casey",
-      "support_oppose": "S",
-      "amount": 52912.98,
-      "date": "2024-09-18",
-      "purpose": "BILLBOARD RENTAL",
-      "payee": "MIDDLE SEAT  CONSULTING LLC",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202410249710853234"
-    },
-    {
       "ie_id": "C00490375-ie-1875388-B884306",
       "spender_entity_id": "C00490375",
       "spender_name": "NATIONAL NURSES UNITED FOR PATIENT PROTECTION",
@@ -160,19 +155,6 @@
       "purpose": "BILLBOARD RENTAL",
       "payee": "MIDDLE SEAT  CONSULTING LLC",
       "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202502109753368231"
-    },
-    {
-      "ie_id": "C00490375-ie-1841338-B883769",
-      "spender_entity_id": "C00490375",
-      "spender_name": "NATIONAL NURSES UNITED FOR PATIENT PROTECTION",
-      "candidate_id": "S6PA00217",
-      "candidate_name": "Bob Casey",
-      "support_oppose": "S",
-      "amount": 35272.43,
-      "date": "2024-09-13",
-      "purpose": "BILLBOARD RENTAL.",
-      "payee": "ADQUICK",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202410249710853234"
     },
     {
       "ie_id": "C00490375-ie-1875388-B883769",
@@ -238,19 +220,6 @@
       "purpose": "PHONE AND TEXT CAMPAIGN",
       "payee": "GETTHRU",
       "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202507299764308523"
-    },
-    {
-      "ie_id": "C00490375-ie-1841338-B886772",
-      "spender_entity_id": "C00490375",
-      "spender_name": "NATIONAL NURSES UNITED FOR PATIENT PROTECTION",
-      "candidate_id": "S6PA00217",
-      "candidate_name": "Bob Casey",
-      "support_oppose": "S",
-      "amount": 15458.51,
-      "date": "2024-10-01",
-      "purpose": "REIMBURSEMENT FOR STAFF EXPENSES.",
-      "payee": "CALIFORNIA NURSES ASSOCIATION",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202410249710853235"
     },
     {
       "ie_id": "C00490375-ie-1875388-B886772",

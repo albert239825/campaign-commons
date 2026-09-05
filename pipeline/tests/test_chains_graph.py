@@ -97,3 +97,59 @@ def test_valve_violation_not_traversed() -> None:
     assert w.nodes[SUPER].terminus_reason == "depth_cap"
     # the super PAC is not traversed, so its dollars are unwalked, not disclosed
     assert node_shares(w)[CAND] == (0.5, 0.0, 0.5, 0.0)
+
+
+def test_build_graph_resolves_committees_misfiled_as_org() -> None:
+    import duckdb
+    import pandas as pd
+
+    from gotham.chains_graph import build_graph
+
+    con = duckdb.connect()
+    con.register(
+        "committees",
+        pd.DataFrame(
+            {
+                "CMTE_ID": ["C1", "C2", "C3"],
+                "CMTE_TP": ["O", "O", "V"],
+                "CMTE_NM": ["ROOT", "RESTORATION PAC", "MOVEMENT VOTER PAC"],
+            }
+        ),
+    )
+    con.register(
+        "transfers",
+        pd.DataFrame(
+            {
+                "to_id": ["C1"],
+                "from_id": ["C2"],
+                "from_name": ["RESTORATION PAC"],
+                "amt": [1100.0],
+                "count": [2],
+                "tt": ["24K"],
+                "dt": pd.to_datetime(["2024-03-01"]),
+                "mismatch": [False],
+            }
+        ),
+    )
+    con.register(
+        "individuals",
+        pd.DataFrame(
+            {
+                "CMTE_ID": ["C1", "C1", "C1", "C2"],
+                "NAME": ["RESTORATION PAC", "Movement Voter PAC", "SOME C4 ACTION", "RESTORATION PAC"],
+                "ZIP5": [None, None, None, None],
+                "ENTITY_TP": ["ORG", "ORG", "ORG", "ORG"],
+                "TRANSACTION_AMT": [900.0, 300.0, 50.0, 10.0],
+                "N_TRANSACTIONS": [1, 1, 1, 1],
+                "TRANSACTION_TP": ["10", "10", "10", "10"],
+                "FIRST_DT": pd.to_datetime(["2024-03-01"] * 4),
+                "LAST_DT": pd.to_datetime(["2024-03-01"] * 4),
+            }
+        ),
+    )
+    g = build_graph(con)
+    by_cp = {e.counterparty: e for e in g.inbound["C1"]}
+    assert by_cp["C2"].amount == 1100.0 and by_cp["C2"].kind == "committee"  # receiver-side ORG copy dropped
+    assert by_cp["C3"].kind == "committee" and by_cp["C3"].amount == 300.0 and by_cp["C3"].name == "MOVEMENT VOTER PAC"
+    assert [e for e in g.inbound["C1"] if e.kind == "organization"][0].name == "SOME C4 ACTION"
+    assert [e.kind for e in g.inbound["C2"]] == ["organization"]  # a committee naming itself stays an organization row

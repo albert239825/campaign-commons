@@ -2,7 +2,7 @@
   "root_entity_id": "C00688655",
   "root_name": "EVERYTOWN FOR GUN SAFETY VICTORY FUND (EVERYTOWN VICTORY FUND)",
   "race_id": "pa-sen-2024",
-  "generated_at": "2026-09-05T13:41:28+00:00",
+  "generated_at": "2026-09-05T15:24:50+00:00",
   "data_status": "real",
   "nodes": [
     {
@@ -49,7 +49,7 @@
       "committee_type": "W",
       "depth": 1,
       "visibility": "disclosed",
-      "amount_in": 207302943.0,
+      "amount_in": 207002943.0,
       "is_terminus": false,
       "terminus_reason": null,
       "source_url": "https://www.fec.gov/data/committee/C00495028/?cycle=2024"
@@ -121,7 +121,7 @@
       "kind": "aggregate",
       "committee_type": null,
       "depth": 2,
-      "visibility": "dark",
+      "visibility": "disclosed",
       "amount_in": 7353.0,
       "is_terminus": true,
       "terminus_reason": "pruned",
@@ -342,11 +342,11 @@
       "committee_type": null,
       "depth": 2,
       "visibility": "disclosed",
-      "amount_in": 84260591.0,
+      "amount_in": 83960591.0,
       "is_terminus": true,
       "terminus_reason": "pruned",
       "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00495028&two_year_transaction_period=2024",
-      "contributor_count": 212
+      "contributor_count": 211
     },
     {
       "id": "org:UNITED_BROTHERHOOD_OF_CARPENTERS_AND_JOINERS",
@@ -3730,7 +3730,7 @@
       "from": "agg:other@C00878009",
       "to": "C00878009",
       "amount": 7353.0,
-      "visibility": "dark",
+      "visibility": "disclosed",
       "depth": 2,
       "transaction_types": [
         "10"
@@ -4017,7 +4017,7 @@
     {
       "from": "agg:other@C00495028",
       "to": "C00495028",
-      "amount": 84260591.0,
+      "amount": 83960591.0,
       "visibility": "disclosed",
       "depth": 2,
       "transaction_types": [
@@ -4028,7 +4028,7 @@
         "24K",
         "24Z"
       ],
-      "count": 375,
+      "count": 374,
       "date_range": [
         "2023-01-26",
         "2024-12-20"
@@ -8358,10 +8358,10 @@
   ],
   "summary": {
     "total_in": 22475647.0,
-    "disclosed_share": 0.3411,
+    "disclosed_share": 0.3415,
     "inferable_share": 0.0,
     "unwalked_share": 0.0,
-    "dark_share": 0.6589,
+    "dark_share": 0.6585,
     "max_depth": 5,
     "terminus_counts": {
       "dark": 4,

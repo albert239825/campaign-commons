@@ -14,12 +14,14 @@ Headline numbers (PA Senate 2024, all from FEC, cycle 2023–24):
 | | Casey | McCormick | Race |
 | --- | --- | --- | --- |
 | Campaign receipts | $58.1M | $36.0M | $94.1M |
-| Outside spending about the candidate (support + oppose) | $127.2M | $108.5M | $235.7M (98 spenders) |
-| Traceability (preliminary) | 0.749 | 0.689 | 0.721 |
+| Outside spending about the candidate (support + oppose) | $125.9M | $107.5M | $233.4M (98 spenders) |
+| Traceability (preliminary) | 0.755 | 0.693 | 0.727 |
 
 Top outside spenders: WINSENATE $63.0M (traceability 0.64, 2.6% not walked; 100% funded by SMP; `dead_end_dark`), Senate Leadership Fund
-$52.8M (0.79), Keystone Renewal PAC $48.2M (0.85), Americans for Prosperity Action $21.7M (0.65, `dead_end_dark`), DSCC $10.5M
-(0.99). Campaign totals and the SLF / WINSENATE IE totals match fec.gov to the cent / within amendments.
+$52.8M (0.79), Keystone Renewal PAC $48.2M (0.85), Americans for Prosperity Action $19.6M (0.65, `dead_end_dark`), DSCC $10.5M
+(0.99). Campaign totals and the per-spender IE totals match the OpenFEC `schedule_e/by_candidate` totals (WINSENATE $63.03M, SLF $52.80M,
+Keystone $48.23M, AFP Action $19.59M, DSCC $10.52M); race-wide FEC reports $231.96M over 94 committees vs our $233.40M over 98 —
+the gap is Form 5 filers and committees the by-candidate endpoint omits, not double counting.
 
 ## How to run
 
@@ -32,11 +34,11 @@ downloads ~3GB of FEC bulk once and caches it, then re-pulls Schedule E from the
 | Surface | File(s) | Status | Notes |
 | --- | --- | --- | --- |
 | Race table | `data/out/races.json` | **real** (PA) / stub (TX 2026) | Totals from FEC candidate summaries (`weball24`) + Schedule E about Casey/McCormick |
-| Race ledger | `pa-sen-2024/ledger.json` | **real** | Casey $58.1M / McCormick $36.0M receipts; $235.7M outside, 98 spenders (OpenFEC `schedule_e`, periodic + `most_recent`, D-36). `via_conduit_total` = 15E earmarks. Per-candidate + per-spender traceability, flags |
+| Race ledger | `pa-sen-2024/ledger.json` | **real** | Casey $58.1M / McCormick $36.0M receipts; $233.4M outside, 98 spenders (OpenFEC `schedule_e`, periodic + `most_recent`, then one row per transaction across periodic filings, D-36/D-48). `via_conduit_total` = 15E earmarks. Per-candidate + per-spender traceability, flags |
 | Entity pages | `pa-sen-2024/entities/*.json` | **real** | 2,000 committees: 98 spenders + 2 campaigns as seeds, then transfer neighborhood (D-29). Totals split individuals / committees / business-union treasuries / orgs with funding not on file (D-38). Form 5 filers fall back to itemized receipts |
 | Chains | `pa-sen-2024/chains/*.json` | **real** | 86/98 spenders (12 are Form 5 / type-I filers with no receipts to walk). Backward over money edges only, to termination (individual, business/union, dark org, conduit, cycle, 8-hop cap), 1% pruning into `agg:other`, dollars conserve per node (D-32..D-35) |
-| Stories | `pa-sen-2024/stories.json` | **real** | 17 ranked by amount / dark share / flags; all `verified: false`. Rendered as the ledger "Start here" strip + `/stories` (V1 below) |
-| Ad gallery | `pa-sen-2024/ads.json` | **real** | Google political-ads bundle; 1,292 PA-relevant, 500 emitted (cap), all matched `auto`; `paid_for_by` null (Google has no US declared-name field); 26 video posters cached |
+| Stories | `pa-sen-2024/stories.json` | **real** | 17 ranked by amount / dark share / flags; all `verified: false` (5 *ads*, not stories, are hand-verified — D-46). Rendered as the ledger "Start here" strip + `/stories` (V1 below) |
+| Ad gallery | `pa-sen-2024/ads.json` | **real** | Google political-ads bundle; 1,849 met the selection rule, 500 emitted (cap), all matched to a committee; 5 sponsor matches hand-verified (advertiser legal name ↔ FEC record — Google publishes no US paid-for-by line); 29 video posters cached |
 | Dossiers | `pa-sen-2024/dossiers/*.json` | **real** | Casey: 33 roll calls + 26 bills across 10/10 issues (senate.gov XML, congress.gov). McCormick: 10 stated positions from 2024-11-01 Wayback of davemccormickpa.com/issues. Every stance `needs_review: true`; asymmetry note rendered |
 | Methodology page | `web/src/app/methodology` | **real** | States the traceability definition, name-only org classifier, no IRS lookup, adjacency-not-causation |
 
@@ -47,7 +49,7 @@ downloads ~3GB of FEC bulk once and caches it, then re-pulls Schedule E from the
   corporate suffix); bare `COINBASE` → unknown → dark. No IRS/990 lookup yet, so `inferable` is never emitted (D-34).
 - **`depth_cap` termini are a fourth "not walked" bucket** (C-06 fixed): committees outside the loaded neighborhood or past the
   hop/node cap are neither disclosed nor dark (`unwalked_share`, `traceability.unwalked`). Race-wide it is $1.86M (0.8%); the
-  score dropped 0.729 → 0.721 accordingly. A dark layer behind an unwalked committee still would not show.
+  score dropped 0.729 → 0.721 accordingly (0.727 after the C-29 Schedule E dedupe). A dark layer behind an unwalked committee still would not show.
 - Traceability is `preliminary: true` everywhere in data and copy.
 - No time ordering in the graph: a December 2024 receipt counts toward the visibility mix of October spending (C-15).
 - Chain pages ship the full SVG server-side: WINSENATE / CFFE PAC pages are 5–6MB HTML (C-10). Fine on localhost; prune
@@ -72,6 +74,13 @@ Fixed on `fix/critic-p1` (one commit each): C-10 chain page size (b051031), C-06
 C-12 "from individuals" labels (67ddc6c), C-07 spender row share bar (08e4fd3), C-09 `transfer_mismatch` on a campaign's
 own JFC (78069cf), C-08 pair-filtered evidence URLs (f37d85f), C-13 dead contract fields (36ded3b).
 Still open: C-11 ad chain-link gating, C-13's `Story*`/`stories.json` part, C-15..C-28 (P2).
+
+Round 2 (`docs/CRITIQUE.md`, C-29..C-44, review of the post-V1 tree) — fixed on `fix/critic-r2-p0`: C-29 Schedule E rows re-reported
+in later periodic filings (P0; $235.7M → $233.4M, now matches FEC by-candidate totals per spender), C-30 registered committees
+filed as `ORG` on Schedule A were dark organization nodes (P0; RESTORATION PAC, Strategic Victory Fund, state parties now resolve
+to their committee), C-31 narrower org-name heuristics, C-32 allocation note on every donor view that shows pooled totals,
+C-33 "paid-for-by" wording → "sponsor verified", C-34 sponsor links gated on an existing entity page, C-35 entity IE total labelled
+all-races with an fec.gov link, C-36 aggregated flow rows carry `count` + `first_date`. Still open: C-37..C-44 (P2).
 
 ## Validation (final, `e117b6f`)
 

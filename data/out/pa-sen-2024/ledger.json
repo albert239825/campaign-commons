@@ -1,6 +1,6 @@
 {
   "race_id": "pa-sen-2024",
-  "generated_at": "2026-09-05T13:41:28+00:00",
+  "generated_at": "2026-09-05T15:24:50+00:00",
   "data_status": "real",
   "candidates": [
     {
@@ -20,12 +20,12 @@
         "source_url": "https://www.fec.gov/data/candidate/S6PA00217/?cycle=2024&election_full=false"
       },
       "outside": {
-        "support": 22317022.61,
-        "oppose": 104850386.27,
-        "total": 127167408.88,
+        "support": 22177381.96,
+        "oppose": 103714339.11,
+        "total": 125891721.07,
         "source_url": "https://www.fec.gov/data/independent-expenditures/?candidate_id=S6PA00217&cycle=2024"
       },
-      "traceability_score": 0.7486
+      "traceability_score": 0.7553
     },
     {
       "candidate_id": "S2PA00661",
@@ -44,12 +44,12 @@
         "source_url": "https://www.fec.gov/data/candidate/S2PA00661/?cycle=2024&election_full=false"
       },
       "outside": {
-        "support": 29344907.67,
+        "support": 28344907.67,
         "oppose": 79160132.72,
-        "total": 108505040.39,
+        "total": 107505040.39,
         "source_url": "https://www.fec.gov/data/independent-expenditures/?candidate_id=S2PA00661&cycle=2024"
       },
-      "traceability_score": 0.6888
+      "traceability_score": 0.6932
     }
   ],
   "top_outside_spenders": [
@@ -71,7 +71,7 @@
           "amount": 2784022.89
         }
       ],
-      "traceability_score": 0.6372,
+      "traceability_score": 0.6386,
       "flags": [
         "dead_end_dark",
         "shell_cluster",
@@ -80,10 +80,10 @@
       "has_chain": true,
       "source_url": "https://www.fec.gov/data/committee/C00865444/?cycle=2024",
       "visibility_shares": {
-        "disclosed": 0.6372,
+        "disclosed": 0.6386,
         "inferable": 0.0,
         "unwalked": 0.0257,
-        "dark": 0.337
+        "dark": 0.3357
       }
     },
     {
@@ -138,15 +138,15 @@
           "amount": 893309.5
         }
       ],
-      "traceability_score": 0.8488,
+      "traceability_score": 0.8659,
       "flags": [],
       "has_chain": true,
       "source_url": "https://www.fec.gov/data/committee/C00849489/?cycle=2024",
       "visibility_shares": {
-        "disclosed": 0.8488,
+        "disclosed": 0.8659,
         "inferable": 0.0,
         "unwalked": 0.0,
-        "dark": 0.1512
+        "dark": 0.1341
       }
     },
     {
@@ -154,17 +154,17 @@
       "name": "AMERICANS FOR PROSPERITY ACTION, INC. (AFP ACTION) DBA CVA ACTION AND DBA LIBRE ACTION",
       "committee_type": "V",
       "committee_type_label": "Hybrid PAC (non-qualified)",
-      "total": 21680723.19,
+      "total": 19592602.21,
       "by_candidate": [
         {
           "candidate_id": "S2PA00661",
           "support_oppose": "S",
-          "amount": 13610479.71
+          "amount": 12610479.71
         },
         {
           "candidate_id": "S6PA00217",
           "support_oppose": "O",
-          "amount": 8070243.48
+          "amount": 6982122.5
         }
       ],
       "traceability_score": 0.6515,
@@ -248,7 +248,7 @@
           "amount": 2002359.54
         }
       ],
-      "traceability_score": 0.2868,
+      "traceability_score": 0.3018,
       "flags": [
         "dead_end_dark",
         "shell_cluster"
@@ -256,10 +256,10 @@
       "has_chain": true,
       "source_url": "https://www.fec.gov/data/committee/C00486845/?cycle=2024",
       "visibility_shares": {
-        "disclosed": 0.2868,
+        "disclosed": 0.3018,
         "inferable": 0.0,
         "unwalked": 0.0,
-        "dark": 0.7131
+        "dark": 0.6982
       }
     },
     {
@@ -275,17 +275,17 @@
           "amount": 2866090.0
         }
       ],
-      "traceability_score": 0.3636,
+      "traceability_score": 0.3637,
       "flags": [
         "dead_end_dark"
       ],
       "has_chain": true,
       "source_url": "https://www.fec.gov/data/committee/C00744920/?cycle=2024",
       "visibility_shares": {
-        "disclosed": 0.3636,
+        "disclosed": 0.3637,
         "inferable": 0.0,
         "unwalked": 0.021,
-        "dark": 0.6154
+        "dark": 0.6153
       }
     },
     {
@@ -301,17 +301,17 @@
           "amount": 2670699.56
         }
       ],
-      "traceability_score": 0.2958,
+      "traceability_score": 0.2962,
       "flags": [
         "dead_end_dark"
       ],
       "has_chain": true,
       "source_url": "https://www.fec.gov/data/committee/C00609388/?cycle=2024",
       "visibility_shares": {
-        "disclosed": 0.2958,
+        "disclosed": 0.2962,
         "inferable": 0.0,
         "unwalked": 0.0,
-        "dark": 0.7041
+        "dark": 0.7038
       }
     },
     {
@@ -404,17 +404,17 @@
           "amount": 1272156.59
         }
       ],
-      "traceability_score": 0.2368,
+      "traceability_score": 0.2372,
       "flags": [
         "dead_end_dark"
       ],
       "has_chain": true,
       "source_url": "https://www.fec.gov/data/committee/C00724203/?cycle=2024",
       "visibility_shares": {
-        "disclosed": 0.2368,
+        "disclosed": 0.2372,
         "inferable": 0.0,
         "unwalked": 0.0004,
-        "dark": 0.7628
+        "dark": 0.7624
       }
     },
     {
@@ -451,7 +451,7 @@
       "name": "THE SENTINEL ACTION FUND",
       "committee_type": "O",
       "committee_type_label": "Super PAC",
-      "total": 1138005.19,
+      "total": 1090079.01,
       "by_candidate": [
         {
           "candidate_id": "S2PA00661",
@@ -461,18 +461,18 @@
         {
           "candidate_id": "S6PA00217",
           "support_oppose": "O",
-          "amount": 251484.55
+          "amount": 203558.37
         }
       ],
-      "traceability_score": 0.8058,
+      "traceability_score": 0.808,
       "flags": [],
       "has_chain": true,
       "source_url": "https://www.fec.gov/data/committee/C00811166/?cycle=2024",
       "visibility_shares": {
-        "disclosed": 0.8058,
+        "disclosed": 0.808,
         "inferable": 0.0,
         "unwalked": 0.0,
-        "dark": 0.1942
+        "dark": 0.192
       }
     },
     {
@@ -493,43 +493,17 @@
           "amount": 5289.26
         }
       ],
-      "traceability_score": 0.3411,
+      "traceability_score": 0.3415,
       "flags": [
         "dead_end_dark"
       ],
       "has_chain": true,
       "source_url": "https://www.fec.gov/data/committee/C00688655/?cycle=2024",
       "visibility_shares": {
-        "disclosed": 0.3411,
+        "disclosed": 0.3415,
         "inferable": 0.0,
         "unwalked": 0.0,
-        "dark": 0.6589
-      }
-    },
-    {
-      "entity_id": "C00490375",
-      "name": "NATIONAL NURSES UNITED FOR PATIENT PROTECTION",
-      "committee_type": "O",
-      "committee_type_label": "Super PAC",
-      "total": 832653.13,
-      "by_candidate": [
-        {
-          "candidate_id": "S6PA00217",
-          "support_oppose": "S",
-          "amount": 832653.13
-        }
-      ],
-      "traceability_score": 0.9094,
-      "flags": [
-        "single_transfer_funded"
-      ],
-      "has_chain": true,
-      "source_url": "https://www.fec.gov/data/committee/C00490375/?cycle=2024",
-      "visibility_shares": {
-        "disclosed": 0.9094,
-        "inferable": 0.0,
-        "unwalked": 0.0,
-        "dark": 0.0906
+        "dark": 0.6585
       }
     },
     {
@@ -559,6 +533,32 @@
         "inferable": 0.0,
         "unwalked": 0.0004,
         "dark": 0.0664
+      }
+    },
+    {
+      "entity_id": "C00490375",
+      "name": "NATIONAL NURSES UNITED FOR PATIENT PROTECTION",
+      "committee_type": "O",
+      "committee_type_label": "Super PAC",
+      "total": 729009.21,
+      "by_candidate": [
+        {
+          "candidate_id": "S6PA00217",
+          "support_oppose": "S",
+          "amount": 729009.21
+        }
+      ],
+      "traceability_score": 0.9094,
+      "flags": [
+        "single_transfer_funded"
+      ],
+      "has_chain": true,
+      "source_url": "https://www.fec.gov/data/committee/C00490375/?cycle=2024",
+      "visibility_shares": {
+        "disclosed": 0.9094,
+        "inferable": 0.0,
+        "unwalked": 0.0,
+        "dark": 0.0906
       }
     },
     {
@@ -757,18 +757,18 @@
           "amount": 177032.83
         }
       ],
-      "traceability_score": 0.5445,
+      "traceability_score": 0.9587,
       "flags": [
-        "dead_end_dark",
-        "shell_cluster"
+        "shell_cluster",
+        "single_transfer_funded"
       ],
       "has_chain": true,
       "source_url": "https://www.fec.gov/data/committee/C00530766/?cycle=2024",
       "visibility_shares": {
-        "disclosed": 0.5445,
+        "disclosed": 0.9587,
         "inferable": 0.0,
         "unwalked": 0.0,
-        "dark": 0.4555
+        "dark": 0.0413
       }
     },
     {
@@ -784,17 +784,17 @@
           "amount": 350094.27
         }
       ],
-      "traceability_score": 0.6569,
+      "traceability_score": 0.7009,
       "flags": [
         "dead_end_dark"
       ],
       "has_chain": true,
       "source_url": "https://www.fec.gov/data/committee/C00606962/?cycle=2024",
       "visibility_shares": {
-        "disclosed": 0.6569,
+        "disclosed": 0.7009,
         "inferable": 0.0,
         "unwalked": 0.0,
-        "dark": 0.3431
+        "dark": 0.2991
       }
     },
     {
@@ -834,17 +834,17 @@
           "amount": 326313.31
         }
       ],
-      "traceability_score": 0.2078,
+      "traceability_score": 0.2167,
       "flags": [
         "dead_end_dark"
       ],
       "has_chain": true,
       "source_url": "https://www.fec.gov/data/committee/C00685693/?cycle=2024",
       "visibility_shares": {
-        "disclosed": 0.2078,
+        "disclosed": 0.2167,
         "inferable": 0.0,
         "unwalked": 0.0319,
-        "dark": 0.7603
+        "dark": 0.7513
       }
     },
     {
@@ -938,7 +938,7 @@
           "amount": 244327.86
         }
       ],
-      "traceability_score": 0.2069,
+      "traceability_score": 0.207,
       "flags": [
         "dead_end_dark",
         "shell_cluster"
@@ -946,10 +946,10 @@
       "has_chain": true,
       "source_url": "https://www.fec.gov/data/committee/C00738674/?cycle=2024",
       "visibility_shares": {
-        "disclosed": 0.2069,
+        "disclosed": 0.207,
         "inferable": 0.0,
         "unwalked": 0.0029,
-        "dark": 0.7902
+        "dark": 0.7901
       }
     },
     {
@@ -1001,17 +1001,17 @@
           "amount": 102050.36
         }
       ],
-      "traceability_score": 0.1977,
+      "traceability_score": 0.3705,
       "flags": [
         "dead_end_dark"
       ],
       "has_chain": true,
       "source_url": "https://www.fec.gov/data/committee/C00890053/?cycle=2024",
       "visibility_shares": {
-        "disclosed": 0.1977,
+        "disclosed": 0.3705,
         "inferable": 0.0,
-        "unwalked": 0.0002,
-        "dark": 0.8021
+        "unwalked": 0.0004,
+        "dark": 0.6291
       }
     },
     {
@@ -1190,41 +1190,15 @@
           "amount": 121161.65
         }
       ],
-      "traceability_score": 0.8505,
+      "traceability_score": 0.8506,
       "flags": [],
       "has_chain": true,
       "source_url": "https://www.fec.gov/data/committee/C00689745/?cycle=2024",
       "visibility_shares": {
-        "disclosed": 0.8505,
+        "disclosed": 0.8506,
         "inferable": 0.0,
         "unwalked": 0.0402,
         "dark": 0.1093
-      }
-    },
-    {
-      "entity_id": "C00761064",
-      "name": "API PA VOTES",
-      "committee_type": "O",
-      "committee_type_label": "Super PAC",
-      "total": 121122.9,
-      "by_candidate": [
-        {
-          "candidate_id": "S6PA00217",
-          "support_oppose": "S",
-          "amount": 121122.9
-        }
-      ],
-      "traceability_score": 0.5996,
-      "flags": [
-        "dead_end_dark"
-      ],
-      "has_chain": true,
-      "source_url": "https://www.fec.gov/data/committee/C00761064/?cycle=2024",
-      "visibility_shares": {
-        "disclosed": 0.5996,
-        "inferable": 0.0,
-        "unwalked": 0.0,
-        "dark": 0.4004
       }
     },
     {
@@ -1273,6 +1247,32 @@
         "inferable": 0.0,
         "unwalked": 0.0,
         "dark": 0.0327
+      }
+    },
+    {
+      "entity_id": "C00761064",
+      "name": "API PA VOTES",
+      "committee_type": "O",
+      "committee_type_label": "Super PAC",
+      "total": 110126.17,
+      "by_candidate": [
+        {
+          "candidate_id": "S6PA00217",
+          "support_oppose": "S",
+          "amount": 110126.17
+        }
+      ],
+      "traceability_score": 0.6,
+      "flags": [
+        "dead_end_dark"
+      ],
+      "has_chain": true,
+      "source_url": "https://www.fec.gov/data/committee/C00761064/?cycle=2024",
+      "visibility_shares": {
+        "disclosed": 0.6,
+        "inferable": 0.0,
+        "unwalked": 0.0,
+        "dark": 0.3999
       }
     },
     {
@@ -1390,30 +1390,6 @@
       }
     },
     {
-      "entity_id": "C00821611",
-      "name": "ASIAN AMERICANS FOR CHANGE FUND",
-      "committee_type": "O",
-      "committee_type_label": "Super PAC",
-      "total": 57683.0,
-      "by_candidate": [
-        {
-          "candidate_id": "S6PA00217",
-          "support_oppose": "S",
-          "amount": 57683.0
-        }
-      ],
-      "traceability_score": 1.0,
-      "flags": [],
-      "has_chain": true,
-      "source_url": "https://www.fec.gov/data/committee/C00821611/?cycle=2024",
-      "visibility_shares": {
-        "disclosed": 1.0,
-        "inferable": 0.0,
-        "unwalked": 0.0,
-        "dark": 0.0
-      }
-    },
-    {
       "entity_id": "C00826776",
       "name": "FRONTIERS OF FREEDOM ACTION, INC.",
       "committee_type": "O",
@@ -1481,6 +1457,30 @@
       "flags": [],
       "has_chain": false,
       "source_url": "https://www.fec.gov/data/committee/C90022757/?cycle=2024"
+    },
+    {
+      "entity_id": "C00821611",
+      "name": "ASIAN AMERICANS FOR CHANGE FUND",
+      "committee_type": "O",
+      "committee_type_label": "Super PAC",
+      "total": 32683.0,
+      "by_candidate": [
+        {
+          "candidate_id": "S6PA00217",
+          "support_oppose": "S",
+          "amount": 32683.0
+        }
+      ],
+      "traceability_score": 1.0,
+      "flags": [],
+      "has_chain": true,
+      "source_url": "https://www.fec.gov/data/committee/C00821611/?cycle=2024",
+      "visibility_shares": {
+        "disclosed": 1.0,
+        "inferable": 0.0,
+        "unwalked": 0.0,
+        "dark": 0.0
+      }
     },
     {
       "entity_id": "C00828608",
@@ -1815,17 +1815,17 @@
           "amount": 10000.0
         }
       ],
-      "traceability_score": 0.7209,
+      "traceability_score": 0.729,
       "flags": [
         "dead_end_dark"
       ],
       "has_chain": true,
       "source_url": "https://www.fec.gov/data/committee/C00747998/?cycle=2024",
       "visibility_shares": {
-        "disclosed": 0.7209,
+        "disclosed": 0.729,
         "inferable": 0.0,
         "unwalked": 0.0004,
-        "dark": 0.2787
+        "dark": 0.2706
       }
     },
     {
@@ -2384,17 +2384,17 @@
           "amount": 546.42
         }
       ],
-      "traceability_score": 0.5252,
+      "traceability_score": 0.5253,
       "flags": [
         "dead_end_dark"
       ],
       "has_chain": true,
       "source_url": "https://www.fec.gov/data/committee/C00678839/?cycle=2024",
       "visibility_shares": {
-        "disclosed": 0.5252,
+        "disclosed": 0.5253,
         "inferable": 0.0,
         "unwalked": 0.0,
-        "dark": 0.4748
+        "dark": 0.4747
       }
     },
     {
@@ -2410,7 +2410,7 @@
           "amount": 495.6
         }
       ],
-      "traceability_score": 0.1245,
+      "traceability_score": 0.131,
       "flags": [
         "dead_end_dark",
         "shell_cluster"
@@ -2418,10 +2418,10 @@
       "has_chain": true,
       "source_url": "https://www.fec.gov/data/committee/C00802389/?cycle=2024",
       "visibility_shares": {
-        "disclosed": 0.1245,
+        "disclosed": 0.131,
         "inferable": 0.0,
         "unwalked": 0.0,
-        "dark": 0.8755
+        "dark": 0.869
       }
     },
     {
@@ -2437,15 +2437,15 @@
           "amount": 223.5
         }
       ],
-      "traceability_score": 0.9036,
+      "traceability_score": 0.904,
       "flags": [],
       "has_chain": true,
       "source_url": "https://www.fec.gov/data/committee/C00418897/?cycle=2024",
       "visibility_shares": {
-        "disclosed": 0.9036,
+        "disclosed": 0.904,
         "inferable": 0.0,
         "unwalked": 0.0237,
-        "dark": 0.0728
+        "dark": 0.0724
       }
     },
     {
@@ -2554,13 +2554,13 @@
     }
   ],
   "traceability": {
-    "score": 0.7211,
-    "outside_total": 235672449.27,
-    "traced_to_individuals": 169943228.96,
+    "score": 0.7267,
+    "outside_total": 233396761.46,
+    "traced_to_individuals": 169612612.38,
     "inferable": 0.0,
-    "unwalked": 1855716.17,
-    "dark": 63873504.14,
-    "method": "Preliminary. Every independent-expenditure dollar reported against a candidate in this race ($235,672,449 across both candidates, support and oppose) is weighted by the disclosed share of the spending committee's own receipts, as computed by the chain walk in chains/<committee>.json: the share of its money that traces back, through any number of committee-to-committee transfers, to a named individual on an FEC filing or to a named business or union giving from its own treasury. The remainder is dark — it stopped at an LLC, trust, advocacy nonprofit or unclassifiable organization whose own funding is not on file (classified by name; no IRS lookup). $532,391 was spent by Form 5 filers (organizations that are not registered committees and report no receipts); those dollars are counted as dark. $1,855,716 reached an FEC-registered committee whose receipts lie outside the loaded 2,000-committee neighborhood (or past the hop cap) and was not walked further; those dollars are counted as 'not walked' — neither disclosed nor dark — and do not raise the score. Super PAC spending is itself disclosed; this score is about the layer behind the spender, not the spender. Nothing is marked inferable in V0.",
+    "unwalked": 1855774.03,
+    "dark": 61928375.05,
+    "method": "Preliminary. Every independent-expenditure dollar reported against a candidate in this race ($233,396,761 across both candidates, support and oppose) is weighted by the disclosed share of the spending committee's own receipts, as computed by the chain walk in chains/<committee>.json: the share of its money that traces back, through any number of committee-to-committee transfers, to a named individual on an FEC filing or to a named business or union giving from its own treasury. The remainder is dark — it stopped at an LLC, trust, advocacy nonprofit or unclassifiable organization whose own funding is not on file (classified by name; no IRS lookup). $532,391 was spent by Form 5 filers (organizations that are not registered committees and report no receipts); those dollars are counted as dark. $1,855,774 reached an FEC-registered committee whose receipts lie outside the loaded 2,000-committee neighborhood (or past the hop cap) and was not walked further; those dollars are counted as 'not walked' — neither disclosed nor dark — and do not raise the score. Super PAC spending is itself disclosed; this score is about the layer behind the spender, not the spender. Nothing is marked inferable in V0.",
     "preliminary": true
   },
   "notes": [

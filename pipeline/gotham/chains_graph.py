@@ -12,7 +12,7 @@ from dataclasses import dataclass, field
 import duckdb
 
 from .config import KNOWN_CONDUITS
-from .orgs import classify_organization, organization_visibility
+from .orgs import classify_organization, committee_name_index, match_committee, organization_visibility
 from .util import individual_id, organization_id
 
 # Sched A codes on the individuals side that are receipts (not refunds / conduit pass-through)
@@ -95,8 +95,18 @@ def build_graph(con: duckdb.DuckDBPyConnection) -> Graph:
         GROUP BY CMTE_ID, NAME, ZIP5, is_org
         """
     ).fetchall()
+    by_name = committee_name_index(g.committee_name.items())
     for cmte, name, zip5, is_org, amt, n, tts, first, last in rows:
-        if is_org:
+        if is_org and (cid := match_committee(name, by_name)) and cid != cmte:
+            # A committee reported on Schedule A as ORG. The sender's own filing is already a transfer edge for
+            # this pair in most cases, and this is the receiver-side copy of the same money; otherwise it is the
+            # only record of the transfer and joins the graph as a committee edge.
+            if any(e.counterparty == cid for e in g.inbound.get(cmte, ())):
+                continue
+            edge = Edge(
+                cid, g.committee_name[cid], "committee", round(amt, 2), int(n), tuple(tts), _date(first), _date(last)
+            )
+        elif is_org:
             edge = Edge(
                 organization_id(name),
                 name,

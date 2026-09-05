@@ -44,6 +44,22 @@ def test_schedule_e_frame_normalizes_and_drops_nonpositive() -> None:
     assert first["pdf_url"] == "https://docquery.fec.gov/cgi-bin/fecimg/?202410019000000001"
 
 
+def test_schedule_e_frame_keeps_latest_filing_per_transaction() -> None:
+    out = schedule_e_frame(
+        [
+            _api_row(file_number=1800000, expenditure_date="2024-10-01"),
+            _api_row(file_number=1850000, expenditure_date="2024-10-03", expenditure_description="TV (revised)"),
+            # same tran_id reused for a different payee/amount: a distinct transaction, not a re-report
+            _api_row(file_number=1800000, payee_name="Mail Co", expenditure_amount=400.0),
+            _api_row(transaction_id=None, file_number=1800000),
+            _api_row(transaction_id=None, file_number=1850000),
+        ]
+    )
+    assert len(out) == 4 and out["expenditure_amount"].sum() == 3400.0
+    kept = out[(out["tran_id"] == "SE1") & (out["payee_name"] == "Media LLC")].iloc[0]
+    assert kept["file_num"] == "1850000" and kept["purpose"] == "TV (revised)"
+
+
 def test_iter_schedule_e_follows_keyset_pagination(monkeypatch) -> None:
     calls: list[dict] = []
     pages = [

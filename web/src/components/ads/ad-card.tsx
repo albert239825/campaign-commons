@@ -28,7 +28,19 @@ function Creative({ ad }: { ad: Ad }) {
 
 export const isVerified = (ad: Ad) => ad.verification?.status === "verified";
 
-export function AdCard({ ad, raceId, sponsorHasChain, candidateNames }: { ad: Ad; raceId: string; sponsorHasChain: boolean; candidateNames: Record<string, string> }) {
+export function AdCard({
+  ad,
+  raceId,
+  sponsorHasPage,
+  sponsorHasChain,
+  candidateNames,
+}: {
+  ad: Ad;
+  raceId: string;
+  sponsorHasPage: boolean;
+  sponsorHasChain: boolean;
+  candidateNames: Record<string, string>;
+}) {
   const conf = CONFIDENCE[ad.match_confidence];
   const targets = ad.candidate_ids.map((id) => candidateNames[id] ?? id);
   const verified = isVerified(ad);
@@ -50,8 +62,8 @@ export function AdCard({ ad, raceId, sponsorHasChain, candidateNames }: { ad: Ad
 
         <div className="flex flex-wrap gap-1">
           {verified ? (
-            <Chip tone="green" title="A person read the advertiser's legal name / FEC ID on adstransparency.google.com and matched it to this committee's fec.gov record">
-              paid-for-by verified by hand
+            <Chip tone="green" title="A person matched the advertiser's legal name on adstransparency.google.com to this committee's fec.gov record. Google's page shows the advertiser, not the ad's paid-for-by line.">
+              sponsor verified by hand
             </Chip>
           ) : (
             <Chip tone={conf.tone} title={conf.title}>
@@ -87,7 +99,7 @@ export function AdCard({ ad, raceId, sponsorHasChain, candidateNames }: { ad: Ad
             <SourceLink href={ad.creative_url} label="ad library record" />
             {fecEvidence && <SourceLink href={fecEvidence} label="fec.gov record" />}
           </span>
-          {ad.matched_entity_id && (
+          {ad.matched_entity_id && sponsorHasPage && (
             <span className="flex gap-3">
               <Link href={routes.entity(raceId, ad.matched_entity_id)} className="font-medium text-neutral-900 hover:underline">
                 Sponsor
@@ -96,9 +108,9 @@ export function AdCard({ ad, raceId, sponsorHasChain, candidateNames }: { ad: Ad
                 <Link
                   href={routes.chain(raceId, ad.matched_entity_id)}
                   className="font-medium text-neutral-900 hover:underline"
-                  title="The sponsor link on this card was checked by a person; follow it into the committee's funding chain"
+                  title="The advertiser-to-committee match on this card was checked by a person; follow it into the committee's funding chain"
                 >
-                  Verified paid-for-by → chain
+                  Verified sponsor → chain
                 </Link>
               )}
             </span>
