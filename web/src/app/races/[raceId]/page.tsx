@@ -10,9 +10,9 @@ import { FundingExplorer } from "@/components/ledger/funding-explorer";
 import { buildFundingViews } from "@/lib/funding-view";
 import { SpendersTable } from "@/components/ledger/spenders-table";
 import { FlagsLegend } from "@/components/ledger/flags-legend";
+import { StorySlideshow } from "@/components/ledger/story-slideshow";
 import { StoryCard } from "@/components/ledger/story-card";
 
-const START_HERE_COUNT = 5;
 const PARTY_NAMES: Record<Party, string> = {
   DEM: "Democratic Party",
   REP: "Republican Party",
@@ -31,7 +31,6 @@ export default async function RaceLedgerPage({ params }: { params: Promise<{ rac
   const ledger = getLedger(raceId);
   const allFlags = ledger.top_outside_spenders.flatMap((s) => s.flags);
   const stories = getStories(raceId);
-  const topStories = stories.stories.slice(0, START_HERE_COUNT);
   const parties = Array.from(new Set(race.candidates.map((c) => c.party)));
   const officeName = { S: "US Senate", H: "US House", P: "US President" }[race.office];
   const stateName = race.label.split("·")[0].trim();
@@ -91,7 +90,7 @@ export default async function RaceLedgerPage({ params }: { params: Promise<{ rac
 
       <RaceSections
         funding={<FundingExplorer views={buildFundingViews(ledger)} raceId={raceId} />}
-        stories={topStories.length > 0 ? (
+        stories={stories.stories.length > 0 ? (
           <Card
             title="Funding highlights"
             action={
@@ -101,14 +100,11 @@ export default async function RaceLedgerPage({ params }: { params: Promise<{ rac
             }
           >
             <p className="mb-3 text-xs text-neutral-500">
-              Spenders ranked by the pipeline (amount, dark share, structural flags). The text is templated from FEC filings, not written by a person;
-              each card says whether a human has checked it.
+              Funding summaries drawn from FEC filings. Titles and narratives are generated from the records; follow the source links to explore the details.
             </p>
-            <div className="race-stories">
-              {topStories.map((s) => (
-                <StoryCard key={s.story_id} story={s} raceId={raceId} hasChain={hasChain(raceId, s.root_entity_id)} />
-              ))}
-            </div>
+            <StorySlideshow slides={stories.stories.map((s) => (
+              <StoryCard key={s.story_id} story={s} raceId={raceId} hasChain={hasChain(raceId, s.root_entity_id)} full />
+            ))} />
           </Card>
         ) : <Card title="Funding highlights"><p>No stories are available for this race yet.</p></Card>}
         spenders={

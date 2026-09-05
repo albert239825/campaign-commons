@@ -565,3 +565,21 @@ body:has(.race-dashboard) :is(a, button):focus-visible { outline: 2px solid curr
   .race-section-tabs button { font-size: 13px; }
   .race-section-panel { grid-column: 1; grid-row: auto; }
 }
+
+.story-slideshow { min-width: 0; }
+.story-slideshow-controls { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px; margin-bottom: 20px; font-size: 13px; }
+.story-slideshow-controls p { color: #6f6d69; font-variant-numeric: tabular-nums; }
+.story-slideshow-controls > div { display: flex; gap: 12px; }
+.story-slideshow-controls button { min-height: 44px; padding: 10px 16px; border: 1px solid var(--race-rule); cursor: pointer; }
+.story-slideshow-controls button:hover:not(:disabled) { background: #e9e5df; }
+.story-slideshow-controls button:disabled { opacity: .35; cursor: default; }
+.story-slideshow-track { display: flex; overflow-x: auto; scroll-snap-type: x mandatory; overscroll-behavior-x: contain; scrollbar-width: thin; scrollbar-color: #b7ab98 #e9e5df; }
+.story-slideshow-track:focus-visible { outline: 2px solid currentColor; outline-offset: 4px; }
+.story-slide { flex: 0 0 100%; min-width: 0; scroll-snap-align: start; scroll-snap-stop: always; }
+.story-slide > article { height: 100%; padding: clamp(24px, 4vw, 48px); gap: 28px; border: 0; border-radius: 0; background: #e9e5df; }
+.story-slide h3 { max-width: 850px; font-size: clamp(26px, 3vw, 40px); font-weight: 400; line-height: 1.15; letter-spacing: -.035em; }
+.story-slide > article > .tabular-nums { font-size: clamp(36px, 4vw, 56px); font-weight: 400; line-height: 1.1; letter-spacing: -.04em; }
+.story-slide > article > .tabular-nums > span:last-child { display: block; margin: 10px 0 0; font-size: 13px; letter-spacing: 0; }
+.story-slide p { max-width: 850px; font-size: 15px; line-height: 1.8; }
+.story-slide footer { border-color: var(--race-rule); padding-top: 24px; font-size: 13px; }
+.story-slideshow-hint { margin-top: 16px; font-size: 12px; color: #6f6d69; }

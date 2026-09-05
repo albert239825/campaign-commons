@@ -23,11 +23,7 @@ export function VerificationChip({ story }: { story: Story }) {
       </Chip>
     );
   }
-  return (
-    <Chip tone="amber" title="Ranked and phrased by the pipeline from FEC filings; no human has checked the chain yet">
-      Unverified — pipeline-generated
-    </Chip>
-  );
+  return null;
 }
 
 export function StoryCard({ story, raceId, hasChain, full = false }: { story: Story; raceId: string; hasChain: boolean; full?: boolean }) {
