@@ -12,3 +12,6 @@ Undecided. When one is decided: add a `D-nn` row to [DECISIONS.md](DECISIONS.md)
 | Q-06 | Public deploy. | Vercel from `web/` on `main`, no env vars. Albert setting up. | Albert |
 | Q-07 | Critic P2s C-37..C-43 (edge colour semantics, design-doc drift, unused contract fields, donor-key dedupe, IE amount semantics, name normalisation). | Do before or after UI work? | critic r2 |
 | Q-08 | Whiteboard feature set and data model changes. | Pending Albert's whiteboard notes; map against `contracts/src/schemas.ts`. | Albert |
+| Q-09 | Outflows → media: show a spender's IE payees (vendors) grouped by vendor/medium/target with fec.gov links, and the spender's Google creatives beside them, adjacent by date (no buy→creative claim). Extend the chain graph rightward: spender → `vendor` terminal nodes → dashed targeting edge. | Schedule E rows already carry `payee_name`, `purpose`, dissemination date. ~1 session total. Brainstorm only. | Albert |
+| Q-10 | Vendor name normalisation (same firm, several spellings). | Reuse the donor-name normaliser (C-43) or a small alias table. | master |
+| Q-11 | Pull Schedule B for outside spenders (non-IE spending: consultants, overhead)? | IE rows cover the large majority of super PAC outflows; start without B. | master |
