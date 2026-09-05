@@ -340,9 +340,20 @@ export const FocusKindSchema = z.enum([
   "labor", // union PAC
 ]);
 
-export const IssueFocusSchema = z.object({
-  kind: FocusKindSchema,
-  issue_ids: z.array(IssueIdSchema).max(3), // first is primary; empty for general_partisan / candidate_aligned
+/** kinds that exist FOR an issue: must name at least one */
+export const IssueFocusKindSchema = z.enum(["single_issue", "multi_issue"]);
+/** kinds whose focus is not an issue (a party, a candidate, a sector); issue tags optional */
+export const NonIssueFocusKindSchema = z.enum(["general_partisan", "candidate_aligned", "business_trade", "labor"]);
+
+/** `{kind, issue_ids}` with the kind-dependent minimum enforced; spread into the row shapes below. */
+function focusVariants<T extends z.ZodRawShape>(fields: T) {
+  return z.union([
+    z.object({ kind: IssueFocusKindSchema, issue_ids: z.array(IssueIdSchema).min(1).max(3), ...fields }), // first is primary
+    z.object({ kind: NonIssueFocusKindSchema, issue_ids: z.array(IssueIdSchema).max(3), ...fields }),
+  ]);
+}
+
+export const IssueFocusSchema = focusVariants({
   /** one sentence in the org's own words (quote or close paraphrase); never our characterization */
   description: z.string(),
   basis: BasisSchema, // verified (org site / Wayback / FEC Form 1 connected org) with source_urls
@@ -414,10 +425,9 @@ export const TerminusReasonSchema = z.enum([
  */
 export const ChainNodeKindSchema = z.enum([...EntityKindSchema.options, "vendor", "ad", "candidate"]);
 
-export const ChainNodeSchema = z.object({
+const chainNodeFields = {
   id: z.string(),
   name: z.string(),
-  kind: ChainNodeKindSchema,
   committee_type: CommitteeTypeSchema.nullable(),
   /** hops from the root on either side; 0 = the root spender. `side` says which direction. */
   depth: z.number().int().min(0),
@@ -436,8 +446,23 @@ export const ChainNodeSchema = z.object({
   medium: MediumSchema.optional(), // kind === "vendor": dominant medium
   thumbnail_path: z.string().nullable().optional(), // kind === "ad": cached creative under web/public
   href: z.string().optional(), // in-app page for this node (entity / vendor / ad-card anchor / dossier)
-  basis: BasisSchema.optional(), // how the amount on a spending-side node was derived (e.g. ad spend midpoint)
-});
+};
+
+/** Spending-side kinds (vendor / ad / candidate) are derived, so they must say how (`basis`); funding-side nodes are read off
+ *  filings and may omit it. */
+export const ChainNodeSchema = z.union([
+  z.object({
+    ...chainNodeFields,
+    kind: z.enum(["vendor", "ad", "candidate"]),
+    side: z.literal("out"),
+    basis: BasisSchema, // vendor: payee grouping; ad: spend-range midpoint; candidate: what the dollars aimed at them are
+  }),
+  z.object({
+    ...chainNodeFields,
+    kind: EntityKindSchema,
+    basis: BasisSchema.optional(), // e.g. an out-side aggregate of folded ads
+  }),
+]);
 
 export const ChainEdgeKindSchema = z.enum([
   "money", // dollars move from → to (transfer, contribution, IE payment to a vendor)
@@ -739,6 +764,9 @@ export const VendorIndexSchema = z.object({
   vendors: z.array(VendorSummarySchema), // sorted by total desc
   total: z.number(), // sum over vendors; must equal the race's outside total
   by_medium: z.array(z.object({ medium: MediumSchema, amount: z.number(), count: z.number().int() })),
+  /** how every `medium` in this race (IE rows, vendors, by_medium) was classified from `purpose` — one rule for the stage;
+   *  the UI renders it wherever a medium is shown */
+  medium_basis: BasisSchema,
   notes: z.array(z.string()),
 });
 
@@ -764,15 +792,18 @@ export const AdIssueSpendingSchema = z.object({
   basis: BasisSchema, // verified — the tags are human; rule states midpoint use and coverage
 });
 
-export const SpenderFocusSpendingSchema = z.object({
-  kind: FocusKindSchema,
-  issue_id: IssueIdSchema.nullable(), // null for kinds with no issue (general_partisan, candidate_aligned)
+const spenderFocusSpendingFields = {
   primary_only: z.boolean(), // true: counts a spender under its primary issue only; false: under every tag (overlaps)
   amount: z.number(), // outside dollars in this race spent by spenders with this focus
   spender_ids: z.array(z.string()),
   traceability_score: z.number().min(0).max(1).nullable(), // dollar-weighted over these spenders' chains
   dark_share: z.number().min(0).max(1).nullable(),
-});
+};
+
+export const SpenderFocusSpendingSchema = z.union([
+  z.object({ kind: IssueFocusKindSchema, issue_id: IssueIdSchema, ...spenderFocusSpendingFields }), // one bucket per issue
+  z.object({ kind: NonIssueFocusKindSchema, issue_id: IssueIdSchema.nullable(), ...spenderFocusSpendingFields }), // null = the kind itself is the bucket
+]);
 
 export const IssueSpendingSchema = z.object({
   race_id: z.string(),
@@ -826,11 +857,9 @@ const HandFileBase = z.object({
   method: z.string(),
 });
 
-export const HandIssueFocusRowSchema = z.object({
+export const HandIssueFocusRowSchema = focusVariants({
   entity_id: z.string(), // FEC committee id, or org:<NAME> chain-node id for a non-committee funder
   name: z.string(), // as filed, for humans reading the file
-  kind: FocusKindSchema,
-  issue_ids: z.array(IssueIdSchema).max(3), // first is primary
   description: z.string(), // the org's own words
   source_urls: z.array(z.string().url()).min(1), // org site / Wayback / FEC Form 1
   quote: z.string().nullable(), // verbatim excerpt supporting `description`

@@ -190,22 +190,18 @@
         "by_spender_focus": {
           "type": "array",
           "items": {
-            "type": "object",
-            "properties": {
-              "kind": {
-                "type": "string",
-                "enum": [
-                  "single_issue",
-                  "multi_issue",
-                  "general_partisan",
-                  "candidate_aligned",
-                  "business_trade",
-                  "labor"
-                ]
-              },
-              "issue_id": {
-                "anyOf": [
-                  {
+            "anyOf": [
+              {
+                "type": "object",
+                "properties": {
+                  "kind": {
+                    "type": "string",
+                    "enum": [
+                      "single_issue",
+                      "multi_issue"
+                    ]
+                  },
+                  "issue_id": {
                     "type": "string",
                     "enum": [
                       "healthcare",
@@ -220,58 +216,137 @@
                       "labor_trade"
                     ]
                   },
-                  {
-                    "type": "null"
-                  }
-                ]
-              },
-              "primary_only": {
-                "type": "boolean"
-              },
-              "amount": {
-                "type": "number"
-              },
-              "spender_ids": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              },
-              "traceability_score": {
-                "anyOf": [
-                  {
-                    "type": "number",
-                    "minimum": 0,
-                    "maximum": 1
+                  "primary_only": {
+                    "type": "boolean"
                   },
-                  {
-                    "type": "null"
-                  }
-                ]
-              },
-              "dark_share": {
-                "anyOf": [
-                  {
-                    "type": "number",
-                    "minimum": 0,
-                    "maximum": 1
+                  "amount": {
+                    "type": "number"
                   },
-                  {
-                    "type": "null"
+                  "spender_ids": {
+                    "type": "array",
+                    "items": {
+                      "type": "string"
+                    }
+                  },
+                  "traceability_score": {
+                    "anyOf": [
+                      {
+                        "type": "number",
+                        "minimum": 0,
+                        "maximum": 1
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ]
+                  },
+                  "dark_share": {
+                    "anyOf": [
+                      {
+                        "type": "number",
+                        "minimum": 0,
+                        "maximum": 1
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ]
                   }
-                ]
+                },
+                "required": [
+                  "kind",
+                  "issue_id",
+                  "primary_only",
+                  "amount",
+                  "spender_ids",
+                  "traceability_score",
+                  "dark_share"
+                ],
+                "additionalProperties": false
+              },
+              {
+                "type": "object",
+                "properties": {
+                  "kind": {
+                    "type": "string",
+                    "enum": [
+                      "general_partisan",
+                      "candidate_aligned",
+                      "business_trade",
+                      "labor"
+                    ]
+                  },
+                  "issue_id": {
+                    "anyOf": [
+                      {
+                        "type": "string",
+                        "enum": [
+                          "healthcare",
+                          "energy_climate",
+                          "defense",
+                          "crypto_fintech",
+                          "immigration",
+                          "abortion",
+                          "guns",
+                          "tax_budget",
+                          "tech_ai",
+                          "labor_trade"
+                        ]
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ]
+                  },
+                  "primary_only": {
+                    "type": "boolean"
+                  },
+                  "amount": {
+                    "type": "number"
+                  },
+                  "spender_ids": {
+                    "type": "array",
+                    "items": {
+                      "type": "string"
+                    }
+                  },
+                  "traceability_score": {
+                    "anyOf": [
+                      {
+                        "type": "number",
+                        "minimum": 0,
+                        "maximum": 1
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ]
+                  },
+                  "dark_share": {
+                    "anyOf": [
+                      {
+                        "type": "number",
+                        "minimum": 0,
+                        "maximum": 1
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ]
+                  }
+                },
+                "required": [
+                  "kind",
+                  "issue_id",
+                  "primary_only",
+                  "amount",
+                  "spender_ids",
+                  "traceability_score",
+                  "dark_share"
+                ],
+                "additionalProperties": false
               }
-            },
-            "required": [
-              "kind",
-              "issue_id",
-              "primary_only",
-              "amount",
-              "spender_ids",
-              "traceability_score",
-              "dark_share"
-            ],
-            "additionalProperties": false
+            ]
           }
         },
         "coverage": {

@@ -714,134 +714,263 @@
           }
         },
         "issue_focus": {
-          "type": "object",
-          "properties": {
-            "kind": {
-              "type": "string",
-              "enum": [
-                "single_issue",
-                "multi_issue",
-                "general_partisan",
-                "candidate_aligned",
-                "business_trade",
-                "labor"
-              ]
-            },
-            "issue_ids": {
-              "type": "array",
-              "items": {
-                "type": "string",
-                "enum": [
-                  "healthcare",
-                  "energy_climate",
-                  "defense",
-                  "crypto_fintech",
-                  "immigration",
-                  "abortion",
-                  "guns",
-                  "tax_budget",
-                  "tech_ai",
-                  "labor_trade"
-                ]
-              },
-              "maxItems": 3
-            },
-            "description": {
-              "type": "string"
-            },
-            "basis": {
-              "anyOf": [
-                {
-                  "type": "object",
-                  "properties": {
-                    "basis": {
-                      "type": "string",
-                      "const": "verified"
-                    },
-                    "rule": {
-                      "type": "string",
-                      "minLength": 1
-                    },
-                    "source_urls": {
-                      "type": "array",
-                      "items": {
-                        "type": "string",
-                        "format": "uri"
-                      },
-                      "minItems": 1
-                    },
-                    "checked_by": {
-                      "type": "string",
-                      "minLength": 1
-                    },
-                    "checked_at": {
-                      "type": "string",
-                      "minLength": 1
-                    }
-                  },
-                  "required": [
-                    "basis",
-                    "rule",
-                    "source_urls",
-                    "checked_by",
-                    "checked_at"
-                  ],
-                  "additionalProperties": false
+          "anyOf": [
+            {
+              "type": "object",
+              "properties": {
+                "kind": {
+                  "type": "string",
+                  "enum": [
+                    "single_issue",
+                    "multi_issue"
+                  ]
                 },
-                {
-                  "type": "object",
-                  "properties": {
-                    "basis": {
-                      "type": "string",
-                      "enum": [
-                        "filed",
-                        "inferred",
-                        "adjacent"
-                      ]
-                    },
-                    "rule": {
-                      "type": "string",
-                      "minLength": 1
-                    },
-                    "source_urls": {
-                      "type": "array",
-                      "items": {
-                        "type": "string",
-                        "format": "uri"
-                      }
-                    },
-                    "checked_by": {
-                      "type": [
-                        "string",
-                        "null"
-                      ]
-                    },
-                    "checked_at": {
-                      "type": [
-                        "string",
-                        "null"
-                      ]
-                    }
+                "issue_ids": {
+                  "type": "array",
+                  "items": {
+                    "type": "string",
+                    "enum": [
+                      "healthcare",
+                      "energy_climate",
+                      "defense",
+                      "crypto_fintech",
+                      "immigration",
+                      "abortion",
+                      "guns",
+                      "tax_budget",
+                      "tech_ai",
+                      "labor_trade"
+                    ]
                   },
-                  "required": [
-                    "basis",
-                    "rule",
-                    "source_urls",
-                    "checked_by",
-                    "checked_at"
-                  ],
-                  "additionalProperties": false
+                  "minItems": 1,
+                  "maxItems": 3
+                },
+                "description": {
+                  "type": "string"
+                },
+                "basis": {
+                  "anyOf": [
+                    {
+                      "type": "object",
+                      "properties": {
+                        "basis": {
+                          "type": "string",
+                          "const": "verified"
+                        },
+                        "rule": {
+                          "type": "string",
+                          "minLength": 1
+                        },
+                        "source_urls": {
+                          "type": "array",
+                          "items": {
+                            "type": "string",
+                            "format": "uri"
+                          },
+                          "minItems": 1
+                        },
+                        "checked_by": {
+                          "type": "string",
+                          "minLength": 1
+                        },
+                        "checked_at": {
+                          "type": "string",
+                          "minLength": 1
+                        }
+                      },
+                      "required": [
+                        "basis",
+                        "rule",
+                        "source_urls",
+                        "checked_by",
+                        "checked_at"
+                      ],
+                      "additionalProperties": false
+                    },
+                    {
+                      "type": "object",
+                      "properties": {
+                        "basis": {
+                          "type": "string",
+                          "enum": [
+                            "filed",
+                            "inferred",
+                            "adjacent"
+                          ]
+                        },
+                        "rule": {
+                          "type": "string",
+                          "minLength": 1
+                        },
+                        "source_urls": {
+                          "type": "array",
+                          "items": {
+                            "type": "string",
+                            "format": "uri"
+                          }
+                        },
+                        "checked_by": {
+                          "type": [
+                            "string",
+                            "null"
+                          ]
+                        },
+                        "checked_at": {
+                          "type": [
+                            "string",
+                            "null"
+                          ]
+                        }
+                      },
+                      "required": [
+                        "basis",
+                        "rule",
+                        "source_urls",
+                        "checked_by",
+                        "checked_at"
+                      ],
+                      "additionalProperties": false
+                    }
+                  ]
                 }
-              ]
+              },
+              "required": [
+                "kind",
+                "issue_ids",
+                "description",
+                "basis"
+              ],
+              "additionalProperties": false
+            },
+            {
+              "type": "object",
+              "properties": {
+                "kind": {
+                  "type": "string",
+                  "enum": [
+                    "general_partisan",
+                    "candidate_aligned",
+                    "business_trade",
+                    "labor"
+                  ]
+                },
+                "issue_ids": {
+                  "type": "array",
+                  "items": {
+                    "type": "string",
+                    "enum": [
+                      "healthcare",
+                      "energy_climate",
+                      "defense",
+                      "crypto_fintech",
+                      "immigration",
+                      "abortion",
+                      "guns",
+                      "tax_budget",
+                      "tech_ai",
+                      "labor_trade"
+                    ]
+                  },
+                  "maxItems": 3
+                },
+                "description": {
+                  "type": "string"
+                },
+                "basis": {
+                  "anyOf": [
+                    {
+                      "type": "object",
+                      "properties": {
+                        "basis": {
+                          "type": "string",
+                          "const": "verified"
+                        },
+                        "rule": {
+                          "type": "string",
+                          "minLength": 1
+                        },
+                        "source_urls": {
+                          "type": "array",
+                          "items": {
+                            "type": "string",
+                            "format": "uri"
+                          },
+                          "minItems": 1
+                        },
+                        "checked_by": {
+                          "type": "string",
+                          "minLength": 1
+                        },
+                        "checked_at": {
+                          "type": "string",
+                          "minLength": 1
+                        }
+                      },
+                      "required": [
+                        "basis",
+                        "rule",
+                        "source_urls",
+                        "checked_by",
+                        "checked_at"
+                      ],
+                      "additionalProperties": false
+                    },
+                    {
+                      "type": "object",
+                      "properties": {
+                        "basis": {
+                          "type": "string",
+                          "enum": [
+                            "filed",
+                            "inferred",
+                            "adjacent"
+                          ]
+                        },
+                        "rule": {
+                          "type": "string",
+                          "minLength": 1
+                        },
+                        "source_urls": {
+                          "type": "array",
+                          "items": {
+                            "type": "string",
+                            "format": "uri"
+                          }
+                        },
+                        "checked_by": {
+                          "type": [
+                            "string",
+                            "null"
+                          ]
+                        },
+                        "checked_at": {
+                          "type": [
+                            "string",
+                            "null"
+                          ]
+                        }
+                      },
+                      "required": [
+                        "basis",
+                        "rule",
+                        "source_urls",
+                        "checked_by",
+                        "checked_at"
+                      ],
+                      "additionalProperties": false
+                    }
+                  ]
+                }
+              },
+              "required": [
+                "kind",
+                "issue_ids",
+                "description",
+                "basis"
+              ],
+              "additionalProperties": false
             }
-          },
-          "required": [
-            "kind",
-            "issue_ids",
-            "description",
-            "basis"
-          ],
-          "additionalProperties": false
+          ]
         }
       },
       "required": [
