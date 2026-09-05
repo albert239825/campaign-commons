@@ -462,3 +462,26 @@ run of every Block 2 stage: 0 files changed.
 
 **Left open (P2).** C-58 wire size (server-render the ad cards, template the `rule` prose); C-59 duplicate `_date_range` and
 `visibility: "disclosed"` on out-side nodes (midpoint half is done).
+
+## 2026-09-06 ~03:30 — Per-ad pages: the chain walked backward from one creative (master)
+
+**What changed.** Albert's read of the Block 2 UI: "a little cluttered visually", and "each ad should have its own page so we
+can see the chain / graph going backward". New static route `/races/<race>/ads/<ad_id>` (500 pages in PA; 2,959 total, was
+2,459): creative large, Google ranges with the midpoint labelled, sponsor match and dark share (worded as the sponsor's funding,
+not the ad's), issue tags with their tagger, the full vendor-link list (medium, basis, rule, sources), and a `ChainDiagram` fed
+by `adFocusWire` — the sponsor's funding side plus only what touches this ad on the spending side. The wall card lost its vendor
+rule/source block (one line "Vendors in window: X (inferred), Y (adjacent)") and links to the page from the creative, the title
+and the footer; every other ad link in the app (entity thumbnails, chain "seen ads" strip, vendor page reverse links, chain ad
+nodes) now lands on the page instead of a `#anchor` in the 500-card wall. Assumptions text repeated on the page: vendor dollars
+filed, ad dollars a Google midpoint never added to them, link semantics per basis, donor dollars pooled, nothing reaches the
+candidate. D-72.
+
+**Challenge.** The chain files only carry the top 10 ads per sponsor as nodes (D-61 keeps the picture legible), so 368 of 500 ads
+had no graph to show. Options: emit every ad as a node and fold client-side (bigger files, and the spender page gets busier),
+or build the ad's out-side in the web layer from `Ad.vendor_links`, which already carries every basis, window and amount. Took
+the second; `ad-view.ts` mirrors `chains_out._ad_parent_edge` (strong link → hangs off the vendor with the midpoint; adjacent
+only → dotted zero-amount edge from the vendor plus a placement edge from the sponsor with the match basis). Two
+implementations of one rule is a maintenance risk, noted in D-72 for the next critic round.
+
+**Numbers.** Ads wall HTML 3.0 MB → 2.8 MB (the card is still dense; C-58 server-rendered compact cards stays open). Ad page
+~24 KB HTML + the sponsor's chain wire.

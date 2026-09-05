@@ -446,7 +446,7 @@ const chainNodeFields = {
   // spending-side extras
   medium: MediumSchema.optional(), // kind === "vendor": dominant medium
   thumbnail_path: z.string().nullable().optional(), // kind === "ad": cached creative under web/public
-  href: z.string().optional(), // in-app page for this node (entity / vendor / ad-card anchor / dossier)
+  href: z.string().optional(), // in-app page for this node (entity / vendor / ad page / dossier)
 };
 
 /** Spending-side kinds (vendor / ad / candidate) are derived, so they must say how (`basis`); funding-side nodes are read off

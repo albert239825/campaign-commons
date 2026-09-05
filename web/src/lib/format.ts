@@ -30,6 +30,7 @@ export const routes = {
   entity: (raceId: string, entityId: string) => `/races/${raceId}/entities/${entityId}`,
   chain: (raceId: string, entityId: string) => `/races/${raceId}/chains/${entityId}`,
   ads: (raceId: string) => `/races/${raceId}/ads`,
+  ad: (raceId: string, adId: string) => `/races/${raceId}/ads/${adId}`,
   vendors: (raceId: string) => `/races/${raceId}/vendors`,
   vendor: (raceId: string, vendorId: string) => `/races/${raceId}/vendors/${vendorId}`,
   stories: (raceId: string) => `/races/${raceId}/stories`,
