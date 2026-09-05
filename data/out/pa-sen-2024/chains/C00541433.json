@@ -1,0 +1,553 @@
+{
+  "root_entity_id": "C00541433",
+  "root_name": "HUNTER ACTION FUND (HAF)",
+  "race_id": "pa-sen-2024",
+  "generated_at": "2026-09-05T13:41:28+00:00",
+  "data_status": "real",
+  "nodes": [
+    {
+      "id": "C00541433",
+      "name": "HUNTER ACTION FUND (HAF)",
+      "kind": "committee",
+      "committee_type": "O",
+      "depth": 0,
+      "visibility": "disclosed",
+      "amount_in": 605333.0,
+      "is_terminus": false,
+      "terminus_reason": null,
+      "source_url": "https://www.fec.gov/data/committee/C00541433/?cycle=2024"
+    },
+    {
+      "id": "org:SAFARI_CLUB_INTERNATIONAL",
+      "name": "SAFARI CLUB INTERNATIONAL",
+      "kind": "organization",
+      "committee_type": null,
+      "depth": 1,
+      "visibility": "dark",
+      "amount_in": 139258.0,
+      "is_terminus": true,
+      "terminus_reason": "dark",
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00541433&two_year_transaction_period=2024&contributor_name=SAFARI+CLUB+INTERNATIONAL",
+      "organization_class": "unknown"
+    },
+    {
+      "id": "ind:ANDERSON_DENNIS|92817",
+      "name": "ANDERSON, DENNIS",
+      "kind": "individual",
+      "committee_type": null,
+      "depth": 1,
+      "visibility": "disclosed",
+      "amount_in": 75600.0,
+      "is_terminus": true,
+      "terminus_reason": "individual",
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00541433&two_year_transaction_period=2024&contributor_name=ANDERSON%2C+DENNIS"
+    },
+    {
+      "id": "org:LOUISIANA_ACADIANA_SCI_CHAPTER",
+      "name": "LOUISIANA ACADIANA SCI CHAPTER",
+      "kind": "organization",
+      "committee_type": null,
+      "depth": 1,
+      "visibility": "dark",
+      "amount_in": 65000.0,
+      "is_terminus": true,
+      "terminus_reason": "dark",
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00541433&two_year_transaction_period=2024&contributor_name=LOUISIANA+ACADIANA+SCI+CHAPTER",
+      "organization_class": "unknown"
+    },
+    {
+      "id": "ind:INGRAM_MICHAEL|85258",
+      "name": "INGRAM, MICHAEL",
+      "kind": "individual",
+      "committee_type": null,
+      "depth": 1,
+      "visibility": "disclosed",
+      "amount_in": 62500.0,
+      "is_terminus": true,
+      "terminus_reason": "individual",
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00541433&two_year_transaction_period=2024&contributor_name=INGRAM%2C+MICHAEL"
+    },
+    {
+      "id": "org:ATWOOD_&_ASSOCIATES",
+      "name": "ATWOOD & ASSOCIATES",
+      "kind": "organization",
+      "committee_type": null,
+      "depth": 1,
+      "visibility": "dark",
+      "amount_in": 50000.0,
+      "is_terminus": true,
+      "terminus_reason": "dark",
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00541433&two_year_transaction_period=2024&contributor_name=ATWOOD+%26+ASSOCIATES",
+      "organization_class": "unknown"
+    },
+    {
+      "id": "ind:WOODRUFF_RICHARD|30339",
+      "name": "WOODRUFF, RICHARD",
+      "kind": "individual",
+      "committee_type": null,
+      "depth": 1,
+      "visibility": "disclosed",
+      "amount_in": 25000.0,
+      "is_terminus": true,
+      "terminus_reason": "individual",
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00541433&two_year_transaction_period=2024&contributor_name=WOODRUFF%2C+RICHARD"
+    },
+    {
+      "id": "ind:SMITH_J._ALAIN|98053",
+      "name": "SMITH, J. ALAIN",
+      "kind": "individual",
+      "committee_type": null,
+      "depth": 1,
+      "visibility": "disclosed",
+      "amount_in": 25000.0,
+      "is_terminus": true,
+      "terminus_reason": "individual",
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00541433&two_year_transaction_period=2024&contributor_name=SMITH%2C+J.+ALAIN"
+    },
+    {
+      "id": "ind:WELKER_BRIAN|77441",
+      "name": "WELKER, BRIAN",
+      "kind": "individual",
+      "committee_type": null,
+      "depth": 1,
+      "visibility": "disclosed",
+      "amount_in": 20000.0,
+      "is_terminus": true,
+      "terminus_reason": "individual",
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00541433&two_year_transaction_period=2024&contributor_name=WELKER%2C+BRIAN"
+    },
+    {
+      "id": "ind:ATWOOD_HARRISON_STANFORD|95032",
+      "name": "ATWOOD, HARRISON STANFORD",
+      "kind": "individual",
+      "committee_type": null,
+      "depth": 1,
+      "visibility": "disclosed",
+      "amount_in": 20000.0,
+      "is_terminus": true,
+      "terminus_reason": "individual",
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00541433&two_year_transaction_period=2024&contributor_name=ATWOOD%2C+HARRISON+STANFORD"
+    },
+    {
+      "id": "ind:ATWOOD_STANFORD|95030",
+      "name": "ATWOOD, STANFORD",
+      "kind": "individual",
+      "committee_type": null,
+      "depth": 1,
+      "visibility": "disclosed",
+      "amount_in": 20000.0,
+      "is_terminus": true,
+      "terminus_reason": "individual",
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00541433&two_year_transaction_period=2024&contributor_name=ATWOOD%2C+STANFORD"
+    },
+    {
+      "id": "ind:ATWOOD_PAMELA|95030",
+      "name": "ATWOOD, PAMELA",
+      "kind": "individual",
+      "committee_type": null,
+      "depth": 1,
+      "visibility": "disclosed",
+      "amount_in": 15000.0,
+      "is_terminus": true,
+      "terminus_reason": "individual",
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00541433&two_year_transaction_period=2024&contributor_name=ATWOOD%2C+PAMELA"
+    },
+    {
+      "id": "ind:MINX_BROOK|77056",
+      "name": "MINX, BROOK",
+      "kind": "individual",
+      "committee_type": null,
+      "depth": 1,
+      "visibility": "disclosed",
+      "amount_in": 14000.0,
+      "is_terminus": true,
+      "terminus_reason": "individual",
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00541433&two_year_transaction_period=2024&contributor_name=MINX%2C+BROOK"
+    },
+    {
+      "id": "ind:ELLIOT_GREG|71463",
+      "name": "ELLIOT, GREG",
+      "kind": "individual",
+      "committee_type": null,
+      "depth": 1,
+      "visibility": "disclosed",
+      "amount_in": 9500.0,
+      "is_terminus": true,
+      "terminus_reason": "individual",
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00541433&two_year_transaction_period=2024&contributor_name=ELLIOT%2C+GREG"
+    },
+    {
+      "id": "ind:COX_CHRIS|22320",
+      "name": "COX, CHRIS",
+      "kind": "individual",
+      "committee_type": null,
+      "depth": 1,
+      "visibility": "disclosed",
+      "amount_in": 9500.0,
+      "is_terminus": true,
+      "terminus_reason": "individual",
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00541433&two_year_transaction_period=2024&contributor_name=COX%2C+CHRIS"
+    },
+    {
+      "id": "ind:BELDING_CHAD|89441",
+      "name": "BELDING, CHAD",
+      "kind": "individual",
+      "committee_type": null,
+      "depth": 1,
+      "visibility": "disclosed",
+      "amount_in": 9500.0,
+      "is_terminus": true,
+      "terminus_reason": "individual",
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00541433&two_year_transaction_period=2024&contributor_name=BELDING%2C+CHAD"
+    },
+    {
+      "id": "ind:NICHOLAS_ERIC|40356",
+      "name": "NICHOLAS, ERIC",
+      "kind": "individual",
+      "committee_type": null,
+      "depth": 1,
+      "visibility": "disclosed",
+      "amount_in": 7500.0,
+      "is_terminus": true,
+      "terminus_reason": "individual",
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00541433&two_year_transaction_period=2024&contributor_name=NICHOLAS%2C+ERIC"
+    },
+    {
+      "id": "ind:DULIEN_LOUIS|78738",
+      "name": "DULIEN, LOUIS",
+      "kind": "individual",
+      "committee_type": null,
+      "depth": 1,
+      "visibility": "disclosed",
+      "amount_in": 6450.0,
+      "is_terminus": true,
+      "terminus_reason": "individual",
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00541433&two_year_transaction_period=2024&contributor_name=DULIEN%2C+LOUIS"
+    },
+    {
+      "id": "agg:other@C00541433",
+      "name": "Other contributors to HUNTER ACTION FUND (HAF) (each <1% of receipts, or beyond the 40 largest)",
+      "kind": "aggregate",
+      "committee_type": null,
+      "depth": 1,
+      "visibility": "disclosed",
+      "amount_in": 31525.0,
+      "is_terminus": true,
+      "terminus_reason": "pruned",
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00541433&two_year_transaction_period=2024",
+      "contributor_count": 14
+    }
+  ],
+  "edges": [
+    {
+      "from": "org:SAFARI_CLUB_INTERNATIONAL",
+      "to": "C00541433",
+      "amount": 139258.0,
+      "visibility": "dark",
+      "depth": 1,
+      "transaction_types": [
+        "10"
+      ],
+      "count": 15,
+      "date_range": [
+        "2023-01-31",
+        "2024-02-29"
+      ],
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00541433&two_year_transaction_period=2024&contributor_name=SAFARI+CLUB+INTERNATIONAL"
+    },
+    {
+      "from": "ind:ANDERSON_DENNIS|92817",
+      "to": "C00541433",
+      "amount": 75600.0,
+      "visibility": "disclosed",
+      "depth": 1,
+      "transaction_types": [
+        "10"
+      ],
+      "count": 4,
+      "date_range": [
+        "2023-02-25",
+        "2024-05-29"
+      ],
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00541433&two_year_transaction_period=2024&contributor_name=ANDERSON%2C+DENNIS"
+    },
+    {
+      "from": "org:LOUISIANA_ACADIANA_SCI_CHAPTER",
+      "to": "C00541433",
+      "amount": 65000.0,
+      "visibility": "dark",
+      "depth": 1,
+      "transaction_types": [
+        "10"
+      ],
+      "count": 3,
+      "date_range": [
+        "2023-04-02",
+        "2024-09-30"
+      ],
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00541433&two_year_transaction_period=2024&contributor_name=LOUISIANA+ACADIANA+SCI+CHAPTER"
+    },
+    {
+      "from": "ind:INGRAM_MICHAEL|85258",
+      "to": "C00541433",
+      "amount": 62500.0,
+      "visibility": "disclosed",
+      "depth": 1,
+      "transaction_types": [
+        "10"
+      ],
+      "count": 2,
+      "date_range": [
+        "2023-04-12",
+        "2023-04-12"
+      ],
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00541433&two_year_transaction_period=2024&contributor_name=INGRAM%2C+MICHAEL"
+    },
+    {
+      "from": "org:ATWOOD_&_ASSOCIATES",
+      "to": "C00541433",
+      "amount": 50000.0,
+      "visibility": "dark",
+      "depth": 1,
+      "transaction_types": [
+        "10"
+      ],
+      "count": 2,
+      "date_range": [
+        "2024-02-01",
+        "2024-02-01"
+      ],
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00541433&two_year_transaction_period=2024&contributor_name=ATWOOD+%26+ASSOCIATES"
+    },
+    {
+      "from": "ind:WOODRUFF_RICHARD|30339",
+      "to": "C00541433",
+      "amount": 25000.0,
+      "visibility": "disclosed",
+      "depth": 1,
+      "transaction_types": [
+        "10"
+      ],
+      "count": 1,
+      "date_range": [
+        "2023-02-25",
+        "2023-02-25"
+      ],
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00541433&two_year_transaction_period=2024&contributor_name=WOODRUFF%2C+RICHARD"
+    },
+    {
+      "from": "ind:SMITH_J._ALAIN|98053",
+      "to": "C00541433",
+      "amount": 25000.0,
+      "visibility": "disclosed",
+      "depth": 1,
+      "transaction_types": [
+        "10"
+      ],
+      "count": 1,
+      "date_range": [
+        "2023-03-16",
+        "2023-03-16"
+      ],
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00541433&two_year_transaction_period=2024&contributor_name=SMITH%2C+J.+ALAIN"
+    },
+    {
+      "from": "ind:WELKER_BRIAN|77441",
+      "to": "C00541433",
+      "amount": 20000.0,
+      "visibility": "disclosed",
+      "depth": 1,
+      "transaction_types": [
+        "10"
+      ],
+      "count": 2,
+      "date_range": [
+        "2023-02-25",
+        "2023-03-03"
+      ],
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00541433&two_year_transaction_period=2024&contributor_name=WELKER%2C+BRIAN"
+    },
+    {
+      "from": "ind:ATWOOD_HARRISON_STANFORD|95032",
+      "to": "C00541433",
+      "amount": 20000.0,
+      "visibility": "disclosed",
+      "depth": 1,
+      "transaction_types": [
+        "10"
+      ],
+      "count": 1,
+      "date_range": [
+        "2023-02-25",
+        "2023-02-25"
+      ],
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00541433&two_year_transaction_period=2024&contributor_name=ATWOOD%2C+HARRISON+STANFORD"
+    },
+    {
+      "from": "ind:ATWOOD_STANFORD|95030",
+      "to": "C00541433",
+      "amount": 20000.0,
+      "visibility": "disclosed",
+      "depth": 1,
+      "transaction_types": [
+        "10"
+      ],
+      "count": 1,
+      "date_range": [
+        "2024-02-01",
+        "2024-02-01"
+      ],
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00541433&two_year_transaction_period=2024&contributor_name=ATWOOD%2C+STANFORD"
+    },
+    {
+      "from": "ind:ATWOOD_PAMELA|95030",
+      "to": "C00541433",
+      "amount": 15000.0,
+      "visibility": "disclosed",
+      "depth": 1,
+      "transaction_types": [
+        "10"
+      ],
+      "count": 1,
+      "date_range": [
+        "2023-02-25",
+        "2023-02-25"
+      ],
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00541433&two_year_transaction_period=2024&contributor_name=ATWOOD%2C+PAMELA"
+    },
+    {
+      "from": "ind:MINX_BROOK|77056",
+      "to": "C00541433",
+      "amount": 14000.0,
+      "visibility": "disclosed",
+      "depth": 1,
+      "transaction_types": [
+        "10"
+      ],
+      "count": 2,
+      "date_range": [
+        "2023-02-26",
+        "2023-08-18"
+      ],
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00541433&two_year_transaction_period=2024&contributor_name=MINX%2C+BROOK"
+    },
+    {
+      "from": "ind:ELLIOT_GREG|71463",
+      "to": "C00541433",
+      "amount": 9500.0,
+      "visibility": "disclosed",
+      "depth": 1,
+      "transaction_types": [
+        "10"
+      ],
+      "count": 1,
+      "date_range": [
+        "2023-06-01",
+        "2023-06-01"
+      ],
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00541433&two_year_transaction_period=2024&contributor_name=ELLIOT%2C+GREG"
+    },
+    {
+      "from": "ind:COX_CHRIS|22320",
+      "to": "C00541433",
+      "amount": 9500.0,
+      "visibility": "disclosed",
+      "depth": 1,
+      "transaction_types": [
+        "10"
+      ],
+      "count": 1,
+      "date_range": [
+        "2023-08-31",
+        "2023-08-31"
+      ],
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00541433&two_year_transaction_period=2024&contributor_name=COX%2C+CHRIS"
+    },
+    {
+      "from": "ind:BELDING_CHAD|89441",
+      "to": "C00541433",
+      "amount": 9500.0,
+      "visibility": "disclosed",
+      "depth": 1,
+      "transaction_types": [
+        "10"
+      ],
+      "count": 1,
+      "date_range": [
+        "2023-06-12",
+        "2023-06-12"
+      ],
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00541433&two_year_transaction_period=2024&contributor_name=BELDING%2C+CHAD"
+    },
+    {
+      "from": "ind:NICHOLAS_ERIC|40356",
+      "to": "C00541433",
+      "amount": 7500.0,
+      "visibility": "disclosed",
+      "depth": 1,
+      "transaction_types": [
+        "10"
+      ],
+      "count": 1,
+      "date_range": [
+        "2023-03-09",
+        "2023-03-09"
+      ],
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00541433&two_year_transaction_period=2024&contributor_name=NICHOLAS%2C+ERIC"
+    },
+    {
+      "from": "ind:DULIEN_LOUIS|78738",
+      "to": "C00541433",
+      "amount": 6450.0,
+      "visibility": "disclosed",
+      "depth": 1,
+      "transaction_types": [
+        "10"
+      ],
+      "count": 2,
+      "date_range": [
+        "2023-02-25",
+        "2023-04-12"
+      ],
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00541433&two_year_transaction_period=2024&contributor_name=DULIEN%2C+LOUIS"
+    },
+    {
+      "from": "agg:other@C00541433",
+      "to": "C00541433",
+      "amount": 31525.0,
+      "visibility": "disclosed",
+      "depth": 1,
+      "transaction_types": [
+        "10"
+      ],
+      "count": 16,
+      "date_range": [
+        "2023-02-25",
+        "2024-02-01"
+      ],
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00541433&two_year_transaction_period=2024"
+    }
+  ],
+  "summary": {
+    "total_in": 605333.0,
+    "disclosed_share": 0.58,
+    "inferable_share": 0.0,
+    "unwalked_share": 0.0,
+    "dark_share": 0.42,
+    "max_depth": 1,
+    "terminus_counts": {
+      "dark": 3,
+      "individual": 14,
+      "pruned": 1
+    }
+  },
+  "flags": [
+    {
+      "id": "dead_end_dark",
+      "label": "Chain ends at undisclosed donors",
+      "detail": "42% of HUNTER ACTION FUND (HAF)'s receipts stop at organizations whose own funding is not on file (advocacy nonprofits, LLCs, trusts) rather than at named individuals, businesses or unions.",
+      "evidence_url": "https://www.fec.gov/data/committee/C00541433/?cycle=2024"
+    }
+  ],
+  "method": "Backward walk over money edges only (Schedule A receipts from individuals and organizations, committee-to-committee transfers) into HUNTER ACTION FUND (HAF), 1 hop(s) deep; independent expenditures are targeting edges and never appear. The walk starts from $605,333 of itemized 2023–2024 receipts as loaded from FEC bulk data (unitemized receipts, loans and offsets are not edges), and every expanded committee conserves dollars: its inbound edges sum to its receipts. Inbound edges under 1% of a committee's receipts are rolled into one 'other contributors' node, which counts as disclosed except for the organization dollars inside it. Each dollar takes the visibility of where the walk stopped: named individuals (including earmarks through ActBlue/WinRed, attributed to the person) are disclosed. Organizations that are not registered committees are classified from their name alone (no IRS lookup): a union or a business giving from its own treasury is disclosed — the named entity is the source; an LLC, trust, advocacy nonprofit (501(c)(4)-style names) or unclassifiable organization is dark, because whoever funds it is not on file with the FEC. Visibility shares are preliminary; no 990 lookups were performed, so nothing is marked inferable."
+}

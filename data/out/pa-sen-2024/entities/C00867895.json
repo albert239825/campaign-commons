@@ -1,0 +1,64 @@
+{
+  "entity_id": "C00867895",
+  "race_id": "pa-sen-2024",
+  "kind": "committee",
+  "name": "FOUNDATIONS FOR A BETTER FUTURE",
+  "aliases": [],
+  "committee_type": "O",
+  "committee_type_label": "Super PAC",
+  "designation": "U",
+  "registration_date": null,
+  "treasurer": "BRUGUERAS, RAYMOND",
+  "address": {
+    "street": "1803 SPRING GARDEN STREET",
+    "city": "PHILADELPHIA",
+    "state": "PA",
+    "zip": "19130"
+  },
+  "visibility": "disclosed",
+  "is_conduit": false,
+  "totals": {
+    "receipts": 501477.96,
+    "disbursements": 503770.48,
+    "independent_expenditures": 0,
+    "from_individuals": 0.0,
+    "from_committees": 0.0,
+    "from_organizations": 0.0,
+    "from_undisclosed": 500000.0
+  },
+  "inflows": [
+    {
+      "transfer_id": "C00867895-in-org:EASTERN_ATLANTIC_STATES_RC",
+      "from_entity_id": "org:EASTERN_ATLANTIC_STATES_RC",
+      "from_name": "EASTERN ATLANTIC STATES RC",
+      "to_entity_id": "C00867895",
+      "to_name": "FOUNDATIONS FOR A BETTER FUTURE",
+      "amount": 500000.0,
+      "date": "2024-02-01",
+      "visibility": "dark",
+      "transaction_type": "10",
+      "limit": "unlimited",
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00867895&two_year_transaction_period=2024&contributor_name=EASTERN+ATLANTIC+STATES+RC"
+    }
+  ],
+  "outflows": [
+    {
+      "transfer_id": "C00867895-out-C00856914",
+      "from_entity_id": "C00867895",
+      "from_name": "FOUNDATIONS FOR A BETTER FUTURE",
+      "to_entity_id": "C00856914",
+      "to_name": "GARDEN STATE INTEGRITY",
+      "amount": 500000.0,
+      "date": "2024-03-05",
+      "visibility": "disclosed",
+      "transaction_type": "18K",
+      "limit": null,
+      "source_url": "https://www.fec.gov/data/disbursements/?committee_id=C00867895&two_year_transaction_period=2024"
+    }
+  ],
+  "independent_expenditures": [],
+  "flags": [],
+  "has_chain": false,
+  "source_url": "https://www.fec.gov/data/committee/C00867895/?cycle=2024",
+  "data_status": "real"
+}

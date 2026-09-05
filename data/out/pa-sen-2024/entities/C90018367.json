@@ -1,0 +1,96 @@
+{
+  "entity_id": "C90018367",
+  "race_id": "pa-sen-2024",
+  "kind": "committee",
+  "name": "MOMSRISING TOGETHER",
+  "aliases": [],
+  "committee_type": "I",
+  "committee_type_label": "Independent expenditor (not a committee)",
+  "designation": "U",
+  "registration_date": null,
+  "treasurer": null,
+  "address": {
+    "street": "12011 BEL RED ROAD",
+    "city": "BELLVUE",
+    "state": "WA",
+    "zip": "98005"
+  },
+  "visibility": "disclosed",
+  "is_conduit": false,
+  "totals": {
+    "receipts": 0.0,
+    "disbursements": 938544.36,
+    "independent_expenditures": 16202.15,
+    "from_individuals": 0.0,
+    "from_committees": 0.0,
+    "from_organizations": 0.0,
+    "from_undisclosed": 0.0
+  },
+  "inflows": [],
+  "outflows": [],
+  "independent_expenditures": [
+    {
+      "ie_id": "C90018367-ie-1870240-F57.4727",
+      "spender_entity_id": "C90018367",
+      "spender_name": "MOMSRISING TOGETHER",
+      "candidate_id": "S6PA00217",
+      "candidate_name": "Bob Casey",
+      "support_oppose": "S",
+      "amount": 14317.53,
+      "date": "2024-10-26",
+      "purpose": "TEXT MESSAGING",
+      "payee": "CIVITECH",
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202501319748780427"
+    },
+    {
+      "ie_id": "C90018367-ie-1870240-F57.4832",
+      "spender_entity_id": "C90018367",
+      "spender_name": "MOMSRISING TOGETHER",
+      "candidate_id": "S6PA00217",
+      "candidate_name": "Bob Casey",
+      "support_oppose": "S",
+      "amount": 800.0,
+      "date": "2024-10-31",
+      "purpose": "SOCIAL MEDIA AD BUY",
+      "payee": "META",
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202501319748780437"
+    },
+    {
+      "ie_id": "C90018367-ie-1870240-F57.4649",
+      "spender_entity_id": "C90018367",
+      "spender_name": "MOMSRISING TOGETHER",
+      "candidate_id": "S6PA00217",
+      "candidate_name": "Bob Casey",
+      "support_oppose": "S",
+      "amount": 700.0,
+      "date": "2024-10-22",
+      "purpose": "SOCIAL MEDIA AD BUY",
+      "payee": "META",
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202501319748780434"
+    },
+    {
+      "ie_id": "C90018367-ie-1870240-F57.4650",
+      "spender_entity_id": "C90018367",
+      "spender_name": "MOMSRISING TOGETHER",
+      "candidate_id": "S6PA00217",
+      "candidate_name": "Bob Casey",
+      "support_oppose": "S",
+      "amount": 384.62,
+      "date": "2024-10-24",
+      "purpose": "SOCIAL MEDIA AD BUY",
+      "payee": "THE NEW MEDIA FIRM",
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202501319748780440"
+    }
+  ],
+  "flags": [
+    {
+      "id": "popup",
+      "label": "Pop-up committee",
+      "detail": "MOMSRISING TOGETHER's first reported activity in the 2024 cycle is 2024-10-22, after the pre-general report cutoff (2024-10-17), so its donors were not on file before election day. Registration date is proxied by first observed activity in FEC bulk data.",
+      "evidence_url": "https://www.fec.gov/data/committee/C90018367/?cycle=2024"
+    }
+  ],
+  "has_chain": false,
+  "source_url": "https://www.fec.gov/data/committee/C90018367/?cycle=2024",
+  "data_status": "real"
+}

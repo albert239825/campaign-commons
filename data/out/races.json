@@ -1,0 +1,56 @@
+{
+  "generated_at": "2026-09-05T13:39:13+00:00",
+  "races": [
+    {
+      "race_id": "pa-sen-2024",
+      "label": "Pennsylvania · U.S. Senate · 2024",
+      "cycle": 2024,
+      "state": "PA",
+      "office": "S",
+      "election_date": "2024-11-05",
+      "status": "complete",
+      "candidates": [
+        {
+          "candidate_id": "S6PA00217",
+          "name": "Bob Casey",
+          "party": "DEM",
+          "incumbent": true,
+          "principal_committee_id": "C00431056",
+          "result": "lost"
+        },
+        {
+          "candidate_id": "S2PA00661",
+          "name": "Dave McCormick",
+          "party": "REP",
+          "incumbent": false,
+          "principal_committee_id": "C00851980",
+          "result": "won"
+        }
+      ],
+      "totals": {
+        "campaign_receipts": 94118182.17,
+        "outside_spending": 235672449.27,
+        "outside_share": 0.7146
+      },
+      "traceability_score": 0.7211,
+      "data_status": "real"
+    },
+    {
+      "race_id": "tx-sen-2026",
+      "label": "Texas · U.S. Senate · 2026",
+      "cycle": 2026,
+      "state": "TX",
+      "office": "S",
+      "election_date": "2026-11-03",
+      "status": "stub",
+      "candidates": [],
+      "totals": {
+        "campaign_receipts": 0,
+        "outside_spending": 0,
+        "outside_share": 0
+      },
+      "traceability_score": null,
+      "data_status": "mock"
+    }
+  ]
+}

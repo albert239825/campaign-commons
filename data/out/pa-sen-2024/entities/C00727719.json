@@ -1,0 +1,149 @@
+{
+  "entity_id": "C00727719",
+  "race_id": "pa-sen-2024",
+  "kind": "committee",
+  "name": "TRANSPORT WORKERS UNION VOICE",
+  "aliases": [],
+  "committee_type": "O",
+  "committee_type_label": "Super PAC",
+  "designation": "B",
+  "registration_date": null,
+  "treasurer": "LAFRAGOLA, JEROME",
+  "address": {
+    "street": "1220 19TH ST. NW STE 600",
+    "city": "WASHINGTON",
+    "state": "DC",
+    "zip": "20036"
+  },
+  "visibility": "disclosed",
+  "is_conduit": false,
+  "totals": {
+    "receipts": 1355560.0,
+    "disbursements": 1890087.1,
+    "independent_expenditures": 0,
+    "from_individuals": 0.0,
+    "from_committees": 0.0,
+    "from_organizations": 1355560.0,
+    "from_undisclosed": 0.0
+  },
+  "inflows": [
+    {
+      "transfer_id": "C00727719-in-org:TRANSPORT_WORKERS_UNION_UNITEM",
+      "from_entity_id": "org:TRANSPORT_WORKERS_UNION_UNITEM",
+      "from_name": "TRANSPORT WORKERS UNION UNITEM",
+      "to_entity_id": "C00727719",
+      "to_name": "TRANSPORT WORKERS UNION VOICE",
+      "amount": 730560.0,
+      "date": "2024-11-13",
+      "visibility": "disclosed",
+      "transaction_type": "10",
+      "limit": "unlimited",
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00727719&two_year_transaction_period=2024&contributor_name=TRANSPORT+WORKERS+UNION+UNITEM"
+    },
+    {
+      "transfer_id": "C00727719-in-org:TRANSPORT_WORKERS_UNION_OF_AMERICA",
+      "from_entity_id": "org:TRANSPORT_WORKERS_UNION_OF_AMERICA",
+      "from_name": "TRANSPORT WORKERS UNION OF AMERICA",
+      "to_entity_id": "C00727719",
+      "to_name": "TRANSPORT WORKERS UNION VOICE",
+      "amount": 375000.0,
+      "date": "2024-05-21",
+      "visibility": "disclosed",
+      "transaction_type": "10",
+      "limit": "unlimited",
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00727719&two_year_transaction_period=2024&contributor_name=TRANSPORT+WORKERS+UNION+OF+AMERICA"
+    },
+    {
+      "transfer_id": "C00727719-in-org:TRANSPORT_WORKERS_UNION_VOICE",
+      "from_entity_id": "org:TRANSPORT_WORKERS_UNION_VOICE",
+      "from_name": "TRANSPORT WORKERS UNION VOICE",
+      "to_entity_id": "C00727719",
+      "to_name": "TRANSPORT WORKERS UNION VOICE",
+      "amount": 250000.0,
+      "date": "2023-11-16",
+      "visibility": "disclosed",
+      "transaction_type": "10",
+      "limit": "unlimited",
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00727719&two_year_transaction_period=2024&contributor_name=TRANSPORT+WORKERS+UNION+VOICE"
+    }
+  ],
+  "outflows": [
+    {
+      "transfer_id": "C00727719-out-C00669259",
+      "from_entity_id": "C00727719",
+      "from_name": "TRANSPORT WORKERS UNION VOICE",
+      "to_entity_id": "C00669259",
+      "to_name": "FF PAC",
+      "amount": 1000000.0,
+      "date": "2024-08-22",
+      "visibility": "disclosed",
+      "transaction_type": "24K",
+      "limit": null,
+      "source_url": "https://www.fec.gov/data/disbursements/?committee_id=C00727719&two_year_transaction_period=2024"
+    },
+    {
+      "transfer_id": "C00727719-out-C00484642",
+      "from_entity_id": "C00727719",
+      "from_name": "TRANSPORT WORKERS UNION VOICE",
+      "to_entity_id": "C00484642",
+      "to_name": "SMP",
+      "amount": 350000.0,
+      "date": "2024-10-24",
+      "visibility": "disclosed",
+      "transaction_type": "24K",
+      "limit": "unlimited",
+      "source_url": "https://www.fec.gov/data/disbursements/?committee_id=C00727719&two_year_transaction_period=2024"
+    },
+    {
+      "transfer_id": "C00727719-out-C00495028",
+      "from_entity_id": "C00727719",
+      "from_name": "TRANSPORT WORKERS UNION VOICE",
+      "to_entity_id": "C00495028",
+      "to_name": "HMP",
+      "amount": 200000.0,
+      "date": "2024-05-24",
+      "visibility": "disclosed",
+      "transaction_type": "24K",
+      "limit": null,
+      "source_url": "https://www.fec.gov/data/disbursements/?committee_id=C00727719&two_year_transaction_period=2024"
+    },
+    {
+      "transfer_id": "C00727719-out-C00540203",
+      "from_entity_id": "C00727719",
+      "from_name": "TRANSPORT WORKERS UNION VOICE",
+      "to_entity_id": "C00540203",
+      "to_name": "DEFENDING MAIN STREET SUPERPAC INC.",
+      "amount": 100000.0,
+      "date": "2023-08-03",
+      "visibility": "disclosed",
+      "transaction_type": "18K",
+      "limit": null,
+      "source_url": "https://www.fec.gov/data/disbursements/?committee_id=C00727719&two_year_transaction_period=2024"
+    },
+    {
+      "transfer_id": "C00727719-out-C00848739",
+      "from_entity_id": "C00727719",
+      "from_name": "TRANSPORT WORKERS UNION VOICE",
+      "to_entity_id": "C00848739",
+      "to_name": "DEFENDING AMERICA PAC, INC.",
+      "amount": 50000.0,
+      "date": "2023-08-04",
+      "visibility": "disclosed",
+      "transaction_type": "24K",
+      "limit": null,
+      "source_url": "https://www.fec.gov/data/disbursements/?committee_id=C00727719&two_year_transaction_period=2024"
+    }
+  ],
+  "independent_expenditures": [],
+  "flags": [
+    {
+      "id": "shell_cluster",
+      "label": "Shares address and treasurer",
+      "detail": "TRANSPORT WORKERS UNION VOICE lists the same street address and treasurer as TRANSPORT WORKERS UNION OF AMERICA POLITICAL CONTRIBUTIONS COMMITTEE (C00008268).",
+      "evidence_url": "https://www.fec.gov/data/committee/C00727719/?cycle=2024"
+    }
+  ],
+  "has_chain": false,
+  "source_url": "https://www.fec.gov/data/committee/C00727719/?cycle=2024",
+  "data_status": "real"
+}

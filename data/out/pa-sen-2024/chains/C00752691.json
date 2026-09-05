@@ -1,0 +1,667 @@
+{
+  "root_entity_id": "C00752691",
+  "root_name": "ONE FOR ALL COMMITTEE",
+  "race_id": "pa-sen-2024",
+  "generated_at": "2026-09-05T13:41:28+00:00",
+  "data_status": "real",
+  "nodes": [
+    {
+      "id": "C00752691",
+      "name": "ONE FOR ALL COMMITTEE",
+      "kind": "committee",
+      "committee_type": "O",
+      "depth": 0,
+      "visibility": "disclosed",
+      "amount_in": 20519717.0,
+      "is_terminus": false,
+      "terminus_reason": null,
+      "source_url": "https://www.fec.gov/data/committee/C00752691/?cycle=2024"
+    },
+    {
+      "id": "ind:HOFFMAN_REID|94126",
+      "name": "HOFFMAN, REID",
+      "kind": "individual",
+      "committee_type": null,
+      "depth": 1,
+      "visibility": "disclosed",
+      "amount_in": 2650000.0,
+      "is_terminus": true,
+      "terminus_reason": "individual",
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00752691&two_year_transaction_period=2024&contributor_name=HOFFMAN%2C+REID"
+    },
+    {
+      "id": "org:PIVOTAL_VENTURES",
+      "name": "PIVOTAL VENTURES",
+      "kind": "organization",
+      "committee_type": null,
+      "depth": 1,
+      "visibility": "disclosed",
+      "amount_in": 2350000.0,
+      "is_terminus": true,
+      "terminus_reason": "organization",
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00752691&two_year_transaction_period=2024&contributor_name=PIVOTAL+VENTURES",
+      "organization_class": "business"
+    },
+    {
+      "id": "org:ADVOCACY_ACTION_FUND",
+      "name": "ADVOCACY ACTION FUND",
+      "kind": "organization",
+      "committee_type": null,
+      "depth": 1,
+      "visibility": "dark",
+      "amount_in": 1750000.0,
+      "is_terminus": true,
+      "terminus_reason": "dark",
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00752691&two_year_transaction_period=2024&contributor_name=ADVOCACY+ACTION+FUND",
+      "organization_class": "nonprofit"
+    },
+    {
+      "id": "C00693382",
+      "name": "DEMOCRACY PAC",
+      "kind": "committee",
+      "committee_type": "O",
+      "depth": 1,
+      "visibility": "disclosed",
+      "amount_in": 70740507.0,
+      "is_terminus": false,
+      "terminus_reason": null,
+      "source_url": "https://www.fec.gov/data/committee/C00693382/?cycle=2024"
+    },
+    {
+      "id": "ind:BALLMER_CONNIE_E.|98009",
+      "name": "BALLMER, CONNIE E.",
+      "kind": "individual",
+      "committee_type": null,
+      "depth": 1,
+      "visibility": "disclosed",
+      "amount_in": 1000000.0,
+      "is_terminus": true,
+      "terminus_reason": "individual",
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00752691&two_year_transaction_period=2024&contributor_name=BALLMER%2C+CONNIE+E."
+    },
+    {
+      "id": "ind:HOFFMAN_REID|94111",
+      "name": "HOFFMAN, REID",
+      "kind": "individual",
+      "committee_type": null,
+      "depth": 1,
+      "visibility": "disclosed",
+      "amount_in": 653500.0,
+      "is_terminus": true,
+      "terminus_reason": "individual",
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00752691&two_year_transaction_period=2024&contributor_name=HOFFMAN%2C+REID"
+    },
+    {
+      "id": "ind:JURVETSON_KARLA|94022",
+      "name": "JURVETSON, KARLA",
+      "kind": "individual",
+      "committee_type": null,
+      "depth": 1,
+      "visibility": "disclosed",
+      "amount_in": 653000.0,
+      "is_terminus": true,
+      "terminus_reason": "individual",
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00752691&two_year_transaction_period=2024&contributor_name=JURVETSON%2C+KARLA"
+    },
+    {
+      "id": "org:GLOBAL_IMPACT_SOCIAL_WELFARE_FUND",
+      "name": "GLOBAL IMPACT SOCIAL WELFARE FUND",
+      "kind": "organization",
+      "committee_type": null,
+      "depth": 1,
+      "visibility": "dark",
+      "amount_in": 500000.0,
+      "is_terminus": true,
+      "terminus_reason": "dark",
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00752691&two_year_transaction_period=2024&contributor_name=GLOBAL+IMPACT+SOCIAL+WELFARE+FUND",
+      "organization_class": "nonprofit"
+    },
+    {
+      "id": "ind:SCRIPPS_SEBASTIAN|06840",
+      "name": "SCRIPPS, SEBASTIAN",
+      "kind": "individual",
+      "committee_type": null,
+      "depth": 1,
+      "visibility": "disclosed",
+      "amount_in": 350000.0,
+      "is_terminus": true,
+      "terminus_reason": "individual",
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00752691&two_year_transaction_period=2024&contributor_name=SCRIPPS%2C+SEBASTIAN"
+    },
+    {
+      "id": "ind:STUTZMAN_S._MARK|84060",
+      "name": "STUTZMAN, S. MARK",
+      "kind": "individual",
+      "committee_type": null,
+      "depth": 1,
+      "visibility": "disclosed",
+      "amount_in": 300000.0,
+      "is_terminus": true,
+      "terminus_reason": "individual",
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00752691&two_year_transaction_period=2024&contributor_name=STUTZMAN%2C+S.+MARK"
+    },
+    {
+      "id": "ind:WALTON_KELLY_R.|76244",
+      "name": "WALTON, KELLY R.",
+      "kind": "individual",
+      "committee_type": null,
+      "depth": 1,
+      "visibility": "disclosed",
+      "amount_in": 250000.0,
+      "is_terminus": true,
+      "terminus_reason": "individual",
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00752691&two_year_transaction_period=2024&contributor_name=WALTON%2C+KELLY+R."
+    },
+    {
+      "id": "ind:WALTON_SAMANTHA_B.|60612",
+      "name": "WALTON, SAMANTHA B.",
+      "kind": "individual",
+      "committee_type": null,
+      "depth": 1,
+      "visibility": "disclosed",
+      "amount_in": 250000.0,
+      "is_terminus": true,
+      "terminus_reason": "individual",
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00752691&two_year_transaction_period=2024&contributor_name=WALTON%2C+SAMANTHA+B."
+    },
+    {
+      "id": "ind:WALTON_OLIVIA_S.|72712",
+      "name": "WALTON, OLIVIA S.",
+      "kind": "individual",
+      "committee_type": null,
+      "depth": 1,
+      "visibility": "disclosed",
+      "amount_in": 250000.0,
+      "is_terminus": true,
+      "terminus_reason": "individual",
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00752691&two_year_transaction_period=2024&contributor_name=WALTON%2C+OLIVIA+S."
+    },
+    {
+      "id": "org:BRICK_BY_BRICK_FOUNDATION",
+      "name": "BRICK BY BRICK FOUNDATION",
+      "kind": "organization",
+      "committee_type": null,
+      "depth": 1,
+      "visibility": "dark",
+      "amount_in": 250000.0,
+      "is_terminus": true,
+      "terminus_reason": "dark",
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00752691&two_year_transaction_period=2024&contributor_name=BRICK+BY+BRICK+FOUNDATION",
+      "organization_class": "nonprofit"
+    },
+    {
+      "id": "ind:MENNET_LISA|98118",
+      "name": "MENNET, LISA",
+      "kind": "individual",
+      "committee_type": null,
+      "depth": 1,
+      "visibility": "disclosed",
+      "amount_in": 250000.0,
+      "is_terminus": true,
+      "terminus_reason": "individual",
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00752691&two_year_transaction_period=2024&contributor_name=MENNET%2C+LISA"
+    },
+    {
+      "id": "org:BUELOW_BAMBINI_LLC",
+      "name": "BUELOW BAMBINI LLC",
+      "kind": "organization",
+      "committee_type": null,
+      "depth": 1,
+      "visibility": "dark",
+      "amount_in": 250000.0,
+      "is_terminus": true,
+      "terminus_reason": "dark",
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00752691&two_year_transaction_period=2024&contributor_name=BUELOW+BAMBINI+LLC",
+      "organization_class": "llc"
+    },
+    {
+      "id": "ind:BLUMENTHAL_JABE|98122",
+      "name": "BLUMENTHAL, JABE",
+      "kind": "individual",
+      "committee_type": null,
+      "depth": 1,
+      "visibility": "disclosed",
+      "amount_in": 225000.0,
+      "is_terminus": true,
+      "terminus_reason": "individual",
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00752691&two_year_transaction_period=2024&contributor_name=BLUMENTHAL%2C+JABE"
+    },
+    {
+      "id": "agg:other@C00752691",
+      "name": "Other contributors to ONE FOR ALL COMMITTEE (each <1% of receipts, or beyond the 40 largest)",
+      "kind": "aggregate",
+      "committee_type": null,
+      "depth": 1,
+      "visibility": "disclosed",
+      "amount_in": 7588217.0,
+      "is_terminus": true,
+      "terminus_reason": "pruned",
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00752691&two_year_transaction_period=2024",
+      "contributor_count": 2244
+    },
+    {
+      "id": "org:FUND_FOR_POLICY_REFORM",
+      "name": "FUND FOR POLICY REFORM",
+      "kind": "organization",
+      "committee_type": null,
+      "depth": 2,
+      "visibility": "dark",
+      "amount_in": 60000000.0,
+      "is_terminus": true,
+      "terminus_reason": "dark",
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00693382&two_year_transaction_period=2024&contributor_name=FUND+FOR+POLICY+REFORM",
+      "organization_class": "nonprofit"
+    },
+    {
+      "id": "org:GEOSOR_CORPORATION",
+      "name": "GEOSOR CORPORATION",
+      "kind": "organization",
+      "committee_type": null,
+      "depth": 2,
+      "visibility": "disclosed",
+      "amount_in": 10000000.0,
+      "is_terminus": true,
+      "terminus_reason": "organization",
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00693382&two_year_transaction_period=2024&contributor_name=GEOSOR+CORPORATION",
+      "organization_class": "business"
+    },
+    {
+      "id": "org:GLOBAL_OAK_HOLDINGS_LLC",
+      "name": "GLOBAL OAK HOLDINGS LLC",
+      "kind": "organization",
+      "committee_type": null,
+      "depth": 2,
+      "visibility": "dark",
+      "amount_in": 731955.0,
+      "is_terminus": true,
+      "terminus_reason": "dark",
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00693382&two_year_transaction_period=2024&contributor_name=GLOBAL+OAK+HOLDINGS+LLC",
+      "organization_class": "llc"
+    },
+    {
+      "id": "agg:other@C00693382",
+      "name": "Other contributors to DEMOCRACY PAC (each <1% of receipts, or beyond the 40 largest)",
+      "kind": "aggregate",
+      "committee_type": null,
+      "depth": 2,
+      "visibility": "dark",
+      "amount_in": 8552.0,
+      "is_terminus": true,
+      "terminus_reason": "pruned",
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00693382&two_year_transaction_period=2024",
+      "contributor_count": 2
+    }
+  ],
+  "edges": [
+    {
+      "from": "ind:HOFFMAN_REID|94126",
+      "to": "C00752691",
+      "amount": 2650000.0,
+      "visibility": "disclosed",
+      "depth": 1,
+      "transaction_types": [
+        "10"
+      ],
+      "count": 5,
+      "date_range": [
+        "2023-08-29",
+        "2024-10-24"
+      ],
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00752691&two_year_transaction_period=2024&contributor_name=HOFFMAN%2C+REID"
+    },
+    {
+      "from": "org:PIVOTAL_VENTURES",
+      "to": "C00752691",
+      "amount": 2350000.0,
+      "visibility": "disclosed",
+      "depth": 1,
+      "transaction_types": [
+        "10"
+      ],
+      "count": 3,
+      "date_range": [
+        "2024-04-11",
+        "2024-10-28"
+      ],
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00752691&two_year_transaction_period=2024&contributor_name=PIVOTAL+VENTURES"
+    },
+    {
+      "from": "org:ADVOCACY_ACTION_FUND",
+      "to": "C00752691",
+      "amount": 1750000.0,
+      "visibility": "dark",
+      "depth": 1,
+      "transaction_types": [
+        "10"
+      ],
+      "count": 4,
+      "date_range": [
+        "2024-08-19",
+        "2024-10-23"
+      ],
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00752691&two_year_transaction_period=2024&contributor_name=ADVOCACY+ACTION+FUND"
+    },
+    {
+      "from": "C00693382",
+      "to": "C00752691",
+      "amount": 1000000.0,
+      "visibility": "disclosed",
+      "depth": 1,
+      "transaction_types": [
+        "24K"
+      ],
+      "count": 1,
+      "date_range": [
+        "2024-02-09",
+        "2024-02-09"
+      ],
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00752691&two_year_transaction_period=2024&contributor_name=C00693382"
+    },
+    {
+      "from": "ind:BALLMER_CONNIE_E.|98009",
+      "to": "C00752691",
+      "amount": 1000000.0,
+      "visibility": "disclosed",
+      "depth": 1,
+      "transaction_types": [
+        "10"
+      ],
+      "count": 1,
+      "date_range": [
+        "2024-09-11",
+        "2024-09-11"
+      ],
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00752691&two_year_transaction_period=2024&contributor_name=BALLMER%2C+CONNIE+E."
+    },
+    {
+      "from": "ind:HOFFMAN_REID|94111",
+      "to": "C00752691",
+      "amount": 653500.0,
+      "visibility": "disclosed",
+      "depth": 1,
+      "transaction_types": [
+        "10"
+      ],
+      "count": 2,
+      "date_range": [
+        "2023-01-30",
+        "2023-03-07"
+      ],
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00752691&two_year_transaction_period=2024&contributor_name=HOFFMAN%2C+REID"
+    },
+    {
+      "from": "ind:JURVETSON_KARLA|94022",
+      "to": "C00752691",
+      "amount": 653000.0,
+      "visibility": "disclosed",
+      "depth": 1,
+      "transaction_types": [
+        "10"
+      ],
+      "count": 2,
+      "date_range": [
+        "2023-01-26",
+        "2023-03-14"
+      ],
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00752691&two_year_transaction_period=2024&contributor_name=JURVETSON%2C+KARLA"
+    },
+    {
+      "from": "org:GLOBAL_IMPACT_SOCIAL_WELFARE_FUND",
+      "to": "C00752691",
+      "amount": 500000.0,
+      "visibility": "dark",
+      "depth": 1,
+      "transaction_types": [
+        "10"
+      ],
+      "count": 1,
+      "date_range": [
+        "2024-10-01",
+        "2024-10-01"
+      ],
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00752691&two_year_transaction_period=2024&contributor_name=GLOBAL+IMPACT+SOCIAL+WELFARE+FUND"
+    },
+    {
+      "from": "ind:SCRIPPS_SEBASTIAN|06840",
+      "to": "C00752691",
+      "amount": 350000.0,
+      "visibility": "disclosed",
+      "depth": 1,
+      "transaction_types": [
+        "10"
+      ],
+      "count": 2,
+      "date_range": [
+        "2024-08-05",
+        "2024-10-02"
+      ],
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00752691&two_year_transaction_period=2024&contributor_name=SCRIPPS%2C+SEBASTIAN"
+    },
+    {
+      "from": "ind:STUTZMAN_S._MARK|84060",
+      "to": "C00752691",
+      "amount": 300000.0,
+      "visibility": "disclosed",
+      "depth": 1,
+      "transaction_types": [
+        "10"
+      ],
+      "count": 1,
+      "date_range": [
+        "2024-08-13",
+        "2024-08-13"
+      ],
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00752691&two_year_transaction_period=2024&contributor_name=STUTZMAN%2C+S.+MARK"
+    },
+    {
+      "from": "ind:WALTON_KELLY_R.|76244",
+      "to": "C00752691",
+      "amount": 250000.0,
+      "visibility": "disclosed",
+      "depth": 1,
+      "transaction_types": [
+        "10"
+      ],
+      "count": 1,
+      "date_range": [
+        "2024-10-09",
+        "2024-10-09"
+      ],
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00752691&two_year_transaction_period=2024&contributor_name=WALTON%2C+KELLY+R."
+    },
+    {
+      "from": "ind:WALTON_SAMANTHA_B.|60612",
+      "to": "C00752691",
+      "amount": 250000.0,
+      "visibility": "disclosed",
+      "depth": 1,
+      "transaction_types": [
+        "10"
+      ],
+      "count": 1,
+      "date_range": [
+        "2024-10-11",
+        "2024-10-11"
+      ],
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00752691&two_year_transaction_period=2024&contributor_name=WALTON%2C+SAMANTHA+B."
+    },
+    {
+      "from": "ind:WALTON_OLIVIA_S.|72712",
+      "to": "C00752691",
+      "amount": 250000.0,
+      "visibility": "disclosed",
+      "depth": 1,
+      "transaction_types": [
+        "10"
+      ],
+      "count": 1,
+      "date_range": [
+        "2024-10-04",
+        "2024-10-04"
+      ],
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00752691&two_year_transaction_period=2024&contributor_name=WALTON%2C+OLIVIA+S."
+    },
+    {
+      "from": "org:BRICK_BY_BRICK_FOUNDATION",
+      "to": "C00752691",
+      "amount": 250000.0,
+      "visibility": "dark",
+      "depth": 1,
+      "transaction_types": [
+        "10"
+      ],
+      "count": 1,
+      "date_range": [
+        "2024-09-27",
+        "2024-09-27"
+      ],
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00752691&two_year_transaction_period=2024&contributor_name=BRICK+BY+BRICK+FOUNDATION"
+    },
+    {
+      "from": "ind:MENNET_LISA|98118",
+      "to": "C00752691",
+      "amount": 250000.0,
+      "visibility": "disclosed",
+      "depth": 1,
+      "transaction_types": [
+        "10"
+      ],
+      "count": 1,
+      "date_range": [
+        "2024-09-03",
+        "2024-09-03"
+      ],
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00752691&two_year_transaction_period=2024&contributor_name=MENNET%2C+LISA"
+    },
+    {
+      "from": "org:BUELOW_BAMBINI_LLC",
+      "to": "C00752691",
+      "amount": 250000.0,
+      "visibility": "dark",
+      "depth": 1,
+      "transaction_types": [
+        "10"
+      ],
+      "count": 1,
+      "date_range": [
+        "2024-08-28",
+        "2024-08-28"
+      ],
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00752691&two_year_transaction_period=2024&contributor_name=BUELOW+BAMBINI+LLC"
+    },
+    {
+      "from": "ind:BLUMENTHAL_JABE|98122",
+      "to": "C00752691",
+      "amount": 225000.0,
+      "visibility": "disclosed",
+      "depth": 1,
+      "transaction_types": [
+        "10"
+      ],
+      "count": 3,
+      "date_range": [
+        "2023-02-01",
+        "2024-10-28"
+      ],
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00752691&two_year_transaction_period=2024&contributor_name=BLUMENTHAL%2C+JABE"
+    },
+    {
+      "from": "agg:other@C00752691",
+      "to": "C00752691",
+      "amount": 7588217.0,
+      "visibility": "disclosed",
+      "depth": 1,
+      "transaction_types": [
+        "10",
+        "18K",
+        "24K"
+      ],
+      "count": 2937,
+      "date_range": [
+        "2023-01-01",
+        "2024-12-31"
+      ],
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00752691&two_year_transaction_period=2024"
+    },
+    {
+      "from": "org:FUND_FOR_POLICY_REFORM",
+      "to": "C00693382",
+      "amount": 60000000.0,
+      "visibility": "dark",
+      "depth": 2,
+      "transaction_types": [
+        "10"
+      ],
+      "count": 1,
+      "date_range": [
+        "2024-01-11",
+        "2024-01-11"
+      ],
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00693382&two_year_transaction_period=2024&contributor_name=FUND+FOR+POLICY+REFORM"
+    },
+    {
+      "from": "org:GEOSOR_CORPORATION",
+      "to": "C00693382",
+      "amount": 10000000.0,
+      "visibility": "disclosed",
+      "depth": 2,
+      "transaction_types": [
+        "10"
+      ],
+      "count": 1,
+      "date_range": [
+        "2024-09-19",
+        "2024-09-19"
+      ],
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00693382&two_year_transaction_period=2024&contributor_name=GEOSOR+CORPORATION"
+    },
+    {
+      "from": "org:GLOBAL_OAK_HOLDINGS_LLC",
+      "to": "C00693382",
+      "amount": 731955.0,
+      "visibility": "dark",
+      "depth": 2,
+      "transaction_types": [
+        "10"
+      ],
+      "count": 6,
+      "date_range": [
+        "2024-01-31",
+        "2024-06-28"
+      ],
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00693382&two_year_transaction_period=2024&contributor_name=GLOBAL+OAK+HOLDINGS+LLC"
+    },
+    {
+      "from": "agg:other@C00693382",
+      "to": "C00693382",
+      "amount": 8552.0,
+      "visibility": "dark",
+      "depth": 2,
+      "transaction_types": [
+        "10"
+      ],
+      "count": 4,
+      "date_range": [
+        "2023-09-07",
+        "2024-12-30"
+      ],
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00693382&two_year_transaction_period=2024"
+    }
+  ],
+  "summary": {
+    "total_in": 20519717.0,
+    "disclosed_share": 0.793,
+    "inferable_share": 0.0,
+    "unwalked_share": 0.0,
+    "dark_share": 0.207,
+    "max_depth": 2,
+    "terminus_counts": {
+      "individual": 11,
+      "organization": 2,
+      "dark": 6,
+      "pruned": 2
+    }
+  },
+  "flags": [],
+  "method": "Backward walk over money edges only (Schedule A receipts from individuals and organizations, committee-to-committee transfers) into ONE FOR ALL COMMITTEE, 2 hop(s) deep; independent expenditures are targeting edges and never appear. The walk starts from $20,519,717 of itemized 2023–2024 receipts as loaded from FEC bulk data (unitemized receipts, loans and offsets are not edges), and every expanded committee conserves dollars: its inbound edges sum to its receipts. Inbound edges under 1% of a committee's receipts are rolled into one 'other contributors' node, which counts as disclosed except for the organization dollars inside it. Each dollar takes the visibility of where the walk stopped: named individuals (including earmarks through ActBlue/WinRed, attributed to the person) are disclosed. Organizations that are not registered committees are classified from their name alone (no IRS lookup): a union or a business giving from its own treasury is disclosed — the named entity is the source; an LLC, trust, advocacy nonprofit (501(c)(4)-style names) or unclassifiable organization is dark, because whoever funds it is not on file with the FEC. Visibility shares are preliminary; no 990 lookups were performed, so nothing is marked inferable."
+}

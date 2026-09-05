@@ -1,0 +1,78 @@
+{
+  "root_entity_id": "C00880518",
+  "root_name": "BITCOIN VOTER PAC",
+  "race_id": "pa-sen-2024",
+  "generated_at": "2026-09-05T13:41:28+00:00",
+  "data_status": "real",
+  "nodes": [
+    {
+      "id": "C00880518",
+      "name": "BITCOIN VOTER PAC",
+      "kind": "committee",
+      "committee_type": "V",
+      "depth": 0,
+      "visibility": "disclosed",
+      "amount_in": 125000.0,
+      "is_terminus": false,
+      "terminus_reason": null,
+      "source_url": "https://www.fec.gov/data/committee/C00880518/?cycle=2024"
+    },
+    {
+      "id": "org:BITCOIN_VOTER_PROJECT,_INC",
+      "name": "BITCOIN VOTER PROJECT, INC",
+      "kind": "organization",
+      "committee_type": null,
+      "depth": 1,
+      "visibility": "dark",
+      "amount_in": 125000.0,
+      "is_terminus": true,
+      "terminus_reason": "dark",
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00880518&two_year_transaction_period=2024&contributor_name=BITCOIN+VOTER+PROJECT%2C+INC",
+      "organization_class": "nonprofit"
+    }
+  ],
+  "edges": [
+    {
+      "from": "org:BITCOIN_VOTER_PROJECT,_INC",
+      "to": "C00880518",
+      "amount": 125000.0,
+      "visibility": "dark",
+      "depth": 1,
+      "transaction_types": [
+        "10"
+      ],
+      "count": 2,
+      "date_range": [
+        "2024-10-01",
+        "2024-10-17"
+      ],
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00880518&two_year_transaction_period=2024&contributor_name=BITCOIN+VOTER+PROJECT%2C+INC"
+    }
+  ],
+  "summary": {
+    "total_in": 125000.0,
+    "disclosed_share": 0.0,
+    "inferable_share": 0.0,
+    "unwalked_share": 0.0,
+    "dark_share": 1.0,
+    "max_depth": 1,
+    "terminus_counts": {
+      "dark": 1
+    }
+  },
+  "flags": [
+    {
+      "id": "single_transfer_funded",
+      "label": "Funded by a single source",
+      "detail": "BITCOIN VOTER PROJECT, INC supplied $125,000 of BITCOIN VOTER PAC's $125,000 itemized receipts (100%).",
+      "evidence_url": "https://www.fec.gov/data/receipts/?committee_id=C00880518&two_year_transaction_period=2024"
+    },
+    {
+      "id": "dead_end_dark",
+      "label": "Chain ends at undisclosed donors",
+      "detail": "100% of BITCOIN VOTER PAC's receipts stop at organizations whose own funding is not on file (advocacy nonprofits, LLCs, trusts) rather than at named individuals, businesses or unions.",
+      "evidence_url": "https://www.fec.gov/data/committee/C00880518/?cycle=2024"
+    }
+  ],
+  "method": "Backward walk over money edges only (Schedule A receipts from individuals and organizations, committee-to-committee transfers) into BITCOIN VOTER PAC, 1 hop(s) deep; independent expenditures are targeting edges and never appear. The walk starts from $125,000 of itemized 2023–2024 receipts as loaded from FEC bulk data (unitemized receipts, loans and offsets are not edges), and every expanded committee conserves dollars: its inbound edges sum to its receipts. Inbound edges under 1% of a committee's receipts are rolled into one 'other contributors' node, which counts as disclosed except for the organization dollars inside it. Each dollar takes the visibility of where the walk stopped: named individuals (including earmarks through ActBlue/WinRed, attributed to the person) are disclosed. Organizations that are not registered committees are classified from their name alone (no IRS lookup): a union or a business giving from its own treasury is disclosed — the named entity is the source; an LLC, trust, advocacy nonprofit (501(c)(4)-style names) or unclassifiable organization is dark, because whoever funds it is not on file with the FEC. Visibility shares are preliminary; no 990 lookups were performed, so nothing is marked inferable."
+}

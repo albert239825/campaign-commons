@@ -1,0 +1,27 @@
+[project]
+name = "citizen-gotham-pipeline"
+version = "0.1.0"
+description = "Offline pipeline: FEC bulk -> DuckDB -> static JSON for the Citizen Gotham web app"
+requires-python = ">=3.10"
+dependencies = [
+  "duckdb>=1.1",
+  "pandas>=2.2",
+  "pyarrow>=17",
+  "requests>=2.32",
+  "jsonschema>=4.23",
+  "python-dotenv>=1.0",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8", "ruff>=0.6"]
+
+[tool.ruff]
+line-length = 120
+target-version = "py310"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "B", "UP"]
+ignore = ["E501"]  # formatter owns line length; long literal strings/URLs are fine
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

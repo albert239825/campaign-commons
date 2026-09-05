@@ -1,0 +1,108 @@
+{
+  "root_entity_id": "C00742635",
+  "root_name": "GUN RIGHTS AMERICA",
+  "race_id": "pa-sen-2024",
+  "generated_at": "2026-09-05T13:41:28+00:00",
+  "data_status": "real",
+  "nodes": [
+    {
+      "id": "C00742635",
+      "name": "GUN RIGHTS AMERICA",
+      "kind": "committee",
+      "committee_type": "O",
+      "depth": 0,
+      "visibility": "disclosed",
+      "amount_in": 161793.0,
+      "is_terminus": false,
+      "terminus_reason": null,
+      "source_url": "https://www.fec.gov/data/committee/C00742635/?cycle=2024"
+    },
+    {
+      "id": "org:NATIONAL_ASSOCIATION_FOR_GUN_RIGHTS",
+      "name": "NATIONAL ASSOCIATION FOR GUN RIGHTS",
+      "kind": "organization",
+      "committee_type": null,
+      "depth": 1,
+      "visibility": "dark",
+      "amount_in": 161731.0,
+      "is_terminus": true,
+      "terminus_reason": "dark",
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00742635&two_year_transaction_period=2024&contributor_name=NATIONAL+ASSOCIATION+FOR+GUN+RIGHTS",
+      "organization_class": "nonprofit"
+    },
+    {
+      "id": "agg:other@C00742635",
+      "name": "Other contributors to GUN RIGHTS AMERICA (each <1% of receipts, or beyond the 40 largest)",
+      "kind": "aggregate",
+      "committee_type": null,
+      "depth": 1,
+      "visibility": "disclosed",
+      "amount_in": 62.0,
+      "is_terminus": true,
+      "terminus_reason": "pruned",
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00742635&two_year_transaction_period=2024",
+      "contributor_count": 1
+    }
+  ],
+  "edges": [
+    {
+      "from": "org:NATIONAL_ASSOCIATION_FOR_GUN_RIGHTS",
+      "to": "C00742635",
+      "amount": 161731.0,
+      "visibility": "dark",
+      "depth": 1,
+      "transaction_types": [
+        "10"
+      ],
+      "count": 10,
+      "date_range": [
+        "2023-02-10",
+        "2024-12-31"
+      ],
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00742635&two_year_transaction_period=2024&contributor_name=NATIONAL+ASSOCIATION+FOR+GUN+RIGHTS"
+    },
+    {
+      "from": "agg:other@C00742635",
+      "to": "C00742635",
+      "amount": 62.0,
+      "visibility": "disclosed",
+      "depth": 1,
+      "transaction_types": [
+        "10"
+      ],
+      "count": 3,
+      "date_range": [
+        "2024-10-10",
+        "2024-12-12"
+      ],
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00742635&two_year_transaction_period=2024"
+    }
+  ],
+  "summary": {
+    "total_in": 161793.0,
+    "disclosed_share": 0.0004,
+    "inferable_share": 0.0,
+    "unwalked_share": 0.0,
+    "dark_share": 0.9996,
+    "max_depth": 1,
+    "terminus_counts": {
+      "dark": 1,
+      "pruned": 1
+    }
+  },
+  "flags": [
+    {
+      "id": "single_transfer_funded",
+      "label": "Funded by a single source",
+      "detail": "NATIONAL ASSOCIATION FOR GUN RIGHTS supplied $161,731 of GUN RIGHTS AMERICA's $161,793 itemized receipts (100%).",
+      "evidence_url": "https://www.fec.gov/data/receipts/?committee_id=C00742635&two_year_transaction_period=2024"
+    },
+    {
+      "id": "dead_end_dark",
+      "label": "Chain ends at undisclosed donors",
+      "detail": "100% of GUN RIGHTS AMERICA's receipts stop at organizations whose own funding is not on file (advocacy nonprofits, LLCs, trusts) rather than at named individuals, businesses or unions.",
+      "evidence_url": "https://www.fec.gov/data/committee/C00742635/?cycle=2024"
+    }
+  ],
+  "method": "Backward walk over money edges only (Schedule A receipts from individuals and organizations, committee-to-committee transfers) into GUN RIGHTS AMERICA, 1 hop(s) deep; independent expenditures are targeting edges and never appear. The walk starts from $161,793 of itemized 2023–2024 receipts as loaded from FEC bulk data (unitemized receipts, loans and offsets are not edges), and every expanded committee conserves dollars: its inbound edges sum to its receipts. Inbound edges under 1% of a committee's receipts are rolled into one 'other contributors' node, which counts as disclosed except for the organization dollars inside it. Each dollar takes the visibility of where the walk stopped: named individuals (including earmarks through ActBlue/WinRed, attributed to the person) are disclosed. Organizations that are not registered committees are classified from their name alone (no IRS lookup): a union or a business giving from its own treasury is disclosed — the named entity is the source; an LLC, trust, advocacy nonprofit (501(c)(4)-style names) or unclassifiable organization is dark, because whoever funds it is not on file with the FEC. Visibility shares are preliminary; no 990 lookups were performed, so nothing is marked inferable."
+}

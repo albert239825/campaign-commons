@@ -1,0 +1,77 @@
+{
+  "entity_id": "C00849729",
+  "race_id": "pa-sen-2024",
+  "kind": "committee",
+  "name": "LAST BEST PLACE PAC",
+  "aliases": [],
+  "committee_type": "O",
+  "committee_type_label": "Super PAC",
+  "designation": "U",
+  "registration_date": null,
+  "treasurer": "LEWIS, DAVID M.",
+  "address": {
+    "street": "PO BOX 947",
+    "city": "HELENA",
+    "state": "MT",
+    "zip": "59624"
+  },
+  "visibility": "disclosed",
+  "is_conduit": false,
+  "totals": {
+    "receipts": 41580000.0,
+    "disbursements": 41580000.0,
+    "independent_expenditures": 33816255.22,
+    "from_individuals": 0.0,
+    "from_committees": 0.0,
+    "from_organizations": 0.0,
+    "from_undisclosed": 41430000.0
+  },
+  "inflows": [
+    {
+      "transfer_id": "C00849729-in-org:MAJORITY_FORWARD",
+      "from_entity_id": "org:MAJORITY_FORWARD",
+      "from_name": "MAJORITY FORWARD",
+      "to_entity_id": "C00849729",
+      "to_name": "LAST BEST PLACE PAC",
+      "amount": 41430000.0,
+      "date": "2024-10-21",
+      "visibility": "dark",
+      "transaction_type": "10",
+      "limit": "unlimited",
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00849729&two_year_transaction_period=2024&contributor_name=MAJORITY+FORWARD"
+    }
+  ],
+  "outflows": [
+    {
+      "transfer_id": "C00849729-out-C00484642",
+      "from_entity_id": "C00849729",
+      "from_name": "LAST BEST PLACE PAC",
+      "to_entity_id": "C00484642",
+      "to_name": "SMP",
+      "amount": 673995.0,
+      "date": "2024-11-08",
+      "visibility": "disclosed",
+      "transaction_type": "24K",
+      "limit": "unlimited",
+      "source_url": "https://www.fec.gov/data/disbursements/?committee_id=C00849729&two_year_transaction_period=2024"
+    },
+    {
+      "transfer_id": "C00849729-out-C00860155",
+      "from_entity_id": "C00849729",
+      "from_name": "LAST BEST PLACE PAC",
+      "to_entity_id": "C00860155",
+      "to_name": "MONTANA OUTDOOR VALUES ACTION FUND",
+      "amount": 12000.0,
+      "date": "2024-10-25",
+      "visibility": "disclosed",
+      "transaction_type": "24K",
+      "limit": null,
+      "source_url": "https://www.fec.gov/data/disbursements/?committee_id=C00849729&two_year_transaction_period=2024"
+    }
+  ],
+  "independent_expenditures": [],
+  "flags": [],
+  "has_chain": false,
+  "source_url": "https://www.fec.gov/data/committee/C00849729/?cycle=2024",
+  "data_status": "real"
+}

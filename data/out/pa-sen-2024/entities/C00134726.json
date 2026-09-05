@@ -1,0 +1,89 @@
+{
+  "entity_id": "C00134726",
+  "race_id": "pa-sen-2024",
+  "kind": "committee",
+  "name": "INTERNATIONAL UNION OF OPERATING ENGINEERS LOCAL 14-14B VOLUNTARY POLITICAL COMMITTEE",
+  "aliases": [],
+  "committee_type": "Q",
+  "committee_type_label": "PAC",
+  "designation": "U",
+  "registration_date": null,
+  "treasurer": "CHRISTIAN, EDWIN L.",
+  "address": {
+    "street": "159-18 NORTHERN BOULEVARD",
+    "city": "FLUSHING",
+    "state": "NY",
+    "zip": "11358"
+  },
+  "visibility": "disclosed",
+  "is_conduit": false,
+  "totals": {
+    "receipts": 115796.01,
+    "disbursements": 267228.95,
+    "independent_expenditures": 0,
+    "from_individuals": 104766.43,
+    "from_committees": 0.0,
+    "from_organizations": 0.0,
+    "from_undisclosed": 0.0
+  },
+  "inflows": [],
+  "outflows": [
+    {
+      "transfer_id": "C00134726-out-C00029504",
+      "from_entity_id": "C00134726",
+      "from_name": "INTERNATIONAL UNION OF OPERATING ENGINEERS LOCAL 14-14B VOLUNTARY POLITICAL COMMITTEE",
+      "to_entity_id": "C00029504",
+      "to_name": "ENGINEERS POLITICAL EDUCATION COMMITTEE (EPEC)/INTERNATIONAL UNION OF OPERATING ENGINEERS",
+      "amount": 400000.0,
+      "date": "2024-10-07",
+      "visibility": "disclosed",
+      "transaction_type": "18G",
+      "limit": null,
+      "source_url": "https://www.fec.gov/data/disbursements/?committee_id=C00134726&two_year_transaction_period=2024"
+    },
+    {
+      "transfer_id": "C00134726-out-C00426163",
+      "from_entity_id": "C00134726",
+      "from_name": "INTERNATIONAL UNION OF OPERATING ENGINEERS LOCAL 14-14B VOLUNTARY POLITICAL COMMITTEE",
+      "to_entity_id": "C00426163",
+      "to_name": "NEW YORK STATE  CONFERENCE OF THE INTERNATIONAL UNION OF OPERATING ENGINEERS FED VPAF (NYS CONF IUOE FED VPAF)",
+      "amount": 122080.0,
+      "date": "2024-07-24",
+      "visibility": "disclosed",
+      "transaction_type": "18G",
+      "limit": null,
+      "source_url": "https://www.fec.gov/data/disbursements/?committee_id=C00134726&two_year_transaction_period=2024"
+    },
+    {
+      "transfer_id": "C00134726-out-C00430991",
+      "from_entity_id": "C00134726",
+      "from_name": "INTERNATIONAL UNION OF OPERATING ENGINEERS LOCAL 14-14B VOLUNTARY POLITICAL COMMITTEE",
+      "to_entity_id": "C00430991",
+      "to_name": "FRIENDS FOR GREGORY MEEKS",
+      "amount": 2000.0,
+      "date": "2023-11-27",
+      "visibility": "disclosed",
+      "transaction_type": "24K",
+      "limit": null,
+      "source_url": "https://www.fec.gov/data/disbursements/?committee_id=C00134726&two_year_transaction_period=2024"
+    },
+    {
+      "transfer_id": "C00134726-out-C00147512",
+      "from_entity_id": "C00134726",
+      "from_name": "INTERNATIONAL UNION OF OPERATING ENGINEERS LOCAL 14-14B VOLUNTARY POLITICAL COMMITTEE",
+      "to_entity_id": "C00147512",
+      "to_name": "CONGRESSIONAL BLACK CAUCUS PAC",
+      "amount": 1000.0,
+      "date": "2024-07-11",
+      "visibility": "disclosed",
+      "transaction_type": "24K",
+      "limit": null,
+      "source_url": "https://www.fec.gov/data/disbursements/?committee_id=C00134726&two_year_transaction_period=2024"
+    }
+  ],
+  "independent_expenditures": [],
+  "flags": [],
+  "has_chain": false,
+  "source_url": "https://www.fec.gov/data/committee/C00134726/?cycle=2024",
+  "data_status": "real"
+}

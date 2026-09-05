@@ -1,0 +1,201 @@
+{
+  "entity_id": "C00659011",
+  "race_id": "pa-sen-2024",
+  "kind": "committee",
+  "name": "WITH HONOR FUND, INC.",
+  "aliases": [],
+  "committee_type": "O",
+  "committee_type_label": "Super PAC",
+  "designation": "U",
+  "registration_date": null,
+  "treasurer": "KOCH, TIMOTHY A,",
+  "address": {
+    "street": "PO BOX 813",
+    "city": "ALEXANDRIA",
+    "state": "VA",
+    "zip": "22313"
+  },
+  "visibility": "disclosed",
+  "is_conduit": false,
+  "totals": {
+    "receipts": 4356143.59,
+    "disbursements": 5934040.36,
+    "independent_expenditures": 0,
+    "from_individuals": 4250292.52,
+    "from_committees": 0.0,
+    "from_organizations": 0.0,
+    "from_undisclosed": 0.0
+  },
+  "inflows": [
+    {
+      "transfer_id": "C00659011-in-ind:BEZOS_JACKLYN|98040",
+      "from_entity_id": "ind:BEZOS_JACKLYN|98040",
+      "from_name": "BEZOS, JACKLYN",
+      "to_entity_id": "C00659011",
+      "to_name": "WITH HONOR FUND, INC.",
+      "amount": 2021133.0,
+      "date": "2023-03-14",
+      "visibility": "disclosed",
+      "transaction_type": "10",
+      "limit": "unlimited",
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00659011&two_year_transaction_period=2024&contributor_name=BEZOS%2C+JACKLYN"
+    },
+    {
+      "transfer_id": "C00659011-in-ind:BEZOS_MIGUEL|98040",
+      "from_entity_id": "ind:BEZOS_MIGUEL|98040",
+      "from_name": "BEZOS, MIGUEL",
+      "to_entity_id": "C00659011",
+      "to_name": "WITH HONOR FUND, INC.",
+      "amount": 2021133.0,
+      "date": "2023-03-14",
+      "visibility": "disclosed",
+      "transaction_type": "10",
+      "limit": "unlimited",
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00659011&two_year_transaction_period=2024&contributor_name=BEZOS%2C+MIGUEL"
+    },
+    {
+      "transfer_id": "C00659011-in-ind:JONES_MATTHEW|22207",
+      "from_entity_id": "ind:JONES_MATTHEW|22207",
+      "from_name": "JONES, MATTHEW",
+      "to_entity_id": "C00659011",
+      "to_name": "WITH HONOR FUND, INC.",
+      "amount": 100000.0,
+      "date": "2023-03-15",
+      "visibility": "disclosed",
+      "transaction_type": "10",
+      "limit": "unlimited",
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00659011&two_year_transaction_period=2024&contributor_name=JONES%2C+MATTHEW"
+    },
+    {
+      "transfer_id": "C00659011-in-C00035451",
+      "from_entity_id": "C00035451",
+      "from_name": "AIR LINE PILOTS ASSOCIATION PAC",
+      "to_entity_id": "C00659011",
+      "to_name": "WITH HONOR FUND, INC.",
+      "amount": 50000.0,
+      "date": "2023-12-13",
+      "visibility": "disclosed",
+      "transaction_type": "24K",
+      "limit": "unlimited",
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00659011&two_year_transaction_period=2024&contributor_name=C00035451"
+    },
+    {
+      "transfer_id": "C00659011-in-ind:BRIERLEY_HAROLD|75205",
+      "from_entity_id": "ind:BRIERLEY_HAROLD|75205",
+      "from_name": "BRIERLEY, HAROLD",
+      "to_entity_id": "C00659011",
+      "to_name": "WITH HONOR FUND, INC.",
+      "amount": 40000.0,
+      "date": "2023-03-14",
+      "visibility": "disclosed",
+      "transaction_type": "10",
+      "limit": "unlimited",
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00659011&two_year_transaction_period=2024&contributor_name=BRIERLEY%2C+HAROLD"
+    },
+    {
+      "transfer_id": "C00659011-in-ind:DIXON_DONALD|94027",
+      "from_entity_id": "ind:DIXON_DONALD|94027",
+      "from_name": "DIXON, DONALD",
+      "to_entity_id": "C00659011",
+      "to_name": "WITH HONOR FUND, INC.",
+      "amount": 40000.0,
+      "date": "2023-03-07",
+      "visibility": "disclosed",
+      "transaction_type": "10",
+      "limit": "unlimited",
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00659011&two_year_transaction_period=2024&contributor_name=DIXON%2C+DONALD"
+    },
+    {
+      "transfer_id": "C00659011-in-ind:YAZDANI_BOBBY|84060",
+      "from_entity_id": "ind:YAZDANI_BOBBY|84060",
+      "from_name": "YAZDANI, BOBBY",
+      "to_entity_id": "C00659011",
+      "to_name": "WITH HONOR FUND, INC.",
+      "amount": 25000.0,
+      "date": "2023-03-20",
+      "visibility": "disclosed",
+      "transaction_type": "10",
+      "limit": "unlimited",
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00659011&two_year_transaction_period=2024&contributor_name=YAZDANI%2C+BOBBY"
+    },
+    {
+      "transfer_id": "C00659011-in-ind:LEITCH_MATTHEW|75218",
+      "from_entity_id": "ind:LEITCH_MATTHEW|75218",
+      "from_name": "LEITCH, MATTHEW",
+      "to_entity_id": "C00659011",
+      "to_name": "WITH HONOR FUND, INC.",
+      "amount": 1000.0,
+      "date": "2023-01-12",
+      "visibility": "disclosed",
+      "transaction_type": "10",
+      "limit": "unlimited",
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00659011&two_year_transaction_period=2024&contributor_name=LEITCH%2C+MATTHEW"
+    },
+    {
+      "transfer_id": "C00659011-in-ind:BORN_DANA|22305",
+      "from_entity_id": "ind:BORN_DANA|22305",
+      "from_name": "BORN, DANA",
+      "to_entity_id": "C00659011",
+      "to_name": "WITH HONOR FUND, INC.",
+      "amount": 500.0,
+      "date": "2023-01-24",
+      "visibility": "disclosed",
+      "transaction_type": "10",
+      "limit": "unlimited",
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00659011&two_year_transaction_period=2024&contributor_name=BORN%2C+DANA"
+    },
+    {
+      "transfer_id": "C00659011-in-ind:NIDESS_DANIEL|94102",
+      "from_entity_id": "ind:NIDESS_DANIEL|94102",
+      "from_name": "NIDESS, DANIEL",
+      "to_entity_id": "C00659011",
+      "to_name": "WITH HONOR FUND, INC.",
+      "amount": 500.0,
+      "date": "2023-04-29",
+      "visibility": "disclosed",
+      "transaction_type": "10",
+      "limit": "unlimited",
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00659011&two_year_transaction_period=2024&contributor_name=NIDESS%2C+DANIEL"
+    },
+    {
+      "transfer_id": "C00659011-in-ind:PROFFITT_STUART|28209",
+      "from_entity_id": "ind:PROFFITT_STUART|28209",
+      "from_name": "PROFFITT, STUART",
+      "to_entity_id": "C00659011",
+      "to_name": "WITH HONOR FUND, INC.",
+      "amount": 500.0,
+      "date": "2023-05-26",
+      "visibility": "disclosed",
+      "transaction_type": "10",
+      "limit": "unlimited",
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00659011&two_year_transaction_period=2024&contributor_name=PROFFITT%2C+STUART"
+    }
+  ],
+  "outflows": [
+    {
+      "transfer_id": "C00659011-out-C00831404",
+      "from_entity_id": "C00659011",
+      "from_name": "WITH HONOR FUND, INC.",
+      "to_entity_id": "C00831404",
+      "to_name": "WITH HONOR FUND II, INC.",
+      "amount": 5891511.0,
+      "date": "2023-09-05",
+      "visibility": "disclosed",
+      "transaction_type": "24K",
+      "limit": "unlimited",
+      "source_url": "https://www.fec.gov/data/disbursements/?committee_id=C00659011&two_year_transaction_period=2024"
+    }
+  ],
+  "independent_expenditures": [],
+  "flags": [
+    {
+      "id": "shell_cluster",
+      "label": "Shares address and treasurer",
+      "detail": "WITH HONOR FUND, INC. lists the same street address and treasurer as PRINCIPLED VETERANS FUND (PV FUND) (C00780841).",
+      "evidence_url": "https://www.fec.gov/data/committee/C00659011/?cycle=2024"
+    }
+  ],
+  "has_chain": false,
+  "source_url": "https://www.fec.gov/data/committee/C00659011/?cycle=2024",
+  "data_status": "real"
+}

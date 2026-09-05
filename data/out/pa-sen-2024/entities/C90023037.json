@@ -1,0 +1,109 @@
+{
+  "entity_id": "C90023037",
+  "race_id": "pa-sen-2024",
+  "kind": "committee",
+  "name": "POPULATION CONNECTION ACTION FUND",
+  "aliases": [],
+  "committee_type": "I",
+  "committee_type_label": "Independent expenditor (not a committee)",
+  "designation": "U",
+  "registration_date": null,
+  "treasurer": null,
+  "address": {
+    "street": "2120 L ST. NW SUITE 500",
+    "city": "WASHINGTON",
+    "state": "DC",
+    "zip": "20037"
+  },
+  "visibility": "disclosed",
+  "is_conduit": false,
+  "totals": {
+    "receipts": 0.0,
+    "disbursements": 25051.69,
+    "independent_expenditures": 2370.92,
+    "from_individuals": 0.0,
+    "from_committees": 0.0,
+    "from_organizations": 0.0,
+    "from_undisclosed": 0.0
+  },
+  "inflows": [],
+  "outflows": [],
+  "independent_expenditures": [
+    {
+      "ie_id": "C90023037-ie-1874773-F57.000020",
+      "spender_entity_id": "C90023037",
+      "spender_name": "POPULATION CONNECTION ACTION FUND",
+      "candidate_id": "S6PA00217",
+      "candidate_name": "Bob Casey",
+      "support_oppose": "S",
+      "amount": 612.0,
+      "date": "2024-11-04",
+      "purpose": "CANVASSING CAST YOUR VOTE",
+      "payee": "POPULATION CONNECTION ACTION FUND",
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202502059753258161"
+    },
+    {
+      "ie_id": "C90023037-ie-1874773-F57.000018",
+      "spender_entity_id": "C90023037",
+      "spender_name": "POPULATION CONNECTION ACTION FUND",
+      "candidate_id": "S6PA00217",
+      "candidate_name": "Bob Casey",
+      "support_oppose": "S",
+      "amount": 602.62,
+      "date": "2024-11-02",
+      "purpose": "CANVASSING CAST YOUR VOTE",
+      "payee": "POPULATION CONNECTION ACTION FUND",
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202502059753258160"
+    },
+    {
+      "ie_id": "C90023037-ie-1874773-F57.000019",
+      "spender_entity_id": "C90023037",
+      "spender_name": "POPULATION CONNECTION ACTION FUND",
+      "candidate_id": "S6PA00217",
+      "candidate_name": "Bob Casey",
+      "support_oppose": "S",
+      "amount": 544.69,
+      "date": "2024-11-03",
+      "purpose": "CANVASSING CAST YOUR VOTE",
+      "payee": "POPULATION CONNECTION ACTION FUND",
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202502059753258161"
+    },
+    {
+      "ie_id": "C90023037-ie-1874773-F57.000021",
+      "spender_entity_id": "C90023037",
+      "spender_name": "POPULATION CONNECTION ACTION FUND",
+      "candidate_id": "S6PA00217",
+      "candidate_name": "Bob Casey",
+      "support_oppose": "S",
+      "amount": 335.28,
+      "date": "2024-11-05",
+      "purpose": "CANVASSING CAST YOUR VOTE",
+      "payee": "POPULATION CONNECTION ACTION FUND",
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202502059753258161"
+    },
+    {
+      "ie_id": "C90023037-ie-1874773-F57.000017",
+      "spender_entity_id": "C90023037",
+      "spender_name": "POPULATION CONNECTION ACTION FUND",
+      "candidate_id": "S6PA00217",
+      "candidate_name": "Bob Casey",
+      "support_oppose": "S",
+      "amount": 276.33,
+      "date": "2024-11-02",
+      "purpose": "CANVASSING CAST YOUR VOTE",
+      "payee": "POPULATION CONNECTION ACTION FUND",
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202502059753258160"
+    }
+  ],
+  "flags": [
+    {
+      "id": "popup",
+      "label": "Pop-up committee",
+      "detail": "POPULATION CONNECTION ACTION FUND's first reported activity in the 2024 cycle is 2024-11-02, after the pre-general report cutoff (2024-10-17), so its donors were not on file before election day. Registration date is proxied by first observed activity in FEC bulk data.",
+      "evidence_url": "https://www.fec.gov/data/committee/C90023037/?cycle=2024"
+    }
+  ],
+  "has_chain": false,
+  "source_url": "https://www.fec.gov/data/committee/C90023037/?cycle=2024",
+  "data_status": "real"
+}

@@ -1,0 +1,68 @@
+@import "tailwindcss";
+
+@theme inline {
+  --color-disclosed: #1d9e75;
+  --color-inferable: #ef9f27;
+  --color-dark: #e24b4a;
+  --color-targeting: #73726c;
+  --font-sans: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --font-mono: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+}
+
+body {
+  font-family: var(--font-sans);
+}
+
+/* Receipts table on chain pages: styled here rather than per cell so a hundred server-rendered rows stay small. */
+.edge-table {
+  @apply w-full text-sm;
+}
+.edge-table th {
+  @apply py-1.5 pr-2 text-left text-[11px] font-medium uppercase tracking-wide text-neutral-500;
+}
+.edge-table td {
+  @apply py-1.5 pr-2 align-top;
+}
+.edge-table tr {
+  @apply border-t border-neutral-100;
+}
+.edge-table .hop,
+.edge-table .txns {
+  @apply text-xs tabular-nums text-neutral-500;
+}
+.edge-table .arrow {
+  @apply text-neutral-400;
+}
+.edge-table .amount,
+.edge-table th.amount,
+.edge-table .record,
+.edge-table th.record {
+  @apply text-right;
+}
+.edge-table .vis {
+  @apply text-xs;
+}
+.edge-table .dot {
+  @apply mr-1.5 inline-block h-2.5 w-2.5 rounded-full;
+}
+.edge-table .code {
+  @apply ml-1 rounded-sm border border-neutral-200 bg-neutral-100 px-1 text-[11px] font-medium text-neutral-500;
+}
+.edge-table .dates {
+  @apply whitespace-nowrap text-xs text-neutral-600;
+}
+.edge-table .why {
+  @apply text-[11px] text-neutral-500;
+}
+.edge-table .muted {
+  @apply text-neutral-500;
+}
+.edge-table .none {
+  @apply text-xs text-neutral-400;
+}
+.edge-table a.rec {
+  @apply text-xs text-neutral-500 underline decoration-dotted underline-offset-2 hover:text-neutral-900;
+}
+.edge-table a.ent {
+  @apply hover:underline;
+}

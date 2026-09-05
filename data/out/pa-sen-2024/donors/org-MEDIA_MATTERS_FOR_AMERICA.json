@@ -1,0 +1,213 @@
+{
+  "donor_id": "org:MEDIA_MATTERS_FOR_AMERICA",
+  "donor_key": "org-MEDIA_MATTERS_FOR_AMERICA",
+  "name": "MEDIA MATTERS FOR AMERICA",
+  "kind": "organization",
+  "race_id": "pa-sen-2024",
+  "generated_at": "2026-09-05T14:22:15+00:00",
+  "data_status": "real",
+  "total_given": 2000000.0,
+  "total_in_chains": 27000000.0,
+  "nodes": [
+    {
+      "id": "org:MEDIA_MATTERS_FOR_AMERICA",
+      "name": "MEDIA MATTERS FOR AMERICA",
+      "kind": "organization",
+      "committee_type": null,
+      "depth": 0,
+      "amount": 27000000.0,
+      "is_spender": false,
+      "has_chain": false,
+      "source_url": "https://www.fec.gov/data/receipts/individual-contributions/?contributor_name=MEDIA+MATTERS+FOR+AMERICA&two_year_transaction_period=2024"
+    },
+    {
+      "id": "C00492520",
+      "name": "AMERICA VOTES ACTION FUND",
+      "kind": "committee",
+      "committee_type": "O",
+      "depth": 1,
+      "amount": 2000000.0,
+      "is_spender": false,
+      "has_chain": false,
+      "source_url": "https://www.fec.gov/data/committee/C00492520/?cycle=2024"
+    },
+    {
+      "id": "C00486845",
+      "name": "LCV VICTORY FUND",
+      "kind": "committee",
+      "committee_type": "O",
+      "depth": 2,
+      "amount": 3775000.0,
+      "is_spender": true,
+      "has_chain": true,
+      "source_url": "https://www.fec.gov/data/committee/C00486845/?cycle=2024"
+    },
+    {
+      "id": "C00609388",
+      "name": "BLACKPAC",
+      "kind": "committee",
+      "committee_type": "O",
+      "depth": 2,
+      "amount": 2500000.0,
+      "is_spender": true,
+      "has_chain": true,
+      "source_url": "https://www.fec.gov/data/committee/C00609388/?cycle=2024"
+    },
+    {
+      "id": "C00744920",
+      "name": "CFFE PAC",
+      "kind": "committee",
+      "committee_type": "W",
+      "depth": 2,
+      "amount": 2100000.0,
+      "is_spender": true,
+      "has_chain": true,
+      "source_url": "https://www.fec.gov/data/committee/C00744920/?cycle=2024"
+    },
+    {
+      "id": "C00724203",
+      "name": "SOMOS PAC",
+      "kind": "committee",
+      "committee_type": "O",
+      "depth": 2,
+      "amount": 1660000.0,
+      "is_spender": true,
+      "has_chain": true,
+      "source_url": "https://www.fec.gov/data/committee/C00724203/?cycle=2024"
+    },
+    {
+      "id": "C00754051",
+      "name": "WORKERS VOTE",
+      "kind": "committee",
+      "committee_type": "O",
+      "depth": 2,
+      "amount": 650000.0,
+      "is_spender": true,
+      "has_chain": true,
+      "source_url": "https://www.fec.gov/data/committee/C00754051/?cycle=2024"
+    },
+    {
+      "id": "S6PA00217",
+      "name": "Bob Casey",
+      "kind": "candidate",
+      "committee_type": null,
+      "depth": 3,
+      "amount": 10382930.99,
+      "is_spender": false,
+      "has_chain": false,
+      "source_url": "https://www.fec.gov/data/candidate/S6PA00217/?cycle=2024&election_full=false"
+    },
+    {
+      "id": "S2PA00661",
+      "name": "Dave McCormick",
+      "kind": "candidate",
+      "committee_type": null,
+      "depth": 3,
+      "amount": 2002359.54,
+      "is_spender": false,
+      "has_chain": false,
+      "source_url": "https://www.fec.gov/data/candidate/S2PA00661/?cycle=2024&election_full=false"
+    }
+  ],
+  "edges": [
+    {
+      "from": "org:MEDIA_MATTERS_FOR_AMERICA",
+      "to": "C00492520",
+      "kind": "money",
+      "amount": 2000000.0,
+      "support_oppose": null,
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00492520&two_year_transaction_period=2024&contributor_name=MEDIA+MATTERS+FOR+AMERICA"
+    },
+    {
+      "from": "C00492520",
+      "to": "C00486845",
+      "kind": "money",
+      "amount": 3775000.0,
+      "support_oppose": null,
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00486845&two_year_transaction_period=2024&contributor_name=C00492520"
+    },
+    {
+      "from": "C00492520",
+      "to": "C00609388",
+      "kind": "money",
+      "amount": 2500000.0,
+      "support_oppose": null,
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00609388&two_year_transaction_period=2024&contributor_name=C00492520"
+    },
+    {
+      "from": "C00492520",
+      "to": "C00744920",
+      "kind": "money",
+      "amount": 2100000.0,
+      "support_oppose": null,
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00744920&two_year_transaction_period=2024&contributor_name=C00492520"
+    },
+    {
+      "from": "C00492520",
+      "to": "C00724203",
+      "kind": "money",
+      "amount": 1660000.0,
+      "support_oppose": null,
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00724203&two_year_transaction_period=2024&contributor_name=C00492520"
+    },
+    {
+      "from": "C00492520",
+      "to": "C00754051",
+      "kind": "money",
+      "amount": 650000.0,
+      "support_oppose": null,
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00754051&two_year_transaction_period=2024&contributor_name=C00492520"
+    },
+    {
+      "from": "C00486845",
+      "to": "S6PA00217",
+      "kind": "targeting",
+      "amount": 3048486.4,
+      "support_oppose": "S",
+      "source_url": "https://www.fec.gov/data/independent-expenditures/?committee_id=C00486845&cycle=2024&candidate_id=S6PA00217"
+    },
+    {
+      "from": "C00486845",
+      "to": "S2PA00661",
+      "kind": "targeting",
+      "amount": 2002359.54,
+      "support_oppose": "O",
+      "source_url": "https://www.fec.gov/data/independent-expenditures/?committee_id=C00486845&cycle=2024&candidate_id=S2PA00661"
+    },
+    {
+      "from": "C00609388",
+      "to": "S6PA00217",
+      "kind": "targeting",
+      "amount": 2670699.56,
+      "support_oppose": "S",
+      "source_url": "https://www.fec.gov/data/independent-expenditures/?committee_id=C00609388&cycle=2024&candidate_id=S6PA00217"
+    },
+    {
+      "from": "C00744920",
+      "to": "S6PA00217",
+      "kind": "targeting",
+      "amount": 2866090.0,
+      "support_oppose": "S",
+      "source_url": "https://www.fec.gov/data/independent-expenditures/?committee_id=C00744920&cycle=2024&candidate_id=S6PA00217"
+    },
+    {
+      "from": "C00724203",
+      "to": "S6PA00217",
+      "kind": "targeting",
+      "amount": 1272156.59,
+      "support_oppose": "S",
+      "source_url": "https://www.fec.gov/data/independent-expenditures/?committee_id=C00724203&cycle=2024&candidate_id=S6PA00217"
+    },
+    {
+      "from": "C00754051",
+      "to": "S6PA00217",
+      "kind": "targeting",
+      "amount": 525498.44,
+      "support_oppose": "S",
+      "source_url": "https://www.fec.gov/data/independent-expenditures/?committee_id=C00754051&cycle=2024&candidate_id=S6PA00217"
+    }
+  ],
+  "allocation_note": "share of donor's dollars reaching this spender is not determinable; showing the committees in between",
+  "truncated": false,
+  "method": "Forward walk over the same money edges as the chain walk (Schedule A receipts and committee-to-committee transfers from FEC bulk data, refunds excluded), starting from MEDIA MATTERS FOR AMERICA: the 1 committee(s) it gave to in the 2024 cycle, then the outside spenders in this race that received transfers from those committees (5 spender(s) reached), then each spender's independent expenditures for or against a candidate. Independent expenditures are targeting edges: they move no money to the candidate and are drawn separately. Amounts on money edges are the reported totals between the two parties, not a share of this donor's dollars — once pooled, a donor's money is fungible, so no allocation is made past the first hop. `total_given` is the sum of the first-hop edges shown (itemized receipts reported under this name); `total_in_chains`, used only to rank donors, sums this donor's edges across every spender chain in the race, so the same gift counts once per chain it appears in."
+}

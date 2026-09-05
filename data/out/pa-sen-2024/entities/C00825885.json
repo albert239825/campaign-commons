@@ -1,0 +1,116 @@
+{
+  "entity_id": "C00825885",
+  "race_id": "pa-sen-2024",
+  "kind": "committee",
+  "name": "PATRIOTS FOR A BRIGHTER AMERICA",
+  "aliases": [],
+  "committee_type": "O",
+  "committee_type_label": "Super PAC",
+  "designation": "U",
+  "registration_date": null,
+  "treasurer": "MARSTON, CHRIS",
+  "address": {
+    "street": "PO BOX 26141",
+    "city": "ALEXANDRIA",
+    "state": "VA",
+    "zip": "22313"
+  },
+  "visibility": "disclosed",
+  "is_conduit": false,
+  "totals": {
+    "receipts": 876736.12,
+    "disbursements": 971750.94,
+    "independent_expenditures": 717626.0,
+    "from_individuals": 874736.12,
+    "from_committees": 0.0,
+    "from_organizations": 0.0,
+    "from_undisclosed": 0.0
+  },
+  "inflows": [
+    {
+      "transfer_id": "C00825885-in-ind:SCHOENFELD_PHILIP_M|23507",
+      "from_entity_id": "ind:SCHOENFELD_PHILIP_M|23507",
+      "from_name": "SCHOENFELD, PHILIP M",
+      "to_entity_id": "C00825885",
+      "to_name": "PATRIOTS FOR A BRIGHTER AMERICA",
+      "amount": 874736.0,
+      "date": "2024-11-04",
+      "visibility": "disclosed",
+      "transaction_type": "10",
+      "limit": "unlimited",
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00825885&two_year_transaction_period=2024&contributor_name=SCHOENFELD%2C+PHILIP+M"
+    }
+  ],
+  "outflows": [],
+  "independent_expenditures": [
+    {
+      "ie_id": "C00825885-ie-1869036-SE.4543",
+      "spender_entity_id": "C00825885",
+      "spender_name": "PATRIOTS FOR A BRIGHTER AMERICA",
+      "candidate_id": "S2PA00661",
+      "candidate_name": "Dave McCormick",
+      "support_oppose": "S",
+      "amount": 11520.0,
+      "date": "2024-11-04",
+      "purpose": "DIGITAL ADVERTSING",
+      "payee": "HILTON MULTIMEDIA",
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202501309748379589"
+    },
+    {
+      "ie_id": "C00825885-ie-1869036-SE.4508",
+      "spender_entity_id": "C00825885",
+      "spender_name": "PATRIOTS FOR A BRIGHTER AMERICA",
+      "candidate_id": "S2PA00661",
+      "candidate_name": "Dave McCormick",
+      "support_oppose": "S",
+      "amount": 7700.0,
+      "date": "2024-11-01",
+      "purpose": "DIGITAL MEDIA",
+      "payee": "HILTON MULTIMEDIA",
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202501309748379582"
+    },
+    {
+      "ie_id": "C00825885-ie-1869036-SE.4487",
+      "spender_entity_id": "C00825885",
+      "spender_name": "PATRIOTS FOR A BRIGHTER AMERICA",
+      "candidate_id": "S2PA00661",
+      "candidate_name": "Dave McCormick",
+      "support_oppose": "S",
+      "amount": 2420.0,
+      "date": "2024-10-29",
+      "purpose": "DIGITAL ADVERTISING",
+      "payee": "HILTON MULTIMEDIA",
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202501309748379578"
+    },
+    {
+      "ie_id": "C00825885-ie-1869036-SE.4546",
+      "spender_entity_id": "C00825885",
+      "spender_name": "PATRIOTS FOR A BRIGHTER AMERICA",
+      "candidate_id": "S2PA00661",
+      "candidate_name": "Dave McCormick",
+      "support_oppose": "S",
+      "amount": 1980.0,
+      "date": "2024-11-04",
+      "purpose": "DIGITAL MEDIA",
+      "payee": "HILTON MULTIMEDIA",
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202501309748379591"
+    }
+  ],
+  "flags": [
+    {
+      "id": "single_transfer_funded",
+      "label": "Funded by a single source",
+      "detail": "SCHOENFELD, PHILIP M supplied $874,736 of PATRIOTS FOR A BRIGHTER AMERICA's $874,736 itemized receipts (100%).",
+      "evidence_url": "https://www.fec.gov/data/receipts/?committee_id=C00825885&two_year_transaction_period=2024"
+    },
+    {
+      "id": "shell_cluster",
+      "label": "Shares address and treasurer",
+      "detail": "PATRIOTS FOR A BRIGHTER AMERICA lists the same street address and treasurer as AMERICA'S FIRST PAC (C00524314), DEFEND OUR CONSERVATIVE SENATE PAC (DOC'S PAC) (C00632323), REPUBLICANS UNITED TO DEFEND YOU PAC (C00823351).",
+      "evidence_url": "https://www.fec.gov/data/committee/C00825885/?cycle=2024"
+    }
+  ],
+  "has_chain": true,
+  "source_url": "https://www.fec.gov/data/committee/C00825885/?cycle=2024",
+  "data_status": "real"
+}

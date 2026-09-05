@@ -1,0 +1,583 @@
+{
+  "root_entity_id": "C00862094",
+  "root_name": "GREAT OPPORTUNITY PAC, INC.",
+  "race_id": "pa-sen-2024",
+  "generated_at": "2026-09-05T13:41:28+00:00",
+  "data_status": "real",
+  "nodes": [
+    {
+      "id": "C00862094",
+      "name": "GREAT OPPORTUNITY PAC, INC.",
+      "kind": "committee",
+      "committee_type": "O",
+      "depth": 0,
+      "visibility": "disclosed",
+      "amount_in": 1482044.0,
+      "is_terminus": false,
+      "terminus_reason": null,
+      "source_url": "https://www.fec.gov/data/committee/C00862094/?cycle=2024"
+    },
+    {
+      "id": "org:GREAT_OPPORTUNITY_POLICY_INC",
+      "name": "GREAT OPPORTUNITY POLICY INC",
+      "kind": "organization",
+      "committee_type": null,
+      "depth": 1,
+      "visibility": "dark",
+      "amount_in": 550000.0,
+      "is_terminus": true,
+      "terminus_reason": "dark",
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00862094&two_year_transaction_period=2024&contributor_name=GREAT+OPPORTUNITY+POLICY+INC",
+      "organization_class": "nonprofit"
+    },
+    {
+      "id": "ind:YASS_JEFF|19004",
+      "name": "YASS, JEFF",
+      "kind": "individual",
+      "committee_type": null,
+      "depth": 1,
+      "visibility": "disclosed",
+      "amount_in": 500000.0,
+      "is_terminus": true,
+      "terminus_reason": "individual",
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00862094&two_year_transaction_period=2024&contributor_name=YASS%2C+JEFF"
+    },
+    {
+      "id": "ind:ROWAN_MARC|10022",
+      "name": "ROWAN, MARC",
+      "kind": "individual",
+      "committee_type": null,
+      "depth": 1,
+      "visibility": "disclosed",
+      "amount_in": 200000.0,
+      "is_terminus": true,
+      "terminus_reason": "individual",
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00862094&two_year_transaction_period=2024&contributor_name=ROWAN%2C+MARC"
+    },
+    {
+      "id": "ind:KASHIAN_EDWARD_M.|93720",
+      "name": "KASHIAN, EDWARD M.",
+      "kind": "individual",
+      "committee_type": null,
+      "depth": 1,
+      "visibility": "disclosed",
+      "amount_in": 50000.0,
+      "is_terminus": true,
+      "terminus_reason": "individual",
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00862094&two_year_transaction_period=2024&contributor_name=KASHIAN%2C+EDWARD+M."
+    },
+    {
+      "id": "org:INTERNATIONAL_BANCSHARES_CORPORATION",
+      "name": "INTERNATIONAL BANCSHARES CORPORATION",
+      "kind": "organization",
+      "committee_type": null,
+      "depth": 1,
+      "visibility": "disclosed",
+      "amount_in": 50000.0,
+      "is_terminus": true,
+      "terminus_reason": "organization",
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00862094&two_year_transaction_period=2024&contributor_name=INTERNATIONAL+BANCSHARES+CORPORATION",
+      "organization_class": "business"
+    },
+    {
+      "id": "ind:STEWARD_DAVID_L.|63146",
+      "name": "STEWARD, DAVID L.",
+      "kind": "individual",
+      "committee_type": null,
+      "depth": 1,
+      "visibility": "disclosed",
+      "amount_in": 50000.0,
+      "is_terminus": true,
+      "terminus_reason": "individual",
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00862094&two_year_transaction_period=2024&contributor_name=STEWARD%2C+DAVID+L."
+    },
+    {
+      "id": "C00825158",
+      "name": "OPPORTUNITY MATTERS FUND ACTION",
+      "kind": "committee",
+      "committee_type": "O",
+      "depth": 1,
+      "visibility": "disclosed",
+      "amount_in": 11105000.0,
+      "is_terminus": false,
+      "terminus_reason": null,
+      "source_url": "https://www.fec.gov/data/committee/C00825158/?cycle=2024"
+    },
+    {
+      "id": "agg:other@C00862094",
+      "name": "Other contributors to GREAT OPPORTUNITY PAC, INC. (each <1% of receipts, or beyond the 40 largest)",
+      "kind": "aggregate",
+      "committee_type": null,
+      "depth": 1,
+      "visibility": "disclosed",
+      "amount_in": 45000.0,
+      "is_terminus": true,
+      "terminus_reason": "pruned",
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00862094&two_year_transaction_period=2024",
+      "contributor_count": 6
+    },
+    {
+      "id": "C00750182",
+      "name": "OPPORTUNITY MATTERS FUND, INC.",
+      "kind": "committee",
+      "committee_type": "O",
+      "depth": 2,
+      "visibility": "disclosed",
+      "amount_in": 177316.0,
+      "is_terminus": false,
+      "terminus_reason": null,
+      "source_url": "https://www.fec.gov/data/committee/C00750182/?cycle=2024"
+    },
+    {
+      "id": "ind:YASS_JEFF|19004@C00825158",
+      "name": "YASS, JEFF",
+      "kind": "individual",
+      "committee_type": null,
+      "depth": 2,
+      "visibility": "disclosed",
+      "amount_in": 600000.0,
+      "is_terminus": true,
+      "terminus_reason": "individual",
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00825158&two_year_transaction_period=2024&contributor_name=YASS%2C+JEFF"
+    },
+    {
+      "id": "ind:DRUCKENMILLER_STANLEY|10019",
+      "name": "DRUCKENMILLER, STANLEY",
+      "kind": "individual",
+      "committee_type": null,
+      "depth": 2,
+      "visibility": "disclosed",
+      "amount_in": 150000.0,
+      "is_terminus": true,
+      "terminus_reason": "individual",
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00825158&two_year_transaction_period=2024&contributor_name=DRUCKENMILLER%2C+STANLEY"
+    },
+    {
+      "id": "agg:other@C00825158",
+      "name": "Other contributors to OPPORTUNITY MATTERS FUND ACTION (each <1% of receipts, or beyond the 40 largest)",
+      "kind": "aggregate",
+      "committee_type": null,
+      "depth": 2,
+      "visibility": "disclosed",
+      "amount_in": 355000.0,
+      "is_terminus": true,
+      "terminus_reason": "pruned",
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00825158&two_year_transaction_period=2024",
+      "contributor_count": 7
+    },
+    {
+      "id": "ind:ROWAN_MARC|06830",
+      "name": "ROWAN, MARC",
+      "kind": "individual",
+      "committee_type": null,
+      "depth": 3,
+      "visibility": "disclosed",
+      "amount_in": 100000.0,
+      "is_terminus": true,
+      "terminus_reason": "individual",
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00750182&two_year_transaction_period=2024&contributor_name=ROWAN%2C+MARC"
+    },
+    {
+      "id": "ind:MCINERNEY_THOMAS_E|06880",
+      "name": "MCINERNEY, THOMAS E",
+      "kind": "individual",
+      "committee_type": null,
+      "depth": 3,
+      "visibility": "disclosed",
+      "amount_in": 25000.0,
+      "is_terminus": true,
+      "terminus_reason": "individual",
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00750182&two_year_transaction_period=2024&contributor_name=MCINERNEY%2C+THOMAS+E"
+    },
+    {
+      "id": "ind:CHILDS_JOHN_W|32963",
+      "name": "CHILDS, JOHN W",
+      "kind": "individual",
+      "committee_type": null,
+      "depth": 3,
+      "visibility": "disclosed",
+      "amount_in": 25000.0,
+      "is_terminus": true,
+      "terminus_reason": "individual",
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00750182&two_year_transaction_period=2024&contributor_name=CHILDS%2C+JOHN+W"
+    },
+    {
+      "id": "ind:HOBSON_H_LEE|75219",
+      "name": "HOBSON, H LEE",
+      "kind": "individual",
+      "committee_type": null,
+      "depth": 3,
+      "visibility": "disclosed",
+      "amount_in": 10000.0,
+      "is_terminus": true,
+      "terminus_reason": "individual",
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00750182&two_year_transaction_period=2024&contributor_name=HOBSON%2C+H+LEE"
+    },
+    {
+      "id": "ind:ISAAC_PAUL_J|10538",
+      "name": "ISAAC, PAUL J",
+      "kind": "individual",
+      "committee_type": null,
+      "depth": 3,
+      "visibility": "disclosed",
+      "amount_in": 10000.0,
+      "is_terminus": true,
+      "terminus_reason": "individual",
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00750182&two_year_transaction_period=2024&contributor_name=ISAAC%2C+PAUL+J"
+    },
+    {
+      "id": "ind:ELLISON_LAWRENCE|94596",
+      "name": "ELLISON, LAWRENCE",
+      "kind": "individual",
+      "committee_type": null,
+      "depth": 3,
+      "visibility": "disclosed",
+      "amount_in": 2566.0,
+      "is_terminus": true,
+      "terminus_reason": "individual",
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00750182&two_year_transaction_period=2024&contributor_name=ELLISON%2C+LAWRENCE"
+    },
+    {
+      "id": "agg:other@C00750182",
+      "name": "Other contributors to OPPORTUNITY MATTERS FUND, INC. (each <1% of receipts, or beyond the 40 largest)",
+      "kind": "aggregate",
+      "committee_type": null,
+      "depth": 3,
+      "visibility": "disclosed",
+      "amount_in": 4750.0,
+      "is_terminus": true,
+      "terminus_reason": "pruned",
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00750182&two_year_transaction_period=2024",
+      "contributor_count": 6
+    }
+  ],
+  "edges": [
+    {
+      "from": "org:GREAT_OPPORTUNITY_POLICY_INC",
+      "to": "C00862094",
+      "amount": 550000.0,
+      "visibility": "dark",
+      "depth": 1,
+      "transaction_types": [
+        "10"
+      ],
+      "count": 1,
+      "date_range": [
+        "2024-09-25",
+        "2024-09-25"
+      ],
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00862094&two_year_transaction_period=2024&contributor_name=GREAT+OPPORTUNITY+POLICY+INC"
+    },
+    {
+      "from": "ind:YASS_JEFF|19004",
+      "to": "C00862094",
+      "amount": 500000.0,
+      "visibility": "disclosed",
+      "depth": 1,
+      "transaction_types": [
+        "10"
+      ],
+      "count": 1,
+      "date_range": [
+        "2024-09-30",
+        "2024-09-30"
+      ],
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00862094&two_year_transaction_period=2024&contributor_name=YASS%2C+JEFF"
+    },
+    {
+      "from": "ind:ROWAN_MARC|10022",
+      "to": "C00862094",
+      "amount": 200000.0,
+      "visibility": "disclosed",
+      "depth": 1,
+      "transaction_types": [
+        "10"
+      ],
+      "count": 2,
+      "date_range": [
+        "2024-06-06",
+        "2024-09-30"
+      ],
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00862094&two_year_transaction_period=2024&contributor_name=ROWAN%2C+MARC"
+    },
+    {
+      "from": "ind:KASHIAN_EDWARD_M.|93720",
+      "to": "C00862094",
+      "amount": 50000.0,
+      "visibility": "disclosed",
+      "depth": 1,
+      "transaction_types": [
+        "10"
+      ],
+      "count": 1,
+      "date_range": [
+        "2024-10-07",
+        "2024-10-07"
+      ],
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00862094&two_year_transaction_period=2024&contributor_name=KASHIAN%2C+EDWARD+M."
+    },
+    {
+      "from": "org:INTERNATIONAL_BANCSHARES_CORPORATION",
+      "to": "C00862094",
+      "amount": 50000.0,
+      "visibility": "disclosed",
+      "depth": 1,
+      "transaction_types": [
+        "10"
+      ],
+      "count": 1,
+      "date_range": [
+        "2024-06-30",
+        "2024-06-30"
+      ],
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00862094&two_year_transaction_period=2024&contributor_name=INTERNATIONAL+BANCSHARES+CORPORATION"
+    },
+    {
+      "from": "ind:STEWARD_DAVID_L.|63146",
+      "to": "C00862094",
+      "amount": 50000.0,
+      "visibility": "disclosed",
+      "depth": 1,
+      "transaction_types": [
+        "10"
+      ],
+      "count": 1,
+      "date_range": [
+        "2024-10-08",
+        "2024-10-08"
+      ],
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00862094&two_year_transaction_period=2024&contributor_name=STEWARD%2C+DAVID+L."
+    },
+    {
+      "from": "C00825158",
+      "to": "C00862094",
+      "amount": 37044.0,
+      "visibility": "disclosed",
+      "depth": 1,
+      "transaction_types": [
+        "24K"
+      ],
+      "count": 1,
+      "date_range": [
+        "2023-12-20",
+        "2023-12-20"
+      ],
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00862094&two_year_transaction_period=2024&contributor_name=C00825158"
+    },
+    {
+      "from": "agg:other@C00862094",
+      "to": "C00862094",
+      "amount": 45000.0,
+      "visibility": "disclosed",
+      "depth": 1,
+      "transaction_types": [
+        "10"
+      ],
+      "count": 6,
+      "date_range": [
+        "2024-05-22",
+        "2024-10-15"
+      ],
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00862094&two_year_transaction_period=2024"
+    },
+    {
+      "from": "C00750182",
+      "to": "C00825158",
+      "amount": 10000000.0,
+      "visibility": "disclosed",
+      "depth": 2,
+      "transaction_types": [
+        "24K"
+      ],
+      "count": 2,
+      "date_range": [
+        "2023-02-16",
+        "2023-03-31"
+      ],
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00825158&two_year_transaction_period=2024&contributor_name=C00750182"
+    },
+    {
+      "from": "ind:YASS_JEFF|19004@C00825158",
+      "to": "C00825158",
+      "amount": 600000.0,
+      "visibility": "disclosed",
+      "depth": 2,
+      "transaction_types": [
+        "10"
+      ],
+      "count": 3,
+      "date_range": [
+        "2023-03-15",
+        "2023-06-30"
+      ],
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00825158&two_year_transaction_period=2024&contributor_name=YASS%2C+JEFF"
+    },
+    {
+      "from": "ind:DRUCKENMILLER_STANLEY|10019",
+      "to": "C00825158",
+      "amount": 150000.0,
+      "visibility": "disclosed",
+      "depth": 2,
+      "transaction_types": [
+        "10"
+      ],
+      "count": 1,
+      "date_range": [
+        "2023-04-19",
+        "2023-04-19"
+      ],
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00825158&two_year_transaction_period=2024&contributor_name=DRUCKENMILLER%2C+STANLEY"
+    },
+    {
+      "from": "agg:other@C00825158",
+      "to": "C00825158",
+      "amount": 355000.0,
+      "visibility": "disclosed",
+      "depth": 2,
+      "transaction_types": [
+        "10"
+      ],
+      "count": 11,
+      "date_range": [
+        "2023-03-21",
+        "2023-08-02"
+      ],
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00825158&two_year_transaction_period=2024"
+    },
+    {
+      "from": "ind:ROWAN_MARC|06830",
+      "to": "C00750182",
+      "amount": 100000.0,
+      "visibility": "disclosed",
+      "depth": 3,
+      "transaction_types": [
+        "10"
+      ],
+      "count": 1,
+      "date_range": [
+        "2023-03-15",
+        "2023-03-15"
+      ],
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00750182&two_year_transaction_period=2024&contributor_name=ROWAN%2C+MARC"
+    },
+    {
+      "from": "ind:MCINERNEY_THOMAS_E|06880",
+      "to": "C00750182",
+      "amount": 25000.0,
+      "visibility": "disclosed",
+      "depth": 3,
+      "transaction_types": [
+        "10"
+      ],
+      "count": 1,
+      "date_range": [
+        "2023-03-15",
+        "2023-03-15"
+      ],
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00750182&two_year_transaction_period=2024&contributor_name=MCINERNEY%2C+THOMAS+E"
+    },
+    {
+      "from": "ind:CHILDS_JOHN_W|32963",
+      "to": "C00750182",
+      "amount": 25000.0,
+      "visibility": "disclosed",
+      "depth": 3,
+      "transaction_types": [
+        "10"
+      ],
+      "count": 1,
+      "date_range": [
+        "2023-03-31",
+        "2023-03-31"
+      ],
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00750182&two_year_transaction_period=2024&contributor_name=CHILDS%2C+JOHN+W"
+    },
+    {
+      "from": "ind:HOBSON_H_LEE|75219",
+      "to": "C00750182",
+      "amount": 10000.0,
+      "visibility": "disclosed",
+      "depth": 3,
+      "transaction_types": [
+        "10"
+      ],
+      "count": 1,
+      "date_range": [
+        "2023-03-22",
+        "2023-03-22"
+      ],
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00750182&two_year_transaction_period=2024&contributor_name=HOBSON%2C+H+LEE"
+    },
+    {
+      "from": "ind:ISAAC_PAUL_J|10538",
+      "to": "C00750182",
+      "amount": 10000.0,
+      "visibility": "disclosed",
+      "depth": 3,
+      "transaction_types": [
+        "10"
+      ],
+      "count": 1,
+      "date_range": [
+        "2023-03-15",
+        "2023-03-15"
+      ],
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00750182&two_year_transaction_period=2024&contributor_name=ISAAC%2C+PAUL+J"
+    },
+    {
+      "from": "ind:ELLISON_LAWRENCE|94596",
+      "to": "C00750182",
+      "amount": 2566.0,
+      "visibility": "disclosed",
+      "depth": 3,
+      "transaction_types": [
+        "10"
+      ],
+      "count": 1,
+      "date_range": [
+        "2023-03-23",
+        "2023-03-23"
+      ],
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00750182&two_year_transaction_period=2024&contributor_name=ELLISON%2C+LAWRENCE"
+    },
+    {
+      "from": "agg:other@C00750182",
+      "to": "C00750182",
+      "amount": 4750.0,
+      "visibility": "disclosed",
+      "depth": 3,
+      "transaction_types": [
+        "10"
+      ],
+      "count": 7,
+      "date_range": [
+        "2023-03-08",
+        "2023-07-05"
+      ],
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00750182&two_year_transaction_period=2024"
+    }
+  ],
+  "summary": {
+    "total_in": 1482044.0,
+    "disclosed_share": 0.6289,
+    "inferable_share": 0.0,
+    "unwalked_share": 0.0,
+    "dark_share": 0.3711,
+    "max_depth": 3,
+    "terminus_counts": {
+      "dark": 1,
+      "individual": 12,
+      "organization": 1,
+      "pruned": 3
+    }
+  },
+  "flags": [
+    {
+      "id": "dead_end_dark",
+      "label": "Chain ends at undisclosed donors",
+      "detail": "37% of GREAT OPPORTUNITY PAC, INC.'s receipts stop at organizations whose own funding is not on file (advocacy nonprofits, LLCs, trusts) rather than at named individuals, businesses or unions.",
+      "evidence_url": "https://www.fec.gov/data/committee/C00862094/?cycle=2024"
+    }
+  ],
+  "method": "Backward walk over money edges only (Schedule A receipts from individuals and organizations, committee-to-committee transfers) into GREAT OPPORTUNITY PAC, INC., 3 hop(s) deep; independent expenditures are targeting edges and never appear. The walk starts from $1,482,044 of itemized 2023–2024 receipts as loaded from FEC bulk data (unitemized receipts, loans and offsets are not edges), and every expanded committee conserves dollars: its inbound edges sum to its receipts. Inbound edges under 1% of a committee's receipts are rolled into one 'other contributors' node, which counts as disclosed except for the organization dollars inside it. Each dollar takes the visibility of where the walk stopped: named individuals (including earmarks through ActBlue/WinRed, attributed to the person) are disclosed. Organizations that are not registered committees are classified from their name alone (no IRS lookup): a union or a business giving from its own treasury is disclosed — the named entity is the source; an LLC, trust, advocacy nonprofit (501(c)(4)-style names) or unclassifiable organization is dark, because whoever funds it is not on file with the FEC. Visibility shares are preliminary; no 990 lookups were performed, so nothing is marked inferable."
+}

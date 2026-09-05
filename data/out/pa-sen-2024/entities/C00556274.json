@@ -1,0 +1,234 @@
+{
+  "entity_id": "C00556274",
+  "race_id": "pa-sen-2024",
+  "kind": "committee",
+  "name": "USW WORKS",
+  "aliases": [],
+  "committee_type": "O",
+  "committee_type_label": "Super PAC",
+  "designation": "B",
+  "registration_date": null,
+  "treasurer": "SHINN, JOHN E",
+  "address": {
+    "street": "60 BOULEVARD OF THE ALLIES",
+    "city": "PITTSBURGH",
+    "state": "PA",
+    "zip": "152221214"
+  },
+  "visibility": "disclosed",
+  "is_conduit": false,
+  "totals": {
+    "receipts": 1790647.39,
+    "disbursements": 2812521.17,
+    "independent_expenditures": 53583.18,
+    "from_individuals": 11.39,
+    "from_committees": 0.0,
+    "from_organizations": 1790636.0,
+    "from_undisclosed": 0.0
+  },
+  "inflows": [
+    {
+      "transfer_id": "C00556274-in-org:UNITED_STEELWORKERS",
+      "from_entity_id": "org:UNITED_STEELWORKERS",
+      "from_name": "UNITED STEELWORKERS",
+      "to_entity_id": "C00556274",
+      "to_name": "USW WORKS",
+      "amount": 1790636.0,
+      "date": "2024-12-18",
+      "visibility": "disclosed",
+      "transaction_type": "10",
+      "limit": "unlimited",
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00556274&two_year_transaction_period=2024&contributor_name=UNITED+STEELWORKERS"
+    }
+  ],
+  "outflows": [
+    {
+      "transfer_id": "C00556274-out-C00625533",
+      "from_entity_id": "C00556274",
+      "from_name": "USW WORKS",
+      "to_entity_id": "C00625533",
+      "to_name": "NEW AMERICAN JOBS FUND",
+      "amount": 1000000.0,
+      "date": "2024-07-31",
+      "visibility": "disclosed",
+      "transaction_type": "18K",
+      "limit": null,
+      "source_url": "https://www.fec.gov/data/disbursements/?committee_id=C00556274&two_year_transaction_period=2024"
+    },
+    {
+      "transfer_id": "C00556274-out-C00745745",
+      "from_entity_id": "C00556274",
+      "from_name": "USW WORKS",
+      "to_entity_id": "C00745745",
+      "to_name": "IN UNION USA",
+      "amount": 750000.0,
+      "date": "2024-01-09",
+      "visibility": "disclosed",
+      "transaction_type": "24K",
+      "limit": "unlimited",
+      "source_url": "https://www.fec.gov/data/disbursements/?committee_id=C00556274&two_year_transaction_period=2024"
+    },
+    {
+      "transfer_id": "C00556274-out-C00484642",
+      "from_entity_id": "C00556274",
+      "from_name": "USW WORKS",
+      "to_entity_id": "C00484642",
+      "to_name": "SMP",
+      "amount": 150000.0,
+      "date": "2024-01-25",
+      "visibility": "disclosed",
+      "transaction_type": "18K",
+      "limit": "unlimited",
+      "source_url": "https://www.fec.gov/data/disbursements/?committee_id=C00556274&two_year_transaction_period=2024"
+    },
+    {
+      "transfer_id": "C00556274-out-C00495028",
+      "from_entity_id": "C00556274",
+      "from_name": "USW WORKS",
+      "to_entity_id": "C00495028",
+      "to_name": "HMP",
+      "amount": 100000.0,
+      "date": "2023-05-03",
+      "visibility": "disclosed",
+      "transaction_type": "24K",
+      "limit": null,
+      "source_url": "https://www.fec.gov/data/disbursements/?committee_id=C00556274&two_year_transaction_period=2024"
+    },
+    {
+      "transfer_id": "C00556274-out-C00701888",
+      "from_entity_id": "C00556274",
+      "from_name": "USW WORKS",
+      "to_entity_id": "C00701888",
+      "to_name": "UNITE THE COUNTRY",
+      "amount": 100000.0,
+      "date": "2024-05-02",
+      "visibility": "disclosed",
+      "transaction_type": "24K",
+      "limit": null,
+      "source_url": "https://www.fec.gov/data/disbursements/?committee_id=C00556274&two_year_transaction_period=2024"
+    },
+    {
+      "transfer_id": "C00556274-out-C00752378",
+      "from_entity_id": "C00556274",
+      "from_name": "USW WORKS",
+      "to_entity_id": "C00752378",
+      "to_name": "OUR FUTURE UNITED",
+      "amount": 10000.0,
+      "date": "2024-10-31",
+      "visibility": "disclosed",
+      "transaction_type": "24K",
+      "limit": null,
+      "source_url": "https://www.fec.gov/data/disbursements/?committee_id=C00556274&two_year_transaction_period=2024"
+    }
+  ],
+  "independent_expenditures": [
+    {
+      "ie_id": "C00556274-ie-1831364-E109172B7494B4449B9A",
+      "spender_entity_id": "C00556274",
+      "spender_name": "USW WORKS",
+      "candidate_id": "S6PA00217",
+      "candidate_name": "Bob Casey",
+      "support_oppose": "S",
+      "amount": 762.96,
+      "date": "2024-09-27",
+      "purpose": "REIMBURSE STAFF SALARIES & OUTDOOR PROJECTOR COSTS",
+      "payee": "UNITED STEELWORKERS",
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202410189698641646"
+    },
+    {
+      "ie_id": "C00556274-ie-1834522-E6D88CAB4A9294A71B47",
+      "spender_entity_id": "C00556274",
+      "spender_name": "USW WORKS",
+      "candidate_id": "S6PA00217",
+      "candidate_name": "Bob Casey",
+      "support_oppose": "S",
+      "amount": 333.26,
+      "date": "2024-10-02",
+      "purpose": "POLITICAL STRATEGY CONSULTING",
+      "payee": "TRACY SEFL",
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202410219710033764"
+    },
+    {
+      "ie_id": "C00556274-ie-1834522-E2C1B65FA4E4D4CB1926",
+      "spender_entity_id": "C00556274",
+      "spender_name": "USW WORKS",
+      "candidate_id": "S6PA00217",
+      "candidate_name": "Bob Casey",
+      "support_oppose": "S",
+      "amount": 149.94,
+      "date": "2024-10-11",
+      "purpose": "POLITICAL STRATEGY CONSULTING",
+      "payee": "TRACY SEFL",
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202410219710033767"
+    },
+    {
+      "ie_id": "C00556274-ie-1852264-E3A67EE00E514479C837",
+      "spender_entity_id": "C00556274",
+      "spender_name": "USW WORKS",
+      "candidate_id": "S6PA00217",
+      "candidate_name": "Bob Casey",
+      "support_oppose": "S",
+      "amount": 116.79,
+      "date": "2024-11-01",
+      "purpose": "POLITICAL STRATEGY CONSULTING",
+      "payee": "TRACY SEFL",
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202412039720162746"
+    },
+    {
+      "ie_id": "C00556274-ie-1852264-E3E7C8389EB1C42468E5",
+      "spender_entity_id": "C00556274",
+      "spender_name": "USW WORKS",
+      "candidate_id": "S6PA00217",
+      "candidate_name": "Bob Casey",
+      "support_oppose": "S",
+      "amount": 116.69,
+      "date": "2024-10-25",
+      "purpose": "POLITICAL STRATEGY CONSULTING",
+      "payee": "TRACY SEFL",
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202412039720162743"
+    },
+    {
+      "ie_id": "C00556274-ie-1852264-E5D91AD9067BC421CA3A",
+      "spender_entity_id": "C00556274",
+      "spender_name": "USW WORKS",
+      "candidate_id": "S6PA00217",
+      "candidate_name": "Bob Casey",
+      "support_oppose": "S",
+      "amount": 116.62,
+      "date": "2024-10-18",
+      "purpose": "POLITICAL STRATEGY CONSULTING",
+      "payee": "TRACY SEFL",
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202412039720162741"
+    },
+    {
+      "ie_id": "C00556274-ie-1852264-E343C8E588F924662B0C",
+      "spender_entity_id": "C00556274",
+      "spender_name": "USW WORKS",
+      "candidate_id": "S6PA00217",
+      "candidate_name": "Bob Casey",
+      "support_oppose": "S",
+      "amount": 66.7,
+      "date": "2024-11-05",
+      "purpose": "POLITICAL STRATEGY CONSULTING",
+      "payee": "TRACY SEFL",
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202412039720162748"
+    }
+  ],
+  "flags": [
+    {
+      "id": "single_transfer_funded",
+      "label": "Funded by a single source",
+      "detail": "UNITED STEELWORKERS supplied $1,790,636 of USW WORKS's $1,790,636 itemized receipts (100%).",
+      "evidence_url": "https://www.fec.gov/data/receipts/?committee_id=C00556274&two_year_transaction_period=2024"
+    },
+    {
+      "id": "shell_cluster",
+      "label": "Shares address and treasurer",
+      "detail": "USW WORKS lists the same street address and treasurer as UNITED STEELWORKERS POLITICAL ACTION FUND (C00003590).",
+      "evidence_url": "https://www.fec.gov/data/committee/C00556274/?cycle=2024"
+    }
+  ],
+  "has_chain": true,
+  "source_url": "https://www.fec.gov/data/committee/C00556274/?cycle=2024",
+  "data_status": "real"
+}

@@ -1,0 +1,525 @@
+{
+  "root_entity_id": "C00544387",
+  "root_name": "AMERICAN PRINCIPLES PROJECT PAC",
+  "race_id": "pa-sen-2024",
+  "generated_at": "2026-09-05T13:41:28+00:00",
+  "data_status": "real",
+  "nodes": [
+    {
+      "id": "C00544387",
+      "name": "AMERICAN PRINCIPLES PROJECT PAC",
+      "kind": "committee",
+      "committee_type": "O",
+      "depth": 0,
+      "visibility": "disclosed",
+      "amount_in": 12787968.0,
+      "is_terminus": false,
+      "terminus_reason": null,
+      "source_url": "https://www.fec.gov/data/committee/C00544387/?cycle=2024"
+    },
+    {
+      "id": "C00571588",
+      "name": "RESTORATION PAC",
+      "kind": "committee",
+      "committee_type": "O",
+      "depth": 1,
+      "visibility": "disclosed",
+      "amount_in": 89812937.0,
+      "is_terminus": false,
+      "terminus_reason": null,
+      "source_url": "https://www.fec.gov/data/committee/C00571588/?cycle=2024"
+    },
+    {
+      "id": "C00814624",
+      "name": "ELECTION INTEGRITY PAC",
+      "kind": "committee",
+      "committee_type": "O",
+      "depth": 1,
+      "visibility": "disclosed",
+      "amount_in": 1166665.0,
+      "is_terminus": false,
+      "terminus_reason": null,
+      "source_url": "https://www.fec.gov/data/committee/C00814624/?cycle=2024"
+    },
+    {
+      "id": "C00769232",
+      "name": "JEFFERSON RISING",
+      "kind": "committee",
+      "committee_type": "O",
+      "depth": 1,
+      "visibility": "disclosed",
+      "amount_in": 18450000.0,
+      "is_terminus": false,
+      "terminus_reason": null,
+      "source_url": "https://www.fec.gov/data/committee/C00769232/?cycle=2024"
+    },
+    {
+      "id": "org:AMERICAN_PRINCIPLES_PROJECT",
+      "name": "AMERICAN PRINCIPLES PROJECT",
+      "kind": "organization",
+      "committee_type": null,
+      "depth": 1,
+      "visibility": "dark",
+      "amount_in": 338759.0,
+      "is_terminus": true,
+      "terminus_reason": "dark",
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00544387&two_year_transaction_period=2024&contributor_name=AMERICAN+PRINCIPLES+PROJECT",
+      "organization_class": "nonprofit"
+    },
+    {
+      "id": "ind:HENDRICKSON_BRETT_ALLEN|76092",
+      "name": "HENDRICKSON, BRETT ALLEN",
+      "kind": "individual",
+      "committee_type": null,
+      "depth": 1,
+      "visibility": "disclosed",
+      "amount_in": 200000.0,
+      "is_terminus": true,
+      "terminus_reason": "individual",
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00544387&two_year_transaction_period=2024&contributor_name=HENDRICKSON%2C+BRETT+ALLEN"
+    },
+    {
+      "id": "org:OUR_UNITED_VOICES,_INC.",
+      "name": "OUR UNITED VOICES, INC.",
+      "kind": "organization",
+      "committee_type": null,
+      "depth": 1,
+      "visibility": "disclosed",
+      "amount_in": 170000.0,
+      "is_terminus": true,
+      "terminus_reason": "organization",
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00544387&two_year_transaction_period=2024&contributor_name=OUR+UNITED+VOICES%2C+INC.",
+      "organization_class": "business"
+    },
+    {
+      "id": "agg:other@C00544387",
+      "name": "Other contributors to AMERICAN PRINCIPLES PROJECT PAC (each <1% of receipts, or beyond the 40 largest)",
+      "kind": "aggregate",
+      "committee_type": null,
+      "depth": 1,
+      "visibility": "disclosed",
+      "amount_in": 303546.0,
+      "is_terminus": true,
+      "terminus_reason": "pruned",
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00544387&two_year_transaction_period=2024",
+      "contributor_count": 24
+    },
+    {
+      "id": "ind:UIHLEIN_RICHARD_E.|60044",
+      "name": "UIHLEIN, RICHARD E.",
+      "kind": "individual",
+      "committee_type": null,
+      "depth": 2,
+      "visibility": "disclosed",
+      "amount_in": 80088001.0,
+      "is_terminus": true,
+      "terminus_reason": "individual",
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00571588&two_year_transaction_period=2024&contributor_name=UIHLEIN%2C+RICHARD+E."
+    },
+    {
+      "id": "ind:KLINGENSTEIN_THOMAS|10024",
+      "name": "KLINGENSTEIN, THOMAS",
+      "kind": "individual",
+      "committee_type": null,
+      "depth": 2,
+      "visibility": "disclosed",
+      "amount_in": 5050000.0,
+      "is_terminus": true,
+      "terminus_reason": "individual",
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00571588&two_year_transaction_period=2024&contributor_name=KLINGENSTEIN%2C+THOMAS"
+    },
+    {
+      "id": "org:RESTORATION_OF_AMERICA",
+      "name": "RESTORATION OF AMERICA",
+      "kind": "organization",
+      "committee_type": null,
+      "depth": 2,
+      "visibility": "dark",
+      "amount_in": 2707931.0,
+      "is_terminus": true,
+      "terminus_reason": "dark",
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00571588&two_year_transaction_period=2024&contributor_name=RESTORATION+OF+AMERICA",
+      "organization_class": "nonprofit"
+    },
+    {
+      "id": "org:AMERICAN_PRINCIPLES_PROJECT@C00571588",
+      "name": "AMERICAN PRINCIPLES PROJECT",
+      "kind": "organization",
+      "committee_type": null,
+      "depth": 2,
+      "visibility": "dark",
+      "amount_in": 1000000.0,
+      "is_terminus": true,
+      "terminus_reason": "dark",
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00571588&two_year_transaction_period=2024&contributor_name=AMERICAN+PRINCIPLES+PROJECT",
+      "organization_class": "nonprofit"
+    },
+    {
+      "id": "agg:other@C00571588",
+      "name": "Other contributors to RESTORATION PAC (each <1% of receipts, or beyond the 40 largest)",
+      "kind": "aggregate",
+      "committee_type": null,
+      "depth": 2,
+      "visibility": "disclosed",
+      "amount_in": 967005.0,
+      "is_terminus": true,
+      "terminus_reason": "pruned",
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00571588&two_year_transaction_period=2024",
+      "contributor_count": 18
+    },
+    {
+      "id": "cycle:C00571588@C00814624",
+      "name": "RESTORATION PAC",
+      "kind": "committee",
+      "committee_type": "O",
+      "depth": 2,
+      "visibility": "disclosed",
+      "amount_in": 1083332.0,
+      "is_terminus": true,
+      "terminus_reason": "cycle",
+      "source_url": "https://www.fec.gov/data/committee/C00571588/?cycle=2024"
+    },
+    {
+      "id": "org:AMERICAN_PRINCIPLES_PROJECT@C00814624",
+      "name": "AMERICAN PRINCIPLES PROJECT",
+      "kind": "organization",
+      "committee_type": null,
+      "depth": 2,
+      "visibility": "dark",
+      "amount_in": 83333.0,
+      "is_terminus": true,
+      "terminus_reason": "dark",
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00814624&two_year_transaction_period=2024&contributor_name=AMERICAN+PRINCIPLES+PROJECT",
+      "organization_class": "nonprofit"
+    },
+    {
+      "id": "ind:DUNN_TIMOTHY|79710",
+      "name": "DUNN, TIMOTHY",
+      "kind": "individual",
+      "committee_type": null,
+      "depth": 2,
+      "visibility": "disclosed",
+      "amount_in": 18000000.0,
+      "is_terminus": true,
+      "terminus_reason": "individual",
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00769232&two_year_transaction_period=2024&contributor_name=DUNN%2C+TIMOTHY"
+    },
+    {
+      "id": "cycle:C00814624@C00769232",
+      "name": "ELECTION INTEGRITY PAC",
+      "kind": "committee",
+      "committee_type": "O",
+      "depth": 2,
+      "visibility": "disclosed",
+      "amount_in": 250000.0,
+      "is_terminus": true,
+      "terminus_reason": "cycle",
+      "source_url": "https://www.fec.gov/data/committee/C00814624/?cycle=2024"
+    },
+    {
+      "id": "C00870592",
+      "name": "FIX WASHINGTON PAC",
+      "kind": "committee",
+      "committee_type": null,
+      "depth": 2,
+      "visibility": "disclosed",
+      "amount_in": 200000.0,
+      "is_terminus": true,
+      "terminus_reason": "depth_cap",
+      "source_url": "https://www.fec.gov/data/committee/C00870592/?cycle=2024"
+    }
+  ],
+  "edges": [
+    {
+      "from": "C00571588",
+      "to": "C00544387",
+      "amount": 10772385.0,
+      "visibility": "disclosed",
+      "depth": 1,
+      "transaction_types": [
+        "24K"
+      ],
+      "count": 16,
+      "date_range": [
+        "2023-02-16",
+        "2024-10-18"
+      ],
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00544387&two_year_transaction_period=2024&contributor_name=C00571588"
+    },
+    {
+      "from": "C00814624",
+      "to": "C00544387",
+      "amount": 503278.0,
+      "visibility": "disclosed",
+      "depth": 1,
+      "transaction_types": [
+        "24K"
+      ],
+      "count": 1,
+      "date_range": [
+        "2024-10-30",
+        "2024-10-30"
+      ],
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00544387&two_year_transaction_period=2024&contributor_name=C00814624"
+    },
+    {
+      "from": "C00769232",
+      "to": "C00544387",
+      "amount": 500000.0,
+      "visibility": "disclosed",
+      "depth": 1,
+      "transaction_types": [
+        "24K"
+      ],
+      "count": 1,
+      "date_range": [
+        "2024-10-10",
+        "2024-10-10"
+      ],
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00544387&two_year_transaction_period=2024&contributor_name=C00769232"
+    },
+    {
+      "from": "org:AMERICAN_PRINCIPLES_PROJECT",
+      "to": "C00544387",
+      "amount": 338759.0,
+      "visibility": "dark",
+      "depth": 1,
+      "transaction_types": [
+        "10"
+      ],
+      "count": 3,
+      "date_range": [
+        "2023-06-30",
+        "2024-08-28"
+      ],
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00544387&two_year_transaction_period=2024&contributor_name=AMERICAN+PRINCIPLES+PROJECT"
+    },
+    {
+      "from": "ind:HENDRICKSON_BRETT_ALLEN|76092",
+      "to": "C00544387",
+      "amount": 200000.0,
+      "visibility": "disclosed",
+      "depth": 1,
+      "transaction_types": [
+        "10"
+      ],
+      "count": 1,
+      "date_range": [
+        "2024-10-08",
+        "2024-10-08"
+      ],
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00544387&two_year_transaction_period=2024&contributor_name=HENDRICKSON%2C+BRETT+ALLEN"
+    },
+    {
+      "from": "org:OUR_UNITED_VOICES,_INC.",
+      "to": "C00544387",
+      "amount": 170000.0,
+      "visibility": "disclosed",
+      "depth": 1,
+      "transaction_types": [
+        "10"
+      ],
+      "count": 1,
+      "date_range": [
+        "2023-10-20",
+        "2023-10-20"
+      ],
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00544387&two_year_transaction_period=2024&contributor_name=OUR+UNITED+VOICES%2C+INC."
+    },
+    {
+      "from": "agg:other@C00544387",
+      "to": "C00544387",
+      "amount": 303546.0,
+      "visibility": "disclosed",
+      "depth": 1,
+      "transaction_types": [
+        "10"
+      ],
+      "count": 41,
+      "date_range": [
+        "2023-01-06",
+        "2024-12-22"
+      ],
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00544387&two_year_transaction_period=2024"
+    },
+    {
+      "from": "ind:UIHLEIN_RICHARD_E.|60044",
+      "to": "C00571588",
+      "amount": 80088001.0,
+      "visibility": "disclosed",
+      "depth": 2,
+      "transaction_types": [
+        "10"
+      ],
+      "count": 28,
+      "date_range": [
+        "2023-02-07",
+        "2024-10-17"
+      ],
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00571588&two_year_transaction_period=2024&contributor_name=UIHLEIN%2C+RICHARD+E."
+    },
+    {
+      "from": "ind:KLINGENSTEIN_THOMAS|10024",
+      "to": "C00571588",
+      "amount": 5050000.0,
+      "visibility": "disclosed",
+      "depth": 2,
+      "transaction_types": [
+        "10"
+      ],
+      "count": 3,
+      "date_range": [
+        "2024-07-15",
+        "2024-10-29"
+      ],
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00571588&two_year_transaction_period=2024&contributor_name=KLINGENSTEIN%2C+THOMAS"
+    },
+    {
+      "from": "org:RESTORATION_OF_AMERICA",
+      "to": "C00571588",
+      "amount": 2707931.0,
+      "visibility": "dark",
+      "depth": 2,
+      "transaction_types": [
+        "10"
+      ],
+      "count": 3,
+      "date_range": [
+        "2023-01-31",
+        "2024-10-21"
+      ],
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00571588&two_year_transaction_period=2024&contributor_name=RESTORATION+OF+AMERICA"
+    },
+    {
+      "from": "org:AMERICAN_PRINCIPLES_PROJECT@C00571588",
+      "to": "C00571588",
+      "amount": 1000000.0,
+      "visibility": "dark",
+      "depth": 2,
+      "transaction_types": [
+        "10"
+      ],
+      "count": 1,
+      "date_range": [
+        "2024-11-27",
+        "2024-11-27"
+      ],
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00571588&two_year_transaction_period=2024&contributor_name=AMERICAN+PRINCIPLES+PROJECT"
+    },
+    {
+      "from": "agg:other@C00571588",
+      "to": "C00571588",
+      "amount": 967005.0,
+      "visibility": "disclosed",
+      "depth": 2,
+      "transaction_types": [
+        "10",
+        "24K"
+      ],
+      "count": 52,
+      "date_range": [
+        "2023-05-24",
+        "2024-12-31"
+      ],
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00571588&two_year_transaction_period=2024"
+    },
+    {
+      "from": "cycle:C00571588@C00814624",
+      "to": "C00814624",
+      "amount": 1083332.0,
+      "visibility": "disclosed",
+      "depth": 2,
+      "transaction_types": [
+        "24K"
+      ],
+      "count": 3,
+      "date_range": [
+        "2024-03-25",
+        "2024-08-21"
+      ],
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00814624&two_year_transaction_period=2024&contributor_name=C00571588"
+    },
+    {
+      "from": "org:AMERICAN_PRINCIPLES_PROJECT@C00814624",
+      "to": "C00814624",
+      "amount": 83333.0,
+      "visibility": "dark",
+      "depth": 2,
+      "transaction_types": [
+        "10"
+      ],
+      "count": 1,
+      "date_range": [
+        "2024-05-01",
+        "2024-05-01"
+      ],
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00814624&two_year_transaction_period=2024&contributor_name=AMERICAN+PRINCIPLES+PROJECT"
+    },
+    {
+      "from": "ind:DUNN_TIMOTHY|79710",
+      "to": "C00769232",
+      "amount": 18000000.0,
+      "visibility": "disclosed",
+      "depth": 2,
+      "transaction_types": [
+        "10"
+      ],
+      "count": 5,
+      "date_range": [
+        "2024-05-02",
+        "2024-09-16"
+      ],
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00769232&two_year_transaction_period=2024&contributor_name=DUNN%2C+TIMOTHY"
+    },
+    {
+      "from": "cycle:C00814624@C00769232",
+      "to": "C00769232",
+      "amount": 250000.0,
+      "visibility": "disclosed",
+      "depth": 2,
+      "transaction_types": [
+        "24K"
+      ],
+      "count": 1,
+      "date_range": [
+        "2024-10-07",
+        "2024-10-07"
+      ],
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00769232&two_year_transaction_period=2024&contributor_name=C00814624"
+    },
+    {
+      "from": "C00870592",
+      "to": "C00769232",
+      "amount": 200000.0,
+      "visibility": "disclosed",
+      "depth": 2,
+      "transaction_types": [
+        "24K"
+      ],
+      "count": 1,
+      "date_range": [
+        "2024-10-31",
+        "2024-10-31"
+      ],
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00769232&two_year_transaction_period=2024&contributor_name=C00870592"
+    }
+  ],
+  "summary": {
+    "total_in": 12787968.0,
+    "disclosed_share": 0.9331,
+    "inferable_share": 0.0,
+    "unwalked_share": 0.0004,
+    "dark_share": 0.0664,
+    "max_depth": 2,
+    "terminus_counts": {
+      "dark": 4,
+      "individual": 4,
+      "organization": 1,
+      "pruned": 2,
+      "cycle": 2,
+      "depth_cap": 1
+    }
+  },
+  "flags": [],
+  "method": "Backward walk over money edges only (Schedule A receipts from individuals and organizations, committee-to-committee transfers) into AMERICAN PRINCIPLES PROJECT PAC, 2 hop(s) deep; independent expenditures are targeting edges and never appear. The walk starts from $12,787,968 of itemized 2023–2024 receipts as loaded from FEC bulk data (unitemized receipts, loans and offsets are not edges), and every expanded committee conserves dollars: its inbound edges sum to its receipts. Inbound edges under 1% of a committee's receipts are rolled into one 'other contributors' node, which counts as disclosed except for the organization dollars inside it. Each dollar takes the visibility of where the walk stopped: named individuals (including earmarks through ActBlue/WinRed, attributed to the person) are disclosed. Organizations that are not registered committees are classified from their name alone (no IRS lookup): a union or a business giving from its own treasury is disclosed — the named entity is the source; an LLC, trust, advocacy nonprofit (501(c)(4)-style names) or unclassifiable organization is dark, because whoever funds it is not on file with the FEC. 1 committee node(s) stop with reason depth_cap: they are FEC-registered committees whose own receipts were not loaded into this race's neighborhood (or the hop or node cap was reached). The committee files donor lists with the FEC, but this walk did not read them, so its dollars are counted as 'not walked' — neither disclosed nor dark — and a dark layer behind such a committee would not show here. 2 edge(s) point at a committee already expanded elsewhere in this chain and reuse its visibility mix instead of being walked twice. Visibility shares are preliminary; no 990 lookups were performed, so nothing is marked inferable."
+}

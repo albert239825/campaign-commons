@@ -1,0 +1,103 @@
+{
+  "entity_id": "C00627372",
+  "race_id": "pa-sen-2024",
+  "kind": "committee",
+  "name": "UNITE HERE PAC",
+  "aliases": [],
+  "committee_type": "O",
+  "committee_type_label": "Super PAC",
+  "designation": "B",
+  "registration_date": null,
+  "treasurer": "TANNU, ZAINA",
+  "address": {
+    "street": "275 7TH AVENUE 16TH FLOOR",
+    "city": "NEW YORK",
+    "state": "NY",
+    "zip": "10001"
+  },
+  "visibility": "disclosed",
+  "is_conduit": false,
+  "totals": {
+    "receipts": 15382500.0,
+    "disbursements": 15322405.31,
+    "independent_expenditures": 0,
+    "from_individuals": 0.0,
+    "from_committees": 13600000.0,
+    "from_organizations": 5000000.0,
+    "from_undisclosed": 0.0
+  },
+  "inflows": [
+    {
+      "transfer_id": "C00627372-in-org:UNITE_HERE",
+      "from_entity_id": "org:UNITE_HERE",
+      "from_name": "UNITE HERE",
+      "to_entity_id": "C00627372",
+      "to_name": "UNITE HERE PAC",
+      "amount": 5000000.0,
+      "date": "2024-10-23",
+      "visibility": "disclosed",
+      "transaction_type": "10",
+      "limit": "unlimited",
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00627372&two_year_transaction_period=2024&contributor_name=UNITE+HERE"
+    },
+    {
+      "transfer_id": "C00627372-in-C00004861",
+      "from_entity_id": "C00004861",
+      "from_name": "UNITE HERE TIP CAMPAIGN COMMITTEE",
+      "to_entity_id": "C00627372",
+      "to_name": "UNITE HERE PAC",
+      "amount": 4600000.0,
+      "date": "2024-09-30",
+      "visibility": "disclosed",
+      "transaction_type": "18G",
+      "limit": "unlimited",
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00627372&two_year_transaction_period=2024&contributor_name=C00004861"
+    }
+  ],
+  "outflows": [
+    {
+      "transfer_id": "C00627372-out-C00754051",
+      "from_entity_id": "C00627372",
+      "from_name": "UNITE HERE PAC",
+      "to_entity_id": "C00754051",
+      "to_name": "WORKERS VOTE",
+      "amount": 13015000.0,
+      "date": "2024-10-18",
+      "visibility": "disclosed",
+      "transaction_type": "24K",
+      "limit": "unlimited",
+      "source_url": "https://www.fec.gov/data/disbursements/?committee_id=C00627372&two_year_transaction_period=2024"
+    },
+    {
+      "transfer_id": "C00627372-out-C00756569",
+      "from_entity_id": "C00627372",
+      "from_name": "UNITE HERE PAC",
+      "to_entity_id": "C00756569",
+      "to_name": "WORKER POWER PAC",
+      "amount": 2200000.0,
+      "date": "2024-10-23",
+      "visibility": "disclosed",
+      "transaction_type": "24K",
+      "limit": null,
+      "source_url": "https://www.fec.gov/data/disbursements/?committee_id=C00627372&two_year_transaction_period=2024"
+    },
+    {
+      "transfer_id": "C00627372-out-C00381806",
+      "from_entity_id": "C00627372",
+      "from_name": "UNITE HERE PAC",
+      "to_entity_id": "C00381806",
+      "to_name": "PROGRESSIVE CHOICES PAC",
+      "amount": 5000.0,
+      "date": "2023-12-31",
+      "visibility": "disclosed",
+      "transaction_type": "18K",
+      "limit": null,
+      "source_url": "https://www.fec.gov/data/disbursements/?committee_id=C00627372&two_year_transaction_period=2024"
+    }
+  ],
+  "independent_expenditures": [],
+  "flags": [],
+  "has_chain": false,
+  "source_url": "https://www.fec.gov/data/committee/C00627372/?cycle=2024",
+  "data_status": "real"
+}

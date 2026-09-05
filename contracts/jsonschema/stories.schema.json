@@ -1,0 +1,129 @@
+{
+  "$ref": "#/definitions/stories",
+  "definitions": {
+    "stories": {
+      "type": "object",
+      "properties": {
+        "race_id": {
+          "type": "string"
+        },
+        "generated_at": {
+          "type": "string"
+        },
+        "data_status": {
+          "type": "string",
+          "enum": [
+            "real",
+            "mock",
+            "partial"
+          ]
+        },
+        "stories": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "story_id": {
+                "type": "string"
+              },
+              "kind": {
+                "type": "string",
+                "enum": [
+                  "dark_dead_end",
+                  "biggest_spender",
+                  "popup",
+                  "single_transfer",
+                  "ad_to_chain"
+                ]
+              },
+              "title": {
+                "type": "string"
+              },
+              "root_entity_id": {
+                "type": "string"
+              },
+              "candidate_ids": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "headline_numbers": {
+                "type": "object",
+                "properties": {
+                  "amount": {
+                    "type": "number"
+                  },
+                  "dark_share": {
+                    "anyOf": [
+                      {
+                        "type": "number",
+                        "minimum": 0,
+                        "maximum": 1
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ]
+                  },
+                  "hops": {
+                    "anyOf": [
+                      {
+                        "type": "integer"
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ]
+                  }
+                },
+                "required": [
+                  "amount",
+                  "dark_share",
+                  "hops"
+                ],
+                "additionalProperties": false
+              },
+              "narrative": {
+                "type": "string"
+              },
+              "ad_ids": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "verified": {
+                "type": "boolean"
+              },
+              "verified_by_url": {
+                "type": "string",
+                "format": "uri"
+              }
+            },
+            "required": [
+              "story_id",
+              "kind",
+              "title",
+              "root_entity_id",
+              "candidate_ids",
+              "headline_numbers",
+              "narrative",
+              "ad_ids",
+              "verified"
+            ],
+            "additionalProperties": false
+          }
+        }
+      },
+      "required": [
+        "race_id",
+        "generated_at",
+        "data_status",
+        "stories"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "$schema": "http://json-schema.org/draft-07/schema#"
+}

@@ -1,0 +1,182 @@
+{
+  "entity_id": "C00740225",
+  "race_id": "pa-sen-2024",
+  "kind": "committee",
+  "name": "NRDC ACTION VOTES",
+  "aliases": [],
+  "committee_type": "O",
+  "committee_type_label": "Super PAC",
+  "designation": "U",
+  "registration_date": null,
+  "treasurer": "FOO, VERONICA",
+  "address": {
+    "street": "40 W 20TH ST",
+    "city": "NEW YORK",
+    "state": "NY",
+    "zip": "10011"
+  },
+  "visibility": "disclosed",
+  "is_conduit": false,
+  "totals": {
+    "receipts": 5005267.79,
+    "disbursements": 5008845.98,
+    "independent_expenditures": 4404837.76,
+    "from_individuals": 259.79,
+    "from_committees": 0.0,
+    "from_organizations": 0.0,
+    "from_undisclosed": 5005008.0
+  },
+  "inflows": [
+    {
+      "transfer_id": "C00740225-in-org:NRDC_ACTION_FUND",
+      "from_entity_id": "org:NRDC_ACTION_FUND",
+      "from_name": "NRDC ACTION FUND",
+      "to_entity_id": "C00740225",
+      "to_name": "NRDC ACTION VOTES",
+      "amount": 5005008.0,
+      "date": "2024-12-31",
+      "visibility": "dark",
+      "transaction_type": "10",
+      "limit": "unlimited",
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00740225&two_year_transaction_period=2024&contributor_name=NRDC+ACTION+FUND"
+    }
+  ],
+  "outflows": [
+    {
+      "transfer_id": "C00740225-out-C00495028",
+      "from_entity_id": "C00740225",
+      "from_name": "NRDC ACTION VOTES",
+      "to_entity_id": "C00495028",
+      "to_name": "HMP",
+      "amount": 10000.0,
+      "date": "2024-07-17",
+      "visibility": "disclosed",
+      "transaction_type": "24K",
+      "limit": null,
+      "source_url": "https://www.fec.gov/data/disbursements/?committee_id=C00740225&two_year_transaction_period=2024"
+    },
+    {
+      "transfer_id": "C00740225-out-C00606962",
+      "from_entity_id": "C00740225",
+      "from_name": "NRDC ACTION VOTES",
+      "to_entity_id": "C00606962",
+      "to_name": "WORKING FAMILIES PARTY PAC",
+      "amount": 10000.0,
+      "date": "2023-04-05",
+      "visibility": "disclosed",
+      "transaction_type": "24K",
+      "limit": null,
+      "source_url": "https://www.fec.gov/data/disbursements/?committee_id=C00740225&two_year_transaction_period=2024"
+    }
+  ],
+  "independent_expenditures": [
+    {
+      "ie_id": "C00740225-ie-1804072-500180017",
+      "spender_entity_id": "C00740225",
+      "spender_name": "NRDC ACTION VOTES",
+      "candidate_id": "S2PA00661",
+      "candidate_name": "Dave McCormick",
+      "support_oppose": "O",
+      "amount": 1177312.0,
+      "date": "2024-06-11",
+      "purpose": "DIGITAL AD BUY",
+      "payee": "GAMBIT STRATEGIES LLC",
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202407199661310878"
+    },
+    {
+      "ie_id": "C00740225-ie-1831691-500186350",
+      "spender_entity_id": "C00740225",
+      "spender_name": "NRDC ACTION VOTES",
+      "candidate_id": "S2PA00661",
+      "candidate_name": "Dave McCormick",
+      "support_oppose": "O",
+      "amount": 485000.0,
+      "date": "2024-09-14",
+      "purpose": "DIGITAL AD BUY",
+      "payee": "GAMBIT STRATEGIES LLC",
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202410189698667004"
+    },
+    {
+      "ie_id": "C00740225-ie-1835203-500189982",
+      "spender_entity_id": "C00740225",
+      "spender_name": "NRDC ACTION VOTES",
+      "candidate_id": "S2PA00661",
+      "candidate_name": "Dave McCormick",
+      "support_oppose": "O",
+      "amount": 300000.0,
+      "date": "2024-10-09",
+      "purpose": "DIGITAL AD BUY",
+      "payee": "GAMBIT STRATEGIES LLC",
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202410229710081711"
+    },
+    {
+      "ie_id": "C00740225-ie-1804072-500180018",
+      "spender_entity_id": "C00740225",
+      "spender_name": "NRDC ACTION VOTES",
+      "candidate_id": "S2PA00661",
+      "candidate_name": "Dave McCormick",
+      "support_oppose": "O",
+      "amount": 22688.0,
+      "date": "2024-06-11",
+      "purpose": "AD PRODUCTION",
+      "payee": "GAMBIT STRATEGIES LLC",
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202407199661310878"
+    },
+    {
+      "ie_id": "C00740225-ie-1831691-500186351",
+      "spender_entity_id": "C00740225",
+      "spender_name": "NRDC ACTION VOTES",
+      "candidate_id": "S2PA00661",
+      "candidate_name": "Dave McCormick",
+      "support_oppose": "O",
+      "amount": 15000.0,
+      "date": "2024-09-14",
+      "purpose": "AD PRODUCTION",
+      "payee": "GAMBIT STRATEGIES LLC",
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202410189698667004"
+    },
+    {
+      "ie_id": "C00740225-ie-1853130-500193025",
+      "spender_entity_id": "C00740225",
+      "spender_name": "NRDC ACTION VOTES",
+      "candidate_id": "S2PA00661",
+      "candidate_name": "Dave McCormick",
+      "support_oppose": "O",
+      "amount": 9500.0,
+      "date": "2024-10-22",
+      "purpose": "DIGITAL AD BUY",
+      "payee": "GAMBIT STRATEGIES LLC",
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202412049720214761"
+    },
+    {
+      "ie_id": "C00740225-ie-1853130-500193026",
+      "spender_entity_id": "C00740225",
+      "spender_name": "NRDC ACTION VOTES",
+      "candidate_id": "S2PA00661",
+      "candidate_name": "Dave McCormick",
+      "support_oppose": "O",
+      "amount": 500.0,
+      "date": "2024-10-22",
+      "purpose": "AD PRODUCTION",
+      "payee": "GAMBIT STRATEGIES LLC",
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202412049720214762"
+    }
+  ],
+  "flags": [
+    {
+      "id": "single_transfer_funded",
+      "label": "Funded by a single source",
+      "detail": "NRDC ACTION FUND supplied $5,005,008 of NRDC ACTION VOTES's $5,005,008 itemized receipts (100%).",
+      "evidence_url": "https://www.fec.gov/data/receipts/?committee_id=C00740225&two_year_transaction_period=2024"
+    },
+    {
+      "id": "dead_end_dark",
+      "label": "Chain ends at undisclosed donors",
+      "detail": "100% of NRDC ACTION VOTES's receipts stop at organizations whose own funding is not on file (advocacy nonprofits, LLCs, trusts) rather than at named individuals, businesses or unions.",
+      "evidence_url": "https://www.fec.gov/data/committee/C00740225/?cycle=2024"
+    }
+  ],
+  "has_chain": true,
+  "source_url": "https://www.fec.gov/data/committee/C00740225/?cycle=2024",
+  "data_status": "real"
+}

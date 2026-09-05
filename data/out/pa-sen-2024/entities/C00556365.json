@@ -1,0 +1,103 @@
+{
+  "entity_id": "C00556365",
+  "race_id": "pa-sen-2024",
+  "kind": "committee",
+  "name": "KATKO FOR CONGRESS",
+  "aliases": [],
+  "committee_type": "N",
+  "committee_type_label": "PAC (non-qualified)",
+  "designation": "U",
+  "registration_date": null,
+  "treasurer": "LISKER, LISA",
+  "address": {
+    "street": "228 S WASHINGTON ST",
+    "city": "ALEXANDRIA",
+    "state": "VA",
+    "zip": "22314"
+  },
+  "visibility": "disclosed",
+  "is_conduit": false,
+  "totals": {
+    "receipts": 4538.94,
+    "disbursements": 907211.72,
+    "independent_expenditures": 0,
+    "from_individuals": 0.0,
+    "from_committees": 100.0,
+    "from_organizations": 0.0,
+    "from_undisclosed": 0.0
+  },
+  "inflows": [
+    {
+      "transfer_id": "C00556365-in-C00416685",
+      "from_entity_id": "C00416685",
+      "from_name": "BSA , THE SOFTWARE ALLIANCE PAC",
+      "to_entity_id": "C00556365",
+      "to_name": "KATKO FOR CONGRESS",
+      "amount": 100.0,
+      "date": "2023-08-16",
+      "visibility": "disclosed",
+      "transaction_type": "24K",
+      "limit": null,
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00556365&two_year_transaction_period=2024&contributor_name=C00416685"
+    }
+  ],
+  "outflows": [
+    {
+      "transfer_id": "C00556365-out-C00608463",
+      "from_entity_id": "C00556365",
+      "from_name": "KATKO FOR CONGRESS",
+      "to_entity_id": "C00608463",
+      "to_name": "SALT CITY PAC",
+      "amount": 713451.0,
+      "date": "2023-12-31",
+      "visibility": "disclosed",
+      "transaction_type": "18G",
+      "limit": null,
+      "source_url": "https://www.fec.gov/data/disbursements/?committee_id=C00556365&two_year_transaction_period=2024"
+    },
+    {
+      "transfer_id": "C00556365-out-C00706614",
+      "from_entity_id": "C00556365",
+      "from_name": "KATKO FOR CONGRESS",
+      "to_entity_id": "C00706614",
+      "to_name": "TONY GONZALES FOR CONGRESS",
+      "amount": 2000.0,
+      "date": "2023-03-29",
+      "visibility": "disclosed",
+      "transaction_type": "24K",
+      "limit": null,
+      "source_url": "https://www.fec.gov/data/disbursements/?committee_id=C00556365&two_year_transaction_period=2024"
+    },
+    {
+      "transfer_id": "C00556365-out-C00789586",
+      "from_entity_id": "C00556365",
+      "from_name": "KATKO FOR CONGRESS",
+      "to_entity_id": "C00789586",
+      "to_name": "MARC FOR US INC.",
+      "amount": 2000.0,
+      "date": "2023-03-29",
+      "visibility": "disclosed",
+      "transaction_type": "24K",
+      "limit": null,
+      "source_url": "https://www.fec.gov/data/disbursements/?committee_id=C00556365&two_year_transaction_period=2024"
+    },
+    {
+      "transfer_id": "C00556365-out-C00806018",
+      "from_entity_id": "C00556365",
+      "from_name": "KATKO FOR CONGRESS",
+      "to_entity_id": "C00806018",
+      "to_name": "LALOTA FOR CONGRESS",
+      "amount": 2000.0,
+      "date": "2023-03-29",
+      "visibility": "disclosed",
+      "transaction_type": "24K",
+      "limit": null,
+      "source_url": "https://www.fec.gov/data/disbursements/?committee_id=C00556365&two_year_transaction_period=2024"
+    }
+  ],
+  "independent_expenditures": [],
+  "flags": [],
+  "has_chain": false,
+  "source_url": "https://www.fec.gov/data/committee/C00556365/?cycle=2024",
+  "data_status": "real"
+}

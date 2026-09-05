@@ -1,0 +1,2572 @@
+{
+  "race_id": "pa-sen-2024",
+  "generated_at": "2026-09-05T13:41:28+00:00",
+  "data_status": "real",
+  "candidates": [
+    {
+      "candidate_id": "S6PA00217",
+      "name": "Bob Casey",
+      "party": "DEM",
+      "incumbent": true,
+      "principal_committee_id": "C00431056",
+      "result": "lost",
+      "campaign": {
+        "receipts": 58147345.34,
+        "disbursements": 60234187.73,
+        "from_individuals": 43598592.23,
+        "from_committees": 2964955.31,
+        "via_conduit_total": 18218774.0,
+        "cash_on_hand": 995039.98,
+        "source_url": "https://www.fec.gov/data/candidate/S6PA00217/?cycle=2024&election_full=false"
+      },
+      "outside": {
+        "support": 22317022.61,
+        "oppose": 104850386.27,
+        "total": 127167408.88,
+        "source_url": "https://www.fec.gov/data/independent-expenditures/?candidate_id=S6PA00217&cycle=2024"
+      },
+      "traceability_score": 0.7486
+    },
+    {
+      "candidate_id": "S2PA00661",
+      "name": "Dave McCormick",
+      "party": "REP",
+      "incumbent": false,
+      "principal_committee_id": "C00851980",
+      "result": "won",
+      "campaign": {
+        "receipts": 35970836.83,
+        "disbursements": 35373179.48,
+        "from_individuals": 21181317.53,
+        "from_committees": 1066344.37,
+        "via_conduit_total": 5791840.0,
+        "cash_on_hand": 605477.88,
+        "source_url": "https://www.fec.gov/data/candidate/S2PA00661/?cycle=2024&election_full=false"
+      },
+      "outside": {
+        "support": 29344907.67,
+        "oppose": 79160132.72,
+        "total": 108505040.39,
+        "source_url": "https://www.fec.gov/data/independent-expenditures/?candidate_id=S2PA00661&cycle=2024"
+      },
+      "traceability_score": 0.6888
+    }
+  ],
+  "top_outside_spenders": [
+    {
+      "entity_id": "C00865444",
+      "name": "WINSENATE",
+      "committee_type": "O",
+      "committee_type_label": "Super PAC",
+      "total": 63032047.23,
+      "by_candidate": [
+        {
+          "candidate_id": "S2PA00661",
+          "support_oppose": "O",
+          "amount": 60248024.34
+        },
+        {
+          "candidate_id": "S6PA00217",
+          "support_oppose": "S",
+          "amount": 2784022.89
+        }
+      ],
+      "traceability_score": 0.6372,
+      "flags": [
+        "dead_end_dark",
+        "shell_cluster",
+        "single_transfer_funded"
+      ],
+      "has_chain": true,
+      "source_url": "https://www.fec.gov/data/committee/C00865444/?cycle=2024",
+      "visibility_shares": {
+        "disclosed": 0.6372,
+        "inferable": 0.0,
+        "unwalked": 0.0257,
+        "dark": 0.337
+      }
+    },
+    {
+      "entity_id": "C00571703",
+      "name": "SENATE LEADERSHIP FUND",
+      "committee_type": "O",
+      "committee_type_label": "Super PAC",
+      "total": 52799239.86,
+      "by_candidate": [
+        {
+          "candidate_id": "S6PA00217",
+          "support_oppose": "O",
+          "amount": 52799239.86
+        }
+      ],
+      "traceability_score": 0.7905,
+      "flags": [],
+      "has_chain": true,
+      "source_url": "https://www.fec.gov/data/committee/C00571703/?cycle=2024",
+      "visibility_shares": {
+        "disclosed": 0.7905,
+        "inferable": 0.0,
+        "unwalked": 0.0,
+        "dark": 0.2095
+      }
+    },
+    {
+      "entity_id": "C00849489",
+      "name": "KEYSTONE RENEWAL PAC",
+      "committee_type": "O",
+      "committee_type_label": "Super PAC",
+      "total": 48234127.36,
+      "by_candidate": [
+        {
+          "candidate_id": "S6PA00217",
+          "support_oppose": "O",
+          "amount": 34126789.22
+        },
+        {
+          "candidate_id": "S2PA00661",
+          "support_oppose": "S",
+          "amount": 12168528.64
+        },
+        {
+          "candidate_id": "S2PA00661",
+          "support_oppose": "O",
+          "amount": 1045500.0
+        },
+        {
+          "candidate_id": "S6PA00217",
+          "support_oppose": "S",
+          "amount": 893309.5
+        }
+      ],
+      "traceability_score": 0.8488,
+      "flags": [],
+      "has_chain": true,
+      "source_url": "https://www.fec.gov/data/committee/C00849489/?cycle=2024",
+      "visibility_shares": {
+        "disclosed": 0.8488,
+        "inferable": 0.0,
+        "unwalked": 0.0,
+        "dark": 0.1512
+      }
+    },
+    {
+      "entity_id": "C00687103",
+      "name": "AMERICANS FOR PROSPERITY ACTION, INC. (AFP ACTION) DBA CVA ACTION AND DBA LIBRE ACTION",
+      "committee_type": "V",
+      "committee_type_label": "Hybrid PAC (non-qualified)",
+      "total": 21680723.19,
+      "by_candidate": [
+        {
+          "candidate_id": "S2PA00661",
+          "support_oppose": "S",
+          "amount": 13610479.71
+        },
+        {
+          "candidate_id": "S6PA00217",
+          "support_oppose": "O",
+          "amount": 8070243.48
+        }
+      ],
+      "traceability_score": 0.6515,
+      "flags": [
+        "dead_end_dark"
+      ],
+      "has_chain": true,
+      "source_url": "https://www.fec.gov/data/committee/C00687103/?cycle=2024",
+      "visibility_shares": {
+        "disclosed": 0.6515,
+        "inferable": 0.0,
+        "unwalked": 0.0,
+        "dark": 0.3485
+      }
+    },
+    {
+      "entity_id": "C00042366",
+      "name": "DSCC",
+      "committee_type": "Y",
+      "committee_type_label": "Party committee",
+      "total": 10521283.69,
+      "by_candidate": [
+        {
+          "candidate_id": "S2PA00661",
+          "support_oppose": "O",
+          "amount": 10521283.69
+        }
+      ],
+      "traceability_score": 0.991,
+      "flags": [],
+      "has_chain": true,
+      "source_url": "https://www.fec.gov/data/committee/C00042366/?cycle=2024",
+      "visibility_shares": {
+        "disclosed": 0.991,
+        "inferable": 0.0,
+        "unwalked": 0.0005,
+        "dark": 0.0085
+      }
+    },
+    {
+      "entity_id": "C00487363",
+      "name": "AMERICAN CROSSROADS",
+      "committee_type": "O",
+      "committee_type_label": "Super PAC",
+      "total": 8795912.55,
+      "by_candidate": [
+        {
+          "candidate_id": "S6PA00217",
+          "support_oppose": "O",
+          "amount": 8795912.55
+        }
+      ],
+      "traceability_score": 0.7917,
+      "flags": [
+        "single_transfer_funded"
+      ],
+      "has_chain": true,
+      "source_url": "https://www.fec.gov/data/committee/C00487363/?cycle=2024",
+      "visibility_shares": {
+        "disclosed": 0.7917,
+        "inferable": 0.0,
+        "unwalked": 0.0,
+        "dark": 0.2083
+      }
+    },
+    {
+      "entity_id": "C00486845",
+      "name": "LCV VICTORY FUND",
+      "committee_type": "O",
+      "committee_type_label": "Super PAC",
+      "total": 5050845.94,
+      "by_candidate": [
+        {
+          "candidate_id": "S6PA00217",
+          "support_oppose": "S",
+          "amount": 3048486.4
+        },
+        {
+          "candidate_id": "S2PA00661",
+          "support_oppose": "O",
+          "amount": 2002359.54
+        }
+      ],
+      "traceability_score": 0.2868,
+      "flags": [
+        "dead_end_dark",
+        "shell_cluster"
+      ],
+      "has_chain": true,
+      "source_url": "https://www.fec.gov/data/committee/C00486845/?cycle=2024",
+      "visibility_shares": {
+        "disclosed": 0.2868,
+        "inferable": 0.0,
+        "unwalked": 0.0,
+        "dark": 0.7131
+      }
+    },
+    {
+      "entity_id": "C00744920",
+      "name": "CFFE PAC",
+      "committee_type": "W",
+      "committee_type_label": "Hybrid PAC",
+      "total": 2866090.0,
+      "by_candidate": [
+        {
+          "candidate_id": "S6PA00217",
+          "support_oppose": "S",
+          "amount": 2866090.0
+        }
+      ],
+      "traceability_score": 0.3636,
+      "flags": [
+        "dead_end_dark"
+      ],
+      "has_chain": true,
+      "source_url": "https://www.fec.gov/data/committee/C00744920/?cycle=2024",
+      "visibility_shares": {
+        "disclosed": 0.3636,
+        "inferable": 0.0,
+        "unwalked": 0.021,
+        "dark": 0.6154
+      }
+    },
+    {
+      "entity_id": "C00609388",
+      "name": "BLACKPAC",
+      "committee_type": "O",
+      "committee_type_label": "Super PAC",
+      "total": 2670699.56,
+      "by_candidate": [
+        {
+          "candidate_id": "S6PA00217",
+          "support_oppose": "S",
+          "amount": 2670699.56
+        }
+      ],
+      "traceability_score": 0.2958,
+      "flags": [
+        "dead_end_dark"
+      ],
+      "has_chain": true,
+      "source_url": "https://www.fec.gov/data/committee/C00609388/?cycle=2024",
+      "visibility_shares": {
+        "disclosed": 0.2958,
+        "inferable": 0.0,
+        "unwalked": 0.0,
+        "dark": 0.7041
+      }
+    },
+    {
+      "entity_id": "C00740225",
+      "name": "NRDC ACTION VOTES",
+      "committee_type": "O",
+      "committee_type_label": "Super PAC",
+      "total": 2010000.0,
+      "by_candidate": [
+        {
+          "candidate_id": "S2PA00661",
+          "support_oppose": "O",
+          "amount": 2010000.0
+        }
+      ],
+      "traceability_score": 0.0,
+      "flags": [
+        "dead_end_dark",
+        "single_transfer_funded"
+      ],
+      "has_chain": true,
+      "source_url": "https://www.fec.gov/data/committee/C00740225/?cycle=2024",
+      "visibility_shares": {
+        "disclosed": 0.0,
+        "inferable": 0.0,
+        "unwalked": 0.0,
+        "dark": 1.0
+      }
+    },
+    {
+      "entity_id": "C00620971",
+      "name": "FOR OUR FUTURE",
+      "committee_type": "O",
+      "committee_type_label": "Super PAC",
+      "total": 1800741.2,
+      "by_candidate": [
+        {
+          "candidate_id": "S6PA00217",
+          "support_oppose": "S",
+          "amount": 1800741.2
+        }
+      ],
+      "traceability_score": 0.4726,
+      "flags": [
+        "dead_end_dark"
+      ],
+      "has_chain": true,
+      "source_url": "https://www.fec.gov/data/committee/C00620971/?cycle=2024",
+      "visibility_shares": {
+        "disclosed": 0.4726,
+        "inferable": 0.0,
+        "unwalked": 0.0,
+        "dark": 0.5274
+      }
+    },
+    {
+      "entity_id": "C00752691",
+      "name": "ONE FOR ALL COMMITTEE",
+      "committee_type": "O",
+      "committee_type_label": "Super PAC",
+      "total": 1300509.78,
+      "by_candidate": [
+        {
+          "candidate_id": "S6PA00217",
+          "support_oppose": "S",
+          "amount": 1300509.78
+        }
+      ],
+      "traceability_score": 0.793,
+      "flags": [],
+      "has_chain": true,
+      "source_url": "https://www.fec.gov/data/committee/C00752691/?cycle=2024",
+      "visibility_shares": {
+        "disclosed": 0.793,
+        "inferable": 0.0,
+        "unwalked": 0.0,
+        "dark": 0.207
+      }
+    },
+    {
+      "entity_id": "C00724203",
+      "name": "SOMOS PAC",
+      "committee_type": "O",
+      "committee_type_label": "Super PAC",
+      "total": 1272156.59,
+      "by_candidate": [
+        {
+          "candidate_id": "S6PA00217",
+          "support_oppose": "S",
+          "amount": 1272156.59
+        }
+      ],
+      "traceability_score": 0.2368,
+      "flags": [
+        "dead_end_dark"
+      ],
+      "has_chain": true,
+      "source_url": "https://www.fec.gov/data/committee/C00724203/?cycle=2024",
+      "visibility_shares": {
+        "disclosed": 0.2368,
+        "inferable": 0.0,
+        "unwalked": 0.0004,
+        "dark": 0.7628
+      }
+    },
+    {
+      "entity_id": "C00053553",
+      "name": "NATIONAL RIFLE ASSOCIATION OF AMERICA POLITICAL VICTORY FUND",
+      "committee_type": "Q",
+      "committee_type_label": "PAC",
+      "total": 1259060.63,
+      "by_candidate": [
+        {
+          "candidate_id": "S2PA00661",
+          "support_oppose": "S",
+          "amount": 1257801.36
+        },
+        {
+          "candidate_id": "S6PA00217",
+          "support_oppose": "O",
+          "amount": 1259.27
+        }
+      ],
+      "traceability_score": 1.0,
+      "flags": [],
+      "has_chain": true,
+      "source_url": "https://www.fec.gov/data/committee/C00053553/?cycle=2024",
+      "visibility_shares": {
+        "disclosed": 1.0,
+        "inferable": 0.0,
+        "unwalked": 0.0,
+        "dark": 0.0
+      }
+    },
+    {
+      "entity_id": "C00811166",
+      "name": "THE SENTINEL ACTION FUND",
+      "committee_type": "O",
+      "committee_type_label": "Super PAC",
+      "total": 1138005.19,
+      "by_candidate": [
+        {
+          "candidate_id": "S2PA00661",
+          "support_oppose": "S",
+          "amount": 886520.64
+        },
+        {
+          "candidate_id": "S6PA00217",
+          "support_oppose": "O",
+          "amount": 251484.55
+        }
+      ],
+      "traceability_score": 0.8058,
+      "flags": [],
+      "has_chain": true,
+      "source_url": "https://www.fec.gov/data/committee/C00811166/?cycle=2024",
+      "visibility_shares": {
+        "disclosed": 0.8058,
+        "inferable": 0.0,
+        "unwalked": 0.0,
+        "dark": 0.1942
+      }
+    },
+    {
+      "entity_id": "C00688655",
+      "name": "EVERYTOWN FOR GUN SAFETY VICTORY FUND (EVERYTOWN VICTORY FUND)",
+      "committee_type": "O",
+      "committee_type_label": "Super PAC",
+      "total": 1005311.13,
+      "by_candidate": [
+        {
+          "candidate_id": "S2PA00661",
+          "support_oppose": "O",
+          "amount": 1000021.87
+        },
+        {
+          "candidate_id": "S6PA00217",
+          "support_oppose": "S",
+          "amount": 5289.26
+        }
+      ],
+      "traceability_score": 0.3411,
+      "flags": [
+        "dead_end_dark"
+      ],
+      "has_chain": true,
+      "source_url": "https://www.fec.gov/data/committee/C00688655/?cycle=2024",
+      "visibility_shares": {
+        "disclosed": 0.3411,
+        "inferable": 0.0,
+        "unwalked": 0.0,
+        "dark": 0.6589
+      }
+    },
+    {
+      "entity_id": "C00490375",
+      "name": "NATIONAL NURSES UNITED FOR PATIENT PROTECTION",
+      "committee_type": "O",
+      "committee_type_label": "Super PAC",
+      "total": 832653.13,
+      "by_candidate": [
+        {
+          "candidate_id": "S6PA00217",
+          "support_oppose": "S",
+          "amount": 832653.13
+        }
+      ],
+      "traceability_score": 0.9094,
+      "flags": [
+        "single_transfer_funded"
+      ],
+      "has_chain": true,
+      "source_url": "https://www.fec.gov/data/committee/C00490375/?cycle=2024",
+      "visibility_shares": {
+        "disclosed": 0.9094,
+        "inferable": 0.0,
+        "unwalked": 0.0,
+        "dark": 0.0906
+      }
+    },
+    {
+      "entity_id": "C00544387",
+      "name": "AMERICAN PRINCIPLES PROJECT PAC",
+      "committee_type": "O",
+      "committee_type_label": "Super PAC",
+      "total": 740000.0,
+      "by_candidate": [
+        {
+          "candidate_id": "S2PA00661",
+          "support_oppose": "S",
+          "amount": 550000.0
+        },
+        {
+          "candidate_id": "S6PA00217",
+          "support_oppose": "O",
+          "amount": 190000.0
+        }
+      ],
+      "traceability_score": 0.9331,
+      "flags": [],
+      "has_chain": true,
+      "source_url": "https://www.fec.gov/data/committee/C00544387/?cycle=2024",
+      "visibility_shares": {
+        "disclosed": 0.9331,
+        "inferable": 0.0,
+        "unwalked": 0.0004,
+        "dark": 0.0664
+      }
+    },
+    {
+      "entity_id": "C00745745",
+      "name": "IN UNION USA",
+      "committee_type": "O",
+      "committee_type_label": "Super PAC",
+      "total": 659458.7,
+      "by_candidate": [
+        {
+          "candidate_id": "S6PA00217",
+          "support_oppose": "S",
+          "amount": 329729.36
+        },
+        {
+          "candidate_id": "S2PA00661",
+          "support_oppose": "O",
+          "amount": 329729.34
+        }
+      ],
+      "traceability_score": 0.9512,
+      "flags": [],
+      "has_chain": true,
+      "source_url": "https://www.fec.gov/data/committee/C00745745/?cycle=2024",
+      "visibility_shares": {
+        "disclosed": 0.9512,
+        "inferable": 0.0,
+        "unwalked": 0.0407,
+        "dark": 0.0081
+      }
+    },
+    {
+      "entity_id": "C00890087",
+      "name": "DEFEND OUR CONSTITUTION PAC",
+      "committee_type": "O",
+      "committee_type_label": "Super PAC",
+      "total": 595000.0,
+      "by_candidate": [
+        {
+          "candidate_id": "S2PA00661",
+          "support_oppose": "O",
+          "amount": 595000.0
+        }
+      ],
+      "traceability_score": 1.0,
+      "flags": [],
+      "has_chain": true,
+      "source_url": "https://www.fec.gov/data/committee/C00890087/?cycle=2024",
+      "visibility_shares": {
+        "disclosed": 1.0,
+        "inferable": 0.0,
+        "unwalked": 0.0,
+        "dark": 0.0
+      }
+    },
+    {
+      "entity_id": "C00754051",
+      "name": "WORKERS VOTE",
+      "committee_type": "O",
+      "committee_type_label": "Super PAC",
+      "total": 525498.44,
+      "by_candidate": [
+        {
+          "candidate_id": "S6PA00217",
+          "support_oppose": "S",
+          "amount": 525498.44
+        }
+      ],
+      "traceability_score": 0.8152,
+      "flags": [],
+      "has_chain": true,
+      "source_url": "https://www.fec.gov/data/committee/C00754051/?cycle=2024",
+      "visibility_shares": {
+        "disclosed": 0.8152,
+        "inferable": 0.0,
+        "unwalked": 0.0,
+        "dark": 0.1848
+      }
+    },
+    {
+      "entity_id": "C00540443",
+      "name": "GIFFORDS PAC",
+      "committee_type": "W",
+      "committee_type_label": "Hybrid PAC",
+      "total": 497750.0,
+      "by_candidate": [
+        {
+          "candidate_id": "S2PA00661",
+          "support_oppose": "O",
+          "amount": 497750.0
+        }
+      ],
+      "traceability_score": 0.5362,
+      "flags": [
+        "dead_end_dark"
+      ],
+      "has_chain": true,
+      "source_url": "https://www.fec.gov/data/committee/C00540443/?cycle=2024",
+      "visibility_shares": {
+        "disclosed": 0.5362,
+        "inferable": 0.0,
+        "unwalked": 0.0,
+        "dark": 0.4638
+      }
+    },
+    {
+      "entity_id": "C00106146",
+      "name": "AMERICAN HOSPITAL ASSOCIATION PAC",
+      "committee_type": "Q",
+      "committee_type_label": "PAC",
+      "total": 450000.0,
+      "by_candidate": [
+        {
+          "candidate_id": "S6PA00217",
+          "support_oppose": "S",
+          "amount": 450000.0
+        }
+      ],
+      "traceability_score": 0.8437,
+      "flags": [],
+      "has_chain": true,
+      "source_url": "https://www.fec.gov/data/committee/C00106146/?cycle=2024",
+      "visibility_shares": {
+        "disclosed": 0.8437,
+        "inferable": 0.0,
+        "unwalked": 0.1563,
+        "dark": 0.0
+      }
+    },
+    {
+      "entity_id": "C00011114",
+      "name": "AMERICAN FEDERATION OF STATE COUNTY & MUNICIPAL EMPLOYEES  P E O P L E",
+      "committee_type": "Q",
+      "committee_type_label": "PAC",
+      "total": 400000.0,
+      "by_candidate": [
+        {
+          "candidate_id": "S2PA00661",
+          "support_oppose": "O",
+          "amount": 400000.0
+        }
+      ],
+      "traceability_score": 1.0,
+      "flags": [],
+      "has_chain": true,
+      "source_url": "https://www.fec.gov/data/committee/C00011114/?cycle=2024",
+      "visibility_shares": {
+        "disclosed": 1.0,
+        "inferable": 0.0,
+        "unwalked": 0.0,
+        "dark": 0.0
+      }
+    },
+    {
+      "entity_id": "C00489799",
+      "name": "PLANNED PARENTHOOD VOTES",
+      "committee_type": "O",
+      "committee_type_label": "Super PAC",
+      "total": 361348.7,
+      "by_candidate": [
+        {
+          "candidate_id": "S2PA00661",
+          "support_oppose": "O",
+          "amount": 361348.7
+        }
+      ],
+      "traceability_score": 0.6308,
+      "flags": [
+        "dead_end_dark",
+        "shell_cluster"
+      ],
+      "has_chain": true,
+      "source_url": "https://www.fec.gov/data/committee/C00489799/?cycle=2024",
+      "visibility_shares": {
+        "disclosed": 0.6308,
+        "inferable": 0.0,
+        "unwalked": 0.0,
+        "dark": 0.3691
+      }
+    },
+    {
+      "entity_id": "C00530766",
+      "name": "WOMEN SPEAK OUT PAC",
+      "committee_type": "O",
+      "committee_type_label": "Super PAC",
+      "total": 354065.66,
+      "by_candidate": [
+        {
+          "candidate_id": "S2PA00661",
+          "support_oppose": "S",
+          "amount": 177032.83
+        },
+        {
+          "candidate_id": "S6PA00217",
+          "support_oppose": "O",
+          "amount": 177032.83
+        }
+      ],
+      "traceability_score": 0.5445,
+      "flags": [
+        "dead_end_dark",
+        "shell_cluster"
+      ],
+      "has_chain": true,
+      "source_url": "https://www.fec.gov/data/committee/C00530766/?cycle=2024",
+      "visibility_shares": {
+        "disclosed": 0.5445,
+        "inferable": 0.0,
+        "unwalked": 0.0,
+        "dark": 0.4555
+      }
+    },
+    {
+      "entity_id": "C00606962",
+      "name": "WORKING FAMILIES PARTY PAC",
+      "committee_type": "W",
+      "committee_type_label": "Hybrid PAC",
+      "total": 350094.27,
+      "by_candidate": [
+        {
+          "candidate_id": "S6PA00217",
+          "support_oppose": "S",
+          "amount": 350094.27
+        }
+      ],
+      "traceability_score": 0.6569,
+      "flags": [
+        "dead_end_dark"
+      ],
+      "has_chain": true,
+      "source_url": "https://www.fec.gov/data/committee/C00606962/?cycle=2024",
+      "visibility_shares": {
+        "disclosed": 0.6569,
+        "inferable": 0.0,
+        "unwalked": 0.0,
+        "dark": 0.3431
+      }
+    },
+    {
+      "entity_id": "C00873877",
+      "name": "SOLIDARITY VICTORY PAC",
+      "committee_type": "O",
+      "committee_type_label": "Super PAC",
+      "total": 347469.7,
+      "by_candidate": [
+        {
+          "candidate_id": "S6PA00217",
+          "support_oppose": "S",
+          "amount": 347469.7
+        }
+      ],
+      "traceability_score": 0.8289,
+      "flags": [],
+      "has_chain": true,
+      "source_url": "https://www.fec.gov/data/committee/C00873877/?cycle=2024",
+      "visibility_shares": {
+        "disclosed": 0.8289,
+        "inferable": 0.0,
+        "unwalked": 0.1515,
+        "dark": 0.0196
+      }
+    },
+    {
+      "entity_id": "C00685693",
+      "name": "CASA IN ACTION PAC",
+      "committee_type": "O",
+      "committee_type_label": "Super PAC",
+      "total": 326313.31,
+      "by_candidate": [
+        {
+          "candidate_id": "S6PA00217",
+          "support_oppose": "S",
+          "amount": 326313.31
+        }
+      ],
+      "traceability_score": 0.2078,
+      "flags": [
+        "dead_end_dark"
+      ],
+      "has_chain": true,
+      "source_url": "https://www.fec.gov/data/committee/C00685693/?cycle=2024",
+      "visibility_shares": {
+        "disclosed": 0.2078,
+        "inferable": 0.0,
+        "unwalked": 0.0319,
+        "dark": 0.7603
+      }
+    },
+    {
+      "entity_id": "C90011156",
+      "name": "WORKING AMERICA",
+      "committee_type": "I",
+      "committee_type_label": "Independent expenditor (not a committee)",
+      "total": 286748.28,
+      "by_candidate": [
+        {
+          "candidate_id": "S6PA00217",
+          "support_oppose": "S",
+          "amount": 284265.99
+        },
+        {
+          "candidate_id": "S2PA00661",
+          "support_oppose": "O",
+          "amount": 2482.29
+        }
+      ],
+      "traceability_score": null,
+      "flags": [
+        "single_transfer_funded"
+      ],
+      "has_chain": false,
+      "source_url": "https://www.fec.gov/data/committee/C90011156/?cycle=2024"
+    },
+    {
+      "entity_id": "C00710848",
+      "name": "DMFI PAC",
+      "committee_type": "W",
+      "committee_type_label": "Hybrid PAC",
+      "total": 262595.0,
+      "by_candidate": [
+        {
+          "candidate_id": "S6PA00217",
+          "support_oppose": "S",
+          "amount": 262595.0
+        }
+      ],
+      "traceability_score": 0.7994,
+      "flags": [],
+      "has_chain": true,
+      "source_url": "https://www.fec.gov/data/committee/C00710848/?cycle=2024",
+      "visibility_shares": {
+        "disclosed": 0.7994,
+        "inferable": 0.0,
+        "unwalked": 0.0,
+        "dark": 0.2006
+      }
+    },
+    {
+      "entity_id": "C00804823",
+      "name": "MAINSTREAM DEMOCRATS PAC",
+      "committee_type": "O",
+      "committee_type_label": "Super PAC",
+      "total": 256582.19,
+      "by_candidate": [
+        {
+          "candidate_id": "S6PA00217",
+          "support_oppose": "S",
+          "amount": 250000.0
+        },
+        {
+          "candidate_id": "S2PA00661",
+          "support_oppose": "O",
+          "amount": 6582.19
+        }
+      ],
+      "traceability_score": 0.9711,
+      "flags": [],
+      "has_chain": true,
+      "source_url": "https://www.fec.gov/data/committee/C00804823/?cycle=2024",
+      "visibility_shares": {
+        "disclosed": 0.9711,
+        "inferable": 0.0,
+        "unwalked": 0.0,
+        "dark": 0.0289
+      }
+    },
+    {
+      "entity_id": "C00738674",
+      "name": "REPRODUCTIVE FREEDOM FOR ALL FREEDOM FUND",
+      "committee_type": "O",
+      "committee_type_label": "Super PAC",
+      "total": 244327.86,
+      "by_candidate": [
+        {
+          "candidate_id": "S6PA00217",
+          "support_oppose": "S",
+          "amount": 244327.86
+        }
+      ],
+      "traceability_score": 0.2069,
+      "flags": [
+        "dead_end_dark",
+        "shell_cluster"
+      ],
+      "has_chain": true,
+      "source_url": "https://www.fec.gov/data/committee/C00738674/?cycle=2024",
+      "visibility_shares": {
+        "disclosed": 0.2069,
+        "inferable": 0.0,
+        "unwalked": 0.0029,
+        "dark": 0.7902
+      }
+    },
+    {
+      "entity_id": "C00862094",
+      "name": "GREAT OPPORTUNITY PAC, INC.",
+      "committee_type": "O",
+      "committee_type_label": "Super PAC",
+      "total": 205000.0,
+      "by_candidate": [
+        {
+          "candidate_id": "S2PA00661",
+          "support_oppose": "S",
+          "amount": 102500.0
+        },
+        {
+          "candidate_id": "S6PA00217",
+          "support_oppose": "O",
+          "amount": 102500.0
+        }
+      ],
+      "traceability_score": 0.6289,
+      "flags": [
+        "dead_end_dark"
+      ],
+      "has_chain": true,
+      "source_url": "https://www.fec.gov/data/committee/C00862094/?cycle=2024",
+      "visibility_shares": {
+        "disclosed": 0.6289,
+        "inferable": 0.0,
+        "unwalked": 0.0,
+        "dark": 0.3711
+      }
+    },
+    {
+      "entity_id": "C00890053",
+      "name": "FUTURE PENNSYLVANIA PAC",
+      "committee_type": "O",
+      "committee_type_label": "Super PAC",
+      "total": 204101.12,
+      "by_candidate": [
+        {
+          "candidate_id": "S2PA00661",
+          "support_oppose": "O",
+          "amount": 102050.76
+        },
+        {
+          "candidate_id": "S6PA00217",
+          "support_oppose": "S",
+          "amount": 102050.36
+        }
+      ],
+      "traceability_score": 0.1977,
+      "flags": [
+        "dead_end_dark"
+      ],
+      "has_chain": true,
+      "source_url": "https://www.fec.gov/data/committee/C00890053/?cycle=2024",
+      "visibility_shares": {
+        "disclosed": 0.1977,
+        "inferable": 0.0,
+        "unwalked": 0.0002,
+        "dark": 0.8021
+      }
+    },
+    {
+      "entity_id": "C00634774",
+      "name": "COMMON SENSE FOR AMERICA PAC",
+      "committee_type": "Q",
+      "committee_type_label": "PAC",
+      "total": 181896.75,
+      "by_candidate": [
+        {
+          "candidate_id": "S2PA00661",
+          "support_oppose": "S",
+          "amount": 181896.75
+        }
+      ],
+      "traceability_score": 1.0,
+      "flags": [],
+      "has_chain": true,
+      "source_url": "https://www.fec.gov/data/committee/C00634774/?cycle=2024",
+      "visibility_shares": {
+        "disclosed": 1.0,
+        "inferable": 0.0,
+        "unwalked": 0.0,
+        "dark": 0.0
+      }
+    },
+    {
+      "entity_id": "C00004036",
+      "name": "SEIU COPE (SERVICE EMPLOYEES INTERNATIONAL UNION COMMITTEE ON POLITICAL EDUCATION)",
+      "committee_type": "Q",
+      "committee_type_label": "PAC",
+      "total": 179749.94,
+      "by_candidate": [
+        {
+          "candidate_id": "S6PA00217",
+          "support_oppose": "S",
+          "amount": 179749.94
+        }
+      ],
+      "traceability_score": 1.0,
+      "flags": [
+        "transfer_mismatch"
+      ],
+      "has_chain": true,
+      "source_url": "https://www.fec.gov/data/committee/C00004036/?cycle=2024",
+      "visibility_shares": {
+        "disclosed": 1.0,
+        "inferable": 0.0,
+        "unwalked": 0.0,
+        "dark": 0.0
+      }
+    },
+    {
+      "entity_id": "C00030718",
+      "name": "NATIONAL ASSOCIATION OF REALTORS POLITICAL ACTION COMMITTEE",
+      "committee_type": "Q",
+      "committee_type_label": "PAC",
+      "total": 167125.0,
+      "by_candidate": [
+        {
+          "candidate_id": "S6PA00217",
+          "support_oppose": "S",
+          "amount": 167125.0
+        }
+      ],
+      "traceability_score": 1.0,
+      "flags": [],
+      "has_chain": true,
+      "source_url": "https://www.fec.gov/data/committee/C00030718/?cycle=2024",
+      "visibility_shares": {
+        "disclosed": 1.0,
+        "inferable": 0.0,
+        "unwalked": 0.0,
+        "dark": 0.0
+      }
+    },
+    {
+      "entity_id": "C00747121",
+      "name": "RED SENATE",
+      "committee_type": "O",
+      "committee_type_label": "Super PAC",
+      "total": 165468.15,
+      "by_candidate": [
+        {
+          "candidate_id": "S6PA00217",
+          "support_oppose": "O",
+          "amount": 129934.37
+        },
+        {
+          "candidate_id": "S2PA00661",
+          "support_oppose": "S",
+          "amount": 35533.78
+        }
+      ],
+      "traceability_score": 0.9999,
+      "flags": [],
+      "has_chain": true,
+      "source_url": "https://www.fec.gov/data/committee/C00747121/?cycle=2024",
+      "visibility_shares": {
+        "disclosed": 0.9999,
+        "inferable": 0.0,
+        "unwalked": 0.0,
+        "dark": 0.0001
+      }
+    },
+    {
+      "entity_id": "C00528554",
+      "name": "RJC VICTORY FUND",
+      "committee_type": "O",
+      "committee_type_label": "Super PAC",
+      "total": 158431.57,
+      "by_candidate": [
+        {
+          "candidate_id": "S6PA00217",
+          "support_oppose": "O",
+          "amount": 120336.37
+        },
+        {
+          "candidate_id": "S2PA00661",
+          "support_oppose": "S",
+          "amount": 38095.2
+        }
+      ],
+      "traceability_score": 0.6899,
+      "flags": [
+        "dead_end_dark"
+      ],
+      "has_chain": true,
+      "source_url": "https://www.fec.gov/data/committee/C00528554/?cycle=2024",
+      "visibility_shares": {
+        "disclosed": 0.6899,
+        "inferable": 0.0,
+        "unwalked": 0.0,
+        "dark": 0.3101
+      }
+    },
+    {
+      "entity_id": "C00835041",
+      "name": "FORWARD BLUE",
+      "committee_type": "O",
+      "committee_type_label": "Super PAC",
+      "total": 121861.93,
+      "by_candidate": [
+        {
+          "candidate_id": "S6PA00217",
+          "support_oppose": "S",
+          "amount": 83861.93
+        },
+        {
+          "candidate_id": "S2PA00661",
+          "support_oppose": "O",
+          "amount": 38000.0
+        }
+      ],
+      "traceability_score": 1.0,
+      "flags": [],
+      "has_chain": true,
+      "source_url": "https://www.fec.gov/data/committee/C00835041/?cycle=2024",
+      "visibility_shares": {
+        "disclosed": 1.0,
+        "inferable": 0.0,
+        "unwalked": 0.0,
+        "dark": 0.0
+      }
+    },
+    {
+      "entity_id": "C00689745",
+      "name": "MAKE THE ROAD ACTION INDEPENDENT EXPENDITURE COMMITTEE",
+      "committee_type": "O",
+      "committee_type_label": "Super PAC",
+      "total": 121161.65,
+      "by_candidate": [
+        {
+          "candidate_id": "S6PA00217",
+          "support_oppose": "S",
+          "amount": 121161.65
+        }
+      ],
+      "traceability_score": 0.8505,
+      "flags": [],
+      "has_chain": true,
+      "source_url": "https://www.fec.gov/data/committee/C00689745/?cycle=2024",
+      "visibility_shares": {
+        "disclosed": 0.8505,
+        "inferable": 0.0,
+        "unwalked": 0.0402,
+        "dark": 0.1093
+      }
+    },
+    {
+      "entity_id": "C00761064",
+      "name": "API PA VOTES",
+      "committee_type": "O",
+      "committee_type_label": "Super PAC",
+      "total": 121122.9,
+      "by_candidate": [
+        {
+          "candidate_id": "S6PA00217",
+          "support_oppose": "S",
+          "amount": 121122.9
+        }
+      ],
+      "traceability_score": 0.5996,
+      "flags": [
+        "dead_end_dark"
+      ],
+      "has_chain": true,
+      "source_url": "https://www.fec.gov/data/committee/C00761064/?cycle=2024",
+      "visibility_shares": {
+        "disclosed": 0.5996,
+        "inferable": 0.0,
+        "unwalked": 0.0,
+        "dark": 0.4004
+      }
+    },
+    {
+      "entity_id": "C00760801",
+      "name": "THE TURNOUT PROJECT",
+      "committee_type": "O",
+      "committee_type_label": "Super PAC",
+      "total": 118255.62,
+      "by_candidate": [
+        {
+          "candidate_id": "S6PA00217",
+          "support_oppose": "S",
+          "amount": 118255.62
+        }
+      ],
+      "traceability_score": 0.9551,
+      "flags": [],
+      "has_chain": true,
+      "source_url": "https://www.fec.gov/data/committee/C00760801/?cycle=2024",
+      "visibility_shares": {
+        "disclosed": 0.9551,
+        "inferable": 0.0,
+        "unwalked": 0.0,
+        "dark": 0.0449
+      }
+    },
+    {
+      "entity_id": "C00684969",
+      "name": "JDCA PAC",
+      "committee_type": "V",
+      "committee_type_label": "Hybrid PAC (non-qualified)",
+      "total": 113290.24,
+      "by_candidate": [
+        {
+          "candidate_id": "S6PA00217",
+          "support_oppose": "S",
+          "amount": 113290.24
+        }
+      ],
+      "traceability_score": 0.9673,
+      "flags": [],
+      "has_chain": true,
+      "source_url": "https://www.fec.gov/data/committee/C00684969/?cycle=2024",
+      "visibility_shares": {
+        "disclosed": 0.9673,
+        "inferable": 0.0,
+        "unwalked": 0.0,
+        "dark": 0.0327
+      }
+    },
+    {
+      "entity_id": "C00851410",
+      "name": "PROTECT LIBERTY PAC",
+      "committee_type": "O",
+      "committee_type_label": "Super PAC",
+      "total": 108876.84,
+      "by_candidate": [
+        {
+          "candidate_id": "S2PA00661",
+          "support_oppose": "S",
+          "amount": 108876.84
+        }
+      ],
+      "traceability_score": 0.1874,
+      "flags": [
+        "dead_end_dark"
+      ],
+      "has_chain": true,
+      "source_url": "https://www.fec.gov/data/committee/C00851410/?cycle=2024",
+      "visibility_shares": {
+        "disclosed": 0.1874,
+        "inferable": 0.0,
+        "unwalked": 0.0,
+        "dark": 0.8126
+      }
+    },
+    {
+      "entity_id": "C90022542",
+      "name": "CLIMATE EMERGENCY ADVOCATES",
+      "committee_type": "I",
+      "committee_type_label": "Independent expenditor (not a committee)",
+      "total": 97681.03,
+      "by_candidate": [
+        {
+          "candidate_id": "S6PA00217",
+          "support_oppose": "S",
+          "amount": 97681.03
+        }
+      ],
+      "traceability_score": null,
+      "flags": [
+        "popup"
+      ],
+      "has_chain": false,
+      "source_url": "https://www.fec.gov/data/committee/C90022542/?cycle=2024"
+    },
+    {
+      "entity_id": "C00612820",
+      "name": "COMMUNITY CHANGE VOTERS",
+      "committee_type": "O",
+      "committee_type_label": "Super PAC",
+      "total": 69194.61,
+      "by_candidate": [
+        {
+          "candidate_id": "S6PA00217",
+          "support_oppose": "S",
+          "amount": 69194.61
+        }
+      ],
+      "traceability_score": 0.5013,
+      "flags": [
+        "dead_end_dark"
+      ],
+      "has_chain": true,
+      "source_url": "https://www.fec.gov/data/committee/C00612820/?cycle=2024",
+      "visibility_shares": {
+        "disclosed": 0.5013,
+        "inferable": 0.0,
+        "unwalked": 0.0,
+        "dark": 0.4987
+      }
+    },
+    {
+      "entity_id": "C90020363",
+      "name": "NAKASEC ACTION FUND",
+      "committee_type": "I",
+      "committee_type_label": "Independent expenditor (not a committee)",
+      "total": 65559.82,
+      "by_candidate": [
+        {
+          "candidate_id": "S6PA00217",
+          "support_oppose": "S",
+          "amount": 65559.82
+        }
+      ],
+      "traceability_score": null,
+      "flags": [],
+      "has_chain": false,
+      "source_url": "https://www.fec.gov/data/committee/C90020363/?cycle=2024"
+    },
+    {
+      "entity_id": "C00883322",
+      "name": "THE L & C COALITION",
+      "committee_type": "O",
+      "committee_type_label": "Super PAC",
+      "total": 64250.0,
+      "by_candidate": [
+        {
+          "candidate_id": "S2PA00661",
+          "support_oppose": "S",
+          "amount": 64250.0
+        }
+      ],
+      "traceability_score": 0.9762,
+      "flags": [],
+      "has_chain": true,
+      "source_url": "https://www.fec.gov/data/committee/C00883322/?cycle=2024",
+      "visibility_shares": {
+        "disclosed": 0.9762,
+        "inferable": 0.0,
+        "unwalked": 0.0,
+        "dark": 0.0238
+      }
+    },
+    {
+      "entity_id": "C00821611",
+      "name": "ASIAN AMERICANS FOR CHANGE FUND",
+      "committee_type": "O",
+      "committee_type_label": "Super PAC",
+      "total": 57683.0,
+      "by_candidate": [
+        {
+          "candidate_id": "S6PA00217",
+          "support_oppose": "S",
+          "amount": 57683.0
+        }
+      ],
+      "traceability_score": 1.0,
+      "flags": [],
+      "has_chain": true,
+      "source_url": "https://www.fec.gov/data/committee/C00821611/?cycle=2024",
+      "visibility_shares": {
+        "disclosed": 1.0,
+        "inferable": 0.0,
+        "unwalked": 0.0,
+        "dark": 0.0
+      }
+    },
+    {
+      "entity_id": "C00826776",
+      "name": "FRONTIERS OF FREEDOM ACTION, INC.",
+      "committee_type": "O",
+      "committee_type_label": "Super PAC",
+      "total": 50891.0,
+      "by_candidate": [
+        {
+          "candidate_id": "S6PA00217",
+          "support_oppose": "O",
+          "amount": 50891.0
+        }
+      ],
+      "traceability_score": 1.0,
+      "flags": [],
+      "has_chain": true,
+      "source_url": "https://www.fec.gov/data/committee/C00826776/?cycle=2024",
+      "visibility_shares": {
+        "disclosed": 1.0,
+        "inferable": 0.0,
+        "unwalked": 0.0,
+        "dark": 0.0
+      }
+    },
+    {
+      "entity_id": "C00880518",
+      "name": "BITCOIN VOTER PAC",
+      "committee_type": "V",
+      "committee_type_label": "Hybrid PAC (non-qualified)",
+      "total": 34969.52,
+      "by_candidate": [
+        {
+          "candidate_id": "S2PA00661",
+          "support_oppose": "S",
+          "amount": 34969.52
+        }
+      ],
+      "traceability_score": 0.0,
+      "flags": [
+        "dead_end_dark",
+        "single_transfer_funded"
+      ],
+      "has_chain": true,
+      "source_url": "https://www.fec.gov/data/committee/C00880518/?cycle=2024",
+      "visibility_shares": {
+        "disclosed": 0.0,
+        "inferable": 0.0,
+        "unwalked": 0.0,
+        "dark": 1.0
+      }
+    },
+    {
+      "entity_id": "C90022757",
+      "name": "WORKING FOR AMERICA POLICY INC.",
+      "committee_type": "I",
+      "committee_type_label": "Independent expenditor (not a committee)",
+      "total": 33253.35,
+      "by_candidate": [
+        {
+          "candidate_id": "S2PA00661",
+          "support_oppose": "S",
+          "amount": 33253.35
+        }
+      ],
+      "traceability_score": null,
+      "flags": [],
+      "has_chain": false,
+      "source_url": "https://www.fec.gov/data/committee/C90022757/?cycle=2024"
+    },
+    {
+      "entity_id": "C00828608",
+      "name": "HARDWORKING AMERICANS INC.",
+      "committee_type": "O",
+      "committee_type_label": "Super PAC",
+      "total": 28900.0,
+      "by_candidate": [
+        {
+          "candidate_id": "S2PA00661",
+          "support_oppose": "S",
+          "amount": 28900.0
+        }
+      ],
+      "traceability_score": 0.9401,
+      "flags": [],
+      "has_chain": true,
+      "source_url": "https://www.fec.gov/data/committee/C00828608/?cycle=2024",
+      "visibility_shares": {
+        "disclosed": 0.9401,
+        "inferable": 0.0,
+        "unwalked": 0.0,
+        "dark": 0.0599
+      }
+    },
+    {
+      "entity_id": "C00738732",
+      "name": "CLEAN WAVE",
+      "committee_type": "O",
+      "committee_type_label": "Super PAC",
+      "total": 27889.13,
+      "by_candidate": [
+        {
+          "candidate_id": "S6PA00217",
+          "support_oppose": "S",
+          "amount": 27889.13
+        }
+      ],
+      "traceability_score": 0.9849,
+      "flags": [],
+      "has_chain": true,
+      "source_url": "https://www.fec.gov/data/committee/C00738732/?cycle=2024",
+      "visibility_shares": {
+        "disclosed": 0.9849,
+        "inferable": 0.0,
+        "unwalked": 0.0,
+        "dark": 0.0151
+      }
+    },
+    {
+      "entity_id": "C00825885",
+      "name": "PATRIOTS FOR A BRIGHTER AMERICA",
+      "committee_type": "O",
+      "committee_type_label": "Super PAC",
+      "total": 23620.0,
+      "by_candidate": [
+        {
+          "candidate_id": "S2PA00661",
+          "support_oppose": "S",
+          "amount": 23620.0
+        }
+      ],
+      "traceability_score": 1.0,
+      "flags": [
+        "shell_cluster",
+        "single_transfer_funded"
+      ],
+      "has_chain": true,
+      "source_url": "https://www.fec.gov/data/committee/C00825885/?cycle=2024",
+      "visibility_shares": {
+        "disclosed": 1.0,
+        "inferable": 0.0,
+        "unwalked": 0.0,
+        "dark": 0.0
+      }
+    },
+    {
+      "entity_id": "C00299396",
+      "name": "ITALIAN AMERICAN DEMOCRATIC LEADERSHIP COUNCIL",
+      "committee_type": "W",
+      "committee_type_label": "Hybrid PAC",
+      "total": 17850.0,
+      "by_candidate": [
+        {
+          "candidate_id": "S6PA00217",
+          "support_oppose": "S",
+          "amount": 17850.0
+        }
+      ],
+      "traceability_score": 0.894,
+      "flags": [],
+      "has_chain": true,
+      "source_url": "https://www.fec.gov/data/committee/C00299396/?cycle=2024",
+      "visibility_shares": {
+        "disclosed": 0.894,
+        "inferable": 0.0,
+        "unwalked": 0.06,
+        "dark": 0.046
+      }
+    },
+    {
+      "entity_id": "C00755363",
+      "name": "VOTE FOR EQUALITY",
+      "committee_type": "O",
+      "committee_type_label": "Super PAC",
+      "total": 16386.4,
+      "by_candidate": [
+        {
+          "candidate_id": "S6PA00217",
+          "support_oppose": "S",
+          "amount": 16386.4
+        }
+      ],
+      "traceability_score": 0.6479,
+      "flags": [
+        "dead_end_dark"
+      ],
+      "has_chain": true,
+      "source_url": "https://www.fec.gov/data/committee/C00755363/?cycle=2024",
+      "visibility_shares": {
+        "disclosed": 0.6479,
+        "inferable": 0.0,
+        "unwalked": 0.0,
+        "dark": 0.3521
+      }
+    },
+    {
+      "entity_id": "C90018367",
+      "name": "MOMSRISING TOGETHER",
+      "committee_type": "I",
+      "committee_type_label": "Independent expenditor (not a committee)",
+      "total": 16202.15,
+      "by_candidate": [
+        {
+          "candidate_id": "S6PA00217",
+          "support_oppose": "S",
+          "amount": 16202.15
+        }
+      ],
+      "traceability_score": null,
+      "flags": [
+        "popup"
+      ],
+      "has_chain": false,
+      "source_url": "https://www.fec.gov/data/committee/C90018367/?cycle=2024"
+    },
+    {
+      "entity_id": "C00625566",
+      "name": "VALOR AMERICA",
+      "committee_type": "O",
+      "committee_type_label": "Super PAC",
+      "total": 16000.0,
+      "by_candidate": [
+        {
+          "candidate_id": "S6PA00217",
+          "support_oppose": "O",
+          "amount": 16000.0
+        }
+      ],
+      "traceability_score": 0.9743,
+      "flags": [],
+      "has_chain": true,
+      "source_url": "https://www.fec.gov/data/committee/C00625566/?cycle=2024",
+      "visibility_shares": {
+        "disclosed": 0.9743,
+        "inferable": 0.0,
+        "unwalked": 0.0,
+        "dark": 0.0257
+      }
+    },
+    {
+      "entity_id": "C00742635",
+      "name": "GUN RIGHTS AMERICA",
+      "committee_type": "O",
+      "committee_type_label": "Super PAC",
+      "total": 14127.38,
+      "by_candidate": [
+        {
+          "candidate_id": "S6PA00217",
+          "support_oppose": "O",
+          "amount": 14127.38
+        }
+      ],
+      "traceability_score": 0.0004,
+      "flags": [
+        "dead_end_dark",
+        "single_transfer_funded"
+      ],
+      "has_chain": true,
+      "source_url": "https://www.fec.gov/data/committee/C00742635/?cycle=2024",
+      "visibility_shares": {
+        "disclosed": 0.0004,
+        "inferable": 0.0,
+        "unwalked": 0.0,
+        "dark": 0.9996
+      }
+    },
+    {
+      "entity_id": "C00891549",
+      "name": "AMERICA FIRST ACTION FUND",
+      "committee_type": "O",
+      "committee_type_label": "Super PAC",
+      "total": 14044.45,
+      "by_candidate": [
+        {
+          "candidate_id": "S2PA00661",
+          "support_oppose": "S",
+          "amount": 14000.0
+        },
+        {
+          "candidate_id": "S6PA00217",
+          "support_oppose": "O",
+          "amount": 44.45
+        }
+      ],
+      "traceability_score": 1.0,
+      "flags": [
+        "popup",
+        "single_transfer_funded"
+      ],
+      "has_chain": true,
+      "source_url": "https://www.fec.gov/data/committee/C00891549/?cycle=2024",
+      "visibility_shares": {
+        "disclosed": 1.0,
+        "inferable": 0.0,
+        "unwalked": 0.0,
+        "dark": 0.0
+      }
+    },
+    {
+      "entity_id": "C00509893",
+      "name": "NATIONAL RIGHT TO LIFE VICTORY FUND",
+      "committee_type": "O",
+      "committee_type_label": "Super PAC",
+      "total": 13625.0,
+      "by_candidate": [
+        {
+          "candidate_id": "S2PA00661",
+          "support_oppose": "S",
+          "amount": 13625.0
+        }
+      ],
+      "traceability_score": 0.6461,
+      "flags": [
+        "dead_end_dark"
+      ],
+      "has_chain": true,
+      "source_url": "https://www.fec.gov/data/committee/C00509893/?cycle=2024",
+      "visibility_shares": {
+        "disclosed": 0.6461,
+        "inferable": 0.0,
+        "unwalked": 0.0,
+        "dark": 0.3539
+      }
+    },
+    {
+      "entity_id": "C90021890",
+      "name": "RISE INC",
+      "committee_type": "I",
+      "committee_type_label": "Independent expenditor (not a committee)",
+      "total": 13507.5,
+      "by_candidate": [
+        {
+          "candidate_id": "S6PA00217",
+          "support_oppose": "S",
+          "amount": 13507.5
+        }
+      ],
+      "traceability_score": null,
+      "flags": [],
+      "has_chain": false,
+      "source_url": "https://www.fec.gov/data/committee/C90021890/?cycle=2024"
+    },
+    {
+      "entity_id": "C00756791",
+      "name": "VOTEBLUE",
+      "committee_type": "O",
+      "committee_type_label": "Super PAC",
+      "total": 10947.83,
+      "by_candidate": [
+        {
+          "candidate_id": "S6PA00217",
+          "support_oppose": "S",
+          "amount": 10947.83
+        }
+      ],
+      "traceability_score": 1.0,
+      "flags": [],
+      "has_chain": true,
+      "source_url": "https://www.fec.gov/data/committee/C00756791/?cycle=2024",
+      "visibility_shares": {
+        "disclosed": 1.0,
+        "inferable": 0.0,
+        "unwalked": 0.0,
+        "dark": 0.0
+      }
+    },
+    {
+      "entity_id": "C00032979",
+      "name": "D.R.I.V.E. - DEMOCRAT, REPUBLICAN, INDEPENDENT VOTER EDUCATION (THE PAC OF THE INTERNATIONAL BROTHERHOOD OF TEAMSTERS)",
+      "committee_type": "Q",
+      "committee_type_label": "PAC",
+      "total": 10000.0,
+      "by_candidate": [
+        {
+          "candidate_id": "S6PA00217",
+          "support_oppose": "S",
+          "amount": 10000.0
+        }
+      ],
+      "traceability_score": 1.0,
+      "flags": [],
+      "has_chain": true,
+      "source_url": "https://www.fec.gov/data/committee/C00032979/?cycle=2024",
+      "visibility_shares": {
+        "disclosed": 1.0,
+        "inferable": 0.0,
+        "unwalked": 0.0,
+        "dark": 0.0
+      }
+    },
+    {
+      "entity_id": "C00747998",
+      "name": "CARE IN ACTION PAC",
+      "committee_type": "O",
+      "committee_type_label": "Super PAC",
+      "total": 10000.0,
+      "by_candidate": [
+        {
+          "candidate_id": "S6PA00217",
+          "support_oppose": "S",
+          "amount": 10000.0
+        }
+      ],
+      "traceability_score": 0.7209,
+      "flags": [
+        "dead_end_dark"
+      ],
+      "has_chain": true,
+      "source_url": "https://www.fec.gov/data/committee/C00747998/?cycle=2024",
+      "visibility_shares": {
+        "disclosed": 0.7209,
+        "inferable": 0.0,
+        "unwalked": 0.0004,
+        "dark": 0.2787
+      }
+    },
+    {
+      "entity_id": "C00508440",
+      "name": "HUMAN RIGHTS CAMPAIGN EQUALITY VOTES",
+      "committee_type": "O",
+      "committee_type_label": "Super PAC",
+      "total": 7843.42,
+      "by_candidate": [
+        {
+          "candidate_id": "S6PA00217",
+          "support_oppose": "S",
+          "amount": 7843.42
+        }
+      ],
+      "traceability_score": 0.9842,
+      "flags": [
+        "shell_cluster"
+      ],
+      "has_chain": true,
+      "source_url": "https://www.fec.gov/data/committee/C00508440/?cycle=2024",
+      "visibility_shares": {
+        "disclosed": 0.9842,
+        "inferable": 0.0,
+        "unwalked": 0.0,
+        "dark": 0.0158
+      }
+    },
+    {
+      "entity_id": "C00800995",
+      "name": "DEMOCRATIC MESSAGING PROJECT",
+      "committee_type": "O",
+      "committee_type_label": "Super PAC",
+      "total": 7398.98,
+      "by_candidate": [
+        {
+          "candidate_id": "S6PA00217",
+          "support_oppose": "S",
+          "amount": 7398.98
+        }
+      ],
+      "traceability_score": 0.9976,
+      "flags": [],
+      "has_chain": true,
+      "source_url": "https://www.fec.gov/data/committee/C00800995/?cycle=2024",
+      "visibility_shares": {
+        "disclosed": 0.9976,
+        "inferable": 0.0,
+        "unwalked": 0.0,
+        "dark": 0.0024
+      }
+    },
+    {
+      "entity_id": "C00879510",
+      "name": "AMERICA PAC",
+      "committee_type": "O",
+      "committee_type_label": "Super PAC",
+      "total": 6692.6,
+      "by_candidate": [
+        {
+          "candidate_id": "S2PA00661",
+          "support_oppose": "S",
+          "amount": 6692.6
+        }
+      ],
+      "traceability_score": 0.9976,
+      "flags": [
+        "single_transfer_funded"
+      ],
+      "has_chain": true,
+      "source_url": "https://www.fec.gov/data/committee/C00879510/?cycle=2024",
+      "visibility_shares": {
+        "disclosed": 0.9976,
+        "inferable": 0.0,
+        "unwalked": 0.0,
+        "dark": 0.0024
+      }
+    },
+    {
+      "entity_id": "C00172361",
+      "name": "PENNSYLVANIA PRO-LIFE FEDERATION PAC",
+      "committee_type": "Q",
+      "committee_type_label": "PAC",
+      "total": 5456.76,
+      "by_candidate": [
+        {
+          "candidate_id": "S2PA00661",
+          "support_oppose": "S",
+          "amount": 2728.4
+        },
+        {
+          "candidate_id": "S6PA00217",
+          "support_oppose": "O",
+          "amount": 2728.36
+        }
+      ],
+      "traceability_score": null,
+      "flags": [],
+      "has_chain": false,
+      "source_url": "https://www.fec.gov/data/committee/C00172361/?cycle=2024"
+    },
+    {
+      "entity_id": "C00891473",
+      "name": "MOSHANGUSA FREE SPEECH",
+      "committee_type": "N",
+      "committee_type_label": "PAC (non-qualified)",
+      "total": 4925.0,
+      "by_candidate": [
+        {
+          "candidate_id": "S2PA00661",
+          "support_oppose": "S",
+          "amount": 4925.0
+        }
+      ],
+      "traceability_score": 1.0,
+      "flags": [
+        "popup"
+      ],
+      "has_chain": true,
+      "source_url": "https://www.fec.gov/data/committee/C00891473/?cycle=2024",
+      "visibility_shares": {
+        "disclosed": 1.0,
+        "inferable": 0.0,
+        "unwalked": 0.0,
+        "dark": 0.0
+      }
+    },
+    {
+      "entity_id": "C90022906",
+      "name": "ACTION TOGETHER NEPA INC.",
+      "committee_type": "I",
+      "committee_type_label": "Independent expenditor (not a committee)",
+      "total": 4259.77,
+      "by_candidate": [
+        {
+          "candidate_id": "S6PA00217",
+          "support_oppose": "S",
+          "amount": 4259.77
+        }
+      ],
+      "traceability_score": null,
+      "flags": [
+        "popup"
+      ],
+      "has_chain": false,
+      "source_url": "https://www.fec.gov/data/committee/C90022906/?cycle=2024"
+    },
+    {
+      "entity_id": "C00880682",
+      "name": "PIVOT VICTORY FUND",
+      "committee_type": "O",
+      "committee_type_label": "Super PAC",
+      "total": 4000.0,
+      "by_candidate": [
+        {
+          "candidate_id": "S6PA00217",
+          "support_oppose": "S",
+          "amount": 4000.0
+        }
+      ],
+      "traceability_score": 0.9949,
+      "flags": [],
+      "has_chain": true,
+      "source_url": "https://www.fec.gov/data/committee/C00880682/?cycle=2024",
+      "visibility_shares": {
+        "disclosed": 0.9949,
+        "inferable": 0.0,
+        "unwalked": 0.0,
+        "dark": 0.0051
+      }
+    },
+    {
+      "entity_id": "C00341396",
+      "name": "MOVEON.ORG POLITICAL ACTION",
+      "committee_type": "W",
+      "committee_type_label": "Hybrid PAC",
+      "total": 3006.1,
+      "by_candidate": [
+        {
+          "candidate_id": "S6PA00217",
+          "support_oppose": "S",
+          "amount": 3006.1
+        }
+      ],
+      "traceability_score": 0.9678,
+      "flags": [],
+      "has_chain": true,
+      "source_url": "https://www.fec.gov/data/committee/C00341396/?cycle=2024",
+      "visibility_shares": {
+        "disclosed": 0.9678,
+        "inferable": 0.0,
+        "unwalked": 0.0,
+        "dark": 0.0322
+      }
+    },
+    {
+      "entity_id": "C00430280",
+      "name": "IMMIGRANTS' LIST",
+      "committee_type": "Q",
+      "committee_type_label": "PAC",
+      "total": 3000.0,
+      "by_candidate": [
+        {
+          "candidate_id": "S6PA00217",
+          "support_oppose": "S",
+          "amount": 3000.0
+        }
+      ],
+      "traceability_score": 1.0,
+      "flags": [],
+      "has_chain": true,
+      "source_url": "https://www.fec.gov/data/committee/C00430280/?cycle=2024",
+      "visibility_shares": {
+        "disclosed": 1.0,
+        "inferable": 0.0,
+        "unwalked": 0.0,
+        "dark": 0.0
+      }
+    },
+    {
+      "entity_id": "C90020116",
+      "name": "CHESAPEAKE CLIMATE ACTION NETWORK ACTION FUND",
+      "committee_type": "I",
+      "committee_type_label": "Independent expenditor (not a committee)",
+      "total": 2976.03,
+      "by_candidate": [
+        {
+          "candidate_id": "S6PA00217",
+          "support_oppose": "S",
+          "amount": 2976.03
+        }
+      ],
+      "traceability_score": null,
+      "flags": [],
+      "has_chain": false,
+      "source_url": "https://www.fec.gov/data/committee/C90020116/?cycle=2024"
+    },
+    {
+      "entity_id": "C00754242",
+      "name": "THEY SEE BLUE",
+      "committee_type": "V",
+      "committee_type_label": "Hybrid PAC (non-qualified)",
+      "total": 2864.56,
+      "by_candidate": [
+        {
+          "candidate_id": "S6PA00217",
+          "support_oppose": "S",
+          "amount": 2864.56
+        }
+      ],
+      "traceability_score": 0.8788,
+      "flags": [],
+      "has_chain": true,
+      "source_url": "https://www.fec.gov/data/committee/C00754242/?cycle=2024",
+      "visibility_shares": {
+        "disclosed": 0.8788,
+        "inferable": 0.0,
+        "unwalked": 0.1212,
+        "dark": 0.0
+      }
+    },
+    {
+      "entity_id": "C00162818",
+      "name": "INTERNATIONAL BROTHERHOOD OF ELECTRICAL WORKERS LOCAL 98 COMMITTEE ON POLITICAL EDUCATION",
+      "committee_type": "Q",
+      "committee_type_label": "PAC",
+      "total": 2707.45,
+      "by_candidate": [
+        {
+          "candidate_id": "S6PA00217",
+          "support_oppose": "S",
+          "amount": 2707.45
+        }
+      ],
+      "traceability_score": 1.0,
+      "flags": [],
+      "has_chain": true,
+      "source_url": "https://www.fec.gov/data/committee/C00162818/?cycle=2024",
+      "visibility_shares": {
+        "disclosed": 1.0,
+        "inferable": 0.0,
+        "unwalked": 0.0,
+        "dark": 0.0
+      }
+    },
+    {
+      "entity_id": "C90017492",
+      "name": "INDIVISIBLE PROJECT INC.",
+      "committee_type": "I",
+      "committee_type_label": "Independent expenditor (not a committee)",
+      "total": 2631.83,
+      "by_candidate": [
+        {
+          "candidate_id": "S6PA00217",
+          "support_oppose": "S",
+          "amount": 2631.83
+        }
+      ],
+      "traceability_score": null,
+      "flags": [],
+      "has_chain": false,
+      "source_url": "https://www.fec.gov/data/committee/C90017492/?cycle=2024"
+    },
+    {
+      "entity_id": "C90023037",
+      "name": "POPULATION CONNECTION ACTION FUND",
+      "committee_type": "I",
+      "committee_type_label": "Independent expenditor (not a committee)",
+      "total": 2370.92,
+      "by_candidate": [
+        {
+          "candidate_id": "S6PA00217",
+          "support_oppose": "S",
+          "amount": 2370.92
+        }
+      ],
+      "traceability_score": null,
+      "flags": [
+        "popup"
+      ],
+      "has_chain": false,
+      "source_url": "https://www.fec.gov/data/committee/C90023037/?cycle=2024"
+    },
+    {
+      "entity_id": "C90022559",
+      "name": "1199 SEIU NEW YORK STATE POLITICAL ACTION FUND",
+      "committee_type": "I",
+      "committee_type_label": "Independent expenditor (not a committee)",
+      "total": 1744.0,
+      "by_candidate": [
+        {
+          "candidate_id": "S6PA00217",
+          "support_oppose": "S",
+          "amount": 1744.0
+        }
+      ],
+      "traceability_score": null,
+      "flags": [],
+      "has_chain": false,
+      "source_url": "https://www.fec.gov/data/committee/C90022559/?cycle=2024"
+    },
+    {
+      "entity_id": "C00556274",
+      "name": "USW WORKS",
+      "committee_type": "O",
+      "committee_type_label": "Super PAC",
+      "total": 1662.96,
+      "by_candidate": [
+        {
+          "candidate_id": "S6PA00217",
+          "support_oppose": "S",
+          "amount": 1662.96
+        }
+      ],
+      "traceability_score": 1.0,
+      "flags": [
+        "shell_cluster",
+        "single_transfer_funded"
+      ],
+      "has_chain": true,
+      "source_url": "https://www.fec.gov/data/committee/C00556274/?cycle=2024",
+      "visibility_shares": {
+        "disclosed": 1.0,
+        "inferable": 0.0,
+        "unwalked": 0.0,
+        "dark": 0.0
+      }
+    },
+    {
+      "entity_id": "C00632398",
+      "name": "LET AMERICA VOTE PAC",
+      "committee_type": "Q",
+      "committee_type_label": "PAC",
+      "total": 1441.0,
+      "by_candidate": [
+        {
+          "candidate_id": "S6PA00217",
+          "support_oppose": "S",
+          "amount": 1441.0
+        }
+      ],
+      "traceability_score": 1.0,
+      "flags": [
+        "shell_cluster"
+      ],
+      "has_chain": true,
+      "source_url": "https://www.fec.gov/data/committee/C00632398/?cycle=2024",
+      "visibility_shares": {
+        "disclosed": 1.0,
+        "inferable": 0.0,
+        "unwalked": 0.0,
+        "dark": 0.0
+      }
+    },
+    {
+      "entity_id": "C00779595",
+      "name": "RSLC PAC",
+      "committee_type": "O",
+      "committee_type_label": "Super PAC",
+      "total": 1250.0,
+      "by_candidate": [
+        {
+          "candidate_id": "S6PA00217",
+          "support_oppose": "O",
+          "amount": 1250.0
+        }
+      ],
+      "traceability_score": 0.0006,
+      "flags": [
+        "dead_end_dark",
+        "single_transfer_funded"
+      ],
+      "has_chain": true,
+      "source_url": "https://www.fec.gov/data/committee/C00779595/?cycle=2024",
+      "visibility_shares": {
+        "disclosed": 0.0006,
+        "inferable": 0.0,
+        "unwalked": 0.0,
+        "dark": 0.9994
+      }
+    },
+    {
+      "entity_id": "C00869040",
+      "name": "BLUEVOTE.ORG",
+      "committee_type": "O",
+      "committee_type_label": "Super PAC",
+      "total": 1239.27,
+      "by_candidate": [
+        {
+          "candidate_id": "S6PA00217",
+          "support_oppose": "S",
+          "amount": 1239.27
+        }
+      ],
+      "traceability_score": 1.0,
+      "flags": [],
+      "has_chain": true,
+      "source_url": "https://www.fec.gov/data/committee/C00869040/?cycle=2024",
+      "visibility_shares": {
+        "disclosed": 1.0,
+        "inferable": 0.0,
+        "unwalked": 0.0,
+        "dark": 0.0
+      }
+    },
+    {
+      "entity_id": "C00640300",
+      "name": "ACTIVATE AMERICA",
+      "committee_type": "O",
+      "committee_type_label": "Super PAC",
+      "total": 1221.97,
+      "by_candidate": [
+        {
+          "candidate_id": "S6PA00217",
+          "support_oppose": "S",
+          "amount": 1221.97
+        }
+      ],
+      "traceability_score": 0.8554,
+      "flags": [],
+      "has_chain": true,
+      "source_url": "https://www.fec.gov/data/committee/C00640300/?cycle=2024",
+      "visibility_shares": {
+        "disclosed": 0.8554,
+        "inferable": 0.0,
+        "unwalked": 0.0,
+        "dark": 0.1446
+      }
+    },
+    {
+      "entity_id": "C00647966",
+      "name": "RURAL FREEDOM NETWORK",
+      "committee_type": "O",
+      "committee_type_label": "Super PAC",
+      "total": 1220.19,
+      "by_candidate": [
+        {
+          "candidate_id": "S6PA00217",
+          "support_oppose": "S",
+          "amount": 1220.19
+        }
+      ],
+      "traceability_score": 0.9902,
+      "flags": [],
+      "has_chain": true,
+      "source_url": "https://www.fec.gov/data/committee/C00647966/?cycle=2024",
+      "visibility_shares": {
+        "disclosed": 0.9902,
+        "inferable": 0.0,
+        "unwalked": 0.0,
+        "dark": 0.0098
+      }
+    },
+    {
+      "entity_id": "C00541433",
+      "name": "HUNTER ACTION FUND (HAF)",
+      "committee_type": "O",
+      "committee_type_label": "Super PAC",
+      "total": 678.05,
+      "by_candidate": [
+        {
+          "candidate_id": "S2PA00661",
+          "support_oppose": "S",
+          "amount": 678.05
+        }
+      ],
+      "traceability_score": 0.58,
+      "flags": [
+        "dead_end_dark"
+      ],
+      "has_chain": true,
+      "source_url": "https://www.fec.gov/data/committee/C00541433/?cycle=2024",
+      "visibility_shares": {
+        "disclosed": 0.58,
+        "inferable": 0.0,
+        "unwalked": 0.0,
+        "dark": 0.42
+      }
+    },
+    {
+      "entity_id": "C00740514",
+      "name": "CONCERNED CITIZEN",
+      "committee_type": "O",
+      "committee_type_label": "Super PAC",
+      "total": 612.58,
+      "by_candidate": [
+        {
+          "candidate_id": "S6PA00217",
+          "support_oppose": "O",
+          "amount": 612.58
+        }
+      ],
+      "traceability_score": 1.0,
+      "flags": [
+        "single_transfer_funded"
+      ],
+      "has_chain": true,
+      "source_url": "https://www.fec.gov/data/committee/C00740514/?cycle=2024",
+      "visibility_shares": {
+        "disclosed": 1.0,
+        "inferable": 0.0,
+        "unwalked": 0.0,
+        "dark": 0.0
+      }
+    },
+    {
+      "entity_id": "C00678839",
+      "name": "INDIVISIBLE ACTION",
+      "committee_type": "W",
+      "committee_type_label": "Hybrid PAC",
+      "total": 546.42,
+      "by_candidate": [
+        {
+          "candidate_id": "S6PA00217",
+          "support_oppose": "S",
+          "amount": 546.42
+        }
+      ],
+      "traceability_score": 0.5252,
+      "flags": [
+        "dead_end_dark"
+      ],
+      "has_chain": true,
+      "source_url": "https://www.fec.gov/data/committee/C00678839/?cycle=2024",
+      "visibility_shares": {
+        "disclosed": 0.5252,
+        "inferable": 0.0,
+        "unwalked": 0.0,
+        "dark": 0.4748
+      }
+    },
+    {
+      "entity_id": "C00802389",
+      "name": "GIVEGREEN UNITED ACTION",
+      "committee_type": "O",
+      "committee_type_label": "Super PAC",
+      "total": 495.6,
+      "by_candidate": [
+        {
+          "candidate_id": "S6PA00217",
+          "support_oppose": "S",
+          "amount": 495.6
+        }
+      ],
+      "traceability_score": 0.1245,
+      "flags": [
+        "dead_end_dark",
+        "shell_cluster"
+      ],
+      "has_chain": true,
+      "source_url": "https://www.fec.gov/data/committee/C00802389/?cycle=2024",
+      "visibility_shares": {
+        "disclosed": 0.1245,
+        "inferable": 0.0,
+        "unwalked": 0.0,
+        "dark": 0.8755
+      }
+    },
+    {
+      "entity_id": "C00418897",
+      "name": "VOTEVETS",
+      "committee_type": "W",
+      "committee_type_label": "Hybrid PAC",
+      "total": 223.5,
+      "by_candidate": [
+        {
+          "candidate_id": "S6PA00217",
+          "support_oppose": "S",
+          "amount": 223.5
+        }
+      ],
+      "traceability_score": 0.9036,
+      "flags": [],
+      "has_chain": true,
+      "source_url": "https://www.fec.gov/data/committee/C00418897/?cycle=2024",
+      "visibility_shares": {
+        "disclosed": 0.9036,
+        "inferable": 0.0,
+        "unwalked": 0.0237,
+        "dark": 0.0728
+      }
+    },
+    {
+      "entity_id": "C00003590",
+      "name": "UNITED STEELWORKERS POLITICAL ACTION FUND",
+      "committee_type": "Q",
+      "committee_type_label": "PAC",
+      "total": 179.0,
+      "by_candidate": [
+        {
+          "candidate_id": "S6PA00217",
+          "support_oppose": "S",
+          "amount": 179.0
+        }
+      ],
+      "traceability_score": 1.0,
+      "flags": [
+        "shell_cluster"
+      ],
+      "has_chain": true,
+      "source_url": "https://www.fec.gov/data/committee/C00003590/?cycle=2024",
+      "visibility_shares": {
+        "disclosed": 1.0,
+        "inferable": 0.0,
+        "unwalked": 0.0,
+        "dark": 0.0
+      }
+    },
+    {
+      "entity_id": "C00882381",
+      "name": "PEOPLE POWER PENNSYLVANIA",
+      "committee_type": "O",
+      "committee_type_label": "Super PAC",
+      "total": 163.23,
+      "by_candidate": [
+        {
+          "candidate_id": "S6PA00217",
+          "support_oppose": "S",
+          "amount": 163.23
+        }
+      ],
+      "traceability_score": 0.5601,
+      "flags": [
+        "dead_end_dark"
+      ],
+      "has_chain": true,
+      "source_url": "https://www.fec.gov/data/committee/C00882381/?cycle=2024",
+      "visibility_shares": {
+        "disclosed": 0.5601,
+        "inferable": 0.0,
+        "unwalked": 0.0019,
+        "dark": 0.438
+      }
+    },
+    {
+      "entity_id": "C00428557",
+      "name": "COLOROFCHANGE PAC",
+      "committee_type": "V",
+      "committee_type_label": "Hybrid PAC (non-qualified)",
+      "total": 45.06,
+      "by_candidate": [
+        {
+          "candidate_id": "S6PA00217",
+          "support_oppose": "S",
+          "amount": 45.06
+        }
+      ],
+      "traceability_score": 0.2835,
+      "flags": [
+        "dead_end_dark"
+      ],
+      "has_chain": true,
+      "source_url": "https://www.fec.gov/data/committee/C00428557/?cycle=2024",
+      "visibility_shares": {
+        "disclosed": 0.2835,
+        "inferable": 0.0,
+        "unwalked": 0.0,
+        "dark": 0.7165
+      }
+    },
+    {
+      "entity_id": "C00483693",
+      "name": "SIERRA CLUB INDEPENDENT ACTION",
+      "committee_type": "O",
+      "committee_type_label": "Super PAC",
+      "total": 10.0,
+      "by_candidate": [
+        {
+          "candidate_id": "S6PA00217",
+          "support_oppose": "S",
+          "amount": 10.0
+        }
+      ],
+      "traceability_score": 1.0,
+      "flags": [
+        "shell_cluster"
+      ],
+      "has_chain": true,
+      "source_url": "https://www.fec.gov/data/committee/C00483693/?cycle=2024",
+      "visibility_shares": {
+        "disclosed": 1.0,
+        "inferable": 0.0,
+        "unwalked": 0.0,
+        "dark": 0.0
+      }
+    }
+  ],
+  "traceability": {
+    "score": 0.7211,
+    "outside_total": 235672449.27,
+    "traced_to_individuals": 169943228.96,
+    "inferable": 0.0,
+    "unwalked": 1855716.17,
+    "dark": 63873504.14,
+    "method": "Preliminary. Every independent-expenditure dollar reported against a candidate in this race ($235,672,449 across both candidates, support and oppose) is weighted by the disclosed share of the spending committee's own receipts, as computed by the chain walk in chains/<committee>.json: the share of its money that traces back, through any number of committee-to-committee transfers, to a named individual on an FEC filing or to a named business or union giving from its own treasury. The remainder is dark — it stopped at an LLC, trust, advocacy nonprofit or unclassifiable organization whose own funding is not on file (classified by name; no IRS lookup). $532,391 was spent by Form 5 filers (organizations that are not registered committees and report no receipts); those dollars are counted as dark. $1,855,716 reached an FEC-registered committee whose receipts lie outside the loaded 2,000-committee neighborhood (or past the hop cap) and was not walked further; those dollars are counted as 'not walked' — neither disclosed nor dark — and do not raise the score. Super PAC spending is itself disclosed; this score is about the layer behind the spender, not the spender. Nothing is marked inferable in V0.",
+    "preliminary": true
+  },
+  "notes": [
+    "Campaign totals are the FEC candidate summary (all authorized committees, itemized and unitemized); top contributors and conduit totals are itemized Schedule A receipts to the principal committee.",
+    "Earmarked contributions (15E) are attributed to the individual, not the conduit (ActBlue/WinRed).",
+    "Outside spending = independent expenditures (Schedule E) supporting or opposing a candidate in this race, with 24/48-hour notices collapsed onto the periodic-report row for the same spend.",
+    "Independent expenditures are legally independent of the campaign and move no money to the candidate. Support/oppose is the spender's own declaration."
+  ]
+}

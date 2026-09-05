@@ -1,0 +1,90 @@
+{
+  "entity_id": "C00476523",
+  "race_id": "pa-sen-2024",
+  "kind": "committee",
+  "name": "KAREN BASS FOR CONGRESS",
+  "aliases": [],
+  "committee_type": "H",
+  "committee_type_label": "House campaign",
+  "designation": "P",
+  "registration_date": null,
+  "treasurer": "ZAMORE, JUDITH",
+  "address": {
+    "street": "600 PENNSYLVANIA AVE SE",
+    "city": "WASHINGTON",
+    "state": "DC",
+    "zip": "20003"
+  },
+  "visibility": "disclosed",
+  "is_conduit": false,
+  "totals": {
+    "receipts": 1000.0,
+    "disbursements": 391000.0,
+    "independent_expenditures": 0,
+    "from_individuals": 1000.0,
+    "from_committees": 0.0,
+    "from_organizations": 0.0,
+    "from_undisclosed": 0.0
+  },
+  "inflows": [
+    {
+      "transfer_id": "C00476523-in-ind:LITT_BARRY|91801",
+      "from_entity_id": "ind:LITT_BARRY|91801",
+      "from_name": "LITT, BARRY",
+      "to_entity_id": "C00476523",
+      "to_name": "KAREN BASS FOR CONGRESS",
+      "amount": 1000.0,
+      "date": "2023-10-11",
+      "visibility": "disclosed",
+      "transaction_type": "22Y",
+      "limit": null,
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00476523&two_year_transaction_period=2024&contributor_name=LITT%2C+BARRY"
+    }
+  ],
+  "outflows": [
+    {
+      "transfer_id": "C00476523-out-C00105668",
+      "from_entity_id": "C00476523",
+      "from_name": "KAREN BASS FOR CONGRESS",
+      "to_entity_id": "C00105668",
+      "to_name": "CALIFORNIA DEMOCRATIC PARTY",
+      "amount": 375000.0,
+      "date": "2023-06-28",
+      "visibility": "disclosed",
+      "transaction_type": "18K",
+      "limit": null,
+      "source_url": "https://www.fec.gov/data/disbursements/?committee_id=C00476523&two_year_transaction_period=2024"
+    },
+    {
+      "transfer_id": "C00476523-out-C00832402",
+      "from_entity_id": "C00476523",
+      "from_name": "KAREN BASS FOR CONGRESS",
+      "to_entity_id": "C00832402",
+      "to_name": "MIKE FEUER FOR CONGRESS",
+      "amount": 8000.0,
+      "date": "2023-03-29",
+      "visibility": "disclosed",
+      "transaction_type": "24K",
+      "limit": null,
+      "source_url": "https://www.fec.gov/data/disbursements/?committee_id=C00476523&two_year_transaction_period=2024"
+    },
+    {
+      "transfer_id": "C00476523-out-C00833608",
+      "from_entity_id": "C00476523",
+      "from_name": "KAREN BASS FOR CONGRESS",
+      "to_entity_id": "C00833608",
+      "to_name": "BARBARA LEE FOR US SENATE",
+      "amount": 8000.0,
+      "date": "2023-03-29",
+      "visibility": "disclosed",
+      "transaction_type": "24K",
+      "limit": null,
+      "source_url": "https://www.fec.gov/data/disbursements/?committee_id=C00476523&two_year_transaction_period=2024"
+    }
+  ],
+  "independent_expenditures": [],
+  "flags": [],
+  "has_chain": false,
+  "source_url": "https://www.fec.gov/data/committee/C00476523/?cycle=2024",
+  "data_status": "real"
+}

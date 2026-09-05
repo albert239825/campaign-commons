@@ -1,0 +1,155 @@
+{
+  "entity_id": "C00742635",
+  "race_id": "pa-sen-2024",
+  "kind": "committee",
+  "name": "GUN RIGHTS AMERICA",
+  "aliases": [],
+  "committee_type": "O",
+  "committee_type_label": "Super PAC",
+  "designation": "U",
+  "registration_date": null,
+  "treasurer": "GATES, BENJAMIN",
+  "address": {
+    "street": "2300 EISENHOWER BLVD.",
+    "city": "LOVELAND",
+    "state": "CO",
+    "zip": "80537"
+  },
+  "visibility": "disclosed",
+  "is_conduit": false,
+  "totals": {
+    "receipts": 168659.36,
+    "disbursements": 203836.03,
+    "independent_expenditures": 119912.59,
+    "from_individuals": 6675.36,
+    "from_committees": 0.0,
+    "from_organizations": 0.0,
+    "from_undisclosed": 161731.0
+  },
+  "inflows": [
+    {
+      "transfer_id": "C00742635-in-org:NATIONAL_ASSOCIATION_FOR_GUN_RIGHTS",
+      "from_entity_id": "org:NATIONAL_ASSOCIATION_FOR_GUN_RIGHTS",
+      "from_name": "NATIONAL ASSOCIATION FOR GUN RIGHTS",
+      "to_entity_id": "C00742635",
+      "to_name": "GUN RIGHTS AMERICA",
+      "amount": 161731.0,
+      "date": "2024-12-31",
+      "visibility": "dark",
+      "transaction_type": "10",
+      "limit": "unlimited",
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00742635&two_year_transaction_period=2024&contributor_name=NATIONAL+ASSOCIATION+FOR+GUN+RIGHTS"
+    },
+    {
+      "transfer_id": "C00742635-in-ind:HOPKINS_LARRY|78665",
+      "from_entity_id": "ind:HOPKINS_LARRY|78665",
+      "from_name": "HOPKINS, LARRY",
+      "to_entity_id": "C00742635",
+      "to_name": "GUN RIGHTS AMERICA",
+      "amount": 62.0,
+      "date": "2024-12-12",
+      "visibility": "disclosed",
+      "transaction_type": "10",
+      "limit": "unlimited",
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00742635&two_year_transaction_period=2024&contributor_name=HOPKINS%2C+LARRY"
+    }
+  ],
+  "outflows": [],
+  "independent_expenditures": [
+    {
+      "ie_id": "C00742635-ie-1839375-E2078BEBF1A614EC5A47",
+      "spender_entity_id": "C00742635",
+      "spender_name": "GUN RIGHTS AMERICA",
+      "candidate_id": "S6PA00217",
+      "candidate_name": "Bob Casey",
+      "support_oppose": "O",
+      "amount": 7500.0,
+      "date": "2024-10-09",
+      "purpose": "PMT FOR EST FROM 10/15/2024. VIDEO ADVERTISING; SEE EST PMT ID #:...4B89ADD",
+      "payee": "MCSHANE LLC",
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202410249710392588"
+    },
+    {
+      "ie_id": "C00742635-ie-1839375-E57D8F76772D148058FD",
+      "spender_entity_id": "C00742635",
+      "spender_name": "GUN RIGHTS AMERICA",
+      "candidate_id": "S6PA00217",
+      "candidate_name": "Bob Casey",
+      "support_oppose": "O",
+      "amount": 3000.0,
+      "date": "2024-10-16",
+      "purpose": "PMT FOR EST FROM 10/15/2024. DIGITAL ADVERTISING; SEE PMT EST ID#:...43FFBE2",
+      "payee": "RING LTD.",
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202410249710392596"
+    },
+    {
+      "ie_id": "C00742635-ie-1839375-E15C564F9FF3946ACAD0",
+      "spender_entity_id": "C00742635",
+      "spender_name": "GUN RIGHTS AMERICA",
+      "candidate_id": "S6PA00217",
+      "candidate_name": "Bob Casey",
+      "support_oppose": "O",
+      "amount": 2000.0,
+      "date": "2024-10-16",
+      "purpose": "ESTIMATED DIGITAL ADVERTISING",
+      "payee": "GOOGLE",
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202410249710392585"
+    },
+    {
+      "ie_id": "C00742635-ie-1855249-E61E531FE660041B8A95",
+      "spender_entity_id": "C00742635",
+      "spender_name": "GUN RIGHTS AMERICA",
+      "candidate_id": "S6PA00217",
+      "candidate_name": "Bob Casey",
+      "support_oppose": "O",
+      "amount": 1230.46,
+      "date": "2024-10-31",
+      "purpose": "PMT FOR EST FROM 10/24/2024. TEXTING OUTREACH; SEE EST TRANS ID#: ...42ED86D",
+      "payee": "MUDSHARE",
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202412059720694680"
+    },
+    {
+      "ie_id": "C00742635-ie-1855249-E336504747252442391E",
+      "spender_entity_id": "C00742635",
+      "spender_name": "GUN RIGHTS AMERICA",
+      "candidate_id": "S6PA00217",
+      "candidate_name": "Bob Casey",
+      "support_oppose": "O",
+      "amount": 343.94,
+      "date": "2024-11-04",
+      "purpose": "PMT FOR EST FROM 10/16/2024. DIGITAL ADVERTISING; SEE PMT EST ID#:...46ACAD0",
+      "payee": "GOOGLE",
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202412059720694673"
+    },
+    {
+      "ie_id": "C00742635-ie-1872397-EEC14F32C416B49B8809",
+      "spender_entity_id": "C00742635",
+      "spender_name": "GUN RIGHTS AMERICA",
+      "candidate_id": "S6PA00217",
+      "candidate_name": "Bob Casey",
+      "support_oppose": "O",
+      "amount": 52.98,
+      "date": "2024-12-02",
+      "purpose": "PMT FOR EST FROM 10/16/2024. LATE ARRIVING DIGITAL AD CHARGE; SEE PMT EST ID#:...46ACAD0",
+      "payee": "GOOGLE",
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202501319749119324"
+    }
+  ],
+  "flags": [
+    {
+      "id": "single_transfer_funded",
+      "label": "Funded by a single source",
+      "detail": "NATIONAL ASSOCIATION FOR GUN RIGHTS supplied $161,731 of GUN RIGHTS AMERICA's $161,793 itemized receipts (100%).",
+      "evidence_url": "https://www.fec.gov/data/receipts/?committee_id=C00742635&two_year_transaction_period=2024"
+    },
+    {
+      "id": "dead_end_dark",
+      "label": "Chain ends at undisclosed donors",
+      "detail": "100% of GUN RIGHTS AMERICA's receipts stop at organizations whose own funding is not on file (advocacy nonprofits, LLCs, trusts) rather than at named individuals, businesses or unions.",
+      "evidence_url": "https://www.fec.gov/data/committee/C00742635/?cycle=2024"
+    }
+  ],
+  "has_chain": true,
+  "source_url": "https://www.fec.gov/data/committee/C00742635/?cycle=2024",
+  "data_status": "real"
+}

@@ -1,0 +1,129 @@
+{
+  "entity_id": "C00829481",
+  "race_id": "pa-sen-2024",
+  "kind": "committee",
+  "name": "BROWN FOR NV SENATE REPUBLICAN NOMINEE FUND 2024",
+  "aliases": [],
+  "committee_type": "S",
+  "committee_type_label": "Senate campaign",
+  "designation": "A",
+  "registration_date": null,
+  "treasurer": "GLAZE, KAYLA",
+  "address": {
+    "street": "PO BOX 9891",
+    "city": "ARLINGTON",
+    "state": "VA",
+    "zip": "22219"
+  },
+  "visibility": "disclosed",
+  "is_conduit": false,
+  "totals": {
+    "receipts": 348883.0,
+    "disbursements": 182269.0,
+    "independent_expenditures": 0,
+    "from_individuals": 1153.0,
+    "from_committees": 347730.0,
+    "from_organizations": 0.0,
+    "from_undisclosed": 0.0
+  },
+  "inflows": [
+    {
+      "transfer_id": "C00829481-in-C00770180",
+      "from_entity_id": "C00770180",
+      "from_name": "CORNYN VICTORY COMMITTEE",
+      "to_entity_id": "C00829481",
+      "to_name": "BROWN FOR NV SENATE REPUBLICAN NOMINEE FUND 2024",
+      "amount": 284110.0,
+      "date": "2024-06-30",
+      "visibility": "disclosed",
+      "transaction_type": "24G",
+      "limit": null,
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00829481&two_year_transaction_period=2024&contributor_name=C00770180"
+    },
+    {
+      "transfer_id": "C00829481-in-C00835751",
+      "from_entity_id": "C00835751",
+      "from_name": "FRIENDS OF KENNEDY",
+      "to_entity_id": "C00829481",
+      "to_name": "BROWN FOR NV SENATE REPUBLICAN NOMINEE FUND 2024",
+      "amount": 63508.0,
+      "date": "2024-03-27",
+      "visibility": "disclosed",
+      "transaction_type": "18G",
+      "limit": null,
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00829481&two_year_transaction_period=2024&contributor_name=C00835751"
+    },
+    {
+      "transfer_id": "C00829481-in-ind:WILLIAMS_GREGG|48390",
+      "from_entity_id": "ind:WILLIAMS_GREGG|48390",
+      "from_name": "WILLIAMS, GREGG",
+      "to_entity_id": "C00829481",
+      "to_name": "BROWN FOR NV SENATE REPUBLICAN NOMINEE FUND 2024",
+      "amount": 500.0,
+      "date": "2024-04-15",
+      "visibility": "disclosed",
+      "transaction_type": "15E",
+      "limit": null,
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00829481&two_year_transaction_period=2024&contributor_name=WILLIAMS%2C+GREGG"
+    },
+    {
+      "transfer_id": "C00829481-in-ind:KOFINAS_GEORGE|10006",
+      "from_entity_id": "ind:KOFINAS_GEORGE|10006",
+      "from_name": "KOFINAS, GEORGE",
+      "to_entity_id": "C00829481",
+      "to_name": "BROWN FOR NV SENATE REPUBLICAN NOMINEE FUND 2024",
+      "amount": 380.0,
+      "date": "2024-01-24",
+      "visibility": "disclosed",
+      "transaction_type": "15E",
+      "limit": null,
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00829481&two_year_transaction_period=2024&contributor_name=KOFINAS%2C+GEORGE"
+    },
+    {
+      "transfer_id": "C00829481-in-ind:BUNN_DANIEL|92067",
+      "from_entity_id": "ind:BUNN_DANIEL|92067",
+      "from_name": "BUNN, DANIEL",
+      "to_entity_id": "C00829481",
+      "to_name": "BROWN FOR NV SENATE REPUBLICAN NOMINEE FUND 2024",
+      "amount": 273.0,
+      "date": "2024-06-08",
+      "visibility": "disclosed",
+      "transaction_type": "15E",
+      "limit": null,
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00829481&two_year_transaction_period=2024&contributor_name=BUNN%2C+DANIEL"
+    },
+    {
+      "transfer_id": "C00829481-in-C00694323",
+      "from_entity_id": "C00694323",
+      "from_name": "WINRED",
+      "to_entity_id": "C00829481",
+      "to_name": "BROWN FOR NV SENATE REPUBLICAN NOMINEE FUND 2024",
+      "amount": 112.0,
+      "date": "2023-12-19",
+      "visibility": "disclosed",
+      "transaction_type": "24K",
+      "limit": null,
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00829481&two_year_transaction_period=2024&contributor_name=C00694323"
+    }
+  ],
+  "outflows": [
+    {
+      "transfer_id": "C00829481-out-C00845032",
+      "from_entity_id": "C00829481",
+      "from_name": "BROWN FOR NV SENATE REPUBLICAN NOMINEE FUND 2024",
+      "to_entity_id": "C00845032",
+      "to_name": "SAM BROWN FOR NEVADA",
+      "amount": 182269.0,
+      "date": "2024-09-26",
+      "visibility": "disclosed",
+      "transaction_type": "18G",
+      "limit": null,
+      "source_url": "https://www.fec.gov/data/disbursements/?committee_id=C00829481&two_year_transaction_period=2024"
+    }
+  ],
+  "independent_expenditures": [],
+  "flags": [],
+  "has_chain": false,
+  "source_url": "https://www.fec.gov/data/committee/C00829481/?cycle=2024",
+  "data_status": "real"
+}

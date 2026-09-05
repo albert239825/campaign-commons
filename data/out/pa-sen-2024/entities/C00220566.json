@@ -1,0 +1,116 @@
+{
+  "entity_id": "C00220566",
+  "race_id": "pa-sen-2024",
+  "kind": "committee",
+  "name": "NEW YORK STATE LABORERS' INTERNATIONAL UNION OF NORTH AMERICA POLITICAL ACTION COMMITTEE",
+  "aliases": [],
+  "committee_type": "Q",
+  "committee_type_label": "PAC",
+  "designation": "U",
+  "registration_date": null,
+  "treasurer": "ALBANESE, VINCENT",
+  "address": {
+    "street": "18 CORPORATE WOODS BLVD",
+    "city": "ALBANY",
+    "state": "NY",
+    "zip": "12211"
+  },
+  "visibility": "disclosed",
+  "is_conduit": false,
+  "totals": {
+    "receipts": 4139056.88,
+    "disbursements": 4299699.96,
+    "independent_expenditures": 0,
+    "from_individuals": 3324359.37,
+    "from_committees": 746998.04,
+    "from_organizations": 0.0,
+    "from_undisclosed": 0.0
+  },
+  "inflows": [
+    {
+      "transfer_id": "C00220566-in-C00337733",
+      "from_entity_id": "C00337733",
+      "from_name": "MASON TENDERS DISTRICT COUNCIL OF GREATER NEW YORK & LI PAC",
+      "to_entity_id": "C00220566",
+      "to_name": "NEW YORK STATE LABORERS' INTERNATIONAL UNION OF NORTH AMERICA POLITICAL ACTION COMMITTEE",
+      "amount": 847330.0,
+      "date": "2024-11-22",
+      "visibility": "disclosed",
+      "transaction_type": "18G",
+      "limit": null,
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00220566&two_year_transaction_period=2024&contributor_name=C00337733"
+    },
+    {
+      "transfer_id": "C00220566-in-C00155069",
+      "from_entity_id": "C00155069",
+      "from_name": "LABORERS INTERNATIONAL UNION OF NORTH AMERICA - LOCAL NO. 91 POLITICAL ACTION FUND",
+      "to_entity_id": "C00220566",
+      "to_name": "NEW YORK STATE LABORERS' INTERNATIONAL UNION OF NORTH AMERICA POLITICAL ACTION COMMITTEE",
+      "amount": 29227.0,
+      "date": "2024-12-05",
+      "visibility": "disclosed",
+      "transaction_type": "24K",
+      "limit": null,
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00220566&two_year_transaction_period=2024&contributor_name=C00155069"
+    },
+    {
+      "transfer_id": "C00220566-in-C00233049",
+      "from_entity_id": "C00233049",
+      "from_name": "LABORERS' INTERNATIONAL UNION OF N.A. LOCAL 17",
+      "to_entity_id": "C00220566",
+      "to_name": "NEW YORK STATE LABORERS' INTERNATIONAL UNION OF NORTH AMERICA POLITICAL ACTION COMMITTEE",
+      "amount": 20000.0,
+      "date": "2023-07-10",
+      "visibility": "disclosed",
+      "transaction_type": "24G",
+      "limit": null,
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00220566&two_year_transaction_period=2024&contributor_name=C00233049"
+    }
+  ],
+  "outflows": [
+    {
+      "transfer_id": "C00220566-out-C00007922",
+      "from_entity_id": "C00220566",
+      "from_name": "NEW YORK STATE LABORERS' INTERNATIONAL UNION OF NORTH AMERICA POLITICAL ACTION COMMITTEE",
+      "to_entity_id": "C00007922",
+      "to_name": "LABORERS' INTERNATIONAL UNION OF NORTH AMERICA (LIUNA) PAC",
+      "amount": 2284412.0,
+      "date": "2024-12-20",
+      "visibility": "disclosed",
+      "transaction_type": "18G",
+      "limit": null,
+      "source_url": "https://www.fec.gov/data/disbursements/?committee_id=C00220566&two_year_transaction_period=2024"
+    },
+    {
+      "transfer_id": "C00220566-out-C00568964",
+      "from_entity_id": "C00220566",
+      "from_name": "NEW YORK STATE LABORERS' INTERNATIONAL UNION OF NORTH AMERICA POLITICAL ACTION COMMITTEE",
+      "to_entity_id": "C00568964",
+      "to_name": "LIUNA BUILDING AMERICA",
+      "amount": 500000.0,
+      "date": "2024-10-29",
+      "visibility": "disclosed",
+      "transaction_type": "24K",
+      "limit": "unlimited",
+      "source_url": "https://www.fec.gov/data/disbursements/?committee_id=C00220566&two_year_transaction_period=2024"
+    },
+    {
+      "transfer_id": "C00220566-out-C00495028",
+      "from_entity_id": "C00220566",
+      "from_name": "NEW YORK STATE LABORERS' INTERNATIONAL UNION OF NORTH AMERICA POLITICAL ACTION COMMITTEE",
+      "to_entity_id": "C00495028",
+      "to_name": "HMP",
+      "amount": 25000.0,
+      "date": "2023-03-24",
+      "visibility": "disclosed",
+      "transaction_type": "24K",
+      "limit": null,
+      "source_url": "https://www.fec.gov/data/disbursements/?committee_id=C00220566&two_year_transaction_period=2024"
+    }
+  ],
+  "independent_expenditures": [],
+  "flags": [],
+  "has_chain": false,
+  "source_url": "https://www.fec.gov/data/committee/C00220566/?cycle=2024",
+  "data_status": "real"
+}

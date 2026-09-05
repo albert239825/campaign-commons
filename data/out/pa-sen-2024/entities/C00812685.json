@@ -1,0 +1,64 @@
+{
+  "entity_id": "C00812685",
+  "race_id": "pa-sen-2024",
+  "kind": "committee",
+  "name": "STRONG LEADERS FUND",
+  "aliases": [],
+  "committee_type": "O",
+  "committee_type_label": "Super PAC",
+  "designation": "U",
+  "registration_date": null,
+  "treasurer": "REED, TAYLOR",
+  "address": {
+    "street": "1900 CAMPUS COMMONS DR",
+    "city": "RESTON",
+    "state": "VA",
+    "zip": "20191"
+  },
+  "visibility": "disclosed",
+  "is_conduit": false,
+  "totals": {
+    "receipts": 1011126.91,
+    "disbursements": 1434606.93,
+    "independent_expenditures": 0,
+    "from_individuals": 1000000.0,
+    "from_committees": 0.0,
+    "from_organizations": 0.0,
+    "from_undisclosed": 0.0
+  },
+  "inflows": [
+    {
+      "transfer_id": "C00812685-in-ind:GRIFFIN_KENNETH_C.|60603",
+      "from_entity_id": "ind:GRIFFIN_KENNETH_C.|60603",
+      "from_name": "GRIFFIN, KENNETH C.",
+      "to_entity_id": "C00812685",
+      "to_name": "STRONG LEADERS FUND",
+      "amount": 1000000.0,
+      "date": "2023-06-30",
+      "visibility": "disclosed",
+      "transaction_type": "10",
+      "limit": "unlimited",
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00812685&two_year_transaction_period=2024&contributor_name=GRIFFIN%2C+KENNETH+C."
+    }
+  ],
+  "outflows": [
+    {
+      "transfer_id": "C00812685-out-C00668905",
+      "from_entity_id": "C00812685",
+      "from_name": "STRONG LEADERS FUND",
+      "to_entity_id": "C00668905",
+      "to_name": "AMERICAN PATRIOTS PAC",
+      "amount": 1320188.0,
+      "date": "2024-12-20",
+      "visibility": "disclosed",
+      "transaction_type": "24K",
+      "limit": "unlimited",
+      "source_url": "https://www.fec.gov/data/disbursements/?committee_id=C00812685&two_year_transaction_period=2024"
+    }
+  ],
+  "independent_expenditures": [],
+  "flags": [],
+  "has_chain": false,
+  "source_url": "https://www.fec.gov/data/committee/C00812685/?cycle=2024",
+  "data_status": "real"
+}

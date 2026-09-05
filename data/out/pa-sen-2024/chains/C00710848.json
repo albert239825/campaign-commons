@@ -1,0 +1,613 @@
+{
+  "root_entity_id": "C00710848",
+  "root_name": "DMFI PAC",
+  "race_id": "pa-sen-2024",
+  "generated_at": "2026-09-05T13:41:28+00:00",
+  "data_status": "real",
+  "nodes": [
+    {
+      "id": "C00710848",
+      "name": "DMFI PAC",
+      "kind": "committee",
+      "committee_type": "W",
+      "depth": 0,
+      "visibility": "disclosed",
+      "amount_in": 6456814.0,
+      "is_terminus": false,
+      "terminus_reason": null,
+      "source_url": "https://www.fec.gov/data/committee/C00710848/?cycle=2024"
+    },
+    {
+      "id": "org:DEMOCRATIC_MAJORITY_FOR_ISRAEL",
+      "name": "DEMOCRATIC MAJORITY FOR ISRAEL",
+      "kind": "organization",
+      "committee_type": null,
+      "depth": 1,
+      "visibility": "dark",
+      "amount_in": 1250000.0,
+      "is_terminus": true,
+      "terminus_reason": "dark",
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00710848&two_year_transaction_period=2024&contributor_name=DEMOCRATIC+MAJORITY+FOR+ISRAEL",
+      "organization_class": "nonprofit"
+    },
+    {
+      "id": "ind:SIMON_DEBORAH|46032",
+      "name": "SIMON, DEBORAH",
+      "kind": "individual",
+      "committee_type": null,
+      "depth": 1,
+      "visibility": "disclosed",
+      "amount_in": 1000000.0,
+      "is_terminus": true,
+      "terminus_reason": "individual",
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00710848&two_year_transaction_period=2024&contributor_name=SIMON%2C+DEBORAH"
+    },
+    {
+      "id": "ind:LAUDER_GARY_MARK|94027",
+      "name": "LAUDER, GARY MARK",
+      "kind": "individual",
+      "committee_type": null,
+      "depth": 1,
+      "visibility": "disclosed",
+      "amount_in": 500000.0,
+      "is_terminus": true,
+      "terminus_reason": "individual",
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00710848&two_year_transaction_period=2024&contributor_name=LAUDER%2C+GARY+MARK"
+    },
+    {
+      "id": "ind:MINDICH_ERIC|10150",
+      "name": "MINDICH, ERIC",
+      "kind": "individual",
+      "committee_type": null,
+      "depth": 1,
+      "visibility": "disclosed",
+      "amount_in": 350000.0,
+      "is_terminus": true,
+      "terminus_reason": "individual",
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00710848&two_year_transaction_period=2024&contributor_name=MINDICH%2C+ERIC"
+    },
+    {
+      "id": "ind:KARSH_MARTHA|90077",
+      "name": "KARSH, MARTHA",
+      "kind": "individual",
+      "committee_type": null,
+      "depth": 1,
+      "visibility": "disclosed",
+      "amount_in": 250000.0,
+      "is_terminus": true,
+      "terminus_reason": "individual",
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00710848&two_year_transaction_period=2024&contributor_name=KARSH%2C+MARTHA"
+    },
+    {
+      "id": "ind:CAPPELL_JACOB|10128",
+      "name": "CAPPELL, JACOB",
+      "kind": "individual",
+      "committee_type": null,
+      "depth": 1,
+      "visibility": "disclosed",
+      "amount_in": 250000.0,
+      "is_terminus": true,
+      "terminus_reason": "individual",
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00710848&two_year_transaction_period=2024&contributor_name=CAPPELL%2C+JACOB"
+    },
+    {
+      "id": "ind:PAVA_ANN|06117",
+      "name": "PAVA, ANN",
+      "kind": "individual",
+      "committee_type": null,
+      "depth": 1,
+      "visibility": "disclosed",
+      "amount_in": 173000.0,
+      "is_terminus": true,
+      "terminus_reason": "individual",
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00710848&two_year_transaction_period=2024&contributor_name=PAVA%2C+ANN"
+    },
+    {
+      "id": "ind:ASTROF_JOSH|10019",
+      "name": "ASTROF, JOSH",
+      "kind": "individual",
+      "committee_type": null,
+      "depth": 1,
+      "visibility": "disclosed",
+      "amount_in": 150000.0,
+      "is_terminus": true,
+      "terminus_reason": "individual",
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00710848&two_year_transaction_period=2024&contributor_name=ASTROF%2C+JOSH"
+    },
+    {
+      "id": "ind:SANDBERG_JOEL|33179",
+      "name": "SANDBERG, JOEL",
+      "kind": "individual",
+      "committee_type": null,
+      "depth": 1,
+      "visibility": "disclosed",
+      "amount_in": 125000.0,
+      "is_terminus": true,
+      "terminus_reason": "individual",
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00710848&two_year_transaction_period=2024&contributor_name=SANDBERG%2C+JOEL"
+    },
+    {
+      "id": "ind:SANDBERG_ADELE|33179",
+      "name": "SANDBERG, ADELE",
+      "kind": "individual",
+      "committee_type": null,
+      "depth": 1,
+      "visibility": "disclosed",
+      "amount_in": 125000.0,
+      "is_terminus": true,
+      "terminus_reason": "individual",
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00710848&two_year_transaction_period=2024&contributor_name=SANDBERG%2C+ADELE"
+    },
+    {
+      "id": "ind:ARONSON_JEFFREY_H|10023",
+      "name": "ARONSON, JEFFREY H",
+      "kind": "individual",
+      "committee_type": null,
+      "depth": 1,
+      "visibility": "disclosed",
+      "amount_in": 125000.0,
+      "is_terminus": true,
+      "terminus_reason": "individual",
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00710848&two_year_transaction_period=2024&contributor_name=ARONSON%2C+JEFFREY+H"
+    },
+    {
+      "id": "ind:PEELER_DAVID_RANDOLPH|02116",
+      "name": "PEELER, DAVID RANDOLPH",
+      "kind": "individual",
+      "committee_type": null,
+      "depth": 1,
+      "visibility": "disclosed",
+      "amount_in": 100000.0,
+      "is_terminus": true,
+      "terminus_reason": "individual",
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00710848&two_year_transaction_period=2024&contributor_name=PEELER%2C+DAVID+RANDOLPH"
+    },
+    {
+      "id": "ind:BLOOM_BRADLEY|02481",
+      "name": "BLOOM, BRADLEY",
+      "kind": "individual",
+      "committee_type": null,
+      "depth": 1,
+      "visibility": "disclosed",
+      "amount_in": 100000.0,
+      "is_terminus": true,
+      "terminus_reason": "individual",
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00710848&two_year_transaction_period=2024&contributor_name=BLOOM%2C+BRADLEY"
+    },
+    {
+      "id": "ind:TISCH_JONATHAN|10019",
+      "name": "TISCH, JONATHAN",
+      "kind": "individual",
+      "committee_type": null,
+      "depth": 1,
+      "visibility": "disclosed",
+      "amount_in": 100000.0,
+      "is_terminus": true,
+      "terminus_reason": "individual",
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00710848&two_year_transaction_period=2024&contributor_name=TISCH%2C+JONATHAN"
+    },
+    {
+      "id": "ind:PORTER_BARRY|90025",
+      "name": "PORTER, BARRY",
+      "kind": "individual",
+      "committee_type": null,
+      "depth": 1,
+      "visibility": "disclosed",
+      "amount_in": 100000.0,
+      "is_terminus": true,
+      "terminus_reason": "individual",
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00710848&two_year_transaction_period=2024&contributor_name=PORTER%2C+BARRY"
+    },
+    {
+      "id": "ind:BLITZER_DAVID_S|10022",
+      "name": "BLITZER, DAVID S",
+      "kind": "individual",
+      "committee_type": null,
+      "depth": 1,
+      "visibility": "disclosed",
+      "amount_in": 100000.0,
+      "is_terminus": true,
+      "terminus_reason": "individual",
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00710848&two_year_transaction_period=2024&contributor_name=BLITZER%2C+DAVID+S"
+    },
+    {
+      "id": "ind:RESNICK_STEWART_A|90064",
+      "name": "RESNICK, STEWART A",
+      "kind": "individual",
+      "committee_type": null,
+      "depth": 1,
+      "visibility": "disclosed",
+      "amount_in": 100000.0,
+      "is_terminus": true,
+      "terminus_reason": "individual",
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00710848&two_year_transaction_period=2024&contributor_name=RESNICK%2C+STEWART+A"
+    },
+    {
+      "id": "ind:FINNEGAN_PAUL|60602",
+      "name": "FINNEGAN, PAUL",
+      "kind": "individual",
+      "committee_type": null,
+      "depth": 1,
+      "visibility": "disclosed",
+      "amount_in": 100000.0,
+      "is_terminus": true,
+      "terminus_reason": "individual",
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00710848&two_year_transaction_period=2024&contributor_name=FINNEGAN%2C+PAUL"
+    },
+    {
+      "id": "ind:ULLMAN_JEFFREY|94305",
+      "name": "ULLMAN, JEFFREY",
+      "kind": "individual",
+      "committee_type": null,
+      "depth": 1,
+      "visibility": "disclosed",
+      "amount_in": 72000.0,
+      "is_terminus": true,
+      "terminus_reason": "individual",
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00710848&two_year_transaction_period=2024&contributor_name=ULLMAN%2C+JEFFREY"
+    },
+    {
+      "id": "agg:other@C00710848",
+      "name": "Other contributors to DMFI PAC (each <1% of receipts, or beyond the 40 largest)",
+      "kind": "aggregate",
+      "committee_type": null,
+      "depth": 1,
+      "visibility": "disclosed",
+      "amount_in": 1386814.0,
+      "is_terminus": true,
+      "terminus_reason": "pruned",
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00710848&two_year_transaction_period=2024",
+      "contributor_count": 299
+    }
+  ],
+  "edges": [
+    {
+      "from": "org:DEMOCRATIC_MAJORITY_FOR_ISRAEL",
+      "to": "C00710848",
+      "amount": 1250000.0,
+      "visibility": "dark",
+      "depth": 1,
+      "transaction_types": [
+        "10"
+      ],
+      "count": 2,
+      "date_range": [
+        "2023-12-22",
+        "2024-10-16"
+      ],
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00710848&two_year_transaction_period=2024&contributor_name=DEMOCRATIC+MAJORITY+FOR+ISRAEL"
+    },
+    {
+      "from": "ind:SIMON_DEBORAH|46032",
+      "to": "C00710848",
+      "amount": 1000000.0,
+      "visibility": "disclosed",
+      "depth": 1,
+      "transaction_types": [
+        "10"
+      ],
+      "count": 1,
+      "date_range": [
+        "2024-02-12",
+        "2024-02-12"
+      ],
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00710848&two_year_transaction_period=2024&contributor_name=SIMON%2C+DEBORAH"
+    },
+    {
+      "from": "ind:LAUDER_GARY_MARK|94027",
+      "to": "C00710848",
+      "amount": 500000.0,
+      "visibility": "disclosed",
+      "depth": 1,
+      "transaction_types": [
+        "10",
+        "15"
+      ],
+      "count": 2,
+      "date_range": [
+        "2023-05-25",
+        "2023-05-25"
+      ],
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00710848&two_year_transaction_period=2024&contributor_name=LAUDER%2C+GARY+MARK"
+    },
+    {
+      "from": "ind:MINDICH_ERIC|10150",
+      "to": "C00710848",
+      "amount": 350000.0,
+      "visibility": "disclosed",
+      "depth": 1,
+      "transaction_types": [
+        "10"
+      ],
+      "count": 2,
+      "date_range": [
+        "2024-02-05",
+        "2024-07-15"
+      ],
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00710848&two_year_transaction_period=2024&contributor_name=MINDICH%2C+ERIC"
+    },
+    {
+      "from": "ind:KARSH_MARTHA|90077",
+      "to": "C00710848",
+      "amount": 250000.0,
+      "visibility": "disclosed",
+      "depth": 1,
+      "transaction_types": [
+        "10"
+      ],
+      "count": 1,
+      "date_range": [
+        "2024-09-23",
+        "2024-09-23"
+      ],
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00710848&two_year_transaction_period=2024&contributor_name=KARSH%2C+MARTHA"
+    },
+    {
+      "from": "ind:CAPPELL_JACOB|10128",
+      "to": "C00710848",
+      "amount": 250000.0,
+      "visibility": "disclosed",
+      "depth": 1,
+      "transaction_types": [
+        "10"
+      ],
+      "count": 1,
+      "date_range": [
+        "2024-07-12",
+        "2024-07-12"
+      ],
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00710848&two_year_transaction_period=2024&contributor_name=CAPPELL%2C+JACOB"
+    },
+    {
+      "from": "ind:PAVA_ANN|06117",
+      "to": "C00710848",
+      "amount": 173000.0,
+      "visibility": "disclosed",
+      "depth": 1,
+      "transaction_types": [
+        "10",
+        "15"
+      ],
+      "count": 4,
+      "date_range": [
+        "2023-04-11",
+        "2024-03-06"
+      ],
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00710848&two_year_transaction_period=2024&contributor_name=PAVA%2C+ANN"
+    },
+    {
+      "from": "ind:ASTROF_JOSH|10019",
+      "to": "C00710848",
+      "amount": 150000.0,
+      "visibility": "disclosed",
+      "depth": 1,
+      "transaction_types": [
+        "10",
+        "15"
+      ],
+      "count": 3,
+      "date_range": [
+        "2024-01-22",
+        "2024-07-09"
+      ],
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00710848&two_year_transaction_period=2024&contributor_name=ASTROF%2C+JOSH"
+    },
+    {
+      "from": "ind:SANDBERG_JOEL|33179",
+      "to": "C00710848",
+      "amount": 125000.0,
+      "visibility": "disclosed",
+      "depth": 1,
+      "transaction_types": [
+        "10",
+        "15"
+      ],
+      "count": 2,
+      "date_range": [
+        "2023-12-14",
+        "2023-12-14"
+      ],
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00710848&two_year_transaction_period=2024&contributor_name=SANDBERG%2C+JOEL"
+    },
+    {
+      "from": "ind:SANDBERG_ADELE|33179",
+      "to": "C00710848",
+      "amount": 125000.0,
+      "visibility": "disclosed",
+      "depth": 1,
+      "transaction_types": [
+        "10",
+        "15"
+      ],
+      "count": 2,
+      "date_range": [
+        "2023-12-14",
+        "2023-12-14"
+      ],
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00710848&two_year_transaction_period=2024&contributor_name=SANDBERG%2C+ADELE"
+    },
+    {
+      "from": "ind:ARONSON_JEFFREY_H|10023",
+      "to": "C00710848",
+      "amount": 125000.0,
+      "visibility": "disclosed",
+      "depth": 1,
+      "transaction_types": [
+        "10",
+        "15"
+      ],
+      "count": 3,
+      "date_range": [
+        "2023-09-15",
+        "2024-08-02"
+      ],
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00710848&two_year_transaction_period=2024&contributor_name=ARONSON%2C+JEFFREY+H"
+    },
+    {
+      "from": "ind:PEELER_DAVID_RANDOLPH|02116",
+      "to": "C00710848",
+      "amount": 100000.0,
+      "visibility": "disclosed",
+      "depth": 1,
+      "transaction_types": [
+        "10"
+      ],
+      "count": 1,
+      "date_range": [
+        "2024-02-29",
+        "2024-02-29"
+      ],
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00710848&two_year_transaction_period=2024&contributor_name=PEELER%2C+DAVID+RANDOLPH"
+    },
+    {
+      "from": "ind:BLOOM_BRADLEY|02481",
+      "to": "C00710848",
+      "amount": 100000.0,
+      "visibility": "disclosed",
+      "depth": 1,
+      "transaction_types": [
+        "10",
+        "15"
+      ],
+      "count": 2,
+      "date_range": [
+        "2024-09-30",
+        "2024-09-30"
+      ],
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00710848&two_year_transaction_period=2024&contributor_name=BLOOM%2C+BRADLEY"
+    },
+    {
+      "from": "ind:TISCH_JONATHAN|10019",
+      "to": "C00710848",
+      "amount": 100000.0,
+      "visibility": "disclosed",
+      "depth": 1,
+      "transaction_types": [
+        "10",
+        "15E"
+      ],
+      "count": 3,
+      "date_range": [
+        "2023-11-15",
+        "2024-08-21"
+      ],
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00710848&two_year_transaction_period=2024&contributor_name=TISCH%2C+JONATHAN"
+    },
+    {
+      "from": "ind:PORTER_BARRY|90025",
+      "to": "C00710848",
+      "amount": 100000.0,
+      "visibility": "disclosed",
+      "depth": 1,
+      "transaction_types": [
+        "10",
+        "15E"
+      ],
+      "count": 5,
+      "date_range": [
+        "2023-12-28",
+        "2024-11-02"
+      ],
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00710848&two_year_transaction_period=2024&contributor_name=PORTER%2C+BARRY"
+    },
+    {
+      "from": "ind:BLITZER_DAVID_S|10022",
+      "to": "C00710848",
+      "amount": 100000.0,
+      "visibility": "disclosed",
+      "depth": 1,
+      "transaction_types": [
+        "10"
+      ],
+      "count": 1,
+      "date_range": [
+        "2024-06-05",
+        "2024-06-05"
+      ],
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00710848&two_year_transaction_period=2024&contributor_name=BLITZER%2C+DAVID+S"
+    },
+    {
+      "from": "ind:RESNICK_STEWART_A|90064",
+      "to": "C00710848",
+      "amount": 100000.0,
+      "visibility": "disclosed",
+      "depth": 1,
+      "transaction_types": [
+        "10"
+      ],
+      "count": 1,
+      "date_range": [
+        "2024-06-05",
+        "2024-06-05"
+      ],
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00710848&two_year_transaction_period=2024&contributor_name=RESNICK%2C+STEWART+A"
+    },
+    {
+      "from": "ind:FINNEGAN_PAUL|60602",
+      "to": "C00710848",
+      "amount": 100000.0,
+      "visibility": "disclosed",
+      "depth": 1,
+      "transaction_types": [
+        "10"
+      ],
+      "count": 1,
+      "date_range": [
+        "2024-07-31",
+        "2024-07-31"
+      ],
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00710848&two_year_transaction_period=2024&contributor_name=FINNEGAN%2C+PAUL"
+    },
+    {
+      "from": "ind:ULLMAN_JEFFREY|94305",
+      "to": "C00710848",
+      "amount": 72000.0,
+      "visibility": "disclosed",
+      "depth": 1,
+      "transaction_types": [
+        "10",
+        "15"
+      ],
+      "count": 4,
+      "date_range": [
+        "2023-06-12",
+        "2024-03-13"
+      ],
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00710848&two_year_transaction_period=2024&contributor_name=ULLMAN%2C+JEFFREY"
+    },
+    {
+      "from": "agg:other@C00710848",
+      "to": "C00710848",
+      "amount": 1386814.0,
+      "visibility": "disclosed",
+      "depth": 1,
+      "transaction_types": [
+        "10",
+        "15",
+        "15E",
+        "24K"
+      ],
+      "count": 635,
+      "date_range": [
+        "2023-01-09",
+        "2024-12-31"
+      ],
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00710848&two_year_transaction_period=2024"
+    }
+  ],
+  "summary": {
+    "total_in": 6456814.0,
+    "disclosed_share": 0.7994,
+    "inferable_share": 0.0,
+    "unwalked_share": 0.0,
+    "dark_share": 0.2006,
+    "max_depth": 1,
+    "terminus_counts": {
+      "dark": 1,
+      "individual": 18,
+      "pruned": 1
+    }
+  },
+  "flags": [],
+  "method": "Backward walk over money edges only (Schedule A receipts from individuals and organizations, committee-to-committee transfers) into DMFI PAC, 1 hop(s) deep; independent expenditures are targeting edges and never appear. The walk starts from $6,456,814 of itemized 2023–2024 receipts as loaded from FEC bulk data (unitemized receipts, loans and offsets are not edges), and every expanded committee conserves dollars: its inbound edges sum to its receipts. Inbound edges under 1% of a committee's receipts are rolled into one 'other contributors' node, which counts as disclosed except for the organization dollars inside it. Each dollar takes the visibility of where the walk stopped: named individuals (including earmarks through ActBlue/WinRed, attributed to the person) are disclosed. Organizations that are not registered committees are classified from their name alone (no IRS lookup): a union or a business giving from its own treasury is disclosed — the named entity is the source; an LLC, trust, advocacy nonprofit (501(c)(4)-style names) or unclassifiable organization is dark, because whoever funds it is not on file with the FEC. Visibility shares are preliminary; no 990 lookups were performed, so nothing is marked inferable."
+}

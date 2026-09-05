@@ -1,0 +1,129 @@
+{
+  "entity_id": "C00512293",
+  "race_id": "pa-sen-2024",
+  "kind": "committee",
+  "name": "THE VOICES OF THE AMERICAN FEDERATION OF GOVERNMENT EMPLOYEES",
+  "aliases": [],
+  "committee_type": "O",
+  "committee_type_label": "Super PAC",
+  "designation": "U",
+  "registration_date": null,
+  "treasurer": "COX, JEFFREY DAVID MR.",
+  "address": {
+    "street": "80 F STREET, NW",
+    "city": "WASHINGTON",
+    "state": "DC",
+    "zip": "20001"
+  },
+  "visibility": "disclosed",
+  "is_conduit": false,
+  "totals": {
+    "receipts": 1736500.0,
+    "disbursements": 1733826.88,
+    "independent_expenditures": 0,
+    "from_individuals": 0.0,
+    "from_committees": 0.0,
+    "from_organizations": 0.0,
+    "from_undisclosed": 1736500.0
+  },
+  "inflows": [
+    {
+      "transfer_id": "C00512293-in-org:NATIONAL_AFGE_HEADQUARTERS",
+      "from_entity_id": "org:NATIONAL_AFGE_HEADQUARTERS",
+      "from_name": "NATIONAL AFGE HEADQUARTERS",
+      "to_entity_id": "C00512293",
+      "to_name": "THE VOICES OF THE AMERICAN FEDERATION OF GOVERNMENT EMPLOYEES",
+      "amount": 1736500.0,
+      "date": "2024-12-31",
+      "visibility": "dark",
+      "transaction_type": "10",
+      "limit": "unlimited",
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00512293&two_year_transaction_period=2024&contributor_name=NATIONAL+AFGE+HEADQUARTERS"
+    }
+  ],
+  "outflows": [
+    {
+      "transfer_id": "C00512293-out-C00484642",
+      "from_entity_id": "C00512293",
+      "from_name": "THE VOICES OF THE AMERICAN FEDERATION OF GOVERNMENT EMPLOYEES",
+      "to_entity_id": "C00484642",
+      "to_name": "SMP",
+      "amount": 600000.0,
+      "date": "2024-10-09",
+      "visibility": "disclosed",
+      "transaction_type": "18K",
+      "limit": "unlimited",
+      "source_url": "https://www.fec.gov/data/disbursements/?committee_id=C00512293&two_year_transaction_period=2024"
+    },
+    {
+      "transfer_id": "C00512293-out-C00495028",
+      "from_entity_id": "C00512293",
+      "from_name": "THE VOICES OF THE AMERICAN FEDERATION OF GOVERNMENT EMPLOYEES",
+      "to_entity_id": "C00495028",
+      "to_name": "HMP",
+      "amount": 600000.0,
+      "date": "2024-10-09",
+      "visibility": "disclosed",
+      "transaction_type": "24K",
+      "limit": null,
+      "source_url": "https://www.fec.gov/data/disbursements/?committee_id=C00512293&two_year_transaction_period=2024"
+    },
+    {
+      "transfer_id": "C00512293-out-C00669259",
+      "from_entity_id": "C00512293",
+      "from_name": "THE VOICES OF THE AMERICAN FEDERATION OF GOVERNMENT EMPLOYEES",
+      "to_entity_id": "C00669259",
+      "to_name": "FF PAC",
+      "amount": 500000.0,
+      "date": "2024-08-08",
+      "visibility": "disclosed",
+      "transaction_type": "24K",
+      "limit": null,
+      "source_url": "https://www.fec.gov/data/disbursements/?committee_id=C00512293&two_year_transaction_period=2024"
+    },
+    {
+      "transfer_id": "C00512293-out-C00550970",
+      "from_entity_id": "C00512293",
+      "from_name": "THE VOICES OF THE AMERICAN FEDERATION OF GOVERNMENT EMPLOYEES",
+      "to_entity_id": "C00550970",
+      "to_name": "EQUALITY PAC",
+      "amount": 10000.0,
+      "date": "2024-02-22",
+      "visibility": "disclosed",
+      "transaction_type": "18K",
+      "limit": null,
+      "source_url": "https://www.fec.gov/data/disbursements/?committee_id=C00512293&two_year_transaction_period=2024"
+    },
+    {
+      "transfer_id": "C00512293-out-C00529693",
+      "from_entity_id": "C00512293",
+      "from_name": "THE VOICES OF THE AMERICAN FEDERATION OF GOVERNMENT EMPLOYEES",
+      "to_entity_id": "C00529693",
+      "to_name": "BLUE MAJORITY PAC",
+      "amount": 5000.0,
+      "date": "2024-08-12",
+      "visibility": "disclosed",
+      "transaction_type": "18K",
+      "limit": null,
+      "source_url": "https://www.fec.gov/data/disbursements/?committee_id=C00512293&two_year_transaction_period=2024"
+    },
+    {
+      "transfer_id": "C00512293-out-C00863712",
+      "from_entity_id": "C00512293",
+      "from_name": "THE VOICES OF THE AMERICAN FEDERATION OF GOVERNMENT EMPLOYEES",
+      "to_entity_id": "C00863712",
+      "to_name": "ROOTED & READY PAC",
+      "amount": 5000.0,
+      "date": "2024-09-25",
+      "visibility": "disclosed",
+      "transaction_type": "18K",
+      "limit": null,
+      "source_url": "https://www.fec.gov/data/disbursements/?committee_id=C00512293&two_year_transaction_period=2024"
+    }
+  ],
+  "independent_expenditures": [],
+  "flags": [],
+  "has_chain": false,
+  "source_url": "https://www.fec.gov/data/committee/C00512293/?cycle=2024",
+  "data_status": "real"
+}

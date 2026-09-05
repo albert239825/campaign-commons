@@ -1,0 +1,90 @@
+{
+  "entity_id": "C00429175",
+  "race_id": "pa-sen-2024",
+  "kind": "committee",
+  "name": "MID-ATLANTIC LABORERS' POLITICAL LEAGUE/LABORERS' INTERNATIONAL UNION OF NORTH AMERICA",
+  "aliases": [],
+  "committee_type": "Q",
+  "committee_type_label": "PAC",
+  "designation": "U",
+  "registration_date": null,
+  "treasurer": "PETRUSKA, BRIAN",
+  "address": {
+    "street": "1875 EXPLORER DR",
+    "city": "RESTON",
+    "state": "VA",
+    "zip": "201905640"
+  },
+  "visibility": "disclosed",
+  "is_conduit": false,
+  "totals": {
+    "receipts": 1448348.62,
+    "disbursements": 2179366.0,
+    "independent_expenditures": 0,
+    "from_individuals": 1109148.62,
+    "from_committees": 339200.0,
+    "from_organizations": 0.0,
+    "from_undisclosed": 0.0
+  },
+  "inflows": [
+    {
+      "transfer_id": "C00429175-in-C00253294",
+      "from_entity_id": "C00253294",
+      "from_name": "LABORERS' DISTRICT COUNCIL OF THE METRO AREA OF PHILADELPHIA AND VICINITY PAC",
+      "to_entity_id": "C00429175",
+      "to_name": "MID-ATLANTIC LABORERS' POLITICAL LEAGUE/LABORERS' INTERNATIONAL UNION OF NORTH AMERICA",
+      "amount": 847267.0,
+      "date": "2024-12-17",
+      "visibility": "disclosed",
+      "transaction_type": "24G",
+      "limit": null,
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00429175&two_year_transaction_period=2024&contributor_name=C00253294"
+    },
+    {
+      "transfer_id": "C00429175-in-ind:MARTIRE_DENNIS_L.|20176",
+      "from_entity_id": "ind:MARTIRE_DENNIS_L.|20176",
+      "from_name": "MARTIRE, DENNIS L.",
+      "to_entity_id": "C00429175",
+      "to_name": "MID-ATLANTIC LABORERS' POLITICAL LEAGUE/LABORERS' INTERNATIONAL UNION OF NORTH AMERICA",
+      "amount": 4074.0,
+      "date": "2024-11-13",
+      "visibility": "disclosed",
+      "transaction_type": "15",
+      "limit": null,
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00429175&two_year_transaction_period=2024&contributor_name=MARTIRE%2C+DENNIS+L."
+    },
+    {
+      "transfer_id": "C00429175-in-ind:OJITO_ERNEST|20874",
+      "from_entity_id": "ind:OJITO_ERNEST|20874",
+      "from_name": "OJITO, ERNEST",
+      "to_entity_id": "C00429175",
+      "to_name": "MID-ATLANTIC LABORERS' POLITICAL LEAGUE/LABORERS' INTERNATIONAL UNION OF NORTH AMERICA",
+      "amount": 400.0,
+      "date": "2024-11-13",
+      "visibility": "disclosed",
+      "transaction_type": "15",
+      "limit": null,
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00429175&two_year_transaction_period=2024&contributor_name=OJITO%2C+ERNEST"
+    }
+  ],
+  "outflows": [
+    {
+      "transfer_id": "C00429175-out-C00007922",
+      "from_entity_id": "C00429175",
+      "from_name": "MID-ATLANTIC LABORERS' POLITICAL LEAGUE/LABORERS' INTERNATIONAL UNION OF NORTH AMERICA",
+      "to_entity_id": "C00007922",
+      "to_name": "LABORERS' INTERNATIONAL UNION OF NORTH AMERICA (LIUNA) PAC",
+      "amount": 780000.0,
+      "date": "2024-07-09",
+      "visibility": "disclosed",
+      "transaction_type": "18G",
+      "limit": null,
+      "source_url": "https://www.fec.gov/data/disbursements/?committee_id=C00429175&two_year_transaction_period=2024"
+    }
+  ],
+  "independent_expenditures": [],
+  "flags": [],
+  "has_chain": false,
+  "source_url": "https://www.fec.gov/data/committee/C00429175/?cycle=2024",
+  "data_status": "real"
+}

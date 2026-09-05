@@ -1,0 +1,484 @@
+{
+  "$ref": "#/definitions/entity",
+  "definitions": {
+    "entity": {
+      "type": "object",
+      "properties": {
+        "entity_id": {
+          "type": "string"
+        },
+        "race_id": {
+          "type": "string"
+        },
+        "kind": {
+          "type": "string",
+          "enum": [
+            "committee",
+            "individual",
+            "organization",
+            "conduit",
+            "aggregate"
+          ]
+        },
+        "name": {
+          "type": "string"
+        },
+        "aliases": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "committee_type": {
+          "anyOf": [
+            {
+              "type": "string",
+              "enum": [
+                "H",
+                "S",
+                "P",
+                "X",
+                "Y",
+                "Z",
+                "N",
+                "Q",
+                "O",
+                "U",
+                "V",
+                "W",
+                "D",
+                "E",
+                "I",
+                "C"
+              ]
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "committee_type_label": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "designation": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "registration_date": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "treasurer": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "address": {
+          "anyOf": [
+            {
+              "type": "object",
+              "properties": {
+                "street": {
+                  "type": [
+                    "string",
+                    "null"
+                  ]
+                },
+                "city": {
+                  "type": [
+                    "string",
+                    "null"
+                  ]
+                },
+                "state": {
+                  "type": [
+                    "string",
+                    "null"
+                  ]
+                },
+                "zip": {
+                  "type": [
+                    "string",
+                    "null"
+                  ]
+                }
+              },
+              "required": [
+                "street",
+                "city",
+                "state",
+                "zip"
+              ],
+              "additionalProperties": false
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "visibility": {
+          "type": "string",
+          "enum": [
+            "disclosed",
+            "inferable",
+            "dark"
+          ]
+        },
+        "is_conduit": {
+          "type": "boolean"
+        },
+        "totals": {
+          "type": "object",
+          "properties": {
+            "receipts": {
+              "type": "number"
+            },
+            "disbursements": {
+              "type": "number"
+            },
+            "independent_expenditures": {
+              "type": "number"
+            },
+            "from_individuals": {
+              "type": "number"
+            },
+            "from_committees": {
+              "type": "number"
+            },
+            "from_organizations": {
+              "type": "number"
+            },
+            "from_undisclosed": {
+              "type": "number"
+            }
+          },
+          "required": [
+            "receipts",
+            "disbursements",
+            "independent_expenditures",
+            "from_individuals",
+            "from_committees",
+            "from_undisclosed"
+          ],
+          "additionalProperties": false
+        },
+        "inflows": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "transfer_id": {
+                "type": "string"
+              },
+              "from_entity_id": {
+                "type": "string"
+              },
+              "from_name": {
+                "type": "string"
+              },
+              "to_entity_id": {
+                "type": "string"
+              },
+              "to_name": {
+                "type": "string"
+              },
+              "amount": {
+                "type": "number"
+              },
+              "date": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "visibility": {
+                "type": "string",
+                "enum": [
+                  "disclosed",
+                  "inferable",
+                  "dark"
+                ]
+              },
+              "transaction_type": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "limit": {
+                "anyOf": [
+                  {
+                    "anyOf": [
+                      {
+                        "type": "number"
+                      },
+                      {
+                        "type": "string",
+                        "const": "unlimited"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "source_url": {
+                "type": "string",
+                "format": "uri"
+              }
+            },
+            "required": [
+              "transfer_id",
+              "from_entity_id",
+              "from_name",
+              "to_entity_id",
+              "to_name",
+              "amount",
+              "date",
+              "visibility",
+              "transaction_type",
+              "limit",
+              "source_url"
+            ],
+            "additionalProperties": false
+          }
+        },
+        "outflows": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "transfer_id": {
+                "type": "string"
+              },
+              "from_entity_id": {
+                "type": "string"
+              },
+              "from_name": {
+                "type": "string"
+              },
+              "to_entity_id": {
+                "type": "string"
+              },
+              "to_name": {
+                "type": "string"
+              },
+              "amount": {
+                "type": "number"
+              },
+              "date": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "visibility": {
+                "type": "string",
+                "enum": [
+                  "disclosed",
+                  "inferable",
+                  "dark"
+                ]
+              },
+              "transaction_type": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "limit": {
+                "anyOf": [
+                  {
+                    "anyOf": [
+                      {
+                        "type": "number"
+                      },
+                      {
+                        "type": "string",
+                        "const": "unlimited"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "source_url": {
+                "type": "string",
+                "format": "uri"
+              }
+            },
+            "required": [
+              "transfer_id",
+              "from_entity_id",
+              "from_name",
+              "to_entity_id",
+              "to_name",
+              "amount",
+              "date",
+              "visibility",
+              "transaction_type",
+              "limit",
+              "source_url"
+            ],
+            "additionalProperties": false
+          }
+        },
+        "independent_expenditures": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "ie_id": {
+                "type": "string"
+              },
+              "spender_entity_id": {
+                "type": "string"
+              },
+              "spender_name": {
+                "type": "string"
+              },
+              "candidate_id": {
+                "type": "string"
+              },
+              "candidate_name": {
+                "type": "string"
+              },
+              "support_oppose": {
+                "type": "string",
+                "enum": [
+                  "S",
+                  "O"
+                ]
+              },
+              "amount": {
+                "type": "number"
+              },
+              "date": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "purpose": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "payee": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "source_url": {
+                "type": "string",
+                "format": "uri"
+              }
+            },
+            "required": [
+              "ie_id",
+              "spender_entity_id",
+              "spender_name",
+              "candidate_id",
+              "candidate_name",
+              "support_oppose",
+              "amount",
+              "date",
+              "purpose",
+              "payee",
+              "source_url"
+            ],
+            "additionalProperties": false
+          }
+        },
+        "flags": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "id": {
+                "type": "string",
+                "enum": [
+                  "popup",
+                  "single_transfer_funded",
+                  "shell_cluster",
+                  "dead_end_dark",
+                  "one_way_valve_violation",
+                  "transfer_mismatch"
+                ]
+              },
+              "label": {
+                "type": "string"
+              },
+              "detail": {
+                "type": "string"
+              },
+              "evidence_url": {
+                "type": "string",
+                "format": "uri"
+              }
+            },
+            "required": [
+              "id",
+              "label",
+              "detail"
+            ],
+            "additionalProperties": false
+          }
+        },
+        "has_chain": {
+          "type": "boolean"
+        },
+        "source_url": {
+          "type": "string",
+          "format": "uri"
+        },
+        "data_status": {
+          "type": "string",
+          "enum": [
+            "real",
+            "mock",
+            "partial"
+          ]
+        }
+      },
+      "required": [
+        "entity_id",
+        "race_id",
+        "kind",
+        "name",
+        "aliases",
+        "committee_type",
+        "committee_type_label",
+        "designation",
+        "registration_date",
+        "treasurer",
+        "address",
+        "visibility",
+        "is_conduit",
+        "totals",
+        "inflows",
+        "outflows",
+        "independent_expenditures",
+        "flags",
+        "has_chain",
+        "source_url",
+        "data_status"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "$schema": "http://json-schema.org/draft-07/schema#"
+}

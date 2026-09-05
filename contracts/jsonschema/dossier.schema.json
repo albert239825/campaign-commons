@@ -1,0 +1,271 @@
+{
+  "$ref": "#/definitions/dossier",
+  "definitions": {
+    "dossier": {
+      "type": "object",
+      "properties": {
+        "candidate_id": {
+          "type": "string"
+        },
+        "race_id": {
+          "type": "string"
+        },
+        "name": {
+          "type": "string"
+        },
+        "party": {
+          "type": "string",
+          "enum": [
+            "DEM",
+            "REP",
+            "LIB",
+            "GRE",
+            "IND",
+            "CON",
+            "OTH"
+          ]
+        },
+        "incumbent": {
+          "type": "boolean"
+        },
+        "role": {
+          "type": "string",
+          "enum": [
+            "incumbent",
+            "challenger"
+          ]
+        },
+        "bioguide_id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "generated_at": {
+          "type": "string"
+        },
+        "data_status": {
+          "type": "string",
+          "enum": [
+            "real",
+            "mock",
+            "partial"
+          ]
+        },
+        "summary": {
+          "type": "string"
+        },
+        "summary_needs_review": {
+          "type": "boolean"
+        },
+        "evidence_basis": {
+          "type": "string",
+          "enum": [
+            "record",
+            "statements",
+            "mixed"
+          ]
+        },
+        "asymmetry_note": {
+          "type": "string"
+        },
+        "stances": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "issue_id": {
+                "type": "string",
+                "enum": [
+                  "healthcare",
+                  "energy_climate",
+                  "defense",
+                  "crypto_fintech",
+                  "immigration",
+                  "abortion",
+                  "guns",
+                  "tax_budget",
+                  "tech_ai",
+                  "labor_trade"
+                ]
+              },
+              "position": {
+                "type": "string"
+              },
+              "confidence": {
+                "type": "string",
+                "enum": [
+                  "high",
+                  "medium",
+                  "low"
+                ]
+              },
+              "needs_review": {
+                "type": "boolean"
+              },
+              "evidence": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "kind": {
+                      "type": "string",
+                      "enum": [
+                        "roll_call_vote",
+                        "sponsored_bill",
+                        "cosponsored_bill",
+                        "stated_position",
+                        "curated_statement"
+                      ]
+                    },
+                    "title": {
+                      "type": "string"
+                    },
+                    "description": {
+                      "type": [
+                        "string",
+                        "null"
+                      ]
+                    },
+                    "date": {
+                      "type": [
+                        "string",
+                        "null"
+                      ]
+                    },
+                    "vote": {
+                      "anyOf": [
+                        {
+                          "type": "string",
+                          "enum": [
+                            "Yea",
+                            "Nay",
+                            "Not Voting",
+                            "Present"
+                          ]
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ]
+                    },
+                    "bill_id": {
+                      "type": [
+                        "string",
+                        "null"
+                      ]
+                    },
+                    "congress": {
+                      "anyOf": [
+                        {
+                          "type": "integer"
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ]
+                    },
+                    "roll_number": {
+                      "anyOf": [
+                        {
+                          "type": "integer"
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ]
+                    },
+                    "url": {
+                      "type": "string",
+                      "format": "uri"
+                    },
+                    "source_label": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "kind",
+                    "title",
+                    "description",
+                    "date",
+                    "vote",
+                    "bill_id",
+                    "congress",
+                    "roll_number",
+                    "url",
+                    "source_label"
+                  ],
+                  "additionalProperties": false
+                }
+              }
+            },
+            "required": [
+              "issue_id",
+              "position",
+              "confidence",
+              "needs_review",
+              "evidence"
+            ],
+            "additionalProperties": false
+          }
+        },
+        "links": {
+          "type": "object",
+          "properties": {
+            "fec_url": {
+              "type": "string",
+              "format": "uri"
+            },
+            "congress_url": {
+              "anyOf": [
+                {
+                  "type": "string",
+                  "format": "uri"
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "campaign_site": {
+              "anyOf": [
+                {
+                  "type": "string",
+                  "format": "uri"
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            }
+          },
+          "required": [
+            "fec_url",
+            "congress_url",
+            "campaign_site"
+          ],
+          "additionalProperties": false
+        }
+      },
+      "required": [
+        "candidate_id",
+        "race_id",
+        "name",
+        "party",
+        "incumbent",
+        "role",
+        "bioguide_id",
+        "generated_at",
+        "data_status",
+        "summary",
+        "summary_needs_review",
+        "evidence_basis",
+        "asymmetry_note",
+        "stances",
+        "links"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "$schema": "http://json-schema.org/draft-07/schema#"
+}

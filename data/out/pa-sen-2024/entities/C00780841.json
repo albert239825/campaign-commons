@@ -1,0 +1,175 @@
+{
+  "entity_id": "C00780841",
+  "race_id": "pa-sen-2024",
+  "kind": "committee",
+  "name": "PRINCIPLED VETERANS FUND (PV FUND)",
+  "aliases": [],
+  "committee_type": "O",
+  "committee_type_label": "Super PAC",
+  "designation": "U",
+  "registration_date": null,
+  "treasurer": "KOCH, TIMOTHY A",
+  "address": {
+    "street": "PO BOX 813",
+    "city": "ALEXANDRIA",
+    "state": "VA",
+    "zip": "22313"
+  },
+  "visibility": "disclosed",
+  "is_conduit": false,
+  "totals": {
+    "receipts": 2824884.47,
+    "disbursements": 3079521.49,
+    "independent_expenditures": 572011.45,
+    "from_individuals": 310000.0,
+    "from_committees": 2500000.0,
+    "from_organizations": 0.0,
+    "from_undisclosed": 0.0
+  },
+  "inflows": [
+    {
+      "transfer_id": "C00780841-in-ind:WITH_HONOR_FUND_II_INC.|22313",
+      "from_entity_id": "ind:WITH_HONOR_FUND_II_INC.|22313",
+      "from_name": "WITH HONOR FUND II, INC.",
+      "to_entity_id": "C00780841",
+      "to_name": "PRINCIPLED VETERANS FUND (PV FUND)",
+      "amount": 2650000.0,
+      "date": "2024-10-08",
+      "visibility": "disclosed",
+      "transaction_type": "10",
+      "limit": "unlimited",
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00780841&two_year_transaction_period=2024&contributor_name=WITH+HONOR+FUND+II%2C+INC."
+    },
+    {
+      "transfer_id": "C00780841-in-C00831404",
+      "from_entity_id": "C00831404",
+      "from_name": "WITH HONOR FUND II, INC.",
+      "to_entity_id": "C00780841",
+      "to_name": "PRINCIPLED VETERANS FUND (PV FUND)",
+      "amount": 2500000.0,
+      "date": "2024-04-24",
+      "visibility": "disclosed",
+      "transaction_type": "24K",
+      "limit": "unlimited",
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00780841&two_year_transaction_period=2024&contributor_name=C00831404"
+    },
+    {
+      "transfer_id": "C00780841-in-ind:HOSTETTER_JR._AMOS_B.|02108",
+      "from_entity_id": "ind:HOSTETTER_JR._AMOS_B.|02108",
+      "from_name": "HOSTETTER JR., AMOS B.",
+      "to_entity_id": "C00780841",
+      "to_name": "PRINCIPLED VETERANS FUND (PV FUND)",
+      "amount": 250000.0,
+      "date": "2024-08-29",
+      "visibility": "disclosed",
+      "transaction_type": "10",
+      "limit": "unlimited",
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00780841&two_year_transaction_period=2024&contributor_name=HOSTETTER+JR.%2C+AMOS+B."
+    },
+    {
+      "transfer_id": "C00780841-in-ind:BEKENSTEIN_JOSHUA|01778",
+      "from_entity_id": "ind:BEKENSTEIN_JOSHUA|01778",
+      "from_name": "BEKENSTEIN, JOSHUA",
+      "to_entity_id": "C00780841",
+      "to_name": "PRINCIPLED VETERANS FUND (PV FUND)",
+      "amount": 30000.0,
+      "date": "2024-10-31",
+      "visibility": "disclosed",
+      "transaction_type": "10",
+      "limit": "unlimited",
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00780841&two_year_transaction_period=2024&contributor_name=BEKENSTEIN%2C+JOSHUA"
+    },
+    {
+      "transfer_id": "C00780841-in-ind:BEKENSTEIN_ANITA|01778",
+      "from_entity_id": "ind:BEKENSTEIN_ANITA|01778",
+      "from_name": "BEKENSTEIN, ANITA",
+      "to_entity_id": "C00780841",
+      "to_name": "PRINCIPLED VETERANS FUND (PV FUND)",
+      "amount": 30000.0,
+      "date": "2024-10-31",
+      "visibility": "disclosed",
+      "transaction_type": "10",
+      "limit": "unlimited",
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00780841&two_year_transaction_period=2024&contributor_name=BEKENSTEIN%2C+ANITA"
+    },
+    {
+      "transfer_id": "C00780841-in-C00864272",
+      "from_entity_id": "C00864272",
+      "from_name": "NEXT GENERATION VETERAN FUND",
+      "to_entity_id": "C00780841",
+      "to_name": "PRINCIPLED VETERANS FUND (PV FUND)",
+      "amount": 7384.0,
+      "date": "2024-04-30",
+      "visibility": "disclosed",
+      "transaction_type": "22Z",
+      "limit": "unlimited",
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00780841&two_year_transaction_period=2024&contributor_name=C00864272"
+    }
+  ],
+  "outflows": [
+    {
+      "transfer_id": "C00780841-out-C00864272",
+      "from_entity_id": "C00780841",
+      "from_name": "PRINCIPLED VETERANS FUND (PV FUND)",
+      "to_entity_id": "C00864272",
+      "to_name": "NEXT GENERATION VETERAN FUND",
+      "amount": 1975000.0,
+      "date": "2024-03-11",
+      "visibility": "disclosed",
+      "transaction_type": "24K",
+      "limit": null,
+      "source_url": "https://www.fec.gov/data/disbursements/?committee_id=C00780841&two_year_transaction_period=2024"
+    },
+    {
+      "transfer_id": "C00780841-out-C00831404",
+      "from_entity_id": "C00780841",
+      "from_name": "PRINCIPLED VETERANS FUND (PV FUND)",
+      "to_entity_id": "C00831404",
+      "to_name": "WITH HONOR FUND II, INC.",
+      "amount": 236716.0,
+      "date": "2024-04-19",
+      "visibility": "disclosed",
+      "transaction_type": "24K",
+      "limit": "unlimited",
+      "source_url": "https://www.fec.gov/data/disbursements/?committee_id=C00780841&two_year_transaction_period=2024"
+    },
+    {
+      "transfer_id": "C00780841-out-C00863472",
+      "from_entity_id": "C00780841",
+      "from_name": "PRINCIPLED VETERANS FUND (PV FUND)",
+      "to_entity_id": "C00863472",
+      "to_name": "EDW ACTION FUND",
+      "amount": 50000.0,
+      "date": "2024-06-17",
+      "visibility": "disclosed",
+      "transaction_type": "24K",
+      "limit": null,
+      "source_url": "https://www.fec.gov/data/disbursements/?committee_id=C00780841&two_year_transaction_period=2024"
+    },
+    {
+      "transfer_id": "C00780841-out-C00854059",
+      "from_entity_id": "C00780841",
+      "from_name": "PRINCIPLED VETERANS FUND (PV FUND)",
+      "to_entity_id": "C00854059",
+      "to_name": "ONE GIANT LEAP PAC",
+      "amount": 25000.0,
+      "date": "2024-03-27",
+      "visibility": "disclosed",
+      "transaction_type": "18K",
+      "limit": null,
+      "source_url": "https://www.fec.gov/data/disbursements/?committee_id=C00780841&two_year_transaction_period=2024"
+    }
+  ],
+  "independent_expenditures": [],
+  "flags": [
+    {
+      "id": "shell_cluster",
+      "label": "Shares address and treasurer",
+      "detail": "PRINCIPLED VETERANS FUND (PV FUND) lists the same street address and treasurer as WITH HONOR FUND, INC. (C00659011).",
+      "evidence_url": "https://www.fec.gov/data/committee/C00780841/?cycle=2024"
+    }
+  ],
+  "has_chain": false,
+  "source_url": "https://www.fec.gov/data/committee/C00780841/?cycle=2024",
+  "data_status": "real"
+}

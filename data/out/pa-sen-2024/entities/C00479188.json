@@ -1,0 +1,103 @@
+{
+  "entity_id": "C00479188",
+  "race_id": "pa-sen-2024",
+  "kind": "committee",
+  "name": "ANTHONY PORTANTINO CONGRESSIONAL EXPLORATORY COMMITTEE",
+  "aliases": [],
+  "committee_type": "H",
+  "committee_type_label": "House campaign",
+  "designation": "P",
+  "registration_date": null,
+  "treasurer": "GOULD, DAVID L.",
+  "address": {
+    "street": "12501 IMPERIAL HIGHWAY, SUITE 200",
+    "city": "NORWALK",
+    "state": "CA",
+    "zip": "90650"
+  },
+  "visibility": "disclosed",
+  "is_conduit": false,
+  "totals": {
+    "receipts": 50000.0,
+    "disbursements": 364694.0,
+    "independent_expenditures": 0,
+    "from_individuals": 0.0,
+    "from_committees": 50000.0,
+    "from_organizations": 0.0,
+    "from_undisclosed": 0.0
+  },
+  "inflows": [
+    {
+      "transfer_id": "C00479188-in-C00005157",
+      "from_entity_id": "C00005157",
+      "from_name": "INTERNATIONAL BROTHERHOOD OF BOILERMAKERS CAMPAIGN ASSISTANCE FUND",
+      "to_entity_id": "C00479188",
+      "to_name": "ANTHONY PORTANTINO CONGRESSIONAL EXPLORATORY COMMITTEE",
+      "amount": 20000.0,
+      "date": "2023-05-18",
+      "visibility": "disclosed",
+      "transaction_type": "24K",
+      "limit": null,
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00479188&two_year_transaction_period=2024&contributor_name=C00005157"
+    },
+    {
+      "transfer_id": "C00479188-in-C00004861",
+      "from_entity_id": "C00004861",
+      "from_name": "UNITE HERE TIP CAMPAIGN COMMITTEE",
+      "to_entity_id": "C00479188",
+      "to_name": "ANTHONY PORTANTINO CONGRESSIONAL EXPLORATORY COMMITTEE",
+      "amount": 10000.0,
+      "date": "2024-02-22",
+      "visibility": "disclosed",
+      "transaction_type": "24K",
+      "limit": null,
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00479188&two_year_transaction_period=2024&contributor_name=C00004861"
+    },
+    {
+      "transfer_id": "C00479188-in-C00007542",
+      "from_entity_id": "C00007542",
+      "from_name": "INTERNATIONAL ASSOCIATION OF SHEET METAL, AIR, RAIL AND TRANSPORTATION WORKERS POLITICAL ACTION LEAGUE",
+      "to_entity_id": "C00479188",
+      "to_name": "ANTHONY PORTANTINO CONGRESSIONAL EXPLORATORY COMMITTEE",
+      "amount": 10000.0,
+      "date": "2023-07-10",
+      "visibility": "disclosed",
+      "transaction_type": "24K",
+      "limit": null,
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00479188&two_year_transaction_period=2024&contributor_name=C00007542"
+    },
+    {
+      "transfer_id": "C00479188-in-C00023580",
+      "from_entity_id": "C00023580",
+      "from_name": "NATIONAL ASSOCIATION OF LETTER CARRIERS OF U.S.A. POLITICAL FUND (LETTER CARRIER POLITICAL FUND)",
+      "to_entity_id": "C00479188",
+      "to_name": "ANTHONY PORTANTINO CONGRESSIONAL EXPLORATORY COMMITTEE",
+      "amount": 10000.0,
+      "date": "2024-02-28",
+      "visibility": "disclosed",
+      "transaction_type": "24K",
+      "limit": null,
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00479188&two_year_transaction_period=2024&contributor_name=C00023580"
+    }
+  ],
+  "outflows": [
+    {
+      "transfer_id": "C00479188-out-C00832279",
+      "from_entity_id": "C00479188",
+      "from_name": "ANTHONY PORTANTINO CONGRESSIONAL EXPLORATORY COMMITTEE",
+      "to_entity_id": "C00832279",
+      "to_name": "ANTHONY PORTANTINO FOR CONGRESS",
+      "amount": 364694.0,
+      "date": "2023-03-02",
+      "visibility": "disclosed",
+      "transaction_type": "24K",
+      "limit": null,
+      "source_url": "https://www.fec.gov/data/disbursements/?committee_id=C00479188&two_year_transaction_period=2024"
+    }
+  ],
+  "independent_expenditures": [],
+  "flags": [],
+  "has_chain": false,
+  "source_url": "https://www.fec.gov/data/committee/C00479188/?cycle=2024",
+  "data_status": "real"
+}

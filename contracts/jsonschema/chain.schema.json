@@ -1,0 +1,346 @@
+{
+  "$ref": "#/definitions/chain",
+  "definitions": {
+    "chain": {
+      "type": "object",
+      "properties": {
+        "root_entity_id": {
+          "type": "string"
+        },
+        "root_name": {
+          "type": "string"
+        },
+        "race_id": {
+          "type": "string"
+        },
+        "generated_at": {
+          "type": "string"
+        },
+        "data_status": {
+          "type": "string",
+          "enum": [
+            "real",
+            "mock",
+            "partial"
+          ]
+        },
+        "nodes": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "name": {
+                "type": "string"
+              },
+              "kind": {
+                "type": "string",
+                "enum": [
+                  "committee",
+                  "individual",
+                  "organization",
+                  "conduit",
+                  "aggregate"
+                ]
+              },
+              "committee_type": {
+                "anyOf": [
+                  {
+                    "type": "string",
+                    "enum": [
+                      "H",
+                      "S",
+                      "P",
+                      "X",
+                      "Y",
+                      "Z",
+                      "N",
+                      "Q",
+                      "O",
+                      "U",
+                      "V",
+                      "W",
+                      "D",
+                      "E",
+                      "I",
+                      "C"
+                    ]
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "depth": {
+                "type": "integer",
+                "minimum": 0
+              },
+              "visibility": {
+                "type": "string",
+                "enum": [
+                  "disclosed",
+                  "inferable",
+                  "dark"
+                ]
+              },
+              "amount_in": {
+                "type": "number"
+              },
+              "is_terminus": {
+                "type": "boolean"
+              },
+              "terminus_reason": {
+                "anyOf": [
+                  {
+                    "type": "string",
+                    "enum": [
+                      "individual",
+                      "organization",
+                      "dark",
+                      "inferable",
+                      "cycle",
+                      "depth_cap",
+                      "pruned"
+                    ]
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "source_url": {
+                "anyOf": [
+                  {
+                    "type": "string",
+                    "format": "uri"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "contributor_count": {
+                "type": "integer"
+              },
+              "organization_class": {
+                "type": "string",
+                "enum": [
+                  "union",
+                  "business",
+                  "llc",
+                  "nonprofit",
+                  "unknown"
+                ]
+              }
+            },
+            "required": [
+              "id",
+              "name",
+              "kind",
+              "committee_type",
+              "depth",
+              "visibility",
+              "amount_in",
+              "is_terminus",
+              "terminus_reason",
+              "source_url"
+            ],
+            "additionalProperties": false
+          }
+        },
+        "edges": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "from": {
+                "type": "string"
+              },
+              "to": {
+                "type": "string"
+              },
+              "amount": {
+                "type": "number"
+              },
+              "visibility": {
+                "type": "string",
+                "enum": [
+                  "disclosed",
+                  "inferable",
+                  "dark"
+                ]
+              },
+              "depth": {
+                "type": "integer",
+                "minimum": 1
+              },
+              "transaction_types": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "count": {
+                "type": "integer"
+              },
+              "date_range": {
+                "anyOf": [
+                  {
+                    "type": "array",
+                    "minItems": 2,
+                    "maxItems": 2,
+                    "items": [
+                      {
+                        "type": "string"
+                      },
+                      {
+                        "type": "string"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "source_url": {
+                "anyOf": [
+                  {
+                    "type": "string",
+                    "format": "uri"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              }
+            },
+            "required": [
+              "from",
+              "to",
+              "amount",
+              "visibility",
+              "depth",
+              "transaction_types",
+              "count",
+              "date_range",
+              "source_url"
+            ],
+            "additionalProperties": false
+          }
+        },
+        "summary": {
+          "type": "object",
+          "properties": {
+            "total_in": {
+              "type": "number"
+            },
+            "disclosed_share": {
+              "type": "number",
+              "minimum": 0,
+              "maximum": 1
+            },
+            "inferable_share": {
+              "type": "number",
+              "minimum": 0,
+              "maximum": 1
+            },
+            "unwalked_share": {
+              "type": "number",
+              "minimum": 0,
+              "maximum": 1
+            },
+            "dark_share": {
+              "type": "number",
+              "minimum": 0,
+              "maximum": 1
+            },
+            "max_depth": {
+              "type": "integer"
+            },
+            "terminus_counts": {
+              "type": "object",
+              "additionalProperties": {
+                "type": "integer"
+              },
+              "propertyNames": {
+                "enum": [
+                  "individual",
+                  "organization",
+                  "dark",
+                  "inferable",
+                  "cycle",
+                  "depth_cap",
+                  "pruned"
+                ]
+              }
+            }
+          },
+          "required": [
+            "total_in",
+            "disclosed_share",
+            "inferable_share",
+            "dark_share",
+            "max_depth",
+            "terminus_counts"
+          ],
+          "additionalProperties": false
+        },
+        "flags": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "id": {
+                "type": "string",
+                "enum": [
+                  "popup",
+                  "single_transfer_funded",
+                  "shell_cluster",
+                  "dead_end_dark",
+                  "one_way_valve_violation",
+                  "transfer_mismatch"
+                ]
+              },
+              "label": {
+                "type": "string"
+              },
+              "detail": {
+                "type": "string"
+              },
+              "evidence_url": {
+                "type": "string",
+                "format": "uri"
+              }
+            },
+            "required": [
+              "id",
+              "label",
+              "detail"
+            ],
+            "additionalProperties": false
+          }
+        },
+        "method": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "root_entity_id",
+        "root_name",
+        "race_id",
+        "generated_at",
+        "data_status",
+        "nodes",
+        "edges",
+        "summary",
+        "flags",
+        "method"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "$schema": "http://json-schema.org/draft-07/schema#"
+}

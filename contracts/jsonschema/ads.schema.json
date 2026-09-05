@@ -1,0 +1,238 @@
+{
+  "$ref": "#/definitions/ads",
+  "definitions": {
+    "ads": {
+      "type": "object",
+      "properties": {
+        "race_id": {
+          "type": "string"
+        },
+        "generated_at": {
+          "type": "string"
+        },
+        "data_status": {
+          "type": "string",
+          "enum": [
+            "real",
+            "mock",
+            "partial"
+          ]
+        },
+        "sources": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "enum": [
+              "google",
+              "meta"
+            ]
+          }
+        },
+        "ads": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "ad_id": {
+                "type": "string"
+              },
+              "platform": {
+                "type": "string",
+                "enum": [
+                  "google",
+                  "meta"
+                ]
+              },
+              "advertiser_id": {
+                "type": "string"
+              },
+              "advertiser_name": {
+                "type": "string"
+              },
+              "matched_entity_id": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "match_confidence": {
+                "type": "string",
+                "enum": [
+                  "verified",
+                  "auto",
+                  "none"
+                ]
+              },
+              "candidate_ids": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "support_oppose": {
+                "anyOf": [
+                  {
+                    "type": "string",
+                    "enum": [
+                      "S",
+                      "O"
+                    ]
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "spend_range": {
+                "type": "object",
+                "properties": {
+                  "min": {
+                    "type": "number"
+                  },
+                  "max": {
+                    "type": [
+                      "number",
+                      "null"
+                    ]
+                  }
+                },
+                "required": [
+                  "min",
+                  "max"
+                ],
+                "additionalProperties": false
+              },
+              "impressions_range": {
+                "type": "object",
+                "properties": {
+                  "min": {
+                    "type": "number"
+                  },
+                  "max": {
+                    "type": [
+                      "number",
+                      "null"
+                    ]
+                  }
+                },
+                "required": [
+                  "min",
+                  "max"
+                ],
+                "additionalProperties": false
+              },
+              "first_shown": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "last_shown": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "ad_type": {
+                "type": "string",
+                "enum": [
+                  "video",
+                  "image",
+                  "text",
+                  "unknown"
+                ]
+              },
+              "creative_url": {
+                "type": "string",
+                "format": "uri"
+              },
+              "cached_creative_path": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "regions": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "source_url": {
+                "type": "string",
+                "format": "uri"
+              },
+              "verification": {
+                "type": "object",
+                "properties": {
+                  "status": {
+                    "type": "string",
+                    "enum": [
+                      "verified",
+                      "unverified"
+                    ]
+                  },
+                  "evidence_urls": {
+                    "type": "array",
+                    "items": {
+                      "type": "string",
+                      "format": "uri"
+                    }
+                  },
+                  "verified_at": {
+                    "type": [
+                      "string",
+                      "null"
+                    ]
+                  }
+                },
+                "required": [
+                  "status",
+                  "evidence_urls",
+                  "verified_at"
+                ],
+                "additionalProperties": false
+              }
+            },
+            "required": [
+              "ad_id",
+              "platform",
+              "advertiser_id",
+              "advertiser_name",
+              "matched_entity_id",
+              "match_confidence",
+              "candidate_ids",
+              "support_oppose",
+              "spend_range",
+              "impressions_range",
+              "first_shown",
+              "last_shown",
+              "ad_type",
+              "creative_url",
+              "cached_creative_path",
+              "regions",
+              "source_url"
+            ],
+            "additionalProperties": false
+          }
+        },
+        "notes": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      },
+      "required": [
+        "race_id",
+        "generated_at",
+        "data_status",
+        "sources",
+        "ads",
+        "notes"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "$schema": "http://json-schema.org/draft-07/schema#"
+}

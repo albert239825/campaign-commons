@@ -1,0 +1,57 @@
+{
+  "entity_id": "C00830810",
+  "race_id": "pa-sen-2024",
+  "kind": "committee",
+  "name": "PROTECT THE HOUSE 2024",
+  "aliases": [],
+  "committee_type": "O",
+  "committee_type_label": "Super PAC",
+  "designation": "U",
+  "registration_date": null,
+  "treasurer": "DATWYLER, THOMAS",
+  "address": {
+    "street": "PO BOX 183",
+    "city": "HUDSON",
+    "state": "WI",
+    "zip": "54016"
+  },
+  "visibility": "disclosed",
+  "is_conduit": false,
+  "totals": {
+    "receipts": 0.0,
+    "disbursements": 0.0,
+    "independent_expenditures": 0,
+    "from_individuals": 0.0,
+    "from_committees": 0.0,
+    "from_organizations": 0.0,
+    "from_undisclosed": 0.0
+  },
+  "inflows": [],
+  "outflows": [
+    {
+      "transfer_id": "C00830810-out-C00677286",
+      "from_entity_id": "C00830810",
+      "from_name": "PROTECT THE HOUSE 2024",
+      "to_entity_id": "C00677286",
+      "to_name": "STEIL FOR WISCONSIN, INC.",
+      "amount": 386665.0,
+      "date": "2024-09-27",
+      "visibility": "disclosed",
+      "transaction_type": "18G",
+      "limit": null,
+      "source_url": "https://www.fec.gov/data/disbursements/?committee_id=C00830810&two_year_transaction_period=2024"
+    }
+  ],
+  "independent_expenditures": [],
+  "flags": [
+    {
+      "id": "shell_cluster",
+      "label": "Shares address and treasurer",
+      "detail": "PROTECT THE HOUSE 2024 lists the same street address and treasurer as LEAD ENCOURAGE ELECT PAC (C00494302), BUCKEYE LIBERTY POLITICAL ACTION COMMITTEE (C00693796), SIX PAC (C00770255).",
+      "evidence_url": "https://www.fec.gov/data/committee/C00830810/?cycle=2024"
+    }
+  ],
+  "has_chain": false,
+  "source_url": "https://www.fec.gov/data/committee/C00830810/?cycle=2024",
+  "data_status": "real"
+}

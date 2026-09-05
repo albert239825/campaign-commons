@@ -1,0 +1,50 @@
+{
+  "entity_id": "C00873620",
+  "race_id": "pa-sen-2024",
+  "kind": "committee",
+  "name": "GREG KIDD FOR NEVADA",
+  "aliases": [],
+  "committee_type": "H",
+  "committee_type_label": "House campaign",
+  "designation": "P",
+  "registration_date": null,
+  "treasurer": "CASTELLI, EMILY",
+  "address": {
+    "street": "PO BOX 1186",
+    "city": "CRYSTAL BAY",
+    "state": "NV",
+    "zip": "89402"
+  },
+  "visibility": "disclosed",
+  "is_conduit": false,
+  "totals": {
+    "receipts": 0.0,
+    "disbursements": 250000.0,
+    "independent_expenditures": 0,
+    "from_individuals": 0.0,
+    "from_committees": 0.0,
+    "from_organizations": 0.0,
+    "from_undisclosed": 0.0
+  },
+  "inflows": [],
+  "outflows": [
+    {
+      "transfer_id": "C00873620-out-C00208991",
+      "from_entity_id": "C00873620",
+      "from_name": "GREG KIDD FOR NEVADA",
+      "to_entity_id": "C00208991",
+      "to_name": "NEVADA STATE DEMOCRATIC PARTY",
+      "amount": 250000.0,
+      "date": "2024-10-03",
+      "visibility": "disclosed",
+      "transaction_type": "18K",
+      "limit": null,
+      "source_url": "https://www.fec.gov/data/disbursements/?committee_id=C00873620&two_year_transaction_period=2024"
+    }
+  ],
+  "independent_expenditures": [],
+  "flags": [],
+  "has_chain": false,
+  "source_url": "https://www.fec.gov/data/committee/C00873620/?cycle=2024",
+  "data_status": "real"
+}

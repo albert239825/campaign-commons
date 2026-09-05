@@ -1,0 +1,209 @@
+{
+  "$ref": "#/definitions/donor",
+  "definitions": {
+    "donor": {
+      "type": "object",
+      "properties": {
+        "donor_id": {
+          "type": "string"
+        },
+        "donor_key": {
+          "type": "string"
+        },
+        "name": {
+          "type": "string"
+        },
+        "kind": {
+          "type": "string",
+          "enum": [
+            "individual",
+            "organization"
+          ]
+        },
+        "race_id": {
+          "type": "string"
+        },
+        "generated_at": {
+          "type": "string"
+        },
+        "data_status": {
+          "type": "string",
+          "enum": [
+            "real",
+            "mock",
+            "partial"
+          ]
+        },
+        "total_given": {
+          "type": "number"
+        },
+        "total_in_chains": {
+          "type": "number"
+        },
+        "nodes": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "name": {
+                "type": "string"
+              },
+              "kind": {
+                "type": "string",
+                "enum": [
+                  "individual",
+                  "organization",
+                  "committee",
+                  "candidate"
+                ]
+              },
+              "committee_type": {
+                "anyOf": [
+                  {
+                    "type": "string",
+                    "enum": [
+                      "H",
+                      "S",
+                      "P",
+                      "X",
+                      "Y",
+                      "Z",
+                      "N",
+                      "Q",
+                      "O",
+                      "U",
+                      "V",
+                      "W",
+                      "D",
+                      "E",
+                      "I",
+                      "C"
+                    ]
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "depth": {
+                "type": "integer",
+                "minimum": 0,
+                "maximum": 3
+              },
+              "amount": {
+                "type": "number"
+              },
+              "is_spender": {
+                "type": "boolean"
+              },
+              "has_chain": {
+                "type": "boolean"
+              },
+              "source_url": {
+                "type": "string",
+                "format": "uri"
+              }
+            },
+            "required": [
+              "id",
+              "name",
+              "kind",
+              "committee_type",
+              "depth",
+              "amount",
+              "is_spender",
+              "has_chain",
+              "source_url"
+            ],
+            "additionalProperties": false
+          },
+          "maxItems": 200
+        },
+        "edges": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "from": {
+                "type": "string"
+              },
+              "to": {
+                "type": "string"
+              },
+              "kind": {
+                "type": "string",
+                "enum": [
+                  "money",
+                  "targeting"
+                ]
+              },
+              "amount": {
+                "type": "number"
+              },
+              "support_oppose": {
+                "anyOf": [
+                  {
+                    "type": "string",
+                    "enum": [
+                      "S",
+                      "O"
+                    ]
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "source_url": {
+                "type": "string",
+                "format": "uri"
+              }
+            },
+            "required": [
+              "from",
+              "to",
+              "kind",
+              "amount",
+              "support_oppose",
+              "source_url"
+            ],
+            "additionalProperties": false
+          }
+        },
+        "allocation_note": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "truncated": {
+          "type": "boolean"
+        },
+        "method": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "donor_id",
+        "donor_key",
+        "name",
+        "kind",
+        "race_id",
+        "generated_at",
+        "data_status",
+        "total_given",
+        "total_in_chains",
+        "nodes",
+        "edges",
+        "allocation_note",
+        "truncated",
+        "method"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "$schema": "http://json-schema.org/draft-07/schema#"
+}

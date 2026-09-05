@@ -1,0 +1,76 @@
+{
+  "entity_id": "C00697730",
+  "race_id": "pa-sen-2024",
+  "kind": "committee",
+  "name": "CORNYN MAJORITY TEXAS",
+  "aliases": [],
+  "committee_type": "N",
+  "committee_type_label": "PAC (non-qualified)",
+  "designation": "J",
+  "registration_date": null,
+  "treasurer": "KEITH A DAVIS",
+  "address": {
+    "street": "228 S WASHINGTON STREET SUITE 115",
+    "city": "ALEXANDRIA",
+    "state": "VA",
+    "zip": "22314"
+  },
+  "visibility": "disclosed",
+  "is_conduit": false,
+  "totals": {
+    "receipts": 0.0,
+    "disbursements": 222970.83,
+    "independent_expenditures": 0,
+    "from_individuals": 0.0,
+    "from_committees": 0.0,
+    "from_organizations": 0.0,
+    "from_undisclosed": 0.0
+  },
+  "inflows": [],
+  "outflows": [
+    {
+      "transfer_id": "C00697730-out-C00369033",
+      "from_entity_id": "C00697730",
+      "from_name": "CORNYN MAJORITY TEXAS",
+      "to_entity_id": "C00369033",
+      "to_name": "TEXANS FOR SENATOR JOHN CORNYN INC.",
+      "amount": 143700.0,
+      "date": "2024-12-31",
+      "visibility": "disclosed",
+      "transaction_type": "18G",
+      "limit": null,
+      "source_url": "https://www.fec.gov/data/disbursements/?committee_id=C00697730&two_year_transaction_period=2024"
+    },
+    {
+      "transfer_id": "C00697730-out-C00387464",
+      "from_entity_id": "C00697730",
+      "from_name": "CORNYN MAJORITY TEXAS",
+      "to_entity_id": "C00387464",
+      "to_name": "ALAMO PAC",
+      "amount": 38700.0,
+      "date": "2024-12-31",
+      "visibility": "disclosed",
+      "transaction_type": "18G",
+      "limit": null,
+      "source_url": "https://www.fec.gov/data/disbursements/?committee_id=C00697730&two_year_transaction_period=2024"
+    },
+    {
+      "transfer_id": "C00697730-out-C00143743",
+      "from_entity_id": "C00697730",
+      "from_name": "CORNYN MAJORITY TEXAS",
+      "to_entity_id": "C00143743",
+      "to_name": "REPUBLICAN PARTY OF TEXAS",
+      "amount": 18300.0,
+      "date": "2024-12-31",
+      "visibility": "disclosed",
+      "transaction_type": "24G",
+      "limit": null,
+      "source_url": "https://www.fec.gov/data/disbursements/?committee_id=C00697730&two_year_transaction_period=2024"
+    }
+  ],
+  "independent_expenditures": [],
+  "flags": [],
+  "has_chain": false,
+  "source_url": "https://www.fec.gov/data/committee/C00697730/?cycle=2024",
+  "data_status": "real"
+}

@@ -1,0 +1,71 @@
+{
+  "entity_id": "C00777185",
+  "race_id": "pa-sen-2024",
+  "kind": "committee",
+  "name": "SAVING ARIZONA PAC",
+  "aliases": [],
+  "committee_type": "O",
+  "committee_type_label": "Super PAC",
+  "designation": "U",
+  "registration_date": null,
+  "treasurer": "RUTLAND, JANNA",
+  "address": {
+    "street": "PO BOX 9891",
+    "city": "ARLINGTON",
+    "state": "VA",
+    "zip": "22219"
+  },
+  "visibility": "disclosed",
+  "is_conduit": false,
+  "totals": {
+    "receipts": 20446.72,
+    "disbursements": 1060898.19,
+    "independent_expenditures": 0,
+    "from_individuals": 407.0,
+    "from_committees": 0.0,
+    "from_organizations": 0.0,
+    "from_undisclosed": 0.0
+  },
+  "inflows": [
+    {
+      "transfer_id": "C00777185-in-ind:GOLLIHER_SEAN|86005",
+      "from_entity_id": "ind:GOLLIHER_SEAN|86005",
+      "from_name": "GOLLIHER, SEAN",
+      "to_entity_id": "C00777185",
+      "to_name": "SAVING ARIZONA PAC",
+      "amount": 250.0,
+      "date": "2023-01-03",
+      "visibility": "disclosed",
+      "transaction_type": "10",
+      "limit": "unlimited",
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00777185&two_year_transaction_period=2024&contributor_name=GOLLIHER%2C+SEAN"
+    }
+  ],
+  "outflows": [
+    {
+      "transfer_id": "C00777185-out-C00804690",
+      "from_entity_id": "C00777185",
+      "from_name": "SAVING ARIZONA PAC",
+      "to_entity_id": "C00804690",
+      "to_name": "AMERICA 21 PAC",
+      "amount": 839166.0,
+      "date": "2024-08-07",
+      "visibility": "disclosed",
+      "transaction_type": "24K",
+      "limit": "unlimited",
+      "source_url": "https://www.fec.gov/data/disbursements/?committee_id=C00777185&two_year_transaction_period=2024"
+    }
+  ],
+  "independent_expenditures": [],
+  "flags": [
+    {
+      "id": "shell_cluster",
+      "label": "Shares address and treasurer",
+      "detail": "SAVING ARIZONA PAC lists the same street address and treasurer as AMERICA 21 PAC (C00804690), OPPORTUNITY MATTERS FUND ACTION (C00825158).",
+      "evidence_url": "https://www.fec.gov/data/committee/C00777185/?cycle=2024"
+    }
+  ],
+  "has_chain": false,
+  "source_url": "https://www.fec.gov/data/committee/C00777185/?cycle=2024",
+  "data_status": "real"
+}

@@ -1,0 +1,78 @@
+{
+  "root_entity_id": "C00556274",
+  "root_name": "USW WORKS",
+  "race_id": "pa-sen-2024",
+  "generated_at": "2026-09-05T13:41:28+00:00",
+  "data_status": "real",
+  "nodes": [
+    {
+      "id": "C00556274",
+      "name": "USW WORKS",
+      "kind": "committee",
+      "committee_type": "O",
+      "depth": 0,
+      "visibility": "disclosed",
+      "amount_in": 1790636.0,
+      "is_terminus": false,
+      "terminus_reason": null,
+      "source_url": "https://www.fec.gov/data/committee/C00556274/?cycle=2024"
+    },
+    {
+      "id": "org:UNITED_STEELWORKERS",
+      "name": "UNITED STEELWORKERS",
+      "kind": "organization",
+      "committee_type": null,
+      "depth": 1,
+      "visibility": "disclosed",
+      "amount_in": 1790636.0,
+      "is_terminus": true,
+      "terminus_reason": "organization",
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00556274&two_year_transaction_period=2024&contributor_name=UNITED+STEELWORKERS",
+      "organization_class": "union"
+    }
+  ],
+  "edges": [
+    {
+      "from": "org:UNITED_STEELWORKERS",
+      "to": "C00556274",
+      "amount": 1790636.0,
+      "visibility": "disclosed",
+      "depth": 1,
+      "transaction_types": [
+        "10"
+      ],
+      "count": 25,
+      "date_range": [
+        "2023-03-14",
+        "2024-12-18"
+      ],
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00556274&two_year_transaction_period=2024&contributor_name=UNITED+STEELWORKERS"
+    }
+  ],
+  "summary": {
+    "total_in": 1790636.0,
+    "disclosed_share": 1.0,
+    "inferable_share": 0.0,
+    "unwalked_share": 0.0,
+    "dark_share": 0.0,
+    "max_depth": 1,
+    "terminus_counts": {
+      "organization": 1
+    }
+  },
+  "flags": [
+    {
+      "id": "single_transfer_funded",
+      "label": "Funded by a single source",
+      "detail": "UNITED STEELWORKERS supplied $1,790,636 of USW WORKS's $1,790,636 itemized receipts (100%).",
+      "evidence_url": "https://www.fec.gov/data/receipts/?committee_id=C00556274&two_year_transaction_period=2024"
+    },
+    {
+      "id": "shell_cluster",
+      "label": "Shares address and treasurer",
+      "detail": "USW WORKS lists the same street address and treasurer as UNITED STEELWORKERS POLITICAL ACTION FUND (C00003590).",
+      "evidence_url": "https://www.fec.gov/data/committee/C00556274/?cycle=2024"
+    }
+  ],
+  "method": "Backward walk over money edges only (Schedule A receipts from individuals and organizations, committee-to-committee transfers) into USW WORKS, 1 hop(s) deep; independent expenditures are targeting edges and never appear. The walk starts from $1,790,636 of itemized 2023–2024 receipts as loaded from FEC bulk data (unitemized receipts, loans and offsets are not edges), and every expanded committee conserves dollars: its inbound edges sum to its receipts. Inbound edges under 1% of a committee's receipts are rolled into one 'other contributors' node, which counts as disclosed except for the organization dollars inside it. Each dollar takes the visibility of where the walk stopped: named individuals (including earmarks through ActBlue/WinRed, attributed to the person) are disclosed. Organizations that are not registered committees are classified from their name alone (no IRS lookup): a union or a business giving from its own treasury is disclosed — the named entity is the source; an LLC, trust, advocacy nonprofit (501(c)(4)-style names) or unclassifiable organization is dark, because whoever funds it is not on file with the FEC. Visibility shares are preliminary; no 990 lookups were performed, so nothing is marked inferable."
+}

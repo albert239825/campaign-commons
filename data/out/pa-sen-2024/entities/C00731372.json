@@ -1,0 +1,90 @@
+{
+  "entity_id": "C00731372",
+  "race_id": "pa-sen-2024",
+  "kind": "committee",
+  "name": "VOTE NURSES VALUES POLITICAL ACTION COMMITTEE: CALIFORNIA NURSES ASSOCIATION",
+  "aliases": [],
+  "committee_type": "O",
+  "committee_type_label": "Super PAC",
+  "designation": "U",
+  "registration_date": null,
+  "treasurer": "MILLER, HOLLY",
+  "address": {
+    "street": "155 GRAND AVENUE",
+    "city": "OAKLAND",
+    "state": "CA",
+    "zip": "94612"
+  },
+  "visibility": "disclosed",
+  "is_conduit": false,
+  "totals": {
+    "receipts": 6020000.0,
+    "disbursements": 5773001.9,
+    "independent_expenditures": 0,
+    "from_individuals": 0.0,
+    "from_committees": 6020000.0,
+    "from_organizations": 0.0,
+    "from_undisclosed": 0.0
+  },
+  "inflows": [
+    {
+      "transfer_id": "C00731372-in-C00731372",
+      "from_entity_id": "C00731372",
+      "from_name": "VOTE NURSES VALUES POLITICAL ACTION COMMITTEE: CALIFORNIA NURSES ASSOCIATION",
+      "to_entity_id": "C00731372",
+      "to_name": "VOTE NURSES VALUES POLITICAL ACTION COMMITTEE: CALIFORNIA NURSES ASSOCIATION",
+      "amount": 4000000.0,
+      "date": "2024-09-05",
+      "visibility": "disclosed",
+      "transaction_type": "18G",
+      "limit": "unlimited",
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00731372&two_year_transaction_period=2024&contributor_name=C00731372"
+    }
+  ],
+  "outflows": [
+    {
+      "transfer_id": "C00731372-out-C00490375",
+      "from_entity_id": "C00731372",
+      "from_name": "VOTE NURSES VALUES POLITICAL ACTION COMMITTEE: CALIFORNIA NURSES ASSOCIATION",
+      "to_entity_id": "C00490375",
+      "to_name": "NATIONAL NURSES UNITED FOR PATIENT PROTECTION",
+      "amount": 5020000.0,
+      "date": "2024-09-25",
+      "visibility": "disclosed",
+      "transaction_type": "24K",
+      "limit": "unlimited",
+      "source_url": "https://www.fec.gov/data/disbursements/?committee_id=C00731372&two_year_transaction_period=2024"
+    },
+    {
+      "transfer_id": "C00731372-out-C00731372",
+      "from_entity_id": "C00731372",
+      "from_name": "VOTE NURSES VALUES POLITICAL ACTION COMMITTEE: CALIFORNIA NURSES ASSOCIATION",
+      "to_entity_id": "C00731372",
+      "to_name": "VOTE NURSES VALUES POLITICAL ACTION COMMITTEE: CALIFORNIA NURSES ASSOCIATION",
+      "amount": 4000000.0,
+      "date": "2024-09-05",
+      "visibility": "disclosed",
+      "transaction_type": "18G",
+      "limit": "unlimited",
+      "source_url": "https://www.fec.gov/data/disbursements/?committee_id=C00731372&two_year_transaction_period=2024"
+    },
+    {
+      "transfer_id": "C00731372-out-C00556860",
+      "from_entity_id": "C00731372",
+      "from_name": "VOTE NURSES VALUES POLITICAL ACTION COMMITTEE: CALIFORNIA NURSES ASSOCIATION",
+      "to_entity_id": "C00556860",
+      "to_name": "PLANNED PARENTHOOD AFFILIATES OF CALIFORNIA VOTES PAC",
+      "amount": 250000.0,
+      "date": "2024-09-13",
+      "visibility": "disclosed",
+      "transaction_type": "24K",
+      "limit": null,
+      "source_url": "https://www.fec.gov/data/disbursements/?committee_id=C00731372&two_year_transaction_period=2024"
+    }
+  ],
+  "independent_expenditures": [],
+  "flags": [],
+  "has_chain": false,
+  "source_url": "https://www.fec.gov/data/committee/C00731372/?cycle=2024",
+  "data_status": "real"
+}

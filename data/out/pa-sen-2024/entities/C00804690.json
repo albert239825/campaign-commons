@@ -1,0 +1,123 @@
+{
+  "entity_id": "C00804690",
+  "race_id": "pa-sen-2024",
+  "kind": "committee",
+  "name": "AMERICA 21 PAC",
+  "aliases": [],
+  "committee_type": "O",
+  "committee_type_label": "Super PAC",
+  "designation": "U",
+  "registration_date": null,
+  "treasurer": "RUTLAND, JANNA",
+  "address": {
+    "street": "PO BOX 9891",
+    "city": "ARLINGTON",
+    "state": "VA",
+    "zip": "22219"
+  },
+  "visibility": "disclosed",
+  "is_conduit": false,
+  "totals": {
+    "receipts": 1029165.29,
+    "disbursements": 576887.59,
+    "independent_expenditures": 0,
+    "from_individuals": 50000.0,
+    "from_committees": 839166.13,
+    "from_organizations": 0.0,
+    "from_undisclosed": 0.0
+  },
+  "inflows": [
+    {
+      "transfer_id": "C00804690-in-C00777185",
+      "from_entity_id": "C00777185",
+      "from_name": "SAVING ARIZONA PAC",
+      "to_entity_id": "C00804690",
+      "to_name": "AMERICA 21 PAC",
+      "amount": 839166.0,
+      "date": "2024-08-07",
+      "visibility": "disclosed",
+      "transaction_type": "24K",
+      "limit": "unlimited",
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00804690&two_year_transaction_period=2024&contributor_name=C00777185"
+    },
+    {
+      "transfer_id": "C00804690-in-ind:SAVING_ARIZONA_PAC|22219",
+      "from_entity_id": "ind:SAVING_ARIZONA_PAC|22219",
+      "from_name": "SAVING ARIZONA PAC",
+      "to_entity_id": "C00804690",
+      "to_name": "AMERICA 21 PAC",
+      "amount": 839166.0,
+      "date": "2024-08-06",
+      "visibility": "disclosed",
+      "transaction_type": "10",
+      "limit": "unlimited",
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00804690&two_year_transaction_period=2024&contributor_name=SAVING+ARIZONA+PAC"
+    },
+    {
+      "transfer_id": "C00804690-in-ind:MICHIGAN_STRONG|35203",
+      "from_entity_id": "ind:MICHIGAN_STRONG|35203",
+      "from_name": "MICHIGAN STRONG",
+      "to_entity_id": "C00804690",
+      "to_name": "AMERICA 21 PAC",
+      "amount": 87610.0,
+      "date": "2023-03-09",
+      "visibility": "disclosed",
+      "transaction_type": "10",
+      "limit": "unlimited",
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00804690&two_year_transaction_period=2024&contributor_name=MICHIGAN+STRONG"
+    },
+    {
+      "transfer_id": "C00804690-in-ind:CURRENT_TAMARA|95112",
+      "from_entity_id": "ind:CURRENT_TAMARA|95112",
+      "from_name": "CURRENT, TAMARA",
+      "to_entity_id": "C00804690",
+      "to_name": "AMERICA 21 PAC",
+      "amount": 25000.0,
+      "date": "2023-12-21",
+      "visibility": "disclosed",
+      "transaction_type": "10",
+      "limit": "unlimited",
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00804690&two_year_transaction_period=2024&contributor_name=CURRENT%2C+TAMARA"
+    },
+    {
+      "transfer_id": "C00804690-in-ind:CURRENT_JEFF|95112",
+      "from_entity_id": "ind:CURRENT_JEFF|95112",
+      "from_name": "CURRENT, JEFF",
+      "to_entity_id": "C00804690",
+      "to_name": "AMERICA 21 PAC",
+      "amount": 25000.0,
+      "date": "2023-09-26",
+      "visibility": "disclosed",
+      "transaction_type": "10",
+      "limit": "unlimited",
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00804690&two_year_transaction_period=2024&contributor_name=CURRENT%2C+JEFF"
+    }
+  ],
+  "outflows": [
+    {
+      "transfer_id": "C00804690-out-C00825851",
+      "from_entity_id": "C00804690",
+      "from_name": "AMERICA 21 PAC",
+      "to_entity_id": "C00825851",
+      "to_name": "MAKE AMERICA GREAT AGAIN INC.",
+      "amount": 200000.0,
+      "date": "2024-06-04",
+      "visibility": "disclosed",
+      "transaction_type": "18K",
+      "limit": "unlimited",
+      "source_url": "https://www.fec.gov/data/disbursements/?committee_id=C00804690&two_year_transaction_period=2024"
+    }
+  ],
+  "independent_expenditures": [],
+  "flags": [
+    {
+      "id": "shell_cluster",
+      "label": "Shares address and treasurer",
+      "detail": "AMERICA 21 PAC lists the same street address and treasurer as SAVING ARIZONA PAC (C00777185), OPPORTUNITY MATTERS FUND ACTION (C00825158).",
+      "evidence_url": "https://www.fec.gov/data/committee/C00804690/?cycle=2024"
+    }
+  ],
+  "has_chain": false,
+  "source_url": "https://www.fec.gov/data/committee/C00804690/?cycle=2024",
+  "data_status": "real"
+}

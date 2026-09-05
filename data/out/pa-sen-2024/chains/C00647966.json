@@ -1,0 +1,346 @@
+{
+  "root_entity_id": "C00647966",
+  "root_name": "RURAL FREEDOM NETWORK",
+  "race_id": "pa-sen-2024",
+  "generated_at": "2026-09-05T13:41:28+00:00",
+  "data_status": "real",
+  "nodes": [
+    {
+      "id": "C00647966",
+      "name": "RURAL FREEDOM NETWORK",
+      "kind": "committee",
+      "committee_type": "O",
+      "depth": 0,
+      "visibility": "disclosed",
+      "amount_in": 576457.0,
+      "is_terminus": false,
+      "terminus_reason": null,
+      "source_url": "https://www.fec.gov/data/committee/C00647966/?cycle=2024"
+    },
+    {
+      "id": "ind:GUERNSEY_SHERWOOD|01201",
+      "name": "GUERNSEY, SHERWOOD",
+      "kind": "individual",
+      "committee_type": null,
+      "depth": 1,
+      "visibility": "disclosed",
+      "amount_in": 347058.0,
+      "is_terminus": true,
+      "terminus_reason": "individual",
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00647966&two_year_transaction_period=2024&contributor_name=GUERNSEY%2C+SHERWOOD"
+    },
+    {
+      "id": "ind:KALISH_EUGENE|01230",
+      "name": "KALISH, EUGENE",
+      "kind": "individual",
+      "committee_type": null,
+      "depth": 1,
+      "visibility": "disclosed",
+      "amount_in": 100000.0,
+      "is_terminus": true,
+      "terminus_reason": "individual",
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00647966&two_year_transaction_period=2024&contributor_name=KALISH%2C+EUGENE"
+    },
+    {
+      "id": "ind:EGERMAN_PAUL|02493",
+      "name": "EGERMAN, PAUL",
+      "kind": "individual",
+      "committee_type": null,
+      "depth": 1,
+      "visibility": "disclosed",
+      "amount_in": 15000.0,
+      "is_terminus": true,
+      "terminus_reason": "individual",
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00647966&two_year_transaction_period=2024&contributor_name=EGERMAN%2C+PAUL"
+    },
+    {
+      "id": "ind:BURMAN_BONNIE|01240",
+      "name": "BURMAN, BONNIE",
+      "kind": "individual",
+      "committee_type": null,
+      "depth": 1,
+      "visibility": "disclosed",
+      "amount_in": 12500.0,
+      "is_terminus": true,
+      "terminus_reason": "individual",
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00647966&two_year_transaction_period=2024&contributor_name=BURMAN%2C+BONNIE"
+    },
+    {
+      "id": "ind:MALLETT_GEORGE|02493",
+      "name": "MALLETT, GEORGE",
+      "kind": "individual",
+      "committee_type": null,
+      "depth": 1,
+      "visibility": "disclosed",
+      "amount_in": 10002.0,
+      "is_terminus": true,
+      "terminus_reason": "individual",
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00647966&two_year_transaction_period=2024&contributor_name=MALLETT%2C+GEORGE"
+    },
+    {
+      "id": "ind:LEVY_PERSIS_BARRON|02130",
+      "name": "LEVY, PERSIS BARRON",
+      "kind": "individual",
+      "committee_type": null,
+      "depth": 1,
+      "visibility": "disclosed",
+      "amount_in": 10000.0,
+      "is_terminus": true,
+      "terminus_reason": "individual",
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00647966&two_year_transaction_period=2024&contributor_name=LEVY%2C+PERSIS+BARRON"
+    },
+    {
+      "id": "ind:KRUPP_GEORGE|02467",
+      "name": "KRUPP, GEORGE",
+      "kind": "individual",
+      "committee_type": null,
+      "depth": 1,
+      "visibility": "disclosed",
+      "amount_in": 8600.0,
+      "is_terminus": true,
+      "terminus_reason": "individual",
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00647966&two_year_transaction_period=2024&contributor_name=KRUPP%2C+GEORGE"
+    },
+    {
+      "id": "ind:SCHNEIDER_ED|94611",
+      "name": "SCHNEIDER, ED",
+      "kind": "individual",
+      "committee_type": null,
+      "depth": 1,
+      "visibility": "disclosed",
+      "amount_in": 8000.0,
+      "is_terminus": true,
+      "terminus_reason": "individual",
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00647966&two_year_transaction_period=2024&contributor_name=SCHNEIDER%2C+ED"
+    },
+    {
+      "id": "ind:WARK_KAREN|95126",
+      "name": "WARK, KAREN",
+      "kind": "individual",
+      "committee_type": null,
+      "depth": 1,
+      "visibility": "disclosed",
+      "amount_in": 7500.0,
+      "is_terminus": true,
+      "terminus_reason": "individual",
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00647966&two_year_transaction_period=2024&contributor_name=WARK%2C+KAREN"
+    },
+    {
+      "id": "ind:QUINSON_BRUNO|10128",
+      "name": "QUINSON, BRUNO",
+      "kind": "individual",
+      "committee_type": null,
+      "depth": 1,
+      "visibility": "disclosed",
+      "amount_in": 6000.0,
+      "is_terminus": true,
+      "terminus_reason": "individual",
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00647966&two_year_transaction_period=2024&contributor_name=QUINSON%2C+BRUNO"
+    },
+    {
+      "id": "agg:other@C00647966",
+      "name": "Other contributors to RURAL FREEDOM NETWORK (each <1% of receipts, or beyond the 40 largest)",
+      "kind": "aggregate",
+      "committee_type": null,
+      "depth": 1,
+      "visibility": "disclosed",
+      "amount_in": 51797.0,
+      "is_terminus": true,
+      "terminus_reason": "pruned",
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00647966&two_year_transaction_period=2024",
+      "contributor_count": 49
+    }
+  ],
+  "edges": [
+    {
+      "from": "ind:GUERNSEY_SHERWOOD|01201",
+      "to": "C00647966",
+      "amount": 347058.0,
+      "visibility": "disclosed",
+      "depth": 1,
+      "transaction_types": [
+        "10"
+      ],
+      "count": 13,
+      "date_range": [
+        "2023-09-20",
+        "2024-11-08"
+      ],
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00647966&two_year_transaction_period=2024&contributor_name=GUERNSEY%2C+SHERWOOD"
+    },
+    {
+      "from": "ind:KALISH_EUGENE|01230",
+      "to": "C00647966",
+      "amount": 100000.0,
+      "visibility": "disclosed",
+      "depth": 1,
+      "transaction_types": [
+        "10"
+      ],
+      "count": 1,
+      "date_range": [
+        "2024-03-13",
+        "2024-03-13"
+      ],
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00647966&two_year_transaction_period=2024&contributor_name=KALISH%2C+EUGENE"
+    },
+    {
+      "from": "ind:EGERMAN_PAUL|02493",
+      "to": "C00647966",
+      "amount": 15000.0,
+      "visibility": "disclosed",
+      "depth": 1,
+      "transaction_types": [
+        "10"
+      ],
+      "count": 3,
+      "date_range": [
+        "2023-03-08",
+        "2024-08-30"
+      ],
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00647966&two_year_transaction_period=2024&contributor_name=EGERMAN%2C+PAUL"
+    },
+    {
+      "from": "ind:BURMAN_BONNIE|01240",
+      "to": "C00647966",
+      "amount": 12500.0,
+      "visibility": "disclosed",
+      "depth": 1,
+      "transaction_types": [
+        "10"
+      ],
+      "count": 3,
+      "date_range": [
+        "2023-03-29",
+        "2024-10-08"
+      ],
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00647966&two_year_transaction_period=2024&contributor_name=BURMAN%2C+BONNIE"
+    },
+    {
+      "from": "ind:MALLETT_GEORGE|02493",
+      "to": "C00647966",
+      "amount": 10002.0,
+      "visibility": "disclosed",
+      "depth": 1,
+      "transaction_types": [
+        "10"
+      ],
+      "count": 1,
+      "date_range": [
+        "2024-10-09",
+        "2024-10-09"
+      ],
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00647966&two_year_transaction_period=2024&contributor_name=MALLETT%2C+GEORGE"
+    },
+    {
+      "from": "ind:LEVY_PERSIS_BARRON|02130",
+      "to": "C00647966",
+      "amount": 10000.0,
+      "visibility": "disclosed",
+      "depth": 1,
+      "transaction_types": [
+        "10"
+      ],
+      "count": 1,
+      "date_range": [
+        "2024-10-24",
+        "2024-10-24"
+      ],
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00647966&two_year_transaction_period=2024&contributor_name=LEVY%2C+PERSIS+BARRON"
+    },
+    {
+      "from": "ind:KRUPP_GEORGE|02467",
+      "to": "C00647966",
+      "amount": 8600.0,
+      "visibility": "disclosed",
+      "depth": 1,
+      "transaction_types": [
+        "10"
+      ],
+      "count": 2,
+      "date_range": [
+        "2024-02-14",
+        "2024-10-23"
+      ],
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00647966&two_year_transaction_period=2024&contributor_name=KRUPP%2C+GEORGE"
+    },
+    {
+      "from": "ind:SCHNEIDER_ED|94611",
+      "to": "C00647966",
+      "amount": 8000.0,
+      "visibility": "disclosed",
+      "depth": 1,
+      "transaction_types": [
+        "10"
+      ],
+      "count": 4,
+      "date_range": [
+        "2024-02-22",
+        "2024-10-12"
+      ],
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00647966&two_year_transaction_period=2024&contributor_name=SCHNEIDER%2C+ED"
+    },
+    {
+      "from": "ind:WARK_KAREN|95126",
+      "to": "C00647966",
+      "amount": 7500.0,
+      "visibility": "disclosed",
+      "depth": 1,
+      "transaction_types": [
+        "10"
+      ],
+      "count": 3,
+      "date_range": [
+        "2024-03-18",
+        "2024-08-26"
+      ],
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00647966&two_year_transaction_period=2024&contributor_name=WARK%2C+KAREN"
+    },
+    {
+      "from": "ind:QUINSON_BRUNO|10128",
+      "to": "C00647966",
+      "amount": 6000.0,
+      "visibility": "disclosed",
+      "depth": 1,
+      "transaction_types": [
+        "10"
+      ],
+      "count": 4,
+      "date_range": [
+        "2023-04-05",
+        "2024-10-25"
+      ],
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00647966&two_year_transaction_period=2024&contributor_name=QUINSON%2C+BRUNO"
+    },
+    {
+      "from": "agg:other@C00647966",
+      "to": "C00647966",
+      "amount": 51797.0,
+      "visibility": "disclosed",
+      "depth": 1,
+      "transaction_types": [
+        "10"
+      ],
+      "count": 72,
+      "date_range": [
+        "2023-03-08",
+        "2024-12-31"
+      ],
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00647966&two_year_transaction_period=2024"
+    }
+  ],
+  "summary": {
+    "total_in": 576457.0,
+    "disclosed_share": 0.9902,
+    "inferable_share": 0.0,
+    "unwalked_share": 0.0,
+    "dark_share": 0.0098,
+    "max_depth": 1,
+    "terminus_counts": {
+      "individual": 10,
+      "pruned": 1
+    }
+  },
+  "flags": [],
+  "method": "Backward walk over money edges only (Schedule A receipts from individuals and organizations, committee-to-committee transfers) into RURAL FREEDOM NETWORK, 1 hop(s) deep; independent expenditures are targeting edges and never appear. The walk starts from $576,457 of itemized 2023–2024 receipts as loaded from FEC bulk data (unitemized receipts, loans and offsets are not edges), and every expanded committee conserves dollars: its inbound edges sum to its receipts. Inbound edges under 1% of a committee's receipts are rolled into one 'other contributors' node, which counts as disclosed except for the organization dollars inside it. Each dollar takes the visibility of where the walk stopped: named individuals (including earmarks through ActBlue/WinRed, attributed to the person) are disclosed. Organizations that are not registered committees are classified from their name alone (no IRS lookup): a union or a business giving from its own treasury is disclosed — the named entity is the source; an LLC, trust, advocacy nonprofit (501(c)(4)-style names) or unclassifiable organization is dark, because whoever funds it is not on file with the FEC. Visibility shares are preliminary; no 990 lookups were performed, so nothing is marked inferable."
+}

@@ -1,0 +1,228 @@
+{
+  "entity_id": "C00882381",
+  "race_id": "pa-sen-2024",
+  "kind": "committee",
+  "name": "PEOPLE POWER PENNSYLVANIA",
+  "aliases": [],
+  "committee_type": "O",
+  "committee_type_label": "Super PAC",
+  "designation": "U",
+  "registration_date": null,
+  "treasurer": "PERRONE, VICTORIA",
+  "address": {
+    "street": "PO BOX 22611",
+    "city": "PHILADELPHIA",
+    "state": "PA",
+    "zip": "19110"
+  },
+  "visibility": "disclosed",
+  "is_conduit": false,
+  "totals": {
+    "receipts": 4749000.0,
+    "disbursements": 4625034.13,
+    "independent_expenditures": 3058375.12,
+    "from_individuals": 100000.0,
+    "from_committees": 4179000.0,
+    "from_organizations": 120000.0,
+    "from_undisclosed": 350000.0
+  },
+  "inflows": [
+    {
+      "transfer_id": "C00882381-in-ind:STRATEGIC_VICTORY_FUND_IE_PAC|27602",
+      "from_entity_id": "ind:STRATEGIC_VICTORY_FUND_IE_PAC|27602",
+      "from_name": "STRATEGIC VICTORY FUND IE PAC",
+      "to_entity_id": "C00882381",
+      "to_name": "PEOPLE POWER PENNSYLVANIA",
+      "amount": 3404000.0,
+      "date": "2024-10-24",
+      "visibility": "disclosed",
+      "transaction_type": "10",
+      "limit": "unlimited",
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00882381&two_year_transaction_period=2024&contributor_name=STRATEGIC+VICTORY+FUND+IE+PAC"
+    },
+    {
+      "transfer_id": "C00882381-in-ind:PROGRESS_NOW|22936",
+      "from_entity_id": "ind:PROGRESS_NOW|22936",
+      "from_name": "PROGRESS NOW",
+      "to_entity_id": "C00882381",
+      "to_name": "PEOPLE POWER PENNSYLVANIA",
+      "amount": 475000.0,
+      "date": "2024-10-11",
+      "visibility": "disclosed",
+      "transaction_type": "10",
+      "limit": "unlimited",
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00882381&two_year_transaction_period=2024&contributor_name=PROGRESS+NOW"
+    },
+    {
+      "transfer_id": "C00882381-in-C00568964",
+      "from_entity_id": "C00568964",
+      "from_name": "LIUNA BUILDING AMERICA",
+      "to_entity_id": "C00882381",
+      "to_name": "PEOPLE POWER PENNSYLVANIA",
+      "amount": 300000.0,
+      "date": "2024-10-31",
+      "visibility": "disclosed",
+      "transaction_type": "24K",
+      "limit": "unlimited",
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00882381&two_year_transaction_period=2024&contributor_name=C00568964"
+    },
+    {
+      "transfer_id": "C00882381-in-ind:LIUNA|20006",
+      "from_entity_id": "ind:LIUNA|20006",
+      "from_name": "LIUNA",
+      "to_entity_id": "C00882381",
+      "to_name": "PEOPLE POWER PENNSYLVANIA",
+      "amount": 300000.0,
+      "date": "2024-10-31",
+      "visibility": "disclosed",
+      "transaction_type": "10",
+      "limit": "unlimited",
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00882381&two_year_transaction_period=2024&contributor_name=LIUNA"
+    },
+    {
+      "transfer_id": "C00882381-in-org:COMMONWEALTH_COMMUNICATIONS",
+      "from_entity_id": "org:COMMONWEALTH_COMMUNICATIONS",
+      "from_name": "COMMONWEALTH COMMUNICATIONS",
+      "to_entity_id": "C00882381",
+      "to_name": "PEOPLE POWER PENNSYLVANIA",
+      "amount": 250000.0,
+      "date": "2024-10-15",
+      "visibility": "dark",
+      "transaction_type": "10",
+      "limit": "unlimited",
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00882381&two_year_transaction_period=2024&contributor_name=COMMONWEALTH+COMMUNICATIONS"
+    },
+    {
+      "transfer_id": "C00882381-in-org:SEIU_STATE_COUNCIL",
+      "from_entity_id": "org:SEIU_STATE_COUNCIL",
+      "from_name": "SEIU STATE COUNCIL",
+      "to_entity_id": "C00882381",
+      "to_name": "PEOPLE POWER PENNSYLVANIA",
+      "amount": 120000.0,
+      "date": "2024-10-24",
+      "visibility": "disclosed",
+      "transaction_type": "10",
+      "limit": "unlimited",
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00882381&two_year_transaction_period=2024&contributor_name=SEIU+STATE+COUNCIL"
+    },
+    {
+      "transfer_id": "C00882381-in-ind:LUDWIG_EUGENE_A.|20007",
+      "from_entity_id": "ind:LUDWIG_EUGENE_A.|20007",
+      "from_name": "LUDWIG, EUGENE A.",
+      "to_entity_id": "C00882381",
+      "to_name": "PEOPLE POWER PENNSYLVANIA",
+      "amount": 100000.0,
+      "date": "2024-09-24",
+      "visibility": "disclosed",
+      "transaction_type": "10",
+      "limit": "unlimited",
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00882381&two_year_transaction_period=2024&contributor_name=LUDWIG%2C+EUGENE+A."
+    },
+    {
+      "transfer_id": "C00882381-in-org:RESET_TECH_ACTION",
+      "from_entity_id": "org:RESET_TECH_ACTION",
+      "from_name": "RESET TECH ACTION",
+      "to_entity_id": "C00882381",
+      "to_name": "PEOPLE POWER PENNSYLVANIA",
+      "amount": 100000.0,
+      "date": "2024-10-18",
+      "visibility": "dark",
+      "transaction_type": "10",
+      "limit": "unlimited",
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00882381&two_year_transaction_period=2024&contributor_name=RESET+TECH+ACTION"
+    }
+  ],
+  "outflows": [
+    {
+      "transfer_id": "C00882381-out-C00890053",
+      "from_entity_id": "C00882381",
+      "from_name": "PEOPLE POWER PENNSYLVANIA",
+      "to_entity_id": "C00890053",
+      "to_name": "FUTURE PENNSYLVANIA PAC",
+      "amount": 800000.0,
+      "date": "2024-10-03",
+      "visibility": "disclosed",
+      "transaction_type": "24K",
+      "limit": "unlimited",
+      "source_url": "https://www.fec.gov/data/disbursements/?committee_id=C00882381&two_year_transaction_period=2024"
+    },
+    {
+      "transfer_id": "C00882381-out-C00489799",
+      "from_entity_id": "C00882381",
+      "from_name": "PEOPLE POWER PENNSYLVANIA",
+      "to_entity_id": "C00489799",
+      "to_name": "PLANNED PARENTHOOD VOTES",
+      "amount": 275000.0,
+      "date": "2024-10-18",
+      "visibility": "disclosed",
+      "transaction_type": "24K",
+      "limit": "unlimited",
+      "source_url": "https://www.fec.gov/data/disbursements/?committee_id=C00882381&two_year_transaction_period=2024"
+    },
+    {
+      "transfer_id": "C00882381-out-C00636027",
+      "from_entity_id": "C00882381",
+      "from_name": "PEOPLE POWER PENNSYLVANIA",
+      "to_entity_id": "C00636027",
+      "to_name": "TECH FOR CAMPAIGNS",
+      "amount": 50000.0,
+      "date": "2024-10-17",
+      "visibility": "disclosed",
+      "transaction_type": "24K",
+      "limit": null,
+      "source_url": "https://www.fec.gov/data/disbursements/?committee_id=C00882381&two_year_transaction_period=2024"
+    },
+    {
+      "transfer_id": "C00882381-out-C00798355",
+      "from_entity_id": "C00882381",
+      "from_name": "PEOPLE POWER PENNSYLVANIA",
+      "to_entity_id": "C00798355",
+      "to_name": "AGENDA PAC",
+      "amount": 20000.0,
+      "date": "2024-10-23",
+      "visibility": "disclosed",
+      "transaction_type": "24K",
+      "limit": null,
+      "source_url": "https://www.fec.gov/data/disbursements/?committee_id=C00882381&two_year_transaction_period=2024"
+    }
+  ],
+  "independent_expenditures": [
+    {
+      "ie_id": "C00882381-ie-1866065-EB1D5FDC44ED94C55AE7",
+      "spender_entity_id": "C00882381",
+      "spender_name": "PEOPLE POWER PENNSYLVANIA",
+      "candidate_id": "S6PA00217",
+      "candidate_name": "Bob Casey",
+      "support_oppose": "S",
+      "amount": 136.99,
+      "date": "2024-10-04",
+      "purpose": "WEBSITE DESIGN",
+      "payee": "FUSE WASHINGTON",
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202501279747784842"
+    },
+    {
+      "ie_id": "C00882381-ie-1866065-E446B57B82118480AAE3",
+      "spender_entity_id": "C00882381",
+      "spender_name": "PEOPLE POWER PENNSYLVANIA",
+      "candidate_id": "S6PA00217",
+      "candidate_name": "Bob Casey",
+      "support_oppose": "S",
+      "amount": 26.24,
+      "date": "2024-10-09",
+      "purpose": "STAFF TIME - PRODUCTION (ESTIMATE)",
+      "payee": "COMMONWEALTH COMMUNICATIONS",
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202501279747784834"
+    }
+  ],
+  "flags": [
+    {
+      "id": "dead_end_dark",
+      "label": "Chain ends at undisclosed donors",
+      "detail": "44% of PEOPLE POWER PENNSYLVANIA's receipts stop at organizations whose own funding is not on file (advocacy nonprofits, LLCs, trusts) rather than at named individuals, businesses or unions.",
+      "evidence_url": "https://www.fec.gov/data/committee/C00882381/?cycle=2024"
+    }
+  ],
+  "has_chain": true,
+  "source_url": "https://www.fec.gov/data/committee/C00882381/?cycle=2024",
+  "data_status": "real"
+}

@@ -1,0 +1,858 @@
+{
+  "candidate_id": "S6PA00217",
+  "race_id": "pa-sen-2024",
+  "name": "Bob Casey",
+  "party": "DEM",
+  "incumbent": true,
+  "role": "incumbent",
+  "bioguide_id": "C001070",
+  "generated_at": "2026-09-05T12:32:19+00:00",
+  "data_status": "real",
+  "summary": "Record covers 10 of 10 issues, drawn from 63 roll-call votes and sponsored bills. Voted for the Inflation Reduction Act, voted against measures blocking EPA vehicle-emission and highway greenhouse-gas rules, voted to disapprove a DOE efficiency-standards rule and the solar-import duty moratorium, voted against requiring offshore lease sales, and sponsored bills on abandoned mine reclamation and super pollutants. Voted to advance a federal minimum wage increase amendment, voted against disapproving the NLRB joint-employer rule, voted to disapprove the solar-import duty moratorium, and sponsored bills on union-busting tax deductions, call-center offshoring, pregnant workers and black lung benefits. Voted for the Inflation Reduction Act and the PACT Act, and sponsored bills on prescription drug costs, home- and community-based care, rural hospitals, and Medicare dental, vision and hearing coverage.",
+  "summary_needs_review": true,
+  "evidence_basis": "record",
+  "asymmetry_note": "Incumbents are judged on what they did (roll-call votes, sponsored bills). Challengers can only be judged on what they say (stated positions). These are not equivalent kinds of evidence; the record type is labeled on every item.",
+  "stances": [
+    {
+      "issue_id": "healthcare",
+      "position": "Voted for the Inflation Reduction Act and the PACT Act, and sponsored bills on prescription drug costs, home- and community-based care, rural hospitals, and Medicare dental, vision and hearing coverage.",
+      "confidence": "medium",
+      "needs_review": true,
+      "evidence": [
+        {
+          "kind": "roll_call_vote",
+          "title": "H.R. 3967: A bill to improve health care and benefits for veterans exposed to toxic substances, and for other purposes.",
+          "description": "On Passage of the Bill H.R. 3967. Result: Bill Passed.",
+          "date": "2022-06-16",
+          "vote": "Yea",
+          "bill_id": "H.R.3967-117",
+          "congress": 117,
+          "roll_number": 230,
+          "url": "https://www.senate.gov/legislative/LIS/roll_call_votes/vote1172/vote_117_2_00230.htm",
+          "source_label": "senate.gov roll call"
+        },
+        {
+          "kind": "roll_call_vote",
+          "title": "H.R. 5376: A bill to provide for reconciliation pursuant to title II of S. Con. Res. 14.",
+          "description": "On Passage of the Bill H.R. 5376. Result: Bill Passed.",
+          "date": "2022-08-07",
+          "vote": "Yea",
+          "bill_id": "H.R.5376-117",
+          "congress": 117,
+          "roll_number": 325,
+          "url": "https://www.senate.gov/legislative/LIS/roll_call_votes/vote1172/vote_117_2_00325.htm",
+          "source_label": "senate.gov roll call"
+        },
+        {
+          "kind": "sponsored_bill",
+          "title": "S.100 (118th): Better Care Better Jobs Act",
+          "description": "Introduced 2023-01-26. Latest action: Read twice and referred to the Committee on Finance.",
+          "date": "2023-01-26",
+          "vote": null,
+          "bill_id": "S.100-118",
+          "congress": 118,
+          "roll_number": null,
+          "url": "https://www.congress.gov/bill/118th-congress/senate-bill/100",
+          "source_label": "congress.gov"
+        },
+        {
+          "kind": "sponsored_bill",
+          "title": "S.842 (118th): Medicare and Medicaid Dental, Vision, and Hearing Benefit Act of 2023",
+          "description": "Introduced 2023-03-16. Latest action: Read twice and referred to the Committee on Finance.",
+          "date": "2023-03-16",
+          "vote": null,
+          "bill_id": "S.842-118",
+          "congress": 118,
+          "roll_number": null,
+          "url": "https://www.congress.gov/bill/118th-congress/senate-bill/842",
+          "source_label": "congress.gov"
+        },
+        {
+          "kind": "sponsored_bill",
+          "title": "S.1110 (118th): Rural Hospital Support Act",
+          "description": "Introduced 2023-03-30. Latest action: Read twice and referred to the Committee on Finance.",
+          "date": "2023-03-30",
+          "vote": null,
+          "bill_id": "S.1110-118",
+          "congress": 118,
+          "roll_number": null,
+          "url": "https://www.congress.gov/bill/118th-congress/senate-bill/1110",
+          "source_label": "congress.gov"
+        },
+        {
+          "kind": "sponsored_bill",
+          "title": "S.2456 (118th): Protecting Seniors from High Drug Costs Act",
+          "description": "Introduced 2023-07-20. Latest action: Read twice and referred to the Committee on Finance.",
+          "date": "2023-07-20",
+          "vote": null,
+          "bill_id": "S.2456-118",
+          "congress": 118,
+          "roll_number": null,
+          "url": "https://www.congress.gov/bill/118th-congress/senate-bill/2456",
+          "source_label": "congress.gov"
+        },
+        {
+          "kind": "sponsored_bill",
+          "title": "S.4671 (118th): Capping Prescription Costs Act of 2024",
+          "description": "Introduced 2024-07-11. Latest action: Read twice and referred to the Committee on Health, Education, Labor, and Pensions.",
+          "date": "2024-07-11",
+          "vote": null,
+          "bill_id": "S.4671-118",
+          "congress": 118,
+          "roll_number": null,
+          "url": "https://www.congress.gov/bill/118th-congress/senate-bill/4671",
+          "source_label": "congress.gov"
+        }
+      ]
+    },
+    {
+      "issue_id": "energy_climate",
+      "position": "Voted for the Inflation Reduction Act, voted against measures blocking EPA vehicle-emission and highway greenhouse-gas rules, voted to disapprove a DOE efficiency-standards rule and the solar-import duty moratorium, voted against requiring offshore lease sales, and sponsored bills on abandoned mine reclamation and super pollutants.",
+      "confidence": "high",
+      "needs_review": true,
+      "evidence": [
+        {
+          "kind": "sponsored_bill",
+          "title": "S.3957 (117th): STREAM Act",
+          "description": "Introduced 2022-03-30. Latest action: Held at the desk.",
+          "date": "2022-03-30",
+          "vote": null,
+          "bill_id": "S.3957-117",
+          "congress": 117,
+          "roll_number": null,
+          "url": "https://www.congress.gov/bill/117th-congress/senate-bill/3957",
+          "source_label": "congress.gov"
+        },
+        {
+          "kind": "sponsored_bill",
+          "title": "S.4559 (117th): SUPER Act of 2022",
+          "description": "Introduced 2022-07-19. Latest action: Read twice and referred to the Committee on Energy and Natural Resources.",
+          "date": "2022-07-19",
+          "vote": null,
+          "bill_id": "S.4559-117",
+          "congress": 117,
+          "roll_number": null,
+          "url": "https://www.congress.gov/bill/117th-congress/senate-bill/4559",
+          "source_label": "congress.gov"
+        },
+        {
+          "kind": "roll_call_vote",
+          "title": "S.Amdt. S.Amdt. 5387 to H.R. 5376: To require oil and gas lease sales in the outer Continental Shelf.",
+          "description": "On the Amendment S.Amdt. 5387 to S.Amdt. 5194 to H.R. 5376 (No short title on file). Result: Amendment Rejected.",
+          "date": "2022-08-07",
+          "vote": "Nay",
+          "bill_id": null,
+          "congress": 117,
+          "roll_number": 303,
+          "url": "https://www.senate.gov/legislative/LIS/roll_call_votes/vote1172/vote_117_2_00303.htm",
+          "source_label": "senate.gov roll call"
+        },
+        {
+          "kind": "roll_call_vote",
+          "title": "H.R. 5376: A bill to provide for reconciliation pursuant to title II of S. Con. Res. 14.",
+          "description": "On Passage of the Bill H.R. 5376. Result: Bill Passed.",
+          "date": "2022-08-07",
+          "vote": "Yea",
+          "bill_id": "H.R.5376-117",
+          "congress": 117,
+          "roll_number": 325,
+          "url": "https://www.senate.gov/legislative/LIS/roll_call_votes/vote1172/vote_117_2_00325.htm",
+          "source_label": "senate.gov roll call"
+        },
+        {
+          "kind": "roll_call_vote",
+          "title": "S.J.Res. 11: A joint resolution providing for congressional disapproval under chapter 8 of title 5, United States Code, of the rule submitted by the Environmental Protection Agency relating to \"Control of Air Pollution From New Motor Vehicles: Heavy-Duty Engine and Vehicle Standards\".",
+          "description": "On the Joint Resolution S.J.Res. 11. Result: Joint Resolution Passed.",
+          "date": "2023-04-26",
+          "vote": "Nay",
+          "bill_id": "S.J.Res.11-118",
+          "congress": 118,
+          "roll_number": 98,
+          "url": "https://www.senate.gov/legislative/LIS/roll_call_votes/vote1181/vote_118_1_00098.htm",
+          "source_label": "senate.gov roll call"
+        },
+        {
+          "kind": "roll_call_vote",
+          "title": "H.J.Res. 39: A joint resolution disapproving the rule submitted by the Department of Commerce relating to \"Procedures Covering Suspension of Liquidation, Duties and Estimated Duties in Accord With Presidential Proclamation 10414\".",
+          "description": "On the Joint Resolution H.J.Res. 39. Result: Joint Resolution Passed.",
+          "date": "2023-05-03",
+          "vote": "Yea",
+          "bill_id": "H.J.Res.39-118",
+          "congress": 118,
+          "roll_number": 109,
+          "url": "https://www.senate.gov/legislative/LIS/roll_call_votes/vote1181/vote_118_1_00109.htm",
+          "source_label": "senate.gov roll call"
+        },
+        {
+          "kind": "sponsored_bill",
+          "title": "S.2242 (118th): Safeguarding Domestic Energy Production and Independence Act of 2023",
+          "description": "Introduced 2023-07-11. Latest action: Read twice and referred to the Committee on Environment and Public Works.",
+          "date": "2023-07-11",
+          "vote": null,
+          "bill_id": "S.2242-118",
+          "congress": 118,
+          "roll_number": null,
+          "url": "https://www.congress.gov/bill/118th-congress/senate-bill/2242",
+          "source_label": "congress.gov"
+        },
+        {
+          "kind": "roll_call_vote",
+          "title": "S.J.Res. 38: A joint resolution providing for congressional disapproval under chapter 8 of title 5, United States Code, of the rule submitted by the Federal Highway Administration relating to \"Waiver of Buy America Requirements for Electric Vehicle Chargers\".",
+          "description": "On the Joint Resolution S.J.Res. 38. Result: Joint Resolution Passed.",
+          "date": "2023-11-08",
+          "vote": "Nay",
+          "bill_id": "S.J.Res.38-118",
+          "congress": 118,
+          "roll_number": 303,
+          "url": "https://www.senate.gov/legislative/LIS/roll_call_votes/vote1181/vote_118_1_00303.htm",
+          "source_label": "senate.gov roll call"
+        },
+        {
+          "kind": "roll_call_vote",
+          "title": "S. 4072: A bill to prohibit the use of funds to implement, administer, or enforce certain rules of the Environmental Protection Agency.",
+          "description": "On Passage of the Bill S. 4072. Result: Bill Defeated.",
+          "date": "2024-04-18",
+          "vote": "Nay",
+          "bill_id": "S.4072-118",
+          "congress": 118,
+          "roll_number": 142,
+          "url": "https://www.senate.gov/legislative/LIS/roll_call_votes/vote1182/vote_118_2_00142.htm",
+          "source_label": "senate.gov roll call"
+        },
+        {
+          "kind": "roll_call_vote",
+          "title": "S.J.Res. 58: A joint resolution providing for congressional disapproval under chapter 8 of title 5, United States Code, of the rule submitted by the Department of Energy relating to \"Energy Conservation Program: Energy Conservation Standards for Consumer Furnaces\".",
+          "description": "On the Joint Resolution S.J.Res. 58. Result: Joint Resolution Passed.",
+          "date": "2024-05-21",
+          "vote": "Yea",
+          "bill_id": "S.J.Res.58-118",
+          "congress": 118,
+          "roll_number": 176,
+          "url": "https://www.senate.gov/legislative/LIS/roll_call_votes/vote1182/vote_118_2_00176.htm",
+          "source_label": "senate.gov roll call"
+        }
+      ]
+    },
+    {
+      "issue_id": "defense",
+      "position": "Voted for the FY2024 NDAA conference report, the 2022 Ukraine supplemental and the 2024 national security supplemental, and sponsored bills on TRICARE copays, veterans' accessibility and port security.",
+      "confidence": "high",
+      "needs_review": true,
+      "evidence": [
+        {
+          "kind": "roll_call_vote",
+          "title": "H.R. 7691: A bill making emergency supplemental appropriations for assistance for the situation in Ukraine for the fiscal year ending September 30, 2022, and for other purposes.",
+          "description": "On Passage of the Bill H.R. 7691. Result: Bill Passed.",
+          "date": "2022-05-19",
+          "vote": "Yea",
+          "bill_id": "H.R.7691-117",
+          "congress": 117,
+          "roll_number": 191,
+          "url": "https://www.senate.gov/legislative/LIS/roll_call_votes/vote1172/vote_117_2_00191.htm",
+          "source_label": "senate.gov roll call"
+        },
+        {
+          "kind": "roll_call_vote",
+          "title": "H.R. 3967: A bill to improve health care and benefits for veterans exposed to toxic substances, and for other purposes.",
+          "description": "On Passage of the Bill H.R. 3967. Result: Bill Passed.",
+          "date": "2022-06-16",
+          "vote": "Yea",
+          "bill_id": "H.R.3967-117",
+          "congress": 117,
+          "roll_number": 230,
+          "url": "https://www.senate.gov/legislative/LIS/roll_call_votes/vote1172/vote_117_2_00230.htm",
+          "source_label": "senate.gov roll call"
+        },
+        {
+          "kind": "sponsored_bill",
+          "title": "S.2516 (118th): Veterans Accessibility Act of 2023",
+          "description": "Introduced 2023-07-26. Latest action: Read twice and referred to the Committee on Veterans' Affairs.",
+          "date": "2023-07-26",
+          "vote": null,
+          "bill_id": "S.2516-118",
+          "congress": 118,
+          "roll_number": null,
+          "url": "https://www.congress.gov/bill/118th-congress/senate-bill/2516",
+          "source_label": "congress.gov"
+        },
+        {
+          "kind": "roll_call_vote",
+          "title": "H.R. 2670: A bill to authorize appropriations for fiscal year 2024 for military activities of the Department of Defense and for military construction, and for defense activities of the Department of Energy, to prescribe military personnel strengths for such fiscal year, and for other purposes.",
+          "description": "On the Conference Report H.R. 2670. Result: Conference Report Agreed to.",
+          "date": "2023-12-13",
+          "vote": "Yea",
+          "bill_id": "H.R.2670-118",
+          "congress": 118,
+          "roll_number": 343,
+          "url": "https://www.senate.gov/legislative/LIS/roll_call_votes/vote1181/vote_118_1_00343.htm",
+          "source_label": "senate.gov roll call"
+        },
+        {
+          "kind": "roll_call_vote",
+          "title": "H.R. 815: A bill to amend title 38, United States Code, to make certain improvements relating to the eligibility of veterans to receive reimbursement for emergency treatment furnished through the Veterans Community Care program, and for other purposes.",
+          "description": "On the Motion (Motion to Concur in the House Amendment to the Senate Amendment to H.R. 815). Result: Motion Agreed to.",
+          "date": "2024-04-23",
+          "vote": "Yea",
+          "bill_id": "H.R.815-118",
+          "congress": 118,
+          "roll_number": 154,
+          "url": "https://www.senate.gov/legislative/LIS/roll_call_votes/vote1182/vote_118_2_00154.htm",
+          "source_label": "senate.gov roll call"
+        },
+        {
+          "kind": "sponsored_bill",
+          "title": "S.4369 (118th): Secure Smartports Act of 2024",
+          "description": "Introduced 2024-05-20. Latest action: Read twice and referred to the Select Committee on Intelligence.",
+          "date": "2024-05-20",
+          "vote": null,
+          "bill_id": "S.4369-118",
+          "congress": 118,
+          "roll_number": null,
+          "url": "https://www.congress.gov/bill/118th-congress/senate-bill/4369",
+          "source_label": "congress.gov"
+        },
+        {
+          "kind": "sponsored_bill",
+          "title": "S.4891 (118th): Stop Copay Overpay Act",
+          "description": "Introduced 2024-07-31. Latest action: Read twice and referred to the Committee on Armed Services.",
+          "date": "2024-07-31",
+          "vote": null,
+          "bill_id": "S.4891-118",
+          "congress": 118,
+          "roll_number": null,
+          "url": "https://www.congress.gov/bill/118th-congress/senate-bill/4891",
+          "source_label": "congress.gov"
+        }
+      ]
+    },
+    {
+      "issue_id": "crypto_fintech",
+      "position": "Voted to disapprove the SEC's crypto-custody bulletin SAB 121, voted against disapproving the CFPB small-business lending rule, and sponsored a bill on disclosing investments in foreign adversaries.",
+      "confidence": "medium",
+      "needs_review": true,
+      "evidence": [
+        {
+          "kind": "roll_call_vote",
+          "title": "S.J.Res. 32: A joint resolution providing for congressional disapproval under chapter 8 of title 5, United States Code, of the rule submitted by the Bureau of Consumer Financial Protection relating to \"Small Business Lending Under the Equal Credit Opportunity Act (Regulation B)\".",
+          "description": "On the Joint Resolution S.J.Res. 32. Result: Joint Resolution Passed.",
+          "date": "2023-10-18",
+          "vote": "Nay",
+          "bill_id": "S.J.Res.32-118",
+          "congress": 118,
+          "roll_number": 260,
+          "url": "https://www.senate.gov/legislative/LIS/roll_call_votes/vote1181/vote_118_1_00260.htm",
+          "source_label": "senate.gov roll call"
+        },
+        {
+          "kind": "sponsored_bill",
+          "title": "S.3286 (118th): Disclosing Investments in Foreign Adversaries Act of 2023",
+          "description": "Introduced 2023-11-09. Latest action: Read twice and referred to the Committee on Banking, Housing, and Urban Affairs.",
+          "date": "2023-11-09",
+          "vote": null,
+          "bill_id": "S.3286-118",
+          "congress": 118,
+          "roll_number": null,
+          "url": "https://www.congress.gov/bill/118th-congress/senate-bill/3286",
+          "source_label": "congress.gov"
+        },
+        {
+          "kind": "roll_call_vote",
+          "title": "H.J.Res. 109: A joint resolution providing for congressional disapproval under chapter 8 of title 5, United States Code, of the rule submitted by the Securities and Exchange Commission relating to \"Staff Accounting Bulletin No. 121\".",
+          "description": "On the Joint Resolution H.J.Res. 109. Result: Joint Resolution Passed.",
+          "date": "2024-05-16",
+          "vote": "Yea",
+          "bill_id": "H.J.Res.109-118",
+          "congress": 118,
+          "roll_number": 169,
+          "url": "https://www.senate.gov/legislative/LIS/roll_call_votes/vote1182/vote_118_2_00169.htm",
+          "source_label": "senate.gov roll call"
+        }
+      ]
+    },
+    {
+      "issue_id": "immigration",
+      "position": "Voted to advance the February 2024 H.R. 815 border and national security package and the Border Act, voted against the Title 42, public-charge and Marshall border amendments, and sponsored the Stop Fentanyl at the Border Act.",
+      "confidence": "high",
+      "needs_review": true,
+      "evidence": [
+        {
+          "kind": "roll_call_vote",
+          "title": "S.Amdt. S.Amdt. 6563 to H.R. 2617: To prohibit the expenditure of Federal funds to terminate the prohibitions on entry into the United States that are commonly referred to as Title 42.",
+          "description": "On the Amendment S.Amdt. 6563 to S.Amdt. 6552 to H.R. 2617 (Performance Enhancement Reform Act). Result: Amendment Rejected.",
+          "date": "2022-12-22",
+          "vote": "Nay",
+          "bill_id": null,
+          "congress": 117,
+          "roll_number": 413,
+          "url": "https://www.senate.gov/legislative/LIS/roll_call_votes/vote1172/vote_117_2_00413.htm",
+          "source_label": "senate.gov roll call"
+        },
+        {
+          "kind": "roll_call_vote",
+          "title": "S.J.Res. 18: A joint resolution disapproving of the rule submitted by the Department of Homeland Security relating to \"Public Charge Ground of Inadmissibility\".",
+          "description": "On the Joint Resolution S.J.Res. 18. Result: Joint Resolution Passed.",
+          "date": "2023-05-17",
+          "vote": "Nay",
+          "bill_id": "S.J.Res.18-118",
+          "congress": 118,
+          "roll_number": 130,
+          "url": "https://www.senate.gov/legislative/LIS/roll_call_votes/vote1181/vote_118_1_00130.htm",
+          "source_label": "senate.gov roll call"
+        },
+        {
+          "kind": "roll_call_vote",
+          "title": "S.Amdt. S.Amdt. 110 to H.R. 3746: To secure the borders of the United States, and for other purposes.",
+          "description": "On the Amendment S.Amdt. 110 to H.R. 3746 (No short title on file). Result: Amendment Rejected.",
+          "date": "2023-06-01",
+          "vote": "Nay",
+          "bill_id": null,
+          "congress": 118,
+          "roll_number": 138,
+          "url": "https://www.senate.gov/legislative/LIS/roll_call_votes/vote1181/vote_118_1_00138.htm",
+          "source_label": "senate.gov roll call"
+        },
+        {
+          "kind": "sponsored_bill",
+          "title": "S.3591 (118th): Stop Fentanyl at the Border Act",
+          "description": "Introduced 2024-01-16. Latest action: Read twice and referred to the Committee on Homeland Security and Governmental Affairs.",
+          "date": "2024-01-16",
+          "vote": null,
+          "bill_id": "S.3591-118",
+          "congress": 118,
+          "roll_number": null,
+          "url": "https://www.congress.gov/bill/118th-congress/senate-bill/3591",
+          "source_label": "congress.gov"
+        },
+        {
+          "kind": "roll_call_vote",
+          "title": "H.R. 815: A bill to amend title 38, United States Code, to make certain improvements relating to the eligibility of veterans to receive reimbursement for emergency treatment furnished through the Veterans Community Care program, and for other purposes.",
+          "description": "On Cloture on the Motion to Proceed H.R. 815. Result: Cloture on the Motion to Proceed Rejected.",
+          "date": "2024-02-07",
+          "vote": "Yea",
+          "bill_id": "H.R.815-118",
+          "congress": 118,
+          "roll_number": 39,
+          "url": "https://www.senate.gov/legislative/LIS/roll_call_votes/vote1182/vote_118_2_00039.htm",
+          "source_label": "senate.gov roll call"
+        },
+        {
+          "kind": "roll_call_vote",
+          "title": "S. 4361: A bill making emergency supplemental appropriations for border security and combatting fentanyl for the fiscal year ending September 30, 2024, and for other purposes.",
+          "description": "On Cloture on the Motion to Proceed S. 4361. Result: Cloture on the Motion to Proceed Rejected.",
+          "date": "2024-05-23",
+          "vote": "Yea",
+          "bill_id": "S.4361-118",
+          "congress": 118,
+          "roll_number": 182,
+          "url": "https://www.senate.gov/legislative/LIS/roll_call_votes/vote1182/vote_118_2_00182.htm",
+          "source_label": "senate.gov roll call"
+        }
+      ]
+    },
+    {
+      "issue_id": "abortion",
+      "position": "Voted to advance the Women's Health Protection Act, the Reproductive Freedom for Women Act, the Right to Contraception Act and the Right to IVF Act.",
+      "confidence": "high",
+      "needs_review": true,
+      "evidence": [
+        {
+          "kind": "roll_call_vote",
+          "title": "H.R. 3755: A bill to protect a person's ability to determine whether to continue or end a pregnancy, and to protect a health care provider's ability to provide abortion services.",
+          "description": "On Cloture on the Motion to Proceed H.R. 3755. Result: Cloture on the Motion to Proceed Rejected.",
+          "date": "2022-02-28",
+          "vote": "Yea",
+          "bill_id": "H.R.3755-117",
+          "congress": 117,
+          "roll_number": 65,
+          "url": "https://www.senate.gov/legislative/LIS/roll_call_votes/vote1172/vote_117_2_00065.htm",
+          "source_label": "senate.gov roll call"
+        },
+        {
+          "kind": "roll_call_vote",
+          "title": "S. 4132: A bill to protect a person's ability to determine whether to continue or end a pregnancy, and to protect a health care provider's ability to provide abortion services.",
+          "description": "On Cloture on the Motion to Proceed S. 4132. Result: Cloture on the Motion to Proceed Rejected.",
+          "date": "2022-05-11",
+          "vote": "Yea",
+          "bill_id": "S.4132-117",
+          "congress": 117,
+          "roll_number": 170,
+          "url": "https://www.senate.gov/legislative/LIS/roll_call_votes/vote1172/vote_117_2_00170.htm",
+          "source_label": "senate.gov roll call"
+        },
+        {
+          "kind": "roll_call_vote",
+          "title": "S. 4381: A bill to protect an individual's ability to access contraceptives and to engage in contraception and to protect a health care provider's ability to provide contraceptives, contraception, and information related to contraception.",
+          "description": "On Cloture on the Motion to Proceed S. 4381. Result: Cloture on the Motion to Proceed Rejected.",
+          "date": "2024-06-05",
+          "vote": "Yea",
+          "bill_id": "S.4381-118",
+          "congress": 118,
+          "roll_number": 190,
+          "url": "https://www.senate.gov/legislative/LIS/roll_call_votes/vote1182/vote_118_2_00190.htm",
+          "source_label": "senate.gov roll call"
+        },
+        {
+          "kind": "roll_call_vote",
+          "title": "S. 4554: A bill to express support for protecting access to reproductive health care after the Dobbs v. Jackson decision on June 24, 2022.",
+          "description": "On Cloture on the Motion to Proceed S. 4554. Result: Cloture on the Motion to Proceed Rejected.",
+          "date": "2024-07-10",
+          "vote": "Yea",
+          "bill_id": "S.4554-118",
+          "congress": 118,
+          "roll_number": 211,
+          "url": "https://www.senate.gov/legislative/LIS/roll_call_votes/vote1182/vote_118_2_00211.htm",
+          "source_label": "senate.gov roll call"
+        },
+        {
+          "kind": "roll_call_vote",
+          "title": "S. 4445: A bill to protect and expand nationwide access to fertility treatment, including in vitro fertilization.",
+          "description": "On the Cloture Motion S. 4445. Result: Cloture Motion Rejected.",
+          "date": "2024-09-17",
+          "vote": "Yea",
+          "bill_id": "S.4445-118",
+          "congress": 118,
+          "roll_number": 242,
+          "url": "https://www.senate.gov/legislative/LIS/roll_call_votes/vote1182/vote_118_2_00242.htm",
+          "source_label": "senate.gov roll call"
+        }
+      ]
+    },
+    {
+      "issue_id": "guns",
+      "position": "Voted for the Bipartisan Safer Communities Act, voted against disapproving the ATF stabilizing-brace rule, and sponsored the Disarm Hate Act and the Resources for Victims of Gun Violence Act.",
+      "confidence": "medium",
+      "needs_review": true,
+      "evidence": [
+        {
+          "kind": "roll_call_vote",
+          "title": "S. 2938: An act to make our communities safer.",
+          "description": "On the Motion (Motion to Concur in the House amendment to S. 2938 with an amendment (Amdt. No. 5099)). Result: Motion Agreed to.",
+          "date": "2022-06-23",
+          "vote": "Yea",
+          "bill_id": "S.2938-117",
+          "congress": 117,
+          "roll_number": 242,
+          "url": "https://www.senate.gov/legislative/LIS/roll_call_votes/vote1172/vote_117_2_00242.htm",
+          "source_label": "senate.gov roll call"
+        },
+        {
+          "kind": "sponsored_bill",
+          "title": "S.1893 (118th): Resources for Victims of Gun Violence Act of 2023",
+          "description": "Introduced 2023-06-08. Latest action: Read twice and referred to the Committee on the Judiciary.",
+          "date": "2023-06-08",
+          "vote": null,
+          "bill_id": "S.1893-118",
+          "congress": 118,
+          "roll_number": null,
+          "url": "https://www.congress.gov/bill/118th-congress/senate-bill/1893",
+          "source_label": "congress.gov"
+        },
+        {
+          "kind": "roll_call_vote",
+          "title": "H.J.Res. 44: A joint resolution providing for congressional disapproval under chapter 8 of title 5, United States Code, of the rule submitted by the Bureau of Alcohol, Tobacco, Firearms, and Explosives relating to \"Factoring Criteria for Firearms with Attached 'Stabilizing Braces'\".",
+          "description": "On the Joint Resolution H.J.Res. 44. Result: Joint Resolution Defeated.",
+          "date": "2023-06-22",
+          "vote": "Nay",
+          "bill_id": "H.J.Res.44-118",
+          "congress": 118,
+          "roll_number": 171,
+          "url": "https://www.senate.gov/legislative/LIS/roll_call_votes/vote1181/vote_118_1_00171.htm",
+          "source_label": "senate.gov roll call"
+        },
+        {
+          "kind": "sponsored_bill",
+          "title": "S.2776 (118th): Disarm Hate Act",
+          "description": "Introduced 2023-09-13. Latest action: Read twice and referred to the Committee on the Judiciary.",
+          "date": "2023-09-13",
+          "vote": null,
+          "bill_id": "S.2776-118",
+          "congress": 118,
+          "roll_number": null,
+          "url": "https://www.congress.gov/bill/118th-congress/senate-bill/2776",
+          "source_label": "congress.gov"
+        }
+      ]
+    },
+    {
+      "issue_id": "tax_budget",
+      "position": "Voted for the Inflation Reduction Act, the Fiscal Responsibility Act and FY2024 continuing appropriations, voted to advance the Tax Relief for American Families and Workers Act, and sponsored bills on worker tax deductions, the child and dependent care credit and children's savings accounts.",
+      "confidence": "high",
+      "needs_review": true,
+      "evidence": [
+        {
+          "kind": "roll_call_vote",
+          "title": "H.R. 5376: A bill to provide for reconciliation pursuant to title II of S. Con. Res. 14.",
+          "description": "On Passage of the Bill H.R. 5376. Result: Bill Passed.",
+          "date": "2022-08-07",
+          "vote": "Yea",
+          "bill_id": "H.R.5376-117",
+          "congress": 117,
+          "roll_number": 325,
+          "url": "https://www.senate.gov/legislative/LIS/roll_call_votes/vote1172/vote_117_2_00325.htm",
+          "source_label": "senate.gov roll call"
+        },
+        {
+          "kind": "sponsored_bill",
+          "title": "S.738 (118th): Tax Fairness for Workers Act",
+          "description": "Introduced 2023-03-09. Latest action: Read twice and referred to the Committee on Finance.",
+          "date": "2023-03-09",
+          "vote": null,
+          "bill_id": "S.738-118",
+          "congress": 118,
+          "roll_number": null,
+          "url": "https://www.congress.gov/bill/118th-congress/senate-bill/738",
+          "source_label": "congress.gov"
+        },
+        {
+          "kind": "roll_call_vote",
+          "title": "H.R. 3746: A bill to provide for a responsible increase to the debt ceiling.",
+          "description": "On Passage of the Bill H.R. 3746. Result: Bill Passed.",
+          "date": "2023-06-01",
+          "vote": "Yea",
+          "bill_id": "H.R.3746-118",
+          "congress": 118,
+          "roll_number": 146,
+          "url": "https://www.senate.gov/legislative/LIS/roll_call_votes/vote1181/vote_118_1_00146.htm",
+          "source_label": "senate.gov roll call"
+        },
+        {
+          "kind": "roll_call_vote",
+          "title": "H.R. 6363: A bill making further continuing appropriations for fiscal year 2024, and for other purposes.",
+          "description": "On Passage of the Bill H.R. 6363. Result: Bill Passed.",
+          "date": "2023-11-15",
+          "vote": "Yea",
+          "bill_id": "H.R.6363-118",
+          "congress": 118,
+          "roll_number": 312,
+          "url": "https://www.senate.gov/legislative/LIS/roll_call_votes/vote1181/vote_118_1_00312.htm",
+          "source_label": "senate.gov roll call"
+        },
+        {
+          "kind": "sponsored_bill",
+          "title": "S.3657 (118th): Child and Dependent Care Tax Credit Enhancement Act of 2024",
+          "description": "Introduced 2024-01-24. Latest action: Read twice and referred to the Committee on Finance.",
+          "date": "2024-01-24",
+          "vote": null,
+          "bill_id": "S.3657-118",
+          "congress": 118,
+          "roll_number": null,
+          "url": "https://www.congress.gov/bill/118th-congress/senate-bill/3657",
+          "source_label": "congress.gov"
+        },
+        {
+          "kind": "sponsored_bill",
+          "title": "S.3716 (118th): 401Kids Savings Account Act of 2024",
+          "description": "Introduced 2024-01-31. Latest action: Read twice and referred to the Committee on Finance.",
+          "date": "2024-01-31",
+          "vote": null,
+          "bill_id": "S.3716-118",
+          "congress": 118,
+          "roll_number": null,
+          "url": "https://www.congress.gov/bill/118th-congress/senate-bill/3716",
+          "source_label": "congress.gov"
+        },
+        {
+          "kind": "roll_call_vote",
+          "title": "H.R. 7024: A bill to make improvements to the child tax credit, to provide tax incentives to promote economic growth, to provide special rules for the taxation of certain residents of Taiwan with income from sources within the United States, to provide tax relief with respect to certain Federal disasters, to make improvements to the low-income housing tax credit, and for other purposes.",
+          "description": "On Cloture on the Motion to Proceed H.R. 7024. Result: Cloture on the Motion to Proceed Rejected.",
+          "date": "2024-08-01",
+          "vote": "Yea",
+          "bill_id": "H.R.7024-118",
+          "congress": 118,
+          "roll_number": 230,
+          "url": "https://www.senate.gov/legislative/LIS/roll_call_votes/vote1182/vote_118_2_00230.htm",
+          "source_label": "senate.gov roll call"
+        }
+      ]
+    },
+    {
+      "issue_id": "tech_ai",
+      "position": "Voted for the CHIPS and Science Act, the U.S. Innovation and Competition Act and the 2024 FISA reauthorization, and sponsored bills on workplace surveillance and automated decision systems.",
+      "confidence": "high",
+      "needs_review": true,
+      "evidence": [
+        {
+          "kind": "roll_call_vote",
+          "title": "S. 1260: A bill to establish a new Directorate for Technology and Innovation in the National Science Foundation, to establish a regional technology hub program, to require a strategy and report on economic security, science, research, innovation, manufacturing, and job creation, to establish a critical supply chain resiliency program, and for other purposes.",
+          "description": "On Passage of the Bill S. 1260. Result: Bill Passed.",
+          "date": "2021-06-08",
+          "vote": "Yea",
+          "bill_id": "S.1260-117",
+          "congress": 117,
+          "roll_number": 226,
+          "url": "https://www.senate.gov/legislative/LIS/roll_call_votes/vote1171/vote_117_1_00226.htm",
+          "source_label": "senate.gov roll call"
+        },
+        {
+          "kind": "roll_call_vote",
+          "title": "H.R. 4346: A bill making appropriations for Legislative Branch for the fiscal year ending September 30, 2022, and for other purposes.",
+          "description": "On the Motion (Motion to Concur in the House Amendment to the Senate Amendment to H.R. 4346 with Amendment No. 5135,). Result: Motion Agreed to.",
+          "date": "2022-07-27",
+          "vote": "Yea",
+          "bill_id": "H.R.4346-117",
+          "congress": 117,
+          "roll_number": 271,
+          "url": "https://www.senate.gov/legislative/LIS/roll_call_votes/vote1172/vote_117_2_00271.htm",
+          "source_label": "senate.gov roll call"
+        },
+        {
+          "kind": "sponsored_bill",
+          "title": "S.262 (118th): Stop Spying Bosses Act",
+          "description": "Introduced 2023-02-02. Latest action: Read twice and referred to the Committee on Health, Education, Labor, and Pensions.",
+          "date": "2023-02-02",
+          "vote": null,
+          "bill_id": "S.262-118",
+          "congress": 118,
+          "roll_number": null,
+          "url": "https://www.congress.gov/bill/118th-congress/senate-bill/262",
+          "source_label": "congress.gov"
+        },
+        {
+          "kind": "sponsored_bill",
+          "title": "S.2419 (118th): No Robot Bosses Act",
+          "description": "Introduced 2023-07-20. Latest action: Read twice and referred to the Committee on Health, Education, Labor, and Pensions.",
+          "date": "2023-07-20",
+          "vote": null,
+          "bill_id": "S.2419-118",
+          "congress": 118,
+          "roll_number": null,
+          "url": "https://www.congress.gov/bill/118th-congress/senate-bill/2419",
+          "source_label": "congress.gov"
+        },
+        {
+          "kind": "sponsored_bill",
+          "title": "S.2440 (118th): Exploitative Workplace Surveillance and Technologies Task Force Act of 2023",
+          "description": "Introduced 2023-07-20. Latest action: Read twice and referred to the Committee on Health, Education, Labor, and Pensions.",
+          "date": "2023-07-20",
+          "vote": null,
+          "bill_id": "S.2440-118",
+          "congress": 118,
+          "roll_number": null,
+          "url": "https://www.congress.gov/bill/118th-congress/senate-bill/2440",
+          "source_label": "congress.gov"
+        },
+        {
+          "kind": "roll_call_vote",
+          "title": "H.R. 7888: A bill to reform the Foreign Intelligence Surveillance Act of 1978.",
+          "description": "On Passage of the Bill H.R. 7888. Result: Bill Passed.",
+          "date": "2024-04-19",
+          "vote": "Yea",
+          "bill_id": "H.R.7888-118",
+          "congress": 118,
+          "roll_number": 150,
+          "url": "https://www.senate.gov/legislative/LIS/roll_call_votes/vote1182/vote_118_2_00150.htm",
+          "source_label": "senate.gov roll call"
+        }
+      ]
+    },
+    {
+      "issue_id": "labor_trade",
+      "position": "Voted to advance a federal minimum wage increase amendment, voted against disapproving the NLRB joint-employer rule, voted to disapprove the solar-import duty moratorium, and sponsored bills on union-busting tax deductions, call-center offshoring, pregnant workers and black lung benefits.",
+      "confidence": "high",
+      "needs_review": true,
+      "evidence": [
+        {
+          "kind": "roll_call_vote",
+          "title": "S.Amdt. S.Amdt. 972 to H.R. 1319: To provide for increases in the Federal minimum wage.",
+          "description": "On the Motion (Motion to Waive All Applicable Budgetary Discipline Re: Sanders Amdt. No. 972). Result: Motion Rejected.",
+          "date": "2021-03-05",
+          "vote": "Yea",
+          "bill_id": null,
+          "congress": 117,
+          "roll_number": 74,
+          "url": "https://www.senate.gov/legislative/LIS/roll_call_votes/vote1171/vote_117_1_00074.htm",
+          "source_label": "senate.gov roll call"
+        },
+        {
+          "kind": "sponsored_bill",
+          "title": "S.1486 (117th): Pregnant Workers Fairness Act",
+          "description": "Introduced 2021-04-29. Latest action: Placed on Senate Legislative Calendar under General Orders. Calendar No. 141.",
+          "date": "2021-04-29",
+          "vote": null,
+          "bill_id": "S.1486-117",
+          "congress": 117,
+          "roll_number": null,
+          "url": "https://www.congress.gov/bill/117th-congress/senate-bill/1486",
+          "source_label": "congress.gov"
+        },
+        {
+          "kind": "sponsored_bill",
+          "title": "S.737 (118th): No Tax Breaks for Union Busting (NTBUB) Act",
+          "description": "Introduced 2023-03-09. Latest action: Read twice and referred to the Committee on Finance.",
+          "date": "2023-03-09",
+          "vote": null,
+          "bill_id": "S.737-118",
+          "congress": 118,
+          "roll_number": null,
+          "url": "https://www.congress.gov/bill/118th-congress/senate-bill/737",
+          "source_label": "congress.gov"
+        },
+        {
+          "kind": "roll_call_vote",
+          "title": "H.J.Res. 39: A joint resolution disapproving the rule submitted by the Department of Commerce relating to \"Procedures Covering Suspension of Liquidation, Duties and Estimated Duties in Accord With Presidential Proclamation 10414\".",
+          "description": "On the Joint Resolution H.J.Res. 39. Result: Joint Resolution Passed.",
+          "date": "2023-05-03",
+          "vote": "Yea",
+          "bill_id": "H.J.Res.39-118",
+          "congress": 118,
+          "roll_number": 109,
+          "url": "https://www.senate.gov/legislative/LIS/roll_call_votes/vote1181/vote_118_1_00109.htm",
+          "source_label": "senate.gov roll call"
+        },
+        {
+          "kind": "sponsored_bill",
+          "title": "S.3304 (118th): Black Lung Benefits Improvement Act of 2023",
+          "description": "Introduced 2023-11-15. Latest action: Read twice and referred to the Committee on Health, Education, Labor, and Pensions.",
+          "date": "2023-11-15",
+          "vote": null,
+          "bill_id": "S.3304-118",
+          "congress": 118,
+          "roll_number": null,
+          "url": "https://www.congress.gov/bill/118th-congress/senate-bill/3304",
+          "source_label": "congress.gov"
+        },
+        {
+          "kind": "roll_call_vote",
+          "title": "H.J.Res. 98: A joint resolution providing for congressional disapproval under chapter 8 of title 5, United States Code, of the rule submitted by the National Labor Relations Board relating to \"Standard for Determining Joint Employer Status\".",
+          "description": "On the Joint Resolution H.J.Res. 98. Result: Joint Resolution Passed.",
+          "date": "2024-04-10",
+          "vote": "Nay",
+          "bill_id": "H.J.Res.98-118",
+          "congress": 118,
+          "roll_number": 122,
+          "url": "https://www.senate.gov/legislative/LIS/roll_call_votes/vote1182/vote_118_2_00122.htm",
+          "source_label": "senate.gov roll call"
+        },
+        {
+          "kind": "sponsored_bill",
+          "title": "S.4300 (118th): United States Call Center Worker and Consumer Protection Act of 2024",
+          "description": "Introduced 2024-05-09. Latest action: Read twice and referred to the Committee on Commerce, Science, and Transportation.",
+          "date": "2024-05-09",
+          "vote": null,
+          "bill_id": "S.4300-118",
+          "congress": 118,
+          "roll_number": null,
+          "url": "https://www.congress.gov/bill/118th-congress/senate-bill/4300",
+          "source_label": "congress.gov"
+        },
+        {
+          "kind": "sponsored_bill",
+          "title": "S.5016 (118th): Combat Chinese Economic Aggression Act of 2024",
+          "description": "Introduced 2024-09-10. Latest action: Read twice and referred to the Committee on Banking, Housing, and Urban Affairs.",
+          "date": "2024-09-10",
+          "vote": null,
+          "bill_id": "S.5016-118",
+          "congress": 118,
+          "roll_number": null,
+          "url": "https://www.congress.gov/bill/118th-congress/senate-bill/5016",
+          "source_label": "congress.gov"
+        }
+      ]
+    }
+  ],
+  "links": {
+    "fec_url": "https://www.fec.gov/data/candidate/S6PA00217/?cycle=2024&election_full=false",
+    "congress_url": "https://www.congress.gov/member/robert-casey/C001070",
+    "campaign_site": null
+  }
+}

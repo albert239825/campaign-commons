@@ -1,0 +1,70 @@
+{
+  "_about": "Hand-maintained. Each entry is one Google ad a person checked: the adstransparency.google.com ad page and advertiser page (legal name + FEC ID), then fec.gov (committee record; independent expenditures filed against the PA-Sen 2024 candidates). make ads merges these into ads.json as `verification`. Never generated.",
+  "verifications": [
+    {
+      "ad_id": "CR10478813122326953985",
+      "entity_id": "C00865444",
+      "verified_at": "2026-09-05T14:05:00Z",
+      "verified_by": "human",
+      "evidence_urls": [
+        "https://adstransparency.google.com/advertiser/AR07109796124864544769/creative/CR10478813122326953985?region=US&topic=political",
+        "https://adstransparency.google.com/advertiser/AR07109796124864544769?region=US&topic=political",
+        "https://www.fec.gov/data/committee/C00865444/?cycle=2024",
+        "https://www.fec.gov/data/independent-expenditures/?q_spender=C00865444&candidate_id=S2PA00661&candidate_id=S6PA00217&cycle=2024&data_type=processed&is_notice=false"
+      ],
+      "note": "Ad page: WINSENATE, video, Sep 18-Oct 8 2024, $500K-$600K, over 10M impressions, location Pennsylvania. Advertiser page: legal name WINSENATE, FEC ID C00865444. fec.gov: WINSENATE, Super PAC (independent expenditure-only), ID C00865444; 100+ processed IE rows for/against McCormick (S2PA00661) and Casey (S6PA00217) in 2023-2024. Google shows no separate 'Paid for by' line for US advertisers; the legal name + FEC ID on the advertiser page is the disclosure read."
+    },
+    {
+      "ad_id": "CR00368842737589420033",
+      "entity_id": "C00571703",
+      "verified_at": "2026-09-05T14:05:00Z",
+      "verified_by": "human",
+      "evidence_urls": [
+        "https://adstransparency.google.com/advertiser/AR12988012301746438145/creative/CR00368842737589420033?region=US&topic=political",
+        "https://adstransparency.google.com/advertiser/AR12988012301746438145?region=US&topic=political",
+        "https://www.fec.gov/data/committee/C00571703/?cycle=2024",
+        "https://www.fec.gov/data/independent-expenditures/?q_spender=C00571703&candidate_id=S2PA00661&candidate_id=S6PA00217&cycle=2024&data_type=processed&is_notice=false"
+      ],
+      "note": "Ad page: SENATE LEADERSHIP FUND, video, Oct 3-11 2024, $300K-$350K, over 10M impressions, location Pennsylvania. Advertiser page: legal name SENATE LEADERSHIP FUND, FEC ID C00571703. fec.gov: SENATE LEADERSHIP FUND, Super PAC (independent expenditure-only), ID C00571703; 74 processed IE rows opposing Casey in 2023-2024."
+    },
+    {
+      "ad_id": "CR04714034298817085441",
+      "entity_id": "C00687103",
+      "verified_at": "2026-09-05T14:05:00Z",
+      "verified_by": "human",
+      "evidence_urls": [
+        "https://adstransparency.google.com/advertiser/AR15510028093073915905/creative/CR04714034298817085441?region=US&topic=political",
+        "https://adstransparency.google.com/advertiser/AR15510028093073915905?region=US&topic=political",
+        "https://www.fec.gov/data/committee/C00687103/?cycle=2024",
+        "https://www.fec.gov/data/independent-expenditures/?q_spender=C00687103&candidate_id=S2PA00661&candidate_id=S6PA00217&cycle=2024&data_type=processed&is_notice=false"
+      ],
+      "note": "Ad page: AMERICANS FOR PROSPERITY ACTION INC, video, Jun 4-Jul 7 2024, $60K-$70K, 4M-4.5M impressions, location Pennsylvania. Advertiser page lists the legal name with an EIN (83-1800586), not an FEC ID, so the name was matched to fec.gov by hand: AMERICANS FOR PROSPERITY ACTION, INC. (AFP ACTION) DBA CVA ACTION AND DBA LIBRE ACTION, ID C00687103; 178 processed IE rows for/against McCormick and Casey in 2023-2024. Name-only link on the Google side; the FEC ID itself is not printed by Google for this advertiser."
+    },
+    {
+      "ad_id": "CR00337131121437310977",
+      "entity_id": "C00849489",
+      "verified_at": "2026-09-05T14:05:00Z",
+      "verified_by": "human",
+      "evidence_urls": [
+        "https://adstransparency.google.com/advertiser/AR05305140614721961985/creative/CR00337131121437310977?region=US&topic=political",
+        "https://adstransparency.google.com/advertiser/AR05305140614721961985?region=US&topic=political",
+        "https://www.fec.gov/data/committee/C00849489/?cycle=2024",
+        "https://www.fec.gov/data/independent-expenditures/?q_spender=C00849489&candidate_id=S2PA00661&candidate_id=S6PA00217&cycle=2024&data_type=processed&is_notice=false"
+      ],
+      "note": "Ad page: KEYSTONE RENEWAL PAC, video, Aug 19-27 2024, $60K-$70K, 4M-4.5M impressions, PA postal codes included. Advertiser page: legal name KEYSTONE RENEWAL PAC, FEC ID C00849489. fec.gov: KEYSTONE RENEWAL PAC, ID C00849489; 90 processed IE rows supporting McCormick in 2023-2024."
+    },
+    {
+      "ad_id": "CR02577931420798287873",
+      "entity_id": "C00042366",
+      "verified_at": "2026-09-05T14:05:00Z",
+      "verified_by": "human",
+      "evidence_urls": [
+        "https://adstransparency.google.com/advertiser/AR00340999924898332673/creative/CR02577931420798287873?region=US&topic=political",
+        "https://adstransparency.google.com/advertiser/AR00340999924898332673?region=US&topic=political",
+        "https://www.fec.gov/data/committee/C00042366/?cycle=2024",
+        "https://www.fec.gov/data/independent-expenditures/?q_spender=C00042366&candidate_id=S2PA00661&candidate_id=S6PA00217&cycle=2024&data_type=processed&is_notice=false"
+      ],
+      "note": "Ad page: DSCC, video, Aug 20-Sep 16 2024, $125K-$150K, 3.5M-4M impressions, PA postal codes (15104 and 10 others). Advertiser page: legal name DSCC, FEC ID C00042366. fec.gov: DSCC, ID C00042366; 37 processed IE rows opposing McCormick in 2023-2024."
+    }
+  ]
+}

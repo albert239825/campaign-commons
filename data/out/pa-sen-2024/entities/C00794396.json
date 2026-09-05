@@ -1,0 +1,188 @@
+{
+  "entity_id": "C00794396",
+  "race_id": "pa-sen-2024",
+  "kind": "committee",
+  "name": "SCHOOL FREEDOM FUND",
+  "aliases": [],
+  "committee_type": "O",
+  "committee_type_label": "Super PAC",
+  "designation": "U",
+  "registration_date": null,
+  "treasurer": "ROZANSKY, ADAM",
+  "address": {
+    "street": "2001 L ST NW STE 600",
+    "city": "WASHINGTON",
+    "state": "DC",
+    "zip": "20036"
+  },
+  "visibility": "disclosed",
+  "is_conduit": false,
+  "totals": {
+    "receipts": 14697585.29,
+    "disbursements": 14783078.96,
+    "independent_expenditures": 1596941.98,
+    "from_individuals": 14410172.0,
+    "from_committees": 0.0,
+    "from_organizations": 0.0,
+    "from_undisclosed": 0.0
+  },
+  "inflows": [
+    {
+      "transfer_id": "C00794396-in-ind:YASS_JEFF|19004",
+      "from_entity_id": "ind:YASS_JEFF|19004",
+      "from_name": "YASS, JEFF",
+      "to_entity_id": "C00794396",
+      "to_name": "SCHOOL FREEDOM FUND",
+      "amount": 11000000.0,
+      "date": "2024-10-29",
+      "visibility": "disclosed",
+      "transaction_type": "10",
+      "limit": "unlimited",
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00794396&two_year_transaction_period=2024&contributor_name=YASS%2C+JEFF"
+    },
+    {
+      "transfer_id": "C00794396-in-ind:UIHLEIN_RICHARD|60044",
+      "from_entity_id": "ind:UIHLEIN_RICHARD|60044",
+      "from_name": "UIHLEIN, RICHARD",
+      "to_entity_id": "C00794396",
+      "to_name": "SCHOOL FREEDOM FUND",
+      "amount": 2000000.0,
+      "date": "2023-07-21",
+      "visibility": "disclosed",
+      "transaction_type": "10",
+      "limit": "unlimited",
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00794396&two_year_transaction_period=2024&contributor_name=UIHLEIN%2C+RICHARD"
+    },
+    {
+      "transfer_id": "C00794396-in-ind:MARCUS_BERNARD|30327",
+      "from_entity_id": "ind:MARCUS_BERNARD|30327",
+      "from_name": "MARCUS, BERNARD",
+      "to_entity_id": "C00794396",
+      "to_name": "SCHOOL FREEDOM FUND",
+      "amount": 1000000.0,
+      "date": "2023-10-25",
+      "visibility": "disclosed",
+      "transaction_type": "10",
+      "limit": "unlimited",
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00794396&two_year_transaction_period=2024&contributor_name=MARCUS%2C+BERNARD"
+    },
+    {
+      "transfer_id": "C00794396-in-ind:ROJ_WILLIAM_H.|44122",
+      "from_entity_id": "ind:ROJ_WILLIAM_H.|44122",
+      "from_name": "ROJ, WILLIAM H.",
+      "to_entity_id": "C00794396",
+      "to_name": "SCHOOL FREEDOM FUND",
+      "amount": 150000.0,
+      "date": "2024-10-04",
+      "visibility": "disclosed",
+      "transaction_type": "10",
+      "limit": "unlimited",
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00794396&two_year_transaction_period=2024&contributor_name=ROJ%2C+WILLIAM+H."
+    },
+    {
+      "transfer_id": "C00794396-in-ind:HENDRICKSON_BRETT|76092",
+      "from_entity_id": "ind:HENDRICKSON_BRETT|76092",
+      "from_name": "HENDRICKSON, BRETT",
+      "to_entity_id": "C00794396",
+      "to_name": "SCHOOL FREEDOM FUND",
+      "amount": 100000.0,
+      "date": "2024-05-08",
+      "visibility": "disclosed",
+      "transaction_type": "10",
+      "limit": "unlimited",
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00794396&two_year_transaction_period=2024&contributor_name=HENDRICKSON%2C+BRETT"
+    },
+    {
+      "transfer_id": "C00794396-in-ind:POPOLO_JOE|75225",
+      "from_entity_id": "ind:POPOLO_JOE|75225",
+      "from_name": "POPOLO, JOE",
+      "to_entity_id": "C00794396",
+      "to_name": "SCHOOL FREEDOM FUND",
+      "amount": 100000.0,
+      "date": "2024-02-02",
+      "visibility": "disclosed",
+      "transaction_type": "10",
+      "limit": "unlimited",
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00794396&two_year_transaction_period=2024&contributor_name=POPOLO%2C+JOE"
+    },
+    {
+      "transfer_id": "C00794396-in-ind:BENNETT_MONTY|75254",
+      "from_entity_id": "ind:BENNETT_MONTY|75254",
+      "from_name": "BENNETT, MONTY",
+      "to_entity_id": "C00794396",
+      "to_name": "SCHOOL FREEDOM FUND",
+      "amount": 50000.0,
+      "date": "2024-02-05",
+      "visibility": "disclosed",
+      "transaction_type": "10",
+      "limit": "unlimited",
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00794396&two_year_transaction_period=2024&contributor_name=BENNETT%2C+MONTY"
+    },
+    {
+      "transfer_id": "C00794396-in-ind:BRUCE_ROBERT_H.|78006",
+      "from_entity_id": "ind:BRUCE_ROBERT_H.|78006",
+      "from_name": "BRUCE, ROBERT H.",
+      "to_entity_id": "C00794396",
+      "to_name": "SCHOOL FREEDOM FUND",
+      "amount": 10000.0,
+      "date": "2024-03-12",
+      "visibility": "disclosed",
+      "transaction_type": "10",
+      "limit": "unlimited",
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00794396&two_year_transaction_period=2024&contributor_name=BRUCE%2C+ROBERT+H."
+    }
+  ],
+  "outflows": [
+    {
+      "transfer_id": "C00794396-out-C00844613",
+      "from_entity_id": "C00794396",
+      "from_name": "SCHOOL FREEDOM FUND",
+      "to_entity_id": "C00844613",
+      "to_name": "WIN IT BACK PAC",
+      "amount": 1250000.0,
+      "date": "2024-11-01",
+      "visibility": "disclosed",
+      "transaction_type": "24K",
+      "limit": "unlimited",
+      "source_url": "https://www.fec.gov/data/disbursements/?committee_id=C00794396&two_year_transaction_period=2024"
+    },
+    {
+      "transfer_id": "C00794396-out-C00796045",
+      "from_entity_id": "C00794396",
+      "from_name": "SCHOOL FREEDOM FUND",
+      "to_entity_id": "C00796045",
+      "to_name": "TRUTH AND COURAGE PAC",
+      "amount": 950000.0,
+      "date": "2024-10-18",
+      "visibility": "disclosed",
+      "transaction_type": "24K",
+      "limit": "unlimited",
+      "source_url": "https://www.fec.gov/data/disbursements/?committee_id=C00794396&two_year_transaction_period=2024"
+    },
+    {
+      "transfer_id": "C00794396-out-C00760124",
+      "from_entity_id": "C00794396",
+      "from_name": "SCHOOL FREEDOM FUND",
+      "to_entity_id": "C00760124",
+      "to_name": "NATIONAL VICTORY ACTION FUND",
+      "amount": 250000.0,
+      "date": "2024-09-11",
+      "visibility": "disclosed",
+      "transaction_type": "24K",
+      "limit": null,
+      "source_url": "https://www.fec.gov/data/disbursements/?committee_id=C00794396&two_year_transaction_period=2024"
+    }
+  ],
+  "independent_expenditures": [],
+  "flags": [
+    {
+      "id": "shell_cluster",
+      "label": "Shares address and treasurer",
+      "detail": "SCHOOL FREEDOM FUND lists the same street address and treasurer as CLUB FOR GROWTH PAC (C00432260), CLUB FOR GROWTH ACTION (C00487470), BITCOIN FREEDOM PAC (C00822775), WIN IT BACK PAC (C00844613).",
+      "evidence_url": "https://www.fec.gov/data/committee/C00794396/?cycle=2024"
+    }
+  ],
+  "has_chain": false,
+  "source_url": "https://www.fec.gov/data/committee/C00794396/?cycle=2024",
+  "data_status": "real"
+}

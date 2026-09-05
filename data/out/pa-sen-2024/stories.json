@@ -1,0 +1,300 @@
+{
+  "race_id": "pa-sen-2024",
+  "generated_at": "2026-09-05T14:15:10+00:00",
+  "data_status": "real",
+  "stories": [
+    {
+      "story_id": "biggest_spender:C00865444",
+      "kind": "biggest_spender",
+      "title": "Biggest outside spender: WINSENATE",
+      "root_entity_id": "C00865444",
+      "candidate_ids": [
+        "S2PA00661",
+        "S6PA00217"
+      ],
+      "headline_numbers": {
+        "amount": 63032047.23,
+        "dark_share": 0.337,
+        "hops": 5
+      },
+      "narrative": "WINSENATE reported $63.0M in independent expenditures in this race ($60.2M opposing Dave McCormick; $2.8M supporting Bob Casey). 64% of its $312.9M in itemized receipts trace to named individuals on FEC filings (or to a named business or union giving from its own treasury) within 5 hop(s); 34% stop at organizations whose own funding is not on file with the FEC. The largest dark source is MAJORITY FORWARD ($81.8M), an organization with no FEC donor-disclosure filing on record; the chain stops there.",
+      "ad_ids": [],
+      "verified": false
+    },
+    {
+      "story_id": "biggest_spender:C00571703",
+      "kind": "biggest_spender",
+      "title": "Biggest outside spender: SENATE LEADERSHIP FUND",
+      "root_entity_id": "C00571703",
+      "candidate_ids": [
+        "S6PA00217"
+      ],
+      "headline_numbers": {
+        "amount": 52799239.86,
+        "dark_share": 0.2095,
+        "hops": 2
+      },
+      "narrative": "SENATE LEADERSHIP FUND reported $52.8M in independent expenditures in this race ($52.8M opposing Bob Casey). 79% of its $264.9M in itemized receipts trace to named individuals on FEC filings (or to a named business or union giving from its own treasury) within 2 hop(s); 21% stop at organizations whose own funding is not on file with the FEC. The largest dark source is ONE NATION ($35.6M), an organization with no FEC donor-disclosure filing on record; the chain stops there.",
+      "ad_ids": [],
+      "verified": false
+    },
+    {
+      "story_id": "biggest_spender:C00849489",
+      "kind": "biggest_spender",
+      "title": "Biggest outside spender: KEYSTONE RENEWAL PAC",
+      "root_entity_id": "C00849489",
+      "candidate_ids": [
+        "S2PA00661",
+        "S6PA00217"
+      ],
+      "headline_numbers": {
+        "amount": 48234127.36,
+        "dark_share": 0.1512,
+        "hops": 3
+      },
+      "narrative": "KEYSTONE RENEWAL PAC reported $48.2M in independent expenditures in this race ($34.1M opposing Bob Casey; $12.2M supporting Dave McCormick; $1.0M opposing Dave McCormick; $893,310 supporting Bob Casey). 85% of its $58.9M in itemized receipts trace to named individuals on FEC filings (or to a named business or union giving from its own treasury) within 3 hop(s); 15% stop at organizations whose own funding is not on file with the FEC. The largest dark source is AMERICAN PROSPERITY ALLIANCE ($21.6M), an organization with no FEC donor-disclosure filing on record; the chain stops there.",
+      "ad_ids": [],
+      "verified": false
+    },
+    {
+      "story_id": "dark_dead_end:C00740225",
+      "kind": "dark_dead_end",
+      "title": "Chain hits the dark wall: NRDC ACTION VOTES",
+      "root_entity_id": "C00740225",
+      "candidate_ids": [
+        "S2PA00661"
+      ],
+      "headline_numbers": {
+        "amount": 2010000.0,
+        "dark_share": 1.0,
+        "hops": 1
+      },
+      "narrative": "NRDC ACTION VOTES reported $2.0M in independent expenditures in this race ($2.0M opposing Dave McCormick). 0% of its $5.0M in itemized receipts trace to named individuals on FEC filings (or to a named business or union giving from its own treasury) within 1 hop(s); 100% stop at organizations whose own funding is not on file with the FEC. The largest dark source is NRDC ACTION FUND ($5.0M), an organization with no FEC donor-disclosure filing on record; the chain stops there.",
+      "ad_ids": [],
+      "verified": false
+    },
+    {
+      "story_id": "dark_dead_end:C00724203",
+      "kind": "dark_dead_end",
+      "title": "Chain hits the dark wall: SOMOS PAC",
+      "root_entity_id": "C00724203",
+      "candidate_ids": [
+        "S6PA00217"
+      ],
+      "headline_numbers": {
+        "amount": 1272156.59,
+        "dark_share": 0.7628,
+        "hops": 5
+      },
+      "narrative": "SOMOS PAC reported $1.3M in independent expenditures in this race ($1.3M supporting Bob Casey). 24% of its $21.9M in itemized receipts trace to named individuals on FEC filings (or to a named business or union giving from its own treasury) within 5 hop(s); 76% stop at organizations whose own funding is not on file with the FEC. The largest dark source is FUTURE FORWARD USA ACTION ($266.4M), an organization with no FEC donor-disclosure filing on record; the chain stops there.",
+      "ad_ids": [],
+      "verified": false
+    },
+    {
+      "story_id": "dark_dead_end:C00486845",
+      "kind": "dark_dead_end",
+      "title": "Chain hits the dark wall: LCV VICTORY FUND",
+      "root_entity_id": "C00486845",
+      "candidate_ids": [
+        "S2PA00661",
+        "S6PA00217"
+      ],
+      "headline_numbers": {
+        "amount": 5050845.94,
+        "dark_share": 0.7131,
+        "hops": 5
+      },
+      "narrative": "LCV VICTORY FUND reported $5.1M in independent expenditures in this race ($3.0M supporting Bob Casey; $2.0M opposing Dave McCormick). 29% of its $78.7M in itemized receipts trace to named individuals on FEC filings (or to a named business or union giving from its own treasury) within 5 hop(s); 71% stop at organizations whose own funding is not on file with the FEC. The largest dark source is FUTURE FORWARD USA ACTION ($266.4M), an organization with no FEC donor-disclosure filing on record; the chain stops there.",
+      "ad_ids": [],
+      "verified": false
+    },
+    {
+      "story_id": "single_transfer:C00487363",
+      "kind": "single_transfer",
+      "title": "One source: AMERICAN CROSSROADS",
+      "root_entity_id": "C00487363",
+      "candidate_ids": [
+        "S6PA00217"
+      ],
+      "headline_numbers": {
+        "amount": 8795912.55,
+        "dark_share": 0.2083,
+        "hops": 3
+      },
+      "narrative": "AMERICAN CROSSROADS reported $8.8M in independent expenditures in this race ($8.8M opposing Bob Casey). 79% of its $62.9M in itemized receipts trace to named individuals on FEC filings (or to a named business or union giving from its own treasury) within 3 hop(s); 21% stop at organizations whose own funding is not on file with the FEC. The largest dark source is ONE NATION ($35.6M), an organization with no FEC donor-disclosure filing on record; the chain stops there.",
+      "ad_ids": [],
+      "verified": false
+    },
+    {
+      "story_id": "single_transfer:C00490375",
+      "kind": "single_transfer",
+      "title": "One source: NATIONAL NURSES UNITED FOR PATIENT PROTECTION",
+      "root_entity_id": "C00490375",
+      "candidate_ids": [
+        "S6PA00217"
+      ],
+      "headline_numbers": {
+        "amount": 832653.13,
+        "dark_share": 0.0906,
+        "hops": 2
+      },
+      "narrative": "NATIONAL NURSES UNITED FOR PATIENT PROTECTION reported $832,653 in independent expenditures in this race ($832,653 supporting Bob Casey). 91% of its $5.5M in itemized receipts trace to named individuals on FEC filings (or to a named business or union giving from its own treasury) within 2 hop(s); 9% stop at organizations whose own funding is not on file with the FEC. The largest dark source is NATIONAL NURSES UNITED ($500,000), an organization with no FEC donor-disclosure filing on record; the chain stops there.",
+      "ad_ids": [],
+      "verified": false
+    },
+    {
+      "story_id": "single_transfer:C00880518",
+      "kind": "single_transfer",
+      "title": "One source: BITCOIN VOTER PAC",
+      "root_entity_id": "C00880518",
+      "candidate_ids": [
+        "S2PA00661"
+      ],
+      "headline_numbers": {
+        "amount": 34969.52,
+        "dark_share": 1.0,
+        "hops": 1
+      },
+      "narrative": "BITCOIN VOTER PAC reported $34,970 in independent expenditures in this race ($34,970 supporting Dave McCormick). 0% of its $125,000 in itemized receipts trace to named individuals on FEC filings (or to a named business or union giving from its own treasury) within 1 hop(s); 100% stop at organizations whose own funding is not on file with the FEC. The largest dark source is BITCOIN VOTER PROJECT, INC ($125,000), an organization with no FEC donor-disclosure filing on record; the chain stops there.",
+      "ad_ids": [],
+      "verified": false
+    },
+    {
+      "story_id": "single_transfer:C00825885",
+      "kind": "single_transfer",
+      "title": "One source: PATRIOTS FOR A BRIGHTER AMERICA",
+      "root_entity_id": "C00825885",
+      "candidate_ids": [
+        "S2PA00661"
+      ],
+      "headline_numbers": {
+        "amount": 23620.0,
+        "dark_share": 0.0,
+        "hops": 1
+      },
+      "narrative": "PATRIOTS FOR A BRIGHTER AMERICA reported $23,620 in independent expenditures in this race ($23,620 supporting Dave McCormick). 100% of its $874,736 in itemized receipts trace to named individuals on FEC filings (or to a named business or union giving from its own treasury) within 1 hop(s); 0% stop at organizations whose own funding is not on file with the FEC.",
+      "ad_ids": [],
+      "verified": false
+    },
+    {
+      "story_id": "single_transfer:C00742635",
+      "kind": "single_transfer",
+      "title": "One source: GUN RIGHTS AMERICA",
+      "root_entity_id": "C00742635",
+      "candidate_ids": [
+        "S6PA00217"
+      ],
+      "headline_numbers": {
+        "amount": 14127.38,
+        "dark_share": 0.9996,
+        "hops": 1
+      },
+      "narrative": "GUN RIGHTS AMERICA reported $14,127 in independent expenditures in this race ($14,127 opposing Bob Casey). 0% of its $161,793 in itemized receipts trace to named individuals on FEC filings (or to a named business or union giving from its own treasury) within 1 hop(s); 100% stop at organizations whose own funding is not on file with the FEC. The largest dark source is NATIONAL ASSOCIATION FOR GUN RIGHTS ($161,731), an organization with no FEC donor-disclosure filing on record; the chain stops there.",
+      "ad_ids": [],
+      "verified": false
+    },
+    {
+      "story_id": "popup:C00891549",
+      "kind": "popup",
+      "title": "Pop-up committee: AMERICA FIRST ACTION FUND",
+      "root_entity_id": "C00891549",
+      "candidate_ids": [
+        "S2PA00661",
+        "S6PA00217"
+      ],
+      "headline_numbers": {
+        "amount": 14044.45,
+        "dark_share": 0.0,
+        "hops": 1
+      },
+      "narrative": "AMERICA FIRST ACTION FUND reported $14,044 in independent expenditures in this race ($14,000 supporting Dave McCormick; $44 opposing Bob Casey). 100% of its $1.0M in itemized receipts trace to named individuals on FEC filings (or to a named business or union giving from its own treasury) within 1 hop(s); 0% stop at organizations whose own funding is not on file with the FEC.",
+      "ad_ids": [],
+      "verified": false
+    },
+    {
+      "story_id": "single_transfer:C00879510",
+      "kind": "single_transfer",
+      "title": "One source: AMERICA PAC",
+      "root_entity_id": "C00879510",
+      "candidate_ids": [
+        "S2PA00661"
+      ],
+      "headline_numbers": {
+        "amount": 6692.6,
+        "dark_share": 0.0024,
+        "hops": 1
+      },
+      "narrative": "AMERICA PAC reported $6,693 in independent expenditures in this race ($6,693 supporting Dave McCormick). 100% of its $208.9M in itemized receipts trace to named individuals on FEC filings (or to a named business or union giving from its own treasury) within 1 hop(s); 0% stop at organizations whose own funding is not on file with the FEC.",
+      "ad_ids": [],
+      "verified": false
+    },
+    {
+      "story_id": "popup:C00891473",
+      "kind": "popup",
+      "title": "Pop-up committee: MOSHANGUSA FREE SPEECH",
+      "root_entity_id": "C00891473",
+      "candidate_ids": [
+        "S2PA00661"
+      ],
+      "headline_numbers": {
+        "amount": 4925.0,
+        "dark_share": 0.0,
+        "hops": 1
+      },
+      "narrative": "MOSHANGUSA FREE SPEECH reported $4,925 in independent expenditures in this race ($4,925 supporting Dave McCormick). 100% of its $11,427 in itemized receipts trace to named individuals on FEC filings (or to a named business or union giving from its own treasury) within 1 hop(s); 0% stop at organizations whose own funding is not on file with the FEC.",
+      "ad_ids": [],
+      "verified": false
+    },
+    {
+      "story_id": "single_transfer:C00556274",
+      "kind": "single_transfer",
+      "title": "One source: USW WORKS",
+      "root_entity_id": "C00556274",
+      "candidate_ids": [
+        "S6PA00217"
+      ],
+      "headline_numbers": {
+        "amount": 1662.96,
+        "dark_share": 0.0,
+        "hops": 1
+      },
+      "narrative": "USW WORKS reported $1,663 in independent expenditures in this race ($1,663 supporting Bob Casey). 100% of its $1.8M in itemized receipts trace to named individuals on FEC filings (or to a named business or union giving from its own treasury) within 1 hop(s); 0% stop at organizations whose own funding is not on file with the FEC.",
+      "ad_ids": [],
+      "verified": false
+    },
+    {
+      "story_id": "single_transfer:C00779595",
+      "kind": "single_transfer",
+      "title": "One source: RSLC PAC",
+      "root_entity_id": "C00779595",
+      "candidate_ids": [
+        "S6PA00217"
+      ],
+      "headline_numbers": {
+        "amount": 1250.0,
+        "dark_share": 0.9994,
+        "hops": 1
+      },
+      "narrative": "RSLC PAC reported $1,250 in independent expenditures in this race ($1,250 opposing Bob Casey). 0% of its $19.3M in itemized receipts trace to named individuals on FEC filings (or to a named business or union giving from its own treasury) within 1 hop(s); 100% stop at organizations whose own funding is not on file with the FEC. The largest dark source is REPUBLICAN STATE LEADERSHIP COMMITTEE ($19.3M), an organization with no FEC donor-disclosure filing on record; the chain stops there.",
+      "ad_ids": [],
+      "verified": false
+    },
+    {
+      "story_id": "single_transfer:C00740514",
+      "kind": "single_transfer",
+      "title": "One source: CONCERNED CITIZEN",
+      "root_entity_id": "C00740514",
+      "candidate_ids": [
+        "S6PA00217"
+      ],
+      "headline_numbers": {
+        "amount": 612.58,
+        "dark_share": 0.0,
+        "hops": 1
+      },
+      "narrative": "CONCERNED CITIZEN reported $613 in independent expenditures in this race ($613 opposing Bob Casey). 100% of its $20,282 in itemized receipts trace to named individuals on FEC filings (or to a named business or union giving from its own treasury) within 1 hop(s); 0% stop at organizations whose own funding is not on file with the FEC.",
+      "ad_ids": [],
+      "verified": false
+    }
+  ]
+}

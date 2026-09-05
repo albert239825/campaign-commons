@@ -1,0 +1,136 @@
+{
+  "entity_id": "C00786624",
+  "race_id": "pa-sen-2024",
+  "kind": "committee",
+  "name": "DEMOCRACY PAC II",
+  "aliases": [],
+  "committee_type": "O",
+  "committee_type_label": "Super PAC",
+  "designation": "U",
+  "registration_date": null,
+  "treasurer": "VACHON, MICHAEL",
+  "address": {
+    "street": "1032 15TH STREET, NW, SUITE 247",
+    "city": "WASHINGTON",
+    "state": "DC",
+    "zip": "20005"
+  },
+  "visibility": "disclosed",
+  "is_conduit": false,
+  "totals": {
+    "receipts": 1515613.62,
+    "disbursements": 13853210.8,
+    "independent_expenditures": 0,
+    "from_individuals": 0.0,
+    "from_committees": 230000.0,
+    "from_organizations": 0.0,
+    "from_undisclosed": 0.0
+  },
+  "inflows": [
+    {
+      "transfer_id": "C00786624-in-C00651505",
+      "from_entity_id": "C00651505",
+      "from_name": "JUSTICE & PUBLIC SAFETY PAC",
+      "to_entity_id": "C00786624",
+      "to_name": "DEMOCRACY PAC II",
+      "amount": 230000.0,
+      "date": "2023-11-22",
+      "visibility": "disclosed",
+      "transaction_type": "22Z",
+      "limit": "unlimited",
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00786624&two_year_transaction_period=2024&contributor_name=C00651505"
+    }
+  ],
+  "outflows": [
+    {
+      "transfer_id": "C00786624-out-C00484642",
+      "from_entity_id": "C00786624",
+      "from_name": "DEMOCRACY PAC II",
+      "to_entity_id": "C00484642",
+      "to_name": "SMP",
+      "amount": 6500000.0,
+      "date": "2024-01-26",
+      "visibility": "disclosed",
+      "transaction_type": "18K",
+      "limit": "unlimited",
+      "source_url": "https://www.fec.gov/data/disbursements/?committee_id=C00786624&two_year_transaction_period=2024"
+    },
+    {
+      "transfer_id": "C00786624-out-C00492140",
+      "from_entity_id": "C00786624",
+      "from_name": "DEMOCRACY PAC II",
+      "to_entity_id": "C00492140",
+      "to_name": "AB PAC",
+      "amount": 2250000.0,
+      "date": "2023-06-22",
+      "visibility": "disclosed",
+      "transaction_type": "24K",
+      "limit": null,
+      "source_url": "https://www.fec.gov/data/disbursements/?committee_id=C00786624&two_year_transaction_period=2024"
+    },
+    {
+      "transfer_id": "C00786624-out-C00495028",
+      "from_entity_id": "C00786624",
+      "from_name": "DEMOCRACY PAC II",
+      "to_entity_id": "C00495028",
+      "to_name": "HMP",
+      "amount": 1000000.0,
+      "date": "2023-03-16",
+      "visibility": "disclosed",
+      "transaction_type": "24K",
+      "limit": null,
+      "source_url": "https://www.fec.gov/data/disbursements/?committee_id=C00786624&two_year_transaction_period=2024"
+    },
+    {
+      "transfer_id": "C00786624-out-C00812495",
+      "from_entity_id": "C00786624",
+      "from_name": "DEMOCRACY PAC II",
+      "to_entity_id": "C00812495",
+      "to_name": "STATE DEMOCRACY DEFENDERS PAC",
+      "amount": 750000.0,
+      "date": "2023-05-08",
+      "visibility": "disclosed",
+      "transaction_type": "24K",
+      "limit": null,
+      "source_url": "https://www.fec.gov/data/disbursements/?committee_id=C00786624&two_year_transaction_period=2024"
+    },
+    {
+      "transfer_id": "C00786624-out-C00589507",
+      "from_entity_id": "C00786624",
+      "from_name": "DEMOCRACY PAC II",
+      "to_entity_id": "C00589507",
+      "to_name": "AAPI VICTORY FUND, INC.",
+      "amount": 300000.0,
+      "date": "2023-05-09",
+      "visibility": "disclosed",
+      "transaction_type": "24K",
+      "limit": null,
+      "source_url": "https://www.fec.gov/data/disbursements/?committee_id=C00786624&two_year_transaction_period=2024"
+    },
+    {
+      "transfer_id": "C00786624-out-C00651505",
+      "from_entity_id": "C00786624",
+      "from_name": "DEMOCRACY PAC II",
+      "to_entity_id": "C00651505",
+      "to_name": "JUSTICE & PUBLIC SAFETY PAC",
+      "amount": 253000.0,
+      "date": "2023-11-22",
+      "visibility": "disclosed",
+      "transaction_type": "18K",
+      "limit": null,
+      "source_url": "https://www.fec.gov/data/disbursements/?committee_id=C00786624&two_year_transaction_period=2024"
+    }
+  ],
+  "independent_expenditures": [],
+  "flags": [
+    {
+      "id": "shell_cluster",
+      "label": "Shares address and treasurer",
+      "detail": "DEMOCRACY PAC II lists the same street address and treasurer as DEMOCRACY PAC (C00693382).",
+      "evidence_url": "https://www.fec.gov/data/committee/C00786624/?cycle=2024"
+    }
+  ],
+  "has_chain": false,
+  "source_url": "https://www.fec.gov/data/committee/C00786624/?cycle=2024",
+  "data_status": "real"
+}

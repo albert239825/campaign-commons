@@ -1,0 +1,116 @@
+{
+  "entity_id": "C00814624",
+  "race_id": "pa-sen-2024",
+  "kind": "committee",
+  "name": "ELECTION INTEGRITY PAC",
+  "aliases": [],
+  "committee_type": "O",
+  "committee_type_label": "Super PAC",
+  "designation": "U",
+  "registration_date": null,
+  "treasurer": "LABRUNA, ANTHONY",
+  "address": {
+    "street": "2800 SHIRLINGTON ROAD",
+    "city": "ARLINGTON",
+    "state": "VA",
+    "zip": "22206"
+  },
+  "visibility": "disclosed",
+  "is_conduit": false,
+  "totals": {
+    "receipts": 1416710.0,
+    "disbursements": 1416803.0,
+    "independent_expenditures": 0,
+    "from_individuals": 0.0,
+    "from_committees": 1083332.0,
+    "from_organizations": 0.0,
+    "from_undisclosed": 83333.0
+  },
+  "inflows": [
+    {
+      "transfer_id": "C00814624-in-C00571588",
+      "from_entity_id": "C00571588",
+      "from_name": "RESTORATION PAC",
+      "to_entity_id": "C00814624",
+      "to_name": "ELECTION INTEGRITY PAC",
+      "amount": 1083332.0,
+      "date": "2024-08-21",
+      "visibility": "disclosed",
+      "transaction_type": "24K",
+      "limit": "unlimited",
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00814624&two_year_transaction_period=2024&contributor_name=C00571588"
+    },
+    {
+      "transfer_id": "C00814624-in-ind:RESTORATION_PAC|60515",
+      "from_entity_id": "ind:RESTORATION_PAC|60515",
+      "from_name": "RESTORATION PAC",
+      "to_entity_id": "C00814624",
+      "to_name": "ELECTION INTEGRITY PAC",
+      "amount": 1083332.0,
+      "date": "2024-08-21",
+      "visibility": "disclosed",
+      "transaction_type": "10",
+      "limit": "unlimited",
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00814624&two_year_transaction_period=2024&contributor_name=RESTORATION+PAC"
+    },
+    {
+      "transfer_id": "C00814624-in-org:AMERICAN_PRINCIPLES_PROJECT",
+      "from_entity_id": "org:AMERICAN_PRINCIPLES_PROJECT",
+      "from_name": "AMERICAN PRINCIPLES PROJECT",
+      "to_entity_id": "C00814624",
+      "to_name": "ELECTION INTEGRITY PAC",
+      "amount": 83333.0,
+      "date": "2024-05-01",
+      "visibility": "dark",
+      "transaction_type": "10",
+      "limit": "unlimited",
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00814624&two_year_transaction_period=2024&contributor_name=AMERICAN+PRINCIPLES+PROJECT"
+    }
+  ],
+  "outflows": [
+    {
+      "transfer_id": "C00814624-out-C00544387",
+      "from_entity_id": "C00814624",
+      "from_name": "ELECTION INTEGRITY PAC",
+      "to_entity_id": "C00544387",
+      "to_name": "AMERICAN PRINCIPLES PROJECT PAC",
+      "amount": 503278.0,
+      "date": "2024-10-30",
+      "visibility": "disclosed",
+      "transaction_type": "24K",
+      "limit": "unlimited",
+      "source_url": "https://www.fec.gov/data/disbursements/?committee_id=C00814624&two_year_transaction_period=2024"
+    },
+    {
+      "transfer_id": "C00814624-out-C00769232",
+      "from_entity_id": "C00814624",
+      "from_name": "ELECTION INTEGRITY PAC",
+      "to_entity_id": "C00769232",
+      "to_name": "JEFFERSON RISING",
+      "amount": 250000.0,
+      "date": "2024-10-07",
+      "visibility": "disclosed",
+      "transaction_type": "24K",
+      "limit": "unlimited",
+      "source_url": "https://www.fec.gov/data/disbursements/?committee_id=C00814624&two_year_transaction_period=2024"
+    },
+    {
+      "transfer_id": "C00814624-out-C00530766",
+      "from_entity_id": "C00814624",
+      "from_name": "ELECTION INTEGRITY PAC",
+      "to_entity_id": "C00530766",
+      "to_name": "WOMEN SPEAK OUT PAC",
+      "amount": 86.0,
+      "date": "2023-02-13",
+      "visibility": "disclosed",
+      "transaction_type": "18K",
+      "limit": "unlimited",
+      "source_url": "https://www.fec.gov/data/disbursements/?committee_id=C00814624&two_year_transaction_period=2024"
+    }
+  ],
+  "independent_expenditures": [],
+  "flags": [],
+  "has_chain": false,
+  "source_url": "https://www.fec.gov/data/committee/C00814624/?cycle=2024",
+  "data_status": "real"
+}

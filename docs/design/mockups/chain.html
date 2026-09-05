@@ -1,0 +1,216 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mockup — Funding chain · WINSENATE</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="tokens.css">
+<style>
+  .head { display: grid; grid-template-columns: 1fr auto; gap: var(--space-6); align-items: start; margin-bottom: var(--space-5); }
+  .head .flags { display: flex; gap: 6px; flex-wrap: wrap; margin-top: var(--space-2); }
+  .summary { display: grid; grid-template-columns: auto auto 1fr; gap: var(--space-8); align-items: center; }
+  .summary .caps { margin-bottom: 4px; }
+  .findings { display: grid; gap: 6px; }
+  .finding { display: grid; grid-template-columns: auto 1fr auto; gap: var(--space-3); align-items: baseline; font-size: var(--text-sm); }
+  .finding .caps { color: var(--flag-text); }
+  .diagram { position: relative; }
+  .diagram svg { width: 100%; height: auto; display: block; }
+  .diagram text { font-family: var(--font-sans); }
+  .diagram .n { font-size: 11px; font-weight: 600; fill: var(--ink); }
+  .diagram .s { font-size: 10px; fill: var(--ink-3); }
+  .diagram .a { font-size: 11px; font-weight: 500; fill: var(--ink); font-variant-numeric: tabular-nums; }
+  .diagram .col { font-size: 11px; font-weight: 600; fill: var(--ink-3); letter-spacing: .06em; text-transform: uppercase; }
+  .edges td.r { white-space: nowrap; }
+  .edges .from { font-weight: 600; }
+  .edges .k { color: var(--ink-3); }
+  .vislbl { font-size: var(--text-2xs); font-weight: 600; }
+  .vislbl.dark { color: var(--dark-text); } .vislbl.disclosed { color: var(--disclosed-text); } .vislbl.neutral { color: var(--ink-3); }
+  .toolbar { display: flex; gap: var(--space-4); align-items: center; font-size: var(--text-xs); color: var(--ink-2); margin-bottom: var(--space-3); flex-wrap: wrap; }
+  .toolbar .seg { display: inline-flex; border: 1px solid var(--border-strong); border-radius: var(--radius-sm); overflow: hidden; }
+  .toolbar .seg span { padding: 3px 8px; border-right: 1px solid var(--border-strong); } .toolbar .seg span:last-child { border-right: 0; }
+  .toolbar .seg .on { background: var(--ink); color: #fff; }
+</style>
+</head>
+<body>
+<header class="topbar"><div class="container">
+  <a class="brand" href="#">Citizen Gotham <small>receipts, not conclusions</small></a>
+  <nav class="nav"><a href="#">Races</a><a href="#">Methodology</a></nav>
+</div></header>
+
+<main class="container rel">
+  <div class="crumbs"><a href="#">Races</a> / <a href="#">Pennsylvania · U.S. Senate · 2024</a> / <a href="#">WINSENATE</a> / <span>Funding chain</span></div>
+
+  <div class="head rel">
+    <span class="anno" style="left:-30px;top:0">1</span>
+    <div>
+      <h1>Where WINSENATE's money came from</h1>
+      <div class="sub">Backward walk over 2024-cycle receipts, 5 hops. Money edges only — independent expenditures are targeting edges and are not drawn. <a class="src" href="https://www.fec.gov/data/committee/C00865444/?cycle=2024">FEC committee record</a></div>
+      <div class="flags">
+        <span class="chip flag">⚑ single source · SMP supplied 100%</span>
+        <span class="chip flag">⚑ dark dead-end · 34% of receipts</span>
+        <span class="chip flag">⚑ shared address &amp; treasurer with SMP</span>
+      </div>
+    </div>
+    <div style="text-align:right">
+      <a class="lnk" style="font-size:var(--text-xs)" href="#">← Entity page</a>
+    </div>
+  </div>
+
+  <div class="stack">
+  <section class="card rel">
+    <span class="anno" style="left:-30px;top:8px">2</span>
+    <div class="summary">
+      <div><div class="caps">Receipts traced</div><div class="stat money">$312.9M</div><div class="note" style="margin-top:4px">$312,850,000 · 38 transfers</div></div>
+      <div><div class="caps">Depth</div><div class="stat num">5</div><div class="note" style="margin-top:4px">461 nodes · 460 edges</div></div>
+      <div>
+        <div class="caps">Visibility of traced dollars</div>
+        <div class="bar tall"><i class="f-disclosed" style="width:66.3%"></i><i class="f-dark" style="width:33.7%"></i></div>
+        <div class="legend"><span><i class="f-disclosed"></i>Disclosed 66% · $207.4M</span><span><i class="f-inferable"></i>Inferable 0%</span><span><i class="f-dark"></i>Dark 34% · $105.5M</span></div>
+        <p class="note" style="margin:8px 0 0">Ends at 370 individual donors, 5 business/union treasuries, 4 dark organizations, 22 committees not walked, 22 aggregated remainders, 9 cycles.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="card rel">
+    <span class="anno" style="left:-30px;top:8px">3</span>
+    <div class="card-h"><h2>Structural findings</h2><span class="note">Descriptive, from filings. Not a judgment of intent.</span></div>
+    <div class="findings">
+      <div class="finding"><span class="caps">⚑ single source</span><span>SMP supplied $312,850,000 of WINSENATE's $312,850,000 itemized receipts (100%).</span><a class="src" href="https://www.fec.gov/data/receipts/?committee_id=C00865444&two_year_transaction_period=2024">evidence</a></div>
+      <div class="finding"><span class="caps">⚑ dark dead-end</span><span>34% of WINSENATE's receipts stop at organizations whose own funding is not on file (advocacy nonprofits, LLCs, trusts) rather than at named individuals, businesses or unions.</span><a class="src" href="https://www.fec.gov/data/committee/C00865444/?cycle=2024">evidence</a></div>
+      <div class="finding"><span class="caps">⚑ shared address</span><span>WINSENATE lists the same street address and treasurer as SMP <span class="mono">C00484642</span>.</span><a class="src" href="https://www.fec.gov/data/committee/C00865444/?cycle=2024">evidence</a></div>
+    </div>
+  </section>
+
+  <section class="card rel diagram">
+    <span class="anno" style="left:-30px;top:8px">4</span>
+    <div class="card-h">
+      <h2>Flow of money into the spender</h2>
+      <div class="legend" style="margin:0"><span><i class="f-disclosed"></i>disclosed (FEC)</span><span><i class="f-inferable"></i>inferable (990, lagged)</span><span><i class="f-dark"></i>dark wall (no disclosure)</span><span><i style="background:var(--surface-2);border:1px dashed var(--border-strong)"></i>other, aggregated</span></div>
+    </div>
+    <div class="toolbar"><span>Show</span><span class="seg"><span class="on">Top 8 sources per hop</span><span>Top 20</span><span>Everything (461 nodes)</span></span><span style="margin-left:auto">Ribbon width ∝ dollars · hop 2 → hop 1 → spender</span></div>
+    <!-- Hand-laid SVG using real depth-2 edges into SMP (chains/C00865444.json). Heights ∝ amount, 1px ≈ $0.5M. -->
+    <svg viewBox="0 0 1120 520" role="img" aria-label="Money into SMP and from SMP to WINSENATE">
+      <defs>
+        <pattern id="hatch" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="6" height="6" fill="#fbe9e8"/><line x1="0" y1="0" x2="0" y2="6" stroke="#dc4a47" stroke-width="1.5"/></pattern>
+      </defs>
+      <text x="20" y="18" class="col">Hop 2 · sources into SMP</text>
+      <text x="560" y="18" class="col">Hop 1</text>
+      <text x="900" y="18" class="col">Spender</text>
+
+      <!-- ribbons (hop2 -> SMP). SMP total in = $328.9M mapped to y 40..500 (460px) -->
+      <g fill-opacity=".55">
+        <path d="M300,40 C430,40 430,40 560,40 L560,200 C430,200 430,200 300,200 Z" fill="#a3a3a0" fill-opacity=".35"/>
+        <path d="M300,212 C430,212 430,200 560,200 L560,314 C430,314 430,326 300,326 Z" fill="#dc4a47"/>
+        <path d="M300,338 C430,338 430,314 560,314 L560,334 C430,334 430,358 300,358 Z" fill="#1d9e75"/>
+        <path d="M300,370 C430,370 430,334 560,334 L560,349 C430,349 430,385 300,385 Z" fill="#1d9e75"/>
+        <path d="M300,397 C430,397 430,349 560,349 L560,363 C430,363 430,411 300,411 Z" fill="#1d9e75"/>
+        <path d="M300,423 C430,423 430,363 560,363 L560,375 C430,375 430,435 300,435 Z" fill="#dc4a47"/>
+        <path d="M300,447 C430,447 430,375 560,375 L560,385 C430,385 430,457 300,457 Z" fill="#1d9e75"/>
+        <path d="M300,469 C430,469 430,385 560,385 L560,395 C430,395 430,479 300,479 Z" fill="#1d9e75"/>
+        <path d="M300,491 C430,491 430,395 560,395 L560,500 C430,500 430,500 300,500 Z" fill="#a3a3a0" fill-opacity=".25"/>
+        <!-- SMP -> WINSENATE : $312.85M of $328.9M -->
+        <path d="M760,40 C830,40 830,60 900,60 L900,498 C830,498 830,500 760,500 Z" fill="#1d9e75"/>
+      </g>
+
+      <!-- hop2 nodes -->
+      <g>
+        <rect x="20" y="40" width="280" height="160" rx="3" fill="#f4f4f2" stroke="#c9c9c4" stroke-dasharray="3 3"/>
+        <text x="30" y="56" class="n" fill="#6b7280">Other contributors to SMP</text>
+        <text x="30" y="70" class="s">438 transactions, each &lt;1% of receipts, aggregated</text>
+        <text x="290" y="192" class="a" text-anchor="end">$114.7M</text>
+
+        <rect x="20" y="212" width="280" height="114" rx="3" fill="url(#hatch)" stroke="#dc4a47" stroke-width="1.25"/>
+        <rect x="20" y="212" width="4" height="114" fill="#dc4a47"/>
+        <rect x="24" y="212" width="276" height="46" fill="#fff" fill-opacity=".92"/>
+        <text x="32" y="228" class="n">MAJORITY FORWARD</text>
+        <text x="32" y="242" class="s">501(c)(4) advocacy nonprofit · funders not on file</text>
+        <text x="32" y="254" class="vislbl dark" style="font-size:10px;font-weight:700;fill:#b42323;letter-spacing:.06em">DARK WALL · 9 transfers 2023-01 → 2024-12</text>
+        <text x="290" y="318" class="a" text-anchor="end">$81.8M</text>
+
+        <rect x="20" y="338" width="280" height="20" rx="3" fill="#fff" stroke="#1d9e75"/><rect x="20" y="338" width="4" height="20" fill="#1d9e75"/>
+        <text x="32" y="352" class="n">WORKING FOR WORKING AMERICANS <tspan class="s" font-weight="400">Super PAC</tspan></text>
+        <text x="290" y="352" class="a" text-anchor="end">$14.0M</text>
+
+        <rect x="20" y="370" width="280" height="15" rx="3" fill="#fff" stroke="#1d9e75"/><rect x="20" y="370" width="4" height="15" fill="#1d9e75"/>
+        <text x="32" y="382" class="n">DEMOCRACY PAC <tspan class="s" font-weight="400">Super PAC</tspan></text>
+        <text x="290" y="382" class="a" text-anchor="end">$10.5M</text>
+
+        <rect x="20" y="397" width="280" height="14" rx="3" fill="#fff" stroke="#1d9e75"/><rect x="20" y="397" width="4" height="14" fill="#1d9e75"/>
+        <text x="32" y="408" class="n">EYCHANER, FRED <tspan class="s" font-weight="400">individual</tspan></text>
+        <text x="290" y="408" class="a" text-anchor="end">$10.0M</text>
+
+        <rect x="20" y="423" width="280" height="12" rx="3" fill="url(#hatch)" stroke="#dc4a47"/><rect x="20" y="423" width="4" height="12" fill="#dc4a47"/>
+        <rect x="24" y="423" width="276" height="12" fill="#fff" fill-opacity=".85"/>
+        <text x="32" y="433" class="n">GREATER NY HOSPITAL ASSN MGMT <tspan style="fill:#b42323" font-size="9">DARK</tspan></text>
+        <text x="290" y="433" class="a" text-anchor="end">$8.5M</text>
+
+        <rect x="20" y="447" width="280" height="10" rx="3" fill="#fff" stroke="#1d9e75"/><rect x="20" y="447" width="4" height="10" fill="#1d9e75"/>
+        <text x="32" y="456" class="n">SIMONS, JAMES <tspan class="s" font-weight="400">individual</tspan></text>
+        <text x="290" y="456" class="a" text-anchor="end">$7.5M</text>
+
+        <rect x="20" y="469" width="280" height="10" rx="3" fill="#fff" stroke="#1d9e75"/><rect x="20" y="469" width="4" height="10" fill="#1d9e75"/>
+        <text x="32" y="478" class="n">SKOLL, JEFF S. <tspan class="s" font-weight="400">individual</tspan></text>
+        <text x="290" y="478" class="a" text-anchor="end">$7.0M</text>
+
+        <rect x="20" y="491" width="280" height="9" rx="3" fill="#f4f4f2" stroke="#c9c9c4" stroke-dasharray="3 3"/>
+        <text x="32" y="499" class="s">+16 more sources shown at "Top 20" · $75.0M</text>
+      </g>
+
+      <!-- SMP -->
+      <rect x="560" y="40" width="200" height="460" rx="3" fill="#fff" stroke="#1d9e75" stroke-width="1.25"/>
+      <rect x="560" y="40" width="4" height="460" fill="#1d9e75"/>
+      <text x="572" y="58" class="n">SMP</text>
+      <text x="572" y="72" class="s">Super PAC · C00484642 · 24 sources</text>
+      <text x="572" y="86" class="s">in $328.9M · disclosed 66% · dark 34%</text>
+      <text x="750" y="492" class="a" text-anchor="end">$328.9M in</text>
+
+      <!-- WINSENATE -->
+      <rect x="900" y="60" width="200" height="438" rx="3" fill="#fafaf9" stroke="#111318" stroke-width="2"/>
+      <text x="912" y="78" class="n">WINSENATE</text>
+      <text x="912" y="92" class="s">Super PAC · C00865444 · spender</text>
+      <text x="912" y="106" class="s">38 transfers from SMP, Feb–Nov 2024</text>
+      <text x="1090" y="490" class="a" text-anchor="end">$312.9M in</text>
+    </svg>
+    <p class="note" style="margin-top:10px">Ribbons are money edges (Schedule A receipts, committee-to-committee transfers). Independent expenditures never appear here. Hatched red = a node with no donor-disclosure obligation; the walk stops there. "Disclosed" at a committee means its own donors are on file, not that every dollar behind it is.</p>
+  </section>
+
+  <section class="card rel edges">
+    <span class="anno" style="left:-30px;top:8px">5</span>
+    <div class="card-h"><h2>Edges into SMP <span style="color:var(--ink-3);font-weight:400;font-size:var(--text-sm)">hop 2 · 24 sources · $328.9M</span></h2><span class="note">Sorted by amount · <a class="lnk" href="#">Show all 460 edges</a></span></div>
+    <table class="tight">
+      <thead><tr><th>From</th><th>Kind</th><th>Visibility</th><th class="r">Amount</th><th class="r">Share</th><th class="r">Transfers</th><th>Dates</th><th>Types</th><th class="r">Record</th></tr></thead>
+      <tbody>
+        <tr><td class="from" style="color:var(--ink-3)">Other contributors to SMP</td><td class="k">aggregate</td><td><span class="vislbl neutral">— pruned</span></td><td class="r money">$114,709,842</td><td class="r num">34.9%</td><td class="r num">438</td><td class="k">Feb 2023 – Nov 2024</td><td class="mono">10 18G 18K 24K</td><td class="r"><a class="src" href="https://www.fec.gov/data/receipts/?committee_id=C00484642&two_year_transaction_period=2024">FEC</a></td></tr>
+        <tr><td class="from">MAJORITY FORWARD</td><td class="k">organization</td><td><span class="vislbl dark">● dark wall</span></td><td class="r money">$81,750,000</td><td class="r num">24.9%</td><td class="r num">9</td><td class="k">Jan 2023 – Dec 2024</td><td class="mono">10</td><td class="r"><a class="src" href="https://www.fec.gov/data/receipts/?committee_id=C00484642&two_year_transaction_period=2024">FEC</a></td></tr>
+        <tr><td class="from"><a class="lnk" href="#">WORKING FOR WORKING AMERICANS – FEDERAL</a></td><td class="k">Super PAC</td><td><span class="vislbl disclosed">● disclosed</span></td><td class="r money">$14,000,000</td><td class="r num">4.3%</td><td class="r num">7</td><td class="k">Jun 2023 – Oct 2024</td><td class="mono">18K 24K</td><td class="r"><a class="src" href="https://www.fec.gov/data/receipts/?committee_id=C00484642&two_year_transaction_period=2024">FEC</a></td></tr>
+        <tr><td class="from"><a class="lnk" href="#">DEMOCRACY PAC</a></td><td class="k">Super PAC</td><td><span class="vislbl disclosed">● disclosed</span></td><td class="r money">$10,500,000</td><td class="r num">3.2%</td><td class="r num">5</td><td class="k">Jan 2024 – Oct 2024</td><td class="mono">18K 24K</td><td class="r"><a class="src" href="https://www.fec.gov/data/receipts/?committee_id=C00484642&two_year_transaction_period=2024">FEC</a></td></tr>
+        <tr><td class="from">EYCHANER, FRED</td><td class="k">individual</td><td><span class="vislbl disclosed">● disclosed</span></td><td class="r money">$10,000,000</td><td class="r num">3.0%</td><td class="r num">5</td><td class="k">Jun 2023 – Sep 2024</td><td class="mono">10</td><td class="r"><a class="src" href="https://www.fec.gov/data/receipts/?committee_id=C00484642&two_year_transaction_period=2024">FEC</a></td></tr>
+        <tr><td class="from">GREATER NEW YORK HOSPITAL ASSOCIATION MANAGEMENT CORPORATION</td><td class="k">organization</td><td><span class="vislbl dark">● dark wall</span></td><td class="r money">$8,500,000</td><td class="r num">2.6%</td><td class="r num">8</td><td class="k">May 2023 – Oct 2024</td><td class="mono">10</td><td class="r"><a class="src" href="https://www.fec.gov/data/receipts/?committee_id=C00484642&two_year_transaction_period=2024">FEC</a></td></tr>
+        <tr><td class="from">SIMONS, JAMES</td><td class="k">individual</td><td><span class="vislbl disclosed">● disclosed</span></td><td class="r money">$7,500,000</td><td class="r num">2.3%</td><td class="r num">3</td><td class="k">Sep 2023 – May 2024</td><td class="mono">10</td><td class="r"><a class="src" href="https://www.fec.gov/data/receipts/?committee_id=C00484642&two_year_transaction_period=2024">FEC</a></td></tr>
+        <tr><td class="from">SKOLL, JEFF S.</td><td class="k">individual</td><td><span class="vislbl disclosed">● disclosed</span></td><td class="r money">$7,000,000</td><td class="r num">2.1%</td><td class="r num">4</td><td class="k">Jun 2023 – Apr 2024</td><td class="mono">10</td><td class="r"><a class="src" href="https://www.fec.gov/data/receipts/?committee_id=C00484642&two_year_transaction_period=2024">FEC</a></td></tr>
+        <tr><td class="from"><a class="lnk" href="#">DEMOCRACY PAC II</a></td><td class="k">Super PAC</td><td><span class="vislbl neutral">● not walked</span></td><td class="r money">$6,500,000</td><td class="r num">2.0%</td><td class="r num">2</td><td class="k">Jun 2023 – Jan 2024</td><td class="mono">18K</td><td class="r"><a class="src" href="https://www.fec.gov/data/receipts/?committee_id=C00484642&two_year_transaction_period=2024">FEC</a></td></tr>
+        <tr><td class="from">MANDEL, STEPHEN</td><td class="k">individual</td><td><span class="vislbl disclosed">● disclosed</span></td><td class="r money">$6,000,000</td><td class="r num">1.8%</td><td class="r num">2</td><td class="k">Jun 2023 – May 2024</td><td class="mono">10</td><td class="r"><a class="src" href="https://www.fec.gov/data/receipts/?committee_id=C00484642&two_year_transaction_period=2024">FEC</a></td></tr>
+        <tr><td class="from"><a class="lnk" href="#">EARN INTERNATIONAL UNION OF OPERATING ENGINEERS</a></td><td class="k">Super PAC</td><td><span class="vislbl disclosed">● disclosed</span></td><td class="r money">$5,750,000</td><td class="r num">1.7%</td><td class="r num">12</td><td class="k">Aug 2023 – Oct 2024</td><td class="mono">18K 24K</td><td class="r"><a class="src" href="https://www.fec.gov/data/receipts/?committee_id=C00484642&two_year_transaction_period=2024">FEC</a></td></tr>
+        <tr><td class="from">IBEW PAC EDUCATIONAL FUND</td><td class="k">union treasury</td><td><span class="vislbl disclosed">● disclosed</span></td><td class="r money">$5,500,000</td><td class="r num">1.7%</td><td class="r num">6</td><td class="k">Jun 2023 – Oct 2024</td><td class="mono">10</td><td class="r"><a class="src" href="https://www.fec.gov/data/receipts/?committee_id=C00484642&two_year_transaction_period=2024">FEC</a></td></tr>
+      </tbody>
+    </table>
+    <p class="note" style="margin-top:10px">"Not walked" = an FEC-registered committee outside the loaded neighborhood or past the hop cap; counted as disclosed in the score (see methodology, and critic finding C-06). Transaction types are FEC codes: 10 individual/org contribution, 18G/18K transfers in, 24K contributions out.</p>
+  </section>
+  </div>
+
+  <section class="anno-panel">
+    <div class="caps" style="color:#1f4e9e;margin-bottom:8px">Annotations (mockup only — not part of the UI)</div>
+    <ol class="anno-list" style="list-style:none;padding:0;margin:0">
+      <li><b>1</b>Flags move out of the h1 line into a chip row and carry their one-number detail ("SMP supplied 100%"); the title stays a single line.</li>
+      <li><b>2</b>Summary card gains the dollar split under the bar (66% ≈ $207M / 34% ≈ $106M) so the percentage is anchored to money; the terminus sentence is demoted to a note.</li>
+      <li><b>3</b>Findings are a 3-column grid (flag · sentence · evidence) instead of interleaved paragraphs and orphaned "evidence ↗" links; a header line says they are descriptive.</li>
+      <li><b>4</b>Diagram shows the top 8 sources per hop by default with an explicit "Top 20 / Everything" switch (this is also how the 5–6 MB HTML problem, C-10, gets solved). Dark nodes are hatched and labelled "DARK WALL", never just red. Column headers name the hops. Ribbon opacity is uniform so width alone carries magnitude.</li>
+      <li><b>5</b>Edge table: visibility becomes a labelled text column (colour is not the only channel), share-of-total is added, FEC transaction codes are set in mono, and "not walked" is distinguished from "disclosed".</li>
+    </ol>
+  </section>
+</main>
+<footer class="container note" style="padding:24px 24px 40px">Every figure links to its government record. We show adjacency, never causation.</footer>
+</body>
+</html>

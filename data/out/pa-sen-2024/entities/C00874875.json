@@ -1,0 +1,188 @@
+{
+  "entity_id": "C00874875",
+  "race_id": "pa-sen-2024",
+  "kind": "committee",
+  "name": "VOTERS FOR RESPONSIVE GOVERNMENT (VRG)",
+  "aliases": [],
+  "committee_type": "O",
+  "committee_type_label": "Super PAC",
+  "designation": "U",
+  "registration_date": null,
+  "treasurer": "DAVIDSON, CARY",
+  "address": {
+    "street": "515 S. FIGUEROA ST., STE. 1110",
+    "city": "LOS ANGELES",
+    "state": "CA",
+    "zip": "90071"
+  },
+  "visibility": "disclosed",
+  "is_conduit": false,
+  "totals": {
+    "receipts": 3953704.02,
+    "disbursements": 3953704.02,
+    "independent_expenditures": 3245816.88,
+    "from_individuals": 978000.0,
+    "from_committees": 1300000.0,
+    "from_organizations": 0.0,
+    "from_undisclosed": 1650000.0
+  },
+  "inflows": [
+    {
+      "transfer_id": "C00874875-in-C00799031",
+      "from_entity_id": "C00799031",
+      "from_name": "UNITED DEMOCRACY PROJECT ('UDP')",
+      "to_entity_id": "C00874875",
+      "to_name": "VOTERS FOR RESPONSIVE GOVERNMENT (VRG)",
+      "amount": 1300000.0,
+      "date": "2024-05-01",
+      "visibility": "disclosed",
+      "transaction_type": "18K",
+      "limit": "unlimited",
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00874875&two_year_transaction_period=2024&contributor_name=C00799031"
+    },
+    {
+      "transfer_id": "C00874875-in-org:DAVIS,_ANTHONY_B.",
+      "from_entity_id": "org:DAVIS,_ANTHONY_B.",
+      "from_name": "DAVIS, ANTHONY B.",
+      "to_entity_id": "C00874875",
+      "to_name": "VOTERS FOR RESPONSIVE GOVERNMENT (VRG)",
+      "amount": 1000000.0,
+      "date": "2024-05-03",
+      "visibility": "dark",
+      "transaction_type": "10",
+      "limit": "unlimited",
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00874875&two_year_transaction_period=2024&contributor_name=DAVIS%2C+ANTHONY+B."
+    },
+    {
+      "transfer_id": "C00874875-in-org:EDGEWATER_PARTNERSHIP_LP",
+      "from_entity_id": "org:EDGEWATER_PARTNERSHIP_LP",
+      "from_name": "EDGEWATER PARTNERSHIP LP",
+      "to_entity_id": "C00874875",
+      "to_name": "VOTERS FOR RESPONSIVE GOVERNMENT (VRG)",
+      "amount": 650000.0,
+      "date": "2024-05-07",
+      "visibility": "dark",
+      "transaction_type": "10",
+      "limit": "unlimited",
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00874875&two_year_transaction_period=2024&contributor_name=EDGEWATER+PARTNERSHIP+LP"
+    },
+    {
+      "transfer_id": "C00874875-in-ind:JACOBSON_JONATHON_S.|02108",
+      "from_entity_id": "ind:JACOBSON_JONATHON_S.|02108",
+      "from_name": "JACOBSON, JONATHON S.",
+      "to_entity_id": "C00874875",
+      "to_name": "VOTERS FOR RESPONSIVE GOVERNMENT (VRG)",
+      "amount": 350000.0,
+      "date": "2024-05-06",
+      "visibility": "disclosed",
+      "transaction_type": "10",
+      "limit": "unlimited",
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00874875&two_year_transaction_period=2024&contributor_name=JACOBSON%2C+JONATHON+S."
+    },
+    {
+      "transfer_id": "C00874875-in-ind:COHEN_NEIL_L.|10022",
+      "from_entity_id": "ind:COHEN_NEIL_L.|10022",
+      "from_name": "COHEN, NEIL L.",
+      "to_entity_id": "C00874875",
+      "to_name": "VOTERS FOR RESPONSIVE GOVERNMENT (VRG)",
+      "amount": 253000.0,
+      "date": "2024-05-08",
+      "visibility": "disclosed",
+      "transaction_type": "10",
+      "limit": "unlimited",
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00874875&two_year_transaction_period=2024&contributor_name=COHEN%2C+NEIL+L."
+    },
+    {
+      "transfer_id": "C00874875-in-ind:MOELIS_KENNETH|90025",
+      "from_entity_id": "ind:MOELIS_KENNETH|90025",
+      "from_name": "MOELIS, KENNETH",
+      "to_entity_id": "C00874875",
+      "to_name": "VOTERS FOR RESPONSIVE GOVERNMENT (VRG)",
+      "amount": 250000.0,
+      "date": "2024-05-06",
+      "visibility": "disclosed",
+      "transaction_type": "10",
+      "limit": "unlimited",
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00874875&two_year_transaction_period=2024&contributor_name=MOELIS%2C+KENNETH"
+    },
+    {
+      "transfer_id": "C00874875-in-ind:FISHER_DANIEL_B.|10021",
+      "from_entity_id": "ind:FISHER_DANIEL_B.|10021",
+      "from_name": "FISHER, DANIEL B.",
+      "to_entity_id": "C00874875",
+      "to_name": "VOTERS FOR RESPONSIVE GOVERNMENT (VRG)",
+      "amount": 100000.0,
+      "date": "2024-05-02",
+      "visibility": "disclosed",
+      "transaction_type": "10",
+      "limit": "unlimited",
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00874875&two_year_transaction_period=2024&contributor_name=FISHER%2C+DANIEL+B."
+    },
+    {
+      "transfer_id": "C00874875-in-ind:CASSELL_LAUREN_S.|10022",
+      "from_entity_id": "ind:CASSELL_LAUREN_S.|10022",
+      "from_name": "CASSELL, LAUREN S.",
+      "to_entity_id": "C00874875",
+      "to_name": "VOTERS FOR RESPONSIVE GOVERNMENT (VRG)",
+      "amount": 12500.0,
+      "date": "2024-05-02",
+      "visibility": "disclosed",
+      "transaction_type": "10",
+      "limit": "unlimited",
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00874875&two_year_transaction_period=2024&contributor_name=CASSELL%2C+LAUREN+S."
+    },
+    {
+      "transfer_id": "C00874875-in-ind:BLINBAUM_JACQUES|10022",
+      "from_entity_id": "ind:BLINBAUM_JACQUES|10022",
+      "from_name": "BLINBAUM, JACQUES",
+      "to_entity_id": "C00874875",
+      "to_name": "VOTERS FOR RESPONSIVE GOVERNMENT (VRG)",
+      "amount": 12500.0,
+      "date": "2024-05-02",
+      "visibility": "disclosed",
+      "transaction_type": "10",
+      "limit": "unlimited",
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00874875&two_year_transaction_period=2024&contributor_name=BLINBAUM%2C+JACQUES"
+    }
+  ],
+  "outflows": [
+    {
+      "transfer_id": "C00874875-out-C00882266",
+      "from_entity_id": "C00874875",
+      "from_name": "VOTERS FOR RESPONSIVE GOVERNMENT (VRG)",
+      "to_entity_id": "C00882266",
+      "to_name": "BLUE WAVE ACTION D/B/A BWA",
+      "amount": 561000.0,
+      "date": "2024-07-25",
+      "visibility": "disclosed",
+      "transaction_type": "18K",
+      "limit": null,
+      "source_url": "https://www.fec.gov/data/disbursements/?committee_id=C00874875&two_year_transaction_period=2024"
+    },
+    {
+      "transfer_id": "C00874875-out-C00854299",
+      "from_entity_id": "C00874875",
+      "from_name": "VOTERS FOR RESPONSIVE GOVERNMENT (VRG)",
+      "to_entity_id": "C00854299",
+      "to_name": "BOLD AMERICA",
+      "amount": 74122.0,
+      "date": "2024-09-27",
+      "visibility": "disclosed",
+      "transaction_type": "24K",
+      "limit": null,
+      "source_url": "https://www.fec.gov/data/disbursements/?committee_id=C00874875&two_year_transaction_period=2024"
+    }
+  ],
+  "independent_expenditures": [],
+  "flags": [
+    {
+      "id": "shell_cluster",
+      "label": "Shares address and treasurer",
+      "detail": "VOTERS FOR RESPONSIVE GOVERNMENT (VRG) lists the same street address and treasurer as EDISON INTERNATIONAL PAC (C00019653), TELEVISAUNIVISION, INC. EMPLOYEE POLITICAL ACTION COMMITTEE (C00435735), BATTLEGROUND CALIFORNIA (C00872549).",
+      "evidence_url": "https://www.fec.gov/data/committee/C00874875/?cycle=2024"
+    }
+  ],
+  "has_chain": false,
+  "source_url": "https://www.fec.gov/data/committee/C00874875/?cycle=2024",
+  "data_status": "real"
+}

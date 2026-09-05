@@ -1,0 +1,77 @@
+{
+  "entity_id": "C00618389",
+  "race_id": "pa-sen-2024",
+  "kind": "committee",
+  "name": "TRUMP VICTORY",
+  "aliases": [],
+  "committee_type": "N",
+  "committee_type_label": "PAC (non-qualified)",
+  "designation": "J",
+  "registration_date": null,
+  "treasurer": "CRATE, BRADLEY T. MR.",
+  "address": {
+    "street": "P.O. BOX 13570",
+    "city": "ARLINGTON",
+    "state": "VA",
+    "zip": "22219"
+  },
+  "visibility": "disclosed",
+  "is_conduit": false,
+  "totals": {
+    "receipts": 0.0,
+    "disbursements": 528609.65,
+    "independent_expenditures": 0,
+    "from_individuals": 0.0,
+    "from_committees": 15000.0,
+    "from_organizations": 0.0,
+    "from_undisclosed": 0.0
+  },
+  "inflows": [
+    {
+      "transfer_id": "C00618389-in-C00428052",
+      "from_entity_id": "C00428052",
+      "from_name": "MAJORITY COMMITTEE PAC--MC PAC",
+      "to_entity_id": "C00618389",
+      "to_name": "TRUMP VICTORY",
+      "amount": 15000.0,
+      "date": "2024-01-30",
+      "visibility": "disclosed",
+      "transaction_type": "24K",
+      "limit": null,
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00618389&two_year_transaction_period=2024&contributor_name=C00428052"
+    }
+  ],
+  "outflows": [
+    {
+      "transfer_id": "C00618389-out-C00580100",
+      "from_entity_id": "C00618389",
+      "from_name": "TRUMP VICTORY",
+      "to_entity_id": "C00580100",
+      "to_name": "MAKE AMERICA GREAT AGAIN PAC",
+      "amount": 509180.0,
+      "date": "2023-01-11",
+      "visibility": "disclosed",
+      "transaction_type": "24G",
+      "limit": null,
+      "source_url": "https://www.fec.gov/data/disbursements/?committee_id=C00618389&two_year_transaction_period=2024"
+    },
+    {
+      "transfer_id": "C00618389-out-C00140590",
+      "from_entity_id": "C00618389",
+      "from_name": "TRUMP VICTORY",
+      "to_entity_id": "C00140590",
+      "to_name": "CALIFORNIA REPUBLICAN PARTY FEDERAL ACCT.",
+      "amount": 194734.0,
+      "date": "2024-08-28",
+      "visibility": "disclosed",
+      "transaction_type": "18G",
+      "limit": null,
+      "source_url": "https://www.fec.gov/data/disbursements/?committee_id=C00618389&two_year_transaction_period=2024"
+    }
+  ],
+  "independent_expenditures": [],
+  "flags": [],
+  "has_chain": false,
+  "source_url": "https://www.fec.gov/data/committee/C00618389/?cycle=2024",
+  "data_status": "real"
+}

@@ -1,0 +1,167 @@
+{
+  "$ref": "#/definitions/races",
+  "definitions": {
+    "races": {
+      "type": "object",
+      "properties": {
+        "generated_at": {
+          "type": "string"
+        },
+        "races": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "race_id": {
+                "type": "string"
+              },
+              "label": {
+                "type": "string"
+              },
+              "cycle": {
+                "type": "integer"
+              },
+              "state": {
+                "type": "string",
+                "minLength": 2,
+                "maxLength": 2
+              },
+              "office": {
+                "type": "string",
+                "enum": [
+                  "S",
+                  "H",
+                  "P"
+                ]
+              },
+              "district": {
+                "type": "string"
+              },
+              "election_date": {
+                "type": "string"
+              },
+              "status": {
+                "type": "string",
+                "enum": [
+                  "complete",
+                  "live",
+                  "stub"
+                ]
+              },
+              "candidates": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "candidate_id": {
+                      "type": "string"
+                    },
+                    "name": {
+                      "type": "string"
+                    },
+                    "party": {
+                      "type": "string",
+                      "enum": [
+                        "DEM",
+                        "REP",
+                        "LIB",
+                        "GRE",
+                        "IND",
+                        "CON",
+                        "OTH"
+                      ]
+                    },
+                    "incumbent": {
+                      "type": "boolean"
+                    },
+                    "principal_committee_id": {
+                      "type": "string"
+                    },
+                    "result": {
+                      "type": "string",
+                      "enum": [
+                        "won",
+                        "lost",
+                        "pending"
+                      ]
+                    }
+                  },
+                  "required": [
+                    "candidate_id",
+                    "name",
+                    "party",
+                    "incumbent",
+                    "principal_committee_id"
+                  ],
+                  "additionalProperties": false
+                }
+              },
+              "totals": {
+                "type": "object",
+                "properties": {
+                  "campaign_receipts": {
+                    "type": "number"
+                  },
+                  "outside_spending": {
+                    "type": "number"
+                  },
+                  "outside_share": {
+                    "type": "number",
+                    "minimum": 0,
+                    "maximum": 1
+                  }
+                },
+                "required": [
+                  "campaign_receipts",
+                  "outside_spending",
+                  "outside_share"
+                ],
+                "additionalProperties": false
+              },
+              "traceability_score": {
+                "anyOf": [
+                  {
+                    "type": "number",
+                    "minimum": 0,
+                    "maximum": 1
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "data_status": {
+                "type": "string",
+                "enum": [
+                  "real",
+                  "mock",
+                  "partial"
+                ]
+              }
+            },
+            "required": [
+              "race_id",
+              "label",
+              "cycle",
+              "state",
+              "office",
+              "election_date",
+              "status",
+              "candidates",
+              "totals",
+              "traceability_score",
+              "data_status"
+            ],
+            "additionalProperties": false
+          }
+        }
+      },
+      "required": [
+        "generated_at",
+        "races"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "$schema": "http://json-schema.org/draft-07/schema#"
+}

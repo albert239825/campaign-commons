@@ -1,0 +1,275 @@
+{
+  "donor_id": "ind:SCHEIDE_JAY|02138",
+  "donor_key": "ind-SCHEIDE_JAY-02138",
+  "name": "SCHEIDE, JAY",
+  "kind": "individual",
+  "race_id": "pa-sen-2024",
+  "generated_at": "2026-09-05T14:22:15+00:00",
+  "data_status": "real",
+  "total_given": 9995000.0,
+  "total_in_chains": 109945000.0,
+  "nodes": [
+    {
+      "id": "ind:SCHEIDE_JAY|02138",
+      "name": "SCHEIDE, JAY",
+      "kind": "individual",
+      "committee_type": null,
+      "depth": 0,
+      "amount": 109945000.0,
+      "is_spender": false,
+      "has_chain": false,
+      "source_url": "https://www.fec.gov/data/receipts/individual-contributions/?contributor_name=SCHEIDE%2C+JAY&two_year_transaction_period=2024"
+    },
+    {
+      "id": "C00728360",
+      "name": "MOVEMENT VOTER PAC",
+      "kind": "committee",
+      "committee_type": "V",
+      "depth": 1,
+      "amount": 9995000.0,
+      "is_spender": false,
+      "has_chain": false,
+      "source_url": "https://www.fec.gov/data/committee/C00728360/?cycle=2024"
+    },
+    {
+      "id": "C00761064",
+      "name": "API PA VOTES",
+      "kind": "committee",
+      "committee_type": "O",
+      "depth": 2,
+      "amount": 290200.0,
+      "is_spender": true,
+      "has_chain": true,
+      "source_url": "https://www.fec.gov/data/committee/C00761064/?cycle=2024"
+    },
+    {
+      "id": "C00873877",
+      "name": "SOLIDARITY VICTORY PAC",
+      "kind": "committee",
+      "committee_type": "O",
+      "depth": 2,
+      "amount": 270000.0,
+      "is_spender": true,
+      "has_chain": true,
+      "source_url": "https://www.fec.gov/data/committee/C00873877/?cycle=2024"
+    },
+    {
+      "id": "C00685693",
+      "name": "CASA IN ACTION PAC",
+      "kind": "committee",
+      "committee_type": "O",
+      "depth": 2,
+      "amount": 235000.0,
+      "is_spender": true,
+      "has_chain": true,
+      "source_url": "https://www.fec.gov/data/committee/C00685693/?cycle=2024"
+    },
+    {
+      "id": "C00747998",
+      "name": "CARE IN ACTION PAC",
+      "kind": "committee",
+      "committee_type": "O",
+      "depth": 2,
+      "amount": 75000.0,
+      "is_spender": true,
+      "has_chain": true,
+      "source_url": "https://www.fec.gov/data/committee/C00747998/?cycle=2024"
+    },
+    {
+      "id": "C00689745",
+      "name": "MAKE THE ROAD ACTION INDEPENDENT EXPENDITURE COMMITTEE",
+      "kind": "committee",
+      "committee_type": "O",
+      "depth": 2,
+      "amount": 75000.0,
+      "is_spender": true,
+      "has_chain": true,
+      "source_url": "https://www.fec.gov/data/committee/C00689745/?cycle=2024"
+    },
+    {
+      "id": "C00738732",
+      "name": "CLEAN WAVE",
+      "kind": "committee",
+      "committee_type": "O",
+      "depth": 2,
+      "amount": 25000.0,
+      "is_spender": true,
+      "has_chain": true,
+      "source_url": "https://www.fec.gov/data/committee/C00738732/?cycle=2024"
+    },
+    {
+      "id": "C00744920",
+      "name": "CFFE PAC",
+      "kind": "committee",
+      "committee_type": "W",
+      "depth": 2,
+      "amount": 20000.0,
+      "is_spender": true,
+      "has_chain": true,
+      "source_url": "https://www.fec.gov/data/committee/C00744920/?cycle=2024"
+    },
+    {
+      "id": "C00341396",
+      "name": "MOVEON.ORG POLITICAL ACTION",
+      "kind": "committee",
+      "committee_type": "W",
+      "depth": 2,
+      "amount": 5000.0,
+      "is_spender": true,
+      "has_chain": true,
+      "source_url": "https://www.fec.gov/data/committee/C00341396/?cycle=2024"
+    },
+    {
+      "id": "S6PA00217",
+      "name": "Bob Casey",
+      "kind": "candidate",
+      "committee_type": null,
+      "depth": 3,
+      "amount": 3823052.79,
+      "is_spender": false,
+      "has_chain": false,
+      "source_url": "https://www.fec.gov/data/candidate/S6PA00217/?cycle=2024&election_full=false"
+    }
+  ],
+  "edges": [
+    {
+      "from": "ind:SCHEIDE_JAY|02138",
+      "to": "C00728360",
+      "kind": "money",
+      "amount": 9995000.0,
+      "support_oppose": null,
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00728360&two_year_transaction_period=2024&contributor_name=SCHEIDE%2C+JAY"
+    },
+    {
+      "from": "C00728360",
+      "to": "C00761064",
+      "kind": "money",
+      "amount": 290200.0,
+      "support_oppose": null,
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00761064&two_year_transaction_period=2024&contributor_name=C00728360"
+    },
+    {
+      "from": "C00728360",
+      "to": "C00873877",
+      "kind": "money",
+      "amount": 270000.0,
+      "support_oppose": null,
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00873877&two_year_transaction_period=2024&contributor_name=C00728360"
+    },
+    {
+      "from": "C00728360",
+      "to": "C00685693",
+      "kind": "money",
+      "amount": 235000.0,
+      "support_oppose": null,
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00685693&two_year_transaction_period=2024&contributor_name=C00728360"
+    },
+    {
+      "from": "C00728360",
+      "to": "C00747998",
+      "kind": "money",
+      "amount": 75000.0,
+      "support_oppose": null,
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00747998&two_year_transaction_period=2024&contributor_name=C00728360"
+    },
+    {
+      "from": "C00728360",
+      "to": "C00689745",
+      "kind": "money",
+      "amount": 75000.0,
+      "support_oppose": null,
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00689745&two_year_transaction_period=2024&contributor_name=C00728360"
+    },
+    {
+      "from": "C00728360",
+      "to": "C00738732",
+      "kind": "money",
+      "amount": 25000.0,
+      "support_oppose": null,
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00738732&two_year_transaction_period=2024&contributor_name=C00728360"
+    },
+    {
+      "from": "C00728360",
+      "to": "C00744920",
+      "kind": "money",
+      "amount": 20000.0,
+      "support_oppose": null,
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00744920&two_year_transaction_period=2024&contributor_name=C00728360"
+    },
+    {
+      "from": "C00728360",
+      "to": "C00341396",
+      "kind": "money",
+      "amount": 5000.0,
+      "support_oppose": null,
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00341396&two_year_transaction_period=2024&contributor_name=C00728360"
+    },
+    {
+      "from": "C00761064",
+      "to": "S6PA00217",
+      "kind": "targeting",
+      "amount": 121122.9,
+      "support_oppose": "S",
+      "source_url": "https://www.fec.gov/data/independent-expenditures/?committee_id=C00761064&cycle=2024&candidate_id=S6PA00217"
+    },
+    {
+      "from": "C00873877",
+      "to": "S6PA00217",
+      "kind": "targeting",
+      "amount": 347469.7,
+      "support_oppose": "S",
+      "source_url": "https://www.fec.gov/data/independent-expenditures/?committee_id=C00873877&cycle=2024&candidate_id=S6PA00217"
+    },
+    {
+      "from": "C00685693",
+      "to": "S6PA00217",
+      "kind": "targeting",
+      "amount": 326313.31,
+      "support_oppose": "S",
+      "source_url": "https://www.fec.gov/data/independent-expenditures/?committee_id=C00685693&cycle=2024&candidate_id=S6PA00217"
+    },
+    {
+      "from": "C00747998",
+      "to": "S6PA00217",
+      "kind": "targeting",
+      "amount": 10000.0,
+      "support_oppose": "S",
+      "source_url": "https://www.fec.gov/data/independent-expenditures/?committee_id=C00747998&cycle=2024&candidate_id=S6PA00217"
+    },
+    {
+      "from": "C00689745",
+      "to": "S6PA00217",
+      "kind": "targeting",
+      "amount": 121161.65,
+      "support_oppose": "S",
+      "source_url": "https://www.fec.gov/data/independent-expenditures/?committee_id=C00689745&cycle=2024&candidate_id=S6PA00217"
+    },
+    {
+      "from": "C00738732",
+      "to": "S6PA00217",
+      "kind": "targeting",
+      "amount": 27889.13,
+      "support_oppose": "S",
+      "source_url": "https://www.fec.gov/data/independent-expenditures/?committee_id=C00738732&cycle=2024&candidate_id=S6PA00217"
+    },
+    {
+      "from": "C00744920",
+      "to": "S6PA00217",
+      "kind": "targeting",
+      "amount": 2866090.0,
+      "support_oppose": "S",
+      "source_url": "https://www.fec.gov/data/independent-expenditures/?committee_id=C00744920&cycle=2024&candidate_id=S6PA00217"
+    },
+    {
+      "from": "C00341396",
+      "to": "S6PA00217",
+      "kind": "targeting",
+      "amount": 3006.1,
+      "support_oppose": "S",
+      "source_url": "https://www.fec.gov/data/independent-expenditures/?committee_id=C00341396&cycle=2024&candidate_id=S6PA00217"
+    }
+  ],
+  "allocation_note": "share of donor's dollars reaching this spender is not determinable; showing the committees in between",
+  "truncated": false,
+  "method": "Forward walk over the same money edges as the chain walk (Schedule A receipts and committee-to-committee transfers from FEC bulk data, refunds excluded), starting from SCHEIDE, JAY: the 1 committee(s) it gave to in the 2024 cycle, then the outside spenders in this race that received transfers from those committees (8 spender(s) reached), then each spender's independent expenditures for or against a candidate. Independent expenditures are targeting edges: they move no money to the candidate and are drawn separately. Amounts on money edges are the reported totals between the two parties, not a share of this donor's dollars — once pooled, a donor's money is fungible, so no allocation is made past the first hop. `total_given` is the sum of the first-hop edges shown (itemized receipts reported under this name); `total_in_chains`, used only to rank donors, sums this donor's edges across every spender chain in the race, so the same gift counts once per chain it appears in."
+}

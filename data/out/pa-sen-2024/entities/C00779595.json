@@ -1,0 +1,130 @@
+{
+  "entity_id": "C00779595",
+  "race_id": "pa-sen-2024",
+  "kind": "committee",
+  "name": "RSLC PAC",
+  "aliases": [],
+  "committee_type": "O",
+  "committee_type_label": "Super PAC",
+  "designation": "U",
+  "registration_date": null,
+  "treasurer": "HOBBS, CABELL",
+  "address": {
+    "street": "1201 F ST NW",
+    "city": "WASHINGTON",
+    "state": "DC",
+    "zip": "20004"
+  },
+  "visibility": "disclosed",
+  "is_conduit": false,
+  "totals": {
+    "receipts": 19520915.63,
+    "disbursements": 19442328.47,
+    "independent_expenditures": 2234021.83,
+    "from_individuals": 0.0,
+    "from_committees": 19493000.0,
+    "from_organizations": 0.0,
+    "from_undisclosed": 19293000.0
+  },
+  "inflows": [
+    {
+      "transfer_id": "C00779595-in-org:REPUBLICAN_STATE_LEADERSHIP_COMMITTEE",
+      "from_entity_id": "org:REPUBLICAN_STATE_LEADERSHIP_COMMITTEE",
+      "from_name": "REPUBLICAN STATE LEADERSHIP COMMITTEE",
+      "to_entity_id": "C00779595",
+      "to_name": "RSLC PAC",
+      "amount": 19293000.0,
+      "date": "2024-10-18",
+      "visibility": "dark",
+      "transaction_type": "10",
+      "limit": "unlimited",
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00779595&two_year_transaction_period=2024&contributor_name=REPUBLICAN+STATE+LEADERSHIP+COMMITTEE"
+    },
+    {
+      "transfer_id": "C00779595-in-C00656777",
+      "from_entity_id": "C00656777",
+      "from_name": "JAM PAC",
+      "to_entity_id": "C00779595",
+      "to_name": "RSLC PAC",
+      "amount": 10000.0,
+      "date": "2024-02-07",
+      "visibility": "disclosed",
+      "transaction_type": "24K",
+      "limit": "unlimited",
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00779595&two_year_transaction_period=2024&contributor_name=C00656777"
+    },
+    {
+      "transfer_id": "C00779595-in-C00425256",
+      "from_entity_id": "C00425256",
+      "from_name": "PICKERING INC PAC",
+      "to_entity_id": "C00779595",
+      "to_name": "RSLC PAC",
+      "amount": 1000.0,
+      "date": "2023-07-28",
+      "visibility": "disclosed",
+      "transaction_type": "24K",
+      "limit": "unlimited",
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00779595&two_year_transaction_period=2024&contributor_name=C00425256"
+    }
+  ],
+  "outflows": [
+    {
+      "transfer_id": "C00779595-out-C00874669",
+      "from_entity_id": "C00779595",
+      "from_name": "RSLC PAC",
+      "to_entity_id": "C00874669",
+      "to_name": "WISCONSIN PRINCIPLES PAC",
+      "amount": 500000.0,
+      "date": "2024-10-15",
+      "visibility": "disclosed",
+      "transaction_type": "24K",
+      "limit": null,
+      "source_url": "https://www.fec.gov/data/disbursements/?committee_id=C00779595&two_year_transaction_period=2024"
+    },
+    {
+      "transfer_id": "C00779595-out-C00867036",
+      "from_entity_id": "C00779595",
+      "from_name": "RSLC PAC",
+      "to_entity_id": "C00867036",
+      "to_name": "RIGHT FOR AMERICA",
+      "amount": 250000.0,
+      "date": "2024-06-05",
+      "visibility": "disclosed",
+      "transaction_type": "24K",
+      "limit": "unlimited",
+      "source_url": "https://www.fec.gov/data/disbursements/?committee_id=C00779595&two_year_transaction_period=2024"
+    }
+  ],
+  "independent_expenditures": [
+    {
+      "ie_id": "C00779595-ie-1808473-SE24.7",
+      "spender_entity_id": "C00779595",
+      "spender_name": "RSLC PAC",
+      "candidate_id": "S6PA00217",
+      "candidate_name": "Bob Casey",
+      "support_oppose": "O",
+      "amount": 1250.0,
+      "date": "2024-04-08",
+      "purpose": "TEXT MESSAGES",
+      "payee": "CREATIVE STRATEGIC SOLUTIONS LLC",
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202408079666111247"
+    }
+  ],
+  "flags": [
+    {
+      "id": "single_transfer_funded",
+      "label": "Funded by a single source",
+      "detail": "REPUBLICAN STATE LEADERSHIP COMMITTEE supplied $19,293,000 of RSLC PAC's $19,304,000 itemized receipts (100%).",
+      "evidence_url": "https://www.fec.gov/data/receipts/?committee_id=C00779595&two_year_transaction_period=2024"
+    },
+    {
+      "id": "dead_end_dark",
+      "label": "Chain ends at undisclosed donors",
+      "detail": "100% of RSLC PAC's receipts stop at organizations whose own funding is not on file (advocacy nonprofits, LLCs, trusts) rather than at named individuals, businesses or unions.",
+      "evidence_url": "https://www.fec.gov/data/committee/C00779595/?cycle=2024"
+    }
+  ],
+  "has_chain": true,
+  "source_url": "https://www.fec.gov/data/committee/C00779595/?cycle=2024",
+  "data_status": "real"
+}

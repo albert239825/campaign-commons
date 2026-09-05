@@ -1,0 +1,243 @@
+{
+  "donor_id": "ind:UIHLEIN_RICHARD_E.|60044",
+  "donor_key": "ind-UIHLEIN_RICHARD_E--60044",
+  "name": "UIHLEIN, RICHARD E.",
+  "kind": "individual",
+  "race_id": "pa-sen-2024",
+  "generated_at": "2026-09-05T14:22:15+00:00",
+  "data_status": "real",
+  "total_given": 80115401.0,
+  "total_in_chains": 240264003.0,
+  "nodes": [
+    {
+      "id": "ind:UIHLEIN_RICHARD_E.|60044",
+      "name": "UIHLEIN, RICHARD E.",
+      "kind": "individual",
+      "committee_type": null,
+      "depth": 0,
+      "amount": 240264003.0,
+      "is_spender": false,
+      "has_chain": false,
+      "source_url": "https://www.fec.gov/data/receipts/individual-contributions/?contributor_name=UIHLEIN%2C+RICHARD+E.&two_year_transaction_period=2024"
+    },
+    {
+      "id": "C00571588",
+      "name": "RESTORATION PAC",
+      "kind": "committee",
+      "committee_type": "O",
+      "depth": 1,
+      "amount": 80088001.0,
+      "is_spender": false,
+      "has_chain": false,
+      "source_url": "https://www.fec.gov/data/committee/C00571588/?cycle=2024"
+    },
+    {
+      "id": "C00005926",
+      "name": "ILLINOIS REPUBLICAN PARTY - FEDERAL",
+      "kind": "committee",
+      "committee_type": "Y",
+      "depth": 1,
+      "amount": 10000.0,
+      "is_spender": false,
+      "has_chain": false,
+      "source_url": "https://www.fec.gov/data/committee/C00005926/?cycle=2024"
+    },
+    {
+      "id": "C00477240",
+      "name": "MORGAN GRIFFITH FOR CONGRESS",
+      "kind": "committee",
+      "committee_type": "H",
+      "depth": 1,
+      "amount": 6600.0,
+      "is_spender": false,
+      "has_chain": false,
+      "source_url": "https://www.fec.gov/data/committee/C00477240/?cycle=2024"
+    },
+    {
+      "id": "C00718239",
+      "name": "ANNA PAULINA LUNA FOR CONGRESS",
+      "kind": "committee",
+      "committee_type": "H",
+      "depth": 1,
+      "amount": 5800.0,
+      "is_spender": false,
+      "has_chain": false,
+      "source_url": "https://www.fec.gov/data/committee/C00718239/?cycle=2024"
+    },
+    {
+      "id": "C00878827",
+      "name": "MERRIN VICTORY COMMITTEE",
+      "kind": "committee",
+      "committee_type": "N",
+      "depth": 1,
+      "amount": 5000.0,
+      "is_spender": false,
+      "has_chain": false,
+      "source_url": "https://www.fec.gov/data/committee/C00878827/?cycle=2024"
+    },
+    {
+      "id": "C00530766",
+      "name": "WOMEN SPEAK OUT PAC",
+      "kind": "committee",
+      "committee_type": "O",
+      "depth": 2,
+      "amount": 11472500.0,
+      "is_spender": true,
+      "has_chain": true,
+      "source_url": "https://www.fec.gov/data/committee/C00530766/?cycle=2024"
+    },
+    {
+      "id": "C00544387",
+      "name": "AMERICAN PRINCIPLES PROJECT PAC",
+      "kind": "committee",
+      "committee_type": "O",
+      "depth": 2,
+      "amount": 10772385.0,
+      "is_spender": true,
+      "has_chain": true,
+      "source_url": "https://www.fec.gov/data/committee/C00544387/?cycle=2024"
+    },
+    {
+      "id": "C00883322",
+      "name": "THE L & C COALITION",
+      "kind": "committee",
+      "committee_type": "O",
+      "depth": 2,
+      "amount": 35000.0,
+      "is_spender": true,
+      "has_chain": true,
+      "source_url": "https://www.fec.gov/data/committee/C00883322/?cycle=2024"
+    },
+    {
+      "id": "S2PA00661",
+      "name": "Dave McCormick",
+      "kind": "candidate",
+      "committee_type": null,
+      "depth": 3,
+      "amount": 791282.83,
+      "is_spender": false,
+      "has_chain": false,
+      "source_url": "https://www.fec.gov/data/candidate/S2PA00661/?cycle=2024&election_full=false"
+    },
+    {
+      "id": "S6PA00217",
+      "name": "Bob Casey",
+      "kind": "candidate",
+      "committee_type": null,
+      "depth": 3,
+      "amount": 367032.83,
+      "is_spender": false,
+      "has_chain": false,
+      "source_url": "https://www.fec.gov/data/candidate/S6PA00217/?cycle=2024&election_full=false"
+    }
+  ],
+  "edges": [
+    {
+      "from": "ind:UIHLEIN_RICHARD_E.|60044",
+      "to": "C00571588",
+      "kind": "money",
+      "amount": 80088001.0,
+      "support_oppose": null,
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00571588&two_year_transaction_period=2024&contributor_name=UIHLEIN%2C+RICHARD+E."
+    },
+    {
+      "from": "ind:UIHLEIN_RICHARD_E.|60044",
+      "to": "C00005926",
+      "kind": "money",
+      "amount": 10000.0,
+      "support_oppose": null,
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00005926&two_year_transaction_period=2024&contributor_name=UIHLEIN%2C+RICHARD+E."
+    },
+    {
+      "from": "ind:UIHLEIN_RICHARD_E.|60044",
+      "to": "C00477240",
+      "kind": "money",
+      "amount": 6600.0,
+      "support_oppose": null,
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00477240&two_year_transaction_period=2024&contributor_name=UIHLEIN%2C+RICHARD+E."
+    },
+    {
+      "from": "ind:UIHLEIN_RICHARD_E.|60044",
+      "to": "C00718239",
+      "kind": "money",
+      "amount": 5800.0,
+      "support_oppose": null,
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00718239&two_year_transaction_period=2024&contributor_name=UIHLEIN%2C+RICHARD+E."
+    },
+    {
+      "from": "ind:UIHLEIN_RICHARD_E.|60044",
+      "to": "C00878827",
+      "kind": "money",
+      "amount": 5000.0,
+      "support_oppose": null,
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00878827&two_year_transaction_period=2024&contributor_name=UIHLEIN%2C+RICHARD+E."
+    },
+    {
+      "from": "C00571588",
+      "to": "C00530766",
+      "kind": "money",
+      "amount": 11472500.0,
+      "support_oppose": null,
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00530766&two_year_transaction_period=2024&contributor_name=C00571588"
+    },
+    {
+      "from": "C00571588",
+      "to": "C00544387",
+      "kind": "money",
+      "amount": 10772385.0,
+      "support_oppose": null,
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00544387&two_year_transaction_period=2024&contributor_name=C00571588"
+    },
+    {
+      "from": "C00571588",
+      "to": "C00883322",
+      "kind": "money",
+      "amount": 35000.0,
+      "support_oppose": null,
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00883322&two_year_transaction_period=2024&contributor_name=C00571588"
+    },
+    {
+      "from": "C00530766",
+      "to": "S2PA00661",
+      "kind": "targeting",
+      "amount": 177032.83,
+      "support_oppose": "S",
+      "source_url": "https://www.fec.gov/data/independent-expenditures/?committee_id=C00530766&cycle=2024&candidate_id=S2PA00661"
+    },
+    {
+      "from": "C00530766",
+      "to": "S6PA00217",
+      "kind": "targeting",
+      "amount": 177032.83,
+      "support_oppose": "O",
+      "source_url": "https://www.fec.gov/data/independent-expenditures/?committee_id=C00530766&cycle=2024&candidate_id=S6PA00217"
+    },
+    {
+      "from": "C00544387",
+      "to": "S2PA00661",
+      "kind": "targeting",
+      "amount": 550000.0,
+      "support_oppose": "S",
+      "source_url": "https://www.fec.gov/data/independent-expenditures/?committee_id=C00544387&cycle=2024&candidate_id=S2PA00661"
+    },
+    {
+      "from": "C00544387",
+      "to": "S6PA00217",
+      "kind": "targeting",
+      "amount": 190000.0,
+      "support_oppose": "O",
+      "source_url": "https://www.fec.gov/data/independent-expenditures/?committee_id=C00544387&cycle=2024&candidate_id=S6PA00217"
+    },
+    {
+      "from": "C00883322",
+      "to": "S2PA00661",
+      "kind": "targeting",
+      "amount": 64250.0,
+      "support_oppose": "S",
+      "source_url": "https://www.fec.gov/data/independent-expenditures/?committee_id=C00883322&cycle=2024&candidate_id=S2PA00661"
+    }
+  ],
+  "allocation_note": "share of donor's dollars reaching this spender is not determinable; showing the committees in between",
+  "truncated": false,
+  "method": "Forward walk over the same money edges as the chain walk (Schedule A receipts and committee-to-committee transfers from FEC bulk data, refunds excluded), starting from UIHLEIN, RICHARD E.: the 5 committee(s) it gave to in the 2024 cycle, then the outside spenders in this race that received transfers from those committees (3 spender(s) reached), then each spender's independent expenditures for or against a candidate. Independent expenditures are targeting edges: they move no money to the candidate and are drawn separately. Amounts on money edges are the reported totals between the two parties, not a share of this donor's dollars — once pooled, a donor's money is fungible, so no allocation is made past the first hop. `total_given` is the sum of the first-hop edges shown (itemized receipts reported under this name); `total_in_chains`, used only to rank donors, sums this donor's edges across every spender chain in the race, so the same gift counts once per chain it appears in."
+}

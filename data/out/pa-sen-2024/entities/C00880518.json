@@ -1,0 +1,90 @@
+{
+  "entity_id": "C00880518",
+  "race_id": "pa-sen-2024",
+  "kind": "committee",
+  "name": "BITCOIN VOTER PAC",
+  "aliases": [],
+  "committee_type": "V",
+  "committee_type_label": "Hybrid PAC (non-qualified)",
+  "designation": "U",
+  "registration_date": null,
+  "treasurer": "MCINTYRE, DUSTIN",
+  "address": {
+    "street": "1520 BELLE VIEW BLVD",
+    "city": "ALEXANDRIA",
+    "state": "VA",
+    "zip": "22307"
+  },
+  "visibility": "disclosed",
+  "is_conduit": false,
+  "totals": {
+    "receipts": 125000.0,
+    "disbursements": 114036.56,
+    "independent_expenditures": 74939.04,
+    "from_individuals": 0.0,
+    "from_committees": 0.0,
+    "from_organizations": 0.0,
+    "from_undisclosed": 125000.0
+  },
+  "inflows": [
+    {
+      "transfer_id": "C00880518-in-org:BITCOIN_VOTER_PROJECT,_INC",
+      "from_entity_id": "org:BITCOIN_VOTER_PROJECT,_INC",
+      "from_name": "BITCOIN VOTER PROJECT, INC",
+      "to_entity_id": "C00880518",
+      "to_name": "BITCOIN VOTER PAC",
+      "amount": 125000.0,
+      "date": "2024-10-17",
+      "visibility": "dark",
+      "transaction_type": "10",
+      "limit": null,
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00880518&two_year_transaction_period=2024&contributor_name=BITCOIN+VOTER+PROJECT%2C+INC"
+    }
+  ],
+  "outflows": [],
+  "independent_expenditures": [
+    {
+      "ie_id": "C00880518-ie-1853863-SE.4119",
+      "spender_entity_id": "C00880518",
+      "spender_name": "BITCOIN VOTER PAC",
+      "candidate_id": "S2PA00661",
+      "candidate_name": "Dave McCormick",
+      "support_oppose": "S",
+      "amount": 24969.52,
+      "date": "2024-10-25",
+      "purpose": "DIGITAL ADVERTISING",
+      "payee": "MAJORITY STRATEGIES LLC",
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202412049720416418"
+    },
+    {
+      "ie_id": "C00880518-ie-1853863-SE.4109",
+      "spender_entity_id": "C00880518",
+      "spender_name": "BITCOIN VOTER PAC",
+      "candidate_id": "S2PA00661",
+      "candidate_name": "Dave McCormick",
+      "support_oppose": "S",
+      "amount": 10000.0,
+      "date": "2024-10-17",
+      "purpose": "TEXT MESSAGING",
+      "payee": "VOTER TEXTING.COM",
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202412049720416419"
+    }
+  ],
+  "flags": [
+    {
+      "id": "single_transfer_funded",
+      "label": "Funded by a single source",
+      "detail": "BITCOIN VOTER PROJECT, INC supplied $125,000 of BITCOIN VOTER PAC's $125,000 itemized receipts (100%).",
+      "evidence_url": "https://www.fec.gov/data/receipts/?committee_id=C00880518&two_year_transaction_period=2024"
+    },
+    {
+      "id": "dead_end_dark",
+      "label": "Chain ends at undisclosed donors",
+      "detail": "100% of BITCOIN VOTER PAC's receipts stop at organizations whose own funding is not on file (advocacy nonprofits, LLCs, trusts) rather than at named individuals, businesses or unions.",
+      "evidence_url": "https://www.fec.gov/data/committee/C00880518/?cycle=2024"
+    }
+  ],
+  "has_chain": true,
+  "source_url": "https://www.fec.gov/data/committee/C00880518/?cycle=2024",
+  "data_status": "real"
+}

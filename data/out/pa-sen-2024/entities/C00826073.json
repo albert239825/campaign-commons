@@ -1,0 +1,90 @@
+{
+  "entity_id": "C00826073",
+  "race_id": "pa-sen-2024",
+  "kind": "committee",
+  "name": "PROTECT WEST VIRGINIA VALUES",
+  "aliases": [],
+  "committee_type": "O",
+  "committee_type_label": "Super PAC",
+  "designation": "U",
+  "registration_date": null,
+  "treasurer": "MCCREADY, JENNIFER",
+  "address": {
+    "street": "824 S. MILLEDGE AVE",
+    "city": "ATHENS",
+    "state": "GA",
+    "zip": "30605"
+  },
+  "visibility": "disclosed",
+  "is_conduit": false,
+  "totals": {
+    "receipts": 750000.0,
+    "disbursements": 1144860.96,
+    "independent_expenditures": 523450.0,
+    "from_individuals": 150000.0,
+    "from_committees": 0.0,
+    "from_organizations": 0.0,
+    "from_undisclosed": 50000.0
+  },
+  "inflows": [
+    {
+      "transfer_id": "C00826073-in-ind:DWYER_JOHN_JACK|32951",
+      "from_entity_id": "ind:DWYER_JOHN_JACK|32951",
+      "from_name": "DWYER, JOHN JACK",
+      "to_entity_id": "C00826073",
+      "to_name": "PROTECT WEST VIRGINIA VALUES",
+      "amount": 100000.0,
+      "date": "2023-03-31",
+      "visibility": "disclosed",
+      "transaction_type": "10",
+      "limit": "unlimited",
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00826073&two_year_transaction_period=2024&contributor_name=DWYER%2C+JOHN+JACK"
+    },
+    {
+      "transfer_id": "C00826073-in-ind:BATMASIAN_JAMES_H.|33432",
+      "from_entity_id": "ind:BATMASIAN_JAMES_H.|33432",
+      "from_name": "BATMASIAN, JAMES H.",
+      "to_entity_id": "C00826073",
+      "to_name": "PROTECT WEST VIRGINIA VALUES",
+      "amount": 50000.0,
+      "date": "2023-03-13",
+      "visibility": "disclosed",
+      "transaction_type": "10",
+      "limit": "unlimited",
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00826073&two_year_transaction_period=2024&contributor_name=BATMASIAN%2C+JAMES+H."
+    },
+    {
+      "transfer_id": "C00826073-in-org:TRUSTED_CAUSES,_LLC",
+      "from_entity_id": "org:TRUSTED_CAUSES,_LLC",
+      "from_name": "TRUSTED CAUSES, LLC",
+      "to_entity_id": "C00826073",
+      "to_name": "PROTECT WEST VIRGINIA VALUES",
+      "amount": 50000.0,
+      "date": "2023-03-23",
+      "visibility": "dark",
+      "transaction_type": "10",
+      "limit": "unlimited",
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00826073&two_year_transaction_period=2024&contributor_name=TRUSTED+CAUSES%2C+LLC"
+    }
+  ],
+  "outflows": [
+    {
+      "transfer_id": "C00826073-out-C00487470",
+      "from_entity_id": "C00826073",
+      "from_name": "PROTECT WEST VIRGINIA VALUES",
+      "to_entity_id": "C00487470",
+      "to_name": "CLUB FOR GROWTH ACTION",
+      "amount": 550000.0,
+      "date": "2023-06-29",
+      "visibility": "disclosed",
+      "transaction_type": "18K",
+      "limit": "unlimited",
+      "source_url": "https://www.fec.gov/data/disbursements/?committee_id=C00826073&two_year_transaction_period=2024"
+    }
+  ],
+  "independent_expenditures": [],
+  "flags": [],
+  "has_chain": false,
+  "source_url": "https://www.fec.gov/data/committee/C00826073/?cycle=2024",
+  "data_status": "real"
+}

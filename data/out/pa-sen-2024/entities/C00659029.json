@@ -1,0 +1,90 @@
+{
+  "entity_id": "C00659029",
+  "race_id": "pa-sen-2024",
+  "kind": "committee",
+  "name": "SLOTKIN VICTORY FUND",
+  "aliases": [],
+  "committee_type": "N",
+  "committee_type_label": "PAC (non-qualified)",
+  "designation": "J",
+  "registration_date": null,
+  "treasurer": "KYRIACOPOULOS, JANICA",
+  "address": {
+    "street": "910 17TH ST NW",
+    "city": "WASHINGTON",
+    "state": "DC",
+    "zip": "20006"
+  },
+  "visibility": "disclosed",
+  "is_conduit": false,
+  "totals": {
+    "receipts": 252.14,
+    "disbursements": 69806.52,
+    "independent_expenditures": 0,
+    "from_individuals": 252.14,
+    "from_committees": 0.0,
+    "from_organizations": 0.0,
+    "from_undisclosed": 0.0
+  },
+  "inflows": [
+    {
+      "transfer_id": "C00659029-in-C00573261",
+      "from_entity_id": "C00573261",
+      "from_name": "END CITIZENS UNITED",
+      "to_entity_id": "C00659029",
+      "to_name": "SLOTKIN VICTORY FUND",
+      "amount": 5000.0,
+      "date": "2024-09-27",
+      "visibility": "disclosed",
+      "transaction_type": "24K",
+      "limit": null,
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00659029&two_year_transaction_period=2024&contributor_name=C00573261"
+    },
+    {
+      "transfer_id": "C00659029-in-ind:DARLING_MARTHA|48105",
+      "from_entity_id": "ind:DARLING_MARTHA|48105",
+      "from_name": "DARLING, MARTHA",
+      "to_entity_id": "C00659029",
+      "to_name": "SLOTKIN VICTORY FUND",
+      "amount": 1300.0,
+      "date": "2023-03-14",
+      "visibility": "disclosed",
+      "transaction_type": "22Y",
+      "limit": null,
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00659029&two_year_transaction_period=2024&contributor_name=DARLING%2C+MARTHA"
+    }
+  ],
+  "outflows": [
+    {
+      "transfer_id": "C00659029-out-C00031054",
+      "from_entity_id": "C00659029",
+      "from_name": "SLOTKIN VICTORY FUND",
+      "to_entity_id": "C00031054",
+      "to_name": "MICHIGAN DEMOCRATIC STATE CENTRAL COMMITTEE",
+      "amount": 2134611.0,
+      "date": "2024-11-20",
+      "visibility": "disclosed",
+      "transaction_type": "18G",
+      "limit": null,
+      "source_url": "https://www.fec.gov/data/disbursements/?committee_id=C00659029&two_year_transaction_period=2024"
+    },
+    {
+      "transfer_id": "C00659029-out-C00650150",
+      "from_entity_id": "C00659029",
+      "from_name": "SLOTKIN VICTORY FUND",
+      "to_entity_id": "C00650150",
+      "to_name": "ELISSA SLOTKIN FOR CONGRESS",
+      "amount": 701.0,
+      "date": "2023-03-17",
+      "visibility": "disclosed",
+      "transaction_type": "18G",
+      "limit": null,
+      "source_url": "https://www.fec.gov/data/disbursements/?committee_id=C00659029&two_year_transaction_period=2024"
+    }
+  ],
+  "independent_expenditures": [],
+  "flags": [],
+  "has_chain": false,
+  "source_url": "https://www.fec.gov/data/committee/C00659029/?cycle=2024",
+  "data_status": "real"
+}

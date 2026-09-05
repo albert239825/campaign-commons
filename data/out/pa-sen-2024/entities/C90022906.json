@@ -1,0 +1,109 @@
+{
+  "entity_id": "C90022906",
+  "race_id": "pa-sen-2024",
+  "kind": "committee",
+  "name": "ACTION TOGETHER NEPA INC.",
+  "aliases": [],
+  "committee_type": "I",
+  "committee_type_label": "Independent expenditor (not a committee)",
+  "designation": "U",
+  "registration_date": null,
+  "treasurer": null,
+  "address": {
+    "street": "PO BOX 521",
+    "city": "MOUNTAIN TOP",
+    "state": "PA",
+    "zip": "18707"
+  },
+  "visibility": "disclosed",
+  "is_conduit": false,
+  "totals": {
+    "receipts": 0.0,
+    "disbursements": 26848.44,
+    "independent_expenditures": 4259.77,
+    "from_individuals": 0.0,
+    "from_committees": 0.0,
+    "from_organizations": 0.0,
+    "from_undisclosed": 0.0
+  },
+  "inflows": [],
+  "outflows": [],
+  "independent_expenditures": [
+    {
+      "ie_id": "C90022906-ie-1870264-F57.000002",
+      "spender_entity_id": "C90022906",
+      "spender_name": "ACTION TOGETHER NEPA INC.",
+      "candidate_id": "S6PA00217",
+      "candidate_name": "Bob Casey",
+      "support_oppose": "S",
+      "amount": 2037.03,
+      "date": "2024-10-23",
+      "purpose": "PRINTING OF CAMPAIGN MATERIALS",
+      "payee": "CENTER CITY PRINT",
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202501319748780722"
+    },
+    {
+      "ie_id": "C90022906-ie-1870264-F57.000006",
+      "spender_entity_id": "C90022906",
+      "spender_name": "ACTION TOGETHER NEPA INC.",
+      "candidate_id": "S6PA00217",
+      "candidate_name": "Bob Casey",
+      "support_oppose": "S",
+      "amount": 1916.25,
+      "date": "2024-10-23",
+      "purpose": "POSTAGE",
+      "payee": "USPS",
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202501319748780723"
+    },
+    {
+      "ie_id": "C90022906-ie-1870264-F57.000010",
+      "spender_entity_id": "C90022906",
+      "spender_name": "ACTION TOGETHER NEPA INC.",
+      "candidate_id": "S6PA00217",
+      "candidate_name": "Bob Casey",
+      "support_oppose": "S",
+      "amount": 229.56,
+      "date": "2024-10-23",
+      "purpose": "MAILING SUPPLIES - ENVELOPES & LABELS",
+      "payee": "AMAZON",
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202501319748780725"
+    },
+    {
+      "ie_id": "C90022906-ie-1870264-F57.000018",
+      "spender_entity_id": "C90022906",
+      "spender_name": "ACTION TOGETHER NEPA INC.",
+      "candidate_id": "S6PA00217",
+      "candidate_name": "Bob Casey",
+      "support_oppose": "S",
+      "amount": 61.3,
+      "date": "2024-10-23",
+      "purpose": "GRAPHIC DESIGN FOR CAMPAIGN MATERIALS",
+      "payee": "BRITTAIN, JESSICA",
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202501319748780727"
+    },
+    {
+      "ie_id": "C90022906-ie-1870264-F57.000014",
+      "spender_entity_id": "C90022906",
+      "spender_name": "ACTION TOGETHER NEPA INC.",
+      "candidate_id": "S6PA00217",
+      "candidate_name": "Bob Casey",
+      "support_oppose": "S",
+      "amount": 15.63,
+      "date": "2024-10-23",
+      "purpose": "GRAPHIC DESIGN FOR CAMPAIGN MATERIALS",
+      "payee": "ROTHENBECKER, DENNIS JR.",
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202501319748780726"
+    }
+  ],
+  "flags": [
+    {
+      "id": "popup",
+      "label": "Pop-up committee",
+      "detail": "ACTION TOGETHER NEPA INC.'s first reported activity in the 2024 cycle is 2024-10-23, after the pre-general report cutoff (2024-10-17), so its donors were not on file before election day. Registration date is proxied by first observed activity in FEC bulk data.",
+      "evidence_url": "https://www.fec.gov/data/committee/C90022906/?cycle=2024"
+    }
+  ],
+  "has_chain": false,
+  "source_url": "https://www.fec.gov/data/committee/C90022906/?cycle=2024",
+  "data_status": "real"
+}

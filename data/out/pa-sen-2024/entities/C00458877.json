@@ -1,0 +1,63 @@
+{
+  "entity_id": "C00458877",
+  "race_id": "pa-sen-2024",
+  "kind": "committee",
+  "name": "COUNTRY OVER PARTY PAC",
+  "aliases": [],
+  "committee_type": "N",
+  "committee_type_label": "PAC (non-qualified)",
+  "designation": "U",
+  "registration_date": null,
+  "treasurer": "KILGORE, PAUL MR.",
+  "address": {
+    "street": "PO BOX 2365",
+    "city": "OTTAWA",
+    "state": "IL",
+    "zip": "61350"
+  },
+  "visibility": "disclosed",
+  "is_conduit": false,
+  "totals": {
+    "receipts": 542.58,
+    "disbursements": 2352393.66,
+    "independent_expenditures": 0,
+    "from_individuals": 0.0,
+    "from_committees": 0.0,
+    "from_organizations": 0.0,
+    "from_undisclosed": 0.0
+  },
+  "inflows": [],
+  "outflows": [
+    {
+      "transfer_id": "C00458877-out-C00771113",
+      "from_entity_id": "C00458877",
+      "from_name": "COUNTRY OVER PARTY PAC",
+      "to_entity_id": "C00771113",
+      "to_name": "COUNTRY FIRST",
+      "amount": 2000000.0,
+      "date": "2023-03-27",
+      "visibility": "disclosed",
+      "transaction_type": "18G",
+      "limit": null,
+      "source_url": "https://www.fec.gov/data/disbursements/?committee_id=C00458877&two_year_transaction_period=2024"
+    },
+    {
+      "transfer_id": "C00458877-out-C00522425",
+      "from_entity_id": "C00458877",
+      "from_name": "COUNTRY OVER PARTY PAC",
+      "to_entity_id": "C00522425",
+      "to_name": "FUTURE FIRST LEADERSHIP PAC",
+      "amount": 250000.0,
+      "date": "2023-02-27",
+      "visibility": "disclosed",
+      "transaction_type": "18G",
+      "limit": null,
+      "source_url": "https://www.fec.gov/data/disbursements/?committee_id=C00458877&two_year_transaction_period=2024"
+    }
+  ],
+  "independent_expenditures": [],
+  "flags": [],
+  "has_chain": false,
+  "source_url": "https://www.fec.gov/data/committee/C00458877/?cycle=2024",
+  "data_status": "real"
+}

@@ -1,0 +1,77 @@
+{
+  "entity_id": "C00816694",
+  "race_id": "pa-sen-2024",
+  "kind": "committee",
+  "name": "RUDY SALAS VICTORY FUND",
+  "aliases": [],
+  "committee_type": "N",
+  "committee_type_label": "PAC (non-qualified)",
+  "designation": "J",
+  "registration_date": null,
+  "treasurer": "OLSEN, JOSIE",
+  "address": {
+    "street": "PO BOX 42257",
+    "city": "BAKERSFIELD",
+    "state": "CA",
+    "zip": "93384"
+  },
+  "visibility": "disclosed",
+  "is_conduit": false,
+  "totals": {
+    "receipts": 0.0,
+    "disbursements": 55256.99,
+    "independent_expenditures": 0,
+    "from_individuals": 0.0,
+    "from_committees": 1667.0,
+    "from_organizations": 0.0,
+    "from_undisclosed": 0.0
+  },
+  "inflows": [
+    {
+      "transfer_id": "C00816694-in-C00305318",
+      "from_entity_id": "C00305318",
+      "from_name": "BLUE DOG POLITICAL ACTION COMMITTEE",
+      "to_entity_id": "C00816694",
+      "to_name": "RUDY SALAS VICTORY FUND",
+      "amount": 1667.0,
+      "date": "2024-10-10",
+      "visibility": "disclosed",
+      "transaction_type": "24K",
+      "limit": null,
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00816694&two_year_transaction_period=2024&contributor_name=C00305318"
+    }
+  ],
+  "outflows": [
+    {
+      "transfer_id": "C00816694-out-C00791756",
+      "from_entity_id": "C00816694",
+      "from_name": "RUDY SALAS VICTORY FUND",
+      "to_entity_id": "C00791756",
+      "to_name": "RUDY SALAS FOR CONGRESS",
+      "amount": 266638.0,
+      "date": "2024-11-05",
+      "visibility": "disclosed",
+      "transaction_type": "18G",
+      "limit": null,
+      "source_url": "https://www.fec.gov/data/disbursements/?committee_id=C00816694&two_year_transaction_period=2024"
+    },
+    {
+      "transfer_id": "C00816694-out-C00105668",
+      "from_entity_id": "C00816694",
+      "from_name": "RUDY SALAS VICTORY FUND",
+      "to_entity_id": "C00105668",
+      "to_name": "CALIFORNIA DEMOCRATIC PARTY",
+      "amount": 52809.0,
+      "date": "2023-03-16",
+      "visibility": "disclosed",
+      "transaction_type": "18G",
+      "limit": null,
+      "source_url": "https://www.fec.gov/data/disbursements/?committee_id=C00816694&two_year_transaction_period=2024"
+    }
+  ],
+  "independent_expenditures": [],
+  "flags": [],
+  "has_chain": false,
+  "source_url": "https://www.fec.gov/data/committee/C00816694/?cycle=2024",
+  "data_status": "real"
+}

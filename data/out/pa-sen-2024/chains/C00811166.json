@@ -1,0 +1,527 @@
+{
+  "root_entity_id": "C00811166",
+  "root_name": "THE SENTINEL ACTION FUND",
+  "race_id": "pa-sen-2024",
+  "generated_at": "2026-09-05T13:41:28+00:00",
+  "data_status": "real",
+  "nodes": [
+    {
+      "id": "C00811166",
+      "name": "THE SENTINEL ACTION FUND",
+      "kind": "committee",
+      "committee_type": "O",
+      "depth": 0,
+      "visibility": "disclosed",
+      "amount_in": 36961169.0,
+      "is_terminus": false,
+      "terminus_reason": null,
+      "source_url": "https://www.fec.gov/data/committee/C00811166/?cycle=2024"
+    },
+    {
+      "id": "ind:MELLON_TIMOTHY|82331",
+      "name": "MELLON, TIMOTHY",
+      "kind": "individual",
+      "committee_type": null,
+      "depth": 1,
+      "visibility": "disclosed",
+      "amount_in": 6000000.0,
+      "is_terminus": true,
+      "terminus_reason": "individual",
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00811166&two_year_transaction_period=2024&contributor_name=MELLON%2C+TIMOTHY"
+    },
+    {
+      "id": "ind:GRIFFIN_KENNETH_C.|33131",
+      "name": "GRIFFIN, KENNETH C.",
+      "kind": "individual",
+      "committee_type": null,
+      "depth": 1,
+      "visibility": "disclosed",
+      "amount_in": 4000000.0,
+      "is_terminus": true,
+      "terminus_reason": "individual",
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00811166&two_year_transaction_period=2024&contributor_name=GRIFFIN%2C+KENNETH+C."
+    },
+    {
+      "id": "org:RIGHT_VOTE_INC.",
+      "name": "RIGHT VOTE INC.",
+      "kind": "organization",
+      "committee_type": null,
+      "depth": 1,
+      "visibility": "dark",
+      "amount_in": 2500000.0,
+      "is_terminus": true,
+      "terminus_reason": "dark",
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00811166&two_year_transaction_period=2024&contributor_name=RIGHT+VOTE+INC.",
+      "organization_class": "nonprofit"
+    },
+    {
+      "id": "org:PARADIGM_OPERATIONS_LP",
+      "name": "PARADIGM OPERATIONS LP",
+      "kind": "organization",
+      "committee_type": null,
+      "depth": 1,
+      "visibility": "dark",
+      "amount_in": 2500000.0,
+      "is_terminus": true,
+      "terminus_reason": "dark",
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00811166&two_year_transaction_period=2024&contributor_name=PARADIGM+OPERATIONS+LP",
+      "organization_class": "llc"
+    },
+    {
+      "id": "ind:MUSK_ELON|78734",
+      "name": "MUSK, ELON",
+      "kind": "individual",
+      "committee_type": null,
+      "depth": 1,
+      "visibility": "disclosed",
+      "amount_in": 2339600.0,
+      "is_terminus": true,
+      "terminus_reason": "individual",
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00811166&two_year_transaction_period=2024&contributor_name=MUSK%2C+ELON"
+    },
+    {
+      "id": "ind:PETERFFY_THOMAS|33480",
+      "name": "PETERFFY, THOMAS",
+      "kind": "individual",
+      "committee_type": null,
+      "depth": 1,
+      "visibility": "disclosed",
+      "amount_in": 2000000.0,
+      "is_terminus": true,
+      "terminus_reason": "individual",
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00811166&two_year_transaction_period=2024&contributor_name=PETERFFY%2C+THOMAS"
+    },
+    {
+      "id": "ind:LIAUTAUD_JAMES_J.|33037",
+      "name": "LIAUTAUD, JAMES J.",
+      "kind": "individual",
+      "committee_type": null,
+      "depth": 1,
+      "visibility": "disclosed",
+      "amount_in": 1500000.0,
+      "is_terminus": true,
+      "terminus_reason": "individual",
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00811166&two_year_transaction_period=2024&contributor_name=LIAUTAUD%2C+JAMES+J."
+    },
+    {
+      "id": "ind:KLINGENSTEIN_THOMAS_D.|10018",
+      "name": "KLINGENSTEIN, THOMAS D.",
+      "kind": "individual",
+      "committee_type": null,
+      "depth": 1,
+      "visibility": "disclosed",
+      "amount_in": 1000000.0,
+      "is_terminus": true,
+      "terminus_reason": "individual",
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00811166&two_year_transaction_period=2024&contributor_name=KLINGENSTEIN%2C+THOMAS+D."
+    },
+    {
+      "id": "ind:GRIFFIN_KENNETH_C|33131",
+      "name": "GRIFFIN, KENNETH C",
+      "kind": "individual",
+      "committee_type": null,
+      "depth": 1,
+      "visibility": "disclosed",
+      "amount_in": 1000000.0,
+      "is_terminus": true,
+      "terminus_reason": "individual",
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00811166&two_year_transaction_period=2024&contributor_name=GRIFFIN%2C+KENNETH+C"
+    },
+    {
+      "id": "org:LEON_RACHEL_CORPORATION",
+      "name": "LEON RACHEL CORPORATION",
+      "kind": "organization",
+      "committee_type": null,
+      "depth": 1,
+      "visibility": "disclosed",
+      "amount_in": 1000000.0,
+      "is_terminus": true,
+      "terminus_reason": "organization",
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00811166&two_year_transaction_period=2024&contributor_name=LEON+RACHEL+CORPORATION",
+      "organization_class": "business"
+    },
+    {
+      "id": "org:MULTICOIN_CAPITAL_GP_LLC",
+      "name": "MULTICOIN CAPITAL GP LLC",
+      "kind": "organization",
+      "committee_type": null,
+      "depth": 1,
+      "visibility": "dark",
+      "amount_in": 1000000.0,
+      "is_terminus": true,
+      "terminus_reason": "dark",
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00811166&two_year_transaction_period=2024&contributor_name=MULTICOIN+CAPITAL+GP+LLC",
+      "organization_class": "llc"
+    },
+    {
+      "id": "ind:CHILDS_JOHN_W.|32963",
+      "name": "CHILDS, JOHN W.",
+      "kind": "individual",
+      "committee_type": null,
+      "depth": 1,
+      "visibility": "disclosed",
+      "amount_in": 775000.0,
+      "is_terminus": true,
+      "terminus_reason": "individual",
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00811166&two_year_transaction_period=2024&contributor_name=CHILDS%2C+JOHN+W."
+    },
+    {
+      "id": "ind:SINGER_PAUL|10019",
+      "name": "SINGER, PAUL",
+      "kind": "individual",
+      "committee_type": null,
+      "depth": 1,
+      "visibility": "disclosed",
+      "amount_in": 750000.0,
+      "is_terminus": true,
+      "terminus_reason": "individual",
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00811166&two_year_transaction_period=2024&contributor_name=SINGER%2C+PAUL"
+    },
+    {
+      "id": "ind:ASNESS_CLIFF|10017",
+      "name": "ASNESS, CLIFF",
+      "kind": "individual",
+      "committee_type": null,
+      "depth": 1,
+      "visibility": "disclosed",
+      "amount_in": 600000.0,
+      "is_terminus": true,
+      "terminus_reason": "individual",
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00811166&two_year_transaction_period=2024&contributor_name=ASNESS%2C+CLIFF"
+    },
+    {
+      "id": "org:HERITAGE_ACTION_FOR_AMERICA",
+      "name": "HERITAGE ACTION FOR AMERICA",
+      "kind": "organization",
+      "committee_type": null,
+      "depth": 1,
+      "visibility": "dark",
+      "amount_in": 501094.0,
+      "is_terminus": true,
+      "terminus_reason": "dark",
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00811166&two_year_transaction_period=2024&contributor_name=HERITAGE+ACTION+FOR+AMERICA",
+      "organization_class": "nonprofit"
+    },
+    {
+      "id": "org:NOSEK_CAPITAL_LLC",
+      "name": "NOSEK CAPITAL LLC",
+      "kind": "organization",
+      "committee_type": null,
+      "depth": 1,
+      "visibility": "dark",
+      "amount_in": 500000.0,
+      "is_terminus": true,
+      "terminus_reason": "dark",
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00811166&two_year_transaction_period=2024&contributor_name=NOSEK+CAPITAL+LLC",
+      "organization_class": "llc"
+    },
+    {
+      "id": "agg:other@C00811166",
+      "name": "Other contributors to THE SENTINEL ACTION FUND (each <1% of receipts, or beyond the 40 largest)",
+      "kind": "aggregate",
+      "committee_type": null,
+      "depth": 1,
+      "visibility": "disclosed",
+      "amount_in": 8995475.0,
+      "is_terminus": true,
+      "terminus_reason": "pruned",
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00811166&two_year_transaction_period=2024",
+      "contributor_count": 210
+    }
+  ],
+  "edges": [
+    {
+      "from": "ind:MELLON_TIMOTHY|82331",
+      "to": "C00811166",
+      "amount": 6000000.0,
+      "visibility": "disclosed",
+      "depth": 1,
+      "transaction_types": [
+        "10",
+        "15"
+      ],
+      "count": 2,
+      "date_range": [
+        "2024-03-18",
+        "2024-09-12"
+      ],
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00811166&two_year_transaction_period=2024&contributor_name=MELLON%2C+TIMOTHY"
+    },
+    {
+      "from": "ind:GRIFFIN_KENNETH_C.|33131",
+      "to": "C00811166",
+      "amount": 4000000.0,
+      "visibility": "disclosed",
+      "depth": 1,
+      "transaction_types": [
+        "10"
+      ],
+      "count": 2,
+      "date_range": [
+        "2024-09-18",
+        "2024-10-21"
+      ],
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00811166&two_year_transaction_period=2024&contributor_name=GRIFFIN%2C+KENNETH+C."
+    },
+    {
+      "from": "org:RIGHT_VOTE_INC.",
+      "to": "C00811166",
+      "amount": 2500000.0,
+      "visibility": "dark",
+      "depth": 1,
+      "transaction_types": [
+        "10"
+      ],
+      "count": 2,
+      "date_range": [
+        "2024-09-17",
+        "2024-12-19"
+      ],
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00811166&two_year_transaction_period=2024&contributor_name=RIGHT+VOTE+INC."
+    },
+    {
+      "from": "org:PARADIGM_OPERATIONS_LP",
+      "to": "C00811166",
+      "amount": 2500000.0,
+      "visibility": "dark",
+      "depth": 1,
+      "transaction_types": [
+        "10"
+      ],
+      "count": 3,
+      "date_range": [
+        "2024-06-26",
+        "2024-09-16"
+      ],
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00811166&two_year_transaction_period=2024&contributor_name=PARADIGM+OPERATIONS+LP"
+    },
+    {
+      "from": "ind:MUSK_ELON|78734",
+      "to": "C00811166",
+      "amount": 2339600.0,
+      "visibility": "disclosed",
+      "depth": 1,
+      "transaction_types": [
+        "10"
+      ],
+      "count": 1,
+      "date_range": [
+        "2024-10-08",
+        "2024-10-08"
+      ],
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00811166&two_year_transaction_period=2024&contributor_name=MUSK%2C+ELON"
+    },
+    {
+      "from": "ind:PETERFFY_THOMAS|33480",
+      "to": "C00811166",
+      "amount": 2000000.0,
+      "visibility": "disclosed",
+      "depth": 1,
+      "transaction_types": [
+        "10",
+        "15"
+      ],
+      "count": 3,
+      "date_range": [
+        "2024-01-31",
+        "2024-07-15"
+      ],
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00811166&two_year_transaction_period=2024&contributor_name=PETERFFY%2C+THOMAS"
+    },
+    {
+      "from": "ind:LIAUTAUD_JAMES_J.|33037",
+      "to": "C00811166",
+      "amount": 1500000.0,
+      "visibility": "disclosed",
+      "depth": 1,
+      "transaction_types": [
+        "10"
+      ],
+      "count": 1,
+      "date_range": [
+        "2024-06-03",
+        "2024-06-03"
+      ],
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00811166&two_year_transaction_period=2024&contributor_name=LIAUTAUD%2C+JAMES+J."
+    },
+    {
+      "from": "ind:KLINGENSTEIN_THOMAS_D.|10018",
+      "to": "C00811166",
+      "amount": 1000000.0,
+      "visibility": "disclosed",
+      "depth": 1,
+      "transaction_types": [
+        "10"
+      ],
+      "count": 1,
+      "date_range": [
+        "2024-05-22",
+        "2024-05-22"
+      ],
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00811166&two_year_transaction_period=2024&contributor_name=KLINGENSTEIN%2C+THOMAS+D."
+    },
+    {
+      "from": "ind:GRIFFIN_KENNETH_C|33131",
+      "to": "C00811166",
+      "amount": 1000000.0,
+      "visibility": "disclosed",
+      "depth": 1,
+      "transaction_types": [
+        "10"
+      ],
+      "count": 1,
+      "date_range": [
+        "2024-05-09",
+        "2024-05-09"
+      ],
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00811166&two_year_transaction_period=2024&contributor_name=GRIFFIN%2C+KENNETH+C"
+    },
+    {
+      "from": "org:LEON_RACHEL_CORPORATION",
+      "to": "C00811166",
+      "amount": 1000000.0,
+      "visibility": "disclosed",
+      "depth": 1,
+      "transaction_types": [
+        "10"
+      ],
+      "count": 1,
+      "date_range": [
+        "2024-10-01",
+        "2024-10-01"
+      ],
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00811166&two_year_transaction_period=2024&contributor_name=LEON+RACHEL+CORPORATION"
+    },
+    {
+      "from": "org:MULTICOIN_CAPITAL_GP_LLC",
+      "to": "C00811166",
+      "amount": 1000000.0,
+      "visibility": "dark",
+      "depth": 1,
+      "transaction_types": [
+        "10"
+      ],
+      "count": 1,
+      "date_range": [
+        "2024-07-26",
+        "2024-07-26"
+      ],
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00811166&two_year_transaction_period=2024&contributor_name=MULTICOIN+CAPITAL+GP+LLC"
+    },
+    {
+      "from": "ind:CHILDS_JOHN_W.|32963",
+      "to": "C00811166",
+      "amount": 775000.0,
+      "visibility": "disclosed",
+      "depth": 1,
+      "transaction_types": [
+        "10"
+      ],
+      "count": 5,
+      "date_range": [
+        "2023-12-26",
+        "2024-10-28"
+      ],
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00811166&two_year_transaction_period=2024&contributor_name=CHILDS%2C+JOHN+W."
+    },
+    {
+      "from": "ind:SINGER_PAUL|10019",
+      "to": "C00811166",
+      "amount": 750000.0,
+      "visibility": "disclosed",
+      "depth": 1,
+      "transaction_types": [
+        "15"
+      ],
+      "count": 1,
+      "date_range": [
+        "2024-03-27",
+        "2024-03-27"
+      ],
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00811166&two_year_transaction_period=2024&contributor_name=SINGER%2C+PAUL"
+    },
+    {
+      "from": "ind:ASNESS_CLIFF|10017",
+      "to": "C00811166",
+      "amount": 600000.0,
+      "visibility": "disclosed",
+      "depth": 1,
+      "transaction_types": [
+        "10"
+      ],
+      "count": 2,
+      "date_range": [
+        "2024-05-02",
+        "2024-09-16"
+      ],
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00811166&two_year_transaction_period=2024&contributor_name=ASNESS%2C+CLIFF"
+    },
+    {
+      "from": "org:HERITAGE_ACTION_FOR_AMERICA",
+      "to": "C00811166",
+      "amount": 501094.0,
+      "visibility": "dark",
+      "depth": 1,
+      "transaction_types": [
+        "10"
+      ],
+      "count": 2,
+      "date_range": [
+        "2023-03-02",
+        "2023-06-25"
+      ],
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00811166&two_year_transaction_period=2024&contributor_name=HERITAGE+ACTION+FOR+AMERICA"
+    },
+    {
+      "from": "org:NOSEK_CAPITAL_LLC",
+      "to": "C00811166",
+      "amount": 500000.0,
+      "visibility": "dark",
+      "depth": 1,
+      "transaction_types": [
+        "10"
+      ],
+      "count": 1,
+      "date_range": [
+        "2024-11-01",
+        "2024-11-01"
+      ],
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00811166&two_year_transaction_period=2024&contributor_name=NOSEK+CAPITAL+LLC"
+    },
+    {
+      "from": "agg:other@C00811166",
+      "to": "C00811166",
+      "amount": 8995475.0,
+      "visibility": "disclosed",
+      "depth": 1,
+      "transaction_types": [
+        "10",
+        "15",
+        "15E",
+        "24K"
+      ],
+      "count": 330,
+      "date_range": [
+        "2023-02-02",
+        "2024-12-31"
+      ],
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00811166&two_year_transaction_period=2024"
+    }
+  ],
+  "summary": {
+    "total_in": 36961169.0,
+    "disclosed_share": 0.8058,
+    "inferable_share": 0.0,
+    "unwalked_share": 0.0,
+    "dark_share": 0.1942,
+    "max_depth": 1,
+    "terminus_counts": {
+      "individual": 10,
+      "dark": 5,
+      "organization": 1,
+      "pruned": 1
+    }
+  },
+  "flags": [],
+  "method": "Backward walk over money edges only (Schedule A receipts from individuals and organizations, committee-to-committee transfers) into THE SENTINEL ACTION FUND, 1 hop(s) deep; independent expenditures are targeting edges and never appear. The walk starts from $36,961,169 of itemized 2023–2024 receipts as loaded from FEC bulk data (unitemized receipts, loans and offsets are not edges), and every expanded committee conserves dollars: its inbound edges sum to its receipts. Inbound edges under 1% of a committee's receipts are rolled into one 'other contributors' node, which counts as disclosed except for the organization dollars inside it. Each dollar takes the visibility of where the walk stopped: named individuals (including earmarks through ActBlue/WinRed, attributed to the person) are disclosed. Organizations that are not registered committees are classified from their name alone (no IRS lookup): a union or a business giving from its own treasury is disclosed — the named entity is the source; an LLC, trust, advocacy nonprofit (501(c)(4)-style names) or unclassifiable organization is dark, because whoever funds it is not on file with the FEC. Visibility shares are preliminary; no 990 lookups were performed, so nothing is marked inferable."
+}

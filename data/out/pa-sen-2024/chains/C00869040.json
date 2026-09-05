@@ -1,0 +1,120 @@
+{
+  "root_entity_id": "C00869040",
+  "root_name": "BLUEVOTE.ORG",
+  "race_id": "pa-sen-2024",
+  "generated_at": "2026-09-05T13:41:28+00:00",
+  "data_status": "real",
+  "nodes": [
+    {
+      "id": "C00869040",
+      "name": "BLUEVOTE.ORG",
+      "kind": "committee",
+      "committee_type": "O",
+      "depth": 0,
+      "visibility": "disclosed",
+      "amount_in": 4100.0,
+      "is_terminus": false,
+      "terminus_reason": null,
+      "source_url": "https://www.fec.gov/data/committee/C00869040/?cycle=2024"
+    },
+    {
+      "id": "ind:KAVANAU_CHRISTOPHER_LEE|18102",
+      "name": "KAVANAU, CHRISTOPHER LEE",
+      "kind": "individual",
+      "committee_type": null,
+      "depth": 1,
+      "visibility": "disclosed",
+      "amount_in": 2100.0,
+      "is_terminus": true,
+      "terminus_reason": "individual",
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00869040&two_year_transaction_period=2024&contributor_name=KAVANAU%2C+CHRISTOPHER+LEE"
+    },
+    {
+      "id": "ind:HUANG_ZHONGYUE|94536",
+      "name": "HUANG, ZHONGYUE",
+      "kind": "individual",
+      "committee_type": null,
+      "depth": 1,
+      "visibility": "disclosed",
+      "amount_in": 1000.0,
+      "is_terminus": true,
+      "terminus_reason": "individual",
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00869040&two_year_transaction_period=2024&contributor_name=HUANG%2C+ZHONGYUE"
+    },
+    {
+      "id": "ind:MOES_DOUG|93003",
+      "name": "MOES, DOUG",
+      "kind": "individual",
+      "committee_type": null,
+      "depth": 1,
+      "visibility": "disclosed",
+      "amount_in": 1000.0,
+      "is_terminus": true,
+      "terminus_reason": "individual",
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00869040&two_year_transaction_period=2024&contributor_name=MOES%2C+DOUG"
+    }
+  ],
+  "edges": [
+    {
+      "from": "ind:KAVANAU_CHRISTOPHER_LEE|18102",
+      "to": "C00869040",
+      "amount": 2100.0,
+      "visibility": "disclosed",
+      "depth": 1,
+      "transaction_types": [
+        "10"
+      ],
+      "count": 1,
+      "date_range": [
+        "2024-04-01",
+        "2024-04-01"
+      ],
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00869040&two_year_transaction_period=2024&contributor_name=KAVANAU%2C+CHRISTOPHER+LEE"
+    },
+    {
+      "from": "ind:HUANG_ZHONGYUE|94536",
+      "to": "C00869040",
+      "amount": 1000.0,
+      "visibility": "disclosed",
+      "depth": 1,
+      "transaction_types": [
+        "10"
+      ],
+      "count": 1,
+      "date_range": [
+        "2024-09-15",
+        "2024-09-15"
+      ],
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00869040&two_year_transaction_period=2024&contributor_name=HUANG%2C+ZHONGYUE"
+    },
+    {
+      "from": "ind:MOES_DOUG|93003",
+      "to": "C00869040",
+      "amount": 1000.0,
+      "visibility": "disclosed",
+      "depth": 1,
+      "transaction_types": [
+        "10"
+      ],
+      "count": 1,
+      "date_range": [
+        "2024-09-29",
+        "2024-09-29"
+      ],
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00869040&two_year_transaction_period=2024&contributor_name=MOES%2C+DOUG"
+    }
+  ],
+  "summary": {
+    "total_in": 4100.0,
+    "disclosed_share": 1.0,
+    "inferable_share": 0.0,
+    "unwalked_share": 0.0,
+    "dark_share": 0.0,
+    "max_depth": 1,
+    "terminus_counts": {
+      "individual": 3
+    }
+  },
+  "flags": [],
+  "method": "Backward walk over money edges only (Schedule A receipts from individuals and organizations, committee-to-committee transfers) into BLUEVOTE.ORG, 1 hop(s) deep; independent expenditures are targeting edges and never appear. The walk starts from $4,100 of itemized 2023–2024 receipts as loaded from FEC bulk data (unitemized receipts, loans and offsets are not edges), and every expanded committee conserves dollars: its inbound edges sum to its receipts. Inbound edges under 1% of a committee's receipts are rolled into one 'other contributors' node, which counts as disclosed except for the organization dollars inside it. Each dollar takes the visibility of where the walk stopped: named individuals (including earmarks through ActBlue/WinRed, attributed to the person) are disclosed. Organizations that are not registered committees are classified from their name alone (no IRS lookup): a union or a business giving from its own treasury is disclosed — the named entity is the source; an LLC, trust, advocacy nonprofit (501(c)(4)-style names) or unclassifiable organization is dark, because whoever funds it is not on file with the FEC. Visibility shares are preliminary; no 990 lookups were performed, so nothing is marked inferable."
+}

@@ -1,0 +1,116 @@
+{
+  "entity_id": "C00891549",
+  "race_id": "pa-sen-2024",
+  "kind": "committee",
+  "name": "AMERICA FIRST ACTION FUND",
+  "aliases": [],
+  "committee_type": "O",
+  "committee_type_label": "Super PAC",
+  "designation": "U",
+  "registration_date": null,
+  "treasurer": "HAYEK, ASHLEY",
+  "address": {
+    "street": "1777 N KENT ST",
+    "city": "ARLINGTON",
+    "state": "VA",
+    "zip": "22209"
+  },
+  "visibility": "disclosed",
+  "is_conduit": false,
+  "totals": {
+    "receipts": 1150064.74,
+    "disbursements": 737198.53,
+    "independent_expenditures": 167778.07,
+    "from_individuals": 1000000.74,
+    "from_committees": 150000.0,
+    "from_organizations": 0.0,
+    "from_undisclosed": 0.0
+  },
+  "inflows": [
+    {
+      "transfer_id": "C00891549-in-ind:MCMAHON_LINDA_E|06831",
+      "from_entity_id": "ind:MCMAHON_LINDA_E|06831",
+      "from_name": "MCMAHON, LINDA E",
+      "to_entity_id": "C00891549",
+      "to_name": "AMERICA FIRST ACTION FUND",
+      "amount": 1000000.0,
+      "date": "2024-10-18",
+      "visibility": "disclosed",
+      "transaction_type": "10",
+      "limit": "unlimited",
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00891549&two_year_transaction_period=2024&contributor_name=MCMAHON%2C+LINDA+E"
+    },
+    {
+      "transfer_id": "C00891549-in-ind:COMMON_SENSE_FOR_AMERICA_PAC|70002",
+      "from_entity_id": "ind:COMMON_SENSE_FOR_AMERICA_PAC|70002",
+      "from_name": "COMMON SENSE FOR AMERICA PAC",
+      "to_entity_id": "C00891549",
+      "to_name": "AMERICA FIRST ACTION FUND",
+      "amount": 150000.0,
+      "date": "2024-10-23",
+      "visibility": "disclosed",
+      "transaction_type": "10",
+      "limit": "unlimited",
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00891549&two_year_transaction_period=2024&contributor_name=COMMON+SENSE+FOR+AMERICA+PAC"
+    }
+  ],
+  "outflows": [],
+  "independent_expenditures": [
+    {
+      "ie_id": "C00891549-ie-1858746-E19842E3AAA0C43CD876",
+      "spender_entity_id": "C00891549",
+      "spender_name": "AMERICA FIRST ACTION FUND",
+      "candidate_id": "S2PA00661",
+      "candidate_name": "Dave McCormick",
+      "support_oppose": "S",
+      "amount": 10000.0,
+      "date": "2024-10-29",
+      "purpose": "DIGITAL AD",
+      "payee": "RAREFIED ATMOSPHERE, INC.",
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202412059739515317"
+    },
+    {
+      "ie_id": "C00891549-ie-1858746-E6CDB2AEEC2E6439C85A",
+      "spender_entity_id": "C00891549",
+      "spender_name": "AMERICA FIRST ACTION FUND",
+      "candidate_id": "S2PA00661",
+      "candidate_name": "Dave McCormick",
+      "support_oppose": "S",
+      "amount": 4000.0,
+      "date": "2024-10-30",
+      "purpose": "VIDEO PRODUCTION",
+      "payee": "45 FILMS, LLC",
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202412059739515313"
+    },
+    {
+      "ie_id": "C00891549-ie-1858746-E3709BFAC08AD4B78B43",
+      "spender_entity_id": "C00891549",
+      "spender_name": "AMERICA FIRST ACTION FUND",
+      "candidate_id": "S6PA00217",
+      "candidate_name": "Bob Casey",
+      "support_oppose": "O",
+      "amount": 44.45,
+      "date": "2024-11-08",
+      "purpose": "VOTER CONTACT: TEXTS",
+      "payee": "PROMPT.IO",
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202412059739515316"
+    }
+  ],
+  "flags": [
+    {
+      "id": "popup",
+      "label": "Pop-up committee",
+      "detail": "AMERICA FIRST ACTION FUND's first reported activity in the 2024 cycle is 2024-10-18, after the pre-general report cutoff (2024-10-17), so its donors were not on file before election day. Registration date is proxied by first observed activity in FEC bulk data.",
+      "evidence_url": "https://www.fec.gov/data/committee/C00891549/?cycle=2024"
+    },
+    {
+      "id": "single_transfer_funded",
+      "label": "Funded by a single source",
+      "detail": "MCMAHON, LINDA E supplied $1,000,000 of AMERICA FIRST ACTION FUND's $1,000,000 itemized receipts (100%).",
+      "evidence_url": "https://www.fec.gov/data/receipts/?committee_id=C00891549&two_year_transaction_period=2024"
+    }
+  ],
+  "has_chain": true,
+  "source_url": "https://www.fec.gov/data/committee/C00891549/?cycle=2024",
+  "data_status": "real"
+}

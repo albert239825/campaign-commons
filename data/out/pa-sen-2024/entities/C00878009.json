@@ -1,0 +1,123 @@
+{
+  "entity_id": "C00878009",
+  "race_id": "pa-sen-2024",
+  "kind": "committee",
+  "name": "EVERYTOWN-DEMAND A SEAT PAC",
+  "aliases": [],
+  "committee_type": "O",
+  "committee_type_label": "Super PAC",
+  "designation": "U",
+  "registration_date": null,
+  "treasurer": "BROUILLARD, MICHAEL",
+  "address": {
+    "street": "P.O. BOX 4184",
+    "city": "NEW YORK",
+    "state": "NY",
+    "zip": "10163"
+  },
+  "visibility": "disclosed",
+  "is_conduit": false,
+  "totals": {
+    "receipts": 8085805.47,
+    "disbursements": 6928366.84,
+    "independent_expenditures": 0,
+    "from_individuals": 7942647.0,
+    "from_committees": 0.0,
+    "from_organizations": 0.0,
+    "from_undisclosed": 7353.0
+  },
+  "inflows": [
+    {
+      "transfer_id": "C00878009-in-ind:BLOOMBERG_MICHAEL_R.|10150",
+      "from_entity_id": "ind:BLOOMBERG_MICHAEL_R.|10150",
+      "from_name": "BLOOMBERG, MICHAEL R.",
+      "to_entity_id": "C00878009",
+      "to_name": "EVERYTOWN-DEMAND A SEAT PAC",
+      "amount": 7000000.0,
+      "date": "2024-04-24",
+      "visibility": "disclosed",
+      "transaction_type": "10",
+      "limit": "unlimited",
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00878009&two_year_transaction_period=2024&contributor_name=BLOOMBERG%2C+MICHAEL+R."
+    },
+    {
+      "transfer_id": "C00878009-in-ind:SCRIPPS_SEBASTIAN|06840",
+      "from_entity_id": "ind:SCRIPPS_SEBASTIAN|06840",
+      "from_name": "SCRIPPS, SEBASTIAN",
+      "to_entity_id": "C00878009",
+      "to_name": "EVERYTOWN-DEMAND A SEAT PAC",
+      "amount": 750000.0,
+      "date": "2024-06-03",
+      "visibility": "disclosed",
+      "transaction_type": "10",
+      "limit": "unlimited",
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00878009&two_year_transaction_period=2024&contributor_name=SCRIPPS%2C+SEBASTIAN"
+    },
+    {
+      "transfer_id": "C00878009-in-ind:SIEGELMAN_ELIZABETH|94301",
+      "from_entity_id": "ind:SIEGELMAN_ELIZABETH|94301",
+      "from_name": "SIEGELMAN, ELIZABETH",
+      "to_entity_id": "C00878009",
+      "to_name": "EVERYTOWN-DEMAND A SEAT PAC",
+      "amount": 200000.0,
+      "date": "2024-05-15",
+      "visibility": "disclosed",
+      "transaction_type": "10",
+      "limit": "unlimited",
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00878009&two_year_transaction_period=2024&contributor_name=SIEGELMAN%2C+ELIZABETH"
+    },
+    {
+      "transfer_id": "C00878009-in-org:BANK_OF_AMERICA",
+      "from_entity_id": "org:BANK_OF_AMERICA",
+      "from_name": "BANK OF AMERICA",
+      "to_entity_id": "C00878009",
+      "to_name": "EVERYTOWN-DEMAND A SEAT PAC",
+      "amount": 7353.0,
+      "date": "2024-11-01",
+      "visibility": "dark",
+      "transaction_type": "10",
+      "limit": "unlimited",
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00878009&two_year_transaction_period=2024&contributor_name=BANK+OF+AMERICA"
+    }
+  ],
+  "outflows": [
+    {
+      "transfer_id": "C00878009-out-C00688655",
+      "from_entity_id": "C00878009",
+      "from_name": "EVERYTOWN-DEMAND A SEAT PAC",
+      "to_entity_id": "C00688655",
+      "to_name": "EVERYTOWN FOR GUN SAFETY VICTORY FUND (EVERYTOWN VICTORY FUND)",
+      "amount": 6500000.0,
+      "date": "2024-10-18",
+      "visibility": "disclosed",
+      "transaction_type": "24K",
+      "limit": "unlimited",
+      "source_url": "https://www.fec.gov/data/disbursements/?committee_id=C00878009&two_year_transaction_period=2024"
+    },
+    {
+      "transfer_id": "C00878009-out-C00010033",
+      "from_entity_id": "C00878009",
+      "from_name": "EVERYTOWN-DEMAND A SEAT PAC",
+      "to_entity_id": "C00010033",
+      "to_name": "MONTANA DEMOCRATIC PARTY",
+      "amount": 2500.0,
+      "date": "2024-10-29",
+      "visibility": "disclosed",
+      "transaction_type": "18K",
+      "limit": null,
+      "source_url": "https://www.fec.gov/data/disbursements/?committee_id=C00878009&two_year_transaction_period=2024"
+    }
+  ],
+  "independent_expenditures": [],
+  "flags": [
+    {
+      "id": "one_way_valve_violation",
+      "label": "Super PAC to candidate/party money edge",
+      "detail": "FEC bulk data records $2,500 moving from EVERYTOWN-DEMAND A SEAT PAC (independent-expenditure-only committee) to MONTANA DEMOCRATIC PARTY (candidate or party committee). Super PACs may not contribute to candidates or parties; this is either a reporting error or a story. Not traversed by the chain walk.",
+      "evidence_url": "https://www.fec.gov/data/receipts/?committee_id=C00010033&two_year_transaction_period=2024"
+    }
+  ],
+  "has_chain": false,
+  "source_url": "https://www.fec.gov/data/committee/C00878009/?cycle=2024",
+  "data_status": "real"
+}

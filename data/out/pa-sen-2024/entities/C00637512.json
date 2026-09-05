@@ -1,0 +1,64 @@
+{
+  "entity_id": "C00637512",
+  "race_id": "pa-sen-2024",
+  "kind": "committee",
+  "name": "AMERICA FIRST ACTION, INC.",
+  "aliases": [],
+  "committee_type": "O",
+  "committee_type_label": "Super PAC",
+  "designation": "U",
+  "registration_date": null,
+  "treasurer": "PROCH, JON",
+  "address": {
+    "street": "C/O BULLDOG COMPLIANCE",
+    "city": "BEVERLY",
+    "state": "MA",
+    "zip": "01915"
+  },
+  "visibility": "disclosed",
+  "is_conduit": false,
+  "totals": {
+    "receipts": 562632.0,
+    "disbursements": 1996308.35,
+    "independent_expenditures": 0,
+    "from_individuals": 0.0,
+    "from_committees": 150000.0,
+    "from_organizations": 0.0,
+    "from_undisclosed": 0.0
+  },
+  "inflows": [
+    {
+      "transfer_id": "C00637512-in-C00634774",
+      "from_entity_id": "C00634774",
+      "from_name": "COMMON SENSE FOR AMERICA PAC",
+      "to_entity_id": "C00637512",
+      "to_name": "AMERICA FIRST ACTION, INC.",
+      "amount": 150000.0,
+      "date": "2024-10-23",
+      "visibility": "disclosed",
+      "transaction_type": "24K",
+      "limit": "unlimited",
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00637512&two_year_transaction_period=2024&contributor_name=C00634774"
+    }
+  ],
+  "outflows": [
+    {
+      "transfer_id": "C00637512-out-C00825851",
+      "from_entity_id": "C00637512",
+      "from_name": "AMERICA FIRST ACTION, INC.",
+      "to_entity_id": "C00825851",
+      "to_name": "MAKE AMERICA GREAT AGAIN INC.",
+      "amount": 1300000.0,
+      "date": "2024-10-21",
+      "visibility": "disclosed",
+      "transaction_type": "18K",
+      "limit": "unlimited",
+      "source_url": "https://www.fec.gov/data/disbursements/?committee_id=C00637512&two_year_transaction_period=2024"
+    }
+  ],
+  "independent_expenditures": [],
+  "flags": [],
+  "has_chain": false,
+  "source_url": "https://www.fec.gov/data/committee/C00637512/?cycle=2024",
+  "data_status": "real"
+}

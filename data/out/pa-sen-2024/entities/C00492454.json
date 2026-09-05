@@ -1,0 +1,50 @@
+{
+  "entity_id": "C00492454",
+  "race_id": "pa-sen-2024",
+  "kind": "committee",
+  "name": "CORY GARDNER FOR SENATE",
+  "aliases": [],
+  "committee_type": "S",
+  "committee_type_label": "Senate campaign",
+  "designation": "U",
+  "registration_date": null,
+  "treasurer": "LISKER, LISA",
+  "address": {
+    "street": "PO BOX 461798",
+    "city": "AURORA",
+    "state": "CO",
+    "zip": "80046"
+  },
+  "visibility": "disclosed",
+  "is_conduit": false,
+  "totals": {
+    "receipts": 0.0,
+    "disbursements": 995733.93,
+    "independent_expenditures": 0,
+    "from_individuals": 0.0,
+    "from_committees": 0.0,
+    "from_organizations": 0.0,
+    "from_undisclosed": 0.0
+  },
+  "inflows": [],
+  "outflows": [
+    {
+      "transfer_id": "C00492454-out-C00525543",
+      "from_entity_id": "C00492454",
+      "from_name": "CORY GARDNER FOR SENATE",
+      "to_entity_id": "C00525543",
+      "to_name": "PROJECT WEST POLITICAL ACTION COMMITTEE",
+      "amount": 992552.0,
+      "date": "2023-07-24",
+      "visibility": "disclosed",
+      "transaction_type": "18G",
+      "limit": null,
+      "source_url": "https://www.fec.gov/data/disbursements/?committee_id=C00492454&two_year_transaction_period=2024"
+    }
+  ],
+  "independent_expenditures": [],
+  "flags": [],
+  "has_chain": false,
+  "source_url": "https://www.fec.gov/data/committee/C00492454/?cycle=2024",
+  "data_status": "real"
+}

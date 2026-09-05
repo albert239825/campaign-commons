@@ -1,0 +1,303 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mockup — Race ledger · Pennsylvania · U.S. Senate · 2024</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="tokens.css">
+<style>
+  .hero { display: grid; grid-template-columns: 1fr auto; gap: var(--space-6); align-items: end; margin-bottom: var(--space-6); }
+  .hero .kpis .caps { margin-bottom: 4px; }
+  .cands { display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-5); }
+  .lines { display: grid; grid-template-columns: 1fr auto auto; column-gap: var(--space-3); row-gap: 2px; align-items: baseline; }
+  .lines .l { color: var(--ink-2); }
+  .lines .l.ind { padding-left: var(--space-4); color: var(--ink-3); }
+  .lines .b { font-weight: 600; color: var(--ink); }
+  .lines .money { text-align: right; }
+  .lines .rule { grid-column: 1 / -1; border-top: 1px solid var(--border); margin: 6px 0 4px; }
+  .cand-h { display: flex; align-items: baseline; gap: var(--space-2); }
+  .cand-h h2 a { text-decoration: none; }
+  .trace { display: grid; grid-template-columns: auto 1fr; gap: var(--space-8); align-items: center; }
+  .trace .split { display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--space-3); margin-top: var(--space-2); font-size: var(--text-xs); }
+  .trace .split .money { font-weight: 600; font-size: var(--text-sm); color: var(--ink); }
+  details summary { cursor: pointer; font-size: var(--text-xs); color: var(--link); margin-top: var(--space-3); }
+  .spenders td:first-child { min-width: 260px; }
+  .spenders .id { display: block; margin-top: 2px; color: var(--ink-3); }
+  .so { display: grid; grid-template-columns: 12px 1fr auto; column-gap: 6px; font-size: var(--text-xs); white-space: nowrap; }
+  .so b { font-weight: 700; color: var(--ink-3); } .so b.o { color: var(--dark-text); }
+  .so .money { color: var(--ink-2); }
+  .tr-cell { display: inline-grid; grid-template-columns: auto 44px; gap: 6px; align-items: center; }
+  .tr-cell .bar { width: 44px; height: 6px; }
+  .flags { display: flex; flex-wrap: wrap; gap: 4px; }
+  .rowlinks a { margin-left: var(--space-2); }
+  .toolbar { display: flex; gap: var(--space-4); align-items: center; font-size: var(--text-xs); color: var(--ink-2); margin-bottom: var(--space-3); flex-wrap: wrap; }
+  .toolbar .seg { display: inline-flex; border: 1px solid var(--border-strong); border-radius: var(--radius-sm); overflow: hidden; }
+  .toolbar .seg span { padding: 3px 8px; border-right: 1px solid var(--border-strong); } .toolbar .seg span:last-child { border-right: 0; }
+  .toolbar .seg .on { background: var(--ink); color: #fff; }
+  .hide-m { }
+  /* mobile */
+  @media (max-width: 720px) {
+    .container { padding: 0 var(--space-4); }
+    .hero { grid-template-columns: 1fr; }
+    .cands { grid-template-columns: 1fr; }
+    .trace { grid-template-columns: 1fr; gap: var(--space-4); }
+    .hide-m { display: none !important; }
+    .spenders table, .spenders thead, .spenders tbody, .spenders tr, .spenders td { display: block; }
+    .spenders thead { display: none; }
+    .spenders tr { border-bottom: 1px solid var(--border); padding: var(--space-3) 0; }
+    .spenders td { border: 0; padding: 2px 0; }
+    .spenders td:first-child { min-width: 0; }
+    .spenders .mrow { display: flex; justify-content: space-between; align-items: baseline; gap: var(--space-3); }
+    .spenders .mrow .stat-sm { font-size: var(--text-lg); }
+    tbody tr:nth-child(even) td, tr:hover td { background: transparent; }
+    .nav a { margin-left: var(--space-3); }
+    .brand small { display: none; }
+  }
+</style>
+</head>
+<body>
+<header class="topbar"><div class="container">
+  <a class="brand" href="#">Citizen Gotham <small>receipts, not conclusions</small></a>
+  <nav class="nav"><a href="#">Races</a><a href="#">Methodology</a></nav>
+</div></header>
+
+<main class="container rel">
+  <div class="crumbs"><a href="#">Races</a> / <span>Pennsylvania · U.S. Senate · 2024</span></div>
+
+  <div class="hero rel">
+    <span class="anno" style="left:-30px;top:0">1</span>
+    <div>
+      <h1>Pennsylvania · U.S. Senate · 2024</h1>
+      <div class="sub">Election Nov 5, 2024 · <span class="party dem">DEM</span> Bob Casey <span class="chip kind">inc.</span> &nbsp;·&nbsp; <span class="party rep">REP</span> Dave McCormick <span class="chip kind">won</span></div>
+    </div>
+    <div class="kpis">
+      <div><div class="caps">Campaign</div><div class="stat-sm money">$94.1M</div></div>
+      <div><div class="caps">Outside</div><div class="stat-sm money">$235.7M</div></div>
+      <div><div class="caps">Outside share</div><div class="stat-sm num">71%</div></div>
+      <div><div class="caps">Traceability</div><div class="stat-sm num">73% <span class="chip kind">prelim.</span></div></div>
+    </div>
+  </div>
+
+  <div class="stack">
+  <section class="cands rel">
+    <span class="anno" style="left:-30px;top:8px">2</span>
+    <div class="card">
+      <div class="card-h">
+        <div class="cand-h"><span class="party dem">DEM</span><h2><a href="#">Bob Casey</a></h2><span class="chip kind">incumbent · lost</span></div>
+        <a class="src" href="https://www.fec.gov/data/candidate/S6PA00217/?cycle=2024&election_full=false">FEC candidate</a>
+      </div>
+      <div class="caps" style="margin-bottom:6px">Campaign committee</div>
+      <div class="lines">
+        <div class="l b">Receipts</div><div class="money b">$58,147,345</div><a class="src" href="https://www.fec.gov/data/candidate/S6PA00217/?cycle=2024&election_full=false">FEC</a>
+        <div class="l ind">from individuals</div><div class="money">$43,598,592</div><span></span>
+        <div class="l ind">&nbsp;&nbsp;of which via conduits (ActBlue/WinRed)</div><div class="money">$18,218,774</div><span></span>
+        <div class="l ind">from committees (PACs, party)</div><div class="money">$2,964,955</div><span></span>
+        <div class="l ind">other</div><div class="money">$11,583,798</div><span></span>
+        <div class="rule"></div>
+        <div class="l b">Disbursements</div><div class="money b">$60,234,188</div><a class="src" href="https://www.fec.gov/data/candidate/S6PA00217/?cycle=2024&election_full=false">FEC</a>
+        <div class="l ind">cash on hand</div><div class="money">$995,040</div><span></span>
+      </div>
+      <div class="caps" style="margin:16px 0 6px">Outside spending about this candidate <span style="font-weight:400;text-transform:none;letter-spacing:0">(independent expenditures · targeting, not money)</span></div>
+      <div class="lines">
+        <div class="l">Supporting</div><div class="money">$22,317,023</div><a class="src" href="https://www.fec.gov/data/independent-expenditures/?candidate_id=S6PA00217&cycle=2024">FEC</a>
+        <div class="l">Opposing</div><div class="money">$104,850,386</div><span></span>
+        <div class="rule"></div>
+        <div class="l b">Total</div><div class="money b">$127,167,409</div><span></span>
+      </div>
+      <div class="rel" style="margin-top:16px">
+        <span class="anno" style="right:-8px;top:-4px">3</span>
+        <div class="bar"><i class="f-campaign" style="width:31.4%"></i><i class="f-outside" style="width:68.6%"></i></div>
+        <div class="legend"><span><i class="f-campaign"></i>Campaign receipts $58.1M</span><span><i class="f-outside"></i>Outside spending about Casey $127.2M · 69%</span></div>
+      </div>
+      <div style="display:flex;justify-content:space-between;align-items:baseline;margin-top:14px;padding-top:10px;border-top:1px solid var(--border);font-size:var(--text-xs);color:var(--ink-2)">
+        <span>Traceability of outside money about Casey</span><span class="num" style="font-weight:600;color:var(--ink)">75% <span class="chip kind">prelim.</span></span>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-h">
+        <div class="cand-h"><span class="party rep">REP</span><h2><a href="#">Dave McCormick</a></h2><span class="chip kind">challenger · won</span></div>
+        <a class="src" href="https://www.fec.gov/data/candidate/S2PA00661/?cycle=2024&election_full=false">FEC candidate</a>
+      </div>
+      <div class="caps" style="margin-bottom:6px">Campaign committee</div>
+      <div class="lines">
+        <div class="l b">Receipts</div><div class="money b">$35,970,837</div><a class="src" href="https://www.fec.gov/data/candidate/S2PA00661/?cycle=2024&election_full=false">FEC</a>
+        <div class="l ind">from individuals</div><div class="money">$21,181,318</div><span></span>
+        <div class="l ind">&nbsp;&nbsp;of which via conduits (ActBlue/WinRed)</div><div class="money">$5,791,840</div><span></span>
+        <div class="l ind">from committees (PACs, party)</div><div class="money">$1,066,344</div><span></span>
+        <div class="l ind">other</div><div class="money">$13,723,175</div><span></span>
+        <div class="rule"></div>
+        <div class="l b">Disbursements</div><div class="money b">$35,373,179</div><a class="src" href="https://www.fec.gov/data/candidate/S2PA00661/?cycle=2024&election_full=false">FEC</a>
+        <div class="l ind">cash on hand</div><div class="money">$605,478</div><span></span>
+      </div>
+      <div class="caps" style="margin:16px 0 6px">Outside spending about this candidate <span style="font-weight:400;text-transform:none;letter-spacing:0">(independent expenditures · targeting, not money)</span></div>
+      <div class="lines">
+        <div class="l">Supporting</div><div class="money">$29,344,908</div><a class="src" href="https://www.fec.gov/data/independent-expenditures/?candidate_id=S2PA00661&cycle=2024">FEC</a>
+        <div class="l">Opposing</div><div class="money">$79,160,133</div><span></span>
+        <div class="rule"></div>
+        <div class="l b">Total</div><div class="money b">$108,505,040</div><span></span>
+      </div>
+      <div style="margin-top:16px">
+        <div class="bar"><i class="f-campaign" style="width:24.9%"></i><i class="f-outside" style="width:75.1%"></i></div>
+        <div class="legend"><span><i class="f-campaign"></i>Campaign receipts $36.0M</span><span><i class="f-outside"></i>Outside spending about McCormick $108.5M · 75%</span></div>
+      </div>
+      <div style="display:flex;justify-content:space-between;align-items:baseline;margin-top:14px;padding-top:10px;border-top:1px solid var(--border);font-size:var(--text-xs);color:var(--ink-2)">
+        <span>Traceability of outside money about McCormick</span><span class="num" style="font-weight:600;color:var(--ink)">70% <span class="chip kind">prelim.</span></span>
+      </div>
+    </div>
+  </section>
+
+  <section class="card rel">
+    <span class="anno" style="left:-30px;top:8px">4</span>
+    <div class="card-h"><h2>Traceability of outside money</h2><a class="lnk" style="font-size:var(--text-xs)" href="#">How this is computed →</a></div>
+    <div class="trace">
+      <div>
+        <div class="stat num">73%</div>
+        <div class="caps" style="margin-top:6px">preliminary · disclosed share of $235.7M</div>
+      </div>
+      <div>
+        <div class="bar tall"><i class="f-disclosed" style="width:72.9%"></i><i class="f-dark" style="width:27.1%"></i></div>
+        <div class="split">
+          <div><div><span class="dot disclosed"></span> Disclosed</div><div class="money">$171.8M <span style="color:var(--ink-3);font-weight:400">73%</span></div></div>
+          <div><div><span class="dot inferable"></span> Inferable</div><div class="money">$0 <span style="color:var(--ink-3);font-weight:400">0%</span></div></div>
+          <div><div><span class="dot dark"></span> Dark</div><div class="money">$63.9M <span style="color:var(--ink-3);font-weight:400">27%</span></div></div>
+        </div>
+      </div>
+    </div>
+    <p class="note" style="margin:14px 0 0">Each independent-expenditure dollar in this race is weighted by the disclosed share of the spender's own receipts, walked back through committee-to-committee transfers to a named individual, business or union on an FEC filing. The remainder stopped at an organization whose own funding is not on file (501(c)(4), LLC, trust). Nothing is inferable in V0.</p>
+    <details><summary>Full method, caveats and what "disclosed" does not mean</summary><p class="note">Committees whose receipts lie outside the loaded 2,000-committee neighborhood count as disclosed without being walked. Form 5 filers ($532,391) count as dark. Super PAC spending is itself disclosed; this score is about the layer behind the spender, not the spender. Organizations are classified by name; no IRS lookup.</p></details>
+  </section>
+
+  <section class="card rel spenders">
+    <span class="anno" style="left:-30px;top:8px">5</span>
+    <div class="card-h"><h2>Top outside spenders <span style="color:var(--ink-3);font-weight:400;font-size:var(--text-sm)">98 committees · $235.7M</span></h2><a class="lnk" style="font-size:var(--text-xs)" href="#">Ad gallery →</a></div>
+    <div class="toolbar">
+      <span>Sort</span><span class="seg"><span class="on">In race</span><span>Traceability</span><span>Name</span></span>
+      <span class="hide-m">Filter</span><span class="seg hide-m"><span class="on">All</span><span>Flagged</span><span>Dark dead-end</span></span>
+      <span style="margin-left:auto" class="hide-m"><span class="dot disclosed"></span> disclosed &nbsp;<span class="dot inferable"></span> inferable &nbsp;<span class="dot dark"></span> dark &nbsp;<span class="dot none"></span> not computed &nbsp;·&nbsp; visibility of the spender's own funding</span>
+    </div>
+    <table>
+      <thead><tr><th>Spender</th><th class="hide-m">Type</th><th>Supports / opposes</th><th class="r">In race</th><th class="r">Traceability</th><th>Flags</th><th class="r hide-m">Open</th></tr></thead>
+      <tbody>
+        <tr>
+          <td><div class="mrow"><span><span class="dot dark"></span> <a class="lnk" href="#" style="font-weight:600;color:var(--ink)">WINSENATE</a> <span class="chip kind">Super PAC</span></span><span class="stat-sm money" style="display:none">$63.0M</span></div><span class="mono id">C00865444</span></td>
+          <td class="hide-m" style="color:var(--ink-2)">Super PAC</td>
+          <td><div class="so"><b class="o">O</b><span>Dave McCormick</span><span class="money">$60.2M</span></div><div class="so"><b>S</b><span>Bob Casey</span><span class="money">$2.8M</span></div></td>
+          <td class="r money" style="font-weight:600">$63.0M</td>
+          <td class="r"><span class="tr-cell"><span class="num">66%</span><span class="bar"><i class="f-disclosed" style="width:66%"></i><i class="f-dark" style="width:34%"></i></span></span></td>
+          <td><div class="flags"><span class="chip flag" title="34% of receipts stop at organizations whose own funding is not on file">⚑ dark dead-end</span><span class="chip flag" title="Same street address and treasurer as SMP (C00484642)">⚑ shared address</span><span class="chip flag" title="SMP supplied 100% of itemized receipts">⚑ single source</span></div></td>
+          <td class="r rowlinks hide-m"><a class="lnk" href="#" style="font-size:var(--text-xs)">entity</a><a class="lnk" href="#" style="font-size:var(--text-xs)">chain</a><a class="src" href="https://www.fec.gov/data/committee/C00865444/?cycle=2024">FEC</a></td>
+        </tr>
+        <tr>
+          <td><span class="dot disclosed"></span> <a class="lnk" href="#" style="font-weight:600;color:var(--ink)">Senate Leadership Fund</a> <span class="chip kind">Super PAC</span><span class="mono id">C00571703</span></td>
+          <td class="hide-m" style="color:var(--ink-2)">Super PAC</td>
+          <td><div class="so"><b class="o">O</b><span>Bob Casey</span><span class="money">$52.8M</span></div></td>
+          <td class="r money" style="font-weight:600">$52.8M</td>
+          <td class="r"><span class="tr-cell"><span class="num">79%</span><span class="bar"><i class="f-disclosed" style="width:79%"></i><i class="f-dark" style="width:21%"></i></span></span></td>
+          <td></td>
+          <td class="r rowlinks hide-m"><a class="lnk" href="#" style="font-size:var(--text-xs)">entity</a><a class="lnk" href="#" style="font-size:var(--text-xs)">chain</a><a class="src" href="https://www.fec.gov/data/committee/C00571703/?cycle=2024">FEC</a></td>
+        </tr>
+        <tr>
+          <td><span class="dot disclosed"></span> <a class="lnk" href="#" style="font-weight:600;color:var(--ink)">Keystone Renewal PAC</a> <span class="chip kind">Super PAC</span><span class="mono id">C00849489</span></td>
+          <td class="hide-m" style="color:var(--ink-2)">Super PAC</td>
+          <td><div class="so"><b class="o">O</b><span>Bob Casey</span><span class="money">$34.1M</span></div><div class="so"><b>S</b><span>Dave McCormick</span><span class="money">$12.2M</span></div><div class="so" style="color:var(--ink-3)"><b></b><span>+2 smaller lines</span><span class="money">$1.9M</span></div></td>
+          <td class="r money" style="font-weight:600">$48.2M</td>
+          <td class="r"><span class="tr-cell"><span class="num">85%</span><span class="bar"><i class="f-disclosed" style="width:85%"></i><i class="f-dark" style="width:15%"></i></span></span></td>
+          <td></td>
+          <td class="r rowlinks hide-m"><a class="lnk" href="#" style="font-size:var(--text-xs)">entity</a><a class="lnk" href="#" style="font-size:var(--text-xs)">chain</a><a class="src" href="https://www.fec.gov/data/committee/C00849489/?cycle=2024">FEC</a></td>
+        </tr>
+        <tr>
+          <td><span class="dot dark"></span> <a class="lnk" href="#" style="font-weight:600;color:var(--ink)">Americans for Prosperity Action</a> <span class="chip kind">Hybrid PAC</span><span class="mono id">C00687103 · dba CVA Action, Libre Action</span></td>
+          <td class="hide-m" style="color:var(--ink-2)">Hybrid PAC (non-qualified)</td>
+          <td><div class="so"><b>S</b><span>Dave McCormick</span><span class="money">$13.6M</span></div><div class="so"><b class="o">O</b><span>Bob Casey</span><span class="money">$8.1M</span></div></td>
+          <td class="r money" style="font-weight:600">$21.7M</td>
+          <td class="r"><span class="tr-cell"><span class="num">65%</span><span class="bar"><i class="f-disclosed" style="width:65%"></i><i class="f-dark" style="width:35%"></i></span></span></td>
+          <td><div class="flags"><span class="chip flag">⚑ dark dead-end</span></div></td>
+          <td class="r rowlinks hide-m"><a class="lnk" href="#" style="font-size:var(--text-xs)">entity</a><a class="lnk" href="#" style="font-size:var(--text-xs)">chain</a><a class="src" href="https://www.fec.gov/data/committee/C00687103/?cycle=2024">FEC</a></td>
+        </tr>
+        <tr>
+          <td><span class="dot disclosed"></span> <a class="lnk" href="#" style="font-weight:600;color:var(--ink)">DSCC</a> <span class="chip kind">Party</span><span class="mono id">C00042366</span></td>
+          <td class="hide-m" style="color:var(--ink-2)">Party committee</td>
+          <td><div class="so"><b class="o">O</b><span>Dave McCormick</span><span class="money">$10.5M</span></div></td>
+          <td class="r money" style="font-weight:600">$10.5M</td>
+          <td class="r"><span class="tr-cell"><span class="num">99%</span><span class="bar"><i class="f-disclosed" style="width:99%"></i><i class="f-dark" style="width:1%"></i></span></span></td>
+          <td></td>
+          <td class="r rowlinks hide-m"><a class="lnk" href="#" style="font-size:var(--text-xs)">entity</a><a class="lnk" href="#" style="font-size:var(--text-xs)">chain</a><a class="src" href="https://www.fec.gov/data/committee/C00042366/?cycle=2024">FEC</a></td>
+        </tr>
+        <tr>
+          <td><span class="dot disclosed"></span> <a class="lnk" href="#" style="font-weight:600;color:var(--ink)">American Crossroads</a> <span class="chip kind">Super PAC</span><span class="mono id">C00487363</span></td>
+          <td class="hide-m" style="color:var(--ink-2)">Super PAC</td>
+          <td><div class="so"><b class="o">O</b><span>Bob Casey</span><span class="money">$8.8M</span></div></td>
+          <td class="r money" style="font-weight:600">$8.8M</td>
+          <td class="r"><span class="tr-cell"><span class="num">79%</span><span class="bar"><i class="f-disclosed" style="width:79%"></i><i class="f-dark" style="width:21%"></i></span></span></td>
+          <td><div class="flags"><span class="chip flag">⚑ single source</span></div></td>
+          <td class="r rowlinks hide-m"><a class="lnk" href="#" style="font-size:var(--text-xs)">entity</a><a class="lnk" href="#" style="font-size:var(--text-xs)">chain</a><a class="src" href="https://www.fec.gov/data/committee/C00487363/?cycle=2024">FEC</a></td>
+        </tr>
+        <tr>
+          <td><span class="dot dark"></span> <a class="lnk" href="#" style="font-weight:600;color:var(--ink)">LCV Victory Fund</a> <span class="chip kind">Super PAC</span><span class="mono id">C00486845</span></td>
+          <td class="hide-m" style="color:var(--ink-2)">Super PAC</td>
+          <td><div class="so"><b>S</b><span>Bob Casey</span><span class="money">$3.0M</span></div><div class="so"><b class="o">O</b><span>Dave McCormick</span><span class="money">$2.0M</span></div></td>
+          <td class="r money" style="font-weight:600">$5.1M</td>
+          <td class="r"><span class="tr-cell"><span class="num">29%</span><span class="bar"><i class="f-disclosed" style="width:29%"></i><i class="f-dark" style="width:71%"></i></span></span></td>
+          <td><div class="flags"><span class="chip flag">⚑ dark dead-end</span><span class="chip flag">⚑ shared address</span></div></td>
+          <td class="r rowlinks hide-m"><a class="lnk" href="#" style="font-size:var(--text-xs)">entity</a><a class="lnk" href="#" style="font-size:var(--text-xs)">chain</a><a class="src" href="https://www.fec.gov/data/committee/C00486845/?cycle=2024">FEC</a></td>
+        </tr>
+        <tr>
+          <td><span class="dot dark"></span> <a class="lnk" href="#" style="font-weight:600;color:var(--ink)">CFFE PAC</a> <span class="chip kind">Hybrid PAC</span><span class="mono id">C00744920</span></td>
+          <td class="hide-m" style="color:var(--ink-2)">Hybrid PAC</td>
+          <td><div class="so"><b>S</b><span>Bob Casey</span><span class="money">$2.9M</span></div></td>
+          <td class="r money" style="font-weight:600">$2.9M</td>
+          <td class="r"><span class="tr-cell"><span class="num">38%</span><span class="bar"><i class="f-disclosed" style="width:38%"></i><i class="f-dark" style="width:62%"></i></span></span></td>
+          <td><div class="flags"><span class="chip flag">⚑ dark dead-end</span></div></td>
+          <td class="r rowlinks hide-m"><a class="lnk" href="#" style="font-size:var(--text-xs)">entity</a><a class="lnk" href="#" style="font-size:var(--text-xs)">chain</a><a class="src" href="https://www.fec.gov/data/committee/C00744920/?cycle=2024">FEC</a></td>
+        </tr>
+        <tr>
+          <td><span class="dot dark"></span> <a class="lnk" href="#" style="font-weight:600;color:var(--ink)">NRDC Action Votes</a> <span class="chip kind">Super PAC</span><span class="mono id">C00740225</span></td>
+          <td class="hide-m" style="color:var(--ink-2)">Super PAC</td>
+          <td><div class="so"><b class="o">O</b><span>Dave McCormick</span><span class="money">$2.0M</span></div></td>
+          <td class="r money" style="font-weight:600">$2.0M</td>
+          <td class="r"><span class="tr-cell"><span class="num">0%</span><span class="bar"><i class="f-dark" style="width:100%"></i></span></span></td>
+          <td><div class="flags"><span class="chip flag">⚑ dark dead-end</span><span class="chip flag">⚑ single source</span></div></td>
+          <td class="r rowlinks hide-m"><a class="lnk" href="#" style="font-size:var(--text-xs)">entity</a><a class="lnk" href="#" style="font-size:var(--text-xs)">chain</a><a class="src" href="https://www.fec.gov/data/committee/C00740225/?cycle=2024">FEC</a></td>
+        </tr>
+        <tr>
+          <td><span class="dot disclosed"></span> <a class="lnk" href="#" style="font-weight:600;color:var(--ink)">NRA Political Victory Fund</a> <span class="chip kind">PAC</span><span class="mono id">C00053553</span></td>
+          <td class="hide-m" style="color:var(--ink-2)">PAC</td>
+          <td><div class="so"><b>S</b><span>Dave McCormick</span><span class="money">$1.3M</span></div><div class="so"><b class="o">O</b><span>Bob Casey</span><span class="money">$1K</span></div></td>
+          <td class="r money" style="font-weight:600">$1.3M</td>
+          <td class="r"><span class="tr-cell"><span class="num">100%</span><span class="bar"><i class="f-disclosed" style="width:100%"></i></span></span></td>
+          <td></td>
+          <td class="r rowlinks hide-m"><a class="lnk" href="#" style="font-size:var(--text-xs)">entity</a><a class="lnk" href="#" style="font-size:var(--text-xs)">chain</a><a class="src" href="https://www.fec.gov/data/committee/C00053553/?cycle=2024">FEC</a></td>
+        </tr>
+      </tbody>
+    </table>
+    <div style="display:flex;justify-content:space-between;align-items:baseline;margin-top:12px;font-size:var(--text-xs);color:var(--ink-3)">
+      <span>Showing 10 of 98 · <a class="lnk" href="#">Show all</a></span>
+      <span class="hide-m">Independent expenditures target a candidate and move no money to the campaign. S/O is the spender's own declaration.</span>
+    </div>
+    <details><summary>What the flags mean</summary>
+      <dl class="note" style="display:grid;grid-template-columns:auto 1fr;gap:4px 12px;margin-top:8px">
+        <dt style="color:var(--flag-text);font-weight:600">⚑ dark dead-end</dt><dd style="margin:0">Backward walk reaches an organization with no donor-disclosure obligation (501(c)(4), LLC, trust).</dd>
+        <dt style="color:var(--flag-text);font-weight:600">⚑ single source</dt><dd style="margin:0">≈90%+ of itemized receipts came from one counterparty.</dd>
+        <dt style="color:var(--flag-text);font-weight:600">⚑ shared address</dt><dd style="margin:0">Same street address, registered agent or treasurer as other committees in this race.</dd>
+      </dl>
+    </details>
+  </section>
+  </div>
+
+  <section class="anno-panel">
+    <div class="caps" style="color:#1f4e9e;margin-bottom:8px">Annotations (mockup only — not part of the UI)</div>
+    <ol class="anno-list" style="list-style:none;padding:0;margin:0">
+      <li><b>1</b>Four race-level KPIs move into the hero, right-aligned, one type size (24px). Traceability joins them so the page's key number is above the fold on a projector.</li>
+      <li><b>2</b>Candidate panels: one FEC link per block instead of one per line (11 → 3 links). Sub-lines are indented and greyed; totals carry a hairline rule. Party is a text mark, not a red/blue box, so it stops competing with the dark/disclosed palette.</li>
+      <li><b>3</b>Campaign vs outside uses a dedicated second hue (violet) instead of grey, so "outside" is no longer visually "unknown". Legend carries the numbers.</li>
+      <li><b>4</b>Traceability: one 44px number, a 14px stacked bar with a hatched dark segment (colour-blind safe), the three amounts under it. The 180-word method paragraph is folded behind a disclosure.</li>
+      <li><b>5</b>Spenders table: traceability gets a 44px inline bar so the column can be scanned; flags shrink to 3 short labels with tooltips; type folds into a chip next to the name; row IDs in mono. On mobile the table collapses into cards (no horizontal scroll).</li>
+    </ol>
+  </section>
+</main>
+<footer class="container note" style="padding:24px 24px 40px">Every figure links to its government record (FEC, congress.gov, platform ad libraries). We show adjacency, never causation. Same treatment for every candidate, party, and committee.</footer>
+</body>
+</html>

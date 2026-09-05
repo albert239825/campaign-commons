@@ -1,0 +1,129 @@
+{
+  "root_entity_id": "C00490375",
+  "root_name": "NATIONAL NURSES UNITED FOR PATIENT PROTECTION",
+  "race_id": "pa-sen-2024",
+  "generated_at": "2026-09-05T13:41:28+00:00",
+  "data_status": "real",
+  "nodes": [
+    {
+      "id": "C00490375",
+      "name": "NATIONAL NURSES UNITED FOR PATIENT PROTECTION",
+      "kind": "committee",
+      "committee_type": "O",
+      "depth": 0,
+      "visibility": "disclosed",
+      "amount_in": 5520000.0,
+      "is_terminus": false,
+      "terminus_reason": null,
+      "source_url": "https://www.fec.gov/data/committee/C00490375/?cycle=2024"
+    },
+    {
+      "id": "C00731372",
+      "name": "VOTE NURSES VALUES POLITICAL ACTION COMMITTEE: CALIFORNIA NURSES ASSOCIATION",
+      "kind": "committee",
+      "committee_type": "O",
+      "depth": 1,
+      "visibility": "disclosed",
+      "amount_in": 4000000.0,
+      "is_terminus": false,
+      "terminus_reason": null,
+      "source_url": "https://www.fec.gov/data/committee/C00731372/?cycle=2024"
+    },
+    {
+      "id": "org:NATIONAL_NURSES_UNITED",
+      "name": "NATIONAL NURSES UNITED",
+      "kind": "organization",
+      "committee_type": null,
+      "depth": 1,
+      "visibility": "dark",
+      "amount_in": 500000.0,
+      "is_terminus": true,
+      "terminus_reason": "dark",
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00490375&two_year_transaction_period=2024&contributor_name=NATIONAL+NURSES+UNITED",
+      "organization_class": "unknown"
+    },
+    {
+      "id": "cycle:C00731372@C00731372",
+      "name": "VOTE NURSES VALUES POLITICAL ACTION COMMITTEE: CALIFORNIA NURSES ASSOCIATION",
+      "kind": "committee",
+      "committee_type": "O",
+      "depth": 2,
+      "visibility": "disclosed",
+      "amount_in": 4000000.0,
+      "is_terminus": true,
+      "terminus_reason": "cycle",
+      "source_url": "https://www.fec.gov/data/committee/C00731372/?cycle=2024"
+    }
+  ],
+  "edges": [
+    {
+      "from": "C00731372",
+      "to": "C00490375",
+      "amount": 5020000.0,
+      "visibility": "disclosed",
+      "depth": 1,
+      "transaction_types": [
+        "24K"
+      ],
+      "count": 3,
+      "date_range": [
+        "2024-07-19",
+        "2024-09-25"
+      ],
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00490375&two_year_transaction_period=2024&contributor_name=C00731372"
+    },
+    {
+      "from": "org:NATIONAL_NURSES_UNITED",
+      "to": "C00490375",
+      "amount": 500000.0,
+      "visibility": "dark",
+      "depth": 1,
+      "transaction_types": [
+        "10"
+      ],
+      "count": 1,
+      "date_range": [
+        "2024-06-27",
+        "2024-06-27"
+      ],
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00490375&two_year_transaction_period=2024&contributor_name=NATIONAL+NURSES+UNITED"
+    },
+    {
+      "from": "cycle:C00731372@C00731372",
+      "to": "C00731372",
+      "amount": 4000000.0,
+      "visibility": "disclosed",
+      "depth": 2,
+      "transaction_types": [
+        "18G"
+      ],
+      "count": 1,
+      "date_range": [
+        "2024-09-05",
+        "2024-09-05"
+      ],
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00731372&two_year_transaction_period=2024&contributor_name=C00731372"
+    }
+  ],
+  "summary": {
+    "total_in": 5520000.0,
+    "disclosed_share": 0.9094,
+    "inferable_share": 0.0,
+    "unwalked_share": 0.0,
+    "dark_share": 0.0906,
+    "max_depth": 2,
+    "terminus_counts": {
+      "dark": 1,
+      "cycle": 1
+    }
+  },
+  "flags": [
+    {
+      "id": "single_transfer_funded",
+      "label": "Funded by a single source",
+      "detail": "VOTE NURSES VALUES POLITICAL ACTION COMMITTEE: CALIFORNIA NURSES ASSOCIATION supplied $5,020,000 of NATIONAL NURSES UNITED FOR PATIENT PROTECTION's $5,520,000 itemized receipts (91%).",
+      "evidence_url": "https://www.fec.gov/data/receipts/?committee_id=C00490375&two_year_transaction_period=2024"
+    }
+  ],
+  "method": "Backward walk over money edges only (Schedule A receipts from individuals and organizations, committee-to-committee transfers) into NATIONAL NURSES UNITED FOR PATIENT PROTECTION, 2 hop(s) deep; independent expenditures are targeting edges and never appear. The walk starts from $5,520,000 of itemized 2023–2024 receipts as loaded from FEC bulk data (unitemized receipts, loans and offsets are not edges), and every expanded committee conserves dollars: its inbound edges sum to its receipts. Inbound edges under 1% of a committee's receipts are rolled into one 'other contributors' node, which counts as disclosed except for the organization dollars inside it. Each dollar takes the visibility of where the walk stopped: named individuals (including earmarks through ActBlue/WinRed, attributed to the person) are disclosed. Organizations that are not registered committees are classified from their name alone (no IRS lookup): a union or a business giving from its own treasury is disclosed — the named entity is the source; an LLC, trust, advocacy nonprofit (501(c)(4)-style names) or unclassifiable organization is dark, because whoever funds it is not on file with the FEC. 1 edge(s) point at a committee already expanded elsewhere in this chain and reuse its visibility mix instead of being walked twice. Visibility shares are preliminary; no 990 lookups were performed, so nothing is marked inferable."
+}

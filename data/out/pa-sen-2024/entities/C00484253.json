@@ -1,0 +1,129 @@
+{
+  "entity_id": "C00484253",
+  "race_id": "pa-sen-2024",
+  "kind": "committee",
+  "name": "UNITED FOOD AND COMMERCIAL WORKERS INTERNATIONAL UNION WORKING FAMILIES ADVOCACY PROJECT",
+  "aliases": [],
+  "committee_type": "O",
+  "committee_type_label": "Super PAC",
+  "designation": "B",
+  "registration_date": null,
+  "treasurer": "JONES, MILTON",
+  "address": {
+    "street": "1775 K STREET, NW",
+    "city": "WASHINGTON",
+    "state": "DC",
+    "zip": "200061598"
+  },
+  "visibility": "disclosed",
+  "is_conduit": false,
+  "totals": {
+    "receipts": 7377000.0,
+    "disbursements": 7360000.0,
+    "independent_expenditures": 0,
+    "from_individuals": 2019.0,
+    "from_committees": 0.0,
+    "from_organizations": 7374981.0,
+    "from_undisclosed": 0.0
+  },
+  "inflows": [
+    {
+      "transfer_id": "C00484253-in-org:UNITED_FOOD_AND_COMMERCIAL_WORKERS_INTERNATIONAL_UNION",
+      "from_entity_id": "org:UNITED_FOOD_AND_COMMERCIAL_WORKERS_INTERNATIONAL_UNION",
+      "from_name": "UNITED FOOD AND COMMERCIAL WORKERS INTERNATIONAL UNION",
+      "to_entity_id": "C00484253",
+      "to_name": "UNITED FOOD AND COMMERCIAL WORKERS INTERNATIONAL UNION WORKING FAMILIES ADVOCACY PROJECT",
+      "amount": 7374981.0,
+      "date": "2024-10-10",
+      "visibility": "disclosed",
+      "transaction_type": "10",
+      "limit": "unlimited",
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00484253&two_year_transaction_period=2024&contributor_name=UNITED+FOOD+AND+COMMERCIAL+WORKERS+INTERNATIONAL+UNION"
+    }
+  ],
+  "outflows": [
+    {
+      "transfer_id": "C00484253-out-C00484642",
+      "from_entity_id": "C00484253",
+      "from_name": "UNITED FOOD AND COMMERCIAL WORKERS INTERNATIONAL UNION WORKING FAMILIES ADVOCACY PROJECT",
+      "to_entity_id": "C00484642",
+      "to_name": "SMP",
+      "amount": 3650000.0,
+      "date": "2024-10-10",
+      "visibility": "disclosed",
+      "transaction_type": "18K",
+      "limit": "unlimited",
+      "source_url": "https://www.fec.gov/data/disbursements/?committee_id=C00484253&two_year_transaction_period=2024"
+    },
+    {
+      "transfer_id": "C00484253-out-C00495028",
+      "from_entity_id": "C00484253",
+      "from_name": "UNITED FOOD AND COMMERCIAL WORKERS INTERNATIONAL UNION WORKING FAMILIES ADVOCACY PROJECT",
+      "to_entity_id": "C00495028",
+      "to_name": "HMP",
+      "amount": 1112500.0,
+      "date": "2024-12-04",
+      "visibility": "disclosed",
+      "transaction_type": "24K",
+      "limit": null,
+      "source_url": "https://www.fec.gov/data/disbursements/?committee_id=C00484253&two_year_transaction_period=2024"
+    },
+    {
+      "transfer_id": "C00484253-out-C00669259",
+      "from_entity_id": "C00484253",
+      "from_name": "UNITED FOOD AND COMMERCIAL WORKERS INTERNATIONAL UNION WORKING FAMILIES ADVOCACY PROJECT",
+      "to_entity_id": "C00669259",
+      "to_name": "FF PAC",
+      "amount": 854000.0,
+      "date": "2024-09-25",
+      "visibility": "disclosed",
+      "transaction_type": "24K",
+      "limit": null,
+      "source_url": "https://www.fec.gov/data/disbursements/?committee_id=C00484253&two_year_transaction_period=2024"
+    },
+    {
+      "transfer_id": "C00484253-out-C00856914",
+      "from_entity_id": "C00484253",
+      "from_name": "UNITED FOOD AND COMMERCIAL WORKERS INTERNATIONAL UNION WORKING FAMILIES ADVOCACY PROJECT",
+      "to_entity_id": "C00856914",
+      "to_name": "GARDEN STATE INTEGRITY",
+      "amount": 100000.0,
+      "date": "2024-03-08",
+      "visibility": "disclosed",
+      "transaction_type": "18K",
+      "limit": null,
+      "source_url": "https://www.fec.gov/data/disbursements/?committee_id=C00484253&two_year_transaction_period=2024"
+    },
+    {
+      "transfer_id": "C00484253-out-C00573709",
+      "from_entity_id": "C00484253",
+      "from_name": "UNITED FOOD AND COMMERCIAL WORKERS INTERNATIONAL UNION WORKING FAMILIES ADVOCACY PROJECT",
+      "to_entity_id": "C00573709",
+      "to_name": "CA LUV PAC (CALIFORNIA LEADERSHIP UNITED FOR VICTORY PAC)",
+      "amount": 10000.0,
+      "date": "2024-09-06",
+      "visibility": "disclosed",
+      "transaction_type": "18K",
+      "limit": null,
+      "source_url": "https://www.fec.gov/data/disbursements/?committee_id=C00484253&two_year_transaction_period=2024"
+    },
+    {
+      "transfer_id": "C00484253-out-C00652644",
+      "from_entity_id": "C00484253",
+      "from_name": "UNITED FOOD AND COMMERCIAL WORKERS INTERNATIONAL UNION WORKING FAMILIES ADVOCACY PROJECT",
+      "to_entity_id": "C00652644",
+      "to_name": "TEAM FITZ",
+      "amount": 2500.0,
+      "date": "2024-10-29",
+      "visibility": "disclosed",
+      "transaction_type": "18K",
+      "limit": null,
+      "source_url": "https://www.fec.gov/data/disbursements/?committee_id=C00484253&two_year_transaction_period=2024"
+    }
+  ],
+  "independent_expenditures": [],
+  "flags": [],
+  "has_chain": false,
+  "source_url": "https://www.fec.gov/data/committee/C00484253/?cycle=2024",
+  "data_status": "real"
+}

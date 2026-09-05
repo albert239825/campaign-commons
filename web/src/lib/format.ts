@@ -1,0 +1,37 @@
+export function money(n: number, opts: { compact?: boolean } = { compact: true }): string {
+  if (opts.compact) {
+    if (Math.abs(n) >= 1_000_000) return `$${(n / 1_000_000).toFixed(n >= 10_000_000 ? 0 : 1)}M`;
+    if (Math.abs(n) >= 1_000) return `$${(n / 1_000).toFixed(0)}K`;
+  }
+  return n.toLocaleString("en-US", { style: "currency", currency: "USD", maximumFractionDigits: 0 });
+}
+
+export function pct(share: number, digits = 0): string {
+  return `${(share * 100).toFixed(digits)}%`;
+}
+
+export function range(min: number, max: number | null, fmt: (n: number) => string = (n) => n.toLocaleString("en-US")): string {
+  return max === null ? `${fmt(min)}+` : `${fmt(min)}–${fmt(max)}`;
+}
+
+export function date(iso: string | null): string {
+  if (!iso) return "—";
+  const d = new Date(iso + "T00:00:00Z");
+  return d.toLocaleDateString("en-US", { year: "numeric", month: "short", day: "numeric", timeZone: "UTC" });
+}
+
+/** File stem of a donor view for a chain-node id; mirrors pipeline/gotham/donors.py `donor_key`. */
+export const donorKey = (nodeId: string) => nodeId.split("@")[0].replace(/[^A-Za-z0-9_-]/g, "-");
+
+/** Routes, in one place so children don't drift. */
+export const routes = {
+  home: () => "/",
+  race: (raceId: string) => `/races/${raceId}`,
+  entity: (raceId: string, entityId: string) => `/races/${raceId}/entities/${entityId}`,
+  chain: (raceId: string, entityId: string) => `/races/${raceId}/chains/${entityId}`,
+  ads: (raceId: string) => `/races/${raceId}/ads`,
+  stories: (raceId: string) => `/races/${raceId}/stories`,
+  donor: (raceId: string, donorKey: string) => `/races/${raceId}/donors/${donorKey}`,
+  candidate: (raceId: string, candidateId: string) => `/races/${raceId}/candidates/${candidateId}`,
+  methodology: () => "/methodology",
+};

@@ -1,0 +1,375 @@
+{
+  "root_entity_id": "C00754242",
+  "root_name": "THEY SEE BLUE",
+  "race_id": "pa-sen-2024",
+  "generated_at": "2026-09-05T13:41:28+00:00",
+  "data_status": "real",
+  "nodes": [
+    {
+      "id": "C00754242",
+      "name": "THEY SEE BLUE",
+      "kind": "committee",
+      "committee_type": "V",
+      "depth": 0,
+      "visibility": "disclosed",
+      "amount_in": 165001.0,
+      "is_terminus": false,
+      "terminus_reason": null,
+      "source_url": "https://www.fec.gov/data/committee/C00754242/?cycle=2024"
+    },
+    {
+      "id": "ind:MASHRUWALA_RAJESH|94301",
+      "name": "MASHRUWALA, RAJESH",
+      "kind": "individual",
+      "committee_type": null,
+      "depth": 1,
+      "visibility": "disclosed",
+      "amount_in": 40000.0,
+      "is_terminus": true,
+      "terminus_reason": "individual",
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00754242&two_year_transaction_period=2024&contributor_name=MASHRUWALA%2C+RAJESH"
+    },
+    {
+      "id": "ind:RAGHAVAN_RAJAN|95070",
+      "name": "RAGHAVAN, RAJAN",
+      "kind": "individual",
+      "committee_type": null,
+      "depth": 1,
+      "visibility": "disclosed",
+      "amount_in": 40000.0,
+      "is_terminus": true,
+      "terminus_reason": "individual",
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00754242&two_year_transaction_period=2024&contributor_name=RAGHAVAN%2C+RAJAN"
+    },
+    {
+      "id": "ind:BHAGAT_NAZIR|22041",
+      "name": "BHAGAT, NAZIR",
+      "kind": "individual",
+      "committee_type": null,
+      "depth": 1,
+      "visibility": "disclosed",
+      "amount_in": 29000.0,
+      "is_terminus": true,
+      "terminus_reason": "individual",
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00754242&two_year_transaction_period=2024&contributor_name=BHAGAT%2C+NAZIR"
+    },
+    {
+      "id": "C00589507",
+      "name": "AAPI VICTORY FUND, INC.",
+      "kind": "committee",
+      "committee_type": null,
+      "depth": 1,
+      "visibility": "disclosed",
+      "amount_in": 20000.0,
+      "is_terminus": true,
+      "terminus_reason": "depth_cap",
+      "source_url": "https://www.fec.gov/data/committee/C00589507/?cycle=2024"
+    },
+    {
+      "id": "ind:DIVECHA_ARJUN|02109",
+      "name": "DIVECHA, ARJUN",
+      "kind": "individual",
+      "committee_type": null,
+      "depth": 1,
+      "visibility": "disclosed",
+      "amount_in": 5000.0,
+      "is_terminus": true,
+      "terminus_reason": "individual",
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00754242&two_year_transaction_period=2024&contributor_name=DIVECHA%2C+ARJUN"
+    },
+    {
+      "id": "ind:SRIVASTAVA_RAJAT|95070",
+      "name": "SRIVASTAVA, RAJAT",
+      "kind": "individual",
+      "committee_type": null,
+      "depth": 1,
+      "visibility": "disclosed",
+      "amount_in": 5000.0,
+      "is_terminus": true,
+      "terminus_reason": "individual",
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00754242&two_year_transaction_period=2024&contributor_name=SRIVASTAVA%2C+RAJAT"
+    },
+    {
+      "id": "ind:SAHAI_AVANISH|94070",
+      "name": "SAHAI, AVANISH",
+      "kind": "individual",
+      "committee_type": null,
+      "depth": 1,
+      "visibility": "disclosed",
+      "amount_in": 5000.0,
+      "is_terminus": true,
+      "terminus_reason": "individual",
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00754242&two_year_transaction_period=2024&contributor_name=SAHAI%2C+AVANISH"
+    },
+    {
+      "id": "ind:DIVECHA_DIANA|06510",
+      "name": "DIVECHA, DIANA",
+      "kind": "individual",
+      "committee_type": null,
+      "depth": 1,
+      "visibility": "disclosed",
+      "amount_in": 5000.0,
+      "is_terminus": true,
+      "terminus_reason": "individual",
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00754242&two_year_transaction_period=2024&contributor_name=DIVECHA%2C+DIANA"
+    },
+    {
+      "id": "ind:DEBAETS_ANDREW|95014",
+      "name": "DEBAETS, ANDREW",
+      "kind": "individual",
+      "committee_type": null,
+      "depth": 1,
+      "visibility": "disclosed",
+      "amount_in": 2000.0,
+      "is_terminus": true,
+      "terminus_reason": "individual",
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00754242&two_year_transaction_period=2024&contributor_name=DEBAETS%2C+ANDREW"
+    },
+    {
+      "id": "ind:MAHANTY_SURESH|94085",
+      "name": "MAHANTY, SURESH",
+      "kind": "individual",
+      "committee_type": null,
+      "depth": 1,
+      "visibility": "disclosed",
+      "amount_in": 2000.0,
+      "is_terminus": true,
+      "terminus_reason": "individual",
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00754242&two_year_transaction_period=2024&contributor_name=MAHANTY%2C+SURESH"
+    },
+    {
+      "id": "ind:PEASE_CHRISTIAN|94306",
+      "name": "PEASE, CHRISTIAN",
+      "kind": "individual",
+      "committee_type": null,
+      "depth": 1,
+      "visibility": "disclosed",
+      "amount_in": 1950.0,
+      "is_terminus": true,
+      "terminus_reason": "individual",
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00754242&two_year_transaction_period=2024&contributor_name=PEASE%2C+CHRISTIAN"
+    },
+    {
+      "id": "agg:other@C00754242",
+      "name": "Other contributors to THEY SEE BLUE (each <1% of receipts, or beyond the 40 largest)",
+      "kind": "aggregate",
+      "committee_type": null,
+      "depth": 1,
+      "visibility": "disclosed",
+      "amount_in": 10051.0,
+      "is_terminus": true,
+      "terminus_reason": "pruned",
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00754242&two_year_transaction_period=2024",
+      "contributor_count": 19
+    }
+  ],
+  "edges": [
+    {
+      "from": "ind:MASHRUWALA_RAJESH|94301",
+      "to": "C00754242",
+      "amount": 40000.0,
+      "visibility": "disclosed",
+      "depth": 1,
+      "transaction_types": [
+        "15"
+      ],
+      "count": 1,
+      "date_range": [
+        "2024-06-24",
+        "2024-06-24"
+      ],
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00754242&two_year_transaction_period=2024&contributor_name=MASHRUWALA%2C+RAJESH"
+    },
+    {
+      "from": "ind:RAGHAVAN_RAJAN|95070",
+      "to": "C00754242",
+      "amount": 40000.0,
+      "visibility": "disclosed",
+      "depth": 1,
+      "transaction_types": [
+        "15"
+      ],
+      "count": 2,
+      "date_range": [
+        "2024-06-25",
+        "2024-08-26"
+      ],
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00754242&two_year_transaction_period=2024&contributor_name=RAGHAVAN%2C+RAJAN"
+    },
+    {
+      "from": "ind:BHAGAT_NAZIR|22041",
+      "to": "C00754242",
+      "amount": 29000.0,
+      "visibility": "disclosed",
+      "depth": 1,
+      "transaction_types": [
+        "15"
+      ],
+      "count": 3,
+      "date_range": [
+        "2024-08-08",
+        "2024-10-15"
+      ],
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00754242&two_year_transaction_period=2024&contributor_name=BHAGAT%2C+NAZIR"
+    },
+    {
+      "from": "C00589507",
+      "to": "C00754242",
+      "amount": 20000.0,
+      "visibility": "disclosed",
+      "depth": 1,
+      "transaction_types": [
+        "18K"
+      ],
+      "count": 1,
+      "date_range": [
+        "2024-03-26",
+        "2024-03-26"
+      ],
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00754242&two_year_transaction_period=2024&contributor_name=C00589507"
+    },
+    {
+      "from": "ind:DIVECHA_ARJUN|02109",
+      "to": "C00754242",
+      "amount": 5000.0,
+      "visibility": "disclosed",
+      "depth": 1,
+      "transaction_types": [
+        "15"
+      ],
+      "count": 1,
+      "date_range": [
+        "2024-08-23",
+        "2024-08-23"
+      ],
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00754242&two_year_transaction_period=2024&contributor_name=DIVECHA%2C+ARJUN"
+    },
+    {
+      "from": "ind:SRIVASTAVA_RAJAT|95070",
+      "to": "C00754242",
+      "amount": 5000.0,
+      "visibility": "disclosed",
+      "depth": 1,
+      "transaction_types": [
+        "15"
+      ],
+      "count": 1,
+      "date_range": [
+        "2024-08-21",
+        "2024-08-21"
+      ],
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00754242&two_year_transaction_period=2024&contributor_name=SRIVASTAVA%2C+RAJAT"
+    },
+    {
+      "from": "ind:SAHAI_AVANISH|94070",
+      "to": "C00754242",
+      "amount": 5000.0,
+      "visibility": "disclosed",
+      "depth": 1,
+      "transaction_types": [
+        "15"
+      ],
+      "count": 1,
+      "date_range": [
+        "2024-07-23",
+        "2024-07-23"
+      ],
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00754242&two_year_transaction_period=2024&contributor_name=SAHAI%2C+AVANISH"
+    },
+    {
+      "from": "ind:DIVECHA_DIANA|06510",
+      "to": "C00754242",
+      "amount": 5000.0,
+      "visibility": "disclosed",
+      "depth": 1,
+      "transaction_types": [
+        "15"
+      ],
+      "count": 1,
+      "date_range": [
+        "2024-08-29",
+        "2024-08-29"
+      ],
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00754242&two_year_transaction_period=2024&contributor_name=DIVECHA%2C+DIANA"
+    },
+    {
+      "from": "ind:DEBAETS_ANDREW|95014",
+      "to": "C00754242",
+      "amount": 2000.0,
+      "visibility": "disclosed",
+      "depth": 1,
+      "transaction_types": [
+        "15"
+      ],
+      "count": 1,
+      "date_range": [
+        "2024-10-15",
+        "2024-10-15"
+      ],
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00754242&two_year_transaction_period=2024&contributor_name=DEBAETS%2C+ANDREW"
+    },
+    {
+      "from": "ind:MAHANTY_SURESH|94085",
+      "to": "C00754242",
+      "amount": 2000.0,
+      "visibility": "disclosed",
+      "depth": 1,
+      "transaction_types": [
+        "15"
+      ],
+      "count": 1,
+      "date_range": [
+        "2024-06-22",
+        "2024-06-22"
+      ],
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00754242&two_year_transaction_period=2024&contributor_name=MAHANTY%2C+SURESH"
+    },
+    {
+      "from": "ind:PEASE_CHRISTIAN|94306",
+      "to": "C00754242",
+      "amount": 1950.0,
+      "visibility": "disclosed",
+      "depth": 1,
+      "transaction_types": [
+        "15"
+      ],
+      "count": 16,
+      "date_range": [
+        "2023-06-30",
+        "2024-11-03"
+      ],
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00754242&two_year_transaction_period=2024&contributor_name=PEASE%2C+CHRISTIAN"
+    },
+    {
+      "from": "agg:other@C00754242",
+      "to": "C00754242",
+      "amount": 10051.0,
+      "visibility": "disclosed",
+      "depth": 1,
+      "transaction_types": [
+        "15"
+      ],
+      "count": 20,
+      "date_range": [
+        "2024-06-23",
+        "2024-10-13"
+      ],
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00754242&two_year_transaction_period=2024"
+    }
+  ],
+  "summary": {
+    "total_in": 165001.0,
+    "disclosed_share": 0.8788,
+    "inferable_share": 0.0,
+    "unwalked_share": 0.1212,
+    "dark_share": 0.0,
+    "max_depth": 1,
+    "terminus_counts": {
+      "individual": 10,
+      "depth_cap": 1,
+      "pruned": 1
+    }
+  },
+  "flags": [],
+  "method": "Backward walk over money edges only (Schedule A receipts from individuals and organizations, committee-to-committee transfers) into THEY SEE BLUE, 1 hop(s) deep; independent expenditures are targeting edges and never appear. The walk starts from $165,001 of itemized 2023–2024 receipts as loaded from FEC bulk data (unitemized receipts, loans and offsets are not edges), and every expanded committee conserves dollars: its inbound edges sum to its receipts. Inbound edges under 1% of a committee's receipts are rolled into one 'other contributors' node, which counts as disclosed except for the organization dollars inside it. Each dollar takes the visibility of where the walk stopped: named individuals (including earmarks through ActBlue/WinRed, attributed to the person) are disclosed. Organizations that are not registered committees are classified from their name alone (no IRS lookup): a union or a business giving from its own treasury is disclosed — the named entity is the source; an LLC, trust, advocacy nonprofit (501(c)(4)-style names) or unclassifiable organization is dark, because whoever funds it is not on file with the FEC. 1 committee node(s) stop with reason depth_cap: they are FEC-registered committees whose own receipts were not loaded into this race's neighborhood (or the hop or node cap was reached). The committee files donor lists with the FEC, but this walk did not read them, so its dollars are counted as 'not walked' — neither disclosed nor dark — and a dark layer behind such a committee would not show here. Visibility shares are preliminary; no 990 lookups were performed, so nothing is marked inferable."
+}

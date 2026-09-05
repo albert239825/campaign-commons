@@ -1,0 +1,260 @@
+{
+  "root_entity_id": "C00756791",
+  "root_name": "VOTEBLUE",
+  "race_id": "pa-sen-2024",
+  "generated_at": "2026-09-05T13:41:28+00:00",
+  "data_status": "real",
+  "nodes": [
+    {
+      "id": "C00756791",
+      "name": "VOTEBLUE",
+      "kind": "committee",
+      "committee_type": "O",
+      "depth": 0,
+      "visibility": "disclosed",
+      "amount_in": 7975.0,
+      "is_terminus": false,
+      "terminus_reason": null,
+      "source_url": "https://www.fec.gov/data/committee/C00756791/?cycle=2024"
+    },
+    {
+      "id": "ind:PARK_SOYOUN|94024",
+      "name": "PARK, SOYOUN",
+      "kind": "individual",
+      "committee_type": null,
+      "depth": 1,
+      "visibility": "disclosed",
+      "amount_in": 3000.0,
+      "is_terminus": true,
+      "terminus_reason": "individual",
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00756791&two_year_transaction_period=2024&contributor_name=PARK%2C+SOYOUN"
+    },
+    {
+      "id": "ind:MCKENNA_REGIS|94087",
+      "name": "MCKENNA, REGIS",
+      "kind": "individual",
+      "committee_type": null,
+      "depth": 1,
+      "visibility": "disclosed",
+      "amount_in": 1000.0,
+      "is_terminus": true,
+      "terminus_reason": "individual",
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00756791&two_year_transaction_period=2024&contributor_name=MCKENNA%2C+REGIS"
+    },
+    {
+      "id": "ind:BURKART_CLAUDIA|18055",
+      "name": "BURKART, CLAUDIA",
+      "kind": "individual",
+      "committee_type": null,
+      "depth": 1,
+      "visibility": "disclosed",
+      "amount_in": 1000.0,
+      "is_terminus": true,
+      "terminus_reason": "individual",
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00756791&two_year_transaction_period=2024&contributor_name=BURKART%2C+CLAUDIA"
+    },
+    {
+      "id": "ind:HARMS_CHRISTOPHER|95033",
+      "name": "HARMS, CHRISTOPHER",
+      "kind": "individual",
+      "committee_type": null,
+      "depth": 1,
+      "visibility": "disclosed",
+      "amount_in": 1000.0,
+      "is_terminus": true,
+      "terminus_reason": "individual",
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00756791&two_year_transaction_period=2024&contributor_name=HARMS%2C+CHRISTOPHER"
+    },
+    {
+      "id": "ind:LOS_HUERTOS_MARC|91711",
+      "name": "LOS HUERTOS, MARC",
+      "kind": "individual",
+      "committee_type": null,
+      "depth": 1,
+      "visibility": "disclosed",
+      "amount_in": 1000.0,
+      "is_terminus": true,
+      "terminus_reason": "individual",
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00756791&two_year_transaction_period=2024&contributor_name=LOS+HUERTOS%2C+MARC"
+    },
+    {
+      "id": "ind:MILLS_DANIEL|95060",
+      "name": "MILLS, DANIEL",
+      "kind": "individual",
+      "committee_type": null,
+      "depth": 1,
+      "visibility": "disclosed",
+      "amount_in": 500.0,
+      "is_terminus": true,
+      "terminus_reason": "individual",
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00756791&two_year_transaction_period=2024&contributor_name=MILLS%2C+DANIEL"
+    },
+    {
+      "id": "ind:POMPEO_SCOTT|43206",
+      "name": "POMPEO, SCOTT",
+      "kind": "individual",
+      "committee_type": null,
+      "depth": 1,
+      "visibility": "disclosed",
+      "amount_in": 375.0,
+      "is_terminus": true,
+      "terminus_reason": "individual",
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00756791&two_year_transaction_period=2024&contributor_name=POMPEO%2C+SCOTT"
+    },
+    {
+      "id": "ind:HALCON_DUSTIN|98406",
+      "name": "HALCON, DUSTIN",
+      "kind": "individual",
+      "committee_type": null,
+      "depth": 1,
+      "visibility": "disclosed",
+      "amount_in": 100.0,
+      "is_terminus": true,
+      "terminus_reason": "individual",
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00756791&two_year_transaction_period=2024&contributor_name=HALCON%2C+DUSTIN"
+    }
+  ],
+  "edges": [
+    {
+      "from": "ind:PARK_SOYOUN|94024",
+      "to": "C00756791",
+      "amount": 3000.0,
+      "visibility": "disclosed",
+      "depth": 1,
+      "transaction_types": [
+        "10"
+      ],
+      "count": 3,
+      "date_range": [
+        "2023-04-08",
+        "2023-11-16"
+      ],
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00756791&two_year_transaction_period=2024&contributor_name=PARK%2C+SOYOUN"
+    },
+    {
+      "from": "ind:MCKENNA_REGIS|94087",
+      "to": "C00756791",
+      "amount": 1000.0,
+      "visibility": "disclosed",
+      "depth": 1,
+      "transaction_types": [
+        "10"
+      ],
+      "count": 1,
+      "date_range": [
+        "2023-11-27",
+        "2023-11-27"
+      ],
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00756791&two_year_transaction_period=2024&contributor_name=MCKENNA%2C+REGIS"
+    },
+    {
+      "from": "ind:BURKART_CLAUDIA|18055",
+      "to": "C00756791",
+      "amount": 1000.0,
+      "visibility": "disclosed",
+      "depth": 1,
+      "transaction_types": [
+        "10"
+      ],
+      "count": 1,
+      "date_range": [
+        "2024-03-09",
+        "2024-03-09"
+      ],
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00756791&two_year_transaction_period=2024&contributor_name=BURKART%2C+CLAUDIA"
+    },
+    {
+      "from": "ind:HARMS_CHRISTOPHER|95033",
+      "to": "C00756791",
+      "amount": 1000.0,
+      "visibility": "disclosed",
+      "depth": 1,
+      "transaction_types": [
+        "10"
+      ],
+      "count": 1,
+      "date_range": [
+        "2023-11-17",
+        "2023-11-17"
+      ],
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00756791&two_year_transaction_period=2024&contributor_name=HARMS%2C+CHRISTOPHER"
+    },
+    {
+      "from": "ind:LOS_HUERTOS_MARC|91711",
+      "to": "C00756791",
+      "amount": 1000.0,
+      "visibility": "disclosed",
+      "depth": 1,
+      "transaction_types": [
+        "10"
+      ],
+      "count": 1,
+      "date_range": [
+        "2023-12-31",
+        "2023-12-31"
+      ],
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00756791&two_year_transaction_period=2024&contributor_name=LOS+HUERTOS%2C+MARC"
+    },
+    {
+      "from": "ind:MILLS_DANIEL|95060",
+      "to": "C00756791",
+      "amount": 500.0,
+      "visibility": "disclosed",
+      "depth": 1,
+      "transaction_types": [
+        "10"
+      ],
+      "count": 1,
+      "date_range": [
+        "2024-01-01",
+        "2024-01-01"
+      ],
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00756791&two_year_transaction_period=2024&contributor_name=MILLS%2C+DANIEL"
+    },
+    {
+      "from": "ind:POMPEO_SCOTT|43206",
+      "to": "C00756791",
+      "amount": 375.0,
+      "visibility": "disclosed",
+      "depth": 1,
+      "transaction_types": [
+        "10"
+      ],
+      "count": 3,
+      "date_range": [
+        "2023-12-07",
+        "2023-12-30"
+      ],
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00756791&two_year_transaction_period=2024&contributor_name=POMPEO%2C+SCOTT"
+    },
+    {
+      "from": "ind:HALCON_DUSTIN|98406",
+      "to": "C00756791",
+      "amount": 100.0,
+      "visibility": "disclosed",
+      "depth": 1,
+      "transaction_types": [
+        "10"
+      ],
+      "count": 4,
+      "date_range": [
+        "2023-09-15",
+        "2023-12-15"
+      ],
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00756791&two_year_transaction_period=2024&contributor_name=HALCON%2C+DUSTIN"
+    }
+  ],
+  "summary": {
+    "total_in": 7975.0,
+    "disclosed_share": 1.0,
+    "inferable_share": 0.0,
+    "unwalked_share": 0.0,
+    "dark_share": 0.0,
+    "max_depth": 1,
+    "terminus_counts": {
+      "individual": 8
+    }
+  },
+  "flags": [],
+  "method": "Backward walk over money edges only (Schedule A receipts from individuals and organizations, committee-to-committee transfers) into VOTEBLUE, 1 hop(s) deep; independent expenditures are targeting edges and never appear. The walk starts from $7,975 of itemized 2023–2024 receipts as loaded from FEC bulk data (unitemized receipts, loans and offsets are not edges), and every expanded committee conserves dollars: its inbound edges sum to its receipts. Inbound edges under 1% of a committee's receipts are rolled into one 'other contributors' node, which counts as disclosed except for the organization dollars inside it. Each dollar takes the visibility of where the walk stopped: named individuals (including earmarks through ActBlue/WinRed, attributed to the person) are disclosed. Organizations that are not registered committees are classified from their name alone (no IRS lookup): a union or a business giving from its own treasury is disclosed — the named entity is the source; an LLC, trust, advocacy nonprofit (501(c)(4)-style names) or unclassifiable organization is dark, because whoever funds it is not on file with the FEC. Visibility shares are preliminary; no 990 lookups were performed, so nothing is marked inferable."
+}

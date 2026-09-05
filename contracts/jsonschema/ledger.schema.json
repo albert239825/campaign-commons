@@ -1,0 +1,366 @@
+{
+  "$ref": "#/definitions/ledger",
+  "definitions": {
+    "ledger": {
+      "type": "object",
+      "properties": {
+        "race_id": {
+          "type": "string"
+        },
+        "generated_at": {
+          "type": "string"
+        },
+        "data_status": {
+          "type": "string",
+          "enum": [
+            "real",
+            "mock",
+            "partial"
+          ]
+        },
+        "candidates": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "candidate_id": {
+                "type": "string"
+              },
+              "name": {
+                "type": "string"
+              },
+              "party": {
+                "type": "string",
+                "enum": [
+                  "DEM",
+                  "REP",
+                  "LIB",
+                  "GRE",
+                  "IND",
+                  "CON",
+                  "OTH"
+                ]
+              },
+              "incumbent": {
+                "type": "boolean"
+              },
+              "principal_committee_id": {
+                "type": "string"
+              },
+              "result": {
+                "type": "string",
+                "enum": [
+                  "won",
+                  "lost",
+                  "pending"
+                ]
+              },
+              "campaign": {
+                "type": "object",
+                "properties": {
+                  "receipts": {
+                    "type": "number"
+                  },
+                  "disbursements": {
+                    "type": "number"
+                  },
+                  "from_individuals": {
+                    "type": "number"
+                  },
+                  "from_committees": {
+                    "type": "number"
+                  },
+                  "via_conduit_total": {
+                    "type": "number"
+                  },
+                  "cash_on_hand": {
+                    "type": "number"
+                  },
+                  "source_url": {
+                    "type": "string",
+                    "format": "uri"
+                  }
+                },
+                "required": [
+                  "receipts",
+                  "disbursements",
+                  "from_individuals",
+                  "from_committees",
+                  "via_conduit_total",
+                  "source_url"
+                ],
+                "additionalProperties": false
+              },
+              "outside": {
+                "type": "object",
+                "properties": {
+                  "support": {
+                    "type": "number"
+                  },
+                  "oppose": {
+                    "type": "number"
+                  },
+                  "total": {
+                    "type": "number"
+                  },
+                  "source_url": {
+                    "type": "string",
+                    "format": "uri"
+                  }
+                },
+                "required": [
+                  "support",
+                  "oppose",
+                  "total",
+                  "source_url"
+                ],
+                "additionalProperties": false
+              },
+              "traceability_score": {
+                "anyOf": [
+                  {
+                    "type": "number",
+                    "minimum": 0,
+                    "maximum": 1
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              }
+            },
+            "required": [
+              "candidate_id",
+              "name",
+              "party",
+              "incumbent",
+              "principal_committee_id",
+              "campaign",
+              "outside",
+              "traceability_score"
+            ],
+            "additionalProperties": false
+          }
+        },
+        "top_outside_spenders": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "entity_id": {
+                "type": "string"
+              },
+              "name": {
+                "type": "string"
+              },
+              "committee_type": {
+                "anyOf": [
+                  {
+                    "type": "string",
+                    "enum": [
+                      "H",
+                      "S",
+                      "P",
+                      "X",
+                      "Y",
+                      "Z",
+                      "N",
+                      "Q",
+                      "O",
+                      "U",
+                      "V",
+                      "W",
+                      "D",
+                      "E",
+                      "I",
+                      "C"
+                    ]
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "committee_type_label": {
+                "type": "string"
+              },
+              "total": {
+                "type": "number"
+              },
+              "by_candidate": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "candidate_id": {
+                      "type": "string"
+                    },
+                    "support_oppose": {
+                      "type": "string",
+                      "enum": [
+                        "S",
+                        "O"
+                      ]
+                    },
+                    "amount": {
+                      "type": "number"
+                    }
+                  },
+                  "required": [
+                    "candidate_id",
+                    "support_oppose",
+                    "amount"
+                  ],
+                  "additionalProperties": false
+                }
+              },
+              "traceability_score": {
+                "anyOf": [
+                  {
+                    "type": "number",
+                    "minimum": 0,
+                    "maximum": 1
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "visibility_shares": {
+                "type": "object",
+                "properties": {
+                  "disclosed": {
+                    "type": "number",
+                    "minimum": 0,
+                    "maximum": 1
+                  },
+                  "inferable": {
+                    "type": "number",
+                    "minimum": 0,
+                    "maximum": 1
+                  },
+                  "unwalked": {
+                    "type": "number",
+                    "minimum": 0,
+                    "maximum": 1
+                  },
+                  "dark": {
+                    "type": "number",
+                    "minimum": 0,
+                    "maximum": 1
+                  }
+                },
+                "required": [
+                  "disclosed",
+                  "inferable",
+                  "unwalked",
+                  "dark"
+                ],
+                "additionalProperties": false
+              },
+              "flags": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "enum": [
+                    "popup",
+                    "single_transfer_funded",
+                    "shell_cluster",
+                    "dead_end_dark",
+                    "one_way_valve_violation",
+                    "transfer_mismatch"
+                  ]
+                }
+              },
+              "has_chain": {
+                "type": "boolean"
+              },
+              "source_url": {
+                "type": "string",
+                "format": "uri"
+              }
+            },
+            "required": [
+              "entity_id",
+              "name",
+              "committee_type",
+              "committee_type_label",
+              "total",
+              "by_candidate",
+              "traceability_score",
+              "flags",
+              "has_chain",
+              "source_url"
+            ],
+            "additionalProperties": false
+          }
+        },
+        "traceability": {
+          "anyOf": [
+            {
+              "type": "object",
+              "properties": {
+                "score": {
+                  "type": "number",
+                  "minimum": 0,
+                  "maximum": 1
+                },
+                "outside_total": {
+                  "type": "number"
+                },
+                "traced_to_individuals": {
+                  "type": "number"
+                },
+                "inferable": {
+                  "type": "number"
+                },
+                "unwalked": {
+                  "type": "number"
+                },
+                "dark": {
+                  "type": "number"
+                },
+                "method": {
+                  "type": "string"
+                },
+                "preliminary": {
+                  "type": "boolean"
+                }
+              },
+              "required": [
+                "score",
+                "outside_total",
+                "traced_to_individuals",
+                "inferable",
+                "dark",
+                "method",
+                "preliminary"
+              ],
+              "additionalProperties": false
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "notes": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      },
+      "required": [
+        "race_id",
+        "generated_at",
+        "data_status",
+        "candidates",
+        "top_outside_spenders",
+        "traceability",
+        "notes"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "$schema": "http://json-schema.org/draft-07/schema#"
+}

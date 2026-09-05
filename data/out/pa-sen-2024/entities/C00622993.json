@@ -1,0 +1,142 @@
+{
+  "entity_id": "C00622993",
+  "race_id": "pa-sen-2024",
+  "kind": "committee",
+  "name": "SUFFOLK COUNTY REPUBLICAN COMMITTEE-FEDERAL ACCOUNT",
+  "aliases": [],
+  "committee_type": "X",
+  "committee_type_label": "Party committee (non-qualified)",
+  "designation": "U",
+  "registration_date": null,
+  "treasurer": "THOMAS J KILMARTIN",
+  "address": {
+    "street": "3239 ROUTE 112",
+    "city": "MEDFORD",
+    "state": "NY",
+    "zip": "11763"
+  },
+  "visibility": "disclosed",
+  "is_conduit": false,
+  "totals": {
+    "receipts": 465567.4,
+    "disbursements": 459518.75,
+    "independent_expenditures": 0,
+    "from_individuals": 0.0,
+    "from_committees": 418867.4,
+    "from_organizations": 0.0,
+    "from_undisclosed": 0.0
+  },
+  "inflows": [
+    {
+      "transfer_id": "C00622993-in-C00806018",
+      "from_entity_id": "C00806018",
+      "from_name": "LALOTA FOR CONGRESS",
+      "to_entity_id": "C00622993",
+      "to_name": "SUFFOLK COUNTY REPUBLICAN COMMITTEE-FEDERAL ACCOUNT",
+      "amount": 654600.0,
+      "date": "2024-10-28",
+      "visibility": "disclosed",
+      "transaction_type": "24G",
+      "limit": null,
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00622993&two_year_transaction_period=2024&contributor_name=C00806018"
+    },
+    {
+      "transfer_id": "C00622993-in-C00823864",
+      "from_entity_id": "C00823864",
+      "from_name": "LALOTA VICTORY FUND",
+      "to_entity_id": "C00622993",
+      "to_name": "SUFFOLK COUNTY REPUBLICAN COMMITTEE-FEDERAL ACCOUNT",
+      "amount": 105054.0,
+      "date": "2024-12-03",
+      "visibility": "disclosed",
+      "transaction_type": "24G",
+      "limit": null,
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00622993&two_year_transaction_period=2024&contributor_name=C00823864"
+    },
+    {
+      "transfer_id": "C00622993-in-C00729954",
+      "from_entity_id": "C00729954",
+      "from_name": "GARBARINO FOR CONGRESS",
+      "to_entity_id": "C00622993",
+      "to_name": "SUFFOLK COUNTY REPUBLICAN COMMITTEE-FEDERAL ACCOUNT",
+      "amount": 13000.0,
+      "date": "2024-11-04",
+      "visibility": "disclosed",
+      "transaction_type": "24K",
+      "limit": null,
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00622993&two_year_transaction_period=2024&contributor_name=C00729954"
+    },
+    {
+      "transfer_id": "C00622993-in-C00813063",
+      "from_entity_id": "C00813063",
+      "from_name": "LEADERSHIP AND LOYALTY ONLY TO AMERICA PAC",
+      "to_entity_id": "C00622993",
+      "to_name": "SUFFOLK COUNTY REPUBLICAN COMMITTEE-FEDERAL ACCOUNT",
+      "amount": 7500.0,
+      "date": "2024-10-07",
+      "visibility": "disclosed",
+      "transaction_type": "24K",
+      "limit": null,
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00622993&two_year_transaction_period=2024&contributor_name=C00813063"
+    },
+    {
+      "transfer_id": "C00622993-in-C00266585",
+      "from_entity_id": "C00266585",
+      "from_name": "GREENBERG TRAURIG, P.A. PAC",
+      "to_entity_id": "C00622993",
+      "to_name": "SUFFOLK COUNTY REPUBLICAN COMMITTEE-FEDERAL ACCOUNT",
+      "amount": 2500.0,
+      "date": "2024-03-04",
+      "visibility": "disclosed",
+      "transaction_type": "24K",
+      "limit": null,
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00622993&two_year_transaction_period=2024&contributor_name=C00266585"
+    }
+  ],
+  "outflows": [
+    {
+      "transfer_id": "C00622993-out-C00055582",
+      "from_entity_id": "C00622993",
+      "from_name": "SUFFOLK COUNTY REPUBLICAN COMMITTEE-FEDERAL ACCOUNT",
+      "to_entity_id": "C00055582",
+      "to_name": "NY REPUBLICAN FEDERAL CAMPAIGN COMMITTEE",
+      "amount": 459100.0,
+      "date": "2024-11-05",
+      "visibility": "disclosed",
+      "transaction_type": "18G",
+      "limit": null,
+      "source_url": "https://www.fec.gov/data/disbursements/?committee_id=C00622993&two_year_transaction_period=2024"
+    },
+    {
+      "transfer_id": "C00622993-out-C00806018",
+      "from_entity_id": "C00622993",
+      "from_name": "SUFFOLK COUNTY REPUBLICAN COMMITTEE-FEDERAL ACCOUNT",
+      "to_entity_id": "C00806018",
+      "to_name": "LALOTA FOR CONGRESS",
+      "amount": 150000.0,
+      "date": "2024-10-16",
+      "visibility": "disclosed",
+      "transaction_type": "24G",
+      "limit": null,
+      "source_url": "https://www.fec.gov/data/disbursements/?committee_id=C00622993&two_year_transaction_period=2024"
+    },
+    {
+      "transfer_id": "C00622993-out-C00823864",
+      "from_entity_id": "C00622993",
+      "from_name": "SUFFOLK COUNTY REPUBLICAN COMMITTEE-FEDERAL ACCOUNT",
+      "to_entity_id": "C00823864",
+      "to_name": "LALOTA VICTORY FUND",
+      "amount": 2000.0,
+      "date": "2023-06-26",
+      "visibility": "disclosed",
+      "transaction_type": "18K",
+      "limit": null,
+      "source_url": "https://www.fec.gov/data/disbursements/?committee_id=C00622993&two_year_transaction_period=2024"
+    }
+  ],
+  "independent_expenditures": [],
+  "flags": [],
+  "has_chain": false,
+  "source_url": "https://www.fec.gov/data/committee/C00622993/?cycle=2024",
+  "data_status": "real"
+}

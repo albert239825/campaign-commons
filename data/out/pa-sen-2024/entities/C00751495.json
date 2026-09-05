@@ -1,0 +1,142 @@
+{
+  "entity_id": "C00751495",
+  "race_id": "pa-sen-2024",
+  "kind": "committee",
+  "name": "ATU ACTION FUND",
+  "aliases": [],
+  "committee_type": "O",
+  "committee_type_label": "Super PAC",
+  "designation": "B",
+  "registration_date": null,
+  "treasurer": "KIRK, KENNETH",
+  "address": {
+    "street": "10000 NEW HAMPSHIRE AVE",
+    "city": "SILVER SPRING",
+    "state": "MD",
+    "zip": "20903"
+  },
+  "visibility": "disclosed",
+  "is_conduit": false,
+  "totals": {
+    "receipts": 3600000.0,
+    "disbursements": 3600000.0,
+    "independent_expenditures": 0,
+    "from_individuals": 0.0,
+    "from_committees": 3600000.0,
+    "from_organizations": 0.0,
+    "from_undisclosed": 0.0
+  },
+  "inflows": [
+    {
+      "transfer_id": "C00751495-in-C00032995",
+      "from_entity_id": "C00032995",
+      "from_name": "AMALGAMATED TRANSIT UNION - COPE",
+      "to_entity_id": "C00751495",
+      "to_name": "ATU ACTION FUND",
+      "amount": 700000.0,
+      "date": "2024-10-29",
+      "visibility": "disclosed",
+      "transaction_type": "18G",
+      "limit": "unlimited",
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00751495&two_year_transaction_period=2024&contributor_name=C00032995"
+    }
+  ],
+  "outflows": [
+    {
+      "transfer_id": "C00751495-out-C00701888",
+      "from_entity_id": "C00751495",
+      "from_name": "ATU ACTION FUND",
+      "to_entity_id": "C00701888",
+      "to_name": "UNITE THE COUNTRY",
+      "amount": 1550000.0,
+      "date": "2024-10-29",
+      "visibility": "disclosed",
+      "transaction_type": "18K",
+      "limit": null,
+      "source_url": "https://www.fec.gov/data/disbursements/?committee_id=C00751495&two_year_transaction_period=2024"
+    },
+    {
+      "transfer_id": "C00751495-out-C00879973",
+      "from_entity_id": "C00751495",
+      "from_name": "ATU ACTION FUND",
+      "to_entity_id": "C00879973",
+      "to_name": "DEMOCRACY 2025",
+      "amount": 1000000.0,
+      "date": "2024-06-17",
+      "visibility": "disclosed",
+      "transaction_type": "24K",
+      "limit": null,
+      "source_url": "https://www.fec.gov/data/disbursements/?committee_id=C00751495&two_year_transaction_period=2024"
+    },
+    {
+      "transfer_id": "C00751495-out-C00669259",
+      "from_entity_id": "C00751495",
+      "from_name": "ATU ACTION FUND",
+      "to_entity_id": "C00669259",
+      "to_name": "FF PAC",
+      "amount": 500000.0,
+      "date": "2024-06-26",
+      "visibility": "disclosed",
+      "transaction_type": "24K",
+      "limit": null,
+      "source_url": "https://www.fec.gov/data/disbursements/?committee_id=C00751495&two_year_transaction_period=2024"
+    },
+    {
+      "transfer_id": "C00751495-out-C00495028",
+      "from_entity_id": "C00751495",
+      "from_name": "ATU ACTION FUND",
+      "to_entity_id": "C00495028",
+      "to_name": "HMP",
+      "amount": 245000.0,
+      "date": "2024-05-07",
+      "visibility": "disclosed",
+      "transaction_type": "24K",
+      "limit": null,
+      "source_url": "https://www.fec.gov/data/disbursements/?committee_id=C00751495&two_year_transaction_period=2024"
+    },
+    {
+      "transfer_id": "C00751495-out-C00418897",
+      "from_entity_id": "C00751495",
+      "from_name": "ATU ACTION FUND",
+      "to_entity_id": "C00418897",
+      "to_name": "VOTEVETS",
+      "amount": 100000.0,
+      "date": "2024-09-24",
+      "visibility": "disclosed",
+      "transaction_type": "24K",
+      "limit": null,
+      "source_url": "https://www.fec.gov/data/disbursements/?committee_id=C00751495&two_year_transaction_period=2024"
+    },
+    {
+      "transfer_id": "C00751495-out-C00582841",
+      "from_entity_id": "C00751495",
+      "from_name": "ATU ACTION FUND",
+      "to_entity_id": "C00582841",
+      "to_name": "COALITION FOR PROGRESS",
+      "amount": 100000.0,
+      "date": "2023-08-23",
+      "visibility": "disclosed",
+      "transaction_type": "24K",
+      "limit": null,
+      "source_url": "https://www.fec.gov/data/disbursements/?committee_id=C00751495&two_year_transaction_period=2024"
+    },
+    {
+      "transfer_id": "C00751495-out-C00550970",
+      "from_entity_id": "C00751495",
+      "from_name": "ATU ACTION FUND",
+      "to_entity_id": "C00550970",
+      "to_name": "EQUALITY PAC",
+      "amount": 25000.0,
+      "date": "2024-05-07",
+      "visibility": "disclosed",
+      "transaction_type": "24K",
+      "limit": null,
+      "source_url": "https://www.fec.gov/data/disbursements/?committee_id=C00751495&two_year_transaction_period=2024"
+    }
+  ],
+  "independent_expenditures": [],
+  "flags": [],
+  "has_chain": false,
+  "source_url": "https://www.fec.gov/data/committee/C00751495/?cycle=2024",
+  "data_status": "real"
+}

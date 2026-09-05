@@ -1,0 +1,63 @@
+{
+  "entity_id": "C00304758",
+  "race_id": "pa-sen-2024",
+  "kind": "committee",
+  "name": "MISSOURI FRB PAC",
+  "aliases": [],
+  "committee_type": "N",
+  "committee_type_label": "PAC (non-qualified)",
+  "designation": "U",
+  "registration_date": null,
+  "treasurer": "ELLIOTT, GORDON A. MR.",
+  "address": {
+    "street": "PO BOX 10178",
+    "city": "COLUMBIA",
+    "state": "MO",
+    "zip": "652034002"
+  },
+  "visibility": "disclosed",
+  "is_conduit": false,
+  "totals": {
+    "receipts": 128761.3,
+    "disbursements": 949762.35,
+    "independent_expenditures": 0,
+    "from_individuals": 0.0,
+    "from_committees": 0.0,
+    "from_organizations": 0.0,
+    "from_undisclosed": 0.0
+  },
+  "inflows": [],
+  "outflows": [
+    {
+      "transfer_id": "C00304758-out-C00344648",
+      "from_entity_id": "C00304758",
+      "from_name": "MISSOURI FRB PAC",
+      "to_entity_id": "C00344648",
+      "to_name": "RELY ON YOUR BELIEFS FUND",
+      "amount": 785809.0,
+      "date": "2023-08-09",
+      "visibility": "disclosed",
+      "transaction_type": "18G",
+      "limit": null,
+      "source_url": "https://www.fec.gov/data/disbursements/?committee_id=C00304758&two_year_transaction_period=2024"
+    },
+    {
+      "transfer_id": "C00304758-out-C00541862",
+      "from_entity_id": "C00304758",
+      "from_name": "MISSOURI FRB PAC",
+      "to_entity_id": "C00541862",
+      "to_name": "JASON SMITH FOR CONGRESS",
+      "amount": 4000.0,
+      "date": "2023-04-28",
+      "visibility": "disclosed",
+      "transaction_type": "24K",
+      "limit": null,
+      "source_url": "https://www.fec.gov/data/disbursements/?committee_id=C00304758&two_year_transaction_period=2024"
+    }
+  ],
+  "independent_expenditures": [],
+  "flags": [],
+  "has_chain": false,
+  "source_url": "https://www.fec.gov/data/committee/C00304758/?cycle=2024",
+  "data_status": "real"
+}

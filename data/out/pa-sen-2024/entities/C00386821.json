@@ -1,0 +1,50 @@
+{
+  "entity_id": "C00386821",
+  "race_id": "pa-sen-2024",
+  "kind": "committee",
+  "name": "ENTERPRISE ASSOCIATION OF STEAMFITTERS LOCAL 638 POLITICAL ACTION COMMITTEE",
+  "aliases": [],
+  "committee_type": "Q",
+  "committee_type_label": "PAC",
+  "designation": "U",
+  "registration_date": null,
+  "treasurer": "DALY, PATRICK",
+  "address": {
+    "street": "27-08 40TH AVENUE",
+    "city": "LONG ISLAND CITY",
+    "state": "NY",
+    "zip": "11101"
+  },
+  "visibility": "disclosed",
+  "is_conduit": false,
+  "totals": {
+    "receipts": 748219.79,
+    "disbursements": 938403.84,
+    "independent_expenditures": 0,
+    "from_individuals": 748219.79,
+    "from_committees": 0.0,
+    "from_organizations": 0.0,
+    "from_undisclosed": 0.0
+  },
+  "inflows": [],
+  "outflows": [
+    {
+      "transfer_id": "C00386821-out-C00012476",
+      "from_entity_id": "C00386821",
+      "from_name": "ENTERPRISE ASSOCIATION OF STEAMFITTERS LOCAL 638 POLITICAL ACTION COMMITTEE",
+      "to_entity_id": "C00012476",
+      "to_name": "UA UNION PLUMBERS & PIPEFITTERS VOTE! PAC (UNITED ASSOCIATION OF JOURNEYMEN AND APPRENTICES OF THE PLUMBING & PIPEFITTING INDUSTRY OF THE UNITED STATES AND CANADA)",
+      "amount": 1531154.0,
+      "date": "2024-10-17",
+      "visibility": "disclosed",
+      "transaction_type": "18G",
+      "limit": null,
+      "source_url": "https://www.fec.gov/data/disbursements/?committee_id=C00386821&two_year_transaction_period=2024"
+    }
+  ],
+  "independent_expenditures": [],
+  "flags": [],
+  "has_chain": false,
+  "source_url": "https://www.fec.gov/data/committee/C00386821/?cycle=2024",
+  "data_status": "real"
+}

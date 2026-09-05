@@ -1,0 +1,97 @@
+{
+  "entity_id": "C00740514",
+  "race_id": "pa-sen-2024",
+  "kind": "committee",
+  "name": "CONCERNED CITIZEN",
+  "aliases": [],
+  "committee_type": "O",
+  "committee_type_label": "Super PAC",
+  "designation": "U",
+  "registration_date": null,
+  "treasurer": "MOORE, GLENN CHARLES",
+  "address": {
+    "street": "145 SOUTH LIVERNOIS #249",
+    "city": "ROCHESTER HILLS",
+    "state": "MI",
+    "zip": "48307"
+  },
+  "visibility": "disclosed",
+  "is_conduit": false,
+  "totals": {
+    "receipts": 20423.27,
+    "disbursements": 20720.18,
+    "independent_expenditures": 19826.13,
+    "from_individuals": 20421.03,
+    "from_committees": 0.0,
+    "from_organizations": 0.0,
+    "from_undisclosed": 0.0
+  },
+  "inflows": [
+    {
+      "transfer_id": "C00740514-in-ind:MOORE_GLENN_C_SR.|48307",
+      "from_entity_id": "ind:MOORE_GLENN_C_SR.|48307",
+      "from_name": "MOORE, GLENN C SR.",
+      "to_entity_id": "C00740514",
+      "to_name": "CONCERNED CITIZEN",
+      "amount": 20282.0,
+      "date": "2024-10-16",
+      "visibility": "disclosed",
+      "transaction_type": "10",
+      "limit": "unlimited",
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00740514&two_year_transaction_period=2024&contributor_name=MOORE%2C+GLENN+C+SR."
+    }
+  ],
+  "outflows": [],
+  "independent_expenditures": [
+    {
+      "ie_id": "C00740514-ie-1821191-SE.4665",
+      "spender_entity_id": "C00740514",
+      "spender_name": "CONCERNED CITIZEN",
+      "candidate_id": "S6PA00217",
+      "candidate_name": "Bob Casey",
+      "support_oppose": "O",
+      "amount": 271.34,
+      "date": "2024-09-16",
+      "purpose": "DIGITAL POLITICAL AD",
+      "payee": "GOOGLEADS",
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202410079684813162"
+    },
+    {
+      "ie_id": "C00740514-ie-1843309-SE.4705",
+      "spender_entity_id": "C00740514",
+      "spender_name": "CONCERNED CITIZEN",
+      "candidate_id": "S6PA00217",
+      "candidate_name": "Bob Casey",
+      "support_oppose": "O",
+      "amount": 180.23,
+      "date": "2024-10-16",
+      "purpose": "DIGITAL POLITICAL AD",
+      "payee": "GOOGLEADS",
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202410269719660475"
+    },
+    {
+      "ie_id": "C00740514-ie-1820608-SE.4590",
+      "spender_entity_id": "C00740514",
+      "spender_name": "CONCERNED CITIZEN",
+      "candidate_id": "S6PA00217",
+      "candidate_name": "Bob Casey",
+      "support_oppose": "O",
+      "amount": 161.01,
+      "date": "2024-04-29",
+      "purpose": "DIGITAL POLITICAL AD",
+      "payee": "GOOGLEADS",
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202410059684795528"
+    }
+  ],
+  "flags": [
+    {
+      "id": "single_transfer_funded",
+      "label": "Funded by a single source",
+      "detail": "MOORE, GLENN C SR. supplied $20,282 of CONCERNED CITIZEN's $20,282 itemized receipts (100%).",
+      "evidence_url": "https://www.fec.gov/data/receipts/?committee_id=C00740514&two_year_transaction_period=2024"
+    }
+  ],
+  "has_chain": true,
+  "source_url": "https://www.fec.gov/data/committee/C00740514/?cycle=2024",
+  "data_status": "real"
+}

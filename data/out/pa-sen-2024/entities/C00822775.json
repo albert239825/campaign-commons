@@ -1,0 +1,123 @@
+{
+  "entity_id": "C00822775",
+  "race_id": "pa-sen-2024",
+  "kind": "committee",
+  "name": "BITCOIN FREEDOM PAC",
+  "aliases": [],
+  "committee_type": "O",
+  "committee_type_label": "Super PAC",
+  "designation": "U",
+  "registration_date": null,
+  "treasurer": "ROZANSKY, ADAM",
+  "address": {
+    "street": "2001 L ST NW STE 600",
+    "city": "WASHINGTON",
+    "state": "DC",
+    "zip": "20036"
+  },
+  "visibility": "disclosed",
+  "is_conduit": false,
+  "totals": {
+    "receipts": 537287.14,
+    "disbursements": 506146.33,
+    "independent_expenditures": 0,
+    "from_individuals": 151462.77,
+    "from_committees": 215000.0,
+    "from_organizations": 0.0,
+    "from_undisclosed": 0.0
+  },
+  "inflows": [
+    {
+      "transfer_id": "C00822775-in-ind:CRYPTO_FREEDOM_PAC|20036",
+      "from_entity_id": "ind:CRYPTO_FREEDOM_PAC|20036",
+      "from_name": "CRYPTO FREEDOM PAC",
+      "to_entity_id": "C00822775",
+      "to_name": "BITCOIN FREEDOM PAC",
+      "amount": 215000.0,
+      "date": "2024-10-09",
+      "visibility": "disclosed",
+      "transaction_type": "10",
+      "limit": "unlimited",
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00822775&two_year_transaction_period=2024&contributor_name=CRYPTO+FREEDOM+PAC"
+    },
+    {
+      "transfer_id": "C00822775-in-ind:STEVENS_ROSS|10022",
+      "from_entity_id": "ind:STEVENS_ROSS|10022",
+      "from_name": "STEVENS, ROSS",
+      "to_entity_id": "C00822775",
+      "to_name": "BITCOIN FREEDOM PAC",
+      "amount": 100022.0,
+      "date": "2023-05-25",
+      "visibility": "disclosed",
+      "transaction_type": "10",
+      "limit": "unlimited",
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00822775&two_year_transaction_period=2024&contributor_name=STEVENS%2C+ROSS"
+    },
+    {
+      "transfer_id": "C00822775-in-ind:BAILEY_DAVID|00966",
+      "from_entity_id": "ind:BAILEY_DAVID|00966",
+      "from_name": "BAILEY, DAVID",
+      "to_entity_id": "C00822775",
+      "to_name": "BITCOIN FREEDOM PAC",
+      "amount": 49815.0,
+      "date": "2023-08-16",
+      "visibility": "disclosed",
+      "transaction_type": "10",
+      "limit": "unlimited",
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00822775&two_year_transaction_period=2024&contributor_name=BAILEY%2C+DAVID"
+    },
+    {
+      "transfer_id": "C00822775-in-ind:KOZNARSKY_CAROLYNN|97214",
+      "from_entity_id": "ind:KOZNARSKY_CAROLYNN|97214",
+      "from_name": "KOZNARSKY, CAROLYNN",
+      "to_entity_id": "C00822775",
+      "to_name": "BITCOIN FREEDOM PAC",
+      "amount": 1000.0,
+      "date": "2023-09-28",
+      "visibility": "disclosed",
+      "transaction_type": "10",
+      "limit": "unlimited",
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00822775&two_year_transaction_period=2024&contributor_name=KOZNARSKY%2C+CAROLYNN"
+    },
+    {
+      "transfer_id": "C00822775-in-ind:BOYER_BENJAMIN|84098",
+      "from_entity_id": "ind:BOYER_BENJAMIN|84098",
+      "from_name": "BOYER, BENJAMIN",
+      "to_entity_id": "C00822775",
+      "to_name": "BITCOIN FREEDOM PAC",
+      "amount": 500.0,
+      "date": "2024-03-13",
+      "visibility": "disclosed",
+      "transaction_type": "10",
+      "limit": "unlimited",
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00822775&two_year_transaction_period=2024&contributor_name=BOYER%2C+BENJAMIN"
+    }
+  ],
+  "outflows": [
+    {
+      "transfer_id": "C00822775-out-C00796045",
+      "from_entity_id": "C00822775",
+      "from_name": "BITCOIN FREEDOM PAC",
+      "to_entity_id": "C00796045",
+      "to_name": "TRUTH AND COURAGE PAC",
+      "amount": 350000.0,
+      "date": "2024-10-09",
+      "visibility": "disclosed",
+      "transaction_type": "24K",
+      "limit": "unlimited",
+      "source_url": "https://www.fec.gov/data/disbursements/?committee_id=C00822775&two_year_transaction_period=2024"
+    }
+  ],
+  "independent_expenditures": [],
+  "flags": [
+    {
+      "id": "shell_cluster",
+      "label": "Shares address and treasurer",
+      "detail": "BITCOIN FREEDOM PAC lists the same street address and treasurer as CLUB FOR GROWTH PAC (C00432260), CLUB FOR GROWTH ACTION (C00487470), SCHOOL FREEDOM FUND (C00794396), WIN IT BACK PAC (C00844613).",
+      "evidence_url": "https://www.fec.gov/data/committee/C00822775/?cycle=2024"
+    }
+  ],
+  "has_chain": false,
+  "source_url": "https://www.fec.gov/data/committee/C00822775/?cycle=2024",
+  "data_status": "real"
+}

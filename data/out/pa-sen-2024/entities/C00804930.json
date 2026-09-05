@@ -1,0 +1,103 @@
+{
+  "entity_id": "C00804930",
+  "race_id": "pa-sen-2024",
+  "kind": "committee",
+  "name": "REPUBLICAN PARTY OF GUAM",
+  "aliases": [],
+  "committee_type": "X",
+  "committee_type_label": "Party committee (non-qualified)",
+  "designation": "U",
+  "registration_date": null,
+  "treasurer": "CASIL, EVELYN",
+  "address": {
+    "street": "PO BOX 8073",
+    "city": "TAMUNING",
+    "state": "GU",
+    "zip": "96931"
+  },
+  "visibility": "disclosed",
+  "is_conduit": false,
+  "totals": {
+    "receipts": 1937228.75,
+    "disbursements": 1923331.26,
+    "independent_expenditures": 0,
+    "from_individuals": 74.15,
+    "from_committees": 1937154.6,
+    "from_organizations": 0.0,
+    "from_undisclosed": 0.0
+  },
+  "inflows": [
+    {
+      "transfer_id": "C00804930-in-C00867937",
+      "from_entity_id": "C00867937",
+      "from_name": "TRUMP 47 COMMITTEE, INC.",
+      "to_entity_id": "C00804930",
+      "to_name": "REPUBLICAN PARTY OF GUAM",
+      "amount": 1937151.0,
+      "date": "2024-11-08",
+      "visibility": "disclosed",
+      "transaction_type": "18G",
+      "limit": null,
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00804930&two_year_transaction_period=2024&contributor_name=C00867937"
+    },
+    {
+      "transfer_id": "C00804930-in-C00003418",
+      "from_entity_id": "C00003418",
+      "from_name": "REPUBLICAN NATIONAL COMMITTEE",
+      "to_entity_id": "C00804930",
+      "to_name": "REPUBLICAN PARTY OF GUAM",
+      "amount": 55000.0,
+      "date": "2024-10-17",
+      "visibility": "disclosed",
+      "transaction_type": "24G",
+      "limit": null,
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00804930&two_year_transaction_period=2024&contributor_name=C00003418"
+    },
+    {
+      "transfer_id": "C00804930-in-C00833392",
+      "from_entity_id": "C00833392",
+      "from_name": "NIKKI HALEY FOR PRESIDENT INC.",
+      "to_entity_id": "C00804930",
+      "to_name": "REPUBLICAN PARTY OF GUAM",
+      "amount": 10000.0,
+      "date": "2024-01-16",
+      "visibility": "disclosed",
+      "transaction_type": "24K",
+      "limit": null,
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00804930&two_year_transaction_period=2024&contributor_name=C00833392"
+    },
+    {
+      "transfer_id": "C00804930-in-C00030718",
+      "from_entity_id": "C00030718",
+      "from_name": "NATIONAL ASSOCIATION OF REALTORS POLITICAL ACTION COMMITTEE",
+      "to_entity_id": "C00804930",
+      "to_name": "REPUBLICAN PARTY OF GUAM",
+      "amount": 2457.0,
+      "date": "2023-10-12",
+      "visibility": "disclosed",
+      "transaction_type": "24G",
+      "limit": null,
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00804930&two_year_transaction_period=2024&contributor_name=C00030718"
+    }
+  ],
+  "outflows": [
+    {
+      "transfer_id": "C00804930-out-C00003418",
+      "from_entity_id": "C00804930",
+      "from_name": "REPUBLICAN PARTY OF GUAM",
+      "to_entity_id": "C00003418",
+      "to_name": "REPUBLICAN NATIONAL COMMITTEE",
+      "amount": 2112196.0,
+      "date": "2024-11-08",
+      "visibility": "disclosed",
+      "transaction_type": "18G",
+      "limit": null,
+      "source_url": "https://www.fec.gov/data/disbursements/?committee_id=C00804930&two_year_transaction_period=2024"
+    }
+  ],
+  "independent_expenditures": [],
+  "flags": [],
+  "has_chain": false,
+  "source_url": "https://www.fec.gov/data/committee/C00804930/?cycle=2024",
+  "data_status": "real"
+}

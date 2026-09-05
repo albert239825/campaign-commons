@@ -1,0 +1,105 @@
+{
+  "donor_id": "org:KOCH_INDUSTRIES_INC.",
+  "donor_key": "org-KOCH_INDUSTRIES_INC-",
+  "name": "KOCH INDUSTRIES INC.",
+  "kind": "organization",
+  "race_id": "pa-sen-2024",
+  "generated_at": "2026-09-05T14:22:15+00:00",
+  "data_status": "real",
+  "total_given": 27000000.0,
+  "total_in_chains": 25000000.0,
+  "nodes": [
+    {
+      "id": "org:KOCH_INDUSTRIES_INC.",
+      "name": "KOCH INDUSTRIES INC.",
+      "kind": "organization",
+      "committee_type": null,
+      "depth": 0,
+      "amount": 25000000.0,
+      "is_spender": false,
+      "has_chain": false,
+      "source_url": "https://www.fec.gov/data/receipts/individual-contributions/?contributor_name=KOCH+INDUSTRIES+INC.&two_year_transaction_period=2024"
+    },
+    {
+      "id": "C00687103",
+      "name": "AMERICANS FOR PROSPERITY ACTION, INC. (AFP ACTION) DBA CVA ACTION AND DBA LIBRE ACTION",
+      "kind": "committee",
+      "committee_type": "V",
+      "depth": 1,
+      "amount": 25000000.0,
+      "is_spender": true,
+      "has_chain": true,
+      "source_url": "https://www.fec.gov/data/committee/C00687103/?cycle=2024"
+    },
+    {
+      "id": "C00504530",
+      "name": "CONGRESSIONAL LEADERSHIP FUND",
+      "kind": "committee",
+      "committee_type": "W",
+      "depth": 1,
+      "amount": 2000000.0,
+      "is_spender": false,
+      "has_chain": false,
+      "source_url": "https://www.fec.gov/data/committee/C00504530/?cycle=2024"
+    },
+    {
+      "id": "S2PA00661",
+      "name": "Dave McCormick",
+      "kind": "candidate",
+      "committee_type": null,
+      "depth": 3,
+      "amount": 13610479.71,
+      "is_spender": false,
+      "has_chain": false,
+      "source_url": "https://www.fec.gov/data/candidate/S2PA00661/?cycle=2024&election_full=false"
+    },
+    {
+      "id": "S6PA00217",
+      "name": "Bob Casey",
+      "kind": "candidate",
+      "committee_type": null,
+      "depth": 3,
+      "amount": 8070243.48,
+      "is_spender": false,
+      "has_chain": false,
+      "source_url": "https://www.fec.gov/data/candidate/S6PA00217/?cycle=2024&election_full=false"
+    }
+  ],
+  "edges": [
+    {
+      "from": "org:KOCH_INDUSTRIES_INC.",
+      "to": "C00687103",
+      "kind": "money",
+      "amount": 25000000.0,
+      "support_oppose": null,
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00687103&two_year_transaction_period=2024&contributor_name=KOCH+INDUSTRIES+INC."
+    },
+    {
+      "from": "org:KOCH_INDUSTRIES_INC.",
+      "to": "C00504530",
+      "kind": "money",
+      "amount": 2000000.0,
+      "support_oppose": null,
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00504530&two_year_transaction_period=2024&contributor_name=KOCH+INDUSTRIES+INC."
+    },
+    {
+      "from": "C00687103",
+      "to": "S2PA00661",
+      "kind": "targeting",
+      "amount": 13610479.71,
+      "support_oppose": "S",
+      "source_url": "https://www.fec.gov/data/independent-expenditures/?committee_id=C00687103&cycle=2024&candidate_id=S2PA00661"
+    },
+    {
+      "from": "C00687103",
+      "to": "S6PA00217",
+      "kind": "targeting",
+      "amount": 8070243.48,
+      "support_oppose": "O",
+      "source_url": "https://www.fec.gov/data/independent-expenditures/?committee_id=C00687103&cycle=2024&candidate_id=S6PA00217"
+    }
+  ],
+  "allocation_note": null,
+  "truncated": false,
+  "method": "Forward walk over the same money edges as the chain walk (Schedule A receipts and committee-to-committee transfers from FEC bulk data, refunds excluded), starting from KOCH INDUSTRIES INC.: the 2 committee(s) it gave to in the 2024 cycle, then the outside spenders in this race that received transfers from those committees (1 spender(s) reached), then each spender's independent expenditures for or against a candidate. Independent expenditures are targeting edges: they move no money to the candidate and are drawn separately. Amounts on money edges are the reported totals between the two parties, not a share of this donor's dollars — once pooled, a donor's money is fungible, so no allocation is made past the first hop. `total_given` is the sum of the first-hop edges shown (itemized receipts reported under this name); `total_in_chains`, used only to rank donors, sums this donor's edges across every spender chain in the race, so the same gift counts once per chain it appears in."
+}
