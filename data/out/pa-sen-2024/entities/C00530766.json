@@ -447,7 +447,9 @@
       "date": "2024-10-28",
       "purpose": "MAILER",
       "payee": "THE LUKENS COMPANY",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202504029755014177"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202504029755014177",
+      "vendor_id": "V-the-lukens-company",
+      "medium": "mail"
     },
     {
       "ie_id": "C00530766-ie-1883568-SE24.30708",
@@ -460,7 +462,9 @@
       "date": "2024-10-28",
       "purpose": "MAILER",
       "payee": "THE LUKENS COMPANY",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202504029755014178"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202504029755014178",
+      "vendor_id": "V-the-lukens-company",
+      "medium": "mail"
     },
     {
       "ie_id": "C00530766-ie-1883568-SE24.30718",
@@ -473,7 +477,9 @@
       "date": "2024-11-01",
       "purpose": "TEXT MESSAGING",
       "payee": "THE LUKENS COMPANY",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202504029755014183"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202504029755014183",
+      "vendor_id": "V-the-lukens-company",
+      "medium": "phones"
     },
     {
       "ie_id": "C00530766-ie-1883568-SE24.30719",
@@ -486,7 +492,9 @@
       "date": "2024-11-01",
       "purpose": "TEXT MESSAGING",
       "payee": "THE LUKENS COMPANY",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202504029755014183"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202504029755014183",
+      "vendor_id": "V-the-lukens-company",
+      "medium": "phones"
     }
   ],
   "flags": [
@@ -505,5 +513,40 @@
   ],
   "has_chain": true,
   "source_url": "https://www.fec.gov/data/committee/C00530766/?cycle=2024",
-  "data_status": "real"
+  "data_status": "real",
+  "vendors": [
+    {
+      "vendor_id": "V-the-lukens-company",
+      "name": "The Lukens Company",
+      "amount": 354065.66,
+      "count": 4,
+      "media_mix": [
+        {
+          "medium": "mail",
+          "amount": 332241.5,
+          "count": 2
+        },
+        {
+          "medium": "phones",
+          "amount": 21824.16,
+          "count": 2
+        }
+      ],
+      "targets": [
+        {
+          "candidate_id": "S2PA00661",
+          "support_oppose": "S",
+          "amount": 177032.83
+        },
+        {
+          "candidate_id": "S6PA00217",
+          "support_oppose": "O",
+          "amount": 177032.83
+        }
+      ],
+      "first_date": "2024-10-28",
+      "last_date": "2024-11-01",
+      "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00530766&payee_name=THE+LUKENS+COMPANY"
+    }
+  ]
 }

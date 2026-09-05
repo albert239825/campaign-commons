@@ -206,7 +206,9 @@
       "date": "2024-10-18",
       "purpose": "DIGITAL ADVERTISING - DEBT PAID",
       "payee": "PENDULUM CREATIVE GROUP LLC",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202504309758901610"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202504309758901610",
+      "vendor_id": "V-pendulum-creative-group",
+      "medium": "digital"
     },
     {
       "ie_id": "C00873877-ie-1890649-SE.4571",
@@ -219,7 +221,9 @@
       "date": "2024-10-03",
       "purpose": "DIGITAL ADVERTISING",
       "payee": "PENDULUM CREATIVE GROUP LLC",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202504309758901583"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202504309758901583",
+      "vendor_id": "V-pendulum-creative-group",
+      "medium": "digital"
     },
     {
       "ie_id": "C00873877-ie-1890649-SE.4585",
@@ -232,7 +236,9 @@
       "date": "2024-10-05",
       "purpose": "PHONEBANKING",
       "payee": "ORGANIZE PENNSYLVANIA",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202504309758901579"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202504309758901579",
+      "vendor_id": "V-organize-pennsylvania",
+      "medium": "phones"
     },
     {
       "ie_id": "C00873877-ie-1890652-SE.4717",
@@ -245,7 +251,9 @@
       "date": "2024-11-01",
       "purpose": "PHONEBANKING - DEBT PAID",
       "payee": "ORGANIZE PENNSYLVANIA",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202504309758901608"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202504309758901608",
+      "vendor_id": "V-organize-pennsylvania",
+      "medium": "phones"
     },
     {
       "ie_id": "C00873877-ie-1890649-SE.4626",
@@ -258,7 +266,9 @@
       "date": "2024-10-05",
       "purpose": "PHONEBANKING",
       "payee": "ORGANIZE PENNSYLVANIA",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202504309758901582"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202504309758901582",
+      "vendor_id": "V-organize-pennsylvania",
+      "medium": "phones"
     },
     {
       "ie_id": "C00873877-ie-1890652-SE.4664",
@@ -271,7 +281,9 @@
       "date": "2024-11-05",
       "purpose": "DIGITAL ADVERTISING",
       "payee": "PENDULUM CREATIVE GROUP LLC",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202504309758901614"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202504309758901614",
+      "vendor_id": "V-pendulum-creative-group",
+      "medium": "digital"
     },
     {
       "ie_id": "C00873877-ie-1890652-SE.4654",
@@ -284,7 +296,9 @@
       "date": "2024-10-23",
       "purpose": "TEXTING",
       "payee": "THE MOVEMENT LAB LLC",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202504309758901616"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202504309758901616",
+      "vendor_id": "V-the-movement-lab",
+      "medium": "phones"
     },
     {
       "ie_id": "C00873877-ie-1890652-SE.4629",
@@ -297,7 +311,9 @@
       "date": "2024-10-25",
       "purpose": "RADIO ADVERTISING",
       "payee": "WRNB-FM IHEART RADIO",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202504309758901622"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202504309758901622",
+      "vendor_id": "V-iheartmedia",
+      "medium": "radio"
     },
     {
       "ie_id": "C00873877-ie-1890652-SE.4640",
@@ -310,7 +326,9 @@
       "date": "2024-10-21",
       "purpose": "RADIO ADVERTISING",
       "payee": "WRNB-FM IHEART RADIO",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202504309758901618"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202504309758901618",
+      "vendor_id": "V-iheartmedia",
+      "medium": "radio"
     },
     {
       "ie_id": "C00873877-ie-1890652-SE.4658",
@@ -323,7 +341,9 @@
       "date": "2024-11-05",
       "purpose": "DIGITAL ADVERTISING",
       "payee": "PENDULUM CREATIVE GROUP LLC",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202504309758901612"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202504309758901612",
+      "vendor_id": "V-pendulum-creative-group",
+      "medium": "digital"
     },
     {
       "ie_id": "C00873877-ie-1890652-SE.4646",
@@ -336,7 +356,9 @@
       "date": "2024-10-25",
       "purpose": "RADIO ADVERTISING",
       "payee": "WRNB-FM IHEART RADIO",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202504309758901620"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202504309758901620",
+      "vendor_id": "V-iheartmedia",
+      "medium": "radio"
     },
     {
       "ie_id": "C00873877-ie-1890652-SE.4634",
@@ -349,11 +371,107 @@
       "date": "2024-10-29",
       "purpose": "RADIO ADVERTISING",
       "payee": "WRNB-FM IHEART RADIO",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202504309758901624"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202504309758901624",
+      "vendor_id": "V-iheartmedia",
+      "medium": "radio"
     }
   ],
   "flags": [],
   "has_chain": true,
   "source_url": "https://www.fec.gov/data/committee/C00873877/?cycle=2024",
-  "data_status": "real"
+  "data_status": "real",
+  "vendors": [
+    {
+      "vendor_id": "V-pendulum-creative-group",
+      "name": "PENDULUM CREATIVE GROUP LLC",
+      "amount": 184283.05,
+      "count": 4,
+      "media_mix": [
+        {
+          "medium": "digital",
+          "amount": 184283.05,
+          "count": 4
+        }
+      ],
+      "targets": [
+        {
+          "candidate_id": "S6PA00217",
+          "support_oppose": "S",
+          "amount": 184283.05
+        }
+      ],
+      "first_date": "2024-10-03",
+      "last_date": "2024-11-05",
+      "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00873877&payee_name=PENDULUM+CREATIVE+GROUP+LLC"
+    },
+    {
+      "vendor_id": "V-organize-pennsylvania",
+      "name": "ORGANIZE PENNSYLVANIA",
+      "amount": 131216.39,
+      "count": 3,
+      "media_mix": [
+        {
+          "medium": "phones",
+          "amount": 131216.39,
+          "count": 3
+        }
+      ],
+      "targets": [
+        {
+          "candidate_id": "S6PA00217",
+          "support_oppose": "S",
+          "amount": 131216.39
+        }
+      ],
+      "first_date": "2024-10-05",
+      "last_date": "2024-11-01",
+      "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00873877&payee_name=ORGANIZE+PENNSYLVANIA"
+    },
+    {
+      "vendor_id": "V-iheartmedia",
+      "name": "iHeartMedia",
+      "amount": 22820.1,
+      "count": 4,
+      "media_mix": [
+        {
+          "medium": "radio",
+          "amount": 22820.1,
+          "count": 4
+        }
+      ],
+      "targets": [
+        {
+          "candidate_id": "S6PA00217",
+          "support_oppose": "S",
+          "amount": 22820.1
+        }
+      ],
+      "first_date": "2024-10-21",
+      "last_date": "2024-10-29",
+      "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00873877&payee_name=WRNB-FM+IHEART+RADIO"
+    },
+    {
+      "vendor_id": "V-the-movement-lab",
+      "name": "THE MOVEMENT LAB LLC",
+      "amount": 9150.16,
+      "count": 1,
+      "media_mix": [
+        {
+          "medium": "phones",
+          "amount": 9150.16,
+          "count": 1
+        }
+      ],
+      "targets": [
+        {
+          "candidate_id": "S6PA00217",
+          "support_oppose": "S",
+          "amount": 9150.16
+        }
+      ],
+      "first_date": "2024-10-23",
+      "last_date": "2024-10-23",
+      "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00873877&payee_name=THE+MOVEMENT+LAB+LLC"
+    }
+  ]
 }

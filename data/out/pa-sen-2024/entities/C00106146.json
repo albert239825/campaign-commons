@@ -792,11 +792,38 @@
       "date": "2024-10-01",
       "purpose": "TV, RADIO & DIGITAL ADS & PRODUCTION",
       "payee": "ALIGNCO LLC",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202410249710358299"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202410249710358299",
+      "vendor_id": "V-alignco",
+      "medium": "production"
     }
   ],
   "flags": [],
   "has_chain": true,
   "source_url": "https://www.fec.gov/data/committee/C00106146/?cycle=2024",
-  "data_status": "real"
+  "data_status": "real",
+  "vendors": [
+    {
+      "vendor_id": "V-alignco",
+      "name": "ALIGNCO LLC",
+      "amount": 450000.0,
+      "count": 1,
+      "media_mix": [
+        {
+          "medium": "production",
+          "amount": 450000.0,
+          "count": 1
+        }
+      ],
+      "targets": [
+        {
+          "candidate_id": "S6PA00217",
+          "support_oppose": "S",
+          "amount": 450000.0
+        }
+      ],
+      "first_date": "2024-10-01",
+      "last_date": "2024-10-01",
+      "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00106146&payee_name=ALIGNCO+LLC"
+    }
+  ]
 }

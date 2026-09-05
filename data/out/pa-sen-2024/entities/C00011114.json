@@ -792,7 +792,9 @@
       "date": "2024-09-24",
       "purpose": "2024 IE MEDIA BUY FOR DIGITAL ADS IN THE PA SENATE GENERAL ELECTION.",
       "payee": "RED HORSE STRATEGIES",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202410189699219639"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202410189699219639",
+      "vendor_id": "V-red-horse-strategies",
+      "medium": "digital"
     },
     {
       "ie_id": "C00011114-ie-1832401-500030883",
@@ -805,11 +807,43 @@
       "date": "2024-09-24",
       "purpose": "2024 IE PRODUCTION COSTS FOR DIGITAL ADS IN THE PA SENATE GENERAL ELECTION.",
       "payee": "RED HORSE STRATEGIES",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202410189699219639"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202410189699219639",
+      "vendor_id": "V-red-horse-strategies",
+      "medium": "production"
     }
   ],
   "flags": [],
   "has_chain": true,
   "source_url": "https://www.fec.gov/data/committee/C00011114/?cycle=2024",
-  "data_status": "real"
+  "data_status": "real",
+  "vendors": [
+    {
+      "vendor_id": "V-red-horse-strategies",
+      "name": "RED HORSE STRATEGIES",
+      "amount": 400000.0,
+      "count": 2,
+      "media_mix": [
+        {
+          "medium": "digital",
+          "amount": 383000.0,
+          "count": 1
+        },
+        {
+          "medium": "production",
+          "amount": 17000.0,
+          "count": 1
+        }
+      ],
+      "targets": [
+        {
+          "candidate_id": "S2PA00661",
+          "support_oppose": "O",
+          "amount": 400000.0
+        }
+      ],
+      "first_date": "2024-09-24",
+      "last_date": "2024-09-24",
+      "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00011114&payee_name=RED+HORSE+STRATEGIES"
+    }
+  ]
 }

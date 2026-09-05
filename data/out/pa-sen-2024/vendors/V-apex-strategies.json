@@ -1,0 +1,100 @@
+{
+  "vendor_id": "V-apex-strategies",
+  "name": "APEX STRATEGIES",
+  "aliases": [
+    "APEX STRATEGIES"
+  ],
+  "normalization": {
+    "basis": "inferred",
+    "rule": "case/punctuation/suffix normalisation + token-set ≥0.92 (numeric tokens must match); aliases file",
+    "source_urls": [
+      "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&payee_name=APEX+STRATEGIES"
+    ],
+    "checked_by": null,
+    "checked_at": null
+  },
+  "total": 28900.0,
+  "count": 3,
+  "media_mix": [
+    {
+      "medium": "phones",
+      "amount": 16500.0,
+      "count": 2
+    },
+    {
+      "medium": "digital",
+      "amount": 12400.0,
+      "count": 1
+    }
+  ],
+  "spenders": [
+    {
+      "entity_id": "C00828608",
+      "name": "HARDWORKING AMERICANS INC.",
+      "amount": 28900.0,
+      "count": 3
+    }
+  ],
+  "targets": [
+    {
+      "candidate_id": "S2PA00661",
+      "support_oppose": "S",
+      "amount": 28900.0
+    }
+  ],
+  "first_date": "2024-06-20",
+  "last_date": "2024-09-23",
+  "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&payee_name=APEX+STRATEGIES",
+  "race_id": "pa-sen-2024",
+  "generated_at": "2026-09-05T19:33:04+00:00",
+  "data_status": "real",
+  "expenditures": [
+    {
+      "ie_id": "C00828608-ie-1822825-E23B72669D338442BA33",
+      "spender_entity_id": "C00828608",
+      "spender_name": "HARDWORKING AMERICANS INC.",
+      "candidate_id": "S2PA00661",
+      "candidate_name": "Dave McCormick",
+      "support_oppose": "S",
+      "amount": 12400.0,
+      "date": "2024-09-23",
+      "purpose": "DIGITAL ADVERTISING",
+      "payee": "APEX STRATEGIES",
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202410119684873163",
+      "vendor_id": "V-apex-strategies",
+      "medium": "digital"
+    },
+    {
+      "ie_id": "C00828608-ie-1810828-E54CB4DDDBDBE484BACD",
+      "spender_entity_id": "C00828608",
+      "spender_name": "HARDWORKING AMERICANS INC.",
+      "candidate_id": "S2PA00661",
+      "candidate_name": "Dave McCormick",
+      "support_oppose": "S",
+      "amount": 7500.0,
+      "date": "2024-07-22",
+      "purpose": "TEXT MESSAGES",
+      "payee": "APEX STRATEGIES",
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202408199666419502",
+      "vendor_id": "V-apex-strategies",
+      "medium": "phones"
+    },
+    {
+      "ie_id": "C00828608-ie-1796105-E6F79DB5231684D86973",
+      "spender_entity_id": "C00828608",
+      "spender_name": "HARDWORKING AMERICANS INC.",
+      "candidate_id": "S2PA00661",
+      "candidate_name": "Dave McCormick",
+      "support_oppose": "S",
+      "amount": 9000.0,
+      "date": "2024-06-20",
+      "purpose": "TEXT MESSAGES",
+      "payee": "APEX STRATEGIES",
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202407119653113390",
+      "vendor_id": "V-apex-strategies",
+      "medium": "phones"
+    }
+  ],
+  "ads": [],
+  "method": "Every Schedule E independent expenditure names a payee. Payee strings are normalised (case, punctuation, legal suffixes, token order), near-duplicates are folded with a difflib ratio ≥ 0.92 when their numeric tokens match, and hand alias rows from data/hand/<race>/vendor_aliases.json override the rule. Medium is classified from the purpose the spender filed (ordered keyword table in gotham/vendors.py); the FEC does not record which buy placed which ad, so vendor ↔ ad links are empty until a human verifies one. Totals are the filed amounts, grouped, never re-estimated."
+}

@@ -2,7 +2,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import type { Party } from "@citizen-gotham/contracts";
-import { getAds, getLedger, getRace, getStories, hasChain, listRaceIds } from "@/lib/data";
+import { countVendors, getAds, getLedger, getRace, getStories, hasChain, listRaceIds } from "@/lib/data";
 import { date, routes } from "@/lib/format";
 import { AdjacencyNote, Card, DataStatusBanner } from "@/components/ui";
 import { RaceNav } from "@/components/ui/race-nav";
@@ -88,7 +88,7 @@ export default async function RaceLedgerPage({ params }: { params: Promise<{ rac
             </section>
           </div>
         </header>
-        <RaceNav race={race} counts={{ ads: adCount, stories: stories.stories.length }} active={routes.race(raceId)} />
+        <RaceNav race={race} counts={{ ads: adCount, stories: stories.stories.length, vendors: countVendors(raceId) }} active={routes.race(raceId)} />
       </div>
 
       <RaceSections

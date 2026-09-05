@@ -56,7 +56,9 @@
       "date": "2024-09-24",
       "purpose": "DIGITAL ADVERTISING",
       "payee": "META",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202603249856839934"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202603249856839934",
+      "vendor_id": "V-meta-platforms",
+      "medium": "digital"
     },
     {
       "ie_id": "C90011156-ie-1956102-501215245",
@@ -69,7 +71,9 @@
       "date": "2024-10-30",
       "purpose": "DIGITAL ADVERTISING",
       "payee": "META",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202603249856839849"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202603249856839849",
+      "vendor_id": "V-meta-platforms",
+      "medium": "digital"
     },
     {
       "ie_id": "C90011156-ie-1956103-501196909",
@@ -82,7 +86,9 @@
       "date": "2024-09-18",
       "purpose": "SMS COMMUNICATIONS",
       "payee": "LINK2TEK",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202603249856839921"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202603249856839921",
+      "vendor_id": "V-link2tek",
+      "medium": "phones"
     },
     {
       "ie_id": "C90011156-ie-1956102-501201593",
@@ -95,7 +101,9 @@
       "date": "2024-10-01",
       "purpose": "SMS COMMUNICATIONS",
       "payee": "LINK2TEK",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202603249856839792"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202603249856839792",
+      "vendor_id": "V-link2tek",
+      "medium": "phones"
     },
     {
       "ie_id": "C90011156-ie-1956102-501201645",
@@ -108,7 +116,9 @@
       "date": "2024-10-01",
       "purpose": "SMS COMMUNICATIONS",
       "payee": "BROADNET TELESERVICES LLC",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202603249856839701"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202603249856839701",
+      "vendor_id": "V-broadnet-teleservices",
+      "medium": "phones"
     },
     {
       "ie_id": "C90011156-ie-1956102-501214893",
@@ -121,7 +131,9 @@
       "date": "2024-10-28",
       "purpose": "SMS COMMUNICATIONS",
       "payee": "LINK2TEK",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202603249856839795"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202603249856839795",
+      "vendor_id": "V-link2tek",
+      "medium": "phones"
     },
     {
       "ie_id": "C90011156-ie-1956102-501215253",
@@ -134,7 +146,9 @@
       "date": "2024-10-30",
       "purpose": "SMS COMMUNICATIONS",
       "payee": "BROADNET TELESERVICES",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202603249856839742"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202603249856839742",
+      "vendor_id": "V-broadnet-teleservices",
+      "medium": "phones"
     },
     {
       "ie_id": "C90011156-ie-1956102-501214872",
@@ -147,7 +161,9 @@
       "date": "2024-10-29",
       "purpose": "PRINTING/LITERATURE",
       "payee": "RAFF PRINTING",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202603249856839856"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202603249856839856",
+      "vendor_id": "V-raff-printing",
+      "medium": "mail"
     },
     {
       "ie_id": "C90011156-ie-1956102-501215255",
@@ -160,7 +176,9 @@
       "date": "2024-10-30",
       "purpose": "PRINTING/LITERATURE",
       "payee": "O'BRIEN PRINTING",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202603249856839854"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202603249856839854",
+      "vendor_id": "V-o-brien-printing",
+      "medium": "mail"
     },
     {
       "ie_id": "C90011156-ie-1956103-501199899",
@@ -173,7 +191,9 @@
       "date": "2024-09-24",
       "purpose": "DIGITAL ADVERTISING",
       "payee": "META",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202603249856839933"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202603249856839933",
+      "vendor_id": "V-meta-platforms",
+      "medium": "digital"
     },
     {
       "ie_id": "C90011156-ie-1956103-501193435",
@@ -186,7 +206,9 @@
       "date": "2024-08-09",
       "purpose": "DIGITAL ADVERTISING",
       "payee": "META",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202603249856839926"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202603249856839926",
+      "vendor_id": "V-meta-platforms",
+      "medium": "digital"
     },
     {
       "ie_id": "C90011156-ie-1956103-501193439",
@@ -199,7 +221,9 @@
       "date": "2024-08-30",
       "purpose": "LITERATURE PRINTING",
       "payee": "ALLEGHENY COMMERCIAL PRINTING",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202603249856839889"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202603249856839889",
+      "vendor_id": "V-allegheny-commercial-printing",
+      "medium": "mail"
     },
     {
       "ie_id": "C90011156-ie-1956103-501196899",
@@ -212,7 +236,9 @@
       "date": "2024-09-19",
       "purpose": "PRINTING/LITERATURE",
       "payee": "ALLEGHENY COMMERCIAL PRINTING",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202603249856839890"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202603249856839890",
+      "vendor_id": "V-allegheny-commercial-printing",
+      "medium": "mail"
     },
     {
       "ie_id": "C90011156-ie-1956103-501199907",
@@ -225,7 +251,9 @@
       "date": "2024-09-26",
       "purpose": "PRINTING/LITERATURE",
       "payee": "JON-DA PRINTING",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202603249856839918"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202603249856839918",
+      "vendor_id": "V-jon-da-printing",
+      "medium": "mail"
     },
     {
       "ie_id": "C90011156-ie-1956103-501193440",
@@ -238,7 +266,9 @@
       "date": "2024-08-30",
       "purpose": "LITERATURE PRINTING",
       "payee": "JON-DA PRINTING",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202603249856839918"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202603249856839918",
+      "vendor_id": "V-jon-da-printing",
+      "medium": "mail"
     },
     {
       "ie_id": "C90011156-ie-1796322-501181650",
@@ -251,7 +281,9 @@
       "date": "2024-06-07",
       "purpose": "DIGITAL ADVERTISING",
       "payee": "META",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202407119653118220"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202407119653118220",
+      "vendor_id": "V-meta-platforms",
+      "medium": "digital"
     },
     {
       "ie_id": "C90011156-ie-1956103-501193436",
@@ -264,7 +296,9 @@
       "date": "2024-08-09",
       "purpose": "DIGITAL ADVERTISING",
       "payee": "BLUEPRINT",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202603249856839892"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202603249856839892",
+      "vendor_id": "V-blueprint",
+      "medium": "digital"
     },
     {
       "ie_id": "C90011156-ie-1956102-501214871",
@@ -277,7 +311,9 @@
       "date": "2024-10-28",
       "purpose": "PRINTING/LITERATURE",
       "payee": "RAFF PRINTING",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202603249856839855"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202603249856839855",
+      "vendor_id": "V-raff-printing",
+      "medium": "mail"
     },
     {
       "ie_id": "C90011156-ie-1956102-501212154",
@@ -290,7 +326,9 @@
       "date": "2024-10-22",
       "purpose": "PRINTING/LITERATURE",
       "payee": "O'BRIEN PRINTING",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202603249856839852"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202603249856839852",
+      "vendor_id": "V-o-brien-printing",
+      "medium": "mail"
     },
     {
       "ie_id": "C90011156-ie-1956102-501212153",
@@ -303,7 +341,9 @@
       "date": "2024-10-22",
       "purpose": "PRINTING/LITERATURE",
       "payee": "O'BRIEN PRINTING",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202603249856839852"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202603249856839852",
+      "vendor_id": "V-o-brien-printing",
+      "medium": "mail"
     },
     {
       "ie_id": "C90011156-ie-1956103-501193438",
@@ -316,7 +356,9 @@
       "date": "2024-08-30",
       "purpose": "LITERATURE DESIGN",
       "payee": "CINCH DESIGN",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202603249856839902"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202603249856839902",
+      "vendor_id": "V-cinch-design",
+      "medium": "production"
     },
     {
       "ie_id": "C90011156-ie-1796322-501181632",
@@ -329,7 +371,9 @@
       "date": "2024-05-13",
       "purpose": "LITERATURE DESIGN",
       "payee": "CINCH DESIGN",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202407119653118208"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202407119653118208",
+      "vendor_id": "V-cinch-design",
+      "medium": "production"
     },
     {
       "ie_id": "C90011156-ie-1956102-501212152",
@@ -342,7 +386,9 @@
       "date": "2024-10-22",
       "purpose": "PRINTING/LITERATURE",
       "payee": "O'BRIEN PRINTING",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202603249856839851"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202603249856839851",
+      "vendor_id": "V-o-brien-printing",
+      "medium": "mail"
     },
     {
       "ie_id": "C90011156-ie-1956102-501212151",
@@ -355,7 +401,9 @@
       "date": "2024-10-22",
       "purpose": "PRINTING/LITERATURE",
       "payee": "O'BRIEN PRINTING",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202603249856839851"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202603249856839851",
+      "vendor_id": "V-o-brien-printing",
+      "medium": "mail"
     },
     {
       "ie_id": "C90011156-ie-1796322-501181656",
@@ -368,7 +416,9 @@
       "date": "2024-05-14",
       "purpose": "PRINTING/LITERATURE",
       "payee": "O'BRIEN PRINTING",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202407119653118221"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202407119653118221",
+      "vendor_id": "V-o-brien-printing",
+      "medium": "mail"
     },
     {
       "ie_id": "C90011156-ie-1956102-501212148",
@@ -381,7 +431,9 @@
       "date": "2024-10-07",
       "purpose": "PRINTING/LITERATURE",
       "payee": "O'BRIEN PRINTING",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202603249856839850"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202603249856839850",
+      "vendor_id": "V-o-brien-printing",
+      "medium": "mail"
     },
     {
       "ie_id": "C90011156-ie-1956102-501212150",
@@ -394,7 +446,9 @@
       "date": "2024-10-07",
       "purpose": "PRINTING/LITERATURE",
       "payee": "O'BRIEN PRINTING",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202603249856839851"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202603249856839851",
+      "vendor_id": "V-o-brien-printing",
+      "medium": "mail"
     },
     {
       "ie_id": "C90011156-ie-1796322-501181624",
@@ -407,7 +461,9 @@
       "date": "2024-06-07",
       "purpose": "DIGITAL ADVERTISING",
       "payee": "BLUEPRINT",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202407119653118205"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202407119653118205",
+      "vendor_id": "V-blueprint",
+      "medium": "digital"
     },
     {
       "ie_id": "C90011156-ie-1956103-501193437",
@@ -420,7 +476,9 @@
       "date": "2024-08-30",
       "purpose": "LITERATURE PRODUCTION",
       "payee": "BUNNEWITH, MARIA",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202603249856839897"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202603249856839897",
+      "vendor_id": "V-bunnewith-maria",
+      "medium": "production"
     },
     {
       "ie_id": "C90011156-ie-1796322-501181641",
@@ -433,7 +491,9 @@
       "date": "2024-05-13",
       "purpose": "PRODUCTION/LITERATURE",
       "payee": "MARIA BUNNEWITH",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202407119653118215"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202407119653118215",
+      "vendor_id": "V-bunnewith-maria",
+      "medium": "production"
     },
     {
       "ie_id": "C90011156-ie-1796322-501181617",
@@ -446,7 +506,9 @@
       "date": "2024-05-15",
       "purpose": "PRINTING/LITERATURE",
       "payee": "ALLEGHENY COMMERCIAL PRINTING",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202407119653118202"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202407119653118202",
+      "vendor_id": "V-allegheny-commercial-printing",
+      "medium": "mail"
     },
     {
       "ie_id": "C90011156-ie-1956102-501212147",
@@ -459,7 +521,9 @@
       "date": "2024-10-07",
       "purpose": "PRINTING/LITERATURE",
       "payee": "ALLEGHENY COMMERCIAL PRINTING",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202603249856839678"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202603249856839678",
+      "vendor_id": "V-allegheny-commercial-printing",
+      "medium": "mail"
     },
     {
       "ie_id": "C90011156-ie-1956102-501212149",
@@ -472,7 +536,9 @@
       "date": "2024-10-07",
       "purpose": "PRINTING/LITERATURE",
       "payee": "ALLEGHENY COMMERCIAL PRINTING",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202603249856839679"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202603249856839679",
+      "vendor_id": "V-allegheny-commercial-printing",
+      "medium": "mail"
     }
   ],
   "flags": [
@@ -485,5 +551,257 @@
   ],
   "has_chain": false,
   "source_url": "https://www.fec.gov/data/committee/C90011156/?cycle=2024",
-  "data_status": "real"
+  "data_status": "real",
+  "vendors": [
+    {
+      "vendor_id": "V-meta-platforms",
+      "name": "Meta Platforms",
+      "amount": 205800.0,
+      "count": 5,
+      "media_mix": [
+        {
+          "medium": "digital",
+          "amount": 205800.0,
+          "count": 5
+        }
+      ],
+      "targets": [
+        {
+          "candidate_id": "S6PA00217",
+          "support_oppose": "S",
+          "amount": 204000.0
+        },
+        {
+          "candidate_id": "S2PA00661",
+          "support_oppose": "O",
+          "amount": 1800.0
+        }
+      ],
+      "first_date": "2024-06-07",
+      "last_date": "2024-10-30",
+      "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C90011156&payee_name=META"
+    },
+    {
+      "vendor_id": "V-link2tek",
+      "name": "LINK2TEK",
+      "amount": 31989.69,
+      "count": 3,
+      "media_mix": [
+        {
+          "medium": "phones",
+          "amount": 31989.69,
+          "count": 3
+        }
+      ],
+      "targets": [
+        {
+          "candidate_id": "S6PA00217",
+          "support_oppose": "S",
+          "amount": 31989.69
+        }
+      ],
+      "first_date": "2024-09-18",
+      "last_date": "2024-10-28",
+      "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C90011156&payee_name=LINK2TEK"
+    },
+    {
+      "vendor_id": "V-broadnet-teleservices",
+      "name": "BROADNET TELESERVICES LLC",
+      "amount": 19498.91,
+      "count": 2,
+      "media_mix": [
+        {
+          "medium": "phones",
+          "amount": 19498.91,
+          "count": 2
+        }
+      ],
+      "targets": [
+        {
+          "candidate_id": "S6PA00217",
+          "support_oppose": "S",
+          "amount": 19498.91
+        }
+      ],
+      "first_date": "2024-10-01",
+      "last_date": "2024-10-30",
+      "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C90011156&payee_name=BROADNET+TELESERVICES&payee_name=BROADNET+TELESERVICES+LLC"
+    },
+    {
+      "vendor_id": "V-raff-printing",
+      "name": "RAFF PRINTING",
+      "amount": 9244.28,
+      "count": 2,
+      "media_mix": [
+        {
+          "medium": "mail",
+          "amount": 9244.28,
+          "count": 2
+        }
+      ],
+      "targets": [
+        {
+          "candidate_id": "S6PA00217",
+          "support_oppose": "S",
+          "amount": 9244.28
+        }
+      ],
+      "first_date": "2024-10-28",
+      "last_date": "2024-10-29",
+      "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C90011156&payee_name=RAFF+PRINTING"
+    },
+    {
+      "vendor_id": "V-o-brien-printing",
+      "name": "O'BRIEN PRINTING",
+      "amount": 6650.28,
+      "count": 8,
+      "media_mix": [
+        {
+          "medium": "mail",
+          "amount": 6650.28,
+          "count": 8
+        }
+      ],
+      "targets": [
+        {
+          "candidate_id": "S6PA00217",
+          "support_oppose": "S",
+          "amount": 6072.05
+        },
+        {
+          "candidate_id": "S2PA00661",
+          "support_oppose": "O",
+          "amount": 578.23
+        }
+      ],
+      "first_date": "2024-05-14",
+      "last_date": "2024-10-30",
+      "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C90011156&payee_name=O%27BRIEN+PRINTING"
+    },
+    {
+      "vendor_id": "V-allegheny-commercial-printing",
+      "name": "ALLEGHENY COMMERCIAL PRINTING",
+      "amount": 5895.12,
+      "count": 5,
+      "media_mix": [
+        {
+          "medium": "mail",
+          "amount": 5895.12,
+          "count": 5
+        }
+      ],
+      "targets": [
+        {
+          "candidate_id": "S6PA00217",
+          "support_oppose": "S",
+          "amount": 5875.06
+        },
+        {
+          "candidate_id": "S2PA00661",
+          "support_oppose": "O",
+          "amount": 20.06
+        }
+      ],
+      "first_date": "2024-05-15",
+      "last_date": "2024-10-07",
+      "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C90011156&payee_name=ALLEGHENY+COMMERCIAL+PRINTING"
+    },
+    {
+      "vendor_id": "V-jon-da-printing",
+      "name": "JON-DA PRINTING",
+      "amount": 5500.0,
+      "count": 2,
+      "media_mix": [
+        {
+          "medium": "mail",
+          "amount": 5500.0,
+          "count": 2
+        }
+      ],
+      "targets": [
+        {
+          "candidate_id": "S6PA00217",
+          "support_oppose": "S",
+          "amount": 5500.0
+        }
+      ],
+      "first_date": "2024-08-30",
+      "last_date": "2024-09-26",
+      "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C90011156&payee_name=JON-DA+PRINTING"
+    },
+    {
+      "vendor_id": "V-blueprint",
+      "name": "BLUEPRINT",
+      "amount": 1680.0,
+      "count": 2,
+      "media_mix": [
+        {
+          "medium": "digital",
+          "amount": 1680.0,
+          "count": 2
+        }
+      ],
+      "targets": [
+        {
+          "candidate_id": "S6PA00217",
+          "support_oppose": "S",
+          "amount": 1596.0
+        },
+        {
+          "candidate_id": "S2PA00661",
+          "support_oppose": "O",
+          "amount": 84.0
+        }
+      ],
+      "first_date": "2024-06-07",
+      "last_date": "2024-08-09",
+      "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C90011156&payee_name=BLUEPRINT"
+    },
+    {
+      "vendor_id": "V-cinch-design",
+      "name": "CINCH DESIGN",
+      "amount": 400.0,
+      "count": 2,
+      "media_mix": [
+        {
+          "medium": "production",
+          "amount": 400.0,
+          "count": 2
+        }
+      ],
+      "targets": [
+        {
+          "candidate_id": "S6PA00217",
+          "support_oppose": "S",
+          "amount": 400.0
+        }
+      ],
+      "first_date": "2024-05-13",
+      "last_date": "2024-08-30",
+      "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C90011156&payee_name=CINCH+DESIGN"
+    },
+    {
+      "vendor_id": "V-bunnewith-maria",
+      "name": "BUNNEWITH, MARIA",
+      "amount": 90.0,
+      "count": 2,
+      "media_mix": [
+        {
+          "medium": "production",
+          "amount": 90.0,
+          "count": 2
+        }
+      ],
+      "targets": [
+        {
+          "candidate_id": "S6PA00217",
+          "support_oppose": "S",
+          "amount": 90.0
+        }
+      ],
+      "first_date": "2024-05-13",
+      "last_date": "2024-08-30",
+      "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C90011156&payee_name=BUNNEWITH%2C+MARIA&payee_name=MARIA+BUNNEWITH"
+    }
+  ]
 }

@@ -18,6 +18,8 @@ import {
   LedgerSchema,
   RacesIndexSchema,
   StoriesSchema,
+  VendorIndexSchema,
+  VendorSchema,
 } from "@citizen-gotham/contracts";
 
 const DATA_OUT = process.env.GOTHAM_DATA_DIR ?? join(process.cwd(), "..", "data", "out");
@@ -54,6 +56,8 @@ export const getDossier = (raceId: string, candidateId: string) =>
   load(DossierSchema, raceId, "dossiers", `${candidateId}.json`);
 export const getStories = (raceId: string) => load(StoriesSchema, raceId, "stories.json");
 export const getDonor = (raceId: string, donorKey: string) => load(DonorViewSchema, raceId, "donors", `${donorKey}.json`);
+export const getVendors = (raceId: string) => load(VendorIndexSchema, raceId, "vendors.json");
+export const getVendor = (raceId: string, vendorId: string) => load(VendorSchema, raceId, "vendors", `${vendorId}.json`);
 
 /** Race ids that have a data directory (stub races have none). */
 export const listRaceIds = () => getRaces().races.filter((r) => existsSync(join(DATA_OUT, r.race_id))).map((r) => r.race_id);
@@ -61,4 +65,7 @@ export const listEntityIds = (raceId: string) => listIds(raceId, "entities");
 export const listChainIds = (raceId: string) => listIds(raceId, "chains");
 export const listDossierIds = (raceId: string) => listIds(raceId, "dossiers");
 export const listDonorKeys = (raceId: string) => listIds(raceId, "donors");
+export const listVendorIds = (raceId: string) => listIds(raceId, "vendors");
+/** Vendor count for nav tabs; 0 when the vendors stage has not run for this race. */
+export const countVendors = (raceId: string) => (existsSync(join(DATA_OUT, raceId, "vendors.json")) ? getVendors(raceId).vendors.length : 0);
 export const hasChain = (raceId: string, entityId: string) => existsSync(join(DATA_OUT, raceId, "chains", `${entityId}.json`));

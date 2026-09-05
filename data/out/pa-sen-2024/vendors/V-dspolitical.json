@@ -1,0 +1,80 @@
+{
+  "vendor_id": "V-dspolitical",
+  "name": "DSPOLITICAL",
+  "aliases": [
+    "DSPOLITICAL"
+  ],
+  "normalization": {
+    "basis": "inferred",
+    "rule": "case/punctuation/suffix normalisation + token-set ≥0.92 (numeric tokens must match); aliases file",
+    "source_urls": [
+      "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&payee_name=DSPOLITICAL"
+    ],
+    "checked_by": null,
+    "checked_at": null
+  },
+  "total": 375183.0,
+  "count": 2,
+  "media_mix": [
+    {
+      "medium": "tv",
+      "amount": 375183.0,
+      "count": 2
+    }
+  ],
+  "spenders": [
+    {
+      "entity_id": "C00490375",
+      "name": "NATIONAL NURSES UNITED FOR PATIENT PROTECTION",
+      "amount": 375183.0,
+      "count": 2
+    }
+  ],
+  "targets": [
+    {
+      "candidate_id": "S6PA00217",
+      "support_oppose": "S",
+      "amount": 375183.0
+    }
+  ],
+  "first_date": "2024-09-26",
+  "last_date": "2024-10-23",
+  "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&payee_name=DSPOLITICAL",
+  "race_id": "pa-sen-2024",
+  "generated_at": "2026-09-05T19:33:04+00:00",
+  "data_status": "real",
+  "expenditures": [
+    {
+      "ie_id": "C00490375-ie-1906778-B890016",
+      "spender_entity_id": "C00490375",
+      "spender_name": "NATIONAL NURSES UNITED FOR PATIENT PROTECTION",
+      "candidate_id": "S6PA00217",
+      "candidate_name": "Bob Casey",
+      "support_oppose": "S",
+      "amount": 125000.0,
+      "date": "2024-10-23",
+      "purpose": "TV ADS",
+      "payee": "DSPOLITICAL",
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202507299764308521",
+      "vendor_id": "V-dspolitical",
+      "medium": "tv"
+    },
+    {
+      "ie_id": "C00490375-ie-1875388-B885828",
+      "spender_entity_id": "C00490375",
+      "spender_name": "NATIONAL NURSES UNITED FOR PATIENT PROTECTION",
+      "candidate_id": "S6PA00217",
+      "candidate_name": "Bob Casey",
+      "support_oppose": "S",
+      "amount": 250183.0,
+      "date": "2024-09-26",
+      "purpose": "TV ADS",
+      "payee": "DSPOLITICAL",
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202502109753368231",
+      "vendor_id": "V-dspolitical",
+      "medium": "tv"
+    }
+  ],
+  "ads": [],
+  "method": "Every Schedule E independent expenditure names a payee. Payee strings are normalised (case, punctuation, legal suffixes, token order), near-duplicates are folded with a difflib ratio ≥ 0.92 when their numeric tokens match, and hand alias rows from data/hand/<race>/vendor_aliases.json override the rule. Medium is classified from the purpose the spender filed (ordered keyword table in gotham/vendors.py); the FEC does not record which buy placed which ad, so vendor ↔ ad links are empty until a human verifies one. Totals are the filed amounts, grouped, never re-estimated."
+}

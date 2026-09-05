@@ -1,0 +1,167 @@
+{
+  "vendor_id": "V-stones-phones",
+  "name": "STONES' PHONES",
+  "aliases": [
+    "STONES' PHONES"
+  ],
+  "normalization": {
+    "basis": "inferred",
+    "rule": "case/punctuation/suffix normalisation + token-set ≥0.92 (numeric tokens must match); aliases file",
+    "source_urls": [
+      "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&payee_name=STONES%27+PHONES"
+    ],
+    "checked_by": null,
+    "checked_at": null
+  },
+  "total": 236541.65,
+  "count": 7,
+  "media_mix": [
+    {
+      "medium": "phones",
+      "amount": 236541.65,
+      "count": 7
+    }
+  ],
+  "spenders": [
+    {
+      "entity_id": "C00486845",
+      "name": "LCV VICTORY FUND",
+      "amount": 164000.0,
+      "count": 2
+    },
+    {
+      "entity_id": "C00612820",
+      "name": "COMMUNITY CHANGE VOTERS",
+      "amount": 67499.99,
+      "count": 4
+    },
+    {
+      "entity_id": "C00724203",
+      "name": "SOMOS PAC",
+      "amount": 5041.66,
+      "count": 1
+    }
+  ],
+  "targets": [
+    {
+      "candidate_id": "S6PA00217",
+      "support_oppose": "S",
+      "amount": 236541.65
+    }
+  ],
+  "first_date": "2024-07-19",
+  "last_date": "2024-11-01",
+  "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&payee_name=STONES%27+PHONES",
+  "race_id": "pa-sen-2024",
+  "generated_at": "2026-09-05T19:33:04+00:00",
+  "data_status": "real",
+  "expenditures": [
+    {
+      "ie_id": "C00486845-ie-1945886-500464220",
+      "spender_entity_id": "C00486845",
+      "spender_name": "LCV VICTORY FUND",
+      "candidate_id": "S6PA00217",
+      "candidate_name": "Bob Casey",
+      "support_oppose": "S",
+      "amount": 4000.0,
+      "date": "2024-11-01",
+      "purpose": "PHONE BANKING",
+      "payee": "STONES' PHONES",
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202602119834308769",
+      "vendor_id": "V-stones-phones",
+      "medium": "phones"
+    },
+    {
+      "ie_id": "C00486845-ie-1945886-500463732",
+      "spender_entity_id": "C00486845",
+      "spender_name": "LCV VICTORY FUND",
+      "candidate_id": "S6PA00217",
+      "candidate_name": "Bob Casey",
+      "support_oppose": "S",
+      "amount": 160000.0,
+      "date": "2024-10-29",
+      "purpose": "PHONE BANKING",
+      "payee": "STONES' PHONES",
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202602119834308759",
+      "vendor_id": "V-stones-phones",
+      "medium": "phones"
+    },
+    {
+      "ie_id": "C00724203-ie-1858137-500191870",
+      "spender_entity_id": "C00724203",
+      "spender_name": "SOMOS PAC",
+      "candidate_id": "S6PA00217",
+      "candidate_name": "Bob Casey",
+      "support_oppose": "S",
+      "amount": 5041.66,
+      "date": "2024-10-17",
+      "purpose": "PHONE CALLS",
+      "payee": "STONES' PHONES",
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202412059731711664",
+      "vendor_id": "V-stones-phones",
+      "medium": "phones"
+    },
+    {
+      "ie_id": "C00612820-ie-1829558-E-306",
+      "spender_entity_id": "C00612820",
+      "spender_name": "COMMUNITY CHANGE VOTERS",
+      "candidate_id": "S6PA00217",
+      "candidate_name": "Bob Casey",
+      "support_oppose": "S",
+      "amount": 17500.0,
+      "date": "2024-09-19",
+      "purpose": "LIVE PERSUASION CALLS",
+      "payee": "STONES' PHONES",
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202410159698401491",
+      "vendor_id": "V-stones-phones",
+      "medium": "phones"
+    },
+    {
+      "ie_id": "C00612820-ie-1829558-E-242",
+      "spender_entity_id": "C00612820",
+      "spender_name": "COMMUNITY CHANGE VOTERS",
+      "candidate_id": "S6PA00217",
+      "candidate_name": "Bob Casey",
+      "support_oppose": "S",
+      "amount": 24999.99,
+      "date": "2024-08-08",
+      "purpose": "LIVE PERSUASION CALLS",
+      "payee": "STONES' PHONES",
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202410159698401478",
+      "vendor_id": "V-stones-phones",
+      "medium": "phones"
+    },
+    {
+      "ie_id": "C00612820-ie-1829558-E-213",
+      "spender_entity_id": "C00612820",
+      "spender_name": "COMMUNITY CHANGE VOTERS",
+      "candidate_id": "S6PA00217",
+      "candidate_name": "Bob Casey",
+      "support_oppose": "S",
+      "amount": 5000.0,
+      "date": "2024-07-26",
+      "purpose": "LIVE PERSUASION CALLS",
+      "payee": "STONES' PHONES",
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202410159698401471",
+      "vendor_id": "V-stones-phones",
+      "medium": "phones"
+    },
+    {
+      "ie_id": "C00612820-ie-1829558-E-184",
+      "spender_entity_id": "C00612820",
+      "spender_name": "COMMUNITY CHANGE VOTERS",
+      "candidate_id": "S6PA00217",
+      "candidate_name": "Bob Casey",
+      "support_oppose": "S",
+      "amount": 20000.0,
+      "date": "2024-07-19",
+      "purpose": "LIVE PERSUASION CALLS",
+      "payee": "STONES' PHONES",
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202410159698401465",
+      "vendor_id": "V-stones-phones",
+      "medium": "phones"
+    }
+  ],
+  "ads": [],
+  "method": "Every Schedule E independent expenditure names a payee. Payee strings are normalised (case, punctuation, legal suffixes, token order), near-duplicates are folded with a difflib ratio ≥ 0.92 when their numeric tokens match, and hand alias rows from data/hand/<race>/vendor_aliases.json override the rule. Medium is classified from the purpose the spender filed (ordered keyword table in gotham/vendors.py); the FEC does not record which buy placed which ad, so vendor ↔ ad links are empty until a human verifies one. Totals are the filed amounts, grouped, never re-estimated."
+}

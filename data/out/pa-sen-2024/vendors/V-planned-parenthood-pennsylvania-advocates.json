@@ -1,0 +1,80 @@
+{
+  "vendor_id": "V-planned-parenthood-pennsylvania-advocates",
+  "name": "PLANNED PARENTHOOD PENNSYLVANIA ADVOCATES",
+  "aliases": [
+    "PLANNED PARENTHOOD PENNSYLVANIA ADVOCATES"
+  ],
+  "normalization": {
+    "basis": "inferred",
+    "rule": "case/punctuation/suffix normalisation + token-set ≥0.92 (numeric tokens must match); aliases file",
+    "source_urls": [
+      "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&payee_name=PLANNED+PARENTHOOD+PENNSYLVANIA+ADVOCATES"
+    ],
+    "checked_by": null,
+    "checked_at": null
+  },
+  "total": 6202.31,
+  "count": 2,
+  "media_mix": [
+    {
+      "medium": "other",
+      "amount": 6202.31,
+      "count": 2
+    }
+  ],
+  "spenders": [
+    {
+      "entity_id": "C00489799",
+      "name": "PLANNED PARENTHOOD VOTES",
+      "amount": 6202.31,
+      "count": 2
+    }
+  ],
+  "targets": [
+    {
+      "candidate_id": "S2PA00661",
+      "support_oppose": "O",
+      "amount": 6202.31
+    }
+  ],
+  "first_date": "2024-09-03",
+  "last_date": "2024-10-01",
+  "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&payee_name=PLANNED+PARENTHOOD+PENNSYLVANIA+ADVOCATES",
+  "race_id": "pa-sen-2024",
+  "generated_at": "2026-09-05T19:33:04+00:00",
+  "data_status": "real",
+  "expenditures": [
+    {
+      "ie_id": "C00489799-ie-1867542-500689650",
+      "spender_entity_id": "C00489799",
+      "spender_name": "PLANNED PARENTHOOD VOTES",
+      "candidate_id": "S2PA00661",
+      "candidate_name": "Dave McCormick",
+      "support_oppose": "O",
+      "amount": 3997.11,
+      "date": "2024-10-01",
+      "purpose": "ESTIMATED COST FOR STAFF TIME FOR VOTER COMMUNICATIONS",
+      "payee": "PLANNED PARENTHOOD PENNSYLVANIA ADVOCATES",
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202501299748057477",
+      "vendor_id": "V-planned-parenthood-pennsylvania-advocates",
+      "medium": "other"
+    },
+    {
+      "ie_id": "C00489799-ie-1853030-500684001",
+      "spender_entity_id": "C00489799",
+      "spender_name": "PLANNED PARENTHOOD VOTES",
+      "candidate_id": "S2PA00661",
+      "candidate_name": "Dave McCormick",
+      "support_oppose": "O",
+      "amount": 2205.2,
+      "date": "2024-09-03",
+      "purpose": "ESTIMATED COST FOR STAFF TIME FOR VOTER COMMUNICATIONS",
+      "payee": "PLANNED PARENTHOOD PENNSYLVANIA ADVOCATES",
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202412049720211517",
+      "vendor_id": "V-planned-parenthood-pennsylvania-advocates",
+      "medium": "other"
+    }
+  ],
+  "ads": [],
+  "method": "Every Schedule E independent expenditure names a payee. Payee strings are normalised (case, punctuation, legal suffixes, token order), near-duplicates are folded with a difflib ratio ≥ 0.92 when their numeric tokens match, and hand alias rows from data/hand/<race>/vendor_aliases.json override the rule. Medium is classified from the purpose the spender filed (ordered keyword table in gotham/vendors.py); the FEC does not record which buy placed which ad, so vendor ↔ ad links are empty until a human verifies one. Totals are the filed amounts, grouped, never re-estimated."
+}

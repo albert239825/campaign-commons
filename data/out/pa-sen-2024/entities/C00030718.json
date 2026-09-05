@@ -792,7 +792,9 @@
       "date": "2024-10-14",
       "purpose": "ONLINE VIDEO PRODUCTION COSTS",
       "payee": "MEATH MEDIA GROUP",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202503289754571377"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202503289754571377",
+      "vendor_id": "V-meath-media-group",
+      "medium": "production"
     },
     {
       "ie_id": "C00030718-ie-1831508-E7F9566DFF65A4BBEA77",
@@ -805,7 +807,9 @@
       "date": "2024-09-25",
       "purpose": "DIGITAL AD BUY, FACEBOOK DISPLAY & SET UP",
       "payee": "A-D STRATEGIES LLC",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202410189698652279"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202410189698652279",
+      "vendor_id": "V-a-d-strategies",
+      "medium": "digital"
     },
     {
       "ie_id": "C00030718-ie-1882642-E8E6CE9DCE1214217A9A",
@@ -818,7 +822,9 @@
       "date": "2024-10-30",
       "purpose": "ONLINE VIDEO PRODUCTION COSTS",
       "payee": "MEATH MEDIA GROUP",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202503289754572422"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202503289754572422",
+      "vendor_id": "V-meath-media-group",
+      "medium": "production"
     },
     {
       "ie_id": "C00030718-ie-1831508-EA4DCDE93D75C4AC8A88",
@@ -831,7 +837,9 @@
       "date": "2024-09-25",
       "purpose": "GIF ADS",
       "payee": "AMBROSINO MUIR HANSEN CROUNSE",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202410189698652273"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202410189698652273",
+      "vendor_id": "V-ambrosino-muir-hansen-crounse",
+      "medium": "digital"
     },
     {
       "ie_id": "C00030718-ie-1831508-E2102660744AC4F7C93C",
@@ -844,7 +852,9 @@
       "date": "2024-09-25",
       "purpose": "ADMINISTRATIVE CONSULTING",
       "payee": "NATIONAL ASSOCIATION OF REALTORS",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202410189698652277"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202410189698652277",
+      "vendor_id": "V-national-association-of-realtors",
+      "medium": "consulting"
     },
     {
       "ie_id": "C00030718-ie-1882642-EA8162BA7DC804A41AD4",
@@ -857,11 +867,107 @@
       "date": "2024-10-30",
       "purpose": "ADMINISTRATIVE CONSULTING",
       "payee": "NATIONAL ASSOCIATION OF REALTORS",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202503289754572423"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202503289754572423",
+      "vendor_id": "V-national-association-of-realtors",
+      "medium": "consulting"
     }
   ],
   "flags": [],
   "has_chain": true,
   "source_url": "https://www.fec.gov/data/committee/C00030718/?cycle=2024",
-  "data_status": "real"
+  "data_status": "real",
+  "vendors": [
+    {
+      "vendor_id": "V-meath-media-group",
+      "name": "MEATH MEDIA GROUP",
+      "amount": 89250.0,
+      "count": 2,
+      "media_mix": [
+        {
+          "medium": "production",
+          "amount": 89250.0,
+          "count": 2
+        }
+      ],
+      "targets": [
+        {
+          "candidate_id": "S6PA00217",
+          "support_oppose": "S",
+          "amount": 89250.0
+        }
+      ],
+      "first_date": "2024-10-14",
+      "last_date": "2024-10-30",
+      "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00030718&payee_name=MEATH+MEDIA+GROUP"
+    },
+    {
+      "vendor_id": "V-a-d-strategies",
+      "name": "A-D STRATEGIES LLC",
+      "amount": 69475.0,
+      "count": 1,
+      "media_mix": [
+        {
+          "medium": "digital",
+          "amount": 69475.0,
+          "count": 1
+        }
+      ],
+      "targets": [
+        {
+          "candidate_id": "S6PA00217",
+          "support_oppose": "S",
+          "amount": 69475.0
+        }
+      ],
+      "first_date": "2024-09-25",
+      "last_date": "2024-09-25",
+      "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00030718&payee_name=A-D+STRATEGIES+LLC"
+    },
+    {
+      "vendor_id": "V-ambrosino-muir-hansen-crounse",
+      "name": "AMBROSINO MUIR HANSEN CROUNSE",
+      "amount": 7200.0,
+      "count": 1,
+      "media_mix": [
+        {
+          "medium": "digital",
+          "amount": 7200.0,
+          "count": 1
+        }
+      ],
+      "targets": [
+        {
+          "candidate_id": "S6PA00217",
+          "support_oppose": "S",
+          "amount": 7200.0
+        }
+      ],
+      "first_date": "2024-09-25",
+      "last_date": "2024-09-25",
+      "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00030718&payee_name=AMBROSINO+MUIR+HANSEN+CROUNSE"
+    },
+    {
+      "vendor_id": "V-national-association-of-realtors",
+      "name": "NATIONAL ASSOCIATION OF REALTORS",
+      "amount": 1200.0,
+      "count": 2,
+      "media_mix": [
+        {
+          "medium": "consulting",
+          "amount": 1200.0,
+          "count": 2
+        }
+      ],
+      "targets": [
+        {
+          "candidate_id": "S6PA00217",
+          "support_oppose": "S",
+          "amount": 1200.0
+        }
+      ],
+      "first_date": "2024-09-25",
+      "last_date": "2024-10-30",
+      "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00030718&payee_name=NATIONAL+ASSOCIATION+OF+REALTORS"
+    }
+  ]
 }

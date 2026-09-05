@@ -87,7 +87,9 @@
       "date": "2024-06-11",
       "purpose": "DIGITAL AD BUY",
       "payee": "GAMBIT STRATEGIES LLC",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202407199661310878"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202407199661310878",
+      "vendor_id": "V-gambit-strategies",
+      "medium": "digital"
     },
     {
       "ie_id": "C00740225-ie-1831691-500186350",
@@ -100,7 +102,9 @@
       "date": "2024-09-14",
       "purpose": "DIGITAL AD BUY",
       "payee": "GAMBIT STRATEGIES LLC",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202410189698667004"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202410189698667004",
+      "vendor_id": "V-gambit-strategies",
+      "medium": "digital"
     },
     {
       "ie_id": "C00740225-ie-1835203-500189982",
@@ -113,7 +117,9 @@
       "date": "2024-10-09",
       "purpose": "DIGITAL AD BUY",
       "payee": "GAMBIT STRATEGIES LLC",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202410229710081711"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202410229710081711",
+      "vendor_id": "V-gambit-strategies",
+      "medium": "digital"
     },
     {
       "ie_id": "C00740225-ie-1804072-500180018",
@@ -126,7 +132,9 @@
       "date": "2024-06-11",
       "purpose": "AD PRODUCTION",
       "payee": "GAMBIT STRATEGIES LLC",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202407199661310878"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202407199661310878",
+      "vendor_id": "V-gambit-strategies",
+      "medium": "production"
     },
     {
       "ie_id": "C00740225-ie-1831691-500186351",
@@ -139,7 +147,9 @@
       "date": "2024-09-14",
       "purpose": "AD PRODUCTION",
       "payee": "GAMBIT STRATEGIES LLC",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202410189698667004"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202410189698667004",
+      "vendor_id": "V-gambit-strategies",
+      "medium": "production"
     },
     {
       "ie_id": "C00740225-ie-1853130-500193025",
@@ -152,7 +162,9 @@
       "date": "2024-10-22",
       "purpose": "DIGITAL AD BUY",
       "payee": "GAMBIT STRATEGIES LLC",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202412049720214761"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202412049720214761",
+      "vendor_id": "V-gambit-strategies",
+      "medium": "digital"
     },
     {
       "ie_id": "C00740225-ie-1853130-500193026",
@@ -165,7 +177,9 @@
       "date": "2024-10-22",
       "purpose": "AD PRODUCTION",
       "payee": "GAMBIT STRATEGIES LLC",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202412049720214762"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202412049720214762",
+      "vendor_id": "V-gambit-strategies",
+      "medium": "production"
     }
   ],
   "flags": [
@@ -184,5 +198,35 @@
   ],
   "has_chain": true,
   "source_url": "https://www.fec.gov/data/committee/C00740225/?cycle=2024",
-  "data_status": "real"
+  "data_status": "real",
+  "vendors": [
+    {
+      "vendor_id": "V-gambit-strategies",
+      "name": "GAMBIT STRATEGIES",
+      "amount": 2010000.0,
+      "count": 7,
+      "media_mix": [
+        {
+          "medium": "digital",
+          "amount": 1971812.0,
+          "count": 4
+        },
+        {
+          "medium": "production",
+          "amount": 38188.0,
+          "count": 3
+        }
+      ],
+      "targets": [
+        {
+          "candidate_id": "S2PA00661",
+          "support_oppose": "O",
+          "amount": 2010000.0
+        }
+      ],
+      "first_date": "2024-06-11",
+      "last_date": "2024-10-22",
+      "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00740225&payee_name=GAMBIT+STRATEGIES+LLC"
+    }
+  ]
 }

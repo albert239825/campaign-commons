@@ -1,0 +1,100 @@
+{
+  "vendor_id": "V-wavelength-strategy",
+  "name": "WAVELENGTH STRATEGY LLC",
+  "aliases": [
+    "WAVELENGTH STRATEGY LLC"
+  ],
+  "normalization": {
+    "basis": "inferred",
+    "rule": "case/punctuation/suffix normalisation + token-set ≥0.92 (numeric tokens must match); aliases file",
+    "source_urls": [
+      "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&payee_name=WAVELENGTH+STRATEGY+LLC"
+    ],
+    "checked_by": null,
+    "checked_at": null
+  },
+  "total": 595000.0,
+  "count": 3,
+  "media_mix": [
+    {
+      "medium": "tv",
+      "amount": 582000.0,
+      "count": 2
+    },
+    {
+      "medium": "production",
+      "amount": 13000.0,
+      "count": 1
+    }
+  ],
+  "spenders": [
+    {
+      "entity_id": "C00890087",
+      "name": "DEFEND OUR CONSTITUTION PAC",
+      "amount": 595000.0,
+      "count": 3
+    }
+  ],
+  "targets": [
+    {
+      "candidate_id": "S2PA00661",
+      "support_oppose": "O",
+      "amount": 595000.0
+    }
+  ],
+  "first_date": "2024-10-22",
+  "last_date": "2024-10-31",
+  "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&payee_name=WAVELENGTH+STRATEGY+LLC",
+  "race_id": "pa-sen-2024",
+  "generated_at": "2026-09-05T19:33:04+00:00",
+  "data_status": "real",
+  "expenditures": [
+    {
+      "ie_id": "C00890087-ie-1876602-SE.4162",
+      "spender_entity_id": "C00890087",
+      "spender_name": "DEFEND OUR CONSTITUTION PAC",
+      "candidate_id": "S2PA00661",
+      "candidate_name": "Dave McCormick",
+      "support_oppose": "O",
+      "amount": 315000.0,
+      "date": "2024-10-31",
+      "purpose": "MEDIA BUY",
+      "payee": "WAVELENGTH STRATEGY LLC",
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202502189753471699",
+      "vendor_id": "V-wavelength-strategy",
+      "medium": "tv"
+    },
+    {
+      "ie_id": "C00890087-ie-1876602-SE.4114",
+      "spender_entity_id": "C00890087",
+      "spender_name": "DEFEND OUR CONSTITUTION PAC",
+      "candidate_id": "S2PA00661",
+      "candidate_name": "Dave McCormick",
+      "support_oppose": "O",
+      "amount": 13000.0,
+      "date": "2024-10-22",
+      "purpose": "MEDIA PRODUCTION",
+      "payee": "WAVELENGTH STRATEGY LLC",
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202502189753471698",
+      "vendor_id": "V-wavelength-strategy",
+      "medium": "production"
+    },
+    {
+      "ie_id": "C00890087-ie-1876602-SE.4113",
+      "spender_entity_id": "C00890087",
+      "spender_name": "DEFEND OUR CONSTITUTION PAC",
+      "candidate_id": "S2PA00661",
+      "candidate_name": "Dave McCormick",
+      "support_oppose": "O",
+      "amount": 267000.0,
+      "date": "2024-10-22",
+      "purpose": "MEDIA BUY",
+      "payee": "WAVELENGTH STRATEGY LLC",
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202502189753471698",
+      "vendor_id": "V-wavelength-strategy",
+      "medium": "tv"
+    }
+  ],
+  "ads": [],
+  "method": "Every Schedule E independent expenditure names a payee. Payee strings are normalised (case, punctuation, legal suffixes, token order), near-duplicates are folded with a difflib ratio ≥ 0.92 when their numeric tokens match, and hand alias rows from data/hand/<race>/vendor_aliases.json override the rule. Medium is classified from the purpose the spender filed (ordered keyword table in gotham/vendors.py); the FEC does not record which buy placed which ad, so vendor ↔ ad links are empty until a human verifies one. Totals are the filed amounts, grouped, never re-estimated."
+}

@@ -416,7 +416,9 @@
       "date": "2024-10-08",
       "purpose": "BUMPER STICKERS",
       "payee": "CAPITOL 6 ADVISORS",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202502129753401790"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202502129753401790",
+      "vendor_id": "V-capitol-6-advisors",
+      "medium": "other"
     },
     {
       "ie_id": "C00541433-ie-1875710-SE.6034",
@@ -429,7 +431,9 @@
       "date": "2024-10-08",
       "purpose": "BUMPER STICKERS--SHIPPING",
       "payee": "UPS",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202502129753401801"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202502129753401801",
+      "vendor_id": "V-ups",
+      "medium": "other"
     }
   ],
   "flags": [
@@ -442,5 +446,53 @@
   ],
   "has_chain": true,
   "source_url": "https://www.fec.gov/data/committee/C00541433/?cycle=2024",
-  "data_status": "real"
+  "data_status": "real",
+  "vendors": [
+    {
+      "vendor_id": "V-capitol-6-advisors",
+      "name": "CAPITOL 6 ADVISORS",
+      "amount": 670.0,
+      "count": 1,
+      "media_mix": [
+        {
+          "medium": "other",
+          "amount": 670.0,
+          "count": 1
+        }
+      ],
+      "targets": [
+        {
+          "candidate_id": "S2PA00661",
+          "support_oppose": "S",
+          "amount": 670.0
+        }
+      ],
+      "first_date": "2024-10-08",
+      "last_date": "2024-10-08",
+      "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00541433&payee_name=CAPITOL+6+ADVISORS"
+    },
+    {
+      "vendor_id": "V-ups",
+      "name": "UPS",
+      "amount": 8.05,
+      "count": 1,
+      "media_mix": [
+        {
+          "medium": "other",
+          "amount": 8.05,
+          "count": 1
+        }
+      ],
+      "targets": [
+        {
+          "candidate_id": "S2PA00661",
+          "support_oppose": "S",
+          "amount": 8.05
+        }
+      ],
+      "first_date": "2024-10-08",
+      "last_date": "2024-10-08",
+      "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00541433&payee_name=UPS"
+    }
+  ]
 }

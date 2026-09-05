@@ -792,7 +792,9 @@
       "date": "2024-09-15",
       "purpose": "ESTIMATED COST - STAFF SALARIES & BENEFITS FOR CANVASSING",
       "payee": "PENNSYLVANIA STATE COUNCIL SEIU",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202410209709586922"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202410209709586922",
+      "vendor_id": "V-pennsylvania-state-council-seiu",
+      "medium": "other"
     },
     {
       "ie_id": "C00004036-ie-1859747-500020105",
@@ -805,7 +807,9 @@
       "date": "2024-10-18",
       "purpose": "ESTIMATED COST - STAFF SALARIES & BENEFITS FOR CANVASS",
       "payee": "SEIU GENERAL FUND",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202412119739859529"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202412119739859529",
+      "vendor_id": "V-seiu-general-fund",
+      "medium": "other"
     },
     {
       "ie_id": "C00004036-ie-1833953-500019714",
@@ -818,7 +822,9 @@
       "date": "2024-09-16",
       "purpose": "ESTIMATED COST - DOORHANGERS",
       "payee": "PENNSYLVANIA STATE COUNCIL SEIU",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202410209709586923"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202410209709586923",
+      "vendor_id": "V-pennsylvania-state-council-seiu",
+      "medium": "other"
     },
     {
       "ie_id": "C00004036-ie-1833953-500019715",
@@ -831,7 +837,9 @@
       "date": "2024-09-12",
       "purpose": "ESTIMATED COST - STAFF SALARIES & BENEFITS FOR CANVASSING",
       "payee": "PENNSYLVANIA STATE COUNCIL SEIU",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202410209709586922"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202410209709586922",
+      "vendor_id": "V-pennsylvania-state-council-seiu",
+      "medium": "other"
     },
     {
       "ie_id": "C00004036-ie-1859747-500020363",
@@ -844,7 +852,9 @@
       "date": "2024-10-26",
       "purpose": "ESTIMATED COST - CANVASS LITERATURE",
       "payee": "RESONANCE CAMPAIGNS LLC",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202412119739859516"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202412119739859516",
+      "vendor_id": "V-resonance-campaigns",
+      "medium": "other"
     },
     {
       "ie_id": "C00004036-ie-1859747-500020404",
@@ -857,7 +867,9 @@
       "date": "2024-10-28",
       "purpose": "ESTIMATED COST - CANVASS LITERATURE",
       "payee": "RESONANCE CAMPAIGNS LLC",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202412119739859521"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202412119739859521",
+      "vendor_id": "V-resonance-campaigns",
+      "medium": "other"
     }
   ],
   "flags": [
@@ -870,5 +882,76 @@
   ],
   "has_chain": true,
   "source_url": "https://www.fec.gov/data/committee/C00004036/?cycle=2024",
-  "data_status": "real"
+  "data_status": "real",
+  "vendors": [
+    {
+      "vendor_id": "V-pennsylvania-state-council-seiu",
+      "name": "PENNSYLVANIA STATE COUNCIL SEIU",
+      "amount": 148911.67,
+      "count": 3,
+      "media_mix": [
+        {
+          "medium": "other",
+          "amount": 148911.67,
+          "count": 3
+        }
+      ],
+      "targets": [
+        {
+          "candidate_id": "S6PA00217",
+          "support_oppose": "S",
+          "amount": 148911.67
+        }
+      ],
+      "first_date": "2024-09-12",
+      "last_date": "2024-09-16",
+      "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00004036&payee_name=PENNSYLVANIA+STATE+COUNCIL+SEIU"
+    },
+    {
+      "vendor_id": "V-seiu-general-fund",
+      "name": "SEIU GENERAL FUND",
+      "amount": 25500.0,
+      "count": 1,
+      "media_mix": [
+        {
+          "medium": "other",
+          "amount": 25500.0,
+          "count": 1
+        }
+      ],
+      "targets": [
+        {
+          "candidate_id": "S6PA00217",
+          "support_oppose": "S",
+          "amount": 25500.0
+        }
+      ],
+      "first_date": "2024-10-18",
+      "last_date": "2024-10-18",
+      "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00004036&payee_name=SEIU+GENERAL+FUND"
+    },
+    {
+      "vendor_id": "V-resonance-campaigns",
+      "name": "RESONANCE CAMPAIGNS LLC",
+      "amount": 5338.27,
+      "count": 2,
+      "media_mix": [
+        {
+          "medium": "other",
+          "amount": 5338.27,
+          "count": 2
+        }
+      ],
+      "targets": [
+        {
+          "candidate_id": "S6PA00217",
+          "support_oppose": "S",
+          "amount": 5338.27
+        }
+      ],
+      "first_date": "2024-10-26",
+      "last_date": "2024-10-28",
+      "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00004036&payee_name=RESONANCE+CAMPAIGNS+LLC"
+    }
+  ]
 }

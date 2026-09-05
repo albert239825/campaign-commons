@@ -147,7 +147,9 @@
       "date": "2024-09-27",
       "purpose": "REIMBURSE STAFF SALARIES & OUTDOOR PROJECTOR COSTS",
       "payee": "UNITED STEELWORKERS",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202410189698641646"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202410189698641646",
+      "vendor_id": "V-united-steelworkers",
+      "medium": "other"
     },
     {
       "ie_id": "C00556274-ie-1834522-E6D88CAB4A9294A71B47",
@@ -160,7 +162,9 @@
       "date": "2024-10-02",
       "purpose": "POLITICAL STRATEGY CONSULTING",
       "payee": "TRACY SEFL",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202410219710033764"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202410219710033764",
+      "vendor_id": "V-tracy-sefl",
+      "medium": "consulting"
     },
     {
       "ie_id": "C00556274-ie-1834522-E2C1B65FA4E4D4CB1926",
@@ -173,7 +177,9 @@
       "date": "2024-10-11",
       "purpose": "POLITICAL STRATEGY CONSULTING",
       "payee": "TRACY SEFL",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202410219710033767"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202410219710033767",
+      "vendor_id": "V-tracy-sefl",
+      "medium": "consulting"
     },
     {
       "ie_id": "C00556274-ie-1852264-E3A67EE00E514479C837",
@@ -186,7 +192,9 @@
       "date": "2024-11-01",
       "purpose": "POLITICAL STRATEGY CONSULTING",
       "payee": "TRACY SEFL",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202412039720162746"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202412039720162746",
+      "vendor_id": "V-tracy-sefl",
+      "medium": "consulting"
     },
     {
       "ie_id": "C00556274-ie-1852264-E3E7C8389EB1C42468E5",
@@ -199,7 +207,9 @@
       "date": "2024-10-25",
       "purpose": "POLITICAL STRATEGY CONSULTING",
       "payee": "TRACY SEFL",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202412039720162743"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202412039720162743",
+      "vendor_id": "V-tracy-sefl",
+      "medium": "consulting"
     },
     {
       "ie_id": "C00556274-ie-1852264-E5D91AD9067BC421CA3A",
@@ -212,7 +222,9 @@
       "date": "2024-10-18",
       "purpose": "POLITICAL STRATEGY CONSULTING",
       "payee": "TRACY SEFL",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202412039720162741"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202412039720162741",
+      "vendor_id": "V-tracy-sefl",
+      "medium": "consulting"
     },
     {
       "ie_id": "C00556274-ie-1852264-E343C8E588F924662B0C",
@@ -225,7 +237,9 @@
       "date": "2024-11-05",
       "purpose": "POLITICAL STRATEGY CONSULTING",
       "payee": "TRACY SEFL",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202412039720162748"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202412039720162748",
+      "vendor_id": "V-tracy-sefl",
+      "medium": "consulting"
     }
   ],
   "flags": [
@@ -244,5 +258,53 @@
   ],
   "has_chain": true,
   "source_url": "https://www.fec.gov/data/committee/C00556274/?cycle=2024",
-  "data_status": "real"
+  "data_status": "real",
+  "vendors": [
+    {
+      "vendor_id": "V-tracy-sefl",
+      "name": "TRACY SEFL",
+      "amount": 900.0,
+      "count": 6,
+      "media_mix": [
+        {
+          "medium": "consulting",
+          "amount": 900.0,
+          "count": 6
+        }
+      ],
+      "targets": [
+        {
+          "candidate_id": "S6PA00217",
+          "support_oppose": "S",
+          "amount": 900.0
+        }
+      ],
+      "first_date": "2024-10-02",
+      "last_date": "2024-11-05",
+      "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00556274&payee_name=TRACY+SEFL"
+    },
+    {
+      "vendor_id": "V-united-steelworkers",
+      "name": "UNITED STEELWORKERS",
+      "amount": 762.96,
+      "count": 1,
+      "media_mix": [
+        {
+          "medium": "other",
+          "amount": 762.96,
+          "count": 1
+        }
+      ],
+      "targets": [
+        {
+          "candidate_id": "S6PA00217",
+          "support_oppose": "S",
+          "amount": 762.96
+        }
+      ],
+      "first_date": "2024-09-27",
+      "last_date": "2024-09-27",
+      "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00556274&payee_name=UNITED+STEELWORKERS"
+    }
+  ]
 }

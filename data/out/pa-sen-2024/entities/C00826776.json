@@ -416,7 +416,9 @@
       "date": "2024-11-04",
       "purpose": "DIGITAL ADVERTISING",
       "payee": "LAGNIAPPE COMMUNICATIONS GROUP",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202412039720153344"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202412039720153344",
+      "vendor_id": "V-lagniappe-communications-group",
+      "medium": "digital"
     },
     {
       "ie_id": "C00826776-ie-1828209-SE.4198",
@@ -429,7 +431,9 @@
       "date": "2024-09-27",
       "purpose": "DIGITAL ADVERTISING",
       "payee": "LAGNIAPPE COMMUNICATIONS GROUP",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202410159687854666"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202410159687854666",
+      "vendor_id": "V-lagniappe-communications-group",
+      "medium": "digital"
     },
     {
       "ie_id": "C00826776-ie-1828209-SE.4170",
@@ -442,7 +446,9 @@
       "date": "2024-09-17",
       "purpose": "DIGITAL ADVERTISING",
       "payee": "LAGNIAPPE COMMUNICATIONS GROUP",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202410159687854664"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202410159687854664",
+      "vendor_id": "V-lagniappe-communications-group",
+      "medium": "digital"
     },
     {
       "ie_id": "C00826776-ie-1836954-SE.4215",
@@ -455,7 +461,9 @@
       "date": "2024-10-10",
       "purpose": "DIGITAL ADVERTISING",
       "payee": "LAGNIAPPE COMMUNICATIONS GROUP",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202410239710137222"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202410239710137222",
+      "vendor_id": "V-lagniappe-communications-group",
+      "medium": "digital"
     },
     {
       "ie_id": "C00826776-ie-1828209-SE.4206",
@@ -468,11 +476,61 @@
       "date": "2024-09-30",
       "purpose": "DIGITAL ADVERTISING",
       "payee": "HANCO PRODUCTIONS",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202410159687854660"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202410159687854660",
+      "vendor_id": "V-hanco-productions",
+      "medium": "digital"
     }
   ],
   "flags": [],
   "has_chain": true,
   "source_url": "https://www.fec.gov/data/committee/C00826776/?cycle=2024",
-  "data_status": "real"
+  "data_status": "real",
+  "vendors": [
+    {
+      "vendor_id": "V-lagniappe-communications-group",
+      "name": "LAGNIAPPE COMMUNICATIONS GROUP",
+      "amount": 49891.0,
+      "count": 4,
+      "media_mix": [
+        {
+          "medium": "digital",
+          "amount": 49891.0,
+          "count": 4
+        }
+      ],
+      "targets": [
+        {
+          "candidate_id": "S6PA00217",
+          "support_oppose": "O",
+          "amount": 49891.0
+        }
+      ],
+      "first_date": "2024-09-17",
+      "last_date": "2024-11-04",
+      "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00826776&payee_name=LAGNIAPPE+COMMUNICATIONS+GROUP"
+    },
+    {
+      "vendor_id": "V-hanco-productions",
+      "name": "HANCO PRODUCTIONS",
+      "amount": 1000.0,
+      "count": 1,
+      "media_mix": [
+        {
+          "medium": "digital",
+          "amount": 1000.0,
+          "count": 1
+        }
+      ],
+      "targets": [
+        {
+          "candidate_id": "S6PA00217",
+          "support_oppose": "O",
+          "amount": 1000.0
+        }
+      ],
+      "first_date": "2024-09-30",
+      "last_date": "2024-09-30",
+      "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00826776&payee_name=HANCO+PRODUCTIONS"
+    }
+  ]
 }

@@ -1,0 +1,140 @@
+{
+  "vendor_id": "V-new-blue-interactive",
+  "name": "NEW BLUE INTERACTIVE",
+  "aliases": [
+    "NEW BLUE INTERACTIVE"
+  ],
+  "normalization": {
+    "basis": "inferred",
+    "rule": "case/punctuation/suffix normalisation + token-set ≥0.92 (numeric tokens must match); aliases file",
+    "source_urls": [
+      "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&payee_name=NEW+BLUE+INTERACTIVE"
+    ],
+    "checked_by": null,
+    "checked_at": null
+  },
+  "total": 392.01,
+  "count": 6,
+  "media_mix": [
+    {
+      "medium": "digital",
+      "amount": 392.01,
+      "count": 6
+    }
+  ],
+  "spenders": [
+    {
+      "entity_id": "C00802389",
+      "name": "GIVEGREEN UNITED ACTION",
+      "amount": 392.01,
+      "count": 6
+    }
+  ],
+  "targets": [
+    {
+      "candidate_id": "S6PA00217",
+      "support_oppose": "S",
+      "amount": 392.01
+    }
+  ],
+  "first_date": "2023-01-25",
+  "last_date": "2024-08-21",
+  "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&payee_name=NEW+BLUE+INTERACTIVE",
+  "race_id": "pa-sen-2024",
+  "generated_at": "2026-09-05T19:33:04+00:00",
+  "data_status": "real",
+  "expenditures": [
+    {
+      "ie_id": "C00802389-ie-1816764-500453913",
+      "spender_entity_id": "C00802389",
+      "spender_name": "GIVEGREEN UNITED ACTION",
+      "candidate_id": "S6PA00217",
+      "candidate_name": "Bob Casey",
+      "support_oppose": "S",
+      "amount": 53.34,
+      "date": "2024-08-21",
+      "purpose": "EMAIL MESSAGING",
+      "payee": "NEW BLUE INTERACTIVE",
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202409199675537869",
+      "vendor_id": "V-new-blue-interactive",
+      "medium": "digital"
+    },
+    {
+      "ie_id": "C00802389-ie-1752717-500430918",
+      "spender_entity_id": "C00802389",
+      "spender_name": "GIVEGREEN UNITED ACTION",
+      "candidate_id": "S6PA00217",
+      "candidate_name": "Bob Casey",
+      "support_oppose": "S",
+      "amount": 40.0,
+      "date": "2023-09-27",
+      "purpose": "EMAIL MESSAGING",
+      "payee": "NEW BLUE INTERACTIVE",
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202401319618342919",
+      "vendor_id": "V-new-blue-interactive",
+      "medium": "digital"
+    },
+    {
+      "ie_id": "C00802389-ie-1720052-VVAG5ARX4K5",
+      "spender_entity_id": "C00802389",
+      "spender_name": "GIVEGREEN UNITED ACTION",
+      "candidate_id": "S6PA00217",
+      "candidate_name": "Bob Casey",
+      "support_oppose": "S",
+      "amount": 53.34,
+      "date": "2023-06-12",
+      "purpose": "EMAIL MESSAGING",
+      "payee": "NEW BLUE INTERACTIVE",
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202307319584263163",
+      "vendor_id": "V-new-blue-interactive",
+      "medium": "digital"
+    },
+    {
+      "ie_id": "C00802389-ie-1720052-VVAG5ARX3K3",
+      "spender_entity_id": "C00802389",
+      "spender_name": "GIVEGREEN UNITED ACTION",
+      "candidate_id": "S6PA00217",
+      "candidate_name": "Bob Casey",
+      "support_oppose": "S",
+      "amount": 160.0,
+      "date": "2023-04-17",
+      "purpose": "EMAIL MESSAGING",
+      "payee": "NEW BLUE INTERACTIVE",
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202307319584263147",
+      "vendor_id": "V-new-blue-interactive",
+      "medium": "digital"
+    },
+    {
+      "ie_id": "C00802389-ie-1720052-VVAG5ARX3J5",
+      "spender_entity_id": "C00802389",
+      "spender_name": "GIVEGREEN UNITED ACTION",
+      "candidate_id": "S6PA00217",
+      "candidate_name": "Bob Casey",
+      "support_oppose": "S",
+      "amount": 32.0,
+      "date": "2023-03-31",
+      "purpose": "EMAIL MESSAGING",
+      "payee": "NEW BLUE INTERACTIVE",
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202307319584263147",
+      "vendor_id": "V-new-blue-interactive",
+      "medium": "digital"
+    },
+    {
+      "ie_id": "C00802389-ie-1719334-VVAG5ART2P2",
+      "spender_entity_id": "C00802389",
+      "spender_name": "GIVEGREEN UNITED ACTION",
+      "candidate_id": "S6PA00217",
+      "candidate_name": "Bob Casey",
+      "support_oppose": "S",
+      "amount": 53.33,
+      "date": "2023-01-25",
+      "purpose": "EMAIL MESSAGING",
+      "payee": "NEW BLUE INTERACTIVE",
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202307319584207269",
+      "vendor_id": "V-new-blue-interactive",
+      "medium": "digital"
+    }
+  ],
+  "ads": [],
+  "method": "Every Schedule E independent expenditure names a payee. Payee strings are normalised (case, punctuation, legal suffixes, token order), near-duplicates are folded with a difflib ratio ≥ 0.92 when their numeric tokens match, and hand alias rows from data/hand/<race>/vendor_aliases.json override the rule. Medium is classified from the purpose the spender filed (ordered keyword table in gotham/vendors.py); the FEC does not record which buy placed which ad, so vendor ↔ ad links are empty until a human verifies one. Totals are the filed amounts, grouped, never re-estimated."
+}

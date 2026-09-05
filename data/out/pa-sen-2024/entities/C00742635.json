@@ -71,7 +71,9 @@
       "date": "2024-10-09",
       "purpose": "PMT FOR EST FROM 10/15/2024. VIDEO ADVERTISING; SEE EST PMT ID #:...4B89ADD",
       "payee": "MCSHANE LLC",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202410249710392588"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202410249710392588",
+      "vendor_id": "V-mcshane",
+      "medium": "other"
     },
     {
       "ie_id": "C00742635-ie-1839375-E57D8F76772D148058FD",
@@ -84,7 +86,9 @@
       "date": "2024-10-16",
       "purpose": "PMT FOR EST FROM 10/15/2024. DIGITAL ADVERTISING; SEE PMT EST ID#:...43FFBE2",
       "payee": "RING LTD.",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202410249710392596"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202410249710392596",
+      "vendor_id": "V-ring",
+      "medium": "digital"
     },
     {
       "ie_id": "C00742635-ie-1839375-E15C564F9FF3946ACAD0",
@@ -97,7 +101,9 @@
       "date": "2024-10-16",
       "purpose": "ESTIMATED DIGITAL ADVERTISING",
       "payee": "GOOGLE",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202410249710392585"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202410249710392585",
+      "vendor_id": "V-google",
+      "medium": "digital"
     },
     {
       "ie_id": "C00742635-ie-1855249-E61E531FE660041B8A95",
@@ -110,7 +116,9 @@
       "date": "2024-10-31",
       "purpose": "PMT FOR EST FROM 10/24/2024. TEXTING OUTREACH; SEE EST TRANS ID#: ...42ED86D",
       "payee": "MUDSHARE",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202412059720694680"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202412059720694680",
+      "vendor_id": "V-mudshare",
+      "medium": "phones"
     },
     {
       "ie_id": "C00742635-ie-1855249-E336504747252442391E",
@@ -123,7 +131,9 @@
       "date": "2024-11-04",
       "purpose": "PMT FOR EST FROM 10/16/2024. DIGITAL ADVERTISING; SEE PMT EST ID#:...46ACAD0",
       "payee": "GOOGLE",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202412059720694673"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202412059720694673",
+      "vendor_id": "V-google",
+      "medium": "digital"
     },
     {
       "ie_id": "C00742635-ie-1872397-EEC14F32C416B49B8809",
@@ -136,7 +146,9 @@
       "date": "2024-12-02",
       "purpose": "PMT FOR EST FROM 10/16/2024. LATE ARRIVING DIGITAL AD CHARGE; SEE PMT EST ID#:...46ACAD0",
       "payee": "GOOGLE",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202501319749119324"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202501319749119324",
+      "vendor_id": "V-google",
+      "medium": "digital"
     }
   ],
   "flags": [
@@ -155,5 +167,99 @@
   ],
   "has_chain": true,
   "source_url": "https://www.fec.gov/data/committee/C00742635/?cycle=2024",
-  "data_status": "real"
+  "data_status": "real",
+  "vendors": [
+    {
+      "vendor_id": "V-mcshane",
+      "name": "MCSHANE LLC",
+      "amount": 7500.0,
+      "count": 1,
+      "media_mix": [
+        {
+          "medium": "other",
+          "amount": 7500.0,
+          "count": 1
+        }
+      ],
+      "targets": [
+        {
+          "candidate_id": "S6PA00217",
+          "support_oppose": "O",
+          "amount": 7500.0
+        }
+      ],
+      "first_date": "2024-10-09",
+      "last_date": "2024-10-09",
+      "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00742635&payee_name=MCSHANE+LLC"
+    },
+    {
+      "vendor_id": "V-ring",
+      "name": "RING LTD.",
+      "amount": 3000.0,
+      "count": 1,
+      "media_mix": [
+        {
+          "medium": "digital",
+          "amount": 3000.0,
+          "count": 1
+        }
+      ],
+      "targets": [
+        {
+          "candidate_id": "S6PA00217",
+          "support_oppose": "O",
+          "amount": 3000.0
+        }
+      ],
+      "first_date": "2024-10-16",
+      "last_date": "2024-10-16",
+      "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00742635&payee_name=RING+LTD."
+    },
+    {
+      "vendor_id": "V-google",
+      "name": "Google",
+      "amount": 2396.92,
+      "count": 3,
+      "media_mix": [
+        {
+          "medium": "digital",
+          "amount": 2396.92,
+          "count": 3
+        }
+      ],
+      "targets": [
+        {
+          "candidate_id": "S6PA00217",
+          "support_oppose": "O",
+          "amount": 2396.92
+        }
+      ],
+      "first_date": "2024-10-16",
+      "last_date": "2024-12-02",
+      "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00742635&payee_name=GOOGLE"
+    },
+    {
+      "vendor_id": "V-mudshare",
+      "name": "MUDSHARE",
+      "amount": 1230.46,
+      "count": 1,
+      "media_mix": [
+        {
+          "medium": "phones",
+          "amount": 1230.46,
+          "count": 1
+        }
+      ],
+      "targets": [
+        {
+          "candidate_id": "S6PA00217",
+          "support_oppose": "O",
+          "amount": 1230.46
+        }
+      ],
+      "first_date": "2024-10-31",
+      "last_date": "2024-10-31",
+      "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00742635&payee_name=MUDSHARE"
+    }
+  ]
 }

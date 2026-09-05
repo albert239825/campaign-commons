@@ -1,0 +1,135 @@
+{
+  "vendor_id": "V-18th-street-media",
+  "name": "18TH STREET MEDIA LLC",
+  "aliases": [
+    "18TH STREET MEDIA LLC"
+  ],
+  "normalization": {
+    "basis": "inferred",
+    "rule": "case/punctuation/suffix normalisation + token-set ≥0.92 (numeric tokens must match); aliases file",
+    "source_urls": [
+      "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&payee_name=18TH+STREET+MEDIA+LLC"
+    ],
+    "checked_by": null,
+    "checked_at": null
+  },
+  "total": 58832.01,
+  "count": 5,
+  "media_mix": [
+    {
+      "medium": "mail",
+      "amount": 56047.22,
+      "count": 3
+    },
+    {
+      "medium": "other",
+      "amount": 2784.79,
+      "count": 2
+    }
+  ],
+  "spenders": [
+    {
+      "entity_id": "C00528554",
+      "name": "RJC VICTORY FUND",
+      "amount": 58832.01,
+      "count": 5
+    }
+  ],
+  "targets": [
+    {
+      "candidate_id": "S6PA00217",
+      "support_oppose": "O",
+      "amount": 48568.4
+    },
+    {
+      "candidate_id": "S2PA00661",
+      "support_oppose": "S",
+      "amount": 10263.61
+    }
+  ],
+  "first_date": "2024-09-15",
+  "last_date": "2024-10-21",
+  "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&payee_name=18TH+STREET+MEDIA+LLC",
+  "race_id": "pa-sen-2024",
+  "generated_at": "2026-09-05T19:33:04+00:00",
+  "data_status": "real",
+  "expenditures": [
+    {
+      "ie_id": "C00528554-ie-1856803-SE.5281",
+      "spender_entity_id": "C00528554",
+      "spender_name": "RJC VICTORY FUND",
+      "candidate_id": "S6PA00217",
+      "candidate_name": "Bob Casey",
+      "support_oppose": "O",
+      "amount": 11691.16,
+      "date": "2024-10-21",
+      "purpose": "DIRECT MAIL",
+      "payee": "18TH STREET MEDIA LLC",
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202412059730903615",
+      "vendor_id": "V-18th-street-media",
+      "medium": "mail"
+    },
+    {
+      "ie_id": "C00528554-ie-1825044-SE.5153",
+      "spender_entity_id": "C00528554",
+      "spender_name": "RJC VICTORY FUND",
+      "candidate_id": "S2PA00661",
+      "candidate_name": "Dave McCormick",
+      "support_oppose": "S",
+      "amount": 8871.21,
+      "date": "2024-09-27",
+      "purpose": "DIRECT MAIL",
+      "payee": "18TH STREET MEDIA LLC",
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202410149685244579",
+      "vendor_id": "V-18th-street-media",
+      "medium": "mail"
+    },
+    {
+      "ie_id": "C00528554-ie-1825044-SE.5152",
+      "spender_entity_id": "C00528554",
+      "spender_name": "RJC VICTORY FUND",
+      "candidate_id": "S6PA00217",
+      "candidate_name": "Bob Casey",
+      "support_oppose": "O",
+      "amount": 35484.85,
+      "date": "2024-09-27",
+      "purpose": "DIRECT MAIL",
+      "payee": "18TH STREET MEDIA LLC",
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202410149685244578",
+      "vendor_id": "V-18th-street-media",
+      "medium": "mail"
+    },
+    {
+      "ie_id": "C00528554-ie-1825044-SE.5042",
+      "spender_entity_id": "C00528554",
+      "spender_name": "RJC VICTORY FUND",
+      "candidate_id": "S6PA00217",
+      "candidate_name": "Bob Casey",
+      "support_oppose": "O",
+      "amount": 1392.39,
+      "date": "2024-09-15",
+      "purpose": "DOORHANGERS",
+      "payee": "18TH STREET MEDIA LLC",
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202410149685244573",
+      "vendor_id": "V-18th-street-media",
+      "medium": "other"
+    },
+    {
+      "ie_id": "C00528554-ie-1825044-SE.5044",
+      "spender_entity_id": "C00528554",
+      "spender_name": "RJC VICTORY FUND",
+      "candidate_id": "S2PA00661",
+      "candidate_name": "Dave McCormick",
+      "support_oppose": "S",
+      "amount": 1392.4,
+      "date": "2024-09-15",
+      "purpose": "DOORHANGERS",
+      "payee": "18TH STREET MEDIA LLC",
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202410149685244574",
+      "vendor_id": "V-18th-street-media",
+      "medium": "other"
+    }
+  ],
+  "ads": [],
+  "method": "Every Schedule E independent expenditure names a payee. Payee strings are normalised (case, punctuation, legal suffixes, token order), near-duplicates are folded with a difflib ratio ≥ 0.92 when their numeric tokens match, and hand alias rows from data/hand/<race>/vendor_aliases.json override the rule. Medium is classified from the purpose the spender filed (ordered keyword table in gotham/vendors.py); the FEC does not record which buy placed which ad, so vendor ↔ ad links are empty until a human verifies one. Totals are the filed amounts, grouped, never re-estimated."
+}
