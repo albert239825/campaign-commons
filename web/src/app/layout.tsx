@@ -22,6 +22,9 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
               <Link href={routes.home()} className="hover:text-neutral-900">
                 Races
               </Link>
+              <Link href={routes.personalize()} className="hover:text-neutral-900">
+                Personalize
+              </Link>
               <Link href={routes.methodology()} className="hover:text-neutral-900">
                 Methodology
               </Link>

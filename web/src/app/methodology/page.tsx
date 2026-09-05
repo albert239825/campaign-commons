@@ -1,5 +1,6 @@
 // OWNER: master session. Plain-English methodology; keep in sync with docs/DECISIONS.md.
 import { UNWALKED_COLOR, UNWALKED_LABEL, VISIBILITY_COLORS, VISIBILITY_LABELS } from "@citizen-gotham/contracts";
+import Link from "next/link";
 import { Card } from "@/components/ui";
 
 export default function MethodologyPage() {
@@ -66,6 +67,38 @@ export default function MethodologyPage() {
           are marked &quot;needs review&quot; until a second person has checked them.
         </p>
       </Card>
+      <div id="alignment">
+        <Card title="Alignment (personalize)">
+          <div className="space-y-3 text-sm">
+            <p>
+              Alignment is a user-driven estimate over human-coded stance directions. Each direction is coded against a published per-issue axis and
+              marked needs review until a second person checks it.
+            </p>
+            <p>
+              The estimate is computed entirely in the browser from the same dossier files. It is not an instruction about how to vote and makes no
+              claim about why a candidate voted. Every issue in the score links to every source record it was built from.
+            </p>
+            <p>
+              The issue poles used for the estimate are:
+            </p>
+            <ul className="list-disc space-y-1 pl-5 text-xs text-neutral-600">
+              <li>Health care: larger federal role ↔ smaller federal role</li>
+              <li>Energy &amp; climate: emissions rules and clean energy ↔ fossil-fuel production and fewer regulations</li>
+              <li>Defense: higher spending and more foreign military aid ↔ lower spending and fewer commitments</li>
+              <li>Crypto &amp; finance: tighter regulation ↔ lighter regulation</li>
+              <li>Immigration: stricter enforcement and limits ↔ broader legal pathways and less enforcement</li>
+              <li>Abortion: protect access in federal law ↔ restrict access</li>
+              <li>Guns: stricter regulation ↔ fewer restrictions</li>
+              <li>Taxes &amp; budget: more revenue and spending ↔ lower taxes and spending</li>
+              <li>Tech &amp; AI: stronger regulation ↔ lighter regulation</li>
+              <li>Labor &amp; trade: stronger protections and enforcement ↔ fewer labor rules and freer trade</li>
+            </ul>
+            <Link href="/personalize" className="inline-block underline decoration-dotted underline-offset-2">
+              Set your issue positions →
+            </Link>
+          </div>
+        </Card>
+      </div>
     </div>
   );
 }

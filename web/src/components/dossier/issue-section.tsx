@@ -1,5 +1,6 @@
 import type { ISSUES, Stance } from "@citizen-gotham/contracts";
 import { Chip, type ChipTone } from "@/components/ui";
+import { directionLabel } from "@/lib/alignment";
 import { EvidenceList } from "./evidence-list";
 
 const CONFIDENCE_TONE: Record<Stance["confidence"], ChipTone> = { high: "green", medium: "amber", low: "muted" };
@@ -21,6 +22,15 @@ export function IssueSection({ issue, stance }: { issue: (typeof ISSUES)[number]
               <Chip tone={CONFIDENCE_TONE[stance.confidence]} title="How well the evidence below supports the one-line position">
                 {stance.confidence} confidence
               </Chip>
+              {stance.direction === undefined ? (
+                <Chip tone="muted" title="Human-coded against the published issue axis; this stance has no coded position">
+                  no coded position
+                </Chip>
+              ) : (
+                <Chip tone="neutral" title="Human-coded against the published issue axis">
+                  {directionLabel(issue.id, stance.direction)}
+                </Chip>
+              )}
               {stance.needs_review && <Chip tone="amber" title="Position and evidence not yet checked by a human">needs review</Chip>}
             </div>
           </div>
