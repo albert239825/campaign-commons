@@ -1,8 +1,9 @@
 import { DetailHeader } from "@/components/ui/detail-layout";
-import { getRace, getStories, hasChain, listRaceIds } from "@/lib/data";
+import { getAds, getRace, getStories, hasChain, listRaceIds } from "@/lib/data";
 import { date, routes } from "@/lib/format";
 import { AdjacencyNote, Breadcrumbs, DataStatusBanner } from "@/components/ui";
 import { StoryCard } from "@/components/ledger/story-card";
+import { RaceNav } from "@/components/ui/race-nav";
 
 export const generateStaticParams = () => listRaceIds().map((raceId) => ({ raceId }));
 
@@ -16,6 +17,7 @@ export default async function StoriesPage({ params }: { params: Promise<{ raceId
     <div className="detail-page stories-page">
       <Breadcrumbs items={[{ href: routes.home(), label: "Races" }, { href: routes.race(raceId), label: race.label }, { label: "Stories" }]} />
       <DataStatusBanner status={stories.data_status} />
+      <RaceNav race={race} counts={{ ads: getAds(raceId).ads.length, stories: stories.stories.length }} active={routes.stories(raceId)} />
       <DetailHeader label={race.label} title="Funding highlights">
         <p className="max-w-3xl text-sm text-neutral-600">
           {stories.stories.length} outside spenders the pipeline ranked as worth a look: the largest by independent expenditures, the largest whose

@@ -15,7 +15,7 @@ pipeline/    Python: FEC bulk → DuckDB → filtered Parquet → static JSON. O
 data/fec/    Filtered FEC Parquet per race (committed, small).
 data/out/    JSON the web app reads (committed). races.json + <race_id>/{ledger,ads,stories}.json + entities/ chains/ dossiers/
 web/         Next.js 15 app. Reads data/out at build time. No backend, no runtime fetches.
-docs/        PLAN.md (technical plan) · CONTRACTS.md · DECISIONS.md (log) · SATURDAY.md (handoff)
+docs/        README.md (index) · FAQ.md · QUESTIONS.md (open) · DECISIONS.md (log) · PLAN.md · CONTRACTS.md · SATURDAY.md
 ```
 
 ## Run it
