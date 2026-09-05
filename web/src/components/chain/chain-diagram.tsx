@@ -153,7 +153,8 @@ export function ChainDiagram({ wire, maxDepth }: { wire: ChainViewWire; maxDepth
   for (const e of graph.edges) txnsFrom.set(e.from, (txnsFrom.get(e.from) ?? 0) + e.count);
   const closed = graph.nodes.filter((n) => n.state === "closed").length;
   return (
-    <figure>
+    <figure className="chain-figure">
+      <div className="chain-map-scroll" tabIndex={0} role="region" aria-label="Scrollable funding map">
       <svg
         viewBox={`0 0 ${L.width} ${L.height + 22}`}
         width="100%"
@@ -185,6 +186,7 @@ export function ChainDiagram({ wire, maxDepth }: { wire: ChainViewWire; maxDepth
           <NodeBox key={ln.node.id} ln={ln} txns={txnsFrom.get(ln.node.id) ?? 0} onToggle={toggle} />
         ))}
       </svg>
+      </div>
       <figcaption className="mt-1 text-xs text-neutral-500">
         Drawn: the spender, its direct sources and every node carrying at least {Math.round(MATERIAL_SHARE * 100)}% of its receipts
         {graph.hidden.nodes > 0 && ` — ${graph.hidden.nodes} smaller ${graph.hidden.nodes === 1 ? "source" : "sources"} (${money(graph.hidden.amount)}) folded into dashed “other” nodes`}

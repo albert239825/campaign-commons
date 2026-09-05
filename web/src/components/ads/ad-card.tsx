@@ -46,11 +46,11 @@ export function AdCard({
   const verified = isVerified(ad);
   const fecEvidence = verified ? ad.verification?.evidence_urls.find((u) => u.startsWith("https://www.fec.gov/data/committee/")) : undefined;
   return (
-    <article id={ad.ad_id} className="flex flex-col overflow-hidden rounded-lg border border-neutral-200 bg-white target:ring-2 target:ring-neutral-900">
+    <article id={ad.ad_id} className="ad-record flex flex-col overflow-hidden rounded-lg border border-neutral-200 bg-white target:ring-2 target:ring-neutral-900">
       <div className="border-b border-neutral-100">
         <Creative ad={ad} />
       </div>
-      <div className="flex flex-1 flex-col gap-2 p-3">
+      <div className="ad-record-content flex flex-1 flex-col gap-2 p-3">
         <header>
           <div className="flex items-start justify-between gap-2">
             <h3 className="text-sm font-semibold leading-tight">{ad.advertiser_name}</h3>
@@ -83,7 +83,7 @@ export function AdCard({
           <dt className="text-neutral-500">Impressions</dt>
           <dd className="text-right tabular-nums">{range(ad.impressions_range.min, ad.impressions_range.max)}</dd>
           <dt className="text-neutral-500">Shown</dt>
-          <dd className="whitespace-nowrap text-right">
+          <dd className="text-right">
             {date(ad.first_shown)} – {date(ad.last_shown)}
           </dd>
           {ad.regions.length > 0 && (

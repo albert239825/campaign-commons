@@ -26,7 +26,7 @@ export function SourceLink({ href, label = "source", className = "" }: { href: s
       href={href}
       target="_blank"
       rel="noreferrer"
-      className={`text-xs text-neutral-500 underline decoration-dotted underline-offset-2 hover:text-neutral-900 ${className}`}
+      className={`source-link text-xs text-neutral-500 underline decoration-dotted underline-offset-2 hover:text-neutral-900 ${className}`}
     >
       {label} ↗
     </a>
@@ -55,8 +55,8 @@ export function VisibilityDot({ visibility, className = "" }: { visibility: Visi
 export function VisibilityBadge({ visibility }: { visibility: Visibility }) {
   return (
     <span
-      className="inline-flex items-center gap-1.5 rounded-full border px-2 py-0.5 text-xs font-medium"
-      style={{ borderColor: VISIBILITY_COLORS[visibility], color: VISIBILITY_COLORS[visibility] }}
+      className="visibility-badge inline-flex items-center gap-1.5 rounded-full border px-2 py-0.5 text-xs font-medium"
+      style={{ borderColor: VISIBILITY_COLORS[visibility], color: `var(--visibility-${visibility}-text, ${VISIBILITY_COLORS[visibility]})` }}
     >
       <VisibilityDot visibility={visibility} />
       {VISIBILITY_LABELS[visibility]}
@@ -69,7 +69,7 @@ export function FlagBadge({ flag }: { flag: Flag | FlagId }) {
   const detail = typeof flag === "string" ? undefined : flag.detail;
   return (
     <span
-      className="inline-flex items-center rounded-sm border border-amber-300 bg-amber-50 px-1.5 py-0.5 text-[11px] font-medium text-amber-900"
+      className="flag-badge inline-flex items-center rounded-sm border border-amber-300 bg-amber-50 px-1.5 py-0.5 text-[11px] font-medium text-amber-900"
       title={detail}
     >
       ⚑ {FLAG_LABELS[id]}
@@ -81,7 +81,7 @@ export function FlagBadge({ flag }: { flag: Flag | FlagId }) {
 export function DataStatusBanner({ status }: { status: DataStatus }) {
   if (status === "real") return null;
   return (
-    <div className="mb-4 rounded-md border border-dashed border-neutral-400 bg-neutral-50 px-3 py-2 text-xs text-neutral-700">
+    <div className="data-status-banner mb-4 rounded-md border border-dashed border-neutral-400 bg-neutral-50 px-3 py-2 text-xs text-neutral-700">
       {status === "mock"
         ? "Mock data — committee IDs are real, dollar figures are placeholders until the FEC pipeline lands."
         : "Partial data — some figures are still being computed."}
@@ -105,7 +105,7 @@ export function Card({ title, children, action }: { title?: ReactNode; children:
 
 export function Stat({ label, value, sub }: { label: string; value: ReactNode; sub?: ReactNode }) {
   return (
-    <div>
+    <div className="ui-stat">
       <div className="text-xs uppercase tracking-wide text-neutral-500">{label}</div>
       <div className="text-2xl font-semibold tabular-nums">{value}</div>
       {sub && <div className="text-xs text-neutral-500">{sub}</div>}
@@ -115,7 +115,7 @@ export function Stat({ label, value, sub }: { label: string; value: ReactNode; s
 
 export function Breadcrumbs({ items }: { items: { href?: string; label: string }[] }) {
   return (
-    <nav className="mb-4 text-sm text-neutral-500">
+    <nav aria-label="Breadcrumb" className="breadcrumbs mb-4 text-sm text-neutral-500">
       {items.map((it, i) => (
         <span key={i}>
           {i > 0 && <span className="mx-1.5">/</span>}

@@ -1,3 +1,4 @@
+import { DetailHeader } from "@/components/ui/detail-layout";
 import { getDonor, getRace, listDonorKeys, listRaceIds } from "@/lib/data";
 import { date, money, routes } from "@/lib/format";
 import { AdjacencyNote, Breadcrumbs, Card, DataStatusBanner, Money, SourceLink, Stat } from "@/components/ui";
@@ -15,17 +16,16 @@ export default async function DonorPage({ params }: { params: Promise<{ raceId: 
   const targeting = view.edges.filter((e) => e.kind === "targeting");
 
   return (
-    <div className="space-y-6">
+    <div className="detail-page donor-page">
       <Breadcrumbs items={[{ href: routes.home(), label: "Races" }, { href: routes.race(raceId), label: race.label }, { label: view.name }]} />
       <DataStatusBanner status={view.data_status} />
-      <header className="space-y-2">
-        <h1 className="text-2xl font-semibold tracking-tight">Where {view.name}&apos;s money went</h1>
+      <DetailHeader label={`Donor record · ${race.label}`} title={<>Where {view.name}&apos;s money went</>}>
         <div className="flex flex-wrap items-center gap-x-4 gap-y-1 text-sm text-neutral-600">
           <span className="capitalize">{view.kind}</span>
           {donor && <SourceLink href={donor.source_url} label="FEC receipts under this name" />}
           <span className="text-xs text-neutral-500">Forward walk over 2024-cycle money edges, ending at independent expenditures in this race.</span>
         </div>
-      </header>
+      </DetailHeader>
 
       <Card>
         <div className="grid grid-cols-2 gap-4 md:grid-cols-4">

@@ -80,7 +80,7 @@ function NodeName({ n }: { n: RowEnd | null }) {
 /** Table markup is deliberately class-light (styled via `.edge-table` in globals.css): a hundred rows ship in the page. */
 export function EdgeRows({ rows }: { rows: EdgeRow[] }) {
   return (
-    <div className="overflow-x-auto">
+    <div className="data-table-scroll overflow-x-auto" tabIndex={0} role="region" aria-label="Scrollable receipt records">
       <table className="edge-table">
         <thead>
           <tr>

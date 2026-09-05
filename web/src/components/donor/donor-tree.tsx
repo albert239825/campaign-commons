@@ -57,7 +57,7 @@ export function DonorTree({ view, raceId }: { view: DonorView; raceId: string })
   }
 
   return (
-    <ul className="space-y-0.5">
+    <ul className="donor-tree space-y-0.5">
       <Node n={root} via={null} />
     </ul>
   );

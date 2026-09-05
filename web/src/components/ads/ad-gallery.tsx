@@ -41,8 +41,8 @@ export function AdGallery({
   );
 
   return (
-    <div className="space-y-3">
-      <div className="flex flex-wrap items-center gap-x-5 gap-y-2 text-sm">
+    <div className="ad-gallery space-y-3">
+      <div className="ad-gallery-controls flex flex-wrap items-center gap-x-5 gap-y-2 text-sm">
         <label className="inline-flex cursor-pointer items-center gap-2">
           <input type="checkbox" checked={matchedOnly} onChange={(e) => setMatchedOnly(e.target.checked)} className="h-3.5 w-3.5 accent-neutral-900" />
           Only ads with a matched FEC sponsor
@@ -62,7 +62,7 @@ export function AdGallery({
           </select>
         </label>
       </div>
-      <p className="text-xs text-neutral-500">
+      <p role="status" aria-live="polite" className="ad-gallery-count text-xs text-neutral-500">
         Showing {shown.length} of {ads.length} ads.
       </p>
       {shown.length === 0 ? (
@@ -70,7 +70,7 @@ export function AdGallery({
           {ads.length === 0 ? "No ads loaded for this race yet." : "No ads match this filter."}
         </p>
       ) : (
-        <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="ad-gallery-grid grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
           {shown.map((ad) => (
             <AdCard key={ad.ad_id} ad={ad} raceId={raceId} sponsorHasPage={ad.matched_entity_id !== null && entities.has(ad.matched_entity_id)}
               sponsorHasChain={ad.matched_entity_id !== null && chains.has(ad.matched_entity_id)} candidateNames={candidateNames} />
