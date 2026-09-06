@@ -540,4 +540,4 @@ neither, and a "Vendors 0" tab would say the stage ran and found nothing. `vendo
 the dashboard's 88px row gap did not open between them; `RaceShell` has a `dashboard` variant for exactly that.
 
 **Numbers.** 2,960 pages build (no routes added or removed). `scrollWidth` at 390px: 417 → 375 (= viewport) on all 11
-sampled race pages. 32 `body:has(...)` header/font rules → 7 (landing hero only).
+sampled race pages. `body:has(...)` rules 38 → 7 (landing hero only); palette hexes 75 → 21 (the rest are in `@theme` or page-local tints).
