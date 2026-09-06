@@ -241,6 +241,7 @@ def run(
     ledger = read_json(ledger_path) if ledger_path.exists() else []
     if not isinstance(ledger, list):
         ledger = []
+    processed: set[str] = set()
     for ad, transcript, key in plans:
         budget_hit = False
         cache_path = cache_dir / f"{key}.json"
@@ -282,6 +283,7 @@ def run(
                 print(f"budget exhausted: ${spent:.6f} used, ${max(0.0, max_usd - spent):.6f} left", file=sys.stderr)
                 exit_code = 3
                 budget_hit = True
+        processed.add(str(ad["ad_id"]))
         response = entry.get("response", {})
         try:
             parsed = _parse_response(response)
@@ -300,7 +302,6 @@ def run(
     hand_path = DATA / "hand" / race_id / "x_ad_issues.json"
     existing = read_json(hand_path) if hand_path.exists() else {"race_id": race_id, "method": "", "rows": []}
     old_rows = existing.get("rows", []) if isinstance(existing, dict) else []
-    processed = {str(ad["ad_id"]) for ad, _, _ in plans}
     kept = [row for row in old_rows if isinstance(row, dict) and str(row.get("ad_id")) not in processed]
     output = {
         "race_id": race_id,
