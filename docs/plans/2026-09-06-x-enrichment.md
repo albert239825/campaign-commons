@@ -1,8 +1,9 @@
 # Block 3 child F — LLM enrichment (web/news first, X supplement, ad transcripts): design
 
-_2026-09-06 · owner: child F · status: **design for review, nothing built** · rev 3 after Albert's feedback: drop D-09
-entirely (runtime LLM calls are coming), web/news search is the primary source and X posts a supplement, and tag ads from
-their transcripts._
+_2026-09-06 · owner: child F · status: **agreed (rev 4); Phase 2 building, ads stage first** · Albert's decisions: drop
+D-09 entirely (runtime LLM calls are coming); web/news search is the primary source, X posts only a supplement for
+candidates; spenders from their website only (no X); ads tagged from their transcripts, with Albert running the caption
+fetch locally (`make enrich-transcripts`); store and cite every source._
 
 Provider for everything: xAI `POST /v1/responses` (`XAI_API_KEY` credits) with server-side `web_search` and `x_search`,
 JSON-schema output, `response.citations` as the source URLs. No X API. Standing rules unchanged: every visible claim carries
@@ -15,7 +16,7 @@ overwritten by machine output; machine output never produces a number.
 | --- | --- | --- | --- | --- | --- |
 | 1 | **Ad issue tags** — 458 untagged of 500 | The ad itself: YouTube auto-captions of the video (pipeline already resolves `video_id` for VIDEO ads, D-22) → Grok classifies into `ISSUES`; TEXT ads from their text. No search at all. | `x_ad_issues.json` → `ads.json[].machine_issues` | ~500 × 2k tokens ≈ **$2**; no tool calls | **First** — biggest gap, cheapest, most certain (it reads the creative, not talk about it) |
 | 2 | **Dossier stances** — both candidates, 10 issues | `web_search` (news, campaign site, senate.gov, votesmart.org, ballotpedia) → summary with citations; then `x_search` on the candidate's verified handles as a supplement ("in their own words") | `x_stances.json` → `dossiers/<id>.enrichment` | 20 units × ~6 calls ≈ 120 calls ≈ **$1** + tokens | Second |
-| 3 | **Spender self-description** — 75 untagged of 98 | `web_search` on the committee's own site (`allowed_domains`), else open web (OpenSecrets, press) ; `x_search` on its handle only if the site confirms the handle | `x_issue_focus.json` → `entities/<id>.x_enrichment` | 75 × ~5 calls ≈ **$2** + tokens | Third (only 2.6% of dollars) |
+| 3 | **Spender self-description** — 75 untagged of 98 | `web_search` on the committee's own site (`allowed_domains`), else open web (OpenSecrets, press). **No X.** | `x_issue_focus.json` → `entities/<id>.x_enrichment` | 75 × ~3 calls ≈ **$1** + tokens | Third (only 2.6% of dollars) |
 | — | IE notices | nothing to join on (no topic in the notice; date ≠ relationship, D-74) | — | — | Drop |
 
 Whole batch ≈ **$5–10**; re-runs free from cache.
@@ -25,8 +26,8 @@ Whole batch ≈ **$5–10**; re-runs free from cache.
 **Yes, with one constraint.** `ads_creatives.py` already turns a creative id into a YouTube `video_id` (checked today:
 `CR05367732770854404097 → 8tImprYNVDU`). YouTube serves auto-generated captions for most videos without any key
 (`youtube-transcript-api` / `yt-dlp --write-auto-sub`). **But YouTube blocks datacenter IPs** — tested from this VM:
-`RequestBlocked`. So the transcript fetch step must run from a residential IP (Albert's machine) or through a proxy; the
-Grok classification and everything else can run anywhere. Fallbacks, in order: (a) no captions → `yt-dlp` audio +
+`RequestBlocked`. **Decision: Albert runs `make enrich-transcripts` locally** (residential IP; ~460 short requests, no
+key) which fills `data/raw/yt/`; the Grok classification and everything else run from that cache anywhere. Fallbacks, in order: (a) no captions → `yt-dlp` audio +
 local Whisper (30-s ads, seconds each); (b) still nothing → `cached_creative_path` poster frame to Grok with image
 understanding (weak; low confidence); (c) TEXT/IMAGE ads: the transparency lookup RPC / preview JS contains the rendered
 text for TEXT ads — to confirm in the smoke test.
@@ -57,8 +58,8 @@ on the 26 cached ads tells us.
 ## 3. Spender self-description
 
 `web_search` with `filters.allowed_domains = [committee website]` when FEC lists one (About page — how the human rows were
-made); otherwise open web, row written only if the found page names the committee/FEC id. `x_search` on the handle only
-after the site confirms it. Output mirrors `HandIssueFocusRow` (kind, ≤3 issues, description, quote, source_urls) +
+made); otherwise open web, row written only if the found page names the committee/FEC id. **No `x_search` for spenders**
+(Albert). Output mirrors `HandIssueFocusRow` (kind, ≤3 issues, description, quote, source_urls) +
 provenance → `entities/<id>.x_enrichment.issue_focus`; human `issue_focus` untouched; `by_spender_focus` counts human rows
 only unless Albert wants accepted rows in (Q5).
 
@@ -97,7 +98,7 @@ MachineProvenance = { tagged_by: "xai-<model>-<date>", tagged_at, model, prompt_
 
 | # | Question | Default |
 | --- | --- | --- |
-| Q1 | Ads first? And can you run the caption-fetch step from your machine (YouTube blocks cloud IPs), or should I add proxy support? | ads first; you run it |
+| Q1 | ~~Ads first? Who runs the caption fetch?~~ **Answered: ads first; Albert runs `make enrich-transcripts` locally.** | — |
 | Q2 | Repo public → commit excerpts/URLs only? | yes |
 | Q3 | Budget cap for the batch? | $15 |
 | Q4 | Model: `grok-4.3` if it accepts structured output + tools (1-call smoke test), else `grok-4.6`? | 4.3 → 4.6 |
