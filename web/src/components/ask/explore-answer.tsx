@@ -1,4 +1,4 @@
-// OWNER: Money Trails exploratory mode (D-79).
+// OWNER: Money Trails exploratory mode (D-80).
 import Link from "next/link";
 import type { ReactNode } from "react";
 import { Card, Chip, SourceLink } from "@/components/ui";

@@ -8,6 +8,7 @@ import {
   type Visibility,
 } from "@campaign-commons/contracts";
 import { BASIS_LABELS, toBasisWire, type BasisWire } from "./basis";
+import { edgeRowId } from "./edge-reveal";
 import { date, money } from "@/lib/format";
 import { pageHref, type NodeLinks } from "./links";
 import { terminusLabel } from "./terminus";
@@ -26,6 +27,8 @@ export type EdgeRow = {
   /** Block 2: placement / targeting edges carry no dollars to `to`; money is the default. */
   kind: ChainEdgeKind;
   basis: BasisWire | null;
+  /** Position in `chain.edges`; the row's id, and what the diagram sends when an edge is clicked. */
+  index: number;
 };
 type RowEnd = {
   name: string;
@@ -49,6 +52,7 @@ export type EdgeRowsWire = {
     EdgeRow["source_url"],
     ChainEdgeKind | null,
     BasisWire | null,
+    EdgeRow["index"],
   ][];
 };
 
@@ -58,6 +62,7 @@ export function toWireRows(
   links: NodeLinks,
 ): EdgeRowsWire {
   const byId = new Map(chain.nodes.map((n) => [n.id, n]));
+  const indexOf = new Map(chain.edges.map((e, i) => [e, i]));
   const ends: RowEnd[] = [];
   const endIndex = new Map<string, number>();
   const end = (id: string, withTerminus: boolean): number => {
@@ -90,6 +95,7 @@ export function toWireRows(
       e.source_url,
       e.kind && e.kind !== "money" ? e.kind : null,
       toBasisWire(e.basis),
+      indexOf.get(e) ?? -1,
     ]),
   };
 }
@@ -108,6 +114,7 @@ export function fromWireRows(w: EdgeRowsWire): EdgeRow[] {
       source_url,
       kind,
       basis,
+      index,
     ]) => ({
       depth,
       from: from >= 0 ? w.ends[from] : null,
@@ -120,6 +127,7 @@ export function fromWireRows(w: EdgeRowsWire): EdgeRow[] {
       source_url,
       kind: kind ?? "money",
       basis,
+      index,
     }),
   );
 }
@@ -157,7 +165,7 @@ export function EdgeRows({ rows }: { rows: EdgeRow[] }) {
         </thead>
         <tbody>
           {rows.map((e, i) => (
-            <tr key={i}>
+            <tr key={e.index >= 0 ? e.index : `r${i}`} id={e.index >= 0 ? edgeRowId(e.index) : undefined}>
               <td className="hop">{e.depth}</td>
               <td>
                 <NodeName n={e.from} />

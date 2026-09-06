@@ -1,5 +1,5 @@
 /**
- * The two model calls of graph mode (D-77), both server-only and both constrained.
+ * The two model calls of graph mode (D-78), both server-only and both constrained.
  *
  * 1. `classifyGraph` — Grok reads the question and picks one allowlisted operation plus its subjects: a subject id from
  *    the race's closed list (trails.json) when the question names a candidate or committee, else the name as typed, for

@@ -33,7 +33,7 @@ it came from.
 | 17:30–18:30 | Whiteboard → ontology | Race nav, docs wiki (FAQ / QUESTIONS / DECISIONS), `ONTOLOGY.md` (questions × surfaces, ER diagram, sources, V0/V1/V2 scope) |
 | 20:30–21:30 | Money Trails (`feature/ask-money-trails`) | `TrailsSchema` + `trails.json`, deterministic question resolver, `/races/<race>/ask` answer pages (D-73) |
 | 23:00–00:30 | Money Trails LLM router (`feature/ask-llm-router`) | `/api/ask-route` + `ask-llm.ts`: Grok picks the route from the closed set, resolver still decides the page, deterministic fallback (D-75) |
-| 01:00–03:00 | Money Trails graph mode (`feature/ask-graph`) | Local Neo4j loaded from `data/out`; `/api/ask-graph`: four allowlisted operations, source-backed facts, Grok narrates only from them and is withheld when it strays (D-77) |
+| 01:00–03:00 | Money Trails graph mode (`feature/ask-graph`) | Local Neo4j loaded from `data/out`; `/api/ask-graph`: four allowlisted operations, source-backed facts, Grok narrates only from them and is withheld when it strays (D-78) |
 
 ## Challenges and how we overcame them
 
@@ -188,7 +188,7 @@ this deploy, so it is per warm instance, and stated as such.
 $2 / $6 per M ≈ $0.006 per ask cold, ≈ $0.002 cached. Tests 23 → 57 (16 classifier, 15 route handler, 3 limiter, all offline with a
 mocked `fetch`); serverless functions 0 → 1; static pages unchanged.
 
-### 15. Money Trails — graph mode: the model may narrate, but only what the graph returned (D-77)
+### 15. Money Trails — graph mode: the model may narrate, but only what the graph returned (D-78)
 **Ask.** Two kinds of question the route resolver cannot serve even with D-75 behind it: traversal ("does Elon Musk's money
 reach Bob Casey?") and aggregation across subjects ("who do WinSenate and Women Vote share as funders?", "who funds
 McCormick's funders?"). No precomputed page holds those, and the router can only pick pages. The direction agreed: not
@@ -225,7 +225,7 @@ on every ask (6–11 s observed) — it has its own 15 s. Grok puts citations af
 uppercase names carry periods ("NAU, JOHN L. MR. III") and digits ("2024 THUNE …"), all of which the first guard rejected as
 uncited or unknown; the guard now normalises citation placement, does not split inside uppercase names, and allows digits
 that appear in a fact's name. Neo4j Community has no node-key constraints (`IS UNIQUE` instead) and no `CALL … IN
-TRANSACTIONS` inside an explicit transaction (reset is one `DETACH DELETE`). D-76 was taken meanwhile; this is D-77.
+TRANSACTIONS` inside an explicit transaction (reset is one `DETACH DELETE`). D-76 and D-77 were taken meanwhile; this is D-78.
 **Numbers.** Live on PA-Sen: Musk → Casey `money_path` 8 facts, narrative ok; WinSenate ∩ Women Vote `shared_funders` → SMP,
 2 facts; McCormick `upstream` 30 facts; Yass `funder_reach` 17 facts. Classifier 2–4 s, narrator 6–11 s. Tests 59 → 126 (9
 schema on real artifacts, 14 queries, 23 classifier/narrator/guard, 13 orchestration, 8 endpoint incl. limiter and an
@@ -621,6 +621,40 @@ nullable when the ad has no dates), which the PA data does not yet exercise (0 v
 611 → 728 across 280 → 284 ads (mixed-media vendors' digital portions now shown); links unchanged at 115 inferred, one rule
 text corrected. 171 pipeline tests.
 
+## 2026-09-06 ~06:30 — Block 3 child C: the chain page after the Sep 5 critique (no zoom/pan)
+
+**What changed.** Five of the six chain-page items from the critique (G1–G5; G6 zoom/pan is child G). The **root** is now
+unmistakable: a 3px ink outline with a soft halo, its name in a filled ink chip, a "YOU ARE HERE · THE SPENDER" caption, and
+a matching legend entry — page ink, not a party or a visibility colour. **Labels fit**: `chain/label.ts` estimates text width
+from a glyph-advance table (Arial/Helvetica metrics, 4% safety) so `layout.ts` and the SVG agree without measuring in the
+browser; a name that cannot share one row with its amount wraps to two rows (fixed-height out-side boxes grow from 28 to
+42px) and is ellipsised after that, with the full name in the accessible label, the tooltip and the panel. "Greater New
+York Hospital Association Management Corporation" reads as two rows plus an ellipsis; the 12 longest labels in `chains/*.json`
+are all `Other contributors to …` folds (up to 245 characters) and now truncate cleanly instead of running out of the box.
+**Misc ads** (`54 more ads` on WINSENATE) sort to the foot of the ads column with a 12px gap, in the smaller grey face.
+**Edge table** starts folded behind "Show all 487 edges, each with its record"; rows carry `id="edge-<i>"` where `i` is
+the edge's position in `chain.edges`, the diagram wire carries the same index as a ninth tuple slot (additive; `-1` for
+client-side folds), and clicking a ribbon or spine dispatches a `chain:reveal-edge` event that the ledger listens for:
+opens the fold (and the long tail if the row lives there), `scrollIntoView`, marks the row. `#edge-<i>` in the URL does the
+same, so a row is linkable. The click also opens a new **edge panel** under the picture — both ends (clickable into their
+node panels), the dollars with what they are ("$19,673,929" for money; "…in independent expenditures — no dollars reach the
+candidate" for targeting; "est. ad spend (range midpoint) — no dollars move on this edge" for placement), visibility and
+transaction count, `BasisLine` with the rule and sources for derived edges, and "Show its row in the table ↓". **Hover /
+focus** on any node or edge shows a small HTML tooltip by the pointer (or beside the focused element for keyboard users):
+kind, name, amount in and money out (root: receipts traced / out to vendors), visibility and terminus for sources, edge
+amount and basis label for edges, the cached creative for ad nodes that have one (name-only otherwise, Q3-10 default).
+Ribbons and spines are now focusable buttons with full accessible labels. Node click → node panel is unchanged. D-77.
+
+**Challenge.** The picture is a client island and the table is server-rendered a card below it, so "click an edge, light
+its row" had no shared state to go through; a DOM event plus a stable row id keeps the table server-rendered (100 rows in
+the HTML, the tail as data) and the wire additive. Text fitting had to be deterministic on both sides of hydration, which
+ruled out `getComputedTextLength`; a metric table is within a few percent of the real font and errs wide. Tooltip
+positioning is written straight to the element's style on `mousemove` so hovering does not re-render a 60-node SVG.
+
+**Numbers.** WINSENATE: 487 edges in the table, 100 rendered on load, table folded; 54 ads folded into the roll-up; the
+root chip fits `AMERICAN HOSPITAL ASSOCIATION PAC` on two rows. Wire edge tuple 8 → 9 slots. `npm run lint`, `tsc
+--noEmit`, `next build` clean; no data or contract changes.
+
 ## 2026-09-06 ~06:00 — Spender issue positions (Money Trails follow-up)
 
 **What changed.** Added a third issue layer: an offline `grok-4.5` enrichment stage reads each outside spender's own site,
@@ -637,7 +671,7 @@ spenders with hand-provided URLs and skipped 75 for want of a URL after FEC webs
 
 **Open.** Rerun with `FEC_API_KEY` to cover the tail, then have a human verify the 30 rows.
 
-## 2026-09-06 ~07:00 — Exploratory graph mode (Money Trails follow-up)
+## 2026-09-06 ~07:00 — Exploratory graph mode (Money Trails follow-up, D-80)
 
 **What changed.** Added a fallback after the route resolver and fixed graph operations refuse: Grok can compose one Cypher query
 over the documented filings graph. The server validates the query as read-only, allows only `$race`, caps it at 20 rows and 8
