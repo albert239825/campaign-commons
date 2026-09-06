@@ -517,3 +517,40 @@ nullable when the ad has no dates), which the PA data does not yet exercise (0 v
 (placement is paid before air) and changed the copy everywhere to "in the week before and while this ad ran". Context rows
 611 → 728 across 280 → 284 ads (mixed-media vendors' digital portions now shown); links unchanged at 115 inferred, one rule
 text corrected. 171 pipeline tests.
+
+## 2026-09-06 ~08:00 — Block 3 child A: one card-first "Top outside spenders" tab; nav down to Ledger · Ads
+
+**What changed.** Sep 5 critique (Albert, Eric, Patrick): "Funding highlights" and "Top outside spenders" were two tabs
+about the same committees, the highlight cards covered 18 of 98 spenders and led with a judgement ("Dark wall", "One
+source") plus a templated paragraph, and the race nav had six items. The ledger now has three sections — Funding overview ·
+Top outside spenders · Spending by issue. The spenders section (`components/ledger/spender-cards.tsx`, client island) is a
+card grid of every `ledger.top_outside_spenders` row sorted by total, with a **Cards | Table** toggle to the unchanged
+`SpendersTable` (flags legend still under it). Each card: committee name + type, total IE dollars with the FEC link, **% dark**
+as a big number over the bar (`visibility_shares.dark`, falling back to `1 − traceability_score`, "not computed" when the filer
+has no receipts to walk), one aggregated targeting line per (candidate, S/O) built from `by_candidate` with last names from
+`race.candidates`, the flags as badges, and — when the entity file carries a hand-tagged `issue_focus` — the group's own
+one-line self-description labelled "self-described focus" with its `basis.source_urls` link (D-66: about the spender, not the
+dollars). `stories.json` only decorates: a story's `root_entity_id` gives that card the story kind as a filter category and
+the "Checked against fec.gov" chip when `verified`. A **Category** dropdown above the grid groups story kinds ("Highlight"),
+`spender.flags` ("Flag", reusing `FLAG_MEANINGS`) and `issue_focus.kind` ("Self-described focus"); the chosen category's
+one-line meaning renders under it with "N of 98 spenders · $X". The whole card navigates to the entity page (card-level click
+handler; the title is the real link; FEC / own-words / chain anchors are ordinary siblings so nothing nests). `lib/data.ts`
+gained `getIssueFocus(raceId, entityId)`; `page.tsx` reads it for each spender at build time and passes a plain
+`Record<entity_id, IssueFocus>` down. `RaceNav` is **Ledger · Ads** (ads count kept; `counts` is `{ ads }`); the six callers
+were trimmed to that. Dossiers stay one click away as an explicit "Dossier →" beside each candidate in the ledger header.
+Per Albert's correction mid-task, the stories and vendors list pages and their routes stay (reachable by URL and existing
+in-page links); only the tabs went. `story-slideshow.tsx` had no remaining caller and was deleted; `story-card.tsx` stays
+for the stories page. D-77.
+
+**Challenge.** "Whole card is a link" versus "every number keeps its source link": an `<a>` wrapping the card cannot contain
+the FEC, own-words and chain anchors. Went with an `article` click handler that ignores clicks landing on any `a`/`button`
+or on selected text, honours ⌘/ctrl-click, and keeps the title as a focusable `Link`, so keyboard and screen-reader users
+get one real link per card and the sourced numbers keep theirs. Second: the story kinds and the flags overlap
+(`dark_dead_end` ≈ `dead_end_dark`, `popup` ≈ `popup`, `single_transfer` ≈ `single_transfer_funded`) but not exactly — the
+story set is capped at 18 while flags cover 50 spenders — so both stay as separate groups in the dropdown rather than
+being merged into one taxonomy the data does not have.
+
+**Numbers.** PA: 98 spender cards, $233M; 86 with `visibility_shares`, 12 with no chain ("not computed"); 50 flagged; 18
+story-decorated; 23 with a self-described focus loaded from `entities/*.json` (34 hand-tag rows; the rest are not top
+spenders). Dropdown: 4 highlight kinds, 5 flags, 6 focus kinds. Nav items 6 → 2. Lint, tsc and the static build pass; the
+`/stories` and `/vendors` routes are still emitted.
