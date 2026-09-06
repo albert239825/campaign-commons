@@ -1,5 +1,8 @@
 // OWNER: Money Trails exploratory mode (D-80) — @graph flow diagrams.
+"use client";
+
 import Link from "next/link";
+import { useRef, useState, type MouseEvent } from "react";
 import { VISIBILITY_COLORS, VISIBILITY_LABELS } from "@campaign-commons/contracts";
 import { Chip } from "@/components/ui";
 import { money } from "@/lib/format";
@@ -97,9 +100,22 @@ function truncate(s: string, max = 26) {
 
 export function ExploreSankey({ data }: { data: Drawable }) {
   const { width, height, nodes, ribbons } = layoutSankey(data);
+  const plotRef = useRef<HTMLDivElement>(null);
+  const [hover, setHover] = useState<{ text: string; x: number; y: number } | null>(null);
+  const [hoveredLinkKey, setHoveredLinkKey] = useState<string | null>(null);
   const visibilities = [...new Set(data.links.filter((l) => l.rel === "GAVE" || l.rel === "PAID").map((l) => l.visibility))];
   const hasTargeting = data.links.some((l) => l.rel === "TARGETED");
   const hasOwnership = data.links.some((l) => l.rel === "CAMPAIGN_OF");
+  const linkKey = (r: Ribbon) => `${r.link.n}-${r.link.source}-${r.link.target}`;
+  const updateHover = (text: string, event: MouseEvent<SVGElement>) => {
+    const rect = plotRef.current?.getBoundingClientRect();
+    if (!rect) return;
+    setHover({ text, x: event.clientX - rect.left, y: event.clientY - rect.top });
+  };
+  const clearHover = () => {
+    setHover(null);
+    setHoveredLinkKey(null);
+  };
   return (
     <section className="explore-sankey space-y-2" aria-label="Flow diagram of the returned rows">
       <div className="flex flex-wrap items-center gap-2">
@@ -108,13 +124,44 @@ export function ExploreSankey({ data }: { data: Drawable }) {
           {data.links.length} flows between {data.nodes.length} parties; ribbon width ∝ filed dollars; bracketed numbers are row citations.
         </span>
       </div>
-      <div className="overflow-x-auto rounded-md border border-neutral-200 bg-white">
+      <div ref={plotRef} className="relative overflow-x-auto rounded-md border border-neutral-200 bg-white">
         <svg width={width} height={height} viewBox={`0 0 ${width} ${height}`} role="img" aria-label="Money flows, left to right">
-          {ribbons.map((r) => (
-            <path key={`${r.link.n}-${r.link.source}-${r.link.target}`} d={ribbonPath(r)} fill="none" stroke={ribbonColor(r.link)} strokeWidth={r.w} strokeOpacity={0.45}>
-              <title>{ribbonTitle(r.link, r.from, r.to)}</title>
-            </path>
-          ))}
+          {ribbons.map((r) => {
+            const key = linkKey(r);
+            const x0 = r.from.x + NODE_W;
+            const x1 = r.to.x;
+            return (
+              <g key={key}>
+                <path
+                  d={ribbonPath(r)}
+                  fill="none"
+                  stroke={ribbonColor(r.link)}
+                  strokeWidth={r.w}
+                  strokeOpacity={hoveredLinkKey === key ? 0.85 : 0.45}
+                  onMouseEnter={(event) => {
+                    setHoveredLinkKey(key);
+                    updateHover(ribbonTitle(r.link, r.from, r.to), event);
+                  }}
+                  onMouseMove={(event) => updateHover(ribbonTitle(r.link, r.from, r.to), event)}
+                  onMouseLeave={clearHover}
+                >
+                  <title>{ribbonTitle(r.link, r.from, r.to)}</title>
+                </path>
+                {r.w >= 14 && (
+                  <text
+                    x={(x0 + x1) / 2}
+                    y={(r.y0 + r.y1) / 2}
+                    fontSize={10}
+                    textAnchor="middle"
+                    fill="#171717"
+                    pointerEvents="none"
+                  >
+                    {money(r.link.amount)}
+                  </text>
+                )}
+              </g>
+            );
+          })}
           {nodes.map((n) => {
             const label = (
               <>
@@ -133,13 +180,36 @@ export function ExploreSankey({ data }: { data: Drawable }) {
             );
             return n.href ? (
               <Link key={n.id} href={n.href}>
-                <g className="cursor-pointer">{label}</g>
+                <g
+                  className="cursor-pointer"
+                  onMouseEnter={(event) => updateHover(`${n.name} (${n.kind}) — ${money(n.flow)}`, event)}
+                  onMouseMove={(event) => updateHover(`${n.name} (${n.kind}) — ${money(n.flow)}`, event)}
+                  onMouseLeave={clearHover}
+                >
+                  {label}
+                </g>
               </Link>
             ) : (
-              <g key={n.id}>{label}</g>
+              <g
+                key={n.id}
+                onMouseEnter={(event) => updateHover(`${n.name} (${n.kind}) — ${money(n.flow)}`, event)}
+                onMouseMove={(event) => updateHover(`${n.name} (${n.kind}) — ${money(n.flow)}`, event)}
+                onMouseLeave={clearHover}
+              >
+                {label}
+              </g>
             );
           })}
         </svg>
+        {hover && (
+          <div
+            role="tooltip"
+            className="pointer-events-none absolute z-10 rounded bg-neutral-900 px-2 py-1 text-xs text-white shadow"
+            style={{ left: hover.x + 12, top: hover.y + 12 }}
+          >
+            {hover.text}
+          </div>
+        )}
       </div>
       <ul className="flex flex-wrap gap-3 text-xs text-neutral-600">
         {visibilities.map((v) => (

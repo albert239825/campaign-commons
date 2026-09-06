@@ -5,6 +5,7 @@ import { exploreQuestion, rowSentence, toCells, validateCypher, type ExploreRow 
 import { COMPLETION } from "./queries";
 
 const node = { properties: { id: "C1", name: "ONE NATION", kind: "committee", href: "/races/r/entities/C1" } };
+const candidateNode = { properties: { id: "S2PA00661", name: "DAVID MCCORMICK", kind: "candidate", href: "/races/r/candidates/S2PA00661" } };
 const relationship = { elementId: "rel-1" };
 const fact = {
   n: 1,
@@ -138,7 +139,31 @@ describe("exploreQuestion", () => {
     });
     const result = await exploreQuestion("race", "show flows", subjects, { run, llm: { apiKey: "key", fetch } }, "graph");
     expect(result).toMatchObject({ kind: "explore", context: [{ n: 2, amount: 1234 }], diagram: { ok: true, links: [{ n: 1, amount: 1234 }] } });
-    expect(run).toHaveBeenCalledWith(COMPLETION, { race: "race", ids: ["C1"] }, { timeoutMs: 8000 });
+    expect(run).toHaveBeenCalledWith(COMPLETION, { race: "race", ids: ["C1"], cands: ["C2"] }, { timeoutMs: 8000 });
+  });
+
+  it("limits completion to candidates mentioned in the rows", async () => {
+    vi.spyOn(neo4j, "isPath").mockReturnValue(false);
+    vi.spyOn(neo4j, "isNode").mockImplementation((value) => value === node || value === candidateNode);
+    const fetch = stubResponses([{ cypher: good, description: "A result." }], { narrative: "The query returned 1 record [1]." });
+    const run = vi.fn(async (cypher: string) => {
+      if (cypher === COMPLETION) return { records: [], queryType: "r" };
+      return { records: [{ committee: node, candidate: candidateNode }], queryType: "r" };
+    });
+    await exploreQuestion("race", "notable donors of David McCormick", subjects, { run, llm: { apiKey: "key", fetch } }, "graph");
+    expect(run).toHaveBeenCalledWith(COMPLETION, { race: "race", ids: ["C1"], cands: ["S2PA00661"] }, { timeoutMs: 8000 });
+  });
+
+  it("leaves completion candidates empty when rows mention committees only", async () => {
+    vi.spyOn(neo4j, "isPath").mockReturnValue(false);
+    vi.spyOn(neo4j, "isNode").mockImplementation((value) => value === node);
+    const fetch = stubResponses([{ cypher: good, description: "A result." }], { narrative: "The query returned 1 record [1]." });
+    const run = vi.fn(async (cypher: string) => {
+      if (cypher === COMPLETION) return { records: [], queryType: "r" };
+      return { records: [{ committee: node }], queryType: "r" };
+    });
+    await exploreQuestion("race", "show committee flows", subjects, { run, llm: { apiKey: "key", fetch } }, "graph");
+    expect(run).toHaveBeenCalledWith(COMPLETION, { race: "race", ids: ["C1"], cands: [] }, { timeoutMs: 8000 });
   });
 
   it("keeps the answer when completion fails and never completes answer mode", async () => {

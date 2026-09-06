@@ -690,3 +690,5 @@ paths or connections, geography or sector—now refuse the nearest fixed intent 
 **Flow diagrams.** An `@graph` prefix asks exploration for whole, amount-bearing relationships and draws a Sankey from the returned rows; when those rows cannot form a flow, only the analysis refusal is shown.
 
 **Flow completion.** Graph mode now adds source-linked filed spending and campaign-ownership facts for committees returned by the model query, so the diagram can continue to candidate campaigns without changing the model's rows.
+
+**Sankey interaction.** Completion now stays within candidates reached by the model rows, and flow ribbons expose pointer tooltips plus inline labels for larger amounts.

@@ -184,26 +184,30 @@ const refuse = (reason: ExploreRefusal["reason"], message: string): ExploreRefus
 
 export type ExploreDeps = { run: TypedRunner | null; llm?: LlmOptions };
 
-function completionIds(rows: readonly ExploreRow[]): string[] {
+function completionIds(rows: readonly ExploreRow[]): { ids: string[]; cands: string[] } {
   const ids = new Set<string>();
+  const cands = new Set<string>();
   for (const row of rows) {
     for (const cell of Object.values(row.cells)) {
       if (cell.t === "node") {
         if (cell.node.kind === "committee") ids.add(cell.node.id);
+        if (cell.node.kind === "candidate") cands.add(cell.node.id);
       } else if (cell.t === "edge") {
         if (cell.fact.from.kind === "committee") ids.add(cell.fact.from.id);
         if (cell.fact.to.kind === "committee") ids.add(cell.fact.to.id);
+        if (cell.fact.from.kind === "candidate") cands.add(cell.fact.from.id);
+        if (cell.fact.to.kind === "candidate") cands.add(cell.fact.to.id);
       }
     }
   }
-  return [...ids];
+  return { ids: [...ids], cands: [...cands] };
 }
 
 async function completeGraph(raceId: string, rows: readonly ExploreRow[], run: TypedRunner): Promise<GraphFact[]> {
-  const ids = completionIds(rows);
+  const { ids, cands } = completionIds(rows);
   if (ids.length === 0) return [];
   try {
-    const result = await run(COMPLETION, { race: raceId, ids }, { timeoutMs: EXPLORE_TIMEOUT_MS });
+    const result = await run(COMPLETION, { race: raceId, ids, cands }, { timeoutMs: EXPLORE_TIMEOUT_MS });
     if (result.queryType !== "r") return [];
     return result.records.flatMap((record, i) => {
       try {
