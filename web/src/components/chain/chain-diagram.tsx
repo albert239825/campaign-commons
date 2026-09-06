@@ -1,14 +1,41 @@
 "use client";
 
-import { useMemo, useState, type ReactNode } from "react";
+import {
+  useMemo,
+  useRef,
+  useState,
+  type FocusEvent,
+  type KeyboardEvent,
+  type MouseEvent,
+  type ReactNode,
+} from "react";
 import {
   COMMITTEE_TYPE_LABELS,
   TARGETING_COLOR,
   UNWALKED_COLOR,
   VISIBILITY_COLORS,
+  VISIBILITY_LABELS,
 } from "@campaign-commons/contracts";
 import { money } from "@/lib/format";
 import { BASIS_DASH, BASIS_LABELS } from "./basis";
+import { EdgePanel, EDGE_KIND_LABELS, edgeAmountLabel, edgeVerb } from "./edge-panel";
+import { revealEdge } from "./edge-reveal";
+import {
+  NAME_FONT,
+  SUB_FONT,
+  TEXT_RIGHT,
+  TEXT_X,
+  THUMB_W,
+  TOGGLE_W,
+  TWO_ROW_H,
+  AMOUNT_GAP,
+  amountText,
+  ellipsize,
+  fitLines,
+  isRootNode,
+  isTogglable,
+  textWidth,
+} from "./label";
 import {
   NODE_W,
   SPINE_W,
@@ -19,7 +46,7 @@ import {
   type LaidOutNode,
   type Ribbon,
 } from "./layout";
-import { NodePanel, type IncidentEdge } from "./node-panel";
+import { NodePanel, kindLabel, type IncidentEdge } from "./node-panel";
 import { terminusLabel } from "./terminus";
 import {
   MATERIAL_SHARE,
@@ -27,6 +54,7 @@ import {
   visibleGraph,
   type GraphControls,
   type ChainViewWire,
+  type ViewEdge,
   type ViewNode,
   type VisibleNode,
 } from "./view";
@@ -37,10 +65,23 @@ const INK = "#171717";
 export const VENDOR_COLOR = "#0f766e";
 export const PLACEMENT_COLOR = VENDOR_COLOR;
 const SELECTED = "#2563eb";
+/** The root's outline and label chip: the page's own ink, so it reads as "this page", not as a party or a visibility. */
+export const ROOT_COLOR = INK;
 
-function truncate(s: string, max: number) {
-  return s.length > max ? `${s.slice(0, max - 1)}…` : s;
-}
+/** Stable identity of a drawn edge: its table row when it has one, else its ends (client-side folds). */
+const edgeKey = (e: ViewEdge) =>
+  e.index >= 0 ? `e${e.index}` : `${e.from}|${e.to}|${e.kind}|${e.support_oppose ?? ""}`;
+
+type Selection = { kind: "node"; id: string } | { kind: "edge"; key: string } | null;
+type TipBody =
+  | { kind: "node"; node: VisibleNode; out: number }
+  | { kind: "edge"; r: Ribbon };
+type PointEvent = MouseEvent<Element> | FocusEvent<Element>;
+type Pointing = {
+  onPoint: (body: TipBody, ev: PointEvent) => void;
+  onMove: (ev: MouseEvent<Element>) => void;
+  onLeave: () => void;
+};
 
 function subLabel(n: VisibleNode, txns: number): string {
   if (n.kind === "aggregate") {
@@ -58,44 +99,77 @@ function subLabel(n: VisibleNode, txns: number): string {
   return n.kind;
 }
 
+const activate = (fn: () => void) => (ev: KeyboardEvent) => {
+  if (ev.key === "Enter" || ev.key === " ") {
+    ev.preventDefault();
+    fn();
+  }
+};
+
+type TextLine = { text: string; y: number; size: number; weight?: number; fill: string; spacing?: number };
+
+/** The rows of text a non-root box shows, top to bottom, never running into the amount or the +/− control. */
+function stackLines(n: VisibleNode, ln: LaidOutNode, txns: number, innerW: number, togglable: boolean): TextLine[] {
+  const { y, h } = ln;
+  const isDark = n.side === "in" && (n.visibility === "dark" || n.terminus_reason === "dark");
+  const textColor = n.kind === "aggregate" ? "#737373" : INK;
+  const amtW = textWidth(amountText(n), NAME_FONT) + AMOUNT_GAP;
+  if (h < TWO_ROW_H) {
+    const budget = innerW - amtW - (togglable ? TOGGLE_W : 0);
+    return [{ text: ellipsize(n.name, budget, NAME_FONT), y: y + h / 2 + 4, size: NAME_FONT, weight: 600, fill: textColor }];
+  }
+  const slots: number[] = [];
+  for (let b = 13; b <= h - 16; b += 13) slots.push(b);
+  const budgetAt = (i: number) =>
+    innerW - (i === 0 && togglable ? TOGGLE_W : 0) - (slots[i] > h - 24 ? amtW : 0);
+  const nameLines = fitLines(n.name, slots.slice(0, 2).map((_, i) => budgetAt(i)), NAME_FONT);
+  const out: TextLine[] = nameLines.map((text, i) => ({
+    text,
+    y: y + slots[i],
+    size: NAME_FONT,
+    weight: 600,
+    fill: textColor,
+  }));
+  const rest: Omit<TextLine, "y">[] = [{ text: subLabel(n, txns), size: SUB_FONT, fill: "#737373" }];
+  if (isDark) {
+    rest.push({ text: "DARK WALL", size: 9.5, weight: 700, fill: VISIBILITY_COLORS.dark, spacing: 0.6 });
+    const term = terminusLabel(n);
+    if (term) rest.push({ text: term, size: 9, fill: "#7f1d1d" });
+  }
+  for (const line of rest) {
+    const i = out.length;
+    if (i >= slots.length) break;
+    out.push({ ...line, text: ellipsize(line.text, budgetAt(i), line.size), y: y + slots[i] });
+  }
+  return out;
+}
+
 function NodeBox({
   ln,
   txns,
+  out,
   selected,
   onSelect,
   onToggle,
+  pointing,
 }: {
   ln: LaidOutNode;
   txns: number;
+  out: number;
   selected: boolean;
   onSelect: (id: string) => void;
   onToggle: (n: VisibleNode) => void;
+  pointing: Pointing;
 }) {
   const { node: n, x, y, h } = ln;
   const isDark =
     n.side === "in" &&
     (n.visibility === "dark" || n.terminus_reason === "dark");
   const isAgg = n.kind === "aggregate";
-  const isRoot = n.side === "in" && n.depth === 0;
+  const isRoot = isRootNode(n);
   const isOut = n.side === "out";
-  const togglable = isOut
-    ? n.children > 0
-    : !isRoot &&
-      (n.state === "closed" || n.state === "partial" || n.userOpened);
+  const togglable = isTogglable(n);
   const showsMore = isOut ? n.state === "closed" : n.state !== "full";
-  const charBudget = Math.floor(NODE_W / 6.4);
-  const labelH = isDark
-    ? h >= 72
-      ? 58
-      : h >= 58
-        ? 46
-        : h >= 42
-          ? 31
-          : 18
-    : h >= 42
-      ? 31
-      : 18;
-  const sub = subLabel(n, txns);
   const isUnwalked = n.terminus_reason === "depth_cap";
   const stroke = selected
     ? SELECTED
@@ -104,7 +178,7 @@ function NodeBox({
       : isAgg
         ? MUTED
         : isRoot
-          ? INK
+          ? ROOT_COLOR
           : n.kind === "vendor" || n.kind === "ad"
             ? VENDOR_COLOR
             : n.kind === "candidate"
@@ -117,7 +191,7 @@ function NodeBox({
     : isAgg
       ? MUTED
       : isRoot
-        ? INK
+        ? ROOT_COLOR
         : n.kind === "vendor" || n.kind === "ad"
           ? VENDOR_COLOR
           : n.kind === "candidate"
@@ -135,24 +209,51 @@ function NodeBox({
           ? "#f7f7f5"
           : "#ffffff";
   const textColor = isAgg ? "#737373" : INK;
-  const thumbW = n.kind === "ad" && n.thumbnail && h >= 58 ? 64 : 0;
+  const thumbW = n.kind === "ad" && n.thumbnail && h >= 58 ? THUMB_W : 0;
+  const textX = x + TEXT_X + thumbW + (thumbW ? 4 : 0);
+  const innerW = NODE_W - TEXT_X - TEXT_RIGHT - thumbW - (thumbW ? 4 : 0);
+  const oneRow = h < TWO_ROW_H;
+  const lines = isRoot ? [] : stackLines(n, ln, txns, innerW, togglable);
+  const lastY = lines.length > 0 ? lines[lines.length - 1].y : y + 13;
+  const labelH = oneRow ? h : Math.min(h, lastY - y + 5);
+  const amount = amountText(n);
+  const amountX = x + NODE_W - TEXT_RIGHT - (oneRow && togglable ? TOGGLE_W : 0);
+  const amountY = oneRow ? y + h / 2 + 4 : y + h - 7;
+  const toggleY = oneRow ? y + h / 2 - 7 : y + 3;
+  // Root: the name sits in a filled chip under a thick outline, with a "you are here" caption.
+  const chipLines = isRoot ? fitLines(n.name, [NODE_W - 20, NODE_W - 20], 12) : [];
+  const chipH = 8 + chipLines.length * 15;
   const term = terminusLabel(n);
-  const title = `${n.name} · ${money(n.amount_in, { compact: false })}${term ? ` · ${term}` : ""} · click for details`;
+  const label = `${n.name} · ${kindLabel(n)}${isRoot ? " · the spender this page is about" : ""} · ${money(n.amount_in, { compact: false })}${term ? ` · ${term}` : ""} · click for details`;
+  const body: TipBody = { kind: "node", node: n, out };
   return (
     <g
       role="button"
       tabIndex={0}
       aria-pressed={selected}
-      className="cursor-pointer hover:opacity-80"
+      aria-label={label}
+      className="chain-node cursor-pointer"
       onClick={() => onSelect(n.id)}
-      onKeyDown={(ev) => {
-        if (ev.key === "Enter" || ev.key === " ") {
-          ev.preventDefault();
-          onSelect(n.id);
-        }
-      }}
+      onKeyDown={activate(() => onSelect(n.id))}
+      onMouseEnter={(ev) => pointing.onPoint(body, ev)}
+      onMouseMove={pointing.onMove}
+      onMouseLeave={pointing.onLeave}
+      onFocus={(ev) => pointing.onPoint(body, ev)}
+      onBlur={pointing.onLeave}
     >
-      <title>{title}</title>
+      {isRoot && (
+        <rect
+          x={x - 5}
+          y={y - 5}
+          width={NODE_W + 10}
+          height={h + 10}
+          rx={6}
+          fill="none"
+          stroke={selected ? SELECTED : ROOT_COLOR}
+          strokeOpacity={0.16}
+          strokeWidth={5}
+        />
+      )}
       <rect
         x={x}
         y={y}
@@ -161,7 +262,7 @@ function NodeBox({
         rx={3}
         fill={fill}
         stroke={stroke}
-        strokeWidth={selected ? 2.5 : isRoot ? 2 : 1.25}
+        strokeWidth={isRoot ? 3 : selected ? 2.5 : 1.25}
         strokeDasharray={isAgg ? "3 3" : undefined}
       />
       {isDark && (
@@ -169,12 +270,12 @@ function NodeBox({
           x={x + 4}
           y={y}
           width={NODE_W - 4}
-          height={Math.min(labelH, h)}
+          height={labelH}
           fill="#ffffff"
           fillOpacity={0.88}
         />
       )}
-      <rect x={x} y={y} width={4} height={h} fill={accent} />
+      {!isRoot && <rect x={x} y={y} width={4} height={h} fill={accent} />}
       {thumbW > 0 && n.thumbnail && (
         <image
           href={n.thumbnail}
@@ -185,32 +286,48 @@ function NodeBox({
           preserveAspectRatio="xMidYMid slice"
         />
       )}
-      <text
-        x={x + 10 + thumbW + (thumbW ? 4 : 0)}
-        y={y + 13}
-        fontSize={11}
-        fontWeight={600}
-        fill={textColor}
-      >
-        {truncate(
-          n.name,
-          charBudget - (togglable ? 3 : 0) - Math.ceil(thumbW / 6.4),
-        )}
-      </text>
-      {h >= 42 && (
-        <text
-          x={x + 10 + thumbW + (thumbW ? 4 : 0)}
-          y={y + 26}
-          fontSize={10}
-          fill="#737373"
-        >
-          {truncate(sub, charBudget + 2 - Math.ceil(thumbW / 6.4))}
-        </text>
+      {isRoot ? (
+        <>
+          <rect x={x + 2} y={y + 2} width={NODE_W - 4} height={chipH} rx={2} fill={selected ? SELECTED : ROOT_COLOR} />
+          {chipLines.map((t, i) => (
+            <text key={i} x={x + TEXT_X} y={y + 2 + 15 + i * 15} fontSize={12} fontWeight={700} fill="#ffffff">
+              {t}
+            </text>
+          ))}
+          <text
+            x={x + TEXT_X}
+            y={y + chipH + 19}
+            fontSize={9}
+            fontWeight={700}
+            letterSpacing={1}
+            fill={ROOT_COLOR}
+          >
+            YOU ARE HERE · THE SPENDER
+          </text>
+          <text x={x + TEXT_X} y={y + chipH + 34} fontSize={SUB_FONT} fill="#737373">
+            {ellipsize(subLabel(n, txns), innerW, SUB_FONT)}
+          </text>
+        </>
+      ) : (
+        lines.map((l, i) => (
+          <text
+            key={i}
+            x={textX}
+            y={l.y}
+            fontSize={isOut && isAgg ? SUB_FONT : l.size}
+            fontWeight={l.weight}
+            fill={l.fill}
+            letterSpacing={l.spacing}
+          >
+            {l.text}
+          </text>
+        ))
       )}
       <text
-        x={x + NODE_W - 8}
-        y={y + h - 7}
-        fontSize={11}
+        x={amountX}
+        y={amountY}
+        fontSize={isRoot ? 13 : NAME_FONT}
+        fontWeight={isRoot ? 700 : undefined}
         textAnchor="end"
         fill={textColor}
         stroke={isDark ? "#ffffff" : "none"}
@@ -218,27 +335,8 @@ function NodeBox({
         paintOrder="stroke"
         className="tabular-nums"
       >
-        {n.kind === "ad" || (isOut && isAgg)
-          ? `~${money(n.amount_in)}`
-          : money(n.amount_in)}
+        {amount}
       </text>
-      {isDark && h >= 58 && (
-        <text
-          x={x + 10}
-          y={y + 41}
-          fontSize={9.5}
-          fontWeight={700}
-          fill={VISIBILITY_COLORS.dark}
-          letterSpacing={0.6}
-        >
-          DARK WALL
-        </text>
-      )}
-      {isDark && h >= 72 && (
-        <text x={x + 10} y={y + 53} fontSize={9} fill="#7f1d1d">
-          {truncate(term ?? "", charBudget + 4)}
-        </text>
-      )}
       {togglable && (
         <g
           role="button"
@@ -266,7 +364,7 @@ function NodeBox({
           </title>
           <rect
             x={x + NODE_W - 20}
-            y={y + 3}
+            y={toggleY}
             width={16}
             height={14}
             rx={2}
@@ -275,7 +373,7 @@ function NodeBox({
           />
           <text
             x={x + NODE_W - 12}
-            y={y + 14}
+            y={toggleY + 11}
             fontSize={12}
             fontWeight={700}
             textAnchor="middle"
@@ -290,34 +388,61 @@ function NodeBox({
   );
 }
 
-function RibbonShape({ r }: { r: Ribbon }) {
+function RibbonShape({
+  r,
+  selected,
+  onSelect,
+  pointing,
+}: {
+  r: Ribbon;
+  selected: boolean;
+  onSelect: (edge: ViewEdge) => void;
+  pointing: Pointing;
+}) {
   const { edge, from, to } = r;
+  const body: TipBody = { kind: "edge", r };
+  const label =
+    edge.kind === "money"
+      ? `${from.node.name} → ${to.node.name}: ${money(edge.amount, { compact: false })} (${edge.visibility}, ${edge.count} transactions) · click for details`
+      : edge.kind === "targeting"
+        ? `${from.node.name} ${edgeVerb(edge, from.node, to.node)} ${to.node.name}: ${money(edge.amount, { compact: false })} in independent expenditures — no money reaches the candidate · click for details`
+        : `${from.node.name} → ${to.node.name}: placement, ${BASIS_LABELS[edge.basis?.[0] ?? "filed"]}${edge.basis ? ` — ${edge.basis[1]}` : ""} · click for details`;
+  const handlers = {
+    role: "button",
+    tabIndex: 0,
+    "aria-pressed": selected,
+    "aria-label": label,
+    className: "chain-ribbon cursor-pointer",
+    onClick: () => onSelect(edge),
+    onKeyDown: activate(() => onSelect(edge)),
+    onMouseEnter: (ev: MouseEvent<Element>) => pointing.onPoint(body, ev),
+    onMouseMove: pointing.onMove,
+    onMouseLeave: pointing.onLeave,
+    onFocus: (ev: FocusEvent<Element>) => pointing.onPoint(body, ev),
+    onBlur: pointing.onLeave,
+  };
   if (edge.kind === "money") {
     return (
       <path
         d={ribbonPath(r)}
         fill={VISIBILITY_COLORS[edge.visibility]}
         fillOpacity={edge.visibility === "dark" ? 0.5 : 0.38}
-        stroke="none"
-      >
-        <title>{`${from.node.name} → ${to.node.name}: ${money(edge.amount, { compact: false })} (${edge.visibility}, ${edge.count} transactions)`}</title>
-      </path>
+        stroke={selected ? SELECTED : "transparent"}
+        strokeWidth={selected ? 2 : 5}
+        {...handlers}
+      />
     );
   }
   const basis = edge.basis?.[0] ?? "filed";
   const color = edge.kind === "targeting" ? TARGETING_COLOR : PLACEMENT_COLOR;
-  const label =
-    edge.kind === "targeting"
-      ? `${from.node.name} ${edge.support_oppose === "S" ? "supports" : edge.support_oppose === "O" ? "opposes" : "targets"} ${to.node.name}: ${money(edge.amount, { compact: false })} in independent expenditures — no money reaches the candidate`
-      : `${from.node.name} → ${to.node.name}: placement, ${BASIS_LABELS[basis]}${edge.basis ? ` — ${edge.basis[1]}` : ""}`;
   return (
     <g>
       <path
         d={ribbonSpine(r)}
         fill="none"
-        stroke="#ffffff"
-        strokeWidth={SPINE_W + 3}
-        strokeOpacity={0.7}
+        stroke={selected ? SELECTED : "#ffffff"}
+        strokeWidth={selected ? SPINE_W + 5 : SPINE_W + 3}
+        strokeOpacity={selected ? 0.55 : 0.7}
       />
       <path
         d={ribbonSpine(r)}
@@ -327,26 +452,96 @@ function RibbonShape({ r }: { r: Ribbon }) {
         strokeDasharray={BASIS_DASH[basis]}
         strokeLinecap="round"
         markerEnd={`url(#arrow-${edge.kind})`}
-      >
-        <title>{label}</title>
-      </path>
+      />
+      <path d={ribbonSpine(r)} fill="none" stroke="transparent" strokeWidth={12} {...handlers} />
     </g>
   );
 }
+
+function TipContent({ body }: { body: TipBody }) {
+  if (body.kind === "node") {
+    const { node: n, out } = body;
+    const isRoot = isRootNode(n);
+    const term = terminusLabel(n);
+    const inLabel =
+      n.kind === "ad"
+        ? "est. spend (range midpoint)"
+        : n.kind === "candidate"
+          ? "in independent expenditures aimed at them — none reaches the candidate"
+          : n.kind === "vendor"
+            ? "paid by the spender"
+            : isRoot
+              ? "receipts traced"
+              : "in";
+    return (
+      <>
+        <div className="chain-tip-kind">
+          {kindLabel(n)}
+          {isRoot && " · you are here"}
+        </div>
+        <div className="chain-tip-name">{n.name}</div>
+        {n.kind === "ad" && n.thumbnail && (
+          // eslint-disable-next-line @next/next/no-img-element -- static file under public/, size unknown
+          <img src={n.thumbnail} alt="" className="chain-tip-thumb" loading="lazy" />
+        )}
+        <div className="chain-tip-amounts tabular-nums">
+          <span>
+            {n.kind === "ad" || (n.side === "out" && n.kind === "aggregate") ? "~" : ""}
+            {money(n.amount_in, { compact: false })}
+          </span>{" "}
+          <span className="chain-tip-muted">{inLabel}</span>
+          {out > 0 && n.kind !== "candidate" && (
+            <>
+              <br />
+              <span>{money(out, { compact: false })}</span>{" "}
+              <span className="chain-tip-muted">{isRoot ? "out to vendors (Schedule E)" : "out, toward the spender"}</span>
+            </>
+          )}
+        </div>
+        {n.side === "in" && !isRoot && (
+          <div className="chain-tip-muted">
+            {VISIBILITY_LABELS[n.visibility]}
+            {term ? ` · ${term}` : ""}
+          </div>
+        )}
+      </>
+    );
+  }
+  const { edge, from, to } = body.r;
+  return (
+    <>
+      <div className="chain-tip-kind">{EDGE_KIND_LABELS[edge.kind]}</div>
+      <div className="chain-tip-name">
+        {from.node.name} <span className="chain-tip-muted">{edgeVerb(edge, from.node, to.node)}</span> {to.node.name}
+      </div>
+      <div className="chain-tip-amounts tabular-nums">{edgeAmountLabel(edge, to.node)}</div>
+      <div className="chain-tip-muted">
+        {edge.kind === "money"
+          ? `${VISIBILITY_LABELS[edge.visibility]} · ${edge.count} ${edge.count === 1 ? "transaction" : "transactions"}`
+          : `${BASIS_LABELS[edge.basis?.[0] ?? "filed"]}${edge.basis ? ` — ${edge.basis[1]}` : ""}`}
+      </div>
+    </>
+  );
+}
+
+const TIP_W = 280;
 
 /**
  * Client-rendered chain picture. Funding side: sources on the left, the spender in the middle; ribbon width ∝ dollars,
  * ribbon color = visibility. Spending side (Block 2): vendors, ads and the targeted candidate to the right; money edges
  * are ribbons, placement / targeting edges are thin spines styled by their evidence basis (solid / dashed / dotted).
- * Clicking a node opens its panel (basics, evidence, links, expand / collapse / hide) — Palantir-Vertex style.
+ * Hovering or focusing a node or edge shows a tooltip; clicking a node opens its panel (basics, evidence, links,
+ * expand / collapse / hide), clicking an edge opens the edge panel and, when the page has one, its table row.
  */
 export function ChainDiagram({
   wire,
+  hasTable = false,
   openAll = false,
   caption,
   rootLabel = "spender",
 }: {
   wire: ChainViewWire;
+  hasTable?: boolean;
   openAll?: boolean;
   caption?: ReactNode;
   rootLabel?: string;
@@ -357,7 +552,10 @@ export function ChainDiagram({
     collapsed: new Set(),
     hidden: new Set(),
   }));
-  const [selectedId, setSelectedId] = useState<string | null>(null);
+  const [selection, setSelection] = useState<Selection>(null);
+  const [tip, setTip] = useState<TipBody | null>(null);
+  const figRef = useRef<HTMLElement>(null);
+  const tipRef = useRef<HTMLDivElement>(null);
   const flip = (key: keyof GraphControls, id: string) =>
     setControls((prev) => {
       const next = new Set(prev[key]);
@@ -369,34 +567,85 @@ export function ChainDiagram({
     flip(n.side === "out" ? "collapsed" : "opened", n.id);
   const hide = (id: string) => {
     flip("hidden", id);
-    setSelectedId(null);
+    setSelection(null);
   };
   const restore = () => setControls((prev) => ({ ...prev, hidden: new Set() }));
+  const selectNode = (id: string) =>
+    setSelection((cur) => (cur?.kind === "node" && cur.id === id ? null : { kind: "node", id }));
+  const selectEdge = (edge: ViewEdge) => {
+    const key = edgeKey(edge);
+    setSelection((cur) => (cur?.kind === "edge" && cur.key === key ? null : { kind: "edge", key }));
+    if (hasTable) revealEdge(edge.index);
+  };
+
+  // Tooltip: placed by the pointer (or beside a focused element), moved without re-rendering the picture.
+  const moveTip = (x: number, y: number) => {
+    const fig = figRef.current;
+    const el = tipRef.current;
+    if (!fig || !el) return;
+    const w = fig.getBoundingClientRect().width;
+    el.style.left = `${Math.max(0, Math.min(x, w - TIP_W))}px`;
+    el.style.top = `${y}px`;
+  };
+  const pointAt = (ev: PointEvent): [number, number] => {
+    const fr = figRef.current?.getBoundingClientRect();
+    if (!fr) return [0, 0];
+    if ("clientX" in ev) return [ev.clientX - fr.left + 14, ev.clientY - fr.top + 14];
+    const r = ev.currentTarget.getBoundingClientRect();
+    return [r.right - fr.left + 8, Math.max(0, r.top - fr.top)];
+  };
+  const pending = useRef<[number, number] | null>(null);
+  const pointing: Pointing = {
+    onPoint: (body, ev) => {
+      const at = pointAt(ev);
+      if (tipRef.current) moveTip(...at);
+      else pending.current = at;
+      setTip(body);
+    },
+    onMove: (ev) => moveTip(...pointAt(ev)),
+    onLeave: () => setTip(null),
+  };
+  // Position the freshly mounted tooltip element before paint.
+  const tipCallback = (el: HTMLDivElement | null) => {
+    tipRef.current = el;
+    if (el && pending.current) {
+      moveTip(...pending.current);
+      pending.current = null;
+    }
+  };
 
   const graph = useMemo(() => visibleGraph(view, controls), [view, controls]);
   const L = useMemo(() => layoutChain(graph.nodes, graph.edges), [graph]);
   const txnsFrom = new Map<string, number>();
+  const moneyOut = new Map<string, number>();
   for (const e of graph.edges)
-    if (e.kind === "money")
+    if (e.kind === "money") {
       txnsFrom.set(e.from, (txnsFrom.get(e.from) ?? 0) + e.count);
+      moneyOut.set(e.from, (moneyOut.get(e.from) ?? 0) + e.amount);
+    }
   const closed = graph.nodes.filter(
     (n) => n.side === "in" && n.state === "closed",
   ).length;
 
-  const selected = selectedId
-    ? (graph.nodes.find((n) => n.id === selectedId) ?? null)
-    : null;
+  const selectedNode =
+    selection?.kind === "node"
+      ? (graph.nodes.find((n) => n.id === selection.id) ?? null)
+      : null;
+  const selectedRibbon =
+    selection?.kind === "edge"
+      ? (L.ribbons.find((r) => edgeKey(r.edge) === selection.key) ?? null)
+      : null;
   const byId = useMemo(
     () => new Map<string, ViewNode>(view.nodes.map((n) => [n.id, n])),
     [view],
   );
-  const incident: IncidentEdge[] = selected
+  const incident: IncidentEdge[] = selectedNode
     ? view.edges.flatMap((e): IncidentEdge[] => {
-        if (e.to === selected.id) {
+        if (e.to === selectedNode.id) {
           const other = byId.get(e.from);
           return other ? [{ edge: e, other, direction: "in" }] : [];
         }
-        if (e.from === selected.id) {
+        if (e.from === selectedNode.id) {
           const other = byId.get(e.to);
           return other ? [{ edge: e, other, direction: "out" }] : [];
         }
@@ -405,7 +654,7 @@ export function ChainDiagram({
     : [];
 
   return (
-    <figure className="chain-figure">
+    <figure className="chain-figure" ref={figRef}>
       <div className="chain-map-scroll" tabIndex={0} role="region" aria-label="Scrollable funding map">
       <svg
         viewBox={`0 0 ${L.width} ${L.height + 22}`}
@@ -470,41 +719,67 @@ export function ChainDiagram({
               {columnLabel(c, rootLabel)}
             </text>
           ))}
-        {L.ribbons.map((r, i) => (
-          <RibbonShape key={i} r={r} />
+        {L.ribbons.map((r) => (
+          <RibbonShape
+            key={edgeKey(r.edge)}
+            r={r}
+            selected={selectedRibbon === r}
+            onSelect={selectEdge}
+            pointing={pointing}
+          />
         ))}
         {L.nodes.map((ln) => (
           <NodeBox
             key={ln.node.id}
             ln={ln}
             txns={txnsFrom.get(ln.node.id) ?? 0}
-            selected={ln.node.id === selectedId}
-            onSelect={(id) => setSelectedId((cur) => (cur === id ? null : id))}
+            out={moneyOut.get(ln.node.id) ?? 0}
+            selected={selectedNode?.id === ln.node.id}
+            onSelect={selectNode}
             onToggle={toggle}
+            pointing={pointing}
           />
         ))}
       </svg>
       </div>
-      {selected && (
+      {tip && (
+        <div ref={tipCallback} className="chain-tip" role="tooltip">
+          <TipContent body={tip} />
+        </div>
+      )}
+      {selectedNode && (
         <div className="mt-2">
           <NodePanel
-            node={selected}
+            node={selectedNode}
             incident={incident}
-            isRoot={selected.id === view.rootId}
+            isRoot={selectedNode.id === view.rootId}
             actions={{
-              onClose: () => setSelectedId(null),
+              onClose: () => setSelection(null),
               onToggleSources:
-                selected.side === "in" &&
-                selected.state !== "leaf" &&
-                selected.id !== view.rootId
-                  ? () => flip("opened", selected.id)
+                selectedNode.side === "in" &&
+                selectedNode.state !== "leaf" &&
+                selectedNode.id !== view.rootId
+                  ? () => flip("opened", selectedNode.id)
                   : null,
               onToggleChildren:
-                selected.children > 0
-                  ? () => flip("collapsed", selected.id)
+                selectedNode.children > 0
+                  ? () => flip("collapsed", selectedNode.id)
                   : null,
-              onHide: () => hide(selected.id),
+              onHide: () => hide(selectedNode.id),
             }}
+          />
+        </div>
+      )}
+      {selectedRibbon && (
+        <div className="mt-2">
+          <EdgePanel
+            edge={selectedRibbon.edge}
+            from={selectedRibbon.from.node}
+            to={selectedRibbon.to.node}
+            hasRow={hasTable && selectedRibbon.edge.index >= 0}
+            onSelectNode={selectNode}
+            onShowRow={() => revealEdge(selectedRibbon.edge.index)}
+            onClose={() => setSelection(null)}
           />
         </div>
       )}
@@ -519,8 +794,8 @@ export function ChainDiagram({
               `; ${closed} ${closed === 1 ? "committee has" : "committees have"} sources not drawn — click + to show them`}
             {graph.hasOut &&
               "; to the right, what the spender paid for and whom it targeted"}
-            . Click any node for its details and evidence. Every edge is in the
-            table below.
+            . Hover for the basics; click any node for its details and evidence
+            {hasTable ? ", any edge for its evidence and its row in the table below" : ", any edge for its evidence"}.
           </>
         )}
         {graph.userHidden > 0 && (

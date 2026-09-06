@@ -29,6 +29,7 @@ const edge = (): ViewEdge => ({
   kind: "money",
   basis: null,
   support_oppose: null,
+  index: 0,
 });
 
 describe("visibleGraph", () => {
