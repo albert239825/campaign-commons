@@ -38,7 +38,9 @@
         "status": "unverified",
         "evidence_urls": [],
         "verified_at": null
-      }
+      },
+      "sponsor_visibility_shares": null,
+      "vendor_links": []
     },
     {
       "ad_id": "CR10478813122326953985",
@@ -76,6 +78,27 @@
           "https://www.fec.gov/data/independent-expenditures/?q_spender=C00865444&candidate_id=S2PA00661&candidate_id=S6PA00217&cycle=2024&data_type=processed&is_notice=false"
         ],
         "verified_at": "2026-09-05T14:05:00Z"
+      },
+      "sponsor_visibility_shares": {
+        "disclosed": 0.6386,
+        "inferable": 0.0,
+        "unwalked": 0.0257,
+        "dark": 0.3357
+      },
+      "vendor_links": [],
+      "issues": {
+        "issue_ids": [
+          "abortion"
+        ],
+        "basis": {
+          "basis": "verified",
+          "rule": "Tagged by a person from the creative",
+          "source_urls": [
+            "https://adstransparency.google.com/advertiser/AR07109796124864544769/creative/CR10478813122326953985?political=&region=US"
+          ],
+          "checked_by": "devin-block2-media",
+          "checked_at": "2026-09-05"
+        }
       }
     },
     {
@@ -109,6 +132,27 @@
         "status": "unverified",
         "evidence_urls": [],
         "verified_at": null
+      },
+      "sponsor_visibility_shares": {
+        "disclosed": 0.6386,
+        "inferable": 0.0,
+        "unwalked": 0.0257,
+        "dark": 0.3357
+      },
+      "vendor_links": [],
+      "issues": {
+        "issue_ids": [
+          "labor_trade"
+        ],
+        "basis": {
+          "basis": "verified",
+          "rule": "Tagged by a person from the creative",
+          "source_urls": [
+            "https://adstransparency.google.com/advertiser/AR07109796124864544769/creative/CR05870211732231684097?political=&region=US"
+          ],
+          "checked_by": "devin-block2-media",
+          "checked_at": "2026-09-05"
+        }
       }
     },
     {
@@ -142,6 +186,27 @@
         "status": "unverified",
         "evidence_urls": [],
         "verified_at": null
+      },
+      "sponsor_visibility_shares": {
+        "disclosed": 0.3018,
+        "inferable": 0.0,
+        "unwalked": 0.0,
+        "dark": 0.6982
+      },
+      "vendor_links": [],
+      "issues": {
+        "issue_ids": [
+          "labor_trade"
+        ],
+        "basis": {
+          "basis": "verified",
+          "rule": "Tagged by a person from the creative",
+          "source_urls": [
+            "https://adstransparency.google.com/advertiser/AR15050660931082125313/creative/CR05367732770854404097?political=&region=US"
+          ],
+          "checked_by": "devin-block2-media",
+          "checked_at": "2026-09-05"
+        }
       }
     },
     {
@@ -176,7 +241,9 @@
         "status": "unverified",
         "evidence_urls": [],
         "verified_at": null
-      }
+      },
+      "sponsor_visibility_shares": null,
+      "vendor_links": []
     },
     {
       "ad_id": "CR00368842737589420033",
@@ -214,6 +281,27 @@
           "https://www.fec.gov/data/independent-expenditures/?q_spender=C00571703&candidate_id=S2PA00661&candidate_id=S6PA00217&cycle=2024&data_type=processed&is_notice=false"
         ],
         "verified_at": "2026-09-05T14:05:00Z"
+      },
+      "sponsor_visibility_shares": {
+        "disclosed": 0.7905,
+        "inferable": 0.0,
+        "unwalked": 0.0,
+        "dark": 0.2095
+      },
+      "vendor_links": [],
+      "issues": {
+        "issue_ids": [
+          "immigration"
+        ],
+        "basis": {
+          "basis": "verified",
+          "rule": "Tagged by a person from the creative",
+          "source_urls": [
+            "https://adstransparency.google.com/advertiser/AR12988012301746438145/creative/CR00368842737589420033?political=&region=US"
+          ],
+          "checked_by": "devin-block2-media",
+          "checked_at": "2026-09-05"
+        }
       }
     },
     {
@@ -247,6 +335,27 @@
         "status": "unverified",
         "evidence_urls": [],
         "verified_at": null
+      },
+      "sponsor_visibility_shares": {
+        "disclosed": 0.7905,
+        "inferable": 0.0,
+        "unwalked": 0.0,
+        "dark": 0.2095
+      },
+      "vendor_links": [],
+      "issues": {
+        "issue_ids": [
+          "tax_budget"
+        ],
+        "basis": {
+          "basis": "verified",
+          "rule": "Tagged by a person from the creative",
+          "source_urls": [
+            "https://adstransparency.google.com/advertiser/AR12988012301746438145/creative/CR11789922739211468801?political=&region=US"
+          ],
+          "checked_by": "devin-block2-media",
+          "checked_at": "2026-09-05"
+        }
       }
     },
     {
@@ -280,6 +389,27 @@
         "status": "unverified",
         "evidence_urls": [],
         "verified_at": null
+      },
+      "sponsor_visibility_shares": {
+        "disclosed": 0.7905,
+        "inferable": 0.0,
+        "unwalked": 0.0,
+        "dark": 0.2095
+      },
+      "vendor_links": [],
+      "issues": {
+        "issue_ids": [
+          "tax_budget"
+        ],
+        "basis": {
+          "basis": "verified",
+          "rule": "Tagged by a person from the creative",
+          "source_urls": [
+            "https://adstransparency.google.com/advertiser/AR12988012301746438145/creative/CR09843875118978170881?political=&region=US"
+          ],
+          "checked_by": "devin-block2-media",
+          "checked_at": "2026-09-05"
+        }
       }
     },
     {
@@ -313,7 +443,14 @@
         "status": "unverified",
         "evidence_urls": [],
         "verified_at": null
-      }
+      },
+      "sponsor_visibility_shares": {
+        "disclosed": 0.6386,
+        "inferable": 0.0,
+        "unwalked": 0.0257,
+        "dark": 0.3357
+      },
+      "vendor_links": []
     },
     {
       "ad_id": "CR16164832502010085377",
@@ -346,6 +483,27 @@
         "status": "unverified",
         "evidence_urls": [],
         "verified_at": null
+      },
+      "sponsor_visibility_shares": {
+        "disclosed": 0.6386,
+        "inferable": 0.0,
+        "unwalked": 0.0257,
+        "dark": 0.3357
+      },
+      "vendor_links": [],
+      "issues": {
+        "issue_ids": [
+          "tax_budget"
+        ],
+        "basis": {
+          "basis": "verified",
+          "rule": "Tagged by a person from the creative",
+          "source_urls": [
+            "https://adstransparency.google.com/advertiser/AR07109796124864544769/creative/CR16164832502010085377?political=&region=US"
+          ],
+          "checked_by": "devin-block2-media",
+          "checked_at": "2026-09-05"
+        }
       }
     },
     {
@@ -381,7 +539,9 @@
         "status": "unverified",
         "evidence_urls": [],
         "verified_at": null
-      }
+      },
+      "sponsor_visibility_shares": null,
+      "vendor_links": []
     },
     {
       "ad_id": "CR16196344247564107777",
@@ -415,7 +575,9 @@
         "status": "unverified",
         "evidence_urls": [],
         "verified_at": null
-      }
+      },
+      "sponsor_visibility_shares": null,
+      "vendor_links": []
     },
     {
       "ad_id": "CR14658086042461011969",
@@ -450,7 +612,9 @@
         "status": "unverified",
         "evidence_urls": [],
         "verified_at": null
-      }
+      },
+      "sponsor_visibility_shares": null,
+      "vendor_links": []
     },
     {
       "ad_id": "CR04948514275950854145",
@@ -483,7 +647,14 @@
         "status": "unverified",
         "evidence_urls": [],
         "verified_at": null
-      }
+      },
+      "sponsor_visibility_shares": {
+        "disclosed": 0.7905,
+        "inferable": 0.0,
+        "unwalked": 0.0,
+        "dark": 0.2095
+      },
+      "vendor_links": []
     },
     {
       "ad_id": "CR15747662947024896001",
@@ -516,6 +687,27 @@
         "status": "unverified",
         "evidence_urls": [],
         "verified_at": null
+      },
+      "sponsor_visibility_shares": {
+        "disclosed": 0.6386,
+        "inferable": 0.0,
+        "unwalked": 0.0257,
+        "dark": 0.3357
+      },
+      "vendor_links": [],
+      "issues": {
+        "issue_ids": [
+          "labor_trade"
+        ],
+        "basis": {
+          "basis": "verified",
+          "rule": "Tagged by a person from the creative",
+          "source_urls": [
+            "https://adstransparency.google.com/advertiser/AR07109796124864544769/creative/CR15747662947024896001?political=&region=US"
+          ],
+          "checked_by": "devin-block2-media",
+          "checked_at": "2026-09-05"
+        }
       }
     },
     {
@@ -551,6 +743,22 @@
         "status": "unverified",
         "evidence_urls": [],
         "verified_at": null
+      },
+      "sponsor_visibility_shares": null,
+      "vendor_links": [],
+      "issues": {
+        "issue_ids": [
+          "energy_climate"
+        ],
+        "basis": {
+          "basis": "verified",
+          "rule": "Tagged by a person from the creative",
+          "source_urls": [
+            "https://adstransparency.google.com/advertiser/AR18145382539424956417/creative/CR14499067438127120385?political=&region=US"
+          ],
+          "checked_by": "devin-block2-media",
+          "checked_at": "2026-09-05"
+        }
       }
     },
     {
@@ -585,7 +793,9 @@
         "status": "unverified",
         "evidence_urls": [],
         "verified_at": null
-      }
+      },
+      "sponsor_visibility_shares": null,
+      "vendor_links": []
     },
     {
       "ad_id": "CR13534678092823396353",
@@ -618,6 +828,28 @@
         "status": "unverified",
         "evidence_urls": [],
         "verified_at": null
+      },
+      "sponsor_visibility_shares": {
+        "disclosed": 0.0,
+        "inferable": 0.0,
+        "unwalked": 0.0,
+        "dark": 1.0
+      },
+      "vendor_links": [],
+      "issues": {
+        "issue_ids": [
+          "labor_trade",
+          "energy_climate"
+        ],
+        "basis": {
+          "basis": "verified",
+          "rule": "Tagged by a person from the creative",
+          "source_urls": [
+            "https://adstransparency.google.com/advertiser/AR07472449934839513089/creative/CR13534678092823396353?political=&region=US"
+          ],
+          "checked_by": "devin-block2-media",
+          "checked_at": "2026-09-05"
+        }
       }
     },
     {
@@ -651,6 +883,27 @@
         "status": "unverified",
         "evidence_urls": [],
         "verified_at": null
+      },
+      "sponsor_visibility_shares": {
+        "disclosed": 0.3018,
+        "inferable": 0.0,
+        "unwalked": 0.0,
+        "dark": 0.6982
+      },
+      "vendor_links": [],
+      "issues": {
+        "issue_ids": [
+          "labor_trade"
+        ],
+        "basis": {
+          "basis": "verified",
+          "rule": "Tagged by a person from the creative",
+          "source_urls": [
+            "https://adstransparency.google.com/advertiser/AR15050660931082125313/creative/CR16821231048187707393?political=&region=US"
+          ],
+          "checked_by": "devin-block2-media",
+          "checked_at": "2026-09-05"
+        }
       }
     },
     {
@@ -684,6 +937,27 @@
         "status": "unverified",
         "evidence_urls": [],
         "verified_at": null
+      },
+      "sponsor_visibility_shares": {
+        "disclosed": 0.7905,
+        "inferable": 0.0,
+        "unwalked": 0.0,
+        "dark": 0.2095
+      },
+      "vendor_links": [],
+      "issues": {
+        "issue_ids": [
+          "tax_budget"
+        ],
+        "basis": {
+          "basis": "verified",
+          "rule": "Tagged by a person from the creative",
+          "source_urls": [
+            "https://adstransparency.google.com/advertiser/AR12988012301746438145/creative/CR16183465650688098305?political=&region=US"
+          ],
+          "checked_by": "devin-block2-media",
+          "checked_at": "2026-09-05"
+        }
       }
     },
     {
@@ -717,6 +991,27 @@
         "status": "unverified",
         "evidence_urls": [],
         "verified_at": null
+      },
+      "sponsor_visibility_shares": {
+        "disclosed": 0.7905,
+        "inferable": 0.0,
+        "unwalked": 0.0,
+        "dark": 0.2095
+      },
+      "vendor_links": [],
+      "issues": {
+        "issue_ids": [
+          "tax_budget"
+        ],
+        "basis": {
+          "basis": "verified",
+          "rule": "Tagged by a person from the creative",
+          "source_urls": [
+            "https://adstransparency.google.com/advertiser/AR12988012301746438145/creative/CR14846206348760186881?political=&region=US"
+          ],
+          "checked_by": "devin-block2-media",
+          "checked_at": "2026-09-05"
+        }
       }
     },
     {
@@ -750,7 +1045,14 @@
         "status": "unverified",
         "evidence_urls": [],
         "verified_at": null
-      }
+      },
+      "sponsor_visibility_shares": {
+        "disclosed": 0.7905,
+        "inferable": 0.0,
+        "unwalked": 0.0,
+        "dark": 0.2095
+      },
+      "vendor_links": []
     },
     {
       "ad_id": "CR13454551182949220353",
@@ -783,6 +1085,27 @@
         "status": "unverified",
         "evidence_urls": [],
         "verified_at": null
+      },
+      "sponsor_visibility_shares": {
+        "disclosed": 0.7905,
+        "inferable": 0.0,
+        "unwalked": 0.0,
+        "dark": 0.2095
+      },
+      "vendor_links": [],
+      "issues": {
+        "issue_ids": [
+          "immigration"
+        ],
+        "basis": {
+          "basis": "verified",
+          "rule": "Tagged by a person from the creative",
+          "source_urls": [
+            "https://adstransparency.google.com/advertiser/AR12988012301746438145/creative/CR13454551182949220353?political=&region=US"
+          ],
+          "checked_by": "devin-block2-media",
+          "checked_at": "2026-09-05"
+        }
       }
     },
     {
@@ -816,6 +1139,27 @@
         "status": "unverified",
         "evidence_urls": [],
         "verified_at": null
+      },
+      "sponsor_visibility_shares": {
+        "disclosed": 0.6386,
+        "inferable": 0.0,
+        "unwalked": 0.0257,
+        "dark": 0.3357
+      },
+      "vendor_links": [],
+      "issues": {
+        "issue_ids": [
+          "abortion"
+        ],
+        "basis": {
+          "basis": "verified",
+          "rule": "Tagged by a person from the creative",
+          "source_urls": [
+            "https://adstransparency.google.com/advertiser/AR07109796124864544769/creative/CR12341671143046905857?political=&region=US"
+          ],
+          "checked_by": "devin-block2-media",
+          "checked_at": "2026-09-05"
+        }
       }
     },
     {
@@ -849,6 +1193,27 @@
         "status": "unverified",
         "evidence_urls": [],
         "verified_at": null
+      },
+      "sponsor_visibility_shares": {
+        "disclosed": 0.6386,
+        "inferable": 0.0,
+        "unwalked": 0.0257,
+        "dark": 0.3357
+      },
+      "vendor_links": [],
+      "issues": {
+        "issue_ids": [
+          "abortion"
+        ],
+        "basis": {
+          "basis": "verified",
+          "rule": "Tagged by a person from the creative",
+          "source_urls": [
+            "https://adstransparency.google.com/advertiser/AR07109796124864544769/creative/CR03071815602860457985?political=&region=US"
+          ],
+          "checked_by": "devin-block2-media",
+          "checked_at": "2026-09-05"
+        }
       }
     },
     {
@@ -882,7 +1247,14 @@
         "status": "unverified",
         "evidence_urls": [],
         "verified_at": null
-      }
+      },
+      "sponsor_visibility_shares": {
+        "disclosed": 0.7905,
+        "inferable": 0.0,
+        "unwalked": 0.0,
+        "dark": 0.2095
+      },
+      "vendor_links": []
     },
     {
       "ad_id": "CR09482672355114221569",
@@ -915,6 +1287,27 @@
         "status": "unverified",
         "evidence_urls": [],
         "verified_at": null
+      },
+      "sponsor_visibility_shares": {
+        "disclosed": 0.7905,
+        "inferable": 0.0,
+        "unwalked": 0.0,
+        "dark": 0.2095
+      },
+      "vendor_links": [],
+      "issues": {
+        "issue_ids": [
+          "tax_budget"
+        ],
+        "basis": {
+          "basis": "verified",
+          "rule": "Tagged by a person from the creative",
+          "source_urls": [
+            "https://adstransparency.google.com/advertiser/AR12988012301746438145/creative/CR09482672355114221569?political=&region=US"
+          ],
+          "checked_by": "devin-block2-media",
+          "checked_at": "2026-09-05"
+        }
       }
     },
     {
@@ -948,6 +1341,27 @@
         "status": "unverified",
         "evidence_urls": [],
         "verified_at": null
+      },
+      "sponsor_visibility_shares": {
+        "disclosed": 0.6386,
+        "inferable": 0.0,
+        "unwalked": 0.0257,
+        "dark": 0.3357
+      },
+      "vendor_links": [],
+      "issues": {
+        "issue_ids": [
+          "labor_trade"
+        ],
+        "basis": {
+          "basis": "verified",
+          "rule": "Tagged by a person from the creative",
+          "source_urls": [
+            "https://adstransparency.google.com/advertiser/AR07109796124864544769/creative/CR14004507606169681921?political=&region=US"
+          ],
+          "checked_by": "devin-block2-media",
+          "checked_at": "2026-09-05"
+        }
       }
     },
     {
@@ -981,6 +1395,28 @@
         "status": "unverified",
         "evidence_urls": [],
         "verified_at": null
+      },
+      "sponsor_visibility_shares": {
+        "disclosed": 0.6386,
+        "inferable": 0.0,
+        "unwalked": 0.0257,
+        "dark": 0.3357
+      },
+      "vendor_links": [],
+      "issues": {
+        "issue_ids": [
+          "abortion",
+          "healthcare"
+        ],
+        "basis": {
+          "basis": "verified",
+          "rule": "Tagged by a person from the creative",
+          "source_urls": [
+            "https://adstransparency.google.com/advertiser/AR07109796124864544769/creative/CR15884613992212070401?political=&region=US"
+          ],
+          "checked_by": "devin-block2-media",
+          "checked_at": "2026-09-05"
+        }
       }
     },
     {
@@ -1014,6 +1450,27 @@
         "status": "unverified",
         "evidence_urls": [],
         "verified_at": null
+      },
+      "sponsor_visibility_shares": {
+        "disclosed": 0.6386,
+        "inferable": 0.0,
+        "unwalked": 0.0257,
+        "dark": 0.3357
+      },
+      "vendor_links": [],
+      "issues": {
+        "issue_ids": [
+          "abortion"
+        ],
+        "basis": {
+          "basis": "verified",
+          "rule": "Tagged by a person from the creative",
+          "source_urls": [
+            "https://adstransparency.google.com/advertiser/AR07109796124864544769/creative/CR03840237839694430209?political=&region=US"
+          ],
+          "checked_by": "devin-block2-media",
+          "checked_at": "2026-09-05"
+        }
       }
     },
     {
@@ -1047,6 +1504,27 @@
         "status": "unverified",
         "evidence_urls": [],
         "verified_at": null
+      },
+      "sponsor_visibility_shares": {
+        "disclosed": 0.6386,
+        "inferable": 0.0,
+        "unwalked": 0.0257,
+        "dark": 0.3357
+      },
+      "vendor_links": [],
+      "issues": {
+        "issue_ids": [
+          "abortion"
+        ],
+        "basis": {
+          "basis": "verified",
+          "rule": "Tagged by a person from the creative",
+          "source_urls": [
+            "https://adstransparency.google.com/advertiser/AR07109796124864544769/creative/CR14255135835702689793?political=&region=US"
+          ],
+          "checked_by": "devin-block2-media",
+          "checked_at": "2026-09-05"
+        }
       }
     },
     {
@@ -1085,6 +1563,27 @@
           "https://www.fec.gov/data/independent-expenditures/?q_spender=C00042366&candidate_id=S2PA00661&candidate_id=S6PA00217&cycle=2024&data_type=processed&is_notice=false"
         ],
         "verified_at": "2026-09-05T14:05:00Z"
+      },
+      "sponsor_visibility_shares": {
+        "disclosed": 0.991,
+        "inferable": 0.0,
+        "unwalked": 0.0005,
+        "dark": 0.0085
+      },
+      "vendor_links": [],
+      "issues": {
+        "issue_ids": [
+          "abortion"
+        ],
+        "basis": {
+          "basis": "verified",
+          "rule": "Tagged by a person from the creative",
+          "source_urls": [
+            "https://adstransparency.google.com/advertiser/AR00340999924898332673/creative/CR02577931420798287873?political=&region=US"
+          ],
+          "checked_by": "devin-block2-media",
+          "checked_at": "2026-09-05"
+        }
       }
     },
     {
@@ -1118,7 +1617,14 @@
         "status": "unverified",
         "evidence_urls": [],
         "verified_at": null
-      }
+      },
+      "sponsor_visibility_shares": {
+        "disclosed": 0.5601,
+        "inferable": 0.0,
+        "unwalked": 0.0019,
+        "dark": 0.438
+      },
+      "vendor_links": []
     },
     {
       "ad_id": "CR15458809439838011393",
@@ -1152,7 +1658,9 @@
         "status": "unverified",
         "evidence_urls": [],
         "verified_at": null
-      }
+      },
+      "sponsor_visibility_shares": null,
+      "vendor_links": []
     },
     {
       "ad_id": "CR06215613208334434305",
@@ -1185,7 +1693,14 @@
         "status": "unverified",
         "evidence_urls": [],
         "verified_at": null
-      }
+      },
+      "sponsor_visibility_shares": {
+        "disclosed": 0.8659,
+        "inferable": 0.0,
+        "unwalked": 0.0,
+        "dark": 0.1341
+      },
+      "vendor_links": []
     },
     {
       "ad_id": "CR16237396970908418049",
@@ -1218,6 +1733,27 @@
         "status": "unverified",
         "evidence_urls": [],
         "verified_at": null
+      },
+      "sponsor_visibility_shares": {
+        "disclosed": 1.0,
+        "inferable": 0.0,
+        "unwalked": 0.0,
+        "dark": 0.0
+      },
+      "vendor_links": [],
+      "issues": {
+        "issue_ids": [
+          "guns"
+        ],
+        "basis": {
+          "basis": "verified",
+          "rule": "Tagged by a person from the creative",
+          "source_urls": [
+            "https://adstransparency.google.com/advertiser/AR16042297274033766401/creative/CR16237396970908418049?political=&region=US"
+          ],
+          "checked_by": "devin-block2-media",
+          "checked_at": "2026-09-05"
+        }
       }
     },
     {
@@ -1251,6 +1787,27 @@
         "status": "unverified",
         "evidence_urls": [],
         "verified_at": null
+      },
+      "sponsor_visibility_shares": {
+        "disclosed": 0.7905,
+        "inferable": 0.0,
+        "unwalked": 0.0,
+        "dark": 0.2095
+      },
+      "vendor_links": [],
+      "issues": {
+        "issue_ids": [
+          "immigration"
+        ],
+        "basis": {
+          "basis": "verified",
+          "rule": "Tagged by a person from the creative",
+          "source_urls": [
+            "https://adstransparency.google.com/advertiser/AR12988012301746438145/creative/CR04370227784589508609?political=&region=US"
+          ],
+          "checked_by": "devin-block2-media",
+          "checked_at": "2026-09-05"
+        }
       }
     },
     {
@@ -1284,7 +1841,14 @@
         "status": "unverified",
         "evidence_urls": [],
         "verified_at": null
-      }
+      },
+      "sponsor_visibility_shares": {
+        "disclosed": 0.7905,
+        "inferable": 0.0,
+        "unwalked": 0.0,
+        "dark": 0.2095
+      },
+      "vendor_links": []
     },
     {
       "ad_id": "CR03497255684309778433",
@@ -1317,6 +1881,27 @@
         "status": "unverified",
         "evidence_urls": [],
         "verified_at": null
+      },
+      "sponsor_visibility_shares": {
+        "disclosed": 0.3705,
+        "inferable": 0.0,
+        "unwalked": 0.0004,
+        "dark": 0.6291
+      },
+      "vendor_links": [],
+      "issues": {
+        "issue_ids": [
+          "abortion"
+        ],
+        "basis": {
+          "basis": "verified",
+          "rule": "Tagged by a person from the creative",
+          "source_urls": [
+            "https://adstransparency.google.com/advertiser/AR09271326703924281345/creative/CR03497255684309778433?political=&region=US"
+          ],
+          "checked_by": "devin-block2-media",
+          "checked_at": "2026-09-05"
+        }
       }
     },
     {
@@ -1352,7 +1937,9 @@
         "status": "unverified",
         "evidence_urls": [],
         "verified_at": null
-      }
+      },
+      "sponsor_visibility_shares": null,
+      "vendor_links": []
     },
     {
       "ad_id": "CR17834934589508812801",
@@ -1385,6 +1972,27 @@
         "status": "unverified",
         "evidence_urls": [],
         "verified_at": null
+      },
+      "sponsor_visibility_shares": {
+        "disclosed": 0.991,
+        "inferable": 0.0,
+        "unwalked": 0.0005,
+        "dark": 0.0085
+      },
+      "vendor_links": [],
+      "issues": {
+        "issue_ids": [
+          "tax_budget"
+        ],
+        "basis": {
+          "basis": "verified",
+          "rule": "Tagged by a person from the creative",
+          "source_urls": [
+            "https://adstransparency.google.com/advertiser/AR00340999924898332673/creative/CR17834934589508812801?political=&region=US"
+          ],
+          "checked_by": "devin-block2-media",
+          "checked_at": "2026-09-05"
+        }
       }
     },
     {
@@ -1420,7 +2028,9 @@
         "status": "unverified",
         "evidence_urls": [],
         "verified_at": null
-      }
+      },
+      "sponsor_visibility_shares": null,
+      "vendor_links": []
     },
     {
       "ad_id": "CR01942361524681048065",
@@ -1453,7 +2063,14 @@
         "status": "unverified",
         "evidence_urls": [],
         "verified_at": null
-      }
+      },
+      "sponsor_visibility_shares": {
+        "disclosed": 0.7905,
+        "inferable": 0.0,
+        "unwalked": 0.0,
+        "dark": 0.2095
+      },
+      "vendor_links": []
     },
     {
       "ad_id": "CR05179166475151212545",
@@ -1486,6 +2103,27 @@
         "status": "unverified",
         "evidence_urls": [],
         "verified_at": null
+      },
+      "sponsor_visibility_shares": {
+        "disclosed": 0.6386,
+        "inferable": 0.0,
+        "unwalked": 0.0257,
+        "dark": 0.3357
+      },
+      "vendor_links": [],
+      "issues": {
+        "issue_ids": [
+          "labor_trade"
+        ],
+        "basis": {
+          "basis": "verified",
+          "rule": "Tagged by a person from the creative",
+          "source_urls": [
+            "https://adstransparency.google.com/advertiser/AR07109796124864544769/creative/CR05179166475151212545?political=&region=US"
+          ],
+          "checked_by": "devin-block2-media",
+          "checked_at": "2026-09-05"
+        }
       }
     },
     {
@@ -1519,6 +2157,27 @@
         "status": "unverified",
         "evidence_urls": [],
         "verified_at": null
+      },
+      "sponsor_visibility_shares": {
+        "disclosed": 0.6386,
+        "inferable": 0.0,
+        "unwalked": 0.0257,
+        "dark": 0.3357
+      },
+      "vendor_links": [],
+      "issues": {
+        "issue_ids": [
+          "labor_trade"
+        ],
+        "basis": {
+          "basis": "verified",
+          "rule": "Tagged by a person from the creative",
+          "source_urls": [
+            "https://adstransparency.google.com/advertiser/AR07109796124864544769/creative/CR16220568893905698817?political=&region=US"
+          ],
+          "checked_by": "devin-block2-media",
+          "checked_at": "2026-09-05"
+        }
       }
     },
     {
@@ -1552,6 +2211,27 @@
         "status": "unverified",
         "evidence_urls": [],
         "verified_at": null
+      },
+      "sponsor_visibility_shares": {
+        "disclosed": 0.991,
+        "inferable": 0.0,
+        "unwalked": 0.0005,
+        "dark": 0.0085
+      },
+      "vendor_links": [],
+      "issues": {
+        "issue_ids": [
+          "tax_budget"
+        ],
+        "basis": {
+          "basis": "verified",
+          "rule": "Tagged by a person from the creative",
+          "source_urls": [
+            "https://adstransparency.google.com/advertiser/AR00340999924898332673/creative/CR06950645183998328833?political=&region=US"
+          ],
+          "checked_by": "devin-block2-media",
+          "checked_at": "2026-09-05"
+        }
       }
     },
     {
@@ -1587,6 +2267,22 @@
         "status": "unverified",
         "evidence_urls": [],
         "verified_at": null
+      },
+      "sponsor_visibility_shares": null,
+      "vendor_links": [],
+      "issues": {
+        "issue_ids": [
+          "healthcare"
+        ],
+        "basis": {
+          "basis": "verified",
+          "rule": "Tagged by a person from the creative",
+          "source_urls": [
+            "https://adstransparency.google.com/advertiser/AR15961232480741097473/creative/CR17089338712283676673?political=&region=US"
+          ],
+          "checked_by": "devin-block2-media",
+          "checked_at": "2026-09-05"
+        }
       }
     },
     {
@@ -1622,6 +2318,22 @@
         "status": "unverified",
         "evidence_urls": [],
         "verified_at": null
+      },
+      "sponsor_visibility_shares": null,
+      "vendor_links": [],
+      "issues": {
+        "issue_ids": [
+          "immigration"
+        ],
+        "basis": {
+          "basis": "verified",
+          "rule": "Tagged by a person from the creative",
+          "source_urls": [
+            "https://adstransparency.google.com/advertiser/AR15961232480741097473/creative/CR10442306037749907457?political=&region=US"
+          ],
+          "checked_by": "devin-block2-media",
+          "checked_at": "2026-09-05"
+        }
       }
     },
     {
@@ -1655,6 +2367,28 @@
         "status": "unverified",
         "evidence_urls": [],
         "verified_at": null
+      },
+      "sponsor_visibility_shares": {
+        "disclosed": 0.7905,
+        "inferable": 0.0,
+        "unwalked": 0.0,
+        "dark": 0.2095
+      },
+      "vendor_links": [],
+      "issues": {
+        "issue_ids": [
+          "immigration",
+          "tax_budget"
+        ],
+        "basis": {
+          "basis": "verified",
+          "rule": "Tagged by a person from the creative",
+          "source_urls": [
+            "https://adstransparency.google.com/advertiser/AR12988012301746438145/creative/CR01265011784436154369?political=&region=US"
+          ],
+          "checked_by": "devin-block2-media",
+          "checked_at": "2026-09-05"
+        }
       }
     },
     {
@@ -1688,6 +2422,28 @@
         "status": "unverified",
         "evidence_urls": [],
         "verified_at": null
+      },
+      "sponsor_visibility_shares": {
+        "disclosed": 0.7905,
+        "inferable": 0.0,
+        "unwalked": 0.0,
+        "dark": 0.2095
+      },
+      "vendor_links": [],
+      "issues": {
+        "issue_ids": [
+          "immigration",
+          "tax_budget"
+        ],
+        "basis": {
+          "basis": "verified",
+          "rule": "Tagged by a person from the creative",
+          "source_urls": [
+            "https://adstransparency.google.com/advertiser/AR12988012301746438145/creative/CR01683002124851478529?political=&region=US"
+          ],
+          "checked_by": "devin-block2-media",
+          "checked_at": "2026-09-05"
+        }
       }
     },
     {
@@ -1721,6 +2477,27 @@
         "status": "unverified",
         "evidence_urls": [],
         "verified_at": null
+      },
+      "sponsor_visibility_shares": {
+        "disclosed": 0.6386,
+        "inferable": 0.0,
+        "unwalked": 0.0257,
+        "dark": 0.3357
+      },
+      "vendor_links": [],
+      "issues": {
+        "issue_ids": [
+          "labor_trade"
+        ],
+        "basis": {
+          "basis": "verified",
+          "rule": "Tagged by a person from the creative",
+          "source_urls": [
+            "https://adstransparency.google.com/advertiser/AR07109796124864544769/creative/CR07452900497838571521?political=&region=US"
+          ],
+          "checked_by": "devin-block2-media",
+          "checked_at": "2026-09-05"
+        }
       }
     },
     {
@@ -1754,6 +2531,27 @@
         "status": "unverified",
         "evidence_urls": [],
         "verified_at": null
+      },
+      "sponsor_visibility_shares": {
+        "disclosed": 0.6386,
+        "inferable": 0.0,
+        "unwalked": 0.0257,
+        "dark": 0.3357
+      },
+      "vendor_links": [],
+      "issues": {
+        "issue_ids": [
+          "abortion"
+        ],
+        "basis": {
+          "basis": "verified",
+          "rule": "Tagged by a person from the creative",
+          "source_urls": [
+            "https://adstransparency.google.com/advertiser/AR07109796124864544769/creative/CR02170178134932979713?political=&region=US"
+          ],
+          "checked_by": "devin-block2-media",
+          "checked_at": "2026-09-05"
+        }
       }
     },
     {
@@ -1787,6 +2585,29 @@
         "status": "unverified",
         "evidence_urls": [],
         "verified_at": null
+      },
+      "sponsor_visibility_shares": {
+        "disclosed": 0.6386,
+        "inferable": 0.0,
+        "unwalked": 0.0257,
+        "dark": 0.3357
+      },
+      "vendor_links": [],
+      "issues": {
+        "issue_ids": [
+          "labor_trade",
+          "healthcare",
+          "tax_budget"
+        ],
+        "basis": {
+          "basis": "verified",
+          "rule": "Tagged by a person from the creative",
+          "source_urls": [
+            "https://adstransparency.google.com/advertiser/AR07109796124864544769/creative/CR01871250335276728321?political=&region=US"
+          ],
+          "checked_by": "devin-block2-media",
+          "checked_at": "2026-09-05"
+        }
       }
     },
     {
@@ -1820,6 +2641,27 @@
         "status": "unverified",
         "evidence_urls": [],
         "verified_at": null
+      },
+      "sponsor_visibility_shares": {
+        "disclosed": 0.6386,
+        "inferable": 0.0,
+        "unwalked": 0.0257,
+        "dark": 0.3357
+      },
+      "vendor_links": [],
+      "issues": {
+        "issue_ids": [
+          "tax_budget"
+        ],
+        "basis": {
+          "basis": "verified",
+          "rule": "Tagged by a person from the creative",
+          "source_urls": [
+            "https://adstransparency.google.com/advertiser/AR07109796124864544769/creative/CR17444495536584392705?political=&region=US"
+          ],
+          "checked_by": "devin-block2-media",
+          "checked_at": "2026-09-05"
+        }
       }
     },
     {
@@ -1855,7 +2697,9 @@
         "status": "unverified",
         "evidence_urls": [],
         "verified_at": null
-      }
+      },
+      "sponsor_visibility_shares": null,
+      "vendor_links": []
     },
     {
       "ad_id": "CR17268551685907677185",
@@ -1888,6 +2732,27 @@
         "status": "unverified",
         "evidence_urls": [],
         "verified_at": null
+      },
+      "sponsor_visibility_shares": {
+        "disclosed": 0.7905,
+        "inferable": 0.0,
+        "unwalked": 0.0,
+        "dark": 0.2095
+      },
+      "vendor_links": [],
+      "issues": {
+        "issue_ids": [
+          "tax_budget"
+        ],
+        "basis": {
+          "basis": "verified",
+          "rule": "Tagged by a person from the creative",
+          "source_urls": [
+            "https://adstransparency.google.com/advertiser/AR12988012301746438145/creative/CR17268551685907677185?political=&region=US"
+          ],
+          "checked_by": "devin-block2-media",
+          "checked_at": "2026-09-05"
+        }
       }
     },
     {
@@ -1921,6 +2786,27 @@
         "status": "unverified",
         "evidence_urls": [],
         "verified_at": null
+      },
+      "sponsor_visibility_shares": {
+        "disclosed": 0.6386,
+        "inferable": 0.0,
+        "unwalked": 0.0257,
+        "dark": 0.3357
+      },
+      "vendor_links": [],
+      "issues": {
+        "issue_ids": [
+          "abortion"
+        ],
+        "basis": {
+          "basis": "verified",
+          "rule": "Tagged by a person from the creative",
+          "source_urls": [
+            "https://adstransparency.google.com/advertiser/AR07109796124864544769/creative/CR16672726609693769729?political=&region=US"
+          ],
+          "checked_by": "devin-block2-media",
+          "checked_at": "2026-09-05"
+        }
       }
     },
     {
@@ -1954,6 +2840,27 @@
         "status": "unverified",
         "evidence_urls": [],
         "verified_at": null
+      },
+      "sponsor_visibility_shares": {
+        "disclosed": 0.6386,
+        "inferable": 0.0,
+        "unwalked": 0.0257,
+        "dark": 0.3357
+      },
+      "vendor_links": [],
+      "issues": {
+        "issue_ids": [
+          "abortion"
+        ],
+        "basis": {
+          "basis": "verified",
+          "rule": "Tagged by a person from the creative",
+          "source_urls": [
+            "https://adstransparency.google.com/advertiser/AR07109796124864544769/creative/CR00279342491088453633?political=&region=US"
+          ],
+          "checked_by": "devin-block2-media",
+          "checked_at": "2026-09-05"
+        }
       }
     },
     {
@@ -1987,6 +2894,27 @@
         "status": "unverified",
         "evidence_urls": [],
         "verified_at": null
+      },
+      "sponsor_visibility_shares": {
+        "disclosed": 0.6386,
+        "inferable": 0.0,
+        "unwalked": 0.0257,
+        "dark": 0.3357
+      },
+      "vendor_links": [],
+      "issues": {
+        "issue_ids": [
+          "abortion"
+        ],
+        "basis": {
+          "basis": "verified",
+          "rule": "Tagged by a person from the creative",
+          "source_urls": [
+            "https://adstransparency.google.com/advertiser/AR07109796124864544769/creative/CR13008203887897739265?political=&region=US"
+          ],
+          "checked_by": "devin-block2-media",
+          "checked_at": "2026-09-05"
+        }
       }
     },
     {
@@ -2020,6 +2948,27 @@
         "status": "unverified",
         "evidence_urls": [],
         "verified_at": null
+      },
+      "sponsor_visibility_shares": {
+        "disclosed": 0.6386,
+        "inferable": 0.0,
+        "unwalked": 0.0257,
+        "dark": 0.3357
+      },
+      "vendor_links": [],
+      "issues": {
+        "issue_ids": [
+          "abortion"
+        ],
+        "basis": {
+          "basis": "verified",
+          "rule": "Tagged by a person from the creative",
+          "source_urls": [
+            "https://adstransparency.google.com/advertiser/AR07109796124864544769/creative/CR05421010431412011009?political=&region=US"
+          ],
+          "checked_by": "devin-block2-media",
+          "checked_at": "2026-09-05"
+        }
       }
     },
     {
@@ -2053,7 +3002,14 @@
         "status": "unverified",
         "evidence_urls": [],
         "verified_at": null
-      }
+      },
+      "sponsor_visibility_shares": {
+        "disclosed": 0.6899,
+        "inferable": 0.0,
+        "unwalked": 0.0,
+        "dark": 0.3101
+      },
+      "vendor_links": []
     },
     {
       "ad_id": "CR15293284819044139009",
@@ -2088,7 +3044,9 @@
         "status": "unverified",
         "evidence_urls": [],
         "verified_at": null
-      }
+      },
+      "sponsor_visibility_shares": null,
+      "vendor_links": []
     },
     {
       "ad_id": "CR04714034298817085441",
@@ -2126,7 +3084,14 @@
           "https://www.fec.gov/data/independent-expenditures/?q_spender=C00687103&candidate_id=S2PA00661&candidate_id=S6PA00217&cycle=2024&data_type=processed&is_notice=false"
         ],
         "verified_at": "2026-09-05T14:05:00Z"
-      }
+      },
+      "sponsor_visibility_shares": {
+        "disclosed": 0.6515,
+        "inferable": 0.0,
+        "unwalked": 0.0,
+        "dark": 0.3485
+      },
+      "vendor_links": []
     },
     {
       "ad_id": "CR14211677638614843393",
@@ -2159,7 +3124,14 @@
         "status": "unverified",
         "evidence_urls": [],
         "verified_at": null
-      }
+      },
+      "sponsor_visibility_shares": {
+        "disclosed": 0.9976,
+        "inferable": 0.0,
+        "unwalked": 0.0,
+        "dark": 0.0024
+      },
+      "vendor_links": []
     },
     {
       "ad_id": "CR00337131121437310977",
@@ -2197,7 +3169,14 @@
           "https://www.fec.gov/data/independent-expenditures/?q_spender=C00849489&candidate_id=S2PA00661&candidate_id=S6PA00217&cycle=2024&data_type=processed&is_notice=false"
         ],
         "verified_at": "2026-09-05T14:05:00Z"
-      }
+      },
+      "sponsor_visibility_shares": {
+        "disclosed": 0.8659,
+        "inferable": 0.0,
+        "unwalked": 0.0,
+        "dark": 0.1341
+      },
+      "vendor_links": []
     },
     {
       "ad_id": "CR17518226862197702657",
@@ -2230,7 +3209,14 @@
         "status": "unverified",
         "evidence_urls": [],
         "verified_at": null
-      }
+      },
+      "sponsor_visibility_shares": {
+        "disclosed": 0.7905,
+        "inferable": 0.0,
+        "unwalked": 0.0,
+        "dark": 0.2095
+      },
+      "vendor_links": []
     },
     {
       "ad_id": "CR07434660424567488513",
@@ -2263,7 +3249,14 @@
         "status": "unverified",
         "evidence_urls": [],
         "verified_at": null
-      }
+      },
+      "sponsor_visibility_shares": {
+        "disclosed": 0.7905,
+        "inferable": 0.0,
+        "unwalked": 0.0,
+        "dark": 0.2095
+      },
+      "vendor_links": []
     },
     {
       "ad_id": "CR10816652638490198017",
@@ -2296,7 +3289,14 @@
         "status": "unverified",
         "evidence_urls": [],
         "verified_at": null
-      }
+      },
+      "sponsor_visibility_shares": {
+        "disclosed": 0.7905,
+        "inferable": 0.0,
+        "unwalked": 0.0,
+        "dark": 0.2095
+      },
+      "vendor_links": []
     },
     {
       "ad_id": "CR07792135019379556353",
@@ -2329,7 +3329,14 @@
         "status": "unverified",
         "evidence_urls": [],
         "verified_at": null
-      }
+      },
+      "sponsor_visibility_shares": {
+        "disclosed": 0.7905,
+        "inferable": 0.0,
+        "unwalked": 0.0,
+        "dark": 0.2095
+      },
+      "vendor_links": []
     },
     {
       "ad_id": "CR05152320575909134337",
@@ -2362,7 +3369,14 @@
         "status": "unverified",
         "evidence_urls": [],
         "verified_at": null
-      }
+      },
+      "sponsor_visibility_shares": {
+        "disclosed": 0.7905,
+        "inferable": 0.0,
+        "unwalked": 0.0,
+        "dark": 0.2095
+      },
+      "vendor_links": []
     },
     {
       "ad_id": "CR03252786695577272321",
@@ -2395,7 +3409,14 @@
         "status": "unverified",
         "evidence_urls": [],
         "verified_at": null
-      }
+      },
+      "sponsor_visibility_shares": {
+        "disclosed": 0.6386,
+        "inferable": 0.0,
+        "unwalked": 0.0257,
+        "dark": 0.3357
+      },
+      "vendor_links": []
     },
     {
       "ad_id": "CR11668932204813090817",
@@ -2428,7 +3449,14 @@
         "status": "unverified",
         "evidence_urls": [],
         "verified_at": null
-      }
+      },
+      "sponsor_visibility_shares": {
+        "disclosed": 0.6386,
+        "inferable": 0.0,
+        "unwalked": 0.0257,
+        "dark": 0.3357
+      },
+      "vendor_links": []
     },
     {
       "ad_id": "CR02455561600602472449",
@@ -2461,7 +3489,14 @@
         "status": "unverified",
         "evidence_urls": [],
         "verified_at": null
-      }
+      },
+      "sponsor_visibility_shares": {
+        "disclosed": 0.6386,
+        "inferable": 0.0,
+        "unwalked": 0.0257,
+        "dark": 0.3357
+      },
+      "vendor_links": []
     },
     {
       "ad_id": "CR07690464003792830465",
@@ -2494,7 +3529,14 @@
         "status": "unverified",
         "evidence_urls": [],
         "verified_at": null
-      }
+      },
+      "sponsor_visibility_shares": {
+        "disclosed": 0.6386,
+        "inferable": 0.0,
+        "unwalked": 0.0257,
+        "dark": 0.3357
+      },
+      "vendor_links": []
     },
     {
       "ad_id": "CR04588870619575091201",
@@ -2527,7 +3569,14 @@
         "status": "unverified",
         "evidence_urls": [],
         "verified_at": null
-      }
+      },
+      "sponsor_visibility_shares": {
+        "disclosed": 0.6386,
+        "inferable": 0.0,
+        "unwalked": 0.0257,
+        "dark": 0.3357
+      },
+      "vendor_links": []
     },
     {
       "ad_id": "CR13298918060816596993",
@@ -2560,7 +3609,14 @@
         "status": "unverified",
         "evidence_urls": [],
         "verified_at": null
-      }
+      },
+      "sponsor_visibility_shares": {
+        "disclosed": 0.3705,
+        "inferable": 0.0,
+        "unwalked": 0.0004,
+        "dark": 0.6291
+      },
+      "vendor_links": []
     },
     {
       "ad_id": "CR04091469151355273217",
@@ -2593,7 +3649,14 @@
         "status": "unverified",
         "evidence_urls": [],
         "verified_at": null
-      }
+      },
+      "sponsor_visibility_shares": {
+        "disclosed": 0.3705,
+        "inferable": 0.0,
+        "unwalked": 0.0004,
+        "dark": 0.6291
+      },
+      "vendor_links": []
     },
     {
       "ad_id": "CR16898073441951809537",
@@ -2626,7 +3689,14 @@
         "status": "unverified",
         "evidence_urls": [],
         "verified_at": null
-      }
+      },
+      "sponsor_visibility_shares": {
+        "disclosed": 0.207,
+        "inferable": 0.0,
+        "unwalked": 0.0029,
+        "dark": 0.7901
+      },
+      "vendor_links": []
     },
     {
       "ad_id": "CR11678766786567733249",
@@ -2659,7 +3729,14 @@
         "status": "unverified",
         "evidence_urls": [],
         "verified_at": null
-      }
+      },
+      "sponsor_visibility_shares": {
+        "disclosed": 0.207,
+        "inferable": 0.0,
+        "unwalked": 0.0029,
+        "dark": 0.7901
+      },
+      "vendor_links": []
     },
     {
       "ad_id": "CR03091034189940654081",
@@ -2692,7 +3769,14 @@
         "status": "unverified",
         "evidence_urls": [],
         "verified_at": null
-      }
+      },
+      "sponsor_visibility_shares": {
+        "disclosed": 0.0,
+        "inferable": 0.0,
+        "unwalked": 0.0,
+        "dark": 1.0
+      },
+      "vendor_links": []
     },
     {
       "ad_id": "CR10045902907338915841",
@@ -2725,7 +3809,14 @@
         "status": "unverified",
         "evidence_urls": [],
         "verified_at": null
-      }
+      },
+      "sponsor_visibility_shares": {
+        "disclosed": 0.6515,
+        "inferable": 0.0,
+        "unwalked": 0.0,
+        "dark": 0.3485
+      },
+      "vendor_links": []
     },
     {
       "ad_id": "CR14071576217736183809",
@@ -2758,7 +3849,14 @@
         "status": "unverified",
         "evidence_urls": [],
         "verified_at": null
-      }
+      },
+      "sponsor_visibility_shares": {
+        "disclosed": 0.6515,
+        "inferable": 0.0,
+        "unwalked": 0.0,
+        "dark": 0.3485
+      },
+      "vendor_links": []
     },
     {
       "ad_id": "CR13232780787138428929",
@@ -2791,7 +3889,14 @@
         "status": "unverified",
         "evidence_urls": [],
         "verified_at": null
-      }
+      },
+      "sponsor_visibility_shares": {
+        "disclosed": 0.6515,
+        "inferable": 0.0,
+        "unwalked": 0.0,
+        "dark": 0.3485
+      },
+      "vendor_links": []
     },
     {
       "ad_id": "CR03308517864792653825",
@@ -2824,7 +3929,14 @@
         "status": "unverified",
         "evidence_urls": [],
         "verified_at": null
-      }
+      },
+      "sponsor_visibility_shares": {
+        "disclosed": 0.6515,
+        "inferable": 0.0,
+        "unwalked": 0.0,
+        "dark": 0.3485
+      },
+      "vendor_links": []
     },
     {
       "ad_id": "CR12869857287577010177",
@@ -2857,7 +3969,14 @@
         "status": "unverified",
         "evidence_urls": [],
         "verified_at": null
-      }
+      },
+      "sponsor_visibility_shares": {
+        "disclosed": 0.7905,
+        "inferable": 0.0,
+        "unwalked": 0.0,
+        "dark": 0.2095
+      },
+      "vendor_links": []
     },
     {
       "ad_id": "CR08848797579509497857",
@@ -2890,7 +4009,14 @@
         "status": "unverified",
         "evidence_urls": [],
         "verified_at": null
-      }
+      },
+      "sponsor_visibility_shares": {
+        "disclosed": 0.7905,
+        "inferable": 0.0,
+        "unwalked": 0.0,
+        "dark": 0.2095
+      },
+      "vendor_links": []
     },
     {
       "ad_id": "CR17620144993022771201",
@@ -2923,7 +4049,14 @@
         "status": "unverified",
         "evidence_urls": [],
         "verified_at": null
-      }
+      },
+      "sponsor_visibility_shares": {
+        "disclosed": 0.7905,
+        "inferable": 0.0,
+        "unwalked": 0.0,
+        "dark": 0.2095
+      },
+      "vendor_links": []
     },
     {
       "ad_id": "CR08724941717809135617",
@@ -2956,7 +4089,14 @@
         "status": "unverified",
         "evidence_urls": [],
         "verified_at": null
-      }
+      },
+      "sponsor_visibility_shares": {
+        "disclosed": 0.7905,
+        "inferable": 0.0,
+        "unwalked": 0.0,
+        "dark": 0.2095
+      },
+      "vendor_links": []
     },
     {
       "ad_id": "CR00972325087657066497",
@@ -2989,7 +4129,14 @@
         "status": "unverified",
         "evidence_urls": [],
         "verified_at": null
-      }
+      },
+      "sponsor_visibility_shares": {
+        "disclosed": 0.7905,
+        "inferable": 0.0,
+        "unwalked": 0.0,
+        "dark": 0.2095
+      },
+      "vendor_links": []
     },
     {
       "ad_id": "CR06943381861724848129",
@@ -3022,7 +4169,14 @@
         "status": "unverified",
         "evidence_urls": [],
         "verified_at": null
-      }
+      },
+      "sponsor_visibility_shares": {
+        "disclosed": 0.6386,
+        "inferable": 0.0,
+        "unwalked": 0.0257,
+        "dark": 0.3357
+      },
+      "vendor_links": []
     },
     {
       "ad_id": "CR08113297418050600961",
@@ -3055,7 +4209,14 @@
         "status": "unverified",
         "evidence_urls": [],
         "verified_at": null
-      }
+      },
+      "sponsor_visibility_shares": {
+        "disclosed": 0.6386,
+        "inferable": 0.0,
+        "unwalked": 0.0257,
+        "dark": 0.3357
+      },
+      "vendor_links": []
     },
     {
       "ad_id": "CR00605536529846108161",
@@ -3088,7 +4249,14 @@
         "status": "unverified",
         "evidence_urls": [],
         "verified_at": null
-      }
+      },
+      "sponsor_visibility_shares": {
+        "disclosed": 0.6386,
+        "inferable": 0.0,
+        "unwalked": 0.0257,
+        "dark": 0.3357
+      },
+      "vendor_links": []
     },
     {
       "ad_id": "CR09737464658519916545",
@@ -3121,7 +4289,14 @@
         "status": "unverified",
         "evidence_urls": [],
         "verified_at": null
-      }
+      },
+      "sponsor_visibility_shares": {
+        "disclosed": 0.6386,
+        "inferable": 0.0,
+        "unwalked": 0.0257,
+        "dark": 0.3357
+      },
+      "vendor_links": []
     },
     {
       "ad_id": "CR00706205890339930113",
@@ -3154,7 +4329,14 @@
         "status": "unverified",
         "evidence_urls": [],
         "verified_at": null
-      }
+      },
+      "sponsor_visibility_shares": {
+        "disclosed": 0.6386,
+        "inferable": 0.0,
+        "unwalked": 0.0257,
+        "dark": 0.3357
+      },
+      "vendor_links": []
     },
     {
       "ad_id": "CR04538465708022956033",
@@ -3187,7 +4369,14 @@
         "status": "unverified",
         "evidence_urls": [],
         "verified_at": null
-      }
+      },
+      "sponsor_visibility_shares": {
+        "disclosed": 0.991,
+        "inferable": 0.0,
+        "unwalked": 0.0005,
+        "dark": 0.0085
+      },
+      "vendor_links": []
     },
     {
       "ad_id": "CR06975285291116396545",
@@ -3220,7 +4409,14 @@
         "status": "unverified",
         "evidence_urls": [],
         "verified_at": null
-      }
+      },
+      "sponsor_visibility_shares": {
+        "disclosed": 0.991,
+        "inferable": 0.0,
+        "unwalked": 0.0005,
+        "dark": 0.0085
+      },
+      "vendor_links": []
     },
     {
       "ad_id": "CR06426726244095623169",
@@ -3253,7 +4449,14 @@
         "status": "unverified",
         "evidence_urls": [],
         "verified_at": null
-      }
+      },
+      "sponsor_visibility_shares": {
+        "disclosed": 0.5601,
+        "inferable": 0.0,
+        "unwalked": 0.0019,
+        "dark": 0.438
+      },
+      "vendor_links": []
     },
     {
       "ad_id": "CR00445732358813908993",
@@ -3286,7 +4489,14 @@
         "status": "unverified",
         "evidence_urls": [],
         "verified_at": null
-      }
+      },
+      "sponsor_visibility_shares": {
+        "disclosed": 0.0,
+        "inferable": 0.0,
+        "unwalked": 0.0,
+        "dark": 1.0
+      },
+      "vendor_links": []
     },
     {
       "ad_id": "CR16084482064857956353",
@@ -3319,7 +4529,14 @@
         "status": "unverified",
         "evidence_urls": [],
         "verified_at": null
-      }
+      },
+      "sponsor_visibility_shares": {
+        "disclosed": 0.0,
+        "inferable": 0.0,
+        "unwalked": 0.0,
+        "dark": 1.0
+      },
+      "vendor_links": []
     },
     {
       "ad_id": "CR03896433380773855233",
@@ -3352,7 +4569,14 @@
         "status": "unverified",
         "evidence_urls": [],
         "verified_at": null
-      }
+      },
+      "sponsor_visibility_shares": {
+        "disclosed": 0.9842,
+        "inferable": 0.0,
+        "unwalked": 0.0,
+        "dark": 0.0158
+      },
+      "vendor_links": []
     },
     {
       "ad_id": "CR09469811728381378561",
@@ -3387,7 +4611,9 @@
         "status": "unverified",
         "evidence_urls": [],
         "verified_at": null
-      }
+      },
+      "sponsor_visibility_shares": null,
+      "vendor_links": []
     },
     {
       "ad_id": "CR12542813051453177857",
@@ -3420,7 +4646,14 @@
         "status": "unverified",
         "evidence_urls": [],
         "verified_at": null
-      }
+      },
+      "sponsor_visibility_shares": {
+        "disclosed": 0.6515,
+        "inferable": 0.0,
+        "unwalked": 0.0,
+        "dark": 0.3485
+      },
+      "vendor_links": []
     },
     {
       "ad_id": "CR01533354744020467713",
@@ -3453,7 +4686,14 @@
         "status": "unverified",
         "evidence_urls": [],
         "verified_at": null
-      }
+      },
+      "sponsor_visibility_shares": {
+        "disclosed": 0.7905,
+        "inferable": 0.0,
+        "unwalked": 0.0,
+        "dark": 0.2095
+      },
+      "vendor_links": []
     },
     {
       "ad_id": "CR04148159970883403777",
@@ -3486,7 +4726,14 @@
         "status": "unverified",
         "evidence_urls": [],
         "verified_at": null
-      }
+      },
+      "sponsor_visibility_shares": {
+        "disclosed": 0.7905,
+        "inferable": 0.0,
+        "unwalked": 0.0,
+        "dark": 0.2095
+      },
+      "vendor_links": []
     },
     {
       "ad_id": "CR04056986817440776193",
@@ -3519,7 +4766,14 @@
         "status": "unverified",
         "evidence_urls": [],
         "verified_at": null
-      }
+      },
+      "sponsor_visibility_shares": {
+        "disclosed": 0.7905,
+        "inferable": 0.0,
+        "unwalked": 0.0,
+        "dark": 0.2095
+      },
+      "vendor_links": []
     },
     {
       "ad_id": "CR01650612711320453121",
@@ -3552,7 +4806,14 @@
         "status": "unverified",
         "evidence_urls": [],
         "verified_at": null
-      }
+      },
+      "sponsor_visibility_shares": {
+        "disclosed": 0.7905,
+        "inferable": 0.0,
+        "unwalked": 0.0,
+        "dark": 0.2095
+      },
+      "vendor_links": []
     },
     {
       "ad_id": "CR07878528046020427777",
@@ -3585,7 +4846,14 @@
         "status": "unverified",
         "evidence_urls": [],
         "verified_at": null
-      }
+      },
+      "sponsor_visibility_shares": {
+        "disclosed": 0.7905,
+        "inferable": 0.0,
+        "unwalked": 0.0,
+        "dark": 0.2095
+      },
+      "vendor_links": []
     },
     {
       "ad_id": "CR13525409708017451009",
@@ -3618,7 +4886,14 @@
         "status": "unverified",
         "evidence_urls": [],
         "verified_at": null
-      }
+      },
+      "sponsor_visibility_shares": {
+        "disclosed": 0.6386,
+        "inferable": 0.0,
+        "unwalked": 0.0257,
+        "dark": 0.3357
+      },
+      "vendor_links": []
     },
     {
       "ad_id": "CR04924708474819969025",
@@ -3651,7 +4926,14 @@
         "status": "unverified",
         "evidence_urls": [],
         "verified_at": null
-      }
+      },
+      "sponsor_visibility_shares": {
+        "disclosed": 0.6386,
+        "inferable": 0.0,
+        "unwalked": 0.0257,
+        "dark": 0.3357
+      },
+      "vendor_links": []
     },
     {
       "ad_id": "CR13755576026157547521",
@@ -3684,7 +4966,14 @@
         "status": "unverified",
         "evidence_urls": [],
         "verified_at": null
-      }
+      },
+      "sponsor_visibility_shares": {
+        "disclosed": 0.6386,
+        "inferable": 0.0,
+        "unwalked": 0.0257,
+        "dark": 0.3357
+      },
+      "vendor_links": []
     },
     {
       "ad_id": "CR02761561407508971521",
@@ -3717,7 +5006,14 @@
         "status": "unverified",
         "evidence_urls": [],
         "verified_at": null
-      }
+      },
+      "sponsor_visibility_shares": {
+        "disclosed": 0.6386,
+        "inferable": 0.0,
+        "unwalked": 0.0257,
+        "dark": 0.3357
+      },
+      "vendor_links": []
     },
     {
       "ad_id": "CR02611023473799069697",
@@ -3750,7 +5046,14 @@
         "status": "unverified",
         "evidence_urls": [],
         "verified_at": null
-      }
+      },
+      "sponsor_visibility_shares": {
+        "disclosed": 0.6386,
+        "inferable": 0.0,
+        "unwalked": 0.0257,
+        "dark": 0.3357
+      },
+      "vendor_links": []
     },
     {
       "ad_id": "CR12649963758114832385",
@@ -3783,7 +5086,14 @@
         "status": "unverified",
         "evidence_urls": [],
         "verified_at": null
-      }
+      },
+      "sponsor_visibility_shares": {
+        "disclosed": 0.6386,
+        "inferable": 0.0,
+        "unwalked": 0.0257,
+        "dark": 0.3357
+      },
+      "vendor_links": []
     },
     {
       "ad_id": "CR08551849175661150209",
@@ -3816,7 +5126,14 @@
         "status": "unverified",
         "evidence_urls": [],
         "verified_at": null
-      }
+      },
+      "sponsor_visibility_shares": {
+        "disclosed": 0.6386,
+        "inferable": 0.0,
+        "unwalked": 0.0257,
+        "dark": 0.3357
+      },
+      "vendor_links": []
     },
     {
       "ad_id": "CR15759935094518710273",
@@ -3849,7 +5166,14 @@
         "status": "unverified",
         "evidence_urls": [],
         "verified_at": null
-      }
+      },
+      "sponsor_visibility_shares": {
+        "disclosed": 0.6386,
+        "inferable": 0.0,
+        "unwalked": 0.0257,
+        "dark": 0.3357
+      },
+      "vendor_links": []
     },
     {
       "ad_id": "CR14267926454468608001",
@@ -3884,7 +5208,9 @@
         "status": "unverified",
         "evidence_urls": [],
         "verified_at": null
-      }
+      },
+      "sponsor_visibility_shares": null,
+      "vendor_links": []
     },
     {
       "ad_id": "CR15284759755638177793",
@@ -3917,7 +5243,14 @@
         "status": "unverified",
         "evidence_urls": [],
         "verified_at": null
-      }
+      },
+      "sponsor_visibility_shares": {
+        "disclosed": 0.5601,
+        "inferable": 0.0,
+        "unwalked": 0.0019,
+        "dark": 0.438
+      },
+      "vendor_links": []
     },
     {
       "ad_id": "CR08794282641953128449",
@@ -3950,7 +5283,14 @@
         "status": "unverified",
         "evidence_urls": [],
         "verified_at": null
-      }
+      },
+      "sponsor_visibility_shares": {
+        "disclosed": 0.5601,
+        "inferable": 0.0,
+        "unwalked": 0.0019,
+        "dark": 0.438
+      },
+      "vendor_links": []
     },
     {
       "ad_id": "CR00569063530129522689",
@@ -3985,7 +5325,9 @@
         "status": "unverified",
         "evidence_urls": [],
         "verified_at": null
-      }
+      },
+      "sponsor_visibility_shares": null,
+      "vendor_links": []
     },
     {
       "ad_id": "CR12667929778112692225",
@@ -4020,7 +5362,9 @@
         "status": "unverified",
         "evidence_urls": [],
         "verified_at": null
-      }
+      },
+      "sponsor_visibility_shares": null,
+      "vendor_links": []
     },
     {
       "ad_id": "CR02499137445434490881",
@@ -4055,7 +5399,9 @@
         "status": "unverified",
         "evidence_urls": [],
         "verified_at": null
-      }
+      },
+      "sponsor_visibility_shares": null,
+      "vendor_links": []
     },
     {
       "ad_id": "CR14821776935557791745",
@@ -4090,7 +5436,9 @@
         "status": "unverified",
         "evidence_urls": [],
         "verified_at": null
-      }
+      },
+      "sponsor_visibility_shares": null,
+      "vendor_links": []
     },
     {
       "ad_id": "CR08883513284766990337",
@@ -4125,7 +5473,9 @@
         "status": "unverified",
         "evidence_urls": [],
         "verified_at": null
-      }
+      },
+      "sponsor_visibility_shares": null,
+      "vendor_links": []
     },
     {
       "ad_id": "CR00979612100970151937",
@@ -4158,7 +5508,14 @@
         "status": "unverified",
         "evidence_urls": [],
         "verified_at": null
-      }
+      },
+      "sponsor_visibility_shares": {
+        "disclosed": 0.6515,
+        "inferable": 0.0,
+        "unwalked": 0.0,
+        "dark": 0.3485
+      },
+      "vendor_links": []
     },
     {
       "ad_id": "CR08459320822597681153",
@@ -4191,7 +5548,14 @@
         "status": "unverified",
         "evidence_urls": [],
         "verified_at": null
-      }
+      },
+      "sponsor_visibility_shares": {
+        "disclosed": 0.8659,
+        "inferable": 0.0,
+        "unwalked": 0.0,
+        "dark": 0.1341
+      },
+      "vendor_links": []
     },
     {
       "ad_id": "CR05604116775709966337",
@@ -4224,7 +5588,14 @@
         "status": "unverified",
         "evidence_urls": [],
         "verified_at": null
-      }
+      },
+      "sponsor_visibility_shares": {
+        "disclosed": 1.0,
+        "inferable": 0.0,
+        "unwalked": 0.0,
+        "dark": 0.0
+      },
+      "vendor_links": []
     },
     {
       "ad_id": "CR10938109365818753025",
@@ -4257,7 +5628,14 @@
         "status": "unverified",
         "evidence_urls": [],
         "verified_at": null
-      }
+      },
+      "sponsor_visibility_shares": {
+        "disclosed": 0.7905,
+        "inferable": 0.0,
+        "unwalked": 0.0,
+        "dark": 0.2095
+      },
+      "vendor_links": []
     },
     {
       "ad_id": "CR12745390922045325313",
@@ -4290,7 +5668,14 @@
         "status": "unverified",
         "evidence_urls": [],
         "verified_at": null
-      }
+      },
+      "sponsor_visibility_shares": {
+        "disclosed": 0.7905,
+        "inferable": 0.0,
+        "unwalked": 0.0,
+        "dark": 0.2095
+      },
+      "vendor_links": []
     },
     {
       "ad_id": "CR05520604469533868033",
@@ -4323,7 +5708,14 @@
         "status": "unverified",
         "evidence_urls": [],
         "verified_at": null
-      }
+      },
+      "sponsor_visibility_shares": {
+        "disclosed": 0.7905,
+        "inferable": 0.0,
+        "unwalked": 0.0,
+        "dark": 0.2095
+      },
+      "vendor_links": []
     },
     {
       "ad_id": "CR01264763844564090881",
@@ -4356,7 +5748,14 @@
         "status": "unverified",
         "evidence_urls": [],
         "verified_at": null
-      }
+      },
+      "sponsor_visibility_shares": {
+        "disclosed": 0.6386,
+        "inferable": 0.0,
+        "unwalked": 0.0257,
+        "dark": 0.3357
+      },
+      "vendor_links": []
     },
     {
       "ad_id": "CR09297534113328136193",
@@ -4389,7 +5788,14 @@
         "status": "unverified",
         "evidence_urls": [],
         "verified_at": null
-      }
+      },
+      "sponsor_visibility_shares": {
+        "disclosed": 0.6386,
+        "inferable": 0.0,
+        "unwalked": 0.0257,
+        "dark": 0.3357
+      },
+      "vendor_links": []
     },
     {
       "ad_id": "CR03568671112017477633",
@@ -4424,7 +5830,9 @@
         "status": "unverified",
         "evidence_urls": [],
         "verified_at": null
-      }
+      },
+      "sponsor_visibility_shares": null,
+      "vendor_links": []
     },
     {
       "ad_id": "CR09326633238313041921",
@@ -4459,7 +5867,9 @@
         "status": "unverified",
         "evidence_urls": [],
         "verified_at": null
-      }
+      },
+      "sponsor_visibility_shares": null,
+      "vendor_links": []
     },
     {
       "ad_id": "CR12208879223930093569",
@@ -4492,7 +5902,14 @@
         "status": "unverified",
         "evidence_urls": [],
         "verified_at": null
-      }
+      },
+      "sponsor_visibility_shares": {
+        "disclosed": 0.991,
+        "inferable": 0.0,
+        "unwalked": 0.0005,
+        "dark": 0.0085
+      },
+      "vendor_links": []
     },
     {
       "ad_id": "CR10468900973462945793",
@@ -4525,7 +5942,14 @@
         "status": "unverified",
         "evidence_urls": [],
         "verified_at": null
-      }
+      },
+      "sponsor_visibility_shares": {
+        "disclosed": 0.5601,
+        "inferable": 0.0,
+        "unwalked": 0.0019,
+        "dark": 0.438
+      },
+      "vendor_links": []
     },
     {
       "ad_id": "CR13287648066631892993",
@@ -4558,7 +5982,14 @@
         "status": "unverified",
         "evidence_urls": [],
         "verified_at": null
-      }
+      },
+      "sponsor_visibility_shares": {
+        "disclosed": 0.5601,
+        "inferable": 0.0,
+        "unwalked": 0.0019,
+        "dark": 0.438
+      },
+      "vendor_links": []
     },
     {
       "ad_id": "CR16948710625335312385",
@@ -4591,7 +6022,14 @@
         "status": "unverified",
         "evidence_urls": [],
         "verified_at": null
-      }
+      },
+      "sponsor_visibility_shares": {
+        "disclosed": 0.0006,
+        "inferable": 0.0,
+        "unwalked": 0.0,
+        "dark": 0.9994
+      },
+      "vendor_links": []
     },
     {
       "ad_id": "CR03241512578223964161",
@@ -4624,7 +6062,14 @@
         "status": "unverified",
         "evidence_urls": [],
         "verified_at": null
-      }
+      },
+      "sponsor_visibility_shares": {
+        "disclosed": 0.0006,
+        "inferable": 0.0,
+        "unwalked": 0.0,
+        "dark": 0.9994
+      },
+      "vendor_links": []
     },
     {
       "ad_id": "CR02345125501657415681",
@@ -4657,7 +6102,14 @@
         "status": "unverified",
         "evidence_urls": [],
         "verified_at": null
-      }
+      },
+      "sponsor_visibility_shares": {
+        "disclosed": 0.0,
+        "inferable": 0.0,
+        "unwalked": 0.0,
+        "dark": 1.0
+      },
+      "vendor_links": []
     },
     {
       "ad_id": "CR05413392190221058049",
@@ -4690,7 +6142,14 @@
         "status": "unverified",
         "evidence_urls": [],
         "verified_at": null
-      }
+      },
+      "sponsor_visibility_shares": {
+        "disclosed": 0.9842,
+        "inferable": 0.0,
+        "unwalked": 0.0,
+        "dark": 0.0158
+      },
+      "vendor_links": []
     },
     {
       "ad_id": "CR13687442314241245185",
@@ -4723,7 +6182,14 @@
         "status": "unverified",
         "evidence_urls": [],
         "verified_at": null
-      }
+      },
+      "sponsor_visibility_shares": {
+        "disclosed": 0.2962,
+        "inferable": 0.0,
+        "unwalked": 0.0,
+        "dark": 0.7038
+      },
+      "vendor_links": []
     },
     {
       "ad_id": "CR12022000781654753281",
@@ -4758,7 +6224,9 @@
         "status": "unverified",
         "evidence_urls": [],
         "verified_at": null
-      }
+      },
+      "sponsor_visibility_shares": null,
+      "vendor_links": []
     },
     {
       "ad_id": "CR08103585706720362497",
@@ -4793,7 +6261,9 @@
         "status": "unverified",
         "evidence_urls": [],
         "verified_at": null
-      }
+      },
+      "sponsor_visibility_shares": null,
+      "vendor_links": []
     },
     {
       "ad_id": "CR02092368995570155521",
@@ -4828,7 +6298,9 @@
         "status": "unverified",
         "evidence_urls": [],
         "verified_at": null
-      }
+      },
+      "sponsor_visibility_shares": null,
+      "vendor_links": []
     },
     {
       "ad_id": "CR09777409915957018625",
@@ -4863,7 +6335,9 @@
         "status": "unverified",
         "evidence_urls": [],
         "verified_at": null
-      }
+      },
+      "sponsor_visibility_shares": null,
+      "vendor_links": []
     },
     {
       "ad_id": "CR15900053609367207937",
@@ -4898,7 +6372,9 @@
         "status": "unverified",
         "evidence_urls": [],
         "verified_at": null
-      }
+      },
+      "sponsor_visibility_shares": null,
+      "vendor_links": []
     },
     {
       "ad_id": "CR01345936389996281857",
@@ -4933,7 +6409,9 @@
         "status": "unverified",
         "evidence_urls": [],
         "verified_at": null
-      }
+      },
+      "sponsor_visibility_shares": null,
+      "vendor_links": []
     },
     {
       "ad_id": "CR02577467426891366401",
@@ -4968,7 +6446,9 @@
         "status": "unverified",
         "evidence_urls": [],
         "verified_at": null
-      }
+      },
+      "sponsor_visibility_shares": null,
+      "vendor_links": []
     },
     {
       "ad_id": "CR05774831160106418177",
@@ -5001,7 +6481,14 @@
         "status": "unverified",
         "evidence_urls": [],
         "verified_at": null
-      }
+      },
+      "sponsor_visibility_shares": {
+        "disclosed": 0.6515,
+        "inferable": 0.0,
+        "unwalked": 0.0,
+        "dark": 0.3485
+      },
+      "vendor_links": []
     },
     {
       "ad_id": "CR02909590358763503617",
@@ -5034,7 +6521,14 @@
         "status": "unverified",
         "evidence_urls": [],
         "verified_at": null
-      }
+      },
+      "sponsor_visibility_shares": {
+        "disclosed": 0.6515,
+        "inferable": 0.0,
+        "unwalked": 0.0,
+        "dark": 0.3485
+      },
+      "vendor_links": []
     },
     {
       "ad_id": "CR02504343856330309633",
@@ -5067,7 +6561,14 @@
         "status": "unverified",
         "evidence_urls": [],
         "verified_at": null
-      }
+      },
+      "sponsor_visibility_shares": {
+        "disclosed": 0.6515,
+        "inferable": 0.0,
+        "unwalked": 0.0,
+        "dark": 0.3485
+      },
+      "vendor_links": []
     },
     {
       "ad_id": "CR12906234080026165249",
@@ -5100,7 +6601,14 @@
         "status": "unverified",
         "evidence_urls": [],
         "verified_at": null
-      }
+      },
+      "sponsor_visibility_shares": {
+        "disclosed": 0.7905,
+        "inferable": 0.0,
+        "unwalked": 0.0,
+        "dark": 0.2095
+      },
+      "vendor_links": []
     },
     {
       "ad_id": "CR03934801938536726529",
@@ -5133,7 +6641,14 @@
         "status": "unverified",
         "evidence_urls": [],
         "verified_at": null
-      }
+      },
+      "sponsor_visibility_shares": {
+        "disclosed": 0.7905,
+        "inferable": 0.0,
+        "unwalked": 0.0,
+        "dark": 0.2095
+      },
+      "vendor_links": []
     },
     {
       "ad_id": "CR15873069120120422401",
@@ -5166,7 +6681,14 @@
         "status": "unverified",
         "evidence_urls": [],
         "verified_at": null
-      }
+      },
+      "sponsor_visibility_shares": {
+        "disclosed": 0.7905,
+        "inferable": 0.0,
+        "unwalked": 0.0,
+        "dark": 0.2095
+      },
+      "vendor_links": []
     },
     {
       "ad_id": "CR00835762444952403969",
@@ -5199,7 +6721,14 @@
         "status": "unverified",
         "evidence_urls": [],
         "verified_at": null
-      }
+      },
+      "sponsor_visibility_shares": {
+        "disclosed": 0.7905,
+        "inferable": 0.0,
+        "unwalked": 0.0,
+        "dark": 0.2095
+      },
+      "vendor_links": []
     },
     {
       "ad_id": "CR14605523803195834369",
@@ -5232,7 +6761,14 @@
         "status": "unverified",
         "evidence_urls": [],
         "verified_at": null
-      }
+      },
+      "sponsor_visibility_shares": {
+        "disclosed": 0.7905,
+        "inferable": 0.0,
+        "unwalked": 0.0,
+        "dark": 0.2095
+      },
+      "vendor_links": []
     },
     {
       "ad_id": "CR08742957490708152321",
@@ -5265,7 +6801,14 @@
         "status": "unverified",
         "evidence_urls": [],
         "verified_at": null
-      }
+      },
+      "sponsor_visibility_shares": {
+        "disclosed": 0.7905,
+        "inferable": 0.0,
+        "unwalked": 0.0,
+        "dark": 0.2095
+      },
+      "vendor_links": []
     },
     {
       "ad_id": "CR15776047389451747329",
@@ -5298,7 +6841,14 @@
         "status": "unverified",
         "evidence_urls": [],
         "verified_at": null
-      }
+      },
+      "sponsor_visibility_shares": {
+        "disclosed": 0.7905,
+        "inferable": 0.0,
+        "unwalked": 0.0,
+        "dark": 0.2095
+      },
+      "vendor_links": []
     },
     {
       "ad_id": "CR01417236918738878465",
@@ -5331,7 +6881,14 @@
         "status": "unverified",
         "evidence_urls": [],
         "verified_at": null
-      }
+      },
+      "sponsor_visibility_shares": {
+        "disclosed": 0.6386,
+        "inferable": 0.0,
+        "unwalked": 0.0257,
+        "dark": 0.3357
+      },
+      "vendor_links": []
     },
     {
       "ad_id": "CR14807351806857838593",
@@ -5364,7 +6921,14 @@
         "status": "unverified",
         "evidence_urls": [],
         "verified_at": null
-      }
+      },
+      "sponsor_visibility_shares": {
+        "disclosed": 0.6386,
+        "inferable": 0.0,
+        "unwalked": 0.0257,
+        "dark": 0.3357
+      },
+      "vendor_links": []
     },
     {
       "ad_id": "CR11268599471384035329",
@@ -5397,7 +6961,14 @@
         "status": "unverified",
         "evidence_urls": [],
         "verified_at": null
-      }
+      },
+      "sponsor_visibility_shares": {
+        "disclosed": 0.3705,
+        "inferable": 0.0,
+        "unwalked": 0.0004,
+        "dark": 0.6291
+      },
+      "vendor_links": []
     },
     {
       "ad_id": "CR11503678355937427457",
@@ -5430,7 +7001,14 @@
         "status": "unverified",
         "evidence_urls": [],
         "verified_at": null
-      }
+      },
+      "sponsor_visibility_shares": {
+        "disclosed": 0.904,
+        "inferable": 0.0,
+        "unwalked": 0.0237,
+        "dark": 0.0724
+      },
+      "vendor_links": []
     },
     {
       "ad_id": "CR09293252288632061953",
@@ -5465,7 +7043,9 @@
         "status": "unverified",
         "evidence_urls": [],
         "verified_at": null
-      }
+      },
+      "sponsor_visibility_shares": null,
+      "vendor_links": []
     },
     {
       "ad_id": "CR05459179651152740353",
@@ -5498,7 +7078,14 @@
         "status": "unverified",
         "evidence_urls": [],
         "verified_at": null
-      }
+      },
+      "sponsor_visibility_shares": {
+        "disclosed": 0.991,
+        "inferable": 0.0,
+        "unwalked": 0.0005,
+        "dark": 0.0085
+      },
+      "vendor_links": []
     },
     {
       "ad_id": "CR05381018994486542337",
@@ -5531,7 +7118,14 @@
         "status": "unverified",
         "evidence_urls": [],
         "verified_at": null
-      }
+      },
+      "sponsor_visibility_shares": {
+        "disclosed": 0.0,
+        "inferable": 0.0,
+        "unwalked": 0.0,
+        "dark": 1.0
+      },
+      "vendor_links": []
     },
     {
       "ad_id": "CR07869527443835453441",
@@ -5564,7 +7158,14 @@
         "status": "unverified",
         "evidence_urls": [],
         "verified_at": null
-      }
+      },
+      "sponsor_visibility_shares": {
+        "disclosed": 0.6289,
+        "inferable": 0.0,
+        "unwalked": 0.0,
+        "dark": 0.3711
+      },
+      "vendor_links": []
     },
     {
       "ad_id": "CR02188100397804027905",
@@ -5599,7 +7200,9 @@
         "status": "unverified",
         "evidence_urls": [],
         "verified_at": null
-      }
+      },
+      "sponsor_visibility_shares": null,
+      "vendor_links": []
     },
     {
       "ad_id": "CR16158908883115442177",
@@ -5634,7 +7237,9 @@
         "status": "unverified",
         "evidence_urls": [],
         "verified_at": null
-      }
+      },
+      "sponsor_visibility_shares": null,
+      "vendor_links": []
     },
     {
       "ad_id": "CR07574709343765921793",
@@ -5669,7 +7274,9 @@
         "status": "unverified",
         "evidence_urls": [],
         "verified_at": null
-      }
+      },
+      "sponsor_visibility_shares": null,
+      "vendor_links": []
     },
     {
       "ad_id": "CR18084280736944226305",
@@ -5702,7 +7309,14 @@
         "status": "unverified",
         "evidence_urls": [],
         "verified_at": null
-      }
+      },
+      "sponsor_visibility_shares": {
+        "disclosed": 0.6515,
+        "inferable": 0.0,
+        "unwalked": 0.0,
+        "dark": 0.3485
+      },
+      "vendor_links": []
     },
     {
       "ad_id": "CR03075334589825155073",
@@ -5735,7 +7349,14 @@
         "status": "unverified",
         "evidence_urls": [],
         "verified_at": null
-      }
+      },
+      "sponsor_visibility_shares": {
+        "disclosed": 0.6515,
+        "inferable": 0.0,
+        "unwalked": 0.0,
+        "dark": 0.3485
+      },
+      "vendor_links": []
     },
     {
       "ad_id": "CR12691408749412220929",
@@ -5768,7 +7389,14 @@
         "status": "unverified",
         "evidence_urls": [],
         "verified_at": null
-      }
+      },
+      "sponsor_visibility_shares": {
+        "disclosed": 0.6515,
+        "inferable": 0.0,
+        "unwalked": 0.0,
+        "dark": 0.3485
+      },
+      "vendor_links": []
     },
     {
       "ad_id": "CR15126906667989467137",
@@ -5801,7 +7429,14 @@
         "status": "unverified",
         "evidence_urls": [],
         "verified_at": null
-      }
+      },
+      "sponsor_visibility_shares": {
+        "disclosed": 0.8659,
+        "inferable": 0.0,
+        "unwalked": 0.0,
+        "dark": 0.1341
+      },
+      "vendor_links": []
     },
     {
       "ad_id": "CR14317278583637147649",
@@ -5834,7 +7469,14 @@
         "status": "unverified",
         "evidence_urls": [],
         "verified_at": null
-      }
+      },
+      "sponsor_visibility_shares": {
+        "disclosed": 0.7905,
+        "inferable": 0.0,
+        "unwalked": 0.0,
+        "dark": 0.2095
+      },
+      "vendor_links": []
     },
     {
       "ad_id": "CR01404384229105598465",
@@ -5867,7 +7509,14 @@
         "status": "unverified",
         "evidence_urls": [],
         "verified_at": null
-      }
+      },
+      "sponsor_visibility_shares": {
+        "disclosed": 0.7905,
+        "inferable": 0.0,
+        "unwalked": 0.0,
+        "dark": 0.2095
+      },
+      "vendor_links": []
     },
     {
       "ad_id": "CR16206538627319070721",
@@ -5900,7 +7549,14 @@
         "status": "unverified",
         "evidence_urls": [],
         "verified_at": null
-      }
+      },
+      "sponsor_visibility_shares": {
+        "disclosed": 0.7905,
+        "inferable": 0.0,
+        "unwalked": 0.0,
+        "dark": 0.2095
+      },
+      "vendor_links": []
     },
     {
       "ad_id": "CR16755977781858271233",
@@ -5933,7 +7589,14 @@
         "status": "unverified",
         "evidence_urls": [],
         "verified_at": null
-      }
+      },
+      "sponsor_visibility_shares": {
+        "disclosed": 0.7905,
+        "inferable": 0.0,
+        "unwalked": 0.0,
+        "dark": 0.2095
+      },
+      "vendor_links": []
     },
     {
       "ad_id": "CR07756333271511728129",
@@ -5966,7 +7629,14 @@
         "status": "unverified",
         "evidence_urls": [],
         "verified_at": null
-      }
+      },
+      "sponsor_visibility_shares": {
+        "disclosed": 0.7905,
+        "inferable": 0.0,
+        "unwalked": 0.0,
+        "dark": 0.2095
+      },
+      "vendor_links": []
     },
     {
       "ad_id": "CR11093675967497895937",
@@ -5999,7 +7669,14 @@
         "status": "unverified",
         "evidence_urls": [],
         "verified_at": null
-      }
+      },
+      "sponsor_visibility_shares": {
+        "disclosed": 0.7905,
+        "inferable": 0.0,
+        "unwalked": 0.0,
+        "dark": 0.2095
+      },
+      "vendor_links": []
     },
     {
       "ad_id": "CR18112535986754813953",
@@ -6032,7 +7709,14 @@
         "status": "unverified",
         "evidence_urls": [],
         "verified_at": null
-      }
+      },
+      "sponsor_visibility_shares": {
+        "disclosed": 0.7905,
+        "inferable": 0.0,
+        "unwalked": 0.0,
+        "dark": 0.2095
+      },
+      "vendor_links": []
     },
     {
       "ad_id": "CR12128375233107197953",
@@ -6065,7 +7749,14 @@
         "status": "unverified",
         "evidence_urls": [],
         "verified_at": null
-      }
+      },
+      "sponsor_visibility_shares": {
+        "disclosed": 0.6386,
+        "inferable": 0.0,
+        "unwalked": 0.0257,
+        "dark": 0.3357
+      },
+      "vendor_links": []
     },
     {
       "ad_id": "CR18348311686802309121",
@@ -6098,7 +7789,14 @@
         "status": "unverified",
         "evidence_urls": [],
         "verified_at": null
-      }
+      },
+      "sponsor_visibility_shares": {
+        "disclosed": 0.6386,
+        "inferable": 0.0,
+        "unwalked": 0.0257,
+        "dark": 0.3357
+      },
+      "vendor_links": []
     },
     {
       "ad_id": "CR17698293606600671233",
@@ -6131,7 +7829,14 @@
         "status": "unverified",
         "evidence_urls": [],
         "verified_at": null
-      }
+      },
+      "sponsor_visibility_shares": {
+        "disclosed": 0.6386,
+        "inferable": 0.0,
+        "unwalked": 0.0257,
+        "dark": 0.3357
+      },
+      "vendor_links": []
     },
     {
       "ad_id": "CR10695007070039572481",
@@ -6164,7 +7869,14 @@
         "status": "unverified",
         "evidence_urls": [],
         "verified_at": null
-      }
+      },
+      "sponsor_visibility_shares": {
+        "disclosed": 0.6386,
+        "inferable": 0.0,
+        "unwalked": 0.0257,
+        "dark": 0.3357
+      },
+      "vendor_links": []
     },
     {
       "ad_id": "CR04678071249157488641",
@@ -6197,7 +7909,14 @@
         "status": "unverified",
         "evidence_urls": [],
         "verified_at": null
-      }
+      },
+      "sponsor_visibility_shares": {
+        "disclosed": 0.6386,
+        "inferable": 0.0,
+        "unwalked": 0.0257,
+        "dark": 0.3357
+      },
+      "vendor_links": []
     },
     {
       "ad_id": "CR17456537387931795457",
@@ -6230,7 +7949,14 @@
         "status": "unverified",
         "evidence_urls": [],
         "verified_at": null
-      }
+      },
+      "sponsor_visibility_shares": {
+        "disclosed": 0.6386,
+        "inferable": 0.0,
+        "unwalked": 0.0257,
+        "dark": 0.3357
+      },
+      "vendor_links": []
     },
     {
       "ad_id": "CR08592898342772539393",
@@ -6263,7 +7989,14 @@
         "status": "unverified",
         "evidence_urls": [],
         "verified_at": null
-      }
+      },
+      "sponsor_visibility_shares": {
+        "disclosed": 0.3705,
+        "inferable": 0.0,
+        "unwalked": 0.0004,
+        "dark": 0.6291
+      },
+      "vendor_links": []
     },
     {
       "ad_id": "CR18332542765914652673",
@@ -6296,7 +8029,14 @@
         "status": "unverified",
         "evidence_urls": [],
         "verified_at": null
-      }
+      },
+      "sponsor_visibility_shares": {
+        "disclosed": 0.904,
+        "inferable": 0.0,
+        "unwalked": 0.0237,
+        "dark": 0.0724
+      },
+      "vendor_links": []
     },
     {
       "ad_id": "CR07146463858398330881",
@@ -6331,7 +8071,9 @@
         "status": "unverified",
         "evidence_urls": [],
         "verified_at": null
-      }
+      },
+      "sponsor_visibility_shares": null,
+      "vendor_links": []
     },
     {
       "ad_id": "CR16074046651538341889",
@@ -6366,7 +8108,9 @@
         "status": "unverified",
         "evidence_urls": [],
         "verified_at": null
-      }
+      },
+      "sponsor_visibility_shares": null,
+      "vendor_links": []
     },
     {
       "ad_id": "CR06269651164002779137",
@@ -6401,7 +8145,9 @@
         "status": "unverified",
         "evidence_urls": [],
         "verified_at": null
-      }
+      },
+      "sponsor_visibility_shares": null,
+      "vendor_links": []
     },
     {
       "ad_id": "CR03627327909875679233",
@@ -6436,7 +8182,9 @@
         "status": "unverified",
         "evidence_urls": [],
         "verified_at": null
-      }
+      },
+      "sponsor_visibility_shares": null,
+      "vendor_links": []
     },
     {
       "ad_id": "CR14038400103635484673",
@@ -6469,7 +8217,14 @@
         "status": "unverified",
         "evidence_urls": [],
         "verified_at": null
-      }
+      },
+      "sponsor_visibility_shares": {
+        "disclosed": 0.991,
+        "inferable": 0.0,
+        "unwalked": 0.0005,
+        "dark": 0.0085
+      },
+      "vendor_links": []
     },
     {
       "ad_id": "CR14424650240596377601",
@@ -6502,7 +8257,14 @@
         "status": "unverified",
         "evidence_urls": [],
         "verified_at": null
-      }
+      },
+      "sponsor_visibility_shares": {
+        "disclosed": 0.991,
+        "inferable": 0.0,
+        "unwalked": 0.0005,
+        "dark": 0.0085
+      },
+      "vendor_links": []
     },
     {
       "ad_id": "CR07393968272317612033",
@@ -6535,7 +8297,14 @@
         "status": "unverified",
         "evidence_urls": [],
         "verified_at": null
-      }
+      },
+      "sponsor_visibility_shares": {
+        "disclosed": 0.991,
+        "inferable": 0.0,
+        "unwalked": 0.0005,
+        "dark": 0.0085
+      },
+      "vendor_links": []
     },
     {
       "ad_id": "CR10545524890830635009",
@@ -6568,7 +8337,14 @@
         "status": "unverified",
         "evidence_urls": [],
         "verified_at": null
-      }
+      },
+      "sponsor_visibility_shares": {
+        "disclosed": 0.5601,
+        "inferable": 0.0,
+        "unwalked": 0.0019,
+        "dark": 0.438
+      },
+      "vendor_links": []
     },
     {
       "ad_id": "CR16744409218727018497",
@@ -6601,7 +8377,14 @@
         "status": "unverified",
         "evidence_urls": [],
         "verified_at": null
-      }
+      },
+      "sponsor_visibility_shares": {
+        "disclosed": 0.5601,
+        "inferable": 0.0,
+        "unwalked": 0.0019,
+        "dark": 0.438
+      },
+      "vendor_links": []
     },
     {
       "ad_id": "CR01449120608460734465",
@@ -6634,7 +8417,14 @@
         "status": "unverified",
         "evidence_urls": [],
         "verified_at": null
-      }
+      },
+      "sponsor_visibility_shares": {
+        "disclosed": 0.5601,
+        "inferable": 0.0,
+        "unwalked": 0.0019,
+        "dark": 0.438
+      },
+      "vendor_links": []
     },
     {
       "ad_id": "CR08222250774025994241",
@@ -6667,7 +8457,14 @@
         "status": "unverified",
         "evidence_urls": [],
         "verified_at": null
-      }
+      },
+      "sponsor_visibility_shares": {
+        "disclosed": 0.5601,
+        "inferable": 0.0,
+        "unwalked": 0.0019,
+        "dark": 0.438
+      },
+      "vendor_links": []
     },
     {
       "ad_id": "CR01850292492600082433",
@@ -6700,7 +8497,14 @@
         "status": "unverified",
         "evidence_urls": [],
         "verified_at": null
-      }
+      },
+      "sponsor_visibility_shares": {
+        "disclosed": 0.0,
+        "inferable": 0.0,
+        "unwalked": 0.0,
+        "dark": 1.0
+      },
+      "vendor_links": []
     },
     {
       "ad_id": "CR15891043111577583617",
@@ -6733,7 +8537,14 @@
         "status": "unverified",
         "evidence_urls": [],
         "verified_at": null
-      }
+      },
+      "sponsor_visibility_shares": {
+        "disclosed": 0.0,
+        "inferable": 0.0,
+        "unwalked": 0.0,
+        "dark": 1.0
+      },
+      "vendor_links": []
     },
     {
       "ad_id": "CR13224696301477691393",
@@ -6766,7 +8577,14 @@
         "status": "unverified",
         "evidence_urls": [],
         "verified_at": null
-      }
+      },
+      "sponsor_visibility_shares": {
+        "disclosed": 0.0,
+        "inferable": 0.0,
+        "unwalked": 0.0,
+        "dark": 1.0
+      },
+      "vendor_links": []
     },
     {
       "ad_id": "CR13983612538735034369",
@@ -6799,7 +8617,14 @@
         "status": "unverified",
         "evidence_urls": [],
         "verified_at": null
-      }
+      },
+      "sponsor_visibility_shares": {
+        "disclosed": 0.729,
+        "inferable": 0.0,
+        "unwalked": 0.0004,
+        "dark": 0.2706
+      },
+      "vendor_links": []
     },
     {
       "ad_id": "CR16886114414753742849",
@@ -6834,7 +8659,9 @@
         "status": "unverified",
         "evidence_urls": [],
         "verified_at": null
-      }
+      },
+      "sponsor_visibility_shares": null,
+      "vendor_links": []
     },
     {
       "ad_id": "CR09958771060423786497",
@@ -6869,7 +8696,9 @@
         "status": "unverified",
         "evidence_urls": [],
         "verified_at": null
-      }
+      },
+      "sponsor_visibility_shares": null,
+      "vendor_links": []
     },
     {
       "ad_id": "CR10971581798303137793",
@@ -6904,7 +8733,9 @@
         "status": "unverified",
         "evidence_urls": [],
         "verified_at": null
-      }
+      },
+      "sponsor_visibility_shares": null,
+      "vendor_links": []
     },
     {
       "ad_id": "CR11084767122994233345",
@@ -6939,7 +8770,9 @@
         "status": "unverified",
         "evidence_urls": [],
         "verified_at": null
-      }
+      },
+      "sponsor_visibility_shares": null,
+      "vendor_links": []
     },
     {
       "ad_id": "CR06818089488082796545",
@@ -6974,7 +8807,9 @@
         "status": "unverified",
         "evidence_urls": [],
         "verified_at": null
-      }
+      },
+      "sponsor_visibility_shares": null,
+      "vendor_links": []
     },
     {
       "ad_id": "CR14733689200721264641",
@@ -7009,7 +8844,9 @@
         "status": "unverified",
         "evidence_urls": [],
         "verified_at": null
-      }
+      },
+      "sponsor_visibility_shares": null,
+      "vendor_links": []
     },
     {
       "ad_id": "CR07463684507883798529",
@@ -7044,7 +8881,9 @@
         "status": "unverified",
         "evidence_urls": [],
         "verified_at": null
-      }
+      },
+      "sponsor_visibility_shares": null,
+      "vendor_links": []
     },
     {
       "ad_id": "CR14104717697220608001",
@@ -7077,7 +8916,14 @@
         "status": "unverified",
         "evidence_urls": [],
         "verified_at": null
-      }
+      },
+      "sponsor_visibility_shares": {
+        "disclosed": 0.6515,
+        "inferable": 0.0,
+        "unwalked": 0.0,
+        "dark": 0.3485
+      },
+      "vendor_links": []
     },
     {
       "ad_id": "CR16279674292508033025",
@@ -7110,7 +8956,14 @@
         "status": "unverified",
         "evidence_urls": [],
         "verified_at": null
-      }
+      },
+      "sponsor_visibility_shares": {
+        "disclosed": 0.6515,
+        "inferable": 0.0,
+        "unwalked": 0.0,
+        "dark": 0.3485
+      },
+      "vendor_links": []
     },
     {
       "ad_id": "CR07197941893299175425",
@@ -7143,7 +8996,14 @@
         "status": "unverified",
         "evidence_urls": [],
         "verified_at": null
-      }
+      },
+      "sponsor_visibility_shares": {
+        "disclosed": 0.6515,
+        "inferable": 0.0,
+        "unwalked": 0.0,
+        "dark": 0.3485
+      },
+      "vendor_links": []
     },
     {
       "ad_id": "CR16050704655335817217",
@@ -7176,7 +9036,14 @@
         "status": "unverified",
         "evidence_urls": [],
         "verified_at": null
-      }
+      },
+      "sponsor_visibility_shares": {
+        "disclosed": 0.6515,
+        "inferable": 0.0,
+        "unwalked": 0.0,
+        "dark": 0.3485
+      },
+      "vendor_links": []
     },
     {
       "ad_id": "CR03517695279052619777",
@@ -7209,7 +9076,14 @@
         "status": "unverified",
         "evidence_urls": [],
         "verified_at": null
-      }
+      },
+      "sponsor_visibility_shares": {
+        "disclosed": 0.6515,
+        "inferable": 0.0,
+        "unwalked": 0.0,
+        "dark": 0.3485
+      },
+      "vendor_links": []
     },
     {
       "ad_id": "CR10983275104464535553",
@@ -7242,7 +9116,14 @@
         "status": "unverified",
         "evidence_urls": [],
         "verified_at": null
-      }
+      },
+      "sponsor_visibility_shares": {
+        "disclosed": 0.9976,
+        "inferable": 0.0,
+        "unwalked": 0.0,
+        "dark": 0.0024
+      },
+      "vendor_links": []
     },
     {
       "ad_id": "CR00563864214519676929",
@@ -7275,7 +9156,14 @@
         "status": "unverified",
         "evidence_urls": [],
         "verified_at": null
-      }
+      },
+      "sponsor_visibility_shares": {
+        "disclosed": 0.9976,
+        "inferable": 0.0,
+        "unwalked": 0.0,
+        "dark": 0.0024
+      },
+      "vendor_links": []
     },
     {
       "ad_id": "CR05194561888502939649",
@@ -7308,7 +9196,14 @@
         "status": "unverified",
         "evidence_urls": [],
         "verified_at": null
-      }
+      },
+      "sponsor_visibility_shares": {
+        "disclosed": 0.3018,
+        "inferable": 0.0,
+        "unwalked": 0.0,
+        "dark": 0.6982
+      },
+      "vendor_links": []
     },
     {
       "ad_id": "CR02513366500287447041",
@@ -7341,7 +9236,14 @@
         "status": "unverified",
         "evidence_urls": [],
         "verified_at": null
-      }
+      },
+      "sponsor_visibility_shares": {
+        "disclosed": 0.8659,
+        "inferable": 0.0,
+        "unwalked": 0.0,
+        "dark": 0.1341
+      },
+      "vendor_links": []
     },
     {
       "ad_id": "CR15369039469390856193",
@@ -7374,7 +9276,14 @@
         "status": "unverified",
         "evidence_urls": [],
         "verified_at": null
-      }
+      },
+      "sponsor_visibility_shares": {
+        "disclosed": 0.8659,
+        "inferable": 0.0,
+        "unwalked": 0.0,
+        "dark": 0.1341
+      },
+      "vendor_links": []
     },
     {
       "ad_id": "CR02005452000099041281",
@@ -7407,7 +9316,14 @@
         "status": "unverified",
         "evidence_urls": [],
         "verified_at": null
-      }
+      },
+      "sponsor_visibility_shares": {
+        "disclosed": 0.8659,
+        "inferable": 0.0,
+        "unwalked": 0.0,
+        "dark": 0.1341
+      },
+      "vendor_links": []
     },
     {
       "ad_id": "CR02987728750319239169",
@@ -7440,7 +9356,14 @@
         "status": "unverified",
         "evidence_urls": [],
         "verified_at": null
-      }
+      },
+      "sponsor_visibility_shares": {
+        "disclosed": 0.8659,
+        "inferable": 0.0,
+        "unwalked": 0.0,
+        "dark": 0.1341
+      },
+      "vendor_links": []
     },
     {
       "ad_id": "CR11512100013710770177",
@@ -7473,7 +9396,14 @@
         "status": "unverified",
         "evidence_urls": [],
         "verified_at": null
-      }
+      },
+      "sponsor_visibility_shares": {
+        "disclosed": 0.8659,
+        "inferable": 0.0,
+        "unwalked": 0.0,
+        "dark": 0.1341
+      },
+      "vendor_links": []
     },
     {
       "ad_id": "CR15651442485454962689",
@@ -7506,7 +9436,14 @@
         "status": "unverified",
         "evidence_urls": [],
         "verified_at": null
-      }
+      },
+      "sponsor_visibility_shares": {
+        "disclosed": 1.0,
+        "inferable": 0.0,
+        "unwalked": 0.0,
+        "dark": 0.0
+      },
+      "vendor_links": []
     },
     {
       "ad_id": "CR06422327699368312833",
@@ -7539,7 +9476,14 @@
         "status": "unverified",
         "evidence_urls": [],
         "verified_at": null
-      }
+      },
+      "sponsor_visibility_shares": {
+        "disclosed": 0.7905,
+        "inferable": 0.0,
+        "unwalked": 0.0,
+        "dark": 0.2095
+      },
+      "vendor_links": []
     },
     {
       "ad_id": "CR11281807354812694529",
@@ -7572,7 +9516,14 @@
         "status": "unverified",
         "evidence_urls": [],
         "verified_at": null
-      }
+      },
+      "sponsor_visibility_shares": {
+        "disclosed": 0.7905,
+        "inferable": 0.0,
+        "unwalked": 0.0,
+        "dark": 0.2095
+      },
+      "vendor_links": []
     },
     {
       "ad_id": "CR03289406754974072833",
@@ -7605,7 +9556,14 @@
         "status": "unverified",
         "evidence_urls": [],
         "verified_at": null
-      }
+      },
+      "sponsor_visibility_shares": {
+        "disclosed": 0.7905,
+        "inferable": 0.0,
+        "unwalked": 0.0,
+        "dark": 0.2095
+      },
+      "vendor_links": []
     },
     {
       "ad_id": "CR01495136819350601729",
@@ -7638,7 +9596,14 @@
         "status": "unverified",
         "evidence_urls": [],
         "verified_at": null
-      }
+      },
+      "sponsor_visibility_shares": {
+        "disclosed": 0.7905,
+        "inferable": 0.0,
+        "unwalked": 0.0,
+        "dark": 0.2095
+      },
+      "vendor_links": []
     },
     {
       "ad_id": "CR13781058307642884097",
@@ -7671,7 +9636,14 @@
         "status": "unverified",
         "evidence_urls": [],
         "verified_at": null
-      }
+      },
+      "sponsor_visibility_shares": {
+        "disclosed": 0.7905,
+        "inferable": 0.0,
+        "unwalked": 0.0,
+        "dark": 0.2095
+      },
+      "vendor_links": []
     },
     {
       "ad_id": "CR07033544014225735681",
@@ -7704,7 +9676,14 @@
         "status": "unverified",
         "evidence_urls": [],
         "verified_at": null
-      }
+      },
+      "sponsor_visibility_shares": {
+        "disclosed": 0.7905,
+        "inferable": 0.0,
+        "unwalked": 0.0,
+        "dark": 0.2095
+      },
+      "vendor_links": []
     },
     {
       "ad_id": "CR15169904771000696833",
@@ -7737,7 +9716,14 @@
         "status": "unverified",
         "evidence_urls": [],
         "verified_at": null
-      }
+      },
+      "sponsor_visibility_shares": {
+        "disclosed": 0.7905,
+        "inferable": 0.0,
+        "unwalked": 0.0,
+        "dark": 0.2095
+      },
+      "vendor_links": []
     },
     {
       "ad_id": "CR01609809285057871873",
@@ -7770,7 +9756,14 @@
         "status": "unverified",
         "evidence_urls": [],
         "verified_at": null
-      }
+      },
+      "sponsor_visibility_shares": {
+        "disclosed": 0.7905,
+        "inferable": 0.0,
+        "unwalked": 0.0,
+        "dark": 0.2095
+      },
+      "vendor_links": []
     },
     {
       "ad_id": "CR14163911005213556737",
@@ -7803,7 +9796,14 @@
         "status": "unverified",
         "evidence_urls": [],
         "verified_at": null
-      }
+      },
+      "sponsor_visibility_shares": {
+        "disclosed": 0.7905,
+        "inferable": 0.0,
+        "unwalked": 0.0,
+        "dark": 0.2095
+      },
+      "vendor_links": []
     },
     {
       "ad_id": "CR04006506589342138369",
@@ -7836,7 +9836,14 @@
         "status": "unverified",
         "evidence_urls": [],
         "verified_at": null
-      }
+      },
+      "sponsor_visibility_shares": {
+        "disclosed": 0.7905,
+        "inferable": 0.0,
+        "unwalked": 0.0,
+        "dark": 0.2095
+      },
+      "vendor_links": []
     },
     {
       "ad_id": "CR04534458537895526401",
@@ -7869,7 +9876,14 @@
         "status": "unverified",
         "evidence_urls": [],
         "verified_at": null
-      }
+      },
+      "sponsor_visibility_shares": {
+        "disclosed": 0.7905,
+        "inferable": 0.0,
+        "unwalked": 0.0,
+        "dark": 0.2095
+      },
+      "vendor_links": []
     },
     {
       "ad_id": "CR09268777486215282689",
@@ -7902,7 +9916,14 @@
         "status": "unverified",
         "evidence_urls": [],
         "verified_at": null
-      }
+      },
+      "sponsor_visibility_shares": {
+        "disclosed": 0.7905,
+        "inferable": 0.0,
+        "unwalked": 0.0,
+        "dark": 0.2095
+      },
+      "vendor_links": []
     },
     {
       "ad_id": "CR13727316378300448769",
@@ -7935,7 +9956,14 @@
         "status": "unverified",
         "evidence_urls": [],
         "verified_at": null
-      }
+      },
+      "sponsor_visibility_shares": {
+        "disclosed": 0.7905,
+        "inferable": 0.0,
+        "unwalked": 0.0,
+        "dark": 0.2095
+      },
+      "vendor_links": []
     },
     {
       "ad_id": "CR11555242977378959361",
@@ -7968,7 +9996,14 @@
         "status": "unverified",
         "evidence_urls": [],
         "verified_at": null
-      }
+      },
+      "sponsor_visibility_shares": {
+        "disclosed": 0.7905,
+        "inferable": 0.0,
+        "unwalked": 0.0,
+        "dark": 0.2095
+      },
+      "vendor_links": []
     },
     {
       "ad_id": "CR13912166273162149889",
@@ -8001,7 +10036,14 @@
         "status": "unverified",
         "evidence_urls": [],
         "verified_at": null
-      }
+      },
+      "sponsor_visibility_shares": {
+        "disclosed": 0.7905,
+        "inferable": 0.0,
+        "unwalked": 0.0,
+        "dark": 0.2095
+      },
+      "vendor_links": []
     },
     {
       "ad_id": "CR03895104620971687937",
@@ -8034,7 +10076,14 @@
         "status": "unverified",
         "evidence_urls": [],
         "verified_at": null
-      }
+      },
+      "sponsor_visibility_shares": {
+        "disclosed": 0.7905,
+        "inferable": 0.0,
+        "unwalked": 0.0,
+        "dark": 0.2095
+      },
+      "vendor_links": []
     },
     {
       "ad_id": "CR08077905513142026241",
@@ -8067,7 +10116,14 @@
         "status": "unverified",
         "evidence_urls": [],
         "verified_at": null
-      }
+      },
+      "sponsor_visibility_shares": {
+        "disclosed": 0.6386,
+        "inferable": 0.0,
+        "unwalked": 0.0257,
+        "dark": 0.3357
+      },
+      "vendor_links": []
     },
     {
       "ad_id": "CR04013292500230864897",
@@ -8100,7 +10156,14 @@
         "status": "unverified",
         "evidence_urls": [],
         "verified_at": null
-      }
+      },
+      "sponsor_visibility_shares": {
+        "disclosed": 0.6386,
+        "inferable": 0.0,
+        "unwalked": 0.0257,
+        "dark": 0.3357
+      },
+      "vendor_links": []
     },
     {
       "ad_id": "CR11579097706777280513",
@@ -8133,7 +10196,14 @@
         "status": "unverified",
         "evidence_urls": [],
         "verified_at": null
-      }
+      },
+      "sponsor_visibility_shares": {
+        "disclosed": 0.6386,
+        "inferable": 0.0,
+        "unwalked": 0.0257,
+        "dark": 0.3357
+      },
+      "vendor_links": []
     },
     {
       "ad_id": "CR12472098510868578305",
@@ -8166,7 +10236,14 @@
         "status": "unverified",
         "evidence_urls": [],
         "verified_at": null
-      }
+      },
+      "sponsor_visibility_shares": {
+        "disclosed": 0.6386,
+        "inferable": 0.0,
+        "unwalked": 0.0257,
+        "dark": 0.3357
+      },
+      "vendor_links": []
     },
     {
       "ad_id": "CR01146283220334018561",
@@ -8199,7 +10276,14 @@
         "status": "unverified",
         "evidence_urls": [],
         "verified_at": null
-      }
+      },
+      "sponsor_visibility_shares": {
+        "disclosed": 0.6386,
+        "inferable": 0.0,
+        "unwalked": 0.0257,
+        "dark": 0.3357
+      },
+      "vendor_links": []
     },
     {
       "ad_id": "CR15931694255479717889",
@@ -8232,7 +10316,14 @@
         "status": "unverified",
         "evidence_urls": [],
         "verified_at": null
-      }
+      },
+      "sponsor_visibility_shares": {
+        "disclosed": 0.3705,
+        "inferable": 0.0,
+        "unwalked": 0.0004,
+        "dark": 0.6291
+      },
+      "vendor_links": []
     },
     {
       "ad_id": "CR01314437031127941121",
@@ -8265,7 +10356,14 @@
         "status": "unverified",
         "evidence_urls": [],
         "verified_at": null
-      }
+      },
+      "sponsor_visibility_shares": {
+        "disclosed": 0.3705,
+        "inferable": 0.0,
+        "unwalked": 0.0004,
+        "dark": 0.6291
+      },
+      "vendor_links": []
     },
     {
       "ad_id": "CR13729923045491998721",
@@ -8300,7 +10398,9 @@
         "status": "unverified",
         "evidence_urls": [],
         "verified_at": null
-      }
+      },
+      "sponsor_visibility_shares": null,
+      "vendor_links": []
     },
     {
       "ad_id": "CR11384215318067937281",
@@ -8335,7 +10435,9 @@
         "status": "unverified",
         "evidence_urls": [],
         "verified_at": null
-      }
+      },
+      "sponsor_visibility_shares": null,
+      "vendor_links": []
     },
     {
       "ad_id": "CR11903091347889848321",
@@ -8370,7 +10472,9 @@
         "status": "unverified",
         "evidence_urls": [],
         "verified_at": null
-      }
+      },
+      "sponsor_visibility_shares": null,
+      "vendor_links": []
     },
     {
       "ad_id": "CR06168584604933423105",
@@ -8405,7 +10509,9 @@
         "status": "unverified",
         "evidence_urls": [],
         "verified_at": null
-      }
+      },
+      "sponsor_visibility_shares": null,
+      "vendor_links": []
     },
     {
       "ad_id": "CR01330023158207479809",
@@ -8438,7 +10544,14 @@
         "status": "unverified",
         "evidence_urls": [],
         "verified_at": null
-      }
+      },
+      "sponsor_visibility_shares": {
+        "disclosed": 0.991,
+        "inferable": 0.0,
+        "unwalked": 0.0005,
+        "dark": 0.0085
+      },
+      "vendor_links": []
     },
     {
       "ad_id": "CR13243514769404592129",
@@ -8471,7 +10584,14 @@
         "status": "unverified",
         "evidence_urls": [],
         "verified_at": null
-      }
+      },
+      "sponsor_visibility_shares": {
+        "disclosed": 0.991,
+        "inferable": 0.0,
+        "unwalked": 0.0005,
+        "dark": 0.0085
+      },
+      "vendor_links": []
     },
     {
       "ad_id": "CR14812426602775838721",
@@ -8504,7 +10624,14 @@
         "status": "unverified",
         "evidence_urls": [],
         "verified_at": null
-      }
+      },
+      "sponsor_visibility_shares": {
+        "disclosed": 0.5601,
+        "inferable": 0.0,
+        "unwalked": 0.0019,
+        "dark": 0.438
+      },
+      "vendor_links": []
     },
     {
       "ad_id": "CR10506681344044564481",
@@ -8537,7 +10664,14 @@
         "status": "unverified",
         "evidence_urls": [],
         "verified_at": null
-      }
+      },
+      "sponsor_visibility_shares": {
+        "disclosed": 0.5601,
+        "inferable": 0.0,
+        "unwalked": 0.0019,
+        "dark": 0.438
+      },
+      "vendor_links": []
     },
     {
       "ad_id": "CR07019206382599536641",
@@ -8570,7 +10704,14 @@
         "status": "unverified",
         "evidence_urls": [],
         "verified_at": null
-      }
+      },
+      "sponsor_visibility_shares": {
+        "disclosed": 0.5601,
+        "inferable": 0.0,
+        "unwalked": 0.0019,
+        "dark": 0.438
+      },
+      "vendor_links": []
     },
     {
       "ad_id": "CR16104092730912669697",
@@ -8603,7 +10744,14 @@
         "status": "unverified",
         "evidence_urls": [],
         "verified_at": null
-      }
+      },
+      "sponsor_visibility_shares": {
+        "disclosed": 0.5601,
+        "inferable": 0.0,
+        "unwalked": 0.0019,
+        "dark": 0.438
+      },
+      "vendor_links": []
     },
     {
       "ad_id": "CR10387335953919246337",
@@ -8636,7 +10784,14 @@
         "status": "unverified",
         "evidence_urls": [],
         "verified_at": null
-      }
+      },
+      "sponsor_visibility_shares": {
+        "disclosed": 0.5601,
+        "inferable": 0.0,
+        "unwalked": 0.0019,
+        "dark": 0.438
+      },
+      "vendor_links": []
     },
     {
       "ad_id": "CR07386695604195295233",
@@ -8669,7 +10824,14 @@
         "status": "unverified",
         "evidence_urls": [],
         "verified_at": null
-      }
+      },
+      "sponsor_visibility_shares": {
+        "disclosed": 0.207,
+        "inferable": 0.0,
+        "unwalked": 0.0029,
+        "dark": 0.7901
+      },
+      "vendor_links": []
     },
     {
       "ad_id": "CR03773329533487284225",
@@ -8702,7 +10864,14 @@
         "status": "unverified",
         "evidence_urls": [],
         "verified_at": null
-      }
+      },
+      "sponsor_visibility_shares": {
+        "disclosed": 0.0,
+        "inferable": 0.0,
+        "unwalked": 0.0,
+        "dark": 1.0
+      },
+      "vendor_links": []
     },
     {
       "ad_id": "CR14141389931880120321",
@@ -8735,7 +10904,14 @@
         "status": "unverified",
         "evidence_urls": [],
         "verified_at": null
-      }
+      },
+      "sponsor_visibility_shares": {
+        "disclosed": 0.0,
+        "inferable": 0.0,
+        "unwalked": 0.0,
+        "dark": 1.0
+      },
+      "vendor_links": []
     },
     {
       "ad_id": "CR04677664979611025409",
@@ -8768,7 +10944,14 @@
         "status": "unverified",
         "evidence_urls": [],
         "verified_at": null
-      }
+      },
+      "sponsor_visibility_shares": {
+        "disclosed": 0.729,
+        "inferable": 0.0,
+        "unwalked": 0.0004,
+        "dark": 0.2706
+      },
+      "vendor_links": []
     },
     {
       "ad_id": "CR13999978769314480129",
@@ -8801,7 +10984,14 @@
         "status": "unverified",
         "evidence_urls": [],
         "verified_at": null
-      }
+      },
+      "sponsor_visibility_shares": {
+        "disclosed": 0.729,
+        "inferable": 0.0,
+        "unwalked": 0.0004,
+        "dark": 0.2706
+      },
+      "vendor_links": []
     },
     {
       "ad_id": "CR03582804286020517889",
@@ -8834,7 +11024,14 @@
         "status": "unverified",
         "evidence_urls": [],
         "verified_at": null
-      }
+      },
+      "sponsor_visibility_shares": {
+        "disclosed": 0.2962,
+        "inferable": 0.0,
+        "unwalked": 0.0,
+        "dark": 0.7038
+      },
+      "vendor_links": []
     },
     {
       "ad_id": "CR17060952070833569793",
@@ -8867,7 +11064,14 @@
         "status": "unverified",
         "evidence_urls": [],
         "verified_at": null
-      }
+      },
+      "sponsor_visibility_shares": {
+        "disclosed": 0.2962,
+        "inferable": 0.0,
+        "unwalked": 0.0,
+        "dark": 0.7038
+      },
+      "vendor_links": []
     },
     {
       "ad_id": "CR09421580465418010625",
@@ -8900,7 +11104,14 @@
         "status": "unverified",
         "evidence_urls": [],
         "verified_at": null
-      }
+      },
+      "sponsor_visibility_shares": {
+        "disclosed": 0.6289,
+        "inferable": 0.0,
+        "unwalked": 0.0,
+        "dark": 0.3711
+      },
+      "vendor_links": []
     },
     {
       "ad_id": "CR14843185440562872321",
@@ -8935,7 +11146,9 @@
         "status": "unverified",
         "evidence_urls": [],
         "verified_at": null
-      }
+      },
+      "sponsor_visibility_shares": null,
+      "vendor_links": []
     },
     {
       "ad_id": "CR11308633789262987265",
@@ -8970,7 +11183,9 @@
         "status": "unverified",
         "evidence_urls": [],
         "verified_at": null
-      }
+      },
+      "sponsor_visibility_shares": null,
+      "vendor_links": []
     },
     {
       "ad_id": "CR10972292082814681089",
@@ -9005,7 +11220,9 @@
         "status": "unverified",
         "evidence_urls": [],
         "verified_at": null
-      }
+      },
+      "sponsor_visibility_shares": null,
+      "vendor_links": []
     },
     {
       "ad_id": "CR10558768044530728961",
@@ -9040,7 +11257,9 @@
         "status": "unverified",
         "evidence_urls": [],
         "verified_at": null
-      }
+      },
+      "sponsor_visibility_shares": null,
+      "vendor_links": []
     },
     {
       "ad_id": "CR07065733952295665665",
@@ -9075,7 +11294,9 @@
         "status": "unverified",
         "evidence_urls": [],
         "verified_at": null
-      }
+      },
+      "sponsor_visibility_shares": null,
+      "vendor_links": []
     },
     {
       "ad_id": "CR02961600832170098689",
@@ -9110,7 +11331,9 @@
         "status": "unverified",
         "evidence_urls": [],
         "verified_at": null
-      }
+      },
+      "sponsor_visibility_shares": null,
+      "vendor_links": []
     },
     {
       "ad_id": "CR03034979214550892545",
@@ -9145,7 +11368,9 @@
         "status": "unverified",
         "evidence_urls": [],
         "verified_at": null
-      }
+      },
+      "sponsor_visibility_shares": null,
+      "vendor_links": []
     },
     {
       "ad_id": "CR13920211949498400769",
@@ -9180,7 +11405,9 @@
         "status": "unverified",
         "evidence_urls": [],
         "verified_at": null
-      }
+      },
+      "sponsor_visibility_shares": null,
+      "vendor_links": []
     },
     {
       "ad_id": "CR06876864242922815489",
@@ -9215,7 +11442,9 @@
         "status": "unverified",
         "evidence_urls": [],
         "verified_at": null
-      }
+      },
+      "sponsor_visibility_shares": null,
+      "vendor_links": []
     },
     {
       "ad_id": "CR09100341874027134977",
@@ -9250,7 +11479,9 @@
         "status": "unverified",
         "evidence_urls": [],
         "verified_at": null
-      }
+      },
+      "sponsor_visibility_shares": null,
+      "vendor_links": []
     },
     {
       "ad_id": "CR13177416528389210113",
@@ -9285,7 +11516,9 @@
         "status": "unverified",
         "evidence_urls": [],
         "verified_at": null
-      }
+      },
+      "sponsor_visibility_shares": null,
+      "vendor_links": []
     },
     {
       "ad_id": "CR05315997398693052417",
@@ -9318,7 +11551,14 @@
         "status": "unverified",
         "evidence_urls": [],
         "verified_at": null
-      }
+      },
+      "sponsor_visibility_shares": {
+        "disclosed": 0.6515,
+        "inferable": 0.0,
+        "unwalked": 0.0,
+        "dark": 0.3485
+      },
+      "vendor_links": []
     },
     {
       "ad_id": "CR00232993076635762689",
@@ -9351,7 +11591,14 @@
         "status": "unverified",
         "evidence_urls": [],
         "verified_at": null
-      }
+      },
+      "sponsor_visibility_shares": {
+        "disclosed": 0.6515,
+        "inferable": 0.0,
+        "unwalked": 0.0,
+        "dark": 0.3485
+      },
+      "vendor_links": []
     },
     {
       "ad_id": "CR09710372692011515905",
@@ -9384,7 +11631,14 @@
         "status": "unverified",
         "evidence_urls": [],
         "verified_at": null
-      }
+      },
+      "sponsor_visibility_shares": {
+        "disclosed": 0.6515,
+        "inferable": 0.0,
+        "unwalked": 0.0,
+        "dark": 0.3485
+      },
+      "vendor_links": []
     },
     {
       "ad_id": "CR12605863446236364801",
@@ -9417,7 +11671,14 @@
         "status": "unverified",
         "evidence_urls": [],
         "verified_at": null
-      }
+      },
+      "sponsor_visibility_shares": {
+        "disclosed": 0.6515,
+        "inferable": 0.0,
+        "unwalked": 0.0,
+        "dark": 0.3485
+      },
+      "vendor_links": []
     },
     {
       "ad_id": "CR08536016208221175809",
@@ -9450,7 +11711,14 @@
         "status": "unverified",
         "evidence_urls": [],
         "verified_at": null
-      }
+      },
+      "sponsor_visibility_shares": {
+        "disclosed": 0.9976,
+        "inferable": 0.0,
+        "unwalked": 0.0,
+        "dark": 0.0024
+      },
+      "vendor_links": []
     },
     {
       "ad_id": "CR08283124084246577153",
@@ -9483,7 +11751,14 @@
         "status": "unverified",
         "evidence_urls": [],
         "verified_at": null
-      }
+      },
+      "sponsor_visibility_shares": {
+        "disclosed": 0.8659,
+        "inferable": 0.0,
+        "unwalked": 0.0,
+        "dark": 0.1341
+      },
+      "vendor_links": []
     },
     {
       "ad_id": "CR14516585407136661505",
@@ -9516,7 +11791,14 @@
         "status": "unverified",
         "evidence_urls": [],
         "verified_at": null
-      }
+      },
+      "sponsor_visibility_shares": {
+        "disclosed": 0.8659,
+        "inferable": 0.0,
+        "unwalked": 0.0,
+        "dark": 0.1341
+      },
+      "vendor_links": []
     },
     {
       "ad_id": "CR18357413444057038849",
@@ -9549,7 +11831,14 @@
         "status": "unverified",
         "evidence_urls": [],
         "verified_at": null
-      }
+      },
+      "sponsor_visibility_shares": {
+        "disclosed": 0.8659,
+        "inferable": 0.0,
+        "unwalked": 0.0,
+        "dark": 0.1341
+      },
+      "vendor_links": []
     },
     {
       "ad_id": "CR11196298885276368897",
@@ -9582,7 +11871,14 @@
         "status": "unverified",
         "evidence_urls": [],
         "verified_at": null
-      }
+      },
+      "sponsor_visibility_shares": {
+        "disclosed": 0.7905,
+        "inferable": 0.0,
+        "unwalked": 0.0,
+        "dark": 0.2095
+      },
+      "vendor_links": []
     },
     {
       "ad_id": "CR06885810333382868993",
@@ -9615,7 +11911,14 @@
         "status": "unverified",
         "evidence_urls": [],
         "verified_at": null
-      }
+      },
+      "sponsor_visibility_shares": {
+        "disclosed": 0.7905,
+        "inferable": 0.0,
+        "unwalked": 0.0,
+        "dark": 0.2095
+      },
+      "vendor_links": []
     },
     {
       "ad_id": "CR10716069589659156481",
@@ -9648,7 +11951,14 @@
         "status": "unverified",
         "evidence_urls": [],
         "verified_at": null
-      }
+      },
+      "sponsor_visibility_shares": {
+        "disclosed": 0.7905,
+        "inferable": 0.0,
+        "unwalked": 0.0,
+        "dark": 0.2095
+      },
+      "vendor_links": []
     },
     {
       "ad_id": "CR15606427379902185473",
@@ -9681,7 +11991,14 @@
         "status": "unverified",
         "evidence_urls": [],
         "verified_at": null
-      }
+      },
+      "sponsor_visibility_shares": {
+        "disclosed": 0.7905,
+        "inferable": 0.0,
+        "unwalked": 0.0,
+        "dark": 0.2095
+      },
+      "vendor_links": []
     },
     {
       "ad_id": "CR01690628887257546753",
@@ -9714,7 +12031,14 @@
         "status": "unverified",
         "evidence_urls": [],
         "verified_at": null
-      }
+      },
+      "sponsor_visibility_shares": {
+        "disclosed": 0.7905,
+        "inferable": 0.0,
+        "unwalked": 0.0,
+        "dark": 0.2095
+      },
+      "vendor_links": []
     },
     {
       "ad_id": "CR04430194049256783873",
@@ -9747,7 +12071,14 @@
         "status": "unverified",
         "evidence_urls": [],
         "verified_at": null
-      }
+      },
+      "sponsor_visibility_shares": {
+        "disclosed": 0.7905,
+        "inferable": 0.0,
+        "unwalked": 0.0,
+        "dark": 0.2095
+      },
+      "vendor_links": []
     },
     {
       "ad_id": "CR14755472999968669697",
@@ -9780,7 +12111,14 @@
         "status": "unverified",
         "evidence_urls": [],
         "verified_at": null
-      }
+      },
+      "sponsor_visibility_shares": {
+        "disclosed": 0.7905,
+        "inferable": 0.0,
+        "unwalked": 0.0,
+        "dark": 0.2095
+      },
+      "vendor_links": []
     },
     {
       "ad_id": "CR10020922879329173505",
@@ -9813,7 +12151,14 @@
         "status": "unverified",
         "evidence_urls": [],
         "verified_at": null
-      }
+      },
+      "sponsor_visibility_shares": {
+        "disclosed": 0.7905,
+        "inferable": 0.0,
+        "unwalked": 0.0,
+        "dark": 0.2095
+      },
+      "vendor_links": []
     },
     {
       "ad_id": "CR07333336304899325953",
@@ -9846,7 +12191,14 @@
         "status": "unverified",
         "evidence_urls": [],
         "verified_at": null
-      }
+      },
+      "sponsor_visibility_shares": {
+        "disclosed": 0.7905,
+        "inferable": 0.0,
+        "unwalked": 0.0,
+        "dark": 0.2095
+      },
+      "vendor_links": []
     },
     {
       "ad_id": "CR08780102841785122817",
@@ -9879,7 +12231,14 @@
         "status": "unverified",
         "evidence_urls": [],
         "verified_at": null
-      }
+      },
+      "sponsor_visibility_shares": {
+        "disclosed": 0.7905,
+        "inferable": 0.0,
+        "unwalked": 0.0,
+        "dark": 0.2095
+      },
+      "vendor_links": []
     },
     {
       "ad_id": "CR16486043279192752129",
@@ -9912,7 +12271,14 @@
         "status": "unverified",
         "evidence_urls": [],
         "verified_at": null
-      }
+      },
+      "sponsor_visibility_shares": {
+        "disclosed": 0.7905,
+        "inferable": 0.0,
+        "unwalked": 0.0,
+        "dark": 0.2095
+      },
+      "vendor_links": []
     },
     {
       "ad_id": "CR17737004937113501697",
@@ -9945,7 +12311,14 @@
         "status": "unverified",
         "evidence_urls": [],
         "verified_at": null
-      }
+      },
+      "sponsor_visibility_shares": {
+        "disclosed": 0.7905,
+        "inferable": 0.0,
+        "unwalked": 0.0,
+        "dark": 0.2095
+      },
+      "vendor_links": []
     },
     {
       "ad_id": "CR12445805339557756929",
@@ -9978,7 +12351,14 @@
         "status": "unverified",
         "evidence_urls": [],
         "verified_at": null
-      }
+      },
+      "sponsor_visibility_shares": {
+        "disclosed": 0.7905,
+        "inferable": 0.0,
+        "unwalked": 0.0,
+        "dark": 0.2095
+      },
+      "vendor_links": []
     },
     {
       "ad_id": "CR13767206660156162049",
@@ -10011,7 +12391,14 @@
         "status": "unverified",
         "evidence_urls": [],
         "verified_at": null
-      }
+      },
+      "sponsor_visibility_shares": {
+        "disclosed": 0.7905,
+        "inferable": 0.0,
+        "unwalked": 0.0,
+        "dark": 0.2095
+      },
+      "vendor_links": []
     },
     {
       "ad_id": "CR04748698378567680001",
@@ -10044,7 +12431,14 @@
         "status": "unverified",
         "evidence_urls": [],
         "verified_at": null
-      }
+      },
+      "sponsor_visibility_shares": {
+        "disclosed": 0.7905,
+        "inferable": 0.0,
+        "unwalked": 0.0,
+        "dark": 0.2095
+      },
+      "vendor_links": []
     },
     {
       "ad_id": "CR07518286805074968577",
@@ -10077,7 +12471,14 @@
         "status": "unverified",
         "evidence_urls": [],
         "verified_at": null
-      }
+      },
+      "sponsor_visibility_shares": {
+        "disclosed": 0.7905,
+        "inferable": 0.0,
+        "unwalked": 0.0,
+        "dark": 0.2095
+      },
+      "vendor_links": []
     },
     {
       "ad_id": "CR04828202140226813953",
@@ -10110,7 +12511,14 @@
         "status": "unverified",
         "evidence_urls": [],
         "verified_at": null
-      }
+      },
+      "sponsor_visibility_shares": {
+        "disclosed": 0.7905,
+        "inferable": 0.0,
+        "unwalked": 0.0,
+        "dark": 0.2095
+      },
+      "vendor_links": []
     },
     {
       "ad_id": "CR15375227022615773185",
@@ -10143,7 +12551,14 @@
         "status": "unverified",
         "evidence_urls": [],
         "verified_at": null
-      }
+      },
+      "sponsor_visibility_shares": {
+        "disclosed": 0.7905,
+        "inferable": 0.0,
+        "unwalked": 0.0,
+        "dark": 0.2095
+      },
+      "vendor_links": []
     },
     {
       "ad_id": "CR11600169022489886721",
@@ -10176,7 +12591,14 @@
         "status": "unverified",
         "evidence_urls": [],
         "verified_at": null
-      }
+      },
+      "sponsor_visibility_shares": {
+        "disclosed": 0.6386,
+        "inferable": 0.0,
+        "unwalked": 0.0257,
+        "dark": 0.3357
+      },
+      "vendor_links": []
     },
     {
       "ad_id": "CR06067496880265232385",
@@ -10209,7 +12631,14 @@
         "status": "unverified",
         "evidence_urls": [],
         "verified_at": null
-      }
+      },
+      "sponsor_visibility_shares": {
+        "disclosed": 0.6386,
+        "inferable": 0.0,
+        "unwalked": 0.0257,
+        "dark": 0.3357
+      },
+      "vendor_links": []
     },
     {
       "ad_id": "CR14221923987474087937",
@@ -10242,7 +12671,14 @@
         "status": "unverified",
         "evidence_urls": [],
         "verified_at": null
-      }
+      },
+      "sponsor_visibility_shares": {
+        "disclosed": 0.6386,
+        "inferable": 0.0,
+        "unwalked": 0.0257,
+        "dark": 0.3357
+      },
+      "vendor_links": []
     },
     {
       "ad_id": "CR00238872216849088513",
@@ -10275,7 +12711,14 @@
         "status": "unverified",
         "evidence_urls": [],
         "verified_at": null
-      }
+      },
+      "sponsor_visibility_shares": {
+        "disclosed": 0.6386,
+        "inferable": 0.0,
+        "unwalked": 0.0257,
+        "dark": 0.3357
+      },
+      "vendor_links": []
     },
     {
       "ad_id": "CR04236317713686855681",
@@ -10308,7 +12751,14 @@
         "status": "unverified",
         "evidence_urls": [],
         "verified_at": null
-      }
+      },
+      "sponsor_visibility_shares": {
+        "disclosed": 0.6386,
+        "inferable": 0.0,
+        "unwalked": 0.0257,
+        "dark": 0.3357
+      },
+      "vendor_links": []
     },
     {
       "ad_id": "CR00468396643536863233",
@@ -10341,7 +12791,14 @@
         "status": "unverified",
         "evidence_urls": [],
         "verified_at": null
-      }
+      },
+      "sponsor_visibility_shares": {
+        "disclosed": 0.6386,
+        "inferable": 0.0,
+        "unwalked": 0.0257,
+        "dark": 0.3357
+      },
+      "vendor_links": []
     },
     {
       "ad_id": "CR14972508847170650113",
@@ -10374,7 +12831,14 @@
         "status": "unverified",
         "evidence_urls": [],
         "verified_at": null
-      }
+      },
+      "sponsor_visibility_shares": {
+        "disclosed": 0.6386,
+        "inferable": 0.0,
+        "unwalked": 0.0257,
+        "dark": 0.3357
+      },
+      "vendor_links": []
     },
     {
       "ad_id": "CR01401037590588555265",
@@ -10407,7 +12871,14 @@
         "status": "unverified",
         "evidence_urls": [],
         "verified_at": null
-      }
+      },
+      "sponsor_visibility_shares": {
+        "disclosed": 0.6386,
+        "inferable": 0.0,
+        "unwalked": 0.0257,
+        "dark": 0.3357
+      },
+      "vendor_links": []
     },
     {
       "ad_id": "CR03118299106192130049",
@@ -10440,7 +12911,14 @@
         "status": "unverified",
         "evidence_urls": [],
         "verified_at": null
-      }
+      },
+      "sponsor_visibility_shares": {
+        "disclosed": 0.6386,
+        "inferable": 0.0,
+        "unwalked": 0.0257,
+        "dark": 0.3357
+      },
+      "vendor_links": []
     },
     {
       "ad_id": "CR03056232774315802625",
@@ -10473,7 +12951,14 @@
         "status": "unverified",
         "evidence_urls": [],
         "verified_at": null
-      }
+      },
+      "sponsor_visibility_shares": {
+        "disclosed": 0.3705,
+        "inferable": 0.0,
+        "unwalked": 0.0004,
+        "dark": 0.6291
+      },
+      "vendor_links": []
     },
     {
       "ad_id": "CR06611701534822498305",
@@ -10506,7 +12991,14 @@
         "status": "unverified",
         "evidence_urls": [],
         "verified_at": null
-      }
+      },
+      "sponsor_visibility_shares": {
+        "disclosed": 0.904,
+        "inferable": 0.0,
+        "unwalked": 0.0237,
+        "dark": 0.0724
+      },
+      "vendor_links": []
     },
     {
       "ad_id": "CR12334260245697134593",
@@ -10541,7 +13033,9 @@
         "status": "unverified",
         "evidence_urls": [],
         "verified_at": null
-      }
+      },
+      "sponsor_visibility_shares": null,
+      "vendor_links": []
     },
     {
       "ad_id": "CR07893470409041903617",
@@ -10576,7 +13070,9 @@
         "status": "unverified",
         "evidence_urls": [],
         "verified_at": null
-      }
+      },
+      "sponsor_visibility_shares": null,
+      "vendor_links": []
     },
     {
       "ad_id": "CR13947216453292785665",
@@ -10611,7 +13107,9 @@
         "status": "unverified",
         "evidence_urls": [],
         "verified_at": null
-      }
+      },
+      "sponsor_visibility_shares": null,
+      "vendor_links": []
     },
     {
       "ad_id": "CR13566346226726600705",
@@ -10646,7 +13144,9 @@
         "status": "unverified",
         "evidence_urls": [],
         "verified_at": null
-      }
+      },
+      "sponsor_visibility_shares": null,
+      "vendor_links": []
     },
     {
       "ad_id": "CR13698033634873704449",
@@ -10681,7 +13181,9 @@
         "status": "unverified",
         "evidence_urls": [],
         "verified_at": null
-      }
+      },
+      "sponsor_visibility_shares": null,
+      "vendor_links": []
     },
     {
       "ad_id": "CR01839040966774751233",
@@ -10716,7 +13218,9 @@
         "status": "unverified",
         "evidence_urls": [],
         "verified_at": null
-      }
+      },
+      "sponsor_visibility_shares": null,
+      "vendor_links": []
     },
     {
       "ad_id": "CR07303931515681898497",
@@ -10749,7 +13253,14 @@
         "status": "unverified",
         "evidence_urls": [],
         "verified_at": null
-      }
+      },
+      "sponsor_visibility_shares": {
+        "disclosed": 1.0,
+        "inferable": 0.0,
+        "unwalked": 0.0,
+        "dark": 0.0
+      },
+      "vendor_links": []
     },
     {
       "ad_id": "CR14110976117405908993",
@@ -10782,7 +13293,14 @@
         "status": "unverified",
         "evidence_urls": [],
         "verified_at": null
-      }
+      },
+      "sponsor_visibility_shares": {
+        "disclosed": 0.991,
+        "inferable": 0.0,
+        "unwalked": 0.0005,
+        "dark": 0.0085
+      },
+      "vendor_links": []
     },
     {
       "ad_id": "CR11709071526052495361",
@@ -10815,7 +13333,14 @@
         "status": "unverified",
         "evidence_urls": [],
         "verified_at": null
-      }
+      },
+      "sponsor_visibility_shares": {
+        "disclosed": 0.58,
+        "inferable": 0.0,
+        "unwalked": 0.0,
+        "dark": 0.42
+      },
+      "vendor_links": []
     },
     {
       "ad_id": "CR02010735703226318849",
@@ -10848,7 +13373,14 @@
         "status": "unverified",
         "evidence_urls": [],
         "verified_at": null
-      }
+      },
+      "sponsor_visibility_shares": {
+        "disclosed": 0.5601,
+        "inferable": 0.0,
+        "unwalked": 0.0019,
+        "dark": 0.438
+      },
+      "vendor_links": []
     },
     {
       "ad_id": "CR11932950785165361153",
@@ -10881,7 +13413,14 @@
         "status": "unverified",
         "evidence_urls": [],
         "verified_at": null
-      }
+      },
+      "sponsor_visibility_shares": {
+        "disclosed": 0.5601,
+        "inferable": 0.0,
+        "unwalked": 0.0019,
+        "dark": 0.438
+      },
+      "vendor_links": []
     },
     {
       "ad_id": "CR08172785893376000001",
@@ -10914,7 +13453,14 @@
         "status": "unverified",
         "evidence_urls": [],
         "verified_at": null
-      }
+      },
+      "sponsor_visibility_shares": {
+        "disclosed": 0.5601,
+        "inferable": 0.0,
+        "unwalked": 0.0019,
+        "dark": 0.438
+      },
+      "vendor_links": []
     },
     {
       "ad_id": "CR08481843270320652289",
@@ -10947,7 +13493,14 @@
         "status": "unverified",
         "evidence_urls": [],
         "verified_at": null
-      }
+      },
+      "sponsor_visibility_shares": {
+        "disclosed": 0.5601,
+        "inferable": 0.0,
+        "unwalked": 0.0019,
+        "dark": 0.438
+      },
+      "vendor_links": []
     },
     {
       "ad_id": "CR00266925706275979265",
@@ -10980,7 +13533,14 @@
         "status": "unverified",
         "evidence_urls": [],
         "verified_at": null
-      }
+      },
+      "sponsor_visibility_shares": {
+        "disclosed": 0.5601,
+        "inferable": 0.0,
+        "unwalked": 0.0019,
+        "dark": 0.438
+      },
+      "vendor_links": []
     },
     {
       "ad_id": "CR14252247418656522241",
@@ -11013,7 +13573,9 @@
         "status": "unverified",
         "evidence_urls": [],
         "verified_at": null
-      }
+      },
+      "sponsor_visibility_shares": null,
+      "vendor_links": []
     },
     {
       "ad_id": "CR16267268502811836417",
@@ -11046,7 +13608,14 @@
         "status": "unverified",
         "evidence_urls": [],
         "verified_at": null
-      }
+      },
+      "sponsor_visibility_shares": {
+        "disclosed": 0.0,
+        "inferable": 0.0,
+        "unwalked": 0.0,
+        "dark": 1.0
+      },
+      "vendor_links": []
     },
     {
       "ad_id": "CR16006340099889430529",
@@ -11079,7 +13648,14 @@
         "status": "unverified",
         "evidence_urls": [],
         "verified_at": null
-      }
+      },
+      "sponsor_visibility_shares": {
+        "disclosed": 0.0,
+        "inferable": 0.0,
+        "unwalked": 0.0,
+        "dark": 1.0
+      },
+      "vendor_links": []
     },
     {
       "ad_id": "CR17561041844983300097",
@@ -11112,7 +13688,14 @@
         "status": "unverified",
         "evidence_urls": [],
         "verified_at": null
-      }
+      },
+      "sponsor_visibility_shares": {
+        "disclosed": 0.9094,
+        "inferable": 0.0,
+        "unwalked": 0.0,
+        "dark": 0.0906
+      },
+      "vendor_links": []
     },
     {
       "ad_id": "CR14891828934487310337",
@@ -11145,7 +13728,14 @@
         "status": "unverified",
         "evidence_urls": [],
         "verified_at": null
-      }
+      },
+      "sponsor_visibility_shares": {
+        "disclosed": 0.729,
+        "inferable": 0.0,
+        "unwalked": 0.0004,
+        "dark": 0.2706
+      },
+      "vendor_links": []
     },
     {
       "ad_id": "CR07510571205565349889",
@@ -11180,7 +13770,9 @@
         "status": "unverified",
         "evidence_urls": [],
         "verified_at": null
-      }
+      },
+      "sponsor_visibility_shares": null,
+      "vendor_links": []
     },
     {
       "ad_id": "CR18068973336062328833",
@@ -11215,7 +13807,9 @@
         "status": "unverified",
         "evidence_urls": [],
         "verified_at": null
-      }
+      },
+      "sponsor_visibility_shares": null,
+      "vendor_links": []
     },
     {
       "ad_id": "CR03920301252772102145",
@@ -11250,7 +13844,9 @@
         "status": "unverified",
         "evidence_urls": [],
         "verified_at": null
-      }
+      },
+      "sponsor_visibility_shares": null,
+      "vendor_links": []
     },
     {
       "ad_id": "CR09165574576053157889",
@@ -11285,7 +13881,9 @@
         "status": "unverified",
         "evidence_urls": [],
         "verified_at": null
-      }
+      },
+      "sponsor_visibility_shares": null,
+      "vendor_links": []
     },
     {
       "ad_id": "CR01204596919024746497",
@@ -11320,7 +13918,9 @@
         "status": "unverified",
         "evidence_urls": [],
         "verified_at": null
-      }
+      },
+      "sponsor_visibility_shares": null,
+      "vendor_links": []
     },
     {
       "ad_id": "CR17749170208641122305",
@@ -11355,7 +13955,9 @@
         "status": "unverified",
         "evidence_urls": [],
         "verified_at": null
-      }
+      },
+      "sponsor_visibility_shares": null,
+      "vendor_links": []
     },
     {
       "ad_id": "CR02544729193296429057",
@@ -11390,7 +13992,9 @@
         "status": "unverified",
         "evidence_urls": [],
         "verified_at": null
-      }
+      },
+      "sponsor_visibility_shares": null,
+      "vendor_links": []
     },
     {
       "ad_id": "CR06846882622417666049",
@@ -11425,7 +14029,9 @@
         "status": "unverified",
         "evidence_urls": [],
         "verified_at": null
-      }
+      },
+      "sponsor_visibility_shares": null,
+      "vendor_links": []
     },
     {
       "ad_id": "CR08439166774460547073",
@@ -11460,7 +14066,9 @@
         "status": "unverified",
         "evidence_urls": [],
         "verified_at": null
-      }
+      },
+      "sponsor_visibility_shares": null,
+      "vendor_links": []
     },
     {
       "ad_id": "CR06100165294871805953",
@@ -11495,7 +14103,9 @@
         "status": "unverified",
         "evidence_urls": [],
         "verified_at": null
-      }
+      },
+      "sponsor_visibility_shares": null,
+      "vendor_links": []
     },
     {
       "ad_id": "CR01662275231156273153",
@@ -11530,7 +14140,9 @@
         "status": "unverified",
         "evidence_urls": [],
         "verified_at": null
-      }
+      },
+      "sponsor_visibility_shares": null,
+      "vendor_links": []
     },
     {
       "ad_id": "CR15552868519245774849",
@@ -11565,7 +14177,9 @@
         "status": "unverified",
         "evidence_urls": [],
         "verified_at": null
-      }
+      },
+      "sponsor_visibility_shares": null,
+      "vendor_links": []
     },
     {
       "ad_id": "CR15561265214669193217",
@@ -11600,7 +14214,9 @@
         "status": "unverified",
         "evidence_urls": [],
         "verified_at": null
-      }
+      },
+      "sponsor_visibility_shares": null,
+      "vendor_links": []
     },
     {
       "ad_id": "CR18182091642083737601",
@@ -11635,7 +14251,9 @@
         "status": "unverified",
         "evidence_urls": [],
         "verified_at": null
-      }
+      },
+      "sponsor_visibility_shares": null,
+      "vendor_links": []
     },
     {
       "ad_id": "CR14917984065549238273",
@@ -11670,7 +14288,9 @@
         "status": "unverified",
         "evidence_urls": [],
         "verified_at": null
-      }
+      },
+      "sponsor_visibility_shares": null,
+      "vendor_links": []
     },
     {
       "ad_id": "CR00176647830176268289",
@@ -11705,7 +14325,9 @@
         "status": "unverified",
         "evidence_urls": [],
         "verified_at": null
-      }
+      },
+      "sponsor_visibility_shares": null,
+      "vendor_links": []
     },
     {
       "ad_id": "CR11639835777067646977",
@@ -11740,7 +14362,9 @@
         "status": "unverified",
         "evidence_urls": [],
         "verified_at": null
-      }
+      },
+      "sponsor_visibility_shares": null,
+      "vendor_links": []
     },
     {
       "ad_id": "CR15444193614590115841",
@@ -11775,7 +14399,9 @@
         "status": "unverified",
         "evidence_urls": [],
         "verified_at": null
-      }
+      },
+      "sponsor_visibility_shares": null,
+      "vendor_links": []
     },
     {
       "ad_id": "CR03750941604140023809",
@@ -11808,7 +14434,14 @@
         "status": "unverified",
         "evidence_urls": [],
         "verified_at": null
-      }
+      },
+      "sponsor_visibility_shares": {
+        "disclosed": 0.6515,
+        "inferable": 0.0,
+        "unwalked": 0.0,
+        "dark": 0.3485
+      },
+      "vendor_links": []
     },
     {
       "ad_id": "CR15976598860113903617",
@@ -11841,7 +14474,14 @@
         "status": "unverified",
         "evidence_urls": [],
         "verified_at": null
-      }
+      },
+      "sponsor_visibility_shares": {
+        "disclosed": 0.6515,
+        "inferable": 0.0,
+        "unwalked": 0.0,
+        "dark": 0.3485
+      },
+      "vendor_links": []
     },
     {
       "ad_id": "CR01740928795449229313",
@@ -11874,7 +14514,14 @@
         "status": "unverified",
         "evidence_urls": [],
         "verified_at": null
-      }
+      },
+      "sponsor_visibility_shares": {
+        "disclosed": 0.6515,
+        "inferable": 0.0,
+        "unwalked": 0.0,
+        "dark": 0.3485
+      },
+      "vendor_links": []
     },
     {
       "ad_id": "CR10403968627089866753",
@@ -11907,7 +14554,14 @@
         "status": "unverified",
         "evidence_urls": [],
         "verified_at": null
-      }
+      },
+      "sponsor_visibility_shares": {
+        "disclosed": 0.6515,
+        "inferable": 0.0,
+        "unwalked": 0.0,
+        "dark": 0.3485
+      },
+      "vendor_links": []
     },
     {
       "ad_id": "CR11521265542639910913",
@@ -11940,7 +14594,14 @@
         "status": "unverified",
         "evidence_urls": [],
         "verified_at": null
-      }
+      },
+      "sponsor_visibility_shares": {
+        "disclosed": 0.6515,
+        "inferable": 0.0,
+        "unwalked": 0.0,
+        "dark": 0.3485
+      },
+      "vendor_links": []
     },
     {
       "ad_id": "CR12185100687251603457",
@@ -11973,7 +14634,14 @@
         "status": "unverified",
         "evidence_urls": [],
         "verified_at": null
-      }
+      },
+      "sponsor_visibility_shares": {
+        "disclosed": 0.6515,
+        "inferable": 0.0,
+        "unwalked": 0.0,
+        "dark": 0.3485
+      },
+      "vendor_links": []
     },
     {
       "ad_id": "CR12426292856455430145",
@@ -12006,7 +14674,14 @@
         "status": "unverified",
         "evidence_urls": [],
         "verified_at": null
-      }
+      },
+      "sponsor_visibility_shares": {
+        "disclosed": 1.0,
+        "inferable": 0.0,
+        "unwalked": 0.0,
+        "dark": 0.0
+      },
+      "vendor_links": []
     },
     {
       "ad_id": "CR16623815659565875201",
@@ -12039,7 +14714,14 @@
         "status": "unverified",
         "evidence_urls": [],
         "verified_at": null
-      }
+      },
+      "sponsor_visibility_shares": {
+        "disclosed": 0.9976,
+        "inferable": 0.0,
+        "unwalked": 0.0,
+        "dark": 0.0024
+      },
+      "vendor_links": []
     },
     {
       "ad_id": "CR18247416101791072257",
@@ -12072,7 +14754,14 @@
         "status": "unverified",
         "evidence_urls": [],
         "verified_at": null
-      }
+      },
+      "sponsor_visibility_shares": {
+        "disclosed": 0.9976,
+        "inferable": 0.0,
+        "unwalked": 0.0,
+        "dark": 0.0024
+      },
+      "vendor_links": []
     },
     {
       "ad_id": "CR10859518198810673153",
@@ -12105,7 +14794,14 @@
         "status": "unverified",
         "evidence_urls": [],
         "verified_at": null
-      }
+      },
+      "sponsor_visibility_shares": {
+        "disclosed": 0.9976,
+        "inferable": 0.0,
+        "unwalked": 0.0,
+        "dark": 0.0024
+      },
+      "vendor_links": []
     },
     {
       "ad_id": "CR01935741090292301825",
@@ -12138,7 +14834,14 @@
         "status": "unverified",
         "evidence_urls": [],
         "verified_at": null
-      }
+      },
+      "sponsor_visibility_shares": {
+        "disclosed": 0.9976,
+        "inferable": 0.0,
+        "unwalked": 0.0,
+        "dark": 0.0024
+      },
+      "vendor_links": []
     },
     {
       "ad_id": "CR12566523195072446465",
@@ -12171,7 +14874,14 @@
         "status": "unverified",
         "evidence_urls": [],
         "verified_at": null
-      }
+      },
+      "sponsor_visibility_shares": {
+        "disclosed": 0.9976,
+        "inferable": 0.0,
+        "unwalked": 0.0,
+        "dark": 0.0024
+      },
+      "vendor_links": []
     },
     {
       "ad_id": "CR10903991245130956801",
@@ -12204,7 +14914,14 @@
         "status": "unverified",
         "evidence_urls": [],
         "verified_at": null
-      }
+      },
+      "sponsor_visibility_shares": {
+        "disclosed": 0.9976,
+        "inferable": 0.0,
+        "unwalked": 0.0,
+        "dark": 0.0024
+      },
+      "vendor_links": []
     },
     {
       "ad_id": "CR15525218825464184833",
@@ -12237,7 +14954,14 @@
         "status": "unverified",
         "evidence_urls": [],
         "verified_at": null
-      }
+      },
+      "sponsor_visibility_shares": {
+        "disclosed": 0.9976,
+        "inferable": 0.0,
+        "unwalked": 0.0,
+        "dark": 0.0024
+      },
+      "vendor_links": []
     },
     {
       "ad_id": "CR09855321035023319041",
@@ -12270,7 +14994,14 @@
         "status": "unverified",
         "evidence_urls": [],
         "verified_at": null
-      }
+      },
+      "sponsor_visibility_shares": {
+        "disclosed": 0.9976,
+        "inferable": 0.0,
+        "unwalked": 0.0,
+        "dark": 0.0024
+      },
+      "vendor_links": []
     },
     {
       "ad_id": "CR10074126047973998593",
@@ -12303,7 +15034,14 @@
         "status": "unverified",
         "evidence_urls": [],
         "verified_at": null
-      }
+      },
+      "sponsor_visibility_shares": {
+        "disclosed": 0.9976,
+        "inferable": 0.0,
+        "unwalked": 0.0,
+        "dark": 0.0024
+      },
+      "vendor_links": []
     },
     {
       "ad_id": "CR04060468421010128897",
@@ -12336,7 +15074,14 @@
         "status": "unverified",
         "evidence_urls": [],
         "verified_at": null
-      }
+      },
+      "sponsor_visibility_shares": {
+        "disclosed": 0.9976,
+        "inferable": 0.0,
+        "unwalked": 0.0,
+        "dark": 0.0024
+      },
+      "vendor_links": []
     },
     {
       "ad_id": "CR15613430444337397761",
@@ -12369,7 +15114,14 @@
         "status": "unverified",
         "evidence_urls": [],
         "verified_at": null
-      }
+      },
+      "sponsor_visibility_shares": {
+        "disclosed": 0.9976,
+        "inferable": 0.0,
+        "unwalked": 0.0,
+        "dark": 0.0024
+      },
+      "vendor_links": []
     },
     {
       "ad_id": "CR10259618057626320897",
@@ -12402,7 +15154,14 @@
         "status": "unverified",
         "evidence_urls": [],
         "verified_at": null
-      }
+      },
+      "sponsor_visibility_shares": {
+        "disclosed": 0.9976,
+        "inferable": 0.0,
+        "unwalked": 0.0,
+        "dark": 0.0024
+      },
+      "vendor_links": []
     },
     {
       "ad_id": "CR11736770148101521409",
@@ -12435,7 +15194,14 @@
         "status": "unverified",
         "evidence_urls": [],
         "verified_at": null
-      }
+      },
+      "sponsor_visibility_shares": {
+        "disclosed": 0.9976,
+        "inferable": 0.0,
+        "unwalked": 0.0,
+        "dark": 0.0024
+      },
+      "vendor_links": []
     },
     {
       "ad_id": "CR15456374004402618369",
@@ -12468,7 +15234,14 @@
         "status": "unverified",
         "evidence_urls": [],
         "verified_at": null
-      }
+      },
+      "sponsor_visibility_shares": {
+        "disclosed": 0.9976,
+        "inferable": 0.0,
+        "unwalked": 0.0,
+        "dark": 0.0024
+      },
+      "vendor_links": []
     },
     {
       "ad_id": "CR06485733511285178369",
@@ -12501,7 +15274,14 @@
         "status": "unverified",
         "evidence_urls": [],
         "verified_at": null
-      }
+      },
+      "sponsor_visibility_shares": {
+        "disclosed": 0.9976,
+        "inferable": 0.0,
+        "unwalked": 0.0,
+        "dark": 0.0024
+      },
+      "vendor_links": []
     },
     {
       "ad_id": "CR07118821311442321409",
@@ -12534,7 +15314,14 @@
         "status": "unverified",
         "evidence_urls": [],
         "verified_at": null
-      }
+      },
+      "sponsor_visibility_shares": {
+        "disclosed": 0.9976,
+        "inferable": 0.0,
+        "unwalked": 0.0,
+        "dark": 0.0024
+      },
+      "vendor_links": []
     },
     {
       "ad_id": "CR17327423111871594497",
@@ -12567,7 +15354,14 @@
         "status": "unverified",
         "evidence_urls": [],
         "verified_at": null
-      }
+      },
+      "sponsor_visibility_shares": {
+        "disclosed": 0.9976,
+        "inferable": 0.0,
+        "unwalked": 0.0,
+        "dark": 0.0024
+      },
+      "vendor_links": []
     },
     {
       "ad_id": "CR05792097804809666561",
@@ -12600,7 +15394,14 @@
         "status": "unverified",
         "evidence_urls": [],
         "verified_at": null
-      }
+      },
+      "sponsor_visibility_shares": {
+        "disclosed": 0.9976,
+        "inferable": 0.0,
+        "unwalked": 0.0,
+        "dark": 0.0024
+      },
+      "vendor_links": []
     },
     {
       "ad_id": "CR02015697249446658049",
@@ -12633,7 +15434,14 @@
         "status": "unverified",
         "evidence_urls": [],
         "verified_at": null
-      }
+      },
+      "sponsor_visibility_shares": {
+        "disclosed": 0.8659,
+        "inferable": 0.0,
+        "unwalked": 0.0,
+        "dark": 0.1341
+      },
+      "vendor_links": []
     },
     {
       "ad_id": "CR06925071643047886849",
@@ -12666,7 +15474,14 @@
         "status": "unverified",
         "evidence_urls": [],
         "verified_at": null
-      }
+      },
+      "sponsor_visibility_shares": {
+        "disclosed": 0.8659,
+        "inferable": 0.0,
+        "unwalked": 0.0,
+        "dark": 0.1341
+      },
+      "vendor_links": []
     },
     {
       "ad_id": "CR17358786079758483457",
@@ -12699,7 +15514,14 @@
         "status": "unverified",
         "evidence_urls": [],
         "verified_at": null
-      }
+      },
+      "sponsor_visibility_shares": {
+        "disclosed": 0.8659,
+        "inferable": 0.0,
+        "unwalked": 0.0,
+        "dark": 0.1341
+      },
+      "vendor_links": []
     },
     {
       "ad_id": "CR15727327479469178881",
@@ -12732,7 +15554,14 @@
         "status": "unverified",
         "evidence_urls": [],
         "verified_at": null
-      }
+      },
+      "sponsor_visibility_shares": {
+        "disclosed": 0.7905,
+        "inferable": 0.0,
+        "unwalked": 0.0,
+        "dark": 0.2095
+      },
+      "vendor_links": []
     },
     {
       "ad_id": "CR01739840278937731073",
@@ -12765,7 +15594,14 @@
         "status": "unverified",
         "evidence_urls": [],
         "verified_at": null
-      }
+      },
+      "sponsor_visibility_shares": {
+        "disclosed": 0.7905,
+        "inferable": 0.0,
+        "unwalked": 0.0,
+        "dark": 0.2095
+      },
+      "vendor_links": []
     },
     {
       "ad_id": "CR04466155226310639617",
@@ -12798,7 +15634,14 @@
         "status": "unverified",
         "evidence_urls": [],
         "verified_at": null
-      }
+      },
+      "sponsor_visibility_shares": {
+        "disclosed": 0.7905,
+        "inferable": 0.0,
+        "unwalked": 0.0,
+        "dark": 0.2095
+      },
+      "vendor_links": []
     },
     {
       "ad_id": "CR18052384454378258433",
@@ -12831,7 +15674,14 @@
         "status": "unverified",
         "evidence_urls": [],
         "verified_at": null
-      }
+      },
+      "sponsor_visibility_shares": {
+        "disclosed": 0.7905,
+        "inferable": 0.0,
+        "unwalked": 0.0,
+        "dark": 0.2095
+      },
+      "vendor_links": []
     },
     {
       "ad_id": "CR07834206182548963329",
@@ -12864,7 +15714,14 @@
         "status": "unverified",
         "evidence_urls": [],
         "verified_at": null
-      }
+      },
+      "sponsor_visibility_shares": {
+        "disclosed": 0.7905,
+        "inferable": 0.0,
+        "unwalked": 0.0,
+        "dark": 0.2095
+      },
+      "vendor_links": []
     },
     {
       "ad_id": "CR04639454751522553857",
@@ -12897,7 +15754,14 @@
         "status": "unverified",
         "evidence_urls": [],
         "verified_at": null
-      }
+      },
+      "sponsor_visibility_shares": {
+        "disclosed": 0.7905,
+        "inferable": 0.0,
+        "unwalked": 0.0,
+        "dark": 0.2095
+      },
+      "vendor_links": []
     },
     {
       "ad_id": "CR11725957825631879169",
@@ -12930,7 +15794,14 @@
         "status": "unverified",
         "evidence_urls": [],
         "verified_at": null
-      }
+      },
+      "sponsor_visibility_shares": {
+        "disclosed": 0.7905,
+        "inferable": 0.0,
+        "unwalked": 0.0,
+        "dark": 0.2095
+      },
+      "vendor_links": []
     },
     {
       "ad_id": "CR05260576016878796801",
@@ -12963,7 +15834,14 @@
         "status": "unverified",
         "evidence_urls": [],
         "verified_at": null
-      }
+      },
+      "sponsor_visibility_shares": {
+        "disclosed": 0.7905,
+        "inferable": 0.0,
+        "unwalked": 0.0,
+        "dark": 0.2095
+      },
+      "vendor_links": []
     },
     {
       "ad_id": "CR12151083446755655681",
@@ -12996,7 +15874,14 @@
         "status": "unverified",
         "evidence_urls": [],
         "verified_at": null
-      }
+      },
+      "sponsor_visibility_shares": {
+        "disclosed": 0.7905,
+        "inferable": 0.0,
+        "unwalked": 0.0,
+        "dark": 0.2095
+      },
+      "vendor_links": []
     },
     {
       "ad_id": "CR16854167468753551361",
@@ -13029,7 +15914,14 @@
         "status": "unverified",
         "evidence_urls": [],
         "verified_at": null
-      }
+      },
+      "sponsor_visibility_shares": {
+        "disclosed": 0.7905,
+        "inferable": 0.0,
+        "unwalked": 0.0,
+        "dark": 0.2095
+      },
+      "vendor_links": []
     },
     {
       "ad_id": "CR08481707480634621953",
@@ -13062,7 +15954,14 @@
         "status": "unverified",
         "evidence_urls": [],
         "verified_at": null
-      }
+      },
+      "sponsor_visibility_shares": {
+        "disclosed": 0.7905,
+        "inferable": 0.0,
+        "unwalked": 0.0,
+        "dark": 0.2095
+      },
+      "vendor_links": []
     },
     {
       "ad_id": "CR01809664489981739009",
@@ -13095,7 +15994,14 @@
         "status": "unverified",
         "evidence_urls": [],
         "verified_at": null
-      }
+      },
+      "sponsor_visibility_shares": {
+        "disclosed": 0.7905,
+        "inferable": 0.0,
+        "unwalked": 0.0,
+        "dark": 0.2095
+      },
+      "vendor_links": []
     },
     {
       "ad_id": "CR10237053605123194881",
@@ -13128,7 +16034,14 @@
         "status": "unverified",
         "evidence_urls": [],
         "verified_at": null
-      }
+      },
+      "sponsor_visibility_shares": {
+        "disclosed": 0.7905,
+        "inferable": 0.0,
+        "unwalked": 0.0,
+        "dark": 0.2095
+      },
+      "vendor_links": []
     },
     {
       "ad_id": "CR14521307259822145537",
@@ -13161,7 +16074,14 @@
         "status": "unverified",
         "evidence_urls": [],
         "verified_at": null
-      }
+      },
+      "sponsor_visibility_shares": {
+        "disclosed": 0.7905,
+        "inferable": 0.0,
+        "unwalked": 0.0,
+        "dark": 0.2095
+      },
+      "vendor_links": []
     },
     {
       "ad_id": "CR18034931356554756097",
@@ -13194,7 +16114,14 @@
         "status": "unverified",
         "evidence_urls": [],
         "verified_at": null
-      }
+      },
+      "sponsor_visibility_shares": {
+        "disclosed": 0.7905,
+        "inferable": 0.0,
+        "unwalked": 0.0,
+        "dark": 0.2095
+      },
+      "vendor_links": []
     },
     {
       "ad_id": "CR18105187400790573057",
@@ -13227,7 +16154,14 @@
         "status": "unverified",
         "evidence_urls": [],
         "verified_at": null
-      }
+      },
+      "sponsor_visibility_shares": {
+        "disclosed": 0.7905,
+        "inferable": 0.0,
+        "unwalked": 0.0,
+        "dark": 0.2095
+      },
+      "vendor_links": []
     },
     {
       "ad_id": "CR17102582604718145537",
@@ -13260,7 +16194,14 @@
         "status": "unverified",
         "evidence_urls": [],
         "verified_at": null
-      }
+      },
+      "sponsor_visibility_shares": {
+        "disclosed": 0.6386,
+        "inferable": 0.0,
+        "unwalked": 0.0257,
+        "dark": 0.3357
+      },
+      "vendor_links": []
     },
     {
       "ad_id": "CR15859783995999911937",
@@ -13293,7 +16234,14 @@
         "status": "unverified",
         "evidence_urls": [],
         "verified_at": null
-      }
+      },
+      "sponsor_visibility_shares": {
+        "disclosed": 0.6386,
+        "inferable": 0.0,
+        "unwalked": 0.0257,
+        "dark": 0.3357
+      },
+      "vendor_links": []
     },
     {
       "ad_id": "CR01428789264073621505",
@@ -13326,7 +16274,14 @@
         "status": "unverified",
         "evidence_urls": [],
         "verified_at": null
-      }
+      },
+      "sponsor_visibility_shares": {
+        "disclosed": 0.6386,
+        "inferable": 0.0,
+        "unwalked": 0.0257,
+        "dark": 0.3357
+      },
+      "vendor_links": []
     },
     {
       "ad_id": "CR07331196105515859969",
@@ -13359,7 +16314,14 @@
         "status": "unverified",
         "evidence_urls": [],
         "verified_at": null
-      }
+      },
+      "sponsor_visibility_shares": {
+        "disclosed": 0.6386,
+        "inferable": 0.0,
+        "unwalked": 0.0257,
+        "dark": 0.3357
+      },
+      "vendor_links": []
     },
     {
       "ad_id": "CR09197140455374979073",
@@ -13392,7 +16354,14 @@
         "status": "unverified",
         "evidence_urls": [],
         "verified_at": null
-      }
+      },
+      "sponsor_visibility_shares": {
+        "disclosed": 0.6386,
+        "inferable": 0.0,
+        "unwalked": 0.0257,
+        "dark": 0.3357
+      },
+      "vendor_links": []
     },
     {
       "ad_id": "CR13642990983275610113",
@@ -13425,7 +16394,14 @@
         "status": "unverified",
         "evidence_urls": [],
         "verified_at": null
-      }
+      },
+      "sponsor_visibility_shares": {
+        "disclosed": 0.6386,
+        "inferable": 0.0,
+        "unwalked": 0.0257,
+        "dark": 0.3357
+      },
+      "vendor_links": []
     },
     {
       "ad_id": "CR13560923710256316417",
@@ -13458,7 +16434,14 @@
         "status": "unverified",
         "evidence_urls": [],
         "verified_at": null
-      }
+      },
+      "sponsor_visibility_shares": {
+        "disclosed": 0.6386,
+        "inferable": 0.0,
+        "unwalked": 0.0257,
+        "dark": 0.3357
+      },
+      "vendor_links": []
     },
     {
       "ad_id": "CR06238434929378590721",
@@ -13491,7 +16474,14 @@
         "status": "unverified",
         "evidence_urls": [],
         "verified_at": null
-      }
+      },
+      "sponsor_visibility_shares": {
+        "disclosed": 0.6386,
+        "inferable": 0.0,
+        "unwalked": 0.0257,
+        "dark": 0.3357
+      },
+      "vendor_links": []
     },
     {
       "ad_id": "CR03905720680615772161",
@@ -13524,7 +16514,14 @@
         "status": "unverified",
         "evidence_urls": [],
         "verified_at": null
-      }
+      },
+      "sponsor_visibility_shares": {
+        "disclosed": 0.6386,
+        "inferable": 0.0,
+        "unwalked": 0.0257,
+        "dark": 0.3357
+      },
+      "vendor_links": []
     },
     {
       "ad_id": "CR13375204376574951425",
@@ -13557,7 +16554,14 @@
         "status": "unverified",
         "evidence_urls": [],
         "verified_at": null
-      }
+      },
+      "sponsor_visibility_shares": {
+        "disclosed": 0.6386,
+        "inferable": 0.0,
+        "unwalked": 0.0257,
+        "dark": 0.3357
+      },
+      "vendor_links": []
     },
     {
       "ad_id": "CR12027220713107619841",
@@ -13590,7 +16594,14 @@
         "status": "unverified",
         "evidence_urls": [],
         "verified_at": null
-      }
+      },
+      "sponsor_visibility_shares": {
+        "disclosed": 0.6386,
+        "inferable": 0.0,
+        "unwalked": 0.0257,
+        "dark": 0.3357
+      },
+      "vendor_links": []
     },
     {
       "ad_id": "CR15040874332702113793",
@@ -13623,7 +16634,14 @@
         "status": "unverified",
         "evidence_urls": [],
         "verified_at": null
-      }
+      },
+      "sponsor_visibility_shares": {
+        "disclosed": 0.3705,
+        "inferable": 0.0,
+        "unwalked": 0.0004,
+        "dark": 0.6291
+      },
+      "vendor_links": []
     },
     {
       "ad_id": "CR01010142790094422017",
@@ -13656,7 +16674,14 @@
         "status": "unverified",
         "evidence_urls": [],
         "verified_at": null
-      }
+      },
+      "sponsor_visibility_shares": {
+        "disclosed": 0.3705,
+        "inferable": 0.0,
+        "unwalked": 0.0004,
+        "dark": 0.6291
+      },
+      "vendor_links": []
     },
     {
       "ad_id": "CR16364243229358424065",
@@ -13691,7 +16716,9 @@
         "status": "unverified",
         "evidence_urls": [],
         "verified_at": null
-      }
+      },
+      "sponsor_visibility_shares": null,
+      "vendor_links": []
     },
     {
       "ad_id": "CR05041381776811884545",
@@ -13726,7 +16753,9 @@
         "status": "unverified",
         "evidence_urls": [],
         "verified_at": null
-      }
+      },
+      "sponsor_visibility_shares": null,
+      "vendor_links": []
     },
     {
       "ad_id": "CR02444061533609656321",
@@ -13761,7 +16790,9 @@
         "status": "unverified",
         "evidence_urls": [],
         "verified_at": null
-      }
+      },
+      "sponsor_visibility_shares": null,
+      "vendor_links": []
     },
     {
       "ad_id": "CR12186794484914192385",
@@ -13796,7 +16827,9 @@
         "status": "unverified",
         "evidence_urls": [],
         "verified_at": null
-      }
+      },
+      "sponsor_visibility_shares": null,
+      "vendor_links": []
     },
     {
       "ad_id": "CR13687097892223844353",
@@ -13831,7 +16864,9 @@
         "status": "unverified",
         "evidence_urls": [],
         "verified_at": null
-      }
+      },
+      "sponsor_visibility_shares": null,
+      "vendor_links": []
     },
     {
       "ad_id": "CR12064258861800882177",
@@ -13866,7 +16901,9 @@
         "status": "unverified",
         "evidence_urls": [],
         "verified_at": null
-      }
+      },
+      "sponsor_visibility_shares": null,
+      "vendor_links": []
     },
     {
       "ad_id": "CR10109674083533717505",
@@ -13899,7 +16936,14 @@
         "status": "unverified",
         "evidence_urls": [],
         "verified_at": null
-      }
+      },
+      "sponsor_visibility_shares": {
+        "disclosed": 1.0,
+        "inferable": 0.0,
+        "unwalked": 0.0,
+        "dark": 0.0
+      },
+      "vendor_links": []
     },
     {
       "ad_id": "CR13942237366426009601",
@@ -13932,7 +16976,14 @@
         "status": "unverified",
         "evidence_urls": [],
         "verified_at": null
-      }
+      },
+      "sponsor_visibility_shares": {
+        "disclosed": 1.0,
+        "inferable": 0.0,
+        "unwalked": 0.0,
+        "dark": 0.0
+      },
+      "vendor_links": []
     },
     {
       "ad_id": "CR15566408403646414849",
@@ -13965,7 +17016,14 @@
         "status": "unverified",
         "evidence_urls": [],
         "verified_at": null
-      }
+      },
+      "sponsor_visibility_shares": {
+        "disclosed": 0.991,
+        "inferable": 0.0,
+        "unwalked": 0.0005,
+        "dark": 0.0085
+      },
+      "vendor_links": []
     },
     {
       "ad_id": "CR06211210420179435521",
@@ -13998,7 +17056,14 @@
         "status": "unverified",
         "evidence_urls": [],
         "verified_at": null
-      }
+      },
+      "sponsor_visibility_shares": {
+        "disclosed": 0.991,
+        "inferable": 0.0,
+        "unwalked": 0.0005,
+        "dark": 0.0085
+      },
+      "vendor_links": []
     },
     {
       "ad_id": "CR12481105710123319297",
@@ -14031,7 +17096,14 @@
         "status": "unverified",
         "evidence_urls": [],
         "verified_at": null
-      }
+      },
+      "sponsor_visibility_shares": {
+        "disclosed": 0.991,
+        "inferable": 0.0,
+        "unwalked": 0.0005,
+        "dark": 0.0085
+      },
+      "vendor_links": []
     },
     {
       "ad_id": "CR03088306628009656321",
@@ -14064,7 +17136,14 @@
         "status": "unverified",
         "evidence_urls": [],
         "verified_at": null
-      }
+      },
+      "sponsor_visibility_shares": {
+        "disclosed": 0.991,
+        "inferable": 0.0,
+        "unwalked": 0.0005,
+        "dark": 0.0085
+      },
+      "vendor_links": []
     },
     {
       "ad_id": "CR08182743122216747009",
@@ -14097,7 +17176,14 @@
         "status": "unverified",
         "evidence_urls": [],
         "verified_at": null
-      }
+      },
+      "sponsor_visibility_shares": {
+        "disclosed": 0.991,
+        "inferable": 0.0,
+        "unwalked": 0.0005,
+        "dark": 0.0085
+      },
+      "vendor_links": []
     },
     {
       "ad_id": "CR09938435592868069377",
@@ -14130,7 +17216,14 @@
         "status": "unverified",
         "evidence_urls": [],
         "verified_at": null
-      }
+      },
+      "sponsor_visibility_shares": {
+        "disclosed": 0.991,
+        "inferable": 0.0,
+        "unwalked": 0.0005,
+        "dark": 0.0085
+      },
+      "vendor_links": []
     },
     {
       "ad_id": "CR10875494102762258433",
@@ -14163,7 +17256,14 @@
         "status": "unverified",
         "evidence_urls": [],
         "verified_at": null
-      }
+      },
+      "sponsor_visibility_shares": {
+        "disclosed": 0.991,
+        "inferable": 0.0,
+        "unwalked": 0.0005,
+        "dark": 0.0085
+      },
+      "vendor_links": []
     },
     {
       "ad_id": "CR00199343124563099649",
@@ -14196,7 +17296,14 @@
         "status": "unverified",
         "evidence_urls": [],
         "verified_at": null
-      }
+      },
+      "sponsor_visibility_shares": {
+        "disclosed": 0.6899,
+        "inferable": 0.0,
+        "unwalked": 0.0,
+        "dark": 0.3101
+      },
+      "vendor_links": []
     },
     {
       "ad_id": "CR11154510846351114241",
@@ -14229,7 +17336,14 @@
         "status": "unverified",
         "evidence_urls": [],
         "verified_at": null
-      }
+      },
+      "sponsor_visibility_shares": {
+        "disclosed": 0.6899,
+        "inferable": 0.0,
+        "unwalked": 0.0,
+        "dark": 0.3101
+      },
+      "vendor_links": []
     },
     {
       "ad_id": "CR00681740055814864897",
@@ -14262,7 +17376,14 @@
         "status": "unverified",
         "evidence_urls": [],
         "verified_at": null
-      }
+      },
+      "sponsor_visibility_shares": {
+        "disclosed": 0.5601,
+        "inferable": 0.0,
+        "unwalked": 0.0019,
+        "dark": 0.438
+      },
+      "vendor_links": []
     },
     {
       "ad_id": "CR04749667598067564545",
@@ -14295,7 +17416,14 @@
         "status": "unverified",
         "evidence_urls": [],
         "verified_at": null
-      }
+      },
+      "sponsor_visibility_shares": {
+        "disclosed": 0.5601,
+        "inferable": 0.0,
+        "unwalked": 0.0019,
+        "dark": 0.438
+      },
+      "vendor_links": []
     },
     {
       "ad_id": "CR00268333081159532545",
@@ -14328,7 +17456,14 @@
         "status": "unverified",
         "evidence_urls": [],
         "verified_at": null
-      }
+      },
+      "sponsor_visibility_shares": {
+        "disclosed": 0.5601,
+        "inferable": 0.0,
+        "unwalked": 0.0019,
+        "dark": 0.438
+      },
+      "vendor_links": []
     },
     {
       "ad_id": "CR13115062124466405377",
@@ -14361,7 +17496,14 @@
         "status": "unverified",
         "evidence_urls": [],
         "verified_at": null
-      }
+      },
+      "sponsor_visibility_shares": {
+        "disclosed": 0.5601,
+        "inferable": 0.0,
+        "unwalked": 0.0019,
+        "dark": 0.438
+      },
+      "vendor_links": []
     },
     {
       "ad_id": "CR13377185696528203777",
@@ -14394,7 +17536,14 @@
         "status": "unverified",
         "evidence_urls": [],
         "verified_at": null
-      }
+      },
+      "sponsor_visibility_shares": {
+        "disclosed": 0.5601,
+        "inferable": 0.0,
+        "unwalked": 0.0019,
+        "dark": 0.438
+      },
+      "vendor_links": []
     },
     {
       "ad_id": "CR06502821846126166017",
@@ -14427,7 +17576,14 @@
         "status": "unverified",
         "evidence_urls": [],
         "verified_at": null
-      }
+      },
+      "sponsor_visibility_shares": {
+        "disclosed": 0.5601,
+        "inferable": 0.0,
+        "unwalked": 0.0019,
+        "dark": 0.438
+      },
+      "vendor_links": []
     },
     {
       "ad_id": "CR04363946274660024321",
@@ -14460,7 +17616,14 @@
         "status": "unverified",
         "evidence_urls": [],
         "verified_at": null
-      }
+      },
+      "sponsor_visibility_shares": {
+        "disclosed": 0.5601,
+        "inferable": 0.0,
+        "unwalked": 0.0019,
+        "dark": 0.438
+      },
+      "vendor_links": []
     },
     {
       "ad_id": "CR14890776152103714817",
@@ -14493,7 +17656,14 @@
         "status": "unverified",
         "evidence_urls": [],
         "verified_at": null
-      }
+      },
+      "sponsor_visibility_shares": {
+        "disclosed": 0.5601,
+        "inferable": 0.0,
+        "unwalked": 0.0019,
+        "dark": 0.438
+      },
+      "vendor_links": []
     },
     {
       "ad_id": "CR18058795655140212737",
@@ -14526,7 +17696,14 @@
         "status": "unverified",
         "evidence_urls": [],
         "verified_at": null
-      }
+      },
+      "sponsor_visibility_shares": {
+        "disclosed": 0.5601,
+        "inferable": 0.0,
+        "unwalked": 0.0019,
+        "dark": 0.438
+      },
+      "vendor_links": []
     },
     {
       "ad_id": "CR04552710430916608001",
@@ -14559,7 +17736,14 @@
         "status": "unverified",
         "evidence_urls": [],
         "verified_at": null
-      }
+      },
+      "sponsor_visibility_shares": {
+        "disclosed": 0.5601,
+        "inferable": 0.0,
+        "unwalked": 0.0019,
+        "dark": 0.438
+      },
+      "vendor_links": []
     },
     {
       "ad_id": "CR10684314594337357825",
@@ -14592,7 +17776,14 @@
         "status": "unverified",
         "evidence_urls": [],
         "verified_at": null
-      }
+      },
+      "sponsor_visibility_shares": {
+        "disclosed": 0.5601,
+        "inferable": 0.0,
+        "unwalked": 0.0019,
+        "dark": 0.438
+      },
+      "vendor_links": []
     },
     {
       "ad_id": "CR15611322955424858113",
@@ -14625,7 +17816,14 @@
         "status": "unverified",
         "evidence_urls": [],
         "verified_at": null
-      }
+      },
+      "sponsor_visibility_shares": {
+        "disclosed": 0.5601,
+        "inferable": 0.0,
+        "unwalked": 0.0019,
+        "dark": 0.438
+      },
+      "vendor_links": []
     },
     {
       "ad_id": "CR12364696565799976961",
@@ -14658,7 +17856,14 @@
         "status": "unverified",
         "evidence_urls": [],
         "verified_at": null
-      }
+      },
+      "sponsor_visibility_shares": {
+        "disclosed": 0.5601,
+        "inferable": 0.0,
+        "unwalked": 0.0019,
+        "dark": 0.438
+      },
+      "vendor_links": []
     },
     {
       "ad_id": "CR06344011685145083905",
@@ -14691,7 +17896,14 @@
         "status": "unverified",
         "evidence_urls": [],
         "verified_at": null
-      }
+      },
+      "sponsor_visibility_shares": {
+        "disclosed": 0.5601,
+        "inferable": 0.0,
+        "unwalked": 0.0019,
+        "dark": 0.438
+      },
+      "vendor_links": []
     },
     {
       "ad_id": "CR01547050260856045569",
@@ -14724,7 +17936,14 @@
         "status": "unverified",
         "evidence_urls": [],
         "verified_at": null
-      }
+      },
+      "sponsor_visibility_shares": {
+        "disclosed": 0.5601,
+        "inferable": 0.0,
+        "unwalked": 0.0019,
+        "dark": 0.438
+      },
+      "vendor_links": []
     },
     {
       "ad_id": "CR09241909270323134465",
@@ -14757,7 +17976,14 @@
         "status": "unverified",
         "evidence_urls": [],
         "verified_at": null
-      }
+      },
+      "sponsor_visibility_shares": {
+        "disclosed": 0.5601,
+        "inferable": 0.0,
+        "unwalked": 0.0019,
+        "dark": 0.438
+      },
+      "vendor_links": []
     },
     {
       "ad_id": "CR04759870516217511937",
@@ -14790,7 +18016,14 @@
         "status": "unverified",
         "evidence_urls": [],
         "verified_at": null
-      }
+      },
+      "sponsor_visibility_shares": {
+        "disclosed": 0.5601,
+        "inferable": 0.0,
+        "unwalked": 0.0019,
+        "dark": 0.438
+      },
+      "vendor_links": []
     },
     {
       "ad_id": "CR04638766457243566081",
@@ -14823,7 +18056,14 @@
         "status": "unverified",
         "evidence_urls": [],
         "verified_at": null
-      }
+      },
+      "sponsor_visibility_shares": {
+        "disclosed": 0.5601,
+        "inferable": 0.0,
+        "unwalked": 0.0019,
+        "dark": 0.438
+      },
+      "vendor_links": []
     },
     {
       "ad_id": "CR06018892693881487361",
@@ -14856,7 +18096,9 @@
         "status": "unverified",
         "evidence_urls": [],
         "verified_at": null
-      }
+      },
+      "sponsor_visibility_shares": null,
+      "vendor_links": []
     },
     {
       "ad_id": "CR02608551221904015361",
@@ -14889,7 +18131,9 @@
         "status": "unverified",
         "evidence_urls": [],
         "verified_at": null
-      }
+      },
+      "sponsor_visibility_shares": null,
+      "vendor_links": []
     },
     {
       "ad_id": "CR00092178124250284033",
@@ -14922,7 +18166,14 @@
         "status": "unverified",
         "evidence_urls": [],
         "verified_at": null
-      }
+      },
+      "sponsor_visibility_shares": {
+        "disclosed": 0.7994,
+        "inferable": 0.0,
+        "unwalked": 0.0,
+        "dark": 0.2006
+      },
+      "vendor_links": []
     },
     {
       "ad_id": "CR10627886558088265729",
@@ -14955,7 +18206,14 @@
         "status": "unverified",
         "evidence_urls": [],
         "verified_at": null
-      }
+      },
+      "sponsor_visibility_shares": {
+        "disclosed": 0.5362,
+        "inferable": 0.0,
+        "unwalked": 0.0,
+        "dark": 0.4638
+      },
+      "vendor_links": []
     },
     {
       "ad_id": "CR07669584552859271169",
@@ -14988,7 +18246,14 @@
         "status": "unverified",
         "evidence_urls": [],
         "verified_at": null
-      }
+      },
+      "sponsor_visibility_shares": {
+        "disclosed": 0.5362,
+        "inferable": 0.0,
+        "unwalked": 0.0,
+        "dark": 0.4638
+      },
+      "vendor_links": []
     },
     {
       "ad_id": "CR09654827563599527937",
@@ -15021,7 +18286,14 @@
         "status": "unverified",
         "evidence_urls": [],
         "verified_at": null
-      }
+      },
+      "sponsor_visibility_shares": {
+        "disclosed": 0.5362,
+        "inferable": 0.0,
+        "unwalked": 0.0,
+        "dark": 0.4638
+      },
+      "vendor_links": []
     },
     {
       "ad_id": "CR14030363773148069889",
@@ -15054,7 +18326,14 @@
         "status": "unverified",
         "evidence_urls": [],
         "verified_at": null
-      }
+      },
+      "sponsor_visibility_shares": {
+        "disclosed": 0.0,
+        "inferable": 0.0,
+        "unwalked": 0.0,
+        "dark": 1.0
+      },
+      "vendor_links": []
     },
     {
       "ad_id": "CR11086297144963891201",
@@ -15087,7 +18366,14 @@
         "status": "unverified",
         "evidence_urls": [],
         "verified_at": null
-      }
+      },
+      "sponsor_visibility_shares": {
+        "disclosed": 0.0,
+        "inferable": 0.0,
+        "unwalked": 0.0,
+        "dark": 1.0
+      },
+      "vendor_links": []
     },
     {
       "ad_id": "CR10834809372215869441",
@@ -15120,7 +18406,14 @@
         "status": "unverified",
         "evidence_urls": [],
         "verified_at": null
-      }
+      },
+      "sponsor_visibility_shares": {
+        "disclosed": 0.0,
+        "inferable": 0.0,
+        "unwalked": 0.0,
+        "dark": 1.0
+      },
+      "vendor_links": []
     },
     {
       "ad_id": "CR15789472649765191681",
@@ -15153,7 +18446,14 @@
         "status": "unverified",
         "evidence_urls": [],
         "verified_at": null
-      }
+      },
+      "sponsor_visibility_shares": {
+        "disclosed": 0.0,
+        "inferable": 0.0,
+        "unwalked": 0.0,
+        "dark": 1.0
+      },
+      "vendor_links": []
     },
     {
       "ad_id": "CR06091244957035659265",
@@ -15186,7 +18486,14 @@
         "status": "unverified",
         "evidence_urls": [],
         "verified_at": null
-      }
+      },
+      "sponsor_visibility_shares": {
+        "disclosed": 0.0,
+        "inferable": 0.0,
+        "unwalked": 0.0,
+        "dark": 1.0
+      },
+      "vendor_links": []
     },
     {
       "ad_id": "CR00507887527793786881",
@@ -15219,7 +18526,14 @@
         "status": "unverified",
         "evidence_urls": [],
         "verified_at": null
-      }
+      },
+      "sponsor_visibility_shares": {
+        "disclosed": 0.0,
+        "inferable": 0.0,
+        "unwalked": 0.0,
+        "dark": 1.0
+      },
+      "vendor_links": []
     },
     {
       "ad_id": "CR13699676855001415681",
@@ -15252,7 +18566,14 @@
         "status": "unverified",
         "evidence_urls": [],
         "verified_at": null
-      }
+      },
+      "sponsor_visibility_shares": {
+        "disclosed": 0.9711,
+        "inferable": 0.0,
+        "unwalked": 0.0,
+        "dark": 0.0289
+      },
+      "vendor_links": []
     },
     {
       "ad_id": "CR10162378572115738625",
@@ -15285,7 +18606,14 @@
         "status": "unverified",
         "evidence_urls": [],
         "verified_at": null
-      }
+      },
+      "sponsor_visibility_shares": {
+        "disclosed": 0.729,
+        "inferable": 0.0,
+        "unwalked": 0.0004,
+        "dark": 0.2706
+      },
+      "vendor_links": []
     },
     {
       "ad_id": "CR15398839034822262785",
@@ -15318,7 +18646,14 @@
         "status": "unverified",
         "evidence_urls": [],
         "verified_at": null
-      }
+      },
+      "sponsor_visibility_shares": {
+        "disclosed": 0.729,
+        "inferable": 0.0,
+        "unwalked": 0.0004,
+        "dark": 0.2706
+      },
+      "vendor_links": []
     },
     {
       "ad_id": "CR02540706956423725057",
@@ -15351,7 +18686,14 @@
         "status": "unverified",
         "evidence_urls": [],
         "verified_at": null
-      }
+      },
+      "sponsor_visibility_shares": {
+        "disclosed": 0.729,
+        "inferable": 0.0,
+        "unwalked": 0.0004,
+        "dark": 0.2706
+      },
+      "vendor_links": []
     },
     {
       "ad_id": "CR12212780840941256705",
@@ -15386,7 +18728,9 @@
         "status": "unverified",
         "evidence_urls": [],
         "verified_at": null
-      }
+      },
+      "sponsor_visibility_shares": null,
+      "vendor_links": []
     },
     {
       "ad_id": "CR14622771842100756481",
@@ -15421,7 +18765,9 @@
         "status": "unverified",
         "evidence_urls": [],
         "verified_at": null
-      }
+      },
+      "sponsor_visibility_shares": null,
+      "vendor_links": []
     },
     {
       "ad_id": "CR02906941171395723265",
@@ -15456,7 +18802,9 @@
         "status": "unverified",
         "evidence_urls": [],
         "verified_at": null
-      }
+      },
+      "sponsor_visibility_shares": null,
+      "vendor_links": []
     },
     {
       "ad_id": "CR08481091204367253505",
@@ -15491,7 +18839,9 @@
         "status": "unverified",
         "evidence_urls": [],
         "verified_at": null
-      }
+      },
+      "sponsor_visibility_shares": null,
+      "vendor_links": []
     },
     {
       "ad_id": "CR13724023890731073537",
@@ -15526,7 +18876,9 @@
         "status": "unverified",
         "evidence_urls": [],
         "verified_at": null
-      }
+      },
+      "sponsor_visibility_shares": null,
+      "vendor_links": []
     },
     {
       "ad_id": "CR11180717705999155201",
@@ -15561,7 +18913,9 @@
         "status": "unverified",
         "evidence_urls": [],
         "verified_at": null
-      }
+      },
+      "sponsor_visibility_shares": null,
+      "vendor_links": []
     },
     {
       "ad_id": "CR17790228446723440641",
@@ -15596,7 +18950,9 @@
         "status": "unverified",
         "evidence_urls": [],
         "verified_at": null
-      }
+      },
+      "sponsor_visibility_shares": null,
+      "vendor_links": []
     },
     {
       "ad_id": "CR01612156278526705665",
@@ -15631,7 +18987,9 @@
         "status": "unverified",
         "evidence_urls": [],
         "verified_at": null
-      }
+      },
+      "sponsor_visibility_shares": null,
+      "vendor_links": []
     },
     {
       "ad_id": "CR02663241480025407489",
@@ -15666,7 +19024,9 @@
         "status": "unverified",
         "evidence_urls": [],
         "verified_at": null
-      }
+      },
+      "sponsor_visibility_shares": null,
+      "vendor_links": []
     },
     {
       "ad_id": "CR01912262118992773121",
@@ -15701,7 +19061,9 @@
         "status": "unverified",
         "evidence_urls": [],
         "verified_at": null
-      }
+      },
+      "sponsor_visibility_shares": null,
+      "vendor_links": []
     },
     {
       "ad_id": "CR07668422042651197441",
@@ -15736,7 +19098,9 @@
         "status": "unverified",
         "evidence_urls": [],
         "verified_at": null
-      }
+      },
+      "sponsor_visibility_shares": null,
+      "vendor_links": []
     },
     {
       "ad_id": "CR13649620711973584897",
@@ -15771,7 +19135,9 @@
         "status": "unverified",
         "evidence_urls": [],
         "verified_at": null
-      }
+      },
+      "sponsor_visibility_shares": null,
+      "vendor_links": []
     },
     {
       "ad_id": "CR17387435916804489217",
@@ -15806,7 +19172,9 @@
         "status": "unverified",
         "evidence_urls": [],
         "verified_at": null
-      }
+      },
+      "sponsor_visibility_shares": null,
+      "vendor_links": []
     },
     {
       "ad_id": "CR16502198953295478785",
@@ -15841,7 +19209,9 @@
         "status": "unverified",
         "evidence_urls": [],
         "verified_at": null
-      }
+      },
+      "sponsor_visibility_shares": null,
+      "vendor_links": []
     },
     {
       "ad_id": "CR15287704247777361921",
@@ -15876,7 +19246,9 @@
         "status": "unverified",
         "evidence_urls": [],
         "verified_at": null
-      }
+      },
+      "sponsor_visibility_shares": null,
+      "vendor_links": []
     },
     {
       "ad_id": "CR00459904513940127745",
@@ -15911,7 +19283,9 @@
         "status": "unverified",
         "evidence_urls": [],
         "verified_at": null
-      }
+      },
+      "sponsor_visibility_shares": null,
+      "vendor_links": []
     },
     {
       "ad_id": "CR00030562952918597633",
@@ -15946,7 +19320,9 @@
         "status": "unverified",
         "evidence_urls": [],
         "verified_at": null
-      }
+      },
+      "sponsor_visibility_shares": null,
+      "vendor_links": []
     },
     {
       "ad_id": "CR14392660224664141825",
@@ -15981,7 +19357,9 @@
         "status": "unverified",
         "evidence_urls": [],
         "verified_at": null
-      }
+      },
+      "sponsor_visibility_shares": null,
+      "vendor_links": []
     },
     {
       "ad_id": "CR14295174551628152833",
@@ -16016,7 +19394,9 @@
         "status": "unverified",
         "evidence_urls": [],
         "verified_at": null
-      }
+      },
+      "sponsor_visibility_shares": null,
+      "vendor_links": []
     },
     {
       "ad_id": "CR04688482524760899585",
@@ -16051,7 +19431,9 @@
         "status": "unverified",
         "evidence_urls": [],
         "verified_at": null
-      }
+      },
+      "sponsor_visibility_shares": null,
+      "vendor_links": []
     },
     {
       "ad_id": "CR04787421528830509057",
@@ -16086,7 +19468,9 @@
         "status": "unverified",
         "evidence_urls": [],
         "verified_at": null
-      }
+      },
+      "sponsor_visibility_shares": null,
+      "vendor_links": []
     },
     {
       "ad_id": "CR14585189933367951361",
@@ -16121,7 +19505,9 @@
         "status": "unverified",
         "evidence_urls": [],
         "verified_at": null
-      }
+      },
+      "sponsor_visibility_shares": null,
+      "vendor_links": []
     },
     {
       "ad_id": "CR12309045282976301057",
@@ -16156,7 +19542,9 @@
         "status": "unverified",
         "evidence_urls": [],
         "verified_at": null
-      }
+      },
+      "sponsor_visibility_shares": null,
+      "vendor_links": []
     },
     {
       "ad_id": "CR02666772647517356033",
@@ -16191,7 +19579,9 @@
         "status": "unverified",
         "evidence_urls": [],
         "verified_at": null
-      }
+      },
+      "sponsor_visibility_shares": null,
+      "vendor_links": []
     },
     {
       "ad_id": "CR07132509956330225665",
@@ -16226,7 +19616,9 @@
         "status": "unverified",
         "evidence_urls": [],
         "verified_at": null
-      }
+      },
+      "sponsor_visibility_shares": null,
+      "vendor_links": []
     },
     {
       "ad_id": "CR11136462362981171201",
@@ -16261,7 +19653,9 @@
         "status": "unverified",
         "evidence_urls": [],
         "verified_at": null
-      }
+      },
+      "sponsor_visibility_shares": null,
+      "vendor_links": []
     },
     {
       "ad_id": "CR03054550469985697793",
@@ -16296,7 +19690,9 @@
         "status": "unverified",
         "evidence_urls": [],
         "verified_at": null
-      }
+      },
+      "sponsor_visibility_shares": null,
+      "vendor_links": []
     },
     {
       "ad_id": "CR15019863215251128321",
@@ -16331,7 +19727,9 @@
         "status": "unverified",
         "evidence_urls": [],
         "verified_at": null
-      }
+      },
+      "sponsor_visibility_shares": null,
+      "vendor_links": []
     },
     {
       "ad_id": "CR01844653973634547713",
@@ -16366,7 +19764,9 @@
         "status": "unverified",
         "evidence_urls": [],
         "verified_at": null
-      }
+      },
+      "sponsor_visibility_shares": null,
+      "vendor_links": []
     },
     {
       "ad_id": "CR02343637089330921473",
@@ -16401,7 +19801,9 @@
         "status": "unverified",
         "evidence_urls": [],
         "verified_at": null
-      }
+      },
+      "sponsor_visibility_shares": null,
+      "vendor_links": []
     },
     {
       "ad_id": "CR09941526869809561601",
@@ -16436,7 +19838,9 @@
         "status": "unverified",
         "evidence_urls": [],
         "verified_at": null
-      }
+      },
+      "sponsor_visibility_shares": null,
+      "vendor_links": []
     },
     {
       "ad_id": "CR09981231557538480129",
@@ -16471,7 +19875,9 @@
         "status": "unverified",
         "evidence_urls": [],
         "verified_at": null
-      }
+      },
+      "sponsor_visibility_shares": null,
+      "vendor_links": []
     },
     {
       "ad_id": "CR12977317730100183041",
@@ -16506,7 +19912,9 @@
         "status": "unverified",
         "evidence_urls": [],
         "verified_at": null
-      }
+      },
+      "sponsor_visibility_shares": null,
+      "vendor_links": []
     },
     {
       "ad_id": "CR06807949190556024833",
@@ -16541,7 +19949,9 @@
         "status": "unverified",
         "evidence_urls": [],
         "verified_at": null
-      }
+      },
+      "sponsor_visibility_shares": null,
+      "vendor_links": []
     },
     {
       "ad_id": "CR09058147290677510145",
@@ -16576,7 +19986,9 @@
         "status": "unverified",
         "evidence_urls": [],
         "verified_at": null
-      }
+      },
+      "sponsor_visibility_shares": null,
+      "vendor_links": []
     },
     {
       "ad_id": "CR11173169232256958465",
@@ -16611,7 +20023,9 @@
         "status": "unverified",
         "evidence_urls": [],
         "verified_at": null
-      }
+      },
+      "sponsor_visibility_shares": null,
+      "vendor_links": []
     },
     {
       "ad_id": "CR09052661277410721793",
@@ -16646,7 +20060,9 @@
         "status": "unverified",
         "evidence_urls": [],
         "verified_at": null
-      }
+      },
+      "sponsor_visibility_shares": null,
+      "vendor_links": []
     },
     {
       "ad_id": "CR17621499041592377345",
@@ -16681,7 +20097,9 @@
         "status": "unverified",
         "evidence_urls": [],
         "verified_at": null
-      }
+      },
+      "sponsor_visibility_shares": null,
+      "vendor_links": []
     },
     {
       "ad_id": "CR08157625552174317569",
@@ -16716,7 +20134,9 @@
         "status": "unverified",
         "evidence_urls": [],
         "verified_at": null
-      }
+      },
+      "sponsor_visibility_shares": null,
+      "vendor_links": []
     },
     {
       "ad_id": "CR04300538349619249153",
@@ -16751,7 +20171,9 @@
         "status": "unverified",
         "evidence_urls": [],
         "verified_at": null
-      }
+      },
+      "sponsor_visibility_shares": null,
+      "vendor_links": []
     },
     {
       "ad_id": "CR07723700539493449729",
@@ -16786,7 +20208,9 @@
         "status": "unverified",
         "evidence_urls": [],
         "verified_at": null
-      }
+      },
+      "sponsor_visibility_shares": null,
+      "vendor_links": []
     }
   ],
   "notes": [
@@ -16794,6 +20218,9 @@
     "Selection: US-region creatives served between 2024-01-01 and 2024-11-05. Ads from the two candidate committees are kept regardless of targeting; ads from other advertisers are kept only when the advertiser name exactly matches (after normalization) a hand-verified list of committees active in this race or a committee named in ledger.json, or when the advertiser name contains a candidate surname, and the ad's declared geo targeting includes Pennsylvania. Exact normalized-name matches carry match_confidence \"auto\" and the FEC committee id; everything else is \"none\" with no committee attached. Stance (support/oppose) is recorded only for candidate committees, which support themselves; no stance or issue is inferred from creative content.",
     "Spend and impressions are the bucketed ranges Google publishes; an open-ended upper bound is null. Google's declared 'paid for by' data covers only California and New Zealand advertisers, so no disclaimer is shown.",
     "1849 ads met the selection rule; 500 emitted (500 matched to a committee, 0 unmatched) after sorting matched-first then by spend upper bound and capping at 500. 29 video poster frames cached locally; text and image creatives have no static asset reachable without a browser.",
-    "Verification: 5 ads carry verification.status \"verified\" — a person opened the Google Ads Transparency ad and advertiser pages (legal name, FEC ID where Google prints one) and confirmed on fec.gov that the committee with that ID filed independent expenditures in this race; evidence_urls list what was read. Every other ad is \"unverified\": its committee link, if any, rests on the exact-name match alone."
+    "Verification: 5 ads carry verification.status \"verified\" — a person opened the Google Ads Transparency ad and advertiser pages (legal name, FEC ID where Google prints one) and confirmed on fec.gov that the committee with that ID filed independent expenditures in this race; evidence_urls list what was read. Every other ad is \"unverified\": its committee link, if any, rests on the exact-name match alone.",
+    "Enrichment (gotham.ads_enrich): 366 of 500 ads carry sponsor_visibility_shares, copied from the sponsor committee's chain summary; the dark share is the fraction of the sponsor's traced receipts that stopped at an organization with no donor-disclosure obligation. It describes the sponsor's funding, not this ad.",
+    "Enrichment (gotham.ads_enrich): 42 of 500 ads carry issue tags; each was tagged by a person who read or watched the creative at its ad-library URL (42 hand-tagged rows in data/hand). Untagged ads are not 'about nothing'; nobody has tagged them.",
+    "Enrichment (gotham.ads_enrich): A vendor is linked to an ad when any of the sponsor's independent-expenditure rows paid to that vendor is dated from 7 days before the ad was first shown through the day it was last shown. 0 vendor links (0 verified, 0 inferred, 0 adjacent). 'adjacent' means only that the buy and the ad overlap in time; 'inferred' means the sponsor paid exactly one digital vendor in the window; 'verified' means a person found a source naming both the sponsor and the vendor for this creative. The FEC does not record which buy placed which ad. No sponsor committee carries vendor rows yet (gotham.vendors has not run), so no ad has vendor links."
   ]
 }

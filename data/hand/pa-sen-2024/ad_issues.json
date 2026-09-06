@@ -1,5 +1,390 @@
 {
   "race_id": "pa-sen-2024",
-  "rows": [],
-  "method": "Hand-tagged content of the top Google ads by spend: what the creative is about, 1-3 issues from the frozen taxonomy, first is primary. The tagger watched/read the creative at creative_url."
+  "rows": [
+    {
+      "ad_id": "CR10478813122326953985",
+      "issue_ids": [
+        "abortion"
+      ],
+      "note": "WinSenate \"Simple\" 15s: McCormick clip \"fully against abortion ... no exceptions for rape or incest\", \"overturning Roe made him very happy\".",
+      "tagged_by": "devin-block2-media",
+      "tagged_at": "2026-09-05"
+    },
+    {
+      "ad_id": "CR05870211732231684097",
+      "issue_ids": [
+        "labor_trade"
+      ],
+      "note": "WinSenate \"Itinerary\": \"Wall Street hedge fund, he made millions outsourcing jobs\"; rest is Connecticut mansion / residency.",
+      "tagged_by": "devin-block2-media",
+      "tagged_at": "2026-09-05"
+    },
+    {
+      "ad_id": "CR05367732770854404097",
+      "issue_ids": [
+        "labor_trade"
+      ],
+      "note": "LCV \"Specialty\": \"his other specialty: outsourcing American jobs, sending Pennsylvania jobs to China\".",
+      "tagged_by": "devin-block2-media",
+      "tagged_at": "2026-09-05"
+    },
+    {
+      "ad_id": "CR00368842737589420033",
+      "issue_ids": [
+        "immigration"
+      ],
+      "note": "SLF \"Accountable\" 15s: \"Casey's dangerous sanctuary city policy released an illegal immigrant felon\".",
+      "tagged_by": "devin-block2-media",
+      "tagged_at": "2026-09-05"
+    },
+    {
+      "ad_id": "CR11789922739211468801",
+      "issue_ids": [
+        "tax_budget"
+      ],
+      "note": "SLF \"Compete\" 15s: \"higher taxes on seniors' Social Security\"; the trans-athletes claim has no taxonomy id.",
+      "tagged_by": "devin-block2-media",
+      "tagged_at": "2026-09-05"
+    },
+    {
+      "ad_id": "CR09843875118978170881",
+      "issue_ids": [
+        "tax_budget"
+      ],
+      "note": "SLF \"Compete\" 15s (second creative id, same spot): \"higher taxes on seniors' Social Security\"; trans-athletes claim untagged.",
+      "tagged_by": "devin-block2-media",
+      "tagged_at": "2026-09-05"
+    },
+    {
+      "ad_id": "CR16164832502010085377",
+      "issue_ids": [
+        "tax_budget"
+      ],
+      "note": "WinSenate \"Pay The Price\": \"wants to raise taxes on working families but cut taxes for millionaires like him\".",
+      "tagged_by": "devin-block2-media",
+      "tagged_at": "2026-09-05"
+    },
+    {
+      "ad_id": "CR15747662947024896001",
+      "issue_ids": [
+        "labor_trade"
+      ],
+      "note": "WinSenate text ad \"Connecticut Millionaire\": \"made millions on Wall Street, and outsourced PA jobs\".",
+      "tagged_by": "devin-block2-media",
+      "tagged_at": "2026-09-05"
+    },
+    {
+      "ad_id": "CR14499067438127120385",
+      "issue_ids": [
+        "energy_climate"
+      ],
+      "note": "McCormick \"Disappear\" 15s: Harris clip \"in favor of banning fracking\" — \"would make these Pennsylvania jobs disappear\".",
+      "tagged_by": "devin-block2-media",
+      "tagged_at": "2026-09-05"
+    },
+    {
+      "ad_id": "CR13534678092823396353",
+      "issue_ids": [
+        "labor_trade",
+        "energy_climate"
+      ],
+      "note": "NRDC Action Votes \"Selling Out\": \"sent jobs to China, laying off Pennsylvania workers\"; \"eliminate thousands of clean energy jobs\".",
+      "tagged_by": "devin-block2-media",
+      "tagged_at": "2026-09-05"
+    },
+    {
+      "ad_id": "CR16821231048187707393",
+      "issue_ids": [
+        "labor_trade"
+      ],
+      "note": "LCV \"Guide\": \"a how-to guide to teach companies to outsource American jobs ... shipping Pennsylvania jobs to China\".",
+      "tagged_by": "devin-block2-media",
+      "tagged_at": "2026-09-05"
+    },
+    {
+      "ad_id": "CR16183465650688098305",
+      "issue_ids": [
+        "tax_budget"
+      ],
+      "note": "SLF \"Compete\" 15s (third creative id): \"higher taxes on seniors' Social Security\"; trans-athletes claim untagged.",
+      "tagged_by": "devin-block2-media",
+      "tagged_at": "2026-09-05"
+    },
+    {
+      "ad_id": "CR14846206348760186881",
+      "issue_ids": [
+        "tax_budget"
+      ],
+      "note": "SLF \"Made Sure\" 15s: \"made sure COVID relief checks could go to murderers, rapists\" — relief-spending attack.",
+      "tagged_by": "devin-block2-media",
+      "tagged_at": "2026-09-05"
+    },
+    {
+      "ad_id": "CR13454551182949220353",
+      "issue_ids": [
+        "immigration"
+      ],
+      "note": "SLF \"Detained\" 15s: \"illegal immigrant ... Philadelphia let him go because of the sanctuary city policy Bob Casey voted for\".",
+      "tagged_by": "devin-block2-media",
+      "tagged_at": "2026-09-05"
+    },
+    {
+      "ad_id": "CR12341671143046905857",
+      "issue_ids": [
+        "abortion"
+      ],
+      "note": "WinSenate \"Hasn't Changed\": \"called himself staunchly pro-life ... no exceptions for rape or incest\".",
+      "tagged_by": "devin-block2-media",
+      "tagged_at": "2026-09-05"
+    },
+    {
+      "ad_id": "CR03071815602860457985",
+      "issue_ids": [
+        "abortion"
+      ],
+      "note": "WinSenate \"Marie\": mother to camera, \"Dave McCormick is fully against abortion even in cases of rape or incest\".",
+      "tagged_by": "devin-block2-media",
+      "tagged_at": "2026-09-05"
+    },
+    {
+      "ad_id": "CR09482672355114221569",
+      "issue_ids": [
+        "tax_budget"
+      ],
+      "note": "SLF \"Compete\" 15s (fourth creative id): \"higher taxes on seniors' Social Security\"; trans-athletes claim untagged.",
+      "tagged_by": "devin-block2-media",
+      "tagged_at": "2026-09-05"
+    },
+    {
+      "ad_id": "CR14004507606169681921",
+      "issue_ids": [
+        "labor_trade"
+      ],
+      "note": "WinSenate text ad \"The Truth about Dave McCormick\": \"made millions on Wall Street, and outsourced PA jobs\".",
+      "tagged_by": "devin-block2-media",
+      "tagged_at": "2026-09-05"
+    },
+    {
+      "ad_id": "CR15884613992212070401",
+      "issue_ids": [
+        "abortion",
+        "healthcare"
+      ],
+      "note": "WinSenate \"The Choice\": \"wanted to outlaw abortion with no exception for rape\"; \"plan could cut Social Security and your Medicare\"; fentanyl line untagged.",
+      "tagged_by": "devin-block2-media",
+      "tagged_at": "2026-09-05"
+    },
+    {
+      "ad_id": "CR03840237839694430209",
+      "issue_ids": [
+        "abortion"
+      ],
+      "note": "WinSenate \"Marie\" (second creative id): \"fully against abortion even in cases of rape or incest\".",
+      "tagged_by": "devin-block2-media",
+      "tagged_at": "2026-09-05"
+    },
+    {
+      "ad_id": "CR14255135835702689793",
+      "issue_ids": [
+        "abortion"
+      ],
+      "note": "WinSenate \"Jennifer\": \"abortion decisions ... between women and their doctors\"; McCormick clip \"life begins at conception without any exceptions\".",
+      "tagged_by": "devin-block2-media",
+      "tagged_at": "2026-09-05"
+    },
+    {
+      "ad_id": "CR02577931420798287873",
+      "issue_ids": [
+        "abortion"
+      ],
+      "note": "DSCC \"Salon\" 15s: \"Dave McCormick is anti-abortion, said he'd oppose it even in cases of rape or incest\".",
+      "tagged_by": "devin-block2-media",
+      "tagged_at": "2026-09-05"
+    },
+    {
+      "ad_id": "CR16237396970908418049",
+      "issue_ids": [
+        "guns"
+      ],
+      "note": "NRA-PVF \"Pennsylvania Decides\": \"future of the Second Amendment\", \"gun grabbing radicals\", \"no one will lay a finger on your firearms\".",
+      "tagged_by": "devin-block2-media",
+      "tagged_at": "2026-09-05"
+    },
+    {
+      "ad_id": "CR04370227784589508609",
+      "issue_ids": [
+        "immigration"
+      ],
+      "note": "SLF \"Detained\" 30s: \"instead of deporting him Philadelphia let him go because of the sanctuary city policy Bob Casey voted for\".",
+      "tagged_by": "devin-block2-media",
+      "tagged_at": "2026-09-05"
+    },
+    {
+      "ad_id": "CR03497255684309778433",
+      "issue_ids": [
+        "abortion"
+      ],
+      "note": "Future Pennsylvania PAC video (frames read): \"Trump leaves door open to national abortion ban\", \"outlaw safe, effective emergency contraception\", \"Vote Kamala Harris\".",
+      "tagged_by": "devin-block2-media",
+      "tagged_at": "2026-09-05"
+    },
+    {
+      "ad_id": "CR17834934589508812801",
+      "issue_ids": [
+        "tax_budget"
+      ],
+      "note": "DSCC \"You Work Hard Contrast\": \"pushing huge tax breaks for the super rich like him\"; \"corporate price gouging\" line untagged.",
+      "tagged_by": "devin-block2-media",
+      "tagged_at": "2026-09-05"
+    },
+    {
+      "ad_id": "CR05179166475151212545",
+      "issue_ids": [
+        "labor_trade"
+      ],
+      "note": "WinSenate \"Itinerary\" (second creative id): \"he made millions outsourcing jobs\".",
+      "tagged_by": "devin-block2-media",
+      "tagged_at": "2026-09-05"
+    },
+    {
+      "ad_id": "CR16220568893905698817",
+      "issue_ids": [
+        "labor_trade"
+      ],
+      "note": "WinSenate \"Itinerary\" (third creative id): \"he made millions outsourcing jobs\".",
+      "tagged_by": "devin-block2-media",
+      "tagged_at": "2026-09-05"
+    },
+    {
+      "ad_id": "CR06950645183998328833",
+      "issue_ids": [
+        "tax_budget"
+      ],
+      "note": "DSCC \"You Work Hard\": \"pushing huge tax breaks for the super rich like him ... while you pay more\".",
+      "tagged_by": "devin-block2-media",
+      "tagged_at": "2026-09-05"
+    },
+    {
+      "ad_id": "CR17089338712283676673",
+      "issue_ids": [
+        "healthcare"
+      ],
+      "note": "Casey \"Small Town\": \"taking on drug companies to reduce cost\".",
+      "tagged_by": "devin-block2-media",
+      "tagged_at": "2026-09-05"
+    },
+    {
+      "ad_id": "CR10442306037749907457",
+      "issue_ids": [
+        "immigration"
+      ],
+      "note": "Casey \"Shame A\": \"McCormick opposed the bipartisan bill to strengthen our border\".",
+      "tagged_by": "devin-block2-media",
+      "tagged_at": "2026-09-05"
+    },
+    {
+      "ad_id": "CR01265011784436154369",
+      "issue_ids": [
+        "immigration",
+        "tax_budget"
+      ],
+      "note": "SLF \"Security\" 30s: \"voted repeatedly to fund dangerous sanctuary cities ... amnesty\"; \"voted for higher taxes on senior Social Security\".",
+      "tagged_by": "devin-block2-media",
+      "tagged_at": "2026-09-05"
+    },
+    {
+      "ad_id": "CR01683002124851478529",
+      "issue_ids": [
+        "immigration",
+        "tax_budget"
+      ],
+      "note": "SLF \"Security\" 30s (second creative id): sanctuary cities / amnesty; \"higher taxes on senior Social Security\".",
+      "tagged_by": "devin-block2-media",
+      "tagged_at": "2026-09-05"
+    },
+    {
+      "ad_id": "CR07452900497838571521",
+      "issue_ids": [
+        "labor_trade"
+      ],
+      "note": "WinSenate \"Rob\": carpenter to camera, \"the hedge fund CEO who sent jobs like mine to China\".",
+      "tagged_by": "devin-block2-media",
+      "tagged_at": "2026-09-05"
+    },
+    {
+      "ad_id": "CR02170178134932979713",
+      "issue_ids": [
+        "abortion"
+      ],
+      "note": "WinSenate \"Jennifer\" (second creative id): \"fully against abortion ... without any exceptions for rape or incest\".",
+      "tagged_by": "devin-block2-media",
+      "tagged_at": "2026-09-05"
+    },
+    {
+      "ad_id": "CR01871250335276728321",
+      "issue_ids": [
+        "labor_trade",
+        "healthcare",
+        "tax_budget"
+      ],
+      "note": "WinSenate \"Slot Machine\": \"outsourced Pennsylvania jobs\"; \"privatize Medicare and opposes a law capping prescription costs\"; \"more tax cuts for millionaires\".",
+      "tagged_by": "devin-block2-media",
+      "tagged_at": "2026-09-05"
+    },
+    {
+      "ad_id": "CR17444495536584392705",
+      "issue_ids": [
+        "tax_budget"
+      ],
+      "note": "WinSenate \"Slot Machine\" 6s: \"would raise taxes on us but cut taxes for millionaires like him\".",
+      "tagged_by": "devin-block2-media",
+      "tagged_at": "2026-09-05"
+    },
+    {
+      "ad_id": "CR17268551685907677185",
+      "issue_ids": [
+        "tax_budget"
+      ],
+      "note": "SLF \"Compete\" 6s: \"higher taxes\"; \"men and girls' sports\" claim untagged.",
+      "tagged_by": "devin-block2-media",
+      "tagged_at": "2026-09-05"
+    },
+    {
+      "ad_id": "CR16672726609693769729",
+      "issue_ids": [
+        "abortion"
+      ],
+      "note": "WinSenate \"Hasn't Changed\" (second creative id): \"staunchly pro-life ... no exceptions for rape or incest\".",
+      "tagged_by": "devin-block2-media",
+      "tagged_at": "2026-09-05"
+    },
+    {
+      "ad_id": "CR00279342491088453633",
+      "issue_ids": [
+        "abortion"
+      ],
+      "note": "WinSenate \"More Worried\": doctor to camera, \"states are banning abortion ... talk of a national abortion ban\"; McCormick \"fully against abortion\".",
+      "tagged_by": "devin-block2-media",
+      "tagged_at": "2026-09-05"
+    },
+    {
+      "ad_id": "CR13008203887897739265",
+      "issue_ids": [
+        "abortion"
+      ],
+      "note": "WinSenate \"Sponsored\": \"ran ads saying he is staunchly pro-life and life begins at conception with no exceptions for rape or incest\".",
+      "tagged_by": "devin-block2-media",
+      "tagged_at": "2026-09-05"
+    },
+    {
+      "ad_id": "CR05421010431412011009",
+      "issue_ids": [
+        "abortion"
+      ],
+      "note": "WinSenate \"Jennifer\" 6s: \"fully against abortion without any exceptions for rape or incest\".",
+      "tagged_by": "devin-block2-media",
+      "tagged_at": "2026-09-05"
+    }
+  ],
+  "method": "Hand-tagged content of the top Google ads by spend: what the creative is about, 1-3 issues from the frozen taxonomy, first is primary. The tagger watched/read the creative at creative_url (YouTube captions of the embedded video, the on-screen text of text ads, or video frames). Ads whose creative names no issue in the taxonomy (fundraising asks, biography, residency, trans-athlete spots) are left untagged on purpose."
 }

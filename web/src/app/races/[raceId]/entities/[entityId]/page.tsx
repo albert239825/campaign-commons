@@ -1,7 +1,7 @@
 import { SectionNav } from "@/components/ui/detail-layout";
 // OWNER: Frontend A (entity page).
 import Link from "next/link";
-import { getEntity, getRace, getVendors, hasChain, listEntityIds, listRaceIds } from "@/lib/data";
+import { getAdsBySponsor, getEntity, getRace, getVendors, hasChain, listEntityIds, listRaceIds } from "@/lib/data";
 import { pct, routes } from "@/lib/format";
 import { AdjacencyNote, Breadcrumbs, Card, DataStatusBanner, Money } from "@/components/ui";
 import { VISIBILITY_COLORS } from "@citizen-gotham/contracts";
@@ -10,6 +10,7 @@ import { EntityHeader } from "@/components/entity/entity-header";
 import { FlowsTable } from "@/components/entity/flows-table";
 import { IeTable } from "@/components/entity/ie-table";
 import { WhereMoneyWent } from "@/components/entity/where-money-went";
+import { AdsSection } from "@/components/entity/ads-section";
 
 export const generateStaticParams = () =>
   listRaceIds().flatMap((raceId) => listEntityIds(raceId).map((entityId) => ({ raceId, entityId })));
@@ -20,6 +21,7 @@ export default async function EntityPage({ params }: { params: Promise<{ raceId:
   const e = getEntity(raceId, entityId);
   const raceEntityIds = new Set(listEntityIds(raceId));
   const chain = e.has_chain && hasChain(raceId, entityId);
+  const ads = getAdsBySponsor(raceId).get(entityId) ?? [];
   const isCampaign = e.designation === "P" && (e.committee_type === "S" || e.committee_type === "H" || e.committee_type === "P");
   const segs = [
     { label: "Itemized individual receipts", value: e.totals.from_individuals, color: VISIBILITY_COLORS.disclosed },
@@ -115,6 +117,8 @@ export default async function EntityPage({ params }: { params: Promise<{ raceId:
 
         </div>
       </div>
+
+      <AdsSection raceId={raceId} entityId={entityId} ads={ads} />
 
       <footer className="space-y-3 border-t border-neutral-200 pt-4">
         <BarLegend segments={visibilitySegments({ disclosed: 1, inferable: 1, dark: 1 })} />
