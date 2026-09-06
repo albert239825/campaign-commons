@@ -103,8 +103,11 @@ export default async function AdPage({ params }: { params: Promise<{ raceId: str
             {fecEvidenceUrls.length > 0 && (
               <>
                 {" · "}
-                {fecEvidenceUrls.map((u) => (
-                  <SourceLink key={u} href={u} label="fec.gov record" />
+                {fecEvidenceUrls.map((u, i) => (
+                  <span key={u}>
+                    {i > 0 && " "}
+                    <SourceLink href={u} label={fecEvidenceUrls.length > 1 ? `fec.gov record ${i + 1}` : "fec.gov record"} />
+                  </span>
                 ))}
               </>
             )}
@@ -177,7 +180,7 @@ export default async function AdPage({ params }: { params: Promise<{ raceId: str
                 <span className="font-medium text-neutral-700">Assumptions.</span> Vendor dollars are Schedule E payments as filed. The ad&apos;s dollars are the
                 midpoint of the range Google reports, not a filed figure, and are never added to the vendor dollars. A vendor → ad edge is drawn only when a person
                 verified it from a source naming both (solid) or that vendor was the only digital vendor the sponsor paid in the week before and while the ad ran
-                (dashed, inferred). Other vendors paid in that window are listed above as a sentence, not drawn: overlapping dates are not evidence of who placed the
+                (dashed, inferred). Other vendors paid in that window are listed below as a sentence, not drawn: overlapping dates are not evidence of who placed the
                 ad. Donor
                 dollars on the left are pooled: none of them can be said to have bought this ad. Nothing here reaches the candidate.
               </p>
