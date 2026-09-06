@@ -41,7 +41,7 @@ describe("buildClassifyBody", () => {
     const body = buildClassifyBody("who funds winsenate's funders", trails.subjects, "grok-4.5");
     expect(body.response_format.json_schema.strict).toBe(true);
     const schema = body.response_format.json_schema.schema;
-    expect(schema.properties.op.enum).toEqual(["shared_funders", "money_path", "funder_reach", "upstream", "none"]);
+    expect(schema.properties.op.enum).toEqual(["shared_funders", "money_path", "funder_reach", "upstream", "funders_by_issue", "issue_funders", "none"]);
     expect(schema.properties.subjects.items.properties.id.anyOf[0].enum).toEqual(trails.subjects.map((s) => s.id));
     expect(schema.properties.subjects.maxItems).toBe(2);
     const text = JSON.stringify(body);
@@ -91,6 +91,7 @@ describe("validatePick (closed-set layer)", () => {
         { id: winsenate.id, mention: null },
         { id: null, mention: "Women Vote" },
       ],
+      issue: null,
     });
   });
   it("rejects op none, an unknown op, and non-objects", () => {
@@ -110,8 +111,16 @@ describe("validatePick (closed-set layer)", () => {
     expect(validatePick({ op: "upstream", subjects: [{ id: null, mention: "x".repeat(121) }] }, trails.subjects)).toBeNull();
     expect(validatePick({ op: "upstream", subjects: [{ id: null, mention: null }] }, trails.subjects)).toBeNull();
   });
+  it("issue operations need an issue id from the taxonomy; other operations ignore one", () => {
+    expect(validatePick({ op: "funders_by_issue", subjects: [{ id: winsenate.id, mention: null }], issue: "crypto_fintech" }, trails.subjects)).toEqual({ op: "funders_by_issue", subjects: [{ id: winsenate.id, mention: null }], issue: "crypto_fintech" });
+    expect(validatePick({ op: "issue_funders", subjects: [], issue: "guns" }, trails.subjects)).toEqual({ op: "issue_funders", subjects: [], issue: "guns" });
+    expect(validatePick({ op: "issue_funders", subjects: [], issue: null }, trails.subjects)).toBeNull();
+    expect(validatePick({ op: "funders_by_issue", subjects: [{ id: winsenate.id, mention: null }], issue: "bitcoin" }, trails.subjects)).toBeNull();
+    expect(validatePick({ op: "issue_funders", subjects: [{ id: winsenate.id, mention: null }], issue: "guns" }, trails.subjects)).toBeNull();
+    expect(validatePick({ op: "upstream", subjects: [{ id: winsenate.id, mention: null }], issue: "guns" }, trails.subjects)).toEqual({ op: "upstream", subjects: [{ id: winsenate.id, mention: null }], issue: null });
+  });
   it("an id wins over a mention on the same subject; the mention is dropped", () => {
-    expect(validatePick({ op: "upstream", subjects: [{ id: winsenate.id, mention: "something else" }] }, trails.subjects)).toEqual({ op: "upstream", subjects: [{ id: winsenate.id, mention: null }] });
+    expect(validatePick({ op: "upstream", subjects: [{ id: winsenate.id, mention: "something else" }] }, trails.subjects)).toEqual({ op: "upstream", subjects: [{ id: winsenate.id, mention: null }], issue: null });
   });
 });
 
@@ -125,7 +134,7 @@ describe("classifyGraph", () => {
   it("posts to the xAI endpoint with the key only in the header and returns the validated pick", async () => {
     const f = fetchReturning(completion({ op: "upstream", subjects: [{ id: winsenate.id, mention: null }] }));
     const pick = await classifyGraph("who funds winsenate's funders", trails.subjects, { apiKey: "k-test", fetch: f });
-    expect(pick).toEqual({ op: "upstream", subjects: [{ id: winsenate.id, mention: null }] });
+    expect(pick).toEqual({ op: "upstream", subjects: [{ id: winsenate.id, mention: null }], issue: null });
     const [url, init] = f.mock.calls[0];
     expect(url).toBe(XAI_CHAT_COMPLETIONS_URL);
     expect((init!.headers as Record<string, string>).authorization).toBe("Bearer k-test");
