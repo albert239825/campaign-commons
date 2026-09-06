@@ -42,6 +42,8 @@
 .cover-stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px; max-width: 980px; border-top: 1px solid rgb(242 239 235 / 30%); padding-top: 22px; }
 .cover-stats b { display: block; font-size: 52px; font-weight: 400; letter-spacing: -.04em; font-variant-numeric: tabular-nums; }
 .cover-stats b.dark { color: var(--dark); }
+.cover-stats .hi b { color: #ffd98a; }
+.cover-stats .hi span { color: var(--paper); }
 .cover-stats span { font-size: 15px; color: rgb(242 239 235 / 75%); }
 
 /* flow */
@@ -104,3 +106,9 @@ html, body { background: #1b1b1a; }
 .reveal p.quote { font-family: "Cinzel", serif; font-size: 116px; line-height: 1.05; letter-spacing: .01em; }
 .reveal p.attrib { margin-top: 30px; font-size: 16px; letter-spacing: .12em; text-transform: uppercase; color: var(--tan); }
 .reveal p.tagline { font-size: 26px; color: #c9c5bf; border-top: 1px solid rgb(242 239 235 / 25%); padding-top: 24px; }
+
+/* architecture 2x2 */
+.grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 28px; margin-top: 30px; flex: 1; align-content: stretch; }
+.grid2 .node { font-size: 28px; padding: 36px 40px; line-height: 1.4; display: flex; flex-direction: column; justify-content: center; }
+.grid2 .node span { font-size: 14px; margin-bottom: 16px; }
+.reveal p.attrib { text-transform: none; letter-spacing: -.01em; font-size: 28px; color: var(--tan); }
