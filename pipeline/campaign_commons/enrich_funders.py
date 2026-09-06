@@ -38,6 +38,14 @@ DENYLIST = {
     "irs.gov",
     "followthemoney.org",
     "littlesis.org",
+    "linkedin.com",
+    "facebook.com",
+    "x.com",
+    "twitter.com",
+    "instagram.com",
+    "crunchbase.com",
+    "zoominfo.com",
+    "bloomberg.com",
 }
 
 

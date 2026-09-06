@@ -379,53 +379,6 @@
       }
     },
     {
-      "entity_id": "org:IN_PURSUIT_OF_LLC",
-      "name": "In Pursuit Of Llc",
-      "kind": "business_trade",
-      "issue_ids": [],
-      "description": "Full-service communications and marketing agency driving ideas and shaping debates in pursuit of a free and open society through mission-driven partnerships that advance policy, political, and cultural changes.",
-      "quote": "We are a full-service communications and marketing agency that drives ideas and shapes debates in pursuit of a free and open society. Our mission-driven partnerships advance policy, political, and cultural changes that enable people to improve their lives.",
-      "source_urls": [
-        "https://www.linkedin.com/company/in-pursuit-of"
-      ],
-      "provenance": {
-        "tagged_by": "xai-grok-4.3-2026-09-06",
-        "tagged_at": "2026-09-06",
-        "model": "grok-4.3",
-        "prompt_version": "classify_funder.v1",
-        "tools": [
-          "web_search"
-        ],
-        "tool_filters": {},
-        "response_id": "e0f1cc2a-93c1-9ac4-b5d3-df66ca5223e0",
-        "retrieved_at": "2026-09-06T03:54:35+00:00",
-        "citations": [
-          "https://www.linkedin.com/company/in-pursuit-of",
-          "https://inpursuitof.com/terms-of-use/",
-          "https://www.visualvisitor.com/companies/5703690/in_pursuit_of",
-          "https://www.desmog.com/in-pursuit-of/",
-          "https://www.inpursuitllc.com/about",
-          "https://www.zoominfo.com/c/in-pursuit-of/1339024688",
-          "https://www.linkedin.com/company/inpursuit-llc-usa",
-          "https://www.inpursuit.org/about",
-          "https://www.zoominfo.com/c/in-pursuit/357829249",
-          "https://councils.forbes.com/profile/Rachel-Kule-Founder-Managing-Partner-Pursuit-PR/a26822c5-a55e-4cba-8add-27d0e0a03d5a",
-          "https://www.genarchives..com/Towne-Bowditch/g0/p311.htm",
-          "https://www.genarchives..com/Towne-Bowditch/g0/p345.htm",
-          "https://www.genarchives..com/Towne-Bowditch/g0/p716.htm",
-          "https://www.genarchives..com/Towne-Bowditch/g0/p634.htm",
-          "https://www.genarchives..com/Towne-Bowditch/g0/p563.htm",
-          "https://inpursuitof.com/",
-          "https://www.inpursuitof.com/"
-        ],
-        "confidence": "medium",
-        "review_status": "pending",
-        "reviewed_by": null,
-        "reviewed_at": null,
-        "review_note": null
-      }
-    },
-    {
       "entity_id": "org:JUMP_CRYPTO",
       "name": "Jump Crypto",
       "kind": "business_trade",
