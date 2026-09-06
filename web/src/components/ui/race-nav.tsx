@@ -23,7 +23,7 @@ export function RaceNav({ race, counts, trails = false }: { race: RaceSummary; c
     <nav aria-label="Race sections" className="flex flex-wrap gap-1 border-b border-neutral-200 text-sm">
       {items.map((it) => {
         const href = it.href.length > 1 ? it.href.replace(/\/+$/, "") : it.href;
-        const on = href === current || (it.href === routes.ask(raceId) && current.startsWith(href + "/"));
+        const on = it.href === routes.race(raceId) ? current === href : current === href || current.startsWith(href + "/");
         return (
           <Link
             key={it.href}

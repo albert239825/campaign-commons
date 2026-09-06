@@ -27,4 +27,18 @@ describe("RaceNav", () => {
     render(<RaceNav race={race} counts={{ ads: 3 }} />);
     expect(screen.queryByRole("link", { name: "Money Trails" })).toBeNull();
   });
+
+  it("marks Ads active on an ad detail page without marking Ledger active", () => {
+    vi.mocked(usePathname).mockReturnValue("/races/pa-sen-2024/ads/CR123");
+    render(<RaceNav race={race} counts={{ ads: 3 }} />);
+    expect(screen.getByRole("link", { name: "Ads 3" }).getAttribute("aria-current")).toBe("page");
+    expect(screen.getByRole("link", { name: "Ledger" }).getAttribute("aria-current")).toBeNull();
+  });
+
+  it("marks Ledger active on the race root without marking Ads active", () => {
+    vi.mocked(usePathname).mockReturnValue("/races/pa-sen-2024");
+    render(<RaceNav race={race} counts={{ ads: 3 }} />);
+    expect(screen.getByRole("link", { name: "Ledger" }).getAttribute("aria-current")).toBe("page");
+    expect(screen.getByRole("link", { name: "Ads 3" }).getAttribute("aria-current")).toBeNull();
+  });
 });
