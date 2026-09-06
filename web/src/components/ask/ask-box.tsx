@@ -40,7 +40,7 @@ const AskRouteBody = z.discriminatedUnion("kind", [
  * Plain-English question box. A typed question is POSTed to /api/ask-route, where an LLM may pick the route
  * (intent, subject) from the closed set before the deterministic resolver (src/lib/ask.ts) has the final say; if the
  * call fails for any reason the same resolver runs here in the browser. When that route is an answer, the result is a
- * link to a statically generated answer page. Only when the route path cannot answer is /api/ask-graph tried (D-82):
+ * link to a statically generated answer page. Only when the route path cannot answer is /api/ask-graph tried (D-83):
  * its facts are read from the filings graph and rendered by GraphAnswer, with the model's summary labelled as such;
  * if the graph call fails or refuses, the route refusal stands.
  */

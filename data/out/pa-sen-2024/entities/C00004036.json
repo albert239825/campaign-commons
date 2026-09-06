@@ -953,5 +953,67 @@
       "last_date": "2024-10-28",
       "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00004036&payee_name=RESONANCE+CAMPAIGNS+LLC"
     }
-  ]
+  ],
+  "x_enrichment": {
+    "issue_focus": {
+      "kind": "labor",
+      "issue_ids": [],
+      "description": "We are the Service Employees International Union (SEIU), an organization of 2 million members united by the belief in the dignity and worth of workers and the services they provide — and dedicated to improving the lives of workers and their families and creating a more just and humane society.",
+      "basis": {
+        "basis": "inferred",
+        "rule": "x_issue_focus",
+        "source_urls": [
+          "https://www.seiu.org/about",
+          "https://www.fec.gov/data/committee/C00004036/"
+        ],
+        "checked_by": null,
+        "checked_at": null
+      },
+      "label": "Machine-tagged from the committee's own website (grok-4.3, 2026-09-06); not part of the record",
+      "quote": "We are the Service Employees International Union (SEIU), an organization of 2 million members united by the belief in the dignity and worth of workers and the services they provide — and dedicated to improving the lives of workers and their families and creating a more just and humane society.",
+      "provenance": {
+        "tagged_by": "xai-grok-4.3-2026-09-06",
+        "tagged_at": "2026-09-06",
+        "model": "grok-4.3",
+        "prompt_version": "classify_spender.v1",
+        "tools": [
+          "web_search"
+        ],
+        "tool_filters": {
+          "allowed_domains": [
+            "seiu.org"
+          ]
+        },
+        "response_id": "0ba58884-1a83-902c-8612-39e6ec77ed4b",
+        "retrieved_at": "2026-09-06T03:13:54+00:00",
+        "citations": [
+          "https://www.seiu.org/about",
+          "https://act.seiu.org/a/seiu-healthcare-cope",
+          "https://www.seiu.org/code-of-ethics",
+          "https://www.seiu.org/unionforever",
+          "https://www.seiu.org/art-in-action",
+          "https://seiu.org/members/",
+          "https://www.seiu.org/cards/the-complete-stewards-manual",
+          "https://www.seiu.org/climate-jobs-and-justice-newsletter-3-3-2-2-3",
+          "https://act.seiu.org/a/committee-political-education",
+          "https://seiu.org/",
+          "https://act.seiu.org/8epiuVW6c0ytsAYGQOAYFQ2",
+          "https://seiu.org/2022/06/two-leaders-who-champion-racial-economic-justice-unanimously-elected-to-top-positions-at-seiu-2",
+          "https://www.seiu.org/privacy/",
+          "https://www.seiu.org/releases/seiu-launches-first-series-of-ads-to-hold-gop-accountable/",
+          "https://www.seiu.org/2025/09/seiu-nea-and-aft-issue-joint-statement-in-support-of-the-open-society-foundation",
+          "https://act.seiu.org/kr8-ESoclkuWYIYL2hsRtQ2",
+          "https://www.seiu.org/2018/04/progressive-groups-announce-unprecedented-30-million-midterm-effort-in-three-states",
+          "https://act.seiu.org/7X4jK_i_pEqDHtBSfLlq1w2",
+          "https://www.seiu.org/docs/2024SEIUConstitution&BylawsEnglish.pdf",
+          "https://www.seiu.org/about/"
+        ],
+        "confidence": "medium",
+        "review_status": "pending",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "review_note": null
+      }
+    }
+  }
 }

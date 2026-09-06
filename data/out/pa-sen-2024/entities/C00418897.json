@@ -825,5 +825,65 @@
       "last_date": "2024-08-06",
       "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00418897&payee_name=BUMPERACTIVE"
     }
-  ]
+  ],
+  "x_enrichment": {
+    "issue_focus": {
+      "kind": "multi_issue",
+      "issue_ids": [
+        "defense",
+        "healthcare"
+      ],
+      "description": "VoteVets uses public issue campaigns to lift up the voices of veterans on matters of national security, veterans’ care, and everyday issues that affect the lives of those who served and their families.",
+      "basis": {
+        "basis": "inferred",
+        "rule": "x_issue_focus",
+        "source_urls": [
+          "https://votevets.org/about",
+          "https://www.fec.gov/data/committee/C00418897/"
+        ],
+        "checked_by": null,
+        "checked_at": null
+      },
+      "label": "Machine-tagged from the committee's own website (grok-4.3, 2026-09-06); not part of the record",
+      "quote": "VoteVets uses public issue campaigns to relentlessly lift up the voices of veterans on matters of national security, veterans’ care, and everyday issues that affect the lives of those who served, and their families.",
+      "provenance": {
+        "tagged_by": "xai-grok-4.3-2026-09-06",
+        "tagged_at": "2026-09-06",
+        "model": "grok-4.3",
+        "prompt_version": "classify_spender.v1",
+        "tools": [
+          "web_search"
+        ],
+        "tool_filters": {
+          "allowed_domains": [
+            "votevets.org"
+          ]
+        },
+        "response_id": "e653c43e-c7a9-9ec4-a1fa-bebd554cafac",
+        "retrieved_at": "2026-09-06T03:37:33+00:00",
+        "citations": [
+          "https://votevets.org/candidates/congressman-ted-lieu",
+          "https://votevets.org/category/videos/on-the-line/page/2",
+          "https://votevets.org/candidates/dan-helmer",
+          "https://votevets.org/press-releases/votevets-endorses-pam-keith-for-congress-2020",
+          "https://votevets.org/press-releases/gold-star-families-thank-president-biden-for-ending-war-in-afghanistan",
+          "https://votevets.org/videos/pete-buttigieg-on-patriotism-service-and-a-unified-united-states-of-america",
+          "https://votevets.org/candidates/congressman-jake-auchincloss",
+          "https://votevets.org/candidates/josh-fryday",
+          "https://votevets.org/policy-priorities",
+          "https://votevets.org/candidates/kishla-askins",
+          "https://votevets.org/press-releases/votevets-launches-nearly-1-million-ad-campaign-supporting-luke-bronin-in-heated-primary",
+          "https://votevets.org/about",
+          "https://votevets.org/press-releases/votevets-congratulates-rebecca-bennett-on-victory-in-nj-07",
+          "https://votevets.org/press-releases/votevets-on-nancy-lacore-advancing-to-sc-01-runoff",
+          "https://votevets.org/press-releases/votevets-endorses-fred-wellman-for-missouris-second-congressional-district"
+        ],
+        "confidence": "high",
+        "review_status": "pending",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "review_note": null
+      }
+    }
+  }
 }

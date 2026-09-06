@@ -14,9 +14,13 @@ import {
   DossierSchema,
   EntitySchema,
   HandAdIssuesFileSchema,
+  HandXAdIssuesFileSchema,
   HandIeIssuesFileSchema,
   HandIssueFocusFileSchema,
   HandIssuePositionsFileSchema,
+  HandXIssueFocusFileSchema,
+  HandXStancesFileSchema,
+  HandXAccountsFileSchema,
   HandVendorAdLinksFileSchema,
   HandVendorAliasesFileSchema,
   IssueSpendingSchema,
@@ -28,6 +32,7 @@ import {
   VendorIndexSchema,
   VendorSchema,
 } from "./schemas";
+import { ISSUES } from "./issues";
 
 const out = join(__dirname, "..", "jsonschema");
 mkdirSync(out, { recursive: true });
@@ -49,7 +54,11 @@ const all: Record<string, ZodTypeAny> = {
   // data/hand/<race>/
   hand_issue_focus: HandIssueFocusFileSchema,
   hand_issue_positions: HandIssuePositionsFileSchema,
+  hand_x_issue_focus: HandXIssueFocusFileSchema,
+  hand_x_stances: HandXStancesFileSchema,
+  hand_x_accounts: HandXAccountsFileSchema,
   hand_ad_issues: HandAdIssuesFileSchema,
+  hand_x_ad_issues: HandXAdIssuesFileSchema,
   hand_ie_issues: HandIeIssuesFileSchema,
   hand_vendor_aliases: HandVendorAliasesFileSchema,
   hand_vendor_ad_links: HandVendorAdLinksFileSchema,
@@ -66,3 +75,6 @@ for (const [name, schema] of Object.entries(all)) {
   writeFileSync(join(out, `${name}.schema.json`), JSON.stringify(json, null, 2));
   console.log(`wrote jsonschema/${name}.schema.json`);
 }
+
+writeFileSync(join(out, "issues_taxonomy.json"), JSON.stringify(ISSUES, null, 2) + "\n");
+console.log("wrote jsonschema/issues_taxonomy.json");

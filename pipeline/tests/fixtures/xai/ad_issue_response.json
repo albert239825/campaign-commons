@@ -1,0 +1,17 @@
+{
+  "id": "resp-fixture",
+  "usage": {
+    "input_tokens": 10,
+    "output_tokens": 5
+  },
+  "output": [
+    {
+      "content": [
+        {
+          "type": "output_text",
+          "text": "{\"issue_ids\":[\"healthcare\"],\"quote\":\"healthcare\",\"rationale\":\"The ad discusses healthcare.\",\"confidence\":\"high\"}"
+        }
+      ]
+    }
+  ]
+}

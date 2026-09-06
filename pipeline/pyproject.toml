@@ -10,6 +10,7 @@ dependencies = [
   "requests>=2.32",
   "jsonschema>=4.23",
   "python-dotenv>=1.0",
+  "youtube-transcript-api>=1.0,<2",
 ]
 
 [project.optional-dependencies]

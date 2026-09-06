@@ -262,5 +262,62 @@
       "last_date": "2024-11-02",
       "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C90020116&payee_name=MAKESTICKERS.COM"
     }
-  ]
+  ],
+  "x_enrichment": {
+    "issue_focus": {
+      "kind": "single_issue",
+      "issue_ids": [
+        "energy_climate"
+      ],
+      "description": "To effect change in public policy at local, state and national levels to directly address the threat of global warming through voter education, lobbying and participation in the electoral process, focusing most efforts in the Chesapeake Bay states together with its sister organization.",
+      "basis": {
+        "basis": "inferred",
+        "rule": "x_issue_focus",
+        "source_urls": [
+          "https://ccanactionfund.org/about/mission/",
+          "https://www.fec.gov/data/committee/C90020116/"
+        ],
+        "checked_by": null,
+        "checked_at": null
+      },
+      "label": "Machine-tagged from the committee's own website (grok-4.3, 2026-09-06); not part of the record",
+      "quote": "The mission of the CCAN Action Fund is to effect change in public policy at local, state and national levels to directly address the threat of global warming. Through voter education, lobbying and participation in the electoral process, we seek to move our country into a leadership position on the most urgent global issue of our time — the climate crisis.",
+      "provenance": {
+        "tagged_by": "xai-grok-4.3-2026-09-06",
+        "tagged_at": "2026-09-06",
+        "model": "grok-4.3",
+        "prompt_version": "classify_spender.v1",
+        "tools": [
+          "web_search"
+        ],
+        "tool_filters": {},
+        "response_id": "72c81c20-6437-9027-b8c1-3c2406f10e03",
+        "retrieved_at": "2026-09-06T03:30:16+00:00",
+        "citations": [
+          "https://www.fec.gov/data/committee/C90020116/",
+          "https://www.guidestar.org/profile/11-3644283",
+          "https://ccanactionfund.org/media/CCAF-FY24-Audited-Financial-Statements.pdf",
+          "https://www.causeiq.com/organizations/chesapeake-climate-action-network,113644283/",
+          "https://docs.candid.org/990/010/010879928/010879928_2024_202521219349301927_990.pdf",
+          "https://www.influencewatch.org/non-profit/chesapeake-climate-action-network-action-fund/",
+          "https://www.causeiq.com/organizations/chesapeake-climate-action-network-action-fund,010879928/",
+          "https://chesapeakeclimate.org/ccan-summer-newsletter-2026/",
+          "https://www.influencewatch.org/non-profit/chesapeake-climate-action-network/",
+          "https://impala.digital/app/profile/37327/overview",
+          "https://chesapeakeclimate.org/mission/",
+          "https://www.guidestar.org/profile/01-0879928",
+          "https://ccanactionfund.org/about/mission/",
+          "https://chesapeakeclimate.org/?ref=51st.news",
+          "https://www.linkedin.com/company/chesapeake-climate-action-network",
+          "https://actionnetwork.org/groups/chesapeake-climate-action-network",
+          "https://actionnetwork.org/groups/ccan"
+        ],
+        "confidence": "high",
+        "review_status": "pending",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "review_note": null
+      }
+    }
+  }
 }

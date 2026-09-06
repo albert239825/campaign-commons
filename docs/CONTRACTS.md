@@ -31,6 +31,8 @@ Block 2 also *patches* existing files in place: `campaign_commons.vendors` adds 
 | `issue_focus.json` | `HandIssueFocusFile` | issue-focus child, teammates | `campaign_commons.issues` → `Entity.issue_focus`, `issues.json.by_spender_focus` |
 | `issue_positions.json` | `HandIssuePositionsFile` | issue-enrichment stage, human reviewers | `campaign_commons.issues_enrich` → `Entity.issue_positions` |
 | `ad_issues.json` | `HandAdIssuesFile` | media-wall child, teammates | `campaign_commons.issues` → `Ad.issues`, `issues.json.by_ad_issue` |
+| `x_ad_issues.json` | `HandXAdIssuesFile` | enrichment stage, reviewers | `campaign_commons.ads_enrich` → optional `Ad.machine_issues` (transcript, rationale, confidence, provenance, review status) |
+| `x_issue_focus.json` | `HandXIssueFocusFile` | enrichment stage, reviewers | `campaign_commons.issues` → optional `Entity.x_enrichment.issue_focus` (website description, quote, provenance, review status) |
 | `ie_issues.json` | `HandIeIssuesFile` | issue-focus child | `campaign_commons.issues` → IE `issues`, `issues.json.by_ad_issue.ie_*` |
 | `vendor_aliases.json` | `HandVendorAliasesFile` | vendors child | `campaign_commons.vendors` (folds after automatic normalisation) |
 | `vendor_ad_links.json` | `HandVendorAdLinksFile` | anyone with a source | `campaign_commons.ads` → `Ad.vendor_links[]` with `basis: verified` |
@@ -38,6 +40,9 @@ Block 2 also *patches* existing files in place: `campaign_commons.vendors` adds 
 Every file is `{race_id, method, rows[]}`; every row carries `source_url(s)` and `tagged_by`/`verified_by`. Empty `rows: []`
 is valid. Never hand-edit `data/out`. `vendor_aliases.json` rows may carry an optional `tagged_at` (ISO date); it becomes the
 vendor's `normalization.checked_at`, which a `verified` Basis requires (D-60).
+
+`Entity.x_enrichment.issue_focus` is a separately labelled machine layer. It never replaces the human `issue_focus` field;
+pending rows use an inferred Basis and accepted rows use a verified Basis.
 
 ## Evidence basis (Block 2)
 

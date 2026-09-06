@@ -63,5 +63,52 @@
   ],
   "allocation_note": "Amounts past this donor's own gifts are the reported totals between the two parties, not this donor's share. Once money is pooled in a committee it is fungible, so how much of it reached any spender or ad is not determinable.",
   "truncated": false,
-  "method": "Forward walk over the same money edges as the chain walk (Schedule A receipts and committee-to-committee transfers from FEC bulk data, refunds excluded), starting from REPUBLICAN STATE LEADERSHIP COMMITTEE: the 1 committee(s) it gave to in the 2024 cycle, then the outside spenders in this race that received transfers from those committees (1 spender(s) reached), then each spender's independent expenditures for or against a candidate. Independent expenditures are targeting edges: they move no money to the candidate and are drawn separately. Amounts on money edges are the reported totals between the two parties, not a share of this donor's dollars — once pooled, a donor's money is fungible, so no allocation is made past the first hop. `total_given` is the sum of the first-hop edges shown (itemized receipts reported under this name); `total_in_chains`, used only to rank donors, sums this donor's edges across every spender chain in the race, so the same gift counts once per chain it appears in."
+  "method": "Forward walk over the same money edges as the chain walk (Schedule A receipts and committee-to-committee transfers from FEC bulk data, refunds excluded), starting from REPUBLICAN STATE LEADERSHIP COMMITTEE: the 1 committee(s) it gave to in the 2024 cycle, then the outside spenders in this race that received transfers from those committees (1 spender(s) reached), then each spender's independent expenditures for or against a candidate. Independent expenditures are targeting edges: they move no money to the candidate and are drawn separately. Amounts on money edges are the reported totals between the two parties, not a share of this donor's dollars — once pooled, a donor's money is fungible, so no allocation is made past the first hop. `total_given` is the sum of the first-hop edges shown (itemized receipts reported under this name); `total_in_chains`, used only to rank donors, sums this donor's edges across every spender chain in the race, so the same gift counts once per chain it appears in.",
+  "x_enrichment": {
+    "issue_focus": {
+      "kind": "general_partisan",
+      "issue_ids": [],
+      "description": "The largest organization of Republican state leaders, focused on recruiting, training, and electing Republicans to down-ballot state offices including legislatures, lieutenant governors, secretaries of state, agriculture officials, and judges across all 50 states.",
+      "basis": {
+        "basis": "inferred",
+        "rule": "x_funder_focus",
+        "source_urls": [
+          "https://rslc.gop/about/"
+        ],
+        "checked_by": null,
+        "checked_at": null
+      },
+      "label": "Machine-tagged from the organization's own website (grok-4.3, 2026-09-06); not part of the record",
+      "quote": "We are the largest organization of Republican state leaders in the country and the only national committee whose mission is to elect Republicans to multiple down-ballot, state-level offices in all 50 states.",
+      "provenance": {
+        "tagged_by": "xai-grok-4.3-2026-09-06",
+        "tagged_at": "2026-09-06",
+        "model": "grok-4.3",
+        "prompt_version": "classify_funder.v1",
+        "tools": [
+          "web_search"
+        ],
+        "tool_filters": {},
+        "response_id": "17479317-0c8d-936b-92b3-fc22f7c139a3",
+        "retrieved_at": "2026-09-06T03:53:22+00:00",
+        "citations": [
+          "https://rslc.gop/",
+          "https://rslc.gop/about/",
+          "https://rslc.gop/americas-250th-anniversary/",
+          "https://rslc.gop/rslc-announces-leadership-change-for-2025-2026-cycle/",
+          "https://rslc.gop/state-officials/",
+          "https://www.genarchives..com/Towne-Bowditch/g0/p239.htm",
+          "https://.com/blog/toothpaste-how-to-choose-the-right-toothpaste-for-you/",
+          "https://www.genarchives..com/Towne-Bowditch/g0/p205.htm",
+          "https://www.genarchives..com/Towne-Bowditch/poems_Swikert_Charles_family.htm",
+          "https://www.genarchives..com/Towne-Bowditch/g0/p583.htm"
+        ],
+        "confidence": "high",
+        "review_status": "pending",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "review_note": null
+      }
+    }
+  }
 }

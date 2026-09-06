@@ -1,0 +1,2091 @@
+{
+  "race_id": "pa-sen-2024",
+  "method": "machine rows, classified by xAI from the committee's own website via web_search, pending human review; human issue_focus.json always wins",
+  "rows": [
+    {
+      "entity_id": "C00003590",
+      "name": "UNITED STEELWORKERS POLITICAL ACTION FUND",
+      "kind": "labor",
+      "issue_ids": [],
+      "description": "USW PAC is a fund that USW members contribute to voluntarily each month to support our union’s efforts to elect pro-worker, pro-union lawmakers and uses the contributions it receives for political purposes such as addressing issues of public importance and making contributions and expenditures in connection with federal, state and local elections.",
+      "quote": "USW PAC uses the contributions it receives for political purposes, such as addressing issues of public importance and making contributions and expenditures in connection with federal, state and local elections.",
+      "source_urls": [
+        "https://usw.org/2025-officers-report/political/",
+        "https://www.fec.gov/data/committee/C00003590/"
+      ],
+      "provenance": {
+        "tagged_by": "xai-grok-4.3-2026-09-06",
+        "tagged_at": "2026-09-06",
+        "model": "grok-4.3",
+        "prompt_version": "classify_spender.v1",
+        "tools": [
+          "web_search"
+        ],
+        "tool_filters": {},
+        "response_id": "c0d68f9d-47d5-93f3-b89c-b46a0b2bf0fb",
+        "retrieved_at": "2026-09-06T03:37:55+00:00",
+        "citations": [
+          "https://usw.org/2025-officers-report/political/",
+          "https://usw.org/",
+          "https://pac.usw.org/donate/",
+          "https://usw.org/get-involved/",
+          "https://usw.org/news/usw-pac-leaders-advance-workers-agenda/",
+          "https://usw.org/get-involved/rapid-response/balancing-the-scales/",
+          "https://usw.org/usw-convention/resolution-no-28-all-in-on-political-power/",
+          "https://usw.org/2025-officers-report/legislative-and-policy/",
+          "https://usw.org/usw-convention/resolution-no-30-all-in-on-balancing-the-scales/",
+          "https://usw.org/2025-officers-report/steelworkers-humanity-fund/",
+          "https://www.fec.gov/data/committee/C00003590/",
+          "https://web.archive.org/web/20111027143447/http:/www.usw.ca/community/political/about",
+          "https://www.dailysignal.com/2026/06/09/exclusive-steelworkers-union-spent-millions-against-trump-agenda-showing-gap-with-membership/",
+          "https://usw.org/news/how-your-dues-dollars-are-used/"
+        ],
+        "confidence": "high",
+        "review_status": "pending",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "review_note": null
+      }
+    },
+    {
+      "entity_id": "C00004036",
+      "name": "SEIU COPE (SERVICE EMPLOYEES INTERNATIONAL UNION COMMITTEE ON POLITICAL EDUCATION)",
+      "kind": "labor",
+      "issue_ids": [],
+      "description": "We are the Service Employees International Union (SEIU), an organization of 2 million members united by the belief in the dignity and worth of workers and the services they provide — and dedicated to improving the lives of workers and their families and creating a more just and humane society.",
+      "quote": "We are the Service Employees International Union (SEIU), an organization of 2 million members united by the belief in the dignity and worth of workers and the services they provide — and dedicated to improving the lives of workers and their families and creating a more just and humane society.",
+      "source_urls": [
+        "https://www.seiu.org/about",
+        "https://www.fec.gov/data/committee/C00004036/"
+      ],
+      "provenance": {
+        "tagged_by": "xai-grok-4.3-2026-09-06",
+        "tagged_at": "2026-09-06",
+        "model": "grok-4.3",
+        "prompt_version": "classify_spender.v1",
+        "tools": [
+          "web_search"
+        ],
+        "tool_filters": {
+          "allowed_domains": [
+            "seiu.org"
+          ]
+        },
+        "response_id": "0ba58884-1a83-902c-8612-39e6ec77ed4b",
+        "retrieved_at": "2026-09-06T03:13:54+00:00",
+        "citations": [
+          "https://www.seiu.org/about",
+          "https://act.seiu.org/a/seiu-healthcare-cope",
+          "https://www.seiu.org/code-of-ethics",
+          "https://www.seiu.org/unionforever",
+          "https://www.seiu.org/art-in-action",
+          "https://seiu.org/members/",
+          "https://www.seiu.org/cards/the-complete-stewards-manual",
+          "https://www.seiu.org/climate-jobs-and-justice-newsletter-3-3-2-2-3",
+          "https://act.seiu.org/a/committee-political-education",
+          "https://seiu.org/",
+          "https://act.seiu.org/8epiuVW6c0ytsAYGQOAYFQ2",
+          "https://seiu.org/2022/06/two-leaders-who-champion-racial-economic-justice-unanimously-elected-to-top-positions-at-seiu-2",
+          "https://www.seiu.org/privacy/",
+          "https://www.seiu.org/releases/seiu-launches-first-series-of-ads-to-hold-gop-accountable/",
+          "https://www.seiu.org/2025/09/seiu-nea-and-aft-issue-joint-statement-in-support-of-the-open-society-foundation",
+          "https://act.seiu.org/kr8-ESoclkuWYIYL2hsRtQ2",
+          "https://www.seiu.org/2018/04/progressive-groups-announce-unprecedented-30-million-midterm-effort-in-three-states",
+          "https://act.seiu.org/7X4jK_i_pEqDHtBSfLlq1w2",
+          "https://www.seiu.org/docs/2024SEIUConstitution&BylawsEnglish.pdf",
+          "https://www.seiu.org/about/"
+        ],
+        "confidence": "medium",
+        "review_status": "pending",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "review_note": null
+      }
+    },
+    {
+      "entity_id": "C00032979",
+      "name": "D.R.I.V.E. - DEMOCRAT, REPUBLICAN, INDEPENDENT VOTER EDUCATION (THE PAC OF THE INTERNATIONAL BROTHERHOOD OF TEAMSTERS)",
+      "kind": "labor",
+      "issue_ids": [],
+      "description": "Officially launched in 1960, D.R.I.V.E. has two main objectives: To elect candidates to public office who are friendly to the interests of Teamster members; Passage or defeat of legislation of special concern to Teamster families.",
+      "quote": "Officially launched in 1960, D.R.I.V.E. has two main objectives: * To elect candidates to public office who are friendly to the interests of Teamster members; * Passage or defeat of legislation of special concern to Teamster families.",
+      "source_urls": [
+        "https://teamster.org/about/teamster-history/teamsters-and-drive/",
+        "https://www.fec.gov/data/committee/C00032979/"
+      ],
+      "provenance": {
+        "tagged_by": "xai-grok-4.3-2026-09-06",
+        "tagged_at": "2026-09-06",
+        "model": "grok-4.3",
+        "prompt_version": "classify_spender.v1",
+        "tools": [
+          "web_search"
+        ],
+        "tool_filters": {},
+        "response_id": "b62800fd-2e64-9780-b9aa-757245bd2f44",
+        "retrieved_at": "2026-09-06T03:27:29+00:00",
+        "citations": [
+          "https://teamster.org/about/teamster-history/teamsters-and-drive/",
+          "https://teamster.org/2026/09/u-s-district-court-grants-end-to-37-year-federal-monitorship-of-teamsters-union/",
+          "https://teamster.org/tag/drive/",
+          "https://teamster.org/2024/09/history-segment-the-history-of-d-r-i-v-e-and-the-importance-of-teamster-involvement-in-elections/",
+          "https://teamster.org/2026/06/obrien-zuckerman-reelected-to-second-five-year-term-leading-teamsters/",
+          "https://teamster.org/about/teamster-departments/",
+          "https://teamster.org/so-called-paycheck-protection-laws/",
+          "https://teamster.org/sites/default/files/73119teamstersconstitution.pdf",
+          "https://teamster.org/2020/05/members-drive-increased-donations-teamsters-pac/",
+          "https://teamster.org/printers/",
+          "https://teamstersjc7.org/local-70/join-us-in-protecting-our-future-get-involved-with-d-r-i-v-e",
+          "https://web.archive.org/web/20250226100943id_/https:/teamster.org/wp-content/uploads/2024/08/71224MagTeamsterSUMMER2024.pdf",
+          "https://www.teamsters731.org/news-details/webview/what-is-drive/single/25057",
+          "https://teamsterslocal222.org/drive/",
+          "https://teamsters2010.org/drive/",
+          "http://docquery.fec.gov/cgi-bin/forms/C00032979/772641/",
+          "https://www.jc32.org/drive.html",
+          "https://teamsters315.com/get-involved/d-r-i-v-e/"
+        ],
+        "confidence": "high",
+        "review_status": "pending",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "review_note": null
+      }
+    },
+    {
+      "entity_id": "C00172361",
+      "name": "PENNSYLVANIA PRO-LIFE FEDERATION PAC",
+      "kind": "single_issue",
+      "issue_ids": [
+        "abortion"
+      ],
+      "description": "The Pennsylvania Pro-Life Federation, Inc., is committed to promoting the dignity and value of human life from conception to natural death and to restoring legal protection for preborn children through legislation, political action, education and other legal means.",
+      "quote": "The Pennsylvania Pro-Life Federation, Inc., is committed to promoting the dignity and value of human life from conception to natural death and to restoring legal protection for preborn children. Through legislation, political action, education and other legal means, we proclaim the truth about abortion, infanticide, and euthanasia.",
+      "source_urls": [
+        "https://paprolife.org/about/",
+        "https://www.fec.gov/data/committee/C00172361/"
+      ],
+      "provenance": {
+        "tagged_by": "xai-grok-4.3-2026-09-06",
+        "tagged_at": "2026-09-06",
+        "model": "grok-4.3",
+        "prompt_version": "classify_spender.v1",
+        "tools": [
+          "web_search"
+        ],
+        "tool_filters": {},
+        "response_id": "877715eb-956a-9fa5-af8f-3f01193bed9b",
+        "retrieved_at": "2026-09-06T03:28:54+00:00",
+        "citations": [
+          "https://www.genarchives..com/Towne-Bowditch/g0/p716.htm",
+          "https://apexshield..com/",
+          "https://.com/more/dental-philosophy/treatment-plans-diagnosis-case-presentation/",
+          "https://www.genarchives..com/Towne-Bowditch/g0/p388.htm",
+          "https://.com/blog/democracy-v-liberty/",
+          "https://www.genarchives..com/Towne-Bowditch/g0/p586.htm",
+          "https://www.genarchives..com/Towne-Bowditch/g0/p78.htm",
+          "https://www.likedogsandcats..com/union-mills/pet-euthanasia-union-mills-in/",
+          "https://www.genarchives..com/Towne-Bowditch/g0/p710.htm",
+          "https://www.miamiherald..com/detour/article267451982.html",
+          "https://www.guidestar.org/profile/25-1285912",
+          "http://www.pennlife.org/about_history.html",
+          "https://paprolife.us/",
+          "https://paprolife.org/about/",
+          "https://paprolife.org/chapters/",
+          "https://www.fec.gov/data/committee/C00172361/",
+          "https://projects.propublica.org/itemizer/committee/C00172361/reports/YEAR-END"
+        ],
+        "confidence": "medium",
+        "review_status": "pending",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "review_note": null
+      }
+    },
+    {
+      "entity_id": "C00299396",
+      "name": "ITALIAN AMERICAN DEMOCRATIC LEADERSHIP COUNCIL",
+      "kind": "general_partisan",
+      "issue_ids": [],
+      "description": "As the voice of Italian Americans in the Democratic Party, we strive to ensure that our community’s values and priorities are heard in Washington, D.C., in the Democratic Party, and beyond while our political action committee supports Italian American candidates for Congress and major statewide offices and promotes appointments of qualified Italian Americans to federal positions.",
+      "quote": "As the voice of Italian Americans in the Democratic Party, we strive to ensure that our community’s values and priorities are heard in Washington, D.C., in the Democratic Party, and beyond.",
+      "source_urls": [
+        "https://italianamericandems.org/",
+        "https://www.fec.gov/data/committee/C00299396/"
+      ],
+      "provenance": {
+        "tagged_by": "xai-grok-4.3-2026-09-06",
+        "tagged_at": "2026-09-06",
+        "model": "grok-4.3",
+        "prompt_version": "classify_spender.v1",
+        "tools": [
+          "web_search"
+        ],
+        "tool_filters": {
+          "allowed_domains": [
+            "italianamericandems.org"
+          ]
+        },
+        "response_id": "b366e537-41ba-9f6b-acd9-49d8dfdfc856",
+        "retrieved_at": "2026-09-06T03:24:55+00:00",
+        "citations": [
+          "https://italianamericandems.org/about-us/",
+          "https://italianamericandems.org/",
+          "https://italianamericandems.org/italian-american-democrats-endorse-tom-suozzi-for-u-s-representative-from-new-york/",
+          "https://italianamericandems.org/news-events/",
+          "https://italianamericandems.org/elections/",
+          "https://italianamericandems.org/membership/",
+          "https://italianamericandems.org/administration/"
+        ],
+        "confidence": "high",
+        "review_status": "pending",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "review_note": null
+      }
+    },
+    {
+      "entity_id": "C00341396",
+      "name": "MOVEON.ORG POLITICAL ACTION",
+      "kind": "general_partisan",
+      "issue_ids": [],
+      "description": "MoveOn.org Political Action is a federal political action committee (PAC) which primarily helps members elect candidates who reflect our members’ values through a variety of activities aimed at influencing the outcome of elections.",
+      "quote": "MoveOn.org Political Action is a federal political action committee (PAC) which primarily helps members elect candidates who reflect our members’ values through a variety of activities aimed at influencing the outcome of elections. We are focused on running powerful progressive advocacy campaigns and demonstrating MoveOn members’ power at the ballot box.",
+      "source_urls": [
+        "https://front.moveon.org/about-us/",
+        "https://www.fec.gov/data/committee/C00341396/"
+      ],
+      "provenance": {
+        "tagged_by": "xai-grok-4.3-2026-09-06",
+        "tagged_at": "2026-09-06",
+        "model": "grok-4.3",
+        "prompt_version": "classify_spender.v1",
+        "tools": [
+          "web_search"
+        ],
+        "tool_filters": {
+          "allowed_domains": [
+            "moveon.org"
+          ]
+        },
+        "response_id": "33d3bab4-fded-9fd5-a565-9efca2409e92",
+        "retrieved_at": "2026-09-06T03:29:49+00:00",
+        "citations": [
+          "https://front.moveon.org/about-us/",
+          "https://sign.moveon.org/partnerships/union-of-concerned-scientists",
+          "https://front.moveon.org/what-we-accomplished-together-in-2023/",
+          "https://sign.moveon.org/petitions/this-pandemic-demands-a-systemic-response-an-urgent-message-from-the-poor-people-s-campaign",
+          "https://front.moveon.org/what-is-organizing-a-beginners-guide-to-building-people-power/",
+          "https://front.moveon.org/careers/",
+          "https://front.moveon.org/we-are-better-than-this-nyt-ad/",
+          "https://sign.moveon.org/petitions/demand-truth-and-accountability-from-public-officials",
+          "https://front.moveon.org/iranian-moveon-member-explains-why-you-should-speak-up/",
+          "https://sign.moveon.org/partnerships/jewish-community-action",
+          "https://front.moveon.org/moveon-launches-27m-program-to-ensure-dems-win-by-big-margins-in-the-midterms/",
+          "https://sign.moveon.org/partnerships/moveon-political-action",
+          "https://front.moveon.org/?download_id=69329&sdm_process_download=1",
+          "https://front.moveon.org/donation-faq/"
+        ],
+        "confidence": "high",
+        "review_status": "pending",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "review_note": null
+      }
+    },
+    {
+      "entity_id": "C00418897",
+      "name": "VOTEVETS",
+      "kind": "multi_issue",
+      "issue_ids": [
+        "defense",
+        "healthcare"
+      ],
+      "description": "VoteVets uses public issue campaigns to lift up the voices of veterans on matters of national security, veterans’ care, and everyday issues that affect the lives of those who served and their families.",
+      "quote": "VoteVets uses public issue campaigns to relentlessly lift up the voices of veterans on matters of national security, veterans’ care, and everyday issues that affect the lives of those who served, and their families.",
+      "source_urls": [
+        "https://votevets.org/about",
+        "https://www.fec.gov/data/committee/C00418897/"
+      ],
+      "provenance": {
+        "tagged_by": "xai-grok-4.3-2026-09-06",
+        "tagged_at": "2026-09-06",
+        "model": "grok-4.3",
+        "prompt_version": "classify_spender.v1",
+        "tools": [
+          "web_search"
+        ],
+        "tool_filters": {
+          "allowed_domains": [
+            "votevets.org"
+          ]
+        },
+        "response_id": "e653c43e-c7a9-9ec4-a1fa-bebd554cafac",
+        "retrieved_at": "2026-09-06T03:37:33+00:00",
+        "citations": [
+          "https://votevets.org/candidates/congressman-ted-lieu",
+          "https://votevets.org/category/videos/on-the-line/page/2",
+          "https://votevets.org/candidates/dan-helmer",
+          "https://votevets.org/press-releases/votevets-endorses-pam-keith-for-congress-2020",
+          "https://votevets.org/press-releases/gold-star-families-thank-president-biden-for-ending-war-in-afghanistan",
+          "https://votevets.org/videos/pete-buttigieg-on-patriotism-service-and-a-unified-united-states-of-america",
+          "https://votevets.org/candidates/congressman-jake-auchincloss",
+          "https://votevets.org/candidates/josh-fryday",
+          "https://votevets.org/policy-priorities",
+          "https://votevets.org/candidates/kishla-askins",
+          "https://votevets.org/press-releases/votevets-launches-nearly-1-million-ad-campaign-supporting-luke-bronin-in-heated-primary",
+          "https://votevets.org/about",
+          "https://votevets.org/press-releases/votevets-congratulates-rebecca-bennett-on-victory-in-nj-07",
+          "https://votevets.org/press-releases/votevets-on-nancy-lacore-advancing-to-sc-01-runoff",
+          "https://votevets.org/press-releases/votevets-endorses-fred-wellman-for-missouris-second-congressional-district"
+        ],
+        "confidence": "high",
+        "review_status": "pending",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "review_note": null
+      }
+    },
+    {
+      "entity_id": "C00430280",
+      "name": "IMMIGRANTS' LIST",
+      "kind": "single_issue",
+      "issue_ids": [
+        "immigration"
+      ],
+      "description": "Immigrant's List is dedicated to reforming our broken immigration system, stopping anti-immigrant policies, and electing pro-reform candidates to office.",
+      "quote": "Immigrant's List is dedicated to reforming our broken immigration system, stopping anti-immigrant policies, and electing pro-reform candidates to office.",
+      "source_urls": [
+        "https://www.immigrantslist.org/about",
+        "https://www.fec.gov/data/committee/C00430280/"
+      ],
+      "provenance": {
+        "tagged_by": "xai-grok-4.3-2026-09-06",
+        "tagged_at": "2026-09-06",
+        "model": "grok-4.3",
+        "prompt_version": "classify_spender.v1",
+        "tools": [
+          "web_search"
+        ],
+        "tool_filters": {
+          "allowed_domains": [
+            "immigrantslist.org"
+          ]
+        },
+        "response_id": "c3edad9e-4dbf-964f-86e8-e11f03c3a8d1",
+        "retrieved_at": "2026-09-06T03:29:55+00:00",
+        "citations": [
+          "https://www.immigrantslist.org/faq",
+          "https://www.immigrantslist.org/about",
+          "https://www.immigrantslist.org/",
+          "https://www.immigrantslist.org/reconbill",
+          "https://www.immigrantslist.org/about-1",
+          "https://www.immigrantslist.org/follow-the-money",
+          "https://www.immigrantslist.org/2025-il-luncheon",
+          "https://www.immigrantslist.org/copy-of-stop-the-spike",
+          "https://www.immigrantslist.org/copy-of-immigrant-defense",
+          "https://www.immigrantslist.org/events"
+        ],
+        "confidence": "high",
+        "review_status": "pending",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "review_note": null
+      }
+    },
+    {
+      "entity_id": "C00483693",
+      "name": "SIERRA CLUB INDEPENDENT ACTION",
+      "kind": "single_issue",
+      "issue_ids": [
+        "energy_climate"
+      ],
+      "description": "Together, we’re committed to blocking the Trump agenda and defending the progress we’ve made. Our nationwide movement, made up of people like you, remains strong, determined, and ready for the work ahead. We’re already mobilizing our 64 chapters and millions of members to support local efforts and push for a clean energy future for all.",
+      "quote": "Together, we’re committed to blocking the Trump agenda and defending the progress we’ve made. Our nationwide movement, made up of people like you, remains strong, determined, and ready for the work ahead. We’re already mobilizing our 64 chapters and millions of members to support local efforts and push for a clean energy future for all.",
+      "source_urls": [
+        "https://www.sierraclubindependentaction.org/",
+        "http://web.archive.org/web/20260821030919/https://www.sierraclubindependentaction.org/",
+        "https://www.fec.gov/data/committee/C00483693/"
+      ],
+      "provenance": {
+        "tagged_by": "xai-grok-4.3-2026-09-06",
+        "tagged_at": "2026-09-06",
+        "model": "grok-4.3",
+        "prompt_version": "classify_spender.v1",
+        "tools": [
+          "web_search"
+        ],
+        "tool_filters": {
+          "allowed_domains": [
+            "sierraclubindependentaction.org"
+          ]
+        },
+        "response_id": "a467f248-6499-9325-8f6f-a743d2b1249b",
+        "retrieved_at": "2026-09-06T03:38:57+00:00",
+        "citations": [
+          "https://www.sierraclubindependentaction.org/",
+          "https://www.sierraclubindependentaction.org/endorsements"
+        ],
+        "confidence": "high",
+        "review_status": "pending",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "review_note": null
+      }
+    },
+    {
+      "entity_id": "C00509893",
+      "name": "NATIONAL RIGHT TO LIFE VICTORY FUND",
+      "kind": "single_issue",
+      "issue_ids": [
+        "abortion"
+      ],
+      "description": "The National Right to Life Victory Fund, established as an independent expenditure political action committee, is National Right to Life’s political arm. The Victory Fund works to elect pro-life men and women to Congress and the White House — men and women dedicated to enacting policies and passing laws that will protect innocent human life.",
+      "quote": "The National Right to Life Victory Fund, established as an independent expenditure political action committee, is National Right to Life’s political arm. The Victory Fund works to elect pro-life men and women to Congress and the White House — men and women dedicated to enacting policies and passing laws that will protect innocent human life.",
+      "source_urls": [
+        "https://nrlc.org/donateinfo/",
+        "https://www.fec.gov/data/committee/C00509893/"
+      ],
+      "provenance": {
+        "tagged_by": "xai-grok-4.3-2026-09-06",
+        "tagged_at": "2026-09-06",
+        "model": "grok-4.3",
+        "prompt_version": "classify_spender.v1",
+        "tools": [
+          "web_search"
+        ],
+        "tool_filters": {
+          "allowed_domains": [
+            "nrlc.org"
+          ]
+        },
+        "response_id": "730eeddd-5f92-9a55-9f85-3897397ae664",
+        "retrieved_at": "2026-09-06T03:26:49+00:00",
+        "citations": [
+          "https://nrlc.org/donateinfo/",
+          "https://nrlc.org/faq/",
+          "https://nrlc.org/communications/florida-amendment-4-fails-life-wins/",
+          "https://nrlc.org/news/12/fall12news/vfpage32/",
+          "https://nrlc.org/wp-content/uploads/2024/02/SeptOct2018News.pdf",
+          "https://nrlc.org/nrlnewstoday/2025/04/victory-210-million-to-help-moms-choose-life/",
+          "https://nrlc.org/nrlnewstoday/2018/09/the-national-right-to-life-victory-fund-needs-your-help-to-fight-an-historic-battle/",
+          "https://nrlc.org/daf/",
+          "https://nrlc.org/wp-content/uploads/2024/02/Oct2023NRLNews.pdf",
+          "https://nrlc.org/nrlnewstoday_tag/victory-fund/",
+          "https://nrlc.org/about/mission/",
+          "https://nrlc.org/about/",
+          "https://nrlc.org/nrlnewstoday/2025/06/our-interdependent-rights/",
+          "https://nrlc.org/nrlnewstoday/2026/01/presidential-message-on-national-sanctity-of-human-life-day-2026/",
+          "http://www.nrlc.org/uploads/ccpa/HJCReportCIANA042105.pdf",
+          "https://nrlc.org/wp-content/uploads/2024/02/March2021NRLNews.pdf",
+          "https://nrlc.org/wp-content/uploads/2024/02/NRLNewsJune2014.pdf",
+          "http://www.nrlc.org/uploads/DvSBA/ExhibitI-USCCBGeneralCounselMemoOnAbortionInPPACAandExecutiveOrder.pdf",
+          "https://nrlc.org/nrlnewstoday/2026/08/how-tiktok-creators-are-glamorizing-assisted-dying/",
+          "https://nrlc.org/nrlnewstoday/2019/05/palliative-care-strives-to-reduce-suffering-not-to-intentionally-end-life/",
+          "https://nrlc.org/nrlnewstoday/2015/05/i-cant-fix-this/",
+          "https://nrlc.org/nrlnewstoday/2025/02/care-net-and-icu-mobile-announce-strategic-merger-to-expand-network-of-life-affirming-care/",
+          "https://nrlc.org/nrlnewstoday/2018/03/the-perfect-facebook-video-for-world-down-syndrome-awareness-day/"
+        ],
+        "confidence": "high",
+        "review_status": "pending",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "review_note": null
+      }
+    },
+    {
+      "entity_id": "C00530766",
+      "name": "WOMEN SPEAK OUT PAC",
+      "kind": "single_issue",
+      "issue_ids": [
+        "abortion"
+      ],
+      "description": "Women Speak Out PAC is a partner of SBA Pro-Life America amplifying the voices of women opposed to abortion extremists in Congress and has built the largest pro-life on-the-ground political campaign using micro-targeting to educate voters.",
+      "quote": "Women Speak Out PAC is a partner of SBA Pro-Life America, a super PAC amplifying the voices of women opposed to abortion extremists in Congress. Since 2014, Women Speak Out PAC has built the largest pro-life on-the-ground political campaign in the country.",
+      "source_urls": [
+        "https://wsopac.com/",
+        "https://www.fec.gov/data/committee/C00530766/"
+      ],
+      "provenance": {
+        "tagged_by": "xai-grok-4.3-2026-09-06",
+        "tagged_at": "2026-09-06",
+        "model": "grok-4.3",
+        "prompt_version": "classify_spender.v1",
+        "tools": [
+          "web_search"
+        ],
+        "tool_filters": {},
+        "response_id": "13c13aad-be32-913d-b9d8-2a7f230f10a5",
+        "retrieved_at": "2026-09-06T03:11:44+00:00",
+        "citations": [
+          "https://www.genarchives..com/Towne-Bowditch/g0/p524.htm",
+          "https://.com/services/dental-anxiety-dental-fear/dental-phobia-dental-fear/",
+          "https://apexshield..com/",
+          "https://www.genarchives..com/Towne-Bowditch/g0/p430.htm",
+          "https://www.sacbee..com/guides/deals/daily/best-selling-beauty-products-on-sale/",
+          "https://www.genarchives..com/Towne-Bowditch/g0/p628.htm",
+          "https://.com/-----/",
+          "https://www.genarchives..com/Towne-Bowditch/g0/p338.htm",
+          "https://www.genarchives..com/Towne-Bowditch/g0/p389.htm",
+          "https://.com/female-infertility-franchise-company-in-india",
+          "https://wsopac.com/",
+          "https://www.fec.gov/data/committee/C00530766/",
+          "https://docquery.fec.gov/cgi-bin/forms/C00530766/1707125/",
+          "https://littlesis.org/org/128007-Women_Speak_out_PAC",
+          "https://www.wisdc.org/interest-group-spending/148-hijacking-campaign-2025/7733-hijacking-campaign-2025-information-on-women-speak-out-pac"
+        ],
+        "confidence": "high",
+        "review_status": "pending",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "review_note": null
+      }
+    },
+    {
+      "entity_id": "C00541433",
+      "name": "HUNTER ACTION FUND (HAF)",
+      "kind": "single_issue",
+      "issue_ids": [
+        "guns"
+      ],
+      "description": "Hunter Action Fund is the only super PAC dedicated to activating pro-hunting voters in critical elections to preserve the right to hunt and fish and address hunting and wildlife conservation issues.",
+      "quote": "Hunter Action Fund (HAF) is the only super PAC in the nation dedicated entirely to activating pro-hunting voters in critical elections across the country.",
+      "source_urls": [
+        "https://www.hunteractionfund.org/",
+        "https://www.fec.gov/data/committee/C00541433/"
+      ],
+      "provenance": {
+        "tagged_by": "xai-grok-4.3-2026-09-06",
+        "tagged_at": "2026-09-06",
+        "model": "grok-4.3",
+        "prompt_version": "classify_spender.v1",
+        "tools": [
+          "web_search"
+        ],
+        "tool_filters": {},
+        "response_id": "4ee2a670-a3f4-90ea-9aa5-5783c2af39dd",
+        "retrieved_at": "2026-09-06T03:36:35+00:00",
+        "citations": [
+          "https://apexshield..com/",
+          "https://www.likedogsandcats..com/farmington/dog-vaccinations-farmington-ut/",
+          "https://.com/blog/tags/architecture",
+          "https://.com/blog/2009/07/",
+          "https://vault12..com/blog/how-it-works-vault12-digital-inheritance-2652564751.html",
+          "https://www.likedogsandcats..com/hermison/pet-euthanasia-hermison-or/",
+          "https://.com/blog/safe-patient-project-and-wwwstophospitalinfectionsorg/",
+          "https://www.likedogsandcats..com/huntington/dog-dentist-huntington-ind/",
+          "https://www.likedogsandcats..com/tooele/spaying-and-neutering-tooele-ut/",
+          "https://www.likedogsandcats..com/crawfordsville/animal-hospital-crawfordsville-in/",
+          "https://www.hunteractionfund.org/",
+          "https://safariclub.org/protect-hunting/hunter-action-fund/",
+          "https://www.youtube.com/watch?v=d2thlT0D-wI",
+          "https://static1.squarespace.com/static/5d39310e96ef000001b54025/t/6846dbd2cb4122097d0ed0b3/1749474263454/HF_Annual+Report_2024_For+Web_Final.pdf",
+          "https://www.backcountryhunters.org/media/stalking-wildness-bhas-wilderness-warriors"
+        ],
+        "confidence": "high",
+        "review_status": "pending",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "review_note": null
+      }
+    },
+    {
+      "entity_id": "C00606962",
+      "name": "WORKING FAMILIES PARTY PAC",
+      "kind": "multi_issue",
+      "issue_ids": [
+        "labor_trade"
+      ],
+      "description": "The Working Families Party is regular people coming together across our differences to make a better future for us all. We’re a multiracial party that fights for workers over bosses and people over the powerful. We want an America which realizes the promise – unrealized in our history – of freedom and equality for all.",
+      "quote": "The Working Families Party is regular people coming together across our differences to make a better future for us all. We’re a multiracial party that fights for workers over bosses and people over the powerful. We want an America which realizes the promise – unrealized in our history – of freedom and equality for all.",
+      "source_urls": [
+        "https://workingfamilies.org/about/",
+        "https://www.fec.gov/data/committee/C00606962/"
+      ],
+      "provenance": {
+        "tagged_by": "xai-grok-4.3-2026-09-06",
+        "tagged_at": "2026-09-06",
+        "model": "grok-4.3",
+        "prompt_version": "classify_spender.v1",
+        "tools": [
+          "web_search"
+        ],
+        "tool_filters": {},
+        "response_id": "8613e994-79bf-984c-8045-265efb451875",
+        "retrieved_at": "2026-09-06T03:11:55+00:00",
+        "citations": [
+          "https://workingfamilies.org/about/",
+          "https://workingfamilies.org/guarantee/",
+          "https://workingfamilies.org/the-peoples-charter/",
+          "https://workingfamilies.org/?refcode=WFP-NatSocial",
+          "https://workingfamilies.org/2025/12/2025s-working-families-party-wave/",
+          "https://workingfamilies.org/2026/07/southern-made-lead-where-you-live/",
+          "https://workingfamilies.org/working-families-national-committee/",
+          "https://workingfamilies.org/get-active/",
+          "https://workingfamilies.org/2026/05/memo-pa-wfps-work-in-the-2026-primary-elections/",
+          "https://workingfamilies.org/state/massachusetts/",
+          "https://www.fec.gov/data/committee/C00606962/",
+          "https://www.linkedin.com/company/working-families-party",
+          "https://www.influencewatch.org/political-party/working-families-party/",
+          "http://campaigns.organizefor.org/partnerships/working-families-party-2",
+          "https://www.caworkingfamilies.org/",
+          "https://medium.com/@WorkingFamilies/what-happens-next-dcdf37f23c34",
+          "https://www.idealist.org/en/nonprofit/6144272eef93418a8aaac0eab3a98668-working-families-kings-county"
+        ],
+        "confidence": "high",
+        "review_status": "pending",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "review_note": null
+      }
+    },
+    {
+      "entity_id": "C00625566",
+      "name": "VALOR AMERICA",
+      "kind": "general_partisan",
+      "issue_ids": [],
+      "description": "Valor America propels our nation forward by rallying support for principled Republican leaders.",
+      "quote": "Valor America propels our nation forward by rallying support for principled Republican leaders.",
+      "source_urls": [
+        "https://valoramerica.org/about",
+        "https://www.fec.gov/data/committee/C00625566/"
+      ],
+      "provenance": {
+        "tagged_by": "xai-grok-4.3-2026-09-06",
+        "tagged_at": "2026-09-06",
+        "model": "grok-4.3",
+        "prompt_version": "classify_spender.v1",
+        "tools": [
+          "web_search"
+        ],
+        "tool_filters": {},
+        "response_id": "57cb9770-36c8-952f-9dff-081b250d485a",
+        "retrieved_at": "2026-09-06T03:25:53+00:00",
+        "citations": [
+          "https://.com/blog/what-is-in-your-toothpaste/",
+          "https://www.genarchives..com/Towne-Bowditch/g0/p97.htm",
+          "https://.com/services/dental-anxiety-dental-fear/dental-phobia-dental-fear/",
+          "https://apexshield..com/",
+          "https://www.genarchives..com/Towne-Bowditch/g0/p4.htm",
+          "https://www.sacbee..com/guides/deals/daily/best-selling-beauty-products-on-sale/",
+          "https://www.genarchives..com/Towne-Bowditch/g0/p92.htm",
+          "https://.com/blog/author/jeff/page/24/",
+          "https://.com/services/cosmetic-dentistry/dental-restorations-using-composite-resin-fillings/",
+          "https://.com/female-infertility-franchise-company-in-india",
+          "https://www.opensecrets.org/political-action-committees-pacs/valor-america/C00625566/summary/2024",
+          "https://valoramerica.org/",
+          "https://valoramerica.org/about",
+          "https://www.stratml.us/pdfs/VLRA.pdf",
+          "https://valoramerica.org/our-method"
+        ],
+        "confidence": "high",
+        "review_status": "pending",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "review_note": null
+      }
+    },
+    {
+      "entity_id": "C00632398",
+      "name": "LET AMERICA VOTE PAC",
+      "kind": "general_partisan",
+      "issue_ids": [],
+      "description": "Let America Vote fights back against proposals that make it harder for eligible voters to exercise their constitutional right to cast a ballot and advocates for pro-voter policies.",
+      "quote": "Our democracy is under attack. It’s not just foreign interference in our elections: Politicians here in America are attacking our right to vote. Politicians are trying to pick their voters instead of voters picking their politicians. We can’t let that happen.",
+      "source_urls": [
+        "https://letamericavote.org/about/",
+        "https://www.fec.gov/data/committee/C00632398/"
+      ],
+      "provenance": {
+        "tagged_by": "xai-grok-4.3-2026-09-06",
+        "tagged_at": "2026-09-06",
+        "model": "grok-4.3",
+        "prompt_version": "classify_spender.v1",
+        "tools": [
+          "web_search"
+        ],
+        "tool_filters": {
+          "allowed_domains": [
+            "letamericavote.org"
+          ]
+        },
+        "response_id": "b3d24921-c255-93d6-ab75-7971e1d1a4c9",
+        "retrieved_at": "2026-09-06T03:35:04+00:00",
+        "citations": [
+          "https://letamericavote.org/wp-content/uploads/2018/01/Voter-Guide.pdf",
+          "https://letamericavote.org/wp-content/uploads/2020/07/FactsAboutVBM.pdf",
+          "https://www.letamericavote.org/",
+          "https://letamericavote.org/about/"
+        ],
+        "confidence": "high",
+        "review_status": "pending",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "review_note": null
+      }
+    },
+    {
+      "entity_id": "C00634774",
+      "name": "COMMON SENSE FOR AMERICA PAC",
+      "kind": "candidate_aligned",
+      "issue_ids": [],
+      "description": "Common Sense for America PAC supports candidates who have the courage to lead with the common sense that made America the greatest country in all of human history while defending core American values with straight talk and hard work.",
+      "quote": "Common Sense for America PAC supports candidates who have the courage to lead with the common sense that made America the greatest country in all of human history.",
+      "source_urls": [
+        "https://commonsenseamericapac.com/",
+        "https://www.fec.gov/data/committee/C00634774/"
+      ],
+      "provenance": {
+        "tagged_by": "xai-grok-4.3-2026-09-06",
+        "tagged_at": "2026-09-06",
+        "model": "grok-4.3",
+        "prompt_version": "classify_spender.v1",
+        "tools": [
+          "web_search"
+        ],
+        "tool_filters": {},
+        "response_id": "609d62b2-2e18-957c-8db9-10dd889c57e6",
+        "retrieved_at": "2026-09-06T03:13:43+00:00",
+        "citations": [
+          "https://www.genarchives..com/Towne-Bowditch/g0/p360.htm",
+          "https://.com/blog/toothpaste-how-to-choose-the-right-toothpaste-for-you/",
+          "https://www.genarchives..com/Towne-Bowditch/g0/p446.htm",
+          "https://.com/blog/page/31/",
+          "https://www.genarchives..com/Towne-Bowditch/g0/p136.htm",
+          "https://www.genarchives..com/Towne-Bowditch/g0/p343.htm",
+          "https://www.genarchives..com/Towne-Bowditch/g0/p14.htm",
+          "https://www.genarchives..com/Towne-Bowditch/g0/p273.htm",
+          "https://www.genarchives..com/Towne-Bowditch/g0/p348.htm",
+          "https://www.genarchives..com/Towne-Bowditch/g0/p368.htm",
+          "https://www.fec.gov/data/committee/C00634774/",
+          "https://www.commonsenseforamerica.org/",
+          "https://opensecrets.org/political-action-committees-pacs/competitive-markets-pac/C00634774/summary/2024",
+          "https://commonsenseamericapac.com/",
+          "https://www.opensecrets.org/outside-spending/detail/2024?cmte=C00634774&tab=targeted_candidates",
+          "https://scispace.com/pdf/next-to-the-man-and-not-forgotten-gay-mcdougall-and-the-3q32h6kyxy.pdf",
+          "https://www.star-telegram.com/opinion/bud-kennedy/article242579951.html",
+          "https://www.youtube.com/watch?v=Fod80u02kW4",
+          "https://etheses.whiterose.ac.uk/id/eprint/5859/1/TAD%20THESIS%20FINAL%20POST%20VIVA%20JAN%202014.pdf",
+          "https://bencodems.org/home/affinity-group-news/"
+        ],
+        "confidence": "high",
+        "review_status": "pending",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "review_note": null
+      }
+    },
+    {
+      "entity_id": "C00640300",
+      "name": "ACTIVATE AMERICA",
+      "kind": "general_partisan",
+      "issue_ids": [],
+      "description": "Activate America is an independent expenditure organization focused on electing Democrats to the U.S. Senate and House of Representatives.",
+      "quote": "Activate America is an independent expenditure organization focused on electing Democrats to the U.S. Senate and House of Representatives.",
+      "source_urls": [
+        "https://www.activateamerica.vote/what-we-do",
+        "https://www.fec.gov/data/committee/C00640300/"
+      ],
+      "provenance": {
+        "tagged_by": "xai-grok-4.3-2026-09-06",
+        "tagged_at": "2026-09-06",
+        "model": "grok-4.3",
+        "prompt_version": "classify_spender.v1",
+        "tools": [
+          "web_search"
+        ],
+        "tool_filters": {
+          "allowed_domains": [
+            "activateamerica.vote"
+          ]
+        },
+        "response_id": "896b7a48-edb0-9863-a817-b10c57970093",
+        "retrieved_at": "2026-09-06T03:35:54+00:00",
+        "citations": [
+          "https://www.activateamerica.vote/",
+          "https://www.activateamerica.vote/what-we-do",
+          "https://www.activateamerica.vote/about-1",
+          "https://www.activateamerica.vote/getting-started-postcards",
+          "https://www.activateamerica.vote/canvassing",
+          "https://www.activateamerica.vote/senate",
+          "https://www.activateamerica.vote/ohio24",
+          "https://www.influencewatch.org/political-party/activate-america/",
+          "https://www.activateamerica.vote/nevada24",
+          "https://www.activateamerica.vote/ourteam",
+          "https://www.activateamerica.vote/amplify/stocks",
+          "https://www.activateamerica.vote/s/CA-41_InfoSheet.pdf",
+          "https://www.activateamerica.vote/house"
+        ],
+        "confidence": "high",
+        "review_status": "pending",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "review_note": null
+      }
+    },
+    {
+      "entity_id": "C00647966",
+      "name": "RURAL FREEDOM NETWORK",
+      "kind": "general_partisan",
+      "issue_ids": [],
+      "description": "The Rural Freedom Network is a grassroots media organization supporting Democratic candidates to reclaim our Democracy and to ensure it remains is safe and secure. We are a political action committee specializing in creating effective political media for our Democratic candidates and Democratic values.",
+      "quote": "The Rural Freedom Network is a grassroots media organization supporting Democratic candidates to reclaim our Democracy and to ensure it remains is safe and secure. We are a political action committee specializing in creating effective political media for our Democratic candidates and Democratic values.",
+      "source_urls": [
+        "https://ruralfreedomnetwork.org/about/",
+        "https://www.fec.gov/data/committee/C00647966/"
+      ],
+      "provenance": {
+        "tagged_by": "xai-grok-4.3-2026-09-06",
+        "tagged_at": "2026-09-06",
+        "model": "grok-4.3",
+        "prompt_version": "classify_spender.v1",
+        "tools": [
+          "web_search"
+        ],
+        "tool_filters": {},
+        "response_id": "958a59eb-2c81-9c2c-a194-84263aad4052",
+        "retrieved_at": "2026-09-06T03:36:03+00:00",
+        "citations": [
+          "https://www.genarchives..com/Towne-Bowditch/g0/p239.htm",
+          "https://www.genarchives..com/Towne-Bowditch/g0/p430.htm",
+          "https://www.genarchives..com/Towne-Bowditch/g0/p10.htm",
+          "https://www.genarchives..com/Towne-Bowditch/g0/p230.htm",
+          "https://www.genarchives..com/Towne-Bowditch/g0/p212.htm",
+          "https://.com/blog/tags/architecture",
+          "https://www.genarchives..com/Towne-Bowditch/g0/p58.htm",
+          "https://www.genarchives..com/Towne-Bowditch/g0/p466.htm",
+          "https://www.genarchives..com/Towne-Bowditch/g0/p213.htm",
+          "https://www.genarchives..com/Towne-Bowditch/g0/p33.htm",
+          "https://www.fec.gov/data/committee/C00647966/",
+          "https://projects.propublica.org/itemizer/committee/C00647966/reports/YEAR-END",
+          "https://ruralfreedomnetwork.org/about/",
+          "https://docquery.fec.gov/cgi-bin/forms/C00647966/1795998/",
+          "https://projects.propublica.org/itemizer/filing/1770831"
+        ],
+        "confidence": "high",
+        "review_status": "pending",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "review_note": null
+      }
+    },
+    {
+      "entity_id": "C00684969",
+      "name": "JDCA PAC",
+      "kind": "general_partisan",
+      "issue_ids": [],
+      "description": "JDCA PAC is your portal to take political action to support Democratic candidates who align with our Jewish and Democratic values.",
+      "quote": "JDCA PAC is your portal to take political action to support Democratic candidates who align with our Jewish and Democratic values.",
+      "source_urls": [
+        "https://jdcapac.org/",
+        "https://www.fec.gov/data/committee/C00684969/"
+      ],
+      "provenance": {
+        "tagged_by": "xai-grok-4.3-2026-09-06",
+        "tagged_at": "2026-09-06",
+        "model": "grok-4.3",
+        "prompt_version": "classify_spender.v1",
+        "tools": [
+          "web_search"
+        ],
+        "tool_filters": {},
+        "response_id": "7c0fe0d3-68c4-963c-ba8a-0683a4de41ed",
+        "retrieved_at": "2026-09-06T03:15:04+00:00",
+        "citations": [
+          "https://www.fec.gov/data/committee/C00684969/",
+          "https://jdcapac.org/",
+          "https://en.m.wikipedia.org/wiki/Jewish_Democratic_Council_of_America",
+          "https://www.opensecrets.org/political-action-committees-pacs/C00684969/summary/2022",
+          "https://en.wikipedia.org/wiki/Juvenile_Diabetes_Cure_Alliance",
+          "http://docquery.fec.gov/cgi-bin/forms/C00684969/1745563/",
+          "https://jewishdems.org/wp-content/uploads/2023/01/JDCA-2023-Overview.pdf",
+          "https://jewishdems.org/about/",
+          "https://jewishdems.org/",
+          "https://www.charitynavigator.org/ein/821919054",
+          "https://.com/blog/retiring-dentists-might-sell-their-practice-to-the-highest-bidder/",
+          "https://www.genarchives..com/Towne-Bowditch/g0/p290.htm",
+          "https://www.genarchives..com/Towne-Bowditch/g0/p600.htm",
+          "https://.com/blog/author/jeff/page/10/",
+          "https://www.genarchives..com/Towne-Bowditch/g0/p563.htm",
+          "https://www.genarchives..com/Towne-Bowditch/g0/p634.htm",
+          "https://.com/blog/page/31/",
+          "https://www.genarchives..com/Towne-Bowditch/g0/p640.htm",
+          "https://www.genarchives..com/Towne-Bowditch/g0/p410.htm",
+          "https://.com/blog/category/dr-dorfman-says/page/5/"
+        ],
+        "confidence": "high",
+        "review_status": "pending",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "review_note": null
+      }
+    },
+    {
+      "entity_id": "C00685693",
+      "name": "CASA IN ACTION PAC",
+      "kind": "general_partisan",
+      "issue_ids": [],
+      "description": "CASA in Action PAC is a sister organization to CASA in Action launched in 2018 to further expand our capacity to impact elections and grow political power by mobilizing Latinos and other voters of color to the polls through targeted data-driven electoral programs.",
+      "quote": "In 2018, we launched CASA in Action PAC, a sister organization to CASA in Action, to further expand our capacity to impact elections and grow political power.",
+      "source_urls": [
+        "https://casainaction.org/about/",
+        "https://www.fec.gov/data/committee/C00685693/"
+      ],
+      "provenance": {
+        "tagged_by": "xai-grok-4.3-2026-09-06",
+        "tagged_at": "2026-09-06",
+        "model": "grok-4.3",
+        "prompt_version": "classify_spender.v1",
+        "tools": [
+          "web_search"
+        ],
+        "tool_filters": {},
+        "response_id": "e7e60f7e-c9ca-94e0-91bc-bd0d3ce84c92",
+        "retrieved_at": "2026-09-06T03:12:26+00:00",
+        "citations": [
+          "https://casainaction.org/about/",
+          "https://www.fec.gov/data/committee/C00685693/",
+          "https://casainaction.org/",
+          "https://casainaction.org/es/sobre-casa-en-accion/",
+          "https://www.influencewatch.org/non-profit/casa-in-action/",
+          "https://www.digitaldemocracyproject.org//member-organizations/casa-in-action",
+          "https://www.guidestar.org/profile/27-2145405",
+          "https://docquery.fec.gov/cgi-bin/fecimg/?C00685693",
+          "https://wearecasa.org/about",
+          "https://www.casa-india.org/upload/newsletter--jan-march--23.pdf",
+          "https://www.genarchives..com/Towne-Bowditch/g0/p492.htm",
+          "https://www.genarchives..com/Towne-Bowditch/g0/p723.htm",
+          "https://.com/services/braces-orthodontics/fixed-or-removable-retainers-offer-passive-orthodontics/",
+          "https://www.genarchives..com/Towne-Bowditch/g0/p361.htm",
+          "https://www.genarchives..com/Towne-Bowditch/g0/p449.htm",
+          "https://.com/blog/author/jeff/page/10/",
+          "https://www.genarchives..com/Towne-Bowditch/g0/p273.htm",
+          "https://www.genarchives..com/Towne-Bowditch/g0/p633.htm",
+          "https://www.likedogsandcats..com/reynolds/animal-hospital-reynolds-in/",
+          "https://www.genarchives..com/Towne-Bowditch/g0/p635.htm"
+        ],
+        "confidence": "high",
+        "review_status": "pending",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "review_note": null
+      }
+    },
+    {
+      "entity_id": "C00710848",
+      "name": "DMFI PAC",
+      "kind": "general_partisan",
+      "issue_ids": [],
+      "description": "DMFI PAC works to elect pro-Israel Democrats up and down the ballot and defeat those few anti-Israel Democratic candidates in federal election primaries.",
+      "quote": "DMFI PAC works to elect pro-Israel Democrats up and down the ballot and defeat those few anti-Israel Democratic candidates in federal election primaries.",
+      "source_urls": [
+        "https://dmfipac.org/who/about/",
+        "https://www.fec.gov/data/committee/C00710848/"
+      ],
+      "provenance": {
+        "tagged_by": "xai-grok-4.3-2026-09-06",
+        "tagged_at": "2026-09-06",
+        "model": "grok-4.3",
+        "prompt_version": "classify_spender.v1",
+        "tools": [
+          "web_search"
+        ],
+        "tool_filters": {
+          "allowed_domains": [
+            "dmfipac.org"
+          ]
+        },
+        "response_id": "ecb061ac-d29a-95d1-9171-1419ca5de2a0",
+        "retrieved_at": "2026-09-06T03:12:52+00:00",
+        "citations": [
+          "https://dmfipac.org/who/about/",
+          "https://dmfipac.org/news-updates/press-release/dmfi-pac-announces-2026-majority-project-endorses-first-slate-of-non-incumbent-candidates-for-the-2026-cycle/",
+          "https://dmfipac.org/2026/?post_type=press-release",
+          "https://dmfipac.org/",
+          "https://dmfipac.org/news-updates/press-release/dmfi-pac-announces-new-endorsements-in-california-as-part-of-2026-majority-project/",
+          "https://dmfipac.org/news-updates/press-release/new-dmfi-pac-ad-highlights-warnings-from-trumps-national-security-team/",
+          "https://dmfipac.org/news-updates/press-release/dmfi-pac-thanks-vice-president-kamala-harris-for-her-service-and-leadership/",
+          "https://dmfipac.org/news-updates/",
+          "https://dmfipac.org/news-updates/press-release/dmfi-pac-statement-presidential-race/",
+          "https://dmfipac.org/news-updates/press-release/dmfi-pac-endorses-vice-president-kamala-harris-for-president/",
+          "https://dmfipac.org/2026/",
+          "https://dmfipac.org/news-updates/press-release/new-dmfi-pac-ad-vice-president-harris-is-a-strong-friend-and-ally-of-israel/"
+        ],
+        "confidence": "high",
+        "review_status": "pending",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "review_note": null
+      }
+    },
+    {
+      "entity_id": "C00738732",
+      "name": "CLEAN WAVE",
+      "kind": "general_partisan",
+      "issue_ids": [],
+      "description": "Clean Wave is a federal Super PAC that intends to make independent expenditures in the 2022 elections pertaining to some federal races, with similar state Super PACs in PA and MI for selected state races.",
+      "quote": "Clean Wave, is a federal Super PAC that intends to make independent expenditures in the 2022 elections pertaining to some federal races.",
+      "source_urls": [
+        "https://cleanwater.org/clean-wave",
+        "https://www.fec.gov/data/committee/C00738732/"
+      ],
+      "provenance": {
+        "tagged_by": "xai-grok-4.3-2026-09-06",
+        "tagged_at": "2026-09-06",
+        "model": "grok-4.3",
+        "prompt_version": "classify_spender.v1",
+        "tools": [
+          "web_search"
+        ],
+        "tool_filters": {},
+        "response_id": "88bd7aa6-9a6b-9627-9131-85de1ab66697",
+        "retrieved_at": "2026-09-06T03:18:36+00:00",
+        "citations": [
+          "https://www.fec.gov/data/committee/C00738732/",
+          "https://projects.propublica.org/itemizer/committee/C00738732/2024",
+          "https://docquery.fec.gov/cgi-bin/forms/C00738732/1923830/",
+          "http://docquery.fec.gov/cgi-bin/forms/C00738732/1863791/",
+          "https://www.opensecrets.org/orgs/clean-water-action/summary?id=D000060695",
+          "http://docquery.fec.gov/cgi-bin/forms/C00738732/1560100/",
+          "http://docquery.fec.gov/cgi-bin/forms/C00738732/1881380/se",
+          "https://docquery.fec.gov/pdf/411/202510309792073411/202510309792073411.pdf",
+          "https://cleanwater.org/clean-wave",
+          "https://cleanwater.org/sites/default/files/2026-04/Curr_Natl_04.13.26a.pdf",
+          "https://cleanwater.org/events/making-waves-2026",
+          "https://cleanwater.org/2023/04/30/clean-water-waves-news-april-2023",
+          "https://cleanwater.org/publications/clean-water-currents-fall-2024",
+          "https://cleanwater.org/about/clean-water-action-board",
+          "https://cleanwater.org/clean-water-voter-2026-massachusetts-endorsements",
+          "https://www.causeiq.com/organizations/clean-water-action,237128611/"
+        ],
+        "confidence": "medium",
+        "review_status": "pending",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "review_note": null
+      }
+    },
+    {
+      "entity_id": "C00740514",
+      "name": "CONCERNED CITIZEN",
+      "kind": "multi_issue",
+      "issue_ids": [
+        "healthcare",
+        "tax_budget",
+        "energy_climate"
+      ],
+      "description": "Concerned Citizen attempts to prepare the public to make ethical and moral choices over their lifetimes by exposing them to issues of the day that will affect their daily lives.",
+      "quote": "Concerned Citizen attempts to prepare the public to make ethical and moral choices over their lifetimes by exposing them to issues of the day that will affect their daily lives.",
+      "source_urls": [
+        "https://concerned-citizen.org/",
+        "https://www.fec.gov/data/committee/C00740514/"
+      ],
+      "provenance": {
+        "tagged_by": "xai-grok-4.3-2026-09-06",
+        "tagged_at": "2026-09-06",
+        "model": "grok-4.3",
+        "prompt_version": "classify_spender.v1",
+        "tools": [
+          "web_search"
+        ],
+        "tool_filters": {
+          "allowed_domains": [
+            "concerned-citizen.org"
+          ]
+        },
+        "response_id": "48f3ea49-7b93-9776-9e12-b7c75b6b8921",
+        "retrieved_at": "2026-09-06T03:36:55+00:00",
+        "citations": [
+          "https://concerned-citizen.org/",
+          "https://tvtropes.org/pmwiki/pmwiki.php/Webcomic/Concerned",
+          "https://www.concernedcitizensofstjohn.org/about-5",
+          "https://www.concerned-citizen.net/",
+          "https://change.org/p/concerned-citizen-of-canada?recruiter=1395189794&utm_campaign=starter_onboarding_0&utm_medium=twitter&utm_source=share_petition",
+          "https://www.consumerreports.org/toxic-chemicals-substances/the-power-of-citizen-science-a1450367401/",
+          "https://concernedcitizensanimalrescue.org/",
+          "https://www.citizensforethics.org/legal-action/letters-testimony/oversight-and-policy-letters/",
+          "https://www.youtube.com/watch?v=BSrFmRuO8JI",
+          "https://www.mcsweeneys.net/articles/i-am-a-concerned-citizen"
+        ],
+        "confidence": "high",
+        "review_status": "pending",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "review_note": null
+      }
+    },
+    {
+      "entity_id": "C00747998",
+      "name": "CARE IN ACTION PAC",
+      "kind": "multi_issue",
+      "issue_ids": [
+        "labor_trade"
+      ],
+      "description": "Care in Action is a nonprofit, nonpartisan group dedicated to fighting for dignity and fairness for the millions of domestic workers in the United States, most of whom are women of color and immigrant women.",
+      "quote": "Care in Action is a nonprofit, nonpartisan group dedicated to fighting for dignity and fairness for the millions of domestic workers in the United States, most of whom are women of color and immigrant women. Founded in 2017, Care in Action is backed by tens of thousands of nannies, house cleaners, and care workers across the country.",
+      "source_urls": [
+        "https://careinaction.us/about/",
+        "https://www.fec.gov/data/committee/C00747998/"
+      ],
+      "provenance": {
+        "tagged_by": "xai-grok-4.3-2026-09-06",
+        "tagged_at": "2026-09-06",
+        "model": "grok-4.3",
+        "prompt_version": "classify_spender.v1",
+        "tools": [
+          "web_search"
+        ],
+        "tool_filters": {},
+        "response_id": "f87b462b-f0e1-9ccd-abb5-07101057220b",
+        "retrieved_at": "2026-09-06T03:27:44+00:00",
+        "citations": [
+          "https://careinaction.us/about/",
+          "https://www.fec.gov/data/committee/C00747998/",
+          "https://www.influencewatch.org/non-profit/domestic-workers-legacy-fund/",
+          "https://care-in-action.org/",
+          "https://careinaction.us/press/the-care-movement-is-ready-to-mobilize-a-groundswell-of-voters-across-key-battleground-states/",
+          "https://careinaction.us/landing/",
+          "https://careinaction.us/",
+          "https://careinaction.us/about/?lang=es",
+          "https://www.opensecrets.org/orgs/care-in-action/summary?id=D000084351",
+          "https://careinactionusa.org/",
+          "https://www.genarchives..com/Towne-Bowditch/g0/p628.htm",
+          "https://.com/blog/2010/04/",
+          "https://www.genarchives..com/Towne-Bowditch/g0/p58.htm",
+          "https://www.genarchives..com/Towne-Bowditch/poems_Swikert_Charles_family.htm",
+          "https://www.sacbee..com/guides/deals/daily/best-selling-beauty-products-on-sale/"
+        ],
+        "confidence": "medium",
+        "review_status": "pending",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "review_note": null
+      }
+    },
+    {
+      "entity_id": "C00754242",
+      "name": "THEY SEE BLUE",
+      "kind": "general_partisan",
+      "issue_ids": [],
+      "description": "The mission of They See Blue® is to mobilize and engage Americans of South Asian origin in the democratic process to help Democrats win federal, state, and local races.",
+      "quote": "The mission of They See Blue® is to mobilize and engage Americans of South Asian (Afghan, Bangladeshi, Bhutanese, Indian, Indo-Fijian, Indo-Caribbean, Maldivian, Nepali, Pakistani, Sri Lankan, Diaspora) origin in the democratic process to help Democrats win federal, state, and local races.",
+      "source_urls": [
+        "https://www.theyseeblue.org/privacy-policy",
+        "http://web.archive.org/web/20260613084802/https://www.theyseeblue.org/privacy-policy",
+        "https://www.fec.gov/data/committee/C00754242/"
+      ],
+      "provenance": {
+        "tagged_by": "xai-grok-4.3-2026-09-06",
+        "tagged_at": "2026-09-06",
+        "model": "grok-4.3",
+        "prompt_version": "classify_spender.v1",
+        "tools": [
+          "web_search"
+        ],
+        "tool_filters": {
+          "allowed_domains": [
+            "theyseeblue.org"
+          ]
+        },
+        "response_id": "c17a8785-ae1e-9284-9b30-30e7666a643b",
+        "retrieved_at": "2026-09-06T03:30:44+00:00",
+        "citations": [
+          "https://www.theyseeblue.org/",
+          "https://www.theyseeblue.org/meet-the-cofounders",
+          "https://www.theyseeblue.org/press-releases-1/they-see-blue%C2%AE-honors-president-joe-biden%EF%BF%BD%EF%BF%BD%E2%80%99s-selfless-service-to-america",
+          "https://www.theyseeblue.org/prop-50",
+          "https://www.theyseeblue.org/community/%E2%80%9Cbut-what-can-i-do%3F%E2%80%9D",
+          "https://www.theyseeblue.org/do-today",
+          "https://www.theyseeblue.org/nevada",
+          "https://theyseeblue.org/",
+          "https://www.theyseeblue.org/privacy-policy",
+          "https://www.theyseeblue.org/resources",
+          "https://www.theyseeblue.org/in-the-news",
+          "https://www.theyseeblue.org/press-releases"
+        ],
+        "confidence": "high",
+        "review_status": "pending",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "review_note": null
+      }
+    },
+    {
+      "entity_id": "C00755363",
+      "name": "VOTE FOR EQUALITY",
+      "kind": "single_issue",
+      "issue_ids": [
+        "abortion"
+      ],
+      "description": "Vote for Equality is an independent expenditure political action committee affiliated with the Feminist Majority with a record of recruiting, organizing and training college students to mobilize the student vote and make the winning difference in elections with a massive campus mobilization initiative.",
+      "quote": "Founded in 2020, Vote for Equality is an Independent expenditure political action committee with a proven record of recruiting organizing and training college students to mobilize the student vote. Affiliated with the Feminist Majority.",
+      "source_urls": [
+        "https://voteforequality.us/",
+        "https://www.fec.gov/data/committee/C00755363/"
+      ],
+      "provenance": {
+        "tagged_by": "xai-grok-4.3-2026-09-06",
+        "tagged_at": "2026-09-06",
+        "model": "grok-4.3",
+        "prompt_version": "classify_spender.v1",
+        "tools": [
+          "web_search"
+        ],
+        "tool_filters": {
+          "allowed_domains": [
+            "voteforequality.us"
+          ]
+        },
+        "response_id": "19d386d3-30bd-9a42-b556-bc78ff2e4788",
+        "retrieved_at": "2026-09-06T03:25:17+00:00",
+        "citations": [
+          "http://voteforequality.us/",
+          "https://voteforequality.us/positions-available-with-vote-for-equality-2024-campaign/",
+          "https://voteforequality.us/"
+        ],
+        "confidence": "high",
+        "review_status": "pending",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "review_note": null
+      }
+    },
+    {
+      "entity_id": "C00761064",
+      "name": "API PA VOTES",
+      "kind": "multi_issue",
+      "issue_ids": [
+        "healthcare"
+      ],
+      "description": "We are Asian Americans coming together across Pennsylvania to protect our democracy, fight for healthcare access, build Asian American political power, and elect candidates who will listen to and show up for Asian American communities!",
+      "quote": "We are Asian Americans coming together across Pennsylvania to protect our democracy, fight for healthcare access, build Asian American political power, and elect candidates who will listen to and show up for Asian American communities!",
+      "source_urls": [
+        "https://www.asiansforpa.org/",
+        "https://www.fec.gov/data/committee/C00761064/"
+      ],
+      "provenance": {
+        "tagged_by": "xai-grok-4.3-2026-09-06",
+        "tagged_at": "2026-09-06",
+        "model": "grok-4.3",
+        "prompt_version": "classify_spender.v1",
+        "tools": [
+          "web_search"
+        ],
+        "tool_filters": {
+          "allowed_domains": [
+            "asiansforpa.org"
+          ]
+        },
+        "response_id": "70280a10-a64e-9fa1-bd25-f73c4d11cf1e",
+        "retrieved_at": "2026-09-06T03:15:19+00:00",
+        "citations": [
+          "https://www.asiansforpa.org/"
+        ],
+        "confidence": "high",
+        "review_status": "pending",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "review_note": null
+      }
+    },
+    {
+      "entity_id": "C00779595",
+      "name": "RSLC PAC",
+      "kind": "general_partisan",
+      "issue_ids": [],
+      "description": "The Republican State Leadership Committee (RSLC) is focused on one goal: winning. We are the largest organization of Republican state leaders in the country and the only national committee whose mission is to elect Republicans to multiple down-ballot, state-level offices in all 50 states.",
+      "quote": "The Republican State Leadership Committee (RSLC) is focused on one goal: winning. We are the largest organization of Republican state leaders in the country and the only national committee whose mission is to elect Republicans to multiple down-ballot, state-level offices in all 50 states.",
+      "source_urls": [
+        "https://rslc.gop/about/",
+        "https://www.fec.gov/data/committee/C00779595/"
+      ],
+      "provenance": {
+        "tagged_by": "xai-grok-4.3-2026-09-06",
+        "tagged_at": "2026-09-06",
+        "model": "grok-4.3",
+        "prompt_version": "classify_spender.v1",
+        "tools": [
+          "web_search"
+        ],
+        "tool_filters": {},
+        "response_id": "57cbfb0f-22b8-914c-84cc-058fabdb3f6b",
+        "retrieved_at": "2026-09-06T03:35:38+00:00",
+        "citations": [
+          "https://www.fec.gov/data/committee/C00779595/",
+          "https://rslc.gop/about/",
+          "https://www.opensecrets.org/political-action-committees-pacs/rslc-pac/C00779595/expenditures/2024",
+          "https://rslc.gop/memo-how-the-rslc-flipped-the-virginia-house/",
+          "https://rslc.gop/memo-pa-mail-in-ballot-program-general-election-overview/",
+          "https://projects.propublica.org/527-explorer/orgs/050532524",
+          "https://www.oregonlive.com/politics/2022/10/political-ads-hide-the-identity-of-deep-pocket-donors-complaints-to-elections-office-claim.html",
+          "https://www.influencewatch.org/political-party/republican-state-leadership-committee-rslc/",
+          "https://rslc.gop/rslc-pac-releases-second-ad-of-republican-roadmap-series-targeting-battleground-states-with-top-issues-for-voters/",
+          "https://ballotpedia.org/Republican_State_Leadership_Committee",
+          "https://www.genarchives..com/Towne-Bowditch/g0/p239.htm",
+          "https://apexshield..com/",
+          "https://www.genarchives..com/Towne-Bowditch/g0/p589.htm",
+          "https://www.genarchives..com/Towne-Bowditch/g0/p727.htm",
+          "https://.com/services/tooth-pain-root-canal/about-root-canal-therapy-or-endodontics/"
+        ],
+        "confidence": "high",
+        "review_status": "pending",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "review_note": null
+      }
+    },
+    {
+      "entity_id": "C00802389",
+      "name": "GIVEGREEN UNITED ACTION",
+      "kind": "multi_issue",
+      "issue_ids": [
+        "energy_climate"
+      ],
+      "description": "GiveGreen empowers you to give to the right race at the right time to win elections, address the climate crisis, protect our environment, and restore American democracy. We take the guesswork out of donating and make sure candidates understand your priorities.",
+      "quote": "GiveGreen empowers you to give to the right race at the right time to win elections, address the climate crisis, protect our environment, and restore American democracy. We take the guesswork out of donating and make sure candidates understand your priorities.",
+      "source_urls": [
+        "https://www.givegreen.com/about",
+        "https://www.fec.gov/data/committee/C00802389/"
+      ],
+      "provenance": {
+        "tagged_by": "xai-grok-4.3-2026-09-06",
+        "tagged_at": "2026-09-06",
+        "model": "grok-4.3",
+        "prompt_version": "classify_spender.v1",
+        "tools": [
+          "web_search"
+        ],
+        "tool_filters": {
+          "allowed_domains": [
+            "givegreen.com"
+          ]
+        },
+        "response_id": "92c57018-8557-9831-a19d-03006be5a7c7",
+        "retrieved_at": "2026-09-06T03:37:17+00:00",
+        "citations": [
+          "https://www.givegreen.com/",
+          "https://www.givegreen.com/get-involved",
+          "https://www.givegreen.com/about",
+          "https://www.givegreen.com/committees/yes-on-50-the-election-rigging-response-act-governor-newsoms-ballot-measure-committee",
+          "https://www.givegreen.com/privacy-policy",
+          "https://www.givegreen.com/committees/ce4a-action",
+          "https://www.givegreen.com/strategy/federal",
+          "https://www.givegreen.com/issues/clean-energy-transition",
+          "https://www.givegreen.com/why-givegreen",
+          "https://www.givegreen.com/issues/public-lands-oceans"
+        ],
+        "confidence": "high",
+        "review_status": "pending",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "review_note": null
+      }
+    },
+    {
+      "entity_id": "C00804823",
+      "name": "MAINSTREAM DEMOCRATS PAC",
+      "kind": "general_partisan",
+      "issue_ids": [],
+      "description": "Mainstream Democrats PAC exists to meet this moment. We support pragmatic Democratic leaders and work to defeat extreme candidates whose stated objective is to weaken the party and obstruct its ability to lead the country.",
+      "quote": "Mainstream Democrats PAC exists to meet this moment. We support pragmatic Democratic leaders and work to defeat extreme candidates whose stated objective is to weaken the party and obstruct its ability to lead the country.",
+      "source_urls": [
+        "https://mainstreamdemocrats.org/",
+        "https://www.fec.gov/data/committee/C00804823/"
+      ],
+      "provenance": {
+        "tagged_by": "xai-grok-4.3-2026-09-06",
+        "tagged_at": "2026-09-06",
+        "model": "grok-4.3",
+        "prompt_version": "classify_spender.v1",
+        "tools": [
+          "web_search"
+        ],
+        "tool_filters": {
+          "allowed_domains": [
+            "mainstreamdemocrats.org"
+          ]
+        },
+        "response_id": "15666fb0-faae-91ce-9124-ed0df3165c09",
+        "retrieved_at": "2026-09-06T03:12:57+00:00",
+        "citations": [
+          "https://mainstreamdemocrats.org/",
+          "https://theintercept.com/2022/10/16/democratic-party-progressive-israel-aipac-dmfi/",
+          "https://www.newsweek.com/democrats-launch-centrist-group-as-trump-attacks-socialists-communists-12130096",
+          "https://www.cnn.com/2026/07/29/politics/democratic-socialists-mamdani-trump-communism-analysis",
+          "https://www.presidency.ucsb.edu/documents/2024-democratic-party-platform",
+          "https://www.thenation.com/article/politics/mainstream-democrat/",
+          "https://www.commondreams.org/opinion/progressives-save-dems",
+          "https://www.democracynow.org/2026/7/10/ashik_siddique_dsa_2026_midterms_democrats",
+          "https://commonsensedemocrats.us/",
+          "https://www.theguardian.com/commentisfree/2026/jul/01/democratic-socialists-versus-corporate-democrats"
+        ],
+        "confidence": "high",
+        "review_status": "pending",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "review_note": null
+      }
+    },
+    {
+      "entity_id": "C00821611",
+      "name": "ASIAN AMERICANS FOR CHANGE FUND",
+      "kind": "general_partisan",
+      "issue_ids": [],
+      "description": "AAFCF organizes, empowers and mobilizes Asian Americans to engage in the democratic process through intergenerational community organizing, public policy advocacy, civic engagement, and leadership development to build political power.",
+      "quote": "Asian American Change Fund (AAFCF) was established in 2022 with the mission to organize, empower and mobilize Asian Americans - communities of West Asian, South Asian, Southeast Asian, and East Asian descent- to engage in the democratic process.",
+      "source_urls": [
+        "https://www.aafcfund.org/",
+        "https://www.fec.gov/data/committee/C00821611/"
+      ],
+      "provenance": {
+        "tagged_by": "xai-grok-4.3-2026-09-06",
+        "tagged_at": "2026-09-06",
+        "model": "grok-4.3",
+        "prompt_version": "classify_spender.v1",
+        "tools": [
+          "web_search"
+        ],
+        "tool_filters": {
+          "allowed_domains": [
+            "aafcfund.org"
+          ]
+        },
+        "response_id": "c4ed5944-6e34-9ac6-b939-82c0e6306b7c",
+        "retrieved_at": "2026-09-06T03:17:53+00:00",
+        "citations": [
+          "https://www.aafcfund.org/",
+          "https://www.aafcfund.org/aafc-virginia",
+          "https://www.aafcfund.org/aafc-pennsylvania",
+          "https://www.aafcfund.org/virginia-2025-candidates"
+        ],
+        "confidence": "high",
+        "review_status": "pending",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "review_note": null
+      }
+    },
+    {
+      "entity_id": "C00828608",
+      "name": "HARDWORKING AMERICANS INC.",
+      "kind": "candidate_aligned",
+      "issue_ids": [],
+      "description": "Our mission at Hardworking Americans Inc. is to support federal candidates who believe we should always put the hardworking men and women of this country first.",
+      "quote": "Our mission at Hardworking Americans Inc. is to support federal candidates who believe we should always put the hardworking men and women of this country first. Small businesses, families, and communities all trying to achieve the American Dream are the backbone of this country — and Hardworking Americans Inc. stands with them.",
+      "source_urls": [
+        "https://www.hardworkingamericans.org/",
+        "https://www.fec.gov/data/committee/C00828608/"
+      ],
+      "provenance": {
+        "tagged_by": "xai-grok-4.3-2026-09-06",
+        "tagged_at": "2026-09-06",
+        "model": "grok-4.3",
+        "prompt_version": "classify_spender.v1",
+        "tools": [
+          "web_search"
+        ],
+        "tool_filters": {
+          "allowed_domains": [
+            "hardworkingamericans.org"
+          ]
+        },
+        "response_id": "981e43dc-3184-9445-bb4c-d958cbf70313",
+        "retrieved_at": "2026-09-06T03:18:03+00:00",
+        "citations": [
+          "https://www.hardworkingamericans.org",
+          "https://www.hardworkingamericans.org/",
+          "https://www.hardworkingamericans.org/terms-conditions"
+        ],
+        "confidence": "high",
+        "review_status": "pending",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "review_note": null
+      }
+    },
+    {
+      "entity_id": "C00835041",
+      "name": "FORWARD BLUE",
+      "kind": "multi_issue",
+      "issue_ids": [
+        "abortion",
+        "labor_trade"
+      ],
+      "description": "We back leaders who show up for their communities, who refuse to apologize for believing in justice, who don’t flinch when extremists threaten them. We are not interested in politics as a hobby. We are here to change outcomes.",
+      "quote": "We back leaders who show up for their communities, who refuse to apologize for believing in justice, who don’t flinch when extremists threaten them. We are not interested in politics as a hobby. We are here to change outcomes.",
+      "source_urls": [
+        "https://www.forwardblue.org/about",
+        "https://www.fec.gov/data/committee/C00835041/"
+      ],
+      "provenance": {
+        "tagged_by": "xai-grok-4.3-2026-09-06",
+        "tagged_at": "2026-09-06",
+        "model": "grok-4.3",
+        "prompt_version": "classify_spender.v1",
+        "tools": [
+          "web_search"
+        ],
+        "tool_filters": {
+          "allowed_domains": [
+            "forwardblue.org"
+          ]
+        },
+        "response_id": "d2f6d942-3186-901b-8d9b-08a13cb1254b",
+        "retrieved_at": "2026-09-06T03:14:46+00:00",
+        "citations": [
+          "https://www.forwardblue.org/about",
+          "https://www.forwardblue.org/",
+          "https://victory.forwardblue.org/about",
+          "https://www.forwardblue.org/press",
+          "https://www.forwardblue.org/endorsements",
+          "https://www.forwardblue.org/contribution-rules",
+          "https://act.forwardblue.org/signup/202411-no-kings-act",
+          "https://www.forwardblue.org/privacy-policy",
+          "https://victory.forwardblue.org/p/americans-pay-more-trump-wants-save-act",
+          "https://victory.forwardblue.org/p/welcome-to-the-margin-of-victory"
+        ],
+        "confidence": "high",
+        "review_status": "pending",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "review_note": null
+      }
+    },
+    {
+      "entity_id": "C00869040",
+      "name": "BLUEVOTE.ORG",
+      "kind": "general_partisan",
+      "issue_ids": [],
+      "description": "BlueVote.org tackles low voter turnout with information and action. Our highly effective phonebanks and text banks educate, register, and motivate Pennsylvania progressive voters who decide elections in Pennsylvania and the nation.",
+      "quote": "BlueVote.org tackles low voter turnout with information and action. Our highly effective phonebanks and text banks educate, register, and motivate Pennsylvania progressive voters who decide elections in Pennsylvania and the nation.",
+      "source_urls": [
+        "https://www.bluevote.org/",
+        "https://www.fec.gov/data/committee/C00869040/"
+      ],
+      "provenance": {
+        "tagged_by": "xai-grok-4.3-2026-09-06",
+        "tagged_at": "2026-09-06",
+        "model": "grok-4.3",
+        "prompt_version": "classify_spender.v1",
+        "tools": [
+          "web_search"
+        ],
+        "tool_filters": {},
+        "response_id": "355847db-a553-9128-b565-f5e62d2e9b94",
+        "retrieved_at": "2026-09-06T03:35:48+00:00",
+        "citations": [
+          "https://www.bluevote.org/",
+          "https://www.bluevote.org/copy-of-articles",
+          "https://www.bluevote.org/voting-info",
+          "https://secure.actblue.com/donate/bluevote-org?refcode=directory",
+          "https://en.wikipedia.org/wiki/BlueVoice.org",
+          "https://www.youtube.com/watch?v=GrO5znaTz7s",
+          "https://www.vote.org/about",
+          "https://bsky.app/profile/bluevoterguide.bsky.social",
+          "https://www.cnn.com/2024/07/29/politics/voter-rolls-ballot-challenges-true-the-vote-elections",
+          "https://www.dailykos.com/stories/2023/6/1/2172665/elections/The-Downballot-How-progressives-are-organizing-blue-surge-voters-transcript/",
+          "https://bluevoterguide.org/about"
+        ],
+        "confidence": "high",
+        "review_status": "pending",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "review_note": null
+      }
+    },
+    {
+      "entity_id": "C00879510",
+      "name": "AMERICA PAC",
+      "kind": "general_partisan",
+      "issue_ids": [],
+      "description": "As a Super PAC, we develop effective and concise content to drive the point home through targeted campaigns for America, focusing on voter turnout, messaging with AI strategies, and research for precise voter targeting using information unavailable to candidates themselves.",
+      "quote": "As a Super PAC, we can collect and use voter information unavailable to candidates themselves, giving us more precise voter targeting.",
+      "source_urls": [
+        "https://america-pac.com/",
+        "https://www.fec.gov/data/committee/C00879510/"
+      ],
+      "provenance": {
+        "tagged_by": "xai-grok-4.3-2026-09-06",
+        "tagged_at": "2026-09-06",
+        "model": "grok-4.3",
+        "prompt_version": "classify_spender.v1",
+        "tools": [
+          "web_search"
+        ],
+        "tool_filters": {},
+        "response_id": "72cdc5fb-60e7-9cc9-a550-4a394eaf4f98",
+        "retrieved_at": "2026-09-06T03:28:45+00:00",
+        "citations": [
+          "https://.com/services/dental-anxiety-dental-fear/dental-phobia-dental-fear/",
+          "https://www.genarchives..com/Towne-Bowditch/g0/p273.htm",
+          "https://www..com/aishford.html",
+          "https://www.genarchives..com/Towne-Bowditch/g0/p205.htm",
+          "https://www.likedogsandcats..com/oak-creek/pet-euthanasia-oak-creek-wi/",
+          "https://.com/blog/toothpaste-how-to-choose-the-right-toothpaste-for-you/",
+          "https://www.genarchives..com/Towne-Bowditch/g0/p92.htm",
+          "https://www..com/nz/useful-maori-for-your-nz-campervan-holiday/",
+          "https://www.sacbee..com/guides/deals/daily/best-selling-beauty-products-on-sale/",
+          "http://www.thebesttaxi..com/gwinnett-taxi-service",
+          "https://en.wikipedia.org/wiki/America_PAC",
+          "https://america-pac.com/",
+          "https://www.opensecrets.org/political-action-committees-pacs/C00879510/summary/2024",
+          "https://www.influencewatch.org/political-party/america-pac/",
+          "http://web.archive.org/web/20250403170838/https://theamericapac.org/"
+        ],
+        "confidence": "high",
+        "review_status": "pending",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "review_note": null
+      }
+    },
+    {
+      "entity_id": "C00880518",
+      "name": "BITCOIN VOTER PAC",
+      "kind": "single_issue",
+      "issue_ids": [
+        "crypto_fintech"
+      ],
+      "description": "The Bitcoin Voter PAC is committed to helping elect Bitcoin champions who want to protect U.S. innovation and bring sound monetary policy to the American people and protect our financial freedom.",
+      "quote": "**The Bitcoin Voter PAC** is committed to helping elect Bitcoin champions who want to protect U.S. innovation and bring sound monetary policy to the American people. There are those in government who want to regulate and restrict access to cryptocurrency. The Bitcoin Voter PAC will help elect candidates who will protect our financial freedom.",
+      "source_urls": [
+        "https://www.bitcoinvoterpac.com/",
+        "https://www.fec.gov/data/committee/C00880518/"
+      ],
+      "provenance": {
+        "tagged_by": "xai-grok-4.3-2026-09-06",
+        "tagged_at": "2026-09-06",
+        "model": "grok-4.3",
+        "prompt_version": "classify_spender.v1",
+        "tools": [
+          "web_search"
+        ],
+        "tool_filters": {},
+        "response_id": "9d98e98c-5737-99a2-aaa3-1551cfcd6755",
+        "retrieved_at": "2026-09-06T03:16:54+00:00",
+        "citations": [
+          "https://www.bitcoinvoterpac.com/",
+          "https://www.bitcoinvoterproject.org/",
+          "https://www.linkedin.com/company/bitcoin-voter-project?trk=public_post-text",
+          "https://sunlightfoundation.com/2014/01/10/an-all-bitcoin-pac-opens-then-immediately-closes",
+          "https://vid.co/portfolio/political-ad-bitcoin-voter-project",
+          "https://www.bitcoinvoterproject.org/about/",
+          "https://www.foxbusiness.com/politics/bitcoin-miners-launch-ad-campaign-swing-states-boost-crypto-friendly-candidates",
+          "https://bitcoinmagazine.com/politics/house-speaker-mike-johnson-on-congress-crypto-were-in-this-together",
+          "https://bitcointalk.org/index.php?topic=401411.0",
+          "https://www.youtube.com/watch?v=1dRZkUkhW7k",
+          "https://www.linkedin.com/company/bitcoin-voter-project",
+          "https://coinpaper.com/5765/bitcoin-voter-pac-backs-ted-cruz-as-early-voting-begins-in-texas",
+          "https://cointelegraph.com/news/cryptocurrency-miners-nonprofit-bitcoin-voters-elections"
+        ],
+        "confidence": "high",
+        "review_status": "pending",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "review_note": null
+      }
+    },
+    {
+      "entity_id": "C00880682",
+      "name": "PIVOT VICTORY FUND",
+      "kind": "general_partisan",
+      "issue_ids": [],
+      "description": "The PIVOT Victory Fund works to mobilize Vietnamese Americans to support progressive federal candidates and preserve democracy.",
+      "quote": "The PIVOT Victory Fund works to mobilize Vietnamese Americans to support progressive federal candidates and preserve democracy.",
+      "source_urls": [
+        "https://pivotvictoryfund.org/",
+        "https://www.fec.gov/data/committee/C00880682/"
+      ],
+      "provenance": {
+        "tagged_by": "xai-grok-4.3-2026-09-06",
+        "tagged_at": "2026-09-06",
+        "model": "grok-4.3",
+        "prompt_version": "classify_spender.v1",
+        "tools": [
+          "web_search"
+        ],
+        "tool_filters": {},
+        "response_id": "0ec10ea2-cce0-9c6e-a2ce-6409f24651f9",
+        "retrieved_at": "2026-09-06T03:29:42+00:00",
+        "citations": [
+          "https:.com/blog/cv/",
+          "https://apexshield..com/",
+          "https://www.genarchives..com/Towne-Bowditch/g0/p475.htm",
+          "https://.com/blog/tags/architecture",
+          "https://www.genarchives..com/Towne-Bowditch/g0/p206.htm",
+          "https://.com/pages/about-us.php",
+          "https://www.genarchives..com/Towne-Bowditch/poems_Swikert_Charles_florida.htm",
+          "https://sellingenergy..com/courses/financial-analysis-basics",
+          "https://.com/female-infertility-franchise-company-in-india",
+          "https://vault12..com/blog/how-it-works-vault12-digital-inheritance-2652564751.html",
+          "https://www.fec.gov/data/committee/C00880682/",
+          "http://opensecrets.org/political-action-committees-pacs/pivot-victory-fund-ii/C00880682/summary/2024",
+          "https://pivotvictoryfund.org",
+          "https://www.opensecrets.org/outside-spending/detail/2024?cmte=C00880682&tab=expenditures",
+          "https://secure.actblue.com/donate/pivot-victory-fund-2025",
+          "http://docquery.fec.gov/cgi-bin/forms/C00826024/1660891/",
+          "https://www.opensecrets.org/outside-spending/detail/2024?cmte=C00826024",
+          "https://www.sec.gov/Archives/edgar/data/908695/000119312526383460/0001193125-26-383460.txt",
+          "https://secure.actblue.com/donate/pivot-victory-fund-pac-1?refcode=directory",
+          "http://docquery.fec.gov/cgi-bin/forms/C00826024/1669933/",
+          "https://pivotvictoryfund.org/"
+        ],
+        "confidence": "high",
+        "review_status": "pending",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "review_note": null
+      }
+    },
+    {
+      "entity_id": "C00891549",
+      "name": "AMERICA FIRST ACTION FUND",
+      "kind": "general_partisan",
+      "issue_ids": [],
+      "description": "America First Action Fund was created to champion these ideals and advocate for the rights of diligent citizens.",
+      "quote": "America First Action Fund was created to champion these ideals and advocate for the rights of diligent citizens.",
+      "source_urls": [
+        "https://americafirstactionfund.com/",
+        "https://www.fec.gov/data/committee/C00891549/"
+      ],
+      "provenance": {
+        "tagged_by": "xai-grok-4.3-2026-09-06",
+        "tagged_at": "2026-09-06",
+        "model": "grok-4.3",
+        "prompt_version": "classify_spender.v1",
+        "tools": [
+          "web_search"
+        ],
+        "tool_filters": {},
+        "response_id": "8fc6d46d-cf97-97a0-8310-7607dafe8dfd",
+        "retrieved_at": "2026-09-06T03:26:22+00:00",
+        "citations": [
+          "https://americafirstactionfund.com/",
+          "https://ballotpedia.org/America_First_Action",
+          "https://www.a1apac.org/about/",
+          "https://www.americafirstpolicy.com/issues/center-for-american-security-overview",
+          "https://en.wikipedia.org/wiki/America_First_Action",
+          "https://www.linkedin.com/company/america-first-action",
+          "https://www.zoominfo.com/c/america-first-action-inc/420541238",
+          "https://acf.gov/about/acf-vision-mission-values",
+          "https://mediabiasfactcheck.com/america-first-action-superpac/",
+          "https://en.wikipedia.org/wiki/America_First_Policies",
+          "https://www.genarchives..com/Towne-Bowditch/g0/p496.htm",
+          "https://apexshield..com/",
+          "https://www.genarchives..com/Towne-Bowditch/g0/p721.htm",
+          "https://www.genarchives..com/Towne-Bowditch/g0/p586.htm",
+          "https://www.genarchives..com/Towne-Bowditch/g0/p346.htm"
+        ],
+        "confidence": "high",
+        "review_status": "pending",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "review_note": null
+      }
+    },
+    {
+      "entity_id": "C90011156",
+      "name": "WORKING AMERICA",
+      "kind": "labor",
+      "issue_ids": [],
+      "description": "Working America unites working people who don’t have a union on the job. With more than 5 million members in urban and suburban communities, we work together for good jobs, a fair economy and a democracy that represents all of us.",
+      "quote": "Working America unites working people who don’t have a union on the job. With more than 5 million members in urban and suburban communities, we work together for good jobs, a fair economy and a democracy that represents all of us.",
+      "source_urls": [
+        "https://workingamerica.org/about/",
+        "https://www.fec.gov/data/committee/C90011156/"
+      ],
+      "provenance": {
+        "tagged_by": "xai-grok-4.3-2026-09-06",
+        "tagged_at": "2026-09-06",
+        "model": "grok-4.3",
+        "prompt_version": "classify_spender.v1",
+        "tools": [
+          "web_search"
+        ],
+        "tool_filters": {},
+        "response_id": "afca1ae4-cd69-9d87-9247-98806313d0f2",
+        "retrieved_at": "2026-09-06T03:12:40+00:00",
+        "citations": [
+          "https://.com/services/dental-anxiety-dental-fear/dental-phobia-dental-fear/",
+          "https://www.genarchives..com/Towne-Bowditch/g0/p479.htm",
+          "https://apexshield..com/",
+          "https://.com/blog/toothpaste-how-to-choose-the-right-toothpaste-for-you/",
+          "https://www.genarchives..com/Towne-Bowditch/g0/p97.htm",
+          "https://.com/blog/category/dr-dorfman-on-wsjcom/page/4/",
+          "https://www.genarchives..com/Towne-Bowditch/g0/p58.htm",
+          "https://www.sacbee..com/guides/deals/daily/best-selling-beauty-products-on-sale/",
+          "https://www.likedogsandcats..com/oak-creek/pet-euthanasia-oak-creek-wi/",
+          "https://www.genarchives..com/Towne-Bowditch/g0/p612.htm",
+          "http://dbpedia.org/resource/Working_America",
+          "https://docs.candid.org/990/200/200263611/200263611_2025_202630369349301803_990.pdf",
+          "https://www.influencewatch.org/labor-union/working-america/",
+          "https://workingamerica.org/issue/goodjobs/",
+          "https://workingamerica.org/",
+          "https://workingamerica.org/feed/",
+          "https://workingamerica.org/privacy/",
+          "https://workingamerica.org/gethelp/childcare/feed/",
+          "https://workingamerica.org/wp-content/uploads/2024/01/WA-OHCS-NDO-project_June2017_FINAL.pdf",
+          "https://workingamerica.org/wp-content/uploads/2023/12/UnderstandingPersonalStake_0.pdf",
+          "https://workingamerica.org/our-community-agenda/",
+          "https://workingamerica.org/home-safety/",
+          "https://workingamerica.org/issue/corporateaccountability/",
+          "https://workingamerica.org/about/",
+          "https://workingamerica.org/gethelp/home-resources/feed/"
+        ],
+        "confidence": "high",
+        "review_status": "pending",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "review_note": null
+      }
+    },
+    {
+      "entity_id": "C90017492",
+      "name": "INDIVISIBLE PROJECT INC.",
+      "kind": "general_partisan",
+      "issue_ids": [],
+      "description": "The Indivisible Project drives coordinated campaigns, powering the grassroots Indivisible movement to defeat the rightwing takeover of American government and win an inclusive democracy and bold progressive policies.",
+      "quote": "drives coordinated campaigns, powering the grassroots Indivisible movement to defeat the rightwing takeover of American government and win an inclusive democracy and bold progressive policies.",
+      "source_urls": [
+        "https://indivisible.org/about/",
+        "https://www.fec.gov/data/committee/C90017492/"
+      ],
+      "provenance": {
+        "tagged_by": "xai-grok-4.3-2026-09-06",
+        "tagged_at": "2026-09-06",
+        "model": "grok-4.3",
+        "prompt_version": "classify_spender.v1",
+        "tools": [
+          "web_search"
+        ],
+        "tool_filters": {},
+        "response_id": "0d868352-ca6a-9ffa-b0fe-ed40ae8ddedc",
+        "retrieved_at": "2026-09-06T03:33:51+00:00",
+        "citations": [
+          "https://indivisible.org/about/",
+          "https://indivisible.org/about",
+          "https://www.guidestar.org/profile/81-4944067",
+          "https://docs.candid.org/990/814/814944067/814944067_2024_202512889349302441_990.pdf",
+          "https://ballotpedia.org/Indivisible_Project",
+          "https://himalayas.app/companies/indivisible-project",
+          "https://990finder.com/814944067/",
+          "https://www.indivisible.org/about-us/",
+          "https://tvtropes.org/pmwiki/pmwiki.php/VideoGame/Indivisible",
+          "https://www.zoominfo.com/c/indivisible-project/352664520",
+          "https://builtin.com/company/indivisible-project",
+          "https://www.theinvisibleproject.org/our-story"
+        ],
+        "confidence": "high",
+        "review_status": "pending",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "review_note": null
+      }
+    },
+    {
+      "entity_id": "C90020116",
+      "name": "CHESAPEAKE CLIMATE ACTION NETWORK ACTION FUND",
+      "kind": "single_issue",
+      "issue_ids": [
+        "energy_climate"
+      ],
+      "description": "To effect change in public policy at local, state and national levels to directly address the threat of global warming through voter education, lobbying and participation in the electoral process, focusing most efforts in the Chesapeake Bay states together with its sister organization.",
+      "quote": "The mission of the CCAN Action Fund is to effect change in public policy at local, state and national levels to directly address the threat of global warming. Through voter education, lobbying and participation in the electoral process, we seek to move our country into a leadership position on the most urgent global issue of our time — the climate crisis.",
+      "source_urls": [
+        "https://ccanactionfund.org/about/mission/",
+        "https://www.fec.gov/data/committee/C90020116/"
+      ],
+      "provenance": {
+        "tagged_by": "xai-grok-4.3-2026-09-06",
+        "tagged_at": "2026-09-06",
+        "model": "grok-4.3",
+        "prompt_version": "classify_spender.v1",
+        "tools": [
+          "web_search"
+        ],
+        "tool_filters": {},
+        "response_id": "72c81c20-6437-9027-b8c1-3c2406f10e03",
+        "retrieved_at": "2026-09-06T03:30:16+00:00",
+        "citations": [
+          "https://www.fec.gov/data/committee/C90020116/",
+          "https://www.guidestar.org/profile/11-3644283",
+          "https://ccanactionfund.org/media/CCAF-FY24-Audited-Financial-Statements.pdf",
+          "https://www.causeiq.com/organizations/chesapeake-climate-action-network,113644283/",
+          "https://docs.candid.org/990/010/010879928/010879928_2024_202521219349301927_990.pdf",
+          "https://www.influencewatch.org/non-profit/chesapeake-climate-action-network-action-fund/",
+          "https://www.causeiq.com/organizations/chesapeake-climate-action-network-action-fund,010879928/",
+          "https://chesapeakeclimate.org/ccan-summer-newsletter-2026/",
+          "https://www.influencewatch.org/non-profit/chesapeake-climate-action-network/",
+          "https://impala.digital/app/profile/37327/overview",
+          "https://chesapeakeclimate.org/mission/",
+          "https://www.guidestar.org/profile/01-0879928",
+          "https://ccanactionfund.org/about/mission/",
+          "https://chesapeakeclimate.org/?ref=51st.news",
+          "https://www.linkedin.com/company/chesapeake-climate-action-network",
+          "https://actionnetwork.org/groups/chesapeake-climate-action-network",
+          "https://actionnetwork.org/groups/ccan"
+        ],
+        "confidence": "high",
+        "review_status": "pending",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "review_note": null
+      }
+    },
+    {
+      "entity_id": "C90020363",
+      "name": "NAKASEC ACTION FUND",
+      "kind": "multi_issue",
+      "issue_ids": [
+        "immigration"
+      ],
+      "description": "We organize, advocate, and fight for the civil, immigrant and human rights of all people in our community which include the low-income, recent immigrant, limited English proficient, undocumented, queer, young people, seniors, and women.",
+      "quote": "We organize, advocate, and fight for the civil, immigrant and human rights of all people in our community which include the low-income, recent immigrant, limited English proficient, undocumented, queer, young people, seniors, and women.",
+      "source_urls": [
+        "https://nakasecactionfund.org/",
+        "https://www.fec.gov/data/committee/C90020363/"
+      ],
+      "provenance": {
+        "tagged_by": "xai-grok-4.3-2026-09-06",
+        "tagged_at": "2026-09-06",
+        "model": "grok-4.3",
+        "prompt_version": "classify_spender.v1",
+        "tools": [
+          "web_search"
+        ],
+        "tool_filters": {},
+        "response_id": "f259ad01-1788-9f1f-9f87-08871ff56ba1",
+        "retrieved_at": "2026-09-06T03:16:09+00:00",
+        "citations": [
+          "https://nakasecactionfund.org/",
+          "https://www.guidestar.org/profile/87-0752611",
+          "https://nakasecactionfund.org/2025-policy-texas/",
+          "https://www.influencewatch.org/non-profit/national-korean-american-service-and-education-consortium-nakasec/",
+          "https://nakasec.org/about-us/our-story/",
+          "https://www.causeiq.com/organizations/nakasec-action-fund,870752611/",
+          "https://www.charitynavigator.org/ein/870752611",
+          "https://nakasecactionfund.org/2024ga/",
+          "https://nakasecactionfund.org/new-jersey/",
+          "https://nakasec.org/",
+          "https://www.genarchives..com/Towne-Bowditch/g0/p310.htm",
+          "https://apexshield..com/",
+          "https://www.likedogsandcats..com/beaverton/dog-vaccinations-beaverton-or/",
+          "https://www.genarchives..com/Towne-Bowditch/g0/p627.htm",
+          "https://.com/blog/pre-dental-education-at-the-center-for-special-dentistry/",
+          "https://.com/nutrition-supplements",
+          "https://www.genarchives..com/Towne-Bowditch/g0/p213.htm",
+          "https://www.genarchives..com/Towne-Bowditch/g0/p633.htm",
+          "https://www.genarchives..com/Towne-Bowditch/g0/p466.htm",
+          "https://www.genarchives..com/Towne-Bowditch/g0/p635.htm"
+        ],
+        "confidence": "high",
+        "review_status": "pending",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "review_note": null
+      }
+    },
+    {
+      "entity_id": "C90022906",
+      "name": "ACTION TOGETHER NEPA INC.",
+      "kind": "multi_issue",
+      "issue_ids": [
+        "healthcare",
+        "energy_climate",
+        "guns"
+      ],
+      "description": "Action Together NEPA is a grassroots progressive organization dedicated to community action and political advocacy. We support bold progressive policies that will preserve our democracy and promote social and economic justice.",
+      "quote": "Our grassroots, progressive organization is dedicated to community action and political advocacy. We support bold progressive policies that will preserve our democracy and promote social and economic justice.",
+      "source_urls": [
+        "https://www.actiontogethernepa.org/",
+        "https://www.fec.gov/data/committee/C90022906/"
+      ],
+      "provenance": {
+        "tagged_by": "xai-grok-4.3-2026-09-06",
+        "tagged_at": "2026-09-06",
+        "model": "grok-4.3",
+        "prompt_version": "classify_spender.v1",
+        "tools": [
+          "web_search"
+        ],
+        "tool_filters": {},
+        "response_id": "02e10a63-26b5-9a61-a4e6-d9728429a2ea",
+        "retrieved_at": "2026-09-06T03:29:16+00:00",
+        "citations": [
+          "https://www.genarchives..com/Towne-Bowditch/g0/p621.htm",
+          "https://www.genarchives..com/Towne-Bowditch/g0/p555.htm",
+          "https://www.genarchives..com/Towne-Bowditch/g0/p732.htm",
+          "https://www.genarchives..com/Towne-Bowditch/g0/p360.htm",
+          "https://www.genarchives..com/Towne-Bowditch/g0/p58.htm",
+          "https://www.genarchives..com/Towne-Bowditch/g0/p206.htm",
+          "https://www.genarchives..com/Towne-Bowditch/g0/p10.htm",
+          "https://www.genarchives..com/Towne-Bowditch/g0/p489.htm",
+          "https://www.genarchives..com/Towne-Bowditch/g0/p466.htm",
+          "https://www.genarchives..com/Towne-Bowditch/g0/p353.htm",
+          "https://docquery.fec.gov/cgi-bin/forms/C90022906/f57",
+          "https://www.actiontogethernepa.org/we-believe",
+          "https://www.actiontogethernepa.org/",
+          "https://www.opensecrets.org/political-action-committees-pacs/action-together-nepa/C90022906/expenditures/2024",
+          "https://www.fec.gov/data/committee/C00740845/",
+          "https://fox56.com/news/local/action-together-nepa-expands-to-bigger-hq-in-downtown-wilkes-barre",
+          "https://impala.digital/public/profiles/82-1570948/overview",
+          "https://www.youtube.com/shorts/tUg68hHi99A",
+          "https://docquery.fec.gov/cgi-bin/forms/C90022906/1870264/",
+          "https://secure.actblue.com/donate/action-together-nepa--inc--1"
+        ],
+        "confidence": "high",
+        "review_status": "pending",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "review_note": null
+      }
+    },
+    {
+      "entity_id": "C90023037",
+      "name": "POPULATION CONNECTION ACTION FUND",
+      "kind": "single_issue",
+      "issue_ids": [
+        "abortion"
+      ],
+      "description": "Population Connection Action Fund raises awareness of stabilizing world population sustainably, fights for global access to comprehensive reproductive health care including contraceptives and safe abortion, mobilizes its grassroots for progressive federal policies, and endorses supportive candidates.",
+      "quote": "Raising awareness of the need to stabilize world population at a level that can be sustained by Earth’s resources; Fighting to ensure that everyone in the world has access to comprehensive reproductive health care, including the full range of contraceptives and safe abortion care",
+      "source_urls": [
+        "https://www.populationconnectionaction.org/about-us/",
+        "https://www.fec.gov/data/committee/C90023037/"
+      ],
+      "provenance": {
+        "tagged_by": "xai-grok-4.3-2026-09-06",
+        "tagged_at": "2026-09-06",
+        "model": "grok-4.3",
+        "prompt_version": "classify_spender.v1",
+        "tools": [
+          "web_search"
+        ],
+        "tool_filters": {},
+        "response_id": "874f79f0-6438-9c09-b8ff-aed73ede40a9",
+        "retrieved_at": "2026-09-06T03:34:09+00:00",
+        "citations": [
+          "https://www.populationconnectionaction.org/about-us/",
+          "https://populationconnectionaction.org/about-us/",
+          "https://populationconnection.org/",
+          "https://www.populationconnectionaction.org/",
+          "https://www.populationconnectionaction.org/about-us/diversity-equity-inclusion-justice/",
+          "https://www.guidestar.org/profile/46-3083014",
+          "https://web.archive.org/web/20220816133807/https://www.populationconnectionaction.org/",
+          "https://populationconnection.org/act/",
+          "https://populationconnection.org/wp-content/uploads/2025/06/PopConn-2024-Consolidated-FS.pdf",
+          "https://populationconnection.org/wp-content/uploads/2026/02/PC_Brochure_Feb2026_12pt.pdf",
+          "https://www.genarchives..com/Towne-Bowditch/g0/p147.htm",
+          "https://apexshield..com/",
+          "https://www.genarchives..com/Towne-Bowditch/g0/p360.htm",
+          "https://www.genarchives..com/Towne-Bowditch/g0/p651.htm",
+          "https://www.genarchives..com/Towne-Bowditch/g0/p213.htm"
+        ],
+        "confidence": "high",
+        "review_status": "pending",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "review_note": null
+      }
+    }
+  ]
+}
