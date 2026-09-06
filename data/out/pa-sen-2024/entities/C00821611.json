@@ -330,5 +330,51 @@
       "last_date": "2024-10-16",
       "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00821611&payee_name=NEW+MAINSTREAM+MEDIA"
     }
-  ]
+  ],
+  "x_enrichment": {
+    "issue_focus": {
+      "kind": "general_partisan",
+      "issue_ids": [],
+      "description": "AAFCF organizes, empowers and mobilizes Asian Americans to engage in the democratic process through intergenerational community organizing, public policy advocacy, civic engagement, and leadership development to build political power.",
+      "basis": {
+        "basis": "inferred",
+        "rule": "x_issue_focus",
+        "source_urls": [
+          "https://www.aafcfund.org/",
+          "https://www.fec.gov/data/committee/C00821611/"
+        ],
+        "checked_by": null,
+        "checked_at": null
+      },
+      "label": "Machine-tagged from the committee's own website (grok-4.3, 2026-09-06); not part of the record",
+      "quote": "Asian American Change Fund (AAFCF) was established in 2022 with the mission to organize, empower and mobilize Asian Americans - communities of West Asian, South Asian, Southeast Asian, and East Asian descent- to engage in the democratic process.",
+      "provenance": {
+        "tagged_by": "xai-grok-4.3-2026-09-06",
+        "tagged_at": "2026-09-06",
+        "model": "grok-4.3",
+        "prompt_version": "classify_spender.v1",
+        "tools": [
+          "web_search"
+        ],
+        "tool_filters": {
+          "allowed_domains": [
+            "aafcfund.org"
+          ]
+        },
+        "response_id": "c4ed5944-6e34-9ac6-b939-82c0e6306b7c",
+        "retrieved_at": "2026-09-06T03:17:53+00:00",
+        "citations": [
+          "https://www.aafcfund.org/",
+          "https://www.aafcfund.org/aafc-virginia",
+          "https://www.aafcfund.org/aafc-pennsylvania",
+          "https://www.aafcfund.org/virginia-2025-candidates"
+        ],
+        "confidence": "high",
+        "review_status": "pending",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "review_note": null
+      }
+    }
+  }
 }

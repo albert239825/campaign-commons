@@ -54,6 +54,7 @@ class EnrichCounts:
     ads: int = 0
     with_shares: int = 0
     tagged: int = 0
+    machine_tagged: int = 0
     links_by_basis: Counter[str] = field(default_factory=Counter)
     same_window_buys: int = 0
     ads_with_same_window_buys: int = 0
@@ -111,6 +112,42 @@ def issue_tags(row: JsonDict, creative_url: str) -> JsonDict:
             "checked_by": row["tagged_by"],
             "checked_at": row["tagged_at"],
         },
+    }
+
+
+def machine_issue_tags(row: JsonDict) -> JsonDict | None:
+    if row is None:
+        return None
+    issue_ids = row.get("issue_ids")
+    provenance = row.get("provenance")
+    if not isinstance(issue_ids, list) or not issue_ids or not isinstance(provenance, dict):
+        return None
+    status = provenance.get("review_status")
+    if status == "rejected":
+        return None
+    model = str(provenance.get("model", "unknown"))
+    tagged_at = str(provenance.get("tagged_at", ""))
+    reviewed_by = provenance.get("reviewed_by")
+    reviewed_at = provenance.get("reviewed_at")
+    accepted = status == "accepted"
+    basis = {
+        "basis": "verified" if accepted else "inferred",
+        "rule": (
+            f"Classified by {model} from the ad's transcript ({tagged_at}); accepted by {reviewed_by} {reviewed_at}"
+            if accepted
+            else f"Classified by {model} from the ad's transcript ({tagged_at}); pending human review"
+        ),
+        "source_urls": list(row.get("source_urls", [])),
+        "checked_by": reviewed_by if accepted else None,
+        "checked_at": reviewed_at if accepted else None,
+    }
+    return {
+        "issue_ids": list(issue_ids),
+        "basis": basis,
+        "label": f"Machine-tagged from the ad's transcript ({model}, {tagged_at}); not part of the record",
+        "quote": row.get("quote"),
+        "transcript_kind": row.get("transcript_kind"),
+        "provenance": provenance,
     }
 
 
@@ -341,6 +378,9 @@ def enrich_notes(c: EnrichCounts, tagger_count: int) -> list[str]:
         f"at its ad-library URL ({tagger_count} hand-tagged rows in data/hand). Untagged ads are not 'about nothing'; nobody "
         "has tagged them.",
         NOTE_PREFIX
+        + f"{c.machine_tagged} of {c.ads} ads carry optional machine transcript issue tags; these are labelled inferred "
+        "until a human accepts them and never replace human issue tags.",
+        NOTE_PREFIX
         + WINDOW_RULE
         + f" {c.ads_with_same_window_buys} of {c.ads} ads list same_window_buys ({c.same_window_buys} vendor rows): digital, "
         "production or unclassified buys in the window (a TV, mail or phone buy cannot have placed a Google ad). These are "
@@ -358,11 +398,13 @@ def enrich(
     vendors: dict[str, JsonDict],
     ad_issues: JsonDict,
     vendor_ad_links: JsonDict,
+    x_ad_issues: JsonDict | None = None,
 ) -> tuple[EnrichCounts, set[str]]:
     """Mutate gallery (and vendors) in place; returns counts and the ids of vendor files that changed."""
     ads = gallery["ads"]
     assert isinstance(ads, list)
     issue_rows = {str(r["ad_id"]): r for r in _rows(ad_issues)}
+    machine_rows = {str(r["ad_id"]): r for r in _rows(x_ad_issues or {})}
     hand_links = {(str(r["ad_id"]), str(r["vendor_id"])): r for r in _rows(vendor_ad_links)}
     counts = EnrichCounts(ads=len(ads))
     seen_sponsors: dict[str, bool] = {}
@@ -380,11 +422,16 @@ def enrich(
             counts.with_shares += 1
         row = issue_rows.get(str(ad["ad_id"]))
         ad.pop("issues", None)
+        ad.pop("machine_issues", None)
         ad.pop("vendor_links", None)
         ad.pop("same_window_buys", None)
         if row is not None:
             ad["issues"] = issue_tags(row, str(ad["creative_url"]))
             counts.tagged += 1
+        machine = machine_issue_tags(machine_rows.get(str(ad["ad_id"])))
+        if machine is not None:
+            ad["machine_issues"] = machine
+            counts.machine_tagged += 1
         buys = same_window_buys(ad, entity) if entity is not None else []
         ad["same_window_buys"] = buys
         if buys:
@@ -442,6 +489,7 @@ def run(race_id: str) -> None:
         vendors,
         load_hand(hand_dir / "ad_issues.json"),
         load_hand(hand_dir / "vendor_ad_links.json"),
+        load_hand(hand_dir / "x_ad_issues.json"),
     )
     write_json(ads_path, gallery)
     for vendor_id in sorted(changed):
@@ -450,6 +498,7 @@ def run(race_id: str) -> None:
         print(f"WARN ad_issues.json row {ad_id} matches no ad in ads.json")
     print(
         f"{counts.ads} ads: {counts.with_shares} with sponsor shares, {counts.tagged} tagged, "
+        f"{counts.machine_tagged} with machine issue tags, "
         f"{counts.ads_with_same_window_buys} with same-window buys ({counts.same_window_buys} rows), "
         f"links {dict(counts.links_by_basis)} ({counts.sponsors_with_vendors} sponsors with vendor rows, "
         f"{counts.sponsors_without_vendors} without), {counts.vendor_files_patched} vendor files patched"

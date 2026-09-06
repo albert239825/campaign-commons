@@ -449,5 +449,64 @@
       "last_date": "2024-10-16",
       "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00880682&payee_name=NERDROCK+MEDIA%2C+LLC"
     }
-  ]
+  ],
+  "x_enrichment": {
+    "issue_focus": {
+      "kind": "general_partisan",
+      "issue_ids": [],
+      "description": "The PIVOT Victory Fund works to mobilize Vietnamese Americans to support progressive federal candidates and preserve democracy.",
+      "basis": {
+        "basis": "inferred",
+        "rule": "x_issue_focus",
+        "source_urls": [
+          "https://pivotvictoryfund.org/",
+          "https://www.fec.gov/data/committee/C00880682/"
+        ],
+        "checked_by": null,
+        "checked_at": null
+      },
+      "label": "Machine-tagged from the committee's own website (grok-4.3, 2026-09-06); not part of the record",
+      "quote": "The PIVOT Victory Fund works to mobilize Vietnamese Americans to support progressive federal candidates and preserve democracy.",
+      "provenance": {
+        "tagged_by": "xai-grok-4.3-2026-09-06",
+        "tagged_at": "2026-09-06",
+        "model": "grok-4.3",
+        "prompt_version": "classify_spender.v1",
+        "tools": [
+          "web_search"
+        ],
+        "tool_filters": {},
+        "response_id": "0ec10ea2-cce0-9c6e-a2ce-6409f24651f9",
+        "retrieved_at": "2026-09-06T03:29:42+00:00",
+        "citations": [
+          "https:.com/blog/cv/",
+          "https://apexshield..com/",
+          "https://www.genarchives..com/Towne-Bowditch/g0/p475.htm",
+          "https://.com/blog/tags/architecture",
+          "https://www.genarchives..com/Towne-Bowditch/g0/p206.htm",
+          "https://.com/pages/about-us.php",
+          "https://www.genarchives..com/Towne-Bowditch/poems_Swikert_Charles_florida.htm",
+          "https://sellingenergy..com/courses/financial-analysis-basics",
+          "https://.com/female-infertility-franchise-company-in-india",
+          "https://vault12..com/blog/how-it-works-vault12-digital-inheritance-2652564751.html",
+          "https://www.fec.gov/data/committee/C00880682/",
+          "http://opensecrets.org/political-action-committees-pacs/pivot-victory-fund-ii/C00880682/summary/2024",
+          "https://pivotvictoryfund.org",
+          "https://www.opensecrets.org/outside-spending/detail/2024?cmte=C00880682&tab=expenditures",
+          "https://secure.actblue.com/donate/pivot-victory-fund-2025",
+          "http://docquery.fec.gov/cgi-bin/forms/C00826024/1660891/",
+          "https://www.opensecrets.org/outside-spending/detail/2024?cmte=C00826024",
+          "https://www.sec.gov/Archives/edgar/data/908695/000119312526383460/0001193125-26-383460.txt",
+          "https://secure.actblue.com/donate/pivot-victory-fund-pac-1?refcode=directory",
+          "http://docquery.fec.gov/cgi-bin/forms/C00826024/1669933/",
+          "https://pivotvictoryfund.org/"
+        ],
+        "confidence": "high",
+        "review_status": "pending",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "review_note": null
+      }
+    }
+  }
 }

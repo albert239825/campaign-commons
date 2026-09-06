@@ -1,0 +1,52 @@
+{
+  "$ref": "#/definitions/hand_x_accounts",
+  "definitions": {
+    "hand_x_accounts": {
+      "type": "object",
+      "properties": {
+        "race_id": {
+          "type": "string"
+        },
+        "method": {
+          "type": "string"
+        },
+        "rows": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "candidate_id": {
+                "type": "string"
+              },
+              "handles": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                },
+                "minItems": 1,
+                "maxItems": 20
+              },
+              "source_url": {
+                "type": "string",
+                "format": "uri"
+              }
+            },
+            "required": [
+              "candidate_id",
+              "handles",
+              "source_url"
+            ],
+            "additionalProperties": false
+          }
+        }
+      },
+      "required": [
+        "race_id",
+        "method",
+        "rows"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "$schema": "http://json-schema.org/draft-07/schema#"
+}

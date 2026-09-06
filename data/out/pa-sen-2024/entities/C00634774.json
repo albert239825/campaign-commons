@@ -863,5 +863,63 @@
       "last_date": "2024-10-30",
       "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00634774&payee_name=BRAVE+NEW+TELEVISION"
     }
-  ]
+  ],
+  "x_enrichment": {
+    "issue_focus": {
+      "kind": "candidate_aligned",
+      "issue_ids": [],
+      "description": "Common Sense for America PAC supports candidates who have the courage to lead with the common sense that made America the greatest country in all of human history while defending core American values with straight talk and hard work.",
+      "basis": {
+        "basis": "inferred",
+        "rule": "x_issue_focus",
+        "source_urls": [
+          "https://commonsenseamericapac.com/",
+          "https://www.fec.gov/data/committee/C00634774/"
+        ],
+        "checked_by": null,
+        "checked_at": null
+      },
+      "label": "Machine-tagged from the committee's own website (grok-4.3, 2026-09-06); not part of the record",
+      "quote": "Common Sense for America PAC supports candidates who have the courage to lead with the common sense that made America the greatest country in all of human history.",
+      "provenance": {
+        "tagged_by": "xai-grok-4.3-2026-09-06",
+        "tagged_at": "2026-09-06",
+        "model": "grok-4.3",
+        "prompt_version": "classify_spender.v1",
+        "tools": [
+          "web_search"
+        ],
+        "tool_filters": {},
+        "response_id": "609d62b2-2e18-957c-8db9-10dd889c57e6",
+        "retrieved_at": "2026-09-06T03:13:43+00:00",
+        "citations": [
+          "https://www.genarchives..com/Towne-Bowditch/g0/p360.htm",
+          "https://.com/blog/toothpaste-how-to-choose-the-right-toothpaste-for-you/",
+          "https://www.genarchives..com/Towne-Bowditch/g0/p446.htm",
+          "https://.com/blog/page/31/",
+          "https://www.genarchives..com/Towne-Bowditch/g0/p136.htm",
+          "https://www.genarchives..com/Towne-Bowditch/g0/p343.htm",
+          "https://www.genarchives..com/Towne-Bowditch/g0/p14.htm",
+          "https://www.genarchives..com/Towne-Bowditch/g0/p273.htm",
+          "https://www.genarchives..com/Towne-Bowditch/g0/p348.htm",
+          "https://www.genarchives..com/Towne-Bowditch/g0/p368.htm",
+          "https://www.fec.gov/data/committee/C00634774/",
+          "https://www.commonsenseforamerica.org/",
+          "https://opensecrets.org/political-action-committees-pacs/competitive-markets-pac/C00634774/summary/2024",
+          "https://commonsenseamericapac.com/",
+          "https://www.opensecrets.org/outside-spending/detail/2024?cmte=C00634774&tab=targeted_candidates",
+          "https://scispace.com/pdf/next-to-the-man-and-not-forgotten-gay-mcdougall-and-the-3q32h6kyxy.pdf",
+          "https://www.star-telegram.com/opinion/bud-kennedy/article242579951.html",
+          "https://www.youtube.com/watch?v=Fod80u02kW4",
+          "https://etheses.whiterose.ac.uk/id/eprint/5859/1/TAD%20THESIS%20FINAL%20POST%20VIVA%20JAN%202014.pdf",
+          "https://bencodems.org/home/affinity-group-news/"
+        ],
+        "confidence": "high",
+        "review_status": "pending",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "review_note": null
+      }
+    }
+  }
 }

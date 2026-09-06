@@ -27,6 +27,7 @@ import { ISSUE_IDS } from "./issues";
  * Hand-maintained inputs (data/hand/<race_id>/, validated by the same tooling, merged in by the pipeline):
  *   issue_focus.json                    -> HandIssueFocusFile
  *   ad_issues.json                      -> HandAdIssuesFile
+ *   x_ad_issues.json                    -> HandXAdIssuesFile
  *   ie_issues.json                      -> HandIeIssuesFile
  *   issue_positions.json                -> HandIssuePositionsFile
  *   vendor_aliases.json                 -> HandVendorAliasesFile
@@ -150,6 +151,32 @@ export const BasisSchema = z.discriminatedUnion("basis", [
 export const IssueTagsSchema = z.object({
   issue_ids: z.array(IssueIdSchema).min(1).max(3), // first is primary
   basis: BasisSchema,
+});
+
+export const MachineProvenanceSchema = z.object({
+  tagged_by: z.string(),
+  tagged_at: z.string(),
+  model: z.string(),
+  prompt_version: z.string(),
+  tools: z.array(z.enum(["web_search", "x_search"])),
+  tool_filters: z.record(z.unknown()),
+  response_id: z.string().nullable(),
+  retrieved_at: z.string(),
+  citations: z.array(z.string().url()),
+  confidence: z.enum(["high", "medium", "low"]),
+  review_status: z.enum(["pending", "accepted", "rejected"]),
+  reviewed_by: z.string().nullable(),
+  reviewed_at: z.string().nullable(),
+  review_note: z.string().nullable(),
+});
+
+export const TranscriptKindSchema = z.enum(["auto_caption", "manual_caption", "whisper", "ad_text", "poster"]);
+
+export const MachineIssueTagsSchema = IssueTagsSchema.extend({
+  label: z.string(),
+  quote: z.string().nullable(),
+  transcript_kind: TranscriptKindSchema,
+  provenance: MachineProvenanceSchema,
 });
 
 /** What an independent expenditure paid for, classified from the filed `purpose` string. Raw purpose is always kept. */
@@ -373,6 +400,14 @@ export const IssuePositionSchema = z.object({
   basis: BasisSchema, // inferred (model-read, checked_by = model id) | verified (a person confirmed quote + coding)
 });
 
+export const MachineIssueFocusSchema = focusVariants({
+  description: z.string().max(400),
+  basis: BasisSchema,
+  label: z.string(),
+  quote: z.string().max(400),
+  provenance: MachineProvenanceSchema,
+});
+
 export const EntitySchema = z.object({
   entity_id: z.string(),
   race_id: z.string(),
@@ -416,6 +451,11 @@ export const EntitySchema = z.object({
   issue_focus: IssueFocusSchema.optional(),
   // Block 2 (campaign_commons.issues_enrich)
   issue_positions: z.array(IssuePositionSchema).optional(),
+  x_enrichment: z
+    .object({
+      issue_focus: MachineIssueFocusSchema.optional(),
+    })
+    .optional(),
 });
 
 // ---------------------------------------------------------------------------
@@ -612,6 +652,8 @@ export const AdSchema = z.object({
   vendor_links: z.array(AdVendorLinkSchema).optional(),
   /** every placeable-medium vendor the sponsor paid in the run window, linked or not — context for the reader, never an edge. */
   same_window_buys: z.array(SameWindowBuySchema).optional(),
+  /** machine-generated transcript classification; human `issues` remains authoritative */
+  machine_issues: MachineIssueTagsSchema.optional(),
 });
 
 
@@ -660,6 +702,33 @@ export const StanceSchema = z.object({
   evidence: z.array(EvidenceSchema),
 });
 
+export const MachineStanceSourceSchema = z.object({
+  url: z.string().url(),
+  publisher: z.string(),
+  published_on: z.string().nullable(),
+  excerpt: z.string().max(400),
+  excerpt_verified: z.boolean(),
+  wayback_url: z.string().url().optional(),
+});
+
+export const MachineStancePostSchema = z.object({
+  url: z.string().url(),
+  excerpt: z.string().max(400),
+  posted_on: z.string().nullable(),
+});
+
+export const MachineStanceSchema = z.object({
+  issue_id: IssueIdSchema,
+  summary: z.string().max(800),
+  direction_proposed: DirectionSchema.nullable(),
+  confidence: z.enum(["high", "medium", "low"]),
+  sources: z.array(MachineStanceSourceSchema).min(1),
+  posts: z.array(MachineStancePostSchema),
+  provenance: MachineProvenanceSchema,
+  basis: z.enum(["inferred", "verified"]),
+  label: z.string(),
+});
+
 export const DossierSchema = z.object({
   candidate_id: z.string(),
   race_id: z.string(),
@@ -676,6 +745,11 @@ export const DossierSchema = z.object({
   evidence_basis: z.enum(["record", "statements", "mixed"]),
   asymmetry_note: z.string(), // shown in UI: incumbents judged on what they did; challengers on what they say
   stances: z.array(StanceSchema), // one per issue where any evidence exists; missing issues render as "no record"
+  enrichment: z
+    .object({
+      stances: z.array(MachineStanceSchema),
+    })
+    .optional(),
   links: z.object({
     fec_url: z.string().url(),
     congress_url: z.string().url().nullable(),
@@ -752,6 +826,11 @@ export const DonorViewSchema = z.object({
   allocation_note: z.string().nullable(),
   truncated: z.boolean(),
   method: z.string(),
+  x_enrichment: z
+    .object({
+      issue_focus: MachineIssueFocusSchema.optional(),
+    })
+    .optional(),
 });
 
 // ---------------------------------------------------------------------------
@@ -1071,6 +1150,49 @@ const HandFileBase = z.object({
   method: z.string(),
 });
 
+export const HandXAdIssueRowSchema = z.object({
+  ad_id: z.string(),
+  issue_ids: z.array(IssueIdSchema).max(2),
+  quote: z.string().max(280).nullable(),
+  rationale: z.string().max(200),
+  transcript_kind: TranscriptKindSchema,
+  source_urls: z.array(z.string().url()).min(1),
+  provenance: MachineProvenanceSchema,
+});
+
+export const HandXAdIssuesFileSchema = HandFileBase.extend({ rows: z.array(HandXAdIssueRowSchema) });
+
+export const HandXIssueFocusRowSchema = focusVariants({
+  entity_id: z.string(),
+  name: z.string(),
+  description: z.string().max(400),
+  quote: z.string().max(400),
+  source_urls: z.array(z.string().url()).min(1),
+  provenance: MachineProvenanceSchema,
+});
+export const HandXIssueFocusFileSchema = HandFileBase.extend({ rows: z.array(HandXIssueFocusRowSchema) });
+
+export const HandXStanceRowSchema = z.object({
+  candidate_id: z.string(),
+  issue_id: IssueIdSchema,
+  summary: z.string().max(800),
+  direction_proposed: DirectionSchema.nullable(),
+  confidence: z.enum(["high", "medium", "low"]),
+  sources: z.array(MachineStanceSourceSchema).min(1),
+  posts: z.array(MachineStancePostSchema),
+  provenance: MachineProvenanceSchema,
+});
+
+export const HandXStancesFileSchema = HandFileBase.extend({ rows: z.array(HandXStanceRowSchema) });
+
+export const HandXAccountRowSchema = z.object({
+  candidate_id: z.string(),
+  handles: z.array(z.string()).min(1).max(20),
+  source_url: z.string().url(),
+});
+
+export const HandXAccountsFileSchema = HandFileBase.extend({ rows: z.array(HandXAccountRowSchema) });
+
 export const HandIssueFocusRowSchema = focusVariants({
   entity_id: z.string(), // FEC committee id, or org:<NAME> chain-node id for a non-committee funder
   name: z.string(), // as filed, for humans reading the file
@@ -1147,6 +1269,19 @@ export const HandVendorAdLinksFileSchema = HandFileBase.extend({ rows: z.array(H
 export type EvidenceBasis = z.infer<typeof EvidenceBasisSchema>;
 export type Basis = z.infer<typeof BasisSchema>;
 export type IssueTags = z.infer<typeof IssueTagsSchema>;
+export type MachineProvenance = z.infer<typeof MachineProvenanceSchema>;
+export type TranscriptKind = z.infer<typeof TranscriptKindSchema>;
+export type HandXAdIssueRow = z.infer<typeof HandXAdIssueRowSchema>;
+export type HandXAdIssuesFile = z.infer<typeof HandXAdIssuesFileSchema>;
+export type MachineIssueTags = z.infer<typeof MachineIssueTagsSchema>;
+export type MachineIssueFocus = z.infer<typeof MachineIssueFocusSchema>;
+export type HandXIssueFocusRow = z.infer<typeof HandXIssueFocusRowSchema>;
+export type HandXIssueFocusFile = z.infer<typeof HandXIssueFocusFileSchema>;
+export type MachineStance = z.infer<typeof MachineStanceSchema>;
+export type HandXStanceRow = z.infer<typeof HandXStanceRowSchema>;
+export type HandXStancesFile = z.infer<typeof HandXStancesFileSchema>;
+export type HandXAccountRow = z.infer<typeof HandXAccountRowSchema>;
+export type HandXAccountsFile = z.infer<typeof HandXAccountsFileSchema>;
 export type Medium = z.infer<typeof MediumSchema>;
 export type SupportOppose = z.infer<typeof SupportOpposeSchema>;
 export type EntityVendorRow = z.infer<typeof EntityVendorRowSchema>;
@@ -1245,6 +1380,11 @@ export const HAND_FILE_SCHEMAS = {
   "issue_focus.json": HandIssueFocusFileSchema,
   "issue_positions.json": HandIssuePositionsFileSchema,
   "ad_issues.json": HandAdIssuesFileSchema,
+  "x_ad_issues.json": HandXAdIssuesFileSchema,
+  "x_issue_focus.json": HandXIssueFocusFileSchema,
+  "x_funder_focus.json": HandXIssueFocusFileSchema,
+  "x_stances.json": HandXStancesFileSchema,
+  "x_accounts.json": HandXAccountsFileSchema,
   "ie_issues.json": HandIeIssuesFileSchema,
   "vendor_aliases.json": HandVendorAliasesFileSchema,
   "vendor_ad_links.json": HandVendorAdLinksFileSchema,

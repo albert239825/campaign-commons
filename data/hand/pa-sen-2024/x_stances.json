@@ -1,0 +1,934 @@
+{
+  "race_id": "pa-sen-2024",
+  "method": "machine stance suggestions from web/news sources, with optional verified X posts; pending human review",
+  "rows": [
+    {
+      "candidate_id": "S2PA00661",
+      "issue_id": "crypto_fintech",
+      "summary": "Dave McCormick advocated for American leadership in blockchain and cryptocurrency as critical to economic and national security. He supported bipartisan legislation such as the Financial Innovation and Technology for the 21st Century Act to establish clear regulatory rules that protect consumers while enabling continued innovation. McCormick highlighted the technology's grounding in principles of individual freedom, limited government, and privacy, along with its potential to support up to 4 million jobs by 2030 and benefit ecosystems in Pennsylvania cities including Allentown and Philadelphia.",
+      "direction_proposed": 2,
+      "confidence": "high",
+      "sources": [
+        {
+          "url": "https://www.davemccormickpa.com/2024/03/26/america-must-lead-on-cryptocurrency/",
+          "publisher": "Dave McCormick for U.S. Senate",
+          "published_on": "2024-03-26",
+          "excerpt": "Leaders in Congress must act to ensure America captures this next wave of innovation. They should embrace bipartisan efforts such as the Financial Innovation and Technology for the 21st Century Act, which would create clear rules for the industry to protect consumers while allowing for continued innovation.",
+          "excerpt_verified": true
+        }
+      ],
+      "posts": [
+        {
+          "url": "https://x.com/DaveMcCormickPA/status/1840037069155959169",
+          "excerpt": "Crypto and blockchain have the potential to create incredible jobs for our commonwealth and strengthen our national security. We need leaders who will embrace it and ensure America is leading the world in another generation of critical innovation.",
+          "posted_on": "2024-09-28"
+        },
+        {
+          "url": "https://x.com/DaveMcCormickPA/status/1803448380741542106",
+          "excerpt": "Embracing crypto and blockchain will unlock great jobs for our commonwealth and benefit our national security. If Congress fails to accept the next wave of innovation, the U.S. will be left behind.",
+          "posted_on": "2024-06-19"
+        },
+        {
+          "url": "https://x.com/DaveMcCormickPA/status/1788962131758448755",
+          "excerpt": "Families in PA would benefit from more access to the financial system. That's why I support cryptocurrency which cuts out powerful intermediaries. But Biden wants to tax the digital assets industry out of existence.",
+          "posted_on": "2024-05-10"
+        },
+        {
+          "url": "https://x.com/DaveMcCormickPA/status/1772642938666827951",
+          "excerpt": "Blockchain & crypto offer PA and America the chance to lead another generation of innovation. But if policymakers don't do their part, this opportunity will slip away. I'll fight to ensure we remain at the tip of the technology spear.",
+          "posted_on": "2024-03-26"
+        }
+      ],
+      "provenance": {
+        "tagged_by": "xai-grok-4.3-2026-09-06",
+        "tagged_at": "2026-09-06",
+        "model": "grok-4.3",
+        "prompt_version": "summarize_stance.v1",
+        "tools": [
+          "web_search",
+          "x_search"
+        ],
+        "tool_filters": {
+          "allowed_x_handles": [
+            "DaveMcCormickPA"
+          ],
+          "from_date": "2023-01-01",
+          "to_date": "2024-11-05"
+        },
+        "response_id": "4db8a60f-2bfa-990a-a1b8-746f00d5e8ba",
+        "retrieved_at": "2026-09-06T04:13:59+00:00",
+        "citations": [
+          "https://www.davemccormickpa.com/2024/03/26/america-must-lead-on-cryptocurrency/",
+          "https://x.com/DaveMcCormickPA/status/1840037069155959169",
+          "https://x.com/DaveMcCormickPA/status/1803448380741542106",
+          "https://x.com/DaveMcCormickPA/status/1788962131758448755",
+          "https://x.com/DaveMcCormickPA/status/1772642938666827951"
+        ],
+        "confidence": "high",
+        "review_status": "pending",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "review_note": null
+      }
+    },
+    {
+      "candidate_id": "S2PA00661",
+      "issue_id": "defense",
+      "summary": "McCormick called for a robust defense budget focused on next-generation warfare and restoring America’s military might. He advocated strengthening the defense industrial base and reestablishing deterrence against adversaries. McCormick endorsed plans to increase defense spending toward Cold War-era levels and supported generational investments in defense infrastructure such as shipyards. He expressed support for providing military aid to Ukraine and firm support for Israel. McCormick backed targeted use of U.S. military assets against fentanyl cartels in Mexico. As a combat veteran, he emphasized the need for quality health care and mental health care for veterans and supported adjusting veterans’ benefits with inflation.",
+      "direction_proposed": 2,
+      "confidence": "high",
+      "sources": [
+        {
+          "url": "https://www.wgal.com/article/us-senate-candidate-dave-mccormick-stance-on-issues/62698972",
+          "publisher": "WGAL",
+          "published_on": "2024-10-24",
+          "excerpt": "As a combat veteran and a former deputy national security adviser, Dave knows we need a robust defense budget focused on equipping us for next generation warfare. As Senator, he’ll work to restore America’s military might, strengthen our defense industrial base... Dave knows that we need to equip our veterans with not just quality health care, but mental health care.",
+          "excerpt_verified": true
+        },
+        {
+          "url": "https://apnews.com/article/pennsylvania-senate-mccormick-casey-fentanyl-military-trump-mexico-cartel-5bb7129c955756010eecc81cfcf1c8fd",
+          "publisher": "AP News",
+          "published_on": "2024-10-02",
+          "excerpt": "McCormick envisions using the U.S. military’s drones and special operations teams in Mexico to destroy fentanyl trafficking cartels... “What I’m saying is the combination of special operations and drones, I think, could eradicate the manufacturing facilities, kill the distribution networks and do a real dent in what is a terrorist activity.”",
+          "excerpt_verified": true,
+          "wayback_url": "http://web.archive.org/web/20250926095134/https://apnews.com/article/pennsylvania-senate-mccormick-casey-fentanyl-military-trump-mexico-cartel-5bb7129c955756010eecc81cfcf1c8fd"
+        }
+      ],
+      "posts": [
+        {
+          "url": "https://x.com/DaveMcCormickPA/status/1851268112051524085",
+          "excerpt": "Israel knows best how to conduct its military operations against Iran — not Joe Biden and Kamala Harris.",
+          "posted_on": "2024-10-29"
+        },
+        {
+          "url": "https://x.com/DaveMcCormickPA/status/1847273932669214989",
+          "excerpt": "On Day One as PA’s next Senator, I’ll fight to rebuild our military power.",
+          "posted_on": "2024-10-18"
+        },
+        {
+          "url": "https://x.com/DaveMcCormickPA/status/1841197118348005383",
+          "excerpt": "Bob Casey was the deciding vote for the 2015 Iran Deal, unlocking billions for Tehran to build up its military arsenal and underwrite terrorist proxies.",
+          "posted_on": "2024-10-01"
+        },
+        {
+          "url": "https://x.com/DaveMcCormickPA/status/1840729969208532998",
+          "excerpt": "We need to secure the border and use our military to take out the Mexican drug cartels that poisoned 4,000 Pennsylvanians with fentanyl last year alone.",
+          "posted_on": "2024-09-30"
+        }
+      ],
+      "provenance": {
+        "tagged_by": "xai-grok-4.3-2026-09-06",
+        "tagged_at": "2026-09-06",
+        "model": "grok-4.3",
+        "prompt_version": "summarize_stance.v1",
+        "tools": [
+          "web_search",
+          "x_search"
+        ],
+        "tool_filters": {
+          "allowed_x_handles": [
+            "DaveMcCormickPA"
+          ],
+          "from_date": "2023-01-01",
+          "to_date": "2024-11-05"
+        },
+        "response_id": "db46c0e3-4fad-9af0-82cd-14b342afc1bd",
+        "retrieved_at": "2026-09-06T04:13:36+00:00",
+        "citations": [
+          "https://www.wgal.com/article/us-senate-candidate-dave-mccormick-stance-on-issues/62698972",
+          "https://apnews.com/article/pennsylvania-senate-mccormick-casey-fentanyl-military-trump-mexico-cartel-5bb7129c955756010eecc81cfcf1c8fd",
+          "http://web.archive.org/web/20250926095134/https://apnews.com/article/pennsylvania-senate-mccormick-casey-fentanyl-military-trump-mexico-cartel-5bb7129c955756010eecc81cfcf1c8fd",
+          "https://x.com/DaveMcCormickPA/status/1851268112051524085",
+          "https://x.com/DaveMcCormickPA/status/1847273932669214989",
+          "https://x.com/DaveMcCormickPA/status/1841197118348005383",
+          "https://x.com/DaveMcCormickPA/status/1840729969208532998"
+        ],
+        "confidence": "high",
+        "review_status": "pending",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "review_note": null
+      }
+    },
+    {
+      "candidate_id": "S2PA00661",
+      "issue_id": "healthcare",
+      "summary": "McCormick stated that the Affordable Care Act failed in its primary goals of reducing costs and enhancing access but does not support repealing it and instead favors making the law better. He expressed skepticism toward Medicare negotiating pharmaceutical prices and preferred competition to lower drug costs, while supporting a rollback of parts of the Inflation Reduction Act. McCormick said the government must keep its promises to protect Social Security and Medicare benefits and would not support changes for those near or in retirement. He advocated expanding mental health care access for veterans by removing certain Medicaid rules and supported measures to increase the supply of doctors and nurses through education and skilled worker programs.",
+      "direction_proposed": null,
+      "confidence": "high",
+      "sources": [
+        {
+          "url": "https://pennsylvaniaindependent.com/politics/gop-senate-nominee-dave-mccormick-opposes-medicare-negotiating-lower-drug-prices/",
+          "publisher": "Pennsylvania Independent",
+          "published_on": "2024-08-22",
+          "excerpt": "McCormick said: “The best way to ensure that we get drug prices down and health care costs down is to make sure we have adequate competition. And having the government negotiate pharmaceutical prices, call me a skeptic, except maybe in very select cases, where we really do have significant price increases.”",
+          "excerpt_verified": true
+        }
+      ],
+      "posts": [
+        {
+          "url": "https://x.com/DaveMcCormickPA/status/1835023788301598961",
+          "excerpt": "Bob Casey wants to impose single-payer healthcare on Americans — another way of abolishing their private insurance.",
+          "posted_on": "2024-09-14"
+        },
+        {
+          "url": "https://x.com/DaveMcCormickPA/status/1826041205194633333",
+          "excerpt": "As PA’s next Senator, I’ll fight for the strongest health care and mental health care for our veterans",
+          "posted_on": "2024-08-20"
+        },
+        {
+          "url": "https://x.com/DaveMcCormickPA/status/1818287831409930263",
+          "excerpt": "Kamala Harris wants to raise your taxes so she can give free healthcare to illegal immigrants.",
+          "posted_on": "2024-07-30"
+        },
+        {
+          "url": "https://x.com/DaveMcCormickPA/status/1816114076021383634",
+          "excerpt": "I’ll fight to ensure those who’ve served have the mental health care they deserve.",
+          "posted_on": "2024-07-24"
+        }
+      ],
+      "provenance": {
+        "tagged_by": "xai-grok-4.3-2026-09-06",
+        "tagged_at": "2026-09-06",
+        "model": "grok-4.3",
+        "prompt_version": "summarize_stance.v1",
+        "tools": [
+          "web_search",
+          "x_search"
+        ],
+        "tool_filters": {
+          "allowed_x_handles": [
+            "DaveMcCormickPA"
+          ],
+          "from_date": "2023-01-01",
+          "to_date": "2024-11-05"
+        },
+        "response_id": "a8321d66-53db-97c6-861e-37f970b4868f",
+        "retrieved_at": "2026-09-06T04:12:42+00:00",
+        "citations": [
+          "https://pennsylvaniaindependent.com/politics/gop-senate-nominee-dave-mccormick-opposes-medicare-negotiating-lower-drug-prices/",
+          "https://x.com/DaveMcCormickPA/status/1835023788301598961",
+          "https://x.com/DaveMcCormickPA/status/1826041205194633333",
+          "https://x.com/DaveMcCormickPA/status/1818287831409930263",
+          "https://x.com/DaveMcCormickPA/status/1816114076021383634"
+        ],
+        "confidence": "high",
+        "review_status": "pending",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "review_note": null
+      }
+    },
+    {
+      "candidate_id": "S2PA00661",
+      "issue_id": "immigration",
+      "summary": "Dave McCormick advocated securing the southern border by completing construction of the border wall, funding Border Patrol agents, and designating Mexican drug cartels as terrorists to enable targeted military action against them. He opposed sanctuary cities, federal benefits for illegal immigrants, and the bipartisan border security bill, arguing it failed to close the border to illegal immigration. McCormick supported enforcement measures including detention of criminal illegal immigrants and ending catch-and-release practices while expressing support for legal immigration.",
+      "direction_proposed": 2,
+      "confidence": "high",
+      "sources": [
+        {
+          "url": "https://ballotpedia.org/David_McCormick_(Pennsylvania)",
+          "publisher": "Ballotpedia",
+          "published_on": null,
+          "excerpt": "As Senator, Dave will fight to secure the border, put an end to drug and human trafficking, and support our border patrol agents with the resources they need to do their jobs.",
+          "excerpt_verified": false
+        },
+        {
+          "url": "https://justfacts.votesmart.org/public-statement/1678083/department-of-homeland-security-appropriations-act-2025",
+          "publisher": "Vote Smart",
+          "published_on": "2024-06-26",
+          "excerpt": "This is not a compromise, it’s a capitulation. This bill does not secure the border — it allows 4000 migrants to cross illegally every. single. day. To protect Americans & fight the scourge of fentanyl, we need to CLOSE the border to illegal immigration. I oppose this deal.",
+          "excerpt_verified": false
+        },
+        {
+          "url": "https://www.mcall.com/2024/09/10/dave-mccormick-discusses-immigration-inflation-during-allentown-visit/",
+          "publisher": "The Morning Call",
+          "published_on": "2024-09-10",
+          "excerpt": "McCormick said he wanted to secure the border by funding a border wall and the Border Patrol. He also wants to designate Mexican drug cartels as terrorists, and use the military to “take out” cartels.",
+          "excerpt_verified": true
+        }
+      ],
+      "posts": [
+        {
+          "url": "https://x.com/DaveMcCormickPA/status/1853512186095632834",
+          "excerpt": "Bob Casey supports sanctuary cities, voted against funding for narcotics detection at the border, and supports men playing in women's sports.",
+          "posted_on": "2024-11-04"
+        },
+        {
+          "url": "https://x.com/DaveMcCormickPA/status/1852714406733398117",
+          "excerpt": "What I learned during my visit to our southern border horrified me: more than 525k kids are victims of the Mexican drug cartels' lucrative human trafficking operation, and many are sexually abused. Casey and Harris opened our borders. I’ll work to secure them.",
+          "posted_on": "2024-11-02"
+        },
+        {
+          "url": "https://x.com/DaveMcCormickPA/status/1852450431274037578",
+          "excerpt": "John, a Pennsylvania Democrat: \"While we may not agree on everything, [McCormick’s] fundamental values of building an economy for all, securing our border, and supporting working families are the things that matter to me most.\"",
+          "posted_on": "2024-11-01"
+        },
+        {
+          "url": "https://x.com/DaveMcCormickPA/status/1852377235975504223",
+          "excerpt": "Harris’ open borders and liberal immigration policies are letting violent antisemites into our nation. Bob Casey has supported these dangerous policies every step of the way, and innocent Americans pay the price.",
+          "posted_on": "2024-11-01"
+        }
+      ],
+      "provenance": {
+        "tagged_by": "xai-grok-4.3-2026-09-06",
+        "tagged_at": "2026-09-06",
+        "model": "grok-4.3",
+        "prompt_version": "summarize_stance.v1",
+        "tools": [
+          "web_search",
+          "x_search"
+        ],
+        "tool_filters": {
+          "allowed_x_handles": [
+            "DaveMcCormickPA"
+          ],
+          "from_date": "2023-01-01",
+          "to_date": "2024-11-05"
+        },
+        "response_id": "8bd9664d-a476-9bc5-aee4-780dd9099d95",
+        "retrieved_at": "2026-09-06T04:14:41+00:00",
+        "citations": [
+          "https://www.mcall.com/2024/09/10/dave-mccormick-discusses-immigration-inflation-during-allentown-visit/",
+          "https://x.com/DaveMcCormickPA/status/1853512186095632834",
+          "https://x.com/DaveMcCormickPA/status/1852714406733398117",
+          "https://x.com/DaveMcCormickPA/status/1852450431274037578",
+          "https://x.com/DaveMcCormickPA/status/1852377235975504223"
+        ],
+        "confidence": "high",
+        "review_status": "pending",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "review_note": null
+      }
+    },
+    {
+      "candidate_id": "S2PA00661",
+      "issue_id": "labor_trade",
+      "summary": "McCormick advocated fair trade rather than free trade, particularly with China. He called for revoking China’s permanent normal trade relations status and removing China from the World Trade Organization to ensure fairness for U.S. manufacturers and labor. McCormick stated general opposition to tariffs but supported their strategic and thoughtful use to achieve reciprocity and fair trade, including as leverage in negotiations such as steel tariffs. He prioritized American manufacturing in critical industries including steel, pharmaceuticals, and advanced manufacturing. McCormick supported investments in defense infrastructure to create union jobs in Pennsylvania manufacturing.",
+      "direction_proposed": 1,
+      "confidence": "medium",
+      "sources": [
+        {
+          "url": "https://www.davemccormickpa.com/daves-keystone-agenda/",
+          "publisher": "Dave McCormick for U.S. Senate",
+          "published_on": "2023-12-13",
+          "excerpt": "Congress must revoke China’s permanent normal trade relations status, and the United States must advocate for China’s removal from the WTO. ... I will be a champion for making generational investments in defense infrastructure that supports our national security—like reconstituting the Philadelphia Naval Shipyard—which will create union jobs right here in Pennsylvania.",
+          "excerpt_verified": true
+        },
+        {
+          "url": "https://www.thecentersquare.com/pennsylvania/article_d78d8d68-cab2-11ee-839d-73804f395c5b.html",
+          "publisher": "The Center Square",
+          "published_on": "2024-02-13",
+          "excerpt": "“It’s important to have a real conversation about the value of fair trade — not free trade, but fair trade,” McCormick said. ... McCormick wants to remove China from the World Trade Organization and revoke its permanent normal trade relations status.",
+          "excerpt_verified": true
+        }
+      ],
+      "posts": [
+        {
+          "url": "https://x.com/DaveMcCormickPA/status/1832061361439842594",
+          "excerpt": "Over the last 12 months: 🚨1.3 million native born Americans lost employment, while 1.2 million foreign-born workers (including undocumented workers) gained employment",
+          "posted_on": "2024-09-06"
+        },
+        {
+          "url": "https://x.com/DaveMcCormickPA/status/1799424609827086517",
+          "excerpt": "The economy lost 625k full-time jobs while adding 286k part-time jobs because people need MULTIPLE jobs just to get by. All while Americans are losing work to non-citizens.",
+          "posted_on": "2024-06-08"
+        },
+        {
+          "url": "https://x.com/DaveMcCormickPA/status/1837512563283644877",
+          "excerpt": "While Bob Casey is “sending letters” from his cozy office in Washington DC, I’m standing with Charleroi workers to fight for more than 300 jobs this great community is poised to lose.",
+          "posted_on": "2024-09-21"
+        },
+        {
+          "url": "https://x.com/DaveMcCormickPA/status/1853542573496820115",
+          "excerpt": "This is a step in the right direction for the hundreds of members of the Charleroi community that rely on Anchor Hocking for their jobs at Corelle. These jobs keep this Western Pennsylvania community going",
+          "posted_on": "2024-11-04"
+        }
+      ],
+      "provenance": {
+        "tagged_by": "xai-grok-4.3-2026-09-06",
+        "tagged_at": "2026-09-06",
+        "model": "grok-4.3",
+        "prompt_version": "summarize_stance.v1",
+        "tools": [
+          "web_search",
+          "x_search"
+        ],
+        "tool_filters": {
+          "allowed_x_handles": [
+            "DaveMcCormickPA"
+          ],
+          "from_date": "2023-01-01",
+          "to_date": "2024-11-05"
+        },
+        "response_id": "bb15c7e4-f13f-93a0-bfe7-eb01bc56cc12",
+        "retrieved_at": "2026-09-06T04:15:57+00:00",
+        "citations": [
+          "https://www.davemccormickpa.com/daves-keystone-agenda/",
+          "https://www.thecentersquare.com/pennsylvania/article_d78d8d68-cab2-11ee-839d-73804f395c5b.html",
+          "https://x.com/DaveMcCormickPA/status/1832061361439842594",
+          "https://x.com/DaveMcCormickPA/status/1799424609827086517",
+          "https://x.com/DaveMcCormickPA/status/1837512563283644877",
+          "https://x.com/DaveMcCormickPA/status/1853542573496820115"
+        ],
+        "confidence": "medium",
+        "review_status": "pending",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "review_note": null
+      }
+    },
+    {
+      "candidate_id": "S2PA00661",
+      "issue_id": "tax_budget",
+      "summary": "McCormick supported making the 2017 Tax Cuts and Jobs Act permanent to maintain competitiveness and prevent tax increases. He advocated reducing overall federal spending, criticizing excess spending as a driver of inflation, and called for cuts to specific programs such as EV subsidies and student loan forgiveness. McCormick endorsed a balanced budget amendment to the Constitution while stating he would protect Social Security and Medicare benefits for those near or in retirement.",
+      "direction_proposed": -1,
+      "confidence": "high",
+      "sources": [
+        {
+          "url": "https://www.davemccormickpa.com/2024/04/12/pennsylvania-senate-hopeful-dave-mccormick-lays-out-economic-priorities/",
+          "publisher": "Dave McCormick for U.S. Senate",
+          "published_on": "2024-04-12",
+          "excerpt": "In order to rein in spending, he supports adding a balanced budget amendment to the Constitution... McCormick also called for dramatic spending cuts to Biden-era programs.",
+          "excerpt_verified": true
+        },
+        {
+          "url": "https://politifact.com/factchecks/2024/oct/22/bob-casey/pennsylvania-sen-bob-casey-misleads-in-ad-claiming/",
+          "publisher": "PolitiFact",
+          "published_on": "2024-10-22",
+          "excerpt": "McCormick has called for those tax cuts to be made permanent... McCormick said he would support a balanced budget amendment to the Constitution... He has not called for specific changes but advocated for lower federal spending generally.",
+          "excerpt_verified": true
+        },
+        {
+          "url": "https://www.centredaily.com/news/politics-government/election/article294133034.html",
+          "publisher": "Centre Daily Times",
+          "published_on": "2024-10-18",
+          "excerpt": "McCormick wants to keep both the individual and corporate tax cuts in place, saying they are necessary to ensure that America remains competitive.",
+          "excerpt_verified": false
+        }
+      ],
+      "posts": [
+        {
+          "url": "https://x.com/DaveMcCormickPA/status/1853477266140864853",
+          "excerpt": "We need to rein in out-of-control spending in Washington.",
+          "posted_on": "2024-11-04"
+        },
+        {
+          "url": "https://x.com/DaveMcCormickPA/status/1850869806615908514",
+          "excerpt": "Every month, PA families are paying $1,000 MORE for the basics because of Harris and Casey’s reckless spending spree.",
+          "posted_on": "2024-10-28"
+        },
+        {
+          "url": "https://x.com/DaveMcCormickPA/status/1851653506475892904",
+          "excerpt": "In the Senate, I’ll work to lower costs and pass a $15,000 tax credit for IVF.",
+          "posted_on": "2024-10-30"
+        }
+      ],
+      "provenance": {
+        "tagged_by": "xai-grok-4.3-2026-09-06",
+        "tagged_at": "2026-09-06",
+        "model": "grok-4.3",
+        "prompt_version": "summarize_stance.v1",
+        "tools": [
+          "web_search",
+          "x_search"
+        ],
+        "tool_filters": {
+          "allowed_x_handles": [
+            "DaveMcCormickPA"
+          ],
+          "from_date": "2023-01-01",
+          "to_date": "2024-11-05"
+        },
+        "response_id": "9bcdcfde-7744-9823-a06c-0064ff0f748e",
+        "retrieved_at": "2026-09-06T04:15:06+00:00",
+        "citations": [
+          "https://www.davemccormickpa.com/2024/04/12/pennsylvania-senate-hopeful-dave-mccormick-lays-out-economic-priorities/",
+          "https://politifact.com/factchecks/2024/oct/22/bob-casey/pennsylvania-sen-bob-casey-misleads-in-ad-claiming/",
+          "https://x.com/DaveMcCormickPA/status/1853477266140864853",
+          "https://x.com/DaveMcCormickPA/status/1850869806615908514",
+          "https://x.com/DaveMcCormickPA/status/1851653506475892904"
+        ],
+        "confidence": "high",
+        "review_status": "pending",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "review_note": null
+      }
+    },
+    {
+      "candidate_id": "S6PA00217",
+      "issue_id": "abortion",
+      "summary": "Senator Casey cosponsored a resolution reaffirming access to emergency health care including abortion care. He cosponsored the Access to Family Building Act to protect nationwide access to IVF and other assisted reproductive technology. He cosponsored the Right to Contraception Act. He voted in favor of the Reproductive Freedom for Women Act.",
+      "direction_proposed": 2,
+      "confidence": "high",
+      "sources": [
+        {
+          "url": "https://www.coons.senate.gov/news/press-releases/senators-carper-coons-cosponsor-resolution-reaffirming-access-to-emergency-health-care-including-abortion-care/",
+          "publisher": "U.S. Senate",
+          "published_on": "2024-09-20",
+          "excerpt": "In addition to Senators Carper and Coons, this resolution is cosponsored by Senators ... Bob Casey (D-Pa.)",
+          "excerpt_verified": true
+        },
+        {
+          "url": "https://www.welch.senate.gov/welch-joins-bill-to-protect-ivf-access-following-alabama-supreme-court-ruling/",
+          "publisher": "U.S. Senate",
+          "published_on": "2024-03-04",
+          "excerpt": "the Access to Family Building Act ... is now co-sponsored by U.S. Senators ... Bob Casey (D-Pa.)",
+          "excerpt_verified": true
+        },
+        {
+          "url": "https://www.markey.senate.gov/news/press-releases/senators-markey-schumer-hirono-duckworth-and-colleagues-blast-republicans-for-blocking-passage-of-right-to-contraception-act",
+          "publisher": "U.S. Senate",
+          "published_on": "2024-06-05",
+          "excerpt": "Cosponsors of the Right to Contraception Act in the Senate include: ... Bob Casey (D-Pa.)",
+          "excerpt_verified": true
+        },
+        {
+          "url": "https://votesmart.org/candidate/key-votes/2541/bob-casey-jr/75/reproduction",
+          "publisher": "Vote Smart",
+          "published_on": "2024-09-17",
+          "excerpt": "Bill No. S 4554 ... Passage - Bill Passed - Senate (49 - 44) | Date 07/10/2024 ... S 4445 ... Cloture Vote",
+          "excerpt_verified": false
+        }
+      ],
+      "posts": [
+        {
+          "url": "https://x.com/SenBobCasey/status/1836139444413374828",
+          "excerpt": "Make no mistake: IVF acess is in jeopardy because of the fall of Roe v Wade.",
+          "posted_on": "2024-09-17"
+        },
+        {
+          "url": "https://x.com/SenBobCasey/status/1811161600092688666",
+          "excerpt": "Senate Republicans just blocked another bill to protect reproductive rights, just one month after blocking bills to protect access to IVF and contraception.",
+          "posted_on": "2024-07-10"
+        },
+        {
+          "url": "https://x.com/SenBobCasey/status/1805248576055828806",
+          "excerpt": "Reproductive rights are under attack. I won't stop fighting to restore the right that was ripped away from women two years ago.",
+          "posted_on": "2024-06-24"
+        },
+        {
+          "url": "https://x.com/SenBobCasey/status/1805248574646534287",
+          "excerpt": "In the two years since the overturning of Roe v. Wade, the impacts of the Supreme Court's dangerous decision are clear.",
+          "posted_on": "2024-06-24"
+        }
+      ],
+      "provenance": {
+        "tagged_by": "xai-grok-4.3-2026-09-06",
+        "tagged_at": "2026-09-06",
+        "model": "grok-4.3",
+        "prompt_version": "summarize_stance.v1",
+        "tools": [
+          "web_search",
+          "x_search"
+        ],
+        "tool_filters": {
+          "allowed_x_handles": [
+            "SenBobCasey",
+            "Bob_Casey"
+          ],
+          "from_date": "2023-01-01",
+          "to_date": "2024-11-05"
+        },
+        "response_id": "f7d2dcf5-bf00-91a9-a53f-2e33fdea2f29",
+        "retrieved_at": "2026-09-06T04:10:47+00:00",
+        "citations": [
+          "https://www.coons.senate.gov/news/press-releases/senators-carper-coons-cosponsor-resolution-reaffirming-access-to-emergency-health-care-including-abortion-care/",
+          "https://www.welch.senate.gov/welch-joins-bill-to-protect-ivf-access-following-alabama-supreme-court-ruling/",
+          "https://www.markey.senate.gov/news/press-releases/senators-markey-schumer-hirono-duckworth-and-colleagues-blast-republicans-for-blocking-passage-of-right-to-contraception-act",
+          "https://x.com/SenBobCasey/status/1836139444413374828",
+          "https://x.com/SenBobCasey/status/1811161600092688666",
+          "https://x.com/SenBobCasey/status/1805248576055828806",
+          "https://x.com/SenBobCasey/status/1805248574646534287"
+        ],
+        "confidence": "high",
+        "review_status": "pending",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "review_note": null
+      }
+    },
+    {
+      "candidate_id": "S6PA00217",
+      "issue_id": "guns",
+      "summary": "Senator Bob Casey cosponsored the Background Check Expansion Act to require background checks for all firearm sales and transfers. He has stated support for expanding background checks to close loopholes in private sales, online sales, and gun shows while preserving certain exceptions such as gifts to family members. Casey voted in favor of the Bipartisan Safer Communities Act.",
+      "direction_proposed": 1,
+      "confidence": "high",
+      "sources": [
+        {
+          "url": "https://www.murphy.senate.gov/newsroom/press-releases/murphy-leads-47-senators-to-reintroduce-background-check-expansion-act",
+          "publisher": "U.S. Senator Chris Murphy",
+          "published_on": "2023-02-16",
+          "excerpt": "U.S. Senators ... Bob Casey (D-Pa.) ... reintroducing the Background Check Expansion Act to expand federal background checks to all gun sales.",
+          "excerpt_verified": true
+        }
+      ],
+      "posts": [
+        {
+          "url": "https://x.com/SenBobCasey/status/1831409746441859272",
+          "excerpt": "What a tragic and senseless way to start a school year. I'm praying for the victims and all those affected by the shooting today at Apalachee High School. We cannot continue letting these senseless acts of violence go unchecked. We need gun safety reform, and we need it now.",
+          "posted_on": "2024-09-04"
+        },
+        {
+          "url": "https://x.com/SenBobCasey/status/1801649767665025033",
+          "excerpt": "Bump stocks made the 2017 Las Vegas shooting the deadliest mass shooting in our Nation's history. This dangerous ruling makes Congress' duty to pass commonsense gun safety laws all the more urgent.",
+          "posted_on": "2024-06-14"
+        },
+        {
+          "url": "https://x.com/SenBobCasey/status/1776343552932348344",
+          "excerpt": "I’ve said it before, and I'll say it again - people convicted of hate crimes shouldn't have access to firearms. It really is that simple. I've introduced the Disarm Hate Act to make sure dangerous people can't buy guns and hurt others.",
+          "posted_on": "2024-04-05"
+        },
+        {
+          "url": "https://x.com/SenBobCasey/status/1771975286696849868",
+          "excerpt": "6 years ago, students led the March for Our Lives to demand gun safety laws in the aftermath of the Parkland shooting, but gun violence is still the top killer of kids and teenagers in America. That's why I'll keep fighting for stronger, common-sense gun safety legislation.",
+          "posted_on": "2024-03-24"
+        }
+      ],
+      "provenance": {
+        "tagged_by": "xai-grok-4.3-2026-09-06",
+        "tagged_at": "2026-09-06",
+        "model": "grok-4.3",
+        "prompt_version": "summarize_stance.v1",
+        "tools": [
+          "web_search",
+          "x_search"
+        ],
+        "tool_filters": {
+          "allowed_x_handles": [
+            "SenBobCasey",
+            "Bob_Casey"
+          ],
+          "from_date": "2023-01-01",
+          "to_date": "2024-11-05"
+        },
+        "response_id": "0b14b7df-5766-90d1-be21-f1c6c99ace42",
+        "retrieved_at": "2026-09-06T04:10:57+00:00",
+        "citations": [
+          "https://www.murphy.senate.gov/newsroom/press-releases/murphy-leads-47-senators-to-reintroduce-background-check-expansion-act",
+          "https://x.com/SenBobCasey/status/1831409746441859272",
+          "https://x.com/SenBobCasey/status/1801649767665025033",
+          "https://x.com/SenBobCasey/status/1776343552932348344",
+          "https://x.com/SenBobCasey/status/1771975286696849868"
+        ],
+        "confidence": "high",
+        "review_status": "pending",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "review_note": null
+      }
+    },
+    {
+      "candidate_id": "S6PA00217",
+      "issue_id": "healthcare",
+      "summary": "Senator Bob Casey supported Inflation Reduction Act provisions capping Medicare insulin costs at $35 monthly and out-of-pocket drug expenses at $2,000 annually while enabling Medicare drug price negotiation. He introduced the Capping Prescription Costs Act to extend out-of-pocket caps to commercial insurance and the Cutting Copays Act to eliminate generic drug copays for low-income Medicare beneficiaries. Casey advocated expanded Medicaid access through automatic child enrollment and opposed lifetime coverage limits.",
+      "direction_proposed": 2,
+      "confidence": "high",
+      "sources": [
+        {
+          "url": "https://www.aging.senate.gov/press-releases/casey-releases-fact-sheet-detailing-how-the-inflation-reduction-act-has-lowered-health-care-costs-for-pennsylvanians",
+          "publisher": "Senate Committee on Aging",
+          "published_on": "2024-02-12",
+          "excerpt": "Fact sheet shows how IRA health care provisions Casey fought for have already lowered drug costs and health care premiums for hundreds of thousands of Pennsylvanians.",
+          "excerpt_verified": true
+        },
+        {
+          "url": "https://www.aging.senate.gov/press-releases/casey-warnock-introduce-bill-to-lower-prescription-costs-for-millions-of-americans",
+          "publisher": "Senate Committee on Aging",
+          "published_on": "2024-07-11",
+          "excerpt": "Casey’s bill builds on the success of the Inflation Reduction Act, extends out-of-pocket caps to commercial health care market.",
+          "excerpt_verified": true
+        },
+        {
+          "url": "https://www.aging.senate.gov/press-releases/casey-introduces-bill-to-eliminate-copays-for-hundreds-of-thousands-of-pennsylvania-seniors",
+          "publisher": "Senate Committee on Aging",
+          "published_on": "2024-03-13",
+          "excerpt": "The Cutting Copays Act would remove costs for generic medications for certain Medicare Part D Low Income Subsidy Program enrollees.",
+          "excerpt_verified": true
+        },
+        {
+          "url": "https://www.aging.senate.gov/press-releases/casey-introduces-bill-to-expand-health-care-access-to-every-child",
+          "publisher": "Senate Committee on Aging",
+          "published_on": "2023-09-15",
+          "excerpt": "The Medicaid for Every Child Act would ensure that every American child is automatically enrolled in Medicaid at birth.",
+          "excerpt_verified": true
+        }
+      ],
+      "posts": [
+        {
+          "url": "https://x.com/SenBobCasey/status/1844110192042221965",
+          "excerpt": "We can never fully repay our servicemembers and their families for their sacrifice, but we can, and we must, ensure that they get the health care they deserve when they return home.",
+          "posted_on": "2024-10-09"
+        },
+        {
+          "url": "https://x.com/SenBobCasey/status/1831773416069668989",
+          "excerpt": "Millions of Americans are struggling to afford their prescription drugs, that's why I fought to give Medicare the power to negotiate the cost of medications.",
+          "posted_on": "2024-09-05"
+        },
+        {
+          "url": "https://x.com/SenBobCasey/status/1829270111838183669",
+          "excerpt": "Many Americans have to choose between going to the doctor and paying their bills. I’m fighting to ensure that all Pennsylvanians can access quality health care without worrying about whether they can afford it.",
+          "posted_on": "2024-08-29"
+        },
+        {
+          "url": "https://x.com/SenBobCasey/status/1818287343163654620",
+          "excerpt": "Medicare and Medicaid are sacred promises that we’ve made to Americans. I’ll always fight to protect these programs for the millions of Pennsylvanians that rely on them.",
+          "posted_on": "2024-07-30"
+        }
+      ],
+      "provenance": {
+        "tagged_by": "xai-grok-4.3-2026-09-06",
+        "tagged_at": "2026-09-06",
+        "model": "grok-4.3",
+        "prompt_version": "summarize_stance.v1",
+        "tools": [
+          "web_search",
+          "x_search"
+        ],
+        "tool_filters": {
+          "allowed_x_handles": [
+            "SenBobCasey",
+            "Bob_Casey"
+          ],
+          "from_date": "2023-01-01",
+          "to_date": "2024-11-05"
+        },
+        "response_id": "ddb7e8a7-3755-9d9a-9798-15f6f761fbd5",
+        "retrieved_at": "2026-09-06T04:07:46+00:00",
+        "citations": [
+          "https://www.aging.senate.gov/press-releases/casey-releases-fact-sheet-detailing-how-the-inflation-reduction-act-has-lowered-health-care-costs-for-pennsylvanians",
+          "https://www.aging.senate.gov/press-releases/casey-warnock-introduce-bill-to-lower-prescription-costs-for-millions-of-americans",
+          "https://www.aging.senate.gov/press-releases/casey-introduces-bill-to-eliminate-copays-for-hundreds-of-thousands-of-pennsylvania-seniors",
+          "https://www.aging.senate.gov/press-releases/casey-introduces-bill-to-expand-health-care-access-to-every-child",
+          "https://x.com/SenBobCasey/status/1844110192042221965",
+          "https://x.com/SenBobCasey/status/1831773416069668989",
+          "https://x.com/SenBobCasey/status/1829270111838183669",
+          "https://x.com/SenBobCasey/status/1818287343163654620"
+        ],
+        "confidence": "high",
+        "review_status": "pending",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "review_note": null
+      }
+    },
+    {
+      "candidate_id": "S6PA00217",
+      "issue_id": "labor_trade",
+      "summary": "Senator Casey received a 100% rating from the AFL-CIO on labor issues in 2023. He co-sponsored legislation to strengthen trade remedy laws against unfair foreign practices and protect American manufacturing. He supported measures to raise wages, including phasing out subminimum wages for workers with disabilities, and backed bills protecting warehouse workers from unsafe quotas.",
+      "direction_proposed": 1,
+      "confidence": "high",
+      "sources": [
+        {
+          "url": "https://justfacts.votesmart.org/candidate/evaluations/2541/bob-casey-jr/43/labor-unions",
+          "publisher": "Vote Smart",
+          "published_on": null,
+          "excerpt": "AFL-CIO (American Federation of Labor and Congress of Industrial Organizations) 100% 2023",
+          "excerpt_verified": false
+        },
+        {
+          "url": "https://www.fetterman.senate.gov/casey-fetterman-introduce-bipartisan-fair-trade-legislation-to-level-the-playing-field-for-american-workers/",
+          "publisher": "U.S. Senate",
+          "published_on": "2023-06-08",
+          "excerpt": "Pennsylvania U.S. Senators Bob Casey and John Fetterman on Wednesday introduced the Leveling the Playing Field 2.0 Act, bipartisan legislation ... to strengthen U.S. trade remedy laws to combat unfair trade practices and protect American workers.",
+          "excerpt_verified": true
+        },
+        {
+          "url": "https://www.aging.senate.gov/press-releases/casey-daines-scott-mcmorris-rodgers-announce-bipartisan-bill-to-phase-out-subminimum-wage-for-people-with-disabilities",
+          "publisher": "U.S. Senate",
+          "published_on": "2023-02-27",
+          "excerpt": "U.S. Senators Bob Casey (D-PA) and Steve Daines (R-MT) ... are announcing introduction of the Transformation to Competitive Integrated Employment Act, (TCIEA) legislation to end subminimum wages for people with disabilities.",
+          "excerpt_verified": true
+        },
+        {
+          "url": "https://www.smith.senate.gov/u-s-senators-tina-smith-ed-markey-bob-casey-introduce-warehouse-worker-protection-act-to-address-dangerous-warehouse-quota-systems/",
+          "publisher": "U.S. Senate",
+          "published_on": "2024-05-02",
+          "excerpt": "U.S. Senator ... Bob Casey (D-Pa.) ... introduced the Warehouse Worker Protection Act, legislation that would protect warehouse workers by prohibiting dangerous work speed quotas that lead to high rates of worker injuries.",
+          "excerpt_verified": true
+        }
+      ],
+      "posts": [
+        {
+          "url": "https://x.com/SenBobCasey/status/1849910895704527164",
+          "excerpt": "Pennsylvania workers are the backbone of our Nation’s economy. I will always fight to support our workers, create good union jobs, and bring investments to the Commonwealth that help Pennsylvanians support their families.",
+          "posted_on": "2024-10-25"
+        },
+        {
+          "url": "https://x.com/SenBobCasey/status/1833558221916672302",
+          "excerpt": "China’s rising economic aggression will put our security, workers, and communities at risk if we don’t fight back. Today I introduced legislation to help to level the playing field for American workers and crack down on trade cheating and dangerous investments in Chinese markets.",
+          "posted_on": "2024-09-10"
+        },
+        {
+          "url": "https://x.com/SenBobCasey/status/1830646876112339141",
+          "excerpt": "Unions and working families built the American middle class and continue to grow our economy every day. This Labor Day I want to celebrate our workers and reaffirm my commitment to protecting workers’ rights. Happy Labor Day!",
+          "posted_on": "2024-09-02"
+        },
+        {
+          "url": "https://x.com/SenBobCasey/status/1805341191078396198",
+          "excerpt": "Last week I joined union leaders and retirees to announce that more than 6,700 Pennsylvania bakery and confectionery workers' pensions would be protected, thanks to the American Rescue Plan. Standing up for PA workers and their families will always be one of my top priorities.",
+          "posted_on": "2024-06-24"
+        }
+      ],
+      "provenance": {
+        "tagged_by": "xai-grok-4.3-2026-09-06",
+        "tagged_at": "2026-09-06",
+        "model": "grok-4.3",
+        "prompt_version": "summarize_stance.v1",
+        "tools": [
+          "web_search",
+          "x_search"
+        ],
+        "tool_filters": {
+          "allowed_x_handles": [
+            "SenBobCasey",
+            "Bob_Casey"
+          ],
+          "from_date": "2023-01-01",
+          "to_date": "2024-11-05"
+        },
+        "response_id": "064b9dcd-70c3-93c5-b60b-c6d9ff3bf25b",
+        "retrieved_at": "2026-09-06T04:12:12+00:00",
+        "citations": [
+          "https://www.fetterman.senate.gov/casey-fetterman-introduce-bipartisan-fair-trade-legislation-to-level-the-playing-field-for-american-workers/",
+          "https://www.aging.senate.gov/press-releases/casey-daines-scott-mcmorris-rodgers-announce-bipartisan-bill-to-phase-out-subminimum-wage-for-people-with-disabilities",
+          "https://www.smith.senate.gov/u-s-senators-tina-smith-ed-markey-bob-casey-introduce-warehouse-worker-protection-act-to-address-dangerous-warehouse-quota-systems/",
+          "https://x.com/SenBobCasey/status/1849910895704527164",
+          "https://x.com/SenBobCasey/status/1833558221916672302",
+          "https://x.com/SenBobCasey/status/1830646876112339141",
+          "https://x.com/SenBobCasey/status/1805341191078396198"
+        ],
+        "confidence": "high",
+        "review_status": "pending",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "review_note": null
+      }
+    },
+    {
+      "candidate_id": "S6PA00217",
+      "issue_id": "tax_budget",
+      "summary": "Senator Bob Casey supports reversing the 2017 tax cuts for the ultra-wealthy and large corporations. He advocates for tax policies that benefit workers and the middle class, including middle-class tax cuts and an expanded child tax credit. Casey voted in favor of the Fiscal Responsibility Act of 2023 to raise the debt limit and avoid default. He has opposed extensions of the 2017 tax cuts that would increase the deficit.",
+      "direction_proposed": 1,
+      "confidence": "medium",
+      "sources": [
+        {
+          "url": "https://keystonenewsroom.com/2024/10/18/bob-casey-calls-for-child-tax-credits-and-middle-class-tax-cuts-at-new-cumberland-event/",
+          "publisher": "Keystone Newsroom",
+          "published_on": "2024-10-18",
+          "excerpt": "Casey called for letting Donald Trump’s 2017 tax cuts for billionaires and corporations expire while pushing for renewing the child tax credit and for cutting taxes for middle class Americans.",
+          "excerpt_verified": true
+        }
+      ],
+      "posts": [
+        {
+          "url": "https://x.com/SenBobCasey/status/1825992553889415273",
+          "excerpt": "Raising kids in America is expensive. When we expanded the Child Tax Credit in 2021, I heard from parents who were able to spend more time with their kids and put them in activities for the first time.",
+          "posted_on": "2024-08-20"
+        },
+        {
+          "url": "https://x.com/SenBobCasey/status/1818293931827667090",
+          "excerpt": "In May, I pushed for the IRS to expand the Direct File program to make filing taxes free and easy for Pennsylvanians. I’m happy to announce in 2025 PA residents will be able to file and claim their taxes directly from the IRS.",
+          "posted_on": "2024-07-30"
+        },
+        {
+          "url": "https://x.com/SenBobCasey/status/1796254444843053335",
+          "excerpt": "This is good news. Americans should have an easy and free way to file their taxes. I’m proud to have voted for the Inflation Reduction Act to make this possible and I encourage Pennsylvanians to use this program next year.",
+          "posted_on": "2024-05-30"
+        },
+        {
+          "url": "https://x.com/SenBobCasey/status/1790815166554075206",
+          "excerpt": "For years, big corporations have been able to write union busting efforts off on their taxes. That's just plain wrong and I'm fighting to stop it.",
+          "posted_on": "2024-05-15"
+        }
+      ],
+      "provenance": {
+        "tagged_by": "xai-grok-4.3-2026-09-06",
+        "tagged_at": "2026-09-06",
+        "model": "grok-4.3",
+        "prompt_version": "summarize_stance.v1",
+        "tools": [
+          "web_search",
+          "x_search"
+        ],
+        "tool_filters": {
+          "allowed_x_handles": [
+            "SenBobCasey",
+            "Bob_Casey"
+          ],
+          "from_date": "2023-01-01",
+          "to_date": "2024-11-05"
+        },
+        "response_id": "f5d7a365-ab0b-94ac-9ff8-7328719aeac3",
+        "retrieved_at": "2026-09-06T04:11:18+00:00",
+        "citations": [
+          "https://keystonenewsroom.com/2024/10/18/bob-casey-calls-for-child-tax-credits-and-middle-class-tax-cuts-at-new-cumberland-event/",
+          "https://x.com/SenBobCasey/status/1825992553889415273",
+          "https://x.com/SenBobCasey/status/1818293931827667090",
+          "https://x.com/SenBobCasey/status/1796254444843053335",
+          "https://x.com/SenBobCasey/status/1790815166554075206"
+        ],
+        "confidence": "medium",
+        "review_status": "pending",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "review_note": null
+      }
+    },
+    {
+      "candidate_id": "S6PA00217",
+      "issue_id": "tech_ai",
+      "summary": "Senator Bob Casey led a letter to the Federal Trade Commission requesting information on tracking artificial intelligence use in scams targeting older Americans. He held a hearing on modern scams involving artificial intelligence. Senator Casey introduced the Section 508 Refresh Act to update requirements for federal agencies to make technology accessible to people with disabilities. Senator Casey introduced the No Robot Bosses Act to bar employers from relying solely on automated systems in employment decisions. Senator Casey introduced the Exploitative Workplace Surveillance and Technologies Task Force Act to examine workplace surveillance technologies.",
+      "direction_proposed": 1,
+      "confidence": "low",
+      "sources": [
+        {
+          "url": "https://www.duckworth.senate.gov/news/press-releases/duckworth-joins-casey-in-introducing-bill-to-make-federal-technology-more-accessible-for-people-with-disabilities",
+          "publisher": "U.S. Senator Tammy Duckworth",
+          "published_on": "2024-07-26",
+          "excerpt": "U.S. Senator Bob Casey (D-PA)—Chairman of the U.S. Senate Special Committee on Aging—along with U.S. Senators John Fetterman (D-PA) and Ron Wyden (D-OR) this week to introduce the Section 508 Refresh Act.",
+          "excerpt_verified": true
+        },
+        {
+          "url": "https://www.yahoo.com/news/sen-casey-rolls-bills-protect-120000819.html",
+          "publisher": "NBC News via Yahoo",
+          "published_on": "2023-09-11",
+          "excerpt": "Sen. Bob Casey, D-Pa., will unveil two new bills Thursday that target artificial intelligence by protecting workers from intrusive workplace surveillance and so-called robot bosses making hiring decisions.",
+          "excerpt_verified": true
+        }
+      ],
+      "posts": [],
+      "provenance": {
+        "tagged_by": "xai-grok-4.3-2026-09-06",
+        "tagged_at": "2026-09-06",
+        "model": "grok-4.3",
+        "prompt_version": "summarize_stance.v1",
+        "tools": [
+          "web_search",
+          "x_search"
+        ],
+        "tool_filters": {
+          "allowed_x_handles": [
+            "SenBobCasey",
+            "Bob_Casey"
+          ],
+          "from_date": "2023-01-01",
+          "to_date": "2024-11-05"
+        },
+        "response_id": "b8da3cb9-f354-9d93-8c2d-82464f95279d",
+        "retrieved_at": "2026-09-06T04:11:47+00:00",
+        "citations": [
+          "https://www.duckworth.senate.gov/news/press-releases/duckworth-joins-casey-in-introducing-bill-to-make-federal-technology-more-accessible-for-people-with-disabilities",
+          "https://www.yahoo.com/news/sen-casey-rolls-bills-protect-120000819.html"
+        ],
+        "confidence": "low",
+        "review_status": "pending",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "review_note": null
+      }
+    }
+  ]
+}

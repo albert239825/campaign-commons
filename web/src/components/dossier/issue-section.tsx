@@ -1,11 +1,20 @@
-import type { ISSUES, Stance } from "@campaign-commons/contracts";
+import type { ISSUES, MachineStance as MachineStanceRow, Stance } from "@campaign-commons/contracts";
 import { Chip, type ChipTone } from "@/components/ui";
 import { directionLabel } from "@/lib/alignment";
 import { EvidenceList } from "./evidence-list";
+import { MachineStance } from "./machine-stance";
 
 const CONFIDENCE_TONE: Record<Stance["confidence"], ChipTone> = { high: "green", medium: "amber", low: "muted" };
 
-export function IssueSection({ issue, stance }: { issue: (typeof ISSUES)[number]; stance: Stance | undefined }) {
+export function IssueSection({
+  issue,
+  stance,
+  machine,
+}: {
+  issue: (typeof ISSUES)[number];
+  stance: Stance | undefined;
+  machine?: MachineStanceRow;
+}) {
   return (
     <section id={issue.id} className="issue-record scroll-mt-20 rounded-lg border border-neutral-200 bg-white p-4">
       <header className="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-1">
@@ -42,6 +51,7 @@ export function IssueSection({ issue, stance }: { issue: (typeof ISSUES)[number]
           </div>
         </>
       )}
+      {machine && <MachineStance issueId={issue.id} stance={machine} />}
     </section>
   );
 }
