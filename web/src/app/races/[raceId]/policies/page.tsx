@@ -1,5 +1,4 @@
 // OWNER: Block 3 child E (policies tab).
-import Link from "next/link";
 import { ISSUES, type IssueFocus, type IssueId } from "@campaign-commons/contracts";
 import { DetailHeader } from "@/components/ui/detail-layout";
 import { getAds, getDossier, getEntity, getLedger, getRace, getStories, hasDossier, hasEntity, listRaceIds } from "@/lib/data";
@@ -45,9 +44,6 @@ export default async function PoliciesPage({ params }: { params: Promise<{ raceI
   });
 
   const defaultIssue: IssueId = (byIssue.find((b) => b.funders.length > 0) ?? byIssue[0]).issue.id;
-  const withFocus = focused.length;
-  const issuesWithFunder = byIssue.filter((b) => b.funders.length > 0).length;
-  const taggedAds = gallery.ads.filter((a) => (a.issues?.issue_ids ?? []).length > 0).length;
 
   return (
     <div className="detail-page policies-page">
@@ -61,26 +57,6 @@ export default async function PoliciesPage({ params }: { params: Promise<{ raceI
         </p>
       </DetailHeader>
       <RaceNav race={race} counts={{ ads: gallery.ads.length, stories: getStories(raceId).stories.length }} active={routes.policies(raceId)} />
-
-      <aside className="detail-callout policies-howto" aria-label="How to read this page">
-        <h2>How to read this</h2>
-        <p>
-          <b>Candidate stances</b> are the full record, not a summary: a one-line position written by a person from roll-call votes,
-          bills and archived statements, every one of them listed and linked to its government record, with a coded direction where
-          one exists. Incumbents are judged on what they did; challengers can only be judged on what they say, and the evidence
-          kind on each record makes that difference visible. <b>Funder focus</b> is
-          self-description: the organisation&apos;s own account of what it is for, sourced to its own material. It says what the group
-          says it stands for, not what its dollars bought, and it carries no direction, so a funder appears beside a stance only
-          because both name the same issue, never because it agrees with, backs or opposes that stance. The <b>support / oppose
-          amounts</b> are independent expenditures reported to the FEC: spending that targets a candidate, not money that reached a
-          campaign. Funders sit in the column of the candidate their FEC-coded spending was <i>for</i> (supports that candidate, or
-          opposes the other); a funder with labelled spending on both sides, or none, sits below on neither side. The column is a
-          targeting fact on file, not agreement with the stance above it. {withFocus} of {ledger.top_outside_spenders.length} outside spenders in this race name at least one issue in their
-          self-described focus, covering {issuesWithFunder} of {ISSUES.length} issues; {taggedAds} of {gallery.ads.length} ads carry an
-          issue tag. Dollar totals by issue live on the <Link href={routes.race(raceId)}>ledger</Link>; that is a different layer and is
-          not compared or summed here.
-        </p>
-      </aside>
 
       <PolicyTabs
         items={byIssue.map((b) => ({

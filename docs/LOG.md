@@ -635,9 +635,10 @@ dossier has none. Below, the funders and ads: the `top_outside_spenders` whose *
 — name, committee type, focus kind, the hand-tagged description with the org's own source URL, the IE total with its fec.gov
 link, and the support/oppose sum per candidate from `by_candidate` ("Opposes Casey $7.0M · Supports McCormick $13M"), then
 "Funding chain →" when a chain exists and "Entity →". Under it, ads tagged with the issue: three by spend with ad-library links
-and "N tagged ads on the ads wall →". A "How to read this" box says the three things the page must not blur: stances are the
-record, funder focus is self-description (D-66), the dollar figures are IEs targeting a candidate, not money to a campaign.
-One `RaceNav` item after Ads; `routes.policies`; `hasEntity`/`hasDossier` existence checks in `lib/data.ts`; `.policies-*` CSS
+and "N tagged ads on the ads wall →". A "How to read this" box said the three things the page must not blur: stances are the
+record, funder focus is self-description (D-66), the dollar figures are IEs targeting a candidate, not money to a campaign;
+Albert cut the box before merge, so the header paragraph, the "Self-described focus" label and the IE captions carry that
+alone. One `RaceNav` item after Ads; `routes.policies`; `hasEntity`/`hasDossier` existence checks in `lib/data.ts`; `.policies-*` CSS
 only. No contract, pipeline or data change.
 
 **Challenge.** The word "alongside" is the whole product decision. `issue_focus` says *what* a group says it is for, not *which
