@@ -226,7 +226,8 @@ export default async function ChainPage({
           )}
           <p className="mt-2 text-xs text-neutral-500">
             Ribbon width is proportional to dollars; color is how the money is disclosed. Read left to right: sources → intermediaries → spender
-            {hasOut && " → vendors paid → ads ⇢ candidate targeted"}. Hover a node or edge for the basics. Click a node for its details, the evidence behind each link, and the page or record
+            {hasOut && " → vendors paid → ads ⇢ candidate targeted"}. Zoom with the buttons above the map or Ctrl/⌘ + scroll, drag to pan; plain scrolling
+            still scrolls the page. Hover a node or edge for the basics. Click a node for its details, the evidence behind each link, and the page or record
             behind it; click an edge for its evidence and its row in the table below; + / − expands or folds what hangs off it.
           </p>
           {hasOut && (

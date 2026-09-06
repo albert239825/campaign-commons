@@ -13,4 +13,4 @@ Undecided. When one is decided: add a `D-nn` row to [DECISIONS.md](DECISIONS.md)
 | Q-07 | Critic P2s C-37..C-43 (edge colour semantics, design-doc drift, unused contract fields, donor-key dedupe, IE amount semantics, name normalisation). | Do before or after UI work? | critic r2 |
 | Q-08 | Whiteboard feature set and data model changes. | Pending Albert's whiteboard notes; map against `contracts/src/schemas.ts`. | Albert |
 | Q-11 | Pull Schedule B for outside spenders (non-IE spending: consultants, overhead) and for the campaigns (media lines)? | IE rows cover the large majority of super PAC outflows; Block 2 starts without B. Needs `oppexp24` bulk or the OpenFEC key re-added. Block 3 candidate. | master |
-| Q-13 | **Answered by D-78.** Use an LLM-assisted first pass in a separately labelled, provenance-carrying machine layer with human review; record-based fields remain authoritative. | D-78 | Albert |
+| Q-13 | **Answered by D-79.** Use an LLM-assisted first pass in a separately labelled, provenance-carrying machine layer with human review; record-based fields remain authoritative. | D-79 | Albert |

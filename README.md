@@ -42,6 +42,6 @@ make all                                        # ingest ledger chains vendors a
   super PAC → candidate as money.
 - "Disclosed" ≠ "traceable". Super PACs disclose; dark = the hidden-donor layer (c4s, LLCs).
 - No causal language anywhere in copy. "Adjacent to", "alongside", never "bought", "influenced".
-- LLM-derived data only in the labelled machine layer (D-78); the record layer is never LLM-written.
+- LLM-derived data only in the labelled machine layer (D-79); the record layer is never LLM-written.
 - `data_status: "mock"` files are placeholders; the pipeline overwrites them in place.
 - Don't rewrite git history.
