@@ -39,4 +39,21 @@ describe("ExploreAnswer paging", () => {
       addedRange: { from: 21, to: 22 },
     });
   });
+
+  it("drops rows duplicated across a page boundary and stops when all rows repeat", () => {
+    const current = result(true).rows.slice(0, 2);
+    const duplicatePage = { ...result(true), rows: [current[1], row(3)], truncated: true };
+    expect(appendExplorePage(current, ["amount"], duplicatePage)).toMatchObject({
+      rows: [current[0], current[1], row(3)],
+      truncated: true,
+      addedRange: { from: 3, to: 3 },
+    });
+
+    const repeatedPage = { ...result(true), rows: [current[0], current[1]], truncated: true };
+    expect(appendExplorePage(current, ["amount"], repeatedPage)).toMatchObject({
+      rows: current,
+      truncated: false,
+      addedRange: null,
+    });
+  });
 });

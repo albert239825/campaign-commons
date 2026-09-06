@@ -59,6 +59,14 @@ describe("buildComposeBody", () => {
       "The reader wants a flow diagram of this answer. Return whole relationships (GAVE, PAID, TARGETED) with their endpoints — not aggregates or bare names — so each row is one money flow with a filed amount, ordered by amount.",
     );
   });
+
+  it("instructs the composer to answer ad questions with money edges", () => {
+    const body = JSON.stringify(buildComposeBody("who paid for negative ads?", [casey], "grok-4.5", undefined, "graph"));
+    expect(body).toContain(
+      "Ads: questions about ads, attack ads, negative ads or advertising for/against a candidate are answered with the money that paid for them",
+    );
+    expect(body).toContain("every question about who paid, spent, gave, funded, supported or opposed is answerable");
+  });
 });
 
 describe("organization classification provenance", () => {

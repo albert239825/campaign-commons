@@ -89,6 +89,7 @@ RETURN elementId(r) AS eid, ${edge("a", "r", "b")} AS edge`;
 
 const BANNED = /\b(?:CREATE|MERGE|SET|DELETE|DETACH|REMOVE|CALL|LOAD|FOREACH|DROP|INDEX|CONSTRAINT|PROFILE|EXPLAIN)\b|apoc\.|dbms\.|db\.|\bUSE\s/i;
 const PARAM = /\$([a-zA-Z_]\w*)/g;
+const EMPTY_QUERY_RETRY = "You returned an empty query. The question is about money in this race; write the query (see the Ads and Supporting rules).";
 
 export function validateCypher(cypher: string): { ok: true; cypher: string } | { ok: false; reason: string } {
   const trimmed = cypher.trim();
@@ -310,10 +311,16 @@ export async function exploreQuestion(
     return refuse("explore_unavailable", "Exploratory graph mode is not configured on this deployment.");
   }
   let composed = await composeExplore(question, subjects, deps.llm, undefined, mode);
-  if (composed === null) return refuse("no_query", "That question cannot be answered from the filed records in this graph.");
-  if (!composed.cypher.trim()) return refuse("no_query", `That question cannot be answered from the filed records in this graph. ${cleanDescription(composed.description)}`.trim());
-
   let retried = false;
+  if (composed === null || !composed.cypher.trim()) {
+    const firstDescription = composed?.description;
+    retried = true;
+    composed = await composeExplore(question, subjects, deps.llm, EMPTY_QUERY_RETRY, mode);
+    if (composed === null || !composed.cypher.trim()) {
+      const description = composed?.description ?? firstDescription;
+      return refuse("no_query", `That question cannot be answered from the filed records in this graph.${description ? ` ${cleanDescription(description)}` : ""}`);
+    }
+  }
   let checked = validateCypher(composed.cypher);
   if (!checked.ok) {
     retried = true;

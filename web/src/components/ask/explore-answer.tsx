@@ -31,11 +31,18 @@ export function appendExplorePage(
   currentColumns: ExploreResult["columns"],
   next: Extract<AskExploreResponse, { kind: "explore" }>,
 ) {
+  const fingerprints = new Set(currentRows.map((row) => JSON.stringify(row.cells)));
+  const uniqueRows = next.rows.filter((row) => {
+    const fingerprint = JSON.stringify(row.cells);
+    if (fingerprints.has(fingerprint)) return false;
+    fingerprints.add(fingerprint);
+    return true;
+  });
   return {
-    rows: [...currentRows, ...next.rows],
+    rows: [...currentRows, ...uniqueRows],
     columns: [...new Set([...currentColumns, ...next.columns])],
-    truncated: next.truncated,
-    addedRange: next.rows.length > 0 ? { from: next.rows[0].n, to: next.rows[next.rows.length - 1].n } : null,
+    truncated: uniqueRows.length === 0 ? false : next.truncated,
+    addedRange: uniqueRows.length > 0 ? { from: uniqueRows[0].n, to: uniqueRows[uniqueRows.length - 1].n } : null,
   };
 }
 

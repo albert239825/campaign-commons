@@ -269,6 +269,30 @@ describe("exploreQuestion", () => {
     });
   });
 
+  it("retries an empty composer query once and executes the valid retry", async () => {
+    const fetch = stubResponses([{ cypher: "", description: "Try the money edges." }, { cypher: good, description: "A result." }]);
+    const run = vi.fn(async () => ({ records: [{ amount: 3 }], queryType: "r" }));
+    const result = await exploreQuestion("race", "who paid for negative ads?", subjects, { run, llm: { apiKey: "key", fetch } }, "graph");
+    expect(result).toMatchObject({ kind: "explore" });
+    expect(run).toHaveBeenCalledTimes(1);
+    expect(
+      fetch.mock.calls.filter(([, init]) => JSON.parse(init!.body as string).response_format.json_schema.name === "money_trails_explore_query"),
+    ).toHaveLength(2);
+  });
+
+  it("returns no_query after both composer attempts are empty", async () => {
+    const fetch = stubResponses([{ cypher: "", description: "No first query." }, { cypher: "", description: "No second query." }]);
+    const result = await exploreQuestion("race", "who paid for negative ads?", subjects, { run: vi.fn(), llm: { apiKey: "key", fetch } }, "graph");
+    expect(result).toEqual({
+      kind: "unsupported",
+      reason: "no_query",
+      message: "That question cannot be answered from the filed records in this graph. No second query.",
+    });
+    expect(
+      fetch.mock.calls.filter(([, init]) => JSON.parse(init!.body as string).response_format.json_schema.name === "money_trails_explore_query"),
+    ).toHaveLength(2);
+  });
+
   it("rejects a non-read query type and withholds an ungrounded narrative", async () => {
     const fetch = stubResponses([{ cypher: good, description: "A result." }]);
     expect(await exploreQuestion("race", "nope", subjects, { run: vi.fn(async () => ({ records: [{ value: 3 }], queryType: "w" })), llm: { apiKey: "key", fetch } })).toMatchObject({
