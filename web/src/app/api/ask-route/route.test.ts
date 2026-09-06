@@ -1,7 +1,9 @@
-import { afterEach, describe, expect, it, vi } from "vitest";
-import { resolveQuestion } from "@/lib/ask";
+import { afterEach, beforeEach, describe, expect, it, vi } from "vitest";
+import type { TrailSubject } from "@campaign-commons/contracts";
+import { INTENTS, resolveQuestion, resolveRoute } from "@/lib/ask";
+import { MAX_IN_FLIGHT, RATE_PER_MINUTE } from "@/lib/ask-limits";
 import { ASK_LLM_TIMEOUT_MS } from "@/lib/ask-llm";
-import type { AskRouteResponse } from "@/lib/ask-router";
+import { seedResolution, type AskRouteResponse } from "@/lib/ask-router";
 import { getTrails } from "@/lib/data";
 import { POST } from "./route";
 
@@ -9,8 +11,17 @@ const trails = getTrails("pa-sen-2024");
 const casey = trails.subjects.find((s) => s.name === "Bob Casey")!;
 const winsenate = trails.subjects.find((s) => s.name === "WINSENATE")!;
 
-const post = async (body: unknown, raw = false) => {
-  const res = await POST(new Request("http://localhost/api/ask-route", { method: "POST", body: raw ? (body as string) : JSON.stringify(body), headers: { "content-type": "application/json" } }));
+// Each call comes from its own address so the per-client limiter (tested below) stays out of the way elsewhere;
+// addresses are only honoured under VERCEL=1 (see clientKey), which beforeEach sets.
+let nextClient = 0;
+const post = async (body: unknown, raw = false, client = `10.0.0.${++nextClient}`) => {
+  const res = await POST(
+    new Request("http://localhost/api/ask-route", {
+      method: "POST",
+      body: raw ? (body as string) : JSON.stringify(body),
+      headers: { "content-type": "application/json", "x-forwarded-for": `${client}, 172.16.0.1` },
+    }),
+  );
   return { status: res.status, body: (await res.json()) as AskRouteResponse & { error?: string } };
 };
 const ask = (question: string) => post({ raceId: "pa-sen-2024", question });
@@ -23,6 +34,7 @@ const stubCompletion = (content: string) => {
 };
 const route = (intent: string, subjectId: string) => JSON.stringify({ route: { intent, subjectId } });
 
+beforeEach(() => vi.stubEnv("VERCEL", "1"));
 afterEach(() => {
   vi.unstubAllGlobals();
   vi.unstubAllEnvs();
@@ -42,6 +54,51 @@ describe("POST /api/ask-route input", () => {
     const f = stubCompletion(route("committee_funding", winsenate.id));
     expect((await post({ raceId: "nope-2024", question: "who funds winsenate" })).status).toBe(404);
     expect(f).not.toHaveBeenCalled();
+  });
+});
+
+describe("POST /api/ask-route spend guard", () => {
+  it(`429 after ${RATE_PER_MINUTE} questions a minute from one address, without calling the provider`, async () => {
+    vi.stubEnv("XAI_API_KEY", "k");
+    const f = stubCompletion(route("committee_funding", winsenate.id));
+    const from = (q: string) => post({ raceId: "pa-sen-2024", question: q }, false, "203.0.113.9");
+    for (let i = 0; i < RATE_PER_MINUTE; i++) expect((await from(`who funds winsenate ${i}`)).status).toBe(200);
+    expect(f).toHaveBeenCalledTimes(RATE_PER_MINUTE);
+    const limited = await from("who funds winsenate again");
+    expect(limited.status).toBe(429);
+    expect(limited.body).toEqual({ error: expect.stringContaining("try again") });
+    expect(f).toHaveBeenCalledTimes(RATE_PER_MINUTE);
+    // another address is unaffected
+    expect((await ask("who funds winsenate")).status).toBe(200);
+  });
+  it("off Vercel, a caller rotating forged x-forwarded-for addresses cannot pick its own bucket", async () => {
+    vi.stubEnv("VERCEL", "");
+    vi.stubEnv("XAI_API_KEY", "k");
+    const f = stubCompletion(route("committee_funding", winsenate.id));
+    let status = 200;
+    for (let i = 0; i < RATE_PER_MINUTE + 1 && status === 200; i++) {
+      status = (await post({ raceId: "pa-sen-2024", question: `who funds winsenate ${i}` }, false, `203.0.113.${i}`)).status;
+    }
+    expect(status).toBe(429);
+    expect(f.mock.calls.length).toBeLessThanOrEqual(RATE_PER_MINUTE);
+    // a fresh forged address is still turned away
+    expect((await post({ raceId: "pa-sen-2024", question: "who funds winsenate" }, false, "198.51.100.1")).status).toBe(429);
+  });
+  it(`429 once ${MAX_IN_FLIGHT} questions are in flight, and slots free up when they settle`, async () => {
+    vi.stubEnv("XAI_API_KEY", "k");
+    const settle: Array<() => void> = [];
+    const f = vi.fn<typeof fetch>(() => new Promise<Response>((resolve) => settle.push(() => resolve(Response.json({ choices: [{ message: { content: route("committee_funding", winsenate.id) } }] })))));
+    vi.stubGlobal("fetch", f);
+    const held = Array.from({ length: MAX_IN_FLIGHT }, (_, i) => ask(`who funds winsenate ${i}`));
+    await vi.waitFor(() => expect(f).toHaveBeenCalledTimes(MAX_IN_FLIGHT));
+    // one client turned away as "busy" RATE_PER_MINUTE times keeps its own quota
+    const from = (q: string) => post({ raceId: "pa-sen-2024", question: q }, false, "203.0.113.77");
+    for (let i = 0; i < RATE_PER_MINUTE; i++) expect((await from(`one more ${i}`)).body).toEqual({ error: expect.stringContaining("busy") });
+    expect(f).toHaveBeenCalledTimes(MAX_IN_FLIGHT);
+    settle.forEach((s) => s());
+    for (const h of held) expect((await h).status).toBe(200);
+    stubCompletion(route("committee_funding", winsenate.id));
+    expect((await from("who funds winsenate")).status).toBe(200);
   });
 });
 
@@ -115,7 +172,7 @@ describe("POST /api/ask-route with a valid route (via: llm)", () => {
     stubCompletion(route("candidate_spender", winsenate.id));
     const { body } = await ask("what is winsenate up to");
     expect(body.via).toBe("llm");
-    expect(body).toEqual({ ...resolveQuestion(`candidate_spender ${winsenate.aliases[0]}`, trails.subjects, trails.examples), via: "llm" });
+    expect(body).toEqual({ ...resolveRoute("candidate_spender", winsenate, trails.subjects), via: "llm" });
     expect(body.kind).toBe("unsupported");
     if (body.kind !== "unsupported") return;
     expect(body.reason).toBe("wrong_kind");
@@ -125,11 +182,35 @@ describe("POST /api/ask-route with a valid route (via: llm)", () => {
     vi.stubEnv("XAI_API_KEY", "k");
     stubCompletion(route("candidate_ad_funding", casey.id));
     const { body } = await ask("who's behind the tv spots about the senator");
-    expect(body).toEqual({ ...resolveQuestion(`candidate_ad_funding ${casey.aliases[0]}`, trails.subjects, trails.examples), via: "llm" });
+    expect(body).toEqual({ ...resolveRoute("candidate_ad_funding", casey, trails.subjects), via: "llm" });
     expect(body.kind).toBe("answer");
     if (body.kind !== "answer") return;
     expect(body.intent).toBe("candidate_ad_funding");
     expect(body.subject.id).toBe(casey.id);
+  });
+  it("every valid (intent, subject) on the ledger seeds to that subject (or its principal committee), never to an ambiguity", () => {
+    for (const subject of trails.subjects) {
+      for (const intent of INTENTS) {
+        const r = seedResolution("irrelevant", { intent, subjectId: subject.id }, trails);
+        expect(r.via).toBe("llm");
+        if (r.kind === "answer") {
+          expect([subject.id, subject.principal_committee_id]).toContain(r.subject.id);
+          expect(r.intent).toBe(intent);
+        } else {
+          expect(r.reason).toBe("wrong_kind");
+        }
+      }
+    }
+  });
+  it("a validated subject whose alias is another subject's alias is not re-matched by text, so it cannot land elsewhere", () => {
+    const america: TrailSubject = { id: "C00000002", kind: "committee", name: "AMERICA PAC", aliases: ["america pac", "america"], type_label: "Super PAC", principal_committee_id: null };
+    const working: TrailSubject = { id: "C00000003", kind: "committee", name: "WORKING AMERICA", aliases: ["america", "working america"], type_label: "Super PAC", principal_committee_id: null };
+    const t = { subjects: [...trails.subjects, america, working], examples: trails.examples };
+    // re-seeding by text (the old `"<intent> <aliases[0]>"`) lands on the other subject; the routed path cannot
+    const byText = resolveQuestion(`committee_funding ${working.aliases[0]}`, t.subjects);
+    expect(byText.kind === "answer" && byText.subject.id).toBe(america.id);
+    const r = seedResolution("who backs working america", { intent: "committee_funding", subjectId: working.id }, t);
+    expect(r).toEqual({ kind: "answer", intent: "committee_funding", subject: working, matched: working.id, note: null, via: "llm" });
   });
   it("the response is exactly a Resolution plus `via`; no model text passes through", async () => {
     vi.stubEnv("XAI_API_KEY", "k");

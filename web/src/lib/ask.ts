@@ -167,6 +167,15 @@ export function resolveQuestion(question: string, subjects: readonly TrailSubjec
     }
   }
 
+  return resolveRoute(intent, subject, subjects, top.alias);
+}
+
+/**
+ * The kind rules for an already-selected (intent, subject), with no text matching involved: a funding question about a
+ * candidate is read as one about their principal committee (with a note), and a spending/ad question about a committee
+ * is refused with the supported question suggested. `matched` records how the subject was picked (an alias, or its id).
+ */
+export function resolveRoute(intent: TrailIntent, subject: TrailSubject, subjects: readonly TrailSubject[], matched: string = subject.id): Resolution {
   if (intent === "committee_funding" && subject.kind === "candidate") {
     if (subject.principal_committee_id === null) {
       return {
@@ -189,7 +198,7 @@ export function resolveQuestion(question: string, subjects: readonly TrailSubjec
       kind: "answer",
       intent,
       subject: committee,
-      matched: top.alias,
+      matched,
       note: `Read as a question about ${subject.name}'s campaign committee, ${committee.name}. Outside groups' money never reaches a candidate; for that, ask who is spending for or against ${subject.name}.`,
     };
   }
@@ -201,7 +210,7 @@ export function resolveQuestion(question: string, subjects: readonly TrailSubjec
       suggestions: [canonicalQuestion("committee_funding", subject)],
     };
   }
-  return { kind: "answer", intent, subject, matched: top.alias, note: null };
+  return { kind: "answer", intent, subject, matched, note: null };
 }
 
 export function defaultIntent(subject: TrailSubject): TrailIntent {

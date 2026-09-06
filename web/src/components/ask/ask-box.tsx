@@ -3,12 +3,30 @@
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { useState, type FormEvent } from "react";
+import { z } from "zod";
 import type { TrailSubject } from "@campaign-commons/contracts";
-import { canonicalQuestion, resolveQuestion, type Resolution } from "@/lib/ask";
+import { canonicalQuestion, isIntent, resolveQuestion, type Resolution } from "@/lib/ask";
 import { routes } from "@/lib/format";
 
 /** Client-side budget for /api/ask-route; the server's own LLM timeout is shorter, so this only trips on a stalled network. */
 const ASK_ROUTE_TIMEOUT_MS = 8000;
+
+/** What /api/ask-route may return; the subject is only carried as an id and re-bound to this page's own subject list. */
+const AskRouteBody = z.discriminatedUnion("kind", [
+  z.object({
+    kind: z.literal("answer"),
+    intent: z.string().refine(isIntent),
+    subject: z.object({ id: z.string() }),
+    matched: z.string(),
+    note: z.string().nullable(),
+  }),
+  z.object({
+    kind: z.literal("unsupported"),
+    reason: z.enum(["empty", "no_subject", "ambiguous_subject", "no_intent", "wrong_kind"]),
+    message: z.string(),
+    suggestions: z.array(z.string()),
+  }),
+]);
 
 /**
  * Plain-English question box. A typed question is POSTed to /api/ask-route, where an LLM may pick the route
@@ -41,7 +59,7 @@ export function AskBox({
     setResult(null);
     let r: Resolution;
     try {
-      r = question.trim() === "" ? resolveQuestion(question, subjects, examples) : await askRoute(raceId, question);
+      r = question.trim() === "" ? resolveQuestion(question, subjects, examples) : await askRoute(raceId, question, subjects);
     } catch {
       r = resolveQuestion(question, subjects, examples);
     }
@@ -51,8 +69,8 @@ export function AskBox({
   };
 
   return (
-    <div className="space-y-3">
-      <form onSubmit={submit} className="flex gap-2">
+    <div className="ask-box space-y-3">
+      <form onSubmit={submit} className="ask-box-form flex gap-2">
         <input
           type="text"
           value={question}
@@ -74,7 +92,11 @@ export function AskBox({
         </button>
       </form>
 
-      {pending && <p className="text-xs text-neutral-500">Looking up…</p>}
+      {pending && (
+        <p className="text-xs text-neutral-500" role="status">
+          Looking up…
+        </p>
+      )}
 
       {result?.kind === "answer" && (
         <p className="text-xs text-neutral-500">
@@ -84,7 +106,7 @@ export function AskBox({
       )}
 
       {result?.kind === "unsupported" && (
-        <div className="rounded-md border border-amber-300 bg-amber-50 p-3 text-sm text-amber-900">
+        <div className="ask-box-refusal rounded-md border border-amber-300 bg-amber-50 p-3 text-sm text-amber-900">
           <p>{result.message}</p>
           {result.suggestions.length > 0 && (
             <ul className="mt-2 flex flex-wrap gap-2">
@@ -102,7 +124,7 @@ export function AskBox({
 }
 
 /** Asks the server to route the question; throws on any transport, timeout, or shape problem so the caller can resolve locally. */
-async function askRoute(raceId: string, question: string): Promise<Resolution> {
+async function askRoute(raceId: string, question: string, subjects: readonly TrailSubject[]): Promise<Resolution> {
   const controller = new AbortController();
   const timer = setTimeout(() => controller.abort(), ASK_ROUTE_TIMEOUT_MS);
   try {
@@ -113,9 +135,11 @@ async function askRoute(raceId: string, question: string): Promise<Resolution> {
       signal: controller.signal,
     });
     if (!res.ok) throw new Error(`ask-route ${res.status}`);
-    const body: unknown = await res.json();
-    if (typeof body !== "object" || body === null || !("kind" in body)) throw new Error("ask-route: unexpected body");
-    return body as Resolution;
+    const body = AskRouteBody.parse(await res.json());
+    if (body.kind === "unsupported") return body;
+    const subject = subjects.find((s) => s.id === body.subject.id);
+    if (!subject) throw new Error(`ask-route: unknown subject ${body.subject.id}`);
+    return { kind: "answer", intent: body.intent, subject, matched: body.matched, note: body.note };
   } finally {
     clearTimeout(timer);
   }
@@ -128,7 +152,7 @@ export function SuggestionLink({ raceId, subjects, question }: { raceId: string;
   return (
     <Link
       href={routes.answer(raceId, r.intent, r.subject.id)}
-      className="inline-block rounded-full border border-neutral-300 bg-white px-3 py-1 text-xs text-neutral-700 hover:border-neutral-900 hover:text-neutral-900"
+      className="ask-suggestion inline-block rounded-full border border-neutral-300 bg-white px-3 py-1 text-xs text-neutral-700 hover:border-neutral-900 hover:text-neutral-900"
     >
       {question}
     </Link>

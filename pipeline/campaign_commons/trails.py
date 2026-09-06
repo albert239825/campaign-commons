@@ -8,8 +8,9 @@ entities/*.json) — no LLM, no graph database, no new FEC reads:
                                                             candidate, and who funds each sponsor
   committee_funding     "who funds WINSENATE?"              the committee's receipts hop by hop, where the walk ended
 
-The client (web/src/components/ask) resolves a typed question to (intent, subject) by keyword and name matching
-over `subjects[].aliases`, then renders the matching answer. Rules the shape enforces:
+The web layer (web/src/components/ask, D-75) resolves a typed question to (intent, subject) — a server-side model
+picks from the closed set of intents and `subjects[].id`, else keyword and name matching over `subjects[].aliases`
+in the browser — then renders the matching answer. Rules the shape enforces:
 
   * every number is a Figure / edge / range that carries the record it came from;
   * money edges (`TrailMoneyEdge`) and targeting edges (`TrailTargetingEdge`) are different types, so an
@@ -625,8 +626,8 @@ def examples(inp: Inputs, answers: list[dict[str, Any]]) -> list[str]:
 
 
 METHOD = (
-    "Answers are precomputed from this race's ledger, ads, chain and entity files by pipeline/campaign_commons/trails.py and matched "
-    "to a typed question by keyword and name matching in the browser; no language model or graph database is involved. "
+    "Answers are precomputed from this race's ledger, ads, chain and entity files by pipeline/campaign_commons/trails.py; no language "
+    "model or graph database is involved in building them. "
     "Three questions are supported: who is spending for/against a candidate (Schedule E), who paid for the ads about a "
     "candidate (ad sponsors, their Schedule E about the candidate, and each sponsor's own funders), and who funds a "
     "committee (its receipts hop by hop). Every figure links to the FEC or Google record it was read from. Money edges "

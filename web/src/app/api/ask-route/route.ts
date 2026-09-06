@@ -1,5 +1,6 @@
-// OWNER: Money Trails (D-74). The site's only server function: routes a typed question to a precomputed answer page.
+// OWNER: Money Trails (D-75). The site's only server function: routes a typed question to a precomputed answer page.
 import { NextResponse } from "next/server";
+import { askLimiter, clientKey } from "@/lib/ask-limits";
 import { AskRouteRequest, routeQuestion } from "@/lib/ask-router";
 import { getTrails, hasTrails } from "@/lib/data";
 
@@ -20,6 +21,23 @@ export async function POST(req: Request): Promise<NextResponse> {
   const { raceId, question } = parsed.data;
   if (!hasTrails(raceId)) return NextResponse.json({ error: `No Money Trails for race ${raceId}.` }, { status: 404 });
 
-  const resolution = await routeQuestion(question, getTrails(raceId));
-  return NextResponse.json(resolution, { headers: { "cache-control": "no-store" } });
+  // 429s never reach the model; the browser answers such questions with its own matcher.
+  // Global capacity first, so a request turned away as "busy" costs the client none of its own quota.
+  const release = askLimiter.acquire();
+  if (release === null) return tooMany("The router is busy; try again shortly.");
+  if (!askLimiter.take(clientKey(req.headers))) {
+    release();
+    return tooMany("Too many questions; try again in a minute.");
+  }
+
+  try {
+    const resolution = await routeQuestion(question, getTrails(raceId));
+    return NextResponse.json(resolution, { headers: { "cache-control": "no-store" } });
+  } finally {
+    release();
+  }
+}
+
+function tooMany(error: string): NextResponse {
+  return NextResponse.json({ error }, { status: 429, headers: { "retry-after": "60", "cache-control": "no-store" } });
 }
