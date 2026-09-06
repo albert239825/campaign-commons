@@ -590,3 +590,11 @@ stances-left / funders-right to stances side by side above a funders + ads row, 
 The per-candidate dossier pages stay in the build and are reachable by URL and by "Full dossier →", but stop being a nav
 destination (child A's nav trim). Header copy now says this tab is the candidates' stance record for the race. PA: Casey's
 longest record is energy & climate at 10 evidence records (5 open, 5 folded); McCormick has one stated position per issue.
+
+**Funders in two columns (Albert, same day).** The funder list under the stances is split into the same two columns as the
+cards above, by whose side the spender's FEC-coded IEs were on: support for X or opposition to the other counts *for* X
+(`targetingSide`, the P1 rule from the plan). A spender with labelled dollars on both sides, or none, goes in a full-width
+"No single side" row rather than being forced under a candidate; two-candidate races only, otherwise one list. The column is a
+targeting fact on file and the copy says so — it is still not agreement with the stance above it (D-78 unchanged). PA: all 21
+funder–issue pairs are one-sided (18 for Casey, 3 for McCormick); McCormick's column is empty on two issues, so the empty state
+carries the comparison. Ads move to a full-width block under the funders.

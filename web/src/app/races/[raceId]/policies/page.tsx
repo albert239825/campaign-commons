@@ -73,7 +73,9 @@ export default async function PoliciesPage({ params }: { params: Promise<{ raceI
           says it stands for, not what its dollars bought, and it carries no direction, so a funder appears beside a stance only
           because both name the same issue, never because it agrees with, backs or opposes that stance. The <b>support / oppose
           amounts</b> are independent expenditures reported to the FEC: spending that targets a candidate, not money that reached a
-          campaign. {withFocus} of {ledger.top_outside_spenders.length} outside spenders in this race name at least one issue in their
+          campaign. Funders sit in the column of the candidate their FEC-coded spending was <i>for</i> (supports that candidate, or
+          opposes the other); a funder with labelled spending on both sides, or none, sits below on neither side. The column is a
+          targeting fact on file, not agreement with the stance above it. {withFocus} of {ledger.top_outside_spenders.length} outside spenders in this race name at least one issue in their
           self-described focus, covering {issuesWithFunder} of {ISSUES.length} issues; {taggedAds} of {gallery.ads.length} ads carry an
           issue tag. Dollar totals by issue live on the <Link href={routes.race(raceId)}>ledger</Link>; that is a different layer and is
           not compared or summed here.

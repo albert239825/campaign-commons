@@ -959,7 +959,12 @@ body:has(.detail-page) :is(a, button, input, select, summary, [tabindex]):focus-
 .policies-panel-head > p { margin-top: 8px; max-width: 850px; font-size: 14px; color: var(--detail-muted); }
 .policies-axis { display: flex; flex-wrap: wrap; gap: 6px 10px; margin-top: 12px; font-size: 12px; color: var(--detail-muted); }
 .policies-axis span { color: var(--detail-ink); }
-.policies-columns { display: grid; grid-template-columns: minmax(0, 1.6fr) minmax(0, 1fr); gap: 40px; align-items: start; padding-top: 32px; border-top: 1px solid var(--detail-rule); }
+.policies-funders-section, .policies-panel > .policies-ads { padding-top: 32px; border-top: 1px solid var(--detail-rule); }
+.policies-side { min-width: 0; display: grid; gap: 12px; align-content: start; }
+.policies-side > h4 { display: flex; flex-wrap: wrap; align-items: baseline; gap: 4px 10px; font-size: 14px; font-weight: 500; letter-spacing: -.01em; }
+.policies-side > h4 small { font-size: 12px; font-weight: 400; color: var(--detail-muted); }
+.policies-sides + .policies-side { margin-top: 8px; }
+.policies-funders-wide { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 .policies-column { min-width: 0; display: grid; gap: 16px; align-content: start; }
 .policies-column > h3, .policies-ads > h3 { display: grid; gap: 4px; font-size: 12px; letter-spacing: .04em; text-transform: uppercase; color: var(--detail-muted); }
 .policies-column > h3 small, .policies-ads > h3 small { font-size: 12px; letter-spacing: 0; text-transform: none; }
@@ -1010,8 +1015,6 @@ body:has(.detail-page) :is(a, button, input, select, summary, [tabindex]):focus-
 @media (max-width: 1050px) {
   .policies-issues { grid-template-columns: 180px minmax(0, 1fr); gap: 28px; }
   .policies-issue-nav [role="tablist"] { padding-right: 12px; }
-  .policies-columns { grid-template-columns: minmax(0, 1fr); }
-  .policies-ads { padding-top: 0; border-top: 0; }
 }
 @media (max-width: 680px) {
   .policies-issues { grid-template-columns: minmax(0, 1fr); gap: 24px; }
@@ -1020,7 +1023,7 @@ body:has(.detail-page) :is(a, button, input, select, summary, [tabindex]):focus-
   .policies-issue-nav button { flex-shrink: 0; border: 1px solid var(--detail-rule); font-size: 13px; }
   .policies-issue-nav button[aria-selected="true"] { border-color: var(--detail-ink); }
   .policies-issue-panel { grid-column: 1; grid-row: auto; }
-  .policies-stances { grid-template-columns: minmax(0, 1fr); }
+  .policies-stances, .policies-funders-wide { grid-template-columns: minmax(0, 1fr); }
   .policies-stance, .policies-funder { padding: 20px; }
   .policies-evidence li, .policies-targeting { grid-template-columns: minmax(0, 1fr); }
   .policies-evidence li > div:first-child { flex-direction: row; align-items: baseline; flex-wrap: wrap; gap: 8px; }

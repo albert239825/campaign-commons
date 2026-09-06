@@ -19,7 +19,22 @@ export function targetingByCandidate(spender: OutsideSpender, candidates: RaceCa
     .filter((t) => t.support > 0 || t.oppose > 0 || t.unlabelled > 0);
 }
 
-const surname = (c: RaceCandidate) => c.name.split(" ").at(-1) ?? c.name;
+/**
+ * Which candidate a spender's IE dollars work for, read off the FEC support/oppose codes only: support for A or opposition to
+ * B both count for A. A spender with labelled dollars on both sides, or none, has no side. Two-candidate races only.
+ */
+export function targetingSide(spender: OutsideSpender, candidates: RaceCandidate[]): RaceCandidate | null {
+  if (candidates.length !== 2) return null;
+  const [a, b] = candidates;
+  const t = new Map(targetingByCandidate(spender, candidates).map((x) => [x.candidate.candidate_id, x]));
+  const forA = (t.get(a.candidate_id)?.support ?? 0) + (t.get(b.candidate_id)?.oppose ?? 0);
+  const forB = (t.get(b.candidate_id)?.support ?? 0) + (t.get(a.candidate_id)?.oppose ?? 0);
+  if (forA > 0 && forB === 0) return a;
+  if (forB > 0 && forA === 0) return b;
+  return null;
+}
+
+export const surname = (c: RaceCandidate) => c.name.split(" ").at(-1) ?? c.name;
 const host = (url: string) => new URL(url).hostname.replace(/^www\./, "");
 
 /**
