@@ -52,6 +52,7 @@ export function buildFundingViews(ledger: Ledger) {
     visibility.unavailable = Math.max(0, outside.total - accounted);
     return {
       id, label, names: candidates.map(c => c.name).join(" & "), campaign, outside, visibility,
+      party: candidates.length === 1 ? candidates[0].party : null,
       sources: candidates.map(c => ({ id: c.candidate_id, name: c.name, campaign: c.campaign.source_url, outside: c.outside.source_url })),
       publishedVisibility: id === "all" && ledger.traceability !== null,
       hasSplit,
@@ -72,11 +73,20 @@ export type SliceGroup = "campaign" | "outside";
 export const GROUP_COLORS: Record<SliceGroup, string> = { campaign: "#343f49", outside: "#b7ab98" };
 const CAMPAIGN_SHADES = ["#343f49", "#5b6874", "#8a95a0"];
 const OUTSIDE_SHADES = ["#8c7e6a", "#cbc1b0"];
-/** By-side view: one non-party hue per side (never party red/blue, D-16); darkest = receipts, lighter = outside spending. */
-const SIDE_HUES = [
-  ["#2f5d62", "#5f8a8b", "#a3c1bd"],
-  ["#6f4a2b", "#a67c52", "#d2b48c"],
+/** Detail views are shaded by party (D-88): darkest = receipts, lighter = outside spending. */
+const PARTY_RAMPS: Partial<Record<Party, string[]>> = {
+  DEM: ["#16305a", "#2f5688", "#5b82b8", "#93aed4", "#c3d2e8"],
+  REP: ["#661a1d", "#93312f", "#bc5b57", "#d99693", "#eec4c1"],
+};
+const NEUTRAL_RAMPS = [
+  ["#2f5d62", "#487477", "#5f8a8b", "#83a8a5", "#a3c1bd"],
+  ["#6f4a2b", "#8a633f", "#a67c52", "#bc9870", "#d2b48c"],
 ];
+/** A party ramp is used once per race; a second candidate of the same party falls back to a neutral ramp. */
+function ramp(party: Party | null, index: number, taken: string[][]) {
+  const hue = party ? PARTY_RAMPS[party] : undefined;
+  return hue && !taken.includes(hue) ? hue : NEUTRAL_RAMPS[index % NEUTRAL_RAMPS.length];
+}
 
 export type PieSlice = {
   id: string; group: SliceGroup; label: string; amount: number; color: string;
@@ -96,26 +106,29 @@ export function pieSlices(view: FundingView, detailed: boolean, candidates: Fund
       { id: "outside", group: "outside", label: "Outside spending", amount: view.outside.total, color: GROUP_COLORS.outside },
     ];
   }
+  const shades = view.party ? ramp(view.party, 0, []) : [...CAMPAIGN_SHADES, ...OUTSIDE_SHADES];
   return [
-    { id: "individuals", group: "campaign", label: "Receipts from individuals", amount: view.campaign.individuals, color: CAMPAIGN_SHADES[0] },
-    { id: "committees", group: "campaign", label: "Receipts from committees", amount: view.campaign.committees, color: CAMPAIGN_SHADES[1] },
-    { id: "other", group: "campaign", label: "Other receipts", amount: view.campaign.other, color: CAMPAIGN_SHADES[2] },
-    { id: "support", group: "outside", label: "Outside spending supporting", amount: view.outside.support, color: OUTSIDE_SHADES[0] },
-    { id: "oppose", group: "outside", label: "Outside spending opposing", amount: view.outside.oppose, color: OUTSIDE_SHADES[1] },
+    { id: "individuals", group: "campaign", label: "Receipts from individuals", amount: view.campaign.individuals, color: shades[0] },
+    { id: "committees", group: "campaign", label: "Receipts from committees", amount: view.campaign.committees, color: shades[1] },
+    { id: "other", group: "campaign", label: "Other receipts", amount: view.campaign.other, color: shades[2] },
+    { id: "support", group: "outside", label: "Outside spending supporting", amount: view.outside.support, color: shades[3] },
+    { id: "oppose", group: "outside", label: "Outside spending opposing", amount: view.outside.oppose, color: shades[4] },
   ];
 }
 
 /**
  * Two-candidate races only: one contiguous side per candidate — their receipts, outside spending supporting them, and
  * outside spending opposing the other candidate — so every dollar appears exactly once. "Money working for" a side is
- * never called a fundraising total (D-16 hues kept). With more candidates an oppose total has no single side, so the
+ * never called a fundraising total. With more candidates an oppose total has no single side, so the
  * all-candidates detail stays on the five-slice source/stance cut.
  */
 export function sideSlices([a, b]: FundingView[]): PieSlice[] {
+  const ramps: string[][] = [];
+  for (const [i, c] of [a, b].entries()) ramps.push(ramp(c.party, i, ramps));
   return [a, b].flatMap((c, i) => {
     const rival = i === 0 ? b : a;
     const side = c.names;
-    const hue = SIDE_HUES[i];
+    const hue = [ramps[i][0], ramps[i][2], ramps[i][4]];
     return [
       { id: `${c.id}-campaign`, group: "campaign" as const, side, viewId: c.id, label: `Receipts, ${c.names}`, amount: c.campaign.receipts, color: hue[0] },
       { id: `${c.id}-support`, group: "outside" as const, side, viewId: c.id, pickId: "support", label: `Supporting ${c.names}`, amount: c.outside.support, color: hue[1] },
