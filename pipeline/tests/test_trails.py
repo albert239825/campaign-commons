@@ -424,7 +424,8 @@ def test_committee_graph_is_bounded_truncated_and_provenance_preserving() -> Non
     assert answer is not None
     graph = answer["graph"]
     assert graph["root_id"] == SUPER
-    assert next(n for n in graph["nodes"] if n["id"] == SUPER)["depth"] == 0
+    root = next(n for n in graph["nodes"] if n["id"] == SUPER)
+    assert root["depth"] == 0 and "side" not in root
     truncation = next(t for t in graph["truncated"] if t["layer"] == "funders_1")
     assert truncation == {"layer": "funders_1", "kept": 5, "hidden": 2}
     assert all(
@@ -472,6 +473,32 @@ def test_candidate_spender_graph_has_root_synthesized_spender_and_pooled_funders
         "agg:other@" + SUPER,
         "ind:alice",
     }
+
+
+def test_candidate_spender_graph_keeps_spender_at_shallowest_depth() -> None:
+    inp = inputs()
+    inp.chains[PARTY] = {
+        "race_id": RACE.race_id,
+        "root_name": "PARTY COMMITTEE",
+        "summary": {
+            "total_in": 20.0,
+            "disclosed_share": 1.0,
+            "inferable_share": 0.0,
+            "dark_share": 0.0,
+            "max_depth": 1,
+        },
+        "method": "synthetic",
+        "nodes": [
+            _node(PARTY, "PARTY COMMITTEE", "committee", 0, "disclosed", None, committee_type="P", amount_in=20.0),
+            _node(SUPER, "BIG SUPER PAC", "committee", 1, "disclosed", None, committee_type="O", amount_in=20.0),
+        ],
+        "edges": [_edge(SUPER, PARTY, 20.0, 1)],
+    }
+    graph = candidate_spender_answer(inp, CASEY)["graph"]
+    super_node = next(n for n in graph["nodes"] if n["id"] == SUPER)
+    assert super_node["depth"] == 1 and super_node["side"] == "in"
+    assert any(e["from"] == SUPER and e["to"] == CASEY and e["kind"] == "targeting" for e in graph["edges"])
+    assert any(e["from"] == SUPER and e["to"] == PARTY and e["kind"] == "money" for e in graph["edges"])
 
 
 def test_candidate_ad_funding_graph_keeps_own_committee_and_ad_provenance() -> None:

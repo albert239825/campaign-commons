@@ -1,6 +1,6 @@
 {
   "race_id": "pa-sen-2024",
-  "generated_at": "2026-09-06T01:59:05+00:00",
+  "generated_at": "2026-09-06T02:02:41+00:00",
   "data_status": "real",
   "subjects": [
     {
@@ -2191,7 +2191,7 @@
             "name": "SENATE LEADERSHIP FUND",
             "kind": "committee",
             "committee_type": "O",
-            "depth": 2,
+            "depth": 1,
             "visibility": "disclosed",
             "amount_in": 264889139.0,
             "is_terminus": false,
@@ -2292,6 +2292,19 @@
             "terminus_reason": "pruned",
             "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00687103&two_year_transaction_period=2024",
             "contributor_count": 1418,
+            "side": "in"
+          },
+          {
+            "id": "ind:GRIFFIN_KENNETH_C.|33131",
+            "name": "GRIFFIN, KENNETH C.",
+            "kind": "individual",
+            "committee_type": null,
+            "depth": 2,
+            "visibility": "disclosed",
+            "amount_in": 30000000.0,
+            "is_terminus": true,
+            "terminus_reason": "individual",
+            "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00571703&two_year_transaction_period=2024&contributor_name=GRIFFIN%2C+KENNETH+C.",
             "side": "in"
           },
           {
@@ -2440,6 +2453,22 @@
             "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00687103&two_year_transaction_period=2024"
           },
           {
+            "from": "ind:GRIFFIN_KENNETH_C.|33131",
+            "to": "C00571703",
+            "amount": 30000000.0,
+            "visibility": "disclosed",
+            "depth": 2,
+            "transaction_types": [
+              "10"
+            ],
+            "count": 4,
+            "date_range": [
+              "2023-06-30",
+              "2024-09-27"
+            ],
+            "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00571703&two_year_transaction_period=2024&contributor_name=GRIFFIN%2C+KENNETH+C."
+          },
+          {
             "from": "C00487363",
             "to": "S6PA00217",
             "kind": "targeting",
@@ -2545,7 +2574,7 @@
           {
             "layer": "funders_1",
             "kept": 5,
-            "hidden": 60
+            "hidden": 59
           }
         ]
       }
@@ -9635,8 +9664,7 @@
             "amount_in": 312850000.0,
             "is_terminus": false,
             "terminus_reason": null,
-            "source_url": "https://www.fec.gov/data/committee/C00865444/?cycle=2024",
-            "side": "out"
+            "source_url": "https://www.fec.gov/data/committee/C00865444/?cycle=2024"
           },
           {
             "id": "agg:other@C00484642",
@@ -10842,8 +10870,7 @@
             "amount_in": 264889139.0,
             "is_terminus": false,
             "terminus_reason": null,
-            "source_url": "https://www.fec.gov/data/committee/C00571703/?cycle=2024",
-            "side": "out"
+            "source_url": "https://www.fec.gov/data/committee/C00571703/?cycle=2024"
           },
           {
             "id": "agg:other@C00571703",
@@ -12044,8 +12071,7 @@
             "amount_in": 58905691.0,
             "is_terminus": false,
             "terminus_reason": null,
-            "source_url": "https://www.fec.gov/data/committee/C00849489/?cycle=2024",
-            "side": "out"
+            "source_url": "https://www.fec.gov/data/committee/C00849489/?cycle=2024"
           },
           {
             "id": "vendor:V-del-cielo-media",
@@ -13229,8 +13255,7 @@
             "amount_in": 176190145.0,
             "is_terminus": false,
             "terminus_reason": null,
-            "source_url": "https://www.fec.gov/data/committee/C00687103/?cycle=2024",
-            "side": "out"
+            "source_url": "https://www.fec.gov/data/committee/C00687103/?cycle=2024"
           },
           {
             "id": "agg:other@C00687103",
@@ -14409,8 +14434,7 @@
             "amount_in": 195918710.0,
             "is_terminus": false,
             "terminus_reason": null,
-            "source_url": "https://www.fec.gov/data/committee/C00042366/?cycle=2024",
-            "side": "out"
+            "source_url": "https://www.fec.gov/data/committee/C00042366/?cycle=2024"
           },
           {
             "id": "agg:other@C00042366",
@@ -15609,8 +15633,7 @@
             "amount_in": 62881147.0,
             "is_terminus": false,
             "terminus_reason": null,
-            "source_url": "https://www.fec.gov/data/committee/C00487363/?cycle=2024",
-            "side": "out"
+            "source_url": "https://www.fec.gov/data/committee/C00487363/?cycle=2024"
           },
           {
             "id": "org:ONE_NATION",
@@ -16445,8 +16468,7 @@
             "amount_in": 78695361.0,
             "is_terminus": false,
             "terminus_reason": null,
-            "source_url": "https://www.fec.gov/data/committee/C00486845/?cycle=2024",
-            "side": "out"
+            "source_url": "https://www.fec.gov/data/committee/C00486845/?cycle=2024"
           },
           {
             "id": "org:LEAGUE_OF_CONSERVATION_VOTERS,_INC.",
@@ -17635,8 +17657,7 @@
             "amount_in": 16202679.0,
             "is_terminus": false,
             "terminus_reason": null,
-            "source_url": "https://www.fec.gov/data/committee/C00744920/?cycle=2024",
-            "side": "out"
+            "source_url": "https://www.fec.gov/data/committee/C00744920/?cycle=2024"
           },
           {
             "id": "C00492520",
@@ -18473,8 +18494,7 @@
             "amount_in": 34566027.0,
             "is_terminus": false,
             "terminus_reason": null,
-            "source_url": "https://www.fec.gov/data/committee/C00609388/?cycle=2024",
-            "side": "out"
+            "source_url": "https://www.fec.gov/data/committee/C00609388/?cycle=2024"
           },
           {
             "id": "C00492520",
@@ -19288,8 +19308,7 @@
             "amount_in": 5005008.0,
             "is_terminus": false,
             "terminus_reason": null,
-            "source_url": "https://www.fec.gov/data/committee/C00740225/?cycle=2024",
-            "side": "out"
+            "source_url": "https://www.fec.gov/data/committee/C00740225/?cycle=2024"
           },
           {
             "id": "org:NRDC_ACTION_FUND",
@@ -20052,8 +20071,7 @@
             "amount_in": 7959198.0,
             "is_terminus": false,
             "terminus_reason": null,
-            "source_url": "https://www.fec.gov/data/committee/C00620971/?cycle=2024",
-            "side": "out"
+            "source_url": "https://www.fec.gov/data/committee/C00620971/?cycle=2024"
           },
           {
             "id": "C00686832",
@@ -21009,8 +21027,7 @@
             "amount_in": 20519717.0,
             "is_terminus": false,
             "terminus_reason": null,
-            "source_url": "https://www.fec.gov/data/committee/C00752691/?cycle=2024",
-            "side": "out"
+            "source_url": "https://www.fec.gov/data/committee/C00752691/?cycle=2024"
           },
           {
             "id": "org:GEOSOR_CORPORATION",
@@ -21949,8 +21966,7 @@
             "amount_in": 21856810.0,
             "is_terminus": false,
             "terminus_reason": null,
-            "source_url": "https://www.fec.gov/data/committee/C00724203/?cycle=2024",
-            "side": "out"
+            "source_url": "https://www.fec.gov/data/committee/C00724203/?cycle=2024"
           },
           {
             "id": "ind:BLOOMBERG_MICHAEL|10150",
@@ -22608,8 +22624,7 @@
             "amount_in": 2307308.0,
             "is_terminus": false,
             "terminus_reason": null,
-            "source_url": "https://www.fec.gov/data/committee/C00053553/?cycle=2024",
-            "side": "out"
+            "source_url": "https://www.fec.gov/data/committee/C00053553/?cycle=2024"
           },
           {
             "id": "agg:other@C00053553",
@@ -23416,8 +23431,7 @@
             "amount_in": 36861169.0,
             "is_terminus": false,
             "terminus_reason": null,
-            "source_url": "https://www.fec.gov/data/committee/C00811166/?cycle=2024",
-            "side": "out"
+            "source_url": "https://www.fec.gov/data/committee/C00811166/?cycle=2024"
           },
           {
             "id": "agg:other@C00811166",
@@ -24422,8 +24436,7 @@
             "amount_in": 22475647.0,
             "is_terminus": false,
             "terminus_reason": null,
-            "source_url": "https://www.fec.gov/data/committee/C00688655/?cycle=2024",
-            "side": "out"
+            "source_url": "https://www.fec.gov/data/committee/C00688655/?cycle=2024"
           },
           {
             "id": "org:EVERYTOWN_FOR_GUN_SAFETY_ACTION_FUND_INC",
@@ -25336,8 +25349,7 @@
             "amount_in": 12787968.0,
             "is_terminus": false,
             "terminus_reason": null,
-            "source_url": "https://www.fec.gov/data/committee/C00544387/?cycle=2024",
-            "side": "out"
+            "source_url": "https://www.fec.gov/data/committee/C00544387/?cycle=2024"
           },
           {
             "id": "ind:KLINGENSTEIN_THOMAS|10024",
@@ -25835,8 +25847,7 @@
             "amount_in": 5520000.0,
             "is_terminus": false,
             "terminus_reason": null,
-            "source_url": "https://www.fec.gov/data/committee/C00490375/?cycle=2024",
-            "side": "out"
+            "source_url": "https://www.fec.gov/data/committee/C00490375/?cycle=2024"
           },
           {
             "id": "C00731372",
@@ -26794,8 +26805,7 @@
             "amount_in": 6150000.0,
             "is_terminus": false,
             "terminus_reason": null,
-            "source_url": "https://www.fec.gov/data/committee/C00745745/?cycle=2024",
-            "side": "out"
+            "source_url": "https://www.fec.gov/data/committee/C00745745/?cycle=2024"
           },
           {
             "id": "C00556274",
@@ -27533,8 +27543,7 @@
             "amount_in": 405000.0,
             "is_terminus": false,
             "terminus_reason": null,
-            "source_url": "https://www.fec.gov/data/committee/C00890087/?cycle=2024",
-            "side": "out"
+            "source_url": "https://www.fec.gov/data/committee/C00890087/?cycle=2024"
           },
           {
             "id": "C00003632",
@@ -28330,8 +28339,7 @@
             "amount_in": 23470212.0,
             "is_terminus": false,
             "terminus_reason": null,
-            "source_url": "https://www.fec.gov/data/committee/C00754051/?cycle=2024",
-            "side": "out"
+            "source_url": "https://www.fec.gov/data/committee/C00754051/?cycle=2024"
           },
           {
             "id": "C00627372",
@@ -29079,8 +29087,7 @@
             "amount_in": 6973470.0,
             "is_terminus": false,
             "terminus_reason": null,
-            "source_url": "https://www.fec.gov/data/committee/C00540443/?cycle=2024",
-            "side": "out"
+            "source_url": "https://www.fec.gov/data/committee/C00540443/?cycle=2024"
           },
           {
             "id": "agg:other@C00540443",
@@ -29737,8 +29744,7 @@
             "amount_in": 3862019.0,
             "is_terminus": false,
             "terminus_reason": null,
-            "source_url": "https://www.fec.gov/data/committee/C00106146/?cycle=2024",
-            "side": "out"
+            "source_url": "https://www.fec.gov/data/committee/C00106146/?cycle=2024"
           },
           {
             "id": "agg:other@C00106146",
@@ -30445,8 +30451,7 @@
             "amount_in": 2803092.0,
             "is_terminus": false,
             "terminus_reason": null,
-            "source_url": "https://www.fec.gov/data/committee/C00011114/?cycle=2024",
-            "side": "out"
+            "source_url": "https://www.fec.gov/data/committee/C00011114/?cycle=2024"
           },
           {
             "id": "agg:other@C00011114",
@@ -31158,8 +31163,7 @@
             "amount_in": 16743220.0,
             "is_terminus": false,
             "terminus_reason": null,
-            "source_url": "https://www.fec.gov/data/committee/C00489799/?cycle=2024",
-            "side": "out"
+            "source_url": "https://www.fec.gov/data/committee/C00489799/?cycle=2024"
           },
           {
             "id": "org:GEOSOR_CORPORATION",
@@ -32054,8 +32058,7 @@
             "amount_in": 11830622.0,
             "is_terminus": false,
             "terminus_reason": null,
-            "source_url": "https://www.fec.gov/data/committee/C00530766/?cycle=2024",
-            "side": "out"
+            "source_url": "https://www.fec.gov/data/committee/C00530766/?cycle=2024"
           },
           {
             "id": "ind:KLINGENSTEIN_THOMAS|10024",
@@ -32832,8 +32835,7 @@
             "amount_in": 15573707.0,
             "is_terminus": false,
             "terminus_reason": null,
-            "source_url": "https://www.fec.gov/data/committee/C00606962/?cycle=2024",
-            "side": "out"
+            "source_url": "https://www.fec.gov/data/committee/C00606962/?cycle=2024"
           },
           {
             "id": "org:GEOSOR_CORPORATION",
@@ -33651,8 +33653,7 @@
             "amount_in": 330000.0,
             "is_terminus": false,
             "terminus_reason": null,
-            "source_url": "https://www.fec.gov/data/committee/C00873877/?cycle=2024",
-            "side": "out"
+            "source_url": "https://www.fec.gov/data/committee/C00873877/?cycle=2024"
           },
           {
             "id": "vendor:V-pendulum-creative-group",
@@ -34534,8 +34535,7 @@
             "amount_in": 3132942.0,
             "is_terminus": false,
             "terminus_reason": null,
-            "source_url": "https://www.fec.gov/data/committee/C00685693/?cycle=2024",
-            "side": "out"
+            "source_url": "https://www.fec.gov/data/committee/C00685693/?cycle=2024"
           },
           {
             "id": "org:CASA_IN_ACTION",
@@ -35450,8 +35450,7 @@
             "amount_in": 6456814.0,
             "is_terminus": false,
             "terminus_reason": null,
-            "source_url": "https://www.fec.gov/data/committee/C00710848/?cycle=2024",
-            "side": "out"
+            "source_url": "https://www.fec.gov/data/committee/C00710848/?cycle=2024"
           },
           {
             "id": "agg:other@C00710848",
@@ -36159,8 +36158,7 @@
             "amount_in": 3458300.0,
             "is_terminus": false,
             "terminus_reason": null,
-            "source_url": "https://www.fec.gov/data/committee/C00804823/?cycle=2024",
-            "side": "out"
+            "source_url": "https://www.fec.gov/data/committee/C00804823/?cycle=2024"
           },
           {
             "id": "ind:HOFFMAN_REID|98221",
@@ -36998,8 +36996,7 @@
             "amount_in": 2662180.0,
             "is_terminus": false,
             "terminus_reason": null,
-            "source_url": "https://www.fec.gov/data/committee/C00738674/?cycle=2024",
-            "side": "out"
+            "source_url": "https://www.fec.gov/data/committee/C00738674/?cycle=2024"
           },
           {
             "id": "org:REPRODUCTIVE_FREEDOM_FOR_ALL",
@@ -37986,8 +37983,7 @@
             "amount_in": 1482044.0,
             "is_terminus": false,
             "terminus_reason": null,
-            "source_url": "https://www.fec.gov/data/committee/C00862094/?cycle=2024",
-            "side": "out"
+            "source_url": "https://www.fec.gov/data/committee/C00862094/?cycle=2024"
           },
           {
             "id": "org:GREAT_OPPORTUNITY_POLICY_INC",
@@ -38747,8 +38743,7 @@
             "amount_in": 3731486.0,
             "is_terminus": false,
             "terminus_reason": null,
-            "source_url": "https://www.fec.gov/data/committee/C00890053/?cycle=2024",
-            "side": "out"
+            "source_url": "https://www.fec.gov/data/committee/C00890053/?cycle=2024"
           },
           {
             "id": "org:STATE_ENGAGEMENT_FUND",
@@ -39824,8 +39819,7 @@
             "amount_in": 4369189.0,
             "is_terminus": false,
             "terminus_reason": null,
-            "source_url": "https://www.fec.gov/data/committee/C00634774/?cycle=2024",
-            "side": "out"
+            "source_url": "https://www.fec.gov/data/committee/C00634774/?cycle=2024"
           },
           {
             "id": "agg:other@C00634774",
@@ -40529,8 +40523,7 @@
             "amount_in": 30576387.0,
             "is_terminus": false,
             "terminus_reason": null,
-            "source_url": "https://www.fec.gov/data/committee/C00004036/?cycle=2024",
-            "side": "out"
+            "source_url": "https://www.fec.gov/data/committee/C00004036/?cycle=2024"
           },
           {
             "id": "agg:other@C00004036",
@@ -41348,8 +41341,7 @@
             "amount_in": 13264828.0,
             "is_terminus": false,
             "terminus_reason": null,
-            "source_url": "https://www.fec.gov/data/committee/C00030718/?cycle=2024",
-            "side": "out"
+            "source_url": "https://www.fec.gov/data/committee/C00030718/?cycle=2024"
           },
           {
             "id": "agg:other@C00030718",
@@ -42062,8 +42054,7 @@
             "amount_in": 2016639.0,
             "is_terminus": false,
             "terminus_reason": null,
-            "source_url": "https://www.fec.gov/data/committee/C00747121/?cycle=2024",
-            "side": "out"
+            "source_url": "https://www.fec.gov/data/committee/C00747121/?cycle=2024"
           },
           {
             "id": "agg:other@C00747121",
@@ -42853,8 +42844,7 @@
             "amount_in": 17011780.0,
             "is_terminus": false,
             "terminus_reason": null,
-            "source_url": "https://www.fec.gov/data/committee/C00528554/?cycle=2024",
-            "side": "out"
+            "source_url": "https://www.fec.gov/data/committee/C00528554/?cycle=2024"
           },
           {
             "id": "ind:ADELSON_MIRIAM|89109",
@@ -43560,8 +43550,7 @@
             "amount_in": 5445682.0,
             "is_terminus": false,
             "terminus_reason": null,
-            "source_url": "https://www.fec.gov/data/committee/C00835041/?cycle=2024",
-            "side": "out"
+            "source_url": "https://www.fec.gov/data/committee/C00835041/?cycle=2024"
           },
           {
             "id": "agg:other@C00835041",
@@ -44387,8 +44376,7 @@
             "amount_in": 124500.0,
             "is_terminus": false,
             "terminus_reason": null,
-            "source_url": "https://www.fec.gov/data/committee/C00689745/?cycle=2024",
-            "side": "out"
+            "source_url": "https://www.fec.gov/data/committee/C00689745/?cycle=2024"
           },
           {
             "id": "S6PA00217",
@@ -45008,8 +44996,7 @@
             "amount_in": 1137000.0,
             "is_terminus": false,
             "terminus_reason": null,
-            "source_url": "https://www.fec.gov/data/committee/C00760801/?cycle=2024",
-            "side": "out"
+            "source_url": "https://www.fec.gov/data/committee/C00760801/?cycle=2024"
           },
           {
             "id": "org:GREATER_PA_CARPENTERS_PEC",
@@ -45766,8 +45753,7 @@
             "amount_in": 1969467.0,
             "is_terminus": false,
             "terminus_reason": null,
-            "source_url": "https://www.fec.gov/data/committee/C00684969/?cycle=2024",
-            "side": "out"
+            "source_url": "https://www.fec.gov/data/committee/C00684969/?cycle=2024"
           },
           {
             "id": "agg:other@C00684969",
@@ -46749,8 +46735,7 @@
             "amount_in": 2072714.0,
             "is_terminus": false,
             "terminus_reason": null,
-            "source_url": "https://www.fec.gov/data/committee/C00761064/?cycle=2024",
-            "side": "out"
+            "source_url": "https://www.fec.gov/data/committee/C00761064/?cycle=2024"
           },
           {
             "id": "ind:FRANKS-ALLEN_SARA|02420",
@@ -47593,8 +47578,7 @@
             "amount_in": 553496.0,
             "is_terminus": false,
             "terminus_reason": null,
-            "source_url": "https://www.fec.gov/data/committee/C00851410/?cycle=2024",
-            "side": "out"
+            "source_url": "https://www.fec.gov/data/committee/C00851410/?cycle=2024"
           },
           {
             "id": "org:NATIONAL_SHOOTING_SPORTS_FOUNDATION,_INC.",
@@ -48319,8 +48303,7 @@
             "amount_in": 4264705.0,
             "is_terminus": false,
             "terminus_reason": null,
-            "source_url": "https://www.fec.gov/data/committee/C00612820/?cycle=2024",
-            "side": "out"
+            "source_url": "https://www.fec.gov/data/committee/C00612820/?cycle=2024"
           },
           {
             "id": "org:COMMUNITY_CHANGE_ACTION",
@@ -49363,8 +49346,7 @@
             "amount_in": 60750.0,
             "is_terminus": false,
             "terminus_reason": null,
-            "source_url": "https://www.fec.gov/data/committee/C00883322/?cycle=2024",
-            "side": "out"
+            "source_url": "https://www.fec.gov/data/committee/C00883322/?cycle=2024"
           },
           {
             "id": "ind:MCENROE_JOHN|60093",
@@ -49763,8 +49745,7 @@
             "amount_in": 300200.0,
             "is_terminus": false,
             "terminus_reason": null,
-            "source_url": "https://www.fec.gov/data/committee/C00826776/?cycle=2024",
-            "side": "out"
+            "source_url": "https://www.fec.gov/data/committee/C00826776/?cycle=2024"
           },
           {
             "id": "ind:CHILDS_JOHN|02116",
@@ -50156,8 +50137,7 @@
             "amount_in": 125000.0,
             "is_terminus": false,
             "terminus_reason": null,
-            "source_url": "https://www.fec.gov/data/committee/C00880518/?cycle=2024",
-            "side": "out"
+            "source_url": "https://www.fec.gov/data/committee/C00880518/?cycle=2024"
           },
           {
             "id": "org:BITCOIN_VOTER_PROJECT,_INC",
@@ -50596,8 +50576,7 @@
             "amount_in": 4230.0,
             "is_terminus": false,
             "terminus_reason": null,
-            "source_url": "https://www.fec.gov/data/committee/C00821611/?cycle=2024",
-            "side": "out"
+            "source_url": "https://www.fec.gov/data/committee/C00821611/?cycle=2024"
           },
           {
             "id": "vendor:V-the-korea-times-philadelphia",
@@ -51137,8 +51116,7 @@
             "amount_in": 1769257.0,
             "is_terminus": false,
             "terminus_reason": null,
-            "source_url": "https://www.fec.gov/data/committee/C00828608/?cycle=2024",
-            "side": "out"
+            "source_url": "https://www.fec.gov/data/committee/C00828608/?cycle=2024"
           },
           {
             "id": "ind:ADELSON_MIRIAM|89113",
@@ -51793,8 +51771,7 @@
             "amount_in": 110494.0,
             "is_terminus": false,
             "terminus_reason": null,
-            "source_url": "https://www.fec.gov/data/committee/C00738732/?cycle=2024",
-            "side": "out"
+            "source_url": "https://www.fec.gov/data/committee/C00738732/?cycle=2024"
           },
           {
             "id": "cycle:C00738732@C00738732",
@@ -52188,8 +52165,7 @@
             "amount_in": 874736.0,
             "is_terminus": false,
             "terminus_reason": null,
-            "source_url": "https://www.fec.gov/data/committee/C00825885/?cycle=2024",
-            "side": "out"
+            "source_url": "https://www.fec.gov/data/committee/C00825885/?cycle=2024"
           },
           {
             "id": "ind:SCHOENFELD_PHILIP_M|23507",
@@ -52720,8 +52696,7 @@
             "amount_in": 251410.0,
             "is_terminus": false,
             "terminus_reason": null,
-            "source_url": "https://www.fec.gov/data/committee/C00299396/?cycle=2024",
-            "side": "out"
+            "source_url": "https://www.fec.gov/data/committee/C00299396/?cycle=2024"
           },
           {
             "id": "C00007542",
@@ -53507,8 +53482,7 @@
             "amount_in": 397663.0,
             "is_terminus": false,
             "terminus_reason": null,
-            "source_url": "https://www.fec.gov/data/committee/C00755363/?cycle=2024",
-            "side": "out"
+            "source_url": "https://www.fec.gov/data/committee/C00755363/?cycle=2024"
           },
           {
             "id": "C00188193",
@@ -54261,8 +54235,7 @@
             "amount_in": 1050506.0,
             "is_terminus": false,
             "terminus_reason": null,
-            "source_url": "https://www.fec.gov/data/committee/C00625566/?cycle=2024",
-            "side": "out"
+            "source_url": "https://www.fec.gov/data/committee/C00625566/?cycle=2024"
           },
           {
             "id": "agg:other@C00625566",
@@ -54602,8 +54575,7 @@
             "amount_in": 161793.0,
             "is_terminus": false,
             "terminus_reason": null,
-            "source_url": "https://www.fec.gov/data/committee/C00742635/?cycle=2024",
-            "side": "out"
+            "source_url": "https://www.fec.gov/data/committee/C00742635/?cycle=2024"
           },
           {
             "id": "org:NATIONAL_ASSOCIATION_FOR_GUN_RIGHTS",
@@ -55065,8 +55037,7 @@
             "amount_in": 1000000.0,
             "is_terminus": false,
             "terminus_reason": null,
-            "source_url": "https://www.fec.gov/data/committee/C00891549/?cycle=2024",
-            "side": "out"
+            "source_url": "https://www.fec.gov/data/committee/C00891549/?cycle=2024"
           },
           {
             "id": "ind:MCMAHON_LINDA_E|06831",
@@ -55554,8 +55525,7 @@
             "amount_in": 257161.0,
             "is_terminus": false,
             "terminus_reason": null,
-            "source_url": "https://www.fec.gov/data/committee/C00509893/?cycle=2024",
-            "side": "out"
+            "source_url": "https://www.fec.gov/data/committee/C00509893/?cycle=2024"
           },
           {
             "id": "agg:other@C00509893",
@@ -56130,8 +56100,7 @@
             "amount_in": 7975.0,
             "is_terminus": false,
             "terminus_reason": null,
-            "source_url": "https://www.fec.gov/data/committee/C00756791/?cycle=2024",
-            "side": "out"
+            "source_url": "https://www.fec.gov/data/committee/C00756791/?cycle=2024"
           },
           {
             "id": "ind:PARK_SOYOUN|94024",
@@ -56410,8 +56379,7 @@
             "amount_in": 929794.0,
             "is_terminus": false,
             "terminus_reason": null,
-            "source_url": "https://www.fec.gov/data/committee/C00032979/?cycle=2024",
-            "side": "out"
+            "source_url": "https://www.fec.gov/data/committee/C00032979/?cycle=2024"
           },
           {
             "id": "agg:other@C00032979",
@@ -56985,8 +56953,7 @@
             "amount_in": 6124042.0,
             "is_terminus": false,
             "terminus_reason": null,
-            "source_url": "https://www.fec.gov/data/committee/C00747998/?cycle=2024",
-            "side": "out"
+            "source_url": "https://www.fec.gov/data/committee/C00747998/?cycle=2024"
           },
           {
             "id": "org:PIVOTAL_VENTURES",
@@ -57967,8 +57934,7 @@
             "amount_in": 1732784.0,
             "is_terminus": false,
             "terminus_reason": null,
-            "source_url": "https://www.fec.gov/data/committee/C00508440/?cycle=2024",
-            "side": "out"
+            "source_url": "https://www.fec.gov/data/committee/C00508440/?cycle=2024"
           },
           {
             "id": "agg:other@C00508440",
@@ -58701,8 +58667,7 @@
             "amount_in": 756486.0,
             "is_terminus": false,
             "terminus_reason": null,
-            "source_url": "https://www.fec.gov/data/committee/C00800995/?cycle=2024",
-            "side": "out"
+            "source_url": "https://www.fec.gov/data/committee/C00800995/?cycle=2024"
           },
           {
             "id": "ind:WOODS_LAURE|94028",
@@ -59188,8 +59153,7 @@
             "amount_in": 208912036.0,
             "is_terminus": false,
             "terminus_reason": null,
-            "source_url": "https://www.fec.gov/data/committee/C00879510/?cycle=2024",
-            "side": "out"
+            "source_url": "https://www.fec.gov/data/committee/C00879510/?cycle=2024"
           },
           {
             "id": "ind:MUSK_ELON|78734",
@@ -59815,8 +59779,7 @@
             "amount_in": 11427.0,
             "is_terminus": false,
             "terminus_reason": null,
-            "source_url": "https://www.fec.gov/data/committee/C00891473/?cycle=2024",
-            "side": "out"
+            "source_url": "https://www.fec.gov/data/committee/C00891473/?cycle=2024"
           },
           {
             "id": "S2PA00661",
@@ -60696,8 +60659,7 @@
             "amount_in": 157300.0,
             "is_terminus": false,
             "terminus_reason": null,
-            "source_url": "https://www.fec.gov/data/committee/C00880682/?cycle=2024",
-            "side": "out"
+            "source_url": "https://www.fec.gov/data/committee/C00880682/?cycle=2024"
           },
           {
             "id": "ind:TOMITA_TAMLYN|91202",
@@ -61191,8 +61153,7 @@
             "amount_in": 14977540.0,
             "is_terminus": false,
             "terminus_reason": null,
-            "source_url": "https://www.fec.gov/data/committee/C00341396/?cycle=2024",
-            "side": "out"
+            "source_url": "https://www.fec.gov/data/committee/C00341396/?cycle=2024"
           },
           {
             "id": "agg:other@C00341396",
@@ -61749,8 +61710,7 @@
             "amount_in": 229061.0,
             "is_terminus": false,
             "terminus_reason": null,
-            "source_url": "https://www.fec.gov/data/committee/C00430280/?cycle=2024",
-            "side": "out"
+            "source_url": "https://www.fec.gov/data/committee/C00430280/?cycle=2024"
           },
           {
             "id": "agg:other@C00430280",
@@ -62307,8 +62267,7 @@
             "amount_in": 165001.0,
             "is_terminus": false,
             "terminus_reason": null,
-            "source_url": "https://www.fec.gov/data/committee/C00754242/?cycle=2024",
-            "side": "out"
+            "source_url": "https://www.fec.gov/data/committee/C00754242/?cycle=2024"
           },
           {
             "id": "ind:MASHRUWALA_RAJESH|94301",
@@ -62635,8 +62594,7 @@
             "amount_in": 2467490.0,
             "is_terminus": false,
             "terminus_reason": null,
-            "source_url": "https://www.fec.gov/data/committee/C00162818/?cycle=2024",
-            "side": "out"
+            "source_url": "https://www.fec.gov/data/committee/C00162818/?cycle=2024"
           },
           {
             "id": "agg:other@C00162818",
@@ -63229,8 +63187,7 @@
             "amount_in": 1790636.0,
             "is_terminus": false,
             "terminus_reason": null,
-            "source_url": "https://www.fec.gov/data/committee/C00556274/?cycle=2024",
-            "side": "out"
+            "source_url": "https://www.fec.gov/data/committee/C00556274/?cycle=2024"
           },
           {
             "id": "org:UNITED_STEELWORKERS",
@@ -63507,8 +63464,7 @@
             "amount_in": 2364511.0,
             "is_terminus": false,
             "terminus_reason": null,
-            "source_url": "https://www.fec.gov/data/committee/C00632398/?cycle=2024",
-            "side": "out"
+            "source_url": "https://www.fec.gov/data/committee/C00632398/?cycle=2024"
           },
           {
             "id": "agg:other@C00632398",
@@ -63728,8 +63684,7 @@
             "amount_in": 19304000.0,
             "is_terminus": false,
             "terminus_reason": null,
-            "source_url": "https://www.fec.gov/data/committee/C00779595/?cycle=2024",
-            "side": "out"
+            "source_url": "https://www.fec.gov/data/committee/C00779595/?cycle=2024"
           },
           {
             "id": "org:REPUBLICAN_STATE_LEADERSHIP_COMMITTEE",
@@ -64077,8 +64032,7 @@
             "amount_in": 4100.0,
             "is_terminus": false,
             "terminus_reason": null,
-            "source_url": "https://www.fec.gov/data/committee/C00869040/?cycle=2024",
-            "side": "out"
+            "source_url": "https://www.fec.gov/data/committee/C00869040/?cycle=2024"
           },
           {
             "id": "ind:KAVANAU_CHRISTOPHER_LEE|18102",
@@ -64529,8 +64483,7 @@
             "amount_in": 1438554.0,
             "is_terminus": false,
             "terminus_reason": null,
-            "source_url": "https://www.fec.gov/data/committee/C00640300/?cycle=2024",
-            "side": "out"
+            "source_url": "https://www.fec.gov/data/committee/C00640300/?cycle=2024"
           },
           {
             "id": "agg:other@C00640300",
@@ -65047,8 +65000,7 @@
             "amount_in": 576457.0,
             "is_terminus": false,
             "terminus_reason": null,
-            "source_url": "https://www.fec.gov/data/committee/C00647966/?cycle=2024",
-            "side": "out"
+            "source_url": "https://www.fec.gov/data/committee/C00647966/?cycle=2024"
           },
           {
             "id": "ind:GUERNSEY_SHERWOOD|01201",
@@ -65636,8 +65588,7 @@
             "amount_in": 605333.0,
             "is_terminus": false,
             "terminus_reason": null,
-            "source_url": "https://www.fec.gov/data/committee/C00541433/?cycle=2024",
-            "side": "out"
+            "source_url": "https://www.fec.gov/data/committee/C00541433/?cycle=2024"
           },
           {
             "id": "org:SAFARI_CLUB_INTERNATIONAL",
@@ -66081,8 +66032,7 @@
             "amount_in": 20282.0,
             "is_terminus": false,
             "terminus_reason": null,
-            "source_url": "https://www.fec.gov/data/committee/C00740514/?cycle=2024",
-            "side": "out"
+            "source_url": "https://www.fec.gov/data/committee/C00740514/?cycle=2024"
           },
           {
             "id": "ind:MOORE_GLENN_C_SR.|48307",
@@ -66603,8 +66553,7 @@
             "amount_in": 6397781.0,
             "is_terminus": false,
             "terminus_reason": null,
-            "source_url": "https://www.fec.gov/data/committee/C00678839/?cycle=2024",
-            "side": "out"
+            "source_url": "https://www.fec.gov/data/committee/C00678839/?cycle=2024"
           },
           {
             "id": "agg:other@C00678839",
@@ -67229,8 +67178,7 @@
             "amount_in": 4046964.0,
             "is_terminus": false,
             "terminus_reason": null,
-            "source_url": "https://www.fec.gov/data/committee/C00802389/?cycle=2024",
-            "side": "out"
+            "source_url": "https://www.fec.gov/data/committee/C00802389/?cycle=2024"
           },
           {
             "id": "ind:BLOOMBERG_MICHAEL|10075",
@@ -68112,8 +68060,7 @@
             "amount_in": 22774450.0,
             "is_terminus": false,
             "terminus_reason": null,
-            "source_url": "https://www.fec.gov/data/committee/C00418897/?cycle=2024",
-            "side": "out"
+            "source_url": "https://www.fec.gov/data/committee/C00418897/?cycle=2024"
           },
           {
             "id": "agg:other@C00418897",
@@ -68646,8 +68593,7 @@
             "amount_in": 894137.0,
             "is_terminus": false,
             "terminus_reason": null,
-            "source_url": "https://www.fec.gov/data/committee/C00003590/?cycle=2024",
-            "side": "out"
+            "source_url": "https://www.fec.gov/data/committee/C00003590/?cycle=2024"
           },
           {
             "id": "agg:other@C00003590",
@@ -69171,8 +69117,7 @@
             "amount_in": 870000.0,
             "is_terminus": false,
             "terminus_reason": null,
-            "source_url": "https://www.fec.gov/data/committee/C00882381/?cycle=2024",
-            "side": "out"
+            "source_url": "https://www.fec.gov/data/committee/C00882381/?cycle=2024"
           },
           {
             "id": "org:NORTHWEST_REGION_ORGANIZING_COALITION_PAC",
@@ -70249,8 +70194,7 @@
             "amount_in": 3270351.0,
             "is_terminus": false,
             "terminus_reason": null,
-            "source_url": "https://www.fec.gov/data/committee/C00428557/?cycle=2024",
-            "side": "out"
+            "source_url": "https://www.fec.gov/data/committee/C00428557/?cycle=2024"
           },
           {
             "id": "org:JORDAN/DELANEY_FAMILY_TRUST",
@@ -70937,8 +70881,7 @@
             "amount_in": 754087.0,
             "is_terminus": false,
             "terminus_reason": null,
-            "source_url": "https://www.fec.gov/data/committee/C00483693/?cycle=2024",
-            "side": "out"
+            "source_url": "https://www.fec.gov/data/committee/C00483693/?cycle=2024"
           },
           {
             "id": "C00135368",
