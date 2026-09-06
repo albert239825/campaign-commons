@@ -1,6 +1,8 @@
 from __future__ import annotations
 
 import json
+import threading
+import time
 from pathlib import Path
 
 import pytest
@@ -9,6 +11,7 @@ from jsonschema import Draft7Validator
 import campaign_commons.enrich_funders as enrich_funders
 import campaign_commons.enrich_spenders as enrich_spenders
 from campaign_commons.issues import RowRefs, patch_machine_funder
+from campaign_commons.xai_client import RetryableResponse
 
 
 def _response(result: dict[str, object], *, source_url: str = "https://example.org/about") -> dict[str, object]:
@@ -196,6 +199,136 @@ def test_funder_materializes_into_donor_views(monkeypatch: pytest.MonkeyPatch, t
     assert materialized["x_enrichment"]["issue_focus"]["basis"]["basis"] == "inferred"
     assert materialized["x_enrichment"]["issue_focus"]["basis"]["rule"] == "x_funder_focus"
     assert "stale" not in json.dumps(materialized)
+
+
+def _setup_many(monkeypatch: pytest.MonkeyPatch, tmp_path: Path, totals: dict[str, int]) -> Path:
+    _, hand = _setup(monkeypatch, tmp_path)
+    entities = tmp_path / "out" / "race" / "entities"
+    for path in entities.glob("*.json"):
+        path.unlink()
+    (hand / "issue_focus.json").write_text(json.dumps({"rows": []}))
+    inflows = [
+        {"from_entity_id": f"org:{slug}", "from_name": slug.replace("_", " ").title(), "amount": total}
+        for slug, total in totals.items()
+    ]
+    (entities / "C1.json").write_text(json.dumps({"inflows": inflows}))
+    return hand
+
+
+def test_min_total_selects_every_org_at_or_above_threshold(monkeypatch: pytest.MonkeyPatch, tmp_path: Path) -> None:
+    hand = _setup_many(monkeypatch, tmp_path, {"ALPHA": 500, "BRAVO": 10_000, "CHARLIE": 9_999, "DELTA": 20_000})
+    (hand / "issue_focus.json").write_text(json.dumps({"rows": [{"entity_id": "org:DELTA"}]}))
+    plans = enrich_funders._plans("race", top=1, limit=None, only=None, refresh_reviewed=False, min_total=10_000)
+    assert [plan["entity_id"] for plan in plans] == ["org:BRAVO"]
+    top_two = enrich_funders._plans("race", top=2, limit=None, only=None, refresh_reviewed=False)
+    assert [plan["entity_id"] for plan in top_two] == ["org:BRAVO"]
+
+
+class ThreadedFakeClient:
+    """Answers each org with its own page, finishing in reverse submission order."""
+
+    def __init__(self, delays: dict[str, float]) -> None:
+        self.delays = delays
+        self.calls = 0
+        self.lock = threading.Lock()
+
+    def create_response(self, payload: dict[str, object]) -> dict[str, object]:
+        content = str(payload["input"][1]["content"])  # type: ignore[index]
+        entity_id = content.split("synthetic id ")[1].split(")")[0]
+        time.sleep(self.delays.get(entity_id, 0.0))
+        with self.lock:
+            self.calls += 1
+        slug = entity_id.removeprefix("org:").lower()
+        return _response(_result(f"https://example.org/{slug}"), source_url=f"https://example.org/{slug}")
+
+
+def _page_for_any_org(url: str) -> tuple[int, str]:
+    slug = url.rsplit("/", 1)[-1]
+    name = slug.replace("_", " ").title()
+    return 200, f"<html><body>{name} exists. We work to protect healthcare access.</body></html>"
+
+
+def test_parallel_rows_are_sorted_regardless_of_completion_order(
+    monkeypatch: pytest.MonkeyPatch, tmp_path: Path
+) -> None:
+    hand = _setup_many(monkeypatch, tmp_path, {"ALPHA": 400, "BRAVO": 300, "CHARLIE": 200, "DELTA": 100})
+    client = ThreadedFakeClient({"org:ALPHA": 0.15, "org:BRAVO": 0.1, "org:CHARLIE": 0.05, "org:DELTA": 0.0})
+    assert enrich_funders.run("race", client=client, page_fetcher=_page_for_any_org, top=10, concurrency=4) == 0
+    rows = json.loads((hand / "x_funder_focus.json").read_text())["rows"]
+    assert [row["entity_id"] for row in rows] == ["org:ALPHA", "org:BRAVO", "org:CHARLIE", "org:DELTA"]
+    assert client.calls == 4
+    ledger = json.loads((tmp_path / "raw" / "xai" / "ledger.json").read_text())
+    assert sorted(entry["entity_id"] for entry in ledger) == ["org:ALPHA", "org:BRAVO", "org:CHARLIE", "org:DELTA"]
+    assert len(list((tmp_path / "raw" / "xai").glob("funder-*.json"))) == 4
+
+
+def test_parallel_budget_stops_submissions_and_keeps_unprocessed_rows(
+    monkeypatch: pytest.MonkeyPatch, tmp_path: Path
+) -> None:
+    hand = _setup_many(monkeypatch, tmp_path, {"ALPHA": 400, "BRAVO": 300, "CHARLIE": 200, "DELTA": 100, "ECHO": 50})
+    old_row = {"entity_id": "org:ECHO", "provenance": {"review_status": "pending"}, "quote": "old"}
+    (hand / "x_funder_focus.json").write_text(json.dumps({"race_id": "race", "rows": [old_row]}))
+    client = ThreadedFakeClient({})
+    assert (
+        enrich_funders.run("race", client=client, page_fetcher=_page_for_any_org, top=10, concurrency=2, max_calls=2)
+        == 3
+    )
+    assert client.calls == 2
+    rows = json.loads((hand / "x_funder_focus.json").read_text())["rows"]
+    assert [row["entity_id"] for row in rows] == ["org:ALPHA", "org:BRAVO", "org:ECHO"]
+    assert rows[2] == old_row
+
+
+def test_parallel_call_failure_is_reported_and_others_continue(
+    monkeypatch: pytest.MonkeyPatch, tmp_path: Path, capsys: pytest.CaptureFixture[str]
+) -> None:
+    hand = _setup_many(monkeypatch, tmp_path, {"ALPHA": 400, "BRAVO": 300})
+
+    class FlakyClient(ThreadedFakeClient):
+        def create_response(self, payload: dict[str, object]) -> dict[str, object]:
+            if "org:ALPHA" in str(payload["input"][1]["content"]):  # type: ignore[index]
+                raise RetryableResponse(503, {"error": "overloaded"})
+            return super().create_response(payload)
+
+    slept: list[float] = []
+    client = FlakyClient({})
+    assert (
+        enrich_funders.run(
+            "race", client=client, page_fetcher=_page_for_any_org, top=10, concurrency=2, sleep=slept.append
+        )
+        == 0
+    )
+    assert slept == [1.0, 2.0]
+    assert [row["entity_id"] for row in json.loads((hand / "x_funder_focus.json").read_text())["rows"]] == ["org:BRAVO"]
+    assert "FAIL org:ALPHA" in capsys.readouterr().err
+
+
+def test_parallel_non_retryable_error_fails_fast(
+    monkeypatch: pytest.MonkeyPatch, tmp_path: Path, capsys: pytest.CaptureFixture[str]
+) -> None:
+    hand = _setup_many(monkeypatch, tmp_path, {"ALPHA": 400, "BRAVO": 300})
+
+    class BadRequestClient(ThreadedFakeClient):
+        def create_response(self, payload: dict[str, object]) -> dict[str, object]:
+            if "org:ALPHA" in str(payload["input"][1]["content"]):  # type: ignore[index]
+                raise RuntimeError("xAI Responses API returned HTTP 400: bad request")
+            return super().create_response(payload)
+
+    slept: list[float] = []
+    assert (
+        enrich_funders.run(
+            "race",
+            client=BadRequestClient({}),
+            page_fetcher=_page_for_any_org,
+            top=10,
+            concurrency=2,
+            sleep=slept.append,
+        )
+        == 0
+    )
+    assert slept == []
+    assert [row["entity_id"] for row in json.loads((hand / "x_funder_focus.json").read_text())["rows"]] == ["org:BRAVO"]
+    assert "FAIL org:ALPHA" in capsys.readouterr().err
 
 
 def test_funder_repair_uses_no_tools_and_preserves_source(monkeypatch: pytest.MonkeyPatch, tmp_path: Path) -> None:
