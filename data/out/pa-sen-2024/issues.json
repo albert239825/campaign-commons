@@ -1,6 +1,6 @@
 {
   "race_id": "pa-sen-2024",
-  "generated_at": "2026-09-06T01:41:20+00:00",
+  "generated_at": "2026-09-06T01:54:28+00:00",
   "data_status": "partial",
   "by_ad_issue": [
     {
@@ -487,7 +487,7 @@
     "ads_total": 500,
     "ies_tagged": 0,
     "ie_dollars_tagged": 0,
-    "spenders_with_positions": 0
+    "spenders_with_positions": 17
   },
   "notes": [
     "Two layers, never summed: by_ad_issue is what tagged ads and filed notices were about (attributable to those records' dollars); by_spender_focus is what the spender says it exists for (about the spender, not the dollars). They are not comparable and must not be added.",
