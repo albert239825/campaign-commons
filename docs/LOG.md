@@ -709,6 +709,33 @@ being merged into one taxonomy the data does not have.
 story-decorated; 23 with a self-described focus loaded from `entities/*.json` (34 hand-tag rows; the rest are not top
 spenders). Dropdown: 4 highlight kinds, 5 flags, 6 focus kinds. Nav items 6 → 2. Lint, tsc and the static build pass; the
 `/stories` and `/vendors` routes are still emitted.
+
+## 2026-09-06 ~09:30 — Block 3 child B: one pie, a "Show detail" toggle (child B)
+
+**What changed.** The ledger's "Funding overview" keeps its shape — one tab per view (all candidates, then each candidate),
+one pie per tab, campaign receipts vs outside spending, detail column on the right — and gains a **Show detail** button
+under the total. Detail re-cuts the same pie into five slices: receipts from individuals, from committees, other receipts
+(three shades of the campaign hue) and outside spending supporting / opposing (two shades of the outside hue), so the
+dark/light split still reads as "reached the campaign" vs "independent, never did" (D-16). Clicking or keying a detail
+slice opens its group in the detail column and highlights the matching line (`aria-current`); the legend under the pie
+lists the five slices with amounts and shares of the pie total. `funding-view.ts` gains `pieSlices(view, detailed)`,
+`pieSectors`, `GROUP_COLORS`; the component draws sectors from cumulative angles instead of one split angle. Summary
+view, tabs, captions, visibility bar, methodology `<details>` and source records are unchanged; no contract or data
+changes; `page.tsx` untouched. D-81. On the **all-candidates** tab, detail instead groups the pie by side (Albert): one
+contiguous half per candidate — their receipts, outside spending supporting them, outside spending opposing their
+opponent(s) — each side in its own non-party hue (teal-slate / umber-ochre; darkest shade = receipts, lighter = outside
+spending) and a "Working for <candidate>" subtotal heading in the legend (`sideSlices`, `SIDE_HUES`). The caption says the side total is a comparison figure, not a fundraising total. Review pass: by-side is two-candidate only (with N>2 an oppose total has no single side and would be counted N-1 times; the all-candidates detail falls back to the five-slice cut), and selecting a by-side slice opens the candidate record it comes from (`viewId`/`pickId`) instead of leaving the race-wide panel up.
+
+**Challenge.** This is the third cut of the same PR: the Sep 5 critique asked for per-candidate support/oppose pairs,
+Albert then asked for one three-slice "Money working for <candidate>" pie per candidate, and Patrick settled on the
+original single pie with more granularity behind a button. The slice model was made data-driven so the third cut was a
+rewrite of `pieSlices`, not of the SVG. The receipts "other" line is `receipts − individuals − committees` floored at 0,
+so in detail the three campaign slices can exceed the summary receipts by the floored amount; PA has none.
+
+**Numbers.** PA all-candidates: $94.1M receipts ($64.8M individuals, $4.0M committees, $25.3M other) + $233.4M outside
+($50.5M supporting, $182.9M opposing). Casey $58.1M / $125.9M; McCormick $36.0M / $107.5M. Sides: Casey $159.5M (49%) =
+58.1 + 22.2 + 79.2; McCormick $168.0M (51%) = 36.0 + 28.3 + 103.7. Lint, tsc, build green.
+
 ### 2026-09-06 — Phase 2a ad transcript enrichment
 
 Added `enrich_transcripts.py`, `enrich_ads.py`, `enrich_review.py`, and the `enrich-transcripts`, `enrich-ads`, and
@@ -716,7 +743,6 @@ Added `enrich_transcripts.py`, `enrich_ads.py`, `enrich_review.py`, and the `enr
 and `--refresh-reviewed`; caches live under `data/raw/yt` and `data/raw/xai`. The transcript step runs locally because
 YouTube blocks cloud IPs. Machine rows remain separate from human issue tags, carry review status and response provenance,
 and are merged into optional `machine_issues` output only. 183 pipeline tests.
-||||||| d7d05e6
 
 ### 2026-09-06 — Phase 2b spender self-description enrichment
 
@@ -727,4 +753,3 @@ Added website-only `enrich_spenders.py`, cached FEC committee/page verification 
 Overlong or incomplete model outputs now get one cached, no-tools repair call before validation.
 Added `enrich_funders.py` for ranked upstream `org:` funders, open-web self-description checks, donor-view materialization,
 and `enrich-funders`/`enrich-review --kind funders`.
-||||||| 97993eb
