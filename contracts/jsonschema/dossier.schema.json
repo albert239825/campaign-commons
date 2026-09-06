@@ -239,7 +239,7 @@
                   },
                   "summary": {
                     "type": "string",
-                    "maxLength": 600
+                    "maxLength": 800
                   },
                   "direction_proposed": {
                     "anyOf": [

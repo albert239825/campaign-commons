@@ -706,7 +706,7 @@ export const MachineStancePostSchema = z.object({
 
 export const MachineStanceSchema = z.object({
   issue_id: IssueIdSchema,
-  summary: z.string().max(600),
+  summary: z.string().max(800),
   direction_proposed: DirectionSchema.nullable(),
   confidence: z.enum(["high", "medium", "low"]),
   sources: z.array(MachineStanceSourceSchema).min(1),
@@ -982,7 +982,7 @@ export const HandXIssueFocusFileSchema = HandFileBase.extend({ rows: z.array(Han
 export const HandXStanceRowSchema = z.object({
   candidate_id: z.string(),
   issue_id: IssueIdSchema,
-  summary: z.string().max(600),
+  summary: z.string().max(800),
   direction_proposed: DirectionSchema.nullable(),
   confidence: z.enum(["high", "medium", "low"]),
   sources: z.array(MachineStanceSourceSchema).min(1),
