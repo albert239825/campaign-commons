@@ -484,10 +484,6 @@ body:has(.race-dashboard) :is(a, button):focus-visible { outline: 2px solid curr
 
 /* A single, candidate-selectable view of campaign and outside dollars. */
 .race-sections { display: grid; grid-template-columns: 180px minmax(0, 1fr); gap: 40px; align-items: start; margin-top: -56px; min-width: 0; }
-.funding-tabs { display: flex; border-bottom: 1px solid var(--race-rule); gap: 32px; margin-bottom: 24px; }
-.funding-tabs button { padding: 16px 0; border-bottom: 2px solid transparent; text-align: left; color: #6f6d69; cursor: pointer; font-size: 15px; }
-.funding-tabs button[aria-selected="true"] { color: #1b1b1a; border-color: currentColor; }
-.funding-tabs small { display: block; margin-top: 4px; font-size: 12px; }
 .funding-panel { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 48px; align-items: start; }
 .funding-chart-column { position: sticky; top: 32px; min-width: 0; }
 .funding-pie { display: block; width: min(100%, 220px); margin: 12px auto; overflow: visible; }
@@ -535,9 +531,6 @@ body:has(.race-dashboard) :is(a, button):focus-visible { outline: 2px solid curr
 }
 @media (max-width: 680px) {
   .race-sections { margin-top: -32px; }
-  .funding-tabs { gap: 16px; }
-  .funding-tabs button { flex: 1; min-width: 0; font-size: 12px; }
-  .funding-tabs small { font-size: 11px; }
   .funding-panel { grid-template-columns: minmax(0, 1fr); }
   .funding-chart-column { position: static; }
   .funding-pie { max-width: 280px; }
@@ -550,12 +543,14 @@ body:has(.race-dashboard) :is(a, button):focus-visible { outline: 2px solid curr
 .funding-pies { display: grid; grid-template-columns: repeat(auto-fit, minmax(190px, 1fr)); gap: 20px; align-items: start; }
 .funding-pie-card { min-width: 0; padding: 16px 12px 12px; border: 1px solid transparent; }
 .funding-pie-card-focused { border-color: var(--race-rule); }
-.funding-pie-heading { display: grid; gap: 4px; text-align: center; font-size: 16px; letter-spacing: -.01em; }
+.funding-pie-heading { display: grid; gap: 4px; align-content: end; min-height: 72px; text-align: center; font-size: 16px; letter-spacing: -.01em; }
 .funding-pie-heading small { display: flex; justify-content: center; align-items: center; gap: 6px; color: #6f6d69; font-size: 12px; }
 .funding-detail-candidate { display: block; margin-top: 6px; font-size: 16px; letter-spacing: 0; color: #6f6d69; }
 .funding-lines dt { display: flex; align-items: center; gap: 8px; }
 .funding-lines > .funding-line-selected { font-weight: 500; }
 .funding-caption .tabular-nums { color: #1b1b1a; }
+.funding-detail-heading > .funding-caption { margin-top: -16px; margin-bottom: 24px; }
+.funding-slice-controls button > span:nth-child(2) { min-width: 0; overflow-wrap: anywhere; }
 @media (max-width: 680px) {
   .funding-pies { grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 12px; }
   .funding-pie-card { padding: 12px 4px; }
