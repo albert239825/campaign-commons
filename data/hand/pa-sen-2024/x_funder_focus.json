@@ -1,0 +1,596 @@
+{
+  "race_id": "pa-sen-2024",
+  "method": "machine rows, classified by xAI from the organization's own website via open web_search, pending human review",
+  "rows": [
+    {
+      "entity_id": "org:ALTRIA_CLIENT_SERVICES_LLC",
+      "name": "Altria Client Services Llc",
+      "kind": "business_trade",
+      "issue_ids": [],
+      "description": "Altria Client Services provides Altria Group and its companies with high-quality services in a financially disciplined way, including advanced analytics, compliance, government affairs, finance, legal, regulatory affairs and more.",
+      "quote": "Altria Client Services provides Altria Group and its companies with high-quality services in a financially disciplined way. These areas include: Advanced Analytics ● Compliance ● Consumer & Market Insights ● Corporate Citizenship ● Digital Marketing Services ● Engineering ● Finance",
+      "source_urls": [
+        "https://www.altria.com/Overlays/Companies-and-Brands/ALCS",
+        "http://web.archive.org/web/20260121002143/https://www.altria.com/Overlays/Companies-and-Brands/ALCS"
+      ],
+      "provenance": {
+        "tagged_by": "xai-grok-4.3-2026-09-06",
+        "tagged_at": "2026-09-06",
+        "model": "grok-4.3",
+        "prompt_version": "classify_funder.v1",
+        "tools": [
+          "web_search"
+        ],
+        "tool_filters": {},
+        "response_id": "7c573e0e-3276-989e-8050-9901a7b369aa",
+        "retrieved_at": "2026-09-06T03:54:57+00:00",
+        "citations": [
+          "https://www.altria.com/about-altria",
+          "https://www.altria.com/contact-us/investors",
+          "https://www.altria.com/contact-us",
+          "https://nhcsl.org/support/altria/",
+          "https://www.cwpma.org/companies/altria-client-services-llc",
+          "https://www.altria.com/responsibility/drive-responsibility-through-our-value-chain",
+          "https://www.altria.com/Overlays/Companies-and-Brands/ALCS",
+          "https://investor.altria.com/press-releases/news-details/2026/Altria-Celebrates-America-by-Investing-in-Our-Growers-Communities-Employees-and-Iconic-Brands/default.aspx",
+          "https://www.altria.com/people-and-careers/workforce-development-and-capability-building",
+          "https://www.altria.com/en/people-and-careers/careers",
+          "https://www.altria.com/-/media/Project/Altria/Altria/Investors/events-and-presentations/2025/2025-Q1/Press-Release.pdf",
+          "https://investor.altria.com/press-releases/news-details/2025/Altria-Group-Inc--Announces-Retirement-of-CEO-Billy-Gifford-and-Appointment-of-Sal-Mancuso-as-Successor/default.aspx"
+        ],
+        "confidence": "high",
+        "review_status": "pending",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "review_note": null
+      }
+    },
+    {
+      "entity_id": "org:AMERICAN_ACTION_NETWORK",
+      "name": "American Action Network",
+      "kind": "general_partisan",
+      "issue_ids": [],
+      "description": "A 501(c)(4) 'action tank' that creates, encourages and promotes center-right policies based on freedom, limited government, American exceptionalism, and strong national security. Primary goal is putting center-right ideas into action by engaging the public.",
+      "quote": "The American Action Network is a 501(c)(4) ‘action tank’ that will create, encourage and promote center-right policies based on the principles of freedom, limited government, American exceptionalism, and strong national security.",
+      "source_urls": [
+        "https://www.americanactionnetwork.org/about-aan/"
+      ],
+      "provenance": {
+        "tagged_by": "xai-grok-4.3-2026-09-06",
+        "tagged_at": "2026-09-06",
+        "model": "grok-4.3",
+        "prompt_version": "classify_funder.v1",
+        "tools": [
+          "web_search"
+        ],
+        "tool_filters": {},
+        "response_id": "f720a64e-eefc-9270-8b0a-c16f758673d8",
+        "retrieved_at": "2026-09-06T03:51:46+00:00",
+        "citations": [
+          "https://www.americanactionnetwork.org/",
+          "https://www.americanactionnetwork.org/about-aan/",
+          "https://www.americanactionnetwork.org/press/",
+          "https://en.wikipedia.org/wiki/American_Action_Network",
+          "https://www.americanactionnetwork.org/blog-center/"
+        ],
+        "confidence": "high",
+        "review_status": "pending",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "review_note": null
+      }
+    },
+    {
+      "entity_id": "org:AMERICAN_ISRAEL_PUBLIC_AFFAIRS_COMMITTEE",
+      "name": "American Israel Public Affairs Committee",
+      "kind": "candidate_aligned",
+      "issue_ids": [],
+      "description": "AIPAC is an American grassroots organization that works to strengthen the U.S.-Israel partnership. Its mission is to encourage and persuade the U.S. government to enact policies creating a strong, enduring and mutually beneficial relationship with Israel.",
+      "quote": "AIPAC is an American grassroots organization that works to strengthen the U.S.-Israel partnership. Our mission is to encourage and persuade the U.S. government to enact specific policies that create a strong, enduring and mutually beneficial relationship with our ally Israel.",
+      "source_urls": [
+        "https://www.aipac.org/about"
+      ],
+      "provenance": {
+        "tagged_by": "xai-grok-4.3-2026-09-06",
+        "tagged_at": "2026-09-06",
+        "model": "grok-4.3",
+        "prompt_version": "classify_funder.v1",
+        "tools": [
+          "web_search"
+        ],
+        "tool_filters": {},
+        "response_id": "a2573e44-556f-987e-b673-c3c10b78696c",
+        "retrieved_at": "2026-09-06T03:53:52+00:00",
+        "citations": [
+          "https://www.aipac.org/about",
+          "https://www.digitaldemocracyproject.org//member-organizations/america-israel-public-affairs-committee-aipac",
+          "https://ballotpedia.org/American_Israel_Public_Affairs_Committee",
+          "https://t.co/GMedGTOWdE",
+          "https://aipac.org/memos/aipac-faqs",
+          "https://aipac.org/memos/israel-fighting-americas-enemies",
+          "https://aipac.org/memos/israel-hamas-myths-facts",
+          "https://www.aipac.org/memos/israel-elections",
+          "https://www.aipac.org/terms",
+          "https://www.aipac.org/resources/a-new-era-two-years-since-the-abraham-accords"
+        ],
+        "confidence": "high",
+        "review_status": "pending",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "review_note": null
+      }
+    },
+    {
+      "entity_id": "org:AMERICAN_PROSPERITY_ALLIANCE",
+      "name": "American Prosperity Alliance",
+      "kind": "multi_issue",
+      "issue_ids": [
+        "tax_budget",
+        "healthcare",
+        "labor_trade"
+      ],
+      "description": "The American Prosperity Alliance (“APA”) is a 501(c)(4) social welfare organization whose primary purpose is to advocate for legislative and regulatory policies that advance economic prosperity in America, including reforms to grow the economy, lower national debt, fix healthcare, improve education, prepare the workforce, reduce regulations, create jobs, and promote free markets.",
+      "quote": "The American Prosperity Alliance (“APA”) is a 501(c)(4) social welfare organization. APA’s primary purpose is to advocate for legislative and regulatory policies that advance economic prosperity in America.",
+      "source_urls": [
+        "https://www.prosperityalliance.org/about"
+      ],
+      "provenance": {
+        "tagged_by": "xai-grok-4.3-2026-09-06",
+        "tagged_at": "2026-09-06",
+        "model": "grok-4.3",
+        "prompt_version": "classify_funder.v1",
+        "tools": [
+          "web_search"
+        ],
+        "tool_filters": {},
+        "response_id": "198f55b7-16bb-90de-9af0-4970e20cbc9c",
+        "retrieved_at": "2026-09-06T03:52:37+00:00",
+        "citations": [
+          "https://www.prosperityalliance.org/about",
+          "https://www.prosperityalliance.org",
+          "https://www.prosperityalliance.org/policies",
+          "https://impala.digital/public/profiles/88-2451891/overview",
+          "https://www.prosperityalliance.org/news",
+          "https://www.causeiq.com/organizations/american-prosperity-alliance%2C882451891/",
+          "https://americanprosperity.com/",
+          "https://www.opensecrets.org/outside-spending/donor_detail/2022?amp=&id=American+Prosperity+Alliance&super=N&type=O",
+          "https://app.candid.org/profile/15239709/american-prosperity-alliance-88-2451891",
+          "https://pluralistic.net/2022/08/11/rope-a-dope/",
+          "https://www.opensecrets.org/news/2022/08/two-dark-money-groups-bankrolled-pop-up-super-pac-spending-millions-gop-primaries",
+          "https://www.causeiq.com/organizations/american-prosperity-alliance,882451891/"
+        ],
+        "confidence": "high",
+        "review_status": "pending",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "review_note": null
+      }
+    },
+    {
+      "entity_id": "org:CAPITAL_INSTITUTIONAL_SERVICES_INC",
+      "name": "Capital Institutional Services Inc",
+      "kind": "business_trade",
+      "issue_ids": [],
+      "description": "CAPIS is a compliance-driven institutional broker focused on high-touch global trade execution and commission management solutions, combining advanced technology with transparency and client service since 1977.",
+      "quote": "CAPIS is a compliance-driven institutional broker that focuses on high-touch global trade execution and commission management solutions. We combine an advanced technology platform with a fully transparent model, a deeply experienced team, and an unparalleled dedication to client service.",
+      "source_urls": [
+        "https://capis.com/company/"
+      ],
+      "provenance": {
+        "tagged_by": "xai-grok-4.3-2026-09-06",
+        "tagged_at": "2026-09-06",
+        "model": "grok-4.3",
+        "prompt_version": "classify_funder.v1",
+        "tools": [
+          "web_search"
+        ],
+        "tool_filters": {},
+        "response_id": "c22b25b5-1506-917c-b6fb-17a5ba1e94aa",
+        "retrieved_at": "2026-09-06T03:54:50+00:00",
+        "citations": [
+          "https://capis.com/company/",
+          "https://capis.com/disclosures/",
+          "https://www.zoominfo.com/c/capital-institutional-services-inc/6685227",
+          "https://capis.com/services/",
+          "https://www.ampliz.com/company/capital-institutional-services-inc/81734914",
+          "https://capis.com/",
+          "https://people.equilar.com/bio/org/capital-institutional-services-inc/5356006",
+          "https://capis.com/trading/",
+          "https://mergr.com/company/capital-institutional-services",
+          "https://capis.com/experience-the-difference-inside-capis-commitment-to-trading-excellence-transparency-and-trust/",
+          "https://www.genarchives..com/Towne-Bowditch/g0/p154.htm",
+          "https://www.likedogsandcats..com/syracuse/bird-vet-syracuse-ut/",
+          "https://www.likedogsandcats..com/crawfordsville/pet-euthanasia-crawfordsville-in/",
+          "https://www.likedogsandcats..com/grantsville/emergency-vet-grantsville-ut/",
+          "https://www.likedogsandcats..com/michigan-city/reptile-vet-michigan-city-ind/"
+        ],
+        "confidence": "high",
+        "review_status": "pending",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "review_note": null
+      }
+    },
+    {
+      "entity_id": "org:COINBASE",
+      "name": "Coinbase",
+      "kind": "business_trade",
+      "issue_ids": [
+        "crypto_fintech"
+      ],
+      "description": "Coinbase is on a mission to increase economic freedom in the world. The most trusted crypto platform, it stores more digital assets than any other company and is building the everything exchange for crypto, equities, derivatives, prediction markets, and more. It serves consumers, institutions, and developers with a full-stack platform focused on security and compliance.",
+      "quote": "Coinbase (NASDAQ: COIN) is on a mission to increase economic freedom in the world. The most trusted crypto platform, Coinbase stores more digital assets than any other company and is building the everything exchange — one place to access crypto, equities, derivatives, prediction markets, and more.",
+      "source_urls": [
+        "https://www.coinbase.com/about"
+      ],
+      "provenance": {
+        "tagged_by": "xai-grok-4.3-2026-09-06",
+        "tagged_at": "2026-09-06",
+        "model": "grok-4.3",
+        "prompt_version": "classify_funder.v1",
+        "tools": [
+          "web_search"
+        ],
+        "tool_filters": {},
+        "response_id": "5283d561-cbdd-912f-a335-ad86ffa1e12c",
+        "retrieved_at": "2026-09-06T03:50:56+00:00",
+        "citations": [
+          "https://www.coinbase.com/en-ca/about",
+          "https://www.coinbase.com/mission",
+          "https://help.coinbase.com/en/coinbase/getting-started/getting-started-with-coinbase/what-is-coinbase",
+          "https://www.coinbase.com/blog/why-focusing-on-the-mission-drives-belonging",
+          "https://www.coinbase.com/blog/our-mission-strategy-and-culture",
+          "https://www.coinbase.com/learn/crypto-basics/what-is-bitcoin",
+          "https://www.coinbase.com/en-ca/mission",
+          "https://www.coinbase.com/en-ca/careers",
+          "https://www.coinbase.com/learn/crypto-basics/what-is-cryptocurrency",
+          "https://www.coinbase.com/blog/coinbase-is-a-mission-focused-company",
+          "https://www.coinbase.com/blog/reliability-engineering-at-coinbase",
+          "https://www.coinbase.com/blog/introducing-our-institutional-core-principles",
+          "https://www.coinbase.com/blog/4-reasons-coinbase-is-staying-remote",
+          "https://www.coinbase.com/about"
+        ],
+        "confidence": "high",
+        "review_status": "pending",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "review_note": null
+      }
+    },
+    {
+      "entity_id": "org:COMMUNICATIONS_WORKERS_OF_AMERICA",
+      "name": "Communications Workers Of America",
+      "kind": "labor",
+      "issue_ids": [],
+      "description": "CWA represents workers in private and public sector employment in 1,200 chartered local unions across communications, media, airlines, public service, health care, manufacturing, high tech and more.",
+      "quote": "CWA represents workers in private and public sector employment in 1,200 chartered CWA local unions. CWA members work in communications and information industries, the news media, the airlines, broadcast and cable television, public service, higher education and health care, manufacturing, in high tech and more.",
+      "source_urls": [
+        "https://cwa-union.org/about/cwa-overview"
+      ],
+      "provenance": {
+        "tagged_by": "xai-grok-4.3-2026-09-06",
+        "tagged_at": "2026-09-06",
+        "model": "grok-4.3",
+        "prompt_version": "classify_funder.v1",
+        "tools": [
+          "web_search"
+        ],
+        "tool_filters": {},
+        "response_id": "8fe7ddda-75d2-962b-be68-6150519b6333",
+        "retrieved_at": "2026-09-06T03:53:40+00:00",
+        "citations": [
+          "https://cwa-union.org/about",
+          "https://cwa-union.org/for-members",
+          "https://cwa-union.org/about/cwa-overview",
+          "https://cwa-union.org/workers-rights/health-care-retirement-security",
+          "https://cwa-union.org/",
+          "https://cwa-union.org/news/releases/wikimedia-foundation-workers-overwhelmingly-vote-form-union-cwa",
+          "https://cwa-union.org/pages/about_cwa_and_sierra_club",
+          "https://cwa-union.org/cwa-convention-proceedings-and-biennial-reports"
+        ],
+        "confidence": "high",
+        "review_status": "pending",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "review_note": null
+      }
+    },
+    {
+      "entity_id": "org:EMPOWER_PARENTS_PAC",
+      "name": "Empower Parents Pac",
+      "kind": "candidate_aligned",
+      "issue_ids": [],
+      "description": "Empower Parents PAC supports the national advancement of issues and candidates committed to protecting parental rights in education.",
+      "quote": "Empower Parents PAC supports the national advancement of issues and candidates committed to protecting parental rights in education.",
+      "source_urls": [
+        "https://empowerparentspac.com/"
+      ],
+      "provenance": {
+        "tagged_by": "xai-grok-4.3-2026-09-06",
+        "tagged_at": "2026-09-06",
+        "model": "grok-4.3",
+        "prompt_version": "classify_funder.v1",
+        "tools": [
+          "web_search"
+        ],
+        "tool_filters": {},
+        "response_id": "7a4250b6-d56f-933f-9e61-e7f39792d011",
+        "retrieved_at": "2026-09-06T03:50:50+00:00",
+        "citations": [
+          "https://empowerparentspac.com/",
+          "https://empowerparents.us/",
+          "https://littlesis.org/org/456303-Empower_Parents_PAC/giving",
+          "https://www.empoweringparents.com/contact-us/",
+          "https://www.empoweringparents.com/shop/",
+          "https://www.empoweringparents.com/",
+          "https://www.empoweringparents.com/about-us/",
+          "https://www.zoominfo.com/c/empowering-parents/96554856",
+          "https://www.empower.com/parenting",
+          "https://www.empower.com/about-us",
+          "https://www.genarchives..com/Towne-Bowditch/g0/p22.htm",
+          "https://www.genarchives..com/Towne-Bowditch/g0/p716.htm",
+          "https://.com/blog/page/23/",
+          "https://www.genarchives..com/Towne-Bowditch/g0/p57.htm",
+          "https://www.genarchives..com/Towne-Bowditch/g0/p138.htm"
+        ],
+        "confidence": "high",
+        "review_status": "pending",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "review_note": null
+      }
+    },
+    {
+      "entity_id": "org:HOUSE_MAJORITY_FORWARD",
+      "name": "House Majority Forward",
+      "kind": "general_partisan",
+      "issue_ids": [
+        "energy_climate",
+        "healthcare"
+      ],
+      "description": "Progressive non-profit advocating for economic growth and opportunity, social justice, environmental stewardship, and democracy through policy advocacy.",
+      "quote": "House Majority Forward is a progressive, non-profit organization committed to promoting economic growth and opportunity, social justice, environmental stewardship, and democracy in the United States of America. We aim to achieve these core goals through aggressive advocacy of policies that move America in the right direction.",
+      "source_urls": [
+        "https://www.housemajorityforward.org/about-hmf"
+      ],
+      "provenance": {
+        "tagged_by": "xai-grok-4.3-2026-09-06",
+        "tagged_at": "2026-09-06",
+        "model": "grok-4.3",
+        "prompt_version": "classify_funder.v1",
+        "tools": [
+          "web_search"
+        ],
+        "tool_filters": {},
+        "response_id": "547bc2f9-f6da-93d6-8767-bfb255878c37",
+        "retrieved_at": "2026-09-06T03:51:22+00:00",
+        "citations": [
+          "https://www.housemajorityforward.org/",
+          "https://www.housemajorityforward.org/about-hmf",
+          "https://www.housemajorityforward.org/news",
+          "https://www.housemajorityforward.org/news/house-majority-forward-launches-10-million-economic-accountability-campaign",
+          "https://www.housemajorityforward.org/news/house-majority-forward-launches-new-seven-figure-rfk-jr-ad-campaign"
+        ],
+        "confidence": "high",
+        "review_status": "pending",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "review_note": null
+      }
+    },
+    {
+      "entity_id": "org:IN_PURSUIT_OF_LLC",
+      "name": "In Pursuit Of Llc",
+      "kind": "business_trade",
+      "issue_ids": [],
+      "description": "Full-service communications and marketing agency driving ideas and shaping debates in pursuit of a free and open society through mission-driven partnerships that advance policy, political, and cultural changes.",
+      "quote": "We are a full-service communications and marketing agency that drives ideas and shapes debates in pursuit of a free and open society. Our mission-driven partnerships advance policy, political, and cultural changes that enable people to improve their lives.",
+      "source_urls": [
+        "https://www.linkedin.com/company/in-pursuit-of"
+      ],
+      "provenance": {
+        "tagged_by": "xai-grok-4.3-2026-09-06",
+        "tagged_at": "2026-09-06",
+        "model": "grok-4.3",
+        "prompt_version": "classify_funder.v1",
+        "tools": [
+          "web_search"
+        ],
+        "tool_filters": {},
+        "response_id": "e0f1cc2a-93c1-9ac4-b5d3-df66ca5223e0",
+        "retrieved_at": "2026-09-06T03:54:35+00:00",
+        "citations": [
+          "https://www.linkedin.com/company/in-pursuit-of",
+          "https://inpursuitof.com/terms-of-use/",
+          "https://www.visualvisitor.com/companies/5703690/in_pursuit_of",
+          "https://www.desmog.com/in-pursuit-of/",
+          "https://www.inpursuitllc.com/about",
+          "https://www.zoominfo.com/c/in-pursuit-of/1339024688",
+          "https://www.linkedin.com/company/inpursuit-llc-usa",
+          "https://www.inpursuit.org/about",
+          "https://www.zoominfo.com/c/in-pursuit/357829249",
+          "https://councils.forbes.com/profile/Rachel-Kule-Founder-Managing-Partner-Pursuit-PR/a26822c5-a55e-4cba-8add-27d0e0a03d5a",
+          "https://www.genarchives..com/Towne-Bowditch/g0/p311.htm",
+          "https://www.genarchives..com/Towne-Bowditch/g0/p345.htm",
+          "https://www.genarchives..com/Towne-Bowditch/g0/p716.htm",
+          "https://www.genarchives..com/Towne-Bowditch/g0/p634.htm",
+          "https://www.genarchives..com/Towne-Bowditch/g0/p563.htm",
+          "https://inpursuitof.com/",
+          "https://www.inpursuitof.com/"
+        ],
+        "confidence": "medium",
+        "review_status": "pending",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "review_note": null
+      }
+    },
+    {
+      "entity_id": "org:JUMP_CRYPTO",
+      "name": "Jump Crypto",
+      "kind": "business_trade",
+      "issue_ids": [
+        "crypto_fintech"
+      ],
+      "description": "Builders of blockchain technology revolutionizing open, community-driven networks. We identify real-world constraints and build decentralized consortiums to convert systemic bottlenecks into shared breakthroughs by contributing time, capital, and code through trade, build, and invest activities.",
+      "quote": "Our strategy is simple: identify real world constraints and build decentralized consortiums to convert systemic bottlenecks into shared breakthroughs. We do it by contributing time, capital, and code.",
+      "source_urls": [
+        "https://jumpcrypto.com/"
+      ],
+      "provenance": {
+        "tagged_by": "xai-grok-4.3-2026-09-06",
+        "tagged_at": "2026-09-06",
+        "model": "grok-4.3",
+        "prompt_version": "classify_funder.v1",
+        "tools": [
+          "web_search"
+        ],
+        "tool_filters": {},
+        "response_id": "fc616573-4720-917d-8e20-02c71ea8c69d",
+        "retrieved_at": "2026-09-06T03:52:04+00:00",
+        "citations": [
+          "https://jumpcrypto.com/",
+          "https://f4.fund/firms/jump-crypto",
+          "https://jumpcrypto.com/trade",
+          "https://www.caplight.com/investor/jumpcrypto",
+          "https://jumpcrypto.com/resources/introducing-jump-crypto",
+          "https://jumpcrypto.com/reintroducing-jump-crypto/",
+          "https://jumpcrypto.com/resources/shelby-decentralized-storage-designed-to-serve",
+          "https://jumpcrypto.com/resources/paradigms-for-on-chain-credit",
+          "https://jumpcrypto.com/resources/meet-us-at-breakpoint-in-abu-dhabi"
+        ],
+        "confidence": "high",
+        "review_status": "pending",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "review_note": null
+      }
+    },
+    {
+      "entity_id": "org:LABORERS'_INTERNATIONAL_UNION_OF_NORTH_AMERICA",
+      "name": "Laborers' International Union Of North America",
+      "kind": "labor",
+      "issue_ids": [],
+      "description": "LIUNA is the most progressive, aggressive and fastest-growing union of construction workers, and one of the most diverse and effective unions representing public service employees. A half-million strong, members earn family-supporting pay and benefits through collective bargaining.",
+      "quote": "LIUNA—the Laborers’ International Union of North America—is the most progressive, aggressive and fastest-growing union of construction workers, and one of the most diverse and effective unions representing public service employees.",
+      "source_urls": [
+        "https://www.liuna.org/about-11"
+      ],
+      "provenance": {
+        "tagged_by": "xai-grok-4.3-2026-09-06",
+        "tagged_at": "2026-09-06",
+        "model": "grok-4.3",
+        "prompt_version": "classify_funder.v1",
+        "tools": [
+          "web_search"
+        ],
+        "tool_filters": {},
+        "response_id": "59a0a744-484c-9959-abae-082352d7d42b",
+        "retrieved_at": "2026-09-06T03:53:59+00:00",
+        "citations": [
+          "https://www.liuna.org/",
+          "https://www.liuna.org/about-11",
+          "https://www.liuna.org/find-a-local",
+          "https://www.liuna.org/about-2",
+          "https://www.liuna.ca/index.php?Itemid=102&id=1&option=com_content&view=article",
+          "https://www.liuna.org/story-detail?pressid=2a721a79-5eb0-42c0-b6d2-1aed9a21c5da",
+          "https://www.liuna.org/about-the-liuna-constitution",
+          "https://www.liuna.org/liuna-tri-funds",
+          "https://www.liuna.org/immigration",
+          "https://www.liuna.org/news/story/on-workers-memorial-day-liuna-calls-on-congress-to-put-safety-before-politics-and-pass-osha-reform"
+        ],
+        "confidence": "high",
+        "review_status": "pending",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "review_note": null
+      }
+    },
+    {
+      "entity_id": "org:PIVOTAL_VENTURES",
+      "name": "Pivotal Ventures",
+      "kind": "multi_issue",
+      "issue_ids": [
+        "healthcare",
+        "labor_trade"
+      ],
+      "description": "Founded by Melinda French Gates, Pivotal is a group of organizations working to accelerate the pace of social progress for women and young people in the U.S. and around the world. We use philanthropy, investments, and advocacy to drive momentum where we see the biggest opportunities for impact.",
+      "quote": "Founded by Melinda French Gates, Pivotal is a group of organizations working to accelerate the pace of social progress for women and young people in the U.S. and around the world. We use philanthropy, investments, and advocacy to drive momentum where we see the biggest opportunities for impact.",
+      "source_urls": [
+        "https://www.pivotal.com/about",
+        "http://web.archive.org/web/20260608084228/https://www.pivotal.com/about"
+      ],
+      "provenance": {
+        "tagged_by": "xai-grok-4.3-2026-09-06",
+        "tagged_at": "2026-09-06",
+        "model": "grok-4.3",
+        "prompt_version": "classify_funder.v1",
+        "tools": [
+          "web_search"
+        ],
+        "tool_filters": {},
+        "response_id": "bccdf79a-4a81-9f36-95d6-4252c949f9fb",
+        "retrieved_at": "2026-09-06T03:55:41+00:00",
+        "citations": [
+          "https://www.pivotal.com/investments",
+          "https://www.pivotalventures.org/latest",
+          "https://image.pivotal.com/-/media/Files/Pivotal/media/Pivotal-Strategy-Overview-Investments.pdf?hash=22D08AC273046B5405E21C95730B41C3&rev=664162b5db214a0b813f51e05eaff8c8",
+          "https://pivotalventures.org/work",
+          "https://www.linkedin.com/company/pivotalventures",
+          "https://www.pivotalventures.org/work/caregiving",
+          "https://www.pivotalventures.org/articles/its-time-for-breakthroughs-in-womens-health",
+          "https://pivotalventures.org/articles/sonya-passi-number-one-obstacle-safety-survivors-economic-insecurity?utm_source=EM&utm_medium=PV_OG&utm_campaign=SP&utm_content=42925",
+          "https://www.pivotalventures.org/articles/the-daunting-damning-number-that-should-spur-us-to-action",
+          "https://www.pivotalventures.org/articles/time-for-philanthropy-invest-women-girls-of-color",
+          "https://www.pivotalventures.org/",
+          "https://www.pivotal.com/about"
+        ],
+        "confidence": "high",
+        "review_status": "pending",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "review_note": null
+      }
+    },
+    {
+      "entity_id": "org:REPUBLICAN_STATE_LEADERSHIP_COMMITTEE",
+      "name": "Republican State Leadership Committee",
+      "kind": "general_partisan",
+      "issue_ids": [],
+      "description": "The largest organization of Republican state leaders, focused on recruiting, training, and electing Republicans to down-ballot state offices including legislatures, lieutenant governors, secretaries of state, agriculture officials, and judges across all 50 states.",
+      "quote": "We are the largest organization of Republican state leaders in the country and the only national committee whose mission is to elect Republicans to multiple down-ballot, state-level offices in all 50 states.",
+      "source_urls": [
+        "https://rslc.gop/about/"
+      ],
+      "provenance": {
+        "tagged_by": "xai-grok-4.3-2026-09-06",
+        "tagged_at": "2026-09-06",
+        "model": "grok-4.3",
+        "prompt_version": "classify_funder.v1",
+        "tools": [
+          "web_search"
+        ],
+        "tool_filters": {},
+        "response_id": "17479317-0c8d-936b-92b3-fc22f7c139a3",
+        "retrieved_at": "2026-09-06T03:53:22+00:00",
+        "citations": [
+          "https://rslc.gop/",
+          "https://rslc.gop/about/",
+          "https://rslc.gop/americas-250th-anniversary/",
+          "https://rslc.gop/rslc-announces-leadership-change-for-2025-2026-cycle/",
+          "https://rslc.gop/state-officials/",
+          "https://www.genarchives..com/Towne-Bowditch/g0/p239.htm",
+          "https://.com/blog/toothpaste-how-to-choose-the-right-toothpaste-for-you/",
+          "https://www.genarchives..com/Towne-Bowditch/g0/p205.htm",
+          "https://www.genarchives..com/Towne-Bowditch/poems_Swikert_Charles_family.htm",
+          "https://www.genarchives..com/Towne-Bowditch/g0/p583.htm"
+        ],
+        "confidence": "high",
+        "review_status": "pending",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "review_note": null
+      }
+    }
+  ]
+}
