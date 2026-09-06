@@ -8,7 +8,7 @@
     "start": "next start",
     "lint": "eslint",
     "typecheck": "tsc --noEmit",
-    "test": "tsc -p tsconfig.test.json && node --test .test-dist"
+    "test": "rm -rf .test-dist && tsc -p tsconfig.test.json && node --test .test-dist/"
   },
   "dependencies": {
     "react": "19.1.0",

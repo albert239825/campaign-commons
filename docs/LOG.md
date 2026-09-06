@@ -583,3 +583,41 @@ space the width divides by f and so does the pointer offset — the unit test pi
 server viewBox (`0 0 2250 948.49`); plain wheel scrolls the page 200 px and leaves the camera alone; `Ctrl`+wheel leaves
 `scrollY` unchanged and holds the pointer's layout point to 0.2 units. 13 boxes hide their amount at the fit bucket.
 `npm run lint`, `npm run typecheck`, `npm test` (13/13) clean; no data or contract changes.
+
+## 2026-09-06 ~03:00 — Block 3 child H1b: keyboard graph cursor + path highlighting
+
+**What changed.** The picture now answers "how does this money reach the spender" on hover instead of asking the reader to
+trace a 6px ribbon. `chain/graph-nav.ts` (new, pure) indexes the `VisibleGraph` once per layout: `ancestors` /
+`descendants` BFS along every edge kind, `pathSet(id)` = the nodes and edges on any path between `id` and the root (for a
+spending-side node, also everything downstream of it, so an ad lights sponsor → placement spine → ad → targeting arrow),
+and a cursor — `left` = largest-amount upstream neighbour, `right` = largest downstream, `up`/`down` = neighbour in the same
+drawn column, `home` = root. `chain-diagram.tsx` derives one `lit` set from pinned selection, then hover, then cursor, and
+stamps `data-lit="1|0"` on every node, ribbon and spine; CSS (`globals.css`, additive `.chain-*`) fades the unlit 25% and
+deepens lit ribbons. Highlight is opacity only: a targeting arrow keeps its 2px stroke and arrowhead, a spine keeps its
+basis dash, no width or fill changes, no sums along the route anywhere. Clicking a node pins its route until `Esc` or a
+click on bare canvas. The map wrapper is now the **single tab stop** (`role="application"`, `aria-roledescription="funding
+map"`, `aria-activedescendant` on the cursor node); the 47–59 node `<g>`s and the ribbons lost their `tabIndex` but stay
+clickable. `←→↑↓` move the cursor, `Home` returns to the root, `Enter`/`Space` open the node panel, `Esc` clears cursor and
+pin. The cursor draws a blue `non-scaling-stroke` ring and shows the same tooltip the pointer would, and a visually hidden
+`aria-live="polite"` region (`chain/graph-announce.ts`) says the node in records language — *"FUND FOR POLICY REFORM,
+non-committee organization; gave $60M to DEMOCRACY PAC, dark (no disclosure); dark wall, no further sources on record; 3
+edges lit"*, *"Dave McCormick, candidate — aimed at by 6 opposing ads, $60M in independent expenditures; no money reaches
+the candidate; 12 edges lit"*. `prefers-reduced-motion` drops the fade transitions; `forced-colors` uses `Highlight` for the
+ring and lit borders. C's tooltip and edge→row reveal fire on the same events as before.
+
+**Tests.** The repo had no JS test runner; `npm test` now compiles `src/**/*.test.ts` with `tsconfig.test.json` and runs
+Node's built-in `node --test` — no new dependency. `graph-nav.test.ts` (10 tests) covers a fixture with money, placement and
+targeting edges: reachability both ways across all kinds, the WINSENATE-shaped path set (FFPR → Democracy PAC → SMP → root,
+three edges, nothing else), root lights everything, candidate and ad path sets, each cursor move, `Home`, and a null cursor
+landing on the root.
+
+**Challenge.** Keyboard focus and pointer clicks both want to place the cursor: focusing the wrapper by Tab should land on
+the root (or the pinned node), but a click on a node also focuses the wrapper, and the root-landing then stole the ring
+from the clicked node. A `pointerdown` flag on the wrapper tells the two apart. H1a is adding a viewBox camera to the same
+file, so all graph logic lives in the two new modules and the diagram edits are the `data-lit` attributes, the wrapper
+attributes/handlers, the ring, and the live region.
+
+**Numbers.** WINSENATE: tab stops inside the figure 59 → 0 (one on the wrapper); hovering FUND FOR POLICY REFORM lights 4
+nodes and 3 ribbons, dims 93 elements. `npm run lint`, `npm run typecheck`, `npm test` (10/10) clean; no data or contract
+changes. Not exercised in the running app: an ad page with both a placement spine and a targeting arrow — no ad in the PA
+data has a walked sponsor chain *and* a `candidate_ids` entry — so that shape is covered by the unit fixture only.
