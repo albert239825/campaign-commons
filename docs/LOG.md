@@ -621,7 +621,23 @@ nullable when the ad has no dates), which the PA data does not yet exercise (0 v
 611 → 728 across 280 → 284 ads (mixed-media vendors' digital portions now shown); links unchanged at 115 inferred, one rule
 text corrected. 171 pipeline tests.
 
-## 2026-09-06 — D-78: bounded graph selections on Money Trails answers
+## 2026-09-06 ~06:00 — Spender issue positions (Money Trails follow-up)
+
+**What changed.** Added a third issue layer: an offline `grok-4.5` enrichment stage reads each outside spender's own site,
+keeps only rows whose quote appears verbatim on the fetched page, and writes 30 model-read positions across 17 spenders.
+The web adds a `spender_issue` intent and guard, plus static issue answer pages built from each candidate's existing spender
+answer and the entities' issue positions. Model rows are marked `inferred` until a person verifies them.
+
+**Challenge.** The question "ads supporting Casey about abortion" initially collapsed into ad-funding because the resolver
+saw the ad language first. Ad-level issue tags were too sparse to answer this reliably (13/500), so issue naming now routes
+to the fixed issue-position pages before ordinary intent detection.
+
+**Numbers.** 30 positions across 17 of 98 outside spenders; 8 rows dropped by the verbatim guard. The stage fetched 23
+spenders with hand-provided URLs and skipped 75 for want of a URL after FEC website discovery hit a DEMO_KEY 429.
+
+**Open.** Rerun with `FEC_API_KEY` to cover the tail, then have a human verify the 30 rows.
+
+## 2026-09-06 — D-79: bounded graph selections on Money Trails answers
 
 Each precomputed answer now carries a deterministic `graph` selection copied from the existing chain files. The selection
 is re-rooted for the question, capped at five nodes per layer, records truncation counts, and preserves copied basis,

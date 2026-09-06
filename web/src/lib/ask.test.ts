@@ -2,7 +2,7 @@ import { existsSync, readFileSync } from "node:fs";
 import { join } from "node:path";
 import { describe, expect, it } from "vitest";
 import { TrailsSchema, type TrailSubject } from "@campaign-commons/contracts";
-import { canonicalQuestion, detectIntent, matchSubjects, normalize, resolveQuestion, titleCase } from "./ask";
+import { canonicalQuestion, detectIssue, detectIntent, matchSubjects, normalize, resolveQuestion, resolveRoute, titleCase } from "./ask";
 
 const casey: TrailSubject = { id: "S1", kind: "candidate", name: "Bob Casey", aliases: ["bob casey", "casey"], type_label: null, principal_committee_id: "C1" };
 const mccormick: TrailSubject = { id: "S2", kind: "candidate", name: "Dave McCormick", aliases: ["dave mccormick", "mccormick"], type_label: null, principal_committee_id: null };
@@ -57,6 +57,14 @@ describe("detectIntent", () => {
   });
 });
 
+describe("detectIssue", () => {
+  it("matches the fixed issue vocabulary in taxonomy order", () => {
+    expect(detectIssue(normalize("are there ads supporting Bob Casey about abortion"))).toBe("abortion");
+    expect(detectIssue(normalize("what is the climate"))).toBe("energy_climate");
+    expect(detectIssue("a question about taxation")).toBeNull();
+  });
+});
+
 describe("matchSubjects", () => {
   it("prefers the longest alias and orders by it", () => {
     const m = matchSubjects(normalize("who funds Bob Casey for Senate"), subjects);
@@ -83,6 +91,18 @@ describe("resolveQuestion", () => {
     const r = answer("who paid for the ads about mccormick");
     expect(r.intent).toBe("candidate_ad_funding");
     expect(r.subject.id).toBe("S2");
+  });
+  it("routes issue questions before ordinary intent words", () => {
+    const r = answer("Please help me find out if there are any ads that are support Bob Casey that are supporting abortion?");
+    expect(r).toMatchObject({ intent: "spender_issue", subject: casey, issueId: "abortion" });
+    expect(answer("who is spending against casey on guns")).toMatchObject({ intent: "spender_issue", issueId: "guns" });
+    expect(answer("Who paid for the ads about Bob Casey?")).toMatchObject({ intent: "candidate_ad_funding", issueId: null });
+  });
+  it("refuses issue questions about committees", () => {
+    const r = refusal("where does winsenate stand on abortion");
+    expect(r.reason).toBe("wrong_kind");
+    expect(r.message).toContain("not for one committee");
+    expect(r.suggestions).toEqual([canonicalQuestion("committee_funding", winsenate)]);
   });
   it("committee funding", () => {
     const r = answer("Who funds WinSenate?");
@@ -126,7 +146,7 @@ describe("resolveQuestion", () => {
   it("candidate with no intent words is refused with both candidate questions", () => {
     const r = refusal("Tell me about Casey");
     expect(r.reason).toBe("no_intent");
-    expect(r.suggestions).toHaveLength(2);
+    expect(r.suggestions).toHaveLength(3);
   });
   it("unknown subject is refused with the race's examples", () => {
     const r = refusal("Who funds the Sierra Club?");
@@ -155,6 +175,8 @@ describe("canonicalQuestion / titleCase", () => {
     expect(titleCase("Bob Casey")).toBe("Bob Casey");
     expect(canonicalQuestion("committee_funding", winsenate)).toBe("Who funds Winsenate?");
     expect(canonicalQuestion("candidate_ad_funding", casey)).toBe("Who paid for the ads about Bob Casey?");
+    expect(canonicalQuestion("spender_issue", casey, "abortion")).toBe("Where do the groups spending for or against Bob Casey stand on abortion & reproductive rights?");
+    expect(resolveRoute("spender_issue", casey, subjects, "casey", null)).toMatchObject({ intent: "candidate_spender", issueId: null });
   });
 });
 

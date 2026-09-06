@@ -1,0 +1,710 @@
+{
+  "race_id": "pa-sen-2024",
+  "method": "Model-read from the committee's own site; quotes are verified verbatim by the stage; status model until a person reviews",
+  "rows": [
+    {
+      "issue_id": "abortion",
+      "direction": 2,
+      "quote": "Sign the petition to defend reproductive rights!",
+      "source_url": "https://web.archive.org/web/20241014000000/https://www.dscc.org/",
+      "entity_id": "C00042366",
+      "name": "DSCC",
+      "status": "model",
+      "tagged_by": "grok-4.5",
+      "tagged_at": "2026-09-06"
+    },
+    {
+      "issue_id": "guns",
+      "direction": -2,
+      "quote": "NRA relies on a very simple premise: when provided with the facts, the nation's elected officials will recognize that \"gun control\" schemes are an infringement on the Second Amendment and a proven failure in fighting crime.",
+      "source_url": "https://www.nrapvf.org/about-pvf.aspx",
+      "entity_id": "C00053553",
+      "name": "NATIONAL RIFLE ASSOCIATION OF AMERICA POLITICAL VICTORY FUND",
+      "status": "model",
+      "tagged_by": "grok-4.5",
+      "tagged_at": "2026-09-06"
+    },
+    {
+      "issue_id": "healthcare",
+      "direction": 2,
+      "quote": "Ensure essential health care services are available in all communities by safeguarding federal funding for Medicare, Medicaid, the Children’s Health Insurance Program and the Health Insurance Marketplaces.",
+      "source_url": "https://www.aha.org/advocacy-agenda",
+      "entity_id": "C00106146",
+      "name": "AMERICAN HOSPITAL ASSOCIATION PAC",
+      "status": "model",
+      "tagged_by": "grok-4.5",
+      "tagged_at": "2026-09-06"
+    },
+    {
+      "issue_id": "immigration",
+      "direction": -1,
+      "quote": "Encourage the continuation of visa waivers for physicians in medically under-resourced areas and the recapture of unused employment visas for doctors and nurses.",
+      "source_url": "https://www.aha.org/advocacy-agenda",
+      "entity_id": "C00106146",
+      "name": "AMERICAN HOSPITAL ASSOCIATION PAC",
+      "status": "model",
+      "tagged_by": "grok-4.5",
+      "tagged_at": "2026-09-06"
+    },
+    {
+      "issue_id": "labor_trade",
+      "direction": -1,
+      "quote": "Ensure dependable, affordable access to pharmaceuticals, medical devices and other critical supplies by limiting the imposition or increase of tariffs.",
+      "source_url": "https://www.aha.org/advocacy-agenda",
+      "entity_id": "C00106146",
+      "name": "AMERICAN HOSPITAL ASSOCIATION PAC",
+      "status": "model",
+      "tagged_by": "grok-4.5",
+      "tagged_at": "2026-09-06"
+    },
+    {
+      "issue_id": "tax_budget",
+      "direction": 1,
+      "quote": "Ensure essential health care services are available in all communities by safeguarding federal funding for Medicare, Medicaid, the Children’s Health Insurance Program and the Health Insurance Marketplaces.",
+      "source_url": "https://www.aha.org/advocacy-agenda",
+      "entity_id": "C00106146",
+      "name": "AMERICAN HOSPITAL ASSOCIATION PAC",
+      "status": "model",
+      "tagged_by": "grok-4.5",
+      "tagged_at": "2026-09-06"
+    },
+    {
+      "issue_id": "tech_ai",
+      "direction": 1,
+      "quote": "Support artificial intelligence policy frameworks that foster continued innovation while ensuring privacy and patient safety.",
+      "source_url": "https://www.aha.org/advocacy-agenda",
+      "entity_id": "C00106146",
+      "name": "AMERICAN HOSPITAL ASSOCIATION PAC",
+      "status": "model",
+      "tagged_by": "grok-4.5",
+      "tagged_at": "2026-09-06"
+    },
+    {
+      "issue_id": "energy_climate",
+      "direction": 2,
+      "quote": "elect environmental champions who will prioritize just and equitable climate solutions",
+      "source_url": "https://www.lcv.org/lcv-victory-fund/",
+      "entity_id": "C00486845",
+      "name": "LCV VICTORY FUND",
+      "status": "model",
+      "tagged_by": "grok-4.5",
+      "tagged_at": "2026-09-06"
+    },
+    {
+      "issue_id": "labor_trade",
+      "direction": -2,
+      "quote": "They are willing to stand up for families, small businesses and communities against arrogant, power-grabbing politicians and wealthy government unions.",
+      "source_url": "https://www.americancrossroads.org/about/",
+      "entity_id": "C00487363",
+      "name": "AMERICAN CROSSROADS",
+      "status": "model",
+      "tagged_by": "grok-4.5",
+      "tagged_at": "2026-09-06"
+    },
+    {
+      "issue_id": "tax_budget",
+      "direction": -2,
+      "quote": "We see government recklessly piling on debt and then insisting we pay it off.",
+      "source_url": "https://www.americancrossroads.org/about/",
+      "entity_id": "C00487363",
+      "name": "AMERICAN CROSSROADS",
+      "status": "model",
+      "tagged_by": "grok-4.5",
+      "tagged_at": "2026-09-06"
+    },
+    {
+      "issue_id": "healthcare",
+      "direction": 2,
+      "quote": "fighting for expanding and updating Medicare to cover all people in the United States, for negotiating many of the best collective bargaining contracts for RNs in the nation",
+      "source_url": "https://www.nationalnursesunited.org/about",
+      "entity_id": "C00490375",
+      "name": "NATIONAL NURSES UNITED FOR PATIENT PROTECTION",
+      "status": "model",
+      "tagged_by": "grok-4.5",
+      "tagged_at": "2026-09-06"
+    },
+    {
+      "issue_id": "labor_trade",
+      "direction": 2,
+      "quote": "for negotiating many of the best collective bargaining contracts for RNs in the nation, and for sponsorship of innovative legislation and regulatory protections for patients and nurses.",
+      "source_url": "https://www.nationalnursesunited.org/about",
+      "entity_id": "C00490375",
+      "name": "NATIONAL NURSES UNITED FOR PATIENT PROTECTION",
+      "status": "model",
+      "tagged_by": "grok-4.5",
+      "tagged_at": "2026-09-06"
+    },
+    {
+      "issue_id": "guns",
+      "direction": 2,
+      "quote": "The evidence is clear: gun laws save lives. Our experts help draft, implement, and defend the laws, policies, and programs proven to make our country safer.",
+      "source_url": "https://giffords.org/about/",
+      "entity_id": "C00540443",
+      "name": "GIFFORDS PAC",
+      "status": "model",
+      "tagged_by": "grok-4.5",
+      "tagged_at": "2026-09-06"
+    },
+    {
+      "issue_id": "tech_ai",
+      "direction": 2,
+      "quote": "Fighting to mandate age verification and hold platforms accountable for exposing children to harm.",
+      "source_url": "https://americanprinciplesproject.org/about/",
+      "entity_id": "C00544387",
+      "name": "AMERICAN PRINCIPLES PROJECT PAC",
+      "status": "model",
+      "tagged_by": "grok-4.5",
+      "tagged_at": "2026-09-06"
+    },
+    {
+      "issue_id": "energy_climate",
+      "direction": 2,
+      "quote": "defending our neighborhoods from environmental racism, climate change, and violence",
+      "source_url": "https://blackpac.com/",
+      "entity_id": "C00609388",
+      "name": "BLACKPAC",
+      "status": "model",
+      "tagged_by": "grok-4.5",
+      "tagged_at": "2026-09-06"
+    },
+    {
+      "issue_id": "healthcare",
+      "direction": 1,
+      "quote": "an equitable healthcare system",
+      "source_url": "https://blackpac.com/",
+      "entity_id": "C00609388",
+      "name": "BLACKPAC",
+      "status": "model",
+      "tagged_by": "grok-4.5",
+      "tagged_at": "2026-09-06"
+    },
+    {
+      "issue_id": "healthcare",
+      "direction": 2,
+      "quote": "Americans strongly support universal, affordable healthcare. They believe billionaires should pay their fair share in taxes—and that those dollars should be invested in what working families need most: affordable healthcare, childcare, housing, and strong public schools.",
+      "source_url": "https://forourfuturefund.org/issues",
+      "entity_id": "C00620971",
+      "name": "FOR OUR FUTURE",
+      "status": "model",
+      "tagged_by": "grok-4.5",
+      "tagged_at": "2026-09-06"
+    },
+    {
+      "issue_id": "labor_trade",
+      "direction": 2,
+      "quote": "helping repeal right-to-work laws in states like Michigan—and working toward similar progress in Wisconsin",
+      "source_url": "https://forourfuturefund.org/issues",
+      "entity_id": "C00620971",
+      "name": "FOR OUR FUTURE",
+      "status": "model",
+      "tagged_by": "grok-4.5",
+      "tagged_at": "2026-09-06"
+    },
+    {
+      "issue_id": "tax_budget",
+      "direction": 2,
+      "quote": "Trump and Republicans made things worse—cutting Medicaid, healthcare, and food assistance to finance $1 trillion in tax breaks for billionaires and large corporations",
+      "source_url": "https://forourfuturefund.org/issues",
+      "entity_id": "C00620971",
+      "name": "FOR OUR FUTURE",
+      "status": "model",
+      "tagged_by": "grok-4.5",
+      "tagged_at": "2026-09-06"
+    },
+    {
+      "issue_id": "energy_climate",
+      "direction": -2,
+      "quote": "He spent years championing the Green New Deal, and now that utility bills are squeezing families, he won’t defend it.",
+      "source_url": "https://afpaction.com/afp-action-condemns-radical-socialist-agenda-on-display-at-michigan-democratic-convention/",
+      "entity_id": "C00687103",
+      "name": "AMERICANS FOR PROSPERITY ACTION, INC. (AFP ACTION) DBA CVA ACTION AND DBA LIBRE ACTION",
+      "status": "model",
+      "tagged_by": "grok-4.5",
+      "tagged_at": "2026-09-06"
+    },
+    {
+      "issue_id": "healthcare",
+      "direction": -2,
+      "quote": "He wants Medicare for All — a government takeover of health care that ends the private coverage millions of Michiganders get through their jobs.",
+      "source_url": "https://afpaction.com/afp-action-condemns-radical-socialist-agenda-on-display-at-michigan-democratic-convention/",
+      "entity_id": "C00687103",
+      "name": "AMERICANS FOR PROSPERITY ACTION, INC. (AFP ACTION) DBA CVA ACTION AND DBA LIBRE ACTION",
+      "status": "model",
+      "tagged_by": "grok-4.5",
+      "tagged_at": "2026-09-06"
+    },
+    {
+      "issue_id": "immigration",
+      "direction": 2,
+      "quote": "He’s called for abolishing ICE outright. That isn’t a Michigan plan, it’s a ridiculous and radical wish list that our state can’t afford.",
+      "source_url": "https://afpaction.com/afp-action-condemns-radical-socialist-agenda-on-display-at-michigan-democratic-convention/",
+      "entity_id": "C00687103",
+      "name": "AMERICANS FOR PROSPERITY ACTION, INC. (AFP ACTION) DBA CVA ACTION AND DBA LIBRE ACTION",
+      "status": "model",
+      "tagged_by": "grok-4.5",
+      "tagged_at": "2026-09-06"
+    },
+    {
+      "issue_id": "tax_budget",
+      "direction": -2,
+      "quote": "AFP Action will continue fighting for candidates that will lower taxes, expand affordable energy, and protect the individual freedoms that Michigan’s working families deserve.",
+      "source_url": "https://afpaction.com/afp-action-condemns-radical-socialist-agenda-on-display-at-michigan-democratic-convention/",
+      "entity_id": "C00687103",
+      "name": "AMERICANS FOR PROSPERITY ACTION, INC. (AFP ACTION) DBA CVA ACTION AND DBA LIBRE ACTION",
+      "status": "model",
+      "tagged_by": "grok-4.5",
+      "tagged_at": "2026-09-06"
+    },
+    {
+      "issue_id": "guns",
+      "direction": 2,
+      "quote": "Lawmakers must act to require background checks on all gun sales, support Extreme Risk laws that provide a process to temporarily remove guns from people showing warning signs, keep guns out of the hands of domestic abusers , and restrict assault weapons and high-capacity magazines",
+      "source_url": "https://www.everytown.org/issues/mass-shootings/",
+      "entity_id": "C00688655",
+      "name": "EVERYTOWN FOR GUN SAFETY VICTORY FUND (EVERYTOWN VICTORY FUND)",
+      "status": "model",
+      "tagged_by": "grok-4.5",
+      "tagged_at": "2026-09-06"
+    },
+    {
+      "issue_id": "energy_climate",
+      "direction": 2,
+      "quote": "works to avert dangerous climate change, support healthy people and thriving communities, and conserve and protect nature and wildlife",
+      "source_url": "https://web.archive.org/web/20241215185416/https://www.nrdcactionvotes.org/",
+      "entity_id": "C00740225",
+      "name": "NRDC ACTION VOTES",
+      "status": "model",
+      "tagged_by": "grok-4.5",
+      "tagged_at": "2026-09-06"
+    },
+    {
+      "issue_id": "healthcare",
+      "direction": 2,
+      "quote": "We should all be able to afford the health care and prescription drugs we need to live healthy, fulfilling lives.",
+      "source_url": "https://www.familyfriendlyeconomy.org/",
+      "entity_id": "C00744920",
+      "name": "CFFE PAC",
+      "status": "model",
+      "tagged_by": "grok-4.5",
+      "tagged_at": "2026-09-06"
+    },
+    {
+      "issue_id": "labor_trade",
+      "direction": 2,
+      "quote": "electing pro-worker and pro-union candidates",
+      "source_url": "https://unitehere.org/about-unite-here-pacs/",
+      "entity_id": "C00754051",
+      "name": "WORKERS VOTE",
+      "status": "model",
+      "tagged_by": "grok-4.5",
+      "tagged_at": "2026-09-06"
+    },
+    {
+      "issue_id": "crypto_fintech",
+      "direction": -1,
+      "quote": "Republicans Must Continue Building on Pro-Innovation Digital Asset Policies",
+      "source_url": "https://sentinelactionfund.com/",
+      "entity_id": "C00811166",
+      "name": "THE SENTINEL ACTION FUND",
+      "status": "model",
+      "tagged_by": "grok-4.5",
+      "tagged_at": "2026-09-06"
+    },
+    {
+      "issue_id": "healthcare",
+      "direction": 2,
+      "quote": "we fight to hold Republicans accountable for their radical proposals to sabotage the health care of millions of Americans and to give more tax breaks to the top 1% while cutting Medicare and education",
+      "source_url": "https://web.archive.org/web/20241014000000/https://www.senatemajority.com/about/",
+      "entity_id": "C00865444",
+      "name": "WINSENATE",
+      "status": "model",
+      "tagged_by": "grok-4.5",
+      "tagged_at": "2026-09-06"
+    },
+    {
+      "issue_id": "tax_budget",
+      "direction": 2,
+      "quote": "we fight to hold Republicans accountable for their radical proposals to sabotage the health care of millions of Americans and to give more tax breaks to the top 1% while cutting Medicare and education",
+      "source_url": "https://web.archive.org/web/20241014000000/https://www.senatemajority.com/about/",
+      "entity_id": "C00865444",
+      "name": "WINSENATE",
+      "status": "model",
+      "tagged_by": "grok-4.5",
+      "tagged_at": "2026-09-06"
+    }
+  ],
+  "pages": [
+    {
+      "entity_id": "C00011114",
+      "url": "https://www.afscme.org/about",
+      "fetched_at": "2026-09-06T01:48:33+00:00",
+      "chars": 1356
+    },
+    {
+      "entity_id": "C00011114",
+      "url": "https://www.afscme.org/about/we-are-afscme/",
+      "fetched_at": "2026-09-06T01:48:34+00:00",
+      "chars": 1632
+    },
+    {
+      "entity_id": "C00042366",
+      "url": "https://web.archive.org/web/20241014000000/https://www.dscc.org/",
+      "fetched_at": "2026-09-06T01:44:35+00:00",
+      "chars": 2051
+    },
+    {
+      "entity_id": "C00042366",
+      "url": "https://web.archive.org/web/20241014022416/https://www.dscc.org/about-us",
+      "fetched_at": "2026-09-06T01:44:41+00:00",
+      "chars": 1567
+    },
+    {
+      "entity_id": "C00042366",
+      "url": "https://web.archive.org/web/20241014022416/https://www.dscc.org/about-us/",
+      "fetched_at": "2026-09-06T01:44:36+00:00",
+      "chars": 1567
+    },
+    {
+      "entity_id": "C00042366",
+      "url": "https://web.archive.org/web/20241014022416/https://www.dscc.org/about-us/internships/",
+      "fetched_at": "2026-09-06T01:44:41+00:00",
+      "chars": 954
+    },
+    {
+      "entity_id": "C00042366",
+      "url": "https://web.archive.org/web/20241014022416/https://www.dscc.org/about-us/jobs/",
+      "fetched_at": "2026-09-06T01:44:39+00:00",
+      "chars": 1670
+    },
+    {
+      "entity_id": "C00053553",
+      "url": "https://www.nrapvf.org/about-pvf.aspx",
+      "fetched_at": "2026-09-06T01:46:21+00:00",
+      "chars": 8958
+    },
+    {
+      "entity_id": "C00053553",
+      "url": "https://www.nrapvf.org/about-pvf/",
+      "fetched_at": "2026-09-06T01:46:22+00:00",
+      "chars": 4
+    },
+    {
+      "entity_id": "C00053553",
+      "url": "https://www.nrapvf.org/articles/20260708/nra-pvf-issues-aplus-rating-and-endorses-senator-ty-masterson-for-kansas-governor",
+      "fetched_at": "2026-09-06T01:46:22+00:00",
+      "chars": 10078
+    },
+    {
+      "entity_id": "C00053553",
+      "url": "https://www.nrapvf.org/articles/20260713/nra-pvf-endorses-and-issues-aplus-rating-to-tom-tiffany-for-wisconsin-governor",
+      "fetched_at": "2026-09-06T01:46:22+00:00",
+      "chars": 10960
+    },
+    {
+      "entity_id": "C00106146",
+      "url": "https://www.aha.org/advocacy-agenda",
+      "fetched_at": "2026-09-06T01:47:44+00:00",
+      "chars": 24180
+    },
+    {
+      "entity_id": "C00106146",
+      "url": "https://www.aha.org/advocacy/action-center",
+      "fetched_at": "2026-09-06T01:47:42+00:00",
+      "chars": 5820
+    },
+    {
+      "entity_id": "C00486845",
+      "url": "https://www.lcv.org/about/",
+      "fetched_at": "2026-09-06T01:45:05+00:00",
+      "chars": 4598
+    },
+    {
+      "entity_id": "C00486845",
+      "url": "https://www.lcv.org/about/building-power-in-the-states/",
+      "fetched_at": "2026-09-06T01:45:06+00:00",
+      "chars": 7507
+    },
+    {
+      "entity_id": "C00486845",
+      "url": "https://www.lcv.org/congressional-scorecard/about-the-scorecard/",
+      "fetched_at": "2026-09-06T01:45:06+00:00",
+      "chars": 15117
+    },
+    {
+      "entity_id": "C00486845",
+      "url": "https://www.lcv.org/lcv-victory-fund/",
+      "fetched_at": "2026-09-06T01:45:03+00:00",
+      "chars": 2778
+    },
+    {
+      "entity_id": "C00487363",
+      "url": "https://web.archive.org/web/20241015000000/https://www.americancrossroads.org/",
+      "fetched_at": "2026-09-06T01:44:52+00:00",
+      "chars": 809
+    },
+    {
+      "entity_id": "C00487363",
+      "url": "https://web.archive.org/web/20241015204058/https://www.americancrossroads.org/about/",
+      "fetched_at": "2026-09-06T01:44:53+00:00",
+      "chars": 2784
+    },
+    {
+      "entity_id": "C00487363",
+      "url": "https://web.archive.org/web/20241015204058/https://www.americancrossroads.org/about/",
+      "fetched_at": "2026-09-06T01:44:53+00:00",
+      "chars": 2784
+    },
+    {
+      "entity_id": "C00487363",
+      "url": "https://web.archive.org/web/20241015204058/https://www.americancrossroads.org/about/",
+      "fetched_at": "2026-09-06T01:44:53+00:00",
+      "chars": 2784
+    },
+    {
+      "entity_id": "C00487363",
+      "url": "https://www.americancrossroads.org/about/",
+      "fetched_at": "2026-09-06T01:44:49+00:00",
+      "chars": 2791
+    },
+    {
+      "entity_id": "C00490375",
+      "url": "https://www.nationalnursesunited.org/about",
+      "fetched_at": "2026-09-06T01:47:16+00:00",
+      "chars": 4134
+    },
+    {
+      "entity_id": "C00490375",
+      "url": "https://www.nationalnursesunited.org/national-nurse-magazine/",
+      "fetched_at": "2026-09-06T01:47:17+00:00",
+      "chars": 1048
+    },
+    {
+      "entity_id": "C00540443",
+      "url": "https://giffords.org/about/",
+      "fetched_at": "2026-09-06T01:47:34+00:00",
+      "chars": 4759
+    },
+    {
+      "entity_id": "C00540443",
+      "url": "https://giffords.org/about/gabbys-story/",
+      "fetched_at": "2026-09-06T01:47:34+00:00",
+      "chars": 4639
+    },
+    {
+      "entity_id": "C00540443",
+      "url": "https://giffords.org/issues/community-violence/",
+      "fetched_at": "2026-09-06T01:47:34+00:00",
+      "chars": 11749
+    },
+    {
+      "entity_id": "C00540443",
+      "url": "https://giffords.org/pac/",
+      "fetched_at": "2026-09-06T01:47:34+00:00",
+      "chars": 571
+    },
+    {
+      "entity_id": "C00540443",
+      "url": "https://giffords.org/the-issue/",
+      "fetched_at": "2026-09-06T01:47:35+00:00",
+      "chars": 8282
+    },
+    {
+      "entity_id": "C00544387",
+      "url": "https://americanprinciplesproject.org/about/",
+      "fetched_at": "2026-09-06T01:46:58+00:00",
+      "chars": 8138
+    },
+    {
+      "entity_id": "C00544387",
+      "url": "https://americanprinciplesproject.org/donate",
+      "fetched_at": "2026-09-06T01:46:59+00:00",
+      "chars": 777
+    },
+    {
+      "entity_id": "C00544387",
+      "url": "https://americanprinciplesproject.org/issues",
+      "fetched_at": "2026-09-06T01:46:58+00:00",
+      "chars": 1452
+    },
+    {
+      "entity_id": "C00544387",
+      "url": "https://americanprinciplesproject.org/issues",
+      "fetched_at": "2026-09-06T01:46:59+00:00",
+      "chars": 1452
+    },
+    {
+      "entity_id": "C00544387",
+      "url": "https://americanprinciplesproject.org/issues/preserving-womens-sports/",
+      "fetched_at": "2026-09-06T01:46:59+00:00",
+      "chars": 4839
+    },
+    {
+      "entity_id": "C00571703",
+      "url": "https://senateleadershipfund.org/about/",
+      "fetched_at": "2026-09-06T01:43:48+00:00",
+      "chars": 1583
+    },
+    {
+      "entity_id": "C00571703",
+      "url": "https://web.archive.org/web/20241014215743/https://www.senateleadershipfund.org/",
+      "fetched_at": "2026-09-06T01:43:46+00:00",
+      "chars": 298
+    },
+    {
+      "entity_id": "C00571703",
+      "url": "https://web.archive.org/web/20241014215743/https://www.senateleadershipfund.org/about/",
+      "fetched_at": "2026-09-06T01:43:48+00:00",
+      "chars": 254
+    },
+    {
+      "entity_id": "C00609388",
+      "url": "https://blackpac.com/",
+      "fetched_at": "2026-09-06T01:45:42+00:00",
+      "chars": 2165
+    },
+    {
+      "entity_id": "C00609388",
+      "url": "https://blackpac.com/#about",
+      "fetched_at": "2026-09-06T01:45:42+00:00",
+      "chars": 2165
+    },
+    {
+      "entity_id": "C00609388",
+      "url": "https://blackpac.com/about/",
+      "fetched_at": "2026-09-06T01:45:43+00:00",
+      "chars": 3093
+    },
+    {
+      "entity_id": "C00620971",
+      "url": "https://forourfuturefund.org/issues",
+      "fetched_at": "2026-09-06T01:46:02+00:00",
+      "chars": 4440
+    },
+    {
+      "entity_id": "C00687103",
+      "url": "https://afpaction.com/about/",
+      "fetched_at": "2026-09-06T01:43:57+00:00",
+      "chars": 2053
+    },
+    {
+      "entity_id": "C00687103",
+      "url": "https://afpaction.com/afp-action-condemns-radical-socialist-agenda-on-display-at-michigan-democratic-convention/",
+      "fetched_at": "2026-09-06T01:43:57+00:00",
+      "chars": 1640
+    },
+    {
+      "entity_id": "C00687103",
+      "url": "https://afpaction.com/afp-action-condemns-radical-socialist-agenda-on-display-at-michigan-democratic-convention/",
+      "fetched_at": "2026-09-06T01:43:57+00:00",
+      "chars": 1640
+    },
+    {
+      "entity_id": "C00687103",
+      "url": "https://afpaction.com/afp-action-to-el-sayed-your-far-left-agenda-is-the-reason-things-are-this-hard-for-michiganders/",
+      "fetched_at": "2026-09-06T01:43:57+00:00",
+      "chars": 1032
+    },
+    {
+      "entity_id": "C00687103",
+      "url": "https://afpaction.com/afp-action-to-el-sayed-your-far-left-agenda-is-the-reason-things-are-this-hard-for-michiganders/",
+      "fetched_at": "2026-09-06T01:43:57+00:00",
+      "chars": 1032
+    },
+    {
+      "entity_id": "C00687103",
+      "url": "https://web.archive.org/web/20241013000000/https://afpaction.com/",
+      "fetched_at": "2026-09-06T01:43:58+00:00",
+      "chars": 1208
+    },
+    {
+      "entity_id": "C00688655",
+      "url": "https://www.everytown.org/about-everytown/",
+      "fetched_at": "2026-09-06T01:46:46+00:00",
+      "chars": 4945
+    },
+    {
+      "entity_id": "C00688655",
+      "url": "https://www.everytown.org/about-everytown/everytown-organizational-values/",
+      "fetched_at": "2026-09-06T01:46:46+00:00",
+      "chars": 2834
+    },
+    {
+      "entity_id": "C00688655",
+      "url": "https://www.everytown.org/about-everytown/victories/",
+      "fetched_at": "2026-09-06T01:46:46+00:00",
+      "chars": 17013
+    },
+    {
+      "entity_id": "C00688655",
+      "url": "https://www.everytown.org/issues/mass-shootings/",
+      "fetched_at": "2026-09-06T01:46:46+00:00",
+      "chars": 5208
+    },
+    {
+      "entity_id": "C00724203",
+      "url": "https://www.somospac.org/",
+      "fetched_at": "2026-09-06T01:46:17+00:00",
+      "chars": 2042
+    },
+    {
+      "entity_id": "C00740225",
+      "url": "https://web.archive.org/web/20241215185416/https://www.nrdcactionvotes.org/",
+      "fetched_at": "2026-09-06T01:45:56+00:00",
+      "chars": 1061
+    },
+    {
+      "entity_id": "C00744920",
+      "url": "https://www.familyfriendlyeconomy.org/",
+      "fetched_at": "2026-09-06T01:45:20+00:00",
+      "chars": 2982
+    },
+    {
+      "entity_id": "C00744920",
+      "url": "https://www.familyfriendlyeconomy.org/leadership",
+      "fetched_at": "2026-09-06T01:45:20+00:00",
+      "chars": 1224
+    },
+    {
+      "entity_id": "C00752691",
+      "url": "https://oneforallcommittee.org/",
+      "fetched_at": "2026-09-06T01:46:12+00:00",
+      "chars": 1166
+    },
+    {
+      "entity_id": "C00754051",
+      "url": "https://unitehere.org/about-unite-here-pacs/",
+      "fetched_at": "2026-09-06T01:47:25+00:00",
+      "chars": 26274
+    },
+    {
+      "entity_id": "C00811166",
+      "url": "https://sentinelactionfund.com/",
+      "fetched_at": "2026-09-06T01:46:37+00:00",
+      "chars": 1658
+    },
+    {
+      "entity_id": "C00811166",
+      "url": "https://web.archive.org/web/20241015000000/https://sentinelactionfund.com/",
+      "fetched_at": "2026-09-06T01:46:36+00:00",
+      "chars": 2346
+    },
+    {
+      "entity_id": "C00849489",
+      "url": "https://web.archive.org/web/20241106000000/https://www.keystonerenewal.com/",
+      "fetched_at": "2026-09-06T01:43:53+00:00",
+      "chars": 311
+    },
+    {
+      "entity_id": "C00865444",
+      "url": "https://web.archive.org/web/20241014000000/https://www.senatemajority.com/about/",
+      "fetched_at": "2026-09-06T01:43:28+00:00",
+      "chars": 2170
+    },
+    {
+      "entity_id": "C00865444",
+      "url": "https://www.senatemajority.com/about/",
+      "fetched_at": "2026-09-06T01:43:28+00:00",
+      "chars": 2170
+    }
+  ]
+}
