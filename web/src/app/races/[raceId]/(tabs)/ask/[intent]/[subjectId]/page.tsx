@@ -4,7 +4,7 @@ import { notFound } from "next/navigation";
 import { getRace, getTrails, hasTrails, listChainIds, listEntityIds, listRaceIds } from "@/lib/data";
 import { routes } from "@/lib/format";
 import { canonicalQuestion, INTENT_LABELS, isIntent } from "@/lib/ask";
-import { Breadcrumbs, Card, DataStatusBanner } from "@/components/ui";
+import { Breadcrumbs, Card } from "@/components/ui";
 import { DetailHeader } from "@/components/ui/detail-layout";
 import { AskBox } from "@/components/ask/ask-box";
 import { AskMethod } from "@/components/ask/method";
@@ -41,7 +41,6 @@ export default async function AnswerPage({ params }: { params: Promise<{ raceId:
             { label: INTENT_LABELS[intent] },
           ]}
         />
-        <DataStatusBanner status={trails.data_status} />
         <DetailHeader
           label={`Money Trails · ${race.label}`}
           title={question}
