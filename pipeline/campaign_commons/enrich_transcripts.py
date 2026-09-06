@@ -15,7 +15,7 @@ import requests
 from youtube_transcript_api import FetchedTranscript, Transcript, YouTubeTranscriptApi
 from youtube_transcript_api._errors import IpBlocked, RequestBlocked
 
-from .ads_creatives import youtube_video_id
+from .ads_creatives import LookupFailed, LookupRateLimited, resolve_video_id_with_backoff, youtube_video_id
 from .config import DATA, RACES
 from .util import now_iso, read_json, write_json
 from .yt_cache import load_video_id_cache
@@ -82,7 +82,7 @@ def run(
     *,
     limit: int | None = None,
     only: str | None = None,
-    sleep_seconds: float = 0.5,
+    sleep_seconds: float = 1.0,
     api: YouTubeTranscriptApi | None = None,
     resolver: Callable[[str, str, requests.Session], str | None] | None = None,
 ) -> int:
@@ -104,14 +104,26 @@ def run(
     ]
     if limit is not None:
         selected = selected[:limit]
-    for ad in selected:
+    for processed, ad in enumerate(selected):
         ad_id = str(ad["ad_id"])
         if ad_id in cache:
             video_id = cache[ad_id]
         else:
-            video_id = resolver(str(ad["advertiser_id"]), ad_id, session)
+            try:
+                video_id = resolve_video_id_with_backoff(resolver, str(ad["advertiser_id"]), ad_id, session)
+            except LookupRateLimited:
+                print(
+                    f"rate limited by adstransparency.google.com after {processed} ads; re-run later to continue",
+                    file=sys.stderr,
+                )
+                return 2
+            except LookupFailed as exc:
+                print(f"video ID lookup failed after {processed} ads: {exc}; re-run later to continue", file=sys.stderr)
+                return 2
             cache[ad_id] = video_id
             write_json(VIDEO_IDS, cache)
+            if sleep_seconds:
+                time.sleep(sleep_seconds)
         if not video_id:
             counts["no_transcript"] += 1
             continue
@@ -147,7 +159,7 @@ def main() -> int:
     parser.add_argument("race")
     parser.add_argument("--limit", type=int)
     parser.add_argument("--only")
-    parser.add_argument("--sleep", type=float, default=0.5)
+    parser.add_argument("--sleep", type=float, default=1.0)
     args = parser.parse_args()
     return run(args.race, limit=args.limit, only=args.only, sleep_seconds=args.sleep)
 

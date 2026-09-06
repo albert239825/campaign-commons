@@ -3,7 +3,9 @@ from pathlib import Path
 
 import pytest
 
+import campaign_commons.ads_creatives as ads_creatives
 import campaign_commons.enrich_video_titles as enrich_video_titles
+from campaign_commons.ads_creatives import LookupRateLimited
 
 
 def _ad(ad_id: str, ad_type: str = "video") -> dict[str, object]:
@@ -113,3 +115,56 @@ def test_rerun_uses_oembed_cache(setup: tuple[Path, Path]) -> None:
     assert all(
         ad["video"] is None or ad["video"]["title"] == "Cached" for ad in json.loads(ads_path.read_text())["ads"]
     )
+
+
+def test_rate_limit_retries_then_patches_title(setup: tuple[Path, Path], monkeypatch: pytest.MonkeyPatch) -> None:
+    ads_path, yt = setup
+    sleeps: list[float] = []
+    attempts = 0
+
+    def resolver(advertiser: str, ad_id: str, session: object) -> str:
+        nonlocal attempts
+        attempts += 1
+        if attempts <= 3:
+            raise LookupRateLimited
+        return "video-retried"
+
+    monkeypatch.setattr(ads_creatives.time, "sleep", sleeps.append)
+    result = enrich_video_titles.run(
+        "race",
+        limit=1,
+        sleep_seconds=0,
+        resolver=resolver,
+        fetcher=lambda video_id, ad_id, session: {
+            "video_id": video_id,
+            "ad_id": ad_id,
+            "title": "Retried title",
+            "author_name": "",
+            "fetched_at": "now",
+        },
+    )
+    assert result == 0
+    assert sleeps == [10, 30, 90]
+    assert json.loads((yt / "video_ids.json").read_text())["A1"] == "video-retried"
+    assert json.loads(ads_path.read_text())["ads"][0]["video"]["title"] == "Retried title"
+
+
+def test_rate_limit_stops_without_poisoning_cache(setup: tuple[Path, Path], monkeypatch: pytest.MonkeyPatch) -> None:
+    ads_path, yt = setup
+    sleeps: list[float] = []
+
+    def resolver(advertiser: str, ad_id: str, session: object) -> str:
+        raise LookupRateLimited
+
+    monkeypatch.setattr(ads_creatives.time, "sleep", sleeps.append)
+    result = enrich_video_titles.run(
+        "race",
+        limit=1,
+        sleep_seconds=0,
+        resolver=resolver,
+        fetcher=lambda *_: pytest.fail("oEmbed should not run"),
+    )
+    assert result == 2
+    assert sleeps == [10, 30, 90]
+    assert not (yt / "video_ids.json").exists()
+    assert json.loads(ads_path.read_text())["ads"][0]["video"] is None

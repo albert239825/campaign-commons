@@ -10,7 +10,7 @@ from pathlib import Path
 
 import requests
 
-from .ads_creatives import youtube_video_id
+from .ads_creatives import LookupFailed, LookupRateLimited, resolve_video_id_with_backoff, youtube_video_id
 from .config import DATA, RACES
 from .util import now_iso, read_json, write_json
 from .yt_cache import load_video_id_cache, save_video_id_cache
@@ -51,7 +51,8 @@ def run(
     *,
     limit: int | None = None,
     only: str | None = None,
-    sleep_seconds: float = 0.5,
+    cached_only: bool = False,
+    sleep_seconds: float = 1.0,
     resolver: Callable[[str, str, requests.Session], str | None] | None = None,
     fetcher: Callable[[str, str, requests.Session], dict[str, object]] | None = None,
 ) -> int:
@@ -71,18 +72,39 @@ def run(
     selected = [
         ad
         for ad in ads
-        if isinstance(ad, dict) and ad.get("ad_type") == "video" and (only is None or str(ad.get("ad_id")) == only)
+        if isinstance(ad, dict)
+        and ad.get("ad_type") == "video"
+        and (only is None or str(ad.get("ad_id")) == only)
+        and (not cached_only or str(ad.get("ad_id")) in cache)
     ]
+    if cached_only:
+        for ad in ads:
+            if isinstance(ad, dict) and ad.get("ad_type") == "video" and str(ad.get("ad_id")) not in cache:
+                ad["video"] = None
     if limit is not None:
         selected = selected[:limit]
-    for ad in selected:
+    for processed, ad in enumerate(selected):
         ad_id = str(ad["ad_id"])
         if ad_id in cache:
             video_id = cache[ad_id]
         else:
-            video_id = resolver(str(ad["advertiser_id"]), ad_id, session)
+            try:
+                video_id = resolve_video_id_with_backoff(resolver, str(ad["advertiser_id"]), ad_id, session)
+            except LookupRateLimited:
+                write_json(ads_path, gallery)
+                print(
+                    f"rate limited by adstransparency.google.com after {processed} ads; re-run later to continue",
+                    file=sys.stderr,
+                )
+                return 2
+            except LookupFailed as exc:
+                write_json(ads_path, gallery)
+                print(f"video ID lookup failed after {processed} ads: {exc}; re-run later to continue", file=sys.stderr)
+                return 2
             cache[ad_id] = video_id
             save_video_id_cache(VIDEO_IDS, cache)
+            if sleep_seconds:
+                time.sleep(sleep_seconds)
         if not video_id:
             ad["video"] = None
             counts["no_video_id"] += 1
@@ -125,9 +147,10 @@ def main() -> int:
     parser.add_argument("race")
     parser.add_argument("--limit", type=int)
     parser.add_argument("--only")
-    parser.add_argument("--sleep", type=float, default=0.5)
+    parser.add_argument("--cached-only", action="store_true")
+    parser.add_argument("--sleep", type=float, default=1.0)
     args = parser.parse_args()
-    return run(args.race, limit=args.limit, only=args.only, sleep_seconds=args.sleep)
+    return run(args.race, limit=args.limit, only=args.only, sleep_seconds=args.sleep, cached_only=args.cached_only)
 
 
 if __name__ == "__main__":
