@@ -23,7 +23,7 @@ export function buildFundingViews(ledger: Ledger) {
     const visibility = { disclosed: 0, inferable: 0, unwalked: 0, dark: 0, unavailable: 0 };
     if (id === "all" && ledger.traceability) {
       const t = ledger.traceability;
-      visibility.disclosed = t.traced_to_individuals;
+      visibility.disclosed = t.traced_to_individuals + (t.traced_to_organizations ?? 0);
       visibility.inferable = t.inferable;
       visibility.unwalked = t.unwalked ?? 0;
       visibility.dark = t.dark;
