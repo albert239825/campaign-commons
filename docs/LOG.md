@@ -635,8 +635,8 @@ lists the five slices with amounts and shares of the pie total. `funding-view.ts
 view, tabs, captions, visibility bar, methodology `<details>` and source records are unchanged; no contract or data
 changes; `page.tsx` untouched. D-79. On the **all-candidates** tab, detail instead groups the pie by side (Albert): one
 contiguous half per candidate — their receipts, outside spending supporting them, outside spending opposing their
-opponent(s) — with an ink line at each side boundary and a "Working for <candidate>" subtotal heading in the legend
-(`sideSlices`). The caption says the side total is a comparison figure, not a fundraising total.
+opponent(s) — each side in its own non-party hue (teal-slate / umber-ochre; darkest shade = receipts, lighter = outside
+spending) and a "Working for <candidate>" subtotal heading in the legend (`sideSlices`, `SIDE_HUES`). The caption says the side total is a comparison figure, not a fundraising total.
 
 **Challenge.** This is the third cut of the same PR: the Sep 5 critique asked for per-candidate support/oppose pairs,
 Albert then asked for one three-slice "Money working for <candidate>" pie per candidate, and Patrick settled on the

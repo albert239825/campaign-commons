@@ -61,6 +61,13 @@ export type SliceGroup = "campaign" | "outside";
 export const GROUP_COLORS: Record<SliceGroup, string> = { campaign: "#343f49", outside: "#b7ab98" };
 const CAMPAIGN_SHADES = ["#343f49", "#5b6874", "#8a95a0"];
 const OUTSIDE_SHADES = ["#8c7e6a", "#cbc1b0"];
+/** By-side view: one non-party hue per side (never party red/blue, D-16); darkest = receipts, lighter = outside spending. */
+const SIDE_HUES = [
+  ["#2f5d62", "#5f8a8b", "#a3c1bd"],
+  ["#6f4a2b", "#a67c52", "#d2b48c"],
+  ["#4b3f6b", "#7d6f9e", "#b9afd0"],
+  ["#5a5e2a", "#8b8f55", "#c2c49a"],
+];
 
 export type PieSlice = { id: string; group: SliceGroup; label: string; amount: number; color: string; side?: string };
 
@@ -90,14 +97,15 @@ export function pieSlices(view: FundingView, detailed: boolean, candidates: Fund
  * opposing their opponent(s) — "money working for" a side, never called a fundraising total (D-16 hues kept).
  */
 export function sideSlices(candidates: FundingView[]): PieSlice[] {
-  return candidates.flatMap(c => {
+  return candidates.flatMap((c, i) => {
     const others = candidates.filter(o => o.id !== c.id);
     const rival = others.length === 1 ? others[0].names : "opponents";
     const side = c.names;
+    const hue = SIDE_HUES[i % SIDE_HUES.length];
     return [
-      { id: `${c.id}-campaign`, group: "campaign" as const, side, label: `Receipts, ${c.names}`, amount: c.campaign.receipts, color: CAMPAIGN_SHADES[0] },
-      { id: `${c.id}-support`, group: "outside" as const, side, label: `Supporting ${c.names}`, amount: c.outside.support, color: OUTSIDE_SHADES[0] },
-      { id: `${c.id}-oppose`, group: "outside" as const, side, label: `Opposing ${rival}`, amount: others.reduce((sum, o) => sum + o.outside.oppose, 0), color: OUTSIDE_SHADES[1] },
+      { id: `${c.id}-campaign`, group: "campaign" as const, side, label: `Receipts, ${c.names}`, amount: c.campaign.receipts, color: hue[0] },
+      { id: `${c.id}-support`, group: "outside" as const, side, label: `Supporting ${c.names}`, amount: c.outside.support, color: hue[1] },
+      { id: `${c.id}-oppose`, group: "outside" as const, side, label: `Opposing ${rival}`, amount: others.reduce((sum, o) => sum + o.outside.oppose, 0), color: hue[2] },
     ];
   });
 }
