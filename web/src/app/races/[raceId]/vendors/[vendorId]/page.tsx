@@ -1,6 +1,6 @@
 // OWNER: Block 2 — vendors.
 import Link from "next/link";
-import { getAds, getEntity, getRace, getVendor, getVendors, hasTrails, listEntityIds, listRaceIds, listVendorIds } from "@/lib/data";
+import { getAds, getEntity, getRace, getVendor, getVendors, listEntityIds, listRaceIds, listVendorIds } from "@/lib/data";
 import { BASIS_LABELS, BASIS_MEANING } from "@/lib/evidence";
 import { date, pct, routes } from "@/lib/format";
 import { AdjacencyNote, Breadcrumbs, Card, Chip, DataStatusBanner, Money, SourceLink, Stat } from "@/components/ui";
@@ -72,7 +72,7 @@ export default async function VendorPage({ params }: { params: Promise<{ raceId:
           ))}
         </p>
       </header>
-      <RaceNav race={race} counts={{ ads: gallery.ads.length }} active={routes.vendors(raceId)} trails={hasTrails(raceId)} />
+      <RaceNav race={race} counts={{ ads: gallery.ads.length }} />
 
       <Card>
         <div className="grid grid-cols-2 gap-4 md:grid-cols-4">

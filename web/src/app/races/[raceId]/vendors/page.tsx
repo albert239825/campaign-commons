@@ -1,6 +1,6 @@
 // OWNER: Block 2 — vendors.
 import Link from "next/link";
-import { getAds, getRace, getVendors, hasTrails, listRaceIds } from "@/lib/data";
+import { getAds, getRace, getVendors, listRaceIds } from "@/lib/data";
 import { date, pct, routes } from "@/lib/format";
 import { Breadcrumbs, Card, Chip, DataStatusBanner, Money, SourceLink, Stat } from "@/components/ui";
 import { RaceNav } from "@/components/ui/race-nav";
@@ -32,7 +32,7 @@ export default async function VendorsPage({ params }: { params: Promise<{ raceId
           the candidate named on a buy received nothing.
         </p>
       </header>
-      <RaceNav race={race} counts={{ ads: getAds(raceId).ads.length }} active={routes.vendors(raceId)} trails={hasTrails(raceId)} />
+      <RaceNav race={race} counts={{ ads: getAds(raceId).ads.length }} />
 
       <Card>
         <div className="grid grid-cols-2 gap-4 md:grid-cols-4">
