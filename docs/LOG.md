@@ -716,7 +716,6 @@ Added `enrich_transcripts.py`, `enrich_ads.py`, `enrich_review.py`, and the `enr
 and `--refresh-reviewed`; caches live under `data/raw/yt` and `data/raw/xai`. The transcript step runs locally because
 YouTube blocks cloud IPs. Machine rows remain separate from human issue tags, carry review status and response provenance,
 and are merged into optional `machine_issues` output only. 183 pipeline tests.
-||||||| d7d05e6
 
 ### 2026-09-06 — Phase 2b spender self-description enrichment
 
@@ -729,4 +728,3 @@ Added `enrich_funders.py` for ranked upstream `org:` funders, open-web self-desc
 and `enrich-funders`/`enrich-review --kind funders`.
 Added `enrich_dossiers.py`, optional X-post verification, `x_accounts.json`, and dossier materialization for pending
 machine stance suggestions.
-||||||| 97993eb
