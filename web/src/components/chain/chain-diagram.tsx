@@ -664,7 +664,9 @@ export function ChainDiagram({ wire, hasTable = false }: { wire: ChainViewWire; 
   };
   /** A click on bare canvas (not a node or edge) unpins the route and drops the cursor. */
   const onCanvasClick = (ev: MouseEvent<SVGSVGElement>) => {
-    if (ev.target !== ev.currentTarget && !(ev.target instanceof SVGTextElement)) return;
+    const t = ev.target;
+    const bare = t === ev.currentTarget || (t instanceof SVGTextElement && t.parentNode === ev.currentTarget);
+    if (!bare) return;
     clearCursor();
     setSelection((cur) => (cur?.kind === "node" ? null : cur));
   };
