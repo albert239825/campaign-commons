@@ -63,7 +63,7 @@ def _date(value: object) -> str | None:
     return None if value is None else str(value)[:10]
 
 
-def build_graph(con: duckdb.DuckDBPyConnection) -> Graph:
+def build_graph(con: duckdb.DuckDBPyConnection, overrides: dict[str, str] | None = None) -> Graph:
     g = Graph()
     for cid, tp, name in con.execute("SELECT CMTE_ID, CMTE_TP, CMTE_NM FROM committees").fetchall():
         g.committee_type[cid] = tp
@@ -116,7 +116,7 @@ def build_graph(con: duckdb.DuckDBPyConnection) -> Graph:
                 tuple(tts),
                 _date(first),
                 _date(last),
-                organization_class=classify_organization(name),
+                organization_class=classify_organization(name, overrides),
             )
         else:
             edge = Edge(

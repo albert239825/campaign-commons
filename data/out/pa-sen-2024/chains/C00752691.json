@@ -2,7 +2,7 @@
   "root_entity_id": "C00752691",
   "root_name": "ONE FOR ALL COMMITTEE",
   "race_id": "pa-sen-2024",
-  "generated_at": "2026-09-05T19:53:48+00:00",
+  "generated_at": "2026-09-06T04:49:10+00:00",
   "data_status": "real",
   "nodes": [
     {
@@ -141,6 +141,31 @@
       "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00752691&two_year_transaction_period=2024&contributor_name=STUTZMAN%2C+S.+MARK"
     },
     {
+      "id": "ind:MENNET_LISA|98118",
+      "name": "MENNET, LISA",
+      "kind": "individual",
+      "committee_type": null,
+      "depth": 1,
+      "visibility": "disclosed",
+      "amount_in": 250000.0,
+      "is_terminus": true,
+      "terminus_reason": "individual",
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00752691&two_year_transaction_period=2024&contributor_name=MENNET%2C+LISA"
+    },
+    {
+      "id": "org:BUELOW_BAMBINI_LLC",
+      "name": "BUELOW BAMBINI LLC",
+      "kind": "organization",
+      "committee_type": null,
+      "depth": 1,
+      "visibility": "dark",
+      "amount_in": 250000.0,
+      "is_terminus": true,
+      "terminus_reason": "dark",
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00752691&two_year_transaction_period=2024&contributor_name=BUELOW+BAMBINI+LLC",
+      "organization_class": "llc"
+    },
+    {
       "id": "ind:WALTON_KELLY_R.|76244",
       "name": "WALTON, KELLY R.",
       "kind": "individual",
@@ -188,31 +213,6 @@
       "terminus_reason": "dark",
       "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00752691&two_year_transaction_period=2024&contributor_name=BRICK+BY+BRICK+FOUNDATION",
       "organization_class": "nonprofit"
-    },
-    {
-      "id": "ind:MENNET_LISA|98118",
-      "name": "MENNET, LISA",
-      "kind": "individual",
-      "committee_type": null,
-      "depth": 1,
-      "visibility": "disclosed",
-      "amount_in": 250000.0,
-      "is_terminus": true,
-      "terminus_reason": "individual",
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00752691&two_year_transaction_period=2024&contributor_name=MENNET%2C+LISA"
-    },
-    {
-      "id": "org:BUELOW_BAMBINI_LLC",
-      "name": "BUELOW BAMBINI LLC",
-      "kind": "organization",
-      "committee_type": null,
-      "depth": 1,
-      "visibility": "dark",
-      "amount_in": 250000.0,
-      "is_terminus": true,
-      "terminus_reason": "dark",
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00752691&two_year_transaction_period=2024&contributor_name=BUELOW+BAMBINI+LLC",
-      "organization_class": "llc"
     },
     {
       "id": "ind:BLUMENTHAL_JABE|98122",
@@ -549,6 +549,38 @@
       "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00752691&two_year_transaction_period=2024&contributor_name=STUTZMAN%2C+S.+MARK"
     },
     {
+      "from": "ind:MENNET_LISA|98118",
+      "to": "C00752691",
+      "amount": 250000.0,
+      "visibility": "disclosed",
+      "depth": 1,
+      "transaction_types": [
+        "10"
+      ],
+      "count": 1,
+      "date_range": [
+        "2024-09-03",
+        "2024-09-03"
+      ],
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00752691&two_year_transaction_period=2024&contributor_name=MENNET%2C+LISA"
+    },
+    {
+      "from": "org:BUELOW_BAMBINI_LLC",
+      "to": "C00752691",
+      "amount": 250000.0,
+      "visibility": "dark",
+      "depth": 1,
+      "transaction_types": [
+        "10"
+      ],
+      "count": 1,
+      "date_range": [
+        "2024-08-28",
+        "2024-08-28"
+      ],
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00752691&two_year_transaction_period=2024&contributor_name=BUELOW+BAMBINI+LLC"
+    },
+    {
       "from": "ind:WALTON_KELLY_R.|76244",
       "to": "C00752691",
       "amount": 250000.0,
@@ -611,38 +643,6 @@
         "2024-09-27"
       ],
       "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00752691&two_year_transaction_period=2024&contributor_name=BRICK+BY+BRICK+FOUNDATION"
-    },
-    {
-      "from": "ind:MENNET_LISA|98118",
-      "to": "C00752691",
-      "amount": 250000.0,
-      "visibility": "disclosed",
-      "depth": 1,
-      "transaction_types": [
-        "10"
-      ],
-      "count": 1,
-      "date_range": [
-        "2024-09-03",
-        "2024-09-03"
-      ],
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00752691&two_year_transaction_period=2024&contributor_name=MENNET%2C+LISA"
-    },
-    {
-      "from": "org:BUELOW_BAMBINI_LLC",
-      "to": "C00752691",
-      "amount": 250000.0,
-      "visibility": "dark",
-      "depth": 1,
-      "transaction_types": [
-        "10"
-      ],
-      "count": 1,
-      "date_range": [
-        "2024-08-28",
-        "2024-08-28"
-      ],
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00752691&two_year_transaction_period=2024&contributor_name=BUELOW+BAMBINI+LLC"
     },
     {
       "from": "ind:BLUMENTHAL_JABE|98122",

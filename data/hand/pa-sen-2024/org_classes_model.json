@@ -1,0 +1,258 @@
+{
+  "race_id": "pa-sen-2024",
+  "generated_at": "2026-09-06T04:47:28+00:00",
+  "classes": [
+    {
+      "name": "AMAZON.COM",
+      "org_class": "business",
+      "basis": "inferred",
+      "source_url": "https://ir.aboutamazon.com/corporate-governance/documents-and-charters/certificate-of-incorporation/default.aspx",
+      "quote": "Amazon.com, Inc., a corporation organized and existing under the General Corporation Law of the State of Delaware,",
+      "tagged_by": "grok-4.3",
+      "amount": 10000.0
+    },
+    {
+      "name": "CHONG + KOSTER",
+      "org_class": "llc",
+      "basis": "inferred",
+      "source_url": "https://opengovwa.com/corporation/604383323",
+      "quote": "the entity type is Foreign Limited Liability Company and the business category is Limited Liability Regular",
+      "tagged_by": "grok-4.3",
+      "amount": 13180.0
+    },
+    {
+      "name": "CONFEDERATED SALISH & KOOTENAI TRIBES OF THE FLATHEAD NATION",
+      "org_class": "nonprofit",
+      "basis": "inferred",
+      "source_url": "https://cskt.org/our-story/",
+      "quote": "The Confederated Salish and Kootenai Tribes are governed by a Tribal Council consisting of ten elected members representing different districts.",
+      "tagged_by": "grok-4.3",
+      "amount": 17400.0
+    },
+    {
+      "name": "COONEY AND CONWAY",
+      "org_class": "business",
+      "basis": "inferred",
+      "source_url": "https://www.cooneyconway.com/about-us/",
+      "quote": "Cooney & Conway is a plaintiff-only law firm with a national presence, based out of Chicago, Illinois.",
+      "tagged_by": "grok-4.3",
+      "amount": 10000.0
+    },
+    {
+      "name": "CORBOY & DEMETRIO, P.C.",
+      "org_class": "business",
+      "basis": "inferred",
+      "source_url": "https://www.linkedin.com/company/corboy-&-demetrio-p.c",
+      "quote": "Corboy & Demetrio is one of the nation’s premier law firms.",
+      "tagged_by": "grok-4.3",
+      "amount": 10000.0
+    },
+    {
+      "name": "DE CASTRO, P.C.",
+      "org_class": "business",
+      "basis": "inferred",
+      "source_url": "https://decastropc.com/",
+      "quote": "Founded in 2003, de Castro, PC is a boutique business law firm consisting of prominent and successful attorneys.",
+      "tagged_by": "grok-4.3",
+      "amount": 20000.0
+    },
+    {
+      "name": "FAGUNDES, FAGUNDES, FAGUNDES",
+      "org_class": "business",
+      "basis": "inferred",
+      "source_url": "https://www.ccof.org/news/fagundes-brothers-dairy-keeps-portuguese-tradition-alive-in-the-central-valley/",
+      "quote": "Fred Fagundes, owner and partner of Fagundes Brother’s Dairy, is a generous business leader.",
+      "tagged_by": "grok-4.3",
+      "amount": 10000.0
+    },
+    {
+      "name": "FLORIDA JUSTICE PC",
+      "org_class": "nonprofit",
+      "basis": "inferred",
+      "source_url": "https://dos.elections.myflorida.com/committees/ComDetail.asp?account=60702",
+      "quote": "Type: Political Committee",
+      "tagged_by": "grok-4.3",
+      "amount": 10000.0
+    },
+    {
+      "name": "FRATERNAL ORDER OF POLICE CHICAGO LODGE 7",
+      "org_class": "union",
+      "basis": "inferred",
+      "source_url": "https://www.chicagofop.org/about/about-the-lodge",
+      "quote": "It was not until August 19, 1981 that the FOP Lodge No. 7, became the collective bargaining agent for the police and the union for 8,202 Chicago Police Officers.",
+      "tagged_by": "grok-4.3",
+      "amount": 10000.0
+    },
+    {
+      "name": "GUSTO",
+      "org_class": "business",
+      "basis": "inferred",
+      "source_url": "https://en.wikipedia.org/wiki/Gusto,_Inc.",
+      "quote": "Gusto, Inc. is a company that develops payroll, benefits, and human resource management software for businesses based in the United States.",
+      "tagged_by": "grok-4.3",
+      "amount": 12754.0
+    },
+    {
+      "name": "HURLEY, MCKENNA & MERTZ",
+      "org_class": "business",
+      "basis": "inferred",
+      "source_url": "https://www.hurley-law.com/about-us/",
+      "quote": "So in 1992 he founded his own personal injury firm, now known as Hurley McKenna & Mertz, P.C.",
+      "tagged_by": "grok-4.3",
+      "amount": 10000.0
+    },
+    {
+      "name": "KEEFE, KEEFEE & UNSELL PC",
+      "org_class": "business",
+      "basis": "inferred",
+      "source_url": "https://www.keefeandkeefe.com/about/",
+      "quote": "For over three decades, Keefe, Keefe & Unsell, P.C. , has stood as a law firm dedicated to helping individuals who suffered serious injuries obtain the compensation and justice they deserve.",
+      "tagged_by": "grok-4.3",
+      "amount": 10000.0
+    },
+    {
+      "name": "LAW OFFICES OF MARSHALL SILBERBERG, P.C.",
+      "org_class": "business",
+      "basis": "inferred",
+      "source_url": "https://naicslist.com/company-profile/the-law-offices-of-marshall-silberberg-irvine-ca-92612",
+      "quote": "The Law Offices of Marshall Silberberg is a specialized Lawyers firm based in Irvine, CA (92612). Functioning as a Corporation,",
+      "tagged_by": "grok-4.3",
+      "amount": 20000.0
+    },
+    {
+      "name": "MARIA MOLINA DBA NOVA CONSULTING",
+      "org_class": "business",
+      "basis": "inferred",
+      "source_url": "https://florida.intercreditreport.com/company/nova-consulting-inc-p95000035314",
+      "quote": "Company Type Domestic for Profit",
+      "tagged_by": "grok-4.3",
+      "amount": 10000.0
+    },
+    {
+      "name": "MINNEAPOLIS REGIONAL LABOR FEDERATION",
+      "org_class": "union",
+      "basis": "inferred",
+      "source_url": "https://minneapolisunions.org/content/13487",
+      "quote": "The Minneapolis Regional Labor Federation, AFL-CIO is the umbrella organization of Minneapolis-area local unions and includes 175 affiliated unions representing over 80,000 working people.",
+      "tagged_by": "grok-4.3",
+      "amount": 10000.0
+    },
+    {
+      "name": "MN 6TH CONGRESSIONAL DISTRICT",
+      "org_class": "nonprofit",
+      "basis": "inferred",
+      "source_url": "https://www.transparencyusa.org/mn/committee/6th-congressional-district-rpm-20778-ptu",
+      "quote": "6th Congressional District RPM - Minnesota Committee",
+      "tagged_by": "grok-4.3",
+      "amount": 10000.0
+    },
+    {
+      "name": "MORGAN BROTHERS",
+      "org_class": "business",
+      "basis": "inferred",
+      "source_url": "https://www.morgancontractorsinc.com/our-history",
+      "quote": "The Morgan brothers have a saying: “When it comes time to move heaven and earth, we’ll move the earth.” The Morgans have been “moving the earth” for more than 50 years.",
+      "tagged_by": "grok-4.3",
+      "amount": 10000.0
+    },
+    {
+      "name": "NEW JERSEY STATE ASSN OF PIPE FITTERS",
+      "org_class": "union",
+      "basis": "inferred",
+      "source_url": "https://givefreely.com/charity-directory/nonprofit/ein-222415035/",
+      "quote": "The New Jersey State Association Of Pipe Trades, also known as the United Association - NJ State Pipe Trades Association, is a distinguished labor union situated in Englishtown, New Jersey.",
+      "tagged_by": "grok-4.3",
+      "amount": 10000.0
+    },
+    {
+      "name": "NEXUS POINT STRATEGIES",
+      "org_class": "business",
+      "basis": "inferred",
+      "source_url": "https://www.nexuspointstrategies.com",
+      "quote": "A Full-Service Political Consulting Firm offering a suite of products to reach voters and donors",
+      "tagged_by": "grok-4.3",
+      "amount": 12500.0
+    },
+    {
+      "name": "NOTTAWASEPPI HURON BAND OF THE POTAWATOMI",
+      "org_class": "nonprofit",
+      "basis": "inferred",
+      "source_url": "https://nhbp-nsn.gov/press-kit/",
+      "quote": "The Nottawaseppi Huron Band of the Potawatomi is a federally recognized Tribal government with more than 1,700 enrolled Tribal Members.",
+      "tagged_by": "grok-4.3",
+      "amount": 23100.0
+    },
+    {
+      "name": "OLEA EDGE ANALYTICS",
+      "org_class": "business",
+      "basis": "inferred",
+      "source_url": "https://www.oleaedge.com/",
+      "quote": "Olea Edge Analytics delivers pressure intelligence to municipal distribution systems.",
+      "tagged_by": "grok-4.3",
+      "amount": 20000.0
+    },
+    {
+      "name": "RONALD L. BOOK PA",
+      "org_class": "business",
+      "basis": "inferred",
+      "source_url": "https://rlbookpa.com/about/",
+      "quote": "Mr. Book is President and Chief Executive Officer of Ronald L. Book, P.A. Since founding the firm in 1987",
+      "tagged_by": "grok-4.3",
+      "amount": 13500.0
+    },
+    {
+      "name": "SALVI, SCHOSTOK & PRITCHARD",
+      "org_class": "business",
+      "basis": "inferred",
+      "source_url": "https://www.salvilaw.com/about-us/",
+      "quote": "Today, Salvi, Schostok & Pritchard has over 20 lawyers and is supported by more than 35 staff members. The firm has earned a reputation as one of the top-ranked firms in Illinois.",
+      "tagged_by": "grok-4.3",
+      "amount": 10000.0
+    },
+    {
+      "name": "STEINGER, GREENE AND FEINER",
+      "org_class": "business",
+      "basis": "inferred",
+      "source_url": "https://www.injurylawyers.com/who-we-are/",
+      "quote": "Our firm, Steinger, Greene & Feiner, has been serving and defending the rights of personal injury victims and their families since 1997.",
+      "tagged_by": "grok-4.3",
+      "amount": 10000.0
+    },
+    {
+      "name": "SWANSON STREET ASSOCIATES",
+      "org_class": "llc",
+      "basis": "inferred",
+      "source_url": "https://www.opensecrets.org/search?field=contrib&page=4&q=Swanson&type=donors",
+      "quote": "SWANSON ASSOCIATES BLUE BELL, PA 19422 Swanson Associates REAL ESTATE DEVELOPERS",
+      "tagged_by": "grok-4.3",
+      "amount": 12900.0
+    },
+    {
+      "name": "VITAS HEALTHCARE",
+      "org_class": "business",
+      "basis": "inferred",
+      "source_url": "https://www.vitas.com/about-us/parent-company",
+      "quote": "VITAS® Healthcare is a wholly owned subsidiary of the Chemed Corporation , which is publicly traded on the New York Stock Exchange under the symbol CHE.",
+      "tagged_by": "grok-4.3",
+      "amount": 10000.0
+    },
+    {
+      "name": "WILLIAM O. PERRY & ASSOCIATES",
+      "org_class": "business",
+      "basis": "inferred",
+      "source_url": "https://perrycommercial.net/services/",
+      "quote": "Founded in 1976 by William Perry III, Perry Commercial has developed over 3 million square feet of residential and commercial spaces throughout the Mountain West.",
+      "tagged_by": "grok-4.3",
+      "amount": 100000.0
+    },
+    {
+      "name": "WILLIG, WILLIAMS & DAVIDSON",
+      "org_class": "business",
+      "basis": "inferred",
+      "source_url": "https://www.wwdlaw.com/firm/",
+      "quote": "Willig, Williams & Davidson is one of the largest and most respected union-side labor law firms in the United States.",
+      "tagged_by": "grok-4.3",
+      "amount": 10000.0
+    }
+  ]
+}

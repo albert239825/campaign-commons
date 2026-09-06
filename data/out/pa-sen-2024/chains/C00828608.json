@@ -2,7 +2,7 @@
   "root_entity_id": "C00828608",
   "root_name": "HARDWORKING AMERICANS INC.",
   "race_id": "pa-sen-2024",
-  "generated_at": "2026-09-05T19:53:48+00:00",
+  "generated_at": "2026-09-06T04:49:10+00:00",
   "data_status": "real",
   "nodes": [
     {
@@ -79,19 +79,6 @@
       "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00828608&two_year_transaction_period=2024&contributor_name=HORNSTEIN%2C+STEVEN"
     },
     {
-      "id": "org:MAVERICK_QUANTUM",
-      "name": "MAVERICK QUANTUM",
-      "kind": "organization",
-      "committee_type": null,
-      "depth": 1,
-      "visibility": "dark",
-      "amount_in": 30000.0,
-      "is_terminus": true,
-      "terminus_reason": "dark",
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00828608&two_year_transaction_period=2024&contributor_name=MAVERICK+QUANTUM",
-      "organization_class": "unknown"
-    },
-    {
       "id": "ind:MCLANE_JAMES_S._MR.|35243",
       "name": "MCLANE, JAMES S. MR.",
       "kind": "individual",
@@ -104,64 +91,17 @@
       "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00828608&two_year_transaction_period=2024&contributor_name=MCLANE%2C+JAMES+S.+MR."
     },
     {
-      "id": "ind:STANARD_JAMES_N.|44114",
-      "name": "STANARD, JAMES N.",
-      "kind": "individual",
+      "id": "org:MAVERICK_QUANTUM",
+      "name": "MAVERICK QUANTUM",
+      "kind": "organization",
       "committee_type": null,
       "depth": 1,
-      "visibility": "disclosed",
-      "amount_in": 25000.0,
+      "visibility": "dark",
+      "amount_in": 30000.0,
       "is_terminus": true,
-      "terminus_reason": "individual",
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00828608&two_year_transaction_period=2024&contributor_name=STANARD%2C+JAMES+N."
-    },
-    {
-      "id": "ind:WINN_STEPHEN_T._MR.|75219",
-      "name": "WINN, STEPHEN T. MR.",
-      "kind": "individual",
-      "committee_type": null,
-      "depth": 1,
-      "visibility": "disclosed",
-      "amount_in": 25000.0,
-      "is_terminus": true,
-      "terminus_reason": "individual",
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00828608&two_year_transaction_period=2024&contributor_name=WINN%2C+STEPHEN+T.+MR."
-    },
-    {
-      "id": "ind:SLATER_KENNETH_Z.|33435",
-      "name": "SLATER, KENNETH Z.",
-      "kind": "individual",
-      "committee_type": null,
-      "depth": 1,
-      "visibility": "disclosed",
-      "amount_in": 25000.0,
-      "is_terminus": true,
-      "terminus_reason": "individual",
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00828608&two_year_transaction_period=2024&contributor_name=SLATER%2C+KENNETH+Z."
-    },
-    {
-      "id": "ind:WHITE_ALAN_B.|75201",
-      "name": "WHITE, ALAN B.",
-      "kind": "individual",
-      "committee_type": null,
-      "depth": 1,
-      "visibility": "disclosed",
-      "amount_in": 25000.0,
-      "is_terminus": true,
-      "terminus_reason": "individual",
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00828608&two_year_transaction_period=2024&contributor_name=WHITE%2C+ALAN+B."
-    },
-    {
-      "id": "ind:CARMICHAEL_JEFFREY|37363",
-      "name": "CARMICHAEL, JEFFREY",
-      "kind": "individual",
-      "committee_type": null,
-      "depth": 1,
-      "visibility": "disclosed",
-      "amount_in": 25000.0,
-      "is_terminus": true,
-      "terminus_reason": "individual",
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00828608&two_year_transaction_period=2024&contributor_name=CARMICHAEL%2C+JEFFREY"
+      "terminus_reason": "dark",
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00828608&two_year_transaction_period=2024&contributor_name=MAVERICK+QUANTUM",
+      "organization_class": "unknown"
     },
     {
       "id": "ind:HILDEBRAND_MELINDA|77019",
@@ -236,6 +176,66 @@
       "is_terminus": true,
       "terminus_reason": "individual",
       "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00828608&two_year_transaction_period=2024&contributor_name=SEAY%2C+GEORGE"
+    },
+    {
+      "id": "ind:STANARD_JAMES_N.|44114",
+      "name": "STANARD, JAMES N.",
+      "kind": "individual",
+      "committee_type": null,
+      "depth": 1,
+      "visibility": "disclosed",
+      "amount_in": 25000.0,
+      "is_terminus": true,
+      "terminus_reason": "individual",
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00828608&two_year_transaction_period=2024&contributor_name=STANARD%2C+JAMES+N."
+    },
+    {
+      "id": "ind:WINN_STEPHEN_T._MR.|75219",
+      "name": "WINN, STEPHEN T. MR.",
+      "kind": "individual",
+      "committee_type": null,
+      "depth": 1,
+      "visibility": "disclosed",
+      "amount_in": 25000.0,
+      "is_terminus": true,
+      "terminus_reason": "individual",
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00828608&two_year_transaction_period=2024&contributor_name=WINN%2C+STEPHEN+T.+MR."
+    },
+    {
+      "id": "ind:SLATER_KENNETH_Z.|33435",
+      "name": "SLATER, KENNETH Z.",
+      "kind": "individual",
+      "committee_type": null,
+      "depth": 1,
+      "visibility": "disclosed",
+      "amount_in": 25000.0,
+      "is_terminus": true,
+      "terminus_reason": "individual",
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00828608&two_year_transaction_period=2024&contributor_name=SLATER%2C+KENNETH+Z."
+    },
+    {
+      "id": "ind:WHITE_ALAN_B.|75201",
+      "name": "WHITE, ALAN B.",
+      "kind": "individual",
+      "committee_type": null,
+      "depth": 1,
+      "visibility": "disclosed",
+      "amount_in": 25000.0,
+      "is_terminus": true,
+      "terminus_reason": "individual",
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00828608&two_year_transaction_period=2024&contributor_name=WHITE%2C+ALAN+B."
+    },
+    {
+      "id": "ind:CARMICHAEL_JEFFREY|37363",
+      "name": "CARMICHAEL, JEFFREY",
+      "kind": "individual",
+      "committee_type": null,
+      "depth": 1,
+      "visibility": "disclosed",
+      "amount_in": 25000.0,
+      "is_terminus": true,
+      "terminus_reason": "individual",
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00828608&two_year_transaction_period=2024&contributor_name=CARMICHAEL%2C+JEFFREY"
     },
     {
       "id": "org:DIALCARE_LLC",
@@ -393,22 +393,6 @@
       "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00828608&two_year_transaction_period=2024&contributor_name=HORNSTEIN%2C+STEVEN"
     },
     {
-      "from": "org:MAVERICK_QUANTUM",
-      "to": "C00828608",
-      "amount": 30000.0,
-      "visibility": "dark",
-      "depth": 1,
-      "transaction_types": [
-        "10"
-      ],
-      "count": 1,
-      "date_range": [
-        "2024-10-16",
-        "2024-10-16"
-      ],
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00828608&two_year_transaction_period=2024&contributor_name=MAVERICK+QUANTUM"
-    },
-    {
       "from": "ind:MCLANE_JAMES_S._MR.|35243",
       "to": "C00828608",
       "amount": 30000.0,
@@ -425,84 +409,20 @@
       "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00828608&two_year_transaction_period=2024&contributor_name=MCLANE%2C+JAMES+S.+MR."
     },
     {
-      "from": "ind:STANARD_JAMES_N.|44114",
+      "from": "org:MAVERICK_QUANTUM",
       "to": "C00828608",
-      "amount": 25000.0,
-      "visibility": "disclosed",
+      "amount": 30000.0,
+      "visibility": "dark",
       "depth": 1,
       "transaction_types": [
         "10"
       ],
       "count": 1,
       "date_range": [
-        "2023-06-08",
-        "2023-06-08"
+        "2024-10-16",
+        "2024-10-16"
       ],
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00828608&two_year_transaction_period=2024&contributor_name=STANARD%2C+JAMES+N."
-    },
-    {
-      "from": "ind:WINN_STEPHEN_T._MR.|75219",
-      "to": "C00828608",
-      "amount": 25000.0,
-      "visibility": "disclosed",
-      "depth": 1,
-      "transaction_types": [
-        "10"
-      ],
-      "count": 1,
-      "date_range": [
-        "2024-09-30",
-        "2024-09-30"
-      ],
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00828608&two_year_transaction_period=2024&contributor_name=WINN%2C+STEPHEN+T.+MR."
-    },
-    {
-      "from": "ind:SLATER_KENNETH_Z.|33435",
-      "to": "C00828608",
-      "amount": 25000.0,
-      "visibility": "disclosed",
-      "depth": 1,
-      "transaction_types": [
-        "10"
-      ],
-      "count": 1,
-      "date_range": [
-        "2023-06-08",
-        "2023-06-08"
-      ],
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00828608&two_year_transaction_period=2024&contributor_name=SLATER%2C+KENNETH+Z."
-    },
-    {
-      "from": "ind:WHITE_ALAN_B.|75201",
-      "to": "C00828608",
-      "amount": 25000.0,
-      "visibility": "disclosed",
-      "depth": 1,
-      "transaction_types": [
-        "10"
-      ],
-      "count": 1,
-      "date_range": [
-        "2024-09-28",
-        "2024-09-28"
-      ],
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00828608&two_year_transaction_period=2024&contributor_name=WHITE%2C+ALAN+B."
-    },
-    {
-      "from": "ind:CARMICHAEL_JEFFREY|37363",
-      "to": "C00828608",
-      "amount": 25000.0,
-      "visibility": "disclosed",
-      "depth": 1,
-      "transaction_types": [
-        "10"
-      ],
-      "count": 2,
-      "date_range": [
-        "2023-08-21",
-        "2024-09-23"
-      ],
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00828608&two_year_transaction_period=2024&contributor_name=CARMICHAEL%2C+JEFFREY"
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00828608&two_year_transaction_period=2024&contributor_name=MAVERICK+QUANTUM"
     },
     {
       "from": "ind:HILDEBRAND_MELINDA|77019",
@@ -599,6 +519,86 @@
         "2024-10-30"
       ],
       "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00828608&two_year_transaction_period=2024&contributor_name=SEAY%2C+GEORGE"
+    },
+    {
+      "from": "ind:STANARD_JAMES_N.|44114",
+      "to": "C00828608",
+      "amount": 25000.0,
+      "visibility": "disclosed",
+      "depth": 1,
+      "transaction_types": [
+        "10"
+      ],
+      "count": 1,
+      "date_range": [
+        "2023-06-08",
+        "2023-06-08"
+      ],
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00828608&two_year_transaction_period=2024&contributor_name=STANARD%2C+JAMES+N."
+    },
+    {
+      "from": "ind:WINN_STEPHEN_T._MR.|75219",
+      "to": "C00828608",
+      "amount": 25000.0,
+      "visibility": "disclosed",
+      "depth": 1,
+      "transaction_types": [
+        "10"
+      ],
+      "count": 1,
+      "date_range": [
+        "2024-09-30",
+        "2024-09-30"
+      ],
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00828608&two_year_transaction_period=2024&contributor_name=WINN%2C+STEPHEN+T.+MR."
+    },
+    {
+      "from": "ind:SLATER_KENNETH_Z.|33435",
+      "to": "C00828608",
+      "amount": 25000.0,
+      "visibility": "disclosed",
+      "depth": 1,
+      "transaction_types": [
+        "10"
+      ],
+      "count": 1,
+      "date_range": [
+        "2023-06-08",
+        "2023-06-08"
+      ],
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00828608&two_year_transaction_period=2024&contributor_name=SLATER%2C+KENNETH+Z."
+    },
+    {
+      "from": "ind:WHITE_ALAN_B.|75201",
+      "to": "C00828608",
+      "amount": 25000.0,
+      "visibility": "disclosed",
+      "depth": 1,
+      "transaction_types": [
+        "10"
+      ],
+      "count": 1,
+      "date_range": [
+        "2024-09-28",
+        "2024-09-28"
+      ],
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00828608&two_year_transaction_period=2024&contributor_name=WHITE%2C+ALAN+B."
+    },
+    {
+      "from": "ind:CARMICHAEL_JEFFREY|37363",
+      "to": "C00828608",
+      "amount": 25000.0,
+      "visibility": "disclosed",
+      "depth": 1,
+      "transaction_types": [
+        "10"
+      ],
+      "count": 2,
+      "date_range": [
+        "2023-08-21",
+        "2024-09-23"
+      ],
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00828608&two_year_transaction_period=2024&contributor_name=CARMICHAEL%2C+JEFFREY"
     },
     {
       "from": "org:DIALCARE_LLC",

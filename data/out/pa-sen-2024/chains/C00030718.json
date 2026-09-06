@@ -2,7 +2,7 @@
   "root_entity_id": "C00030718",
   "root_name": "NATIONAL ASSOCIATION OF REALTORS POLITICAL ACTION COMMITTEE",
   "race_id": "pa-sen-2024",
-  "generated_at": "2026-09-05T19:53:48+00:00",
+  "generated_at": "2026-09-06T04:49:10+00:00",
   "data_status": "real",
   "nodes": [
     {
@@ -187,18 +187,6 @@
       "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00363986&two_year_transaction_period=2024&contributor_name=HARDEEROMERE%2C+TERRI+LYNN"
     },
     {
-      "id": "ind:GOODWIN_J.B.|78759",
-      "name": "GOODWIN, J.B.",
-      "kind": "individual",
-      "committee_type": null,
-      "depth": 2,
-      "visibility": "disclosed",
-      "amount_in": 1500.0,
-      "is_terminus": true,
-      "terminus_reason": "individual",
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00363986&two_year_transaction_period=2024&contributor_name=GOODWIN%2C+J.B."
-    },
-    {
       "id": "ind:BALCH_AMANDA_(MANDY)|78768",
       "name": "BALCH, AMANDA (MANDY)",
       "kind": "individual",
@@ -209,6 +197,18 @@
       "is_terminus": true,
       "terminus_reason": "individual",
       "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00363986&two_year_transaction_period=2024&contributor_name=BALCH%2C+AMANDA+%28MANDY%29"
+    },
+    {
+      "id": "ind:GOODWIN_J.B.|78759",
+      "name": "GOODWIN, J.B.",
+      "kind": "individual",
+      "committee_type": null,
+      "depth": 2,
+      "visibility": "disclosed",
+      "amount_in": 1500.0,
+      "is_terminus": true,
+      "terminus_reason": "individual",
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00363986&two_year_transaction_period=2024&contributor_name=GOODWIN%2C+J.B."
     },
     {
       "id": "ind:CANTU_LESLIE|78768",
@@ -331,18 +331,6 @@
       "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00363986&two_year_transaction_period=2024&contributor_name=RANDALL%2C+MELINDA+T"
     },
     {
-      "id": "ind:MARTIN_ELOISE_E|75201",
-      "name": "MARTIN, ELOISE E",
-      "kind": "individual",
-      "committee_type": null,
-      "depth": 2,
-      "visibility": "disclosed",
-      "amount_in": 1066.0,
-      "is_terminus": true,
-      "terminus_reason": "individual",
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00363986&two_year_transaction_period=2024&contributor_name=MARTIN%2C+ELOISE+E"
-    },
-    {
       "id": "ind:CHAU_CHRISTINE_C|78737",
       "name": "CHAU, CHRISTINE C",
       "kind": "individual",
@@ -353,6 +341,18 @@
       "is_terminus": true,
       "terminus_reason": "individual",
       "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00363986&two_year_transaction_period=2024&contributor_name=CHAU%2C+CHRISTINE+C"
+    },
+    {
+      "id": "ind:MARTIN_ELOISE_E|75201",
+      "name": "MARTIN, ELOISE E",
+      "kind": "individual",
+      "committee_type": null,
+      "depth": 2,
+      "visibility": "disclosed",
+      "amount_in": 1066.0,
+      "is_terminus": true,
+      "terminus_reason": "individual",
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00363986&two_year_transaction_period=2024&contributor_name=MARTIN%2C+ELOISE+E"
     },
     {
       "id": "ind:ACQUISTO_SHANA_L|75071",
@@ -668,30 +668,6 @@
       "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00083279&two_year_transaction_period=2024&contributor_name=KUTZKEY%2C+CHRISTINE"
     },
     {
-      "id": "ind:ZWAHLEN_WILLIAM|94506",
-      "name": "ZWAHLEN, WILLIAM",
-      "kind": "individual",
-      "committee_type": null,
-      "depth": 2,
-      "visibility": "disclosed",
-      "amount_in": 3500.0,
-      "is_terminus": true,
-      "terminus_reason": "individual",
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00083279&two_year_transaction_period=2024&contributor_name=ZWAHLEN%2C+WILLIAM"
-    },
-    {
-      "id": "ind:SMITH_RICK|95032",
-      "name": "SMITH, RICK",
-      "kind": "individual",
-      "committee_type": null,
-      "depth": 2,
-      "visibility": "disclosed",
-      "amount_in": 3500.0,
-      "is_terminus": true,
-      "terminus_reason": "individual",
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00083279&two_year_transaction_period=2024&contributor_name=SMITH%2C+RICK"
-    },
-    {
       "id": "ind:DUFF_CHRISTOPHER|90015",
       "name": "DUFF, CHRISTOPHER",
       "kind": "individual",
@@ -714,6 +690,30 @@
       "is_terminus": true,
       "terminus_reason": "individual",
       "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00083279&two_year_transaction_period=2024&contributor_name=ZWAHLEN%2C+BARRY"
+    },
+    {
+      "id": "ind:ZWAHLEN_WILLIAM|94506",
+      "name": "ZWAHLEN, WILLIAM",
+      "kind": "individual",
+      "committee_type": null,
+      "depth": 2,
+      "visibility": "disclosed",
+      "amount_in": 3500.0,
+      "is_terminus": true,
+      "terminus_reason": "individual",
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00083279&two_year_transaction_period=2024&contributor_name=ZWAHLEN%2C+WILLIAM"
+    },
+    {
+      "id": "ind:SMITH_RICK|95032",
+      "name": "SMITH, RICK",
+      "kind": "individual",
+      "committee_type": null,
+      "depth": 2,
+      "visibility": "disclosed",
+      "amount_in": 3500.0,
+      "is_terminus": true,
+      "terminus_reason": "individual",
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00083279&two_year_transaction_period=2024&contributor_name=SMITH%2C+RICK"
     },
     {
       "id": "agg:other@C00083279",
@@ -1077,22 +1077,6 @@
       "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00363986&two_year_transaction_period=2024&contributor_name=HARDEEROMERE%2C+TERRI+LYNN"
     },
     {
-      "from": "ind:GOODWIN_J.B.|78759",
-      "to": "C00363986",
-      "amount": 1500.0,
-      "visibility": "disclosed",
-      "depth": 2,
-      "transaction_types": [
-        "15"
-      ],
-      "count": 1,
-      "date_range": [
-        "2024-02-20",
-        "2024-02-20"
-      ],
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00363986&two_year_transaction_period=2024&contributor_name=GOODWIN%2C+J.B."
-    },
-    {
       "from": "ind:BALCH_AMANDA_(MANDY)|78768",
       "to": "C00363986",
       "amount": 1500.0,
@@ -1107,6 +1091,22 @@
         "2023-10-26"
       ],
       "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00363986&two_year_transaction_period=2024&contributor_name=BALCH%2C+AMANDA+%28MANDY%29"
+    },
+    {
+      "from": "ind:GOODWIN_J.B.|78759",
+      "to": "C00363986",
+      "amount": 1500.0,
+      "visibility": "disclosed",
+      "depth": 2,
+      "transaction_types": [
+        "15"
+      ],
+      "count": 1,
+      "date_range": [
+        "2024-02-20",
+        "2024-02-20"
+      ],
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00363986&two_year_transaction_period=2024&contributor_name=GOODWIN%2C+J.B."
     },
     {
       "from": "ind:CANTU_LESLIE|78768",
@@ -1269,22 +1269,6 @@
       "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00363986&two_year_transaction_period=2024&contributor_name=RANDALL%2C+MELINDA+T"
     },
     {
-      "from": "ind:MARTIN_ELOISE_E|75201",
-      "to": "C00363986",
-      "amount": 1066.0,
-      "visibility": "disclosed",
-      "depth": 2,
-      "transaction_types": [
-        "15"
-      ],
-      "count": 7,
-      "date_range": [
-        "2024-02-21",
-        "2024-12-18"
-      ],
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00363986&two_year_transaction_period=2024&contributor_name=MARTIN%2C+ELOISE+E"
-    },
-    {
       "from": "ind:CHAU_CHRISTINE_C|78737",
       "to": "C00363986",
       "amount": 1066.0,
@@ -1299,6 +1283,22 @@
         "2023-12-13"
       ],
       "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00363986&two_year_transaction_period=2024&contributor_name=CHAU%2C+CHRISTINE+C"
+    },
+    {
+      "from": "ind:MARTIN_ELOISE_E|75201",
+      "to": "C00363986",
+      "amount": 1066.0,
+      "visibility": "disclosed",
+      "depth": 2,
+      "transaction_types": [
+        "15"
+      ],
+      "count": 7,
+      "date_range": [
+        "2024-02-21",
+        "2024-12-18"
+      ],
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00363986&two_year_transaction_period=2024&contributor_name=MARTIN%2C+ELOISE+E"
     },
     {
       "from": "ind:ACQUISTO_SHANA_L|75071",
@@ -1718,38 +1718,6 @@
       "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00083279&two_year_transaction_period=2024&contributor_name=KUTZKEY%2C+CHRISTINE"
     },
     {
-      "from": "ind:ZWAHLEN_WILLIAM|94506",
-      "to": "C00083279",
-      "amount": 3500.0,
-      "visibility": "disclosed",
-      "depth": 2,
-      "transaction_types": [
-        "15"
-      ],
-      "count": 4,
-      "date_range": [
-        "2023-01-26",
-        "2023-05-20"
-      ],
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00083279&two_year_transaction_period=2024&contributor_name=ZWAHLEN%2C+WILLIAM"
-    },
-    {
-      "from": "ind:SMITH_RICK|95032",
-      "to": "C00083279",
-      "amount": 3500.0,
-      "visibility": "disclosed",
-      "depth": 2,
-      "transaction_types": [
-        "15"
-      ],
-      "count": 1,
-      "date_range": [
-        "2023-02-28",
-        "2023-02-28"
-      ],
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00083279&two_year_transaction_period=2024&contributor_name=SMITH%2C+RICK"
-    },
-    {
       "from": "ind:DUFF_CHRISTOPHER|90015",
       "to": "C00083279",
       "amount": 3500.0,
@@ -1780,6 +1748,38 @@
         "2024-04-07"
       ],
       "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00083279&two_year_transaction_period=2024&contributor_name=ZWAHLEN%2C+BARRY"
+    },
+    {
+      "from": "ind:ZWAHLEN_WILLIAM|94506",
+      "to": "C00083279",
+      "amount": 3500.0,
+      "visibility": "disclosed",
+      "depth": 2,
+      "transaction_types": [
+        "15"
+      ],
+      "count": 4,
+      "date_range": [
+        "2023-01-26",
+        "2023-05-20"
+      ],
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00083279&two_year_transaction_period=2024&contributor_name=ZWAHLEN%2C+WILLIAM"
+    },
+    {
+      "from": "ind:SMITH_RICK|95032",
+      "to": "C00083279",
+      "amount": 3500.0,
+      "visibility": "disclosed",
+      "depth": 2,
+      "transaction_types": [
+        "15"
+      ],
+      "count": 1,
+      "date_range": [
+        "2023-02-28",
+        "2023-02-28"
+      ],
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00083279&two_year_transaction_period=2024&contributor_name=SMITH%2C+RICK"
     },
     {
       "from": "agg:other@C00083279",

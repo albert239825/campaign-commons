@@ -840,19 +840,5 @@
       "last_date": "2024-10-17",
       "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00724203&payee_name=STONES%27+PHONES"
     }
-  ],
-  "issue_focus": {
-    "kind": "general_partisan",
-    "issue_ids": [],
-    "description": "Somos PAC 'works to empower hardworking Latinos in shaping the future of our democracy by increasing our participation in elections and by electing progressive candidates', in support of 'candidates who will fight for an economy that works for everyone.' A voter-engagement and electoral mission; no issue from the frozen taxonomy is named.",
-    "basis": {
-      "basis": "verified",
-      "rule": "Self-described focus from the organisation's own material; says what the org is for, not what its dollars bought",
-      "source_urls": [
-        "https://www.somospac.org/"
-      ],
-      "checked_by": "devin-block2-issues",
-      "checked_at": "2026-09-05"
-    }
-  }
+  ]
 }

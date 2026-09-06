@@ -2,7 +2,7 @@
   "root_entity_id": "C00826776",
   "root_name": "FRONTIERS OF FREEDOM ACTION, INC.",
   "race_id": "pa-sen-2024",
-  "generated_at": "2026-09-05T19:53:48+00:00",
+  "generated_at": "2026-09-06T04:49:10+00:00",
   "data_status": "real",
   "nodes": [
     {
@@ -42,18 +42,6 @@
       "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00826776&two_year_transaction_period=2024&contributor_name=SINQUEFIELD%2C+REX"
     },
     {
-      "id": "ind:FINLEY_ANGELA|58763",
-      "name": "FINLEY, ANGELA",
-      "kind": "individual",
-      "committee_type": null,
-      "depth": 1,
-      "visibility": "disclosed",
-      "amount_in": 4000.0,
-      "is_terminus": true,
-      "terminus_reason": "individual",
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00826776&two_year_transaction_period=2024&contributor_name=FINLEY%2C+ANGELA"
-    },
-    {
       "id": "ind:FARISH_WILL|33921",
       "name": "FARISH, WILL",
       "kind": "individual",
@@ -64,6 +52,18 @@
       "is_terminus": true,
       "terminus_reason": "individual",
       "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00826776&two_year_transaction_period=2024&contributor_name=FARISH%2C+WILL"
+    },
+    {
+      "id": "ind:FINLEY_ANGELA|58763",
+      "name": "FINLEY, ANGELA",
+      "kind": "individual",
+      "committee_type": null,
+      "depth": 1,
+      "visibility": "disclosed",
+      "amount_in": 4000.0,
+      "is_terminus": true,
+      "terminus_reason": "individual",
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00826776&two_year_transaction_period=2024&contributor_name=FINLEY%2C+ANGELA"
     },
     {
       "id": "agg:other@C00826776",
@@ -184,22 +184,6 @@
       "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00826776&two_year_transaction_period=2024&contributor_name=SINQUEFIELD%2C+REX"
     },
     {
-      "from": "ind:FINLEY_ANGELA|58763",
-      "to": "C00826776",
-      "amount": 4000.0,
-      "visibility": "disclosed",
-      "depth": 1,
-      "transaction_types": [
-        "10"
-      ],
-      "count": 2,
-      "date_range": [
-        "2023-01-27",
-        "2023-04-13"
-      ],
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00826776&two_year_transaction_period=2024&contributor_name=FINLEY%2C+ANGELA"
-    },
-    {
       "from": "ind:FARISH_WILL|33921",
       "to": "C00826776",
       "amount": 4000.0,
@@ -214,6 +198,22 @@
         "2023-04-21"
       ],
       "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00826776&two_year_transaction_period=2024&contributor_name=FARISH%2C+WILL"
+    },
+    {
+      "from": "ind:FINLEY_ANGELA|58763",
+      "to": "C00826776",
+      "amount": 4000.0,
+      "visibility": "disclosed",
+      "depth": 1,
+      "transaction_types": [
+        "10"
+      ],
+      "count": 2,
+      "date_range": [
+        "2023-01-27",
+        "2023-04-13"
+      ],
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00826776&two_year_transaction_period=2024&contributor_name=FINLEY%2C+ANGELA"
     },
     {
       "from": "agg:other@C00826776",

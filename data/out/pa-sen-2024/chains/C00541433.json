@@ -2,7 +2,7 @@
   "root_entity_id": "C00541433",
   "root_name": "HUNTER ACTION FUND (HAF)",
   "race_id": "pa-sen-2024",
-  "generated_at": "2026-09-05T19:53:48+00:00",
+  "generated_at": "2026-09-06T04:49:10+00:00",
   "data_status": "real",
   "nodes": [
     {
@@ -105,6 +105,18 @@
       "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00541433&two_year_transaction_period=2024&contributor_name=SMITH%2C+J.+ALAIN"
     },
     {
+      "id": "ind:ATWOOD_STANFORD|95030",
+      "name": "ATWOOD, STANFORD",
+      "kind": "individual",
+      "committee_type": null,
+      "depth": 1,
+      "visibility": "disclosed",
+      "amount_in": 20000.0,
+      "is_terminus": true,
+      "terminus_reason": "individual",
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00541433&two_year_transaction_period=2024&contributor_name=ATWOOD%2C+STANFORD"
+    },
+    {
       "id": "ind:WELKER_BRIAN|77441",
       "name": "WELKER, BRIAN",
       "kind": "individual",
@@ -127,18 +139,6 @@
       "is_terminus": true,
       "terminus_reason": "individual",
       "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00541433&two_year_transaction_period=2024&contributor_name=ATWOOD%2C+HARRISON+STANFORD"
-    },
-    {
-      "id": "ind:ATWOOD_STANFORD|95030",
-      "name": "ATWOOD, STANFORD",
-      "kind": "individual",
-      "committee_type": null,
-      "depth": 1,
-      "visibility": "disclosed",
-      "amount_in": 20000.0,
-      "is_terminus": true,
-      "terminus_reason": "individual",
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00541433&two_year_transaction_period=2024&contributor_name=ATWOOD%2C+STANFORD"
     },
     {
       "id": "ind:ATWOOD_PAMELA|95030",
@@ -165,18 +165,6 @@
       "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00541433&two_year_transaction_period=2024&contributor_name=MINX%2C+BROOK"
     },
     {
-      "id": "ind:ELLIOT_GREG|71463",
-      "name": "ELLIOT, GREG",
-      "kind": "individual",
-      "committee_type": null,
-      "depth": 1,
-      "visibility": "disclosed",
-      "amount_in": 9500.0,
-      "is_terminus": true,
-      "terminus_reason": "individual",
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00541433&two_year_transaction_period=2024&contributor_name=ELLIOT%2C+GREG"
-    },
-    {
       "id": "ind:COX_CHRIS|22320",
       "name": "COX, CHRIS",
       "kind": "individual",
@@ -199,6 +187,18 @@
       "is_terminus": true,
       "terminus_reason": "individual",
       "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00541433&two_year_transaction_period=2024&contributor_name=BELDING%2C+CHAD"
+    },
+    {
+      "id": "ind:ELLIOT_GREG|71463",
+      "name": "ELLIOT, GREG",
+      "kind": "individual",
+      "committee_type": null,
+      "depth": 1,
+      "visibility": "disclosed",
+      "amount_in": 9500.0,
+      "is_terminus": true,
+      "terminus_reason": "individual",
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00541433&two_year_transaction_period=2024&contributor_name=ELLIOT%2C+GREG"
     },
     {
       "id": "ind:NICHOLAS_ERIC|40356",
@@ -446,6 +446,22 @@
       "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00541433&two_year_transaction_period=2024&contributor_name=SMITH%2C+J.+ALAIN"
     },
     {
+      "from": "ind:ATWOOD_STANFORD|95030",
+      "to": "C00541433",
+      "amount": 20000.0,
+      "visibility": "disclosed",
+      "depth": 1,
+      "transaction_types": [
+        "10"
+      ],
+      "count": 1,
+      "date_range": [
+        "2024-02-01",
+        "2024-02-01"
+      ],
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00541433&two_year_transaction_period=2024&contributor_name=ATWOOD%2C+STANFORD"
+    },
+    {
       "from": "ind:WELKER_BRIAN|77441",
       "to": "C00541433",
       "amount": 20000.0,
@@ -476,22 +492,6 @@
         "2023-02-25"
       ],
       "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00541433&two_year_transaction_period=2024&contributor_name=ATWOOD%2C+HARRISON+STANFORD"
-    },
-    {
-      "from": "ind:ATWOOD_STANFORD|95030",
-      "to": "C00541433",
-      "amount": 20000.0,
-      "visibility": "disclosed",
-      "depth": 1,
-      "transaction_types": [
-        "10"
-      ],
-      "count": 1,
-      "date_range": [
-        "2024-02-01",
-        "2024-02-01"
-      ],
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00541433&two_year_transaction_period=2024&contributor_name=ATWOOD%2C+STANFORD"
     },
     {
       "from": "ind:ATWOOD_PAMELA|95030",
@@ -526,22 +526,6 @@
       "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00541433&two_year_transaction_period=2024&contributor_name=MINX%2C+BROOK"
     },
     {
-      "from": "ind:ELLIOT_GREG|71463",
-      "to": "C00541433",
-      "amount": 9500.0,
-      "visibility": "disclosed",
-      "depth": 1,
-      "transaction_types": [
-        "10"
-      ],
-      "count": 1,
-      "date_range": [
-        "2023-06-01",
-        "2023-06-01"
-      ],
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00541433&two_year_transaction_period=2024&contributor_name=ELLIOT%2C+GREG"
-    },
-    {
       "from": "ind:COX_CHRIS|22320",
       "to": "C00541433",
       "amount": 9500.0,
@@ -572,6 +556,22 @@
         "2023-06-12"
       ],
       "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00541433&two_year_transaction_period=2024&contributor_name=BELDING%2C+CHAD"
+    },
+    {
+      "from": "ind:ELLIOT_GREG|71463",
+      "to": "C00541433",
+      "amount": 9500.0,
+      "visibility": "disclosed",
+      "depth": 1,
+      "transaction_types": [
+        "10"
+      ],
+      "count": 1,
+      "date_range": [
+        "2023-06-01",
+        "2023-06-01"
+      ],
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00541433&two_year_transaction_period=2024&contributor_name=ELLIOT%2C+GREG"
     },
     {
       "from": "ind:NICHOLAS_ERIC|40356",

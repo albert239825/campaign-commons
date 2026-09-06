@@ -21,8 +21,11 @@ sender's own public filing (C-30). `committee_name_index` / `match_committee` do
 
 from __future__ import annotations
 
+import json
 import re
 from collections.abc import Iterable
+
+from .config import DATA
 
 ORGANIZATION_CLASSES = ("union", "business", "llc", "nonprofit", "unknown")
 DISCLOSED_CLASSES = {"union", "business"}
@@ -51,8 +54,33 @@ def _norm(name: str) -> str:
     return re.sub(r"\s+", " ", re.sub(r"[^A-Z0-9&' .-]", " ", name.upper())).strip()
 
 
-def classify_organization(name: str) -> str:
+def load_org_overrides(race_id: str) -> dict[str, str]:
+    """Load model classifications first, then let hand-verified rows override them."""
+    overrides: dict[str, str] = {}
+    for path in (
+        DATA / "hand" / race_id / "org_classes_model.json",
+        DATA / "hand" / race_id / "org_classes.json",
+    ):
+        if not path.exists():
+            continue
+        try:
+            payload = json.loads(path.read_text())
+        except (OSError, json.JSONDecodeError):
+            continue
+        for row in payload.get("classes", []) if isinstance(payload, dict) else []:
+            if not isinstance(row, dict):
+                continue
+            name = row.get("name")
+            org_class = row.get("org_class")
+            if isinstance(name, str) and org_class in ORGANIZATION_CLASSES:
+                overrides[_norm(name)] = org_class
+    return overrides
+
+
+def classify_organization(name: str, overrides: dict[str, str] | None = None) -> str:
     n = _norm(name)
+    if overrides and n in overrides:
+        return overrides[n]
     if _UNION.search(n):
         return "union"
     if _NONPROFIT.search(n):

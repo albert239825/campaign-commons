@@ -23,8 +23,8 @@
     "independent_expenditures": 9322389.74,
     "from_individuals": 0.0,
     "from_committees": 20054912.78,
-    "from_organizations": 1367318.0,
-    "from_undisclosed": 3473947.0
+    "from_organizations": 1367668.0,
+    "from_undisclosed": 3473597.0
   },
   "inflows": [
     {
@@ -2574,40 +2574,6 @@
       "first_date": "2024-11-01",
       "last_date": "2024-11-01",
       "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00754051&payee_name=LOCAL+878+UNITE+HERE"
-    }
-  ],
-  "issue_focus": {
-    "kind": "labor",
-    "issue_ids": [
-      "labor_trade"
-    ],
-    "description": "UNITE HERE describes Workers Vote as 'an independent expenditure PAC that's been registered with the Federal Election Commission since 2020' which 'played a critical role' in its 2020 swing-state campaigns and supports 'pro-worker and pro-union candidates'.",
-    "basis": {
-      "basis": "verified",
-      "rule": "Self-described focus from the organisation's own material; says what the org is for, not what its dollars bought",
-      "source_urls": [
-        "https://unitehere.org/about-unite-here-pacs/",
-        "https://www.fec.gov/data/committee/C00754051/"
-      ],
-      "checked_by": "devin-block2-issues",
-      "checked_at": "2026-09-05"
-    }
-  },
-  "issue_positions": [
-    {
-      "issue_id": "labor_trade",
-      "direction": 2,
-      "quote": "electing pro-worker and pro-union candidates",
-      "source_url": "https://unitehere.org/about-unite-here-pacs/",
-      "basis": {
-        "basis": "inferred",
-        "rule": "Stated position read from the organisation's own site by a language model and kept only where the quote appears verbatim on the fetched page; says what the org says, not what its dollars bought",
-        "source_urls": [
-          "https://unitehere.org/about-unite-here-pacs/"
-        ],
-        "checked_by": "grok-4.5",
-        "checked_at": "2026-09-06"
-      }
     }
   ]
 }

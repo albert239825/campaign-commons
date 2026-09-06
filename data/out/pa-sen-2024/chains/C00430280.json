@@ -2,7 +2,7 @@
   "root_entity_id": "C00430280",
   "root_name": "IMMIGRANTS' LIST",
   "race_id": "pa-sen-2024",
-  "generated_at": "2026-09-05T19:53:48+00:00",
+  "generated_at": "2026-09-06T04:49:10+00:00",
   "data_status": "real",
   "nodes": [
     {
@@ -30,18 +30,6 @@
       "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00430280&two_year_transaction_period=2024&contributor_name=RESNICK%2C+KALMAN"
     },
     {
-      "id": "ind:KURZBAN_IRA|33149",
-      "name": "KURZBAN, IRA",
-      "kind": "individual",
-      "committee_type": null,
-      "depth": 1,
-      "visibility": "disclosed",
-      "amount_in": 10000.0,
-      "is_terminus": true,
-      "terminus_reason": "individual",
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00430280&two_year_transaction_period=2024&contributor_name=KURZBAN%2C+IRA"
-    },
-    {
       "id": "ind:SABAGH_DENYSE|20010",
       "name": "SABAGH, DENYSE",
       "kind": "individual",
@@ -52,6 +40,18 @@
       "is_terminus": true,
       "terminus_reason": "individual",
       "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00430280&two_year_transaction_period=2024&contributor_name=SABAGH%2C+DENYSE"
+    },
+    {
+      "id": "ind:KURZBAN_IRA|33149",
+      "name": "KURZBAN, IRA",
+      "kind": "individual",
+      "committee_type": null,
+      "depth": 1,
+      "visibility": "disclosed",
+      "amount_in": 10000.0,
+      "is_terminus": true,
+      "terminus_reason": "individual",
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00430280&two_year_transaction_period=2024&contributor_name=KURZBAN%2C+IRA"
     },
     {
       "id": "ind:FORMAN_CORY|10960",
@@ -246,18 +246,6 @@
       "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00430280&two_year_transaction_period=2024&contributor_name=GOSS%2C+PRISCILLA"
     },
     {
-      "id": "ind:SEID_MARCINE|95613",
-      "name": "SEID, MARCINE",
-      "kind": "individual",
-      "committee_type": null,
-      "depth": 1,
-      "visibility": "disclosed",
-      "amount_in": 3000.0,
-      "is_terminus": true,
-      "terminus_reason": "individual",
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00430280&two_year_transaction_period=2024&contributor_name=SEID%2C+MARCINE"
-    },
-    {
       "id": "ind:STOLLER_DAVID|32812",
       "name": "STOLLER, DAVID",
       "kind": "individual",
@@ -270,6 +258,18 @@
       "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00430280&two_year_transaction_period=2024&contributor_name=STOLLER%2C+DAVID"
     },
     {
+      "id": "ind:SEID_MARCINE|95613",
+      "name": "SEID, MARCINE",
+      "kind": "individual",
+      "committee_type": null,
+      "depth": 1,
+      "visibility": "disclosed",
+      "amount_in": 3000.0,
+      "is_terminus": true,
+      "terminus_reason": "individual",
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00430280&two_year_transaction_period=2024&contributor_name=SEID%2C+MARCINE"
+    },
+    {
       "id": "ind:BERG_ROYAL|60602",
       "name": "BERG, ROYAL",
       "kind": "individual",
@@ -280,42 +280,6 @@
       "is_terminus": true,
       "terminus_reason": "individual",
       "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00430280&two_year_transaction_period=2024&contributor_name=BERG%2C+ROYAL"
-    },
-    {
-      "id": "ind:ARCE_CARMEN|33134",
-      "name": "ARCE, CARMEN",
-      "kind": "individual",
-      "committee_type": null,
-      "depth": 1,
-      "visibility": "disclosed",
-      "amount_in": 2500.0,
-      "is_terminus": true,
-      "terminus_reason": "individual",
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00430280&two_year_transaction_period=2024&contributor_name=ARCE%2C+CARMEN"
-    },
-    {
-      "id": "ind:FRAGER_BARRY|38103",
-      "name": "FRAGER, BARRY",
-      "kind": "individual",
-      "committee_type": null,
-      "depth": 1,
-      "visibility": "disclosed",
-      "amount_in": 2500.0,
-      "is_terminus": true,
-      "terminus_reason": "individual",
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00430280&two_year_transaction_period=2024&contributor_name=FRAGER%2C+BARRY"
-    },
-    {
-      "id": "ind:STOCK_MARGARET|99524",
-      "name": "STOCK, MARGARET",
-      "kind": "individual",
-      "committee_type": null,
-      "depth": 1,
-      "visibility": "disclosed",
-      "amount_in": 2500.0,
-      "is_terminus": true,
-      "terminus_reason": "individual",
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00430280&two_year_transaction_period=2024&contributor_name=STOCK%2C+MARGARET"
     },
     {
       "id": "ind:PEREZ_JR_JOSE_R|77057",
@@ -352,6 +316,42 @@
       "is_terminus": true,
       "terminus_reason": "individual",
       "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00430280&two_year_transaction_period=2024&contributor_name=KONG-SIVERT%2C+JILLIAN"
+    },
+    {
+      "id": "ind:ARCE_CARMEN|33134",
+      "name": "ARCE, CARMEN",
+      "kind": "individual",
+      "committee_type": null,
+      "depth": 1,
+      "visibility": "disclosed",
+      "amount_in": 2500.0,
+      "is_terminus": true,
+      "terminus_reason": "individual",
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00430280&two_year_transaction_period=2024&contributor_name=ARCE%2C+CARMEN"
+    },
+    {
+      "id": "ind:FRAGER_BARRY|38103",
+      "name": "FRAGER, BARRY",
+      "kind": "individual",
+      "committee_type": null,
+      "depth": 1,
+      "visibility": "disclosed",
+      "amount_in": 2500.0,
+      "is_terminus": true,
+      "terminus_reason": "individual",
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00430280&two_year_transaction_period=2024&contributor_name=FRAGER%2C+BARRY"
+    },
+    {
+      "id": "ind:STOCK_MARGARET|99524",
+      "name": "STOCK, MARGARET",
+      "kind": "individual",
+      "committee_type": null,
+      "depth": 1,
+      "visibility": "disclosed",
+      "amount_in": 2500.0,
+      "is_terminus": true,
+      "terminus_reason": "individual",
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00430280&two_year_transaction_period=2024&contributor_name=STOCK%2C+MARGARET"
     },
     {
       "id": "agg:other@C00430280",
@@ -457,22 +457,6 @@
       "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00430280&two_year_transaction_period=2024&contributor_name=RESNICK%2C+KALMAN"
     },
     {
-      "from": "ind:KURZBAN_IRA|33149",
-      "to": "C00430280",
-      "amount": 10000.0,
-      "visibility": "disclosed",
-      "depth": 1,
-      "transaction_types": [
-        "15"
-      ],
-      "count": 2,
-      "date_range": [
-        "2023-01-04",
-        "2024-01-09"
-      ],
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00430280&two_year_transaction_period=2024&contributor_name=KURZBAN%2C+IRA"
-    },
-    {
       "from": "ind:SABAGH_DENYSE|20010",
       "to": "C00430280",
       "amount": 10000.0,
@@ -488,6 +472,22 @@
         "2024-03-15"
       ],
       "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00430280&two_year_transaction_period=2024&contributor_name=SABAGH%2C+DENYSE"
+    },
+    {
+      "from": "ind:KURZBAN_IRA|33149",
+      "to": "C00430280",
+      "amount": 10000.0,
+      "visibility": "disclosed",
+      "depth": 1,
+      "transaction_types": [
+        "15"
+      ],
+      "count": 2,
+      "date_range": [
+        "2023-01-04",
+        "2024-01-09"
+      ],
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00430280&two_year_transaction_period=2024&contributor_name=KURZBAN%2C+IRA"
     },
     {
       "from": "ind:FORMAN_CORY|10960",
@@ -749,22 +749,6 @@
       "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00430280&two_year_transaction_period=2024&contributor_name=GOSS%2C+PRISCILLA"
     },
     {
-      "from": "ind:SEID_MARCINE|95613",
-      "to": "C00430280",
-      "amount": 3000.0,
-      "visibility": "disclosed",
-      "depth": 1,
-      "transaction_types": [
-        "15E"
-      ],
-      "count": 3,
-      "date_range": [
-        "2023-08-07",
-        "2023-12-05"
-      ],
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00430280&two_year_transaction_period=2024&contributor_name=SEID%2C+MARCINE"
-    },
-    {
       "from": "ind:STOLLER_DAVID|32812",
       "to": "C00430280",
       "amount": 3000.0,
@@ -779,6 +763,22 @@
         "2024-10-04"
       ],
       "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00430280&two_year_transaction_period=2024&contributor_name=STOLLER%2C+DAVID"
+    },
+    {
+      "from": "ind:SEID_MARCINE|95613",
+      "to": "C00430280",
+      "amount": 3000.0,
+      "visibility": "disclosed",
+      "depth": 1,
+      "transaction_types": [
+        "15E"
+      ],
+      "count": 3,
+      "date_range": [
+        "2023-08-07",
+        "2023-12-05"
+      ],
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00430280&two_year_transaction_period=2024&contributor_name=SEID%2C+MARCINE"
     },
     {
       "from": "ind:BERG_ROYAL|60602",
@@ -796,54 +796,6 @@
         "2024-12-11"
       ],
       "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00430280&two_year_transaction_period=2024&contributor_name=BERG%2C+ROYAL"
-    },
-    {
-      "from": "ind:ARCE_CARMEN|33134",
-      "to": "C00430280",
-      "amount": 2500.0,
-      "visibility": "disclosed",
-      "depth": 1,
-      "transaction_types": [
-        "15E"
-      ],
-      "count": 1,
-      "date_range": [
-        "2024-06-10",
-        "2024-06-10"
-      ],
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00430280&two_year_transaction_period=2024&contributor_name=ARCE%2C+CARMEN"
-    },
-    {
-      "from": "ind:FRAGER_BARRY|38103",
-      "to": "C00430280",
-      "amount": 2500.0,
-      "visibility": "disclosed",
-      "depth": 1,
-      "transaction_types": [
-        "15E"
-      ],
-      "count": 1,
-      "date_range": [
-        "2024-11-07",
-        "2024-11-07"
-      ],
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00430280&two_year_transaction_period=2024&contributor_name=FRAGER%2C+BARRY"
-    },
-    {
-      "from": "ind:STOCK_MARGARET|99524",
-      "to": "C00430280",
-      "amount": 2500.0,
-      "visibility": "disclosed",
-      "depth": 1,
-      "transaction_types": [
-        "15E"
-      ],
-      "count": 2,
-      "date_range": [
-        "2023-06-06",
-        "2023-06-28"
-      ],
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00430280&two_year_transaction_period=2024&contributor_name=STOCK%2C+MARGARET"
     },
     {
       "from": "ind:PEREZ_JR_JOSE_R|77057",
@@ -892,6 +844,54 @@
         "2023-08-24"
       ],
       "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00430280&two_year_transaction_period=2024&contributor_name=KONG-SIVERT%2C+JILLIAN"
+    },
+    {
+      "from": "ind:ARCE_CARMEN|33134",
+      "to": "C00430280",
+      "amount": 2500.0,
+      "visibility": "disclosed",
+      "depth": 1,
+      "transaction_types": [
+        "15E"
+      ],
+      "count": 1,
+      "date_range": [
+        "2024-06-10",
+        "2024-06-10"
+      ],
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00430280&two_year_transaction_period=2024&contributor_name=ARCE%2C+CARMEN"
+    },
+    {
+      "from": "ind:FRAGER_BARRY|38103",
+      "to": "C00430280",
+      "amount": 2500.0,
+      "visibility": "disclosed",
+      "depth": 1,
+      "transaction_types": [
+        "15E"
+      ],
+      "count": 1,
+      "date_range": [
+        "2024-11-07",
+        "2024-11-07"
+      ],
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00430280&two_year_transaction_period=2024&contributor_name=FRAGER%2C+BARRY"
+    },
+    {
+      "from": "ind:STOCK_MARGARET|99524",
+      "to": "C00430280",
+      "amount": 2500.0,
+      "visibility": "disclosed",
+      "depth": 1,
+      "transaction_types": [
+        "15E"
+      ],
+      "count": 2,
+      "date_range": [
+        "2023-06-06",
+        "2023-06-28"
+      ],
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00430280&two_year_transaction_period=2024&contributor_name=STOCK%2C+MARGARET"
     },
     {
       "from": "agg:other@C00430280",

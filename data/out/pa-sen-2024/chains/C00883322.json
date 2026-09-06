@@ -2,7 +2,7 @@
   "root_entity_id": "C00883322",
   "root_name": "THE L & C COALITION",
   "race_id": "pa-sen-2024",
-  "generated_at": "2026-09-05T19:53:48+00:00",
+  "generated_at": "2026-09-06T04:49:10+00:00",
   "data_status": "real",
   "nodes": [
     {
@@ -90,18 +90,6 @@
       "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00883322&two_year_transaction_period=2024&contributor_name=FOLLIS%2C+GLENN"
     },
     {
-      "id": "ind:BREJCHA_THOMAS|60606",
-      "name": "BREJCHA, THOMAS",
-      "kind": "individual",
-      "committee_type": null,
-      "depth": 1,
-      "visibility": "disclosed",
-      "amount_in": 1000.0,
-      "is_terminus": true,
-      "terminus_reason": "individual",
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00883322&two_year_transaction_period=2024&contributor_name=BREJCHA%2C+THOMAS"
-    },
-    {
       "id": "ind:DEMONTE_DEMETRA|60045",
       "name": "DEMONTE, DEMETRA",
       "kind": "individual",
@@ -124,6 +112,18 @@
       "is_terminus": true,
       "terminus_reason": "individual",
       "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00883322&two_year_transaction_period=2024&contributor_name=PHELPS%2C+SCOTT"
+    },
+    {
+      "id": "ind:BREJCHA_THOMAS|60606",
+      "name": "BREJCHA, THOMAS",
+      "kind": "individual",
+      "committee_type": null,
+      "depth": 1,
+      "visibility": "disclosed",
+      "amount_in": 1000.0,
+      "is_terminus": true,
+      "terminus_reason": "individual",
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00883322&two_year_transaction_period=2024&contributor_name=BREJCHA%2C+THOMAS"
     },
     {
       "id": "agg:other@C00883322",
@@ -347,22 +347,6 @@
       "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00883322&two_year_transaction_period=2024&contributor_name=FOLLIS%2C+GLENN"
     },
     {
-      "from": "ind:BREJCHA_THOMAS|60606",
-      "to": "C00883322",
-      "amount": 1000.0,
-      "visibility": "disclosed",
-      "depth": 1,
-      "transaction_types": [
-        "10"
-      ],
-      "count": 1,
-      "date_range": [
-        "2024-11-05",
-        "2024-11-05"
-      ],
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00883322&two_year_transaction_period=2024&contributor_name=BREJCHA%2C+THOMAS"
-    },
-    {
       "from": "ind:DEMONTE_DEMETRA|60045",
       "to": "C00883322",
       "amount": 1000.0,
@@ -393,6 +377,22 @@
         "2024-11-08"
       ],
       "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00883322&two_year_transaction_period=2024&contributor_name=PHELPS%2C+SCOTT"
+    },
+    {
+      "from": "ind:BREJCHA_THOMAS|60606",
+      "to": "C00883322",
+      "amount": 1000.0,
+      "visibility": "disclosed",
+      "depth": 1,
+      "transaction_types": [
+        "10"
+      ],
+      "count": 1,
+      "date_range": [
+        "2024-11-05",
+        "2024-11-05"
+      ],
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00883322&two_year_transaction_period=2024&contributor_name=BREJCHA%2C+THOMAS"
     },
     {
       "from": "agg:other@C00883322",

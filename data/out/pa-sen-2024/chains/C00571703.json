@@ -2,7 +2,7 @@
   "root_entity_id": "C00571703",
   "root_name": "SENATE LEADERSHIP FUND",
   "race_id": "pa-sen-2024",
-  "generated_at": "2026-09-05T19:53:48+00:00",
+  "generated_at": "2026-09-06T04:49:10+00:00",
   "data_status": "real",
   "nodes": [
     {
@@ -115,18 +115,6 @@
       "source_url": "https://www.fec.gov/data/committee/C00782664/?cycle=2024"
     },
     {
-      "id": "ind:SCHWAB_CHARLES_R.|33480",
-      "name": "SCHWAB, CHARLES R.",
-      "kind": "individual",
-      "committee_type": null,
-      "depth": 1,
-      "visibility": "disclosed",
-      "amount_in": 5000000.0,
-      "is_terminus": true,
-      "terminus_reason": "individual",
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00571703&two_year_transaction_period=2024&contributor_name=SCHWAB%2C+CHARLES+R."
-    },
-    {
       "id": "ind:RYAN_SHIRLEY_W.|60601",
       "name": "RYAN, SHIRLEY W.",
       "kind": "individual",
@@ -161,6 +149,18 @@
       "is_terminus": true,
       "terminus_reason": "individual",
       "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00571703&two_year_transaction_period=2024&contributor_name=BUCKLEY%2C+MARJORIE+B."
+    },
+    {
+      "id": "ind:SCHWAB_CHARLES_R.|33480",
+      "name": "SCHWAB, CHARLES R.",
+      "kind": "individual",
+      "committee_type": null,
+      "depth": 1,
+      "visibility": "disclosed",
+      "amount_in": 5000000.0,
+      "is_terminus": true,
+      "terminus_reason": "individual",
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00571703&two_year_transaction_period=2024&contributor_name=SCHWAB%2C+CHARLES+R."
     },
     {
       "id": "ind:CAMERON_RONALD|72119",
@@ -238,18 +238,6 @@
       "organization_class": "llc"
     },
     {
-      "id": "ind:DUCHOSSOIS_CRAIG|60606",
-      "name": "DUCHOSSOIS, CRAIG",
-      "kind": "individual",
-      "committee_type": null,
-      "depth": 1,
-      "visibility": "disclosed",
-      "amount_in": 3500000.0,
-      "is_terminus": true,
-      "terminus_reason": "individual",
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00571703&two_year_transaction_period=2024&contributor_name=DUCHOSSOIS%2C+CRAIG"
-    },
-    {
       "id": "org:AMERICAN_PETROLEUM_INSTITUTE",
       "name": "AMERICAN PETROLEUM INSTITUTE",
       "kind": "organization",
@@ -263,17 +251,16 @@
       "organization_class": "nonprofit"
     },
     {
-      "id": "org:HILLWOOD_DEVELOPMENT_COMPANY_LLC",
-      "name": "HILLWOOD DEVELOPMENT COMPANY LLC",
-      "kind": "organization",
+      "id": "ind:DUCHOSSOIS_CRAIG|60606",
+      "name": "DUCHOSSOIS, CRAIG",
+      "kind": "individual",
       "committee_type": null,
       "depth": 1,
-      "visibility": "dark",
-      "amount_in": 3000000.0,
+      "visibility": "disclosed",
+      "amount_in": 3500000.0,
       "is_terminus": true,
-      "terminus_reason": "dark",
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00571703&two_year_transaction_period=2024&contributor_name=HILLWOOD+DEVELOPMENT+COMPANY+LLC",
-      "organization_class": "llc"
+      "terminus_reason": "individual",
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00571703&two_year_transaction_period=2024&contributor_name=DUCHOSSOIS%2C+CRAIG"
     },
     {
       "id": "org:RAI_SERVICES_COMPANY",
@@ -287,6 +274,19 @@
       "terminus_reason": "organization",
       "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00571703&two_year_transaction_period=2024&contributor_name=RAI+SERVICES+COMPANY",
       "organization_class": "business"
+    },
+    {
+      "id": "org:HILLWOOD_DEVELOPMENT_COMPANY_LLC",
+      "name": "HILLWOOD DEVELOPMENT COMPANY LLC",
+      "kind": "organization",
+      "committee_type": null,
+      "depth": 1,
+      "visibility": "dark",
+      "amount_in": 3000000.0,
+      "is_terminus": true,
+      "terminus_reason": "dark",
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00571703&two_year_transaction_period=2024&contributor_name=HILLWOOD+DEVELOPMENT+COMPANY+LLC",
+      "organization_class": "llc"
     },
     {
       "id": "agg:other@C00571703",
@@ -315,18 +315,6 @@
       "organization_class": "nonprofit"
     },
     {
-      "id": "ind:FRIESE_DONALD_E|91311",
-      "name": "FRIESE, DONALD E",
-      "kind": "individual",
-      "committee_type": null,
-      "depth": 2,
-      "visibility": "disclosed",
-      "amount_in": 1000000.0,
-      "is_terminus": true,
-      "terminus_reason": "individual",
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00782664&two_year_transaction_period=2024&contributor_name=FRIESE%2C+DONALD+E"
-    },
-    {
       "id": "ind:BUCKLEY_MARJORIE_B|33408",
       "name": "BUCKLEY, MARJORIE B",
       "kind": "individual",
@@ -337,6 +325,18 @@
       "is_terminus": true,
       "terminus_reason": "individual",
       "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00782664&two_year_transaction_period=2024&contributor_name=BUCKLEY%2C+MARJORIE+B"
+    },
+    {
+      "id": "ind:FRIESE_DONALD_E|91311",
+      "name": "FRIESE, DONALD E",
+      "kind": "individual",
+      "committee_type": null,
+      "depth": 2,
+      "visibility": "disclosed",
+      "amount_in": 1000000.0,
+      "is_terminus": true,
+      "terminus_reason": "individual",
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00782664&two_year_transaction_period=2024&contributor_name=FRIESE%2C+DONALD+E"
     },
     {
       "id": "ind:SIMMONS_ANNETTE|75206",
@@ -917,22 +917,6 @@
       "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00571703&two_year_transaction_period=2024&contributor_name=C00782664"
     },
     {
-      "from": "ind:SCHWAB_CHARLES_R.|33480",
-      "to": "C00571703",
-      "amount": 5000000.0,
-      "visibility": "disclosed",
-      "depth": 1,
-      "transaction_types": [
-        "10"
-      ],
-      "count": 3,
-      "date_range": [
-        "2024-02-23",
-        "2024-09-24"
-      ],
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00571703&two_year_transaction_period=2024&contributor_name=SCHWAB%2C+CHARLES+R."
-    },
-    {
       "from": "ind:RYAN_SHIRLEY_W.|60601",
       "to": "C00571703",
       "amount": 5000000.0,
@@ -979,6 +963,22 @@
         "2024-08-29"
       ],
       "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00571703&two_year_transaction_period=2024&contributor_name=BUCKLEY%2C+MARJORIE+B."
+    },
+    {
+      "from": "ind:SCHWAB_CHARLES_R.|33480",
+      "to": "C00571703",
+      "amount": 5000000.0,
+      "visibility": "disclosed",
+      "depth": 1,
+      "transaction_types": [
+        "10"
+      ],
+      "count": 3,
+      "date_range": [
+        "2024-02-23",
+        "2024-09-24"
+      ],
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00571703&two_year_transaction_period=2024&contributor_name=SCHWAB%2C+CHARLES+R."
     },
     {
       "from": "ind:CAMERON_RONALD|72119",
@@ -1077,22 +1077,6 @@
       "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00571703&two_year_transaction_period=2024&contributor_name=ALTRIA+CLIENT+SERVICES+LLC"
     },
     {
-      "from": "ind:DUCHOSSOIS_CRAIG|60606",
-      "to": "C00571703",
-      "amount": 3500000.0,
-      "visibility": "disclosed",
-      "depth": 1,
-      "transaction_types": [
-        "10"
-      ],
-      "count": 4,
-      "date_range": [
-        "2024-03-29",
-        "2024-09-24"
-      ],
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00571703&two_year_transaction_period=2024&contributor_name=DUCHOSSOIS%2C+CRAIG"
-    },
-    {
       "from": "org:AMERICAN_PETROLEUM_INSTITUTE",
       "to": "C00571703",
       "amount": 3500000.0,
@@ -1109,20 +1093,20 @@
       "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00571703&two_year_transaction_period=2024&contributor_name=AMERICAN+PETROLEUM+INSTITUTE"
     },
     {
-      "from": "org:HILLWOOD_DEVELOPMENT_COMPANY_LLC",
+      "from": "ind:DUCHOSSOIS_CRAIG|60606",
       "to": "C00571703",
-      "amount": 3000000.0,
-      "visibility": "dark",
+      "amount": 3500000.0,
+      "visibility": "disclosed",
       "depth": 1,
       "transaction_types": [
         "10"
       ],
-      "count": 3,
+      "count": 4,
       "date_range": [
-        "2023-05-15",
-        "2024-10-07"
+        "2024-03-29",
+        "2024-09-24"
       ],
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00571703&two_year_transaction_period=2024&contributor_name=HILLWOOD+DEVELOPMENT+COMPANY+LLC"
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00571703&two_year_transaction_period=2024&contributor_name=DUCHOSSOIS%2C+CRAIG"
     },
     {
       "from": "org:RAI_SERVICES_COMPANY",
@@ -1139,6 +1123,22 @@
         "2024-09-20"
       ],
       "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00571703&two_year_transaction_period=2024&contributor_name=RAI+SERVICES+COMPANY"
+    },
+    {
+      "from": "org:HILLWOOD_DEVELOPMENT_COMPANY_LLC",
+      "to": "C00571703",
+      "amount": 3000000.0,
+      "visibility": "dark",
+      "depth": 1,
+      "transaction_types": [
+        "10"
+      ],
+      "count": 3,
+      "date_range": [
+        "2023-05-15",
+        "2024-10-07"
+      ],
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00571703&two_year_transaction_period=2024&contributor_name=HILLWOOD+DEVELOPMENT+COMPANY+LLC"
     },
     {
       "from": "agg:other@C00571703",
@@ -1174,22 +1174,6 @@
       "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00782664&two_year_transaction_period=2024&contributor_name=AMERICAN+PROSPERITY+ALLIANCE"
     },
     {
-      "from": "ind:FRIESE_DONALD_E|91311",
-      "to": "C00782664",
-      "amount": 1000000.0,
-      "visibility": "disclosed",
-      "depth": 2,
-      "transaction_types": [
-        "10"
-      ],
-      "count": 1,
-      "date_range": [
-        "2024-04-18",
-        "2024-04-18"
-      ],
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00782664&two_year_transaction_period=2024&contributor_name=FRIESE%2C+DONALD+E"
-    },
-    {
       "from": "ind:BUCKLEY_MARJORIE_B|33408",
       "to": "C00782664",
       "amount": 1000000.0,
@@ -1204,6 +1188,22 @@
         "2024-02-14"
       ],
       "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00782664&two_year_transaction_period=2024&contributor_name=BUCKLEY%2C+MARJORIE+B"
+    },
+    {
+      "from": "ind:FRIESE_DONALD_E|91311",
+      "to": "C00782664",
+      "amount": 1000000.0,
+      "visibility": "disclosed",
+      "depth": 2,
+      "transaction_types": [
+        "10"
+      ],
+      "count": 1,
+      "date_range": [
+        "2024-04-18",
+        "2024-04-18"
+      ],
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00782664&two_year_transaction_period=2024&contributor_name=FRIESE%2C+DONALD+E"
     },
     {
       "from": "ind:SIMMONS_ANNETTE|75206",

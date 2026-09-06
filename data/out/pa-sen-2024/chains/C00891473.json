@@ -2,7 +2,7 @@
   "root_entity_id": "C00891473",
   "root_name": "MOSHANGUSA FREE SPEECH",
   "race_id": "pa-sen-2024",
-  "generated_at": "2026-09-05T19:53:48+00:00",
+  "generated_at": "2026-09-06T04:49:10+00:00",
   "data_status": "real",
   "nodes": [
     {
@@ -54,18 +54,6 @@
       "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00891473&two_year_transaction_period=2024&contributor_name=WEI%2C+YUAN"
     },
     {
-      "id": "ind:HAFER_THOMAS|22207",
-      "name": "HAFER, THOMAS",
-      "kind": "individual",
-      "committee_type": null,
-      "depth": 1,
-      "visibility": "disclosed",
-      "amount_in": 1000.0,
-      "is_terminus": true,
-      "terminus_reason": "individual",
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00891473&two_year_transaction_period=2024&contributor_name=HAFER%2C+THOMAS"
-    },
-    {
       "id": "ind:WU_MENGYAO|07450",
       "name": "WU, MENGYAO",
       "kind": "individual",
@@ -78,6 +66,18 @@
       "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00891473&two_year_transaction_period=2024&contributor_name=WU%2C+MENGYAO"
     },
     {
+      "id": "ind:HAFER_THOMAS|22207",
+      "name": "HAFER, THOMAS",
+      "kind": "individual",
+      "committee_type": null,
+      "depth": 1,
+      "visibility": "disclosed",
+      "amount_in": 1000.0,
+      "is_terminus": true,
+      "terminus_reason": "individual",
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00891473&two_year_transaction_period=2024&contributor_name=HAFER%2C+THOMAS"
+    },
+    {
       "id": "ind:SUN_DAOSHAN|28270",
       "name": "SUN, DAOSHAN",
       "kind": "individual",
@@ -88,18 +88,6 @@
       "is_terminus": true,
       "terminus_reason": "individual",
       "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00891473&two_year_transaction_period=2024&contributor_name=SUN%2C+DAOSHAN"
-    },
-    {
-      "id": "ind:JIANG_FANG|92620",
-      "name": "JIANG, FANG",
-      "kind": "individual",
-      "committee_type": null,
-      "depth": 1,
-      "visibility": "disclosed",
-      "amount_in": 500.0,
-      "is_terminus": true,
-      "terminus_reason": "individual",
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00891473&two_year_transaction_period=2024&contributor_name=JIANG%2C+FANG"
     },
     {
       "id": "ind:YE_JUN|94301",
@@ -124,6 +112,18 @@
       "is_terminus": true,
       "terminus_reason": "individual",
       "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00891473&two_year_transaction_period=2024&contributor_name=GUAN%2C+BO"
+    },
+    {
+      "id": "ind:JIANG_FANG|92620",
+      "name": "JIANG, FANG",
+      "kind": "individual",
+      "committee_type": null,
+      "depth": 1,
+      "visibility": "disclosed",
+      "amount_in": 500.0,
+      "is_terminus": true,
+      "terminus_reason": "individual",
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00891473&two_year_transaction_period=2024&contributor_name=JIANG%2C+FANG"
     },
     {
       "id": "ind:LI_JING|75044",
@@ -319,22 +319,6 @@
       "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00891473&two_year_transaction_period=2024&contributor_name=WEI%2C+YUAN"
     },
     {
-      "from": "ind:HAFER_THOMAS|22207",
-      "to": "C00891473",
-      "amount": 1000.0,
-      "visibility": "disclosed",
-      "depth": 1,
-      "transaction_types": [
-        "15"
-      ],
-      "count": 1,
-      "date_range": [
-        "2024-11-01",
-        "2024-11-01"
-      ],
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00891473&two_year_transaction_period=2024&contributor_name=HAFER%2C+THOMAS"
-    },
-    {
       "from": "ind:WU_MENGYAO|07450",
       "to": "C00891473",
       "amount": 1000.0,
@@ -351,6 +335,22 @@
       "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00891473&two_year_transaction_period=2024&contributor_name=WU%2C+MENGYAO"
     },
     {
+      "from": "ind:HAFER_THOMAS|22207",
+      "to": "C00891473",
+      "amount": 1000.0,
+      "visibility": "disclosed",
+      "depth": 1,
+      "transaction_types": [
+        "15"
+      ],
+      "count": 1,
+      "date_range": [
+        "2024-11-01",
+        "2024-11-01"
+      ],
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00891473&two_year_transaction_period=2024&contributor_name=HAFER%2C+THOMAS"
+    },
+    {
       "from": "ind:SUN_DAOSHAN|28270",
       "to": "C00891473",
       "amount": 999.0,
@@ -365,22 +365,6 @@
         "2024-11-01"
       ],
       "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00891473&two_year_transaction_period=2024&contributor_name=SUN%2C+DAOSHAN"
-    },
-    {
-      "from": "ind:JIANG_FANG|92620",
-      "to": "C00891473",
-      "amount": 500.0,
-      "visibility": "disclosed",
-      "depth": 1,
-      "transaction_types": [
-        "15"
-      ],
-      "count": 1,
-      "date_range": [
-        "2024-11-02",
-        "2024-11-02"
-      ],
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00891473&two_year_transaction_period=2024&contributor_name=JIANG%2C+FANG"
     },
     {
       "from": "ind:YE_JUN|94301",
@@ -413,6 +397,22 @@
         "2024-11-04"
       ],
       "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00891473&two_year_transaction_period=2024&contributor_name=GUAN%2C+BO"
+    },
+    {
+      "from": "ind:JIANG_FANG|92620",
+      "to": "C00891473",
+      "amount": 500.0,
+      "visibility": "disclosed",
+      "depth": 1,
+      "transaction_types": [
+        "15"
+      ],
+      "count": 1,
+      "date_range": [
+        "2024-11-02",
+        "2024-11-02"
+      ],
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00891473&two_year_transaction_period=2024&contributor_name=JIANG%2C+FANG"
     },
     {
       "from": "ind:LI_JING|75044",

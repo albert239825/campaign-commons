@@ -2,7 +2,7 @@
   "root_entity_id": "C00684969",
   "root_name": "JDCA PAC",
   "race_id": "pa-sen-2024",
-  "generated_at": "2026-09-05T19:53:48+00:00",
+  "generated_at": "2026-09-06T04:49:10+00:00",
   "data_status": "real",
   "nodes": [
     {
@@ -210,6 +210,30 @@
       "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00684969&two_year_transaction_period=2024&contributor_name=LEVINE%2C+ADAM"
     },
     {
+      "id": "ind:MINSKY-PRIMUS_LISA|10024",
+      "name": "MINSKY-PRIMUS, LISA",
+      "kind": "individual",
+      "committee_type": null,
+      "depth": 1,
+      "visibility": "disclosed",
+      "amount_in": 25000.0,
+      "is_terminus": true,
+      "terminus_reason": "individual",
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00684969&two_year_transaction_period=2024&contributor_name=MINSKY-PRIMUS%2C+LISA"
+    },
+    {
+      "id": "ind:ISAACSON_JONATHAN|02116",
+      "name": "ISAACSON, JONATHAN",
+      "kind": "individual",
+      "committee_type": null,
+      "depth": 1,
+      "visibility": "disclosed",
+      "amount_in": 25000.0,
+      "is_terminus": true,
+      "terminus_reason": "individual",
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00684969&two_year_transaction_period=2024&contributor_name=ISAACSON%2C+JONATHAN"
+    },
+    {
       "id": "ind:RADER_KEVIN|33141",
       "name": "RADER, KEVIN",
       "kind": "individual",
@@ -244,30 +268,6 @@
       "is_terminus": true,
       "terminus_reason": "individual",
       "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00684969&two_year_transaction_period=2024&contributor_name=STAVIS%2C+ROB"
-    },
-    {
-      "id": "ind:MINSKY-PRIMUS_LISA|10024",
-      "name": "MINSKY-PRIMUS, LISA",
-      "kind": "individual",
-      "committee_type": null,
-      "depth": 1,
-      "visibility": "disclosed",
-      "amount_in": 25000.0,
-      "is_terminus": true,
-      "terminus_reason": "individual",
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00684969&two_year_transaction_period=2024&contributor_name=MINSKY-PRIMUS%2C+LISA"
-    },
-    {
-      "id": "ind:ISAACSON_JONATHAN|02116",
-      "name": "ISAACSON, JONATHAN",
-      "kind": "individual",
-      "committee_type": null,
-      "depth": 1,
-      "visibility": "disclosed",
-      "amount_in": 25000.0,
-      "is_terminus": true,
-      "terminus_reason": "individual",
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00684969&two_year_transaction_period=2024&contributor_name=ISAACSON%2C+JONATHAN"
     },
     {
       "id": "ind:MERFISH_SHERRY|77007",
@@ -817,6 +817,38 @@
       "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00684969&two_year_transaction_period=2024&contributor_name=LEVINE%2C+ADAM"
     },
     {
+      "from": "ind:MINSKY-PRIMUS_LISA|10024",
+      "to": "C00684969",
+      "amount": 25000.0,
+      "visibility": "disclosed",
+      "depth": 1,
+      "transaction_types": [
+        "10"
+      ],
+      "count": 1,
+      "date_range": [
+        "2024-10-15",
+        "2024-10-15"
+      ],
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00684969&two_year_transaction_period=2024&contributor_name=MINSKY-PRIMUS%2C+LISA"
+    },
+    {
+      "from": "ind:ISAACSON_JONATHAN|02116",
+      "to": "C00684969",
+      "amount": 25000.0,
+      "visibility": "disclosed",
+      "depth": 1,
+      "transaction_types": [
+        "10"
+      ],
+      "count": 1,
+      "date_range": [
+        "2024-10-21",
+        "2024-10-21"
+      ],
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00684969&two_year_transaction_period=2024&contributor_name=ISAACSON%2C+JONATHAN"
+    },
+    {
       "from": "ind:RADER_KEVIN|33141",
       "to": "C00684969",
       "amount": 25000.0,
@@ -863,38 +895,6 @@
         "2024-09-19"
       ],
       "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00684969&two_year_transaction_period=2024&contributor_name=STAVIS%2C+ROB"
-    },
-    {
-      "from": "ind:MINSKY-PRIMUS_LISA|10024",
-      "to": "C00684969",
-      "amount": 25000.0,
-      "visibility": "disclosed",
-      "depth": 1,
-      "transaction_types": [
-        "10"
-      ],
-      "count": 1,
-      "date_range": [
-        "2024-10-15",
-        "2024-10-15"
-      ],
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00684969&two_year_transaction_period=2024&contributor_name=MINSKY-PRIMUS%2C+LISA"
-    },
-    {
-      "from": "ind:ISAACSON_JONATHAN|02116",
-      "to": "C00684969",
-      "amount": 25000.0,
-      "visibility": "disclosed",
-      "depth": 1,
-      "transaction_types": [
-        "10"
-      ],
-      "count": 1,
-      "date_range": [
-        "2024-10-21",
-        "2024-10-21"
-      ],
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00684969&two_year_transaction_period=2024&contributor_name=ISAACSON%2C+JONATHAN"
     },
     {
       "from": "ind:MERFISH_SHERRY|77007",

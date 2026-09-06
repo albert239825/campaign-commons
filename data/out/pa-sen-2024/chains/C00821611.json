@@ -2,7 +2,7 @@
   "root_entity_id": "C00821611",
   "root_name": "ASIAN AMERICANS FOR CHANGE FUND",
   "race_id": "pa-sen-2024",
-  "generated_at": "2026-09-05T19:53:48+00:00",
+  "generated_at": "2026-09-06T04:49:10+00:00",
   "data_status": "real",
   "nodes": [
     {
@@ -54,18 +54,6 @@
       "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00821611&two_year_transaction_period=2024&contributor_name=BELCORE%2C+REBECCA"
     },
     {
-      "id": "ind:COTTINGHAM_ALICE|60304",
-      "name": "COTTINGHAM, ALICE",
-      "kind": "individual",
-      "committee_type": null,
-      "depth": 1,
-      "visibility": "disclosed",
-      "amount_in": 250.0,
-      "is_terminus": true,
-      "terminus_reason": "individual",
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00821611&two_year_transaction_period=2024&contributor_name=COTTINGHAM%2C+ALICE"
-    },
-    {
       "id": "ind:WILLIAMS_GRANT|63119",
       "name": "WILLIAMS, GRANT",
       "kind": "individual",
@@ -100,6 +88,18 @@
       "is_terminus": true,
       "terminus_reason": "individual",
       "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00821611&two_year_transaction_period=2024&contributor_name=KANG%2C+WAN-MO"
+    },
+    {
+      "id": "ind:COTTINGHAM_ALICE|60304",
+      "name": "COTTINGHAM, ALICE",
+      "kind": "individual",
+      "committee_type": null,
+      "depth": 1,
+      "visibility": "disclosed",
+      "amount_in": 250.0,
+      "is_terminus": true,
+      "terminus_reason": "individual",
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00821611&two_year_transaction_period=2024&contributor_name=COTTINGHAM%2C+ALICE"
     },
     {
       "id": "vendor:V-the-pivot-group",
@@ -247,22 +247,6 @@
       "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00821611&two_year_transaction_period=2024&contributor_name=BELCORE%2C+REBECCA"
     },
     {
-      "from": "ind:COTTINGHAM_ALICE|60304",
-      "to": "C00821611",
-      "amount": 250.0,
-      "visibility": "disclosed",
-      "depth": 1,
-      "transaction_types": [
-        "10"
-      ],
-      "count": 1,
-      "date_range": [
-        "2023-02-14",
-        "2023-02-14"
-      ],
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00821611&two_year_transaction_period=2024&contributor_name=COTTINGHAM%2C+ALICE"
-    },
-    {
       "from": "ind:WILLIAMS_GRANT|63119",
       "to": "C00821611",
       "amount": 250.0,
@@ -309,6 +293,22 @@
         "2023-02-17"
       ],
       "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00821611&two_year_transaction_period=2024&contributor_name=KANG%2C+WAN-MO"
+    },
+    {
+      "from": "ind:COTTINGHAM_ALICE|60304",
+      "to": "C00821611",
+      "amount": 250.0,
+      "visibility": "disclosed",
+      "depth": 1,
+      "transaction_types": [
+        "10"
+      ],
+      "count": 1,
+      "date_range": [
+        "2023-02-14",
+        "2023-02-14"
+      ],
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00821611&two_year_transaction_period=2024&contributor_name=COTTINGHAM%2C+ALICE"
     },
     {
       "from": "C00821611",

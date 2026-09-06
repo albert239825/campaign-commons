@@ -654,55 +654,5 @@
       "last_date": "2024-08-02",
       "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00490375&payee_name=TARGETSMART+COMMUNICATIONS"
     }
-  ],
-  "issue_focus": {
-    "kind": "labor",
-    "issue_ids": [
-      "healthcare",
-      "labor_trade"
-    ],
-    "description": "National Nurses United, 'with more than 225,000 members nationwide, is the largest union and professional association of registered nurses in U.S. history', founded 'to counter the national assault by the health care industry on patient care conditions and standards for nurses'. The committee is its independent-expenditure arm.",
-    "basis": {
-      "basis": "verified",
-      "rule": "Self-described focus from the organisation's own material; says what the org is for, not what its dollars bought",
-      "source_urls": [
-        "https://www.nationalnursesunited.org/about",
-        "https://www.fec.gov/data/committee/C00490375/"
-      ],
-      "checked_by": "devin-block2-issues",
-      "checked_at": "2026-09-05"
-    }
-  },
-  "issue_positions": [
-    {
-      "issue_id": "healthcare",
-      "direction": 2,
-      "quote": "fighting for expanding and updating Medicare to cover all people in the United States, for negotiating many of the best collective bargaining contracts for RNs in the nation",
-      "source_url": "https://www.nationalnursesunited.org/about",
-      "basis": {
-        "basis": "inferred",
-        "rule": "Stated position read from the organisation's own site by a language model and kept only where the quote appears verbatim on the fetched page; says what the org says, not what its dollars bought",
-        "source_urls": [
-          "https://www.nationalnursesunited.org/about"
-        ],
-        "checked_by": "grok-4.5",
-        "checked_at": "2026-09-06"
-      }
-    },
-    {
-      "issue_id": "labor_trade",
-      "direction": 2,
-      "quote": "for negotiating many of the best collective bargaining contracts for RNs in the nation, and for sponsorship of innovative legislation and regulatory protections for patients and nurses.",
-      "source_url": "https://www.nationalnursesunited.org/about",
-      "basis": {
-        "basis": "inferred",
-        "rule": "Stated position read from the organisation's own site by a language model and kept only where the quote appears verbatim on the fetched page; says what the org says, not what its dollars bought",
-        "source_urls": [
-          "https://www.nationalnursesunited.org/about"
-        ],
-        "checked_by": "grok-4.5",
-        "checked_at": "2026-09-06"
-      }
-    }
   ]
 }

@@ -2,7 +2,7 @@
   "root_entity_id": "C00851410",
   "root_name": "PROTECT LIBERTY PAC",
   "race_id": "pa-sen-2024",
-  "generated_at": "2026-09-05T19:53:48+00:00",
+  "generated_at": "2026-09-06T04:49:10+00:00",
   "data_status": "real",
   "nodes": [
     {
@@ -42,45 +42,6 @@
       "terminus_reason": "dark",
       "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00851410&two_year_transaction_period=2024&contributor_name=BMADDOX+ENTERPRISES+LLC+DBA+SILENCER+CENTRAL",
       "organization_class": "llc"
-    },
-    {
-      "id": "org:LIPSEY'S",
-      "name": "LIPSEY'S",
-      "kind": "organization",
-      "committee_type": null,
-      "depth": 1,
-      "visibility": "dark",
-      "amount_in": 25000.0,
-      "is_terminus": true,
-      "terminus_reason": "dark",
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00851410&two_year_transaction_period=2024&contributor_name=LIPSEY%27S",
-      "organization_class": "unknown"
-    },
-    {
-      "id": "org:TAURUS_HOLDINGS,_INC",
-      "name": "TAURUS HOLDINGS, INC",
-      "kind": "organization",
-      "committee_type": null,
-      "depth": 1,
-      "visibility": "dark",
-      "amount_in": 25000.0,
-      "is_terminus": true,
-      "terminus_reason": "dark",
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00851410&two_year_transaction_period=2024&contributor_name=TAURUS+HOLDINGS%2C+INC",
-      "organization_class": "llc"
-    },
-    {
-      "id": "org:SILENCER_SHOP",
-      "name": "SILENCER SHOP",
-      "kind": "organization",
-      "committee_type": null,
-      "depth": 1,
-      "visibility": "dark",
-      "amount_in": 25000.0,
-      "is_terminus": true,
-      "terminus_reason": "dark",
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00851410&two_year_transaction_period=2024&contributor_name=SILENCER+SHOP",
-      "organization_class": "unknown"
     },
     {
       "id": "org:BERETTA_U.S.A._CORPORATION",
@@ -146,6 +107,71 @@
       "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00851410&two_year_transaction_period=2024&contributor_name=TUCKER%2C+BRYAN"
     },
     {
+      "id": "org:LIPSEY'S",
+      "name": "LIPSEY'S",
+      "kind": "organization",
+      "committee_type": null,
+      "depth": 1,
+      "visibility": "dark",
+      "amount_in": 25000.0,
+      "is_terminus": true,
+      "terminus_reason": "dark",
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00851410&two_year_transaction_period=2024&contributor_name=LIPSEY%27S",
+      "organization_class": "unknown"
+    },
+    {
+      "id": "org:TAURUS_HOLDINGS,_INC",
+      "name": "TAURUS HOLDINGS, INC",
+      "kind": "organization",
+      "committee_type": null,
+      "depth": 1,
+      "visibility": "dark",
+      "amount_in": 25000.0,
+      "is_terminus": true,
+      "terminus_reason": "dark",
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00851410&two_year_transaction_period=2024&contributor_name=TAURUS+HOLDINGS%2C+INC",
+      "organization_class": "llc"
+    },
+    {
+      "id": "org:SILENCER_SHOP",
+      "name": "SILENCER SHOP",
+      "kind": "organization",
+      "committee_type": null,
+      "depth": 1,
+      "visibility": "dark",
+      "amount_in": 25000.0,
+      "is_terminus": true,
+      "terminus_reason": "dark",
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00851410&two_year_transaction_period=2024&contributor_name=SILENCER+SHOP",
+      "organization_class": "unknown"
+    },
+    {
+      "id": "org:GRASSO_HOLDINGS_INC",
+      "name": "GRASSO HOLDINGS INC",
+      "kind": "organization",
+      "committee_type": null,
+      "depth": 1,
+      "visibility": "dark",
+      "amount_in": 10000.0,
+      "is_terminus": true,
+      "terminus_reason": "dark",
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00851410&two_year_transaction_period=2024&contributor_name=GRASSO+HOLDINGS+INC",
+      "organization_class": "llc"
+    },
+    {
+      "id": "org:LUTH-AR_LLC",
+      "name": "LUTH-AR LLC",
+      "kind": "organization",
+      "committee_type": null,
+      "depth": 1,
+      "visibility": "dark",
+      "amount_in": 10000.0,
+      "is_terminus": true,
+      "terminus_reason": "dark",
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00851410&two_year_transaction_period=2024&contributor_name=LUTH-AR+LLC",
+      "organization_class": "llc"
+    },
+    {
       "id": "org:TOPCO_AMERICA_LLC",
       "name": "TOPCO AMERICA LLC",
       "kind": "organization",
@@ -182,32 +208,6 @@
       "terminus_reason": "dark",
       "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00851410&two_year_transaction_period=2024&contributor_name=RANGE+USA",
       "organization_class": "unknown"
-    },
-    {
-      "id": "org:GRASSO_HOLDINGS_INC",
-      "name": "GRASSO HOLDINGS INC",
-      "kind": "organization",
-      "committee_type": null,
-      "depth": 1,
-      "visibility": "dark",
-      "amount_in": 10000.0,
-      "is_terminus": true,
-      "terminus_reason": "dark",
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00851410&two_year_transaction_period=2024&contributor_name=GRASSO+HOLDINGS+INC",
-      "organization_class": "llc"
-    },
-    {
-      "id": "org:LUTH-AR_LLC",
-      "name": "LUTH-AR LLC",
-      "kind": "organization",
-      "committee_type": null,
-      "depth": 1,
-      "visibility": "dark",
-      "amount_in": 10000.0,
-      "is_terminus": true,
-      "terminus_reason": "dark",
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00851410&two_year_transaction_period=2024&contributor_name=LUTH-AR+LLC",
-      "organization_class": "llc"
     },
     {
       "id": "agg:other@C00851410",
@@ -304,54 +304,6 @@
       "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00851410&two_year_transaction_period=2024&contributor_name=BMADDOX+ENTERPRISES+LLC+DBA+SILENCER+CENTRAL"
     },
     {
-      "from": "org:LIPSEY'S",
-      "to": "C00851410",
-      "amount": 25000.0,
-      "visibility": "dark",
-      "depth": 1,
-      "transaction_types": [
-        "10"
-      ],
-      "count": 1,
-      "date_range": [
-        "2024-05-28",
-        "2024-05-28"
-      ],
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00851410&two_year_transaction_period=2024&contributor_name=LIPSEY%27S"
-    },
-    {
-      "from": "org:TAURUS_HOLDINGS,_INC",
-      "to": "C00851410",
-      "amount": 25000.0,
-      "visibility": "dark",
-      "depth": 1,
-      "transaction_types": [
-        "10"
-      ],
-      "count": 1,
-      "date_range": [
-        "2024-08-19",
-        "2024-08-19"
-      ],
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00851410&two_year_transaction_period=2024&contributor_name=TAURUS+HOLDINGS%2C+INC"
-    },
-    {
-      "from": "org:SILENCER_SHOP",
-      "to": "C00851410",
-      "amount": 25000.0,
-      "visibility": "dark",
-      "depth": 1,
-      "transaction_types": [
-        "10"
-      ],
-      "count": 1,
-      "date_range": [
-        "2024-08-12",
-        "2024-08-12"
-      ],
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00851410&two_year_transaction_period=2024&contributor_name=SILENCER+SHOP"
-    },
-    {
       "from": "org:BERETTA_U.S.A._CORPORATION",
       "to": "C00851410",
       "amount": 25000.0,
@@ -432,6 +384,86 @@
       "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00851410&two_year_transaction_period=2024&contributor_name=TUCKER%2C+BRYAN"
     },
     {
+      "from": "org:LIPSEY'S",
+      "to": "C00851410",
+      "amount": 25000.0,
+      "visibility": "dark",
+      "depth": 1,
+      "transaction_types": [
+        "10"
+      ],
+      "count": 1,
+      "date_range": [
+        "2024-05-28",
+        "2024-05-28"
+      ],
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00851410&two_year_transaction_period=2024&contributor_name=LIPSEY%27S"
+    },
+    {
+      "from": "org:TAURUS_HOLDINGS,_INC",
+      "to": "C00851410",
+      "amount": 25000.0,
+      "visibility": "dark",
+      "depth": 1,
+      "transaction_types": [
+        "10"
+      ],
+      "count": 1,
+      "date_range": [
+        "2024-08-19",
+        "2024-08-19"
+      ],
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00851410&two_year_transaction_period=2024&contributor_name=TAURUS+HOLDINGS%2C+INC"
+    },
+    {
+      "from": "org:SILENCER_SHOP",
+      "to": "C00851410",
+      "amount": 25000.0,
+      "visibility": "dark",
+      "depth": 1,
+      "transaction_types": [
+        "10"
+      ],
+      "count": 1,
+      "date_range": [
+        "2024-08-12",
+        "2024-08-12"
+      ],
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00851410&two_year_transaction_period=2024&contributor_name=SILENCER+SHOP"
+    },
+    {
+      "from": "org:GRASSO_HOLDINGS_INC",
+      "to": "C00851410",
+      "amount": 10000.0,
+      "visibility": "dark",
+      "depth": 1,
+      "transaction_types": [
+        "10"
+      ],
+      "count": 1,
+      "date_range": [
+        "2024-04-22",
+        "2024-04-22"
+      ],
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00851410&two_year_transaction_period=2024&contributor_name=GRASSO+HOLDINGS+INC"
+    },
+    {
+      "from": "org:LUTH-AR_LLC",
+      "to": "C00851410",
+      "amount": 10000.0,
+      "visibility": "dark",
+      "depth": 1,
+      "transaction_types": [
+        "10"
+      ],
+      "count": 1,
+      "date_range": [
+        "2024-07-14",
+        "2024-07-14"
+      ],
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00851410&two_year_transaction_period=2024&contributor_name=LUTH-AR+LLC"
+    },
+    {
       "from": "org:TOPCO_AMERICA_LLC",
       "to": "C00851410",
       "amount": 10000.0,
@@ -478,38 +510,6 @@
         "2024-05-28"
       ],
       "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00851410&two_year_transaction_period=2024&contributor_name=RANGE+USA"
-    },
-    {
-      "from": "org:GRASSO_HOLDINGS_INC",
-      "to": "C00851410",
-      "amount": 10000.0,
-      "visibility": "dark",
-      "depth": 1,
-      "transaction_types": [
-        "10"
-      ],
-      "count": 1,
-      "date_range": [
-        "2024-04-22",
-        "2024-04-22"
-      ],
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00851410&two_year_transaction_period=2024&contributor_name=GRASSO+HOLDINGS+INC"
-    },
-    {
-      "from": "org:LUTH-AR_LLC",
-      "to": "C00851410",
-      "amount": 10000.0,
-      "visibility": "dark",
-      "depth": 1,
-      "transaction_types": [
-        "10"
-      ],
-      "count": 1,
-      "date_range": [
-        "2024-07-14",
-        "2024-07-14"
-      ],
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00851410&two_year_transaction_period=2024&contributor_name=LUTH-AR+LLC"
     },
     {
       "from": "agg:other@C00851410",

@@ -1,5 +1,6 @@
 import pytest
 
+from campaign_commons import orgs
 from campaign_commons.orgs import classify_organization, committee_name_index, match_committee, organization_visibility
 
 
@@ -36,6 +37,26 @@ def test_only_unions_and_businesses_are_disclosed() -> None:
     assert organization_visibility("business") == "disclosed"
     for cls in ("llc", "nonprofit", "unknown"):
         assert organization_visibility(cls) == "dark"
+
+
+def test_overrides_beat_regex_and_invalid_classes_are_ignored(tmp_path, monkeypatch) -> None:
+    hand = tmp_path / "hand" / "race"
+    hand.mkdir(parents=True)
+    (hand / "org_classes_model.json").write_text(
+        '{"classes":[{"name":"TRUIST","org_class":"business"},{"name":"BAD","org_class":"not-a-class"}]}'
+    )
+    (hand / "org_classes.json").write_text('{"classes":[{"name":"TRUIST","org_class":"union"}]}')
+    monkeypatch.setattr(orgs, "DATA", tmp_path)
+    overrides = orgs.load_org_overrides("race")
+    assert overrides == {"TRUIST": "union"}
+    assert classify_organization("TRUIST", overrides) == "union"
+    assert classify_organization("COINBASE", {}) == "unknown"
+
+
+def test_missing_override_files_keep_regex_behavior(tmp_path, monkeypatch) -> None:
+    monkeypatch.setattr(orgs, "DATA", tmp_path)
+    assert orgs.load_org_overrides("race") == {}
+    assert classify_organization("COINBASE", orgs.load_org_overrides("race")) == "unknown"
 
 
 def test_committee_name_index_resolves_exact_unique_names() -> None:

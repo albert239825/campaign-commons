@@ -1747,20 +1747,5 @@
       "last_date": "2024-10-29",
       "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00571703&payee_name=RICHARD+SALES+MEDIA"
     }
-  ],
-  "issue_focus": {
-    "kind": "general_partisan",
-    "issue_ids": [],
-    "description": "Describes itself as 'the only outside organization solely dedicated to protecting and expanding the Republican Senate Majority'; its 2024 site stated 'one goal: to build a Republican Senate majority'.",
-    "basis": {
-      "basis": "verified",
-      "rule": "Self-described focus from the organisation's own material; says what the org is for, not what its dollars bought",
-      "source_urls": [
-        "https://web.archive.org/web/20241014215743/https://www.senateleadershipfund.org/",
-        "https://senateleadershipfund.org/about/"
-      ],
-      "checked_by": "devin-block2-issues",
-      "checked_at": "2026-09-05"
-    }
-  }
+  ]
 }

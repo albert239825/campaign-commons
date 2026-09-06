@@ -2,7 +2,7 @@
   "root_entity_id": "C00811166",
   "root_name": "THE SENTINEL ACTION FUND",
   "race_id": "pa-sen-2024",
-  "generated_at": "2026-09-05T19:53:48+00:00",
+  "generated_at": "2026-09-06T04:49:10+00:00",
   "data_status": "real",
   "nodes": [
     {
@@ -42,19 +42,6 @@
       "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00811166&two_year_transaction_period=2024&contributor_name=GRIFFIN%2C+KENNETH+C."
     },
     {
-      "id": "org:RIGHT_VOTE_INC.",
-      "name": "RIGHT VOTE INC.",
-      "kind": "organization",
-      "committee_type": null,
-      "depth": 1,
-      "visibility": "dark",
-      "amount_in": 2500000.0,
-      "is_terminus": true,
-      "terminus_reason": "dark",
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00811166&two_year_transaction_period=2024&contributor_name=RIGHT+VOTE+INC.",
-      "organization_class": "nonprofit"
-    },
-    {
       "id": "org:PARADIGM_OPERATIONS_LP",
       "name": "PARADIGM OPERATIONS LP",
       "kind": "organization",
@@ -66,6 +53,19 @@
       "terminus_reason": "dark",
       "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00811166&two_year_transaction_period=2024&contributor_name=PARADIGM+OPERATIONS+LP",
       "organization_class": "llc"
+    },
+    {
+      "id": "org:RIGHT_VOTE_INC.",
+      "name": "RIGHT VOTE INC.",
+      "kind": "organization",
+      "committee_type": null,
+      "depth": 1,
+      "visibility": "dark",
+      "amount_in": 2500000.0,
+      "is_terminus": true,
+      "terminus_reason": "dark",
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00811166&two_year_transaction_period=2024&contributor_name=RIGHT+VOTE+INC.",
+      "organization_class": "nonprofit"
     },
     {
       "id": "ind:MUSK_ELON|78734",
@@ -104,30 +104,6 @@
       "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00811166&two_year_transaction_period=2024&contributor_name=LIAUTAUD%2C+JAMES+J."
     },
     {
-      "id": "ind:KLINGENSTEIN_THOMAS_D.|10018",
-      "name": "KLINGENSTEIN, THOMAS D.",
-      "kind": "individual",
-      "committee_type": null,
-      "depth": 1,
-      "visibility": "disclosed",
-      "amount_in": 1000000.0,
-      "is_terminus": true,
-      "terminus_reason": "individual",
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00811166&two_year_transaction_period=2024&contributor_name=KLINGENSTEIN%2C+THOMAS+D."
-    },
-    {
-      "id": "ind:GRIFFIN_KENNETH_C|33131",
-      "name": "GRIFFIN, KENNETH C",
-      "kind": "individual",
-      "committee_type": null,
-      "depth": 1,
-      "visibility": "disclosed",
-      "amount_in": 1000000.0,
-      "is_terminus": true,
-      "terminus_reason": "individual",
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00811166&two_year_transaction_period=2024&contributor_name=GRIFFIN%2C+KENNETH+C"
-    },
-    {
       "id": "org:LEON_RACHEL_CORPORATION",
       "name": "LEON RACHEL CORPORATION",
       "kind": "organization",
@@ -152,6 +128,30 @@
       "terminus_reason": "dark",
       "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00811166&two_year_transaction_period=2024&contributor_name=MULTICOIN+CAPITAL+GP+LLC",
       "organization_class": "llc"
+    },
+    {
+      "id": "ind:KLINGENSTEIN_THOMAS_D.|10018",
+      "name": "KLINGENSTEIN, THOMAS D.",
+      "kind": "individual",
+      "committee_type": null,
+      "depth": 1,
+      "visibility": "disclosed",
+      "amount_in": 1000000.0,
+      "is_terminus": true,
+      "terminus_reason": "individual",
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00811166&two_year_transaction_period=2024&contributor_name=KLINGENSTEIN%2C+THOMAS+D."
+    },
+    {
+      "id": "ind:GRIFFIN_KENNETH_C|33131",
+      "name": "GRIFFIN, KENNETH C",
+      "kind": "individual",
+      "committee_type": null,
+      "depth": 1,
+      "visibility": "disclosed",
+      "amount_in": 1000000.0,
+      "is_terminus": true,
+      "terminus_reason": "individual",
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00811166&two_year_transaction_period=2024&contributor_name=GRIFFIN%2C+KENNETH+C"
     },
     {
       "id": "ind:CHILDS_JOHN_W.|32963",
@@ -430,22 +430,6 @@
       "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00811166&two_year_transaction_period=2024&contributor_name=GRIFFIN%2C+KENNETH+C."
     },
     {
-      "from": "org:RIGHT_VOTE_INC.",
-      "to": "C00811166",
-      "amount": 2500000.0,
-      "visibility": "dark",
-      "depth": 1,
-      "transaction_types": [
-        "10"
-      ],
-      "count": 2,
-      "date_range": [
-        "2024-09-17",
-        "2024-12-19"
-      ],
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00811166&two_year_transaction_period=2024&contributor_name=RIGHT+VOTE+INC."
-    },
-    {
       "from": "org:PARADIGM_OPERATIONS_LP",
       "to": "C00811166",
       "amount": 2500000.0,
@@ -460,6 +444,22 @@
         "2024-09-16"
       ],
       "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00811166&two_year_transaction_period=2024&contributor_name=PARADIGM+OPERATIONS+LP"
+    },
+    {
+      "from": "org:RIGHT_VOTE_INC.",
+      "to": "C00811166",
+      "amount": 2500000.0,
+      "visibility": "dark",
+      "depth": 1,
+      "transaction_types": [
+        "10"
+      ],
+      "count": 2,
+      "date_range": [
+        "2024-09-17",
+        "2024-12-19"
+      ],
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00811166&two_year_transaction_period=2024&contributor_name=RIGHT+VOTE+INC."
     },
     {
       "from": "ind:MUSK_ELON|78734",
@@ -511,38 +511,6 @@
       "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00811166&two_year_transaction_period=2024&contributor_name=LIAUTAUD%2C+JAMES+J."
     },
     {
-      "from": "ind:KLINGENSTEIN_THOMAS_D.|10018",
-      "to": "C00811166",
-      "amount": 1000000.0,
-      "visibility": "disclosed",
-      "depth": 1,
-      "transaction_types": [
-        "10"
-      ],
-      "count": 1,
-      "date_range": [
-        "2024-05-22",
-        "2024-05-22"
-      ],
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00811166&two_year_transaction_period=2024&contributor_name=KLINGENSTEIN%2C+THOMAS+D."
-    },
-    {
-      "from": "ind:GRIFFIN_KENNETH_C|33131",
-      "to": "C00811166",
-      "amount": 1000000.0,
-      "visibility": "disclosed",
-      "depth": 1,
-      "transaction_types": [
-        "10"
-      ],
-      "count": 1,
-      "date_range": [
-        "2024-05-09",
-        "2024-05-09"
-      ],
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00811166&two_year_transaction_period=2024&contributor_name=GRIFFIN%2C+KENNETH+C"
-    },
-    {
       "from": "org:LEON_RACHEL_CORPORATION",
       "to": "C00811166",
       "amount": 1000000.0,
@@ -573,6 +541,38 @@
         "2024-07-26"
       ],
       "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00811166&two_year_transaction_period=2024&contributor_name=MULTICOIN+CAPITAL+GP+LLC"
+    },
+    {
+      "from": "ind:KLINGENSTEIN_THOMAS_D.|10018",
+      "to": "C00811166",
+      "amount": 1000000.0,
+      "visibility": "disclosed",
+      "depth": 1,
+      "transaction_types": [
+        "10"
+      ],
+      "count": 1,
+      "date_range": [
+        "2024-05-22",
+        "2024-05-22"
+      ],
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00811166&two_year_transaction_period=2024&contributor_name=KLINGENSTEIN%2C+THOMAS+D."
+    },
+    {
+      "from": "ind:GRIFFIN_KENNETH_C|33131",
+      "to": "C00811166",
+      "amount": 1000000.0,
+      "visibility": "disclosed",
+      "depth": 1,
+      "transaction_types": [
+        "10"
+      ],
+      "count": 1,
+      "date_range": [
+        "2024-05-09",
+        "2024-05-09"
+      ],
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00811166&two_year_transaction_period=2024&contributor_name=GRIFFIN%2C+KENNETH+C"
     },
     {
       "from": "ind:CHILDS_JOHN_W.|32963",

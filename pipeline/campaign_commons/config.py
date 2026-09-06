@@ -21,6 +21,7 @@ FEC_API_KEY = os.environ.get("FEC_API_KEY", "DEMO_KEY")
 CONGRESS_GOV_API_KEY = os.environ.get("CONGRESS_GOV_API_KEY", "DEMO_KEY")
 XAI_API_KEY = os.environ.get("XAI_API_KEY")
 XAI_MODEL = os.environ.get("XAI_MODEL", "grok-4.5")
+XAI_ORGS_MODEL = os.environ.get("XAI_ORGS_MODEL") or ("grok-4.3" if XAI_MODEL == "grok-4.5" else XAI_MODEL)
 
 FEC_API = "https://api.open.fec.gov/v1"
 FEC_BULK = "https://cg-519a459a-0ea3-42c2-b7bc-fa1143481f74.s3-us-gov-west-1.amazonaws.com/bulk-downloads"

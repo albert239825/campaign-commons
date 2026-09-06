@@ -2,7 +2,7 @@
   "root_entity_id": "C00804823",
   "root_name": "MAINSTREAM DEMOCRATS PAC",
   "race_id": "pa-sen-2024",
-  "generated_at": "2026-09-05T19:53:48+00:00",
+  "generated_at": "2026-09-06T04:49:10+00:00",
   "data_status": "real",
   "nodes": [
     {
@@ -91,18 +91,6 @@
       "organization_class": "llc"
     },
     {
-      "id": "ind:PEELER_DAVID_RANDOLPH|02116",
-      "name": "PEELER, DAVID RANDOLPH",
-      "kind": "individual",
-      "committee_type": null,
-      "depth": 1,
-      "visibility": "disclosed",
-      "amount_in": 50000.0,
-      "is_terminus": true,
-      "terminus_reason": "individual",
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00804823&two_year_transaction_period=2024&contributor_name=PEELER%2C+DAVID+RANDOLPH"
-    },
-    {
       "id": "ind:JONES_ALAN_K.|10028",
       "name": "JONES, ALAN K.",
       "kind": "individual",
@@ -113,6 +101,18 @@
       "is_terminus": true,
       "terminus_reason": "individual",
       "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00804823&two_year_transaction_period=2024&contributor_name=JONES%2C+ALAN+K."
+    },
+    {
+      "id": "ind:PEELER_DAVID_RANDOLPH|02116",
+      "name": "PEELER, DAVID RANDOLPH",
+      "kind": "individual",
+      "committee_type": null,
+      "depth": 1,
+      "visibility": "disclosed",
+      "amount_in": 50000.0,
+      "is_terminus": true,
+      "terminus_reason": "individual",
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00804823&two_year_transaction_period=2024&contributor_name=PEELER%2C+DAVID+RANDOLPH"
     },
     {
       "id": "agg:other@C00804823",
@@ -343,22 +343,6 @@
       "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00804823&two_year_transaction_period=2024&contributor_name=DAVID+RANDOLPH+PEELER+TRUST"
     },
     {
-      "from": "ind:PEELER_DAVID_RANDOLPH|02116",
-      "to": "C00804823",
-      "amount": 50000.0,
-      "visibility": "disclosed",
-      "depth": 1,
-      "transaction_types": [
-        "10"
-      ],
-      "count": 1,
-      "date_range": [
-        "2024-02-29",
-        "2024-02-29"
-      ],
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00804823&two_year_transaction_period=2024&contributor_name=PEELER%2C+DAVID+RANDOLPH"
-    },
-    {
       "from": "ind:JONES_ALAN_K.|10028",
       "to": "C00804823",
       "amount": 50000.0,
@@ -373,6 +357,22 @@
         "2023-05-22"
       ],
       "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00804823&two_year_transaction_period=2024&contributor_name=JONES%2C+ALAN+K."
+    },
+    {
+      "from": "ind:PEELER_DAVID_RANDOLPH|02116",
+      "to": "C00804823",
+      "amount": 50000.0,
+      "visibility": "disclosed",
+      "depth": 1,
+      "transaction_types": [
+        "10"
+      ],
+      "count": 1,
+      "date_range": [
+        "2024-02-29",
+        "2024-02-29"
+      ],
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00804823&two_year_transaction_period=2024&contributor_name=PEELER%2C+DAVID+RANDOLPH"
     },
     {
       "from": "agg:other@C00804823",

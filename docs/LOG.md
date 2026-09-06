@@ -741,7 +741,7 @@ spenders with hand-provided URLs and skipped 75 for want of a URL after FEC webs
 
 **Open.** Rerun with `FEC_API_KEY` to cover the tail, then have a human verify the 30 rows.
 
-## 2026-09-06 ~07:00 — Exploratory graph mode (Money Trails follow-up, D-81)
+## 2026-09-06 ~07:00 — Exploratory graph mode (Money Trails follow-up, D-83)
 
 **What changed.** Added a fallback after the route resolver and fixed graph operations refuse: Grok can compose one Cypher query
 over the documented filings graph. The server validates the query as read-only, allows only `$race`, caps it at 20 rows and 8
@@ -762,3 +762,5 @@ paths or connections, geography or sector—now refuse the nearest fixed intent 
 **Flow completion.** Graph mode now adds source-linked filed spending and campaign-ownership facts for committees returned by the model query, so the diagram can continue to candidate campaigns without changing the model's rows.
 
 **Sankey interaction.** Completion now stays within candidates reached by the model rows, and flow ribbons expose pointer tooltips plus inline labels for larger amounts.
+
+**Organization classes.** For `pa-sen-2024` the offline Grok pass considered 262 unknown organizations over $10,000, kept 28 quoted classifications totaling $435,334, and dropped 217 unverified rows; traceability dark fell from $61,928,375.05 to $61,914,229.99. `TRUIST` was read as `business` from `https://www.truist.com/about-us` with quote “Truist Financial Corporation is a purpose-driven financial services company committed to inspiring and building better lives and communities,” but the returned page was 404, so the source-quote guard left it dark.

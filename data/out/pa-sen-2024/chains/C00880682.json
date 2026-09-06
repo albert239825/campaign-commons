@@ -2,7 +2,7 @@
   "root_entity_id": "C00880682",
   "root_name": "PIVOT VICTORY FUND",
   "race_id": "pa-sen-2024",
-  "generated_at": "2026-09-05T19:53:48+00:00",
+  "generated_at": "2026-09-06T04:49:10+00:00",
   "data_status": "real",
   "nodes": [
     {
@@ -127,18 +127,6 @@
       "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00564690&two_year_transaction_period=2024&contributor_name=KONG%2C+CLEMENT+J."
     },
     {
-      "id": "ind:OCAMPO_JR._RAYMOND_L.|94401",
-      "name": "OCAMPO, JR., RAYMOND L.",
-      "kind": "individual",
-      "committee_type": null,
-      "depth": 2,
-      "visibility": "disclosed",
-      "amount_in": 50000.0,
-      "is_terminus": true,
-      "terminus_reason": "individual",
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00564690&two_year_transaction_period=2024&contributor_name=OCAMPO%2C+JR.%2C+RAYMOND+L."
-    },
-    {
       "id": "ind:OCAMPO_SANDRA_O|94401",
       "name": "OCAMPO, SANDRA O",
       "kind": "individual",
@@ -161,6 +149,18 @@
       "is_terminus": true,
       "terminus_reason": "individual",
       "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00564690&two_year_transaction_period=2024&contributor_name=BLINKOFF%2C+DANIEL+M"
+    },
+    {
+      "id": "ind:OCAMPO_JR._RAYMOND_L.|94401",
+      "name": "OCAMPO, JR., RAYMOND L.",
+      "kind": "individual",
+      "committee_type": null,
+      "depth": 2,
+      "visibility": "disclosed",
+      "amount_in": 50000.0,
+      "is_terminus": true,
+      "terminus_reason": "individual",
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00564690&two_year_transaction_period=2024&contributor_name=OCAMPO%2C+JR.%2C+RAYMOND+L."
     },
     {
       "id": "ind:YAMADA_CRAIG|95831",
@@ -187,18 +187,6 @@
       "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00564690&two_year_transaction_period=2024&contributor_name=FANG%2C+SANKONG"
     },
     {
-      "id": "ind:LOUIE_DAVID|96816",
-      "name": "LOUIE, DAVID",
-      "kind": "individual",
-      "committee_type": null,
-      "depth": 2,
-      "visibility": "disclosed",
-      "amount_in": 15000.0,
-      "is_terminus": true,
-      "terminus_reason": "individual",
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00564690&two_year_transaction_period=2024&contributor_name=LOUIE%2C+DAVID"
-    },
-    {
       "id": "ind:KWOK_MINETTE_A.|94116",
       "name": "KWOK, MINETTE A.",
       "kind": "individual",
@@ -209,6 +197,18 @@
       "is_terminus": true,
       "terminus_reason": "individual",
       "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00564690&two_year_transaction_period=2024&contributor_name=KWOK%2C+MINETTE+A."
+    },
+    {
+      "id": "ind:LOUIE_DAVID|96816",
+      "name": "LOUIE, DAVID",
+      "kind": "individual",
+      "committee_type": null,
+      "depth": 2,
+      "visibility": "disclosed",
+      "amount_in": 15000.0,
+      "is_terminus": true,
+      "terminus_reason": "individual",
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00564690&two_year_transaction_period=2024&contributor_name=LOUIE%2C+DAVID"
     },
     {
       "id": "ind:KWOK_MONICE|95831",
@@ -281,6 +281,78 @@
       "is_terminus": true,
       "terminus_reason": "individual",
       "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00564690&two_year_transaction_period=2024&contributor_name=FUKAMI%2C+DIANNE"
+    },
+    {
+      "id": "ind:TAKAHASHI_CAROLL|96821",
+      "name": "TAKAHASHI, CAROLL",
+      "kind": "individual",
+      "committee_type": null,
+      "depth": 2,
+      "visibility": "disclosed",
+      "amount_in": 10000.0,
+      "is_terminus": true,
+      "terminus_reason": "individual",
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00564690&two_year_transaction_period=2024&contributor_name=TAKAHASHI%2C+CAROLL"
+    },
+    {
+      "id": "ind:SPARER_ALAN|94707",
+      "name": "SPARER, ALAN",
+      "kind": "individual",
+      "committee_type": null,
+      "depth": 2,
+      "visibility": "disclosed",
+      "amount_in": 10000.0,
+      "is_terminus": true,
+      "terminus_reason": "individual",
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00564690&two_year_transaction_period=2024&contributor_name=SPARER%2C+ALAN"
+    },
+    {
+      "id": "ind:LEE_BILL_LANN|94708",
+      "name": "LEE, BILL LANN",
+      "kind": "individual",
+      "committee_type": null,
+      "depth": 2,
+      "visibility": "disclosed",
+      "amount_in": 10000.0,
+      "is_terminus": true,
+      "terminus_reason": "individual",
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00564690&two_year_transaction_period=2024&contributor_name=LEE%2C+BILL+LANN"
+    },
+    {
+      "id": "ind:AMUSO_LINDA_E.|94114",
+      "name": "AMUSO, LINDA E.",
+      "kind": "individual",
+      "committee_type": null,
+      "depth": 2,
+      "visibility": "disclosed",
+      "amount_in": 10000.0,
+      "is_terminus": true,
+      "terminus_reason": "individual",
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00564690&two_year_transaction_period=2024&contributor_name=AMUSO%2C+LINDA+E."
+    },
+    {
+      "id": "ind:KWOK_DAPHNE|22003",
+      "name": "KWOK, DAPHNE",
+      "kind": "individual",
+      "committee_type": null,
+      "depth": 2,
+      "visibility": "disclosed",
+      "amount_in": 10000.0,
+      "is_terminus": true,
+      "terminus_reason": "individual",
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00564690&two_year_transaction_period=2024&contributor_name=KWOK%2C+DAPHNE"
+    },
+    {
+      "id": "ind:TAKAGI_TANI|10011",
+      "name": "TAKAGI, TANI",
+      "kind": "individual",
+      "committee_type": null,
+      "depth": 2,
+      "visibility": "disclosed",
+      "amount_in": 10000.0,
+      "is_terminus": true,
+      "terminus_reason": "individual",
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00564690&two_year_transaction_period=2024&contributor_name=TAKAGI%2C+TANI"
     },
     {
       "id": "ind:PARK_THERESA|10011",
@@ -365,78 +437,6 @@
       "is_terminus": true,
       "terminus_reason": "individual",
       "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00564690&two_year_transaction_period=2024&contributor_name=MINAMI%2C+DALE"
-    },
-    {
-      "id": "ind:TAKAHASHI_CAROLL|96821",
-      "name": "TAKAHASHI, CAROLL",
-      "kind": "individual",
-      "committee_type": null,
-      "depth": 2,
-      "visibility": "disclosed",
-      "amount_in": 10000.0,
-      "is_terminus": true,
-      "terminus_reason": "individual",
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00564690&two_year_transaction_period=2024&contributor_name=TAKAHASHI%2C+CAROLL"
-    },
-    {
-      "id": "ind:SPARER_ALAN|94707",
-      "name": "SPARER, ALAN",
-      "kind": "individual",
-      "committee_type": null,
-      "depth": 2,
-      "visibility": "disclosed",
-      "amount_in": 10000.0,
-      "is_terminus": true,
-      "terminus_reason": "individual",
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00564690&two_year_transaction_period=2024&contributor_name=SPARER%2C+ALAN"
-    },
-    {
-      "id": "ind:LEE_BILL_LANN|94708",
-      "name": "LEE, BILL LANN",
-      "kind": "individual",
-      "committee_type": null,
-      "depth": 2,
-      "visibility": "disclosed",
-      "amount_in": 10000.0,
-      "is_terminus": true,
-      "terminus_reason": "individual",
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00564690&two_year_transaction_period=2024&contributor_name=LEE%2C+BILL+LANN"
-    },
-    {
-      "id": "ind:AMUSO_LINDA_E.|94114",
-      "name": "AMUSO, LINDA E.",
-      "kind": "individual",
-      "committee_type": null,
-      "depth": 2,
-      "visibility": "disclosed",
-      "amount_in": 10000.0,
-      "is_terminus": true,
-      "terminus_reason": "individual",
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00564690&two_year_transaction_period=2024&contributor_name=AMUSO%2C+LINDA+E."
-    },
-    {
-      "id": "ind:KWOK_DAPHNE|22003",
-      "name": "KWOK, DAPHNE",
-      "kind": "individual",
-      "committee_type": null,
-      "depth": 2,
-      "visibility": "disclosed",
-      "amount_in": 10000.0,
-      "is_terminus": true,
-      "terminus_reason": "individual",
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00564690&two_year_transaction_period=2024&contributor_name=KWOK%2C+DAPHNE"
-    },
-    {
-      "id": "ind:TAKAGI_TANI|10011",
-      "name": "TAKAGI, TANI",
-      "kind": "individual",
-      "committee_type": null,
-      "depth": 2,
-      "visibility": "disclosed",
-      "amount_in": 10000.0,
-      "is_terminus": true,
-      "terminus_reason": "individual",
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00564690&two_year_transaction_period=2024&contributor_name=TAKAGI%2C+TANI"
     },
     {
       "id": "agg:other@C00564690",
@@ -647,22 +647,6 @@
       "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00564690&two_year_transaction_period=2024&contributor_name=KONG%2C+CLEMENT+J."
     },
     {
-      "from": "ind:OCAMPO_JR._RAYMOND_L.|94401",
-      "to": "C00564690",
-      "amount": 50000.0,
-      "visibility": "disclosed",
-      "depth": 2,
-      "transaction_types": [
-        "10"
-      ],
-      "count": 1,
-      "date_range": [
-        "2024-04-25",
-        "2024-04-25"
-      ],
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00564690&two_year_transaction_period=2024&contributor_name=OCAMPO%2C+JR.%2C+RAYMOND+L."
-    },
-    {
       "from": "ind:OCAMPO_SANDRA_O|94401",
       "to": "C00564690",
       "amount": 50000.0,
@@ -693,6 +677,22 @@
         "2024-04-03"
       ],
       "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00564690&two_year_transaction_period=2024&contributor_name=BLINKOFF%2C+DANIEL+M"
+    },
+    {
+      "from": "ind:OCAMPO_JR._RAYMOND_L.|94401",
+      "to": "C00564690",
+      "amount": 50000.0,
+      "visibility": "disclosed",
+      "depth": 2,
+      "transaction_types": [
+        "10"
+      ],
+      "count": 1,
+      "date_range": [
+        "2024-04-25",
+        "2024-04-25"
+      ],
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00564690&two_year_transaction_period=2024&contributor_name=OCAMPO%2C+JR.%2C+RAYMOND+L."
     },
     {
       "from": "ind:YAMADA_CRAIG|95831",
@@ -727,23 +727,6 @@
       "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00564690&two_year_transaction_period=2024&contributor_name=FANG%2C+SANKONG"
     },
     {
-      "from": "ind:LOUIE_DAVID|96816",
-      "to": "C00564690",
-      "amount": 15000.0,
-      "visibility": "disclosed",
-      "depth": 2,
-      "transaction_types": [
-        "10",
-        "15"
-      ],
-      "count": 2,
-      "date_range": [
-        "2024-03-19",
-        "2024-03-19"
-      ],
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00564690&two_year_transaction_period=2024&contributor_name=LOUIE%2C+DAVID"
-    },
-    {
       "from": "ind:KWOK_MINETTE_A.|94116",
       "to": "C00564690",
       "amount": 15000.0,
@@ -759,6 +742,23 @@
         "2024-06-07"
       ],
       "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00564690&two_year_transaction_period=2024&contributor_name=KWOK%2C+MINETTE+A."
+    },
+    {
+      "from": "ind:LOUIE_DAVID|96816",
+      "to": "C00564690",
+      "amount": 15000.0,
+      "visibility": "disclosed",
+      "depth": 2,
+      "transaction_types": [
+        "10",
+        "15"
+      ],
+      "count": 2,
+      "date_range": [
+        "2024-03-19",
+        "2024-03-19"
+      ],
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00564690&two_year_transaction_period=2024&contributor_name=LOUIE%2C+DAVID"
     },
     {
       "from": "ind:KWOK_MONICE|95831",
@@ -855,6 +855,104 @@
         "2024-10-12"
       ],
       "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00564690&two_year_transaction_period=2024&contributor_name=FUKAMI%2C+DIANNE"
+    },
+    {
+      "from": "ind:TAKAHASHI_CAROLL|96821",
+      "to": "C00564690",
+      "amount": 10000.0,
+      "visibility": "disclosed",
+      "depth": 2,
+      "transaction_types": [
+        "10"
+      ],
+      "count": 2,
+      "date_range": [
+        "2024-04-29",
+        "2024-07-23"
+      ],
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00564690&two_year_transaction_period=2024&contributor_name=TAKAHASHI%2C+CAROLL"
+    },
+    {
+      "from": "ind:SPARER_ALAN|94707",
+      "to": "C00564690",
+      "amount": 10000.0,
+      "visibility": "disclosed",
+      "depth": 2,
+      "transaction_types": [
+        "10"
+      ],
+      "count": 1,
+      "date_range": [
+        "2024-07-11",
+        "2024-07-11"
+      ],
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00564690&two_year_transaction_period=2024&contributor_name=SPARER%2C+ALAN"
+    },
+    {
+      "from": "ind:LEE_BILL_LANN|94708",
+      "to": "C00564690",
+      "amount": 10000.0,
+      "visibility": "disclosed",
+      "depth": 2,
+      "transaction_types": [
+        "10"
+      ],
+      "count": 1,
+      "date_range": [
+        "2024-03-27",
+        "2024-03-27"
+      ],
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00564690&two_year_transaction_period=2024&contributor_name=LEE%2C+BILL+LANN"
+    },
+    {
+      "from": "ind:AMUSO_LINDA_E.|94114",
+      "to": "C00564690",
+      "amount": 10000.0,
+      "visibility": "disclosed",
+      "depth": 2,
+      "transaction_types": [
+        "10"
+      ],
+      "count": 1,
+      "date_range": [
+        "2024-04-11",
+        "2024-04-11"
+      ],
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00564690&two_year_transaction_period=2024&contributor_name=AMUSO%2C+LINDA+E."
+    },
+    {
+      "from": "ind:KWOK_DAPHNE|22003",
+      "to": "C00564690",
+      "amount": 10000.0,
+      "visibility": "disclosed",
+      "depth": 2,
+      "transaction_types": [
+        "10",
+        "15"
+      ],
+      "count": 2,
+      "date_range": [
+        "2024-07-29",
+        "2024-07-29"
+      ],
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00564690&two_year_transaction_period=2024&contributor_name=KWOK%2C+DAPHNE"
+    },
+    {
+      "from": "ind:TAKAGI_TANI|10011",
+      "to": "C00564690",
+      "amount": 10000.0,
+      "visibility": "disclosed",
+      "depth": 2,
+      "transaction_types": [
+        "10",
+        "15E"
+      ],
+      "count": 2,
+      "date_range": [
+        "2024-04-07",
+        "2024-08-09"
+      ],
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00564690&two_year_transaction_period=2024&contributor_name=TAKAGI%2C+TANI"
     },
     {
       "from": "ind:PARK_THERESA|10011",
@@ -969,104 +1067,6 @@
         "2024-07-03"
       ],
       "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00564690&two_year_transaction_period=2024&contributor_name=MINAMI%2C+DALE"
-    },
-    {
-      "from": "ind:TAKAHASHI_CAROLL|96821",
-      "to": "C00564690",
-      "amount": 10000.0,
-      "visibility": "disclosed",
-      "depth": 2,
-      "transaction_types": [
-        "10"
-      ],
-      "count": 2,
-      "date_range": [
-        "2024-04-29",
-        "2024-07-23"
-      ],
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00564690&two_year_transaction_period=2024&contributor_name=TAKAHASHI%2C+CAROLL"
-    },
-    {
-      "from": "ind:SPARER_ALAN|94707",
-      "to": "C00564690",
-      "amount": 10000.0,
-      "visibility": "disclosed",
-      "depth": 2,
-      "transaction_types": [
-        "10"
-      ],
-      "count": 1,
-      "date_range": [
-        "2024-07-11",
-        "2024-07-11"
-      ],
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00564690&two_year_transaction_period=2024&contributor_name=SPARER%2C+ALAN"
-    },
-    {
-      "from": "ind:LEE_BILL_LANN|94708",
-      "to": "C00564690",
-      "amount": 10000.0,
-      "visibility": "disclosed",
-      "depth": 2,
-      "transaction_types": [
-        "10"
-      ],
-      "count": 1,
-      "date_range": [
-        "2024-03-27",
-        "2024-03-27"
-      ],
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00564690&two_year_transaction_period=2024&contributor_name=LEE%2C+BILL+LANN"
-    },
-    {
-      "from": "ind:AMUSO_LINDA_E.|94114",
-      "to": "C00564690",
-      "amount": 10000.0,
-      "visibility": "disclosed",
-      "depth": 2,
-      "transaction_types": [
-        "10"
-      ],
-      "count": 1,
-      "date_range": [
-        "2024-04-11",
-        "2024-04-11"
-      ],
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00564690&two_year_transaction_period=2024&contributor_name=AMUSO%2C+LINDA+E."
-    },
-    {
-      "from": "ind:KWOK_DAPHNE|22003",
-      "to": "C00564690",
-      "amount": 10000.0,
-      "visibility": "disclosed",
-      "depth": 2,
-      "transaction_types": [
-        "10",
-        "15"
-      ],
-      "count": 2,
-      "date_range": [
-        "2024-07-29",
-        "2024-07-29"
-      ],
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00564690&two_year_transaction_period=2024&contributor_name=KWOK%2C+DAPHNE"
-    },
-    {
-      "from": "ind:TAKAGI_TANI|10011",
-      "to": "C00564690",
-      "amount": 10000.0,
-      "visibility": "disclosed",
-      "depth": 2,
-      "transaction_types": [
-        "10",
-        "15E"
-      ],
-      "count": 2,
-      "date_range": [
-        "2024-04-07",
-        "2024-08-09"
-      ],
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00564690&two_year_transaction_period=2024&contributor_name=TAKAGI%2C+TANI"
     },
     {
       "from": "agg:other@C00564690",

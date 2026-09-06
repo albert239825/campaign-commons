@@ -1,6 +1,6 @@
 {
   "race_id": "pa-sen-2024",
-  "generated_at": "2026-09-06T00:30:49+00:00",
+  "generated_at": "2026-09-06T04:49:12+00:00",
   "data_status": "real",
   "subjects": [
     {
@@ -2515,10 +2515,10 @@
           ],
           "shares": {
             "total_in": 176190145.0,
-            "disclosed": 0.6515,
+            "disclosed": 0.6521,
             "inferable": 0.0,
             "unwalked": 0.0,
-            "dark": 0.3485,
+            "dark": 0.3479,
             "max_depth": 1,
             "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00687103&two_year_transaction_period=2024"
           },
@@ -5019,10 +5019,10 @@
           ],
           "shares": {
             "total_in": 176190145.0,
-            "disclosed": 0.6515,
+            "disclosed": 0.6521,
             "inferable": 0.0,
             "unwalked": 0.0,
-            "dark": 0.3485,
+            "dark": 0.3479,
             "max_depth": 1,
             "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00687103&two_year_transaction_period=2024"
           },
@@ -7445,10 +7445,10 @@
       "ultimate": [],
       "shares": {
         "total_in": 176190145.0,
-        "disclosed": 0.6515,
+        "disclosed": 0.6521,
         "inferable": 0.0,
         "unwalked": 0.0,
-        "dark": 0.3485,
+        "dark": 0.3479,
         "max_depth": 1,
         "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00687103&two_year_transaction_period=2024"
       },
@@ -17500,7 +17500,7 @@
           "to_id": "C00760801",
           "to_name": "THE TURNOUT PROJECT",
           "amount": 37000.0,
-          "visibility": "dark",
+          "visibility": "disclosed",
           "depth": 1,
           "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00760801&two_year_transaction_period=2024",
           "contributor_count": 8
@@ -17718,10 +17718,10 @@
       ],
       "shares": {
         "total_in": 1137000.0,
-        "disclosed": 0.9551,
+        "disclosed": 0.9639,
         "inferable": 0.0,
         "unwalked": 0.0,
-        "dark": 0.0449,
+        "dark": 0.0361,
         "max_depth": 2,
         "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00760801&two_year_transaction_period=2024"
       },
