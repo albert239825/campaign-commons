@@ -970,6 +970,487 @@
               "additionalProperties": false
             }
           ]
+        },
+        "x_enrichment": {
+          "type": "object",
+          "properties": {
+            "issue_focus": {
+              "anyOf": [
+                {
+                  "type": "object",
+                  "properties": {
+                    "kind": {
+                      "type": "string",
+                      "enum": [
+                        "single_issue",
+                        "multi_issue"
+                      ]
+                    },
+                    "issue_ids": {
+                      "type": "array",
+                      "items": {
+                        "type": "string",
+                        "enum": [
+                          "healthcare",
+                          "energy_climate",
+                          "defense",
+                          "crypto_fintech",
+                          "immigration",
+                          "abortion",
+                          "guns",
+                          "tax_budget",
+                          "tech_ai",
+                          "labor_trade"
+                        ]
+                      },
+                      "minItems": 1,
+                      "maxItems": 3
+                    },
+                    "description": {
+                      "type": "string",
+                      "maxLength": 300
+                    },
+                    "basis": {
+                      "anyOf": [
+                        {
+                          "type": "object",
+                          "properties": {
+                            "basis": {
+                              "type": "string",
+                              "const": "verified"
+                            },
+                            "rule": {
+                              "type": "string",
+                              "minLength": 1
+                            },
+                            "source_urls": {
+                              "type": "array",
+                              "items": {
+                                "type": "string",
+                                "format": "uri"
+                              },
+                              "minItems": 1
+                            },
+                            "checked_by": {
+                              "type": "string",
+                              "minLength": 1
+                            },
+                            "checked_at": {
+                              "type": "string",
+                              "minLength": 1
+                            }
+                          },
+                          "required": [
+                            "basis",
+                            "rule",
+                            "source_urls",
+                            "checked_by",
+                            "checked_at"
+                          ],
+                          "additionalProperties": false
+                        },
+                        {
+                          "type": "object",
+                          "properties": {
+                            "basis": {
+                              "type": "string",
+                              "enum": [
+                                "filed",
+                                "inferred"
+                              ]
+                            },
+                            "rule": {
+                              "type": "string",
+                              "minLength": 1
+                            },
+                            "source_urls": {
+                              "type": "array",
+                              "items": {
+                                "type": "string",
+                                "format": "uri"
+                              }
+                            },
+                            "checked_by": {
+                              "type": [
+                                "string",
+                                "null"
+                              ]
+                            },
+                            "checked_at": {
+                              "type": [
+                                "string",
+                                "null"
+                              ]
+                            }
+                          },
+                          "required": [
+                            "basis",
+                            "rule",
+                            "source_urls",
+                            "checked_by",
+                            "checked_at"
+                          ],
+                          "additionalProperties": false
+                        }
+                      ]
+                    },
+                    "label": {
+                      "type": "string"
+                    },
+                    "quote": {
+                      "type": "string",
+                      "maxLength": 400
+                    },
+                    "provenance": {
+                      "type": "object",
+                      "properties": {
+                        "tagged_by": {
+                          "type": "string"
+                        },
+                        "tagged_at": {
+                          "type": "string"
+                        },
+                        "model": {
+                          "type": "string"
+                        },
+                        "prompt_version": {
+                          "type": "string"
+                        },
+                        "tools": {
+                          "type": "array",
+                          "items": {
+                            "type": "string",
+                            "enum": [
+                              "web_search",
+                              "x_search"
+                            ]
+                          }
+                        },
+                        "tool_filters": {
+                          "type": "object",
+                          "additionalProperties": {}
+                        },
+                        "response_id": {
+                          "type": [
+                            "string",
+                            "null"
+                          ]
+                        },
+                        "retrieved_at": {
+                          "type": "string"
+                        },
+                        "citations": {
+                          "type": "array",
+                          "items": {
+                            "type": "string",
+                            "format": "uri"
+                          }
+                        },
+                        "confidence": {
+                          "type": "string",
+                          "enum": [
+                            "high",
+                            "medium",
+                            "low"
+                          ]
+                        },
+                        "review_status": {
+                          "type": "string",
+                          "enum": [
+                            "pending",
+                            "accepted",
+                            "rejected"
+                          ]
+                        },
+                        "reviewed_by": {
+                          "type": [
+                            "string",
+                            "null"
+                          ]
+                        },
+                        "reviewed_at": {
+                          "type": [
+                            "string",
+                            "null"
+                          ]
+                        },
+                        "review_note": {
+                          "type": [
+                            "string",
+                            "null"
+                          ]
+                        }
+                      },
+                      "required": [
+                        "tagged_by",
+                        "tagged_at",
+                        "model",
+                        "prompt_version",
+                        "tools",
+                        "tool_filters",
+                        "response_id",
+                        "retrieved_at",
+                        "citations",
+                        "confidence",
+                        "review_status",
+                        "reviewed_by",
+                        "reviewed_at",
+                        "review_note"
+                      ],
+                      "additionalProperties": false
+                    }
+                  },
+                  "required": [
+                    "kind",
+                    "issue_ids",
+                    "description",
+                    "basis",
+                    "label",
+                    "quote",
+                    "provenance"
+                  ],
+                  "additionalProperties": false
+                },
+                {
+                  "type": "object",
+                  "properties": {
+                    "kind": {
+                      "type": "string",
+                      "enum": [
+                        "general_partisan",
+                        "candidate_aligned",
+                        "business_trade",
+                        "labor"
+                      ]
+                    },
+                    "issue_ids": {
+                      "type": "array",
+                      "items": {
+                        "type": "string",
+                        "enum": [
+                          "healthcare",
+                          "energy_climate",
+                          "defense",
+                          "crypto_fintech",
+                          "immigration",
+                          "abortion",
+                          "guns",
+                          "tax_budget",
+                          "tech_ai",
+                          "labor_trade"
+                        ]
+                      },
+                      "maxItems": 3
+                    },
+                    "description": {
+                      "type": "string",
+                      "maxLength": 300
+                    },
+                    "basis": {
+                      "anyOf": [
+                        {
+                          "type": "object",
+                          "properties": {
+                            "basis": {
+                              "type": "string",
+                              "const": "verified"
+                            },
+                            "rule": {
+                              "type": "string",
+                              "minLength": 1
+                            },
+                            "source_urls": {
+                              "type": "array",
+                              "items": {
+                                "type": "string",
+                                "format": "uri"
+                              },
+                              "minItems": 1
+                            },
+                            "checked_by": {
+                              "type": "string",
+                              "minLength": 1
+                            },
+                            "checked_at": {
+                              "type": "string",
+                              "minLength": 1
+                            }
+                          },
+                          "required": [
+                            "basis",
+                            "rule",
+                            "source_urls",
+                            "checked_by",
+                            "checked_at"
+                          ],
+                          "additionalProperties": false
+                        },
+                        {
+                          "type": "object",
+                          "properties": {
+                            "basis": {
+                              "type": "string",
+                              "enum": [
+                                "filed",
+                                "inferred"
+                              ]
+                            },
+                            "rule": {
+                              "type": "string",
+                              "minLength": 1
+                            },
+                            "source_urls": {
+                              "type": "array",
+                              "items": {
+                                "type": "string",
+                                "format": "uri"
+                              }
+                            },
+                            "checked_by": {
+                              "type": [
+                                "string",
+                                "null"
+                              ]
+                            },
+                            "checked_at": {
+                              "type": [
+                                "string",
+                                "null"
+                              ]
+                            }
+                          },
+                          "required": [
+                            "basis",
+                            "rule",
+                            "source_urls",
+                            "checked_by",
+                            "checked_at"
+                          ],
+                          "additionalProperties": false
+                        }
+                      ]
+                    },
+                    "label": {
+                      "type": "string"
+                    },
+                    "quote": {
+                      "type": "string",
+                      "maxLength": 400
+                    },
+                    "provenance": {
+                      "type": "object",
+                      "properties": {
+                        "tagged_by": {
+                          "type": "string"
+                        },
+                        "tagged_at": {
+                          "type": "string"
+                        },
+                        "model": {
+                          "type": "string"
+                        },
+                        "prompt_version": {
+                          "type": "string"
+                        },
+                        "tools": {
+                          "type": "array",
+                          "items": {
+                            "type": "string",
+                            "enum": [
+                              "web_search",
+                              "x_search"
+                            ]
+                          }
+                        },
+                        "tool_filters": {
+                          "type": "object",
+                          "additionalProperties": {}
+                        },
+                        "response_id": {
+                          "type": [
+                            "string",
+                            "null"
+                          ]
+                        },
+                        "retrieved_at": {
+                          "type": "string"
+                        },
+                        "citations": {
+                          "type": "array",
+                          "items": {
+                            "type": "string",
+                            "format": "uri"
+                          }
+                        },
+                        "confidence": {
+                          "type": "string",
+                          "enum": [
+                            "high",
+                            "medium",
+                            "low"
+                          ]
+                        },
+                        "review_status": {
+                          "type": "string",
+                          "enum": [
+                            "pending",
+                            "accepted",
+                            "rejected"
+                          ]
+                        },
+                        "reviewed_by": {
+                          "type": [
+                            "string",
+                            "null"
+                          ]
+                        },
+                        "reviewed_at": {
+                          "type": [
+                            "string",
+                            "null"
+                          ]
+                        },
+                        "review_note": {
+                          "type": [
+                            "string",
+                            "null"
+                          ]
+                        }
+                      },
+                      "required": [
+                        "tagged_by",
+                        "tagged_at",
+                        "model",
+                        "prompt_version",
+                        "tools",
+                        "tool_filters",
+                        "response_id",
+                        "retrieved_at",
+                        "citations",
+                        "confidence",
+                        "review_status",
+                        "reviewed_by",
+                        "reviewed_at",
+                        "review_note"
+                      ],
+                      "additionalProperties": false
+                    }
+                  },
+                  "required": [
+                    "kind",
+                    "issue_ids",
+                    "description",
+                    "basis",
+                    "label",
+                    "quote",
+                    "provenance"
+                  ],
+                  "additionalProperties": false
+                }
+              ]
+            }
+          },
+          "additionalProperties": false
         }
       },
       "required": [

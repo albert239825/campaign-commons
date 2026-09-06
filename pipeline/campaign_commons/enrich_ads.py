@@ -5,14 +5,14 @@ from __future__ import annotations
 import argparse
 import hashlib
 import json
-import string
 import sys
 from typing import Any
 
 from .config import DATA, RACES, ROOT, XAI_API_KEY
 from .dossier import issue_ids
+from .enrich_common import _normalize
 from .util import now_iso, read_json, write_json
-from .xai_client import XaiClient, estimate_usd, output_text
+from .xai_client import XaiClient, estimate_usd, output_text, response_cost_usd
 
 PROMPT_VERSION = "classify_ad.v1"
 PROMPT_PATH = ROOT / "pipeline" / "campaign_commons" / "prompts" / "enrich" / f"{PROMPT_VERSION}.md"
@@ -94,11 +94,6 @@ def _payload(model: str, prompt: str, issue_ids_: list[str], transcript: dict[st
     }
 
 
-def _normalised(text: str) -> str:
-    table = str.maketrans({char: " " for char in string.punctuation})
-    return " ".join(text.lower().translate(table).split())
-
-
 def _validate_result(result: Any, transcript_text: str, known: set[str]) -> str | None:
     if not isinstance(result, dict):
         return "response JSON is not an object"
@@ -116,7 +111,7 @@ def _validate_result(result: Any, transcript_text: str, known: set[str]) -> str 
         return "quote is too long"
     if not issue_values and quote is not None:
         return "quote must be null when issue_ids is empty"
-    if isinstance(quote, str) and _normalised(quote) not in _normalised(transcript_text):
+    if isinstance(quote, str) and _normalize(quote) not in _normalize(transcript_text):
         return "quote is not a transcript substring"
     rationale = result.get("rationale")
     if not isinstance(rationale, str) or len(rationale) > 200:
@@ -263,7 +258,7 @@ def run(
             usage = response.get("usage", {}) if isinstance(response, dict) else {}
             input_tokens = int(usage.get("input_tokens", 0) or 0) if isinstance(usage, dict) else 0
             output_tokens = int(usage.get("output_tokens", 0) or 0) if isinstance(usage, dict) else 0
-            est_usd = estimate_usd(model, {"input_tokens": input_tokens, "output_tokens": output_tokens})
+            est_usd = response_cost_usd(model, response)
             spent += est_usd
             calls += 1
             ledger.append(

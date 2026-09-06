@@ -80,3 +80,13 @@ def estimate_usd(model: str, usage: dict[str, Any] | None) -> float:
     input_tokens = usage.get("input_tokens", 0) or 0
     output_tokens = usage.get("output_tokens", 0) or 0
     return (float(input_tokens) * input_price + float(output_tokens) * output_price) / 1_000_000
+
+
+def response_cost_usd(model: str, response: dict[str, Any] | None) -> float:
+    usage = response.get("usage", {}) if isinstance(response, dict) else {}
+    if not isinstance(usage, dict):
+        return 0.0
+    ticks = usage.get("cost_in_usd_ticks")
+    if ticks is not None:
+        return float(ticks) / 10_000_000_000
+    return estimate_usd(model, usage)
