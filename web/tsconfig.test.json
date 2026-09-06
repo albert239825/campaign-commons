@@ -1,0 +1,14 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "noEmit": false,
+    "incremental": false,
+    "module": "commonjs",
+    "moduleResolution": "node10",
+    "target": "es2020",
+    "outDir": ".test-dist",
+    "rootDir": "src",
+    "plugins": []
+  },
+  "include": ["src/**/*.test.ts"]
+}
