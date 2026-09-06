@@ -10,6 +10,7 @@ import type { AskAlignResponse, Statement } from "@/lib/align-llm";
 import type { AlignFunder, AlignFundersResponse } from "@/lib/align-funders";
 import { directionLabel } from "@/lib/alignment";
 import { loadPrefs, savePrefs } from "@/lib/prefs";
+import { surname } from "./funder-row";
 import type { CandidateStance } from "./issue-panel";
 
 type Issue = (typeof ISSUES)[number];
@@ -45,10 +46,6 @@ class StatusError extends Error {
   }
 }
 
-function surname(name: string): string {
-  return name.split(" ").at(-1) ?? name;
-}
-
 function dateLabel(value: string | null): string {
   return value ? value : "date unavailable";
 }
@@ -63,7 +60,7 @@ function sourceLabel(url: string): string {
 
 function basisText(candidate: CandidateStance, issue: Issue, value: ReturnType<typeof alignVerdict>): string | null {
   if (value.basis === "record" && value.candidate !== null) {
-    return `Compared against the coded record: ${directionLabel(issue.id, value.candidate)}.`;
+    return `Compared against the coded record: ${directionLabel(issue.id, value.candidate)}. Record above ↑`;
   }
   if (value.basis === "model" && value.candidate !== null) {
     return `Compared against the model-proposed direction (unreviewed): ${directionLabel(issue.id, value.candidate)}.`;
@@ -193,7 +190,8 @@ function FunderRow({ funder, issue }: { funder: AlignFunder; issue: Issue }) {
         <Chip tone="muted">{TAG_LABELS[funder.tag_layer]}</Chip>
       </div>
       <div className="policies-meta">
-        <Money amount={funder.amount} /> ·{" "}
+        <Money amount={funder.amount} />{" "}
+        {funder.amount_basis === "listed_gifts" && <span>listed gifts only</span>} ·{" "}
         {funder.source_url ? <SourceLink href={funder.source_url} label="fec.gov" /> : <span>no source</span>}
       </div>
       {funder.position && (
@@ -206,13 +204,13 @@ function FunderRow({ funder, issue }: { funder: AlignFunder; issue: Issue }) {
   );
 }
 
-function FunderRows({ issue, candidateName, response }: { issue: Issue; candidateName: string; response: AlignFundersResponse }) {
+function FunderRows({ issue, candidate, response }: { issue: Issue; candidate: CandidateStance; response: AlignFundersResponse }) {
   return (
     <div className="policies-align-funders">
       <div>
-        <h4>Gave to {surname(candidateName)}&apos;s committee</h4>
+        <h4>Gave to {surname(candidate.candidate)}&apos;s committee</h4>
         {response.candidate.length === 0 ? (
-          <p className="policies-empty">No funder tagged on {issue.label.toLowerCase()} reached the graph for this candidate.</p>
+          <p className="policies-empty">No funder tagged on {issue.label.toLowerCase()} reached the graph for this race.</p>
         ) : (
           <ol className="policies-align-funder-list">{response.candidate.map((funder) => <FunderRow key={funder.entity_id} funder={funder} issue={issue} />)}</ol>
         )}
@@ -261,7 +259,7 @@ function FundersBlock({ raceId, issue, candidate }: { raceId: string; issue: Iss
       <summary>Funders tagged on this issue <small>same topic is the only link — a tag on the funder&apos;s own words, never a filed record</small></summary>
       {loading && <p className="policies-empty">Loading funders…</p>}
       {error && <p className="policies-empty">Could not load tagged funders.</p>}
-      {response && <FunderRows issue={issue} candidateName={candidate.candidate.name} response={response} />}
+      {response && <FunderRows issue={issue} candidate={candidate} response={response} />}
     </details>
   );
 }
@@ -281,7 +279,6 @@ function CandidateAlignment({ raceId, issue, user, candidate }: { raceId: string
       </div>
       <p className="policies-align-reason">{verdict.reason}</p>
       {basis && <p className="policies-meta">{basis}</p>}
-      {verdict.basis === "record" && <p className="policies-meta">Record above ↑</p>}
       <ResearchBlock raceId={raceId} issue={issue} candidate={candidate} />
     </article>
   );
@@ -337,12 +334,11 @@ export function AlignPanel({ raceId, issue, candidates }: { raceId: string; issu
               type="button"
               role="radio"
               className="policies-align-choice"
-              aria-label={labels[index]}
               aria-checked={hydrated && user === direction}
               disabled={!hydrated}
               onClick={() => choose(direction)}
             >
-              {direction}
+              {labels[index]}
             </button>
           ))}
         </div>

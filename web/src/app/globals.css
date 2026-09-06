@@ -1133,7 +1133,8 @@ svg[data-k="9"] .chain-short-k9 :is(.chain-amount, .chain-sub) { display: none; 
 .policies-align-clear { padding: 0; color: var(--detail-muted); font-size: 12px; text-decoration: underline; text-decoration-style: dotted; text-underline-offset: 3px; cursor: pointer; }
 .policies-align-clear:hover { color: var(--detail-ink); text-decoration-style: solid; }
 .policies-align-choices { display: flex; flex-wrap: wrap; gap: 6px; }
-.policies-align-choice, .policies-align-action { min-width: 34px; min-height: 34px; padding: 6px 10px; border: 1px solid var(--detail-ink); border-radius: 0; background: var(--detail-paper); color: var(--detail-ink); font-size: 13px; line-height: 1; cursor: pointer; }
+.policies-align-choice, .policies-align-action { min-width: 34px; min-height: 34px; padding: 6px 10px; border: 1px solid var(--detail-ink); border-radius: 0; background: var(--detail-paper); color: var(--detail-ink); font-size: 13px; line-height: 1.3; cursor: pointer; }
+.policies-align-choice { max-width: 100%; text-align: left; }
 .policies-align-choice[aria-checked="true"] { background: var(--detail-ink); color: var(--detail-paper); }
 .policies-align-choice:disabled, .policies-align-action:disabled { cursor: wait; opacity: .55; }
 .policies-align-choice:focus-visible, .policies-align-action:focus-visible, .policies-align-clear:focus-visible { outline: 2px solid #2563eb; outline-offset: 2px; }

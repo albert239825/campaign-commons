@@ -64,7 +64,6 @@ describe("AlignPanel", () => {
     renderPanel();
 
     await waitFor(() => expect(screen.getByRole("radio", { name: /strongly: stricter firearms regulation/i }).getAttribute("aria-checked")).toBe("true"));
-    expect(screen.getByText(/strongly: stricter firearms regulation/i)).toBeTruthy();
   });
 
   it("researches only after clicking and renders sourced quotes", async () => {

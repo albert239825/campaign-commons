@@ -909,4 +909,4 @@ The race ledger, ads, and policies tabs now share one route-group layout: the se
 
 Built the two stacked alignment-view PRs. PR 1 added the deterministic verdict helper, Grok Responses API research endpoint with strict quote/source filtering and limits, and graph/static funder plumbing. PR 2 adds the Policies alignment panel: browser-local -2..2 views shared with personalization, record-first verdicts with model-proposed fallback, offline x_stances rows, on-demand Grok research, and lazy issue-tagged funders with graph/static fallback and adjacency copy. The panel keeps model-found material labelled unreviewed and does not send the user’s view to the server.
 
-Open items: the research cache is per process instance, and HEAD checks may be blocked by some source hosts; network errors therefore keep a candidate URL rather than hiding it.
+Open items: the research cache is per process instance; graph funder amounts use complete ledger totals where available, while listed gift sums are labelled when no ledger total exists.
