@@ -5,6 +5,7 @@
  * same thing: a list of edges read from the graph, each with the `source_url` it was filed under — the facts a narrative
  * may cite and the table the page renders regardless of whether a narrative is written.
  */
+import type { IssueId } from "@campaign-commons/contracts";
 import { type GraphFact, type GraphNodeRef, type GraphOp, type GraphSubject, type NodeKind } from "./facts";
 import type { Runner } from "./neo4j";
 import { ENTITY, REL } from "./schema";
@@ -14,7 +15,7 @@ import { ENTITY, REL } from "./schema";
  * their campaign committee (funding-side positions, where money is received), and the one-line description the
  * classifier sees.
  */
-export const GRAPH_OP_SPEC: Record<GraphOp, { arity: 1 | 2; kinds: readonly NodeKind[][]; candidateAsCommittee: readonly boolean[]; describe: string }> = {
+export const GRAPH_OP_SPEC: Record<GraphOp, { arity: 0 | 1 | 2; kinds: readonly NodeKind[][]; candidateAsCommittee: readonly boolean[]; issue: boolean; describe: string }> = {
   shared_funders: {
     arity: 2,
     kinds: [
@@ -22,6 +23,7 @@ export const GRAPH_OP_SPEC: Record<GraphOp, { arity: 1 | 2; kinds: readonly Node
       ["committee", "candidate"],
     ],
     candidateAsCommittee: [true, true],
+    issue: false,
     describe: "contributors that gave to BOTH of two committees (a candidate stands for their campaign committee)",
   },
   money_path: {
@@ -31,6 +33,7 @@ export const GRAPH_OP_SPEC: Record<GraphOp, { arity: 1 | 2; kinds: readonly Node
       ["committee", "candidate"],
     ],
     candidateAsCommittee: [false, false],
+    issue: false,
     describe:
       "how money moves from a contributor, organization or committee to a committee or candidate: the shortest filed paths (transfers, and outside spending for/against)",
   },
@@ -38,13 +41,30 @@ export const GRAPH_OP_SPEC: Record<GraphOp, { arity: 1 | 2; kinds: readonly Node
     arity: 1,
     kinds: [["individual", "organization", "committee", "aggregate", "conduit"]],
     candidateAsCommittee: [false],
+    issue: false,
     describe: "everything a contributor or committee gave to, and which candidates those recipients then spent for or against",
   },
   upstream: {
     arity: 1,
     kinds: [["committee", "candidate"]],
     candidateAsCommittee: [true],
+    issue: false,
     describe: "who funds a committee's own funders: the money two steps upstream of a committee (a candidate stands for their campaign committee)",
+  },
+  funders_by_issue: {
+    arity: 1,
+    kinds: [["committee", "candidate"]],
+    candidateAsCommittee: [true],
+    issue: true,
+    describe:
+      "a committee's funders that are tagged on one issue from the issue list (tags read from the funder's own website, not from filings), with what each gave (a candidate stands for their campaign committee); needs `issue`",
+  },
+  issue_funders: {
+    arity: 0,
+    kinds: [],
+    candidateAsCommittee: [],
+    issue: true,
+    describe: "every funder in the race tagged on one issue from the issue list (tags read from the funder's own website, not from filings), ranked by total dollars given; takes no subject, needs `issue`",
   },
 };
 
@@ -56,7 +76,17 @@ export const edge = (a: string, r: string, b: string, path = "null") =>
   `{from: ${node(a)}, to: ${node(b)}, rel: type(${r}), amount: ${r}.amount, count: ${r}.count, support_oppose: ${r}.support_oppose,
     visibility: ${r}.visibility, class_basis: ${r}.class_basis, first_date: ${r}.first_date, last_date: ${r}.last_date, source_url: ${r}.source_url, path: ${path}}`;
 
+/** A tagged edge: the same edge shape plus which layer of `f` carries `$issue`; the machine layer is named first when both do. */
+const taggedEdge = (a: string, r: string, b: string) =>
+  edge(a, r, b).replace(
+    /path: null}$/,
+    `path: null,
+    tag: {issue_id: $issue, layer: CASE WHEN $issue IN coalesce(${a}.machine_issue_ids, []) THEN 'machine' ELSE 'position' END, label: ${a}.machine_label}}`,
+  );
+
 const E = `:${ENTITY}`;
+/** A funder whose machine layer or spender-position layer carries `$issue`; record properties are never consulted for this. */
+const TAGGED = (f: string) => `($issue IN coalesce(${f}.machine_issue_ids, []) OR $issue IN coalesce(${f}.issue_position_ids, []))`;
 
 /** Fixed graph-only completion for @graph: carry drawn committees through targeting and campaign ownership. */
 export const COMPLETION = `
@@ -90,7 +120,7 @@ CALL {
 }
 RETURN edge`;
 
-/** The statements each operation runs. `$race`, `$a`, `$b` (id lists) are the only parameters. */
+/** The statements each operation runs. `$race`, `$a`, `$b` (id lists) and `$issue` (a taxonomy id, issue operations only) are the only parameters. */
 export const CYPHER: Record<GraphOp, readonly string[]> = {
   shared_funders: [
     `MATCH (f${E} {race_id: $race})-[g1:${REL.GAVE}]->(a${E} {race_id: $race}) WHERE a.id IN $a
@@ -125,6 +155,21 @@ export const CYPHER: Record<GraphOp, readonly string[]> = {
        RETURN f2, g2 ORDER BY g2.amount DESC LIMIT 3
      }
      RETURN [${edge("f1", "g1", "c")}] + CASE WHEN g2 IS NULL THEN [] ELSE [${edge("f2", "g2", "f1")}] END AS edges`,
+  ],
+  funders_by_issue: [
+    `MATCH (f${E} {race_id: $race})-[g:${REL.GAVE}]->(c${E} {race_id: $race}) WHERE c.id IN $a AND f.kind <> 'aggregate' AND ${TAGGED("f")}
+     WITH f, g, c ORDER BY g.amount DESC LIMIT 20
+     RETURN [${taggedEdge("f", "g", "c")}] AS edges`,
+  ],
+  issue_funders: [
+    `MATCH (f${E} {race_id: $race})-[g:${REL.GAVE}]->(${E} {race_id: $race}) WHERE f.kind <> 'aggregate' AND ${TAGGED("f")}
+     WITH f, sum(g.amount) AS total ORDER BY total DESC, f.id LIMIT 12
+     CALL {
+       WITH f
+       MATCH (f)-[g:${REL.GAVE}]->(c${E} {race_id: $race})
+       RETURN g, c ORDER BY g.amount DESC LIMIT 3
+     }
+     RETURN [${taggedEdge("f", "g", "c")}] AS edges`,
   ],
 };
 
@@ -175,8 +220,9 @@ export async function resolveSubject(run: Runner, race: string, pick: { id: stri
 }
 
 /** Run an operation's statements and flatten to a deduped, capped, citation-numbered fact list. */
-export async function runOperation(run: Runner, race: string, op: GraphOp, subjects: readonly GraphSubject[]): Promise<GraphFact[]> {
-  const params = { race, a: subjects[0]?.ids ?? [], b: subjects[1]?.ids ?? [] };
+export async function runOperation(run: Runner, race: string, op: GraphOp, subjects: readonly GraphSubject[], issue: IssueId | null = null): Promise<GraphFact[]> {
+  if (GRAPH_OP_SPEC[op].issue !== (issue !== null)) throw new Error(`${op}: issue ${issue === null ? "required" : "not accepted"}`);
+  const params = { race, a: subjects[0]?.ids ?? [], b: subjects[1]?.ids ?? [], issue };
   const seen = new Set<string>();
   const facts: GraphFact[] = [];
   for (const cypher of CYPHER[op]) {

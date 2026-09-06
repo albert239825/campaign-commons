@@ -2,7 +2,7 @@ import { readFileSync } from "node:fs";
 import { join } from "node:path";
 import { describe, expect, it } from "vitest";
 import { AdGallerySchema, ChainSchema, DonorViewSchema, EntitySchema, LedgerSchema, TrailsSchema } from "@campaign-commons/contracts";
-import { adName, adSpend, edgeType, graphRows, REL } from "./schema";
+import { adName, adSpend, edgeType, graphRows, machineTags, NO_TAGS, REL } from "./schema";
 
 const out = join(process.cwd(), "..", "data", "out", "pa-sen-2024");
 const read = (...p: string[]) => JSON.parse(readFileSync(join(out, ...p), "utf8")) as unknown;
@@ -102,6 +102,23 @@ describe("graphRows", () => {
     expect(edges.filter((e) => e.from === sample.ad_id && (e.type === REL.GAVE || e.type === REL.PAID))).toEqual([]);
     const unnamed = matched.find((a) => a.support_oppose === null)!;
     expect(edges.filter((e) => e.from === unnamed.ad_id)).toEqual([]);
+  });
+
+  it("carries the machine issue layer and spender positions as their own node properties, never touching record properties", () => {
+    const provenance = { tagged_by: "grok", tagged_at: "2026-09-06", model: "grok", prompt_version: "v1", tools: ["web_search" as const], tool_filters: {}, response_id: null, retrieved_at: "2026-09-06", citations: ["https://example.com/"], confidence: "high" as const, review_status: "pending" as const, reviewed_by: null, reviewed_at: null, review_note: null };
+    const basis = { basis: "inferred" as const, source_urls: ["https://example.com/"], checked_by: "grok", checked_at: "2026-09-06", rule: "quote verified on page" };
+    const focus = { kind: "multi_issue" as const, issue_ids: ["crypto_fintech" as const, "tech_ai" as const], label: "Machine-tagged from the organization's own website (grok, 2026-09-06); not part of the record" };
+    const tagged = { ...donor, donor_id: "org:FAIRSHAKE", name: "FAIRSHAKE", kind: "organization" as const, nodes: [{ ...donor.nodes[0], id: "org:FAIRSHAKE", name: "FAIRSHAKE", kind: "organization" as const }, ...donor.nodes.slice(1)], x_enrichment: { issue_focus: { ...focus, description: "d", basis, quote: "q", provenance } } };
+    const spender = { ...caseyCommittee, issue_positions: [{ issue_id: "guns" as const, direction: 1, quote: "q", source_url: "https://example.com/", basis }, { issue_id: "guns" as const, direction: 2, quote: "q2", source_url: "https://example.com/", basis }] };
+    const { nodes } = graphRows({ raceId: "pa-sen-2024", chains: [winsenate], ledger, entities: [spender], donors: [tagged] });
+    const org = nodes.find((n) => n.id === "org:FAIRSHAKE")!;
+    expect(org).toMatchObject({ name: "FAIRSHAKE", kind: "organization", machine_issue_ids: ["crypto_fintech", "tech_ai"], machine_kind: "multi_issue", machine_label: focus.label, issue_position_ids: [] });
+    const cmte = nodes.find((n) => n.id === caseyCommittee.entity_id)!;
+    expect(cmte).toMatchObject({ name: caseyCommittee.name, source_url: caseyCommittee.source_url, machine_issue_ids: [], machine_kind: null, machine_label: null, issue_position_ids: ["guns"] });
+    // nothing in the machine layer reaches a record property, and every other node carries the empty tags
+    expect(Object.keys(org).filter((k) => k.startsWith("machine_") || k === "issue_position_ids").sort()).toEqual(["issue_position_ids", "machine_issue_ids", "machine_kind", "machine_label"]);
+    expect(nodes.filter((n) => n.id !== "org:FAIRSHAKE" && n.id !== caseyCommittee.entity_id).every((n) => JSON.stringify(machineTags(n as never)) === JSON.stringify(NO_TAGS) && n.machine_issue_ids.length === 0 && n.machine_label === null)).toBe(true);
+    expect(machineTags({})).toEqual(NO_TAGS);
   });
 
   it("draws an ad's spend as the range midpoint, or the floor of an open-ended range", () => {
