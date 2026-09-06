@@ -95,7 +95,7 @@ MachineProvenance = { tagged_by: "xai-<model>-<date>", tagged_at, model, prompt_
 ## 5. Decisions
 
 - **Remove D-09** ("no LLM anywhere") — superseded, per Albert: LLM calls are allowed both in the pipeline and at runtime.
-  Replace with **D-79**: LLM-derived data lives in a separately stored, labelled layer (`x_*.json` hand files; optional
+  Replace with **D-81**: LLM-derived data lives in a separately stored, labelled layer (`x_*.json` hand files; optional
   `machine_issues` / `enrichment` / `x_enrichment` output blocks) with provenance (`tagged_by`, model, prompt version,
   tools + filters, `response_id`, `retrieved_at`, full `citations`, confidence, `review_status`); it never overwrites
   record-based fields, never substitutes for a `source_url`, never produces a number; cited URLs must be in `citations`;
