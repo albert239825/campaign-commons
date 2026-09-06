@@ -917,6 +917,16 @@
               "minimum": 0,
               "maximum": 1
             },
+            "disclosed_individuals_share": {
+              "type": "number",
+              "minimum": 0,
+              "maximum": 1
+            },
+            "disclosed_organizations_share": {
+              "type": "number",
+              "minimum": 0,
+              "maximum": 1
+            },
             "inferable_share": {
               "type": "number",
               "minimum": 0,

@@ -1,13 +1,14 @@
 import Link from "next/link";
-import { ISSUE_AXES, type Ad, type ISSUES, type RaceCandidate, type Stance } from "@campaign-commons/contracts";
+import { ISSUE_AXES, type Ad, type ISSUES, type MachineStance, type RaceCandidate, type Stance } from "@campaign-commons/contracts";
 import { date, money, range, routes } from "@/lib/format";
 import { SourceLink } from "@/components/ui";
 import { StanceCard } from "./stance-card";
 import { FunderRow, surname, targetingSide, type IssueFunder } from "./funder-row";
+import { AlignPanel } from "./align-panel";
 
 const ADS_SHOWN = 3;
 
-export type CandidateStance = { candidate: RaceCandidate; stance: Stance | undefined; hasDossier: boolean };
+export type CandidateStance = { candidate: RaceCandidate; stance: Stance | undefined; machine: MachineStance | undefined; hasDossier: boolean };
 
 /**
  * One issue: the candidates' full stance records side by side on top, then — in the same two columns — the outside spenders
@@ -51,6 +52,8 @@ export function IssuePanel({ raceId, issue, stances, funders, ads, candidateName
           ))}
         </div>
       </div>
+
+      <AlignPanel raceId={raceId} issue={issue} candidates={stances} />
 
       <div className="policies-column policies-funders-section">
         <h3>

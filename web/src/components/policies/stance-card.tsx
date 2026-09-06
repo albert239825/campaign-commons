@@ -2,10 +2,8 @@ import Link from "next/link";
 import { EVIDENCE_KINDS, ISSUE_AXES, type Evidence, type EvidenceKind, type IssueId, type RaceCandidate, type Stance } from "@campaign-commons/contracts";
 import { directionLabel } from "@/lib/alignment";
 import { date, routes } from "@/lib/format";
-import { Chip, SourceLink, type ChipTone } from "@/components/ui";
+import { Chip, SourceLink } from "@/components/ui";
 import { PartyTag } from "@/components/ui/party-tag";
-
-const CONFIDENCE_TONE: Record<Stance["confidence"], ChipTone> = { high: "green", medium: "amber", low: "muted" };
 
 const KIND_LABEL: Record<EvidenceKind, string> = {
   roll_call_vote: "roll call",
@@ -56,8 +54,8 @@ function EvidenceItems({ evidence }: { evidence: Evidence[] }) {
 
 /**
  * One candidate's complete stance record on one issue (D-09: hand-written, review-marked): the one-line position, the coded
- * direction, confidence and review state, and every evidence record with its source link. Nothing here is derived from who
- * spent money on the race; the funders sit below it, not behind it.
+ * direction, and every evidence record with its source link. Nothing here is derived from who spent money on the race; the
+ * funders sit below it, not behind it.
  */
 export function StanceCard({ raceId, candidate, issueId, stance, hasDossier }: {
   raceId: string;
@@ -92,18 +90,6 @@ export function StanceCard({ raceId, candidate, issueId, stance, hasDossier }: {
             ) : (
               <Chip tone="neutral" title={`Human-coded against the published issue axis: ${axis.minus} ↔ ${axis.plus}`}>
                 {directionLabel(issueId, stance.direction)}
-              </Chip>
-            )}
-            <Chip tone={CONFIDENCE_TONE[stance.confidence]} title="How well the evidence below supports the one-line position">
-              {stance.confidence} confidence
-            </Chip>
-            {stance.needs_review ? (
-              <Chip tone="amber" title="Position and evidence not yet checked by a human">
-                needs review
-              </Chip>
-            ) : (
-              <Chip tone="green" title="Position and evidence checked by a human">
-                verified
               </Chip>
             )}
           </div>

@@ -6,6 +6,7 @@ import { ISSUE_AXES, ISSUES, type Dossier, type IssueId, type RaceSummary } from
 import { alignRaces, directionLabel, type CandidateAlignment, type RaceAlignment } from "@/lib/alignment";
 import { EMPTY_PREFS, loadPrefs, savePrefs, type UserPrefs } from "@/lib/prefs";
 import { pct, routes } from "@/lib/format";
+import { US_STATES } from "@/lib/states";
 import { Breadcrumbs, Card, Chip } from "@/components/ui";
 import { DetailHeader, SectionNav } from "@/components/ui/detail-layout";
 import { PartyTag } from "@/components/ui/party-tag";
@@ -147,7 +148,7 @@ function RaceResults({ result, answered, opinions }: { result: RaceAlignment; an
 export function PersonalizeClient({ races, dossiers }: { races: RaceSummary[]; dossiers: Dossier[] }) {
   const [prefs, setPrefs] = useState<UserPrefs>(EMPTY_PREFS);
   const [loaded, setLoaded] = useState(false);
-  const states = useMemo(() => [...new Set(races.map((race) => race.state))].sort(), [races]);
+  const coveredStates = useMemo(() => new Set(races.map((race) => race.state)), [races]);
   const results = useMemo(() => alignRaces(prefs, races, dossiers), [prefs, races, dossiers]);
   const answered = Object.keys(prefs.opinions).length;
 
@@ -213,7 +214,10 @@ export function PersonalizeClient({ races, dossiers }: { races: RaceSummary[]; d
         <div className="detail-content">
           <div id="state" className="detail-section">
             <Card title="Where should we look?">
-              <p>Alignment is only shown for races on your ballot. Only states with loaded race dossiers appear here.</p>
+              <p>
+                Alignment is only shown for races on your ballot. Dossiers are currently loaded for{" "}
+                {[...coveredStates].sort().join(", ")}; other states will show no races yet.
+              </p>
               <div className="personalize-state">
                 <label htmlFor="state-select">State where you are registered</label>
                 <select
@@ -222,9 +226,9 @@ export function PersonalizeClient({ races, dossiers }: { races: RaceSummary[]; d
                   onChange={(event) => updatePrefs((current) => ({ ...current, state: event.target.value || null }))}
                 >
                   <option value="">— choose —</option>
-                  {states.map((state) => (
-                    <option key={state} value={state}>
-                      {state}
+                  {US_STATES.map((state) => (
+                    <option key={state.code} value={state.code}>
+                      {state.name} ({state.code})
                     </option>
                   ))}
                 </select>
@@ -325,13 +329,13 @@ export function PersonalizeClient({ races, dossiers }: { races: RaceSummary[]; d
               <Card title="Alignment estimate">
                 <div className="detail-empty">Choose a state above to see alignment estimates.</div>
               </Card>
+            ) : !coveredStates.has(prefs.state) ? (
+              <Card title="Alignment estimate">
+                <div className="detail-empty">No races with dossiers loaded for {prefs.state.toUpperCase()} yet.</div>
+              </Card>
             ) : answered === 0 ? (
               <Card title="Alignment estimate">
                 <div className="detail-empty">Answer at least one issue above to see alignment estimates.</div>
-              </Card>
-            ) : results.length === 0 ? (
-              <Card title="Alignment estimate">
-                <div className="detail-empty">No races with dossiers loaded for {prefs.state.toUpperCase()} yet.</div>
               </Card>
             ) : (
               <div className="alignment-races">
