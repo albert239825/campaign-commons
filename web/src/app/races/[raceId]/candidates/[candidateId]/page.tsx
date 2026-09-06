@@ -36,6 +36,7 @@ export default async function DossierPage({ params }: { params: Promise<{ raceId
   const d = getDossier(raceId, candidateId);
   const byIssue = new Map(d.stances.map((s) => [s.issue_id, s]));
   const covered = new Set<IssueId>(byIssue.keys());
+  const machineByIssue = new Map((d.enrichment?.stances ?? []).map((s) => [s.issue_id, s]));
   const evidenceCount = d.stances.reduce((n, s) => n + s.evidence.length, 0);
   const others = race.candidates.filter((c) => c.candidate_id !== candidateId && listDossierIds(raceId).includes(c.candidate_id));
 
@@ -93,7 +94,7 @@ export default async function DossierPage({ params }: { params: Promise<{ raceId
         </div>
         <div className="detail-content">
           {ISSUES.map((issue) => (
-            <IssueSection key={issue.id} issue={issue} stance={byIssue.get(issue.id)} />
+            <IssueSection key={issue.id} issue={issue} stance={byIssue.get(issue.id)} machine={machineByIssue.get(issue.id)} />
           ))}
         </div>
       </div>
