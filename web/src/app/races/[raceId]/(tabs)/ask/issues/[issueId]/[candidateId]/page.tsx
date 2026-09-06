@@ -2,13 +2,12 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { ISSUE_BY_ID, ISSUE_IDS, type IssueId } from "@campaign-commons/contracts";
-import { getAds, getRace, hasTrails, getTrails, listEntityIds, listRaceIds } from "@/lib/data";
+import { getRace, hasTrails, getTrails, listEntityIds, listRaceIds } from "@/lib/data";
 import { canonicalQuestion, INTENT_LABELS } from "@/lib/ask";
 import { getSpenderIssueAnswer } from "@/lib/ask-issues";
 import { routes } from "@/lib/format";
-import { Breadcrumbs, Card, DataStatusBanner } from "@/components/ui";
+import { Breadcrumbs, Card } from "@/components/ui";
 import { DetailHeader } from "@/components/ui/detail-layout";
-import { RaceNav } from "@/components/ui/race-nav";
 import { AskBox } from "@/components/ask/ask-box";
 import { AskMethod } from "@/components/ask/method";
 import { IssueAnswerView } from "@/components/ask/issue-answer";
@@ -47,7 +46,6 @@ export default async function IssueAnswerPage({ params }: { params: Promise<{ ra
             { label: INTENT_LABELS.spender_issue },
           ]}
         />
-        <DataStatusBanner status={trails.data_status} />
         <DetailHeader
           label={`Money Trails · ${race.label}`}
           title={question}
@@ -60,7 +58,6 @@ export default async function IssueAnswerPage({ params }: { params: Promise<{ ra
         >
           <p className="max-w-3xl text-lg leading-snug text-neutral-900">{answer.headline}</p>
         </DetailHeader>
-        <RaceNav race={race} counts={{ ads: getAds(raceId).ads.length }} active={routes.ask(raceId)} trails />
       </div>
 
       <div className="detail-sections">
