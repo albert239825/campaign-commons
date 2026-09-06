@@ -17,6 +17,7 @@ import {
 } from "@campaign-commons/contracts";
 import { money } from "@/lib/format";
 import { BASIS_DASH, BASIS_LABELS } from "./basis";
+import { kMaxFor, shortBuckets } from "./camera";
 import { EdgePanel, EDGE_KIND_LABELS, edgeAmountLabel, edgeVerb } from "./edge-panel";
 import { revealEdge } from "./edge-reveal";
 import {
@@ -47,6 +48,7 @@ import {
 } from "./layout";
 import { NodePanel, kindLabel, type IncidentEdge } from "./node-panel";
 import { terminusLabel } from "./terminus";
+import { useCamera } from "./use-camera";
 import {
   MATERIAL_SHARE,
   fromWire,
@@ -225,13 +227,15 @@ function NodeBox({
   const term = terminusLabel(n);
   const label = `${n.name} · ${kindLabel(n)}${isRoot ? " · the spender this page is about" : ""} · ${money(n.amount_in, { compact: false })}${term ? ` · ${term}` : ""} · click for details`;
   const body: TipBody = { kind: "node", node: n, out };
+  // Semantic zoom: the `data-k` buckets at which this box is under 20 px tall and hides its amount and sub-labels (globals.css).
+  const short = shortBuckets(h).map((b) => `chain-short-k${b}`);
   return (
     <g
       role="button"
       tabIndex={0}
       aria-pressed={selected}
       aria-label={label}
-      className="chain-node cursor-pointer"
+      className={["chain-node cursor-pointer", ...short].join(" ")}
       onClick={() => onSelect(n.id)}
       onKeyDown={activate(() => onSelect(n.id))}
       onMouseEnter={(ev) => pointing.onPoint(body, ev)}
@@ -263,6 +267,7 @@ function NodeBox({
         stroke={stroke}
         strokeWidth={isRoot ? 3 : selected ? 2.5 : 1.25}
         strokeDasharray={isAgg ? "3 3" : undefined}
+        vectorEffect={selected ? "non-scaling-stroke" : undefined}
       />
       {isDark && (
         <rect
@@ -317,6 +322,7 @@ function NodeBox({
             fontWeight={l.weight}
             fill={l.fill}
             letterSpacing={l.spacing}
+            className={l.size === NAME_FONT ? undefined : "chain-sub"}
           >
             {l.text}
           </text>
@@ -332,7 +338,7 @@ function NodeBox({
         stroke={isDark ? "#ffffff" : "none"}
         strokeWidth={isDark ? 3 : 0}
         paintOrder="stroke"
-        className="tabular-nums"
+        className="chain-amount tabular-nums"
       >
         {amount}
       </text>
@@ -428,6 +434,7 @@ function RibbonShape({
         fillOpacity={edge.visibility === "dark" ? 0.5 : 0.38}
         stroke={selected ? SELECTED : "transparent"}
         strokeWidth={selected ? 2 : 5}
+        vectorEffect={selected ? "non-scaling-stroke" : undefined}
         {...handlers}
       />
     );
@@ -542,6 +549,7 @@ export function ChainDiagram({ wire, hasTable = false }: { wire: ChainViewWire; 
   const [selection, setSelection] = useState<Selection>(null);
   const [tip, setTip] = useState<TipBody | null>(null);
   const figRef = useRef<HTMLElement>(null);
+  const svgRef = useRef<SVGSVGElement>(null);
   const tipRef = useRef<HTMLDivElement>(null);
   const flip = (key: keyof GraphControls, id: string) =>
     setControls((prev) => {
@@ -603,6 +611,22 @@ export function ChainDiagram({ wire, hasTable = false }: { wire: ChainViewWire; 
 
   const graph = useMemo(() => visibleGraph(view, controls), [view, controls]);
   const L = useMemo(() => layoutChain(graph.nodes, graph.edges), [graph]);
+  const frame = useMemo(() => ({ width: L.width, height: L.height + 22 }), [L]);
+  const camera = useCamera(svgRef, frame, kMaxFor(NAME_FONT));
+  const onMapKey = (ev: KeyboardEvent<HTMLDivElement>) => {
+    const c = camera.controls;
+    const step = c.keyPanPx;
+    if (ev.shiftKey && ev.key.startsWith("Arrow")) {
+      c.panPx(
+        ev.key === "ArrowLeft" ? -step : ev.key === "ArrowRight" ? step : 0,
+        ev.key === "ArrowUp" ? -step : ev.key === "ArrowDown" ? step : 0,
+      );
+    } else if (ev.key === "+" || ev.key === "=") c.zoomIn();
+    else if (ev.key === "-" || ev.key === "_") c.zoomOut();
+    else if (ev.key === "0") c.fit();
+    else return;
+    ev.preventDefault();
+  };
   const txnsFrom = new Map<string, number>();
   const moneyOut = new Map<string, number>();
   for (const e of graph.edges)
@@ -642,9 +666,32 @@ export function ChainDiagram({ wire, hasTable = false }: { wire: ChainViewWire; 
 
   return (
     <figure className="chain-figure" ref={figRef}>
-      <div className="chain-map-scroll" tabIndex={0} role="region" aria-label="Scrollable funding map">
+      <div className="chain-toolbar" role="toolbar" aria-label="Map zoom">
+        <button type="button" aria-label="Zoom in" title="Zoom in (+)" onClick={camera.controls.zoomIn}>
+          +
+        </button>
+        <button type="button" aria-label="Zoom out" title="Zoom out (−)" onClick={camera.controls.zoomOut}>
+          −
+        </button>
+        <button type="button" aria-label="Fit the whole map" title="Fit the whole map (0)" onClick={camera.controls.fit}>
+          <span aria-hidden="true">⤢</span> fit
+        </button>
+        <button type="button" aria-label="Actual size, labels at their designed size" title="Actual size" onClick={camera.controls.actual}>
+          1:1
+        </button>
+        <span ref={camera.readoutRef} className="chain-zoom-readout tabular-nums" aria-live="polite" />
+        <span className="chain-toolbar-hint">Ctrl/⌘ + scroll to zoom · drag to pan</span>
+      </div>
+      <div
+        className="chain-map-scroll"
+        tabIndex={0}
+        role="region"
+        aria-label="Funding map. Zoom with the toolbar above, Ctrl or Command plus scroll wheel, or the plus, minus and 0 keys; Shift with the arrow keys pans."
+        onKeyDown={onMapKey}
+      >
       <svg
-        viewBox={`0 0 ${L.width} ${L.height + 22}`}
+        ref={svgRef}
+        viewBox={camera.viewBox}
         width="100%"
         style={{ maxHeight: 880, fontFamily: "var(--font-sans)" }}
         role="img"

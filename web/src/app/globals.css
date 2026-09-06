@@ -713,8 +713,24 @@ body:has(.detail-page) :is(a, button, input, select, summary, [tabindex]):focus-
 .entity-funding-breakdown .tabular-nums { margin-top: 12px; font-size: 22px; letter-spacing: -.025em; }
 .entity-funding-breakdown .tabular-nums > span:last-child { font-size: 13px; }
 .chain-findings { display: grid; gap: 20px; padding: 28px 32px; background: var(--detail-surface); }
-.chain-map-scroll { max-width: 100%; overflow-x: auto; overscroll-behavior-inline: contain; }
-.detail-page .chain-map-scroll > svg { min-width: 1000px; }
+/* Chain map: the camera (chain/use-camera.ts) writes the SVG viewBox; the wrapper never scrolls. */
+.chain-map-scroll { max-width: 100%; overflow: hidden; }
+.chain-map-scroll:focus-visible { outline: 2px solid #2563eb; outline-offset: 2px; }
+.chain-map-scroll > svg { touch-action: none; user-select: none; cursor: grab; }
+.chain-map-scroll > svg.chain-grabbing { cursor: grabbing; }
+.chain-toolbar { display: flex; flex-wrap: wrap; align-items: center; gap: 6px; margin-bottom: 8px; font-size: 12px; color: var(--detail-muted, #737373); }
+.chain-toolbar > button { min-width: 32px; height: 28px; padding: 0 8px; border: 1px solid var(--detail-rule, #d4d4d4); border-radius: 3px; background: #fff; color: var(--detail-ink, #171717); font-size: 13px; font-weight: 600; line-height: 1; cursor: pointer; }
+.chain-toolbar > button:hover { background: var(--detail-surface, #f5f5f5); }
+.chain-toolbar > button:focus-visible { outline: 2px solid #2563eb; outline-offset: 2px; }
+.chain-zoom-readout { min-width: 5.5em; margin-left: 4px; }
+.chain-toolbar-hint { margin-left: auto; }
+@media (max-width: 680px) { .chain-toolbar-hint { display: none; } }
+/* Semantic zoom: at scale bucket k/10 a box that would be under 20px tall drops its amount and sub-labels instead of drawing 4px text. */
+svg[data-k="1"] .chain-short-k1 :is(.chain-amount, .chain-sub), svg[data-k="2"] .chain-short-k2 :is(.chain-amount, .chain-sub),
+svg[data-k="3"] .chain-short-k3 :is(.chain-amount, .chain-sub), svg[data-k="4"] .chain-short-k4 :is(.chain-amount, .chain-sub),
+svg[data-k="5"] .chain-short-k5 :is(.chain-amount, .chain-sub), svg[data-k="6"] .chain-short-k6 :is(.chain-amount, .chain-sub),
+svg[data-k="7"] .chain-short-k7 :is(.chain-amount, .chain-sub), svg[data-k="8"] .chain-short-k8 :is(.chain-amount, .chain-sub),
+svg[data-k="9"] .chain-short-k9 :is(.chain-amount, .chain-sub) { display: none; }
 .detail-page .chain-figure figcaption { margin-top: 20px; line-height: 1.8; }
 /* Chain picture: root legend swatch, hover states, the pointer tooltip, and the folded receipts table. */
 .chain-figure { position: relative; }

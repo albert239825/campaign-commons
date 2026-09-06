@@ -551,3 +551,35 @@ positioning is written straight to the element's style on `mousemove` so hoverin
 **Numbers.** WINSENATE: 487 edges in the table, 100 rendered on load, table folded; 54 ads folded into the roll-up; the
 root chip fits `AMERICAN HOSPITAL ASSOCIATION PAC` on two rows. Wire edge tuple 8 → 9 slots. `npm run lint`, `tsc
 --noEmit`, `next build` clean; no data or contract changes.
+
+## 2026-09-06 ~08:00 — Block 3 child H1a: a viewBox camera and a zoom toolbar for the chain picture
+
+**What changed.** The chain SVG gets a camera. `chain/camera.ts` is pure math over `{x, y, w, h}` in layout units —
+`fitAll`, `zoomAbout` (k' = k·f, the layout point under the pointer stays put), `pan`, `clamp` (scale in [fit, kMax],
+never showing space outside the graph), `fitToNodes`, `scaleOf`, plus `kBucket`/`shortBuckets` for the semantic-zoom
+classes — with 13 unit tests. `chain/use-camera.ts` writes it straight to the existing `<svg viewBox>` once per animation
+frame; the server-rendered layout is never recomputed and React never re-renders on a gesture (D-24, no layout flash: the
+first camera *is* the server's viewBox). `kMax` = 18 / 11 ≈ 1.64, the scale at which 11-pt labels render at 18 px. Gestures:
+plain wheel is left alone (the page scrolls — Albert's call), `Ctrl`/`⌘`+wheel and trackpad pinch zoom about the pointer,
+touch pinch zooms, one-finger touch or a mouse drag on empty canvas pans, double-click on empty canvas zooms 2×.
+A toolbar above the map — `[+] [−] [⤢ fit] [1:1]`, real buttons with `aria-label`s, a live "zoom 1.0×" readout — and
+keys on the focused wrapper (`+`/`=`, `-`, `0` fit, `Shift`+arrows pan). The wrapper is one focusable region whose label
+now describes the map and its controls instead of claiming to scroll. **Semantic zoom**: the hook writes `data-k`
+(scale × 10) on the SVG and each box carries the buckets at which it would be under 20 px tall, so CSS drops its amount
+and sub-label rather than drawing 4 px text. Selected strokes use `vector-effect: non-scaling-stroke`; focus rings are
+CSS outlines and were already in px. `.chain-map-scroll` no longer scrolls horizontally (`overflow: hidden`; the 880 px
+max-height cap stays); below 720 px the picture still fits at first paint and pinch/pan explores it. Caption gains one
+sentence on how to zoom. D-78.
+
+**Challenge.** The first cut kept the scale bucket in React state so the toolbar readout could render it; every bucket
+change re-rendered the whole WINSENATE SVG and a wheel sweep dropped ~1 frame in 7 (avg 20 ms, p95 50 ms). Moving
+`data-k` and the readout text to direct DOM writes, like the viewBox itself, took a 180-frame `Ctrl`+wheel sweep on
+WINSENATE to avg 17.5 ms, p95 16.8 ms, 8 frames over 20 ms, on the 2-vCPU software-rendered test VM (idle frames on the
+same VM: 16.7 ms flat). The spec's zoom formula (`x' = px − (px − x)·f`) is written for a scale-space camera; in viewBox
+space the width divides by f and so does the pointer offset — the unit test pins the invariant rather than the formula.
+`web/` had no test runner; rather than add one, `npm test` compiles `src/**/*.test.ts` with `tsc` and runs `node --test`.
+
+**Numbers.** WINSENATE at 1440 px: labels 6.4 px at fit → 11 px after `[1:1]`, 18 px at kMax; `[fit]` restores the exact
+server viewBox (`0 0 2250 948.49`); plain wheel scrolls the page 200 px and leaves the camera alone; `Ctrl`+wheel leaves
+`scrollY` unchanged and holds the pointer's layout point to 0.2 units. 13 boxes hide their amount at the fit bucket.
+`npm run lint`, `npm run typecheck`, `npm test` (13/13) clean; no data or contract changes.
