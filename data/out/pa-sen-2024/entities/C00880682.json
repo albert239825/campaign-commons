@@ -416,11 +416,38 @@
       "date": "2024-10-16",
       "purpose": "DIGITAL MEDIA ADVERTISING",
       "payee": "NERDROCK MEDIA, LLC",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202410249710836983"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202410249710836983",
+      "vendor_id": "V-nerdrock-media",
+      "medium": "digital"
     }
   ],
   "flags": [],
   "has_chain": true,
   "source_url": "https://www.fec.gov/data/committee/C00880682/?cycle=2024",
-  "data_status": "real"
+  "data_status": "real",
+  "vendors": [
+    {
+      "vendor_id": "V-nerdrock-media",
+      "name": "NERDROCK MEDIA, LLC",
+      "amount": 4000.0,
+      "count": 1,
+      "media_mix": [
+        {
+          "medium": "digital",
+          "amount": 4000.0,
+          "count": 1
+        }
+      ],
+      "targets": [
+        {
+          "candidate_id": "S6PA00217",
+          "support_oppose": "S",
+          "amount": 4000.0
+        }
+      ],
+      "first_date": "2024-10-16",
+      "last_date": "2024-10-16",
+      "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00880682&payee_name=NERDROCK+MEDIA%2C+LLC"
+    }
+  ]
 }

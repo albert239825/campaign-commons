@@ -1,5 +1,5 @@
 import Link from "next/link";
-import type { Figure, RangeFigure, TrailMoneyEdge, TrailTargetingEdge } from "@citizen-gotham/contracts";
+import type { Figure, RangeFigure, TrailMoneyEdge, TrailTargetingEdge } from "@campaign-commons/contracts";
 import { Chip, Money, SourceLink, VisibilityDot } from "@/components/ui";
 import { money, range, routes } from "@/lib/format";
 

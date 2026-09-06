@@ -1,0 +1,155 @@
+{
+  "vendor_id": "V-magnus-pearson-media",
+  "name": "MAGNUS PEARSON MEDIA",
+  "aliases": [
+    "MAGNUS PEARSON MEDIA"
+  ],
+  "normalization": {
+    "basis": "inferred",
+    "rule": "case/punctuation/suffix normalisation + token-set ≥0.92 (numeric tokens must match); aliases file",
+    "source_urls": [
+      "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&payee_name=MAGNUS+PEARSON+MEDIA"
+    ],
+    "checked_by": null,
+    "checked_at": null
+  },
+  "total": 85130.16,
+  "count": 7,
+  "media_mix": [
+    {
+      "medium": "production",
+      "amount": 85130.16,
+      "count": 7
+    }
+  ],
+  "spenders": [
+    {
+      "entity_id": "C00042366",
+      "name": "DSCC",
+      "amount": 85130.16,
+      "count": 7
+    }
+  ],
+  "targets": [
+    {
+      "candidate_id": "S2PA00661",
+      "support_oppose": "O",
+      "amount": 85130.16
+    }
+  ],
+  "first_date": "2024-08-02",
+  "last_date": "2024-09-04",
+  "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&payee_name=MAGNUS+PEARSON+MEDIA",
+  "race_id": "pa-sen-2024",
+  "generated_at": "2026-09-05T20:34:15+00:00",
+  "data_status": "real",
+  "expenditures": [
+    {
+      "ie_id": "C00042366-ie-1833435-SE-255129",
+      "spender_entity_id": "C00042366",
+      "spender_name": "DSCC",
+      "candidate_id": "S2PA00661",
+      "candidate_name": "Dave McCormick",
+      "support_oppose": "O",
+      "amount": 1266.7,
+      "date": "2024-09-04",
+      "purpose": "MEDIA PRODUCTION",
+      "payee": "MAGNUS PEARSON MEDIA",
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202410209699361880",
+      "vendor_id": "V-magnus-pearson-media",
+      "medium": "production"
+    },
+    {
+      "ie_id": "C00042366-ie-1817683-SE-252494",
+      "spender_entity_id": "C00042366",
+      "spender_name": "DSCC",
+      "candidate_id": "S2PA00661",
+      "candidate_name": "Dave McCormick",
+      "support_oppose": "O",
+      "amount": 1860.3,
+      "date": "2024-08-23",
+      "purpose": "MEDIA PRODUCTION",
+      "payee": "MAGNUS PEARSON MEDIA",
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202409209675757230",
+      "vendor_id": "V-magnus-pearson-media",
+      "medium": "production"
+    },
+    {
+      "ie_id": "C00042366-ie-1817683-SE-252495",
+      "spender_entity_id": "C00042366",
+      "spender_name": "DSCC",
+      "candidate_id": "S2PA00661",
+      "candidate_name": "Dave McCormick",
+      "support_oppose": "O",
+      "amount": 13324.55,
+      "date": "2024-08-23",
+      "purpose": "MEDIA PRODUCTION",
+      "payee": "MAGNUS PEARSON MEDIA",
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202409209675757231",
+      "vendor_id": "V-magnus-pearson-media",
+      "medium": "production"
+    },
+    {
+      "ie_id": "C00042366-ie-1817683-SE-252497",
+      "spender_entity_id": "C00042366",
+      "spender_name": "DSCC",
+      "candidate_id": "S2PA00661",
+      "candidate_name": "Dave McCormick",
+      "support_oppose": "O",
+      "amount": 8659.13,
+      "date": "2024-08-20",
+      "purpose": "MEDIA PRODUCTION",
+      "payee": "MAGNUS PEARSON MEDIA",
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202409209675757225",
+      "vendor_id": "V-magnus-pearson-media",
+      "medium": "production"
+    },
+    {
+      "ie_id": "C00042366-ie-1817683-SE-251557",
+      "spender_entity_id": "C00042366",
+      "spender_name": "DSCC",
+      "candidate_id": "S2PA00661",
+      "candidate_name": "Dave McCormick",
+      "support_oppose": "O",
+      "amount": 10915.58,
+      "date": "2024-08-07",
+      "purpose": "MEDIA PRODUCTION",
+      "payee": "MAGNUS PEARSON MEDIA",
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202409209675757215",
+      "vendor_id": "V-magnus-pearson-media",
+      "medium": "production"
+    },
+    {
+      "ie_id": "C00042366-ie-1817683-SE-251558",
+      "spender_entity_id": "C00042366",
+      "spender_name": "DSCC",
+      "candidate_id": "S2PA00661",
+      "candidate_name": "Dave McCormick",
+      "support_oppose": "O",
+      "amount": 11270.59,
+      "date": "2024-08-07",
+      "purpose": "MEDIA PRODUCTION",
+      "payee": "MAGNUS PEARSON MEDIA",
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202409209675757216",
+      "vendor_id": "V-magnus-pearson-media",
+      "medium": "production"
+    },
+    {
+      "ie_id": "C00042366-ie-1817683-SE-251430",
+      "spender_entity_id": "C00042366",
+      "spender_name": "DSCC",
+      "candidate_id": "S2PA00661",
+      "candidate_name": "Dave McCormick",
+      "support_oppose": "O",
+      "amount": 37833.31,
+      "date": "2024-08-02",
+      "purpose": "MEDIA PRODUCTION",
+      "payee": "MAGNUS PEARSON MEDIA",
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202409209675757209",
+      "vendor_id": "V-magnus-pearson-media",
+      "medium": "production"
+    }
+  ],
+  "ads": [],
+  "method": "Every Schedule E independent expenditure names a payee. Payee strings are normalised (case, punctuation, legal suffixes, token order), near-duplicates are folded with a difflib ratio ≥ 0.92 when their numeric tokens match, and hand alias rows from data/hand/<race>/vendor_aliases.json override the rule. Medium is classified from the purpose the spender filed (ordered keyword table in campaign_commons/vendors.py). The FEC does not record which buy placed which ad: vendor ↔ ad links are date-window adjacency (or single-digital-vendor inference) from campaign_commons.ads_enrich, each with its basis, and are only `verified` when a person found a source naming both. Totals are the filed amounts, grouped, never re-estimated."
+}

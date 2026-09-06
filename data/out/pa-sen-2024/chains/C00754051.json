@@ -2,7 +2,7 @@
   "root_entity_id": "C00754051",
   "root_name": "WORKERS VOTE",
   "race_id": "pa-sen-2024",
-  "generated_at": "2026-09-05T15:46:45+00:00",
+  "generated_at": "2026-09-05T19:53:48+00:00",
   "data_status": "real",
   "nodes": [
     {
@@ -7575,6 +7575,533 @@
       "terminus_reason": "pruned",
       "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00096156&two_year_transaction_period=2024",
       "contributor_count": 70
+    },
+    {
+      "id": "vendor:V-unite-here-local-274",
+      "name": "UNITE HERE LOCAL 274",
+      "kind": "vendor",
+      "committee_type": null,
+      "depth": 1,
+      "side": "out",
+      "visibility": "disclosed",
+      "amount_in": 89490.36,
+      "is_terminus": false,
+      "terminus_reason": null,
+      "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00754051&payee_name=UNITE+HERE+LOCAL+274",
+      "href": "/races/pa-sen-2024/vendors/V-unite-here-local-274",
+      "medium": "field",
+      "basis": {
+        "basis": "filed",
+        "rule": "Schedule E payee, grouped by normalized vendor name (campaign_commons.vendors)",
+        "source_urls": [
+          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00754051&payee_name=UNITE+HERE+LOCAL+274"
+        ],
+        "checked_by": null,
+        "checked_at": null
+      }
+    },
+    {
+      "id": "vendor:V-labor-canvass",
+      "name": "LABOR CANVASS",
+      "kind": "vendor",
+      "committee_type": null,
+      "depth": 1,
+      "side": "out",
+      "visibility": "disclosed",
+      "amount_in": 85306.9,
+      "is_terminus": false,
+      "terminus_reason": null,
+      "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00754051&payee_name=LABOR+CANVASS",
+      "href": "/races/pa-sen-2024/vendors/V-labor-canvass",
+      "medium": "field",
+      "basis": {
+        "basis": "filed",
+        "rule": "Schedule E payee, grouped by normalized vendor name (campaign_commons.vendors)",
+        "source_urls": [
+          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00754051&payee_name=LABOR+CANVASS"
+        ],
+        "checked_by": null,
+        "checked_at": null
+      }
+    },
+    {
+      "id": "vendor:V-unite-here-local-23",
+      "name": "UNITE HERE Local 23",
+      "kind": "vendor",
+      "committee_type": null,
+      "depth": 1,
+      "side": "out",
+      "visibility": "disclosed",
+      "amount_in": 84248.98,
+      "is_terminus": false,
+      "terminus_reason": null,
+      "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00754051&payee_name=LOCAL+23+UNITE+HERE",
+      "href": "/races/pa-sen-2024/vendors/V-unite-here-local-23",
+      "medium": "field",
+      "basis": {
+        "basis": "filed",
+        "rule": "Schedule E payee, grouped by normalized vendor name (campaign_commons.vendors)",
+        "source_urls": [
+          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00754051&payee_name=LOCAL+23+UNITE+HERE"
+        ],
+        "checked_by": null,
+        "checked_at": null
+      }
+    },
+    {
+      "id": "vendor:V-unite-here-local-54",
+      "name": "UNITE HERE LOCAL 54",
+      "kind": "vendor",
+      "committee_type": null,
+      "depth": 1,
+      "side": "out",
+      "visibility": "disclosed",
+      "amount_in": 81461.87,
+      "is_terminus": false,
+      "terminus_reason": null,
+      "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00754051&payee_name=UNITE+HERE+LOCAL+54",
+      "href": "/races/pa-sen-2024/vendors/V-unite-here-local-54",
+      "medium": "field",
+      "basis": {
+        "basis": "filed",
+        "rule": "Schedule E payee, grouped by normalized vendor name (campaign_commons.vendors)",
+        "source_urls": [
+          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00754051&payee_name=UNITE+HERE+LOCAL+54"
+        ],
+        "checked_by": null,
+        "checked_at": null
+      }
+    },
+    {
+      "id": "vendor:V-unite-here",
+      "name": "UNITE HERE",
+      "kind": "vendor",
+      "committee_type": null,
+      "depth": 1,
+      "side": "out",
+      "visibility": "disclosed",
+      "amount_in": 78332.94,
+      "is_terminus": false,
+      "terminus_reason": null,
+      "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00754051&payee_name=UNITE+HERE",
+      "href": "/races/pa-sen-2024/vendors/V-unite-here",
+      "medium": "field",
+      "basis": {
+        "basis": "filed",
+        "rule": "Schedule E payee, grouped by normalized vendor name (campaign_commons.vendors)",
+        "source_urls": [
+          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00754051&payee_name=UNITE+HERE"
+        ],
+        "checked_by": null,
+        "checked_at": null
+      }
+    },
+    {
+      "id": "vendor:V-unite-here-local-25",
+      "name": "UNITE HERE Local 25",
+      "kind": "vendor",
+      "committee_type": null,
+      "depth": 1,
+      "side": "out",
+      "visibility": "disclosed",
+      "amount_in": 34547.99,
+      "is_terminus": false,
+      "terminus_reason": null,
+      "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00754051&payee_name=LOCAL+25+UNITE+HERE",
+      "href": "/races/pa-sen-2024/vendors/V-unite-here-local-25",
+      "medium": "field",
+      "basis": {
+        "basis": "filed",
+        "rule": "Schedule E payee, grouped by normalized vendor name (campaign_commons.vendors)",
+        "source_urls": [
+          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00754051&payee_name=LOCAL+25+UNITE+HERE"
+        ],
+        "checked_by": null,
+        "checked_at": null
+      }
+    },
+    {
+      "id": "vendor:V-unite-here-local-217",
+      "name": "UNITE HERE LOCAL 217",
+      "kind": "vendor",
+      "committee_type": null,
+      "depth": 1,
+      "side": "out",
+      "visibility": "disclosed",
+      "amount_in": 18121.55,
+      "is_terminus": false,
+      "terminus_reason": null,
+      "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00754051&payee_name=UNITE+HERE+LOCAL+217",
+      "href": "/races/pa-sen-2024/vendors/V-unite-here-local-217",
+      "medium": "field",
+      "basis": {
+        "basis": "filed",
+        "rule": "Schedule E payee, grouped by normalized vendor name (campaign_commons.vendors)",
+        "source_urls": [
+          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00754051&payee_name=UNITE+HERE+LOCAL+217"
+        ],
+        "checked_by": null,
+        "checked_at": null
+      }
+    },
+    {
+      "id": "vendor:V-northern-liberty-press",
+      "name": "NORTHERN LIBERTY PRESS",
+      "kind": "vendor",
+      "committee_type": null,
+      "depth": 1,
+      "side": "out",
+      "visibility": "disclosed",
+      "amount_in": 13464.29,
+      "is_terminus": false,
+      "terminus_reason": null,
+      "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00754051&payee_name=NORTHERN+LIBERTY+PRESS",
+      "href": "/races/pa-sen-2024/vendors/V-northern-liberty-press",
+      "medium": "mail",
+      "basis": {
+        "basis": "filed",
+        "rule": "Schedule E payee, grouped by normalized vendor name (campaign_commons.vendors)",
+        "source_urls": [
+          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00754051&payee_name=NORTHERN+LIBERTY+PRESS"
+        ],
+        "checked_by": null,
+        "checked_at": null
+      }
+    },
+    {
+      "id": "vendor:V-unite-here-local-26",
+      "name": "UNITE HERE LOCAL 26",
+      "kind": "vendor",
+      "committee_type": null,
+      "depth": 1,
+      "side": "out",
+      "visibility": "disclosed",
+      "amount_in": 11539.24,
+      "is_terminus": false,
+      "terminus_reason": null,
+      "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00754051&payee_name=UNITE+HERE+LOCAL+26",
+      "href": "/races/pa-sen-2024/vendors/V-unite-here-local-26",
+      "medium": "field",
+      "basis": {
+        "basis": "filed",
+        "rule": "Schedule E payee, grouped by normalized vendor name (campaign_commons.vendors)",
+        "source_urls": [
+          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00754051&payee_name=UNITE+HERE+LOCAL+26"
+        ],
+        "checked_by": null,
+        "checked_at": null
+      }
+    },
+    {
+      "id": "vendor:V-unite-here-local-34",
+      "name": "UNITE HERE LOCAL 34",
+      "kind": "vendor",
+      "committee_type": null,
+      "depth": 1,
+      "side": "out",
+      "visibility": "disclosed",
+      "amount_in": 7041.06,
+      "is_terminus": false,
+      "terminus_reason": null,
+      "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00754051&payee_name=UNITE+HERE+LOCAL+34",
+      "href": "/races/pa-sen-2024/vendors/V-unite-here-local-34",
+      "medium": "field",
+      "basis": {
+        "basis": "filed",
+        "rule": "Schedule E payee, grouped by normalized vendor name (campaign_commons.vendors)",
+        "source_urls": [
+          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00754051&payee_name=UNITE+HERE+LOCAL+34"
+        ],
+        "checked_by": null,
+        "checked_at": null
+      }
+    },
+    {
+      "id": "vendor:V-new-england-joint-board-unite-here",
+      "name": "NEW ENGLAND JOINT BOARD UNITE HERE",
+      "kind": "vendor",
+      "committee_type": null,
+      "depth": 1,
+      "side": "out",
+      "visibility": "disclosed",
+      "amount_in": 5738.14,
+      "is_terminus": false,
+      "terminus_reason": null,
+      "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00754051&payee_name=NEW+ENGLAND+JOINT+BOARD+UNITE+HERE",
+      "href": "/races/pa-sen-2024/vendors/V-new-england-joint-board-unite-here",
+      "medium": "field",
+      "basis": {
+        "basis": "filed",
+        "rule": "Schedule E payee, grouped by normalized vendor name (campaign_commons.vendors)",
+        "source_urls": [
+          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00754051&payee_name=NEW+ENGLAND+JOINT+BOARD+UNITE+HERE"
+        ],
+        "checked_by": null,
+        "checked_at": null
+      }
+    },
+    {
+      "id": "vendor:V-scale-to-win",
+      "name": "SCALE TO WIN",
+      "kind": "vendor",
+      "committee_type": null,
+      "depth": 1,
+      "side": "out",
+      "visibility": "disclosed",
+      "amount_in": 3430.0,
+      "is_terminus": false,
+      "terminus_reason": null,
+      "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00754051&payee_name=SCALE+TO+WIN",
+      "href": "/races/pa-sen-2024/vendors/V-scale-to-win",
+      "medium": "phones",
+      "basis": {
+        "basis": "filed",
+        "rule": "Schedule E payee, grouped by normalized vendor name (campaign_commons.vendors)",
+        "source_urls": [
+          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00754051&payee_name=SCALE+TO+WIN"
+        ],
+        "checked_by": null,
+        "checked_at": null
+      }
+    },
+    {
+      "id": "vendor:V-unite-here-local-100",
+      "name": "UNITE HERE LOCAL 100",
+      "kind": "vendor",
+      "committee_type": null,
+      "depth": 1,
+      "side": "out",
+      "visibility": "disclosed",
+      "amount_in": 2700.98,
+      "is_terminus": false,
+      "terminus_reason": null,
+      "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00754051&payee_name=UNITE+HERE+LOCAL+100",
+      "href": "/races/pa-sen-2024/vendors/V-unite-here-local-100",
+      "medium": "field",
+      "basis": {
+        "basis": "filed",
+        "rule": "Schedule E payee, grouped by normalized vendor name (campaign_commons.vendors)",
+        "source_urls": [
+          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00754051&payee_name=UNITE+HERE+LOCAL+100"
+        ],
+        "checked_by": null,
+        "checked_at": null
+      }
+    },
+    {
+      "id": "vendor:V-unite-here-local-75",
+      "name": "UNITE HERE Local 75 (Toronto)",
+      "kind": "vendor",
+      "committee_type": null,
+      "depth": 1,
+      "side": "out",
+      "visibility": "disclosed",
+      "amount_in": 2666.71,
+      "is_terminus": false,
+      "terminus_reason": null,
+      "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00754051&payee_name=LOCAL+75+TORONTO+ONTARIO",
+      "href": "/races/pa-sen-2024/vendors/V-unite-here-local-75",
+      "medium": "field",
+      "basis": {
+        "basis": "filed",
+        "rule": "Schedule E payee, grouped by normalized vendor name (campaign_commons.vendors)",
+        "source_urls": [
+          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00754051&payee_name=LOCAL+75+TORONTO+ONTARIO"
+        ],
+        "checked_by": null,
+        "checked_at": null
+      }
+    },
+    {
+      "id": "vendor:V-unite-here-local-737",
+      "name": "UNITE HERE LOCAL 737",
+      "kind": "vendor",
+      "committee_type": null,
+      "depth": 1,
+      "side": "out",
+      "visibility": "disclosed",
+      "amount_in": 2244.82,
+      "is_terminus": false,
+      "terminus_reason": null,
+      "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00754051&payee_name=UNITE+HERE+LOCAL+737",
+      "href": "/races/pa-sen-2024/vendors/V-unite-here-local-737",
+      "medium": "field",
+      "basis": {
+        "basis": "filed",
+        "rule": "Schedule E payee, grouped by normalized vendor name (campaign_commons.vendors)",
+        "source_urls": [
+          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00754051&payee_name=UNITE+HERE+LOCAL+737"
+        ],
+        "checked_by": null,
+        "checked_at": null
+      }
+    },
+    {
+      "id": "vendor:V-unite-here-local-26-political-cmte",
+      "name": "UNITE HERE LOCAL 26 POLITICAL CMTE",
+      "kind": "vendor",
+      "committee_type": null,
+      "depth": 1,
+      "side": "out",
+      "visibility": "disclosed",
+      "amount_in": 2219.63,
+      "is_terminus": false,
+      "terminus_reason": null,
+      "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00754051&payee_name=UNITE+HERE+LOCAL+26+POLITICAL+CMTE",
+      "href": "/races/pa-sen-2024/vendors/V-unite-here-local-26-political-cmte",
+      "medium": "field",
+      "basis": {
+        "basis": "filed",
+        "rule": "Schedule E payee, grouped by normalized vendor name (campaign_commons.vendors)",
+        "source_urls": [
+          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00754051&payee_name=UNITE+HERE+LOCAL+26+POLITICAL+CMTE"
+        ],
+        "checked_by": null,
+        "checked_at": null
+      }
+    },
+    {
+      "id": "vendor:V-unite-here-local-35",
+      "name": "UNITE HERE LOCAL 35",
+      "kind": "vendor",
+      "committee_type": null,
+      "depth": 1,
+      "side": "out",
+      "visibility": "disclosed",
+      "amount_in": 1812.49,
+      "is_terminus": false,
+      "terminus_reason": null,
+      "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00754051&payee_name=UNITE+HERE+LOCAL+35",
+      "href": "/races/pa-sen-2024/vendors/V-unite-here-local-35",
+      "medium": "field",
+      "basis": {
+        "basis": "filed",
+        "rule": "Schedule E payee, grouped by normalized vendor name (campaign_commons.vendors)",
+        "source_urls": [
+          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00754051&payee_name=UNITE+HERE+LOCAL+35"
+        ],
+        "checked_by": null,
+        "checked_at": null
+      }
+    },
+    {
+      "id": "vendor:V-unite-here-local-7",
+      "name": "UNITE HERE LOCAL 7",
+      "kind": "vendor",
+      "committee_type": null,
+      "depth": 1,
+      "side": "out",
+      "visibility": "disclosed",
+      "amount_in": 694.03,
+      "is_terminus": false,
+      "terminus_reason": null,
+      "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00754051&payee_name=UNITE+HERE+LOCAL+7",
+      "href": "/races/pa-sen-2024/vendors/V-unite-here-local-7",
+      "medium": "field",
+      "basis": {
+        "basis": "filed",
+        "rule": "Schedule E payee, grouped by normalized vendor name (campaign_commons.vendors)",
+        "source_urls": [
+          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00754051&payee_name=UNITE+HERE+LOCAL+7"
+        ],
+        "checked_by": null,
+        "checked_at": null
+      }
+    },
+    {
+      "id": "vendor:V-unite-here-local-634",
+      "name": "UNITE HERE LOCAL 634",
+      "kind": "vendor",
+      "committee_type": null,
+      "depth": 1,
+      "side": "out",
+      "visibility": "disclosed",
+      "amount_in": 233.38,
+      "is_terminus": false,
+      "terminus_reason": null,
+      "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00754051&payee_name=UNITE+HERE+LOCAL+634",
+      "href": "/races/pa-sen-2024/vendors/V-unite-here-local-634",
+      "medium": "field",
+      "basis": {
+        "basis": "filed",
+        "rule": "Schedule E payee, grouped by normalized vendor name (campaign_commons.vendors)",
+        "source_urls": [
+          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00754051&payee_name=UNITE+HERE+LOCAL+634"
+        ],
+        "checked_by": null,
+        "checked_at": null
+      }
+    },
+    {
+      "id": "vendor:V-unite-here-local-74",
+      "name": "UNITE HERE LOCAL 74",
+      "kind": "vendor",
+      "committee_type": null,
+      "depth": 1,
+      "side": "out",
+      "visibility": "disclosed",
+      "amount_in": 110.0,
+      "is_terminus": false,
+      "terminus_reason": null,
+      "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00754051&payee_name=UNITE+HERE+LOCAL+74",
+      "href": "/races/pa-sen-2024/vendors/V-unite-here-local-74",
+      "medium": "field",
+      "basis": {
+        "basis": "filed",
+        "rule": "Schedule E payee, grouped by normalized vendor name (campaign_commons.vendors)",
+        "source_urls": [
+          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00754051&payee_name=UNITE+HERE+LOCAL+74"
+        ],
+        "checked_by": null,
+        "checked_at": null
+      }
+    },
+    {
+      "id": "vendor:V-unite-here-local-878",
+      "name": "UNITE HERE Local 878",
+      "kind": "vendor",
+      "committee_type": null,
+      "depth": 1,
+      "side": "out",
+      "visibility": "disclosed",
+      "amount_in": 93.08,
+      "is_terminus": false,
+      "terminus_reason": null,
+      "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00754051&payee_name=LOCAL+878+UNITE+HERE",
+      "href": "/races/pa-sen-2024/vendors/V-unite-here-local-878",
+      "medium": "field",
+      "basis": {
+        "basis": "filed",
+        "rule": "Schedule E payee, grouped by normalized vendor name (campaign_commons.vendors)",
+        "source_urls": [
+          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00754051&payee_name=LOCAL+878+UNITE+HERE"
+        ],
+        "checked_by": null,
+        "checked_at": null
+      }
+    },
+    {
+      "id": "S6PA00217",
+      "name": "Bob Casey",
+      "kind": "candidate",
+      "committee_type": null,
+      "depth": 2,
+      "side": "out",
+      "visibility": "disclosed",
+      "amount_in": 525498.44,
+      "is_terminus": true,
+      "terminus_reason": null,
+      "source_url": "https://www.fec.gov/data/candidate/S6PA00217/?cycle=2024&election_full=false",
+      "href": "/races/pa-sen-2024/candidates/S6PA00217",
+      "basis": {
+        "basis": "filed",
+        "rule": "Schedule E dollars naming this candidate as supported or opposed; nothing here reached the candidate",
+        "source_urls": [
+          "https://www.fec.gov/data/independent-expenditures/?committee_id=C00754051&cycle=2024&candidate_id=S6PA00217"
+        ],
+        "checked_by": null,
+        "checked_at": null
+      }
     }
   ],
   "edges": [
@@ -17684,6 +18211,1014 @@
         "2024-12-27"
       ],
       "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00096156&two_year_transaction_period=2024"
+    },
+    {
+      "from": "C00754051",
+      "to": "vendor:V-unite-here-local-274",
+      "kind": "money",
+      "amount": 89490.36,
+      "visibility": "disclosed",
+      "depth": 1,
+      "transaction_types": [
+        "24E"
+      ],
+      "count": 5,
+      "date_range": [
+        "2024-07-11",
+        "2024-11-01"
+      ],
+      "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00754051&payee_name=UNITE+HERE+LOCAL+274",
+      "basis": {
+        "basis": "filed",
+        "rule": "Schedule E independent expenditure paid to this payee",
+        "source_urls": [
+          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00754051&payee_name=UNITE+HERE+LOCAL+274"
+        ],
+        "checked_by": null,
+        "checked_at": null
+      }
+    },
+    {
+      "from": "vendor:V-unite-here-local-274",
+      "to": "S6PA00217",
+      "kind": "targeting",
+      "amount": 89490.36,
+      "visibility": "disclosed",
+      "depth": 2,
+      "transaction_types": [],
+      "count": 0,
+      "date_range": null,
+      "source_url": "https://www.fec.gov/data/independent-expenditures/?committee_id=C00754051&cycle=2024&candidate_id=S6PA00217",
+      "support_oppose": "S",
+      "basis": {
+        "basis": "filed",
+        "rule": "Schedule E: this payee's buys named the candidate as supported/opposed",
+        "source_urls": [
+          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00754051&payee_name=UNITE+HERE+LOCAL+274"
+        ],
+        "checked_by": null,
+        "checked_at": null
+      }
+    },
+    {
+      "from": "C00754051",
+      "to": "vendor:V-labor-canvass",
+      "kind": "money",
+      "amount": 85306.9,
+      "visibility": "disclosed",
+      "depth": 1,
+      "transaction_types": [
+        "24E"
+      ],
+      "count": 6,
+      "date_range": [
+        "2024-09-17",
+        "2024-10-24"
+      ],
+      "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00754051&payee_name=LABOR+CANVASS",
+      "basis": {
+        "basis": "filed",
+        "rule": "Schedule E independent expenditure paid to this payee",
+        "source_urls": [
+          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00754051&payee_name=LABOR+CANVASS"
+        ],
+        "checked_by": null,
+        "checked_at": null
+      }
+    },
+    {
+      "from": "vendor:V-labor-canvass",
+      "to": "S6PA00217",
+      "kind": "targeting",
+      "amount": 85306.9,
+      "visibility": "disclosed",
+      "depth": 2,
+      "transaction_types": [],
+      "count": 0,
+      "date_range": null,
+      "source_url": "https://www.fec.gov/data/independent-expenditures/?committee_id=C00754051&cycle=2024&candidate_id=S6PA00217",
+      "support_oppose": "S",
+      "basis": {
+        "basis": "filed",
+        "rule": "Schedule E: this payee's buys named the candidate as supported/opposed",
+        "source_urls": [
+          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00754051&payee_name=LABOR+CANVASS"
+        ],
+        "checked_by": null,
+        "checked_at": null
+      }
+    },
+    {
+      "from": "C00754051",
+      "to": "vendor:V-unite-here-local-23",
+      "kind": "money",
+      "amount": 84248.98,
+      "visibility": "disclosed",
+      "depth": 1,
+      "transaction_types": [
+        "24E"
+      ],
+      "count": 9,
+      "date_range": [
+        "2024-07-09",
+        "2024-11-01"
+      ],
+      "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00754051&payee_name=LOCAL+23+UNITE+HERE",
+      "basis": {
+        "basis": "filed",
+        "rule": "Schedule E independent expenditure paid to this payee",
+        "source_urls": [
+          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00754051&payee_name=LOCAL+23+UNITE+HERE"
+        ],
+        "checked_by": null,
+        "checked_at": null
+      }
+    },
+    {
+      "from": "vendor:V-unite-here-local-23",
+      "to": "S6PA00217",
+      "kind": "targeting",
+      "amount": 84248.98,
+      "visibility": "disclosed",
+      "depth": 2,
+      "transaction_types": [],
+      "count": 0,
+      "date_range": null,
+      "source_url": "https://www.fec.gov/data/independent-expenditures/?committee_id=C00754051&cycle=2024&candidate_id=S6PA00217",
+      "support_oppose": "S",
+      "basis": {
+        "basis": "filed",
+        "rule": "Schedule E: this payee's buys named the candidate as supported/opposed",
+        "source_urls": [
+          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00754051&payee_name=LOCAL+23+UNITE+HERE"
+        ],
+        "checked_by": null,
+        "checked_at": null
+      }
+    },
+    {
+      "from": "C00754051",
+      "to": "vendor:V-unite-here-local-54",
+      "kind": "money",
+      "amount": 81461.87,
+      "visibility": "disclosed",
+      "depth": 1,
+      "transaction_types": [
+        "24E"
+      ],
+      "count": 11,
+      "date_range": [
+        "2024-07-09",
+        "2024-11-01"
+      ],
+      "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00754051&payee_name=UNITE+HERE+LOCAL+54",
+      "basis": {
+        "basis": "filed",
+        "rule": "Schedule E independent expenditure paid to this payee",
+        "source_urls": [
+          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00754051&payee_name=UNITE+HERE+LOCAL+54"
+        ],
+        "checked_by": null,
+        "checked_at": null
+      }
+    },
+    {
+      "from": "vendor:V-unite-here-local-54",
+      "to": "S6PA00217",
+      "kind": "targeting",
+      "amount": 81461.87,
+      "visibility": "disclosed",
+      "depth": 2,
+      "transaction_types": [],
+      "count": 0,
+      "date_range": null,
+      "source_url": "https://www.fec.gov/data/independent-expenditures/?committee_id=C00754051&cycle=2024&candidate_id=S6PA00217",
+      "support_oppose": "S",
+      "basis": {
+        "basis": "filed",
+        "rule": "Schedule E: this payee's buys named the candidate as supported/opposed",
+        "source_urls": [
+          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00754051&payee_name=UNITE+HERE+LOCAL+54"
+        ],
+        "checked_by": null,
+        "checked_at": null
+      }
+    },
+    {
+      "from": "C00754051",
+      "to": "vendor:V-unite-here",
+      "kind": "money",
+      "amount": 78332.94,
+      "visibility": "disclosed",
+      "depth": 1,
+      "transaction_types": [
+        "24E"
+      ],
+      "count": 14,
+      "date_range": [
+        "2024-07-11",
+        "2024-11-01"
+      ],
+      "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00754051&payee_name=UNITE+HERE",
+      "basis": {
+        "basis": "filed",
+        "rule": "Schedule E independent expenditure paid to this payee",
+        "source_urls": [
+          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00754051&payee_name=UNITE+HERE"
+        ],
+        "checked_by": null,
+        "checked_at": null
+      }
+    },
+    {
+      "from": "vendor:V-unite-here",
+      "to": "S6PA00217",
+      "kind": "targeting",
+      "amount": 78332.94,
+      "visibility": "disclosed",
+      "depth": 2,
+      "transaction_types": [],
+      "count": 0,
+      "date_range": null,
+      "source_url": "https://www.fec.gov/data/independent-expenditures/?committee_id=C00754051&cycle=2024&candidate_id=S6PA00217",
+      "support_oppose": "S",
+      "basis": {
+        "basis": "filed",
+        "rule": "Schedule E: this payee's buys named the candidate as supported/opposed",
+        "source_urls": [
+          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00754051&payee_name=UNITE+HERE"
+        ],
+        "checked_by": null,
+        "checked_at": null
+      }
+    },
+    {
+      "from": "C00754051",
+      "to": "vendor:V-unite-here-local-25",
+      "kind": "money",
+      "amount": 34547.99,
+      "visibility": "disclosed",
+      "depth": 1,
+      "transaction_types": [
+        "24E"
+      ],
+      "count": 7,
+      "date_range": [
+        "2024-07-09",
+        "2024-11-01"
+      ],
+      "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00754051&payee_name=LOCAL+25+UNITE+HERE",
+      "basis": {
+        "basis": "filed",
+        "rule": "Schedule E independent expenditure paid to this payee",
+        "source_urls": [
+          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00754051&payee_name=LOCAL+25+UNITE+HERE"
+        ],
+        "checked_by": null,
+        "checked_at": null
+      }
+    },
+    {
+      "from": "vendor:V-unite-here-local-25",
+      "to": "S6PA00217",
+      "kind": "targeting",
+      "amount": 34547.99,
+      "visibility": "disclosed",
+      "depth": 2,
+      "transaction_types": [],
+      "count": 0,
+      "date_range": null,
+      "source_url": "https://www.fec.gov/data/independent-expenditures/?committee_id=C00754051&cycle=2024&candidate_id=S6PA00217",
+      "support_oppose": "S",
+      "basis": {
+        "basis": "filed",
+        "rule": "Schedule E: this payee's buys named the candidate as supported/opposed",
+        "source_urls": [
+          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00754051&payee_name=LOCAL+25+UNITE+HERE"
+        ],
+        "checked_by": null,
+        "checked_at": null
+      }
+    },
+    {
+      "from": "C00754051",
+      "to": "vendor:V-unite-here-local-217",
+      "kind": "money",
+      "amount": 18121.55,
+      "visibility": "disclosed",
+      "depth": 1,
+      "transaction_types": [
+        "24E"
+      ],
+      "count": 9,
+      "date_range": [
+        "2024-07-09",
+        "2024-11-01"
+      ],
+      "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00754051&payee_name=UNITE+HERE+LOCAL+217",
+      "basis": {
+        "basis": "filed",
+        "rule": "Schedule E independent expenditure paid to this payee",
+        "source_urls": [
+          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00754051&payee_name=UNITE+HERE+LOCAL+217"
+        ],
+        "checked_by": null,
+        "checked_at": null
+      }
+    },
+    {
+      "from": "vendor:V-unite-here-local-217",
+      "to": "S6PA00217",
+      "kind": "targeting",
+      "amount": 18121.55,
+      "visibility": "disclosed",
+      "depth": 2,
+      "transaction_types": [],
+      "count": 0,
+      "date_range": null,
+      "source_url": "https://www.fec.gov/data/independent-expenditures/?committee_id=C00754051&cycle=2024&candidate_id=S6PA00217",
+      "support_oppose": "S",
+      "basis": {
+        "basis": "filed",
+        "rule": "Schedule E: this payee's buys named the candidate as supported/opposed",
+        "source_urls": [
+          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00754051&payee_name=UNITE+HERE+LOCAL+217"
+        ],
+        "checked_by": null,
+        "checked_at": null
+      }
+    },
+    {
+      "from": "C00754051",
+      "to": "vendor:V-northern-liberty-press",
+      "kind": "money",
+      "amount": 13464.29,
+      "visibility": "disclosed",
+      "depth": 1,
+      "transaction_types": [
+        "24E"
+      ],
+      "count": 6,
+      "date_range": [
+        "2024-07-11",
+        "2024-11-05"
+      ],
+      "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00754051&payee_name=NORTHERN+LIBERTY+PRESS",
+      "basis": {
+        "basis": "filed",
+        "rule": "Schedule E independent expenditure paid to this payee",
+        "source_urls": [
+          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00754051&payee_name=NORTHERN+LIBERTY+PRESS"
+        ],
+        "checked_by": null,
+        "checked_at": null
+      }
+    },
+    {
+      "from": "vendor:V-northern-liberty-press",
+      "to": "S6PA00217",
+      "kind": "targeting",
+      "amount": 13464.29,
+      "visibility": "disclosed",
+      "depth": 2,
+      "transaction_types": [],
+      "count": 0,
+      "date_range": null,
+      "source_url": "https://www.fec.gov/data/independent-expenditures/?committee_id=C00754051&cycle=2024&candidate_id=S6PA00217",
+      "support_oppose": "S",
+      "basis": {
+        "basis": "filed",
+        "rule": "Schedule E: this payee's buys named the candidate as supported/opposed",
+        "source_urls": [
+          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00754051&payee_name=NORTHERN+LIBERTY+PRESS"
+        ],
+        "checked_by": null,
+        "checked_at": null
+      }
+    },
+    {
+      "from": "C00754051",
+      "to": "vendor:V-unite-here-local-26",
+      "kind": "money",
+      "amount": 11539.24,
+      "visibility": "disclosed",
+      "depth": 1,
+      "transaction_types": [
+        "24E"
+      ],
+      "count": 4,
+      "date_range": [
+        "2024-07-09",
+        "2024-10-22"
+      ],
+      "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00754051&payee_name=UNITE+HERE+LOCAL+26",
+      "basis": {
+        "basis": "filed",
+        "rule": "Schedule E independent expenditure paid to this payee",
+        "source_urls": [
+          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00754051&payee_name=UNITE+HERE+LOCAL+26"
+        ],
+        "checked_by": null,
+        "checked_at": null
+      }
+    },
+    {
+      "from": "vendor:V-unite-here-local-26",
+      "to": "S6PA00217",
+      "kind": "targeting",
+      "amount": 11539.24,
+      "visibility": "disclosed",
+      "depth": 2,
+      "transaction_types": [],
+      "count": 0,
+      "date_range": null,
+      "source_url": "https://www.fec.gov/data/independent-expenditures/?committee_id=C00754051&cycle=2024&candidate_id=S6PA00217",
+      "support_oppose": "S",
+      "basis": {
+        "basis": "filed",
+        "rule": "Schedule E: this payee's buys named the candidate as supported/opposed",
+        "source_urls": [
+          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00754051&payee_name=UNITE+HERE+LOCAL+26"
+        ],
+        "checked_by": null,
+        "checked_at": null
+      }
+    },
+    {
+      "from": "C00754051",
+      "to": "vendor:V-unite-here-local-34",
+      "kind": "money",
+      "amount": 7041.06,
+      "visibility": "disclosed",
+      "depth": 1,
+      "transaction_types": [
+        "24E"
+      ],
+      "count": 7,
+      "date_range": [
+        "2024-07-09",
+        "2024-10-24"
+      ],
+      "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00754051&payee_name=UNITE+HERE+LOCAL+34",
+      "basis": {
+        "basis": "filed",
+        "rule": "Schedule E independent expenditure paid to this payee",
+        "source_urls": [
+          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00754051&payee_name=UNITE+HERE+LOCAL+34"
+        ],
+        "checked_by": null,
+        "checked_at": null
+      }
+    },
+    {
+      "from": "vendor:V-unite-here-local-34",
+      "to": "S6PA00217",
+      "kind": "targeting",
+      "amount": 7041.06,
+      "visibility": "disclosed",
+      "depth": 2,
+      "transaction_types": [],
+      "count": 0,
+      "date_range": null,
+      "source_url": "https://www.fec.gov/data/independent-expenditures/?committee_id=C00754051&cycle=2024&candidate_id=S6PA00217",
+      "support_oppose": "S",
+      "basis": {
+        "basis": "filed",
+        "rule": "Schedule E: this payee's buys named the candidate as supported/opposed",
+        "source_urls": [
+          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00754051&payee_name=UNITE+HERE+LOCAL+34"
+        ],
+        "checked_by": null,
+        "checked_at": null
+      }
+    },
+    {
+      "from": "C00754051",
+      "to": "vendor:V-new-england-joint-board-unite-here",
+      "kind": "money",
+      "amount": 5738.14,
+      "visibility": "disclosed",
+      "depth": 1,
+      "transaction_types": [
+        "24E"
+      ],
+      "count": 5,
+      "date_range": [
+        "2024-09-05",
+        "2024-10-24"
+      ],
+      "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00754051&payee_name=NEW+ENGLAND+JOINT+BOARD+UNITE+HERE",
+      "basis": {
+        "basis": "filed",
+        "rule": "Schedule E independent expenditure paid to this payee",
+        "source_urls": [
+          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00754051&payee_name=NEW+ENGLAND+JOINT+BOARD+UNITE+HERE"
+        ],
+        "checked_by": null,
+        "checked_at": null
+      }
+    },
+    {
+      "from": "vendor:V-new-england-joint-board-unite-here",
+      "to": "S6PA00217",
+      "kind": "targeting",
+      "amount": 5738.14,
+      "visibility": "disclosed",
+      "depth": 2,
+      "transaction_types": [],
+      "count": 0,
+      "date_range": null,
+      "source_url": "https://www.fec.gov/data/independent-expenditures/?committee_id=C00754051&cycle=2024&candidate_id=S6PA00217",
+      "support_oppose": "S",
+      "basis": {
+        "basis": "filed",
+        "rule": "Schedule E: this payee's buys named the candidate as supported/opposed",
+        "source_urls": [
+          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00754051&payee_name=NEW+ENGLAND+JOINT+BOARD+UNITE+HERE"
+        ],
+        "checked_by": null,
+        "checked_at": null
+      }
+    },
+    {
+      "from": "C00754051",
+      "to": "vendor:V-scale-to-win",
+      "kind": "money",
+      "amount": 3430.0,
+      "visibility": "disclosed",
+      "depth": 1,
+      "transaction_types": [
+        "24E"
+      ],
+      "count": 1,
+      "date_range": [
+        "2024-10-28",
+        "2024-10-28"
+      ],
+      "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00754051&payee_name=SCALE+TO+WIN",
+      "basis": {
+        "basis": "filed",
+        "rule": "Schedule E independent expenditure paid to this payee",
+        "source_urls": [
+          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00754051&payee_name=SCALE+TO+WIN"
+        ],
+        "checked_by": null,
+        "checked_at": null
+      }
+    },
+    {
+      "from": "vendor:V-scale-to-win",
+      "to": "S6PA00217",
+      "kind": "targeting",
+      "amount": 3430.0,
+      "visibility": "disclosed",
+      "depth": 2,
+      "transaction_types": [],
+      "count": 0,
+      "date_range": null,
+      "source_url": "https://www.fec.gov/data/independent-expenditures/?committee_id=C00754051&cycle=2024&candidate_id=S6PA00217",
+      "support_oppose": "S",
+      "basis": {
+        "basis": "filed",
+        "rule": "Schedule E: this payee's buys named the candidate as supported/opposed",
+        "source_urls": [
+          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00754051&payee_name=SCALE+TO+WIN"
+        ],
+        "checked_by": null,
+        "checked_at": null
+      }
+    },
+    {
+      "from": "C00754051",
+      "to": "vendor:V-unite-here-local-100",
+      "kind": "money",
+      "amount": 2700.98,
+      "visibility": "disclosed",
+      "depth": 1,
+      "transaction_types": [
+        "24E"
+      ],
+      "count": 4,
+      "date_range": [
+        "2024-09-05",
+        "2024-10-22"
+      ],
+      "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00754051&payee_name=UNITE+HERE+LOCAL+100",
+      "basis": {
+        "basis": "filed",
+        "rule": "Schedule E independent expenditure paid to this payee",
+        "source_urls": [
+          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00754051&payee_name=UNITE+HERE+LOCAL+100"
+        ],
+        "checked_by": null,
+        "checked_at": null
+      }
+    },
+    {
+      "from": "vendor:V-unite-here-local-100",
+      "to": "S6PA00217",
+      "kind": "targeting",
+      "amount": 2700.98,
+      "visibility": "disclosed",
+      "depth": 2,
+      "transaction_types": [],
+      "count": 0,
+      "date_range": null,
+      "source_url": "https://www.fec.gov/data/independent-expenditures/?committee_id=C00754051&cycle=2024&candidate_id=S6PA00217",
+      "support_oppose": "S",
+      "basis": {
+        "basis": "filed",
+        "rule": "Schedule E: this payee's buys named the candidate as supported/opposed",
+        "source_urls": [
+          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00754051&payee_name=UNITE+HERE+LOCAL+100"
+        ],
+        "checked_by": null,
+        "checked_at": null
+      }
+    },
+    {
+      "from": "C00754051",
+      "to": "vendor:V-unite-here-local-75",
+      "kind": "money",
+      "amount": 2666.71,
+      "visibility": "disclosed",
+      "depth": 1,
+      "transaction_types": [
+        "24E"
+      ],
+      "count": 4,
+      "date_range": [
+        "2024-09-17",
+        "2024-10-24"
+      ],
+      "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00754051&payee_name=LOCAL+75+TORONTO+ONTARIO",
+      "basis": {
+        "basis": "filed",
+        "rule": "Schedule E independent expenditure paid to this payee",
+        "source_urls": [
+          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00754051&payee_name=LOCAL+75+TORONTO+ONTARIO"
+        ],
+        "checked_by": null,
+        "checked_at": null
+      }
+    },
+    {
+      "from": "vendor:V-unite-here-local-75",
+      "to": "S6PA00217",
+      "kind": "targeting",
+      "amount": 2666.71,
+      "visibility": "disclosed",
+      "depth": 2,
+      "transaction_types": [],
+      "count": 0,
+      "date_range": null,
+      "source_url": "https://www.fec.gov/data/independent-expenditures/?committee_id=C00754051&cycle=2024&candidate_id=S6PA00217",
+      "support_oppose": "S",
+      "basis": {
+        "basis": "filed",
+        "rule": "Schedule E: this payee's buys named the candidate as supported/opposed",
+        "source_urls": [
+          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00754051&payee_name=LOCAL+75+TORONTO+ONTARIO"
+        ],
+        "checked_by": null,
+        "checked_at": null
+      }
+    },
+    {
+      "from": "C00754051",
+      "to": "vendor:V-unite-here-local-737",
+      "kind": "money",
+      "amount": 2244.82,
+      "visibility": "disclosed",
+      "depth": 1,
+      "transaction_types": [
+        "24E"
+      ],
+      "count": 4,
+      "date_range": [
+        "2024-09-17",
+        "2024-10-22"
+      ],
+      "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00754051&payee_name=UNITE+HERE+LOCAL+737",
+      "basis": {
+        "basis": "filed",
+        "rule": "Schedule E independent expenditure paid to this payee",
+        "source_urls": [
+          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00754051&payee_name=UNITE+HERE+LOCAL+737"
+        ],
+        "checked_by": null,
+        "checked_at": null
+      }
+    },
+    {
+      "from": "vendor:V-unite-here-local-737",
+      "to": "S6PA00217",
+      "kind": "targeting",
+      "amount": 2244.82,
+      "visibility": "disclosed",
+      "depth": 2,
+      "transaction_types": [],
+      "count": 0,
+      "date_range": null,
+      "source_url": "https://www.fec.gov/data/independent-expenditures/?committee_id=C00754051&cycle=2024&candidate_id=S6PA00217",
+      "support_oppose": "S",
+      "basis": {
+        "basis": "filed",
+        "rule": "Schedule E: this payee's buys named the candidate as supported/opposed",
+        "source_urls": [
+          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00754051&payee_name=UNITE+HERE+LOCAL+737"
+        ],
+        "checked_by": null,
+        "checked_at": null
+      }
+    },
+    {
+      "from": "C00754051",
+      "to": "vendor:V-unite-here-local-26-political-cmte",
+      "kind": "money",
+      "amount": 2219.63,
+      "visibility": "disclosed",
+      "depth": 1,
+      "transaction_types": [
+        "24E"
+      ],
+      "count": 1,
+      "date_range": [
+        "2024-10-02",
+        "2024-10-02"
+      ],
+      "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00754051&payee_name=UNITE+HERE+LOCAL+26+POLITICAL+CMTE",
+      "basis": {
+        "basis": "filed",
+        "rule": "Schedule E independent expenditure paid to this payee",
+        "source_urls": [
+          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00754051&payee_name=UNITE+HERE+LOCAL+26+POLITICAL+CMTE"
+        ],
+        "checked_by": null,
+        "checked_at": null
+      }
+    },
+    {
+      "from": "vendor:V-unite-here-local-26-political-cmte",
+      "to": "S6PA00217",
+      "kind": "targeting",
+      "amount": 2219.63,
+      "visibility": "disclosed",
+      "depth": 2,
+      "transaction_types": [],
+      "count": 0,
+      "date_range": null,
+      "source_url": "https://www.fec.gov/data/independent-expenditures/?committee_id=C00754051&cycle=2024&candidate_id=S6PA00217",
+      "support_oppose": "S",
+      "basis": {
+        "basis": "filed",
+        "rule": "Schedule E: this payee's buys named the candidate as supported/opposed",
+        "source_urls": [
+          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00754051&payee_name=UNITE+HERE+LOCAL+26+POLITICAL+CMTE"
+        ],
+        "checked_by": null,
+        "checked_at": null
+      }
+    },
+    {
+      "from": "C00754051",
+      "to": "vendor:V-unite-here-local-35",
+      "kind": "money",
+      "amount": 1812.49,
+      "visibility": "disclosed",
+      "depth": 1,
+      "transaction_types": [
+        "24E"
+      ],
+      "count": 5,
+      "date_range": [
+        "2024-09-17",
+        "2024-11-01"
+      ],
+      "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00754051&payee_name=UNITE+HERE+LOCAL+35",
+      "basis": {
+        "basis": "filed",
+        "rule": "Schedule E independent expenditure paid to this payee",
+        "source_urls": [
+          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00754051&payee_name=UNITE+HERE+LOCAL+35"
+        ],
+        "checked_by": null,
+        "checked_at": null
+      }
+    },
+    {
+      "from": "vendor:V-unite-here-local-35",
+      "to": "S6PA00217",
+      "kind": "targeting",
+      "amount": 1812.49,
+      "visibility": "disclosed",
+      "depth": 2,
+      "transaction_types": [],
+      "count": 0,
+      "date_range": null,
+      "source_url": "https://www.fec.gov/data/independent-expenditures/?committee_id=C00754051&cycle=2024&candidate_id=S6PA00217",
+      "support_oppose": "S",
+      "basis": {
+        "basis": "filed",
+        "rule": "Schedule E: this payee's buys named the candidate as supported/opposed",
+        "source_urls": [
+          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00754051&payee_name=UNITE+HERE+LOCAL+35"
+        ],
+        "checked_by": null,
+        "checked_at": null
+      }
+    },
+    {
+      "from": "C00754051",
+      "to": "vendor:V-unite-here-local-7",
+      "kind": "money",
+      "amount": 694.03,
+      "visibility": "disclosed",
+      "depth": 1,
+      "transaction_types": [
+        "24E"
+      ],
+      "count": 1,
+      "date_range": [
+        "2024-11-01",
+        "2024-11-01"
+      ],
+      "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00754051&payee_name=UNITE+HERE+LOCAL+7",
+      "basis": {
+        "basis": "filed",
+        "rule": "Schedule E independent expenditure paid to this payee",
+        "source_urls": [
+          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00754051&payee_name=UNITE+HERE+LOCAL+7"
+        ],
+        "checked_by": null,
+        "checked_at": null
+      }
+    },
+    {
+      "from": "vendor:V-unite-here-local-7",
+      "to": "S6PA00217",
+      "kind": "targeting",
+      "amount": 694.03,
+      "visibility": "disclosed",
+      "depth": 2,
+      "transaction_types": [],
+      "count": 0,
+      "date_range": null,
+      "source_url": "https://www.fec.gov/data/independent-expenditures/?committee_id=C00754051&cycle=2024&candidate_id=S6PA00217",
+      "support_oppose": "S",
+      "basis": {
+        "basis": "filed",
+        "rule": "Schedule E: this payee's buys named the candidate as supported/opposed",
+        "source_urls": [
+          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00754051&payee_name=UNITE+HERE+LOCAL+7"
+        ],
+        "checked_by": null,
+        "checked_at": null
+      }
+    },
+    {
+      "from": "C00754051",
+      "to": "vendor:V-unite-here-local-634",
+      "kind": "money",
+      "amount": 233.38,
+      "visibility": "disclosed",
+      "depth": 1,
+      "transaction_types": [
+        "24E"
+      ],
+      "count": 1,
+      "date_range": [
+        "2024-11-01",
+        "2024-11-01"
+      ],
+      "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00754051&payee_name=UNITE+HERE+LOCAL+634",
+      "basis": {
+        "basis": "filed",
+        "rule": "Schedule E independent expenditure paid to this payee",
+        "source_urls": [
+          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00754051&payee_name=UNITE+HERE+LOCAL+634"
+        ],
+        "checked_by": null,
+        "checked_at": null
+      }
+    },
+    {
+      "from": "vendor:V-unite-here-local-634",
+      "to": "S6PA00217",
+      "kind": "targeting",
+      "amount": 233.38,
+      "visibility": "disclosed",
+      "depth": 2,
+      "transaction_types": [],
+      "count": 0,
+      "date_range": null,
+      "source_url": "https://www.fec.gov/data/independent-expenditures/?committee_id=C00754051&cycle=2024&candidate_id=S6PA00217",
+      "support_oppose": "S",
+      "basis": {
+        "basis": "filed",
+        "rule": "Schedule E: this payee's buys named the candidate as supported/opposed",
+        "source_urls": [
+          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00754051&payee_name=UNITE+HERE+LOCAL+634"
+        ],
+        "checked_by": null,
+        "checked_at": null
+      }
+    },
+    {
+      "from": "C00754051",
+      "to": "vendor:V-unite-here-local-74",
+      "kind": "money",
+      "amount": 110.0,
+      "visibility": "disclosed",
+      "depth": 1,
+      "transaction_types": [
+        "24E"
+      ],
+      "count": 1,
+      "date_range": [
+        "2024-10-24",
+        "2024-10-24"
+      ],
+      "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00754051&payee_name=UNITE+HERE+LOCAL+74",
+      "basis": {
+        "basis": "filed",
+        "rule": "Schedule E independent expenditure paid to this payee",
+        "source_urls": [
+          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00754051&payee_name=UNITE+HERE+LOCAL+74"
+        ],
+        "checked_by": null,
+        "checked_at": null
+      }
+    },
+    {
+      "from": "vendor:V-unite-here-local-74",
+      "to": "S6PA00217",
+      "kind": "targeting",
+      "amount": 110.0,
+      "visibility": "disclosed",
+      "depth": 2,
+      "transaction_types": [],
+      "count": 0,
+      "date_range": null,
+      "source_url": "https://www.fec.gov/data/independent-expenditures/?committee_id=C00754051&cycle=2024&candidate_id=S6PA00217",
+      "support_oppose": "S",
+      "basis": {
+        "basis": "filed",
+        "rule": "Schedule E: this payee's buys named the candidate as supported/opposed",
+        "source_urls": [
+          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00754051&payee_name=UNITE+HERE+LOCAL+74"
+        ],
+        "checked_by": null,
+        "checked_at": null
+      }
+    },
+    {
+      "from": "C00754051",
+      "to": "vendor:V-unite-here-local-878",
+      "kind": "money",
+      "amount": 93.08,
+      "visibility": "disclosed",
+      "depth": 1,
+      "transaction_types": [
+        "24E"
+      ],
+      "count": 1,
+      "date_range": [
+        "2024-11-01",
+        "2024-11-01"
+      ],
+      "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00754051&payee_name=LOCAL+878+UNITE+HERE",
+      "basis": {
+        "basis": "filed",
+        "rule": "Schedule E independent expenditure paid to this payee",
+        "source_urls": [
+          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00754051&payee_name=LOCAL+878+UNITE+HERE"
+        ],
+        "checked_by": null,
+        "checked_at": null
+      }
+    },
+    {
+      "from": "vendor:V-unite-here-local-878",
+      "to": "S6PA00217",
+      "kind": "targeting",
+      "amount": 93.08,
+      "visibility": "disclosed",
+      "depth": 2,
+      "transaction_types": [],
+      "count": 0,
+      "date_range": null,
+      "source_url": "https://www.fec.gov/data/independent-expenditures/?committee_id=C00754051&cycle=2024&candidate_id=S6PA00217",
+      "support_oppose": "S",
+      "basis": {
+        "basis": "filed",
+        "rule": "Schedule E: this payee's buys named the candidate as supported/opposed",
+        "source_urls": [
+          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00754051&payee_name=LOCAL+878+UNITE+HERE"
+        ],
+        "checked_by": null,
+        "checked_at": null
+      }
     }
   ],
   "summary": {
@@ -17700,8 +19235,10 @@
       "pruned": 33,
       "cycle": 18,
       "depth_cap": 42
-    }
+    },
+    "out_total": 525498.44,
+    "max_out_depth": 2
   },
   "flags": [],
-  "method": "Backward walk over money edges only (Schedule A receipts from individuals and organizations, committee-to-committee transfers) into WORKERS VOTE, 5 hop(s) deep; independent expenditures are targeting edges and never appear. The walk starts from $23,470,212 of itemized 2023–2024 receipts as loaded from FEC bulk data (unitemized receipts, loans and offsets are not edges), and every expanded committee conserves dollars: its inbound edges sum to its receipts. Inbound edges under 1% of a committee's receipts are rolled into one 'other contributors' node, which counts as disclosed except for the organization dollars inside it. Each dollar takes the visibility of where the walk stopped: named individuals (including earmarks through ActBlue/WinRed, attributed to the person) are disclosed. Organizations that are not registered committees are classified from their name alone (no IRS lookup): a union or a business giving from its own treasury is disclosed — the named entity is the source; an LLC, trust, advocacy nonprofit (501(c)(4)-style names) or unclassifiable organization is dark, because whoever funds it is not on file with the FEC. 42 committee node(s) stop with reason depth_cap: they are FEC-registered committees whose own receipts were not loaded into this race's neighborhood (or the hop or node cap was reached). The committee files donor lists with the FEC, but this walk did not read them, so its dollars are counted as 'not walked' — neither disclosed nor dark — and a dark layer behind such a committee would not show here. 18 edge(s) point at a committee already expanded elsewhere in this chain and reuse its visibility mix instead of being walked twice. Visibility shares are preliminary; no 990 lookups were performed, so nothing is marked inferable."
+  "method": "Backward walk over money edges only (Schedule A receipts from individuals and organizations, committee-to-committee transfers) into WORKERS VOTE, 5 hop(s) deep; independent expenditures are targeting edges and never appear. The walk starts from $23,470,212 of itemized 2023–2024 receipts as loaded from FEC bulk data (unitemized receipts, loans and offsets are not edges), and every expanded committee conserves dollars: its inbound edges sum to its receipts. Inbound edges under 1% of a committee's receipts are rolled into one 'other contributors' node, which counts as disclosed except for the organization dollars inside it. Each dollar takes the visibility of where the walk stopped: named individuals (including earmarks through ActBlue/WinRed, attributed to the person) are disclosed. Organizations that are not registered committees are classified from their name alone (no IRS lookup): a union or a business giving from its own treasury is disclosed — the named entity is the source; an LLC, trust, advocacy nonprofit (501(c)(4)-style names) or unclassifiable organization is dark, because whoever funds it is not on file with the FEC. 42 committee node(s) stop with reason depth_cap: they are FEC-registered committees whose own receipts were not loaded into this race's neighborhood (or the hop or node cap was reached). The committee files donor lists with the FEC, but this walk did not read them, so its dollars are counted as 'not walked' — neither disclosed nor dark — and a dark layer behind such a committee would not show here. 18 edge(s) point at a committee already expanded elsewhere in this chain and reuse its visibility mix instead of being walked twice. Visibility shares are preliminary; no 990 lookups were performed, so nothing is marked inferable. Spending side (right of the spender): Schedule E payments to vendors are money edges; vendor → ad and spender → ad edges are placement (no dollars) and carry the evidence basis they were drawn on; edges into a candidate are targeting (for/against) and never carry money to the candidate. Ad dollars are the midpoint of the Google-reported spend range."
 }

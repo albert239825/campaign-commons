@@ -1,4 +1,4 @@
-import { UNWALKED_COLOR, VISIBILITY_COLORS, type VisibilityShares } from "@citizen-gotham/contracts";
+import { UNWALKED_COLOR, VISIBILITY_COLORS, type VisibilityShares } from "@campaign-commons/contracts";
 
 export type BarSegment = { label: string; value: number; color: string };
 

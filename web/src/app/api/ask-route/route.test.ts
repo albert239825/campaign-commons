@@ -1,5 +1,5 @@
 import { afterEach, describe, expect, it, vi } from "vitest";
-import type { TrailSubject } from "@citizen-gotham/contracts";
+import type { TrailSubject } from "@campaign-commons/contracts";
 import { INTENTS, resolveQuestion, resolveRoute } from "@/lib/ask";
 import { MAX_IN_FLIGHT, RATE_PER_MINUTE } from "@/lib/ask-limits";
 import { ASK_LLM_TIMEOUT_MS } from "@/lib/ask-llm";

@@ -1,7 +1,7 @@
 import { existsSync, readFileSync } from "node:fs";
 import { join } from "node:path";
 import { describe, expect, it } from "vitest";
-import { TrailsSchema, type TrailSubject } from "@citizen-gotham/contracts";
+import { TrailsSchema, type TrailSubject } from "@campaign-commons/contracts";
 import { canonicalQuestion, detectIntent, matchSubjects, normalize, resolveQuestion, titleCase } from "./ask";
 
 const casey: TrailSubject = { id: "S1", kind: "candidate", name: "Bob Casey", aliases: ["bob casey", "casey"], type_label: null, principal_committee_id: "C1" };

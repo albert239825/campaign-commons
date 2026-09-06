@@ -1,0 +1,86 @@
+{
+  "$ref": "#/definitions/hand_ie_issues",
+  "definitions": {
+    "hand_ie_issues": {
+      "type": "object",
+      "properties": {
+        "race_id": {
+          "type": "string"
+        },
+        "method": {
+          "type": "string"
+        },
+        "rows": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "ie_id": {
+                "type": "string"
+              },
+              "issue_ids": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "enum": [
+                    "healthcare",
+                    "energy_climate",
+                    "defense",
+                    "crypto_fintech",
+                    "immigration",
+                    "abortion",
+                    "guns",
+                    "tax_budget",
+                    "tech_ai",
+                    "labor_trade"
+                  ]
+                },
+                "minItems": 1,
+                "maxItems": 3
+              },
+              "ad_title": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "source_url": {
+                "type": "string",
+                "format": "uri"
+              },
+              "note": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "tagged_by": {
+                "type": "string"
+              },
+              "tagged_at": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "ie_id",
+              "issue_ids",
+              "ad_title",
+              "source_url",
+              "note",
+              "tagged_by",
+              "tagged_at"
+            ],
+            "additionalProperties": false
+          }
+        }
+      },
+      "required": [
+        "race_id",
+        "method",
+        "rows"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "$schema": "http://json-schema.org/draft-07/schema#"
+}

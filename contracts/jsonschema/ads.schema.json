@@ -192,6 +192,354 @@
                   "verified_at"
                 ],
                 "additionalProperties": false
+              },
+              "sponsor_visibility_shares": {
+                "anyOf": [
+                  {
+                    "type": "object",
+                    "properties": {
+                      "disclosed": {
+                        "type": "number",
+                        "minimum": 0,
+                        "maximum": 1
+                      },
+                      "inferable": {
+                        "type": "number",
+                        "minimum": 0,
+                        "maximum": 1
+                      },
+                      "unwalked": {
+                        "type": "number",
+                        "minimum": 0,
+                        "maximum": 1
+                      },
+                      "dark": {
+                        "type": "number",
+                        "minimum": 0,
+                        "maximum": 1
+                      }
+                    },
+                    "required": [
+                      "disclosed",
+                      "inferable",
+                      "unwalked",
+                      "dark"
+                    ],
+                    "additionalProperties": false
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "issues": {
+                "type": "object",
+                "properties": {
+                  "issue_ids": {
+                    "type": "array",
+                    "items": {
+                      "type": "string",
+                      "enum": [
+                        "healthcare",
+                        "energy_climate",
+                        "defense",
+                        "crypto_fintech",
+                        "immigration",
+                        "abortion",
+                        "guns",
+                        "tax_budget",
+                        "tech_ai",
+                        "labor_trade"
+                      ]
+                    },
+                    "minItems": 1,
+                    "maxItems": 3
+                  },
+                  "basis": {
+                    "anyOf": [
+                      {
+                        "type": "object",
+                        "properties": {
+                          "basis": {
+                            "type": "string",
+                            "const": "verified"
+                          },
+                          "rule": {
+                            "type": "string",
+                            "minLength": 1
+                          },
+                          "source_urls": {
+                            "type": "array",
+                            "items": {
+                              "type": "string",
+                              "format": "uri"
+                            },
+                            "minItems": 1
+                          },
+                          "checked_by": {
+                            "type": "string",
+                            "minLength": 1
+                          },
+                          "checked_at": {
+                            "type": "string",
+                            "minLength": 1
+                          }
+                        },
+                        "required": [
+                          "basis",
+                          "rule",
+                          "source_urls",
+                          "checked_by",
+                          "checked_at"
+                        ],
+                        "additionalProperties": false
+                      },
+                      {
+                        "type": "object",
+                        "properties": {
+                          "basis": {
+                            "type": "string",
+                            "enum": [
+                              "filed",
+                              "inferred"
+                            ]
+                          },
+                          "rule": {
+                            "type": "string",
+                            "minLength": 1
+                          },
+                          "source_urls": {
+                            "type": "array",
+                            "items": {
+                              "type": "string",
+                              "format": "uri"
+                            }
+                          },
+                          "checked_by": {
+                            "type": [
+                              "string",
+                              "null"
+                            ]
+                          },
+                          "checked_at": {
+                            "type": [
+                              "string",
+                              "null"
+                            ]
+                          }
+                        },
+                        "required": [
+                          "basis",
+                          "rule",
+                          "source_urls",
+                          "checked_by",
+                          "checked_at"
+                        ],
+                        "additionalProperties": false
+                      }
+                    ]
+                  }
+                },
+                "required": [
+                  "issue_ids",
+                  "basis"
+                ],
+                "additionalProperties": false
+              },
+              "vendor_links": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "vendor_id": {
+                      "type": "string"
+                    },
+                    "vendor_name": {
+                      "type": "string"
+                    },
+                    "medium": {
+                      "type": "string",
+                      "enum": [
+                        "tv",
+                        "radio",
+                        "digital",
+                        "mail",
+                        "phones",
+                        "production",
+                        "consulting",
+                        "field",
+                        "other"
+                      ]
+                    },
+                    "window": {
+                      "anyOf": [
+                        {
+                          "type": "array",
+                          "minItems": 2,
+                          "maxItems": 2,
+                          "items": [
+                            {
+                              "type": "string"
+                            },
+                            {
+                              "type": "string"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ]
+                    },
+                    "amount_in_window": {
+                      "type": "number"
+                    },
+                    "buys_in_window": {
+                      "type": "integer"
+                    },
+                    "basis": {
+                      "anyOf": [
+                        {
+                          "type": "object",
+                          "properties": {
+                            "basis": {
+                              "type": "string",
+                              "const": "verified"
+                            },
+                            "rule": {
+                              "type": "string",
+                              "minLength": 1
+                            },
+                            "source_urls": {
+                              "type": "array",
+                              "items": {
+                                "type": "string",
+                                "format": "uri"
+                              },
+                              "minItems": 1
+                            },
+                            "checked_by": {
+                              "type": "string",
+                              "minLength": 1
+                            },
+                            "checked_at": {
+                              "type": "string",
+                              "minLength": 1
+                            }
+                          },
+                          "required": [
+                            "basis",
+                            "rule",
+                            "source_urls",
+                            "checked_by",
+                            "checked_at"
+                          ],
+                          "additionalProperties": false
+                        },
+                        {
+                          "type": "object",
+                          "properties": {
+                            "basis": {
+                              "type": "string",
+                              "enum": [
+                                "filed",
+                                "inferred"
+                              ]
+                            },
+                            "rule": {
+                              "type": "string",
+                              "minLength": 1
+                            },
+                            "source_urls": {
+                              "type": "array",
+                              "items": {
+                                "type": "string",
+                                "format": "uri"
+                              }
+                            },
+                            "checked_by": {
+                              "type": [
+                                "string",
+                                "null"
+                              ]
+                            },
+                            "checked_at": {
+                              "type": [
+                                "string",
+                                "null"
+                              ]
+                            }
+                          },
+                          "required": [
+                            "basis",
+                            "rule",
+                            "source_urls",
+                            "checked_by",
+                            "checked_at"
+                          ],
+                          "additionalProperties": false
+                        }
+                      ]
+                    }
+                  },
+                  "required": [
+                    "vendor_id",
+                    "vendor_name",
+                    "medium",
+                    "window",
+                    "amount_in_window",
+                    "buys_in_window",
+                    "basis"
+                  ],
+                  "additionalProperties": false
+                }
+              },
+              "same_window_buys": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "vendor_id": {
+                      "type": "string"
+                    },
+                    "vendor_name": {
+                      "type": "string"
+                    },
+                    "medium": {
+                      "type": "string",
+                      "enum": [
+                        "tv",
+                        "radio",
+                        "digital",
+                        "mail",
+                        "phones",
+                        "production",
+                        "consulting",
+                        "field",
+                        "other"
+                      ]
+                    },
+                    "amount_in_window": {
+                      "type": "number"
+                    },
+                    "buys_in_window": {
+                      "type": "integer"
+                    },
+                    "source_url": {
+                      "type": "string",
+                      "format": "uri"
+                    }
+                  },
+                  "required": [
+                    "vendor_id",
+                    "vendor_name",
+                    "medium",
+                    "amount_in_window",
+                    "buys_in_window",
+                    "source_url"
+                  ],
+                  "additionalProperties": false
+                }
               }
             },
             "required": [

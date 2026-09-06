@@ -1,0 +1,80 @@
+{
+  "vendor_id": "V-in-field-pro",
+  "name": "IN FIELD PRO",
+  "aliases": [
+    "IN FIELD PRO"
+  ],
+  "normalization": {
+    "basis": "inferred",
+    "rule": "case/punctuation/suffix normalisation + token-set ≥0.92 (numeric tokens must match); aliases file",
+    "source_urls": [
+      "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&payee_name=IN+FIELD+PRO"
+    ],
+    "checked_by": null,
+    "checked_at": null
+  },
+  "total": 181484.25,
+  "count": 2,
+  "media_mix": [
+    {
+      "medium": "phones",
+      "amount": 181484.25,
+      "count": 2
+    }
+  ],
+  "spenders": [
+    {
+      "entity_id": "C00634774",
+      "name": "COMMON SENSE FOR AMERICA PAC",
+      "amount": 181484.25,
+      "count": 2
+    }
+  ],
+  "targets": [
+    {
+      "candidate_id": "S2PA00661",
+      "support_oppose": "S",
+      "amount": 181484.25
+    }
+  ],
+  "first_date": "2024-10-21",
+  "last_date": "2024-11-05",
+  "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&payee_name=IN+FIELD+PRO",
+  "race_id": "pa-sen-2024",
+  "generated_at": "2026-09-05T20:34:15+00:00",
+  "data_status": "real",
+  "expenditures": [
+    {
+      "ie_id": "C00634774-ie-1853216-EDE4F807F5B214A13A04",
+      "spender_entity_id": "C00634774",
+      "spender_name": "COMMON SENSE FOR AMERICA PAC",
+      "candidate_id": "S2PA00661",
+      "candidate_name": "Dave McCormick",
+      "support_oppose": "S",
+      "amount": 97103.06,
+      "date": "2024-11-05",
+      "purpose": "INDEPENDENT EXPENDITURE: GOTV TEXTS",
+      "payee": "IN FIELD PRO",
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202412049720237294",
+      "vendor_id": "V-in-field-pro",
+      "medium": "phones"
+    },
+    {
+      "ie_id": "C00634774-ie-1853216-E3C87A5859E0A4654BAD",
+      "spender_entity_id": "C00634774",
+      "spender_name": "COMMON SENSE FOR AMERICA PAC",
+      "candidate_id": "S2PA00661",
+      "candidate_name": "Dave McCormick",
+      "support_oppose": "S",
+      "amount": 84381.19,
+      "date": "2024-10-21",
+      "purpose": "INDEPENDENT EXPENDITURE: GOTV TEXTS",
+      "payee": "IN FIELD PRO",
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202412049720237290",
+      "vendor_id": "V-in-field-pro",
+      "medium": "phones"
+    }
+  ],
+  "ads": [],
+  "method": "Every Schedule E independent expenditure names a payee. Payee strings are normalised (case, punctuation, legal suffixes, token order), near-duplicates are folded with a difflib ratio ≥ 0.92 when their numeric tokens match, and hand alias rows from data/hand/<race>/vendor_aliases.json override the rule. Medium is classified from the purpose the spender filed (ordered keyword table in campaign_commons/vendors.py). The FEC does not record which buy placed which ad: vendor ↔ ad links are date-window adjacency (or single-digital-vendor inference) from campaign_commons.ads_enrich, each with its basis, and are only `verified` when a person found a source naming both. Totals are the filed amounts, grouped, never re-estimated."
+}

@@ -2,7 +2,7 @@
   "root_entity_id": "C00865444",
   "root_name": "WINSENATE",
   "race_id": "pa-sen-2024",
-  "generated_at": "2026-09-05T15:46:45+00:00",
+  "generated_at": "2026-09-05T19:53:48+00:00",
   "data_status": "real",
   "nodes": [
     {
@@ -5567,6 +5567,479 @@
       "terminus_reason": "pruned",
       "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00253294&two_year_transaction_period=2024",
       "contributor_count": 69
+    },
+    {
+      "id": "vendor:V-waterfront-strategies",
+      "name": "WATERFRONT STRATEGIES",
+      "kind": "vendor",
+      "committee_type": null,
+      "depth": 1,
+      "side": "out",
+      "visibility": "disclosed",
+      "amount_in": 43078363.37,
+      "is_terminus": false,
+      "terminus_reason": null,
+      "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00865444&payee_name=WATERFRONT+STRATEGIES",
+      "href": "/races/pa-sen-2024/vendors/V-waterfront-strategies",
+      "medium": "tv",
+      "basis": {
+        "basis": "filed",
+        "rule": "Schedule E payee, grouped by normalized vendor name (campaign_commons.vendors)",
+        "source_urls": [
+          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00865444&payee_name=WATERFRONT+STRATEGIES"
+        ],
+        "checked_by": null,
+        "checked_at": null
+      }
+    },
+    {
+      "id": "vendor:V-gambit-strategies",
+      "name": "GAMBIT STRATEGIES",
+      "kind": "vendor",
+      "committee_type": null,
+      "depth": 1,
+      "side": "out",
+      "visibility": "disclosed",
+      "amount_in": 19673928.86,
+      "is_terminus": false,
+      "terminus_reason": null,
+      "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00865444&payee_name=GAMBIT+STRATEGIES",
+      "href": "/races/pa-sen-2024/vendors/V-gambit-strategies",
+      "medium": "digital",
+      "basis": {
+        "basis": "filed",
+        "rule": "Schedule E payee, grouped by normalized vendor name (campaign_commons.vendors)",
+        "source_urls": [
+          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00865444&payee_name=GAMBIT+STRATEGIES"
+        ],
+        "checked_by": null,
+        "checked_at": null
+      }
+    },
+    {
+      "id": "vendor:V-impact-360",
+      "name": "IMPACT 360",
+      "kind": "vendor",
+      "committee_type": null,
+      "depth": 1,
+      "side": "out",
+      "visibility": "disclosed",
+      "amount_in": 199948.0,
+      "is_terminus": false,
+      "terminus_reason": null,
+      "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00865444&payee_name=IMPACT+360",
+      "href": "/races/pa-sen-2024/vendors/V-impact-360",
+      "medium": "tv",
+      "basis": {
+        "basis": "filed",
+        "rule": "Schedule E payee, grouped by normalized vendor name (campaign_commons.vendors)",
+        "source_urls": [
+          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00865444&payee_name=IMPACT+360"
+        ],
+        "checked_by": null,
+        "checked_at": null
+      }
+    },
+    {
+      "id": "vendor:V-social-currant",
+      "name": "SOCIAL CURRANT",
+      "kind": "vendor",
+      "committee_type": null,
+      "depth": 1,
+      "side": "out",
+      "visibility": "disclosed",
+      "amount_in": 55700.0,
+      "is_terminus": false,
+      "terminus_reason": null,
+      "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00865444&payee_name=SOCIAL+CURRANT",
+      "href": "/races/pa-sen-2024/vendors/V-social-currant",
+      "medium": "production",
+      "basis": {
+        "basis": "filed",
+        "rule": "Schedule E payee, grouped by normalized vendor name (campaign_commons.vendors)",
+        "source_urls": [
+          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00865444&payee_name=SOCIAL+CURRANT"
+        ],
+        "checked_by": null,
+        "checked_at": null
+      }
+    },
+    {
+      "id": "vendor:V-al-media",
+      "name": "AL MEDIA LLC",
+      "kind": "vendor",
+      "committee_type": null,
+      "depth": 1,
+      "side": "out",
+      "visibility": "disclosed",
+      "amount_in": 18507.0,
+      "is_terminus": false,
+      "terminus_reason": null,
+      "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00865444&payee_name=AL+MEDIA+LLC",
+      "href": "/races/pa-sen-2024/vendors/V-al-media",
+      "medium": "production",
+      "basis": {
+        "basis": "filed",
+        "rule": "Schedule E payee, grouped by normalized vendor name (campaign_commons.vendors)",
+        "source_urls": [
+          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00865444&payee_name=AL+MEDIA+LLC"
+        ],
+        "checked_by": null,
+        "checked_at": null
+      }
+    },
+    {
+      "id": "vendor:V-solidarity-strategies",
+      "name": "SOLIDARITY STRATEGIES LLC",
+      "kind": "vendor",
+      "committee_type": null,
+      "depth": 1,
+      "side": "out",
+      "visibility": "disclosed",
+      "amount_in": 5500.0,
+      "is_terminus": false,
+      "terminus_reason": null,
+      "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00865444&payee_name=SOLIDARITY+STRATEGIES+LLC",
+      "href": "/races/pa-sen-2024/vendors/V-solidarity-strategies",
+      "medium": "production",
+      "basis": {
+        "basis": "filed",
+        "rule": "Schedule E payee, grouped by normalized vendor name (campaign_commons.vendors)",
+        "source_urls": [
+          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00865444&payee_name=SOLIDARITY+STRATEGIES+LLC"
+        ],
+        "checked_by": null,
+        "checked_at": null
+      }
+    },
+    {
+      "id": "vendor:V-peters-consulting",
+      "name": "PETERS CONSULTING LLC",
+      "kind": "vendor",
+      "committee_type": null,
+      "depth": 1,
+      "side": "out",
+      "visibility": "disclosed",
+      "amount_in": 100.0,
+      "is_terminus": false,
+      "terminus_reason": null,
+      "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00865444&payee_name=PETERS+CONSULTING+LLC",
+      "href": "/races/pa-sen-2024/vendors/V-peters-consulting",
+      "medium": "production",
+      "basis": {
+        "basis": "filed",
+        "rule": "Schedule E payee, grouped by normalized vendor name (campaign_commons.vendors)",
+        "source_urls": [
+          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00865444&payee_name=PETERS+CONSULTING+LLC"
+        ],
+        "checked_by": null,
+        "checked_at": null
+      }
+    },
+    {
+      "id": "CR10478813122326953985",
+      "name": "Video ad · 2024-09-18 – 2024-10-08",
+      "kind": "ad",
+      "committee_type": null,
+      "depth": 2,
+      "side": "out",
+      "visibility": "disclosed",
+      "amount_in": 550000.0,
+      "is_terminus": false,
+      "terminus_reason": null,
+      "source_url": "https://adstransparency.google.com/advertiser/AR07109796124864544769/creative/CR10478813122326953985?political=&region=US",
+      "href": "/races/pa-sen-2024/ads/CR10478813122326953985",
+      "thumbnail_path": "/creatives/pa-sen-2024/CR10478813122326953985.jpg",
+      "basis": {
+        "basis": "inferred",
+        "rule": "Google reports spend as a range ($500,000–$600,000); the midpoint is drawn",
+        "source_urls": [
+          "https://adstransparency.google.com/advertiser/AR07109796124864544769/creative/CR10478813122326953985?political=&region=US"
+        ],
+        "checked_by": null,
+        "checked_at": null
+      }
+    },
+    {
+      "id": "CR05870211732231684097",
+      "name": "Video ad · 2024-07-23 – 2024-08-14",
+      "kind": "ad",
+      "committee_type": null,
+      "depth": 2,
+      "side": "out",
+      "visibility": "disclosed",
+      "amount_in": 425000.0,
+      "is_terminus": false,
+      "terminus_reason": null,
+      "source_url": "https://adstransparency.google.com/advertiser/AR07109796124864544769/creative/CR05870211732231684097?political=&region=US",
+      "href": "/races/pa-sen-2024/ads/CR05870211732231684097",
+      "basis": {
+        "basis": "inferred",
+        "rule": "Google reports spend as a range ($400,000–$450,000); the midpoint is drawn",
+        "source_urls": [
+          "https://adstransparency.google.com/advertiser/AR07109796124864544769/creative/CR05870211732231684097?political=&region=US"
+        ],
+        "checked_by": null,
+        "checked_at": null
+      }
+    },
+    {
+      "id": "CR17813237325262487553",
+      "name": "Video ad · 2024-08-13 – 2024-08-27",
+      "kind": "ad",
+      "committee_type": null,
+      "depth": 2,
+      "side": "out",
+      "visibility": "disclosed",
+      "amount_in": 275000.0,
+      "is_terminus": false,
+      "terminus_reason": null,
+      "source_url": "https://adstransparency.google.com/advertiser/AR07109796124864544769/creative/CR17813237325262487553?political=&region=US",
+      "href": "/races/pa-sen-2024/ads/CR17813237325262487553",
+      "basis": {
+        "basis": "inferred",
+        "rule": "Google reports spend as a range ($250,000–$300,000); the midpoint is drawn",
+        "source_urls": [
+          "https://adstransparency.google.com/advertiser/AR07109796124864544769/creative/CR17813237325262487553?political=&region=US"
+        ],
+        "checked_by": null,
+        "checked_at": null
+      }
+    },
+    {
+      "id": "CR16164832502010085377",
+      "name": "Video ad · 2024-10-16 – 2024-10-30",
+      "kind": "ad",
+      "committee_type": null,
+      "depth": 2,
+      "side": "out",
+      "visibility": "disclosed",
+      "amount_in": 275000.0,
+      "is_terminus": false,
+      "terminus_reason": null,
+      "source_url": "https://adstransparency.google.com/advertiser/AR07109796124864544769/creative/CR16164832502010085377?political=&region=US",
+      "href": "/races/pa-sen-2024/ads/CR16164832502010085377",
+      "basis": {
+        "basis": "inferred",
+        "rule": "Google reports spend as a range ($250,000–$300,000); the midpoint is drawn",
+        "source_urls": [
+          "https://adstransparency.google.com/advertiser/AR07109796124864544769/creative/CR16164832502010085377?political=&region=US"
+        ],
+        "checked_by": null,
+        "checked_at": null
+      }
+    },
+    {
+      "id": "CR15747662947024896001",
+      "name": "Text ad · 2024-09-04 – 2024-11-05",
+      "kind": "ad",
+      "committee_type": null,
+      "depth": 2,
+      "side": "out",
+      "visibility": "disclosed",
+      "amount_in": 237500.0,
+      "is_terminus": false,
+      "terminus_reason": null,
+      "source_url": "https://adstransparency.google.com/advertiser/AR07109796124864544769/creative/CR15747662947024896001?political=&region=US",
+      "href": "/races/pa-sen-2024/ads/CR15747662947024896001",
+      "basis": {
+        "basis": "inferred",
+        "rule": "Google reports spend as a range ($225,000–$250,000); the midpoint is drawn",
+        "source_urls": [
+          "https://adstransparency.google.com/advertiser/AR07109796124864544769/creative/CR15747662947024896001?political=&region=US"
+        ],
+        "checked_by": null,
+        "checked_at": null
+      }
+    },
+    {
+      "id": "CR03071815602860457985",
+      "name": "Video ad · 2024-09-04 – 2024-09-19",
+      "kind": "ad",
+      "committee_type": null,
+      "depth": 2,
+      "side": "out",
+      "visibility": "disclosed",
+      "amount_in": 187500.0,
+      "is_terminus": false,
+      "terminus_reason": null,
+      "source_url": "https://adstransparency.google.com/advertiser/AR07109796124864544769/creative/CR03071815602860457985?political=&region=US",
+      "href": "/races/pa-sen-2024/ads/CR03071815602860457985",
+      "basis": {
+        "basis": "inferred",
+        "rule": "Google reports spend as a range ($175,000–$200,000); the midpoint is drawn",
+        "source_urls": [
+          "https://adstransparency.google.com/advertiser/AR07109796124864544769/creative/CR03071815602860457985?political=&region=US"
+        ],
+        "checked_by": null,
+        "checked_at": null
+      }
+    },
+    {
+      "id": "CR12341671143046905857",
+      "name": "Video ad · 2024-10-05 – 2024-10-29",
+      "kind": "ad",
+      "committee_type": null,
+      "depth": 2,
+      "side": "out",
+      "visibility": "disclosed",
+      "amount_in": 187500.0,
+      "is_terminus": false,
+      "terminus_reason": null,
+      "source_url": "https://adstransparency.google.com/advertiser/AR07109796124864544769/creative/CR12341671143046905857?political=&region=US",
+      "href": "/races/pa-sen-2024/ads/CR12341671143046905857",
+      "basis": {
+        "basis": "inferred",
+        "rule": "Google reports spend as a range ($175,000–$200,000); the midpoint is drawn",
+        "source_urls": [
+          "https://adstransparency.google.com/advertiser/AR07109796124864544769/creative/CR12341671143046905857?political=&region=US"
+        ],
+        "checked_by": null,
+        "checked_at": null
+      }
+    },
+    {
+      "id": "CR14255135835702689793",
+      "name": "Video ad · 2024-10-08 – 2024-10-16",
+      "kind": "ad",
+      "committee_type": null,
+      "depth": 2,
+      "side": "out",
+      "visibility": "disclosed",
+      "amount_in": 137500.0,
+      "is_terminus": false,
+      "terminus_reason": null,
+      "source_url": "https://adstransparency.google.com/advertiser/AR07109796124864544769/creative/CR14255135835702689793?political=&region=US",
+      "href": "/races/pa-sen-2024/ads/CR14255135835702689793",
+      "basis": {
+        "basis": "inferred",
+        "rule": "Google reports spend as a range ($125,000–$150,000); the midpoint is drawn",
+        "source_urls": [
+          "https://adstransparency.google.com/advertiser/AR07109796124864544769/creative/CR14255135835702689793?political=&region=US"
+        ],
+        "checked_by": null,
+        "checked_at": null
+      }
+    },
+    {
+      "id": "CR15884613992212070401",
+      "name": "Video ad · 2024-11-02 – 2024-11-05",
+      "kind": "ad",
+      "committee_type": null,
+      "depth": 2,
+      "side": "out",
+      "visibility": "disclosed",
+      "amount_in": 137500.0,
+      "is_terminus": false,
+      "terminus_reason": null,
+      "source_url": "https://adstransparency.google.com/advertiser/AR07109796124864544769/creative/CR15884613992212070401?political=&region=US",
+      "href": "/races/pa-sen-2024/ads/CR15884613992212070401",
+      "basis": {
+        "basis": "inferred",
+        "rule": "Google reports spend as a range ($125,000–$150,000); the midpoint is drawn",
+        "source_urls": [
+          "https://adstransparency.google.com/advertiser/AR07109796124864544769/creative/CR15884613992212070401?political=&region=US"
+        ],
+        "checked_by": null,
+        "checked_at": null
+      }
+    },
+    {
+      "id": "CR14004507606169681921",
+      "name": "Text ad · 2024-07-25 – 2024-09-03",
+      "kind": "ad",
+      "committee_type": null,
+      "depth": 2,
+      "side": "out",
+      "visibility": "disclosed",
+      "amount_in": 137500.0,
+      "is_terminus": false,
+      "terminus_reason": null,
+      "source_url": "https://adstransparency.google.com/advertiser/AR07109796124864544769/creative/CR14004507606169681921?political=&region=US",
+      "href": "/races/pa-sen-2024/ads/CR14004507606169681921",
+      "basis": {
+        "basis": "inferred",
+        "rule": "Google reports spend as a range ($125,000–$150,000); the midpoint is drawn",
+        "source_urls": [
+          "https://adstransparency.google.com/advertiser/AR07109796124864544769/creative/CR14004507606169681921?political=&region=US"
+        ],
+        "checked_by": null,
+        "checked_at": null
+      }
+    },
+    {
+      "id": "agg:ads@C00865444",
+      "name": "64 more ads",
+      "kind": "aggregate",
+      "committee_type": null,
+      "depth": 2,
+      "side": "out",
+      "visibility": "disclosed",
+      "amount_in": 2835000.0,
+      "is_terminus": true,
+      "terminus_reason": "pruned",
+      "source_url": null,
+      "href": "/races/pa-sen-2024/ads",
+      "contributor_count": 64,
+      "basis": {
+        "basis": "inferred",
+        "rule": "Sum of Google spend-range midpoints for the ads not drawn individually",
+        "source_urls": [
+          "https://adstransparency.google.com/advertiser/AR07109796124864544769/creative/CR03840237839694430209?political=&region=US",
+          "https://adstransparency.google.com/advertiser/AR07109796124864544769/creative/CR16220568893905698817?political=&region=US",
+          "https://adstransparency.google.com/advertiser/AR07109796124864544769/creative/CR05179166475151212545?political=&region=US",
+          "https://adstransparency.google.com/advertiser/AR07109796124864544769/creative/CR17444495536584392705?political=&region=US",
+          "https://adstransparency.google.com/advertiser/AR07109796124864544769/creative/CR02170178134932979713?political=&region=US"
+        ],
+        "checked_by": null,
+        "checked_at": null
+      }
+    },
+    {
+      "id": "S2PA00661",
+      "name": "Dave McCormick",
+      "kind": "candidate",
+      "committee_type": null,
+      "depth": 3,
+      "side": "out",
+      "visibility": "disclosed",
+      "amount_in": 60248024.34,
+      "is_terminus": true,
+      "terminus_reason": null,
+      "source_url": "https://www.fec.gov/data/candidate/S2PA00661/?cycle=2024&election_full=false",
+      "href": "/races/pa-sen-2024/candidates/S2PA00661",
+      "basis": {
+        "basis": "filed",
+        "rule": "Schedule E dollars naming this candidate as supported or opposed; nothing here reached the candidate",
+        "source_urls": [
+          "https://www.fec.gov/data/independent-expenditures/?committee_id=C00865444&cycle=2024&candidate_id=S2PA00661"
+        ],
+        "checked_by": null,
+        "checked_at": null
+      }
+    },
+    {
+      "id": "S6PA00217",
+      "name": "Bob Casey",
+      "kind": "candidate",
+      "committee_type": null,
+      "depth": 3,
+      "side": "out",
+      "visibility": "disclosed",
+      "amount_in": 2784022.89,
+      "is_terminus": true,
+      "terminus_reason": null,
+      "source_url": "https://www.fec.gov/data/candidate/S6PA00217/?cycle=2024&election_full=false",
+      "href": "/races/pa-sen-2024/candidates/S6PA00217",
+      "basis": {
+        "basis": "filed",
+        "rule": "Schedule E dollars naming this candidate as supported or opposed; nothing here reached the candidate",
+        "source_urls": [
+          "https://www.fec.gov/data/independent-expenditures/?committee_id=C00865444&cycle=2024&candidate_id=S6PA00217"
+        ],
+        "checked_by": null,
+        "checked_at": null
+      }
     }
   ],
   "edges": [
@@ -12990,6 +13463,651 @@
         "2024-12-28"
       ],
       "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00253294&two_year_transaction_period=2024"
+    },
+    {
+      "from": "C00865444",
+      "to": "vendor:V-waterfront-strategies",
+      "kind": "money",
+      "amount": 43078363.37,
+      "visibility": "disclosed",
+      "depth": 1,
+      "transaction_types": [
+        "24E"
+      ],
+      "count": 45,
+      "date_range": [
+        "2024-07-02",
+        "2024-11-13"
+      ],
+      "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00865444&payee_name=WATERFRONT+STRATEGIES",
+      "basis": {
+        "basis": "filed",
+        "rule": "Schedule E independent expenditure paid to this payee",
+        "source_urls": [
+          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00865444&payee_name=WATERFRONT+STRATEGIES"
+        ],
+        "checked_by": null,
+        "checked_at": null
+      }
+    },
+    {
+      "from": "vendor:V-waterfront-strategies",
+      "to": "S2PA00661",
+      "kind": "targeting",
+      "amount": 40557247.98,
+      "visibility": "disclosed",
+      "depth": 3,
+      "transaction_types": [],
+      "count": 0,
+      "date_range": null,
+      "source_url": "https://www.fec.gov/data/independent-expenditures/?committee_id=C00865444&cycle=2024&candidate_id=S2PA00661",
+      "support_oppose": "O",
+      "basis": {
+        "basis": "filed",
+        "rule": "Schedule E: this payee's buys named the candidate as supported/opposed",
+        "source_urls": [
+          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00865444&payee_name=WATERFRONT+STRATEGIES"
+        ],
+        "checked_by": null,
+        "checked_at": null
+      }
+    },
+    {
+      "from": "vendor:V-waterfront-strategies",
+      "to": "S6PA00217",
+      "kind": "targeting",
+      "amount": 2521115.39,
+      "visibility": "disclosed",
+      "depth": 3,
+      "transaction_types": [],
+      "count": 0,
+      "date_range": null,
+      "source_url": "https://www.fec.gov/data/independent-expenditures/?committee_id=C00865444&cycle=2024&candidate_id=S6PA00217",
+      "support_oppose": "S",
+      "basis": {
+        "basis": "filed",
+        "rule": "Schedule E: this payee's buys named the candidate as supported/opposed",
+        "source_urls": [
+          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00865444&payee_name=WATERFRONT+STRATEGIES"
+        ],
+        "checked_by": null,
+        "checked_at": null
+      }
+    },
+    {
+      "from": "C00865444",
+      "to": "vendor:V-gambit-strategies",
+      "kind": "money",
+      "amount": 19673928.86,
+      "visibility": "disclosed",
+      "depth": 1,
+      "transaction_types": [
+        "24E"
+      ],
+      "count": 48,
+      "date_range": [
+        "2024-07-12",
+        "2024-11-13"
+      ],
+      "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00865444&payee_name=GAMBIT+STRATEGIES",
+      "basis": {
+        "basis": "filed",
+        "rule": "Schedule E independent expenditure paid to this payee",
+        "source_urls": [
+          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00865444&payee_name=GAMBIT+STRATEGIES"
+        ],
+        "checked_by": null,
+        "checked_at": null
+      }
+    },
+    {
+      "from": "vendor:V-gambit-strategies",
+      "to": "S2PA00661",
+      "kind": "targeting",
+      "amount": 19610969.36,
+      "visibility": "disclosed",
+      "depth": 3,
+      "transaction_types": [],
+      "count": 0,
+      "date_range": null,
+      "source_url": "https://www.fec.gov/data/independent-expenditures/?committee_id=C00865444&cycle=2024&candidate_id=S2PA00661",
+      "support_oppose": "O",
+      "basis": {
+        "basis": "filed",
+        "rule": "Schedule E: this payee's buys named the candidate as supported/opposed",
+        "source_urls": [
+          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00865444&payee_name=GAMBIT+STRATEGIES"
+        ],
+        "checked_by": null,
+        "checked_at": null
+      }
+    },
+    {
+      "from": "vendor:V-gambit-strategies",
+      "to": "S6PA00217",
+      "kind": "targeting",
+      "amount": 62959.5,
+      "visibility": "disclosed",
+      "depth": 3,
+      "transaction_types": [],
+      "count": 0,
+      "date_range": null,
+      "source_url": "https://www.fec.gov/data/independent-expenditures/?committee_id=C00865444&cycle=2024&candidate_id=S6PA00217",
+      "support_oppose": "S",
+      "basis": {
+        "basis": "filed",
+        "rule": "Schedule E: this payee's buys named the candidate as supported/opposed",
+        "source_urls": [
+          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00865444&payee_name=GAMBIT+STRATEGIES"
+        ],
+        "checked_by": null,
+        "checked_at": null
+      }
+    },
+    {
+      "from": "C00865444",
+      "to": "vendor:V-impact-360",
+      "kind": "money",
+      "amount": 199948.0,
+      "visibility": "disclosed",
+      "depth": 1,
+      "transaction_types": [
+        "24E"
+      ],
+      "count": 2,
+      "date_range": [
+        "2024-10-04",
+        "2024-10-04"
+      ],
+      "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00865444&payee_name=IMPACT+360",
+      "basis": {
+        "basis": "filed",
+        "rule": "Schedule E independent expenditure paid to this payee",
+        "source_urls": [
+          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00865444&payee_name=IMPACT+360"
+        ],
+        "checked_by": null,
+        "checked_at": null
+      }
+    },
+    {
+      "from": "vendor:V-impact-360",
+      "to": "S6PA00217",
+      "kind": "targeting",
+      "amount": 199948.0,
+      "visibility": "disclosed",
+      "depth": 3,
+      "transaction_types": [],
+      "count": 0,
+      "date_range": null,
+      "source_url": "https://www.fec.gov/data/independent-expenditures/?committee_id=C00865444&cycle=2024&candidate_id=S6PA00217",
+      "support_oppose": "S",
+      "basis": {
+        "basis": "filed",
+        "rule": "Schedule E: this payee's buys named the candidate as supported/opposed",
+        "source_urls": [
+          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00865444&payee_name=IMPACT+360"
+        ],
+        "checked_by": null,
+        "checked_at": null
+      }
+    },
+    {
+      "from": "C00865444",
+      "to": "vendor:V-social-currant",
+      "kind": "money",
+      "amount": 55700.0,
+      "visibility": "disclosed",
+      "depth": 1,
+      "transaction_types": [
+        "24E"
+      ],
+      "count": 2,
+      "date_range": [
+        "2024-10-08",
+        "2024-11-13"
+      ],
+      "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00865444&payee_name=SOCIAL+CURRANT",
+      "basis": {
+        "basis": "filed",
+        "rule": "Schedule E independent expenditure paid to this payee",
+        "source_urls": [
+          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00865444&payee_name=SOCIAL+CURRANT"
+        ],
+        "checked_by": null,
+        "checked_at": null
+      }
+    },
+    {
+      "from": "vendor:V-social-currant",
+      "to": "S2PA00661",
+      "kind": "targeting",
+      "amount": 55700.0,
+      "visibility": "disclosed",
+      "depth": 3,
+      "transaction_types": [],
+      "count": 0,
+      "date_range": null,
+      "source_url": "https://www.fec.gov/data/independent-expenditures/?committee_id=C00865444&cycle=2024&candidate_id=S2PA00661",
+      "support_oppose": "O",
+      "basis": {
+        "basis": "filed",
+        "rule": "Schedule E: this payee's buys named the candidate as supported/opposed",
+        "source_urls": [
+          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00865444&payee_name=SOCIAL+CURRANT"
+        ],
+        "checked_by": null,
+        "checked_at": null
+      }
+    },
+    {
+      "from": "C00865444",
+      "to": "vendor:V-al-media",
+      "kind": "money",
+      "amount": 18507.0,
+      "visibility": "disclosed",
+      "depth": 1,
+      "transaction_types": [
+        "24E"
+      ],
+      "count": 1,
+      "date_range": [
+        "2024-07-29",
+        "2024-07-29"
+      ],
+      "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00865444&payee_name=AL+MEDIA+LLC",
+      "basis": {
+        "basis": "filed",
+        "rule": "Schedule E independent expenditure paid to this payee",
+        "source_urls": [
+          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00865444&payee_name=AL+MEDIA+LLC"
+        ],
+        "checked_by": null,
+        "checked_at": null
+      }
+    },
+    {
+      "from": "vendor:V-al-media",
+      "to": "S2PA00661",
+      "kind": "targeting",
+      "amount": 18507.0,
+      "visibility": "disclosed",
+      "depth": 3,
+      "transaction_types": [],
+      "count": 0,
+      "date_range": null,
+      "source_url": "https://www.fec.gov/data/independent-expenditures/?committee_id=C00865444&cycle=2024&candidate_id=S2PA00661",
+      "support_oppose": "O",
+      "basis": {
+        "basis": "filed",
+        "rule": "Schedule E: this payee's buys named the candidate as supported/opposed",
+        "source_urls": [
+          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00865444&payee_name=AL+MEDIA+LLC"
+        ],
+        "checked_by": null,
+        "checked_at": null
+      }
+    },
+    {
+      "from": "C00865444",
+      "to": "vendor:V-solidarity-strategies",
+      "kind": "money",
+      "amount": 5500.0,
+      "visibility": "disclosed",
+      "depth": 1,
+      "transaction_types": [
+        "24E"
+      ],
+      "count": 1,
+      "date_range": [
+        "2024-11-13",
+        "2024-11-13"
+      ],
+      "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00865444&payee_name=SOLIDARITY+STRATEGIES+LLC",
+      "basis": {
+        "basis": "filed",
+        "rule": "Schedule E independent expenditure paid to this payee",
+        "source_urls": [
+          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00865444&payee_name=SOLIDARITY+STRATEGIES+LLC"
+        ],
+        "checked_by": null,
+        "checked_at": null
+      }
+    },
+    {
+      "from": "vendor:V-solidarity-strategies",
+      "to": "S2PA00661",
+      "kind": "targeting",
+      "amount": 5500.0,
+      "visibility": "disclosed",
+      "depth": 3,
+      "transaction_types": [],
+      "count": 0,
+      "date_range": null,
+      "source_url": "https://www.fec.gov/data/independent-expenditures/?committee_id=C00865444&cycle=2024&candidate_id=S2PA00661",
+      "support_oppose": "O",
+      "basis": {
+        "basis": "filed",
+        "rule": "Schedule E: this payee's buys named the candidate as supported/opposed",
+        "source_urls": [
+          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00865444&payee_name=SOLIDARITY+STRATEGIES+LLC"
+        ],
+        "checked_by": null,
+        "checked_at": null
+      }
+    },
+    {
+      "from": "C00865444",
+      "to": "vendor:V-peters-consulting",
+      "kind": "money",
+      "amount": 100.0,
+      "visibility": "disclosed",
+      "depth": 1,
+      "transaction_types": [
+        "24E"
+      ],
+      "count": 1,
+      "date_range": [
+        "2024-10-10",
+        "2024-10-10"
+      ],
+      "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00865444&payee_name=PETERS+CONSULTING+LLC",
+      "basis": {
+        "basis": "filed",
+        "rule": "Schedule E independent expenditure paid to this payee",
+        "source_urls": [
+          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00865444&payee_name=PETERS+CONSULTING+LLC"
+        ],
+        "checked_by": null,
+        "checked_at": null
+      }
+    },
+    {
+      "from": "vendor:V-peters-consulting",
+      "to": "S2PA00661",
+      "kind": "targeting",
+      "amount": 100.0,
+      "visibility": "disclosed",
+      "depth": 3,
+      "transaction_types": [],
+      "count": 0,
+      "date_range": null,
+      "source_url": "https://www.fec.gov/data/independent-expenditures/?committee_id=C00865444&cycle=2024&candidate_id=S2PA00661",
+      "support_oppose": "O",
+      "basis": {
+        "basis": "filed",
+        "rule": "Schedule E: this payee's buys named the candidate as supported/opposed",
+        "source_urls": [
+          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00865444&payee_name=PETERS+CONSULTING+LLC"
+        ],
+        "checked_by": null,
+        "checked_at": null
+      }
+    },
+    {
+      "from": "vendor:V-gambit-strategies",
+      "to": "CR10478813122326953985",
+      "kind": "placement",
+      "amount": 550000.0,
+      "visibility": "disclosed",
+      "depth": 2,
+      "transaction_types": [],
+      "count": 11,
+      "date_range": [
+        "2024-09-18",
+        "2024-10-08"
+      ],
+      "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00865444&payee_name=GAMBIT+STRATEGIES",
+      "basis": {
+        "basis": "inferred",
+        "rule": "Only digital vendor WINSENATE paid during this ad's run window (ran sep 18, 2024 – oct 8, 2024, counting buys dated up to 7 days before first shown) — inferred, not filed. WINSENATE reported $5,587,369 in digital buys to GAMBIT STRATEGIES; Google ads are digital placements.",
+        "source_urls": [
+          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00865444&payee_name=GAMBIT+STRATEGIES"
+        ],
+        "checked_by": null,
+        "checked_at": null
+      }
+    },
+    {
+      "from": "vendor:V-gambit-strategies",
+      "to": "CR05870211732231684097",
+      "kind": "placement",
+      "amount": 425000.0,
+      "visibility": "disclosed",
+      "depth": 2,
+      "transaction_types": [],
+      "count": 11,
+      "date_range": [
+        "2024-07-23",
+        "2024-08-14"
+      ],
+      "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00865444&payee_name=GAMBIT+STRATEGIES",
+      "basis": {
+        "basis": "inferred",
+        "rule": "Only digital vendor WINSENATE paid during this ad's run window (ran jul 23, 2024 – aug 14, 2024, counting buys dated up to 7 days before first shown) — inferred, not filed. WINSENATE reported $4,489,059 in digital buys to GAMBIT STRATEGIES; Google ads are digital placements.",
+        "source_urls": [
+          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00865444&payee_name=GAMBIT+STRATEGIES"
+        ],
+        "checked_by": null,
+        "checked_at": null
+      }
+    },
+    {
+      "from": "vendor:V-gambit-strategies",
+      "to": "CR17813237325262487553",
+      "kind": "placement",
+      "amount": 275000.0,
+      "visibility": "disclosed",
+      "depth": 2,
+      "transaction_types": [],
+      "count": 5,
+      "date_range": [
+        "2024-08-13",
+        "2024-08-27"
+      ],
+      "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00865444&payee_name=GAMBIT+STRATEGIES",
+      "basis": {
+        "basis": "inferred",
+        "rule": "Only digital vendor WINSENATE paid during this ad's run window (ran aug 13, 2024 – aug 27, 2024, counting buys dated up to 7 days before first shown) — inferred, not filed. WINSENATE reported $1,457,441 in digital buys to GAMBIT STRATEGIES; Google ads are digital placements.",
+        "source_urls": [
+          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00865444&payee_name=GAMBIT+STRATEGIES"
+        ],
+        "checked_by": null,
+        "checked_at": null
+      }
+    },
+    {
+      "from": "vendor:V-gambit-strategies",
+      "to": "CR16164832502010085377",
+      "kind": "placement",
+      "amount": 275000.0,
+      "visibility": "disclosed",
+      "depth": 2,
+      "transaction_types": [],
+      "count": 13,
+      "date_range": [
+        "2024-10-16",
+        "2024-10-30"
+      ],
+      "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00865444&payee_name=GAMBIT+STRATEGIES",
+      "basis": {
+        "basis": "inferred",
+        "rule": "Only digital vendor WINSENATE paid during this ad's run window (ran oct 16, 2024 – oct 30, 2024, counting buys dated up to 7 days before first shown) — inferred, not filed. WINSENATE reported $5,799,784 in digital buys to GAMBIT STRATEGIES; Google ads are digital placements.",
+        "source_urls": [
+          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00865444&payee_name=GAMBIT+STRATEGIES"
+        ],
+        "checked_by": null,
+        "checked_at": null
+      }
+    },
+    {
+      "from": "vendor:V-gambit-strategies",
+      "to": "CR15747662947024896001",
+      "kind": "placement",
+      "amount": 237500.0,
+      "visibility": "disclosed",
+      "depth": 2,
+      "transaction_types": [],
+      "count": 28,
+      "date_range": [
+        "2024-09-04",
+        "2024-11-05"
+      ],
+      "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00865444&payee_name=GAMBIT+STRATEGIES",
+      "basis": {
+        "basis": "inferred",
+        "rule": "Only digital vendor WINSENATE paid during this ad's run window (ran sep 4, 2024 – nov 5, 2024, counting buys dated up to 7 days before first shown) — inferred, not filed. WINSENATE reported $13,687,209 in digital buys to GAMBIT STRATEGIES; Google ads are digital placements.",
+        "source_urls": [
+          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00865444&payee_name=GAMBIT+STRATEGIES"
+        ],
+        "checked_by": null,
+        "checked_at": null
+      }
+    },
+    {
+      "from": "vendor:V-gambit-strategies",
+      "to": "CR03071815602860457985",
+      "kind": "placement",
+      "amount": 187500.0,
+      "visibility": "disclosed",
+      "depth": 2,
+      "transaction_types": [],
+      "count": 5,
+      "date_range": [
+        "2024-09-04",
+        "2024-09-19"
+      ],
+      "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00865444&payee_name=GAMBIT+STRATEGIES",
+      "basis": {
+        "basis": "inferred",
+        "rule": "Only digital vendor WINSENATE paid during this ad's run window (ran sep 4, 2024 – sep 19, 2024, counting buys dated up to 7 days before first shown) — inferred, not filed. WINSENATE reported $3,130,851 in digital buys to GAMBIT STRATEGIES; Google ads are digital placements.",
+        "source_urls": [
+          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00865444&payee_name=GAMBIT+STRATEGIES"
+        ],
+        "checked_by": null,
+        "checked_at": null
+      }
+    },
+    {
+      "from": "vendor:V-gambit-strategies",
+      "to": "CR12341671143046905857",
+      "kind": "placement",
+      "amount": 187500.0,
+      "visibility": "disclosed",
+      "depth": 2,
+      "transaction_types": [],
+      "count": 18,
+      "date_range": [
+        "2024-10-05",
+        "2024-10-29"
+      ],
+      "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00865444&payee_name=GAMBIT+STRATEGIES",
+      "basis": {
+        "basis": "inferred",
+        "rule": "Only digital vendor WINSENATE paid during this ad's run window (ran oct 5, 2024 – oct 29, 2024, counting buys dated up to 7 days before first shown) — inferred, not filed. WINSENATE reported $7,328,588 in digital buys to GAMBIT STRATEGIES; Google ads are digital placements.",
+        "source_urls": [
+          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00865444&payee_name=GAMBIT+STRATEGIES"
+        ],
+        "checked_by": null,
+        "checked_at": null
+      }
+    },
+    {
+      "from": "vendor:V-gambit-strategies",
+      "to": "CR14255135835702689793",
+      "kind": "placement",
+      "amount": 137500.0,
+      "visibility": "disclosed",
+      "depth": 2,
+      "transaction_types": [],
+      "count": 8,
+      "date_range": [
+        "2024-10-08",
+        "2024-10-16"
+      ],
+      "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00865444&payee_name=GAMBIT+STRATEGIES",
+      "basis": {
+        "basis": "inferred",
+        "rule": "Only digital vendor WINSENATE paid during this ad's run window (ran oct 8, 2024 – oct 16, 2024, counting buys dated up to 7 days before first shown) — inferred, not filed. WINSENATE reported $3,822,033 in digital buys to GAMBIT STRATEGIES; Google ads are digital placements.",
+        "source_urls": [
+          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00865444&payee_name=GAMBIT+STRATEGIES"
+        ],
+        "checked_by": null,
+        "checked_at": null
+      }
+    },
+    {
+      "from": "vendor:V-gambit-strategies",
+      "to": "CR15884613992212070401",
+      "kind": "placement",
+      "amount": 137500.0,
+      "visibility": "disclosed",
+      "depth": 2,
+      "transaction_types": [],
+      "count": 5,
+      "date_range": [
+        "2024-11-02",
+        "2024-11-05"
+      ],
+      "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00865444&payee_name=GAMBIT+STRATEGIES",
+      "basis": {
+        "basis": "inferred",
+        "rule": "Only digital vendor WINSENATE paid during this ad's run window (ran nov 2, 2024 – nov 5, 2024, counting buys dated up to 7 days before first shown) — inferred, not filed. WINSENATE reported $1,706,519 in digital buys to GAMBIT STRATEGIES; Google ads are digital placements.",
+        "source_urls": [
+          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00865444&payee_name=GAMBIT+STRATEGIES"
+        ],
+        "checked_by": null,
+        "checked_at": null
+      }
+    },
+    {
+      "from": "vendor:V-gambit-strategies",
+      "to": "CR14004507606169681921",
+      "kind": "placement",
+      "amount": 137500.0,
+      "visibility": "disclosed",
+      "depth": 2,
+      "transaction_types": [],
+      "count": 16,
+      "date_range": [
+        "2024-07-25",
+        "2024-09-03"
+      ],
+      "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00865444&payee_name=GAMBIT+STRATEGIES",
+      "basis": {
+        "basis": "inferred",
+        "rule": "Only digital vendor WINSENATE paid during this ad's run window (ran jul 25, 2024 – sep 3, 2024, counting buys dated up to 7 days before first shown) — inferred, not filed. WINSENATE reported $6,535,403 in digital buys to GAMBIT STRATEGIES; Google ads are digital placements.",
+        "source_urls": [
+          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00865444&payee_name=GAMBIT+STRATEGIES"
+        ],
+        "checked_by": null,
+        "checked_at": null
+      }
+    },
+    {
+      "from": "C00865444",
+      "to": "agg:ads@C00865444",
+      "kind": "placement",
+      "amount": 2835000.0,
+      "visibility": "disclosed",
+      "depth": 2,
+      "transaction_types": [],
+      "count": 64,
+      "date_range": null,
+      "source_url": null,
+      "basis": {
+        "basis": "inferred",
+        "rule": "Advertiser name matched to this committee by normalized name",
+        "source_urls": [
+          "https://adstransparency.google.com/advertiser/AR07109796124864544769/creative/CR03840237839694430209?political=&region=US",
+          "https://adstransparency.google.com/advertiser/AR07109796124864544769/creative/CR16220568893905698817?political=&region=US",
+          "https://adstransparency.google.com/advertiser/AR07109796124864544769/creative/CR05179166475151212545?political=&region=US",
+          "https://adstransparency.google.com/advertiser/AR07109796124864544769/creative/CR17444495536584392705?political=&region=US",
+          "https://adstransparency.google.com/advertiser/AR07109796124864544769/creative/CR02170178134932979713?political=&region=US"
+        ],
+        "checked_by": null,
+        "checked_at": null
+      }
     }
   ],
   "summary": {
@@ -13006,7 +14124,9 @@
       "organization": 5,
       "pruned": 22,
       "cycle": 9
-    }
+    },
+    "out_total": 63032047.23,
+    "max_out_depth": 3
   },
   "flags": [
     {
@@ -13028,5 +14148,5 @@
       "evidence_url": "https://www.fec.gov/data/committee/C00865444/?cycle=2024"
     }
   ],
-  "method": "Backward walk over money edges only (Schedule A receipts from individuals and organizations, committee-to-committee transfers) into WINSENATE, 5 hop(s) deep; independent expenditures are targeting edges and never appear. The walk starts from $312,850,000 of itemized 2023–2024 receipts as loaded from FEC bulk data (unitemized receipts, loans and offsets are not edges), and every expanded committee conserves dollars: its inbound edges sum to its receipts. Inbound edges under 1% of a committee's receipts are rolled into one 'other contributors' node, which counts as disclosed except for the organization dollars inside it. Each dollar takes the visibility of where the walk stopped: named individuals (including earmarks through ActBlue/WinRed, attributed to the person) are disclosed. Organizations that are not registered committees are classified from their name alone (no IRS lookup): a union or a business giving from its own treasury is disclosed — the named entity is the source; an LLC, trust, advocacy nonprofit (501(c)(4)-style names) or unclassifiable organization is dark, because whoever funds it is not on file with the FEC. 22 committee node(s) stop with reason depth_cap: they are FEC-registered committees whose own receipts were not loaded into this race's neighborhood (or the hop or node cap was reached). The committee files donor lists with the FEC, but this walk did not read them, so its dollars are counted as 'not walked' — neither disclosed nor dark — and a dark layer behind such a committee would not show here. 9 edge(s) point at a committee already expanded elsewhere in this chain and reuse its visibility mix instead of being walked twice. Visibility shares are preliminary; no 990 lookups were performed, so nothing is marked inferable."
+  "method": "Backward walk over money edges only (Schedule A receipts from individuals and organizations, committee-to-committee transfers) into WINSENATE, 5 hop(s) deep; independent expenditures are targeting edges and never appear. The walk starts from $312,850,000 of itemized 2023–2024 receipts as loaded from FEC bulk data (unitemized receipts, loans and offsets are not edges), and every expanded committee conserves dollars: its inbound edges sum to its receipts. Inbound edges under 1% of a committee's receipts are rolled into one 'other contributors' node, which counts as disclosed except for the organization dollars inside it. Each dollar takes the visibility of where the walk stopped: named individuals (including earmarks through ActBlue/WinRed, attributed to the person) are disclosed. Organizations that are not registered committees are classified from their name alone (no IRS lookup): a union or a business giving from its own treasury is disclosed — the named entity is the source; an LLC, trust, advocacy nonprofit (501(c)(4)-style names) or unclassifiable organization is dark, because whoever funds it is not on file with the FEC. 22 committee node(s) stop with reason depth_cap: they are FEC-registered committees whose own receipts were not loaded into this race's neighborhood (or the hop or node cap was reached). The committee files donor lists with the FEC, but this walk did not read them, so its dollars are counted as 'not walked' — neither disclosed nor dark — and a dark layer behind such a committee would not show here. 9 edge(s) point at a committee already expanded elsewhere in this chain and reuse its visibility mix instead of being walked twice. Visibility shares are preliminary; no 990 lookups were performed, so nothing is marked inferable. Spending side (right of the spender): Schedule E payments to vendors are money edges; vendor → ad and spender → ad edges are placement (no dollars) and carry the evidence basis they were drawn on; edges into a candidate are targeting (for/against) and never carry money to the candidate. Ad dollars are the midpoint of the Google-reported spend range."
 }

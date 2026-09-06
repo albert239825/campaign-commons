@@ -1,4 +1,4 @@
-import type { Party } from "@citizen-gotham/contracts";
+import type { Party } from "@campaign-commons/contracts";
 
 const PARTY_STYLES: Record<Party, string> = {
   DEM: "bg-blue-50 text-blue-800 border-blue-200",

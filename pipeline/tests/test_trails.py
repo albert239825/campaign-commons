@@ -8,8 +8,8 @@ from typing import Any
 import pytest
 from jsonschema import Draft7Validator
 
-from gotham.config import PA_SEN_2024, ROOT
-from gotham.trails import (
+from campaign_commons.config import PA_SEN_2024, ROOT
+from campaign_commons.trails import (
     Inputs,
     ad_runs,
     build_trails,

@@ -4,7 +4,7 @@
  * precomputed answer page the resolver lands on, and the resolver alone answers whenever the LLM does not.
  */
 import { z } from "zod";
-import type { Trails } from "@citizen-gotham/contracts";
+import type { Trails } from "@campaign-commons/contracts";
 import { resolveQuestion, resolveRoute, type Resolution } from "./ask";
 import { classify, type ClassifyOptions, type Route } from "./ask-llm";
 

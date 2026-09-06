@@ -4,7 +4,7 @@ import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { useState, type FormEvent } from "react";
 import { z } from "zod";
-import type { TrailSubject } from "@citizen-gotham/contracts";
+import type { TrailSubject } from "@campaign-commons/contracts";
 import { canonicalQuestion, isIntent, resolveQuestion, type Resolution } from "@/lib/ask";
 import { routes } from "@/lib/format";
 

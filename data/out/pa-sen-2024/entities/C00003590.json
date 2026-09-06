@@ -792,7 +792,9 @@
       "date": "2024-08-29",
       "purpose": "REIMBURSE FEDERAL PUBLIC COMMUNICATION COSTS",
       "payee": "UNITED STEELWORKERS",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202409199675529266"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202409199675529266",
+      "vendor_id": "V-united-steelworkers",
+      "medium": "other"
     },
     {
       "ie_id": "C00003590-ie-1737904-E927909D452DA4316A8F",
@@ -805,7 +807,9 @@
       "date": "2023-10-17",
       "purpose": "REIMBURSE FEDERAL PUBLIC COMMUNICATION COSTS",
       "payee": "UNITED STEELWORKERS",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202312079599392280"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202312079599392280",
+      "vendor_id": "V-united-steelworkers",
+      "medium": "other"
     }
   ],
   "flags": [
@@ -818,5 +822,30 @@
   ],
   "has_chain": true,
   "source_url": "https://www.fec.gov/data/committee/C00003590/?cycle=2024",
-  "data_status": "real"
+  "data_status": "real",
+  "vendors": [
+    {
+      "vendor_id": "V-united-steelworkers",
+      "name": "UNITED STEELWORKERS",
+      "amount": 179.0,
+      "count": 2,
+      "media_mix": [
+        {
+          "medium": "other",
+          "amount": 179.0,
+          "count": 2
+        }
+      ],
+      "targets": [
+        {
+          "candidate_id": "S6PA00217",
+          "support_oppose": "S",
+          "amount": 179.0
+        }
+      ],
+      "first_date": "2023-10-17",
+      "last_date": "2024-08-29",
+      "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00003590&payee_name=UNITED+STEELWORKERS"
+    }
+  ]
 }

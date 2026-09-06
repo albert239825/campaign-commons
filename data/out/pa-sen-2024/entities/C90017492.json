@@ -416,7 +416,9 @@
       "date": "2024-10-29",
       "purpose": "BILLBOARD (ESTIMATE)",
       "payee": "DIRECT AD NETWORK PHILADELPHIA",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202501319748751551"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202501319748751551",
+      "vendor_id": "V-direct-ad-network-philadelphia",
+      "medium": "other"
     },
     {
       "ie_id": "C90017492-ie-1827545-500085064",
@@ -429,7 +431,9 @@
       "date": "2024-09-21",
       "purpose": "DOOR HNAGERS",
       "payee": "VISTAPRINT",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202410159686533160"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202410159686533160",
+      "vendor_id": "V-vistaprint",
+      "medium": "field"
     },
     {
       "ie_id": "C90017492-ie-1827545-500085065",
@@ -442,11 +446,84 @@
       "date": "2024-09-13",
       "purpose": "FLYERS",
       "payee": "PROSHOP",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202410159686533147"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202410159686533147",
+      "vendor_id": "V-proshop",
+      "medium": "other"
     }
   ],
   "flags": [],
   "has_chain": false,
   "source_url": "https://www.fec.gov/data/committee/C90017492/?cycle=2024",
-  "data_status": "real"
+  "data_status": "real",
+  "vendors": [
+    {
+      "vendor_id": "V-direct-ad-network-philadelphia",
+      "name": "DIRECT AD NETWORK PHILADELPHIA",
+      "amount": 2200.0,
+      "count": 1,
+      "media_mix": [
+        {
+          "medium": "other",
+          "amount": 2200.0,
+          "count": 1
+        }
+      ],
+      "targets": [
+        {
+          "candidate_id": "S6PA00217",
+          "support_oppose": "S",
+          "amount": 2200.0
+        }
+      ],
+      "first_date": "2024-10-29",
+      "last_date": "2024-10-29",
+      "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C90017492&payee_name=DIRECT+AD+NETWORK+PHILADELPHIA"
+    },
+    {
+      "vendor_id": "V-vistaprint",
+      "name": "VISTAPRINT",
+      "amount": 379.66,
+      "count": 1,
+      "media_mix": [
+        {
+          "medium": "field",
+          "amount": 379.66,
+          "count": 1
+        }
+      ],
+      "targets": [
+        {
+          "candidate_id": "S6PA00217",
+          "support_oppose": "S",
+          "amount": 379.66
+        }
+      ],
+      "first_date": "2024-09-21",
+      "last_date": "2024-09-21",
+      "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C90017492&payee_name=VISTAPRINT"
+    },
+    {
+      "vendor_id": "V-proshop",
+      "name": "PROSHOP",
+      "amount": 52.17,
+      "count": 1,
+      "media_mix": [
+        {
+          "medium": "other",
+          "amount": 52.17,
+          "count": 1
+        }
+      ],
+      "targets": [
+        {
+          "candidate_id": "S6PA00217",
+          "support_oppose": "S",
+          "amount": 52.17
+        }
+      ],
+      "first_date": "2024-09-13",
+      "last_date": "2024-09-13",
+      "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C90017492&payee_name=PROSHOP"
+    }
+  ]
 }

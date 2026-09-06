@@ -1,5 +1,5 @@
 import Link from "next/link";
-import type { CandidateLedger } from "@citizen-gotham/contracts";
+import type { CandidateLedger } from "@campaign-commons/contracts";
 import { pct, routes } from "@/lib/format";
 import { Card, Money, SourceLink } from "@/components/ui";
 import { PartyTag } from "@/components/ui/party-tag";

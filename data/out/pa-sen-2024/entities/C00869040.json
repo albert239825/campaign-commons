@@ -86,7 +86,9 @@
       "date": "2024-07-01",
       "purpose": "PHONE CALLS",
       "payee": "SCALE TO WIN",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202410149684989948"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202410149684989948",
+      "vendor_id": "V-scale-to-win",
+      "medium": "phones"
     },
     {
       "ie_id": "C00869040-ie-1796697-SE.4152",
@@ -99,7 +101,9 @@
       "date": "2024-05-19",
       "purpose": "PHONE CALLS",
       "payee": "SCALE TO WIN",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202407129653142217"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202407129653142217",
+      "vendor_id": "V-scale-to-win",
+      "medium": "phones"
     },
     {
       "ie_id": "C00869040-ie-1835166-SE.4226",
@@ -112,7 +116,9 @@
       "date": "2024-10-01",
       "purpose": "PHONE CALLS",
       "payee": "SCALE TO WIN",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202410229710081215"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202410229710081215",
+      "vendor_id": "V-scale-to-win",
+      "medium": "phones"
     },
     {
       "ie_id": "C00869040-ie-1824197-SE.4210",
@@ -125,7 +131,9 @@
       "date": "2024-07-01",
       "purpose": "LIST FOR PHONE CALLS",
       "payee": "CATALIST LLC",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202410149684989946"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202410149684989946",
+      "vendor_id": "V-catalist",
+      "medium": "phones"
     },
     {
       "ie_id": "C00869040-ie-1796697-SE.4156",
@@ -138,7 +146,9 @@
       "date": "2024-05-19",
       "purpose": "LIST FOR PHONE CALLS",
       "payee": "CATALIST LLC",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202407129653142215"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202407129653142215",
+      "vendor_id": "V-catalist",
+      "medium": "phones"
     },
     {
       "ie_id": "C00869040-ie-1856138-SE.4255",
@@ -151,11 +161,61 @@
       "date": "2024-10-27",
       "purpose": "PHONE CALLS",
       "payee": "SCALE TO WIN",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202412059720966803"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202412059720966803",
+      "vendor_id": "V-scale-to-win",
+      "medium": "phones"
     }
   ],
   "flags": [],
   "has_chain": true,
   "source_url": "https://www.fec.gov/data/committee/C00869040/?cycle=2024",
-  "data_status": "real"
+  "data_status": "real",
+  "vendors": [
+    {
+      "vendor_id": "V-scale-to-win",
+      "name": "SCALE TO WIN",
+      "amount": 964.27,
+      "count": 4,
+      "media_mix": [
+        {
+          "medium": "phones",
+          "amount": 964.27,
+          "count": 4
+        }
+      ],
+      "targets": [
+        {
+          "candidate_id": "S6PA00217",
+          "support_oppose": "S",
+          "amount": 964.27
+        }
+      ],
+      "first_date": "2024-05-19",
+      "last_date": "2024-10-27",
+      "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00869040&payee_name=SCALE+TO+WIN"
+    },
+    {
+      "vendor_id": "V-catalist",
+      "name": "CATALIST LLC",
+      "amount": 275.0,
+      "count": 2,
+      "media_mix": [
+        {
+          "medium": "phones",
+          "amount": 275.0,
+          "count": 2
+        }
+      ],
+      "targets": [
+        {
+          "candidate_id": "S6PA00217",
+          "support_oppose": "S",
+          "amount": 275.0
+        }
+      ],
+      "first_date": "2024-05-19",
+      "last_date": "2024-07-01",
+      "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00869040&payee_name=CATALIST+LLC"
+    }
+  ]
 }

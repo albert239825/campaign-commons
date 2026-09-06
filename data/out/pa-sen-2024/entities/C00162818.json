@@ -537,7 +537,9 @@
       "date": "2024-10-18",
       "purpose": "DOOR HANGERS SUPPORTING BOB CASEY FOR US SENATE",
       "payee": "NORTHERN LIBERTY PRESS",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202502039753240270"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202502039753240270",
+      "vendor_id": "V-northern-liberty-press",
+      "medium": "field"
     },
     {
       "ie_id": "C00162818-ie-1874244-E14E0525B5C224435BC2",
@@ -550,7 +552,9 @@
       "date": "2024-10-18",
       "purpose": "SHIRTS SUPPORTING BOB CASEY FOR US SENATE",
       "payee": "KO SPORTING GOODS",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202502039753240272"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202502039753240272",
+      "vendor_id": "V-ko-sporting-goods",
+      "medium": "other"
     },
     {
       "ie_id": "C00162818-ie-1874244-E3985F61E8E98485EBEA",
@@ -563,11 +567,84 @@
       "date": "2024-10-18",
       "purpose": "DOOR HANGERS SUPPORTING BOB CASEY FOR US SENATE",
       "payee": "KENNEDY PRINTING CO., INC.",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202502039753240271"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202502039753240271",
+      "vendor_id": "V-kennedy-printing",
+      "medium": "field"
     }
   ],
   "flags": [],
   "has_chain": true,
   "source_url": "https://www.fec.gov/data/committee/C00162818/?cycle=2024",
-  "data_status": "real"
+  "data_status": "real",
+  "vendors": [
+    {
+      "vendor_id": "V-northern-liberty-press",
+      "name": "NORTHERN LIBERTY PRESS",
+      "amount": 1337.58,
+      "count": 1,
+      "media_mix": [
+        {
+          "medium": "field",
+          "amount": 1337.58,
+          "count": 1
+        }
+      ],
+      "targets": [
+        {
+          "candidate_id": "S6PA00217",
+          "support_oppose": "S",
+          "amount": 1337.58
+        }
+      ],
+      "first_date": "2024-10-18",
+      "last_date": "2024-10-18",
+      "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00162818&payee_name=NORTHERN+LIBERTY+PRESS"
+    },
+    {
+      "vendor_id": "V-ko-sporting-goods",
+      "name": "KO SPORTING GOODS",
+      "amount": 1267.0,
+      "count": 1,
+      "media_mix": [
+        {
+          "medium": "other",
+          "amount": 1267.0,
+          "count": 1
+        }
+      ],
+      "targets": [
+        {
+          "candidate_id": "S6PA00217",
+          "support_oppose": "S",
+          "amount": 1267.0
+        }
+      ],
+      "first_date": "2024-10-18",
+      "last_date": "2024-10-18",
+      "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00162818&payee_name=KO+SPORTING+GOODS"
+    },
+    {
+      "vendor_id": "V-kennedy-printing",
+      "name": "KENNEDY PRINTING CO., INC.",
+      "amount": 102.87,
+      "count": 1,
+      "media_mix": [
+        {
+          "medium": "field",
+          "amount": 102.87,
+          "count": 1
+        }
+      ],
+      "targets": [
+        {
+          "candidate_id": "S6PA00217",
+          "support_oppose": "S",
+          "amount": 102.87
+        }
+      ],
+      "first_date": "2024-10-18",
+      "last_date": "2024-10-18",
+      "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00162818&payee_name=KENNEDY+PRINTING+CO.%2C+INC."
+    }
+  ]
 }

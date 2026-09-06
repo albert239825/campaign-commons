@@ -1,0 +1,151 @@
+{
+  "vendor_id": "V-amazon",
+  "name": "AMAZON",
+  "aliases": [
+    "AMAZON"
+  ],
+  "normalization": {
+    "basis": "inferred",
+    "rule": "case/punctuation/suffix normalisation + token-set ≥0.92 (numeric tokens must match); aliases file",
+    "source_urls": [
+      "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&payee_name=AMAZON"
+    ],
+    "checked_by": null,
+    "checked_at": null
+  },
+  "total": 622.11,
+  "count": 6,
+  "media_mix": [
+    {
+      "medium": "other",
+      "amount": 392.55,
+      "count": 5
+    },
+    {
+      "medium": "mail",
+      "amount": 229.56,
+      "count": 1
+    }
+  ],
+  "spenders": [
+    {
+      "entity_id": "C00685693",
+      "name": "CASA IN ACTION PAC",
+      "amount": 392.55,
+      "count": 5
+    },
+    {
+      "entity_id": "C90022906",
+      "name": "ACTION TOGETHER NEPA INC.",
+      "amount": 229.56,
+      "count": 1
+    }
+  ],
+  "targets": [
+    {
+      "candidate_id": "S6PA00217",
+      "support_oppose": "S",
+      "amount": 622.11
+    }
+  ],
+  "first_date": "2024-10-22",
+  "last_date": "2024-10-30",
+  "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&payee_name=AMAZON",
+  "race_id": "pa-sen-2024",
+  "generated_at": "2026-09-05T20:34:15+00:00",
+  "data_status": "real",
+  "expenditures": [
+    {
+      "ie_id": "C00685693-ie-1859745-500011041",
+      "spender_entity_id": "C00685693",
+      "spender_name": "CASA IN ACTION PAC",
+      "candidate_id": "S6PA00217",
+      "candidate_name": "Bob Casey",
+      "support_oppose": "S",
+      "amount": 79.71,
+      "date": "2024-10-30",
+      "purpose": "EVENT SUPPLIES - ESTIMATE",
+      "payee": "AMAZON",
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202412109739858473",
+      "vendor_id": "V-amazon",
+      "medium": "other"
+    },
+    {
+      "ie_id": "C00685693-ie-1859745-500011038",
+      "spender_entity_id": "C00685693",
+      "spender_name": "CASA IN ACTION PAC",
+      "candidate_id": "S6PA00217",
+      "candidate_name": "Bob Casey",
+      "support_oppose": "S",
+      "amount": 30.9,
+      "date": "2024-10-24",
+      "purpose": "EVENT SUPPLIES - ESTIMATE",
+      "payee": "AMAZON",
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202412109739858471",
+      "vendor_id": "V-amazon",
+      "medium": "other"
+    },
+    {
+      "ie_id": "C00685693-ie-1859745-500011035",
+      "spender_entity_id": "C00685693",
+      "spender_name": "CASA IN ACTION PAC",
+      "candidate_id": "S6PA00217",
+      "candidate_name": "Bob Casey",
+      "support_oppose": "S",
+      "amount": 31.71,
+      "date": "2024-10-24",
+      "purpose": "EVENT SUPPLIES - ESTIMATE",
+      "payee": "AMAZON",
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202412109739858470",
+      "vendor_id": "V-amazon",
+      "medium": "other"
+    },
+    {
+      "ie_id": "C00685693-ie-1859745-500011029",
+      "spender_entity_id": "C00685693",
+      "spender_name": "CASA IN ACTION PAC",
+      "candidate_id": "S6PA00217",
+      "candidate_name": "Bob Casey",
+      "support_oppose": "S",
+      "amount": 191.35,
+      "date": "2024-10-23",
+      "purpose": "EVENT SUPPLIES - ESTIMATE",
+      "payee": "AMAZON",
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202412109739858468",
+      "vendor_id": "V-amazon",
+      "medium": "other"
+    },
+    {
+      "ie_id": "C90022906-ie-1870264-F57.000010",
+      "spender_entity_id": "C90022906",
+      "spender_name": "ACTION TOGETHER NEPA INC.",
+      "candidate_id": "S6PA00217",
+      "candidate_name": "Bob Casey",
+      "support_oppose": "S",
+      "amount": 229.56,
+      "date": "2024-10-23",
+      "purpose": "MAILING SUPPLIES - ENVELOPES & LABELS",
+      "payee": "AMAZON",
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202501319748780725",
+      "vendor_id": "V-amazon",
+      "medium": "mail"
+    },
+    {
+      "ie_id": "C00685693-ie-1859745-500011032",
+      "spender_entity_id": "C00685693",
+      "spender_name": "CASA IN ACTION PAC",
+      "candidate_id": "S6PA00217",
+      "candidate_name": "Bob Casey",
+      "support_oppose": "S",
+      "amount": 58.88,
+      "date": "2024-10-22",
+      "purpose": "EVENT SUPPLIES - ESTIMATE",
+      "payee": "AMAZON",
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202412109739858467",
+      "vendor_id": "V-amazon",
+      "medium": "other"
+    }
+  ],
+  "ads": [],
+  "method": "Every Schedule E independent expenditure names a payee. Payee strings are normalised (case, punctuation, legal suffixes, token order), near-duplicates are folded with a difflib ratio ≥ 0.92 when their numeric tokens match, and hand alias rows from data/hand/<race>/vendor_aliases.json override the rule. Medium is classified from the purpose the spender filed (ordered keyword table in campaign_commons/vendors.py). The FEC does not record which buy placed which ad: vendor ↔ ad links are date-window adjacency (or single-digital-vendor inference) from campaign_commons.ads_enrich, each with its basis, and are only `verified` when a person found a source naming both. Totals are the filed amounts, grouped, never re-estimated."
+}

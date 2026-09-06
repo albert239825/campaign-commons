@@ -1,0 +1,170 @@
+{
+  "vendor_id": "V-adbeat-digital",
+  "name": "ADBEAT DIGITAL",
+  "aliases": [
+    "ADBEAT DIGITAL"
+  ],
+  "normalization": {
+    "basis": "inferred",
+    "rule": "case/punctuation/suffix normalisation + token-set ≥0.92 (numeric tokens must match); aliases file",
+    "source_urls": [
+      "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&payee_name=ADBEAT+DIGITAL"
+    ],
+    "checked_by": null,
+    "checked_at": null
+  },
+  "total": 17851.66,
+  "count": 8,
+  "media_mix": [
+    {
+      "medium": "digital",
+      "amount": 17851.66,
+      "count": 8
+    }
+  ],
+  "spenders": [
+    {
+      "entity_id": "C00684969",
+      "name": "JDCA PAC",
+      "amount": 17851.66,
+      "count": 8
+    }
+  ],
+  "targets": [
+    {
+      "candidate_id": "S6PA00217",
+      "support_oppose": "S",
+      "amount": 17851.66
+    }
+  ],
+  "first_date": "2024-10-19",
+  "last_date": "2024-11-04",
+  "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&payee_name=ADBEAT+DIGITAL",
+  "race_id": "pa-sen-2024",
+  "generated_at": "2026-09-05T20:34:15+00:00",
+  "data_status": "real",
+  "expenditures": [
+    {
+      "ie_id": "C00684969-ie-1926661-500120509",
+      "spender_entity_id": "C00684969",
+      "spender_name": "JDCA PAC",
+      "candidate_id": "S6PA00217",
+      "candidate_name": "Bob Casey",
+      "support_oppose": "S",
+      "amount": 2050.0,
+      "date": "2024-11-04",
+      "purpose": "DIGITAL ADS",
+      "payee": "ADBEAT DIGITAL",
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202511219793328980",
+      "vendor_id": "V-adbeat-digital",
+      "medium": "digital"
+    },
+    {
+      "ie_id": "C00684969-ie-1926661-500120510",
+      "spender_entity_id": "C00684969",
+      "spender_name": "JDCA PAC",
+      "candidate_id": "S6PA00217",
+      "candidate_name": "Bob Casey",
+      "support_oppose": "S",
+      "amount": 10507.5,
+      "date": "2024-11-02",
+      "purpose": "DIGITAL ADS",
+      "payee": "ADBEAT DIGITAL",
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202511219793328975",
+      "vendor_id": "V-adbeat-digital",
+      "medium": "digital"
+    },
+    {
+      "ie_id": "C00684969-ie-1926661-500120506",
+      "spender_entity_id": "C00684969",
+      "spender_name": "JDCA PAC",
+      "candidate_id": "S6PA00217",
+      "candidate_name": "Bob Casey",
+      "support_oppose": "S",
+      "amount": 148.33,
+      "date": "2024-10-19",
+      "purpose": "DIGITAL ADS",
+      "payee": "ADBEAT DIGITAL",
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202511219793328958",
+      "vendor_id": "V-adbeat-digital",
+      "medium": "digital"
+    },
+    {
+      "ie_id": "C00684969-ie-1926661-500120505",
+      "spender_entity_id": "C00684969",
+      "spender_name": "JDCA PAC",
+      "candidate_id": "S6PA00217",
+      "candidate_name": "Bob Casey",
+      "support_oppose": "S",
+      "amount": 223.33,
+      "date": "2024-10-19",
+      "purpose": "DIGITAL ADS",
+      "payee": "ADBEAT DIGITAL",
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202511219793328957",
+      "vendor_id": "V-adbeat-digital",
+      "medium": "digital"
+    },
+    {
+      "ie_id": "C00684969-ie-1926661-500120507",
+      "spender_entity_id": "C00684969",
+      "spender_name": "JDCA PAC",
+      "candidate_id": "S6PA00217",
+      "candidate_name": "Bob Casey",
+      "support_oppose": "S",
+      "amount": 260.0,
+      "date": "2024-10-19",
+      "purpose": "DIGITAL ADS",
+      "payee": "ADBEAT DIGITAL",
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202511219793328958",
+      "vendor_id": "V-adbeat-digital",
+      "medium": "digital"
+    },
+    {
+      "ie_id": "C00684969-ie-1926661-500120504",
+      "spender_entity_id": "C00684969",
+      "spender_name": "JDCA PAC",
+      "candidate_id": "S6PA00217",
+      "candidate_name": "Bob Casey",
+      "support_oppose": "S",
+      "amount": 333.33,
+      "date": "2024-10-19",
+      "purpose": "DIGITAL ADS",
+      "payee": "ADBEAT DIGITAL",
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202511219793328957",
+      "vendor_id": "V-adbeat-digital",
+      "medium": "digital"
+    },
+    {
+      "ie_id": "C00684969-ie-1926661-500120503",
+      "spender_entity_id": "C00684969",
+      "spender_name": "JDCA PAC",
+      "candidate_id": "S6PA00217",
+      "candidate_name": "Bob Casey",
+      "support_oppose": "S",
+      "amount": 496.67,
+      "date": "2024-10-19",
+      "purpose": "DIGITAL ADS",
+      "payee": "ADBEAT DIGITAL",
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202511219793328956",
+      "vendor_id": "V-adbeat-digital",
+      "medium": "digital"
+    },
+    {
+      "ie_id": "C00684969-ie-1926661-500120508",
+      "spender_entity_id": "C00684969",
+      "spender_name": "JDCA PAC",
+      "candidate_id": "S6PA00217",
+      "candidate_name": "Bob Casey",
+      "support_oppose": "S",
+      "amount": 3832.5,
+      "date": "2024-10-19",
+      "purpose": "DIGITAL ADS",
+      "payee": "ADBEAT DIGITAL",
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202511219793328959",
+      "vendor_id": "V-adbeat-digital",
+      "medium": "digital"
+    }
+  ],
+  "ads": [],
+  "method": "Every Schedule E independent expenditure names a payee. Payee strings are normalised (case, punctuation, legal suffixes, token order), near-duplicates are folded with a difflib ratio ≥ 0.92 when their numeric tokens match, and hand alias rows from data/hand/<race>/vendor_aliases.json override the rule. Medium is classified from the purpose the spender filed (ordered keyword table in campaign_commons/vendors.py). The FEC does not record which buy placed which ad: vendor ↔ ad links are date-window adjacency (or single-digital-vendor inference) from campaign_commons.ads_enrich, each with its basis, and are only `verified` when a person found a source naming both. Totals are the filed amounts, grouped, never re-estimated."
+}

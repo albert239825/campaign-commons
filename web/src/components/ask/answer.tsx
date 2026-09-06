@@ -6,7 +6,7 @@ import type {
   CommitteeFundingAnswer,
   TrailAnswer,
   TrailShares,
-} from "@citizen-gotham/contracts";
+} from "@campaign-commons/contracts";
 import { Card, Chip, Money, ShareBar, SourceLink, Stat, VisibilityBadge } from "@/components/ui";
 import { date, pct, routes } from "@/lib/format";
 import { Caveats, EdgeLegend, Fig, MoneyEdgeRow, RangeFig, TargetingRow } from "./figures";

@@ -221,7 +221,9 @@
       "date": "2024-10-15",
       "purpose": "RADIO ADVERTISING & PRODUCTION",
       "payee": "SAGE MEDIA PLANNING & PLACEMENT, INC.",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202410249710503939"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202410249710503939",
+      "vendor_id": "V-sage-media-planning-placement",
+      "medium": "production"
     },
     {
       "ie_id": "C00804823-ie-1855182-500689881",
@@ -234,11 +236,61 @@
       "date": "2024-10-29",
       "purpose": "ADDITIONAL RADIO ADVERTISING PRODUCTION FOR BUY REPORTED ON 10/16 48-HOUR REPORT",
       "payee": "SENA KOZAR STRATEGIES",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202412059720660466"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202412059720660466",
+      "vendor_id": "V-sena-kozar-strategies",
+      "medium": "production"
     }
   ],
   "flags": [],
   "has_chain": true,
   "source_url": "https://www.fec.gov/data/committee/C00804823/?cycle=2024",
-  "data_status": "real"
+  "data_status": "real",
+  "vendors": [
+    {
+      "vendor_id": "V-sage-media-planning-placement",
+      "name": "SAGE MEDIA PLANNING & PLACEMENT, INC.",
+      "amount": 250000.0,
+      "count": 1,
+      "media_mix": [
+        {
+          "medium": "production",
+          "amount": 250000.0,
+          "count": 1
+        }
+      ],
+      "targets": [
+        {
+          "candidate_id": "S6PA00217",
+          "support_oppose": "S",
+          "amount": 250000.0
+        }
+      ],
+      "first_date": "2024-10-15",
+      "last_date": "2024-10-15",
+      "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00804823&payee_name=SAGE+MEDIA+PLANNING+%26+PLACEMENT%2C+INC."
+    },
+    {
+      "vendor_id": "V-sena-kozar-strategies",
+      "name": "SENA KOZAR STRATEGIES",
+      "amount": 6582.19,
+      "count": 1,
+      "media_mix": [
+        {
+          "medium": "production",
+          "amount": 6582.19,
+          "count": 1
+        }
+      ],
+      "targets": [
+        {
+          "candidate_id": "S2PA00661",
+          "support_oppose": "O",
+          "amount": 6582.19
+        }
+      ],
+      "first_date": "2024-10-29",
+      "last_date": "2024-10-29",
+      "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00804823&payee_name=SENA+KOZAR+STRATEGIES"
+    }
+  ]
 }

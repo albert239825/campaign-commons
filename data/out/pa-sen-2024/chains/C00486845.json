@@ -2,7 +2,7 @@
   "root_entity_id": "C00486845",
   "root_name": "LCV VICTORY FUND",
   "race_id": "pa-sen-2024",
-  "generated_at": "2026-09-05T15:46:45+00:00",
+  "generated_at": "2026-09-05T19:53:48+00:00",
   "data_status": "real",
   "nodes": [
     {
@@ -7498,6 +7498,315 @@
       "terminus_reason": "pruned",
       "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00147173&two_year_transaction_period=2024",
       "contributor_count": 61
+    },
+    {
+      "id": "vendor:V-otg-strategies",
+      "name": "OTG STRATEGIES",
+      "kind": "vendor",
+      "committee_type": null,
+      "depth": 1,
+      "side": "out",
+      "visibility": "disclosed",
+      "amount_in": 2447692.5,
+      "is_terminus": false,
+      "terminus_reason": null,
+      "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00486845&payee_name=OTG+STRATEGIES",
+      "href": "/races/pa-sen-2024/vendors/V-otg-strategies",
+      "medium": "field",
+      "basis": {
+        "basis": "filed",
+        "rule": "Schedule E payee, grouped by normalized vendor name (campaign_commons.vendors)",
+        "source_urls": [
+          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00486845&payee_name=OTG+STRATEGIES"
+        ],
+        "checked_by": null,
+        "checked_at": null
+      }
+    },
+    {
+      "id": "vendor:V-gambit-strategies",
+      "name": "GAMBIT STRATEGIES",
+      "kind": "vendor",
+      "committee_type": null,
+      "depth": 1,
+      "side": "out",
+      "visibility": "disclosed",
+      "amount_in": 2000000.0,
+      "is_terminus": false,
+      "terminus_reason": null,
+      "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00486845&payee_name=GAMBIT+STRATEGIES",
+      "href": "/races/pa-sen-2024/vendors/V-gambit-strategies",
+      "medium": "production",
+      "basis": {
+        "basis": "filed",
+        "rule": "Schedule E payee, grouped by normalized vendor name (campaign_commons.vendors)",
+        "source_urls": [
+          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00486845&payee_name=GAMBIT+STRATEGIES"
+        ],
+        "checked_by": null,
+        "checked_at": null
+      }
+    },
+    {
+      "id": "vendor:V-the-outreach-team",
+      "name": "THE OUTREACH TEAM",
+      "kind": "vendor",
+      "committee_type": null,
+      "depth": 1,
+      "side": "out",
+      "visibility": "disclosed",
+      "amount_in": 200000.0,
+      "is_terminus": false,
+      "terminus_reason": null,
+      "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00486845&payee_name=THE+OUTREACH+TEAM",
+      "href": "/races/pa-sen-2024/vendors/V-the-outreach-team",
+      "medium": "field",
+      "basis": {
+        "basis": "filed",
+        "rule": "Schedule E payee, grouped by normalized vendor name (campaign_commons.vendors)",
+        "source_urls": [
+          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00486845&payee_name=THE+OUTREACH+TEAM"
+        ],
+        "checked_by": null,
+        "checked_at": null
+      }
+    },
+    {
+      "id": "vendor:V-deliver-strategies",
+      "name": "DELIVER STRATEGIES, LLC",
+      "kind": "vendor",
+      "committee_type": null,
+      "depth": 1,
+      "side": "out",
+      "visibility": "disclosed",
+      "amount_in": 189828.43,
+      "is_terminus": false,
+      "terminus_reason": null,
+      "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00486845&payee_name=DELIVER+STRATEGIES+LLC",
+      "href": "/races/pa-sen-2024/vendors/V-deliver-strategies",
+      "medium": "production",
+      "basis": {
+        "basis": "filed",
+        "rule": "Schedule E payee, grouped by normalized vendor name (campaign_commons.vendors)",
+        "source_urls": [
+          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00486845&payee_name=DELIVER+STRATEGIES+LLC"
+        ],
+        "checked_by": null,
+        "checked_at": null
+      }
+    },
+    {
+      "id": "vendor:V-stones-phones",
+      "name": "STONES' PHONES",
+      "kind": "vendor",
+      "committee_type": null,
+      "depth": 1,
+      "side": "out",
+      "visibility": "disclosed",
+      "amount_in": 164000.0,
+      "is_terminus": false,
+      "terminus_reason": null,
+      "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00486845&payee_name=STONES%27+PHONES",
+      "href": "/races/pa-sen-2024/vendors/V-stones-phones",
+      "medium": "phones",
+      "basis": {
+        "basis": "filed",
+        "rule": "Schedule E payee, grouped by normalized vendor name (campaign_commons.vendors)",
+        "source_urls": [
+          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00486845&payee_name=STONES%27+PHONES"
+        ],
+        "checked_by": null,
+        "checked_at": null
+      }
+    },
+    {
+      "id": "vendor:V-the-pivot-group",
+      "name": "THE PIVOT GROUP, INC.",
+      "kind": "vendor",
+      "committee_type": null,
+      "depth": 1,
+      "side": "out",
+      "visibility": "disclosed",
+      "amount_in": 46880.0,
+      "is_terminus": false,
+      "terminus_reason": null,
+      "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00486845&payee_name=THE+PIVOT+GROUP",
+      "href": "/races/pa-sen-2024/vendors/V-the-pivot-group",
+      "medium": "field",
+      "basis": {
+        "basis": "filed",
+        "rule": "Schedule E payee, grouped by normalized vendor name (campaign_commons.vendors)",
+        "source_urls": [
+          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00486845&payee_name=THE+PIVOT+GROUP"
+        ],
+        "checked_by": null,
+        "checked_at": null
+      }
+    },
+    {
+      "id": "vendor:V-league-of-conservation-voters",
+      "name": "LEAGUE OF CONSERVATION VOTERS, INC.",
+      "kind": "vendor",
+      "committee_type": null,
+      "depth": 1,
+      "side": "out",
+      "visibility": "disclosed",
+      "amount_in": 1887.01,
+      "is_terminus": false,
+      "terminus_reason": null,
+      "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00486845&payee_name=LEAGUE+OF+CONSERVATION+VOTERS%2C+INC.",
+      "href": "/races/pa-sen-2024/vendors/V-league-of-conservation-voters",
+      "medium": "digital",
+      "basis": {
+        "basis": "filed",
+        "rule": "Schedule E payee, grouped by normalized vendor name (campaign_commons.vendors)",
+        "source_urls": [
+          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00486845&payee_name=LEAGUE+OF+CONSERVATION+VOTERS%2C+INC."
+        ],
+        "checked_by": null,
+        "checked_at": null
+      }
+    },
+    {
+      "id": "vendor:V-long-view-media",
+      "name": "LONG VIEW MEDIA LLC",
+      "kind": "vendor",
+      "committee_type": null,
+      "depth": 1,
+      "side": "out",
+      "visibility": "disclosed",
+      "amount_in": 558.0,
+      "is_terminus": false,
+      "terminus_reason": null,
+      "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00486845&payee_name=LONG+VIEW+MEDIA+LLC",
+      "href": "/races/pa-sen-2024/vendors/V-long-view-media",
+      "medium": "consulting",
+      "basis": {
+        "basis": "filed",
+        "rule": "Schedule E payee, grouped by normalized vendor name (campaign_commons.vendors)",
+        "source_urls": [
+          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00486845&payee_name=LONG+VIEW+MEDIA+LLC"
+        ],
+        "checked_by": null,
+        "checked_at": null
+      }
+    },
+    {
+      "id": "CR05367732770854404097",
+      "name": "Video ad · 2024-10-02 – 2024-10-22",
+      "kind": "ad",
+      "committee_type": null,
+      "depth": 2,
+      "side": "out",
+      "visibility": "disclosed",
+      "amount_in": 375000.0,
+      "is_terminus": false,
+      "terminus_reason": null,
+      "source_url": "https://adstransparency.google.com/advertiser/AR15050660931082125313/creative/CR05367732770854404097?political=&region=US",
+      "href": "/races/pa-sen-2024/ads/CR05367732770854404097",
+      "thumbnail_path": "/creatives/pa-sen-2024/CR05367732770854404097.jpg",
+      "basis": {
+        "basis": "inferred",
+        "rule": "Google reports spend as a range ($350,000–$400,000); the midpoint is drawn",
+        "source_urls": [
+          "https://adstransparency.google.com/advertiser/AR15050660931082125313/creative/CR05367732770854404097?political=&region=US"
+        ],
+        "checked_by": null,
+        "checked_at": null
+      }
+    },
+    {
+      "id": "CR16821231048187707393",
+      "name": "Video ad · 2024-10-02 – 2024-10-22",
+      "kind": "ad",
+      "committee_type": null,
+      "depth": 2,
+      "side": "out",
+      "visibility": "disclosed",
+      "amount_in": 212500.0,
+      "is_terminus": false,
+      "terminus_reason": null,
+      "source_url": "https://adstransparency.google.com/advertiser/AR15050660931082125313/creative/CR16821231048187707393?political=&region=US",
+      "href": "/races/pa-sen-2024/ads/CR16821231048187707393",
+      "thumbnail_path": "/creatives/pa-sen-2024/CR16821231048187707393.jpg",
+      "basis": {
+        "basis": "inferred",
+        "rule": "Google reports spend as a range ($200,000–$225,000); the midpoint is drawn",
+        "source_urls": [
+          "https://adstransparency.google.com/advertiser/AR15050660931082125313/creative/CR16821231048187707393?political=&region=US"
+        ],
+        "checked_by": null,
+        "checked_at": null
+      }
+    },
+    {
+      "id": "CR05194561888502939649",
+      "name": "Video ad · 2024-10-08 – 2024-11-05",
+      "kind": "ad",
+      "committee_type": null,
+      "depth": 2,
+      "side": "out",
+      "visibility": "disclosed",
+      "amount_in": 27500.0,
+      "is_terminus": false,
+      "terminus_reason": null,
+      "source_url": "https://adstransparency.google.com/advertiser/AR15050660931082125313/creative/CR05194561888502939649?political=&region=US",
+      "href": "/races/pa-sen-2024/ads/CR05194561888502939649",
+      "basis": {
+        "basis": "inferred",
+        "rule": "Google reports spend as a range ($25,000–$30,000); the midpoint is drawn",
+        "source_urls": [
+          "https://adstransparency.google.com/advertiser/AR15050660931082125313/creative/CR05194561888502939649?political=&region=US"
+        ],
+        "checked_by": null,
+        "checked_at": null
+      }
+    },
+    {
+      "id": "S2PA00661",
+      "name": "Dave McCormick",
+      "kind": "candidate",
+      "committee_type": null,
+      "depth": 3,
+      "side": "out",
+      "visibility": "disclosed",
+      "amount_in": 2002359.54,
+      "is_terminus": true,
+      "terminus_reason": null,
+      "source_url": "https://www.fec.gov/data/candidate/S2PA00661/?cycle=2024&election_full=false",
+      "href": "/races/pa-sen-2024/candidates/S2PA00661",
+      "basis": {
+        "basis": "filed",
+        "rule": "Schedule E dollars naming this candidate as supported or opposed; nothing here reached the candidate",
+        "source_urls": [
+          "https://www.fec.gov/data/independent-expenditures/?committee_id=C00486845&cycle=2024&candidate_id=S2PA00661"
+        ],
+        "checked_by": null,
+        "checked_at": null
+      }
+    },
+    {
+      "id": "S6PA00217",
+      "name": "Bob Casey",
+      "kind": "candidate",
+      "committee_type": null,
+      "depth": 3,
+      "side": "out",
+      "visibility": "disclosed",
+      "amount_in": 3048486.4,
+      "is_terminus": true,
+      "terminus_reason": null,
+      "source_url": "https://www.fec.gov/data/candidate/S6PA00217/?cycle=2024&election_full=false",
+      "href": "/races/pa-sen-2024/candidates/S6PA00217",
+      "basis": {
+        "basis": "filed",
+        "rule": "Schedule E dollars naming this candidate as supported or opposed; nothing here reached the candidate",
+        "source_urls": [
+          "https://www.fec.gov/data/independent-expenditures/?committee_id=C00486845&cycle=2024&candidate_id=S6PA00217"
+        ],
+        "checked_by": null,
+        "checked_at": null
+      }
     }
   ],
   "edges": [
@@ -17525,6 +17834,484 @@
         "2024-12-31"
       ],
       "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00147173&two_year_transaction_period=2024"
+    },
+    {
+      "from": "C00486845",
+      "to": "vendor:V-otg-strategies",
+      "kind": "money",
+      "amount": 2447692.5,
+      "visibility": "disclosed",
+      "depth": 1,
+      "transaction_types": [
+        "24E"
+      ],
+      "count": 9,
+      "date_range": [
+        "2024-09-03",
+        "2024-11-01"
+      ],
+      "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00486845&payee_name=OTG+STRATEGIES",
+      "basis": {
+        "basis": "filed",
+        "rule": "Schedule E independent expenditure paid to this payee",
+        "source_urls": [
+          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00486845&payee_name=OTG+STRATEGIES"
+        ],
+        "checked_by": null,
+        "checked_at": null
+      }
+    },
+    {
+      "from": "vendor:V-otg-strategies",
+      "to": "S6PA00217",
+      "kind": "targeting",
+      "amount": 2447692.5,
+      "visibility": "disclosed",
+      "depth": 3,
+      "transaction_types": [],
+      "count": 0,
+      "date_range": null,
+      "source_url": "https://www.fec.gov/data/independent-expenditures/?committee_id=C00486845&cycle=2024&candidate_id=S6PA00217",
+      "support_oppose": "S",
+      "basis": {
+        "basis": "filed",
+        "rule": "Schedule E: this payee's buys named the candidate as supported/opposed",
+        "source_urls": [
+          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00486845&payee_name=OTG+STRATEGIES"
+        ],
+        "checked_by": null,
+        "checked_at": null
+      }
+    },
+    {
+      "from": "C00486845",
+      "to": "vendor:V-gambit-strategies",
+      "kind": "money",
+      "amount": 2000000.0,
+      "visibility": "disclosed",
+      "depth": 1,
+      "transaction_types": [
+        "24E"
+      ],
+      "count": 1,
+      "date_range": [
+        "2024-10-02",
+        "2024-10-02"
+      ],
+      "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00486845&payee_name=GAMBIT+STRATEGIES",
+      "basis": {
+        "basis": "filed",
+        "rule": "Schedule E independent expenditure paid to this payee",
+        "source_urls": [
+          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00486845&payee_name=GAMBIT+STRATEGIES"
+        ],
+        "checked_by": null,
+        "checked_at": null
+      }
+    },
+    {
+      "from": "vendor:V-gambit-strategies",
+      "to": "S2PA00661",
+      "kind": "targeting",
+      "amount": 2000000.0,
+      "visibility": "disclosed",
+      "depth": 3,
+      "transaction_types": [],
+      "count": 0,
+      "date_range": null,
+      "source_url": "https://www.fec.gov/data/independent-expenditures/?committee_id=C00486845&cycle=2024&candidate_id=S2PA00661",
+      "support_oppose": "O",
+      "basis": {
+        "basis": "filed",
+        "rule": "Schedule E: this payee's buys named the candidate as supported/opposed",
+        "source_urls": [
+          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00486845&payee_name=GAMBIT+STRATEGIES"
+        ],
+        "checked_by": null,
+        "checked_at": null
+      }
+    },
+    {
+      "from": "C00486845",
+      "to": "vendor:V-the-outreach-team",
+      "kind": "money",
+      "amount": 200000.0,
+      "visibility": "disclosed",
+      "depth": 1,
+      "transaction_types": [
+        "24E"
+      ],
+      "count": 2,
+      "date_range": [
+        "2024-10-10",
+        "2024-10-17"
+      ],
+      "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00486845&payee_name=THE+OUTREACH+TEAM",
+      "basis": {
+        "basis": "filed",
+        "rule": "Schedule E independent expenditure paid to this payee",
+        "source_urls": [
+          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00486845&payee_name=THE+OUTREACH+TEAM"
+        ],
+        "checked_by": null,
+        "checked_at": null
+      }
+    },
+    {
+      "from": "vendor:V-the-outreach-team",
+      "to": "S6PA00217",
+      "kind": "targeting",
+      "amount": 200000.0,
+      "visibility": "disclosed",
+      "depth": 3,
+      "transaction_types": [],
+      "count": 0,
+      "date_range": null,
+      "source_url": "https://www.fec.gov/data/independent-expenditures/?committee_id=C00486845&cycle=2024&candidate_id=S6PA00217",
+      "support_oppose": "S",
+      "basis": {
+        "basis": "filed",
+        "rule": "Schedule E: this payee's buys named the candidate as supported/opposed",
+        "source_urls": [
+          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00486845&payee_name=THE+OUTREACH+TEAM"
+        ],
+        "checked_by": null,
+        "checked_at": null
+      }
+    },
+    {
+      "from": "C00486845",
+      "to": "vendor:V-deliver-strategies",
+      "kind": "money",
+      "amount": 189828.43,
+      "visibility": "disclosed",
+      "depth": 1,
+      "transaction_types": [
+        "24E"
+      ],
+      "count": 6,
+      "date_range": [
+        "2024-09-27",
+        "2024-11-07"
+      ],
+      "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00486845&payee_name=DELIVER+STRATEGIES+LLC",
+      "basis": {
+        "basis": "filed",
+        "rule": "Schedule E independent expenditure paid to this payee",
+        "source_urls": [
+          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00486845&payee_name=DELIVER+STRATEGIES+LLC"
+        ],
+        "checked_by": null,
+        "checked_at": null
+      }
+    },
+    {
+      "from": "vendor:V-deliver-strategies",
+      "to": "S6PA00217",
+      "kind": "targeting",
+      "amount": 189828.43,
+      "visibility": "disclosed",
+      "depth": 3,
+      "transaction_types": [],
+      "count": 0,
+      "date_range": null,
+      "source_url": "https://www.fec.gov/data/independent-expenditures/?committee_id=C00486845&cycle=2024&candidate_id=S6PA00217",
+      "support_oppose": "S",
+      "basis": {
+        "basis": "filed",
+        "rule": "Schedule E: this payee's buys named the candidate as supported/opposed",
+        "source_urls": [
+          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00486845&payee_name=DELIVER+STRATEGIES+LLC"
+        ],
+        "checked_by": null,
+        "checked_at": null
+      }
+    },
+    {
+      "from": "C00486845",
+      "to": "vendor:V-stones-phones",
+      "kind": "money",
+      "amount": 164000.0,
+      "visibility": "disclosed",
+      "depth": 1,
+      "transaction_types": [
+        "24E"
+      ],
+      "count": 2,
+      "date_range": [
+        "2024-10-29",
+        "2024-11-01"
+      ],
+      "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00486845&payee_name=STONES%27+PHONES",
+      "basis": {
+        "basis": "filed",
+        "rule": "Schedule E independent expenditure paid to this payee",
+        "source_urls": [
+          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00486845&payee_name=STONES%27+PHONES"
+        ],
+        "checked_by": null,
+        "checked_at": null
+      }
+    },
+    {
+      "from": "vendor:V-stones-phones",
+      "to": "S6PA00217",
+      "kind": "targeting",
+      "amount": 164000.0,
+      "visibility": "disclosed",
+      "depth": 3,
+      "transaction_types": [],
+      "count": 0,
+      "date_range": null,
+      "source_url": "https://www.fec.gov/data/independent-expenditures/?committee_id=C00486845&cycle=2024&candidate_id=S6PA00217",
+      "support_oppose": "S",
+      "basis": {
+        "basis": "filed",
+        "rule": "Schedule E: this payee's buys named the candidate as supported/opposed",
+        "source_urls": [
+          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00486845&payee_name=STONES%27+PHONES"
+        ],
+        "checked_by": null,
+        "checked_at": null
+      }
+    },
+    {
+      "from": "C00486845",
+      "to": "vendor:V-the-pivot-group",
+      "kind": "money",
+      "amount": 46880.0,
+      "visibility": "disclosed",
+      "depth": 1,
+      "transaction_types": [
+        "24E"
+      ],
+      "count": 5,
+      "date_range": [
+        "2024-09-03",
+        "2024-10-11"
+      ],
+      "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00486845&payee_name=THE+PIVOT+GROUP",
+      "basis": {
+        "basis": "filed",
+        "rule": "Schedule E independent expenditure paid to this payee",
+        "source_urls": [
+          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00486845&payee_name=THE+PIVOT+GROUP"
+        ],
+        "checked_by": null,
+        "checked_at": null
+      }
+    },
+    {
+      "from": "vendor:V-the-pivot-group",
+      "to": "S6PA00217",
+      "kind": "targeting",
+      "amount": 46880.0,
+      "visibility": "disclosed",
+      "depth": 3,
+      "transaction_types": [],
+      "count": 0,
+      "date_range": null,
+      "source_url": "https://www.fec.gov/data/independent-expenditures/?committee_id=C00486845&cycle=2024&candidate_id=S6PA00217",
+      "support_oppose": "S",
+      "basis": {
+        "basis": "filed",
+        "rule": "Schedule E: this payee's buys named the candidate as supported/opposed",
+        "source_urls": [
+          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00486845&payee_name=THE+PIVOT+GROUP"
+        ],
+        "checked_by": null,
+        "checked_at": null
+      }
+    },
+    {
+      "from": "C00486845",
+      "to": "vendor:V-league-of-conservation-voters",
+      "kind": "money",
+      "amount": 1887.01,
+      "visibility": "disclosed",
+      "depth": 1,
+      "transaction_types": [
+        "24E"
+      ],
+      "count": 13,
+      "date_range": [
+        "2024-06-21",
+        "2024-10-31"
+      ],
+      "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00486845&payee_name=LEAGUE+OF+CONSERVATION+VOTERS%2C+INC.",
+      "basis": {
+        "basis": "filed",
+        "rule": "Schedule E independent expenditure paid to this payee",
+        "source_urls": [
+          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00486845&payee_name=LEAGUE+OF+CONSERVATION+VOTERS%2C+INC."
+        ],
+        "checked_by": null,
+        "checked_at": null
+      }
+    },
+    {
+      "from": "vendor:V-league-of-conservation-voters",
+      "to": "S2PA00661",
+      "kind": "targeting",
+      "amount": 1801.54,
+      "visibility": "disclosed",
+      "depth": 3,
+      "transaction_types": [],
+      "count": 0,
+      "date_range": null,
+      "source_url": "https://www.fec.gov/data/independent-expenditures/?committee_id=C00486845&cycle=2024&candidate_id=S2PA00661",
+      "support_oppose": "O",
+      "basis": {
+        "basis": "filed",
+        "rule": "Schedule E: this payee's buys named the candidate as supported/opposed",
+        "source_urls": [
+          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00486845&payee_name=LEAGUE+OF+CONSERVATION+VOTERS%2C+INC."
+        ],
+        "checked_by": null,
+        "checked_at": null
+      }
+    },
+    {
+      "from": "vendor:V-league-of-conservation-voters",
+      "to": "S6PA00217",
+      "kind": "targeting",
+      "amount": 85.47,
+      "visibility": "disclosed",
+      "depth": 3,
+      "transaction_types": [],
+      "count": 0,
+      "date_range": null,
+      "source_url": "https://www.fec.gov/data/independent-expenditures/?committee_id=C00486845&cycle=2024&candidate_id=S6PA00217",
+      "support_oppose": "S",
+      "basis": {
+        "basis": "filed",
+        "rule": "Schedule E: this payee's buys named the candidate as supported/opposed",
+        "source_urls": [
+          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00486845&payee_name=LEAGUE+OF+CONSERVATION+VOTERS%2C+INC."
+        ],
+        "checked_by": null,
+        "checked_at": null
+      }
+    },
+    {
+      "from": "C00486845",
+      "to": "vendor:V-long-view-media",
+      "kind": "money",
+      "amount": 558.0,
+      "visibility": "disclosed",
+      "depth": 1,
+      "transaction_types": [
+        "24E"
+      ],
+      "count": 4,
+      "date_range": [
+        "2024-09-19",
+        "2024-11-27"
+      ],
+      "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00486845&payee_name=LONG+VIEW+MEDIA+LLC",
+      "basis": {
+        "basis": "filed",
+        "rule": "Schedule E independent expenditure paid to this payee",
+        "source_urls": [
+          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00486845&payee_name=LONG+VIEW+MEDIA+LLC"
+        ],
+        "checked_by": null,
+        "checked_at": null
+      }
+    },
+    {
+      "from": "vendor:V-long-view-media",
+      "to": "S2PA00661",
+      "kind": "targeting",
+      "amount": 558.0,
+      "visibility": "disclosed",
+      "depth": 3,
+      "transaction_types": [],
+      "count": 0,
+      "date_range": null,
+      "source_url": "https://www.fec.gov/data/independent-expenditures/?committee_id=C00486845&cycle=2024&candidate_id=S2PA00661",
+      "support_oppose": "O",
+      "basis": {
+        "basis": "filed",
+        "rule": "Schedule E: this payee's buys named the candidate as supported/opposed",
+        "source_urls": [
+          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00486845&payee_name=LONG+VIEW+MEDIA+LLC"
+        ],
+        "checked_by": null,
+        "checked_at": null
+      }
+    },
+    {
+      "from": "vendor:V-league-of-conservation-voters",
+      "to": "CR05367732770854404097",
+      "kind": "placement",
+      "amount": 375000.0,
+      "visibility": "disclosed",
+      "depth": 2,
+      "transaction_types": [],
+      "count": 4,
+      "date_range": [
+        "2024-10-02",
+        "2024-10-22"
+      ],
+      "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00486845&payee_name=LEAGUE+OF+CONSERVATION+VOTERS%2C+INC.",
+      "basis": {
+        "basis": "inferred",
+        "rule": "Only digital vendor LCV VICTORY FUND paid during this ad's run window (ran oct 2, 2024 – oct 22, 2024, counting buys dated up to 7 days before first shown) — inferred, not filed. LCV VICTORY FUND reported $781 in digital buys to LEAGUE OF CONSERVATION VOTERS, INC.; Google ads are digital placements.",
+        "source_urls": [
+          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00486845&payee_name=LEAGUE+OF+CONSERVATION+VOTERS%2C+INC."
+        ],
+        "checked_by": null,
+        "checked_at": null
+      }
+    },
+    {
+      "from": "vendor:V-league-of-conservation-voters",
+      "to": "CR16821231048187707393",
+      "kind": "placement",
+      "amount": 212500.0,
+      "visibility": "disclosed",
+      "depth": 2,
+      "transaction_types": [],
+      "count": 4,
+      "date_range": [
+        "2024-10-02",
+        "2024-10-22"
+      ],
+      "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00486845&payee_name=LEAGUE+OF+CONSERVATION+VOTERS%2C+INC.",
+      "basis": {
+        "basis": "inferred",
+        "rule": "Only digital vendor LCV VICTORY FUND paid during this ad's run window (ran oct 2, 2024 – oct 22, 2024, counting buys dated up to 7 days before first shown) — inferred, not filed. LCV VICTORY FUND reported $781 in digital buys to LEAGUE OF CONSERVATION VOTERS, INC.; Google ads are digital placements.",
+        "source_urls": [
+          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00486845&payee_name=LEAGUE+OF+CONSERVATION+VOTERS%2C+INC."
+        ],
+        "checked_by": null,
+        "checked_at": null
+      }
+    },
+    {
+      "from": "vendor:V-league-of-conservation-voters",
+      "to": "CR05194561888502939649",
+      "kind": "placement",
+      "amount": 27500.0,
+      "visibility": "disclosed",
+      "depth": 2,
+      "transaction_types": [],
+      "count": 6,
+      "date_range": [
+        "2024-10-08",
+        "2024-11-05"
+      ],
+      "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00486845&payee_name=LEAGUE+OF+CONSERVATION+VOTERS%2C+INC.",
+      "basis": {
+        "basis": "inferred",
+        "rule": "Only digital vendor LCV VICTORY FUND paid during this ad's run window (ran oct 8, 2024 – nov 5, 2024, counting buys dated up to 7 days before first shown) — inferred, not filed. LCV VICTORY FUND reported $1,114 in digital buys to LEAGUE OF CONSERVATION VOTERS, INC.; Google ads are digital placements.",
+        "source_urls": [
+          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00486845&payee_name=LEAGUE+OF+CONSERVATION+VOTERS%2C+INC."
+        ],
+        "checked_by": null,
+        "checked_at": null
+      }
     }
   ],
   "summary": {
@@ -17541,7 +18328,9 @@
       "pruned": 28,
       "cycle": 10,
       "depth_cap": 51
-    }
+    },
+    "out_total": 5050845.94,
+    "max_out_depth": 3
   },
   "flags": [
     {
@@ -17557,5 +18346,5 @@
       "evidence_url": "https://www.fec.gov/data/committee/C00486845/?cycle=2024"
     }
   ],
-  "method": "Backward walk over money edges only (Schedule A receipts from individuals and organizations, committee-to-committee transfers) into LCV VICTORY FUND, 5 hop(s) deep; independent expenditures are targeting edges and never appear. The walk starts from $78,695,361 of itemized 2023–2024 receipts as loaded from FEC bulk data (unitemized receipts, loans and offsets are not edges), and every expanded committee conserves dollars: its inbound edges sum to its receipts. Inbound edges under 1% of a committee's receipts are rolled into one 'other contributors' node, which counts as disclosed except for the organization dollars inside it. Each dollar takes the visibility of where the walk stopped: named individuals (including earmarks through ActBlue/WinRed, attributed to the person) are disclosed. Organizations that are not registered committees are classified from their name alone (no IRS lookup): a union or a business giving from its own treasury is disclosed — the named entity is the source; an LLC, trust, advocacy nonprofit (501(c)(4)-style names) or unclassifiable organization is dark, because whoever funds it is not on file with the FEC. 51 committee node(s) stop with reason depth_cap: they are FEC-registered committees whose own receipts were not loaded into this race's neighborhood (or the hop or node cap was reached). The committee files donor lists with the FEC, but this walk did not read them, so its dollars are counted as 'not walked' — neither disclosed nor dark — and a dark layer behind such a committee would not show here. 10 edge(s) point at a committee already expanded elsewhere in this chain and reuse its visibility mix instead of being walked twice. Visibility shares are preliminary; no 990 lookups were performed, so nothing is marked inferable."
+  "method": "Backward walk over money edges only (Schedule A receipts from individuals and organizations, committee-to-committee transfers) into LCV VICTORY FUND, 5 hop(s) deep; independent expenditures are targeting edges and never appear. The walk starts from $78,695,361 of itemized 2023–2024 receipts as loaded from FEC bulk data (unitemized receipts, loans and offsets are not edges), and every expanded committee conserves dollars: its inbound edges sum to its receipts. Inbound edges under 1% of a committee's receipts are rolled into one 'other contributors' node, which counts as disclosed except for the organization dollars inside it. Each dollar takes the visibility of where the walk stopped: named individuals (including earmarks through ActBlue/WinRed, attributed to the person) are disclosed. Organizations that are not registered committees are classified from their name alone (no IRS lookup): a union or a business giving from its own treasury is disclosed — the named entity is the source; an LLC, trust, advocacy nonprofit (501(c)(4)-style names) or unclassifiable organization is dark, because whoever funds it is not on file with the FEC. 51 committee node(s) stop with reason depth_cap: they are FEC-registered committees whose own receipts were not loaded into this race's neighborhood (or the hop or node cap was reached). The committee files donor lists with the FEC, but this walk did not read them, so its dollars are counted as 'not walked' — neither disclosed nor dark — and a dark layer behind such a committee would not show here. 10 edge(s) point at a committee already expanded elsewhere in this chain and reuse its visibility mix instead of being walked twice. Visibility shares are preliminary; no 990 lookups were performed, so nothing is marked inferable. Spending side (right of the spender): Schedule E payments to vendors are money edges; vendor → ad and spender → ad edges are placement (no dollars) and carry the evidence basis they were drawn on; edges into a candidate are targeting (for/against) and never carry money to the candidate. Ad dollars are the midpoint of the Google-reported spend range."
 }

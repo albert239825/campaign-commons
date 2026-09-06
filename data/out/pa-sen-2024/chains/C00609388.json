@@ -2,7 +2,7 @@
   "root_entity_id": "C00609388",
   "root_name": "BLACKPAC",
   "race_id": "pa-sen-2024",
-  "generated_at": "2026-09-05T15:46:45+00:00",
+  "generated_at": "2026-09-05T19:53:48+00:00",
   "data_status": "real",
   "nodes": [
     {
@@ -7658,6 +7658,194 @@
       "terminus_reason": "pruned",
       "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00147173&two_year_transaction_period=2024",
       "contributor_count": 61
+    },
+    {
+      "id": "vendor:V-otg-strategies",
+      "name": "OTG STRATEGIES",
+      "kind": "vendor",
+      "committee_type": null,
+      "depth": 1,
+      "side": "out",
+      "visibility": "disclosed",
+      "amount_in": 2360000.0,
+      "is_terminus": false,
+      "terminus_reason": null,
+      "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00609388&payee_name=OTG+STRATEGIES",
+      "href": "/races/pa-sen-2024/vendors/V-otg-strategies",
+      "medium": "field",
+      "basis": {
+        "basis": "filed",
+        "rule": "Schedule E payee, grouped by normalized vendor name (campaign_commons.vendors)",
+        "source_urls": [
+          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00609388&payee_name=OTG+STRATEGIES"
+        ],
+        "checked_by": null,
+        "checked_at": null
+      }
+    },
+    {
+      "id": "vendor:V-technicolor-political",
+      "name": "TECHNICOLOR POLITICAL",
+      "kind": "vendor",
+      "committee_type": null,
+      "depth": 1,
+      "side": "out",
+      "visibility": "disclosed",
+      "amount_in": 206105.0,
+      "is_terminus": false,
+      "terminus_reason": null,
+      "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00609388&payee_name=TECHNICOLOR+POLITICAL",
+      "href": "/races/pa-sen-2024/vendors/V-technicolor-political",
+      "medium": "digital",
+      "basis": {
+        "basis": "filed",
+        "rule": "Schedule E payee, grouped by normalized vendor name (campaign_commons.vendors)",
+        "source_urls": [
+          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00609388&payee_name=TECHNICOLOR+POLITICAL"
+        ],
+        "checked_by": null,
+        "checked_at": null
+      }
+    },
+    {
+      "id": "vendor:V-the-pivot-group",
+      "name": "THE PIVOT GROUP, INC.",
+      "kind": "vendor",
+      "committee_type": null,
+      "depth": 1,
+      "side": "out",
+      "visibility": "disclosed",
+      "amount_in": 101469.56,
+      "is_terminus": false,
+      "terminus_reason": null,
+      "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00609388&payee_name=THE+PIVOT+GROUP+INC.",
+      "href": "/races/pa-sen-2024/vendors/V-the-pivot-group",
+      "medium": "mail",
+      "basis": {
+        "basis": "filed",
+        "rule": "Schedule E payee, grouped by normalized vendor name (campaign_commons.vendors)",
+        "source_urls": [
+          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00609388&payee_name=THE+PIVOT+GROUP+INC."
+        ],
+        "checked_by": null,
+        "checked_at": null
+      }
+    },
+    {
+      "id": "vendor:V-good-fight-political",
+      "name": "GOOD FIGHT POLITICAL INC",
+      "kind": "vendor",
+      "committee_type": null,
+      "depth": 1,
+      "side": "out",
+      "visibility": "disclosed",
+      "amount_in": 3125.0,
+      "is_terminus": false,
+      "terminus_reason": null,
+      "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00609388&payee_name=GOOD+FIGHT+POLITICAL+INC",
+      "href": "/races/pa-sen-2024/vendors/V-good-fight-political",
+      "medium": "phones",
+      "basis": {
+        "basis": "filed",
+        "rule": "Schedule E payee, grouped by normalized vendor name (campaign_commons.vendors)",
+        "source_urls": [
+          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00609388&payee_name=GOOD+FIGHT+POLITICAL+INC"
+        ],
+        "checked_by": null,
+        "checked_at": null
+      }
+    },
+    {
+      "id": "CR13687442314241245185",
+      "name": "Video ad · 2024-10-26 – 2024-11-05",
+      "kind": "ad",
+      "committee_type": null,
+      "depth": 2,
+      "side": "out",
+      "visibility": "disclosed",
+      "amount_in": 37500.0,
+      "is_terminus": false,
+      "terminus_reason": null,
+      "source_url": "https://adstransparency.google.com/advertiser/AR04859098812104310785/creative/CR13687442314241245185?political=&region=US",
+      "href": "/races/pa-sen-2024/ads/CR13687442314241245185",
+      "basis": {
+        "basis": "inferred",
+        "rule": "Google reports spend as a range ($35,000–$40,000); the midpoint is drawn",
+        "source_urls": [
+          "https://adstransparency.google.com/advertiser/AR04859098812104310785/creative/CR13687442314241245185?political=&region=US"
+        ],
+        "checked_by": null,
+        "checked_at": null
+      }
+    },
+    {
+      "id": "CR03582804286020517889",
+      "name": "Video ad · 2024-10-18 – 2024-11-05",
+      "kind": "ad",
+      "committee_type": null,
+      "depth": 2,
+      "side": "out",
+      "visibility": "disclosed",
+      "amount_in": 22500.0,
+      "is_terminus": false,
+      "terminus_reason": null,
+      "source_url": "https://adstransparency.google.com/advertiser/AR04859098812104310785/creative/CR03582804286020517889?political=&region=US",
+      "href": "/races/pa-sen-2024/ads/CR03582804286020517889",
+      "basis": {
+        "basis": "inferred",
+        "rule": "Google reports spend as a range ($20,000–$25,000); the midpoint is drawn",
+        "source_urls": [
+          "https://adstransparency.google.com/advertiser/AR04859098812104310785/creative/CR03582804286020517889?political=&region=US"
+        ],
+        "checked_by": null,
+        "checked_at": null
+      }
+    },
+    {
+      "id": "CR17060952070833569793",
+      "name": "Video ad · 2024-10-18 – 2024-11-05",
+      "kind": "ad",
+      "committee_type": null,
+      "depth": 2,
+      "side": "out",
+      "visibility": "disclosed",
+      "amount_in": 22500.0,
+      "is_terminus": false,
+      "terminus_reason": null,
+      "source_url": "https://adstransparency.google.com/advertiser/AR04859098812104310785/creative/CR17060952070833569793?political=&region=US",
+      "href": "/races/pa-sen-2024/ads/CR17060952070833569793",
+      "basis": {
+        "basis": "inferred",
+        "rule": "Google reports spend as a range ($20,000–$25,000); the midpoint is drawn",
+        "source_urls": [
+          "https://adstransparency.google.com/advertiser/AR04859098812104310785/creative/CR17060952070833569793?political=&region=US"
+        ],
+        "checked_by": null,
+        "checked_at": null
+      }
+    },
+    {
+      "id": "S6PA00217",
+      "name": "Bob Casey",
+      "kind": "candidate",
+      "committee_type": null,
+      "depth": 3,
+      "side": "out",
+      "visibility": "disclosed",
+      "amount_in": 2670699.56,
+      "is_terminus": true,
+      "terminus_reason": null,
+      "source_url": "https://www.fec.gov/data/candidate/S6PA00217/?cycle=2024&election_full=false",
+      "href": "/races/pa-sen-2024/candidates/S6PA00217",
+      "basis": {
+        "basis": "filed",
+        "rule": "Schedule E dollars naming this candidate as supported or opposed; nothing here reached the candidate",
+        "source_urls": [
+          "https://www.fec.gov/data/independent-expenditures/?committee_id=C00609388&cycle=2024&candidate_id=S6PA00217"
+        ],
+        "checked_by": null,
+        "checked_at": null
+      }
     }
   ],
   "edges": [
@@ -17896,6 +18084,270 @@
         "2024-12-31"
       ],
       "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00147173&two_year_transaction_period=2024"
+    },
+    {
+      "from": "C00609388",
+      "to": "vendor:V-otg-strategies",
+      "kind": "money",
+      "amount": 2360000.0,
+      "visibility": "disclosed",
+      "depth": 1,
+      "transaction_types": [
+        "24E"
+      ],
+      "count": 8,
+      "date_range": [
+        "2024-10-03",
+        "2024-11-05"
+      ],
+      "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00609388&payee_name=OTG+STRATEGIES",
+      "basis": {
+        "basis": "filed",
+        "rule": "Schedule E independent expenditure paid to this payee",
+        "source_urls": [
+          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00609388&payee_name=OTG+STRATEGIES"
+        ],
+        "checked_by": null,
+        "checked_at": null
+      }
+    },
+    {
+      "from": "vendor:V-otg-strategies",
+      "to": "S6PA00217",
+      "kind": "targeting",
+      "amount": 2360000.0,
+      "visibility": "disclosed",
+      "depth": 3,
+      "transaction_types": [],
+      "count": 0,
+      "date_range": null,
+      "source_url": "https://www.fec.gov/data/independent-expenditures/?committee_id=C00609388&cycle=2024&candidate_id=S6PA00217",
+      "support_oppose": "S",
+      "basis": {
+        "basis": "filed",
+        "rule": "Schedule E: this payee's buys named the candidate as supported/opposed",
+        "source_urls": [
+          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00609388&payee_name=OTG+STRATEGIES"
+        ],
+        "checked_by": null,
+        "checked_at": null
+      }
+    },
+    {
+      "from": "C00609388",
+      "to": "vendor:V-technicolor-political",
+      "kind": "money",
+      "amount": 206105.0,
+      "visibility": "disclosed",
+      "depth": 1,
+      "transaction_types": [
+        "24E"
+      ],
+      "count": 1,
+      "date_range": [
+        "2024-10-29",
+        "2024-10-29"
+      ],
+      "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00609388&payee_name=TECHNICOLOR+POLITICAL",
+      "basis": {
+        "basis": "filed",
+        "rule": "Schedule E independent expenditure paid to this payee",
+        "source_urls": [
+          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00609388&payee_name=TECHNICOLOR+POLITICAL"
+        ],
+        "checked_by": null,
+        "checked_at": null
+      }
+    },
+    {
+      "from": "vendor:V-technicolor-political",
+      "to": "S6PA00217",
+      "kind": "targeting",
+      "amount": 206105.0,
+      "visibility": "disclosed",
+      "depth": 3,
+      "transaction_types": [],
+      "count": 0,
+      "date_range": null,
+      "source_url": "https://www.fec.gov/data/independent-expenditures/?committee_id=C00609388&cycle=2024&candidate_id=S6PA00217",
+      "support_oppose": "S",
+      "basis": {
+        "basis": "filed",
+        "rule": "Schedule E: this payee's buys named the candidate as supported/opposed",
+        "source_urls": [
+          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00609388&payee_name=TECHNICOLOR+POLITICAL"
+        ],
+        "checked_by": null,
+        "checked_at": null
+      }
+    },
+    {
+      "from": "C00609388",
+      "to": "vendor:V-the-pivot-group",
+      "kind": "money",
+      "amount": 101469.56,
+      "visibility": "disclosed",
+      "depth": 1,
+      "transaction_types": [
+        "24E"
+      ],
+      "count": 2,
+      "date_range": [
+        "2024-10-04",
+        "2024-10-24"
+      ],
+      "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00609388&payee_name=THE+PIVOT+GROUP+INC.",
+      "basis": {
+        "basis": "filed",
+        "rule": "Schedule E independent expenditure paid to this payee",
+        "source_urls": [
+          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00609388&payee_name=THE+PIVOT+GROUP+INC."
+        ],
+        "checked_by": null,
+        "checked_at": null
+      }
+    },
+    {
+      "from": "vendor:V-the-pivot-group",
+      "to": "S6PA00217",
+      "kind": "targeting",
+      "amount": 101469.56,
+      "visibility": "disclosed",
+      "depth": 3,
+      "transaction_types": [],
+      "count": 0,
+      "date_range": null,
+      "source_url": "https://www.fec.gov/data/independent-expenditures/?committee_id=C00609388&cycle=2024&candidate_id=S6PA00217",
+      "support_oppose": "S",
+      "basis": {
+        "basis": "filed",
+        "rule": "Schedule E: this payee's buys named the candidate as supported/opposed",
+        "source_urls": [
+          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00609388&payee_name=THE+PIVOT+GROUP+INC."
+        ],
+        "checked_by": null,
+        "checked_at": null
+      }
+    },
+    {
+      "from": "C00609388",
+      "to": "vendor:V-good-fight-political",
+      "kind": "money",
+      "amount": 3125.0,
+      "visibility": "disclosed",
+      "depth": 1,
+      "transaction_types": [
+        "24E"
+      ],
+      "count": 2,
+      "date_range": [
+        "2024-10-11",
+        "2024-10-31"
+      ],
+      "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00609388&payee_name=GOOD+FIGHT+POLITICAL+INC",
+      "basis": {
+        "basis": "filed",
+        "rule": "Schedule E independent expenditure paid to this payee",
+        "source_urls": [
+          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00609388&payee_name=GOOD+FIGHT+POLITICAL+INC"
+        ],
+        "checked_by": null,
+        "checked_at": null
+      }
+    },
+    {
+      "from": "vendor:V-good-fight-political",
+      "to": "S6PA00217",
+      "kind": "targeting",
+      "amount": 3125.0,
+      "visibility": "disclosed",
+      "depth": 3,
+      "transaction_types": [],
+      "count": 0,
+      "date_range": null,
+      "source_url": "https://www.fec.gov/data/independent-expenditures/?committee_id=C00609388&cycle=2024&candidate_id=S6PA00217",
+      "support_oppose": "S",
+      "basis": {
+        "basis": "filed",
+        "rule": "Schedule E: this payee's buys named the candidate as supported/opposed",
+        "source_urls": [
+          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00609388&payee_name=GOOD+FIGHT+POLITICAL+INC"
+        ],
+        "checked_by": null,
+        "checked_at": null
+      }
+    },
+    {
+      "from": "vendor:V-technicolor-political",
+      "to": "CR13687442314241245185",
+      "kind": "placement",
+      "amount": 37500.0,
+      "visibility": "disclosed",
+      "depth": 2,
+      "transaction_types": [],
+      "count": 1,
+      "date_range": [
+        "2024-10-26",
+        "2024-11-05"
+      ],
+      "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00609388&payee_name=TECHNICOLOR+POLITICAL",
+      "basis": {
+        "basis": "inferred",
+        "rule": "Only digital vendor BLACKPAC paid during this ad's run window (ran oct 26, 2024 – nov 5, 2024, counting buys dated up to 7 days before first shown) — inferred, not filed. BLACKPAC reported $206,105 in digital buys to TECHNICOLOR POLITICAL; Google ads are digital placements.",
+        "source_urls": [
+          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00609388&payee_name=TECHNICOLOR+POLITICAL"
+        ],
+        "checked_by": null,
+        "checked_at": null
+      }
+    },
+    {
+      "from": "vendor:V-technicolor-political",
+      "to": "CR03582804286020517889",
+      "kind": "placement",
+      "amount": 22500.0,
+      "visibility": "disclosed",
+      "depth": 2,
+      "transaction_types": [],
+      "count": 1,
+      "date_range": [
+        "2024-10-18",
+        "2024-11-05"
+      ],
+      "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00609388&payee_name=TECHNICOLOR+POLITICAL",
+      "basis": {
+        "basis": "inferred",
+        "rule": "Only digital vendor BLACKPAC paid during this ad's run window (ran oct 18, 2024 – nov 5, 2024, counting buys dated up to 7 days before first shown) — inferred, not filed. BLACKPAC reported $206,105 in digital buys to TECHNICOLOR POLITICAL; Google ads are digital placements.",
+        "source_urls": [
+          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00609388&payee_name=TECHNICOLOR+POLITICAL"
+        ],
+        "checked_by": null,
+        "checked_at": null
+      }
+    },
+    {
+      "from": "vendor:V-technicolor-political",
+      "to": "CR17060952070833569793",
+      "kind": "placement",
+      "amount": 22500.0,
+      "visibility": "disclosed",
+      "depth": 2,
+      "transaction_types": [],
+      "count": 1,
+      "date_range": [
+        "2024-10-18",
+        "2024-11-05"
+      ],
+      "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00609388&payee_name=TECHNICOLOR+POLITICAL",
+      "basis": {
+        "basis": "inferred",
+        "rule": "Only digital vendor BLACKPAC paid during this ad's run window (ran oct 18, 2024 – nov 5, 2024, counting buys dated up to 7 days before first shown) — inferred, not filed. BLACKPAC reported $206,105 in digital buys to TECHNICOLOR POLITICAL; Google ads are digital placements.",
+        "source_urls": [
+          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00609388&payee_name=TECHNICOLOR+POLITICAL"
+        ],
+        "checked_by": null,
+        "checked_at": null
+      }
     }
   ],
   "summary": {
@@ -17912,7 +18364,9 @@
       "organization": 7,
       "cycle": 13,
       "depth_cap": 51
-    }
+    },
+    "out_total": 2670699.56,
+    "max_out_depth": 3
   },
   "flags": [
     {
@@ -17922,5 +18376,5 @@
       "evidence_url": "https://www.fec.gov/data/committee/C00609388/?cycle=2024"
     }
   ],
-  "method": "Backward walk over money edges only (Schedule A receipts from individuals and organizations, committee-to-committee transfers) into BLACKPAC, 5 hop(s) deep; independent expenditures are targeting edges and never appear. The walk starts from $34,566,027 of itemized 2023–2024 receipts as loaded from FEC bulk data (unitemized receipts, loans and offsets are not edges), and every expanded committee conserves dollars: its inbound edges sum to its receipts. Inbound edges under 1% of a committee's receipts are rolled into one 'other contributors' node, which counts as disclosed except for the organization dollars inside it. Each dollar takes the visibility of where the walk stopped: named individuals (including earmarks through ActBlue/WinRed, attributed to the person) are disclosed. Organizations that are not registered committees are classified from their name alone (no IRS lookup): a union or a business giving from its own treasury is disclosed — the named entity is the source; an LLC, trust, advocacy nonprofit (501(c)(4)-style names) or unclassifiable organization is dark, because whoever funds it is not on file with the FEC. 51 committee node(s) stop with reason depth_cap: they are FEC-registered committees whose own receipts were not loaded into this race's neighborhood (or the hop or node cap was reached). The committee files donor lists with the FEC, but this walk did not read them, so its dollars are counted as 'not walked' — neither disclosed nor dark — and a dark layer behind such a committee would not show here. 13 edge(s) point at a committee already expanded elsewhere in this chain and reuse its visibility mix instead of being walked twice. Visibility shares are preliminary; no 990 lookups were performed, so nothing is marked inferable."
+  "method": "Backward walk over money edges only (Schedule A receipts from individuals and organizations, committee-to-committee transfers) into BLACKPAC, 5 hop(s) deep; independent expenditures are targeting edges and never appear. The walk starts from $34,566,027 of itemized 2023–2024 receipts as loaded from FEC bulk data (unitemized receipts, loans and offsets are not edges), and every expanded committee conserves dollars: its inbound edges sum to its receipts. Inbound edges under 1% of a committee's receipts are rolled into one 'other contributors' node, which counts as disclosed except for the organization dollars inside it. Each dollar takes the visibility of where the walk stopped: named individuals (including earmarks through ActBlue/WinRed, attributed to the person) are disclosed. Organizations that are not registered committees are classified from their name alone (no IRS lookup): a union or a business giving from its own treasury is disclosed — the named entity is the source; an LLC, trust, advocacy nonprofit (501(c)(4)-style names) or unclassifiable organization is dark, because whoever funds it is not on file with the FEC. 51 committee node(s) stop with reason depth_cap: they are FEC-registered committees whose own receipts were not loaded into this race's neighborhood (or the hop or node cap was reached). The committee files donor lists with the FEC, but this walk did not read them, so its dollars are counted as 'not walked' — neither disclosed nor dark — and a dark layer behind such a committee would not show here. 13 edge(s) point at a committee already expanded elsewhere in this chain and reuse its visibility mix instead of being walked twice. Visibility shares are preliminary; no 990 lookups were performed, so nothing is marked inferable. Spending side (right of the spender): Schedule E payments to vendors are money edges; vendor → ad and spender → ad edges are placement (no dollars) and carry the evidence basis they were drawn on; edges into a candidate are targeting (for/against) and never carry money to the candidate. Ad dollars are the midpoint of the Google-reported spend range."
 }

@@ -1,0 +1,661 @@
+{
+  "vendor_id": "V-creative-strategic-solutions",
+  "name": "CREATIVE STRATEGIC SOLUTIONS LLC",
+  "aliases": [
+    "CREATIVE STRATEGIC SOLUTIONS LLC"
+  ],
+  "normalization": {
+    "basis": "inferred",
+    "rule": "case/punctuation/suffix normalisation + token-set ≥0.92 (numeric tokens must match); aliases file",
+    "source_urls": [
+      "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&payee_name=CREATIVE+STRATEGIC+SOLUTIONS+LLC"
+    ],
+    "checked_by": null,
+    "checked_at": null
+  },
+  "total": 3564382.0,
+  "count": 33,
+  "media_mix": [
+    {
+      "medium": "digital",
+      "amount": 2563132.0,
+      "count": 30
+    },
+    {
+      "medium": "production",
+      "amount": 1000000.0,
+      "count": 2
+    },
+    {
+      "medium": "phones",
+      "amount": 1250.0,
+      "count": 1
+    }
+  ],
+  "spenders": [
+    {
+      "entity_id": "C00849489",
+      "name": "KEYSTONE RENEWAL PAC",
+      "amount": 2563132.0,
+      "count": 30
+    },
+    {
+      "entity_id": "C00053553",
+      "name": "NATIONAL RIFLE ASSOCIATION OF AMERICA POLITICAL VICTORY FUND",
+      "amount": 1000000.0,
+      "count": 2
+    },
+    {
+      "entity_id": "C00779595",
+      "name": "RSLC PAC",
+      "amount": 1250.0,
+      "count": 1
+    }
+  ],
+  "targets": [
+    {
+      "candidate_id": "S2PA00661",
+      "support_oppose": "S",
+      "amount": 2019756.5
+    },
+    {
+      "candidate_id": "S6PA00217",
+      "support_oppose": "O",
+      "amount": 947316.0
+    },
+    {
+      "candidate_id": "S6PA00217",
+      "support_oppose": "S",
+      "amount": 411809.5
+    },
+    {
+      "candidate_id": "S2PA00661",
+      "support_oppose": "O",
+      "amount": 185500.0
+    }
+  ],
+  "first_date": "2023-09-22",
+  "last_date": "2024-10-24",
+  "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&payee_name=CREATIVE+STRATEGIC+SOLUTIONS+LLC",
+  "race_id": "pa-sen-2024",
+  "generated_at": "2026-09-05T20:34:15+00:00",
+  "data_status": "real",
+  "expenditures": [
+    {
+      "ie_id": "C00053553-ie-1859893-SE.109",
+      "spender_entity_id": "C00053553",
+      "spender_name": "NATIONAL RIFLE ASSOCIATION OF AMERICA POLITICAL VICTORY FUND",
+      "candidate_id": "S2PA00661",
+      "candidate_name": "Dave McCormick",
+      "support_oppose": "S",
+      "amount": 250000.0,
+      "date": "2024-10-24",
+      "purpose": "MEDIA PRODUCTION / MEDIA PLACEMENT",
+      "payee": "CREATIVE STRATEGIC SOLUTIONS LLC",
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202412129739890387",
+      "vendor_id": "V-creative-strategic-solutions",
+      "medium": "production"
+    },
+    {
+      "ie_id": "C00053553-ie-1849414-SE.149",
+      "spender_entity_id": "C00053553",
+      "spender_name": "NATIONAL RIFLE ASSOCIATION OF AMERICA POLITICAL VICTORY FUND",
+      "candidate_id": "S2PA00661",
+      "candidate_name": "Dave McCormick",
+      "support_oppose": "S",
+      "amount": 750000.0,
+      "date": "2024-10-07",
+      "purpose": "MEDIA PRODUCTION / MEDIA PLACEMENT",
+      "payee": "CREATIVE STRATEGIC SOLUTIONS LLC",
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202411219720014884",
+      "vendor_id": "V-creative-strategic-solutions",
+      "medium": "production"
+    },
+    {
+      "ie_id": "C00849489-ie-1826107-SE.29",
+      "spender_entity_id": "C00849489",
+      "spender_name": "KEYSTONE RENEWAL PAC",
+      "candidate_id": "S6PA00217",
+      "candidate_name": "Bob Casey",
+      "support_oppose": "O",
+      "amount": 50000.0,
+      "date": "2024-09-05",
+      "purpose": "EMAILS / SMS MESSAGING",
+      "payee": "CREATIVE STRATEGIC SOLUTIONS LLC",
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202410159685491290",
+      "vendor_id": "V-creative-strategic-solutions",
+      "medium": "digital"
+    },
+    {
+      "ie_id": "C00849489-ie-1826107-SE.28",
+      "spender_entity_id": "C00849489",
+      "spender_name": "KEYSTONE RENEWAL PAC",
+      "candidate_id": "S2PA00661",
+      "candidate_name": "Dave McCormick",
+      "support_oppose": "S",
+      "amount": 50000.0,
+      "date": "2024-09-05",
+      "purpose": "EMAILS / SMS MESSAGING",
+      "payee": "CREATIVE STRATEGIC SOLUTIONS LLC",
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202410159685491289",
+      "vendor_id": "V-creative-strategic-solutions",
+      "medium": "digital"
+    },
+    {
+      "ie_id": "C00849489-ie-1826107-SE.19",
+      "spender_entity_id": "C00849489",
+      "spender_name": "KEYSTONE RENEWAL PAC",
+      "candidate_id": "S6PA00217",
+      "candidate_name": "Bob Casey",
+      "support_oppose": "O",
+      "amount": 151382.0,
+      "date": "2024-08-19",
+      "purpose": "EMAILS / SMS MESSAGING",
+      "payee": "CREATIVE STRATEGIC SOLUTIONS LLC",
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202410159685491285",
+      "vendor_id": "V-creative-strategic-solutions",
+      "medium": "digital"
+    },
+    {
+      "ie_id": "C00849489-ie-1826107-SE.18",
+      "spender_entity_id": "C00849489",
+      "spender_name": "KEYSTONE RENEWAL PAC",
+      "candidate_id": "S6PA00217",
+      "candidate_name": "Bob Casey",
+      "support_oppose": "S",
+      "amount": 151382.0,
+      "date": "2024-08-19",
+      "purpose": "EMAILS / SMS MESSAGING",
+      "payee": "CREATIVE STRATEGIC SOLUTIONS LLC",
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202410159685491284",
+      "vendor_id": "V-creative-strategic-solutions",
+      "medium": "digital"
+    },
+    {
+      "ie_id": "C00849489-ie-1826107-SE.14",
+      "spender_entity_id": "C00849489",
+      "spender_name": "KEYSTONE RENEWAL PAC",
+      "candidate_id": "S6PA00217",
+      "candidate_name": "Bob Casey",
+      "support_oppose": "O",
+      "amount": 260427.5,
+      "date": "2024-08-05",
+      "purpose": "EMAILS / SMS MESSAGING",
+      "payee": "CREATIVE STRATEGIC SOLUTIONS LLC",
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202410159685491282",
+      "vendor_id": "V-creative-strategic-solutions",
+      "medium": "digital"
+    },
+    {
+      "ie_id": "C00849489-ie-1826107-SE.13",
+      "spender_entity_id": "C00849489",
+      "spender_name": "KEYSTONE RENEWAL PAC",
+      "candidate_id": "S6PA00217",
+      "candidate_name": "Bob Casey",
+      "support_oppose": "S",
+      "amount": 260427.5,
+      "date": "2024-08-05",
+      "purpose": "EMAILS / SMS MESSAGING",
+      "payee": "CREATIVE STRATEGIC SOLUTIONS LLC",
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202410159685491282",
+      "vendor_id": "V-creative-strategic-solutions",
+      "medium": "digital"
+    },
+    {
+      "ie_id": "C00849489-ie-1826107-SE.6",
+      "spender_entity_id": "C00849489",
+      "spender_name": "KEYSTONE RENEWAL PAC",
+      "candidate_id": "S2PA00661",
+      "candidate_name": "Dave McCormick",
+      "support_oppose": "O",
+      "amount": 185500.0,
+      "date": "2024-07-02",
+      "purpose": "EMAILS / SMS MESSAGING",
+      "payee": "CREATIVE STRATEGIC SOLUTIONS LLC",
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202410159685491278",
+      "vendor_id": "V-creative-strategic-solutions",
+      "medium": "digital"
+    },
+    {
+      "ie_id": "C00849489-ie-1826107-SE.5",
+      "spender_entity_id": "C00849489",
+      "spender_name": "KEYSTONE RENEWAL PAC",
+      "candidate_id": "S2PA00661",
+      "candidate_name": "Dave McCormick",
+      "support_oppose": "S",
+      "amount": 185500.0,
+      "date": "2024-07-02",
+      "purpose": "EMAILS / SMS MESSAGING",
+      "payee": "CREATIVE STRATEGIC SOLUTIONS LLC",
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202410159685491278",
+      "vendor_id": "V-creative-strategic-solutions",
+      "medium": "digital"
+    },
+    {
+      "ie_id": "C00849489-ie-1806357-SE.22",
+      "spender_entity_id": "C00849489",
+      "spender_name": "KEYSTONE RENEWAL PAC",
+      "candidate_id": "S6PA00217",
+      "candidate_name": "Bob Casey",
+      "support_oppose": "O",
+      "amount": 84256.5,
+      "date": "2024-06-14",
+      "purpose": "EMAILS / SMS MESSAGING",
+      "payee": "CREATIVE STRATEGIC SOLUTIONS LLC",
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202407269665748307",
+      "vendor_id": "V-creative-strategic-solutions",
+      "medium": "digital"
+    },
+    {
+      "ie_id": "C00849489-ie-1806357-SE.21",
+      "spender_entity_id": "C00849489",
+      "spender_name": "KEYSTONE RENEWAL PAC",
+      "candidate_id": "S2PA00661",
+      "candidate_name": "Dave McCormick",
+      "support_oppose": "S",
+      "amount": 84256.5,
+      "date": "2024-06-14",
+      "purpose": "EMAILS / SMS MESSAGING",
+      "payee": "CREATIVE STRATEGIC SOLUTIONS LLC",
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202407269665748306",
+      "vendor_id": "V-creative-strategic-solutions",
+      "medium": "digital"
+    },
+    {
+      "ie_id": "C00849489-ie-1806357-SE.16",
+      "spender_entity_id": "C00849489",
+      "spender_name": "KEYSTONE RENEWAL PAC",
+      "candidate_id": "S6PA00217",
+      "candidate_name": "Bob Casey",
+      "support_oppose": "O",
+      "amount": 50000.0,
+      "date": "2024-06-04",
+      "purpose": "EMAILS / SMS MESSAGING",
+      "payee": "CREATIVE STRATEGIC SOLUTIONS LLC",
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202407269665748304",
+      "vendor_id": "V-creative-strategic-solutions",
+      "medium": "digital"
+    },
+    {
+      "ie_id": "C00849489-ie-1806357-SE.15",
+      "spender_entity_id": "C00849489",
+      "spender_name": "KEYSTONE RENEWAL PAC",
+      "candidate_id": "S2PA00661",
+      "candidate_name": "Dave McCormick",
+      "support_oppose": "S",
+      "amount": 50000.0,
+      "date": "2024-06-04",
+      "purpose": "EMAILS / SMS MESSAGING",
+      "payee": "CREATIVE STRATEGIC SOLUTIONS LLC",
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202407269665748303",
+      "vendor_id": "V-creative-strategic-solutions",
+      "medium": "digital"
+    },
+    {
+      "ie_id": "C00849489-ie-1806357-SE.11",
+      "spender_entity_id": "C00849489",
+      "spender_name": "KEYSTONE RENEWAL PAC",
+      "candidate_id": "S6PA00217",
+      "candidate_name": "Bob Casey",
+      "support_oppose": "O",
+      "amount": 50000.0,
+      "date": "2024-05-13",
+      "purpose": "EMAILS / SMS MESSAGING",
+      "payee": "CREATIVE STRATEGIC SOLUTIONS LLC",
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202407269665748301",
+      "vendor_id": "V-creative-strategic-solutions",
+      "medium": "digital"
+    },
+    {
+      "ie_id": "C00849489-ie-1806357-SE.10",
+      "spender_entity_id": "C00849489",
+      "spender_name": "KEYSTONE RENEWAL PAC",
+      "candidate_id": "S2PA00661",
+      "candidate_name": "Dave McCormick",
+      "support_oppose": "S",
+      "amount": 50000.0,
+      "date": "2024-05-13",
+      "purpose": "EMAILS / SMS MESSAGING",
+      "payee": "CREATIVE STRATEGIC SOLUTIONS LLC",
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202407269665748301",
+      "vendor_id": "V-creative-strategic-solutions",
+      "medium": "digital"
+    },
+    {
+      "ie_id": "C00849489-ie-1806357-SE.5",
+      "spender_entity_id": "C00849489",
+      "spender_name": "KEYSTONE RENEWAL PAC",
+      "candidate_id": "S6PA00217",
+      "candidate_name": "Bob Casey",
+      "support_oppose": "O",
+      "amount": 50000.0,
+      "date": "2024-04-29",
+      "purpose": "EMAILS / SMS MESSAGING",
+      "payee": "CREATIVE STRATEGIC SOLUTIONS LLC",
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202407269665748299",
+      "vendor_id": "V-creative-strategic-solutions",
+      "medium": "digital"
+    },
+    {
+      "ie_id": "C00849489-ie-1806357-SE.4",
+      "spender_entity_id": "C00849489",
+      "spender_name": "KEYSTONE RENEWAL PAC",
+      "candidate_id": "S2PA00661",
+      "candidate_name": "Dave McCormick",
+      "support_oppose": "S",
+      "amount": 50000.0,
+      "date": "2024-04-29",
+      "purpose": "EMAILS / SMS MESSAGING",
+      "payee": "CREATIVE STRATEGIC SOLUTIONS LLC",
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202407269665748298",
+      "vendor_id": "V-creative-strategic-solutions",
+      "medium": "digital"
+    },
+    {
+      "ie_id": "C00849489-ie-1806357-SE.3",
+      "spender_entity_id": "C00849489",
+      "spender_name": "KEYSTONE RENEWAL PAC",
+      "candidate_id": "S2PA00661",
+      "candidate_name": "Dave McCormick",
+      "support_oppose": "S",
+      "amount": 40000.0,
+      "date": "2024-04-24",
+      "purpose": "EMAILS / SMS MESSAGING",
+      "payee": "CREATIVE STRATEGIC SOLUTIONS LLC",
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202407269665748298",
+      "vendor_id": "V-creative-strategic-solutions",
+      "medium": "digital"
+    },
+    {
+      "ie_id": "C00849489-ie-1806357-SE.2",
+      "spender_entity_id": "C00849489",
+      "spender_name": "KEYSTONE RENEWAL PAC",
+      "candidate_id": "S6PA00217",
+      "candidate_name": "Bob Casey",
+      "support_oppose": "O",
+      "amount": 50000.0,
+      "date": "2024-04-09",
+      "purpose": "EMAILS / SMS MESSAGING",
+      "payee": "CREATIVE STRATEGIC SOLUTIONS LLC",
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202407269665748297",
+      "vendor_id": "V-creative-strategic-solutions",
+      "medium": "digital"
+    },
+    {
+      "ie_id": "C00849489-ie-1806357-SE.1",
+      "spender_entity_id": "C00849489",
+      "spender_name": "KEYSTONE RENEWAL PAC",
+      "candidate_id": "S2PA00661",
+      "candidate_name": "Dave McCormick",
+      "support_oppose": "S",
+      "amount": 50000.0,
+      "date": "2024-04-09",
+      "purpose": "EMAILS / SMS MESSAGING",
+      "payee": "CREATIVE STRATEGIC SOLUTIONS LLC",
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202407269665748297",
+      "vendor_id": "V-creative-strategic-solutions",
+      "medium": "digital"
+    },
+    {
+      "ie_id": "C00779595-ie-1808473-SE24.7",
+      "spender_entity_id": "C00779595",
+      "spender_name": "RSLC PAC",
+      "candidate_id": "S6PA00217",
+      "candidate_name": "Bob Casey",
+      "support_oppose": "O",
+      "amount": 1250.0,
+      "date": "2024-04-08",
+      "purpose": "TEXT MESSAGES",
+      "payee": "CREATIVE STRATEGIC SOLUTIONS LLC",
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202408079666111247",
+      "vendor_id": "V-creative-strategic-solutions",
+      "medium": "phones"
+    },
+    {
+      "ie_id": "C00849489-ie-1806356-SE.6",
+      "spender_entity_id": "C00849489",
+      "spender_name": "KEYSTONE RENEWAL PAC",
+      "candidate_id": "S6PA00217",
+      "candidate_name": "Bob Casey",
+      "support_oppose": "O",
+      "amount": 50000.0,
+      "date": "2024-03-19",
+      "purpose": "EMAILS / SMS MESSAGING",
+      "payee": "CREATIVE STRATEGIC SOLUTIONS LLC",
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202407269665748252",
+      "vendor_id": "V-creative-strategic-solutions",
+      "medium": "digital"
+    },
+    {
+      "ie_id": "C00849489-ie-1806356-SE.5",
+      "spender_entity_id": "C00849489",
+      "spender_name": "KEYSTONE RENEWAL PAC",
+      "candidate_id": "S2PA00661",
+      "candidate_name": "Dave McCormick",
+      "support_oppose": "S",
+      "amount": 50000.0,
+      "date": "2024-03-19",
+      "purpose": "EMAILS / SMS MESSAGING",
+      "payee": "CREATIVE STRATEGIC SOLUTIONS LLC",
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202407269665748252",
+      "vendor_id": "V-creative-strategic-solutions",
+      "medium": "digital"
+    },
+    {
+      "ie_id": "C00849489-ie-1806356-SE.3",
+      "spender_entity_id": "C00849489",
+      "spender_name": "KEYSTONE RENEWAL PAC",
+      "candidate_id": "S2PA00661",
+      "candidate_name": "Dave McCormick",
+      "support_oppose": "S",
+      "amount": 60000.0,
+      "date": "2024-02-06",
+      "purpose": "EMAILS / SMS MESSAGING",
+      "payee": "CREATIVE STRATEGIC SOLUTIONS LLC",
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202407269665748251",
+      "vendor_id": "V-creative-strategic-solutions",
+      "medium": "digital"
+    },
+    {
+      "ie_id": "C00849489-ie-1806356-SE.2",
+      "spender_entity_id": "C00849489",
+      "spender_name": "KEYSTONE RENEWAL PAC",
+      "candidate_id": "S6PA00217",
+      "candidate_name": "Bob Casey",
+      "support_oppose": "O",
+      "amount": 50000.0,
+      "date": "2024-02-01",
+      "purpose": "EMAILS / SMS MESSAGING",
+      "payee": "CREATIVE STRATEGIC SOLUTIONS LLC",
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202407269665748250",
+      "vendor_id": "V-creative-strategic-solutions",
+      "medium": "digital"
+    },
+    {
+      "ie_id": "C00849489-ie-1806356-SE.1",
+      "spender_entity_id": "C00849489",
+      "spender_name": "KEYSTONE RENEWAL PAC",
+      "candidate_id": "S2PA00661",
+      "candidate_name": "Dave McCormick",
+      "support_oppose": "S",
+      "amount": 50000.0,
+      "date": "2024-02-01",
+      "purpose": "EMAILS / SMS MESSAGING",
+      "payee": "CREATIVE STRATEGIC SOLUTIONS LLC",
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202407269665748250",
+      "vendor_id": "V-creative-strategic-solutions",
+      "medium": "digital"
+    },
+    {
+      "ie_id": "C00849489-ie-1752473-SE.7",
+      "spender_entity_id": "C00849489",
+      "spender_name": "KEYSTONE RENEWAL PAC",
+      "candidate_id": "S6PA00217",
+      "candidate_name": "Bob Casey",
+      "support_oppose": "O",
+      "amount": 50000.0,
+      "date": "2023-12-14",
+      "purpose": "EMAILS / SMS MESSAGING",
+      "payee": "CREATIVE STRATEGIC SOLUTIONS LLC",
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202401319608124053",
+      "vendor_id": "V-creative-strategic-solutions",
+      "medium": "digital"
+    },
+    {
+      "ie_id": "C00849489-ie-1752473-SE.6",
+      "spender_entity_id": "C00849489",
+      "spender_name": "KEYSTONE RENEWAL PAC",
+      "candidate_id": "S2PA00661",
+      "candidate_name": "Dave McCormick",
+      "support_oppose": "S",
+      "amount": 50000.0,
+      "date": "2023-12-14",
+      "purpose": "EMAILS / SMS MESSAGING",
+      "payee": "CREATIVE STRATEGIC SOLUTIONS LLC",
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202401319608124052",
+      "vendor_id": "V-creative-strategic-solutions",
+      "medium": "digital"
+    },
+    {
+      "ie_id": "C00849489-ie-1752473-SE.5",
+      "spender_entity_id": "C00849489",
+      "spender_name": "KEYSTONE RENEWAL PAC",
+      "candidate_id": "S6PA00217",
+      "candidate_name": "Bob Casey",
+      "support_oppose": "O",
+      "amount": 50000.0,
+      "date": "2023-11-06",
+      "purpose": "EMAILS / SMS MESSAGING",
+      "payee": "CREATIVE STRATEGIC SOLUTIONS LLC",
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202401319608124052",
+      "vendor_id": "V-creative-strategic-solutions",
+      "medium": "digital"
+    },
+    {
+      "ie_id": "C00849489-ie-1752473-SE.4",
+      "spender_entity_id": "C00849489",
+      "spender_name": "KEYSTONE RENEWAL PAC",
+      "candidate_id": "S2PA00661",
+      "candidate_name": "Dave McCormick",
+      "support_oppose": "S",
+      "amount": 50000.0,
+      "date": "2023-11-06",
+      "purpose": "EMAILS / SMS MESSAGING",
+      "payee": "CREATIVE STRATEGIC SOLUTIONS LLC",
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202401319608124051",
+      "vendor_id": "V-creative-strategic-solutions",
+      "medium": "digital"
+    },
+    {
+      "ie_id": "C00849489-ie-1752473-SE.2",
+      "spender_entity_id": "C00849489",
+      "spender_name": "KEYSTONE RENEWAL PAC",
+      "candidate_id": "S2PA00661",
+      "candidate_name": "Dave McCormick",
+      "support_oppose": "S",
+      "amount": 100000.0,
+      "date": "2023-10-03",
+      "purpose": "EMAILS / SMS MESSAGING",
+      "payee": "CREATIVE STRATEGIC SOLUTIONS LLC",
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202401319608124050",
+      "vendor_id": "V-creative-strategic-solutions",
+      "medium": "digital"
+    },
+    {
+      "ie_id": "C00849489-ie-1752473-SE.1",
+      "spender_entity_id": "C00849489",
+      "spender_name": "KEYSTONE RENEWAL PAC",
+      "candidate_id": "S2PA00661",
+      "candidate_name": "Dave McCormick",
+      "support_oppose": "S",
+      "amount": 100000.0,
+      "date": "2023-09-22",
+      "purpose": "EMAILS / SMS MESSAGING",
+      "payee": "CREATIVE STRATEGIC SOLUTIONS LLC",
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202401319608124050",
+      "vendor_id": "V-creative-strategic-solutions",
+      "medium": "digital"
+    }
+  ],
+  "ads": [
+    {
+      "ad_id": "CR06215613208334434305",
+      "sponsor_entity_id": "C00849489",
+      "basis": {
+        "basis": "inferred",
+        "rule": "Only digital vendor KEYSTONE RENEWAL PAC paid during this ad's run window (ran sep 25, 2023 – sep 10, 2024, counting buys dated up to 7 days before first shown) — inferred, not filed. KEYSTONE RENEWAL PAC reported $2,563,132 in digital buys to CREATIVE STRATEGIC SOLUTIONS LLC; Google ads are digital placements.",
+        "source_urls": [
+          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00849489&payee_name=CREATIVE+STRATEGIC+SOLUTIONS+LLC"
+        ],
+        "checked_by": null,
+        "checked_at": null
+      }
+    },
+    {
+      "ad_id": "CR00337131121437310977",
+      "sponsor_entity_id": "C00849489",
+      "basis": {
+        "basis": "inferred",
+        "rule": "Only digital vendor KEYSTONE RENEWAL PAC paid during this ad's run window (ran aug 19, 2024 – aug 28, 2024, counting buys dated up to 7 days before first shown) — inferred, not filed. KEYSTONE RENEWAL PAC reported $302,764 in digital buys to CREATIVE STRATEGIC SOLUTIONS LLC; Google ads are digital placements.",
+        "source_urls": [
+          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00849489&payee_name=CREATIVE+STRATEGIC+SOLUTIONS+LLC"
+        ],
+        "checked_by": null,
+        "checked_at": null
+      }
+    },
+    {
+      "ad_id": "CR08459320822597681153",
+      "sponsor_entity_id": "C00849489",
+      "basis": {
+        "basis": "inferred",
+        "rule": "Only digital vendor KEYSTONE RENEWAL PAC paid during this ad's run window (ran aug 3, 2024 – aug 14, 2024, counting buys dated up to 7 days before first shown) — inferred, not filed. KEYSTONE RENEWAL PAC reported $520,855 in digital buys to CREATIVE STRATEGIC SOLUTIONS LLC; Google ads are digital placements.",
+        "source_urls": [
+          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00849489&payee_name=CREATIVE+STRATEGIC+SOLUTIONS+LLC"
+        ],
+        "checked_by": null,
+        "checked_at": null
+      }
+    },
+    {
+      "ad_id": "CR11512100013710770177",
+      "sponsor_entity_id": "C00849489",
+      "basis": {
+        "basis": "inferred",
+        "rule": "Only digital vendor KEYSTONE RENEWAL PAC paid during this ad's run window (ran aug 23, 2024 – aug 28, 2024, counting buys dated up to 7 days before first shown) — inferred, not filed. KEYSTONE RENEWAL PAC reported $302,764 in digital buys to CREATIVE STRATEGIC SOLUTIONS LLC; Google ads are digital placements.",
+        "source_urls": [
+          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00849489&payee_name=CREATIVE+STRATEGIC+SOLUTIONS+LLC"
+        ],
+        "checked_by": null,
+        "checked_at": null
+      }
+    },
+    {
+      "ad_id": "CR02987728750319239169",
+      "sponsor_entity_id": "C00849489",
+      "basis": {
+        "basis": "inferred",
+        "rule": "Only digital vendor KEYSTONE RENEWAL PAC paid during this ad's run window (ran aug 3, 2024 – aug 14, 2024, counting buys dated up to 7 days before first shown) — inferred, not filed. KEYSTONE RENEWAL PAC reported $520,855 in digital buys to CREATIVE STRATEGIC SOLUTIONS LLC; Google ads are digital placements.",
+        "source_urls": [
+          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00849489&payee_name=CREATIVE+STRATEGIC+SOLUTIONS+LLC"
+        ],
+        "checked_by": null,
+        "checked_at": null
+      }
+    },
+    {
+      "ad_id": "CR02015697249446658049",
+      "sponsor_entity_id": "C00849489",
+      "basis": {
+        "basis": "inferred",
+        "rule": "Only digital vendor KEYSTONE RENEWAL PAC paid during this ad's run window (ran aug 23, 2024 – aug 28, 2024, counting buys dated up to 7 days before first shown) — inferred, not filed. KEYSTONE RENEWAL PAC reported $302,764 in digital buys to CREATIVE STRATEGIC SOLUTIONS LLC; Google ads are digital placements.",
+        "source_urls": [
+          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00849489&payee_name=CREATIVE+STRATEGIC+SOLUTIONS+LLC"
+        ],
+        "checked_by": null,
+        "checked_at": null
+      }
+    }
+  ],
+  "method": "Every Schedule E independent expenditure names a payee. Payee strings are normalised (case, punctuation, legal suffixes, token order), near-duplicates are folded with a difflib ratio ≥ 0.92 when their numeric tokens match, and hand alias rows from data/hand/<race>/vendor_aliases.json override the rule. Medium is classified from the purpose the spender filed (ordered keyword table in campaign_commons/vendors.py). The FEC does not record which buy placed which ad: vendor ↔ ad links are date-window adjacency (or single-digital-vendor inference) from campaign_commons.ads_enrich, each with its basis, and are only `verified` when a person found a source naming both. Totals are the filed amounts, grouped, never re-estimated."
+}

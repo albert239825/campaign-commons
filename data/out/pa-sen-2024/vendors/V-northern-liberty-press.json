@@ -1,0 +1,187 @@
+{
+  "vendor_id": "V-northern-liberty-press",
+  "name": "NORTHERN LIBERTY PRESS",
+  "aliases": [
+    "NORTHERN LIBERTY PRESS"
+  ],
+  "normalization": {
+    "basis": "inferred",
+    "rule": "case/punctuation/suffix normalisation + token-set ≥0.92 (numeric tokens must match); aliases file",
+    "source_urls": [
+      "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&payee_name=NORTHERN+LIBERTY+PRESS"
+    ],
+    "checked_by": null,
+    "checked_at": null
+  },
+  "total": 16109.38,
+  "count": 8,
+  "media_mix": [
+    {
+      "medium": "mail",
+      "amount": 14771.8,
+      "count": 7
+    },
+    {
+      "medium": "field",
+      "amount": 1337.58,
+      "count": 1
+    }
+  ],
+  "spenders": [
+    {
+      "entity_id": "C00754051",
+      "name": "WORKERS VOTE",
+      "amount": 13464.29,
+      "count": 6
+    },
+    {
+      "entity_id": "C00162818",
+      "name": "INTERNATIONAL BROTHERHOOD OF ELECTRICAL WORKERS LOCAL 98 COMMITTEE ON POLITICAL EDUCATION",
+      "amount": 1337.58,
+      "count": 1
+    },
+    {
+      "entity_id": "C00761064",
+      "name": "API PA VOTES",
+      "amount": 1307.51,
+      "count": 1
+    }
+  ],
+  "targets": [
+    {
+      "candidate_id": "S6PA00217",
+      "support_oppose": "S",
+      "amount": 16109.38
+    }
+  ],
+  "first_date": "2024-07-11",
+  "last_date": "2024-11-05",
+  "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&payee_name=NORTHERN+LIBERTY+PRESS",
+  "race_id": "pa-sen-2024",
+  "generated_at": "2026-09-05T20:34:15+00:00",
+  "data_status": "real",
+  "expenditures": [
+    {
+      "ie_id": "C00754051-ie-1859402-B891689",
+      "spender_entity_id": "C00754051",
+      "spender_name": "WORKERS VOTE",
+      "candidate_id": "S6PA00217",
+      "candidate_name": "Bob Casey",
+      "support_oppose": "S",
+      "amount": 1221.48,
+      "date": "2024-11-05",
+      "purpose": "PRINTED VOTER LITERATURE FOR DISTRIBUTION STARTING 11/4/2024",
+      "payee": "NORTHERN LIBERTY PRESS",
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202412079739740013",
+      "vendor_id": "V-northern-liberty-press",
+      "medium": "mail"
+    },
+    {
+      "ie_id": "C00754051-ie-1859402-B891376",
+      "spender_entity_id": "C00754051",
+      "spender_name": "WORKERS VOTE",
+      "candidate_id": "S6PA00217",
+      "candidate_name": "Bob Casey",
+      "support_oppose": "S",
+      "amount": 3076.69,
+      "date": "2024-10-31",
+      "purpose": "PRINTED VOTER LITERATURE FOR DISTRIBUTION STARTING 11/1/2024",
+      "payee": "NORTHERN LIBERTY PRESS",
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202412079739740007",
+      "vendor_id": "V-northern-liberty-press",
+      "medium": "mail"
+    },
+    {
+      "ie_id": "C00761064-ie-2002532-500085187",
+      "spender_entity_id": "C00761064",
+      "spender_name": "API PA VOTES",
+      "candidate_id": "S6PA00217",
+      "candidate_name": "Bob Casey",
+      "support_oppose": "S",
+      "amount": 1307.51,
+      "date": "2024-10-21",
+      "purpose": "PRINTING",
+      "payee": "NORTHERN LIBERTY PRESS",
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202607289894482446",
+      "vendor_id": "V-northern-liberty-press",
+      "medium": "mail"
+    },
+    {
+      "ie_id": "C00162818-ie-1874244-E8C12CABDC9C041248B5",
+      "spender_entity_id": "C00162818",
+      "spender_name": "INTERNATIONAL BROTHERHOOD OF ELECTRICAL WORKERS LOCAL 98 COMMITTEE ON POLITICAL EDUCATION",
+      "candidate_id": "S6PA00217",
+      "candidate_name": "Bob Casey",
+      "support_oppose": "S",
+      "amount": 1337.58,
+      "date": "2024-10-18",
+      "purpose": "DOOR HANGERS SUPPORTING BOB CASEY FOR US SENATE",
+      "payee": "NORTHERN LIBERTY PRESS",
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202502039753240270",
+      "vendor_id": "V-northern-liberty-press",
+      "medium": "field"
+    },
+    {
+      "ie_id": "C00754051-ie-1842186-B887314",
+      "spender_entity_id": "C00754051",
+      "spender_name": "WORKERS VOTE",
+      "candidate_id": "S6PA00217",
+      "candidate_name": "Bob Casey",
+      "support_oppose": "S",
+      "amount": 1113.75,
+      "date": "2024-10-02",
+      "purpose": "PRINTED VOTER LITERATURE FOR DISTRIBUTION STARTING 10/2/2024",
+      "payee": "NORTHERN LIBERTY PRESS",
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202410249719553362",
+      "vendor_id": "V-northern-liberty-press",
+      "medium": "mail"
+    },
+    {
+      "ie_id": "C00754051-ie-1833966-B885424",
+      "spender_entity_id": "C00754051",
+      "spender_name": "WORKERS VOTE",
+      "candidate_id": "S6PA00217",
+      "candidate_name": "Bob Casey",
+      "support_oppose": "S",
+      "amount": 5818.55,
+      "date": "2024-09-23",
+      "purpose": "PRINTED CANVASSER LITERATURE AND SIGNS FOR DISTRIBUTION STARTING 9/22/2024",
+      "payee": "NORTHERN LIBERTY PRESS",
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202410209709587548",
+      "vendor_id": "V-northern-liberty-press",
+      "medium": "mail"
+    },
+    {
+      "ie_id": "C00754051-ie-1818090-B880770",
+      "spender_entity_id": "C00754051",
+      "spender_name": "WORKERS VOTE",
+      "candidate_id": "S6PA00217",
+      "candidate_name": "Bob Casey",
+      "support_oppose": "S",
+      "amount": 1417.61,
+      "date": "2024-08-13",
+      "purpose": "PRINTED DOORHANGERS FOR CANVASSERS FOR DISTRIBUTION STARTING 8/13/2024",
+      "payee": "NORTHERN LIBERTY PRESS",
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202409209684604354",
+      "vendor_id": "V-northern-liberty-press",
+      "medium": "mail"
+    },
+    {
+      "ie_id": "C00754051-ie-1812264-B878106",
+      "spender_entity_id": "C00754051",
+      "spender_name": "WORKERS VOTE",
+      "candidate_id": "S6PA00217",
+      "candidate_name": "Bob Casey",
+      "support_oppose": "S",
+      "amount": 816.21,
+      "date": "2024-07-11",
+      "purpose": "PRINTED HANDOUTS FOR CANVASSERS FOR DISTRIBUTION 7/12/24 - 8/31/2024",
+      "payee": "NORTHERN LIBERTY PRESS",
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202408209674147924",
+      "vendor_id": "V-northern-liberty-press",
+      "medium": "mail"
+    }
+  ],
+  "ads": [],
+  "method": "Every Schedule E independent expenditure names a payee. Payee strings are normalised (case, punctuation, legal suffixes, token order), near-duplicates are folded with a difflib ratio ≥ 0.92 when their numeric tokens match, and hand alias rows from data/hand/<race>/vendor_aliases.json override the rule. Medium is classified from the purpose the spender filed (ordered keyword table in campaign_commons/vendors.py). The FEC does not record which buy placed which ad: vendor ↔ ad links are date-window adjacency (or single-digital-vendor inference) from campaign_commons.ads_enrich, each with its basis, and are only `verified` when a person found a source naming both. Totals are the filed amounts, grouped, never re-estimated."
+}

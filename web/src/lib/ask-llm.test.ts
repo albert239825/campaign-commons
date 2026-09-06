@@ -1,7 +1,7 @@
 import { readFileSync } from "node:fs";
 import { join } from "node:path";
 import { afterEach, describe, expect, it, vi } from "vitest";
-import { TrailsSchema } from "@citizen-gotham/contracts";
+import { TrailsSchema } from "@campaign-commons/contracts";
 import { ASK_LLM_TIMEOUT_MS, buildRequestBody, classify, parseCompletion, validateRoute, XAI_CHAT_COMPLETIONS_URL, XAI_DEFAULT_MODEL } from "./ask-llm";
 
 const trails = TrailsSchema.parse(JSON.parse(readFileSync(join(process.cwd(), "..", "data", "out", "pa-sen-2024", "trails.json"), "utf8")));

@@ -2,9 +2,10 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import "./globals.css";
 import { routes } from "@/lib/format";
+import { SearchBox } from "@/components/search/search-box";
 
 export const metadata: Metadata = {
-  title: "Citizen Gotham",
+  title: "Campaign Commons",
   description: "Political money & policy provenance. Receipts, not conclusions.",
 };
 
@@ -15,7 +16,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
         <header className="site-header border-b border-neutral-200 bg-white">
           <div className="site-header-inner mx-auto flex max-w-6xl items-center justify-between px-4 py-3">
             <Link href={routes.home()} className="site-brand font-semibold tracking-tight">
-              Citizen Gotham
+              Campaign Commons
               <span className="site-tagline ml-2 text-xs font-normal text-neutral-500">receipts, not conclusions</span>
             </Link>
             <nav className="flex gap-4 text-sm text-neutral-600">
@@ -28,6 +29,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
               <Link href={routes.methodology()} className="hover:text-neutral-900">
                 Methodology
               </Link>
+              <SearchBox />
             </nav>
           </div>
         </header>

@@ -327,7 +327,9 @@
       "date": "2024-10-29",
       "purpose": "CANVASS OPERATIONS",
       "payee": "SECOND STREET ASSOCIATES LLC",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202412039720160958"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202412039720160958",
+      "vendor_id": "V-second-street-associates",
+      "medium": "field"
     },
     {
       "ie_id": "C00760801-ie-1852199-SE.4602",
@@ -340,11 +342,61 @@
       "date": "2024-10-29",
       "purpose": "CANVASS MATERIALS - DOORHANGERS",
       "payee": "HIGHPOINT CAMPAIGNS",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202412039720160956"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202412039720160956",
+      "vendor_id": "V-highpoint-campaigns",
+      "medium": "field"
     }
   ],
   "flags": [],
   "has_chain": true,
   "source_url": "https://www.fec.gov/data/committee/C00760801/?cycle=2024",
-  "data_status": "real"
+  "data_status": "real",
+  "vendors": [
+    {
+      "vendor_id": "V-second-street-associates",
+      "name": "SECOND STREET ASSOCIATES, LLC",
+      "amount": 115500.0,
+      "count": 1,
+      "media_mix": [
+        {
+          "medium": "field",
+          "amount": 115500.0,
+          "count": 1
+        }
+      ],
+      "targets": [
+        {
+          "candidate_id": "S6PA00217",
+          "support_oppose": "S",
+          "amount": 115500.0
+        }
+      ],
+      "first_date": "2024-10-29",
+      "last_date": "2024-10-29",
+      "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00760801&payee_name=SECOND+STREET+ASSOCIATES+LLC"
+    },
+    {
+      "vendor_id": "V-highpoint-campaigns",
+      "name": "HIGHPOINT CAMPAIGNS",
+      "amount": 2755.62,
+      "count": 1,
+      "media_mix": [
+        {
+          "medium": "field",
+          "amount": 2755.62,
+          "count": 1
+        }
+      ],
+      "targets": [
+        {
+          "candidate_id": "S6PA00217",
+          "support_oppose": "S",
+          "amount": 2755.62
+        }
+      ],
+      "first_date": "2024-10-29",
+      "last_date": "2024-10-29",
+      "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00760801&payee_name=HIGHPOINT+CAMPAIGNS"
+    }
+  ]
 }

@@ -1,0 +1,80 @@
+{
+  "vendor_id": "V-feminist-majority",
+  "name": "FEMINIST MAJORITY",
+  "aliases": [
+    "FEMINIST MAJORITY"
+  ],
+  "normalization": {
+    "basis": "inferred",
+    "rule": "case/punctuation/suffix normalisation + token-set ≥0.92 (numeric tokens must match); aliases file",
+    "source_urls": [
+      "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&payee_name=FEMINIST+MAJORITY"
+    ],
+    "checked_by": null,
+    "checked_at": null
+  },
+  "total": 15995.94,
+  "count": 2,
+  "media_mix": [
+    {
+      "medium": "other",
+      "amount": 15995.94,
+      "count": 2
+    }
+  ],
+  "spenders": [
+    {
+      "entity_id": "C00755363",
+      "name": "VOTE FOR EQUALITY",
+      "amount": 15995.94,
+      "count": 2
+    }
+  ],
+  "targets": [
+    {
+      "candidate_id": "S6PA00217",
+      "support_oppose": "S",
+      "amount": 15995.94
+    }
+  ],
+  "first_date": "2024-09-26",
+  "last_date": "2024-09-26",
+  "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&payee_name=FEMINIST+MAJORITY",
+  "race_id": "pa-sen-2024",
+  "generated_at": "2026-09-05T20:34:15+00:00",
+  "data_status": "real",
+  "expenditures": [
+    {
+      "ie_id": "C00755363-ie-1827640-500034603",
+      "spender_entity_id": "C00755363",
+      "spender_name": "VOTE FOR EQUALITY",
+      "candidate_id": "S6PA00217",
+      "candidate_name": "Bob Casey",
+      "support_oppose": "S",
+      "amount": 947.94,
+      "date": "2024-09-26",
+      "purpose": "ESTIMATED COST - T-SHIRTS, FLYERS & SHIPPING",
+      "payee": "FEMINIST MAJORITY",
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202410159686606456",
+      "vendor_id": "V-feminist-majority",
+      "medium": "other"
+    },
+    {
+      "ie_id": "C00755363-ie-1827640-500034593",
+      "spender_entity_id": "C00755363",
+      "spender_name": "VOTE FOR EQUALITY",
+      "candidate_id": "S6PA00217",
+      "candidate_name": "Bob Casey",
+      "support_oppose": "S",
+      "amount": 15048.0,
+      "date": "2024-09-26",
+      "purpose": "ESTIMATED COST - STAFF SALARIES & BENEFITS FOR STUDENT ELECTORAL ENGAGEMENT",
+      "payee": "FEMINIST MAJORITY",
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202410159686606454",
+      "vendor_id": "V-feminist-majority",
+      "medium": "other"
+    }
+  ],
+  "ads": [],
+  "method": "Every Schedule E independent expenditure names a payee. Payee strings are normalised (case, punctuation, legal suffixes, token order), near-duplicates are folded with a difflib ratio ≥ 0.92 when their numeric tokens match, and hand alias rows from data/hand/<race>/vendor_aliases.json override the rule. Medium is classified from the purpose the spender filed (ordered keyword table in campaign_commons/vendors.py). The FEC does not record which buy placed which ad: vendor ↔ ad links are date-window adjacency (or single-digital-vendor inference) from campaign_commons.ads_enrich, each with its basis, and are only `verified` when a person found a source naming both. Totals are the filed amounts, grouped, never re-estimated."
+}

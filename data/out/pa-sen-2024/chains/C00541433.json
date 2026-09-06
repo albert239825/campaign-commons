@@ -2,7 +2,7 @@
   "root_entity_id": "C00541433",
   "root_name": "HUNTER ACTION FUND (HAF)",
   "race_id": "pa-sen-2024",
-  "generated_at": "2026-09-05T15:46:46+00:00",
+  "generated_at": "2026-09-05T19:53:48+00:00",
   "data_status": "real",
   "nodes": [
     {
@@ -236,6 +236,100 @@
       "terminus_reason": "pruned",
       "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00541433&two_year_transaction_period=2024",
       "contributor_count": 14
+    },
+    {
+      "id": "vendor:V-capitol-6-advisors",
+      "name": "CAPITOL 6 ADVISORS",
+      "kind": "vendor",
+      "committee_type": null,
+      "depth": 1,
+      "side": "out",
+      "visibility": "disclosed",
+      "amount_in": 670.0,
+      "is_terminus": false,
+      "terminus_reason": null,
+      "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00541433&payee_name=CAPITOL+6+ADVISORS",
+      "href": "/races/pa-sen-2024/vendors/V-capitol-6-advisors",
+      "medium": "other",
+      "basis": {
+        "basis": "filed",
+        "rule": "Schedule E payee, grouped by normalized vendor name (campaign_commons.vendors)",
+        "source_urls": [
+          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00541433&payee_name=CAPITOL+6+ADVISORS"
+        ],
+        "checked_by": null,
+        "checked_at": null
+      }
+    },
+    {
+      "id": "vendor:V-ups",
+      "name": "UPS",
+      "kind": "vendor",
+      "committee_type": null,
+      "depth": 1,
+      "side": "out",
+      "visibility": "disclosed",
+      "amount_in": 8.05,
+      "is_terminus": false,
+      "terminus_reason": null,
+      "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00541433&payee_name=UPS",
+      "href": "/races/pa-sen-2024/vendors/V-ups",
+      "medium": "other",
+      "basis": {
+        "basis": "filed",
+        "rule": "Schedule E payee, grouped by normalized vendor name (campaign_commons.vendors)",
+        "source_urls": [
+          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00541433&payee_name=UPS"
+        ],
+        "checked_by": null,
+        "checked_at": null
+      }
+    },
+    {
+      "id": "CR11709071526052495361",
+      "name": "Video ad · 2024-10-09 – 2024-10-22",
+      "kind": "ad",
+      "committee_type": null,
+      "depth": 2,
+      "side": "out",
+      "visibility": "disclosed",
+      "amount_in": 22500.0,
+      "is_terminus": false,
+      "terminus_reason": null,
+      "source_url": "https://adstransparency.google.com/advertiser/AR05838131882763485185/creative/CR11709071526052495361?political=&region=US",
+      "href": "/races/pa-sen-2024/ads/CR11709071526052495361",
+      "basis": {
+        "basis": "inferred",
+        "rule": "Google reports spend as a range ($20,000–$25,000); the midpoint is drawn",
+        "source_urls": [
+          "https://adstransparency.google.com/advertiser/AR05838131882763485185/creative/CR11709071526052495361?political=&region=US"
+        ],
+        "checked_by": null,
+        "checked_at": null
+      }
+    },
+    {
+      "id": "S2PA00661",
+      "name": "Dave McCormick",
+      "kind": "candidate",
+      "committee_type": null,
+      "depth": 3,
+      "side": "out",
+      "visibility": "disclosed",
+      "amount_in": 678.05,
+      "is_terminus": true,
+      "terminus_reason": null,
+      "source_url": "https://www.fec.gov/data/candidate/S2PA00661/?cycle=2024&election_full=false",
+      "href": "/races/pa-sen-2024/candidates/S2PA00661",
+      "basis": {
+        "basis": "filed",
+        "rule": "Schedule E dollars naming this candidate as supported or opposed; nothing here reached the candidate",
+        "source_urls": [
+          "https://www.fec.gov/data/independent-expenditures/?committee_id=C00541433&cycle=2024&candidate_id=S2PA00661"
+        ],
+        "checked_by": null,
+        "checked_at": null
+      }
     }
   ],
   "edges": [
@@ -526,6 +620,123 @@
         "2024-02-01"
       ],
       "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00541433&two_year_transaction_period=2024"
+    },
+    {
+      "from": "C00541433",
+      "to": "vendor:V-capitol-6-advisors",
+      "kind": "money",
+      "amount": 670.0,
+      "visibility": "disclosed",
+      "depth": 1,
+      "transaction_types": [
+        "24E"
+      ],
+      "count": 1,
+      "date_range": [
+        "2024-10-08",
+        "2024-10-08"
+      ],
+      "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00541433&payee_name=CAPITOL+6+ADVISORS",
+      "basis": {
+        "basis": "filed",
+        "rule": "Schedule E independent expenditure paid to this payee",
+        "source_urls": [
+          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00541433&payee_name=CAPITOL+6+ADVISORS"
+        ],
+        "checked_by": null,
+        "checked_at": null
+      }
+    },
+    {
+      "from": "vendor:V-capitol-6-advisors",
+      "to": "S2PA00661",
+      "kind": "targeting",
+      "amount": 670.0,
+      "visibility": "disclosed",
+      "depth": 3,
+      "transaction_types": [],
+      "count": 0,
+      "date_range": null,
+      "source_url": "https://www.fec.gov/data/independent-expenditures/?committee_id=C00541433&cycle=2024&candidate_id=S2PA00661",
+      "support_oppose": "S",
+      "basis": {
+        "basis": "filed",
+        "rule": "Schedule E: this payee's buys named the candidate as supported/opposed",
+        "source_urls": [
+          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00541433&payee_name=CAPITOL+6+ADVISORS"
+        ],
+        "checked_by": null,
+        "checked_at": null
+      }
+    },
+    {
+      "from": "C00541433",
+      "to": "vendor:V-ups",
+      "kind": "money",
+      "amount": 8.05,
+      "visibility": "disclosed",
+      "depth": 1,
+      "transaction_types": [
+        "24E"
+      ],
+      "count": 1,
+      "date_range": [
+        "2024-10-08",
+        "2024-10-08"
+      ],
+      "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00541433&payee_name=UPS",
+      "basis": {
+        "basis": "filed",
+        "rule": "Schedule E independent expenditure paid to this payee",
+        "source_urls": [
+          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00541433&payee_name=UPS"
+        ],
+        "checked_by": null,
+        "checked_at": null
+      }
+    },
+    {
+      "from": "vendor:V-ups",
+      "to": "S2PA00661",
+      "kind": "targeting",
+      "amount": 8.05,
+      "visibility": "disclosed",
+      "depth": 3,
+      "transaction_types": [],
+      "count": 0,
+      "date_range": null,
+      "source_url": "https://www.fec.gov/data/independent-expenditures/?committee_id=C00541433&cycle=2024&candidate_id=S2PA00661",
+      "support_oppose": "S",
+      "basis": {
+        "basis": "filed",
+        "rule": "Schedule E: this payee's buys named the candidate as supported/opposed",
+        "source_urls": [
+          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00541433&payee_name=UPS"
+        ],
+        "checked_by": null,
+        "checked_at": null
+      }
+    },
+    {
+      "from": "C00541433",
+      "to": "CR11709071526052495361",
+      "kind": "placement",
+      "amount": 22500.0,
+      "visibility": "disclosed",
+      "depth": 2,
+      "transaction_types": [],
+      "count": 1,
+      "date_range": null,
+      "source_url": "https://adstransparency.google.com/advertiser/AR05838131882763485185/creative/CR11709071526052495361?political=&region=US",
+      "basis": {
+        "basis": "inferred",
+        "rule": "Advertiser name matched to this committee by normalized name; Google's bulk data names the advertiser and carries no paid-for-by field for US ads",
+        "source_urls": [
+          "https://adstransparency.google.com/advertiser/AR05838131882763485185/creative/CR11709071526052495361?political=&region=US"
+        ],
+        "checked_by": null,
+        "checked_at": null
+      }
     }
   ],
   "summary": {
@@ -539,7 +750,9 @@
       "dark": 3,
       "individual": 14,
       "pruned": 1
-    }
+    },
+    "out_total": 678.05,
+    "max_out_depth": 3
   },
   "flags": [
     {
@@ -549,5 +762,5 @@
       "evidence_url": "https://www.fec.gov/data/committee/C00541433/?cycle=2024"
     }
   ],
-  "method": "Backward walk over money edges only (Schedule A receipts from individuals and organizations, committee-to-committee transfers) into HUNTER ACTION FUND (HAF), 1 hop(s) deep; independent expenditures are targeting edges and never appear. The walk starts from $605,333 of itemized 2023–2024 receipts as loaded from FEC bulk data (unitemized receipts, loans and offsets are not edges), and every expanded committee conserves dollars: its inbound edges sum to its receipts. Inbound edges under 1% of a committee's receipts are rolled into one 'other contributors' node, which counts as disclosed except for the organization dollars inside it. Each dollar takes the visibility of where the walk stopped: named individuals (including earmarks through ActBlue/WinRed, attributed to the person) are disclosed. Organizations that are not registered committees are classified from their name alone (no IRS lookup): a union or a business giving from its own treasury is disclosed — the named entity is the source; an LLC, trust, advocacy nonprofit (501(c)(4)-style names) or unclassifiable organization is dark, because whoever funds it is not on file with the FEC. Visibility shares are preliminary; no 990 lookups were performed, so nothing is marked inferable."
+  "method": "Backward walk over money edges only (Schedule A receipts from individuals and organizations, committee-to-committee transfers) into HUNTER ACTION FUND (HAF), 1 hop(s) deep; independent expenditures are targeting edges and never appear. The walk starts from $605,333 of itemized 2023–2024 receipts as loaded from FEC bulk data (unitemized receipts, loans and offsets are not edges), and every expanded committee conserves dollars: its inbound edges sum to its receipts. Inbound edges under 1% of a committee's receipts are rolled into one 'other contributors' node, which counts as disclosed except for the organization dollars inside it. Each dollar takes the visibility of where the walk stopped: named individuals (including earmarks through ActBlue/WinRed, attributed to the person) are disclosed. Organizations that are not registered committees are classified from their name alone (no IRS lookup): a union or a business giving from its own treasury is disclosed — the named entity is the source; an LLC, trust, advocacy nonprofit (501(c)(4)-style names) or unclassifiable organization is dark, because whoever funds it is not on file with the FEC. Visibility shares are preliminary; no 990 lookups were performed, so nothing is marked inferable. Spending side (right of the spender): Schedule E payments to vendors are money edges; vendor → ad and spender → ad edges are placement (no dollars) and carry the evidence basis they were drawn on; edges into a candidate are targeting (for/against) and never carry money to the candidate. Ad dollars are the midpoint of the Google-reported spend range."
 }

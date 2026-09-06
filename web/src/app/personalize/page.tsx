@@ -1,10 +1,10 @@
 import type { Metadata } from "next";
-import type { Dossier } from "@citizen-gotham/contracts";
+import type { Dossier } from "@campaign-commons/contracts";
 import { getDossier, getRaces, listDossierIds, listRaceIds } from "@/lib/data";
 import { PersonalizeClient } from "@/components/personalize/personalize-client";
 
 export const metadata: Metadata = {
-  title: "Personalize · Citizen Gotham",
+  title: "Personalize · Campaign Commons",
   description: "Create a private alignment estimate from your stated issue positions.",
 };
 

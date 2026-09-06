@@ -222,7 +222,9 @@
       "date": "2024-10-04",
       "purpose": "WEBSITE DESIGN",
       "payee": "FUSE WASHINGTON",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202501279747784842"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202501279747784842",
+      "vendor_id": "V-fuse-washington",
+      "medium": "production"
     },
     {
       "ie_id": "C00882381-ie-1866065-E446B57B82118480AAE3",
@@ -235,7 +237,9 @@
       "date": "2024-10-09",
       "purpose": "STAFF TIME - PRODUCTION (ESTIMATE)",
       "payee": "COMMONWEALTH COMMUNICATIONS",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202501279747784834"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202501279747784834",
+      "vendor_id": "V-commonwealth-communications",
+      "medium": "production"
     }
   ],
   "flags": [
@@ -248,5 +252,53 @@
   ],
   "has_chain": true,
   "source_url": "https://www.fec.gov/data/committee/C00882381/?cycle=2024",
-  "data_status": "real"
+  "data_status": "real",
+  "vendors": [
+    {
+      "vendor_id": "V-fuse-washington",
+      "name": "FUSE WASHINGTON",
+      "amount": 136.99,
+      "count": 1,
+      "media_mix": [
+        {
+          "medium": "production",
+          "amount": 136.99,
+          "count": 1
+        }
+      ],
+      "targets": [
+        {
+          "candidate_id": "S6PA00217",
+          "support_oppose": "S",
+          "amount": 136.99
+        }
+      ],
+      "first_date": "2024-10-04",
+      "last_date": "2024-10-04",
+      "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00882381&payee_name=FUSE+WASHINGTON"
+    },
+    {
+      "vendor_id": "V-commonwealth-communications",
+      "name": "COMMONWEALTH COMMUNICATIONS",
+      "amount": 26.24,
+      "count": 1,
+      "media_mix": [
+        {
+          "medium": "production",
+          "amount": 26.24,
+          "count": 1
+        }
+      ],
+      "targets": [
+        {
+          "candidate_id": "S6PA00217",
+          "support_oppose": "S",
+          "amount": 26.24
+        }
+      ],
+      "first_date": "2024-10-09",
+      "last_date": "2024-10-09",
+      "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00882381&payee_name=COMMONWEALTH+COMMUNICATIONS"
+    }
+  ]
 }

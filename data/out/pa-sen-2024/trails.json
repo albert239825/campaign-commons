@@ -1,6 +1,6 @@
 {
   "race_id": "pa-sen-2024",
-  "generated_at": "2026-09-06T00:26:54+00:00",
+  "generated_at": "2026-09-06T00:30:49+00:00",
   "data_status": "real",
   "subjects": [
     {
@@ -27342,5 +27342,5 @@
     "Who funds Winsenate?",
     "Who funds Senate Leadership Fund?"
   ],
-  "method": "Answers are precomputed from this race's ledger, ads, chain and entity files by pipeline/gotham/trails.py; no language model or graph database is involved in building them. Three questions are supported: who is spending for/against a candidate (Schedule E), who paid for the ads about a candidate (ad sponsors, their Schedule E about the candidate, and each sponsor's own funders), and who funds a committee (its receipts hop by hop). Every figure links to the FEC or Google record it was read from. Money edges and targeting edges are separate; an independent expenditure moves no money to a candidate, and a funder is never joined to a particular ad because pooled dollars cannot be allocated that way."
+  "method": "Answers are precomputed from this race's ledger, ads, chain and entity files by pipeline/campaign_commons/trails.py; no language model or graph database is involved in building them. Three questions are supported: who is spending for/against a candidate (Schedule E), who paid for the ads about a candidate (ad sponsors, their Schedule E about the candidate, and each sponsor's own funders), and who funds a committee (its receipts hop by hop). Every figure links to the FEC or Google record it was read from. Money edges and targeting edges are separate; an independent expenditure moves no money to a candidate, and a funder is never joined to a particular ad because pooled dollars cannot be allocated that way."
 }
