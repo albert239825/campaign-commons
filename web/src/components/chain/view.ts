@@ -45,6 +45,8 @@ export type ViewEdge = Pick<
   kind: ChainEdgeKind;
   basis: BasisWire | null;
   support_oppose: SupportOppose | null;
+  /** Position in `chain.edges`, which is also the edge's row id in the table; -1 for edges synthesised in the client. */
+  index: number;
 };
 export type ChainView = {
   rootId: string;
@@ -76,7 +78,10 @@ export type ViewNodeWire = [
   ViewNode["medium"],
   ViewNode["thumbnail"],
 ];
-/** [from index, to index, amount, visibility, count, kind (null = money), basis, support/oppose]; indices into the nodes array. */
+/**
+ * [from index, to index, amount, visibility, count, kind (null = money), basis, support/oppose, chain edge index];
+ * from / to index into the nodes array.
+ */
 export type ViewEdgeWire = [
   number,
   number,
@@ -86,6 +91,7 @@ export type ViewEdgeWire = [
   ChainEdgeKind | null,
   BasisWire | null,
   SupportOppose | null,
+  number,
 ];
 export type ChainViewWire = {
   rootId: string;
@@ -122,7 +128,7 @@ export function toWire(chain: Chain, links: NodeLinks): ChainViewWire {
         n.thumbnail_path ?? null,
       ];
     }),
-    edges: chain.edges.flatMap((e) => {
+    edges: chain.edges.flatMap((e, i) => {
       const from = index.get(e.from);
       const to = index.get(e.to);
       if (from === undefined || to === undefined) return [];
@@ -137,6 +143,7 @@ export function toWire(chain: Chain, links: NodeLinks): ChainViewWire {
           kind === "money" ? null : kind,
           toBasisWire(e.basis),
           e.support_oppose ?? null,
+          i,
         ] as ViewEdgeWire,
       ];
     }),
@@ -184,7 +191,7 @@ export function fromWire(w: ChainViewWire): ChainView {
     rootName: w.rootName,
     nodes,
     edges: w.edges.map(
-      ([from, to, amount, visibility, count, kind, basis, support_oppose]) => ({
+      ([from, to, amount, visibility, count, kind, basis, support_oppose, index]) => ({
         from: nodes[from].id,
         to: nodes[to].id,
         amount,
@@ -193,6 +200,7 @@ export function fromWire(w: ChainViewWire): ChainView {
         kind: kind ?? "money",
         basis,
         support_oppose,
+        index,
       }),
     ),
   };
@@ -399,6 +407,7 @@ export function visibleGraph(
           kind: "money",
           basis: null,
           support_oppose: null,
+          index: -1,
         });
       }
     }
