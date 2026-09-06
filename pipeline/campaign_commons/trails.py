@@ -530,15 +530,18 @@ def _committee_graph(inp: Inputs, committee_id: str) -> dict[str, Any] | None:
 
 
 def _candidate_root(inp: Inputs, candidate_id: str) -> dict[str, Any]:
+    candidate = next(c for c in inp.race.candidates if c.candidate_id == candidate_id)
+    outside = next(c for c in inp.ledger["candidates"] if c["candidate_id"] == candidate_id)["outside"]
     for chain_id in sorted(inp.chains):
         node = next(
             (n for n in inp.chains[chain_id]["nodes"] if n["id"] == candidate_id and n["kind"] == "candidate"),
             None,
         )
         if node is not None:
-            return _copy_chain_node(node, 0, "out")
-    candidate = next(c for c in inp.race.candidates if c.candidate_id == candidate_id)
-    outside = next(c for c in inp.ledger["candidates"] if c["candidate_id"] == candidate_id)["outside"]
+            root = _copy_chain_node(node, 0, "out")
+            root["amount_in"] = outside["total"]
+            root["source_url"] = outside["source_url"]
+            return root
     return {
         "id": candidate_id,
         "name": candidate.name,

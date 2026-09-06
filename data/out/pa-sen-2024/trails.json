@@ -1,6 +1,6 @@
 {
   "race_id": "pa-sen-2024",
-  "generated_at": "2026-09-06T02:02:41+00:00",
+  "generated_at": "2026-09-06T02:14:47+00:00",
   "data_status": "real",
   "subjects": [
     {
@@ -2213,6 +2213,29 @@
             "side": "in"
           },
           {
+            "id": "S6PA00217",
+            "name": "Bob Casey",
+            "kind": "candidate",
+            "committee_type": null,
+            "depth": 0,
+            "side": "out",
+            "visibility": "disclosed",
+            "amount_in": 125891721.07,
+            "is_terminus": true,
+            "terminus_reason": null,
+            "source_url": "https://www.fec.gov/data/independent-expenditures/?candidate_id=S6PA00217&cycle=2024",
+            "href": "/races/pa-sen-2024/candidates/S6PA00217",
+            "basis": {
+              "basis": "filed",
+              "rule": "Schedule E dollars naming this candidate as supported or opposed; nothing here reached the candidate",
+              "source_urls": [
+                "https://www.fec.gov/data/independent-expenditures/?committee_id=C00003590&cycle=2024&candidate_id=S6PA00217"
+              ],
+              "checked_by": null,
+              "checked_at": null
+            }
+          },
+          {
             "id": "C00486845",
             "name": "LCV VICTORY FUND",
             "kind": "committee",
@@ -2319,29 +2342,6 @@
             "terminus_reason": null,
             "source_url": "https://www.fec.gov/data/committee/C00744920/?cycle=2024",
             "side": "in"
-          },
-          {
-            "id": "S6PA00217",
-            "name": "Bob Casey",
-            "kind": "candidate",
-            "committee_type": null,
-            "depth": 0,
-            "side": "out",
-            "visibility": "disclosed",
-            "amount_in": 179.0,
-            "is_terminus": true,
-            "terminus_reason": null,
-            "source_url": "https://www.fec.gov/data/candidate/S6PA00217/?cycle=2024&election_full=false",
-            "href": "/races/pa-sen-2024/candidates/S6PA00217",
-            "basis": {
-              "basis": "filed",
-              "rule": "Schedule E dollars naming this candidate as supported or opposed; nothing here reached the candidate",
-              "source_urls": [
-                "https://www.fec.gov/data/independent-expenditures/?committee_id=C00003590&cycle=2024&candidate_id=S6PA00217"
-              ],
-              "checked_by": null,
-              "checked_at": null
-            }
           }
         ],
         "edges": [
@@ -4721,6 +4721,29 @@
             "side": "in"
           },
           {
+            "id": "S6PA00217",
+            "name": "Bob Casey",
+            "kind": "candidate",
+            "committee_type": null,
+            "depth": 0,
+            "side": "out",
+            "visibility": "disclosed",
+            "amount_in": 125891721.07,
+            "is_terminus": true,
+            "terminus_reason": null,
+            "source_url": "https://www.fec.gov/data/independent-expenditures/?candidate_id=S6PA00217&cycle=2024",
+            "href": "/races/pa-sen-2024/candidates/S6PA00217",
+            "basis": {
+              "basis": "filed",
+              "rule": "Schedule E dollars naming this candidate as supported or opposed; nothing here reached the candidate",
+              "source_urls": [
+                "https://www.fec.gov/data/independent-expenditures/?committee_id=C00003590&cycle=2024&candidate_id=S6PA00217"
+              ],
+              "checked_by": null,
+              "checked_at": null
+            }
+          },
+          {
             "id": "C00486845",
             "name": "LCV VICTORY FUND",
             "kind": "committee",
@@ -4988,29 +5011,6 @@
               "rule": "Schedule E payee, grouped by normalized vendor name (campaign_commons.vendors)",
               "source_urls": [
                 "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00486845&payee_name=LEAGUE+OF+CONSERVATION+VOTERS%2C+INC."
-              ],
-              "checked_by": null,
-              "checked_at": null
-            }
-          },
-          {
-            "id": "S6PA00217",
-            "name": "Bob Casey",
-            "kind": "candidate",
-            "committee_type": null,
-            "depth": 0,
-            "side": "out",
-            "visibility": "disclosed",
-            "amount_in": 179.0,
-            "is_terminus": true,
-            "terminus_reason": null,
-            "source_url": "https://www.fec.gov/data/candidate/S6PA00217/?cycle=2024&election_full=false",
-            "href": "/races/pa-sen-2024/candidates/S6PA00217",
-            "basis": {
-              "basis": "filed",
-              "rule": "Schedule E dollars naming this candidate as supported or opposed; nothing here reached the candidate",
-              "source_urls": [
-                "https://www.fec.gov/data/independent-expenditures/?committee_id=C00003590&cycle=2024&candidate_id=S6PA00217"
               ],
               "checked_by": null,
               "checked_at": null
@@ -6263,6 +6263,29 @@
             "side": "in"
           },
           {
+            "id": "S2PA00661",
+            "name": "Dave McCormick",
+            "kind": "candidate",
+            "committee_type": null,
+            "depth": 0,
+            "side": "out",
+            "visibility": "disclosed",
+            "amount_in": 107505040.39,
+            "is_terminus": true,
+            "terminus_reason": null,
+            "source_url": "https://www.fec.gov/data/independent-expenditures/?candidate_id=S2PA00661&cycle=2024",
+            "href": "/races/pa-sen-2024/candidates/S2PA00661",
+            "basis": {
+              "basis": "filed",
+              "rule": "Schedule E dollars naming this candidate as supported or opposed; nothing here reached the candidate",
+              "source_urls": [
+                "https://www.fec.gov/data/independent-expenditures/?committee_id=C00011114&cycle=2024&candidate_id=S2PA00661"
+              ],
+              "checked_by": null,
+              "checked_at": null
+            }
+          },
+          {
             "id": "C00486845",
             "name": "LCV VICTORY FUND",
             "kind": "committee",
@@ -6329,29 +6352,6 @@
             "terminus_reason": null,
             "source_url": "https://www.fec.gov/data/committee/C00740225/?cycle=2024",
             "side": "in"
-          },
-          {
-            "id": "S2PA00661",
-            "name": "Dave McCormick",
-            "kind": "candidate",
-            "committee_type": null,
-            "depth": 0,
-            "side": "out",
-            "visibility": "disclosed",
-            "amount_in": 400000.0,
-            "is_terminus": true,
-            "terminus_reason": null,
-            "source_url": "https://www.fec.gov/data/candidate/S2PA00661/?cycle=2024&election_full=false",
-            "href": "/races/pa-sen-2024/candidates/S2PA00661",
-            "basis": {
-              "basis": "filed",
-              "rule": "Schedule E dollars naming this candidate as supported or opposed; nothing here reached the candidate",
-              "source_urls": [
-                "https://www.fec.gov/data/independent-expenditures/?committee_id=C00011114&cycle=2024&candidate_id=S2PA00661"
-              ],
-              "checked_by": null,
-              "checked_at": null
-            }
           }
         ],
         "edges": [
@@ -8207,6 +8207,29 @@
             "side": "in"
           },
           {
+            "id": "S2PA00661",
+            "name": "Dave McCormick",
+            "kind": "candidate",
+            "committee_type": null,
+            "depth": 0,
+            "side": "out",
+            "visibility": "disclosed",
+            "amount_in": 107505040.39,
+            "is_terminus": true,
+            "terminus_reason": null,
+            "source_url": "https://www.fec.gov/data/independent-expenditures/?candidate_id=S2PA00661&cycle=2024",
+            "href": "/races/pa-sen-2024/candidates/S2PA00661",
+            "basis": {
+              "basis": "filed",
+              "rule": "Schedule E dollars naming this candidate as supported or opposed; nothing here reached the candidate",
+              "source_urls": [
+                "https://www.fec.gov/data/independent-expenditures/?committee_id=C00011114&cycle=2024&candidate_id=S2PA00661"
+              ],
+              "checked_by": null,
+              "checked_at": null
+            }
+          },
+          {
             "id": "C00851980",
             "name": "FRIENDS OF DAVE MCCORMICK",
             "kind": "committee",
@@ -8364,29 +8387,6 @@
               "rule": "Google reports spend as a range ($400,000–$450,000); the midpoint is drawn",
               "source_urls": [
                 "https://adstransparency.google.com/advertiser/AR07109796124864544769/creative/CR05870211732231684097?political=&region=US"
-              ],
-              "checked_by": null,
-              "checked_at": null
-            }
-          },
-          {
-            "id": "S2PA00661",
-            "name": "Dave McCormick",
-            "kind": "candidate",
-            "committee_type": null,
-            "depth": 0,
-            "side": "out",
-            "visibility": "disclosed",
-            "amount_in": 400000.0,
-            "is_terminus": true,
-            "terminus_reason": null,
-            "source_url": "https://www.fec.gov/data/candidate/S2PA00661/?cycle=2024&election_full=false",
-            "href": "/races/pa-sen-2024/candidates/S2PA00661",
-            "basis": {
-              "basis": "filed",
-              "rule": "Schedule E dollars naming this candidate as supported or opposed; nothing here reached the candidate",
-              "source_urls": [
-                "https://www.fec.gov/data/independent-expenditures/?committee_id=C00011114&cycle=2024&candidate_id=S2PA00661"
               ],
               "checked_by": null,
               "checked_at": null
