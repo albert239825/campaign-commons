@@ -487,5 +487,60 @@
       "last_date": "2024-10-22",
       "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00640300&payee_name=AMERICA+VOTES"
     }
-  ]
+  ],
+  "x_enrichment": {
+    "issue_focus": {
+      "kind": "general_partisan",
+      "issue_ids": [],
+      "description": "Activate America is an independent expenditure organization focused on electing Democrats to the U.S. Senate and House of Representatives.",
+      "basis": {
+        "basis": "inferred",
+        "rule": "x_issue_focus",
+        "source_urls": [
+          "https://www.activateamerica.vote/what-we-do",
+          "https://www.fec.gov/data/committee/C00640300/"
+        ],
+        "checked_by": null,
+        "checked_at": null
+      },
+      "label": "Machine-tagged from the committee's own website (grok-4.3, 2026-09-06); not part of the record",
+      "quote": "Activate America is an independent expenditure organization focused on electing Democrats to the U.S. Senate and House of Representatives.",
+      "provenance": {
+        "tagged_by": "xai-grok-4.3-2026-09-06",
+        "tagged_at": "2026-09-06",
+        "model": "grok-4.3",
+        "prompt_version": "classify_spender.v1",
+        "tools": [
+          "web_search"
+        ],
+        "tool_filters": {
+          "allowed_domains": [
+            "activateamerica.vote"
+          ]
+        },
+        "response_id": "896b7a48-edb0-9863-a817-b10c57970093",
+        "retrieved_at": "2026-09-06T03:35:54+00:00",
+        "citations": [
+          "https://www.activateamerica.vote/",
+          "https://www.activateamerica.vote/what-we-do",
+          "https://www.activateamerica.vote/about-1",
+          "https://www.activateamerica.vote/getting-started-postcards",
+          "https://www.activateamerica.vote/canvassing",
+          "https://www.activateamerica.vote/senate",
+          "https://www.activateamerica.vote/ohio24",
+          "https://www.influencewatch.org/political-party/activate-america/",
+          "https://www.activateamerica.vote/nevada24",
+          "https://www.activateamerica.vote/ourteam",
+          "https://www.activateamerica.vote/amplify/stocks",
+          "https://www.activateamerica.vote/s/CA-41_InfoSheet.pdf",
+          "https://www.activateamerica.vote/house"
+        ],
+        "confidence": "high",
+        "review_status": "pending",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "review_note": null
+      }
+    }
+  }
 }

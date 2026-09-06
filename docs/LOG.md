@@ -743,3 +743,13 @@ Added `enrich_transcripts.py`, `enrich_ads.py`, `enrich_review.py`, and the `enr
 and `--refresh-reviewed`; caches live under `data/raw/yt` and `data/raw/xai`. The transcript step runs locally because
 YouTube blocks cloud IPs. Machine rows remain separate from human issue tags, carry review status and response provenance,
 and are merged into optional `machine_issues` output only. 183 pipeline tests.
+
+### 2026-09-06 — Phase 2b spender self-description enrichment
+
+Added website-only `enrich_spenders.py`, cached FEC committee/page verification under `data/raw/fec`, `data/raw/web`, and
+`data/raw/xai`, the `enrich-spenders` target, and review output for spender rows. It supports `--dry-run`, `--limit`,
+`--only`, `--max-calls`, `--max-usd`, `--model`, and `--refresh-reviewed`; machine focus remains separate from human
+`issue_focus`, with pending/accepted provenance and Wayback fallback. 192 pipeline tests.
+Overlong or incomplete model outputs now get one cached, no-tools repair call before validation.
+Added `enrich_funders.py` for ranked upstream `org:` funders, open-web self-description checks, donor-view materialization,
+and `enrich-funders`/`enrich-review --kind funders`.

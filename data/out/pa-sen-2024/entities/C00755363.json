@@ -547,5 +547,52 @@
       "last_date": "2024-09-26",
       "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00755363&payee_name=SIR+SPEEDY+PRINTING"
     }
-  ]
+  ],
+  "x_enrichment": {
+    "issue_focus": {
+      "kind": "single_issue",
+      "issue_ids": [
+        "abortion"
+      ],
+      "description": "Vote for Equality is an independent expenditure political action committee affiliated with the Feminist Majority with a record of recruiting, organizing and training college students to mobilize the student vote and make the winning difference in elections with a massive campus mobilization initiative.",
+      "basis": {
+        "basis": "inferred",
+        "rule": "x_issue_focus",
+        "source_urls": [
+          "https://voteforequality.us/",
+          "https://www.fec.gov/data/committee/C00755363/"
+        ],
+        "checked_by": null,
+        "checked_at": null
+      },
+      "label": "Machine-tagged from the committee's own website (grok-4.3, 2026-09-06); not part of the record",
+      "quote": "Founded in 2020, Vote for Equality is an Independent expenditure political action committee with a proven record of recruiting organizing and training college students to mobilize the student vote. Affiliated with the Feminist Majority.",
+      "provenance": {
+        "tagged_by": "xai-grok-4.3-2026-09-06",
+        "tagged_at": "2026-09-06",
+        "model": "grok-4.3",
+        "prompt_version": "classify_spender.v1",
+        "tools": [
+          "web_search"
+        ],
+        "tool_filters": {
+          "allowed_domains": [
+            "voteforequality.us"
+          ]
+        },
+        "response_id": "19d386d3-30bd-9a42-b556-bc78ff2e4788",
+        "retrieved_at": "2026-09-06T03:25:17+00:00",
+        "citations": [
+          "http://voteforequality.us/",
+          "https://voteforequality.us/positions-available-with-vote-for-equality-2024-campaign/",
+          "https://voteforequality.us/"
+        ],
+        "confidence": "high",
+        "review_status": "pending",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "review_note": null
+      }
+    }
+  }
 }

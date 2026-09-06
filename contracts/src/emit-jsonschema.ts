@@ -17,6 +17,7 @@ import {
   HandXAdIssuesFileSchema,
   HandIeIssuesFileSchema,
   HandIssueFocusFileSchema,
+  HandXIssueFocusFileSchema,
   HandVendorAdLinksFileSchema,
   HandVendorAliasesFileSchema,
   IssueSpendingSchema,
@@ -47,6 +48,7 @@ const all: Record<string, ZodTypeAny> = {
   search: SearchIndexSchema,
   // data/hand/<race>/
   hand_issue_focus: HandIssueFocusFileSchema,
+  hand_x_issue_focus: HandXIssueFocusFileSchema,
   hand_ad_issues: HandAdIssuesFileSchema,
   hand_x_ad_issues: HandXAdIssuesFileSchema,
   hand_ie_issues: HandIeIssuesFileSchema,

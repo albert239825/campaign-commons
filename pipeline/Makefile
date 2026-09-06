@@ -1,7 +1,7 @@
 RACE ?= pa-sen-2024
 PY ?= python3
 
-.PHONY: setup mock ingest ledger chains vendors ads ads-enrich enrich-transcripts enrich-ads enrich-review issues search dossier validate all lint test
+.PHONY: setup mock ingest ledger chains vendors ads ads-enrich enrich-transcripts enrich-ads enrich-review enrich-spenders enrich-funders issues search dossier validate all lint test
 
 setup:            ## install pipeline deps (creates .venv)
 	$(PY) -m venv .venv && . .venv/bin/activate && pip install -q -e ".[dev]"
@@ -35,6 +35,12 @@ enrich-ads:       ## Classify cached ad transcripts with xAI (requires XAI_API_K
 
 enrich-review:    ## Print pending machine ad classifications for human review
 	$(PY) -m campaign_commons.enrich_review $(RACE)
+
+enrich-spenders:  ## Classify spender self-descriptions (requires XAI_API_KEY and FEC_API_KEY; get a free key at api.open.fec.gov/developers)
+	$(PY) -m campaign_commons.enrich_spenders $(RACE)
+
+enrich-funders:   ## Classify upstream organization self-descriptions with open web search (requires XAI_API_KEY)
+	$(PY) -m campaign_commons.enrich_funders $(RACE)
 
 issues:           ## Block 2: data/hand/$(RACE)/{issue_focus,ad_issues,ie_issues}.json -> issues.json; patches entities + ads
 	$(PY) -m campaign_commons.issues $(RACE)

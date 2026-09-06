@@ -57,11 +57,20 @@ on the 26 cached ads tells us.
 
 ## 3. Spender self-description
 
+**Phase 2b implementation: in progress — website-only `web_search` enrichment with cached FEC/page verification and pending human review.**
+
 `web_search` with `filters.allowed_domains = [committee website]` when FEC lists one (About page — how the human rows were
 made); otherwise open web, row written only if the found page names the committee/FEC id. **No `x_search` for spenders**
 (Albert). Output mirrors `HandIssueFocusRow` (kind, ≤3 issues, description, quote, source_urls) +
 provenance → `entities/<id>.x_enrichment.issue_focus`; human `issue_focus` untouched; `by_spender_focus` counts human rows
-only unless Albert wants accepted rows in (Q5).
+only unless Albert wants accepted rows in (Q5). A single no-tools repair call may shorten overlong descriptions/quotes or
+add required issue ids while preserving the cited source URL.
+
+## Step 4 — upstream funders
+
+Upstream `org:` funders are ranked from aggregate entity inflows, classified from their own sites with
+open `web_search`, and materialized as a separate `x_funder_focus.json` layer on donor views. A cited page
+must name the organization; third-party and record-only sites are rejected, and rows remain pending review.
 
 ## 4. Common machinery
 
