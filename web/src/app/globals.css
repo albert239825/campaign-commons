@@ -395,6 +395,9 @@ body:has(.race-dashboard) .site-footer { max-width: 1440px; padding: 32px clamp(
 body:has(.race-dashboard) :is(a, button):focus-visible { outline: 2px solid currentColor; outline-offset: 4px; }
 .race-dashboard { max-width: 1440px; margin-inline: auto; padding-inline: clamp(24px, 4.2vw, 60px); --race-rule: rgb(155 151 146 / 25%); display: grid; gap: 88px; min-width: 0; line-height: 1.6; }
 .race-dashboard > *, .race-dashboard .ui-card { min-width: 0; }
+/* Tab pages built on the detail shell sit inside the dashboard's padding already; close the tab-to-content gap. */
+.race-dashboard:has(> .detail-page) { gap: 32px; }
+.race-dashboard > .detail-page { padding-inline: 0; }
 .race-dashboard :where(.font-semibold, .font-bold) { font-weight: 500; }
 .race-overview { margin-top: 0; }
 .race-title { max-width: 640px; font-size: clamp(30px, 3vw, 42px); font-weight: 400; line-height: 1.1; letter-spacing: -.045em; text-wrap: balance; }
