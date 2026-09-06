@@ -9,8 +9,8 @@ const candidateNode = { properties: { id: "S2PA00661", name: "DAVID MCCORMICK", 
 const relationship = { elementId: "rel-1" };
 const fact = {
   n: 1,
-  from: { id: "C1", name: "ONE NATION", kind: "committee" as const, href: null },
-  to: { id: "C2", name: "CASEY", kind: "candidate" as const, href: null },
+  from: { id: "C1", name: "ONE NATION", kind: "committee" as const, href: null, title: null },
+  to: { id: "C2", name: "CASEY", kind: "candidate" as const, href: null, title: null },
   rel: "TARGETED" as const,
   amount: 1234,
   count: null,

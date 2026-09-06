@@ -94,7 +94,7 @@ describe("graphRows", () => {
     expect(placed.length).toBe(new Set(matched.map((a) => a.ad_id)).size);
     const sample = matched.find((a) => a.support_oppose !== null && a.candidate_ids.length > 0)!;
     const adNode = nodes.find((n) => n.id === sample.ad_id)!;
-    expect(adNode).toMatchObject({ kind: "ad", name: adName(sample), source_url: sample.source_url, href: `/races/pa-sen-2024/ads/${sample.ad_id}` });
+    expect(adNode).toMatchObject({ kind: "ad", name: adName(sample), title: sample.video?.title ?? null, source_url: sample.source_url, href: `/races/pa-sen-2024/ads/${sample.ad_id}` });
     expect(placed.find((e) => e.to === sample.ad_id)).toMatchObject({ from: sample.matched_entity_id, amount: adSpend(sample), source_url: sample.source_url, basis: "inferred" });
     const targeted = edges.filter((e) => e.type === REL.TARGETED && e.from === sample.ad_id);
     expect(targeted.map((e) => e.to)).toEqual(sample.candidate_ids);

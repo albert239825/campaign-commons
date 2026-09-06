@@ -3,7 +3,7 @@ import type { GraphFact, GraphNodeRef } from "./facts";
 import type { Runner } from "./neo4j";
 import { CYPHER, GRAPH_OP_SPEC, MAX_FACTS, mentionTokens, resolveSubject, runOperation } from "./queries";
 
-const node = (id: string, name: string, kind: GraphNodeRef["kind"] = "committee"): GraphNodeRef => ({ id, name, kind, href: null });
+const node = (id: string, name: string, kind: GraphNodeRef["kind"] = "committee"): GraphNodeRef => ({ id, name, kind, href: null, title: null });
 const fact = (from: GraphNodeRef, to: GraphNodeRef, amount: number, extra: Partial<Omit<GraphFact, "n">> = {}): Omit<GraphFact, "n"> => ({
   from,
   to,

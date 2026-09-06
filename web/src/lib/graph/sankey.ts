@@ -60,7 +60,7 @@ export function sankeyFromRows(rows: readonly ExploreRow[], context: readonly Gr
     const existing = canonical.get(key);
     if (existing !== undefined) return existing;
     canonical.set(key, ref.id);
-    nodesById.set(ref.id, { id: ref.id, name: ref.name, kind: ref.kind, href: ref.href });
+    nodesById.set(ref.id, { id: ref.id, name: ref.name, kind: ref.kind, href: ref.href, title: ref.title });
     return ref.id;
   };
 

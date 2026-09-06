@@ -186,7 +186,12 @@ export function AdCard({
           <div className="flex items-start justify-between gap-2">
             <h3 className="text-sm font-semibold leading-tight">
               <Link href={routes.ad(raceId, ad.ad_id)} className="hover:underline">
-                {ad.advertiser_name}
+                {ad.video?.title ? (
+                  <span className="block truncate" title={ad.video.title}>
+                    {ad.video.title}
+                  </span>
+                ) : null}
+                <span className={ad.video?.title ? "block text-xs font-medium text-neutral-700" : undefined}>{ad.advertiser_name}</span>
               </Link>
             </h3>
             <Chip tone="muted" className="shrink-0 capitalize">

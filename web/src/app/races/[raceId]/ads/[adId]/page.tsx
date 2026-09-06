@@ -49,9 +49,8 @@ export default async function AdPage({ params }: { params: Promise<{ raceId: str
       <DataStatusBanner status={gallery.data_status} />
 
       <header className="space-y-2">
-        <h1 className="text-2xl font-semibold tracking-tight">
-          {AD_TYPE_LABEL[ad.ad_type]} by {ad.advertiser_name}
-        </h1>
+        <h1 className="text-2xl font-semibold tracking-tight">{ad.video?.title ?? `${AD_TYPE_LABEL[ad.ad_type]} by ${ad.advertiser_name}`}</h1>
+        {ad.video && <p className="text-sm text-neutral-600">{AD_TYPE_LABEL[ad.ad_type]} by {ad.advertiser_name}</p>}
         <div className="flex flex-wrap items-center gap-x-4 gap-y-1 text-sm text-neutral-600">
           {sponsor && (
             <Link href={routes.entity(raceId, sponsor.entity_id)} className="font-medium text-neutral-900 hover:underline">
@@ -64,6 +63,7 @@ export default async function AdPage({ params }: { params: Promise<{ raceId: str
             </Link>
           )}
           <SourceLink href={ad.creative_url} label="ad library record" />
+          {ad.video && <SourceLink href={ad.video.source_url} label="Title from YouTube" />}
           {verified &&
             ad.verification?.evidence_urls
               .filter((u) => u.startsWith("https://www.fec.gov/"))
