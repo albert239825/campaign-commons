@@ -6,7 +6,7 @@ import { getRace, hasTrails, getTrails, listEntityIds, listRaceIds } from "@/lib
 import { canonicalQuestion, INTENT_LABELS } from "@/lib/ask";
 import { getSpenderIssueAnswer } from "@/lib/ask-issues";
 import { routes } from "@/lib/format";
-import { Breadcrumbs, Card, DataStatusBanner } from "@/components/ui";
+import { Breadcrumbs, Card } from "@/components/ui";
 import { DetailHeader } from "@/components/ui/detail-layout";
 import { AskBox } from "@/components/ask/ask-box";
 import { AskMethod } from "@/components/ask/method";
@@ -46,7 +46,6 @@ export default async function IssueAnswerPage({ params }: { params: Promise<{ ra
             { label: INTENT_LABELS.spender_issue },
           ]}
         />
-        <DataStatusBanner status={trails.data_status} />
         <DetailHeader
           label={`Money Trails · ${race.label}`}
           title={question}

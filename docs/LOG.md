@@ -848,6 +848,33 @@ and `enrich-funders`/`enrich-review --kind funders`.
 Added `enrich_dossiers.py`, optional X-post verification, `x_accounts.json`, and dossier materialization for pending
 machine stance suggestions.
 
+### 2026-09-06 — Upstream funder enrichment scaled to every org ≥ $10k (parallel)
+
+**What changed.** `enrich_funders.py` gained `--min-total <usd>` (select every `org:` funder whose summed upstream
+dollars meet the threshold, ranked by total desc; `--top` unchanged when absent) and `--concurrency` (default 8): the
+per-plan Grok call now runs on a `ThreadPoolExecutor`. Cache hits never take a worker; `max_calls`/`max_usd` are reserved
+atomically under one lock that also guards cache writes and the in-memory ledger append (ledger written once at the end);
+submission stops as soon as a budget is hit (exit 3 as before). Rows are written sorted by `entity_id` so the JSON is
+byte-stable whatever the completion order. Inside a worker, 429/5xx and transport errors are retried three times with 1s/2s
+backoff; other errors fail fast; a unit that still fails is printed as `FAIL <entity_id>` on stderr and the run continues.
+`make enrich-funders ARGS="..."` passes flags through. Skips are unchanged: hand `issue_focus.json` entities and
+accepted/rejected machine rows (unless `--refresh-reviewed`). 223 pipeline tests.
+
+**Run.** Dry run: planned 495 units, cached 0, to-call 495, est. $19.80. Live at concurrency 8 (no rate limiting seen):
+600 calls (483 classify + 117 no-tools repairs) hit `--max-calls 600` with 486/495 processed, exit 3; a second pass with the
+same flags served the 486 from cache and finished the last 9 with 12 calls. Totals: 495 orgs planned · 198 classified ·
+0 failed calls · 297 dropped by page verification (page does not name the organization / quote not verified / quote
+missing or too long) · 612 API calls · est. $19.62. Kinds: business_trade 66 · general_partisan 57 · labor 29 ·
+candidate_aligned 19 · multi_issue 16 · single_issue 11; confidence high 196 / medium 2. Every row is `pending`. The 13
+earlier pending rows were re-classified as pending rows always are: 10 came back (AIPAC moved candidate_aligned →
+single_issue/defense), 3 were dropped this time by verification (Altria, American Prosperity Alliance, Jump Crypto).
+`make issues` put `x_enrichment.issue_focus` on the 5 of 50 published donor views that have a machine row; entities,
+ledger and chains are untouched. `make validate` 2455 + 9 ok; `contracts npm run validate` ok.
+
+**Dead ends.** Repairs count against `max_calls`, so 600 was not enough for 495 units in one pass; the cache made the
+rerun cost $0.35 rather than a budget bump.
+
+
 ## 2026-09-06 ~07:00 — Exploratory graph mode (Money Trails follow-up, D-85)
 
 **What changed.** Added a fallback after the route resolver and fixed graph operations refuse: Grok can compose one Cypher query

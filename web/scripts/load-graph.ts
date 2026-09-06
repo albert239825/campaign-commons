@@ -85,7 +85,9 @@ async function main() {
         `UNWIND $rows AS n
          MERGE (e:${ENTITY} {race_id: $race, id: n.id})
          SET e.name = n.name, e.name_lc = n.name_lc, e.kind = n.kind, e.committee_type = n.committee_type,
-             e.visibility = n.visibility, e.class_basis = n.class_basis, e.source_url = n.source_url, e.href = n.href`,
+             e.visibility = n.visibility, e.class_basis = n.class_basis, e.source_url = n.source_url, e.href = n.href,
+             e.machine_issue_ids = n.machine_issue_ids, e.machine_kind = n.machine_kind, e.machine_label = n.machine_label,
+             e.issue_position_ids = n.issue_position_ids`,
         { race: raceId, rows },
       );
     }
