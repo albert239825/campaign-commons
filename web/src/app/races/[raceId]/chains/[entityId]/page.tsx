@@ -3,6 +3,7 @@ import { DetailHeader, SectionNav } from "@/components/ui/detail-layout";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import {
+  DISCLOSED_SPLIT_COLORS,
   TARGETING_COLOR,
   UNWALKED_COLOR,
   VISIBILITY_COLORS,
@@ -151,6 +152,8 @@ export default async function ChainPage({
               <ShareBar
                 shares={{
                   disclosed: chain.summary.disclosed_share,
+                  disclosed_individuals: chain.summary.disclosed_individuals_share,
+                  disclosed_organizations: chain.summary.disclosed_organizations_share,
                   inferable: chain.summary.inferable_share,
                   unwalked: chain.summary.unwalked_share,
                   dark: chain.summary.dark_share,
@@ -189,7 +192,8 @@ export default async function ChainPage({
             <Legend
               items={[
                 { swatch: <span className="chain-legend-root" />, label: `you are here — ${chain.root_name}, the spender this page is about` },
-                { swatch: <Swatch color={VISIBILITY_COLORS.disclosed} />, label: "disclosed (FEC)" },
+                { swatch: <Swatch color={VISIBILITY_COLORS.disclosed} />, label: "disclosed (FEC): individual" },
+                { swatch: <Swatch color={DISCLOSED_SPLIT_COLORS.disclosed_organizations} />, label: "disclosed (FEC): business or union treasury" },
                 { swatch: <Swatch color={VISIBILITY_COLORS.inferable} />, label: "inferable (990, lagged)" },
                 { swatch: <Swatch color={UNWALKED_COLOR} />, label: "not walked (FEC committee, receipts outside this race's neighborhood)" },
                 { swatch: <Swatch color={VISIBILITY_COLORS.dark} className="bg-[repeating-linear-gradient(45deg,#e24b4a_0_2px,#fdecec_2px_4px)]" />, label: "dark wall (no disclosure)" },

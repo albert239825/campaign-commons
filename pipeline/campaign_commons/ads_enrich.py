@@ -94,12 +94,16 @@ def sponsor_shares(chain: JsonDict | None) -> JsonDict | None:
     summary = chain.get("summary")
     if not isinstance(summary, dict):
         return None
-    return {
+    shares = {
         "disclosed": summary["disclosed_share"],
         "inferable": summary["inferable_share"],
         "unwalked": summary.get("unwalked_share", 0.0),
         "dark": summary["dark_share"],
     }
+    if "disclosed_organizations_share" in summary:
+        shares["disclosed_individuals"] = summary["disclosed_individuals_share"]
+        shares["disclosed_organizations"] = summary["disclosed_organizations_share"]
+    return shares
 
 
 def issue_tags(row: JsonDict, creative_url: str) -> JsonDict:

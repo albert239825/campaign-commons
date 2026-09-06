@@ -3287,5 +3287,84 @@
       "last_date": "2024-05-07",
       "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00687103&payee_name=TOUCHDOWN+STRATEGIES+LLC"
     }
+  ],
+  "issue_focus": {
+    "kind": "multi_issue",
+    "issue_ids": [
+      "tax_budget"
+    ],
+    "description": "AFP Action says it is 'committed to electing candidates who will drive policy change and facilitate the building of broad policy coalitions that remove barriers to opportunity'. Its About page names no specific policy area; tax_budget is the closest frozen id to its stated economic-opportunity agenda and is a loose fit.",
+    "basis": {
+      "basis": "verified",
+      "rule": "Self-described focus from the organisation's own material; says what the org is for, not what its dollars bought",
+      "source_urls": [
+        "https://afpaction.com/about/",
+        "https://web.archive.org/web/20241013000000/https://afpaction.com/"
+      ],
+      "checked_by": "devin-block2-issues",
+      "checked_at": "2026-09-05"
+    }
+  },
+  "issue_positions": [
+    {
+      "issue_id": "energy_climate",
+      "direction": -2,
+      "quote": "He spent years championing the Green New Deal, and now that utility bills are squeezing families, he won’t defend it.",
+      "source_url": "https://afpaction.com/afp-action-condemns-radical-socialist-agenda-on-display-at-michigan-democratic-convention/",
+      "basis": {
+        "basis": "inferred",
+        "rule": "Stated position read from the organisation's own site by a language model and kept only where the quote appears verbatim on the fetched page; says what the org says, not what its dollars bought",
+        "source_urls": [
+          "https://afpaction.com/afp-action-condemns-radical-socialist-agenda-on-display-at-michigan-democratic-convention/"
+        ],
+        "checked_by": "grok-4.5",
+        "checked_at": "2026-09-06"
+      }
+    },
+    {
+      "issue_id": "healthcare",
+      "direction": -2,
+      "quote": "He wants Medicare for All — a government takeover of health care that ends the private coverage millions of Michiganders get through their jobs.",
+      "source_url": "https://afpaction.com/afp-action-condemns-radical-socialist-agenda-on-display-at-michigan-democratic-convention/",
+      "basis": {
+        "basis": "inferred",
+        "rule": "Stated position read from the organisation's own site by a language model and kept only where the quote appears verbatim on the fetched page; says what the org says, not what its dollars bought",
+        "source_urls": [
+          "https://afpaction.com/afp-action-condemns-radical-socialist-agenda-on-display-at-michigan-democratic-convention/"
+        ],
+        "checked_by": "grok-4.5",
+        "checked_at": "2026-09-06"
+      }
+    },
+    {
+      "issue_id": "immigration",
+      "direction": 2,
+      "quote": "He’s called for abolishing ICE outright. That isn’t a Michigan plan, it’s a ridiculous and radical wish list that our state can’t afford.",
+      "source_url": "https://afpaction.com/afp-action-condemns-radical-socialist-agenda-on-display-at-michigan-democratic-convention/",
+      "basis": {
+        "basis": "inferred",
+        "rule": "Stated position read from the organisation's own site by a language model and kept only where the quote appears verbatim on the fetched page; says what the org says, not what its dollars bought",
+        "source_urls": [
+          "https://afpaction.com/afp-action-condemns-radical-socialist-agenda-on-display-at-michigan-democratic-convention/"
+        ],
+        "checked_by": "grok-4.5",
+        "checked_at": "2026-09-06"
+      }
+    },
+    {
+      "issue_id": "tax_budget",
+      "direction": -2,
+      "quote": "AFP Action will continue fighting for candidates that will lower taxes, expand affordable energy, and protect the individual freedoms that Michigan’s working families deserve.",
+      "source_url": "https://afpaction.com/afp-action-condemns-radical-socialist-agenda-on-display-at-michigan-democratic-convention/",
+      "basis": {
+        "basis": "inferred",
+        "rule": "Stated position read from the organisation's own site by a language model and kept only where the quote appears verbatim on the fetched page; says what the org says, not what its dollars bought",
+        "source_urls": [
+          "https://afpaction.com/afp-action-condemns-radical-socialist-agenda-on-display-at-michigan-democratic-convention/"
+        ],
+        "checked_by": "grok-4.5",
+        "checked_at": "2026-09-06"
+      }
+    }
   ]
 }

@@ -33,6 +33,7 @@ export default async function PoliciesPage({ params }: { params: Promise<{ raceI
     const stances: CandidateStance[] = dossiers.map(({ candidate, dossier }) => ({
       candidate,
       stance: dossier?.stances.find((s) => s.issue_id === issue.id),
+      machine: dossier?.enrichment?.stances.find((s) => s.issue_id === issue.id),
       hasDossier: dossier !== null,
     }));
     const funders = focused.filter((f) => f.focus.issue_ids.includes(issue.id));

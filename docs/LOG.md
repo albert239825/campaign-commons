@@ -907,6 +907,12 @@ The race ledger, ads, and policies tabs now share one route-group layout: the se
 
 The ad detail page moved into the shared race shell, `RaceNav` now uses prefix matching for nested tabs while keeping Ledger exact, and the page was restyled to match the warm paper, sand, and ink Ads gallery/Ledger design.
 
+### 2026-09-06 — Policies alignment views
+
+Built the two stacked alignment-view PRs. PR 1 added the deterministic verdict helper, Grok Responses API research endpoint with strict quote/source filtering and limits, and graph/static funder plumbing. PR 2 adds the Policies alignment panel: browser-local -2..2 views shared with personalization, record-first verdicts with model-proposed fallback, offline x_stances rows, on-demand Grok research, and lazy issue-tagged funders with graph/static fallback and adjacency copy. The panel keeps model-found material labelled unreviewed and does not send the user’s view to the server.
+
+Open items: the research cache is per process instance; graph funder amounts use complete ledger totals where available, while listed gift sums are labelled when no ledger total exists.
+
 ### 2026-09-06 — Landing page Ask box
 
 Added a text box at the bottom of the landing page that navigates to `/races/<id>/ask?q=`. The Ask page reads `q` client-side via `useSearchParams` inside Suspense so it stays prerendered, then auto-submits once on mount; the landing page makes no model call.

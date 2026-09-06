@@ -228,7 +228,7 @@ export function PersonalizeClient({ races, dossiers }: { races: RaceSummary[]; d
                   <option value="">— choose —</option>
                   {US_STATES.map((state) => (
                     <option key={state.code} value={state.code}>
-                      {state.name} ({state.code}){coveredStates.has(state.code) ? " · races loaded" : ""}
+                      {state.name} ({state.code})
                     </option>
                   ))}
                 </select>
