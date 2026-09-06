@@ -488,16 +488,16 @@ body:has(.race-dashboard) :is(a, button):focus-visible { outline: 2px solid curr
 .funding-tabs button { padding: 16px 0; border-bottom: 2px solid transparent; text-align: left; color: #6f6d69; cursor: pointer; font-size: 15px; }
 .funding-tabs button[aria-selected="true"] { color: #1b1b1a; border-color: currentColor; }
 .funding-tabs small { display: block; margin-top: 4px; font-size: 12px; }
-.funding-panel { display: grid; grid-template-columns: minmax(0, .85fr) minmax(0, 1.15fr); gap: 64px; align-items: start; }
+.funding-panel { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 48px; align-items: start; }
 .funding-chart-column { position: sticky; top: 32px; min-width: 0; }
-.funding-pie { display: block; width: min(100%, 340px); margin: 12px auto; overflow: visible; }
+.funding-pie { display: block; width: min(100%, 220px); margin: 12px auto; overflow: visible; }
 .funding-pie [role="button"] { cursor: pointer; transition: opacity 160ms ease; }
 .funding-pie [role="button"]:hover { opacity: .8; }
 .funding-pie [role="button"]:focus-visible { outline: none; stroke: #1b1b1a; stroke-width: 5; }
-.funding-chart-total { text-align: center; font-size: 40px; line-height: 1.2; letter-spacing: -.035em; }
-.funding-chart-total > span:last-child { display: block; margin-top: 8px; color: #6f6d69; font-size: 12px; letter-spacing: 0; }
-.funding-slice-controls { display: grid; gap: 8px; margin-top: 32px; }
-.funding-slice-controls button { display: grid; grid-template-columns: 10px 1fr auto 40px; align-items: center; gap: 12px; padding: 14px 12px; text-align: left; font-size: 14px; cursor: pointer; border: 1px solid transparent; }
+.funding-chart-total { text-align: center; font-size: clamp(26px, 2.4vw, 34px); line-height: 1.2; letter-spacing: -.035em; }
+.funding-chart-total > span:last-child { display: block; margin-top: 6px; color: #6f6d69; font-size: 12px; letter-spacing: 0; }
+.funding-slice-controls { display: grid; gap: 6px; margin-top: 20px; }
+.funding-slice-controls button { display: grid; grid-template-columns: 10px 1fr auto 36px; align-items: center; gap: 10px; padding: 10px 10px; text-align: left; font-size: 13px; cursor: pointer; border: 1px solid transparent; }
 .funding-slice-controls button[aria-pressed="true"] { background: #e9e5df; border-color: var(--race-rule); }
 .funding-slice-controls strong { font-weight: 500; }
 .funding-slice-controls button > span:last-child { text-align: right; color: #6f6d69; font-size: 12px; }
@@ -545,6 +545,22 @@ body:has(.race-dashboard) :is(a, button):focus-visible { outline: 2px solid curr
 }
 @media (prefers-reduced-motion: reduce) {
   .funding-pie [role="button"] { transition: none; }
+}
+.funding-pie [role="button"]:focus:not(:focus-visible) { outline: none; }
+.funding-pies { display: grid; grid-template-columns: repeat(auto-fit, minmax(190px, 1fr)); gap: 20px; align-items: start; }
+.funding-pie-card { min-width: 0; padding: 16px 12px 12px; border: 1px solid transparent; }
+.funding-pie-card-focused { border-color: var(--race-rule); }
+.funding-pie-heading { display: grid; gap: 4px; text-align: center; font-size: 16px; letter-spacing: -.01em; }
+.funding-pie-heading small { display: flex; justify-content: center; align-items: center; gap: 6px; color: #6f6d69; font-size: 12px; }
+.funding-detail-candidate { display: block; margin-top: 6px; font-size: 16px; letter-spacing: 0; color: #6f6d69; }
+.funding-lines dt { display: flex; align-items: center; gap: 8px; }
+.funding-lines > .funding-line-selected { font-weight: 500; }
+.funding-caption .tabular-nums { color: #1b1b1a; }
+@media (max-width: 680px) {
+  .funding-pies { grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 12px; }
+  .funding-pie-card { padding: 12px 4px; }
+  .funding-slice-controls button { grid-template-columns: 10px 1fr auto; }
+  .funding-slice-controls button > span:last-child { grid-column: 2 / -1; text-align: left; }
 }
 
 .race-section-tabs { display: flex; flex-direction: column; gap: 4px; position: sticky; top: 32px; padding-right: 20px; border-right: 1px solid var(--race-rule); }

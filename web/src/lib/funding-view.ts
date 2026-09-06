@@ -42,6 +42,7 @@ export function buildFundingViews(ledger: Ledger) {
     visibility.unavailable = Math.max(0, outside.total - accounted);
     return {
       id, label, names: candidates.map(c => c.name).join(" & "), campaign, outside, visibility,
+      party: candidates.length === 1 ? candidates[0].party : null,
       sources: candidates.map(c => ({ id: c.candidate_id, name: c.name, campaign: c.campaign.source_url, outside: c.outside.source_url })),
       publishedVisibility: id === "all" && ledger.traceability !== null,
       method: id === "all" ? ledger.traceability?.method ?? null : null,
@@ -54,3 +55,40 @@ export function buildFundingViews(ledger: Ledger) {
 }
 
 export type FundingView = ReturnType<typeof buildFundingViews>[number];
+
+/** The two pie pairs. Outside dollars target a candidate; receipts are the campaign's own money. Never summed. */
+export const FUNDING_MODES = [
+  { id: "outside", label: "Outside spending", noun: "outside spending", about: "about", detail: "Independent expenditures for or against each candidate" },
+  { id: "campaign", label: "Campaign receipts", noun: "campaign receipts", about: "for", detail: "What each candidate's own committees took in" },
+] as const;
+export type FundingMode = (typeof FUNDING_MODES)[number]["id"];
+
+/** Two shades of the outside hue and three of the campaign hue (D-16: neutral money palette, never party or visibility colours). */
+export const OUTSIDE_COLORS = { support: "#8c7e6a", oppose: "#cbc1b0" } as const;
+export const RECEIPT_COLORS = { individuals: "#343f49", committees: "#6e7983", other: "#adb4bb" } as const;
+
+/** `label` names the candidate for the detail column and screen readers; `short` sits under the pie, where the card header already does. */
+export type PieSlice = { id: string; label: string; short: string; amount: number; color: string };
+
+/** Slices of one candidate's pie in the given mode; amounts are as filed, `other` is floored at zero upstream. */
+export function pieSlices(view: FundingView, mode: FundingMode): PieSlice[] {
+  const name = view.names || "this candidate";
+  if (mode === "outside") {
+    return [
+      { id: "support", label: `Supporting ${name}`, short: "Supporting", amount: view.outside.support, color: OUTSIDE_COLORS.support },
+      { id: "oppose", label: `Opposing ${name}`, short: "Opposing", amount: view.outside.oppose, color: OUTSIDE_COLORS.oppose },
+    ];
+  }
+  return [
+    { id: "individuals", label: "From individuals", short: "Individuals", amount: view.campaign.individuals, color: RECEIPT_COLORS.individuals },
+    { id: "committees", label: "From committees (PACs, party)", short: "Committees", amount: view.campaign.committees, color: RECEIPT_COLORS.committees },
+    { id: "other", label: "Other receipts", short: "Other", amount: view.campaign.other, color: RECEIPT_COLORS.other },
+  ];
+}
+
+export const pieTotal = (view: FundingView, mode: FundingMode) => (mode === "outside" ? view.outside.total : view.campaign.receipts);
+
+/** The race-wide view (published totals) and one view per candidate, in ledger order. */
+export function splitFundingViews(views: FundingView[]) {
+  return { race: views.find(v => v.id === "all") ?? null, candidates: views.filter(v => v.id !== "all") };
+}

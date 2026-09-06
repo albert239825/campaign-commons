@@ -517,3 +517,30 @@ nullable when the ad has no dates), which the PA data does not yet exercise (0 v
 (placement is paid before air) and changed the copy everywhere to "in the week before and while this ad ran". Context rows
 611 → 728 across 280 → 284 ads (mixed-media vendors' digital portions now shown); links unchanged at 115 inferred, one rule
 text corrected. 171 pipeline tests.
+
+## 2026-09-06 ~06:00 — Block 3 child B: the funding overview compares candidates, not slices (child B)
+
+**What changed.** The Sep 5 critique: the ledger's "Funding overview" drew one pie per candidate tab (campaign receipts vs
+outside spending) and so never answered the question people brought to it — how much outside money went *for* each candidate
+and how much *against*. `FundingExplorer` now renders one card per `ledger.candidates` entry (N cards; 2 in PA) side by side,
+with a two-way switch above them: **Outside spending** (slices Supporting X / Opposing X from `c.outside`, source
+`c.outside.source_url`) and **Campaign receipts** (from individuals / from committees / other, `c.campaign.source_url`). Each
+card prints its total and its share of the race total; each slice prints dollars and its share of the *race* total for that
+pair, so the two charts read on one scale without resizing the circles. The right-hand detail column follows whichever card and
+slice is selected: outside mode keeps the support/oppose lines, the visibility bar, the per-candidate visibility rows and the
+methodology `<details>` (per-candidate estimates from `buildFundingViews` unchanged; the published race total now lives inside
+the methodology text, keyed off the `all` view); campaign mode shows the receipts lines with conduits nested under individuals,
+disbursements and cash on hand. Source records link the selected candidate's dossier and the FEC record for the shown pair. The
+sentence "Outside spending supports or opposes candidates; it does not go to their campaigns" stays on the outside pair; the
+receipts caption says conduit dollars are already inside the individual total. Colours: two shades of the outside hue for
+support/oppose, three neutral greys for receipts; party tags sit under the name as metadata only. `page.tsx` untouched — the
+`<FundingExplorer views={buildFundingViews(ledger)} raceId={raceId} />` call compiles as before. D-77.
+
+**Challenge.** The old component's slice-select carried both what-to-show and what-to-explain; splitting it into a mode switch
+(tablist) plus a per-card slice focus (`{candidate, slice}`) kept keyboard access intact — arrow/Home/End on the switch, Enter
+and Space on SVG sectors, `aria-pressed` on both the sectors and their legend buttons. Two 220px pies plus a legend had to fit
+where one 340px pie sat, so the panel is now two equal columns and the slice legend drops its race-share column under 680px.
+
+**Numbers.** PA outside spending $233.4M: about Casey $125.9M (54%; $22.2M supporting, $103.7M opposing), about McCormick
+$107.5M (46%; $28.3M supporting, $79.2M opposing). Receipts $94.1M: Casey $58.1M ($43.6M individuals of which $18.2M via
+conduits, $3.0M committees, $11.6M other), McCormick $36.0M ($21.2M / $5.8M conduit / $1.1M / $13.7M). Lint, tsc, build green.
