@@ -552,32 +552,24 @@ positioning is written straight to the element's style on `mousemove` so hoverin
 root chip fits `AMERICAN HOSPITAL ASSOCIATION PAC` on two rows. Wire edge tuple 8 → 9 slots. `npm run lint`, `tsc
 --noEmit`, `next build` clean; no data or contract changes.
 
-## 2026-09-06 ~07:00 — Block 3 child B: one pie per candidate, "Money working for" (child B)
+## 2026-09-06 ~07:00 — Block 3 child B: one pie, a "Show detail" toggle (child B)
 
-**What changed.** The Sep 5 critique: the ledger's "Funding overview" drew one pie per candidate tab (campaign receipts vs
-outside spending) and never answered the question people brought to it — which side more money is working for. Albert's
-call (Sep 6): dollars supporting McCormick and dollars opposing Casey are one side. `FundingExplorer` now renders one card per
-`ledger.candidates` entry side by side (N cards; 2 in PA), each titled **Money working for <candidate>** with three slices:
-campaign receipts (`c.campaign.receipts`, campaign hue), outside spending supporting them (`c.outside.support`) and outside
-spending opposing their opponent (`opponent.outside.oppose`; summed and labelled "opposing opponents" when N>2), the two
-outside slices in two shades of the outside hue so "reaches the campaign" vs "independent, never does" reads at a glance. The
-side total sits under each pie with "not a fundraising total"; both pies share one radius and each percentage is a share of
-that side. The right-hand detail column follows the selected card + slice: the campaign slice opens the receipts breakdown
-(individuals with conduits nested, committees, other, disbursements, cash on hand); either outside slice opens "Outside
-spending about <subject>" (the counterpart line marked "counted on the other side"), the visibility bar and rows for that
-subject (per-candidate estimates from `buildFundingViews`, summed across opponents when N>2 — they are per-spender weights,
-so additive) and the methodology `<details>` with the published race figure. Source records list the campaign FEC record and
-each candidate's independent-expenditure record, so all three slices keep their links. `funding-view.ts` gains `buildSide`,
-`buildSides`, `aggregateOutside`, `SIDE_COLORS`; no contract or data changes. `page.tsx` untouched — the
-`<FundingExplorer views={buildFundingViews(ledger)} raceId={raceId} />` call compiles as before. D-78.
+**What changed.** The ledger's "Funding overview" keeps its shape — one tab per view (all candidates, then each candidate),
+one pie per tab, campaign receipts vs outside spending, detail column on the right — and gains a **Show detail** button
+under the total. Detail re-cuts the same pie into five slices: receipts from individuals, from committees, other receipts
+(three shades of the campaign hue) and outside spending supporting / opposing (two shades of the outside hue), so the
+dark/light split still reads as "reached the campaign" vs "independent, never did" (D-16). Clicking or keying a detail
+slice opens its group in the detail column and highlights the matching line (`aria-current`); the legend under the pie
+lists the five slices with amounts and shares of the pie total. `funding-view.ts` gains `pieSlices(view, detailed)`,
+`pieSectors`, `GROUP_COLORS`; the component draws sectors from cumulative angles instead of one split angle. Summary
+view, tabs, captions, visibility bar, methodology `<details>` and source records are unchanged; no contract or data
+changes; `page.tsx` untouched. D-78.
 
-**Challenge.** The first cut of this PR was a per-candidate *support / oppose* pair plus a mirrored *receipts* pair behind a
-mode switch; it compared candidates, not sides, and Albert redirected it mid-review. The rewrite dropped the switch entirely
-(one view, three slices) which also removed the only place where receipts and outside dollars were shown as separate headline
-totals — hence the "not a fundraising total" caption on every total and the campaign-hue / outside-hue split. Two 220px pies
-plus a legend had to fit where one 340px pie sat, so the panel is now two equal columns and the legend drops its share column
-under 680px.
+**Challenge.** This is the third cut of the same PR: the Sep 5 critique asked for per-candidate support/oppose pairs,
+Albert then asked for one three-slice "Money working for <candidate>" pie per candidate, and Patrick settled on the
+original single pie with more granularity behind a button. The slice model was made data-driven so the third cut was a
+rewrite of `pieSlices`, not of the SVG. The receipts "other" line is `receipts − individuals − committees` floored at 0,
+so in detail the three campaign slices can exceed the summary receipts by the floored amount; PA has none.
 
-**Numbers.** PA: Casey side $159.5M = $58.1M receipts + $22.2M supporting Casey + $79.2M opposing McCormick; McCormick side
-$168.0M = $36.0M + $28.3M + $103.7M opposing Casey. Race: $94.1M receipts, $233.4M outside ($50.5M supporting, $182.9M
-opposing). Lint, tsc, build green.
+**Numbers.** PA all-candidates: $94.1M receipts ($64.8M individuals, $4.0M committees, $25.3M other) + $233.4M outside
+($50.5M supporting, $182.9M opposing). Casey $58.1M / $125.9M; McCormick $36.0M / $107.5M. Lint, tsc, build green.

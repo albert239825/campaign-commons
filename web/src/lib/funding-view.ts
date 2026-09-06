@@ -42,7 +42,6 @@ export function buildFundingViews(ledger: Ledger) {
     visibility.unavailable = Math.max(0, outside.total - accounted);
     return {
       id, label, names: candidates.map(c => c.name).join(" & "), campaign, outside, visibility,
-      party: candidates.length === 1 ? candidates[0].party : null,
       sources: candidates.map(c => ({ id: c.candidate_id, name: c.name, campaign: c.campaign.source_url, outside: c.outside.source_url })),
       publishedVisibility: id === "all" && ledger.traceability !== null,
       method: id === "all" ? ledger.traceability?.method ?? null : null,
@@ -56,47 +55,39 @@ export function buildFundingViews(ledger: Ledger) {
 
 export type FundingView = ReturnType<typeof buildFundingViews>[number];
 
-/** Campaign hue for money that reaches the campaign; two shades of the outside hue for independent expenditures (D-16). */
-export const SIDE_COLORS = { campaign: "#343f49", support: "#8c7e6a", oppose: "#cbc1b0" } as const;
-export type SideSliceId = keyof typeof SIDE_COLORS;
+export type SliceGroup = "campaign" | "outside";
 
-/** `label` names the candidates for the detail column and screen readers; `short` sits under the pie, where the card header already does. */
-export type SideSlice = { id: SideSliceId; label: string; short: string; amount: number; color: string };
+/** Campaign money in one hue, outside spending in another (D-16); the detailed view uses shades of the same two hues. */
+export const GROUP_COLORS: Record<SliceGroup, string> = { campaign: "#343f49", outside: "#b7ab98" };
+const CAMPAIGN_SHADES = ["#343f49", "#5b6874", "#8a95a0"];
+const OUTSIDE_SHADES = ["#8c7e6a", "#cbc1b0"];
 
-/** Outside spending about a set of candidates, with the per-candidate visibility estimates summed (they are per-spender weights, so additive). */
-export function aggregateOutside(views: FundingView[]) {
-  const sum = (value: (v: FundingView) => number) => views.reduce((total, v) => total + value(v), 0);
-  return {
-    names: views.map(v => v.names).join(" & "),
-    outside: { total: sum(v => v.outside.total), support: sum(v => v.outside.support), oppose: sum(v => v.outside.oppose) },
-    visibility: {
-      disclosed: sum(v => v.visibility.disclosed), inferable: sum(v => v.visibility.inferable), unwalked: sum(v => v.visibility.unwalked),
-      dark: sum(v => v.visibility.dark), unavailable: sum(v => v.visibility.unavailable),
-    },
-  };
-}
+export type PieSlice = { id: string; group: SliceGroup; label: string; amount: number; color: string };
 
-/**
- * Money working for one candidate's side: the campaign's own receipts, independent expenditures supporting them, and
- * independent expenditures opposing their opponent(s). Receipts reach the campaign; the two outside slices never do,
- * so the side total is a comparison figure, not a fundraising total.
- */
-export function buildSide(view: FundingView, opponents: FundingView[]) {
-  const name = view.names || "this candidate";
-  const rivals = aggregateOutside(opponents);
-  const rivalLabel = opponents.length === 1 ? rivals.names : "opponents";
-  const slices: SideSlice[] = [
-    { id: "campaign", label: `Campaign receipts, ${name}`, short: "Campaign receipts", amount: view.campaign.receipts, color: SIDE_COLORS.campaign },
-    { id: "support", label: `Outside spending supporting ${name}`, short: `Supporting ${name}`, amount: view.outside.support, color: SIDE_COLORS.support },
-    { id: "oppose", label: `Outside spending opposing ${rivalLabel}`, short: `Opposing ${rivalLabel}`, amount: rivals.outside.oppose, color: SIDE_COLORS.oppose },
+/** Summary: receipts vs outside. Detailed: receipts by source (individuals / committees / other) and outside by stance (supporting / opposing). */
+export function pieSlices(view: FundingView, detailed: boolean): PieSlice[] {
+  if (!detailed) {
+    return [
+      { id: "campaign", group: "campaign", label: "Campaign receipts", amount: view.campaign.receipts, color: GROUP_COLORS.campaign },
+      { id: "outside", group: "outside", label: "Outside spending", amount: view.outside.total, color: GROUP_COLORS.outside },
+    ];
+  }
+  return [
+    { id: "individuals", group: "campaign", label: "Receipts from individuals", amount: view.campaign.individuals, color: CAMPAIGN_SHADES[0] },
+    { id: "committees", group: "campaign", label: "Receipts from committees", amount: view.campaign.committees, color: CAMPAIGN_SHADES[1] },
+    { id: "other", group: "campaign", label: "Other receipts", amount: view.campaign.other, color: CAMPAIGN_SHADES[2] },
+    { id: "support", group: "outside", label: "Outside spending supporting", amount: view.outside.support, color: OUTSIDE_SHADES[0] },
+    { id: "oppose", group: "outside", label: "Outside spending opposing", amount: view.outside.oppose, color: OUTSIDE_SHADES[1] },
   ];
-  return { view, opponents, rivals, rivalLabel, slices, total: slices.reduce((sum, s) => sum + s.amount, 0) };
 }
-export type Side = ReturnType<typeof buildSide>;
 
-/** The race-wide view (published totals) and one side per candidate, in ledger order. */
-export function buildSides(views: FundingView[]) {
-  const race = views.find(v => v.id === "all") ?? null;
-  const candidates = views.filter(v => v.id !== "all");
-  return { race, sides: candidates.map(view => buildSide(view, candidates.filter(other => other.id !== view.id))) };
+/** Adds start/end angles (clockwise from 12 o'clock) so the pie can be drawn with hand-rolled sectors. */
+export function pieSectors(slices: PieSlice[]) {
+  const total = slices.reduce((sum, s) => sum + Math.max(0, s.amount), 0);
+  let angle = -Math.PI / 2;
+  return slices.map(s => {
+    const start = angle;
+    angle += total > 0 ? (Math.max(0, s.amount) / total) * Math.PI * 2 : 0;
+    return { ...s, start, end: angle, share: total > 0 ? s.amount / total : 0 };
+  });
 }
