@@ -1,6 +1,7 @@
 "use client";
 
 import {
+  useId,
   useMemo,
   useRef,
   useState,
@@ -8,6 +9,7 @@ import {
   type KeyboardEvent,
   type MouseEvent,
   type ReactNode,
+  type PointerEvent,
 } from "react";
 import {
   COMMITTEE_TYPE_LABELS,
@@ -18,8 +20,11 @@ import {
 } from "@campaign-commons/contracts";
 import { money } from "@/lib/format";
 import { BASIS_DASH, BASIS_LABELS } from "./basis";
+import { kMaxFor, shortBuckets } from "./camera";
 import { EdgePanel, EDGE_KIND_LABELS, edgeAmountLabel, edgeVerb } from "./edge-panel";
 import { revealEdge } from "./edge-reveal";
+import { announceNode } from "./graph-announce";
+import { edgeKey, isCursorKey, moveCursor, navGraph, pathSet } from "./graph-nav";
 import {
   NAME_FONT,
   SUB_FONT,
@@ -48,6 +53,7 @@ import {
 } from "./layout";
 import { NodePanel, kindLabel, type IncidentEdge } from "./node-panel";
 import { terminusLabel } from "./terminus";
+import { useCamera } from "./use-camera";
 import {
   MATERIAL_SHARE,
   fromWire,
@@ -67,10 +73,6 @@ export const PLACEMENT_COLOR = VENDOR_COLOR;
 const SELECTED = "#2563eb";
 /** The root's outline and label chip: the page's own ink, so it reads as "this page", not as a party or a visibility. */
 export const ROOT_COLOR = INK;
-
-/** Stable identity of a drawn edge: its table row when it has one, else its ends (client-side folds). */
-const edgeKey = (e: ViewEdge) =>
-  e.index >= 0 ? `e${e.index}` : `${e.from}|${e.to}|${e.kind}|${e.support_oppose ?? ""}`;
 
 type Selection = { kind: "node"; id: string } | { kind: "edge"; key: string } | null;
 type TipBody =
@@ -99,12 +101,8 @@ function subLabel(n: VisibleNode, txns: number): string {
   return n.kind;
 }
 
-const activate = (fn: () => void) => (ev: KeyboardEvent) => {
-  if (ev.key === "Enter" || ev.key === " ") {
-    ev.preventDefault();
-    fn();
-  }
-};
+/** `data-lit` for a node or edge while a route is lit: "1" on the route, "0" dimmed; absent when nothing is lit. */
+const litAttr = (lit: boolean | null) => (lit === null ? undefined : lit ? "1" : "0");
 
 type TextLine = { text: string; y: number; size: number; weight?: number; fill: string; spacing?: number };
 
@@ -146,18 +144,22 @@ function stackLines(n: VisibleNode, ln: LaidOutNode, txns: number, innerW: numbe
 
 function NodeBox({
   ln,
+  domId,
   txns,
   out,
   selected,
+  lit,
   onSelect,
   onToggle,
   pointing,
   rootLabel,
 }: {
   ln: LaidOutNode;
+  domId: string;
   txns: number;
   out: number;
   selected: boolean;
+  lit: boolean | null;
   onSelect: (id: string) => void;
   onToggle: (n: VisibleNode) => void;
   pointing: Pointing;
@@ -228,20 +230,20 @@ function NodeBox({
   const term = terminusLabel(n);
   const label = `${n.name} · ${kindLabel(n)}${isRoot ? ` · the ${rootLabel} this page is about` : ""} · ${money(n.amount_in, { compact: false })}${term ? ` · ${term}` : ""} · click for details`;
   const body: TipBody = { kind: "node", node: n, out };
+  // Semantic zoom: the `data-k` buckets at which this box is under 20 px tall and hides its amount and sub-labels (globals.css).
+  const short = shortBuckets(h).map((b) => `chain-short-k${b}`);
   return (
     <g
+      id={domId}
       role="button"
-      tabIndex={0}
       aria-pressed={selected}
       aria-label={label}
-      className="chain-node cursor-pointer"
+      className={["chain-node cursor-pointer", ...short].join(" ")}
+      data-lit={litAttr(lit)}
       onClick={() => onSelect(n.id)}
-      onKeyDown={activate(() => onSelect(n.id))}
       onMouseEnter={(ev) => pointing.onPoint(body, ev)}
       onMouseMove={pointing.onMove}
       onMouseLeave={pointing.onLeave}
-      onFocus={(ev) => pointing.onPoint(body, ev)}
-      onBlur={pointing.onLeave}
     >
       {isRoot && (
         <rect
@@ -266,6 +268,7 @@ function NodeBox({
         stroke={stroke}
         strokeWidth={isRoot ? 3 : selected ? 2.5 : 1.25}
         strokeDasharray={isAgg ? "3 3" : undefined}
+        vectorEffect={selected ? "non-scaling-stroke" : undefined}
       />
       {isDark && (
         <rect
@@ -320,6 +323,7 @@ function NodeBox({
             fontWeight={l.weight}
             fill={l.fill}
             letterSpacing={l.spacing}
+            className={l.size === NAME_FONT ? undefined : "chain-sub"}
           >
             {l.text}
           </text>
@@ -335,24 +339,17 @@ function NodeBox({
         stroke={isDark ? "#ffffff" : "none"}
         strokeWidth={isDark ? 3 : 0}
         paintOrder="stroke"
-        className="tabular-nums"
+        className="chain-amount tabular-nums"
       >
         {amount}
       </text>
       {togglable && (
         <g
           role="button"
-          tabIndex={0}
           className="cursor-pointer"
           onClick={(ev) => {
             ev.stopPropagation();
             onToggle(n);
-          }}
-          onKeyDown={(ev) => {
-            if (ev.key === "Enter") {
-              ev.stopPropagation();
-              onToggle(n);
-            }
           }}
         >
           <title>
@@ -393,11 +390,13 @@ function NodeBox({
 function RibbonShape({
   r,
   selected,
+  lit,
   onSelect,
   pointing,
 }: {
   r: Ribbon;
   selected: boolean;
+  lit: boolean | null;
   onSelect: (edge: ViewEdge) => void;
   pointing: Pointing;
 }) {
@@ -411,26 +410,24 @@ function RibbonShape({
         : `${from.node.name} → ${to.node.name}: placement, ${BASIS_LABELS[edge.basis?.[0] ?? "filed"]}${edge.basis ? ` — ${edge.basis[1]}` : ""} · click for details`;
   const handlers = {
     role: "button",
-    tabIndex: 0,
     "aria-pressed": selected,
     "aria-label": label,
     className: "chain-ribbon cursor-pointer",
     onClick: () => onSelect(edge),
-    onKeyDown: activate(() => onSelect(edge)),
     onMouseEnter: (ev: MouseEvent<Element>) => pointing.onPoint(body, ev),
     onMouseMove: pointing.onMove,
     onMouseLeave: pointing.onLeave,
-    onFocus: (ev: FocusEvent<Element>) => pointing.onPoint(body, ev),
-    onBlur: pointing.onLeave,
   };
   if (edge.kind === "money") {
     return (
       <path
+        data-lit={litAttr(lit)}
         d={ribbonPath(r)}
         fill={VISIBILITY_COLORS[edge.visibility]}
         fillOpacity={edge.visibility === "dark" ? 0.5 : 0.38}
         stroke={selected ? SELECTED : "transparent"}
         strokeWidth={selected ? 2 : 5}
+        vectorEffect={selected ? "non-scaling-stroke" : undefined}
         {...handlers}
       />
     );
@@ -438,7 +435,7 @@ function RibbonShape({
   const basis = edge.basis?.[0] ?? "filed";
   const color = edge.kind === "targeting" ? TARGETING_COLOR : PLACEMENT_COLOR;
   return (
-    <g>
+    <g className="chain-spine" data-lit={litAttr(lit)}>
       <path
         d={ribbonSpine(r)}
         fill="none"
@@ -556,7 +553,13 @@ export function ChainDiagram({
   }));
   const [selection, setSelection] = useState<Selection>(null);
   const [tip, setTip] = useState<TipBody | null>(null);
+  /** Keyboard cursor (a node id) and the node under the pointer; either lights its route. */
+  const [cursor, setCursor] = useState<string | null>(null);
+  const [hover, setHover] = useState<string | null>(null);
+  const domPrefix = useId();
+  const nodeDomId = (id: string) => `${domPrefix}n-${id.replace(/[^A-Za-z0-9_-]/g, "_")}`;
   const figRef = useRef<HTMLElement>(null);
+  const svgRef = useRef<SVGSVGElement>(null);
   const tipRef = useRef<HTMLDivElement>(null);
   const flip = (key: keyof GraphControls, id: string) =>
     setControls((prev) => {
@@ -572,8 +575,10 @@ export function ChainDiagram({
     setSelection(null);
   };
   const restore = () => setControls((prev) => ({ ...prev, hidden: new Set() }));
-  const selectNode = (id: string) =>
+  const selectNode = (id: string) => {
     setSelection((cur) => (cur?.kind === "node" && cur.id === id ? null : { kind: "node", id }));
+    setCursor(id);
+  };
   const selectEdge = (edge: ViewEdge) => {
     const key = edgeKey(edge);
     setSelection((cur) => (cur?.kind === "edge" && cur.key === key ? null : { kind: "edge", key }));
@@ -597,15 +602,21 @@ export function ChainDiagram({
     return [r.right - fr.left + 8, Math.max(0, r.top - fr.top)];
   };
   const pending = useRef<[number, number] | null>(null);
+  const showTip = (body: TipBody, at: [number, number]) => {
+    if (tipRef.current) moveTip(...at);
+    else pending.current = at;
+    setTip(body);
+  };
   const pointing: Pointing = {
     onPoint: (body, ev) => {
-      const at = pointAt(ev);
-      if (tipRef.current) moveTip(...at);
-      else pending.current = at;
-      setTip(body);
+      showTip(body, pointAt(ev));
+      setHover(body.kind === "node" ? body.node.id : null);
     },
     onMove: (ev) => moveTip(...pointAt(ev)),
-    onLeave: () => setTip(null),
+    onLeave: () => {
+      setTip(null);
+      setHover(null);
+    },
   };
   // Position the freshly mounted tooltip element before paint.
   const tipCallback = (el: HTMLDivElement | null) => {
@@ -618,6 +629,98 @@ export function ChainDiagram({
 
   const graph = useMemo(() => visibleGraph(view, controls), [view, controls]);
   const L = useMemo(() => layoutChain(graph.nodes, graph.edges), [graph]);
+  const frame = useMemo(() => ({ width: L.width, height: L.height + 22 }), [L]);
+  const camera = useCamera(svgRef, frame, kMaxFor(NAME_FONT));
+  /** Camera keys on the focused wrapper: `+`/`=`, `-`, `0` fit, `Shift`+arrows pan. True when handled. */
+  const onCameraKey = (ev: KeyboardEvent<HTMLDivElement>) => {
+    const c = camera.controls;
+    const step = c.keyPanPx;
+    if (ev.shiftKey && ev.key.startsWith("Arrow")) {
+      c.panPx(
+        ev.key === "ArrowLeft" ? -step : ev.key === "ArrowRight" ? step : 0,
+        ev.key === "ArrowUp" ? -step : ev.key === "ArrowDown" ? step : 0,
+      );
+    } else if (ev.key === "+" || ev.key === "=") c.zoomIn();
+    else if (ev.key === "-" || ev.key === "_") c.zoomOut();
+    else if (ev.key === "0") c.fit();
+    else return false;
+    ev.preventDefault();
+    return true;
+  };
+  const nav = useMemo(
+    () => navGraph(graph, view.rootId, L.columns.map((c) => c.nodes)),
+    [graph, view.rootId, L],
+  );
+  // A clicked node pins its route; otherwise the pointer, then the keyboard cursor, decides what is lit.
+  const pinned = selection?.kind === "node" && nav.nodes.has(selection.id) ? selection.id : null;
+  const litFrom = pinned ?? (hover && nav.nodes.has(hover) ? hover : null) ?? (cursor && nav.nodes.has(cursor) ? cursor : null);
+  const lit = useMemo(() => (litFrom ? pathSet(nav, litFrom) : null), [nav, litFrom]);
+  const cursorNode = cursor ? (L.nodes.find((ln) => ln.node.id === cursor) ?? null) : null;
+  const announcement = useMemo(() => (cursor ? announceNode(nav, cursor) : ""), [nav, cursor]);
+
+  // The cursor shows the same tooltip the pointer would, beside the node (placed once the node has rendered).
+  const moveCursorTo = (id: string) => {
+    setCursor(id);
+    const n = nav.nodes.get(id);
+    if (!n) return;
+    const out = (nav.downstream.get(id) ?? []).filter((e) => e.kind === "money").reduce((s, e) => s + e.amount, 0);
+    requestAnimationFrame(() => {
+      const el = document.getElementById(nodeDomId(id));
+      const fr = figRef.current?.getBoundingClientRect();
+      if (!el || !fr) return;
+      const r = el.getBoundingClientRect();
+      showTip({ kind: "node", node: n, out }, [r.right - fr.left + 8, Math.max(0, r.top - fr.top)]);
+    });
+  };
+  const clearCursor = () => {
+    setCursor(null);
+    setTip(null);
+  };
+  const onMapKeyDown = (ev: KeyboardEvent<HTMLDivElement>) => {
+    if (ev.target !== ev.currentTarget) return;
+    if (onCameraKey(ev)) return;
+    const key = ev.key;
+    if (isCursorKey(key)) {
+      ev.preventDefault();
+      moveCursorTo(moveCursor(nav, cursor, key));
+    } else if ((ev.key === "Enter" || ev.key === " ") && cursor) {
+      ev.preventDefault();
+      selectNode(cursor);
+    } else if (ev.key === "Escape") {
+      ev.preventDefault();
+      clearCursor();
+      setSelection(null);
+    }
+  };
+  // Keyboard focus lands the cursor on the pinned node or the root; a pointer press places it by clicking instead.
+  const pointerDownRef = useRef(false);
+  const pressAt = useRef<[number, number] | null>(null);
+  const onMapPointerDown = (ev: PointerEvent<HTMLDivElement>) => {
+    pointerDownRef.current = true;
+    pressAt.current = [ev.clientX, ev.clientY];
+  };
+  // Focus, if the press moves it, arrives before pointerup; a press on an already-focused map must not mark the next Tab.
+  const onMapPointerUp = () => {
+    pointerDownRef.current = false;
+  };
+  const onMapFocus = (ev: FocusEvent<HTMLDivElement>) => {
+    const byPointer = pointerDownRef.current;
+    pointerDownRef.current = false;
+    if (ev.target === ev.currentTarget && !cursor && !byPointer) moveCursorTo(pinned ?? nav.rootId);
+  };
+  const onMapBlur = (ev: FocusEvent<HTMLDivElement>) => {
+    if (!ev.currentTarget.contains(ev.relatedTarget)) clearCursor();
+  };
+  /** A click on bare canvas (not a node or edge) unpins the route and drops the cursor; a drag-to-pan does not. */
+  const onCanvasClick = (ev: MouseEvent<SVGSVGElement>) => {
+    const p = pressAt.current;
+    if (p && Math.hypot(ev.clientX - p[0], ev.clientY - p[1]) > 4) return;
+    const t = ev.target;
+    const bare = t === ev.currentTarget || (t instanceof SVGTextElement && t.parentNode === ev.currentTarget);
+    if (!bare) return;
+    clearCursor();
+    setSelection((cur) => (cur?.kind === "node" ? null : cur));
+  };
   const txnsFrom = new Map<string, number>();
   const moneyOut = new Map<string, number>();
   for (const e of graph.edges)
@@ -657,13 +760,44 @@ export function ChainDiagram({
 
   return (
     <figure className="chain-figure" ref={figRef}>
-      <div className="chain-map-scroll" tabIndex={0} role="region" aria-label="Scrollable funding map">
+      <div className="chain-toolbar" role="toolbar" aria-label="Map zoom">
+        <button type="button" aria-label="Zoom in" title="Zoom in (+)" onClick={camera.controls.zoomIn}>
+          +
+        </button>
+        <button type="button" aria-label="Zoom out" title="Zoom out (−)" onClick={camera.controls.zoomOut}>
+          −
+        </button>
+        <button type="button" aria-label="Fit the whole map" title="Fit the whole map (0)" onClick={camera.controls.fit}>
+          <span aria-hidden="true">⤢</span> fit
+        </button>
+        <button type="button" aria-label="Actual size, labels at their designed size" title="Actual size" onClick={camera.controls.actual}>
+          1:1
+        </button>
+        <span ref={camera.readoutRef} className="chain-zoom-readout tabular-nums" aria-live="polite" />
+        <span className="chain-toolbar-hint">Ctrl/⌘ + scroll to zoom · drag to pan</span>
+      </div>
+      <div
+        className="chain-map-scroll"
+        tabIndex={0}
+        role="application"
+        aria-roledescription="funding map"
+        aria-label={`${graph.hasOut ? "Money into and out of" : "Funding chain into"} ${view.rootName}: ${L.nodes.length} nodes, ${L.ribbons.length} edges drawn. Arrow keys move between nodes, Home returns to the spender, Enter opens a node's details, Escape clears. Plus, minus and 0 zoom; Shift with the arrow keys pans. Full detail in the table below.`}
+        aria-activedescendant={cursorNode ? nodeDomId(cursorNode.node.id) : undefined}
+        data-lit-mode={lit ? (pinned ? "pinned" : "hover") : undefined}
+        onKeyDown={onMapKeyDown}
+        onFocus={onMapFocus}
+        onBlur={onMapBlur}
+        onPointerDown={onMapPointerDown}
+        onPointerUp={onMapPointerUp}
+      >
       <svg
-        viewBox={`0 0 ${L.width} ${L.height + 22}`}
+        ref={svgRef}
+        viewBox={camera.viewBox}
         width="100%"
         style={{ maxHeight: 880, fontFamily: "var(--font-sans)" }}
-        role="img"
-        aria-label={`${graph.hasOut ? "Money into and out of" : "Funding chain into"} ${view.rootName}: ${L.nodes.length} nodes, ${L.ribbons.length} edges drawn. Full detail in the table below.`}
+        role="group"
+        aria-label={`${view.rootName} funding map, ${L.nodes.length} nodes`}
+        onClick={onCanvasClick}
       >
         <defs>
           <pattern
@@ -726,6 +860,7 @@ export function ChainDiagram({
             key={edgeKey(r.edge)}
             r={r}
             selected={selectedRibbon === r}
+            lit={lit ? lit.edges.has(edgeKey(r.edge)) : null}
             onSelect={selectEdge}
             pointing={pointing}
           />
@@ -735,15 +870,32 @@ export function ChainDiagram({
             key={ln.node.id}
             ln={ln}
             rootLabel={rootLabel}
+            domId={nodeDomId(ln.node.id)}
             txns={txnsFrom.get(ln.node.id) ?? 0}
             out={moneyOut.get(ln.node.id) ?? 0}
             selected={selectedNode?.id === ln.node.id}
+            lit={lit ? lit.nodes.has(ln.node.id) : null}
             onSelect={selectNode}
             onToggle={toggle}
             pointing={pointing}
           />
         ))}
+        {cursorNode && (
+          <rect
+            className="chain-cursor"
+            x={cursorNode.x - 4}
+            y={cursorNode.y - 4}
+            width={NODE_W + 8}
+            height={cursorNode.h + 8}
+            rx={5}
+            fill="none"
+            pointerEvents="none"
+          />
+        )}
       </svg>
+      </div>
+      <div className="sr-only" aria-live="polite" aria-atomic="true">
+        {announcement}
       </div>
       {tip && (
         <div ref={tipCallback} className="chain-tip" role="tooltip">
