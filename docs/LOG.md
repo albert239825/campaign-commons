@@ -684,3 +684,5 @@ graph behavior remain unchanged.
 
 **Routing guard.** Questions asking for breakdowns the fixed pages do not provide—dark money, people behind a candidate, vendors,
 paths or connections, geography or sector—now refuse the nearest fixed intent and proceed to the filings graph instead.
+
+**Ask box.** The box is graph-first: every question goes to exploratory mode, with deterministic route/page matches shown as related-page links; fixed graph operations remain available at their endpoint.
