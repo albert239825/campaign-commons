@@ -14,6 +14,7 @@ Source of truth: [`contracts/src/schemas.ts`](../contracts/src/schemas.ts). This
 | `<race_id>/dossiers/<candidate_id>.json` | `Dossier` | `campaign_commons.dossier` | `/races/[raceId]/candidates/[candidateId]` |
 | `<race_id>/stories.json` | `Stories` | `campaign_commons.chains` | `/races/[raceId]/stories`, ledger strip |
 | `<race_id>/donors/<donor_key>.json` | `DonorView` | `campaign_commons.donors` | `/races/[raceId]/donors/[key]` |
+| `<race_id>/trails.json` | `Trails` (including per-answer `TrailGraph` selections) | `campaign_commons.trails` | Money Trails answer pages |
 | `<race_id>/vendors.json` | `VendorIndex` | `campaign_commons.vendors` (Block 2) | entity page, vendor pages |
 | `<race_id>/vendors/<vendor_id>.json` | `Vendor` | `campaign_commons.vendors`; `campaign_commons.ads_enrich` fills `ads[]` (vendors preserves it on re-run) | `/races/[raceId]/vendors/[vendorId]` |
 | `<race_id>/issues.json` | `IssueSpending` | `campaign_commons.issues` (Block 2) | ledger issue cards |
@@ -76,6 +77,7 @@ default. Pass a directory to check one root; add `--hand` to validate a director
 - **Visibility** is a property of an edge or a node's own funding: `disclosed` (FEC-filed), `inferable` (reconstructable from
   990s, lagged), `dark` (no disclosure obligation). Colors in `contracts/src/display.ts`.
 - **Chain direction.** `depth 0` is the spender (sink). Edges point toward the root. Backward walk; see DECISIONS D-05.
+- **TrailGraph.** Each Money Trails answer carries a nullable, bounded selection copied from audited chain files. Nodes are re-rooted with `depth` and `side`; at most five nodes are kept per layer, with dropped candidates recorded in `truncated`. Copied nodes and edges retain their chain provenance, and no graph edge joins an upstream funder to an ad.
 - **`data_status`** on every top-level file: `mock` | `partial` | `real`. UI shows a banner unless `real`.
 - **Adjacency only.** Every free-text field (`position`, `narrative`, `detail`, `method`) must be descriptive. No causal verbs.
 - **Every number has a `source_url`.** If you can't source it, don't emit it.

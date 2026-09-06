@@ -620,3 +620,10 @@ nullable when the ad has no dates), which the PA data does not yet exercise (0 v
 (placement is paid before air) and changed the copy everywhere to "in the week before and while this ad ran". Context rows
 611 → 728 across 280 → 284 ads (mixed-media vendors' digital portions now shown); links unchanged at 115 inferred, one rule
 text corrected. 171 pipeline tests.
+
+## 2026-09-06 — D-78: bounded graph selections on Money Trails answers
+
+Each precomputed answer now carries a deterministic `graph` selection copied from the existing chain files. The selection
+is re-rooted for the question, capped at five nodes per layer, records truncation counts, and preserves copied basis,
+visibility and source URLs. Funding nodes never connect directly to ads; subjects with no chain and nothing to draw carry
+`graph: null`.

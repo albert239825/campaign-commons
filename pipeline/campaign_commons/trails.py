@@ -1,22 +1,7 @@
-"""trails.json: precomputed plain-English "Money Trails" answers (D-73).
+"""Precompute Money Trails answers and bounded graph selections (D-73, D-78).
 
-Three questions, answered from artifacts other stages already wrote (ledger.json, ads.json, chains/*.json,
-entities/*.json) — no LLM, no graph database, no new FEC reads:
-
-  candidate_spender     "who is spending against Casey?"    Schedule E spenders for/against the candidate
-  candidate_ad_funding  "who paid for the ads about Casey?" sponsors that ran ads, their Schedule E about the
-                                                            candidate, and who funds each sponsor
-  committee_funding     "who funds WINSENATE?"              the committee's receipts hop by hop, where the walk ended
-
-The web layer (web/src/components/ask, D-75) resolves a typed question to (intent, subject) — a server-side model
-picks from the closed set of intents and `subjects[].id`, else keyword and name matching over `subjects[].aliases`
-in the browser — then renders the matching answer. Rules the shape enforces:
-
-  * every number is a Figure / edge / range that carries the record it came from;
-  * money edges (`TrailMoneyEdge`) and targeting edges (`TrailTargetingEdge`) are different types, so an
-    independent expenditure is never drawn as dollars reaching a candidate;
-  * ads hang off their *sponsor* (`TrailAdRun`) and funders hang off the sponsor too; there is no field that
-    joins a funder to an ad, and the caveats say why (pooled dollars).
+All three intents read existing ledger, ads, entity and chain artifacts: no LLM, graph database or new FEC reads.
+Each answer preserves separate money/targeting semantics and carries a provenance-preserving chain selection.
 """
 
 from __future__ import annotations
@@ -36,6 +21,7 @@ from .util import (
     write_json,
 )
 
+TOP_PER_LAYER = 5
 TOP_FUNDERS = 10
 TOP_NEXT_HOP = 8
 TOP_ULTIMATE = 8
@@ -356,6 +342,407 @@ def _range_text(r: dict[str, Any]) -> str:
 
 
 # ---------------------------------------------------------------------------
+# per-answer graph selections
+# ---------------------------------------------------------------------------
+
+
+def _chain_kind(edge: dict[str, Any]) -> str:
+    return edge.get("kind", "money")
+
+
+def _copy_chain_node(node: dict[str, Any], depth: int, side: str) -> dict[str, Any]:
+    copied = dict(node)
+    copied["depth"] = depth
+    copied["side"] = side
+    return copied
+
+
+def _copy_chain_edge(edge: dict[str, Any], depth: int) -> dict[str, Any]:
+    copied = dict(edge)
+    copied["depth"] = depth
+    return copied
+
+
+def _filed_basis(rule: str, source_url: str) -> dict[str, Any]:
+    return {
+        "basis": "filed",
+        "rule": rule,
+        "source_urls": [source_url],
+        "checked_by": None,
+        "checked_at": None,
+    }
+
+
+def _raw_edges(chain: dict[str, Any], *, to_id: str | None = None, from_id: str | None = None) -> list[dict[str, Any]]:
+    return [
+        e
+        for e in chain["edges"]
+        if (to_id is None or e["to"] == to_id) and (from_id is None or e["from"] == from_id) and e["amount"] > 0
+    ]
+
+
+def _ranked_ids(groups: dict[str, tuple[float, list[dict[str, Any]]]], limit: int) -> tuple[list[str], list[str]]:
+    ranked = sorted(groups, key=lambda node_id: (-groups[node_id][0], node_id))
+    return ranked[:limit], ranked[limit:]
+
+
+def _append_truncation(truncated: list[dict[str, Any]], layer: str, kept: list[str], candidates: list[str]) -> None:
+    if len(candidates) > TOP_PER_LAYER:
+        truncated.append({"layer": layer, "kept": len(kept), "hidden": len(candidates) - len(kept)})
+
+
+def _finish_graph(
+    root_id: str,
+    nodes: dict[str, dict[str, Any]],
+    edges: list[dict[str, Any]],
+    truncated: list[dict[str, Any]],
+) -> dict[str, Any]:
+    kept_ids = set(nodes)
+    edges = [e for e in edges if e["from"] in kept_ids and e["to"] in kept_ids]
+    edges.sort(key=lambda e: (-e["amount"], e["from"], e["to"], _chain_kind(e)))
+    return {
+        "root_id": root_id,
+        "nodes": sorted(nodes.values(), key=lambda n: (-n.get("amount_in", 0), n["id"])),
+        "edges": edges,
+        "truncated": truncated,
+    }
+
+
+def _committee_graph(inp: Inputs, committee_id: str) -> dict[str, Any] | None:
+    chain = inp.chains.get(committee_id)
+    if chain is None:
+        return None
+    raw_nodes = {n["id"]: n for n in chain["nodes"]}
+    root = raw_nodes.get(committee_id)
+    if root is None:
+        return None
+    nodes = {committee_id: _copy_chain_node(root, 0, "out")}
+    edges: list[dict[str, Any]] = []
+    truncated: list[dict[str, Any]] = []
+
+    f1_groups: dict[str, tuple[float, list[dict[str, Any]]]] = {}
+    for edge in _raw_edges(chain, to_id=committee_id):
+        if _chain_kind(edge) != "money" or edge["from"] not in raw_nodes:
+            continue
+        amount, grouped = f1_groups.get(edge["from"], (0.0, []))
+        f1_groups[edge["from"]] = (amount + edge["amount"], grouped + [edge])
+    f1, _ = _ranked_ids(f1_groups, TOP_PER_LAYER)
+    _append_truncation(truncated, "funders_1", f1, list(f1_groups))
+    for node_id in f1:
+        nodes[node_id] = _copy_chain_node(raw_nodes[node_id], 1, "in")
+        edges.extend(_copy_chain_edge(e, 1) for e in f1_groups[node_id][1])
+
+    f2_groups: dict[str, tuple[float, list[dict[str, Any]]]] = {}
+    for parent_id in f1:
+        parent = raw_nodes[parent_id]
+        if parent["kind"] != "committee" or parent["is_terminus"]:
+            continue
+        for edge in _raw_edges(chain, to_id=parent_id):
+            if _chain_kind(edge) != "money" or edge["from"] not in raw_nodes:
+                continue
+            amount, grouped = f2_groups.get(edge["from"], (0.0, []))
+            f2_groups[edge["from"]] = (amount + edge["amount"], grouped + [edge])
+    f2, _ = _ranked_ids(f2_groups, TOP_PER_LAYER)
+    _append_truncation(truncated, "funders_2", f2, list(f2_groups))
+    for node_id in f2:
+        nodes[node_id] = _copy_chain_node(raw_nodes[node_id], 2, "in")
+        edges.extend(_copy_chain_edge(e, 2) for e in f2_groups[node_id][1])
+
+    vendor_groups: dict[str, tuple[float, list[dict[str, Any]]]] = {}
+    for edge in _raw_edges(chain, from_id=committee_id):
+        if _chain_kind(edge) != "money" or raw_nodes.get(edge["to"], {}).get("kind") != "vendor":
+            continue
+        amount, grouped = vendor_groups.get(edge["to"], (0.0, []))
+        vendor_groups[edge["to"]] = (amount + edge["amount"], grouped + [edge])
+    vendors, _ = _ranked_ids(vendor_groups, TOP_PER_LAYER)
+    _append_truncation(truncated, "vendors", vendors, list(vendor_groups))
+    for node_id in vendors:
+        nodes[node_id] = _copy_chain_node(raw_nodes[node_id], 1, "out")
+        edges.extend(_copy_chain_edge(e, 1) for e in vendor_groups[node_id][1])
+
+    placement_groups: dict[str, tuple[float, list[dict[str, Any]]]] = {}
+    placement_sources = {committee_id, *vendors}
+    for edge in chain["edges"]:
+        if _chain_kind(edge) != "placement" or edge["from"] not in placement_sources:
+            continue
+        if edge.get("basis", {}).get("basis") not in {"verified", "inferred"}:
+            continue
+        ad = raw_nodes.get(edge["to"])
+        if ad is None or ad["kind"] != "ad":
+            continue
+        amount, grouped = placement_groups.get(ad["id"], (0.0, []))
+        placement_groups[ad["id"]] = (max(amount, ad["amount_in"]), grouped + [edge])
+    ads, _ = _ranked_ids(placement_groups, TOP_PER_LAYER)
+    _append_truncation(truncated, "ads", ads, list(placement_groups))
+    for node_id in ads:
+        nodes[node_id] = _copy_chain_node(raw_nodes[node_id], 2, "out")
+        edges.extend(_copy_chain_edge(e, 2) for e in placement_groups[node_id][1])
+
+    candidate_depth: dict[str, int] = {}
+    candidate_edges: dict[str, list[dict[str, Any]]] = {}
+    for edge in chain["edges"]:
+        if _chain_kind(edge) != "targeting" or edge["from"] not in placement_sources:
+            continue
+        candidate = raw_nodes.get(edge["to"])
+        if candidate is None or candidate["kind"] != "candidate":
+            continue
+        depth = 1 if edge["from"] == committee_id else 2
+        candidate_depth[candidate["id"]] = min(candidate_depth.get(candidate["id"], depth), depth)
+        candidate_edges.setdefault(candidate["id"], []).append(edge)
+    for node_id, depth in candidate_depth.items():
+        nodes[node_id] = _copy_chain_node(raw_nodes[node_id], depth, "out")
+        edges.extend(_copy_chain_edge(e, depth) for e in candidate_edges[node_id])
+
+    return _finish_graph(committee_id, nodes, edges, truncated)
+
+
+def _candidate_root(inp: Inputs, candidate_id: str) -> dict[str, Any]:
+    for chain_id in sorted(inp.chains):
+        node = next(
+            (n for n in inp.chains[chain_id]["nodes"] if n["id"] == candidate_id and n["kind"] == "candidate"),
+            None,
+        )
+        if node is not None:
+            return _copy_chain_node(node, 0, "out")
+    candidate = next(c for c in inp.race.candidates if c.candidate_id == candidate_id)
+    outside = next(c for c in inp.ledger["candidates"] if c["candidate_id"] == candidate_id)["outside"]
+    return {
+        "id": candidate_id,
+        "name": candidate.name,
+        "kind": "candidate",
+        "committee_type": None,
+        "depth": 0,
+        "side": "out",
+        "visibility": "disclosed",
+        "amount_in": outside["total"],
+        "is_terminus": True,
+        "terminus_reason": None,
+        "source_url": outside["source_url"],
+        "basis": _filed_basis(
+            "Independent expenditures reported on FEC Schedule E about this candidate.", outside["source_url"]
+        ),
+        "href": f"/races/{inp.race.race_id}/candidates/{candidate_id}",
+    }
+
+
+def _synth_spender_node(inp: Inputs, spender_id: str, amount: float, source_url: str) -> dict[str, Any]:
+    spender = inp.spender(spender_id) or {}
+    entity = inp.entities.get(spender_id) or {}
+    return {
+        "id": spender_id,
+        "name": entity.get("name") or spender.get("name") or spender_id,
+        "kind": "committee",
+        "committee_type": entity.get("committee_type"),
+        "depth": 1,
+        "side": "in",
+        "visibility": entity.get("visibility", "disclosed"),
+        "amount_in": amount,
+        "is_terminus": False,
+        "terminus_reason": None,
+        "source_url": entity.get("source_url") or spender.get("source_url") or source_url,
+    }
+
+
+def _targeting_chain_edge(
+    inp: Inputs, targeting: dict[str, Any], chain: dict[str, Any] | None, spender_id: str, depth: int
+) -> dict[str, Any]:
+    if chain is not None:
+        for edge in chain["edges"]:
+            if (
+                _chain_kind(edge) == "targeting"
+                and edge["from"] == spender_id
+                and edge["to"] == targeting["candidate_id"]
+            ):
+                return _copy_chain_edge(edge, depth)
+    source_url = targeting["source_url"]
+    spender = inp.spender(spender_id) or {}
+    by_candidate = next(
+        (row for row in spender.get("by_candidate", []) if row["candidate_id"] == targeting["candidate_id"]),
+        {},
+    )
+    return {
+        "from": spender_id,
+        "to": targeting["candidate_id"],
+        "kind": "targeting",
+        "amount": targeting["amount"],
+        "visibility": "disclosed",
+        "depth": depth,
+        "transaction_types": ["24E"],
+        "count": by_candidate.get("count", 1),
+        "date_range": None,
+        "source_url": source_url,
+        "support_oppose": targeting["support_oppose"],
+        "basis": _filed_basis(
+            "Schedule E independent expenditures by this committee about the candidate, summed.", source_url
+        ),
+    }
+
+
+def _candidate_spender_graph(inp: Inputs, candidate_id: str) -> dict[str, Any]:
+    root = _candidate_root(inp, candidate_id)
+    nodes = {candidate_id: root}
+    edges: list[dict[str, Any]] = []
+    truncated: list[dict[str, Any]] = []
+    targeting = targeting_for_candidate(inp, candidate_id)
+    groups = {e["spender_id"]: (e["amount"], [e]) for e in targeting}
+    spenders, _ = _ranked_ids(groups, TOP_PER_LAYER)
+    _append_truncation(truncated, "spenders", spenders, list(groups))
+    for spender_id in spenders:
+        target = groups[spender_id][1][0]
+        chain = inp.chains.get(spender_id)
+        chain_root = next((n for n in chain["nodes"] if n["id"] == spender_id), None) if chain else None
+        nodes[spender_id] = (
+            _copy_chain_node(chain_root, 1, "in")
+            if chain_root is not None
+            else _synth_spender_node(inp, spender_id, target["amount"], target["source_url"])
+        )
+        edges.append(_targeting_chain_edge(inp, target, chain, spender_id, 1))
+
+    funder_groups: dict[str, tuple[float, list[dict[str, Any]]]] = {}
+    for spender_id in spenders:
+        chain = inp.chains.get(spender_id)
+        if chain is None:
+            continue
+        for edge in _raw_edges(chain, to_id=spender_id):
+            if _chain_kind(edge) != "money":
+                continue
+            amount, grouped = funder_groups.get(edge["from"], (0.0, []))
+            funder_groups[edge["from"]] = (amount + edge["amount"], grouped + [edge])
+    funders, _ = _ranked_ids(funder_groups, TOP_PER_LAYER)
+    _append_truncation(truncated, "funders_1", funders, list(funder_groups))
+    for node_id in funders:
+        chain = next(
+            (
+                inp.chains[sid]
+                for sid in spenders
+                if sid in inp.chains and node_id in {n["id"] for n in inp.chains[sid]["nodes"]}
+            ),
+            None,
+        )
+        raw = next(n for n in chain["nodes"] if n["id"] == node_id)
+        nodes[node_id] = _copy_chain_node(raw, 2, "in")
+        edges.extend(_copy_chain_edge(e, 2) for e in funder_groups[node_id][1])
+    return _finish_graph(candidate_id, nodes, edges, truncated)
+
+
+def _sponsor_node(inp: Inputs, sponsor: dict[str, Any], depth: int) -> dict[str, Any]:
+    sponsor_id = sponsor["sponsor_id"]
+    chain = inp.chains.get(sponsor_id)
+    if chain is not None:
+        raw = next((n for n in chain["nodes"] if n["id"] == sponsor_id), None)
+        if raw is not None:
+            return _copy_chain_node(raw, depth, "in")
+    target = sponsor.get("targeting")
+    amount = target["amount"] if target is not None else sponsor["campaign_receipts"]["receipts"]["amount"]
+    source_url = target["source_url"] if target is not None else sponsor["campaign_receipts"]["receipts"]["source_url"]
+    return _synth_spender_node(inp, sponsor_id, amount, source_url) | {"depth": depth}
+
+
+def _candidate_ad_funding_graph(inp: Inputs, candidate_id: str, sponsors: list[dict[str, Any]]) -> dict[str, Any]:
+    nodes = {candidate_id: _candidate_root(inp, candidate_id)}
+    edges: list[dict[str, Any]] = []
+    truncated: list[dict[str, Any]] = []
+    sponsor_groups = {}
+    for sponsor in sponsors:
+        targeting = sponsor.get("targeting") or {}
+        amount = targeting.get("amount")
+        if amount is None:
+            amount = sponsor["campaign_receipts"]["receipts"]["amount"]
+        sponsor_groups[sponsor["sponsor_id"]] = (amount, [sponsor])
+    own_ids = [sponsor["sponsor_id"] for sponsor in sponsors if sponsor["is_candidate_committee"]]
+    outside_ids = sorted(
+        (sponsor["sponsor_id"] for sponsor in sponsors if not sponsor["is_candidate_committee"]),
+        key=lambda sponsor_id: (-sponsor_groups[sponsor_id][0], sponsor_id),
+    )
+    ordered_sponsors = own_ids + outside_ids
+    sponsor_ids = ordered_sponsors[:TOP_PER_LAYER]
+    _append_truncation(truncated, "sponsors", sponsor_ids, list(sponsor_groups))
+    kept_sponsors = [sponsor_groups[sid][1][0] for sid in sponsor_ids]
+    for sponsor in kept_sponsors:
+        sid = sponsor["sponsor_id"]
+        nodes[sid] = _sponsor_node(inp, sponsor, 1)
+        if sponsor.get("targeting") is not None:
+            edges.append(_targeting_chain_edge(inp, sponsor["targeting"], inp.chains.get(sid), sid, 1))
+
+    vendor_groups: dict[str, tuple[float, list[tuple[str, dict[str, Any]]]]] = {}
+    placement_records: list[tuple[dict[str, Any], dict[str, Any], int]] = []
+    for sponsor in kept_sponsors:
+        sid = sponsor["sponsor_id"]
+        chain = inp.chains.get(sid)
+        if chain is None:
+            continue
+        raw_nodes = {n["id"]: n for n in chain["nodes"]}
+        for edge in chain["edges"]:
+            if _chain_kind(edge) != "placement" or edge.get("basis", {}).get("basis") not in {"verified", "inferred"}:
+                continue
+            ad = raw_nodes.get(edge["to"])
+            if ad is None or ad["kind"] != "ad":
+                continue
+            if edge["from"] == sid:
+                placement_records.append((ad, edge, 2))
+                continue
+            vendor = raw_nodes.get(edge["from"])
+            if vendor is None or vendor["kind"] != "vendor":
+                continue
+            for money in _raw_edges(chain, from_id=sid, to_id=vendor["id"]):
+                amount, grouped = vendor_groups.get(vendor["id"], (0.0, []))
+                vendor_groups[vendor["id"]] = (amount + money["amount"], grouped + [(sid, money)])
+            placement_records.append((ad, edge, 3))
+    vendors, _ = _ranked_ids(
+        {vid: (amount, records) for vid, (amount, records) in vendor_groups.items()}, TOP_PER_LAYER
+    )
+    _append_truncation(truncated, "vendors", vendors, list(vendor_groups))
+    kept_vendors = set(vendors)
+    for vendor_id in vendors:
+        sid, _ = vendor_groups[vendor_id][1][0]
+        chain = inp.chains[sid]
+        raw = next(n for n in chain["nodes"] if n["id"] == vendor_id)
+        nodes[vendor_id] = _copy_chain_node(raw, 2, "out")
+        edges.extend(_copy_chain_edge(e, 2) for _, e in vendor_groups[vendor_id][1])
+
+    ad_groups: dict[str, tuple[float, list[tuple[dict[str, Any], dict[str, Any], int]]]] = {}
+    for record in placement_records:
+        ad, edge, depth = record
+        if depth == 3 and edge["from"] not in kept_vendors:
+            continue
+        amount, grouped = ad_groups.get(ad["id"], (0.0, []))
+        ad_groups[ad["id"]] = (max(amount, ad["amount_in"]), grouped + [record])
+    ads, _ = _ranked_ids(ad_groups, TOP_PER_LAYER)
+    _append_truncation(truncated, "ads", ads, list(ad_groups))
+    for ad_id in ads:
+        records = ad_groups[ad_id][1]
+        ad, _, depth = records[0]
+        nodes[ad_id] = _copy_chain_node(ad, depth, "out")
+        for _, edge, edge_depth in records:
+            if edge_depth == 2 or edge["from"] in kept_vendors:
+                edges.append(_copy_chain_edge(edge, edge_depth))
+
+    funder_groups: dict[str, tuple[float, list[dict[str, Any]]]] = {}
+    for sponsor in kept_sponsors:
+        chain = inp.chains.get(sponsor["sponsor_id"])
+        if chain is None:
+            continue
+        for edge in _raw_edges(chain, to_id=sponsor["sponsor_id"]):
+            if _chain_kind(edge) != "money":
+                continue
+            amount, grouped = funder_groups.get(edge["from"], (0.0, []))
+            funder_groups[edge["from"]] = (amount + edge["amount"], grouped + [edge])
+    funders, _ = _ranked_ids(funder_groups, TOP_PER_LAYER)
+    _append_truncation(truncated, "funders_1", funders, list(funder_groups))
+    for node_id in funders:
+        owner_chain = next(
+            inp.chains[sponsor["sponsor_id"]]
+            for sponsor in kept_sponsors
+            if sponsor["sponsor_id"] in inp.chains
+            and node_id in {n["id"] for n in inp.chains[sponsor["sponsor_id"]]["nodes"]}
+        )
+        raw = next(n for n in owner_chain["nodes"] if n["id"] == node_id)
+        nodes[node_id] = _copy_chain_node(raw, 2, "in")
+        edges.extend(_copy_chain_edge(e, 2) for e in funder_groups[node_id][1])
+    return _finish_graph(candidate_id, nodes, edges, truncated)
+
+
+# ---------------------------------------------------------------------------
 # answers
 # ---------------------------------------------------------------------------
 
@@ -396,6 +783,7 @@ def candidate_spender_answer(inp: Inputs, candidate_id: str) -> dict[str, Any]:
         "oppose": {"amount": outside["oppose"], "source_url": outside["source_url"]},
         "total": {"amount": outside["total"], "source_url": outside["source_url"]},
         "spenders": spenders,
+        "graph": _candidate_spender_graph(inp, candidate_id),
     }
 
 
@@ -473,6 +861,7 @@ def committee_funding_answer(inp: Inputs, committee_id: str) -> dict[str, Any] |
         "ultimate": ultimate,
         "shares": shares,
         "spent_on": spent_on,
+        "graph": _committee_graph(inp, committee_id),
     }
 
 
@@ -565,6 +954,7 @@ def candidate_ad_funding_answer(inp: Inputs, candidate_id: str, runs: dict[str, 
         "candidate_id": candidate_id,
         "sponsors": sponsors,
         "spenders_without_ads": without_ads,
+        "graph": _candidate_ad_funding_graph(inp, candidate_id, sponsors),
     }
 
 
@@ -632,7 +1022,8 @@ METHOD = (
     "candidate (ad sponsors, their Schedule E about the candidate, and each sponsor's own funders), and who funds a "
     "committee (its receipts hop by hop). Every figure links to the FEC or Google record it was read from. Money edges "
     "and targeting edges are separate; an independent expenditure moves no money to a candidate, and a funder is never "
-    "joined to a particular ad because pooled dollars cannot be allocated that way."
+    "joined to a particular ad because pooled dollars cannot be allocated that way. Each answer also carries a bounded "
+    "graph selection copied from the audited chain files, retaining node and edge provenance."
 )
 
 

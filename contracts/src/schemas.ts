@@ -848,11 +848,33 @@ export const TrailSubjectSchema = z.object({
   principal_committee_id: z.string().nullable(), // candidates only
 });
 
+/** One layer of a TrailGraph that was cut to the per-layer budget. */
+export const TrailGraphTruncationSchema = z.object({
+  layer: z.enum(["funders_1", "funders_2", "spenders", "sponsors", "vendors", "ads"]),
+  kept: z.number().int().min(0),
+  hidden: z.number().int().min(0), // candidates dropped from this layer; the reader sees "and N more"
+});
+
+/**
+ * The answer's subject and the chain nodes/edges that matter for the question, copied verbatim from
+ * chains/<committee>.json (basis, visibility, source_url survive) and re-rooted on `root_id`: depth = hops from the
+ * root in THIS graph, side "in" = funding/targeting-source side (left), "out" = spending side (right). At most
+ * TOP_PER_LAYER (5) nodes per layer; what was cut is in `truncated`. Money, placement and targeting edges keep their
+ * chain `kind`; no edge joins an upstream funder to an ad.
+ */
+export const TrailGraphSchema = z.object({
+  root_id: z.string(),
+  nodes: z.array(ChainNodeSchema),
+  edges: z.array(ChainEdgeSchema),
+  truncated: z.array(TrailGraphTruncationSchema),
+});
+
 const answerBase = {
   subject_id: z.string(),
   subject_name: z.string(),
   headline: z.string(), // one plain-English sentence, numbers included, adjacency language only
   caveats: z.array(z.string()), // every assumption the reader needs, in order
+  graph: TrailGraphSchema.nullable(),
 };
 
 export const CandidateSpenderAnswerSchema = z.object({
@@ -1184,6 +1206,8 @@ export type TrailAdRun = z.infer<typeof TrailAdRunSchema>;
 export type TrailShares = z.infer<typeof TrailSharesSchema>;
 export type TrailTerminus = z.infer<typeof TrailTerminusSchema>;
 export type TrailSubject = z.infer<typeof TrailSubjectSchema>;
+export type TrailGraph = z.infer<typeof TrailGraphSchema>;
+export type TrailGraphTruncation = z.infer<typeof TrailGraphTruncationSchema>;
 export type CandidateSpenderAnswer = z.infer<typeof CandidateSpenderAnswerSchema>;
 export type AdSponsorTrail = z.infer<typeof AdSponsorTrailSchema>;
 export type CandidateAdFundingAnswer = z.infer<typeof CandidateAdFundingAnswerSchema>;
