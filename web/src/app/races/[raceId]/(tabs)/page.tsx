@@ -1,13 +1,12 @@
 // OWNER: Frontend A (race ledger).
 import Link from "next/link";
-import { getIssueFocus, getIssues, getLedger, getRace, getStories, hasTrails, listRaceIds } from "@/lib/data";
+import { getIssueFocus, getLedger, getRace, getStories, listRaceIds } from "@/lib/data";
 import { date, routes } from "@/lib/format";
 import { AdjacencyNote, Card } from "@/components/ui";
 import { RaceSections } from "@/components/ledger/race-sections";
 import { FundingExplorer } from "@/components/ledger/funding-explorer";
 import { buildFundingViews } from "@/lib/funding-view";
 import { SpenderCards } from "@/components/ledger/spender-cards";
-import { IssueCards } from "@/components/ledger/issue-cards";
 
 export const generateStaticParams = () => listRaceIds().map((raceId) => ({ raceId }));
 
@@ -22,33 +21,12 @@ export default async function RaceLedgerPage({ params }: { params: Promise<{ rac
       return focus ? [[s.entity_id, focus] as const] : [];
     }),
   );
-  const issues = getIssues(raceId);
 
   return (
     <>
-      {hasTrails(raceId) && (
-        <Link
-          href={routes.ask(raceId)}
-          className="mt-4 flex flex-wrap items-baseline justify-between gap-2 rounded-md border border-neutral-300 bg-white px-3 py-2 text-sm hover:border-neutral-900"
-        >
-          <span>
-            <span className="font-medium">Money Trails</span> — ask in plain English: who funds a committee, who is spending for or against a candidate, who paid
-            for the ads about them.
-          </span>
-          <span className="text-xs text-neutral-500">Ask →</span>
-        </Link>
-      )}
-
       <RaceSections
         funding={<FundingExplorer views={buildFundingViews(ledger)} raceId={raceId} />}
-        issues={issues ? (
-          <IssueCards
-            raceId={raceId}
-            issues={issues}
-            candidates={race.candidates}
-            spenders={ledger.top_outside_spenders.map((s) => ({ entity_id: s.entity_id, name: s.name }))}
-          />
-        ) : undefined}
+        issues={undefined}
         spenders={
           <Card
             title="Top outside spenders"

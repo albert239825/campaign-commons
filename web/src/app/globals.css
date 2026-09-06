@@ -395,6 +395,9 @@ body:has(.race-dashboard) .site-footer { max-width: 1440px; padding: 32px clamp(
 body:has(.race-dashboard) :is(a, button):focus-visible { outline: 2px solid currentColor; outline-offset: 4px; }
 .race-dashboard { max-width: 1440px; margin-inline: auto; padding-inline: clamp(24px, 4.2vw, 60px); --race-rule: rgb(155 151 146 / 25%); display: grid; gap: 88px; min-width: 0; line-height: 1.6; }
 .race-dashboard > *, .race-dashboard .ui-card { min-width: 0; }
+/* Tab pages built on the detail shell sit inside the dashboard's padding already; close the tab-to-content gap. */
+.race-dashboard:has(> .detail-page) { gap: 32px; }
+.race-dashboard > .detail-page { padding-inline: 0; }
 .race-dashboard :where(.font-semibold, .font-bold) { font-weight: 500; }
 .race-overview { margin-top: 0; }
 .race-title { max-width: 640px; font-size: clamp(30px, 3vw, 42px); font-weight: 400; line-height: 1.1; letter-spacing: -.045em; text-wrap: balance; }
@@ -446,9 +449,9 @@ body:has(.race-dashboard) :is(a, button):focus-visible { outline: 2px solid curr
   .race-dashboard .candidate-line > span:last-child { margin-left: auto; }
 }
 @media (max-width: 680px) {
-  body:has(.race-dashboard) .site-header-inner { min-height: 72px; padding: 20px 24px; }
+  body:has(.race-dashboard) .site-header-inner { min-height: 72px; padding: 20px 24px; flex-wrap: wrap; row-gap: 12px; }
   body:has(.race-dashboard) .site-brand { font-size: 19px; }
-  body:has(.race-dashboard) .site-header nav { gap: 16px; font-size: 12px; }
+  body:has(.race-dashboard) .site-header nav { flex-basis: 100%; justify-content: flex-end; gap: 12px; font-size: 12px; }
   .race-dashboard { gap: 56px; }
   .race-totals { grid-template-columns: 1fr; gap: 24px; margin-top: 32px; padding-block: 24px; }
   .race-totals > div { display: flex; justify-content: space-between; align-items: baseline; gap: 16px; }
@@ -834,6 +837,9 @@ svg[data-k="9"] .chain-short-k9 :is(.chain-amount, .chain-sub) { display: none; 
 .ad-gallery-controls select { min-height: 44px; max-width: 100%; padding: 10px 12px; border: 1px solid #b7ab98; border-radius: 0; background: var(--detail-paper); }
 .ad-gallery-count { padding-block: 16px; }
 .detail-page .ad-gallery-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 32px 24px; }
+.ad-page { gap: 40px; }
+.ad-page-section { padding-top: 24px; border-top: 1px solid var(--detail-rule); }
+.ad-page-section > h2 { color: var(--detail-ink); font-size: clamp(26px, 2.4vw, 34px); font-weight: 400; letter-spacing: -.035em; line-height: 1.2; }
 .detail-page .ad-record { min-width: 0; border: 0; border-radius: 0; background: var(--detail-surface); scroll-margin-top: 24px; }
 .ad-record > div:first-child { border: 0; }
 .ad-record > div:first-child > :is(img, div) { height: auto; aspect-ratio: 16 / 10; background: #ddd8d0; }
@@ -965,9 +971,9 @@ svg[data-k="9"] .chain-short-k9 :is(.chain-amount, .chain-sub) { display: none; 
   .issue-scale .issue-steps { grid-column: 1 / -1; grid-row: 1; justify-content: center; }
 }
 @media (max-width: 680px) {
-  body:has(.detail-page) .site-header-inner { min-height: 72px; padding: 20px 24px; }
+  body:has(.detail-page) .site-header-inner { min-height: 72px; padding: 20px 24px; flex-wrap: wrap; row-gap: 12px; }
   body:has(.detail-page) .site-brand { font-size: 19px; }
-  body:has(.detail-page) .site-header nav { gap: 16px; font-size: 12px; }
+  body:has(.detail-page) .site-header nav { flex-basis: 100%; justify-content: flex-end; gap: 12px; font-size: 12px; }
   .detail-page { gap: 32px; padding-bottom: 40px; }
   .detail-page > .breadcrumbs { margin-bottom: -32px; }
   .detail-banner { padding-block: 32px; }

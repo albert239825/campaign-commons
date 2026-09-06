@@ -70,14 +70,14 @@ def test_visibility_shares_propagate() -> None:
     assert abs(s[PAC][3] - 0.25) < 1e-9
     assert abs(s[PAC][2] - 100 / 600) < 1e-9
     # ROOT: (600 * 0.25 + 200) / 1000 => 35% dark; 600 * (1/6) / 1000 => 10% unwalked
-    d, i, u, k = s[ROOT]
+    d, i, u, k, o = s[ROOT]
     assert abs(k - 0.35) < 1e-9 and abs(u - 0.10) < 1e-9 and i == 0.0 and abs(d + i + u + k - 1) < 1e-3
-    assert abs(d - 0.55) < 1e-9
+    assert abs(d - 0.55) < 1e-9 and o == 0.0  # no business/union anywhere in this graph
 
 
 def test_depth_cap_dollars_are_unwalked_not_disclosed() -> None:
     w = walk(graph(), ROOT, 1, 0.01)
-    d, i, u, k = node_shares(w)[ROOT]
+    d, i, u, k, _ = node_shares(w)[ROOT]
     # PAC (600) hits the hop cap and is not read; dark llc 200; conduit + alice + agg (200) disclosed
     assert abs(u - 0.6) < 1e-9 and abs(k - 0.2) < 1e-9 and abs(d - 0.2) < 1e-9 and i == 0.0
 
@@ -96,7 +96,31 @@ def test_valve_violation_not_traversed() -> None:
     assert w.valve_violations == [(SUPER, CAND, 50.0)]
     assert w.nodes[SUPER].terminus_reason == "depth_cap"
     # the super PAC is not traversed, so its dollars are unwalked, not disclosed
-    assert node_shares(w)[CAND] == (0.5, 0.0, 0.5, 0.0)
+    assert node_shares(w)[CAND] == (0.5, 0.0, 0.5, 0.0, 0.0)
+
+
+def test_disclosed_splits_into_individuals_and_organizations() -> None:
+    g = Graph()
+    g.committee_type[ROOT] = "O"
+    g.committee_name[ROOT] = "Root PAC"
+    business = Edge(
+        "org:acme", "Acme Corp", "organization", 400.0, 1, ("15",), None, None, organization_class="business"
+    )
+    tiny_union = Edge("org:local", "Local 5", "organization", 3.0, 1, ("15",), None, None, organization_class="union")
+    tiny_llc = Edge("org:llc", "X LLC", "organization", 2.0, 1, ("15",), None, None, organization_class="llc")
+    g.inbound[ROOT] = [
+        edge("ind:alice", "individual", 500.0),
+        business,
+        edge("org:dark", "organization", 95.0, "Mystery"),
+        tiny_union,
+        tiny_llc,
+    ]
+    w = walk(g, ROOT, 8, 0.01)
+    agg = w.nodes[f"agg:other@{ROOT}"]
+    assert (agg.amount_in, agg.organization_amount, agg.dark_amount) == (5.0, 3.0, 2.0)
+    d, i, u, k, o = node_shares(w)[ROOT]
+    # disclosed = alice 500 + acme 400 + union 3 = 903; organizations = 403; dark = 95 + 2
+    assert abs(d - 0.903) < 1e-9 and abs(o - 0.403) < 1e-9 and abs(k - 0.097) < 1e-9 and u == 0.0 and i == 0.0
 
 
 def test_build_graph_resolves_committees_misfiled_as_org() -> None:

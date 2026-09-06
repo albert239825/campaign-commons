@@ -159,6 +159,7 @@ class Node:
     contributor_count: int | None = None
     refers_to: str | None = None  # cycle nodes: the already-visited committee they stand for
     dark_amount: float = 0.0  # pruned aggregates: dark dollars inside the bucket
+    organization_amount: float = 0.0  # pruned aggregates: disclosed business/union dollars inside the bucket
     organization_class: str | None = None
     class_basis: str | None = None
 
@@ -348,6 +349,7 @@ def _classify(graph: Graph, w: Walk, visited: set[str], parent: Node, e: Edge) -
 def _aggregate(parent: Node, pruned: list[Edge]) -> Node:
     amount = round(sum(e.amount for e in pruned), 2)
     dark = round(sum(e.amount for e in pruned if e.dark), 2)
+    orgs = round(sum(e.amount for e in pruned if e.kind == "organization" and not e.dark), 2)
     return Node(
         f"agg:other@{parent.id}",
         f"Other contributors to {parent.name} (each <1% of receipts, or beyond the {MAX_CHILDREN} largest)",
@@ -359,16 +361,20 @@ def _aggregate(parent: Node, pruned: list[Edge]) -> Node:
         "pruned",
         contributor_count=len(pruned),
         dark_amount=dark,
+        organization_amount=orgs,
     )
 
 
 # --- visibility shares ----------------------------------------------------------------------------
 
 
-Shares = tuple[float, float, float, float]  # disclosed, inferable, unwalked, dark
-DISCLOSED: Shares = (1.0, 0.0, 0.0, 0.0)
-UNWALKED: Shares = (0.0, 0.0, 1.0, 0.0)
-DARK: Shares = (0.0, 0.0, 0.0, 1.0)
+# disclosed, inferable, unwalked, dark, disclosed_organizations. The first four sum to 1; the fifth is the part of
+# `disclosed` that stops at a named business or union rather than a person (disclosed - it = disclosed_individuals).
+Shares = tuple[float, float, float, float, float]
+DISCLOSED: Shares = (1.0, 0.0, 0.0, 0.0, 0.0)
+DISCLOSED_ORGANIZATION: Shares = (1.0, 0.0, 0.0, 0.0, 1.0)
+UNWALKED: Shares = (0.0, 0.0, 1.0, 0.0, 0.0)
+DARK: Shares = (0.0, 0.0, 0.0, 1.0, 0.0)
 
 
 def node_shares(w: Walk) -> dict[str, Shares]:
@@ -388,14 +394,23 @@ def node_shares(w: Walk) -> dict[str, Shares]:
             return memo[node_id]
         n = w.nodes[node_id]
         if n.terminus_reason == "pruned":
-            result = _mix([(n.amount_in - n.dark_amount, DISCLOSED), (n.dark_amount, DARK)])
+            result = _mix(
+                [
+                    (n.amount_in - n.dark_amount - n.organization_amount, DISCLOSED),
+                    (n.organization_amount, DISCLOSED_ORGANIZATION),
+                    (n.dark_amount, DARK),
+                ]
+            )
         elif n.terminus_reason == "cycle" and n.refers_to is not None:
             # a committee already expanded elsewhere: reuse its mix, unless we are inside its own subtree
             result = DISCLOSED if n.refers_to in in_progress or n.refers_to not in w.nodes else shares(n.refers_to)
         elif n.terminus_reason == "depth_cap":
             result = UNWALKED
         elif n.terminus_reason is not None or not children.get(node_id):
-            result = DARK if n.visibility == "dark" else DISCLOSED
+            if n.visibility == "dark":
+                result = DARK
+            else:
+                result = DISCLOSED_ORGANIZATION if n.kind == "organization" else DISCLOSED
         else:
             in_progress.add(node_id)
             result = _mix([(e.amount, shares(e.src)) for e in children[node_id]])
@@ -418,4 +433,5 @@ def _mix(parts: list[tuple[float, Shares]]) -> Shares:
     i = sum(a * s[1] for a, s in parts) / total
     u = sum(a * s[2] for a, s in parts) / total
     k = sum(a * s[3] for a, s in parts) / total
-    return (d, i, u, k)
+    o = sum(a * s[4] for a, s in parts) / total
+    return (d, i, u, k, o)
