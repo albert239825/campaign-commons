@@ -1,0 +1,119 @@
+{
+  "$ref": "#/definitions/hand_issue_positions",
+  "definitions": {
+    "hand_issue_positions": {
+      "type": "object",
+      "properties": {
+        "race_id": {
+          "type": "string"
+        },
+        "method": {
+          "type": "string"
+        },
+        "rows": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "entity_id": {
+                "type": "string"
+              },
+              "name": {
+                "type": "string"
+              },
+              "issue_id": {
+                "type": "string",
+                "enum": [
+                  "healthcare",
+                  "energy_climate",
+                  "defense",
+                  "crypto_fintech",
+                  "immigration",
+                  "abortion",
+                  "guns",
+                  "tax_budget",
+                  "tech_ai",
+                  "labor_trade"
+                ]
+              },
+              "direction": {
+                "type": "integer",
+                "minimum": -2,
+                "maximum": 2
+              },
+              "quote": {
+                "type": "string",
+                "minLength": 1
+              },
+              "source_url": {
+                "type": "string",
+                "format": "uri"
+              },
+              "status": {
+                "type": "string",
+                "enum": [
+                  "model",
+                  "verified"
+                ]
+              },
+              "tagged_by": {
+                "type": "string"
+              },
+              "tagged_at": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "entity_id",
+              "name",
+              "issue_id",
+              "direction",
+              "quote",
+              "source_url",
+              "status",
+              "tagged_by",
+              "tagged_at"
+            ],
+            "additionalProperties": false
+          }
+        },
+        "pages": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "entity_id": {
+                "type": "string"
+              },
+              "url": {
+                "type": "string",
+                "format": "uri"
+              },
+              "fetched_at": {
+                "type": "string"
+              },
+              "chars": {
+                "type": "integer"
+              }
+            },
+            "required": [
+              "entity_id",
+              "url",
+              "fetched_at",
+              "chars"
+            ],
+            "additionalProperties": false
+          }
+        }
+      },
+      "required": [
+        "race_id",
+        "method",
+        "rows",
+        "pages"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "$schema": "http://json-schema.org/draft-07/schema#"
+}
