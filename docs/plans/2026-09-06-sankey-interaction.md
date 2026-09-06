@@ -43,11 +43,24 @@ Together = **H1, ~2 sessions**, all inside `chain/` in new files (`camera.ts`, `
 
 Every number comes from `record`/`basis`/`amount_in` already in the wire — no path sums, no runtime fetch. Money ribbons and targeting arrows never share a grammar in any state. Copy stays "received from / paid to / aimed at". `unwalked` stays distinct from `dark`. Hand-rolled SVG stays: `d3-zoom` (16 KB gz) is not needed for these gestures and hijacks page scroll by default; `d3-sankey` still rejected (D-24, C-46).
 
-## Decisions needed from Albert
+## Decisions (Albert, 2026-09-06)
 
-1. **Wheel**: plain wheel scrolls the page, zoom needs `Ctrl/⌘` or the toolbar (Google-Maps-embed behaviour) — OK?
-2. **Filters**: dim (ribbons keep summing to receipts) for disclosure, remove for edge-kind layers — OK?
-3. **Order after H1**: H2 (focus/filters/search) or H3 (story mode + mobile) next?
-4. **Compare**: curated side-by-side pairs (A) or donor → every chain it appears in (B)? Lean: B first.
+1. **Wheel**: plain wheel scrolls the page; zoom needs `Ctrl/⌘` or the toolbar. **Approved.**
+2. **Filters**: dim for disclosure (ribbons keep summing to receipts), remove for edge-kind layers. **Approved.**
+3. **Order after H1**: **H2 (focus / filters / search)**, then H3.
+4. **Compare / donor index (H4)**: **deferred.**
 
-Remaining smaller calls (accordion default, re-root in place vs navigate, `hide=` in shared URLs, semantic zoom) are in appendix §7 and can be decided when H2 starts.
+Remaining smaller calls (accordion default, re-root in place vs navigate, `hide=` in shared URLs, semantic zoom) are in appendix §7 and are decided when H2 starts.
+
+## Execution (child C merged in #34)
+
+One PR per child, single purpose, all rebased on `main` before opening:
+
+| Child | Scope | Depends on |
+| --- | --- | --- |
+| H1a | viewBox camera + toolbar + semantic zoom (`chain/camera.ts`) | — |
+| H1b | graph cursor + live region + path highlight/dim (`chain/graph-nav.ts`) | — (parallel with H1a) |
+| H1c | hop rail + minimap + URL state (`chain/url-state.ts`) | H1a, H1b |
+| H2a | focus / expand one level / re-root in place (`GraphControls.focus`) | H1c |
+| H2b | legend filter chips: disclosure dim, edge-kind layers | H1c |
+| H2c | search in graph | H2a |
