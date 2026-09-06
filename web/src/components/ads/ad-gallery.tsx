@@ -5,7 +5,7 @@ import { ISSUE_BY_ID, type Ad, type IssueId } from "@campaign-commons/contracts"
 import { AdCard, darkShare, isVerified } from "./ad-card";
 
 type Sort = "spend_desc" | "spend_asc" | "recent" | "dark_desc";
-type LinkBasis = "any" | "verified" | "inferred" | "adjacent" | "none";
+type LinkBasis = "any" | "verified" | "inferred" | "none";
 
 const SORTS: Record<Sort, { label: string; cmp: (a: Ad, b: Ad) => number }> = {
   spend_desc: { label: "Spend: high → low", cmp: (a, b) => b.spend_range.min - a.spend_range.min },
@@ -18,10 +18,9 @@ const LINK_BASIS: Record<LinkBasis, string> = {
   any: "Any vendor link",
   verified: "Only verified vendor links",
   inferred: "Only inferred vendor links",
-  adjacent: "Only adjacent vendor links",
   none: "No vendor links",
 };
-const LINK_BASIS_ORDER: LinkBasis[] = ["any", "verified", "inferred", "adjacent", "none"];
+const LINK_BASIS_ORDER: LinkBasis[] = ["any", "verified", "inferred", "none"];
 
 const hasLinkBasis = (ad: Ad, want: LinkBasis): boolean => {
   const links = ad.vendor_links ?? [];
@@ -123,7 +122,7 @@ export function AdGallery({
             ))}
           </select>
         </label>
-        <label className="inline-flex items-center gap-2 text-neutral-600" title="Vendor links are time-window co-occurrences with the sponsor's reported buys; the label says how each was derived">
+        <label className="inline-flex items-center gap-2 text-neutral-600" title="A vendor link exists only when a person verified it or the sponsor paid exactly one digital vendor in the week before and while the ad ran; overlapping dates alone never make a link">
           Vendor links
           <select value={linkBasis} onChange={(e) => setLinkBasis(e.target.value as LinkBasis | "")} className="rounded-sm border border-neutral-300 bg-white px-2 py-1 text-sm text-neutral-900">
             <option value="">Any ({linkedCount} linked)</option>
@@ -157,8 +156,8 @@ export function AdGallery({
       )}
       {vendor !== null && (
         <p className="flex flex-wrap items-center gap-2 text-sm">
-          <span className="rounded-sm border border-neutral-300 bg-white px-2 py-0.5" title="Ads whose run window overlapped this vendor's reported buys; the link basis on each card says how">
-            Ran during buys by: <span className="font-medium">{vendorName}</span>
+          <span className="rounded-sm border border-neutral-300 bg-white px-2 py-0.5" title="Ads linked to this vendor (verified by a person, or the only digital vendor the sponsor paid in the week before and while the ad ran); the basis on each card says which">
+            Linked to vendor: <span className="font-medium">{vendorName}</span>
           </span>
           <button type="button" onClick={() => setVendor(null)} className="text-xs text-neutral-600 underline decoration-dotted underline-offset-2 hover:text-neutral-900">
             show all vendors

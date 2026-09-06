@@ -301,8 +301,7 @@
                             "type": "string",
                             "enum": [
                               "filed",
-                              "inferred",
-                              "adjacent"
+                              "inferred"
                             ]
                           },
                           "rule": {
@@ -373,15 +372,22 @@
                       ]
                     },
                     "window": {
-                      "type": "array",
-                      "minItems": 2,
-                      "maxItems": 2,
-                      "items": [
+                      "anyOf": [
                         {
-                          "type": "string"
+                          "type": "array",
+                          "minItems": 2,
+                          "maxItems": 2,
+                          "items": [
+                            {
+                              "type": "string"
+                            },
+                            {
+                              "type": "string"
+                            }
+                          ]
                         },
                         {
-                          "type": "string"
+                          "type": "null"
                         }
                       ]
                     },
@@ -437,8 +443,7 @@
                               "type": "string",
                               "enum": [
                                 "filed",
-                                "inferred",
-                                "adjacent"
+                                "inferred"
                               ]
                             },
                             "rule": {
@@ -485,6 +490,53 @@
                     "amount_in_window",
                     "buys_in_window",
                     "basis"
+                  ],
+                  "additionalProperties": false
+                }
+              },
+              "same_window_buys": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "vendor_id": {
+                      "type": "string"
+                    },
+                    "vendor_name": {
+                      "type": "string"
+                    },
+                    "medium": {
+                      "type": "string",
+                      "enum": [
+                        "tv",
+                        "radio",
+                        "digital",
+                        "mail",
+                        "phones",
+                        "production",
+                        "consulting",
+                        "field",
+                        "other"
+                      ]
+                    },
+                    "amount_in_window": {
+                      "type": "number"
+                    },
+                    "buys_in_window": {
+                      "type": "integer"
+                    },
+                    "source_url": {
+                      "type": "string",
+                      "format": "uri"
+                    }
+                  },
+                  "required": [
+                    "vendor_id",
+                    "vendor_name",
+                    "medium",
+                    "amount_in_window",
+                    "buys_in_window",
+                    "source_url"
                   ],
                   "additionalProperties": false
                 }

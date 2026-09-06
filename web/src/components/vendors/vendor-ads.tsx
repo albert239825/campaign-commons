@@ -5,38 +5,73 @@ import { date, routes } from "@/lib/format";
 import { Card, Chip, SourceLink } from "@/components/ui";
 import { AdThumb } from "@/components/entity/ads-section";
 
-const BASIS_ORDER: EvidenceBasis[] = ["verified", "filed", "inferred", "adjacent"];
+const BASIS_ORDER: EvidenceBasis[] = ["verified", "filed", "inferred"];
 const THUMBS_PER_GROUP = 8;
 
 type Row = { link: Vendor["ads"][number]; ad: Ad };
 
 /**
- * The reverse of an ad card's "Vendors in this window": every ad whose run window overlapped this vendor's buys,
- * grouped by the evidence behind the link. A link is a fact about dates (or a rule, or a person's check), never a
- * claim that this vendor made or placed the creative.
+ * Ads whose run window overlapped this vendor's buys but that are not linked to it: the date fact as a sentence, drawn
+ * from each ad's `same_window_buys` (window = the week before first shown through last shown). Says who was paying while
+ * what ran; never that this vendor placed anything.
+ */
+function SameWindowAds({ raceId, vendor, ads, sponsorNames }: { raceId: string; vendor: Vendor; ads: Ad[]; sponsorNames: Record<string, string> }) {
+  const linked = new Set(vendor.ads.map((l) => l.ad_id));
+  const overlapping = ads.filter((ad) => !linked.has(ad.ad_id) && (ad.same_window_buys ?? []).some((b) => b.vendor_id === vendor.vendor_id));
+  if (overlapping.length === 0) return null;
+  const bySponsor = new Map<string, number>();
+  for (const ad of overlapping) {
+    const id = ad.matched_entity_id ?? ad.advertiser_name;
+    bySponsor.set(id, (bySponsor.get(id) ?? 0) + 1);
+  }
+  return (
+    <p className="text-xs text-neutral-600">
+      Separately, {overlapping.length} other {overlapping.length === 1 ? "ad" : "ads"} ran within a week of this vendor being paid for placeable media —{" "}
+      {[...bySponsor.entries()].map(([id, n], i) => (
+        <span key={id}>
+          {i > 0 && (i === bySponsor.size - 1 ? " and " : ", ")}
+          {n} by{" "}
+          <Link href={`${routes.ads(raceId)}?sponsor=${encodeURIComponent(id)}`} className="font-medium text-neutral-900 hover:underline">
+            {sponsorNames[id] ?? id}
+          </Link>
+        </span>
+      ))}
+      . FEC records do not identify which vendor placed them, so they are listed here as a fact about dates, not as this vendor&apos;s ads.
+    </p>
+  );
+}
+
+/**
+ * Ads joined to this vendor by a person's check or a stated rule, grouped by the evidence behind the link, followed by
+ * the date-overlap fact as a sentence. Date overlap alone is never a link (D-74).
  */
 export function VendorAds({
   raceId,
   vendor,
-  adsById,
+  ads,
   sponsorNames,
 }: {
   raceId: string;
   vendor: Vendor;
-  adsById: ReadonlyMap<string, Ad>;
+  ads: Ad[];
   sponsorNames: Record<string, string>;
 }) {
+  const adsById = new Map(ads.map((a) => [a.ad_id, a]));
   const rows: Row[] = vendor.ads.flatMap((link) => {
     const ad = adsById.get(link.ad_id);
     return ad ? [{ link, ad }] : [];
   });
+  const sameWindow = <SameWindowAds raceId={raceId} vendor={vendor} ads={ads} sponsorNames={sponsorNames} />;
   if (rows.length === 0) {
     return (
-      <Card title="Ads that ran during this vendor's buys">
-        <p className="text-xs text-neutral-500">
-          No ad-library creative from a spender who paid this vendor ran while its buys were reported, so there is nothing to place next to these
-          payments — not evidence that the vendor made no ads.
-        </p>
+      <Card title="Ads linked to this vendor">
+        <div className="space-y-2">
+          <p className="text-xs text-neutral-500">
+            None. An ad is linked only when a person verified it from a source naming both, or when this was the only digital vendor its sponsor paid in the
+            week before and while it ran — the FEC does not record which buy placed which ad, so this is not evidence that the vendor made no ads.
+          </p>
+          {sameWindow}
+        </div>
       </Card>
     );
   }
@@ -48,7 +83,7 @@ export function VendorAds({
   })).filter((g) => g.rows.length > 0);
   const sponsors = [...new Set(rows.map((r) => r.link.sponsor_entity_id))];
   return (
-    <Card title="Ads that ran during this vendor's buys">
+    <Card title="Ads linked to this vendor">
       <p className="mb-3 text-xs text-neutral-600">
         {rows.length} {rows.length === 1 ? "ad" : "ads"} from {sponsors.length} {sponsors.length === 1 ? "spender" : "spenders"} who paid this vendor.
         The FEC does not record which buy placed which ad; each link below says what it rests on.
@@ -133,6 +168,7 @@ export function VendorAds({
         ))}
         . Ad spend is the range Google publishes; the vendor totals above are filed dollars. The two are never added together.
       </p>
+      <div className="mt-3">{sameWindow}</div>
     </Card>
   );
 }

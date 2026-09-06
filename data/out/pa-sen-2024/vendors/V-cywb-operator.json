@@ -60,20 +60,6 @@
       "medium": "other"
     }
   ],
-  "ads": [
-    {
-      "ad_id": "CR15651442485454962689",
-      "sponsor_entity_id": "C00053553",
-      "basis": {
-        "basis": "adjacent",
-        "rule": "Ran Sep 5, 2024 – Nov 4, 2024. In that window (buys dated up to 7 days before first shown through last shown) NATIONAL RIFLE ASSOCIATION OF AMERICA POLITICAL VICTORY FUND reported other buys to CYWB OPERATOR LLC ($33); the FEC does not record which buy placed which ad. Same-window buys in media that cannot place a Google ad (TV, radio, mail, phones, field, consulting) are not listed.",
-        "source_urls": [
-          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00053553&payee_name=CYWB+OPERATOR+LLC"
-        ],
-        "checked_by": null,
-        "checked_at": null
-      }
-    }
-  ],
+  "ads": [],
   "method": "Every Schedule E independent expenditure names a payee. Payee strings are normalised (case, punctuation, legal suffixes, token order), near-duplicates are folded with a difflib ratio ≥ 0.92 when their numeric tokens match, and hand alias rows from data/hand/<race>/vendor_aliases.json override the rule. Medium is classified from the purpose the spender filed (ordered keyword table in campaign_commons/vendors.py). The FEC does not record which buy placed which ad: vendor ↔ ad links are date-window adjacency (or single-digital-vendor inference) from campaign_commons.ads_enrich, each with its basis, and are only `verified` when a person found a source naming both. Totals are the filed amounts, grouped, never re-estimated."
 }

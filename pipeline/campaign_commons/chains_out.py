@@ -111,22 +111,25 @@ def _ad_name(ad: dict) -> str:
 
 
 def _ad_parent_edge(ad: dict, ad_node_id: str, root: str, vendor_ids: set[str], depth: int) -> tuple[list[dict], bool]:
-    """Placement edges into an ad node. Returns (edges, attached_to_vendor)."""
+    """Placement edges into an ad node, one per verified or inferred vendor link. Same-window buys are context on the ad
+    (Ad.same_window_buys) and never become an edge. Returns (edges, attached_to_vendor)."""
     edges: list[dict] = []
-    links = [link for link in ad.get("vendor_links") or [] if f"vendor:{link['vendor_id']}" in vendor_ids]
-    strong = [link for link in links if link["basis"]["basis"] in ("verified", "inferred")]
+    strong = [
+        link
+        for link in ad.get("vendor_links") or []
+        if f"vendor:{link['vendor_id']}" in vendor_ids and link["basis"]["basis"] in ("verified", "inferred")
+    ]
     amount = midpoint(ad["spend_range"])
-    for link in links:
-        is_parent = link in strong
+    for link in strong:
         edges.append(
             _edge(
                 f"vendor:{link['vendor_id']}",
                 ad_node_id,
                 "placement",
-                amount if is_parent else 0,
+                amount,
                 depth,
                 count=int(link["buys_in_window"]),
-                date_range=list(link["window"]),
+                date_range=list(link["window"]) if link.get("window") else None,
                 source_url=(link["basis"]["source_urls"] or [None])[0],
                 basis=link["basis"],
             )

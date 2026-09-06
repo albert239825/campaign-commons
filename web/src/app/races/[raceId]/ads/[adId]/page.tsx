@@ -4,7 +4,7 @@ import { TARGETING_COLOR, VISIBILITY_COLORS } from "@campaign-commons/contracts"
 import { getAds, getChain, getEntity, getRace, hasChain, listDonorKeys, listDossierIds, listEntityIds, listRaceIds } from "@/lib/data";
 import { date, money, pct, range, routes } from "@/lib/format";
 import { Breadcrumbs, Card, Chip, DataStatusBanner, Legend, SourceLink, Stat, Swatch } from "@/components/ui";
-import { AD_TYPE_LABEL, Creative, IssueChips, VendorLines, isVerified } from "@/components/ads/ad-card";
+import { AD_TYPE_LABEL, Creative, IssueChips, SameWindowBuys, VendorLines, isVerified } from "@/components/ads/ad-card";
 import { adFocusWire, adTitle, spendMidpoint } from "@/components/chain/ad-view";
 import { ChainDiagram, PLACEMENT_COLOR } from "@/components/chain/chain-diagram";
 import type { NodeLinks } from "@/components/chain/links";
@@ -30,6 +30,7 @@ export default async function AdPage({ params }: { params: Promise<{ raceId: str
     donorKeys: new Set(listDonorKeys(raceId)),
   };
   const vendorLinks = ad.vendor_links ?? [];
+  const sameWindow = ad.same_window_buys ?? [];
   const verified = isVerified(ad);
   const dark = ad.sponsor_visibility_shares?.dark ?? null;
   const targets = ad.candidate_ids.map((id) => candidateNames[id] ?? id);
@@ -136,22 +137,31 @@ export default async function AdPage({ params }: { params: Promise<{ raceId: str
         </div>
       </div>
 
-      <Card title="Who the sponsor paid while this ad ran">
-        {vendorLinks.length === 0 ? (
+      <Card title="Which vendor placed this ad">
+        {vendorLinks.length === 0 && sameWindow.length === 0 ? (
           <p className="text-xs text-neutral-500">
             {sponsorId
-              ? "No Schedule E payment by this sponsor to a digital, production or unclassified vendor falls in this ad's run window, so no vendor is placed next to it — not evidence that nobody was paid."
+              ? "No Schedule E payment by this sponsor to a digital, production or unclassified vendor falls in this ad's run window (up to 7 days before first shown) — not evidence that nobody was paid."
               : "The advertiser is not matched to an FEC committee, so its filings cannot be searched for vendors."}
           </p>
         ) : (
-          <>
-            <p className="mb-3 text-xs text-neutral-600">
-              Schedule E payments by the sponsor dated inside this ad&apos;s run window (up to 7 days before first shown). The FEC does not record which buy
-              placed which ad; each link says what it rests on. Buys in media that cannot place a {ad.platform === "google" ? "Google" : "platform"} ad (TV,
-              radio, mail, phones, field, consulting) are not listed.
-            </p>
-            <VendorLines links={vendorLinks} raceId={raceId} />
-          </>
+          <div className="space-y-3">
+            {vendorLinks.length > 0 ? (
+              <>
+                <p className="text-xs text-neutral-600">
+                  A vendor is linked to this ad only when a person verified it from a source naming both, or when it was the only digital vendor the sponsor
+                  paid in the week before and while the ad ran (inferred). Each link says what it rests on.
+                </p>
+                <VendorLines links={vendorLinks} raceId={raceId} />
+              </>
+            ) : (
+              <p className="text-xs text-neutral-600">
+                Unknown. Nothing filed joins a {ad.platform === "google" ? "Google" : "platform"} creative to a Schedule E payment, and no rule or person has
+                linked this one.
+              </p>
+            )}
+            <SameWindowBuys ad={ad} raceId={raceId} sponsorName={sponsor?.name ?? ad.advertiser_name} />
+          </div>
         )}
       </Card>
 
@@ -179,7 +189,7 @@ export default async function AdPage({ params }: { params: Promise<{ raceId: str
                 },
                 {
                   swatch: <span className="inline-block h-0.5 w-5 align-middle" style={{ backgroundColor: PLACEMENT_COLOR }} />,
-                  label: "placement: solid = filed or verified · dashed = inferred · dotted = adjacent by date",
+                  label: "placement: solid = filed or verified · dashed = inferred",
                 },
                 {
                   swatch: <span className="inline-block h-0.5 w-5 align-middle" style={{ backgroundColor: TARGETING_COLOR }} />,
@@ -196,10 +206,11 @@ export default async function AdPage({ params }: { params: Promise<{ raceId: str
           </p>
           <p className="mt-1 text-xs text-neutral-500">
             <span className="font-medium text-neutral-700">Assumptions.</span> Vendor dollars are Schedule E payments as filed. The ad&apos;s dollars are the
-            midpoint of the range Google reports, not a filed figure, and are never added to the vendor dollars. A vendor → ad link means the ad ran while the
-            sponsor was paying that vendor for digital, production or unclassified work (adjacent), or that vendor was the only digital vendor paid in the
-            window (inferred), unless a person verified it from a source naming both. Donor dollars on the left are pooled: none of them can be said to have
-            bought this ad. Nothing here reaches the candidate.
+            midpoint of the range Google reports, not a filed figure, and are never added to the vendor dollars. A vendor → ad edge is drawn only when a person
+            verified it from a source naming both (solid) or that vendor was the only digital vendor the sponsor paid in the week before and while the ad ran
+            (dashed, inferred). Other vendors paid in that window are listed above as a sentence, not drawn: overlapping dates are not evidence of who placed
+            the ad. Donor
+            dollars on the left are pooled: none of them can be said to have bought this ad. Nothing here reaches the candidate.
           </p>
         </Card>
       )}

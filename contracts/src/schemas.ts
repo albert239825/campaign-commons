@@ -116,9 +116,10 @@ export const SourceRefSchema = z.object({
  *                       paid-for-by, the org's own site). `source_urls` + `checked_by` required.
  *   inferred  dashed  — derived by an explicit rule stated in `rule` (e.g. "only digital vendor this sponsor paid
  *                       during the ad's run window"). Never presented as fact.
- *   adjacent  dotted  — co-occurrence only (date-window overlap, shared sponsor). `rule` must say what is NOT known.
+ * Co-occurrence alone (two records overlapping in time) is not a basis and is never drawn as an edge; see
+ * `AdSchema.same_window_buys` for how that fact is carried as context instead.
  */
-export const EvidenceBasisSchema = z.enum(["filed", "verified", "inferred", "adjacent"]);
+export const EvidenceBasisSchema = z.enum(["filed", "verified", "inferred"]);
 
 const basisFields = {
   /** one plain-English sentence shown to the user: what the record says, or how this was derived and why it is uncertain */
@@ -135,7 +136,7 @@ export const BasisSchema = z.discriminatedUnion("basis", [
     checked_at: z.string().min(1), // ISO date
   }),
   z.object({
-    basis: z.enum(["filed", "inferred", "adjacent"]),
+    basis: z.enum(["filed", "inferred"]),
     ...basisFields,
     source_urls: z.array(z.string().url()),
     checked_by: z.string().nullable(),
@@ -468,7 +469,7 @@ export const ChainNodeSchema = z.union([
 
 export const ChainEdgeKindSchema = z.enum([
   "money", // dollars move from → to (transfer, contribution, IE payment to a vendor)
-  "placement", // vendor → ad: produced/placed; no dollars; carries a Basis (verified / inferred / adjacent)
+  "placement", // vendor → ad: produced/placed; no dollars; carries a Basis (verified / inferred only)
   "targeting", // ad or root → candidate: for/against; no dollars reach the candidate
 ]);
 
@@ -531,20 +532,35 @@ export const ChainSchema = z.object({
 
 /**
  * Ad ⇠ vendor relationship. FEC records sponsor → vendor → $; the ad library records sponsor → creative. Nothing filed
- * joins the two, so every link carries a Basis:
- *   adjacent — the ad's run window overlaps this vendor's buys for the same sponsor (rule must say the pair is unknown)
- *   inferred — the sponsor paid exactly one vendor of this medium during the window
+ * joins the two, so a link exists only when a rule or a person joins them, and every link carries a Basis:
+ *   inferred — the sponsor paid exactly one digital vendor during the ad's run window
  *   verified — a source names both (vendor portfolio, FCC PB-18, Meta paid-for-by), via data/hand/<race>/vendor_ad_links.json
+ * Mere date overlap is NOT a link (it used to be, as `adjacent`); it is carried on the ad as `same_window_buys` context.
  */
 export const AdVendorLinkSchema = z.object({
   vendor_id: z.string(),
   vendor_name: z.string(),
   medium: MediumSchema,
-  window: z.tuple([z.string(), z.string()]), // the ad's [first_shown, last_shown] used for the overlap
-  amount_in_window: z.number(), // sponsor → vendor IE dollars whose date falls in the window
+  window: z.tuple([z.string(), z.string()]).nullable(), // the ad's [first_shown, last_shown] used for the overlap; null when the ad has no dates (verified links only)
+  amount_in_window: z.number(), // sponsor → vendor IE dollars for placeable media whose date falls in the window
   buys_in_window: z.number().int(),
   basis: BasisSchema,
 });
+
+/**
+ * Context, not a relationship: a vendor the sponsor paid, for a medium that could place or produce a platform ad, inside
+ * the ad's run window. The FEC does not record which buy placed which ad, so the UI renders these as a sentence
+ * ("while this ad ran, the sponsor reported digital buys to A and B") and never as a vendor → ad edge or link label.
+ */
+export const SameWindowBuySchema = z.object({
+  vendor_id: z.string(),
+  vendor_name: z.string(),
+  medium: MediumSchema,
+  amount_in_window: z.number(), // sponsor → vendor IE dollars dated in the window
+  buys_in_window: z.number().int(),
+  source_url: z.string().url(), // the vendor's Schedule E search on fec.gov
+});
+export type SameWindowBuy = z.infer<typeof SameWindowBuySchema>;
 
 export const AdVerificationSchema = z.object({
   status: z.enum(["verified", "unverified"]),
@@ -579,8 +595,10 @@ export const AdSchema = z.object({
   sponsor_visibility_shares: VisibilitySharesSchema.nullable().optional(),
   /** what the ad's content is about (data/hand/<race>/ad_issues.json); basis.source_urls = [creative_url], checked_by = tagger */
   issues: IssueTagsSchema.optional(),
-  /** vendors the sponsor paid whose buys relate to this ad. Each link says how (adjacent / inferred / verified). */
+  /** vendors joined to this ad by a rule or a person. Each link says how (inferred / verified); date overlap alone never qualifies. */
   vendor_links: z.array(AdVendorLinkSchema).optional(),
+  /** every placeable-medium vendor the sponsor paid in the run window, linked or not — context for the reader, never an edge. */
+  same_window_buys: z.array(SameWindowBuySchema).optional(),
 });
 
 

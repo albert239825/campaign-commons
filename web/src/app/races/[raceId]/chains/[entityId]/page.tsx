@@ -201,7 +201,7 @@ export default async function ChainPage({
                       },
                       {
                         swatch: <span className="inline-block h-0.5 w-5 align-middle" style={{ backgroundColor: PLACEMENT_COLOR }} />,
-                        label: "placement: solid = filed or verified · dashed = inferred · dotted = adjacent by date",
+                        label: "placement: solid = filed or verified · dashed = inferred",
                       },
                       {
                         swatch: <span className="inline-block h-0.5 w-5 align-middle" style={{ backgroundColor: TARGETING_COLOR }} />,
@@ -232,10 +232,10 @@ export default async function ChainPage({
             <p className="mt-1 text-xs text-neutral-500">
               <span className="font-medium text-neutral-700">Assumptions on the spending side.</span>{" "}
               Vendor dollars are Schedule E payments as filed. Ad dollars are the midpoint of the range Google reports, not a filed figure. A vendor →
-              ad link means the ad ran while the spender was paying that vendor for digital, production or unclassified work (adjacent; TV, mail,
-              phone and field buys are not linked to Google ads), or the vendor was the only digital vendor paid in that window (inferred), unless
-              a person verified it from a source naming both. FEC does not record which buy placed which ad. Targeting edges
-              never carry money to the candidate.
+              ad edge is drawn only when a person verified it from a source naming both (solid), or the vendor was the only digital vendor the spender
+              paid in the week before and while the ad ran (dashed, inferred). FEC does not record which buy placed which ad, so an ad with no such link
+              hangs off the spender alone; vendors merely paid in that window are named on the ad&apos;s page as a sentence, never drawn as an edge. Targeting edges never
+              carry money to the candidate.
             </p>
           )}
         </Card>
