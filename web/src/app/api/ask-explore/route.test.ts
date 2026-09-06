@@ -1,5 +1,7 @@
 import { afterEach, describe, expect, it, vi } from "vitest";
 import { graphLimiter } from "@/lib/graph/limits";
+import * as neo4j from "@/lib/graph/neo4j";
+import type { TypedRunner } from "@/lib/graph/neo4j";
 import { POST } from "./route";
 
 let nextClient = 0;
@@ -38,5 +40,27 @@ describe("POST /api/ask-explore", () => {
     const limited = await post({ raceId: "pa-sen-2024", question: "again?" });
     expect(limited.status).toBe(429);
     expect(limited.headers.get("retry-after")).toBe("60");
+  });
+
+  it("rejects an invalid page query without calling the composer", async () => {
+    const run: TypedRunner = vi.fn();
+    vi.spyOn(neo4j, "getDriver").mockReturnValue({ driver: {} as never });
+    vi.spyOn(neo4j, "typedRunnerFor").mockReturnValue(run);
+    const model = vi.fn<typeof fetch>();
+    vi.stubGlobal("fetch", model);
+    const result = await post({
+      raceId: "pa-sen-2024",
+      question: "largest sources of dark money supporting Bob Casey",
+      mode: "answer",
+      page: { cypher: "MATCH (x:Entity) RETURN x", offset: 20 },
+    });
+    expect(result.status).toBe(200);
+    expect(result.body).toEqual({
+      kind: "unsupported",
+      reason: "rejected_query",
+      message: "The exploratory query did not meet the graph's read-only rules.",
+    });
+    expect(model).not.toHaveBeenCalled();
+    expect(run).not.toHaveBeenCalled();
   });
 });

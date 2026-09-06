@@ -1,9 +1,10 @@
 // OWNER: Money Trails exploratory mode (D-85).
 import Link from "next/link";
 import type { ReactNode } from "react";
+import { useEffect, useState } from "react";
 import { Card, Chip, SourceLink } from "@/components/ui";
 import { factSentence } from "@/lib/graph/facts";
-import { exploreCellText, formatExploreNumber, type ExploreCell, type ExploreResult } from "@/lib/graph/explore";
+import { AskExploreResponseSchema, exploreCellText, formatExploreNumber, type AskExploreResponse, type ExploreCell, type ExploreResult } from "@/lib/graph/explore";
 
 const WITHHELD_COPY: Record<Extract<ExploreResult["narrative"], { status: "withheld" }>["reason"], string> = {
   empty: "the model returned nothing",
@@ -12,9 +13,74 @@ const WITHHELD_COPY: Record<Extract<ExploreResult["narrative"], { status: "withh
   bad_citation: "the model cited a row that is not in the table below",
   uncited_number: "the model stated a figure without citing a row",
   unknown_number: "the model stated a figure that is not in any row below",
+  paged: "this is an additional page of rows",
 };
 
-export function ExploreAnswer({ result }: { result: ExploreResult }) {
+export async function fetchExplorePage(raceId: string, question: string, cypher: string, offset: number): Promise<AskExploreResponse> {
+  const response = await fetch("/api/ask-explore", {
+    method: "POST",
+    headers: { "content-type": "application/json" },
+    body: JSON.stringify({ raceId, question, mode: "answer", page: { cypher, offset } }),
+  });
+  if (!response.ok) throw new Error(`ask-explore ${response.status}`);
+  return AskExploreResponseSchema.parse(await response.json());
+}
+
+export function appendExplorePage(
+  currentRows: ExploreResult["rows"],
+  currentColumns: ExploreResult["columns"],
+  next: Extract<AskExploreResponse, { kind: "explore" }>,
+) {
+  return {
+    rows: [...currentRows, ...next.rows],
+    columns: [...new Set([...currentColumns, ...next.columns])],
+    truncated: next.truncated,
+    addedRange: next.rows.length > 0 ? { from: next.rows[0].n, to: next.rows[next.rows.length - 1].n } : null,
+  };
+}
+
+export function canPageExploreResult(result: ExploreResult, rowCount: number): boolean {
+  return result.diagram === null && result.truncated && rowCount >= 20 && rowCount < 200;
+}
+
+export function ExploreAnswer({ result, raceId, question }: { result: ExploreResult; raceId: string; question: string }) {
+  const [rows, setRows] = useState(result.rows);
+  const [columns, setColumns] = useState(result.columns);
+  const [truncated, setTruncated] = useState(result.truncated);
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState<string | null>(null);
+  const [addedRange, setAddedRange] = useState<{ from: number; to: number } | null>(null);
+
+  useEffect(() => {
+    setRows(result.rows);
+    setColumns(result.columns);
+    setTruncated(result.truncated);
+    setLoading(false);
+    setError(null);
+    setAddedRange(null);
+  }, [result]);
+
+  const offset = rows.length;
+  const canShowMore = canPageExploreResult({ ...result, truncated }, offset);
+  const showMore = async () => {
+    if (loading || !canShowMore) return;
+    setLoading(true);
+    setError(null);
+    try {
+      const next = await fetchExplorePage(raceId, question, result.cypher, offset);
+      if (next.kind !== "explore") throw new Error(next.message);
+      const appended = appendExplorePage(rows, columns, next);
+      setRows(appended.rows);
+      setColumns(appended.columns);
+      setTruncated(appended.truncated);
+      setAddedRange(appended.addedRange);
+    } catch (caught) {
+      setError(caught instanceof Error ? caught.message : "Could not load more rows.");
+    } finally {
+      setLoading(false);
+    }
+  };
+
   return (
     <section className="explore-answer space-y-4" aria-label="Exploratory graph answer">
       <header className="space-y-2">
@@ -36,7 +102,7 @@ export function ExploreAnswer({ result }: { result: ExploreResult }) {
             <thead>
               <tr className="border-b border-neutral-200 text-xs uppercase tracking-wide text-neutral-500">
                 <th className="w-8 px-2 py-2 font-medium">#</th>
-                {result.columns.map((column) => (
+                {columns.map((column) => (
                   <th key={column} className="px-2 py-2 font-medium">
                     {column}
                   </th>
@@ -44,10 +110,10 @@ export function ExploreAnswer({ result }: { result: ExploreResult }) {
               </tr>
             </thead>
             <tbody className="divide-y divide-neutral-100">
-              {result.rows.map((row) => (
+              {rows.map((row) => (
                 <tr key={row.n} id={`explore-row-${row.n}`}>
                   <td className="px-2 py-2 align-top tabular-nums text-xs text-neutral-500">{row.n}</td>
-                  {result.columns.map((column) => (
+                  {columns.map((column) => (
                     <td key={column} className="px-2 py-2 align-top text-neutral-900">
                       <ExploreCellView column={column} cell={row.cells[column] ?? { t: "null" }} />
                     </td>
@@ -57,7 +123,21 @@ export function ExploreAnswer({ result }: { result: ExploreResult }) {
             </tbody>
           </table>
         </div>
-        {result.truncated && <p className="mt-3 text-xs text-neutral-500">Showing the first 20 rows.</p>}
+        {result.rows.length > 0 && <p className="mt-3 text-xs text-neutral-500">Showing the first 20 rows.</p>}
+        {canShowMore && (
+          <div className="mt-3 space-y-1">
+            <button
+              type="button"
+              onClick={showMore}
+              disabled={loading}
+              className="rounded-md border border-neutral-300 bg-white px-3 py-1.5 text-xs font-medium text-neutral-700 hover:border-neutral-900 hover:text-neutral-900 disabled:opacity-50"
+            >
+              {loading ? "Loading more rows…" : "Show more"}
+            </button>
+            {error && <p className="text-xs text-neutral-500">{error}</p>}
+          </div>
+        )}
+        {addedRange && <p className="mt-2 text-xs text-neutral-500">Rows {addedRange.from}–{addedRange.to} added; the summary above covers the first 20 only.</p>}
       </Card>
 
       {result.context.length > 0 && (
@@ -81,7 +161,7 @@ export function ExploreAnswer({ result }: { result: ExploreResult }) {
         <div className="graph-narrative border-l-2 border-neutral-300 pl-4">
           <p className="text-[11px] uppercase tracking-wide text-neutral-500">Model-written summary — Grok, from the records below only</p>
           <p className="mt-1 text-sm leading-relaxed text-neutral-900">
-            <Cited text={result.narrative.text} rows={result.rows} />
+            <Cited text={result.narrative.text} rows={rows} />
           </p>
         </div>
       ) : (

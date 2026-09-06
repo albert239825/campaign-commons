@@ -868,6 +868,8 @@ paths or connections, geography or sector—now refuse the nearest fixed intent 
 
 **Flow completion.** Graph mode now adds source-linked filed spending and campaign-ownership facts for committees returned by the model query, so the diagram can continue to candidate campaigns without changing the model's rows.
 
+**Answer paging.** Answer-mode exploratory results now offer “Show more” for additional validated query rows; graph-mode Sankey responses remain unchanged.
+
 **Sankey interaction.** Completion now stays within candidates reached by the model rows, and flow ribbons expose pointer tooltips plus inline labels for larger amounts.
 
 **Organization classes.** For `pa-sen-2024` the offline Grok pass considered 262 unknown organizations over $10,000, kept 182 valid model classifications totaling $150,323,620.00, and dropped 80 `unknown` rows; the cached rerun made zero API requests. Traceability dark fell from $61,914,229.99 to $61,031,422.96 (a reduction of $882,807.03). `TRUIST` is model-read as `business` from `https://www.truist.com/about-us`, with `verified: false`; its $3,072,643 inflow is now disclosed with `class_basis: inferred`.

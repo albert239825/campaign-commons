@@ -36,6 +36,7 @@ export function AskBox({
   const [question, setQuestion] = useState(initial);
   const [result, setResult] = useState<Resolution | null>(null);
   const [explore, setExplore] = useState<AskExploreResponse | null>(null);
+  const [submittedQuestion, setSubmittedQuestion] = useState("");
   const [pending, setPending] = useState<null | "explore">(null);
   const [graphMode, setGraphMode] = useState(false);
   const diagram = explore?.kind === "explore" ? explore.diagram : null;
@@ -48,6 +49,7 @@ export function AskBox({
     const trimmed = question.trim();
     const nextGraphMode = /^@graph(?:\s|$)/i.test(trimmed);
     const graphQuestion = nextGraphMode ? trimmed.replace(/^@graph(?:\s|$)/i, "").trim() : trimmed;
+    setSubmittedQuestion(graphQuestion);
     setGraphMode(nextGraphMode);
     const related = resolveQuestion(graphQuestion, subjects, examples);
     setResult(related);
@@ -81,6 +83,7 @@ export function AskBox({
             setQuestion(e.target.value);
             setResult(null);
             setExplore(null);
+            setSubmittedQuestion("");
             setGraphMode(false);
           }}
           placeholder={examples[0] ?? "Who funds …?"}
@@ -137,7 +140,7 @@ export function AskBox({
       {explore?.kind === "explore" && (!graphMode || diagram?.ok === true) && (
         <div className="ask-box-graph rounded-md border border-neutral-200 bg-white p-4">
           {graphMode && diagram?.ok === true && <ExploreSankey data={diagram} />}
-          <ExploreAnswer result={explore} />
+          <ExploreAnswer result={explore} raceId={raceId} question={submittedQuestion} />
         </div>
       )}
       {result?.kind === "unsupported" && graphMode && explore === null && pending === null && (

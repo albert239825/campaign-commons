@@ -26,11 +26,13 @@ export type ExploreResult = {
   description: string;
   columns: string[];
   rows: ExploreRow[];
-  narrative: Narration;
+  narrative: ExploreNarration;
   truncated: boolean;
   diagram: SankeyData | null;
   context: GraphFact[];
 };
+type PagedNarration = { status: "withheld"; reason: "paged" };
+type ExploreNarration = Narration | PagedNarration;
 export type ExploreRefusal = {
   kind: "unsupported";
   reason: "explore_unavailable" | "no_query" | "rejected_query" | "query_failed" | "empty";
@@ -48,7 +50,7 @@ const ExploreCellSchema: z.ZodType<ExploreCell> = z.discriminatedUnion("t", [
 ]);
 const ExploreNarrationSchema = z.discriminatedUnion("status", [
   z.object({ status: z.literal("ok"), text: z.string() }),
-  z.object({ status: z.literal("withheld"), reason: z.enum(WITHHELD_REASONS) }),
+  z.object({ status: z.literal("withheld"), reason: z.union([z.enum(WITHHELD_REASONS), z.literal("paged")]) }),
   z.object({ status: z.literal("unavailable") }),
 ]);
 export const AskExploreResponseSchema = z.discriminatedUnion("kind", [
@@ -73,6 +75,12 @@ export const AskExploreRequest = z.object({
   raceId: z.string().min(1).max(64),
   question: z.string().trim().min(1).max(500),
   mode: z.enum(["answer", "graph"]).default("answer"),
+  page: z
+    .object({
+      cypher: z.string().trim().min(1).max(2_000),
+      offset: z.number().int().min(20).max(200).refine((value) => value % MAX_ROWS === 0),
+    })
+    .optional(),
 });
 
 const HYDRATE = `MATCH (a${`:${ENTITY}`} {race_id: $race})-[r]->(b${`:${ENTITY}`} {race_id: $race})
@@ -96,6 +104,11 @@ export function validateCypher(cypher: string): { ok: true; cypher: string } | {
   const last = limits.at(-1);
   if (last && Number(last[1]) > MAX_ROWS) return { ok: false, reason: `LIMIT above ${MAX_ROWS}` };
   return { ok: true, cypher: last ? trimmed : `${trimmed}\nLIMIT ${MAX_ROWS}` };
+}
+
+export function pageCypher(validated: string, offset: number): string {
+  const bumped = validated.replace(/\bLIMIT\s+(\d+)\b/gi, (_, limit: string) => `LIMIT ${Number(limit) + offset}`);
+  return `CALL {\n${bumped}\n}\nRETURN *\nSKIP ${offset}\nLIMIT ${MAX_ROWS}`;
 }
 
 function nodeRef(value: unknown): GraphNodeRef {
@@ -142,6 +155,7 @@ function cellOf(value: unknown): CellResult {
 export async function toCells(
   records: Array<Record<string, unknown>>,
   hydrate: (ids: string[]) => Promise<ReadonlyMap<string, GraphFact>>,
+  rowOffset = 0,
 ): Promise<{ ok: true; rows: ExploreRow[]; columns: string[]; truncated: boolean } | { ok: false; reason: string }> {
   for (const record of records) {
     if (Object.values(record).some((value) => neo4j.isPath(value))) return { ok: false, reason: "return nodes/relationships, not paths" };
@@ -159,7 +173,7 @@ export async function toCells(
       if (converted.cell.t === "rel") relationshipIds.add(converted.cell.id);
       cells[column] = converted.cell;
     }
-    preliminary.push({ n: i + 1, cells });
+    preliminary.push({ n: rowOffset + i + 1, cells });
   }
   const hydrated = await hydrate([...relationshipIds]);
   const rows: ExploreRow[] = preliminary.map((row) => {
@@ -221,14 +235,66 @@ async function completeGraph(raceId: string, rows: readonly ExploreRow[], run: T
   }
 }
 
+type Execution =
+  | { ok: true; rows: ExploreRow[]; columns: string[]; truncated: boolean; queryType: string }
+  | { ok: false; reason: string };
+
+async function executeQuery(raceId: string, deps: ExploreDeps, cypher: string, rowOffset = 0): Promise<Execution> {
+  const result = await deps.run!(cypher, { race: raceId }, { timeoutMs: EXPLORE_TIMEOUT_MS });
+  if (result.queryType !== "r") return { ok: false, reason: "the query was not read-only" };
+  if (result.records.length === 0) return { ok: true, rows: [], columns: [], truncated: false, queryType: result.queryType };
+  const converted = await toCells(
+    result.records,
+    async (ids) => {
+      if (ids.length === 0) return new Map();
+      const hydrated = await deps.run!(HYDRATE, { race: raceId, ids }, { timeoutMs: EXPLORE_TIMEOUT_MS });
+      if (hydrated.queryType !== "r") throw new Error("relationship hydration was not read-only");
+      return new Map(
+        hydrated.records.map((record) => {
+          const fact = GraphFactSchema.parse({ ...(record.edge as Record<string, unknown>), n: 1 });
+          return [String(record.eid), fact] as const;
+        }),
+      );
+    },
+    rowOffset,
+  );
+  if (!converted.ok) return converted;
+  return { ...converted, queryType: result.queryType };
+}
+
 export async function exploreQuestion(
   raceId: string,
   question: string,
   subjects: readonly TrailSubject[],
   deps: ExploreDeps,
   mode: "answer" | "graph" = "answer",
+  page?: { cypher: string; offset: number },
 ): Promise<AskExploreResponse> {
-  if (deps.run === null || !(deps.llm?.apiKey ?? process.env.XAI_API_KEY)) {
+  if (deps.run === null) {
+    return refuse("explore_unavailable", "Exploratory graph mode is not configured on this deployment.");
+  }
+  if (page) {
+    const checked = validateCypher(page.cypher);
+    if (!checked.ok) return refuse("rejected_query", "The exploratory query did not meet the graph's read-only rules.");
+    try {
+      const execution = await executeQuery(raceId, deps, pageCypher(checked.cypher, page.offset), page.offset);
+      if (!execution.ok) return refuse("rejected_query", "The exploratory query did not meet the graph's read-only rules.");
+      return {
+        kind: "explore",
+        cypher: page.cypher,
+        description: "Additional filed rows from the same exploratory query.",
+        columns: execution.columns,
+        rows: execution.rows,
+        narrative: { status: "withheld", reason: "paged" },
+        truncated: execution.truncated,
+        diagram: null,
+        context: [],
+      };
+    } catch {
+      return refuse("query_failed", "The exploratory query could not be run against the filings graph.");
+    }
+  }
+  if (!(deps.llm?.apiKey ?? process.env.XAI_API_KEY)) {
     return refuse("explore_unavailable", "Exploratory graph mode is not configured on this deployment.");
   }
   let composed = await composeExplore(question, subjects, deps.llm, undefined, mode);
@@ -246,28 +312,9 @@ export async function exploreQuestion(
     if (!checked.ok) return refuse("rejected_query", "The exploratory query did not meet the graph's read-only rules.");
   }
 
-  const execute = async (cypher: string): Promise<{ ok: true; rows: ExploreRow[]; columns: string[]; truncated: boolean; queryType: string } | { ok: false; reason: string }> => {
-    const result = await deps.run!(cypher, { race: raceId }, { timeoutMs: EXPLORE_TIMEOUT_MS });
-    if (result.queryType !== "r") return { ok: false, reason: "the query was not read-only" };
-    if (result.records.length === 0) return { ok: true, rows: [], columns: [], truncated: false, queryType: result.queryType };
-    const converted = await toCells(result.records, async (ids) => {
-      if (ids.length === 0) return new Map();
-      const hydrated = await deps.run!(HYDRATE, { race: raceId, ids }, { timeoutMs: EXPLORE_TIMEOUT_MS });
-      if (hydrated.queryType !== "r") throw new Error("relationship hydration was not read-only");
-      return new Map(
-        hydrated.records.map((record) => {
-          const fact = GraphFactSchema.parse({ ...(record.edge as Record<string, unknown>), n: 1 });
-          return [String(record.eid), fact] as const;
-        }),
-      );
-    });
-    if (!converted.ok) return converted;
-    return { ...converted, queryType: result.queryType };
-  };
-
-  let execution: Awaited<ReturnType<typeof execute>>;
+  let execution: Execution;
   try {
-    execution = await execute(checked.cypher);
+    execution = await executeQuery(raceId, deps, checked.cypher);
   } catch (error) {
     if (retried) return refuse("query_failed", "The exploratory query could not be run against the filings graph.");
     retried = true;
@@ -277,7 +324,7 @@ export async function exploreQuestion(
     checked = validateCypher(composed.cypher);
     if (!checked.ok) return refuse("rejected_query", "The exploratory query did not meet the graph's read-only rules.");
     try {
-      execution = await execute(checked.cypher);
+      execution = await executeQuery(raceId, deps, checked.cypher);
     } catch {
       return refuse("query_failed", "The exploratory query could not be run against the filings graph.");
     }

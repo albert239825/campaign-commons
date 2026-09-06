@@ -1,7 +1,7 @@
 import neo4j from "neo4j-driver";
 import { afterEach, describe, expect, it, vi } from "vitest";
 import type { TrailSubject } from "@campaign-commons/contracts";
-import { exploreQuestion, rowSentence, toCells, validateCypher, type ExploreRow } from "./explore";
+import { exploreQuestion, pageCypher, rowSentence, toCells, validateCypher, type ExploreRow } from "./explore";
 import { COMPLETION } from "./queries";
 
 const node = { properties: { id: "C1", name: "ONE NATION", kind: "committee", href: "/races/r/entities/C1" } };
@@ -57,6 +57,25 @@ describe("validateCypher", () => {
       ok: true,
       cypher: "MATCH (x:Entity {race_id: $race}) RETURN x LIMIT 20",
     });
+  });
+});
+
+describe("pageCypher", () => {
+  it("bumps a single limit and adds the paging wrapper", () => {
+    expect(pageCypher("MATCH (x:Entity {race_id: $race}) RETURN x LIMIT 20", 20)).toBe(
+      "CALL {\nMATCH (x:Entity {race_id: $race}) RETURN x LIMIT 40\n}\nRETURN *\nSKIP 20\nLIMIT 20",
+    );
+  });
+
+  it("bumps every branch limit in a UNION query", () => {
+    expect(
+      pageCypher(
+        "MATCH (x:Entity {race_id: $race}) RETURN x LIMIT 20 UNION MATCH (y:Entity {race_id: $race}) RETURN y LIMIT 10",
+        20,
+      ),
+    ).toBe(
+      "CALL {\nMATCH (x:Entity {race_id: $race}) RETURN x LIMIT 40 UNION MATCH (y:Entity {race_id: $race}) RETURN y LIMIT 30\n}\nRETURN *\nSKIP 20\nLIMIT 20",
+    );
   });
 });
 
@@ -120,6 +139,36 @@ function stubResponses(composer: unknown[], narrator: unknown = { narrative: "Th
 }
 
 describe("exploreQuestion", () => {
+  it("runs a validated page without calling the composer and numbers rows after the offset", async () => {
+    const fetch = vi.fn<typeof globalThis.fetch>();
+    const run = vi.fn(async () => ({ records: [{ amount: 3 }, { amount: 2 }], queryType: "r" }));
+    const result = await exploreQuestion("race", "how much?", subjects, { run, llm: { apiKey: "key", fetch } }, "answer", {
+      cypher: good,
+      offset: 20,
+    });
+    expect(result).toMatchObject({
+      kind: "explore",
+      rows: [{ n: 21 }, { n: 22 }],
+      narrative: { status: "withheld", reason: "paged" },
+      diagram: null,
+      context: [],
+    });
+    expect(fetch).not.toHaveBeenCalled();
+    expect(run).toHaveBeenCalledWith(pageCypher(`${good}\nLIMIT 20`, 20), { race: "race" }, { timeoutMs: 8000 });
+  });
+
+  it("rejects an invalid page query without calling the composer", async () => {
+    const fetch = vi.fn<typeof globalThis.fetch>();
+    const run = vi.fn();
+    const result = await exploreQuestion("race", "how much?", subjects, { run, llm: { apiKey: "key", fetch } }, "answer", {
+      cypher: "MATCH (x:Entity) RETURN x",
+      offset: 20,
+    });
+    expect(result).toEqual({ kind: "unsupported", reason: "rejected_query", message: "The exploratory query did not meet the graph's read-only rules." });
+    expect(fetch).not.toHaveBeenCalled();
+    expect(run).not.toHaveBeenCalled();
+  });
+
   it("retries a rejected query and narrates the returned rows", async () => {
     const fetch = stubResponses([{ cypher: "MATCH (x:Entity {race_id: $race}) MERGE (x) RETURN x", description: "bad" }, { cypher: good, description: "A good result." }]);
     const run = vi.fn(async () => ({ records: [{ amount: 3 }], queryType: "r" }));
