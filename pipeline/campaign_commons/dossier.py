@@ -243,6 +243,9 @@ def run(race_id: str) -> None:
     for candidate in race.candidates:
         dossier = build(race, candidate, known)
         write_json(race.out_dir / "dossiers" / f"{candidate.candidate_id}.json", dossier)
+    from .dossier_enrich import run as enrich_run
+
+    enrich_run(race_id)
 
 
 if __name__ == "__main__":

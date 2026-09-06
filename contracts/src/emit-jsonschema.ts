@@ -18,6 +18,8 @@ import {
   HandIeIssuesFileSchema,
   HandIssueFocusFileSchema,
   HandXIssueFocusFileSchema,
+  HandXStancesFileSchema,
+  HandXAccountsFileSchema,
   HandVendorAdLinksFileSchema,
   HandVendorAliasesFileSchema,
   IssueSpendingSchema,
@@ -49,6 +51,8 @@ const all: Record<string, ZodTypeAny> = {
   // data/hand/<race>/
   hand_issue_focus: HandIssueFocusFileSchema,
   hand_x_issue_focus: HandXIssueFocusFileSchema,
+  hand_x_stances: HandXStancesFileSchema,
+  hand_x_accounts: HandXAccountsFileSchema,
   hand_ad_issues: HandAdIssuesFileSchema,
   hand_x_ad_issues: HandXAdIssuesFileSchema,
   hand_ie_issues: HandIeIssuesFileSchema,
