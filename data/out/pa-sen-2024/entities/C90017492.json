@@ -525,5 +525,55 @@
       "last_date": "2024-09-13",
       "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C90017492&payee_name=PROSHOP"
     }
-  ]
+  ],
+  "x_enrichment": {
+    "issue_focus": {
+      "kind": "general_partisan",
+      "issue_ids": [],
+      "description": "The Indivisible Project drives coordinated campaigns, powering the grassroots Indivisible movement to defeat the rightwing takeover of American government and win an inclusive democracy and bold progressive policies.",
+      "basis": {
+        "basis": "inferred",
+        "rule": "x_issue_focus",
+        "source_urls": [
+          "https://indivisible.org/about/",
+          "https://www.fec.gov/data/committee/C90017492/"
+        ],
+        "checked_by": null,
+        "checked_at": null
+      },
+      "label": "Machine-tagged from the committee's own website (grok-4.3, 2026-09-06); not part of the record",
+      "quote": "drives coordinated campaigns, powering the grassroots Indivisible movement to defeat the rightwing takeover of American government and win an inclusive democracy and bold progressive policies.",
+      "provenance": {
+        "tagged_by": "xai-grok-4.3-2026-09-06",
+        "tagged_at": "2026-09-06",
+        "model": "grok-4.3",
+        "prompt_version": "classify_spender.v1",
+        "tools": [
+          "web_search"
+        ],
+        "tool_filters": {},
+        "response_id": "0d868352-ca6a-9ffa-b0fe-ed40ae8ddedc",
+        "retrieved_at": "2026-09-06T03:33:51+00:00",
+        "citations": [
+          "https://indivisible.org/about/",
+          "https://indivisible.org/about",
+          "https://www.guidestar.org/profile/81-4944067",
+          "https://docs.candid.org/990/814/814944067/814944067_2024_202512889349302441_990.pdf",
+          "https://ballotpedia.org/Indivisible_Project",
+          "https://himalayas.app/companies/indivisible-project",
+          "https://990finder.com/814944067/",
+          "https://www.indivisible.org/about-us/",
+          "https://tvtropes.org/pmwiki/pmwiki.php/VideoGame/Indivisible",
+          "https://www.zoominfo.com/c/indivisible-project/352664520",
+          "https://builtin.com/company/indivisible-project",
+          "https://www.theinvisibleproject.org/our-story"
+        ],
+        "confidence": "high",
+        "review_status": "pending",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "review_note": null
+      }
+    }
+  }
 }

@@ -955,5 +955,59 @@
       "last_date": "2024-11-01",
       "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00710848&payee_name=THE+REPORTER+GROUP"
     }
-  ]
+  ],
+  "x_enrichment": {
+    "issue_focus": {
+      "kind": "general_partisan",
+      "issue_ids": [],
+      "description": "DMFI PAC works to elect pro-Israel Democrats up and down the ballot and defeat those few anti-Israel Democratic candidates in federal election primaries.",
+      "basis": {
+        "basis": "inferred",
+        "rule": "x_issue_focus",
+        "source_urls": [
+          "https://dmfipac.org/who/about/",
+          "https://www.fec.gov/data/committee/C00710848/"
+        ],
+        "checked_by": null,
+        "checked_at": null
+      },
+      "label": "Machine-tagged from the committee's own website (grok-4.3, 2026-09-06); not part of the record",
+      "quote": "DMFI PAC works to elect pro-Israel Democrats up and down the ballot and defeat those few anti-Israel Democratic candidates in federal election primaries.",
+      "provenance": {
+        "tagged_by": "xai-grok-4.3-2026-09-06",
+        "tagged_at": "2026-09-06",
+        "model": "grok-4.3",
+        "prompt_version": "classify_spender.v1",
+        "tools": [
+          "web_search"
+        ],
+        "tool_filters": {
+          "allowed_domains": [
+            "dmfipac.org"
+          ]
+        },
+        "response_id": "ecb061ac-d29a-95d1-9171-1419ca5de2a0",
+        "retrieved_at": "2026-09-06T03:12:52+00:00",
+        "citations": [
+          "https://dmfipac.org/who/about/",
+          "https://dmfipac.org/news-updates/press-release/dmfi-pac-announces-2026-majority-project-endorses-first-slate-of-non-incumbent-candidates-for-the-2026-cycle/",
+          "https://dmfipac.org/2026/?post_type=press-release",
+          "https://dmfipac.org/",
+          "https://dmfipac.org/news-updates/press-release/dmfi-pac-announces-new-endorsements-in-california-as-part-of-2026-majority-project/",
+          "https://dmfipac.org/news-updates/press-release/new-dmfi-pac-ad-highlights-warnings-from-trumps-national-security-team/",
+          "https://dmfipac.org/news-updates/press-release/dmfi-pac-thanks-vice-president-kamala-harris-for-her-service-and-leadership/",
+          "https://dmfipac.org/news-updates/",
+          "https://dmfipac.org/news-updates/press-release/dmfi-pac-statement-presidential-race/",
+          "https://dmfipac.org/news-updates/press-release/dmfi-pac-endorses-vice-president-kamala-harris-for-president/",
+          "https://dmfipac.org/2026/",
+          "https://dmfipac.org/news-updates/press-release/new-dmfi-pac-ad-vice-president-harris-is-a-strong-friend-and-ally-of-israel/"
+        ],
+        "confidence": "high",
+        "review_status": "pending",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "review_note": null
+      }
+    }
+  }
 }

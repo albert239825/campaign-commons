@@ -1006,5 +1006,59 @@
       "last_date": "2024-11-22",
       "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00738732&payee_name=CLEAN+WATER+ACTION"
     }
-  ]
+  ],
+  "x_enrichment": {
+    "issue_focus": {
+      "kind": "general_partisan",
+      "issue_ids": [],
+      "description": "Clean Wave is a federal Super PAC that intends to make independent expenditures in the 2022 elections pertaining to some federal races, with similar state Super PACs in PA and MI for selected state races.",
+      "basis": {
+        "basis": "inferred",
+        "rule": "x_issue_focus",
+        "source_urls": [
+          "https://cleanwater.org/clean-wave",
+          "https://www.fec.gov/data/committee/C00738732/"
+        ],
+        "checked_by": null,
+        "checked_at": null
+      },
+      "label": "Machine-tagged from the committee's own website (grok-4.3, 2026-09-06); not part of the record",
+      "quote": "Clean Wave, is a federal Super PAC that intends to make independent expenditures in the 2022 elections pertaining to some federal races.",
+      "provenance": {
+        "tagged_by": "xai-grok-4.3-2026-09-06",
+        "tagged_at": "2026-09-06",
+        "model": "grok-4.3",
+        "prompt_version": "classify_spender.v1",
+        "tools": [
+          "web_search"
+        ],
+        "tool_filters": {},
+        "response_id": "88bd7aa6-9a6b-9627-9131-85de1ab66697",
+        "retrieved_at": "2026-09-06T03:18:36+00:00",
+        "citations": [
+          "https://www.fec.gov/data/committee/C00738732/",
+          "https://projects.propublica.org/itemizer/committee/C00738732/2024",
+          "https://docquery.fec.gov/cgi-bin/forms/C00738732/1923830/",
+          "http://docquery.fec.gov/cgi-bin/forms/C00738732/1863791/",
+          "https://www.opensecrets.org/orgs/clean-water-action/summary?id=D000060695",
+          "http://docquery.fec.gov/cgi-bin/forms/C00738732/1560100/",
+          "http://docquery.fec.gov/cgi-bin/forms/C00738732/1881380/se",
+          "https://docquery.fec.gov/pdf/411/202510309792073411/202510309792073411.pdf",
+          "https://cleanwater.org/clean-wave",
+          "https://cleanwater.org/sites/default/files/2026-04/Curr_Natl_04.13.26a.pdf",
+          "https://cleanwater.org/events/making-waves-2026",
+          "https://cleanwater.org/2023/04/30/clean-water-waves-news-april-2023",
+          "https://cleanwater.org/publications/clean-water-currents-fall-2024",
+          "https://cleanwater.org/about/clean-water-action-board",
+          "https://cleanwater.org/clean-water-voter-2026-massachusetts-endorsements",
+          "https://www.causeiq.com/organizations/clean-water-action,237128611/"
+        ],
+        "confidence": "medium",
+        "review_status": "pending",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "review_note": null
+      }
+    }
+  }
 }

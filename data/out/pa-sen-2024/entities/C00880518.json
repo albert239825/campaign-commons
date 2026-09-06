@@ -141,5 +141,58 @@
       "last_date": "2024-10-17",
       "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00880518&payee_name=VOTER+TEXTING.COM"
     }
-  ]
+  ],
+  "x_enrichment": {
+    "issue_focus": {
+      "kind": "single_issue",
+      "issue_ids": [
+        "crypto_fintech"
+      ],
+      "description": "The Bitcoin Voter PAC is committed to helping elect Bitcoin champions who want to protect U.S. innovation and bring sound monetary policy to the American people and protect our financial freedom.",
+      "basis": {
+        "basis": "inferred",
+        "rule": "x_issue_focus",
+        "source_urls": [
+          "https://www.bitcoinvoterpac.com/",
+          "https://www.fec.gov/data/committee/C00880518/"
+        ],
+        "checked_by": null,
+        "checked_at": null
+      },
+      "label": "Machine-tagged from the committee's own website (grok-4.3, 2026-09-06); not part of the record",
+      "quote": "**The Bitcoin Voter PAC** is committed to helping elect Bitcoin champions who want to protect U.S. innovation and bring sound monetary policy to the American people. There are those in government who want to regulate and restrict access to cryptocurrency. The Bitcoin Voter PAC will help elect candidates who will protect our financial freedom.",
+      "provenance": {
+        "tagged_by": "xai-grok-4.3-2026-09-06",
+        "tagged_at": "2026-09-06",
+        "model": "grok-4.3",
+        "prompt_version": "classify_spender.v1",
+        "tools": [
+          "web_search"
+        ],
+        "tool_filters": {},
+        "response_id": "9d98e98c-5737-99a2-aaa3-1551cfcd6755",
+        "retrieved_at": "2026-09-06T03:16:54+00:00",
+        "citations": [
+          "https://www.bitcoinvoterpac.com/",
+          "https://www.bitcoinvoterproject.org/",
+          "https://www.linkedin.com/company/bitcoin-voter-project?trk=public_post-text",
+          "https://sunlightfoundation.com/2014/01/10/an-all-bitcoin-pac-opens-then-immediately-closes",
+          "https://vid.co/portfolio/political-ad-bitcoin-voter-project",
+          "https://www.bitcoinvoterproject.org/about/",
+          "https://www.foxbusiness.com/politics/bitcoin-miners-launch-ad-campaign-swing-states-boost-crypto-friendly-candidates",
+          "https://bitcoinmagazine.com/politics/house-speaker-mike-johnson-on-congress-crypto-were-in-this-together",
+          "https://bitcointalk.org/index.php?topic=401411.0",
+          "https://www.youtube.com/watch?v=1dRZkUkhW7k",
+          "https://www.linkedin.com/company/bitcoin-voter-project",
+          "https://coinpaper.com/5765/bitcoin-voter-pac-backs-ted-cruz-as-early-voting-begins-in-texas",
+          "https://cointelegraph.com/news/cryptocurrency-miners-nonprofit-bitcoin-voters-elections"
+        ],
+        "confidence": "high",
+        "review_status": "pending",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "review_note": null
+      }
+    }
+  }
 }

@@ -1,0 +1,16 @@
+{
+  "video_id": "fixture-video",
+  "ad_id": "fixture-ad",
+  "kind": "auto_caption",
+  "language": "en",
+  "is_generated": true,
+  "text": "Healthcare matters.",
+  "segments": [
+    {
+      "start": 0.0,
+      "duration": 1.0,
+      "text": "Healthcare matters."
+    }
+  ],
+  "fetched_at": "2026-09-06T00:00:00+00:00"
+}

@@ -428,5 +428,59 @@
       "last_date": "2024-10-07",
       "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00802389&payee_name=LEAGUE+OF+CONSERVATION+VOTERS%2C+INC."
     }
-  ]
+  ],
+  "x_enrichment": {
+    "issue_focus": {
+      "kind": "multi_issue",
+      "issue_ids": [
+        "energy_climate"
+      ],
+      "description": "GiveGreen empowers you to give to the right race at the right time to win elections, address the climate crisis, protect our environment, and restore American democracy. We take the guesswork out of donating and make sure candidates understand your priorities.",
+      "basis": {
+        "basis": "inferred",
+        "rule": "x_issue_focus",
+        "source_urls": [
+          "https://www.givegreen.com/about",
+          "https://www.fec.gov/data/committee/C00802389/"
+        ],
+        "checked_by": null,
+        "checked_at": null
+      },
+      "label": "Machine-tagged from the committee's own website (grok-4.3, 2026-09-06); not part of the record",
+      "quote": "GiveGreen empowers you to give to the right race at the right time to win elections, address the climate crisis, protect our environment, and restore American democracy. We take the guesswork out of donating and make sure candidates understand your priorities.",
+      "provenance": {
+        "tagged_by": "xai-grok-4.3-2026-09-06",
+        "tagged_at": "2026-09-06",
+        "model": "grok-4.3",
+        "prompt_version": "classify_spender.v1",
+        "tools": [
+          "web_search"
+        ],
+        "tool_filters": {
+          "allowed_domains": [
+            "givegreen.com"
+          ]
+        },
+        "response_id": "92c57018-8557-9831-a19d-03006be5a7c7",
+        "retrieved_at": "2026-09-06T03:37:17+00:00",
+        "citations": [
+          "https://www.givegreen.com/",
+          "https://www.givegreen.com/get-involved",
+          "https://www.givegreen.com/about",
+          "https://www.givegreen.com/committees/yes-on-50-the-election-rigging-response-act-governor-newsoms-ballot-measure-committee",
+          "https://www.givegreen.com/privacy-policy",
+          "https://www.givegreen.com/committees/ce4a-action",
+          "https://www.givegreen.com/strategy/federal",
+          "https://www.givegreen.com/issues/clean-energy-transition",
+          "https://www.givegreen.com/why-givegreen",
+          "https://www.givegreen.com/issues/public-lands-oceans"
+        ],
+        "confidence": "high",
+        "review_status": "pending",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "review_note": null
+      }
+    }
+  }
 }

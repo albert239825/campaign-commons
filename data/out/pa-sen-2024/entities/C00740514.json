@@ -126,5 +126,61 @@
       "last_date": "2024-10-16",
       "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00740514&payee_name=GOOGLEADS"
     }
-  ]
+  ],
+  "x_enrichment": {
+    "issue_focus": {
+      "kind": "multi_issue",
+      "issue_ids": [
+        "healthcare",
+        "tax_budget",
+        "energy_climate"
+      ],
+      "description": "Concerned Citizen attempts to prepare the public to make ethical and moral choices over their lifetimes by exposing them to issues of the day that will affect their daily lives.",
+      "basis": {
+        "basis": "inferred",
+        "rule": "x_issue_focus",
+        "source_urls": [
+          "https://concerned-citizen.org/",
+          "https://www.fec.gov/data/committee/C00740514/"
+        ],
+        "checked_by": null,
+        "checked_at": null
+      },
+      "label": "Machine-tagged from the committee's own website (grok-4.3, 2026-09-06); not part of the record",
+      "quote": "Concerned Citizen attempts to prepare the public to make ethical and moral choices over their lifetimes by exposing them to issues of the day that will affect their daily lives.",
+      "provenance": {
+        "tagged_by": "xai-grok-4.3-2026-09-06",
+        "tagged_at": "2026-09-06",
+        "model": "grok-4.3",
+        "prompt_version": "classify_spender.v1",
+        "tools": [
+          "web_search"
+        ],
+        "tool_filters": {
+          "allowed_domains": [
+            "concerned-citizen.org"
+          ]
+        },
+        "response_id": "48f3ea49-7b93-9776-9e12-b7c75b6b8921",
+        "retrieved_at": "2026-09-06T03:36:55+00:00",
+        "citations": [
+          "https://concerned-citizen.org/",
+          "https://tvtropes.org/pmwiki/pmwiki.php/Webcomic/Concerned",
+          "https://www.concernedcitizensofstjohn.org/about-5",
+          "https://www.concerned-citizen.net/",
+          "https://change.org/p/concerned-citizen-of-canada?recruiter=1395189794&utm_campaign=starter_onboarding_0&utm_medium=twitter&utm_source=share_petition",
+          "https://www.consumerreports.org/toxic-chemicals-substances/the-power-of-citizen-science-a1450367401/",
+          "https://concernedcitizensanimalrescue.org/",
+          "https://www.citizensforethics.org/legal-action/letters-testimony/oversight-and-policy-letters/",
+          "https://www.youtube.com/watch?v=BSrFmRuO8JI",
+          "https://www.mcsweeneys.net/articles/i-am-a-concerned-citizen"
+        ],
+        "confidence": "high",
+        "review_status": "pending",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "review_note": null
+      }
+    }
+  }
 }

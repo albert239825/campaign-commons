@@ -15,7 +15,7 @@ const ASK_EXPLORE_TIMEOUT_MS = 60_000;
 const EXPLORE_REFUSAL_SHOWN = new Set<Extract<AskExploreResponse, { kind: "unsupported" }>["reason"]>(["no_query", "rejected_query", "query_failed", "empty"]);
 
 /**
- * Plain-English question box. Every non-empty question first goes to exploratory graph mode (D-83), while the
+ * Plain-English question box. Every non-empty question first goes to exploratory graph mode (D-85), while the
  * deterministic resolver supplies a related precomputed page link. If the graph is unavailable, the browser falls
  * back to that page or its deterministic refusal.
  */

@@ -497,5 +497,60 @@
       "last_date": "2024-10-08",
       "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00541433&payee_name=UPS"
     }
-  ]
+  ],
+  "x_enrichment": {
+    "issue_focus": {
+      "kind": "single_issue",
+      "issue_ids": [
+        "guns"
+      ],
+      "description": "Hunter Action Fund is the only super PAC dedicated to activating pro-hunting voters in critical elections to preserve the right to hunt and fish and address hunting and wildlife conservation issues.",
+      "basis": {
+        "basis": "inferred",
+        "rule": "x_issue_focus",
+        "source_urls": [
+          "https://www.hunteractionfund.org/",
+          "https://www.fec.gov/data/committee/C00541433/"
+        ],
+        "checked_by": null,
+        "checked_at": null
+      },
+      "label": "Machine-tagged from the committee's own website (grok-4.3, 2026-09-06); not part of the record",
+      "quote": "Hunter Action Fund (HAF) is the only super PAC in the nation dedicated entirely to activating pro-hunting voters in critical elections across the country.",
+      "provenance": {
+        "tagged_by": "xai-grok-4.3-2026-09-06",
+        "tagged_at": "2026-09-06",
+        "model": "grok-4.3",
+        "prompt_version": "classify_spender.v1",
+        "tools": [
+          "web_search"
+        ],
+        "tool_filters": {},
+        "response_id": "4ee2a670-a3f4-90ea-9aa5-5783c2af39dd",
+        "retrieved_at": "2026-09-06T03:36:35+00:00",
+        "citations": [
+          "https://apexshield..com/",
+          "https://www.likedogsandcats..com/farmington/dog-vaccinations-farmington-ut/",
+          "https://.com/blog/tags/architecture",
+          "https://.com/blog/2009/07/",
+          "https://vault12..com/blog/how-it-works-vault12-digital-inheritance-2652564751.html",
+          "https://www.likedogsandcats..com/hermison/pet-euthanasia-hermison-or/",
+          "https://.com/blog/safe-patient-project-and-wwwstophospitalinfectionsorg/",
+          "https://www.likedogsandcats..com/huntington/dog-dentist-huntington-ind/",
+          "https://www.likedogsandcats..com/tooele/spaying-and-neutering-tooele-ut/",
+          "https://www.likedogsandcats..com/crawfordsville/animal-hospital-crawfordsville-in/",
+          "https://www.hunteractionfund.org/",
+          "https://safariclub.org/protect-hunting/hunter-action-fund/",
+          "https://www.youtube.com/watch?v=d2thlT0D-wI",
+          "https://static1.squarespace.com/static/5d39310e96ef000001b54025/t/6846dbd2cb4122097d0ed0b3/1749474263454/HF_Annual+Report_2024_For+Web_Final.pdf",
+          "https://www.backcountryhunters.org/media/stalking-wildness-bhas-wilderness-warriors"
+        ],
+        "confidence": "high",
+        "review_status": "pending",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "review_note": null
+      }
+    }
+  }
 }

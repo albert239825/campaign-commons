@@ -867,5 +867,65 @@
       "last_date": "2024-10-30",
       "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C90020363&payee_name=FEDEX+OFFICE"
     }
-  ]
+  ],
+  "x_enrichment": {
+    "issue_focus": {
+      "kind": "multi_issue",
+      "issue_ids": [
+        "immigration"
+      ],
+      "description": "We organize, advocate, and fight for the civil, immigrant and human rights of all people in our community which include the low-income, recent immigrant, limited English proficient, undocumented, queer, young people, seniors, and women.",
+      "basis": {
+        "basis": "inferred",
+        "rule": "x_issue_focus",
+        "source_urls": [
+          "https://nakasecactionfund.org/",
+          "https://www.fec.gov/data/committee/C90020363/"
+        ],
+        "checked_by": null,
+        "checked_at": null
+      },
+      "label": "Machine-tagged from the committee's own website (grok-4.3, 2026-09-06); not part of the record",
+      "quote": "We organize, advocate, and fight for the civil, immigrant and human rights of all people in our community which include the low-income, recent immigrant, limited English proficient, undocumented, queer, young people, seniors, and women.",
+      "provenance": {
+        "tagged_by": "xai-grok-4.3-2026-09-06",
+        "tagged_at": "2026-09-06",
+        "model": "grok-4.3",
+        "prompt_version": "classify_spender.v1",
+        "tools": [
+          "web_search"
+        ],
+        "tool_filters": {},
+        "response_id": "f259ad01-1788-9f1f-9f87-08871ff56ba1",
+        "retrieved_at": "2026-09-06T03:16:09+00:00",
+        "citations": [
+          "https://nakasecactionfund.org/",
+          "https://www.guidestar.org/profile/87-0752611",
+          "https://nakasecactionfund.org/2025-policy-texas/",
+          "https://www.influencewatch.org/non-profit/national-korean-american-service-and-education-consortium-nakasec/",
+          "https://nakasec.org/about-us/our-story/",
+          "https://www.causeiq.com/organizations/nakasec-action-fund,870752611/",
+          "https://www.charitynavigator.org/ein/870752611",
+          "https://nakasecactionfund.org/2024ga/",
+          "https://nakasecactionfund.org/new-jersey/",
+          "https://nakasec.org/",
+          "https://www.genarchives..com/Towne-Bowditch/g0/p310.htm",
+          "https://apexshield..com/",
+          "https://www.likedogsandcats..com/beaverton/dog-vaccinations-beaverton-or/",
+          "https://www.genarchives..com/Towne-Bowditch/g0/p627.htm",
+          "https://.com/blog/pre-dental-education-at-the-center-for-special-dentistry/",
+          "https://.com/nutrition-supplements",
+          "https://www.genarchives..com/Towne-Bowditch/g0/p213.htm",
+          "https://www.genarchives..com/Towne-Bowditch/g0/p633.htm",
+          "https://www.genarchives..com/Towne-Bowditch/g0/p466.htm",
+          "https://www.genarchives..com/Towne-Bowditch/g0/p635.htm"
+        ],
+        "confidence": "high",
+        "review_status": "pending",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "review_note": null
+      }
+    }
+  }
 }

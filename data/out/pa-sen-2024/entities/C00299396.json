@@ -588,5 +588,54 @@
       "last_date": "2024-10-30",
       "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00299396&payee_name=CRESSEY+STRATEGIES"
     }
-  ]
+  ],
+  "x_enrichment": {
+    "issue_focus": {
+      "kind": "general_partisan",
+      "issue_ids": [],
+      "description": "As the voice of Italian Americans in the Democratic Party, we strive to ensure that our community’s values and priorities are heard in Washington, D.C., in the Democratic Party, and beyond while our political action committee supports Italian American candidates for Congress and major statewide offices and promotes appointments of qualified Italian Americans to federal positions.",
+      "basis": {
+        "basis": "inferred",
+        "rule": "x_issue_focus",
+        "source_urls": [
+          "https://italianamericandems.org/",
+          "https://www.fec.gov/data/committee/C00299396/"
+        ],
+        "checked_by": null,
+        "checked_at": null
+      },
+      "label": "Machine-tagged from the committee's own website (grok-4.3, 2026-09-06); not part of the record",
+      "quote": "As the voice of Italian Americans in the Democratic Party, we strive to ensure that our community’s values and priorities are heard in Washington, D.C., in the Democratic Party, and beyond.",
+      "provenance": {
+        "tagged_by": "xai-grok-4.3-2026-09-06",
+        "tagged_at": "2026-09-06",
+        "model": "grok-4.3",
+        "prompt_version": "classify_spender.v1",
+        "tools": [
+          "web_search"
+        ],
+        "tool_filters": {
+          "allowed_domains": [
+            "italianamericandems.org"
+          ]
+        },
+        "response_id": "b366e537-41ba-9f6b-acd9-49d8dfdfc856",
+        "retrieved_at": "2026-09-06T03:24:55+00:00",
+        "citations": [
+          "https://italianamericandems.org/about-us/",
+          "https://italianamericandems.org/",
+          "https://italianamericandems.org/italian-american-democrats-endorse-tom-suozzi-for-u-s-representative-from-new-york/",
+          "https://italianamericandems.org/news-events/",
+          "https://italianamericandems.org/elections/",
+          "https://italianamericandems.org/membership/",
+          "https://italianamericandems.org/administration/"
+        ],
+        "confidence": "high",
+        "review_status": "pending",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "review_note": null
+      }
+    }
+  }
 }

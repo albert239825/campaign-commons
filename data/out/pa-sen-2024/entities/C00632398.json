@@ -472,5 +472,51 @@
       "last_date": "2024-09-30",
       "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00632398&payee_name=LIFTOFF+CAMPAIGNS"
     }
-  ]
+  ],
+  "x_enrichment": {
+    "issue_focus": {
+      "kind": "general_partisan",
+      "issue_ids": [],
+      "description": "Let America Vote fights back against proposals that make it harder for eligible voters to exercise their constitutional right to cast a ballot and advocates for pro-voter policies.",
+      "basis": {
+        "basis": "inferred",
+        "rule": "x_issue_focus",
+        "source_urls": [
+          "https://letamericavote.org/about/",
+          "https://www.fec.gov/data/committee/C00632398/"
+        ],
+        "checked_by": null,
+        "checked_at": null
+      },
+      "label": "Machine-tagged from the committee's own website (grok-4.3, 2026-09-06); not part of the record",
+      "quote": "Our democracy is under attack. It’s not just foreign interference in our elections: Politicians here in America are attacking our right to vote. Politicians are trying to pick their voters instead of voters picking their politicians. We can’t let that happen.",
+      "provenance": {
+        "tagged_by": "xai-grok-4.3-2026-09-06",
+        "tagged_at": "2026-09-06",
+        "model": "grok-4.3",
+        "prompt_version": "classify_spender.v1",
+        "tools": [
+          "web_search"
+        ],
+        "tool_filters": {
+          "allowed_domains": [
+            "letamericavote.org"
+          ]
+        },
+        "response_id": "b3d24921-c255-93d6-ab75-7971e1d1a4c9",
+        "retrieved_at": "2026-09-06T03:35:04+00:00",
+        "citations": [
+          "https://letamericavote.org/wp-content/uploads/2018/01/Voter-Guide.pdf",
+          "https://letamericavote.org/wp-content/uploads/2020/07/FactsAboutVBM.pdf",
+          "https://www.letamericavote.org/",
+          "https://letamericavote.org/about/"
+        ],
+        "confidence": "high",
+        "review_status": "pending",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "review_note": null
+      }
+    }
+  }
 }

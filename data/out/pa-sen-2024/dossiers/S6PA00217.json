@@ -864,5 +864,488 @@
     "fec_url": "https://www.fec.gov/data/candidate/S6PA00217/?cycle=2024&election_full=false",
     "congress_url": "https://www.congress.gov/member/robert-casey/C001070",
     "campaign_site": null
+  },
+  "enrichment": {
+    "stances": [
+      {
+        "issue_id": "abortion",
+        "summary": "Senator Casey cosponsored a resolution reaffirming access to emergency health care including abortion care. He cosponsored the Access to Family Building Act to protect nationwide access to IVF and other assisted reproductive technology. He cosponsored the Right to Contraception Act. He voted in favor of the Reproductive Freedom for Women Act.",
+        "direction_proposed": 2,
+        "confidence": "high",
+        "sources": [
+          {
+            "url": "https://www.coons.senate.gov/news/press-releases/senators-carper-coons-cosponsor-resolution-reaffirming-access-to-emergency-health-care-including-abortion-care/",
+            "publisher": "U.S. Senate",
+            "published_on": "2024-09-20",
+            "excerpt": "In addition to Senators Carper and Coons, this resolution is cosponsored by Senators ... Bob Casey (D-Pa.)",
+            "excerpt_verified": true
+          },
+          {
+            "url": "https://www.welch.senate.gov/welch-joins-bill-to-protect-ivf-access-following-alabama-supreme-court-ruling/",
+            "publisher": "U.S. Senate",
+            "published_on": "2024-03-04",
+            "excerpt": "the Access to Family Building Act ... is now co-sponsored by U.S. Senators ... Bob Casey (D-Pa.)",
+            "excerpt_verified": true
+          },
+          {
+            "url": "https://www.markey.senate.gov/news/press-releases/senators-markey-schumer-hirono-duckworth-and-colleagues-blast-republicans-for-blocking-passage-of-right-to-contraception-act",
+            "publisher": "U.S. Senate",
+            "published_on": "2024-06-05",
+            "excerpt": "Cosponsors of the Right to Contraception Act in the Senate include: ... Bob Casey (D-Pa.)",
+            "excerpt_verified": true
+          },
+          {
+            "url": "https://votesmart.org/candidate/key-votes/2541/bob-casey-jr/75/reproduction",
+            "publisher": "Vote Smart",
+            "published_on": "2024-09-17",
+            "excerpt": "Bill No. S 4554 ... Passage - Bill Passed - Senate (49 - 44) | Date 07/10/2024 ... S 4445 ... Cloture Vote",
+            "excerpt_verified": false
+          }
+        ],
+        "posts": [
+          {
+            "url": "https://x.com/SenBobCasey/status/1836139444413374828",
+            "excerpt": "Make no mistake: IVF acess is in jeopardy because of the fall of Roe v Wade.",
+            "posted_on": "2024-09-17"
+          },
+          {
+            "url": "https://x.com/SenBobCasey/status/1811161600092688666",
+            "excerpt": "Senate Republicans just blocked another bill to protect reproductive rights, just one month after blocking bills to protect access to IVF and contraception.",
+            "posted_on": "2024-07-10"
+          },
+          {
+            "url": "https://x.com/SenBobCasey/status/1805248576055828806",
+            "excerpt": "Reproductive rights are under attack. I won't stop fighting to restore the right that was ripped away from women two years ago.",
+            "posted_on": "2024-06-24"
+          },
+          {
+            "url": "https://x.com/SenBobCasey/status/1805248574646534287",
+            "excerpt": "In the two years since the overturning of Roe v. Wade, the impacts of the Supreme Court's dangerous decision are clear.",
+            "posted_on": "2024-06-24"
+          }
+        ],
+        "provenance": {
+          "tagged_by": "xai-grok-4.3-2026-09-06",
+          "tagged_at": "2026-09-06",
+          "model": "grok-4.3",
+          "prompt_version": "summarize_stance.v1",
+          "tools": [
+            "web_search",
+            "x_search"
+          ],
+          "tool_filters": {
+            "allowed_x_handles": [
+              "SenBobCasey",
+              "Bob_Casey"
+            ],
+            "from_date": "2023-01-01",
+            "to_date": "2024-11-05"
+          },
+          "response_id": "f7d2dcf5-bf00-91a9-a53f-2e33fdea2f29",
+          "retrieved_at": "2026-09-06T04:10:47+00:00",
+          "citations": [
+            "https://www.coons.senate.gov/news/press-releases/senators-carper-coons-cosponsor-resolution-reaffirming-access-to-emergency-health-care-including-abortion-care/",
+            "https://www.welch.senate.gov/welch-joins-bill-to-protect-ivf-access-following-alabama-supreme-court-ruling/",
+            "https://www.markey.senate.gov/news/press-releases/senators-markey-schumer-hirono-duckworth-and-colleagues-blast-republicans-for-blocking-passage-of-right-to-contraception-act",
+            "https://x.com/SenBobCasey/status/1836139444413374828",
+            "https://x.com/SenBobCasey/status/1811161600092688666",
+            "https://x.com/SenBobCasey/status/1805248576055828806",
+            "https://x.com/SenBobCasey/status/1805248574646534287"
+          ],
+          "confidence": "high",
+          "review_status": "pending",
+          "reviewed_by": null,
+          "reviewed_at": null,
+          "review_note": null
+        },
+        "basis": "inferred",
+        "label": "Machine-summarised from news/web (grok-4.3, 2026-09-06); not part of the record"
+      },
+      {
+        "issue_id": "guns",
+        "summary": "Senator Bob Casey cosponsored the Background Check Expansion Act to require background checks for all firearm sales and transfers. He has stated support for expanding background checks to close loopholes in private sales, online sales, and gun shows while preserving certain exceptions such as gifts to family members. Casey voted in favor of the Bipartisan Safer Communities Act.",
+        "direction_proposed": 1,
+        "confidence": "high",
+        "sources": [
+          {
+            "url": "https://www.murphy.senate.gov/newsroom/press-releases/murphy-leads-47-senators-to-reintroduce-background-check-expansion-act",
+            "publisher": "U.S. Senator Chris Murphy",
+            "published_on": "2023-02-16",
+            "excerpt": "U.S. Senators ... Bob Casey (D-Pa.) ... reintroducing the Background Check Expansion Act to expand federal background checks to all gun sales.",
+            "excerpt_verified": true
+          }
+        ],
+        "posts": [
+          {
+            "url": "https://x.com/SenBobCasey/status/1831409746441859272",
+            "excerpt": "What a tragic and senseless way to start a school year. I'm praying for the victims and all those affected by the shooting today at Apalachee High School. We cannot continue letting these senseless acts of violence go unchecked. We need gun safety reform, and we need it now.",
+            "posted_on": "2024-09-04"
+          },
+          {
+            "url": "https://x.com/SenBobCasey/status/1801649767665025033",
+            "excerpt": "Bump stocks made the 2017 Las Vegas shooting the deadliest mass shooting in our Nation's history. This dangerous ruling makes Congress' duty to pass commonsense gun safety laws all the more urgent.",
+            "posted_on": "2024-06-14"
+          },
+          {
+            "url": "https://x.com/SenBobCasey/status/1776343552932348344",
+            "excerpt": "I’ve said it before, and I'll say it again - people convicted of hate crimes shouldn't have access to firearms. It really is that simple. I've introduced the Disarm Hate Act to make sure dangerous people can't buy guns and hurt others.",
+            "posted_on": "2024-04-05"
+          },
+          {
+            "url": "https://x.com/SenBobCasey/status/1771975286696849868",
+            "excerpt": "6 years ago, students led the March for Our Lives to demand gun safety laws in the aftermath of the Parkland shooting, but gun violence is still the top killer of kids and teenagers in America. That's why I'll keep fighting for stronger, common-sense gun safety legislation.",
+            "posted_on": "2024-03-24"
+          }
+        ],
+        "provenance": {
+          "tagged_by": "xai-grok-4.3-2026-09-06",
+          "tagged_at": "2026-09-06",
+          "model": "grok-4.3",
+          "prompt_version": "summarize_stance.v1",
+          "tools": [
+            "web_search",
+            "x_search"
+          ],
+          "tool_filters": {
+            "allowed_x_handles": [
+              "SenBobCasey",
+              "Bob_Casey"
+            ],
+            "from_date": "2023-01-01",
+            "to_date": "2024-11-05"
+          },
+          "response_id": "0b14b7df-5766-90d1-be21-f1c6c99ace42",
+          "retrieved_at": "2026-09-06T04:10:57+00:00",
+          "citations": [
+            "https://www.murphy.senate.gov/newsroom/press-releases/murphy-leads-47-senators-to-reintroduce-background-check-expansion-act",
+            "https://x.com/SenBobCasey/status/1831409746441859272",
+            "https://x.com/SenBobCasey/status/1801649767665025033",
+            "https://x.com/SenBobCasey/status/1776343552932348344",
+            "https://x.com/SenBobCasey/status/1771975286696849868"
+          ],
+          "confidence": "high",
+          "review_status": "pending",
+          "reviewed_by": null,
+          "reviewed_at": null,
+          "review_note": null
+        },
+        "basis": "inferred",
+        "label": "Machine-summarised from news/web (grok-4.3, 2026-09-06); not part of the record"
+      },
+      {
+        "issue_id": "healthcare",
+        "summary": "Senator Bob Casey supported Inflation Reduction Act provisions capping Medicare insulin costs at $35 monthly and out-of-pocket drug expenses at $2,000 annually while enabling Medicare drug price negotiation. He introduced the Capping Prescription Costs Act to extend out-of-pocket caps to commercial insurance and the Cutting Copays Act to eliminate generic drug copays for low-income Medicare beneficiaries. Casey advocated expanded Medicaid access through automatic child enrollment and opposed lifetime coverage limits.",
+        "direction_proposed": 2,
+        "confidence": "high",
+        "sources": [
+          {
+            "url": "https://www.aging.senate.gov/press-releases/casey-releases-fact-sheet-detailing-how-the-inflation-reduction-act-has-lowered-health-care-costs-for-pennsylvanians",
+            "publisher": "Senate Committee on Aging",
+            "published_on": "2024-02-12",
+            "excerpt": "Fact sheet shows how IRA health care provisions Casey fought for have already lowered drug costs and health care premiums for hundreds of thousands of Pennsylvanians.",
+            "excerpt_verified": true
+          },
+          {
+            "url": "https://www.aging.senate.gov/press-releases/casey-warnock-introduce-bill-to-lower-prescription-costs-for-millions-of-americans",
+            "publisher": "Senate Committee on Aging",
+            "published_on": "2024-07-11",
+            "excerpt": "Casey’s bill builds on the success of the Inflation Reduction Act, extends out-of-pocket caps to commercial health care market.",
+            "excerpt_verified": true
+          },
+          {
+            "url": "https://www.aging.senate.gov/press-releases/casey-introduces-bill-to-eliminate-copays-for-hundreds-of-thousands-of-pennsylvania-seniors",
+            "publisher": "Senate Committee on Aging",
+            "published_on": "2024-03-13",
+            "excerpt": "The Cutting Copays Act would remove costs for generic medications for certain Medicare Part D Low Income Subsidy Program enrollees.",
+            "excerpt_verified": true
+          },
+          {
+            "url": "https://www.aging.senate.gov/press-releases/casey-introduces-bill-to-expand-health-care-access-to-every-child",
+            "publisher": "Senate Committee on Aging",
+            "published_on": "2023-09-15",
+            "excerpt": "The Medicaid for Every Child Act would ensure that every American child is automatically enrolled in Medicaid at birth.",
+            "excerpt_verified": true
+          }
+        ],
+        "posts": [
+          {
+            "url": "https://x.com/SenBobCasey/status/1844110192042221965",
+            "excerpt": "We can never fully repay our servicemembers and their families for their sacrifice, but we can, and we must, ensure that they get the health care they deserve when they return home.",
+            "posted_on": "2024-10-09"
+          },
+          {
+            "url": "https://x.com/SenBobCasey/status/1831773416069668989",
+            "excerpt": "Millions of Americans are struggling to afford their prescription drugs, that's why I fought to give Medicare the power to negotiate the cost of medications.",
+            "posted_on": "2024-09-05"
+          },
+          {
+            "url": "https://x.com/SenBobCasey/status/1829270111838183669",
+            "excerpt": "Many Americans have to choose between going to the doctor and paying their bills. I’m fighting to ensure that all Pennsylvanians can access quality health care without worrying about whether they can afford it.",
+            "posted_on": "2024-08-29"
+          },
+          {
+            "url": "https://x.com/SenBobCasey/status/1818287343163654620",
+            "excerpt": "Medicare and Medicaid are sacred promises that we’ve made to Americans. I’ll always fight to protect these programs for the millions of Pennsylvanians that rely on them.",
+            "posted_on": "2024-07-30"
+          }
+        ],
+        "provenance": {
+          "tagged_by": "xai-grok-4.3-2026-09-06",
+          "tagged_at": "2026-09-06",
+          "model": "grok-4.3",
+          "prompt_version": "summarize_stance.v1",
+          "tools": [
+            "web_search",
+            "x_search"
+          ],
+          "tool_filters": {
+            "allowed_x_handles": [
+              "SenBobCasey",
+              "Bob_Casey"
+            ],
+            "from_date": "2023-01-01",
+            "to_date": "2024-11-05"
+          },
+          "response_id": "ddb7e8a7-3755-9d9a-9798-15f6f761fbd5",
+          "retrieved_at": "2026-09-06T04:07:46+00:00",
+          "citations": [
+            "https://www.aging.senate.gov/press-releases/casey-releases-fact-sheet-detailing-how-the-inflation-reduction-act-has-lowered-health-care-costs-for-pennsylvanians",
+            "https://www.aging.senate.gov/press-releases/casey-warnock-introduce-bill-to-lower-prescription-costs-for-millions-of-americans",
+            "https://www.aging.senate.gov/press-releases/casey-introduces-bill-to-eliminate-copays-for-hundreds-of-thousands-of-pennsylvania-seniors",
+            "https://www.aging.senate.gov/press-releases/casey-introduces-bill-to-expand-health-care-access-to-every-child",
+            "https://x.com/SenBobCasey/status/1844110192042221965",
+            "https://x.com/SenBobCasey/status/1831773416069668989",
+            "https://x.com/SenBobCasey/status/1829270111838183669",
+            "https://x.com/SenBobCasey/status/1818287343163654620"
+          ],
+          "confidence": "high",
+          "review_status": "pending",
+          "reviewed_by": null,
+          "reviewed_at": null,
+          "review_note": null
+        },
+        "basis": "inferred",
+        "label": "Machine-summarised from news/web (grok-4.3, 2026-09-06); not part of the record"
+      },
+      {
+        "issue_id": "labor_trade",
+        "summary": "Senator Casey received a 100% rating from the AFL-CIO on labor issues in 2023. He co-sponsored legislation to strengthen trade remedy laws against unfair foreign practices and protect American manufacturing. He supported measures to raise wages, including phasing out subminimum wages for workers with disabilities, and backed bills protecting warehouse workers from unsafe quotas.",
+        "direction_proposed": 1,
+        "confidence": "high",
+        "sources": [
+          {
+            "url": "https://justfacts.votesmart.org/candidate/evaluations/2541/bob-casey-jr/43/labor-unions",
+            "publisher": "Vote Smart",
+            "published_on": null,
+            "excerpt": "AFL-CIO (American Federation of Labor and Congress of Industrial Organizations) 100% 2023",
+            "excerpt_verified": false
+          },
+          {
+            "url": "https://www.fetterman.senate.gov/casey-fetterman-introduce-bipartisan-fair-trade-legislation-to-level-the-playing-field-for-american-workers/",
+            "publisher": "U.S. Senate",
+            "published_on": "2023-06-08",
+            "excerpt": "Pennsylvania U.S. Senators Bob Casey and John Fetterman on Wednesday introduced the Leveling the Playing Field 2.0 Act, bipartisan legislation ... to strengthen U.S. trade remedy laws to combat unfair trade practices and protect American workers.",
+            "excerpt_verified": true
+          },
+          {
+            "url": "https://www.aging.senate.gov/press-releases/casey-daines-scott-mcmorris-rodgers-announce-bipartisan-bill-to-phase-out-subminimum-wage-for-people-with-disabilities",
+            "publisher": "U.S. Senate",
+            "published_on": "2023-02-27",
+            "excerpt": "U.S. Senators Bob Casey (D-PA) and Steve Daines (R-MT) ... are announcing introduction of the Transformation to Competitive Integrated Employment Act, (TCIEA) legislation to end subminimum wages for people with disabilities.",
+            "excerpt_verified": true
+          },
+          {
+            "url": "https://www.smith.senate.gov/u-s-senators-tina-smith-ed-markey-bob-casey-introduce-warehouse-worker-protection-act-to-address-dangerous-warehouse-quota-systems/",
+            "publisher": "U.S. Senate",
+            "published_on": "2024-05-02",
+            "excerpt": "U.S. Senator ... Bob Casey (D-Pa.) ... introduced the Warehouse Worker Protection Act, legislation that would protect warehouse workers by prohibiting dangerous work speed quotas that lead to high rates of worker injuries.",
+            "excerpt_verified": true
+          }
+        ],
+        "posts": [
+          {
+            "url": "https://x.com/SenBobCasey/status/1849910895704527164",
+            "excerpt": "Pennsylvania workers are the backbone of our Nation’s economy. I will always fight to support our workers, create good union jobs, and bring investments to the Commonwealth that help Pennsylvanians support their families.",
+            "posted_on": "2024-10-25"
+          },
+          {
+            "url": "https://x.com/SenBobCasey/status/1833558221916672302",
+            "excerpt": "China’s rising economic aggression will put our security, workers, and communities at risk if we don’t fight back. Today I introduced legislation to help to level the playing field for American workers and crack down on trade cheating and dangerous investments in Chinese markets.",
+            "posted_on": "2024-09-10"
+          },
+          {
+            "url": "https://x.com/SenBobCasey/status/1830646876112339141",
+            "excerpt": "Unions and working families built the American middle class and continue to grow our economy every day. This Labor Day I want to celebrate our workers and reaffirm my commitment to protecting workers’ rights. Happy Labor Day!",
+            "posted_on": "2024-09-02"
+          },
+          {
+            "url": "https://x.com/SenBobCasey/status/1805341191078396198",
+            "excerpt": "Last week I joined union leaders and retirees to announce that more than 6,700 Pennsylvania bakery and confectionery workers' pensions would be protected, thanks to the American Rescue Plan. Standing up for PA workers and their families will always be one of my top priorities.",
+            "posted_on": "2024-06-24"
+          }
+        ],
+        "provenance": {
+          "tagged_by": "xai-grok-4.3-2026-09-06",
+          "tagged_at": "2026-09-06",
+          "model": "grok-4.3",
+          "prompt_version": "summarize_stance.v1",
+          "tools": [
+            "web_search",
+            "x_search"
+          ],
+          "tool_filters": {
+            "allowed_x_handles": [
+              "SenBobCasey",
+              "Bob_Casey"
+            ],
+            "from_date": "2023-01-01",
+            "to_date": "2024-11-05"
+          },
+          "response_id": "064b9dcd-70c3-93c5-b60b-c6d9ff3bf25b",
+          "retrieved_at": "2026-09-06T04:12:12+00:00",
+          "citations": [
+            "https://www.fetterman.senate.gov/casey-fetterman-introduce-bipartisan-fair-trade-legislation-to-level-the-playing-field-for-american-workers/",
+            "https://www.aging.senate.gov/press-releases/casey-daines-scott-mcmorris-rodgers-announce-bipartisan-bill-to-phase-out-subminimum-wage-for-people-with-disabilities",
+            "https://www.smith.senate.gov/u-s-senators-tina-smith-ed-markey-bob-casey-introduce-warehouse-worker-protection-act-to-address-dangerous-warehouse-quota-systems/",
+            "https://x.com/SenBobCasey/status/1849910895704527164",
+            "https://x.com/SenBobCasey/status/1833558221916672302",
+            "https://x.com/SenBobCasey/status/1830646876112339141",
+            "https://x.com/SenBobCasey/status/1805341191078396198"
+          ],
+          "confidence": "high",
+          "review_status": "pending",
+          "reviewed_by": null,
+          "reviewed_at": null,
+          "review_note": null
+        },
+        "basis": "inferred",
+        "label": "Machine-summarised from news/web (grok-4.3, 2026-09-06); not part of the record"
+      },
+      {
+        "issue_id": "tax_budget",
+        "summary": "Senator Bob Casey supports reversing the 2017 tax cuts for the ultra-wealthy and large corporations. He advocates for tax policies that benefit workers and the middle class, including middle-class tax cuts and an expanded child tax credit. Casey voted in favor of the Fiscal Responsibility Act of 2023 to raise the debt limit and avoid default. He has opposed extensions of the 2017 tax cuts that would increase the deficit.",
+        "direction_proposed": 1,
+        "confidence": "medium",
+        "sources": [
+          {
+            "url": "https://keystonenewsroom.com/2024/10/18/bob-casey-calls-for-child-tax-credits-and-middle-class-tax-cuts-at-new-cumberland-event/",
+            "publisher": "Keystone Newsroom",
+            "published_on": "2024-10-18",
+            "excerpt": "Casey called for letting Donald Trump’s 2017 tax cuts for billionaires and corporations expire while pushing for renewing the child tax credit and for cutting taxes for middle class Americans.",
+            "excerpt_verified": true
+          }
+        ],
+        "posts": [
+          {
+            "url": "https://x.com/SenBobCasey/status/1825992553889415273",
+            "excerpt": "Raising kids in America is expensive. When we expanded the Child Tax Credit in 2021, I heard from parents who were able to spend more time with their kids and put them in activities for the first time.",
+            "posted_on": "2024-08-20"
+          },
+          {
+            "url": "https://x.com/SenBobCasey/status/1818293931827667090",
+            "excerpt": "In May, I pushed for the IRS to expand the Direct File program to make filing taxes free and easy for Pennsylvanians. I’m happy to announce in 2025 PA residents will be able to file and claim their taxes directly from the IRS.",
+            "posted_on": "2024-07-30"
+          },
+          {
+            "url": "https://x.com/SenBobCasey/status/1796254444843053335",
+            "excerpt": "This is good news. Americans should have an easy and free way to file their taxes. I’m proud to have voted for the Inflation Reduction Act to make this possible and I encourage Pennsylvanians to use this program next year.",
+            "posted_on": "2024-05-30"
+          },
+          {
+            "url": "https://x.com/SenBobCasey/status/1790815166554075206",
+            "excerpt": "For years, big corporations have been able to write union busting efforts off on their taxes. That's just plain wrong and I'm fighting to stop it.",
+            "posted_on": "2024-05-15"
+          }
+        ],
+        "provenance": {
+          "tagged_by": "xai-grok-4.3-2026-09-06",
+          "tagged_at": "2026-09-06",
+          "model": "grok-4.3",
+          "prompt_version": "summarize_stance.v1",
+          "tools": [
+            "web_search",
+            "x_search"
+          ],
+          "tool_filters": {
+            "allowed_x_handles": [
+              "SenBobCasey",
+              "Bob_Casey"
+            ],
+            "from_date": "2023-01-01",
+            "to_date": "2024-11-05"
+          },
+          "response_id": "f5d7a365-ab0b-94ac-9ff8-7328719aeac3",
+          "retrieved_at": "2026-09-06T04:11:18+00:00",
+          "citations": [
+            "https://keystonenewsroom.com/2024/10/18/bob-casey-calls-for-child-tax-credits-and-middle-class-tax-cuts-at-new-cumberland-event/",
+            "https://x.com/SenBobCasey/status/1825992553889415273",
+            "https://x.com/SenBobCasey/status/1818293931827667090",
+            "https://x.com/SenBobCasey/status/1796254444843053335",
+            "https://x.com/SenBobCasey/status/1790815166554075206"
+          ],
+          "confidence": "medium",
+          "review_status": "pending",
+          "reviewed_by": null,
+          "reviewed_at": null,
+          "review_note": null
+        },
+        "basis": "inferred",
+        "label": "Machine-summarised from news/web (grok-4.3, 2026-09-06); not part of the record"
+      },
+      {
+        "issue_id": "tech_ai",
+        "summary": "Senator Bob Casey led a letter to the Federal Trade Commission requesting information on tracking artificial intelligence use in scams targeting older Americans. He held a hearing on modern scams involving artificial intelligence. Senator Casey introduced the Section 508 Refresh Act to update requirements for federal agencies to make technology accessible to people with disabilities. Senator Casey introduced the No Robot Bosses Act to bar employers from relying solely on automated systems in employment decisions. Senator Casey introduced the Exploitative Workplace Surveillance and Technologies Task Force Act to examine workplace surveillance technologies.",
+        "direction_proposed": 1,
+        "confidence": "low",
+        "sources": [
+          {
+            "url": "https://www.duckworth.senate.gov/news/press-releases/duckworth-joins-casey-in-introducing-bill-to-make-federal-technology-more-accessible-for-people-with-disabilities",
+            "publisher": "U.S. Senator Tammy Duckworth",
+            "published_on": "2024-07-26",
+            "excerpt": "U.S. Senator Bob Casey (D-PA)—Chairman of the U.S. Senate Special Committee on Aging—along with U.S. Senators John Fetterman (D-PA) and Ron Wyden (D-OR) this week to introduce the Section 508 Refresh Act.",
+            "excerpt_verified": true
+          },
+          {
+            "url": "https://www.yahoo.com/news/sen-casey-rolls-bills-protect-120000819.html",
+            "publisher": "NBC News via Yahoo",
+            "published_on": "2023-09-11",
+            "excerpt": "Sen. Bob Casey, D-Pa., will unveil two new bills Thursday that target artificial intelligence by protecting workers from intrusive workplace surveillance and so-called robot bosses making hiring decisions.",
+            "excerpt_verified": true
+          }
+        ],
+        "posts": [],
+        "provenance": {
+          "tagged_by": "xai-grok-4.3-2026-09-06",
+          "tagged_at": "2026-09-06",
+          "model": "grok-4.3",
+          "prompt_version": "summarize_stance.v1",
+          "tools": [
+            "web_search",
+            "x_search"
+          ],
+          "tool_filters": {
+            "allowed_x_handles": [
+              "SenBobCasey",
+              "Bob_Casey"
+            ],
+            "from_date": "2023-01-01",
+            "to_date": "2024-11-05"
+          },
+          "response_id": "b8da3cb9-f354-9d93-8c2d-82464f95279d",
+          "retrieved_at": "2026-09-06T04:11:47+00:00",
+          "citations": [
+            "https://www.duckworth.senate.gov/news/press-releases/duckworth-joins-casey-in-introducing-bill-to-make-federal-technology-more-accessible-for-people-with-disabilities",
+            "https://www.yahoo.com/news/sen-casey-rolls-bills-protect-120000819.html"
+          ],
+          "confidence": "low",
+          "review_status": "pending",
+          "reviewed_by": null,
+          "reviewed_at": null,
+          "review_note": null
+        },
+        "basis": "inferred",
+        "label": "Machine-summarised from news/web (grok-4.3, 2026-09-06); not part of the record"
+      }
+    ]
   }
 }

@@ -1,6 +1,6 @@
 import { FLAG_LABELS, type FlagId } from "@campaign-commons/contracts";
 
-const FLAG_MEANINGS: Record<FlagId, string> = {
+export const FLAG_MEANINGS: Record<FlagId, string> = {
   popup: "Registered within ~60 days of the election, reported independent expenditures, and had filed no donor report at the time.",
   single_transfer_funded: "Roughly 90% or more of itemized receipts came from one counterparty (a committee, organization, or person).",
   shell_cluster: "Shares a street address, registered agent, or treasurer with other committees in this race.",

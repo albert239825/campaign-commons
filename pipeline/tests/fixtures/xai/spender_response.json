@@ -1,0 +1,39 @@
+{
+  "id": "resp-spender-fixture",
+  "usage": {
+    "input_tokens": 20,
+    "output_tokens": 10,
+    "cost_in_usd_ticks": 319789000
+  },
+  "output": [
+    {
+      "type": "web_search_call",
+      "action": {
+        "type": "search",
+        "query": "Example Committee mission",
+        "sources": [
+          {
+            "type": "url",
+            "url": "https://example.org/about"
+          }
+        ]
+      }
+    },
+    {
+      "type": "web_search_call",
+      "action": {
+        "type": "open_page",
+        "url": "https://example.org/about"
+      }
+    },
+    {
+      "type": "message",
+      "content": [
+        {
+          "type": "output_text",
+          "text": "{\"found\":true,\"kind\":\"single_issue\",\"issue_ids\":[\"healthcare\"],\"description\":\"The committee works to protect healthcare access.\",\"quote\":\"We work to protect healthcare access.\",\"source_url\":\"https://example.org/about\",\"confidence\":\"high\"}"
+        }
+      ]
+    }
+  ]
+}

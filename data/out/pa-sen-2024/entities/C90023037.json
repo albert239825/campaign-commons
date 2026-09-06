@@ -140,5 +140,60 @@
       "last_date": "2024-11-05",
       "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C90023037&payee_name=POPULATION+CONNECTION+ACTION+FUND"
     }
-  ]
+  ],
+  "x_enrichment": {
+    "issue_focus": {
+      "kind": "single_issue",
+      "issue_ids": [
+        "abortion"
+      ],
+      "description": "Population Connection Action Fund raises awareness of stabilizing world population sustainably, fights for global access to comprehensive reproductive health care including contraceptives and safe abortion, mobilizes its grassroots for progressive federal policies, and endorses supportive candidates.",
+      "basis": {
+        "basis": "inferred",
+        "rule": "x_issue_focus",
+        "source_urls": [
+          "https://www.populationconnectionaction.org/about-us/",
+          "https://www.fec.gov/data/committee/C90023037/"
+        ],
+        "checked_by": null,
+        "checked_at": null
+      },
+      "label": "Machine-tagged from the committee's own website (grok-4.3, 2026-09-06); not part of the record",
+      "quote": "Raising awareness of the need to stabilize world population at a level that can be sustained by Earth’s resources; Fighting to ensure that everyone in the world has access to comprehensive reproductive health care, including the full range of contraceptives and safe abortion care",
+      "provenance": {
+        "tagged_by": "xai-grok-4.3-2026-09-06",
+        "tagged_at": "2026-09-06",
+        "model": "grok-4.3",
+        "prompt_version": "classify_spender.v1",
+        "tools": [
+          "web_search"
+        ],
+        "tool_filters": {},
+        "response_id": "874f79f0-6438-9c09-b8ff-aed73ede40a9",
+        "retrieved_at": "2026-09-06T03:34:09+00:00",
+        "citations": [
+          "https://www.populationconnectionaction.org/about-us/",
+          "https://populationconnectionaction.org/about-us/",
+          "https://populationconnection.org/",
+          "https://www.populationconnectionaction.org/",
+          "https://www.populationconnectionaction.org/about-us/diversity-equity-inclusion-justice/",
+          "https://www.guidestar.org/profile/46-3083014",
+          "https://web.archive.org/web/20220816133807/https://www.populationconnectionaction.org/",
+          "https://populationconnection.org/act/",
+          "https://populationconnection.org/wp-content/uploads/2025/06/PopConn-2024-Consolidated-FS.pdf",
+          "https://populationconnection.org/wp-content/uploads/2026/02/PC_Brochure_Feb2026_12pt.pdf",
+          "https://www.genarchives..com/Towne-Bowditch/g0/p147.htm",
+          "https://apexshield..com/",
+          "https://www.genarchives..com/Towne-Bowditch/g0/p360.htm",
+          "https://www.genarchives..com/Towne-Bowditch/g0/p651.htm",
+          "https://www.genarchives..com/Towne-Bowditch/g0/p213.htm"
+        ],
+        "confidence": "high",
+        "review_status": "pending",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "review_note": null
+      }
+    }
+  }
 }

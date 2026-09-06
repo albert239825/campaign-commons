@@ -1,5 +1,5 @@
 /**
- * The allowlisted graph operations for Money Trails (D-81). Each operation is one fixed Cypher statement (or two) over
+ * The allowlisted graph operations for Money Trails (D-83). Each operation is one fixed Cypher statement (or two) over
  * the graph ./schema.ts describes, parameterised only by race id and the node ids the server has already resolved.
  * Nothing from the question, and nothing the model writes, is ever spliced into Cypher. Every operation returns the
  * same thing: a list of edges read from the graph, each with the `source_url` it was filed under — the facts a narrative

@@ -980,5 +980,61 @@
       "last_date": "2024-09-16",
       "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00341396&payee_name=BEN+%26+JERRY%27S+HOMEMADE%2C+INC."
     }
-  ]
+  ],
+  "x_enrichment": {
+    "issue_focus": {
+      "kind": "general_partisan",
+      "issue_ids": [],
+      "description": "MoveOn.org Political Action is a federal political action committee (PAC) which primarily helps members elect candidates who reflect our members’ values through a variety of activities aimed at influencing the outcome of elections.",
+      "basis": {
+        "basis": "inferred",
+        "rule": "x_issue_focus",
+        "source_urls": [
+          "https://front.moveon.org/about-us/",
+          "https://www.fec.gov/data/committee/C00341396/"
+        ],
+        "checked_by": null,
+        "checked_at": null
+      },
+      "label": "Machine-tagged from the committee's own website (grok-4.3, 2026-09-06); not part of the record",
+      "quote": "MoveOn.org Political Action is a federal political action committee (PAC) which primarily helps members elect candidates who reflect our members’ values through a variety of activities aimed at influencing the outcome of elections. We are focused on running powerful progressive advocacy campaigns and demonstrating MoveOn members’ power at the ballot box.",
+      "provenance": {
+        "tagged_by": "xai-grok-4.3-2026-09-06",
+        "tagged_at": "2026-09-06",
+        "model": "grok-4.3",
+        "prompt_version": "classify_spender.v1",
+        "tools": [
+          "web_search"
+        ],
+        "tool_filters": {
+          "allowed_domains": [
+            "moveon.org"
+          ]
+        },
+        "response_id": "33d3bab4-fded-9fd5-a565-9efca2409e92",
+        "retrieved_at": "2026-09-06T03:29:49+00:00",
+        "citations": [
+          "https://front.moveon.org/about-us/",
+          "https://sign.moveon.org/partnerships/union-of-concerned-scientists",
+          "https://front.moveon.org/what-we-accomplished-together-in-2023/",
+          "https://sign.moveon.org/petitions/this-pandemic-demands-a-systemic-response-an-urgent-message-from-the-poor-people-s-campaign",
+          "https://front.moveon.org/what-is-organizing-a-beginners-guide-to-building-people-power/",
+          "https://front.moveon.org/careers/",
+          "https://front.moveon.org/we-are-better-than-this-nyt-ad/",
+          "https://sign.moveon.org/petitions/demand-truth-and-accountability-from-public-officials",
+          "https://front.moveon.org/iranian-moveon-member-explains-why-you-should-speak-up/",
+          "https://sign.moveon.org/partnerships/jewish-community-action",
+          "https://front.moveon.org/moveon-launches-27m-program-to-ensure-dems-win-by-big-margins-in-the-midterms/",
+          "https://sign.moveon.org/partnerships/moveon-political-action",
+          "https://front.moveon.org/?download_id=69329&sdm_process_download=1",
+          "https://front.moveon.org/donation-faq/"
+        ],
+        "confidence": "high",
+        "review_status": "pending",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "review_note": null
+      }
+    }
+  }
 }

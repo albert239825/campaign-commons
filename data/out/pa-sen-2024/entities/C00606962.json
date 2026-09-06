@@ -797,5 +797,62 @@
       "last_date": "2024-10-23",
       "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00606962&payee_name=CCM%26CO"
     }
-  ]
+  ],
+  "x_enrichment": {
+    "issue_focus": {
+      "kind": "multi_issue",
+      "issue_ids": [
+        "labor_trade"
+      ],
+      "description": "The Working Families Party is regular people coming together across our differences to make a better future for us all. We’re a multiracial party that fights for workers over bosses and people over the powerful. We want an America which realizes the promise – unrealized in our history – of freedom and equality for all.",
+      "basis": {
+        "basis": "inferred",
+        "rule": "x_issue_focus",
+        "source_urls": [
+          "https://workingfamilies.org/about/",
+          "https://www.fec.gov/data/committee/C00606962/"
+        ],
+        "checked_by": null,
+        "checked_at": null
+      },
+      "label": "Machine-tagged from the committee's own website (grok-4.3, 2026-09-06); not part of the record",
+      "quote": "The Working Families Party is regular people coming together across our differences to make a better future for us all. We’re a multiracial party that fights for workers over bosses and people over the powerful. We want an America which realizes the promise – unrealized in our history – of freedom and equality for all.",
+      "provenance": {
+        "tagged_by": "xai-grok-4.3-2026-09-06",
+        "tagged_at": "2026-09-06",
+        "model": "grok-4.3",
+        "prompt_version": "classify_spender.v1",
+        "tools": [
+          "web_search"
+        ],
+        "tool_filters": {},
+        "response_id": "8613e994-79bf-984c-8045-265efb451875",
+        "retrieved_at": "2026-09-06T03:11:55+00:00",
+        "citations": [
+          "https://workingfamilies.org/about/",
+          "https://workingfamilies.org/guarantee/",
+          "https://workingfamilies.org/the-peoples-charter/",
+          "https://workingfamilies.org/?refcode=WFP-NatSocial",
+          "https://workingfamilies.org/2025/12/2025s-working-families-party-wave/",
+          "https://workingfamilies.org/2026/07/southern-made-lead-where-you-live/",
+          "https://workingfamilies.org/working-families-national-committee/",
+          "https://workingfamilies.org/get-active/",
+          "https://workingfamilies.org/2026/05/memo-pa-wfps-work-in-the-2026-primary-elections/",
+          "https://workingfamilies.org/state/massachusetts/",
+          "https://www.fec.gov/data/committee/C00606962/",
+          "https://www.linkedin.com/company/working-families-party",
+          "https://www.influencewatch.org/political-party/working-families-party/",
+          "http://campaigns.organizefor.org/partnerships/working-families-party-2",
+          "https://www.caworkingfamilies.org/",
+          "https://medium.com/@WorkingFamilies/what-happens-next-dcdf37f23c34",
+          "https://www.idealist.org/en/nonprofit/6144272eef93418a8aaac0eab3a98668-working-families-kings-county"
+        ],
+        "confidence": "high",
+        "review_status": "pending",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "review_note": null
+      }
+    }
+  }
 }

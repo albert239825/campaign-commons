@@ -390,7 +390,7 @@ def test_vendor_files_get_reverse_ads_deduped_and_enrich_is_idempotent() -> None
     assert changed2 == set() and counts2.links_by_basis == counts.links_by_basis
     notes = gallery["notes"]
     assert isinstance(notes, list)
-    assert notes[0] == "Base note from campaign_commons.ads." and sum(n.startswith(NOTE_PREFIX) for n in notes) == 3
+    assert notes[0] == "Base note from campaign_commons.ads." and sum(n.startswith(NOTE_PREFIX) for n in notes) == 4
 
 
 def test_patch_vendor_ads_replaces_same_ad_and_reports_change() -> None:

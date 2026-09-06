@@ -549,5 +549,60 @@
       "last_date": "2024-11-01",
       "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00530766&payee_name=THE+LUKENS+COMPANY"
     }
-  ]
+  ],
+  "x_enrichment": {
+    "issue_focus": {
+      "kind": "single_issue",
+      "issue_ids": [
+        "abortion"
+      ],
+      "description": "Women Speak Out PAC is a partner of SBA Pro-Life America amplifying the voices of women opposed to abortion extremists in Congress and has built the largest pro-life on-the-ground political campaign using micro-targeting to educate voters.",
+      "basis": {
+        "basis": "inferred",
+        "rule": "x_issue_focus",
+        "source_urls": [
+          "https://wsopac.com/",
+          "https://www.fec.gov/data/committee/C00530766/"
+        ],
+        "checked_by": null,
+        "checked_at": null
+      },
+      "label": "Machine-tagged from the committee's own website (grok-4.3, 2026-09-06); not part of the record",
+      "quote": "Women Speak Out PAC is a partner of SBA Pro-Life America, a super PAC amplifying the voices of women opposed to abortion extremists in Congress. Since 2014, Women Speak Out PAC has built the largest pro-life on-the-ground political campaign in the country.",
+      "provenance": {
+        "tagged_by": "xai-grok-4.3-2026-09-06",
+        "tagged_at": "2026-09-06",
+        "model": "grok-4.3",
+        "prompt_version": "classify_spender.v1",
+        "tools": [
+          "web_search"
+        ],
+        "tool_filters": {},
+        "response_id": "13c13aad-be32-913d-b9d8-2a7f230f10a5",
+        "retrieved_at": "2026-09-06T03:11:44+00:00",
+        "citations": [
+          "https://www.genarchives..com/Towne-Bowditch/g0/p524.htm",
+          "https://.com/services/dental-anxiety-dental-fear/dental-phobia-dental-fear/",
+          "https://apexshield..com/",
+          "https://www.genarchives..com/Towne-Bowditch/g0/p430.htm",
+          "https://www.sacbee..com/guides/deals/daily/best-selling-beauty-products-on-sale/",
+          "https://www.genarchives..com/Towne-Bowditch/g0/p628.htm",
+          "https://.com/-----/",
+          "https://www.genarchives..com/Towne-Bowditch/g0/p338.htm",
+          "https://www.genarchives..com/Towne-Bowditch/g0/p389.htm",
+          "https://.com/female-infertility-franchise-company-in-india",
+          "https://wsopac.com/",
+          "https://www.fec.gov/data/committee/C00530766/",
+          "https://docquery.fec.gov/cgi-bin/forms/C00530766/1707125/",
+          "https://littlesis.org/org/128007-Women_Speak_out_PAC",
+          "https://www.wisdc.org/interest-group-spending/148-hijacking-campaign-2025/7733-hijacking-campaign-2025-information-on-women-speak-out-pac"
+        ],
+        "confidence": "high",
+        "review_status": "pending",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "review_note": null
+      }
+    }
+  }
 }

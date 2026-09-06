@@ -2356,5 +2356,63 @@
       "last_date": "2024-11-02",
       "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00685693&payee_name=WOLF+PRINTING+COMPANY"
     }
-  ]
+  ],
+  "x_enrichment": {
+    "issue_focus": {
+      "kind": "general_partisan",
+      "issue_ids": [],
+      "description": "CASA in Action PAC is a sister organization to CASA in Action launched in 2018 to further expand our capacity to impact elections and grow political power by mobilizing Latinos and other voters of color to the polls through targeted data-driven electoral programs.",
+      "basis": {
+        "basis": "inferred",
+        "rule": "x_issue_focus",
+        "source_urls": [
+          "https://casainaction.org/about/",
+          "https://www.fec.gov/data/committee/C00685693/"
+        ],
+        "checked_by": null,
+        "checked_at": null
+      },
+      "label": "Machine-tagged from the committee's own website (grok-4.3, 2026-09-06); not part of the record",
+      "quote": "In 2018, we launched CASA in Action PAC, a sister organization to CASA in Action, to further expand our capacity to impact elections and grow political power.",
+      "provenance": {
+        "tagged_by": "xai-grok-4.3-2026-09-06",
+        "tagged_at": "2026-09-06",
+        "model": "grok-4.3",
+        "prompt_version": "classify_spender.v1",
+        "tools": [
+          "web_search"
+        ],
+        "tool_filters": {},
+        "response_id": "e7e60f7e-c9ca-94e0-91bc-bd0d3ce84c92",
+        "retrieved_at": "2026-09-06T03:12:26+00:00",
+        "citations": [
+          "https://casainaction.org/about/",
+          "https://www.fec.gov/data/committee/C00685693/",
+          "https://casainaction.org/",
+          "https://casainaction.org/es/sobre-casa-en-accion/",
+          "https://www.influencewatch.org/non-profit/casa-in-action/",
+          "https://www.digitaldemocracyproject.org//member-organizations/casa-in-action",
+          "https://www.guidestar.org/profile/27-2145405",
+          "https://docquery.fec.gov/cgi-bin/fecimg/?C00685693",
+          "https://wearecasa.org/about",
+          "https://www.casa-india.org/upload/newsletter--jan-march--23.pdf",
+          "https://www.genarchives..com/Towne-Bowditch/g0/p492.htm",
+          "https://www.genarchives..com/Towne-Bowditch/g0/p723.htm",
+          "https://.com/services/braces-orthodontics/fixed-or-removable-retainers-offer-passive-orthodontics/",
+          "https://www.genarchives..com/Towne-Bowditch/g0/p361.htm",
+          "https://www.genarchives..com/Towne-Bowditch/g0/p449.htm",
+          "https://.com/blog/author/jeff/page/10/",
+          "https://www.genarchives..com/Towne-Bowditch/g0/p273.htm",
+          "https://www.genarchives..com/Towne-Bowditch/g0/p633.htm",
+          "https://www.likedogsandcats..com/reynolds/animal-hospital-reynolds-in/",
+          "https://www.genarchives..com/Towne-Bowditch/g0/p635.htm"
+        ],
+        "confidence": "high",
+        "review_status": "pending",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "review_note": null
+      }
+    }
+  }
 }
