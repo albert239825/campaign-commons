@@ -5,11 +5,13 @@ import { useRouter } from "next/navigation";
 import { useMemo, useState, type MouseEvent } from "react";
 import {
   FLAG_LABELS,
+  ISSUE_BY_ID,
   VISIBILITY_COLORS,
   type FlagId,
   type FocusKind,
   type IssueFocus,
   type OutsideSpender,
+  type Party,
   type RaceCandidate,
   type Story,
 } from "@campaign-commons/contracts";
@@ -45,6 +47,26 @@ const FOCUS_KIND_MEANINGS: Record<FocusKind, string> = {
   labor: "A labor union or union-funded committee.",
   single_issue: "Organized around one policy issue in its own words.",
   multi_issue: "Advocates on several named issues.",
+};
+
+/** Short headline per kind, answering "what is this group for?" at a glance. */
+const FOCUS_KIND_HEADLINES: Record<FocusKind, string> = {
+  general_partisan: "General partisan platform",
+  candidate_aligned: "Single-candidate vehicle",
+  business_trade: "Industry / trade group",
+  labor: "Labor union",
+  single_issue: "Single issue",
+  multi_issue: "Multi-issue agenda",
+};
+
+const PARTY_SIDE: Record<Party, string> = {
+  DEM: "Democratic",
+  REP: "Republican",
+  LIB: "Libertarian",
+  GRE: "Green",
+  IND: "independent",
+  CON: "Constitution",
+  OTH: "other-party",
 };
 
 const FOCUS_KINDS: readonly FocusKind[] = ["general_partisan", "single_issue", "multi_issue", "business_trade", "labor", "candidate_aligned"];
@@ -86,16 +108,56 @@ function targetingLine(s: OutsideSpender, lastName: Map<string, string>): string
     .join(" · ");
 }
 
-function SpenderCard({ model, raceId, lastName }: { model: CardModel; raceId: string; lastName: Map<string, string> }) {
+/**
+ * Which party's side this spender's declared IE targeting lands on in this race: support dollars count for the
+ * candidate's party, oppose dollars for the other party when the race has exactly two. Null when there is no
+ * declared targeting or the parties tie. Read off the same Schedule E rows as the targeting line; not a judgement.
+ */
+function targetedSide(s: OutsideSpender, candidates: RaceCandidate[]): Party | null {
+  const partyOf = new Map(candidates.map((c) => [c.candidate_id, c.party]));
+  const parties = [...new Set(candidates.map((c) => c.party))];
+  const score = new Map<Party, number>();
+  for (const row of s.by_candidate) {
+    const p = partyOf.get(row.candidate_id);
+    if (!p) continue;
+    if (row.support_oppose === "S") score.set(p, (score.get(p) ?? 0) + row.amount);
+    else if (parties.length === 2) {
+      const other = parties.find((q) => q !== p);
+      if (other) score.set(other, (score.get(other) ?? 0) + row.amount);
+    }
+  }
+  const ranked = [...score.entries()].sort((a, b) => b[1] - a[1]);
+  if (ranked.length === 0 || (ranked.length > 1 && ranked[0][1] === ranked[1][1])) return null;
+  return ranked[0][0];
+}
+
+/** "What does this group say it is for?" — the kind, plus which side its declared targeting lands on for partisan platforms. */
+function focusHeadline(focus: IssueFocus, side: Party | null): string {
+  const head = FOCUS_KIND_HEADLINES[focus.kind];
+  return focus.kind === "general_partisan" && side ? `${head} · ${PARTY_SIDE[side]} side in this race` : head;
+}
+
+function SpenderCard({
+  model,
+  raceId,
+  candidates,
+  lastName,
+}: {
+  model: CardModel;
+  raceId: string;
+  candidates: RaceCandidate[];
+  lastName: Map<string, string>;
+}) {
   const router = useRouter();
   const { spender: s, story, focus } = model;
   const href = routes.entity(raceId, s.entity_id);
   const dark = darkShare(s);
   const focusSource = focus?.basis.source_urls[0];
+  const side = focus?.kind === "general_partisan" ? targetedSide(s, candidates) : null;
 
-  // Whole card navigates; real links/buttons inside keep their own behaviour, and text selection is left alone.
+  // Whole card navigates; real links/buttons/disclosures inside keep their own behaviour, and text selection is left alone.
   const onCardClick = (e: MouseEvent<HTMLElement>) => {
-    if ((e.target as HTMLElement).closest("a, button")) return;
+    if ((e.target as HTMLElement).closest("a, button, summary")) return;
     if (window.getSelection()?.toString()) return;
     if (e.metaKey || e.ctrlKey) window.open(href, "_blank", "noreferrer");
     else router.push(href);
@@ -160,11 +222,31 @@ function SpenderCard({ model, raceId, lastName }: { model: CardModel; raceId: st
       <p className="spender-card-targets">{targetingLine(s, lastName) || "No per-candidate rows on file"}</p>
 
       {focus && (
-        <p className="spender-card-agenda" title={focus.description}>
+        <div className="spender-card-agenda">
           <span className="spender-card-agenda-label">Self-described focus</span>
-          <span className="spender-card-agenda-text">“{focus.description}”</span>
-          {focusSource && <SourceLink href={focusSource} label="own words" className="spender-card-agenda-src" />}
-        </p>
+          <p className="spender-card-agenda-head">
+            {focusHeadline(focus, side)}
+            {focusSource && (
+              <>
+                {" "}
+                <SourceLink href={focusSource} label="source" />
+              </>
+            )}
+          </p>
+          {focus.issue_ids.length > 0 && (
+            <ul className="spender-card-agenda-issues" aria-label="Tagged issues">
+              {focus.issue_ids.map((id) => (
+                <li key={id} title={ISSUE_BY_ID[id].description}>
+                  {ISSUE_BY_ID[id].label}
+                </li>
+              ))}
+            </ul>
+          )}
+          <details className="spender-card-agenda-quote">
+            <summary>In its own words</summary>
+            <p>“{focus.description}”</p>
+          </details>
+        </div>
       )}
 
       <div className="spender-card-foot">
@@ -278,7 +360,7 @@ export function SpenderCards({
         shown.length > 0 ? (
           <div className="spender-grid">
             {shown.map((m) => (
-              <SpenderCard key={m.spender.entity_id} model={m} raceId={raceId} lastName={lastName} />
+              <SpenderCard key={m.spender.entity_id} model={m} raceId={raceId} candidates={candidates} lastName={lastName} />
             ))}
           </div>
         ) : (

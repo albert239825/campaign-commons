@@ -947,10 +947,14 @@ body:has(.detail-page) :is(a, button, input, select, summary, [tabindex]):focus-
 .spender-card-dark { color: var(--visibility-dark-text, #a53131); }
 .spender-card-caption { margin-top: 4px; font-size: 11px; line-height: 1.4; color: #6f6d69; }
 .spender-card-targets { font-size: 13px; line-height: 1.5; color: #1b1b1a; }
-.spender-card-agenda { display: grid; gap: 2px; padding-top: 10px; border-top: 1px solid var(--race-rule, #e5e2dc); font-size: 12px; line-height: 1.5; color: #555550; }
+.spender-card-agenda { display: grid; gap: 4px; padding-top: 10px; border-top: 1px solid var(--race-rule, #e5e2dc); font-size: 12px; line-height: 1.5; color: #555550; }
 .spender-card-agenda-label { font-size: 10px; font-weight: 500; letter-spacing: .06em; text-transform: uppercase; color: #8a877f; }
-.spender-card-agenda-text { display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 2; overflow: hidden; }
-.spender-card-agenda-src { justify-self: start; }
+.spender-card-agenda-head { font-size: 13px; font-weight: 500; color: #1b1b1a; }
+.spender-card-agenda-issues { display: flex; flex-wrap: wrap; gap: 4px; margin: 0; padding: 0; list-style: none; }
+.spender-card-agenda-issues li { border: 1px solid #d9d6cf; border-radius: 3px; padding: 1px 6px; font-size: 11px; line-height: 1.5; color: #3d3d3a; background: #faf9f6; }
+.spender-card-agenda-quote summary { cursor: pointer; color: #6b6963; text-decoration: underline dotted; text-underline-offset: 2px; font-size: 11px; }
+.spender-card-agenda-quote summary:hover { color: #1b1b1a; }
+.spender-card-agenda-quote p { margin: 4px 0 0; }
 .spender-card-foot { display: flex; flex-wrap: wrap; gap: 6px 16px; padding-top: 10px; border-top: 1px solid var(--race-rule, #e5e2dc); font-size: 12px; color: #555550; }
 .spender-card-foot a:hover { color: #1b1b1a; }
 @media (max-width: 1280px) { .spender-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }

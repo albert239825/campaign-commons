@@ -528,9 +528,12 @@ card grid of every `ledger.top_outside_spenders` row sorted by total, with a **C
 `SpendersTable` (flags legend still under it). Each card: committee name + type, total IE dollars with the FEC link, **% dark**
 as a big number over the bar (`visibility_shares.dark`, falling back to `1 − traceability_score`, "not computed" when the filer
 has no receipts to walk), one aggregated targeting line per (candidate, S/O) built from `by_candidate` with last names from
-`race.candidates`, the flags as badges, and — when the entity file carries a hand-tagged `issue_focus` — the group's own
-one-line self-description labelled "self-described focus" with its `basis.source_urls` link (D-66: about the spender, not the
-dollars). `stories.json` only decorates: a story's `root_entity_id` gives that card the story kind as a filter category and
+`race.candidates`, the flags as badges, and — when the entity file carries a hand-tagged `issue_focus` — a **self-described focus** block: the kind as a headline ("General partisan platform", "Single issue", "Multi-issue agenda", "Labor
+union"…), the tagged issues from `issue_ids` as chips by name, the `basis.source_urls` link, and the group's own one-sentence
+description behind an "In its own words" disclosure (D-66: about the spender, not the dollars). For general-partisan platforms
+the headline also says which side the committee's declared IE targeting lands on in this race ("· Republican side in this
+race"), read off the same Schedule E rows as the targeting line above it — a derivation, not a judgement, and only when the
+rows point one way. `stories.json` only decorates: a story's `root_entity_id` gives that card the story kind as a filter category and
 the "Checked against fec.gov" chip when `verified`. A **Category** dropdown above the grid groups story kinds ("Highlight"),
 `spender.flags` ("Flag", reusing `FLAG_MEANINGS`) and `issue_focus.kind` ("Self-described focus"); the chosen category's
 one-line meaning renders under it with "N of 98 spenders · $X". The whole card navigates to the entity page (card-level click
