@@ -151,7 +151,8 @@ function ResearchBlock({ raceId, issue, candidate }: { raceId: string; issue: Is
 
   async function research(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
-    const focused = question.trim();
+    const trimmed = question.trim();
+    const focused = trimmed.length >= 3 ? trimmed : "";
     setLoading(true);
     setError(null);
     setFocusedQuestion(focused || null);
