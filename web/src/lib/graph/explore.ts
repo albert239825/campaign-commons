@@ -1,7 +1,8 @@
 import neo4j from "neo4j-driver";
 import { z } from "zod";
+import type { TrailSubject } from "@campaign-commons/contracts";
 import { NODE_KINDS, GraphFactSchema, GraphNodeRefSchema, WITHHELD_REASONS, type GraphFact, type GraphNodeRef, type NodeKind } from "./facts";
-import { narrateExplore, type LlmOptions, type Narration } from "./llm";
+import { composeExplore, narrateExplore, type LlmOptions, type Narration } from "./llm";
 import { edge } from "./queries";
 import { type TypedRunner } from "./neo4j";
 import { ENTITY } from "./schema";
@@ -72,7 +73,7 @@ const HYDRATE = `MATCH (a${`:${ENTITY}`} {race_id: $race})-[r]->(b${`:${ENTITY}`
 WHERE elementId(r) IN $ids
 RETURN elementId(r) AS eid, ${edge("a", "r", "b")} AS edge`;
 
-const BANNED = /\b(?:CREATE|MERGE|SET|DELETE|DETACH|REMOVE|CALL|LOAD|FOREACH|DROP|INDEX|CONSTRAINT|PROFILE|EXPLAIN)\b|apoc\.|dbms\.|db\.|USE\s/i;
+const BANNED = /\b(?:CREATE|MERGE|SET|DELETE|DETACH|REMOVE|CALL|LOAD|FOREACH|DROP|INDEX|CONSTRAINT|PROFILE|EXPLAIN)\b|apoc\.|dbms\.|db\.|\bUSE\s/i;
 const PARAM = /\$([a-zA-Z_]\w*)/g;
 
 export function validateCypher(cypher: string): { ok: true; cypher: string } | { ok: false; reason: string } {
@@ -111,7 +112,8 @@ function relationshipId(value: unknown): string | null {
   return null;
 }
 
-type CellResult = { ok: true; cell: ExploreCell } | { ok: false; reason: string };
+type PendingCell = ExploreCell | { t: "rel"; id: string };
+type CellResult = { ok: true; cell: PendingCell } | { ok: false; reason: string };
 
 function cellOf(value: unknown): CellResult {
   if (value === null || value === undefined) return { ok: true, cell: { t: "null" } };
@@ -119,7 +121,7 @@ function cellOf(value: unknown): CellResult {
   if (neo4j.isNode(value)) return { ok: true, cell: { t: "node", node: nodeRef(value) } };
   if (neo4j.isRelationship(value)) {
     const id = relationshipId(value);
-    return id ? { ok: true, cell: { t: "text", value: `__relationship__${id}` } } : { ok: false, reason: "relationship has no element id" };
+    return id ? { ok: true, cell: { t: "rel", id } } : { ok: false, reason: "relationship has no element id" };
   }
   if (neo4j.isInt(value)) return { ok: true, cell: { t: "number", value: value.toNumber() } };
   if (typeof value === "number") return { ok: true, cell: { t: "number", value } };
@@ -140,15 +142,15 @@ export async function toCells(
   }
   const visible = records.slice(0, MAX_ROWS);
   const relationshipIds = new Set<string>();
-  const preliminary: Array<{ n: number; cells: Record<string, ExploreCell> }> = [];
+  const preliminary: Array<{ n: number; cells: Record<string, PendingCell> }> = [];
   const columns = new Set<string>();
   for (const [i, record] of visible.entries()) {
-    const cells: Record<string, ExploreCell> = {};
+    const cells: Record<string, PendingCell> = {};
     for (const [column, value] of Object.entries(record)) {
       columns.add(column);
       const converted = cellOf(value);
       if (!converted.ok) return converted;
-      if (converted.cell.t === "text" && converted.cell.value.startsWith("__relationship__")) relationshipIds.add(converted.cell.value.slice("__relationship__".length));
+      if (converted.cell.t === "rel") relationshipIds.add(converted.cell.id);
       cells[column] = converted.cell;
     }
     preliminary.push({ n: i + 1, cells });
@@ -157,8 +159,8 @@ export async function toCells(
   const rows: ExploreRow[] = preliminary.map((row) => {
     const cells = Object.fromEntries(
       Object.entries(row.cells).map(([column, cell]) => {
-        if (cell.t !== "text" || !cell.value.startsWith("__relationship__")) return [column, cell];
-        const fact = hydrated.get(cell.value.slice("__relationship__".length));
+        if (cell.t !== "rel") return [column, cell];
+        const fact = hydrated.get(cell.id);
         if (!fact) throw new Error("relationship could not be hydrated");
         return [column, { t: "edge", fact: { ...fact, n: row.n } } satisfies ExploreCell];
       }),
@@ -176,11 +178,11 @@ const refuse = (reason: ExploreRefusal["reason"], message: string): ExploreRefus
 
 export type ExploreDeps = { run: TypedRunner | null; llm?: LlmOptions };
 
-export async function exploreQuestion(raceId: string, question: string, subjects: readonly import("@campaign-commons/contracts").TrailSubject[], deps: ExploreDeps): Promise<AskExploreResponse> {
+export async function exploreQuestion(raceId: string, question: string, subjects: readonly TrailSubject[], deps: ExploreDeps): Promise<AskExploreResponse> {
   if (deps.run === null || !(deps.llm?.apiKey ?? process.env.XAI_API_KEY)) {
     return refuse("explore_unavailable", "Exploratory graph mode is not configured on this deployment.");
   }
-  let composed = await import("./llm").then(({ composeExplore }) => composeExplore(question, subjects, deps.llm));
+  let composed = await composeExplore(question, subjects, deps.llm);
   if (composed === null) return refuse("no_query", "That question cannot be answered from the filed records in this graph.");
   if (!composed.cypher.trim()) return refuse("no_query", `That question cannot be answered from the filed records in this graph. ${cleanDescription(composed.description)}`.trim());
 
@@ -189,7 +191,7 @@ export async function exploreQuestion(raceId: string, question: string, subjects
   if (!checked.ok) {
     retried = true;
     const validationError = checked.reason;
-    composed = await import("./llm").then(({ composeExplore }) => composeExplore(question, subjects, deps.llm, validationError));
+    composed = await composeExplore(question, subjects, deps.llm, validationError);
     if (composed === null || !composed.cypher.trim()) return refuse("rejected_query", "The exploratory query did not meet the graph's read-only rules.");
     checked = validateCypher(composed.cypher);
     if (!checked.ok) return refuse("rejected_query", "The exploratory query did not meet the graph's read-only rules.");
@@ -221,7 +223,7 @@ export async function exploreQuestion(raceId: string, question: string, subjects
     if (retried) return refuse("query_failed", "The exploratory query could not be run against the filings graph.");
     retried = true;
     const retryError = error instanceof Error ? error.message.slice(0, 300) : "the graph query failed";
-    composed = await import("./llm").then(({ composeExplore }) => composeExplore(question, subjects, deps.llm, retryError));
+    composed = await composeExplore(question, subjects, deps.llm, retryError);
     if (composed === null || !composed.cypher.trim()) return refuse("query_failed", "The exploratory query could not be run against the filings graph.");
     checked = validateCypher(composed.cypher);
     if (!checked.ok) return refuse("rejected_query", "The exploratory query did not meet the graph's read-only rules.");

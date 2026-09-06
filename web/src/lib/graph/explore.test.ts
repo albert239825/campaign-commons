@@ -38,6 +38,11 @@ describe("validateCypher", () => {
     expect(validateCypher(cypher).ok).toBe(false);
   });
 
+  it("allows the word house in a string and rejects USE", () => {
+    expect(validateCypher("MATCH (x:Entity {race_id: $race}) WHERE x.name CONTAINS 'house of' RETURN x").ok).toBe(true);
+    expect(validateCypher("USE neo4j MATCH (x:Entity {race_id: $race}) RETURN x").ok).toBe(false);
+  });
+
   it("adds a limit to a good query", () => {
     expect(validateCypher("MATCH (x:Entity {race_id: $race}) RETURN x")).toEqual({
       ok: true,
