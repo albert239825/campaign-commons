@@ -1,5 +1,5 @@
 /**
- * Graph mode for Money Trails (D-79): the server-side sequence behind /api/ask-graph. In order, and stopping at the
+ * Graph mode for Money Trails (D-81): the server-side sequence behind /api/ask-graph. In order, and stopping at the
  * first step that fails:
  *
  *   race validated by the caller (trails.json exists) → Grok picks an allowlisted operation and its subjects →

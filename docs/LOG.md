@@ -33,7 +33,7 @@ it came from.
 | 17:30–18:30 | Whiteboard → ontology | Race nav, docs wiki (FAQ / QUESTIONS / DECISIONS), `ONTOLOGY.md` (questions × surfaces, ER diagram, sources, V0/V1/V2 scope) |
 | 20:30–21:30 | Money Trails (`feature/ask-money-trails`) | `TrailsSchema` + `trails.json`, deterministic question resolver, `/races/<race>/ask` answer pages (D-73) |
 | 23:00–00:30 | Money Trails LLM router (`feature/ask-llm-router`) | `/api/ask-route` + `ask-llm.ts`: Grok picks the route from the closed set, resolver still decides the page, deterministic fallback (D-75) |
-| 01:00–03:00 | Money Trails graph mode (`feature/ask-graph`) | Local Neo4j loaded from `data/out`; `/api/ask-graph`: four allowlisted operations, source-backed facts, Grok narrates only from them and is withheld when it strays (D-79) |
+| 01:00–03:00 | Money Trails graph mode (`feature/ask-graph`) | Local Neo4j loaded from `data/out`; `/api/ask-graph`: four allowlisted operations, source-backed facts, Grok narrates only from them and is withheld when it strays (D-81) |
 
 ## Challenges and how we overcame them
 
@@ -188,7 +188,7 @@ this deploy, so it is per warm instance, and stated as such.
 $2 / $6 per M ≈ $0.006 per ask cold, ≈ $0.002 cached. Tests 23 → 57 (16 classifier, 15 route handler, 3 limiter, all offline with a
 mocked `fetch`); serverless functions 0 → 1; static pages unchanged.
 
-### 15. Money Trails — graph mode: the model may narrate, but only what the graph returned (D-79)
+### 15. Money Trails — graph mode: the model may narrate, but only what the graph returned (D-81)
 **Ask.** Two kinds of question the route resolver cannot serve even with D-75 behind it: traversal ("does Elon Musk's money
 reach Bob Casey?") and aggregation across subjects ("who do WinSenate and Women Vote share as funders?", "who funds
 McCormick's funders?"). No precomputed page holds those, and the router can only pick pages. The direction agreed: not
@@ -225,7 +225,7 @@ on every ask (6–11 s observed) — it has its own 15 s. Grok puts citations af
 uppercase names carry periods ("NAU, JOHN L. MR. III") and digits ("2024 THUNE …"), all of which the first guard rejected as
 uncited or unknown; the guard now normalises citation placement, does not split inside uppercase names, and allows digits
 that appear in a fact's name. Neo4j Community has no node-key constraints (`IS UNIQUE` instead) and no `CALL … IN
-TRANSACTIONS` inside an explicit transaction (reset is one `DETACH DELETE`). D-76–D-78 were taken meanwhile; this is D-79.
+TRANSACTIONS` inside an explicit transaction (reset is one `DETACH DELETE`). D-76–D-80 were taken meanwhile; this is D-81.
 **Numbers.** Live on PA-Sen: Musk → Casey `money_path` 8 facts, narrative ok; WinSenate ∩ Women Vote `shared_funders` → SMP,
 2 facts; McCormick `upstream` 30 facts; Yass `funder_reach` 17 facts. Classifier 2–4 s, narrator 6–11 s. Tests 59 → 126 (9
 schema on real artifacts, 14 queries, 23 classifier/narrator/guard, 13 orchestration, 8 endpoint incl. limiter and an
@@ -741,7 +741,95 @@ spenders with hand-provided URLs and skipped 75 for want of a URL after FEC webs
 
 **Open.** Rerun with `FEC_API_KEY` to cover the tail, then have a human verify the 30 rows.
 
-## 2026-09-06 — D-81: bounded graph selections on Money Trails answers
+## 2026-09-06 ~08:00 — Block 3 child E: the Policies tab is the stance record, beside the spenders that say they care (child E)
+
+**What changed.** New top-level race tab `/races/<race>/policies` (T1–T3 in `docs/plans/2026-09-06-block3.md`). Ten issues in
+`ISSUES` order (D-26) in a sidebar tablist, one visible at a time, hash-synced so `#tax_budget` deep-links and the dossier's
+own `#<issue_id>` (child D) is the reverse trip. Top row, the two candidates side by side: each
+candidate's **complete** stance record for the issue — position, coded direction via `directionLabel`/`ISSUE_AXES`, confidence,
+`needs review` / `verified`, and every evidence record (kind, vote, title, date, bill, Congress, roll call, description, `SourceLink`)
+in the contract's revealed-before-stated order; past five records the rest fold behind a native `<details>` "Show all N evidence
+records", still in the static HTML. "Full dossier →" keeps the per-candidate page reachable by URL; "No record loaded" when the
+dossier has none. Below, the funders and ads: the `top_outside_spenders` whose *entity* record has `issue_focus.issue_ids` naming the issue, sorted by IE total
+— name, committee type, focus kind, the hand-tagged description with the org's own source URL, the IE total with its fec.gov
+link, and the support/oppose sum per candidate from `by_candidate` ("Opposes Casey $7.0M · Supports McCormick $13M"), then
+"Funding chain →" when a chain exists and "Entity →". Under it, ads tagged with the issue: three by spend with ad-library links
+and "N tagged ads on the ads wall →". A "How to read this" box said the three things the page must not blur: stances are the
+record, funder focus is self-description (D-66), the dollar figures are IEs targeting a candidate, not money to a campaign;
+Albert cut the box before merge, so the header paragraph, the "Self-described focus" label and the IE captions carry that
+alone. One `RaceNav` item after Ads; `routes.policies`; `hasEntity`/`hasDossier` existence checks in `lib/data.ts`; `.policies-*` CSS
+only. No contract, pipeline or data change.
+
+**Challenge.** The word "alongside" is the whole product decision. `issue_focus` says *what* a group says it is for, not *which
+way*, so the page can never say a funder agrees with, backs or is aligned with a stance — only that both name the same topic.
+The copy pattern from the ledger's Layer A card ("spenders that describe themselves as focused on X") carries over; the
+directional field is left for later as an explicitly labelled inference (D-79). The plan's ads-wall filter turned out not to
+exist (`?issue=` is not read by `AdGallery`, even though the ledger's issue card links with it), so the page lists ad titles and
+links to the wall unfiltered rather than a dead query string. The hand-tagged descriptions carry tagger notes ("caregiving
+costs have no frozen id; healthcare is the closest"), so the label is "Self-described focus", not "In its own words".
+
+**Numbers.** PA: 98 outside spenders, 23 with `issue_focus`, 15 naming at least one issue, 21 funder–issue pairs across 5 of 10
+issues (health care 7, taxes 4, labor 4, energy 3, guns 3; defense, crypto, immigration, abortion and tech have stances but no
+self-described funder). 42 of 500 ads tagged. Both dossiers cover all 10 issues, so every panel has two stances. Built page HTML
+335 KB with all ten panels server-rendered (21 funder rows, 20 stance cards); the client island only toggles `hidden`.
+
+**Consolidation (same PR, Pat/Albert, Sep 6).** The dossier and the Policies tab were merged into one top-level tab: the stance
+cards went from a preview (top two records + "more in the dossier") to the whole record the dossier's `IssueSection` shows,
+adapted into `components/policies/stance-card.tsx` (nothing imported from `components/dossier`). Layout moved from
+stances-left / funders-right to stances side by side above a funders + ads row, so the two candidates are compared directly.
+The per-candidate dossier pages stay in the build and are reachable by URL and by "Full dossier →", but stop being a nav
+destination (child A's nav trim). Header copy now says this tab is the candidates' stance record for the race. PA: Casey's
+longest record is energy & climate at 10 evidence records (5 open, 5 folded); McCormick has one stated position per issue.
+
+**Funders in two columns (Albert, same day).** The funder list under the stances is split into the same two columns as the
+cards above, by whose side the spender's FEC-coded IEs were on: support for X or opposition to the other counts *for* X
+(`targetingSide`, the P1 rule from the plan). A spender with labelled dollars on both sides, or none, goes in a full-width
+"No single side" row rather than being forced under a candidate; two-candidate races only, otherwise one list. The column is a
+targeting fact on file and the copy says so — it is still not agreement with the stance above it (D-79 unchanged). PA: all 21
+funder–issue pairs are one-sided (18 for Casey, 3 for McCormick); McCormick's column is empty on two issues, so the empty state
+carries the comparison. Ads move to a full-width block under the funders.
+
+## 2026-09-06 ~08:00 — Block 3 child A: one card-first "Top outside spenders" tab; nav down to Ledger · Ads
+
+**What changed.** Sep 5 critique (Albert, Eric, Patrick): "Funding highlights" and "Top outside spenders" were two tabs
+about the same committees, the highlight cards covered 18 of 98 spenders and led with a judgement ("Dark wall", "One
+source") plus a templated paragraph, and the race nav had six items. The ledger now has three sections — Funding overview ·
+Top outside spenders · Spending by issue. The spenders section (`components/ledger/spender-cards.tsx`, client island) is a
+card grid of every `ledger.top_outside_spenders` row sorted by total, with a **Cards | Table** toggle to the unchanged
+`SpendersTable` (flags legend still under it). Each card: committee name + type, total IE dollars with the FEC link, **% dark**
+as a big number over the bar (`visibility_shares.dark`, falling back to `1 − traceability_score`, "not computed" when the filer
+has no receipts to walk), one aggregated targeting line per (candidate, S/O) built from `by_candidate` with last names from
+`race.candidates`, and — when the entity file carries a hand-tagged `issue_focus` — a **self-described focus** block: the kind as a headline ("General partisan platform", "Single issue", "Multi-issue agenda", "Labor
+union"…), the tagged issues from `issue_ids` listed by name (plain text, dot-separated), the `basis.source_urls` link, and the group's own one-sentence
+description behind an "In its own words" disclosure (D-66: about the spender, not the dollars). For general-partisan platforms
+the headline also says which side the committee's declared IE targeting lands on in this race ("· Republican side in this
+race"), read off the same Schedule E rows as the targeting line above it — a derivation, not a judgement, and only when the
+rows point one way. `stories.json` only decorates: a story's `root_entity_id` gives that card the story kind as a filter category and
+the "Checked against fec.gov" chip when `verified`. A **Category** dropdown above the grid groups story kinds ("Highlight"),
+`spender.flags` ("Flag", reusing `FLAG_MEANINGS`) and `issue_focus.kind` ("Self-described focus"); the chosen category's
+one-line meaning renders under it with "N of 98 spenders · $X". The whole card navigates to the entity page (card-level click
+handler; the title is the real link; FEC / own-words / chain anchors are ordinary siblings so nothing nests). `lib/data.ts`
+gained `getIssueFocus(raceId, entityId)`; `page.tsx` reads it for each spender at build time and passes a plain
+`Record<entity_id, IssueFocus>` down. `RaceNav` is **Ledger · Ads** (ads count kept; `counts` is `{ ads }`); the six callers
+were trimmed to that. Dossiers stay one click away as an explicit "Dossier →" beside each candidate in the ledger header.
+Per Albert's correction mid-task, the stories and vendors list pages and their routes stay (reachable by URL and existing
+in-page links); only the tabs went. `story-slideshow.tsx` had no remaining caller and was deleted; `story-card.tsx` stays
+for the stories page. D-80.
+
+**Challenge.** "Whole card is a link" versus "every number keeps its source link": an `<a>` wrapping the card cannot contain
+the FEC, own-words and chain anchors. Went with an `article` click handler that ignores clicks landing on any `a`/`button`
+or on selected text, honours ⌘/ctrl-click, and keeps the title as a focusable `Link`, so keyboard and screen-reader users
+get one real link per card and the sourced numbers keep theirs. Second: the story kinds and the flags overlap
+(`dark_dead_end` ≈ `dead_end_dark`, `popup` ≈ `popup`, `single_transfer` ≈ `single_transfer_funded`) but not exactly — the
+story set is capped at 18 while flags cover 50 spenders — so both stay as separate groups in the dropdown rather than
+being merged into one taxonomy the data does not have.
+
+**Numbers.** PA: 98 spender cards, $233M; 86 with `visibility_shares`, 12 with no chain ("not computed"); 50 flagged; 18
+story-decorated; 23 with a self-described focus loaded from `entities/*.json` (34 hand-tag rows; the rest are not top
+spenders). Dropdown: 4 highlight kinds, 5 flags, 6 focus kinds. Nav items 6 → 2. Lint, tsc and the static build pass; the
+`/stories` and `/vendors` routes are still emitted.
+
+## 2026-09-06 — D-83: bounded graph selections on Money Trails answers
 
 Each precomputed answer now carries a deterministic `graph` selection copied from the existing chain files. The selection
 is re-rooted for the question, capped at five nodes per layer, records truncation counts, and preserves copied basis,

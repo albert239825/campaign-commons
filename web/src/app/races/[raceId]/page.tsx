@@ -2,17 +2,14 @@
 import Link from "next/link";
 import Image from "next/image";
 import type { Party } from "@campaign-commons/contracts";
-import { countVendors, getAds, getIssues, getLedger, getRace, getStories, hasChain, hasTrails, listRaceIds } from "@/lib/data";
+import { getAds, getIssueFocus, getIssues, getLedger, getRace, getStories, hasTrails, listRaceIds } from "@/lib/data";
 import { date, routes } from "@/lib/format";
 import { AdjacencyNote, Card, DataStatusBanner } from "@/components/ui";
 import { RaceNav } from "@/components/ui/race-nav";
 import { RaceSections } from "@/components/ledger/race-sections";
 import { FundingExplorer } from "@/components/ledger/funding-explorer";
 import { buildFundingViews } from "@/lib/funding-view";
-import { SpendersTable } from "@/components/ledger/spenders-table";
-import { FlagsLegend } from "@/components/ledger/flags-legend";
-import { StorySlideshow } from "@/components/ledger/story-slideshow";
-import { StoryCard } from "@/components/ledger/story-card";
+import { SpenderCards } from "@/components/ledger/spender-cards";
 import { IssueCards } from "@/components/ledger/issue-cards";
 
 const PARTY_NAMES: Record<Party, string> = {
@@ -31,8 +28,13 @@ export default async function RaceLedgerPage({ params }: { params: Promise<{ rac
   const { raceId } = await params;
   const race = getRace(raceId);
   const ledger = getLedger(raceId);
-  const allFlags = ledger.top_outside_spenders.flatMap((s) => s.flags);
   const stories = getStories(raceId);
+  const issueFocus = Object.fromEntries(
+    ledger.top_outside_spenders.flatMap((s) => {
+      const focus = getIssueFocus(raceId, s.entity_id);
+      return focus ? [[s.entity_id, focus] as const] : [];
+    }),
+  );
   const parties = Array.from(new Set(race.candidates.map((c) => c.party)));
   const officeName = { S: "US Senate", H: "US House", P: "US President" }[race.office];
   const stateName = race.label.split("·")[0].trim();
@@ -79,6 +81,9 @@ export default async function RaceLedgerPage({ params }: { params: Promise<{ rac
                             <li key={c.candidate_id}>
                               <Link href={routes.candidate(raceId, c.candidate_id)}>{c.name}</Link>
                               {c.incumbent && <span className="race-candidate-role">{race.status === "complete" ? "Incumbent at election" : "Incumbent"}</span>}
+                              <Link href={routes.candidate(raceId, c.candidate_id)} className="race-candidate-dossier" aria-label={`${c.name} dossier`}>
+                                Dossier →
+                              </Link>
                             </li>
                           ))}
                         </ul>
@@ -90,7 +95,7 @@ export default async function RaceLedgerPage({ params }: { params: Promise<{ rac
             </section>
           </div>
         </header>
-        <RaceNav race={race} counts={{ ads: adCount, stories: stories.stories.length, vendors: countVendors(raceId) }} active={routes.race(raceId)} />
+        <RaceNav race={race} counts={{ ads: adCount }} active={routes.race(raceId)} />
         {hasTrails(raceId) && (
           <Link
             href={routes.ask(raceId)}
@@ -107,11 +112,6 @@ export default async function RaceLedgerPage({ params }: { params: Promise<{ rac
 
       <RaceSections
         funding={<FundingExplorer views={buildFundingViews(ledger)} raceId={raceId} />}
-        stories={stories.stories.length > 0 ? (
-          <StorySlideshow slides={stories.stories.map((s) => (
-            <StoryCard key={s.story_id} story={s} raceId={raceId} hasChain={hasChain(raceId, s.root_entity_id)} expandable />
-          ))} />
-        ) : <Card title="Funding highlights"><p>No stories are available for this race yet.</p></Card>}
         issues={issues ? (
           <IssueCards
             raceId={raceId}
@@ -130,16 +130,17 @@ export default async function RaceLedgerPage({ params }: { params: Promise<{ rac
             }
           >
             <p className="mb-3 text-xs text-neutral-500">
-              Committees reporting independent expenditures (Schedule E) about candidates in this race. S = supports, O = opposes, as
-              declared by the spender. Dot = how visible the spender&apos;s own funding is. Click a column to sort.
+              Committees reporting independent expenditures (Schedule E) about candidates in this race. Supports / opposes is as declared by
+              the spender; these dollars are targeting, not money to a campaign. A self-described focus is the group&apos;s own words about
+              itself, not what the dollars were spent on.
             </p>
-            <SpendersTable raceId={raceId} spenders={ledger.top_outside_spenders} candidates={race.candidates} />
-            {allFlags.length > 0 && (
-              <div className="mt-4 border-t border-neutral-100 pt-3">
-                <div className="mb-1.5 text-[11px] font-medium tracking-wide text-neutral-500">Flags</div>
-                <FlagsLegend flags={allFlags} />
-              </div>
-            )}
+            <SpenderCards
+              raceId={raceId}
+              spenders={ledger.top_outside_spenders}
+              candidates={race.candidates}
+              stories={stories.stories}
+              focus={issueFocus}
+            />
           </Card>
         }
       />
