@@ -41,16 +41,19 @@ on the 26 cached ads tells us.
 
 ## 2. Dossier stances — web/news first, X as supplement
 
+**Phase 2c implementation: complete — cached web/news stance suggestions with optional verified X-post supplements and pending human review; live enrichment remains off.**
+
 - **Call 1 (primary)** per candidate × issue: `web_search`, no domain restriction but the prompt names preferred sources
   (news outlets, congress.gov/senate.gov, votesmart.org, ballotpedia.org, the campaign site) and forbids opinion/social
   sources; the 2023–24 window goes in the prompt (`web_search` has no documented date filter). Output: `summary` (≤3 sentences, each tied to a citation), `sources[]` {url, publisher,
-  published_on as reported, excerpt ≤280}, `confidence`, `direction_proposed`.
-- **Call 2 (supplement)**: `x_search` with `allowed_x_handles` = verified handles (`x_accounts.json`, confirmed from campaign
-  site / senate.gov — `@SenBobCasey`, `@Bob_Casey`, `@DaveMcCormickPA` pending confirmation), same window. Output:
+  published_on as reported, excerpt ≤280; hard limit 400}, `confidence`, `direction_proposed`.
+- **Call 2 (supplement)**: `x_search` with `allowed_x_handles` = verified handles (`x_accounts.json`, pending confirmation for the
+  seeded Casey and McCormick accounts) — `@SenBobCasey`, `@Bob_Casey`, `@DaveMcCormickPA`, same window. Output:
   `posts[]` {url, excerpt, posted_on} — shown as "in their own words", never as the summary's basis.
-- **Verification**: every URL must be in `response.citations`; X posts are checked via X's public oEmbed
-  (`publish.x.com/oembed`, no key, confirmed working) for excerpt text and canonical author → `excerpt_verified`. Web
-  excerpts: fetch the page, substring check where the page is static; else `excerpt_verified: false` and human review.
+- **Verification**: every web URL must be surfaced by the primary response's searched/opened URLs; X posts are checked via X's public oEmbed
+  (`publish.twitter.com/oembed`, no key) for excerpt text and canonical author → `excerpt_verified`. Web
+  excerpts: fetch the page, tolerate ellipses between independently matched fragments, and use Wayback when a fetch is non-200;
+  an unavailable page remains `excerpt_verified: false` for human review.
 - **Renders** under each issue's record evidence as a labelled block: "Machine-summarised from news/web (<model>, <date>);
   not part of the record" + source list + "On X" strip. `Stance.evidence`, `EvidenceKind`, `direction`, dossier `summary`
   stay record-only (D-23, D-76). The future runtime Enrich button makes the same two calls with the user's prompt appended.
@@ -127,7 +130,7 @@ MachineProvenance = { tagged_by: "xai-<model>-<date>", tagged_at, model, prompt_
 - Pricing: $5 / 1k successful tool calls (web or X); `grok-4.3` $1.25/$2.50 per 1M, `grok-4.6` $2/$6
   (https://docs.x.ai/developers/pricing). Structured output + server-side tools supported for "supported Grok 4 family
   models" (…/structured-outputs). `seed` best-effort; responses retained 30 days; `GET /v1/responses/{id}`.
-- oEmbed: `GET https://publish.x.com/oembed?url=<permalink>` → 200 JSON with canonical `url`, `author_name`, `html` (post
+- oEmbed: `GET https://publish.twitter.com/oembed?url=<permalink>&omit_script=1` → 200 JSON with canonical `url`, `author_name`, `html` (post
   text); 404 for missing posts. Tested from this VM.
 - YouTube captions: `youtube-transcript-api` → `RequestBlocked` from this VM (cloud IP); the library documents residential
   IP / proxy as the workaround. `video_id` resolution via the transparency-site RPC works (`ads_creatives.py`).

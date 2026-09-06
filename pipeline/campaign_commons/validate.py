@@ -24,6 +24,8 @@ HAND_SCHEMAS = {
     "x_ad_issues.json": "hand_x_ad_issues",
     "x_issue_focus.json": "hand_x_issue_focus",
     "x_funder_focus.json": "hand_x_issue_focus",
+    "x_stances.json": "hand_x_stances",
+    "x_accounts.json": "hand_x_accounts",
     "ie_issues.json": "hand_ie_issues",
     "vendor_aliases.json": "hand_vendor_aliases",
     "vendor_ad_links.json": "hand_vendor_ad_links",
