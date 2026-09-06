@@ -25,7 +25,12 @@ export function PolicyTabs({ items, defaultId, panels }: { items: PolicyTabItem[
 
   useEffect(() => {
     const fromHash = () => {
-      const id = decodeURIComponent(window.location.hash.slice(1));
+      let id: string;
+      try {
+        id = decodeURIComponent(window.location.hash.slice(1));
+      } catch {
+        return null;
+      }
       return items.some((item) => item.id === id) ? id : null;
     };
     const sync = () => setSelected(fromHash() ?? defaultId);
