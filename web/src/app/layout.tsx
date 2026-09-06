@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import "./globals.css";
 import { routes } from "@/lib/format";
+import { SearchBox } from "@/components/search/search-box";
 
 export const metadata: Metadata = {
   title: "Citizen Gotham",
@@ -28,6 +29,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
               <Link href={routes.methodology()} className="hover:text-neutral-900">
                 Methodology
               </Link>
+              <SearchBox />
             </nav>
           </div>
         </header>
