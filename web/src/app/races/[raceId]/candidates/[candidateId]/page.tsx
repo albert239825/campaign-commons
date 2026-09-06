@@ -3,7 +3,7 @@ import Link from "next/link";
 import { DetailHeader } from "@/components/ui/detail-layout";
 import { notFound } from "next/navigation";
 import { ISSUES, type Dossier, type IssueId } from "@campaign-commons/contracts";
-import { getAds, getDossier, getRace, getStories, listDossierIds, listRaceIds } from "@/lib/data";
+import { getAds, getDossier, getRace, listDossierIds, listRaceIds } from "@/lib/data";
 import { date, routes } from "@/lib/format";
 import { AdjacencyNote, Breadcrumbs, Chip, DataStatusBanner, SourceLink } from "@/components/ui";
 import { IssueNav } from "@/components/dossier/issue-nav";
@@ -69,7 +69,7 @@ export default async function DossierPage({ params }: { params: Promise<{ raceId
 
       <RaceNav
         race={race}
-        counts={{ ads: getAds(raceId).ads.length, stories: getStories(raceId).stories.length }}
+        counts={{ ads: getAds(raceId).ads.length }}
         active={routes.candidate(raceId, candidateId)}
       />
 

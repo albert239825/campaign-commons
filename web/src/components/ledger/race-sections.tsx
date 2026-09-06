@@ -4,16 +4,15 @@ import { useId, useState, type KeyboardEvent, type ReactNode } from "react";
 
 const SECTIONS = [
   { id: "funding", label: "Funding overview" },
-  { id: "stories", label: "Funding highlights" },
   { id: "spenders", label: "Top outside spenders" },
   { id: "issues", label: "Spending by issue" },
 ] as const;
 type Section = (typeof SECTIONS)[number]["id"];
 
-export function RaceSections({ funding, stories, spenders, issues }: Record<Section, ReactNode | undefined>) {
+export function RaceSections({ funding, spenders, issues }: Record<Section, ReactNode | undefined>) {
   const [selected, setSelected] = useState<Section>("funding");
   const prefix = useId();
-  const content = { funding, stories, spenders, issues };
+  const content = { funding, spenders, issues };
   const sections = SECTIONS.filter((section) => content[section.id] !== undefined);
 
   function navigate(event: KeyboardEvent<HTMLButtonElement>, index: number) {
