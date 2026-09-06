@@ -7,8 +7,8 @@
  *
  * Server-only: reads `process.env.XAI_API_KEY` / `XAI_MODEL`. Never import from a client component.
  */
-import type { TrailIntent, TrailSubject } from "@campaign-commons/contracts";
-import { INTENT_LABELS, INTENTS, isIntent } from "./ask";
+import { ISSUE_IDS, ISSUES, type IssueId, type TrailSubject } from "@campaign-commons/contracts";
+import { ASK_INTENTS, INTENT_LABELS, isAskIntent, type AskIntent } from "./ask";
 
 export const XAI_CHAT_COMPLETIONS_URL = "https://api.x.ai/v1/chat/completions";
 /** Listed with structured-output support at docs.x.ai/developers/models (checked 2026-09). Override with XAI_MODEL. */
@@ -18,7 +18,7 @@ export const XAI_REASONING_EFFORT = "low";
 /** Measured grok-4.5/low on PA-Sen questions: 2.3–5.0s end to end; a budget below that falls back on most asks. */
 export const ASK_LLM_TIMEOUT_MS = 6000;
 
-export type Route = { intent: TrailIntent; subjectId: string };
+export type Route = { intent: AskIntent; subjectId: string; issueId: IssueId | null };
 
 export type TrailsView = { subjects: readonly TrailSubject[] };
 
@@ -35,7 +35,9 @@ export type ClassifyOptions = {
 const SYSTEM_PROMPT = [
   "You route questions about campaign money in one US election race to a precomputed answer page.",
   "You are given the closed list of supported question kinds (intents) and the closed list of subjects (candidates and committees) with their ids.",
-  "Return the single best route as {intent, subjectId}, using only ids and intents from those lists exactly as written.",
+  "The intent spender_issue is for questions that name a policy issue (from the closed issue list) together with a candidate — it asks where the groups spending for or against that candidate stand on the issue; for it, set issueId to the matching issue id, otherwise set issueId to null.",
+  "A question that names an issue is never routed to candidate_ad_funding or candidate_spender.",
+  "Return the single best route as {intent, subjectId, issueId}, using only ids and intents from those lists exactly as written.",
   "If the question is not about exactly one listed subject, or does not fit any listed intent, return null for the route.",
   "Never answer the question, never add commentary, never invent an id.",
 ].join(" ");
@@ -52,10 +54,11 @@ function schemaFor(subjects: readonly TrailSubject[]) {
             {
               type: "object",
               properties: {
-                intent: { type: "string", enum: [...INTENTS] },
+                intent: { type: "string", enum: [...ASK_INTENTS] },
                 subjectId: { type: "string", enum: subjects.map((s) => s.id) },
+                issueId: { anyOf: [{ type: "string", enum: [...ISSUE_IDS] }, { type: "null" }] },
               },
-              required: ["intent", "subjectId"],
+              required: ["intent", "subjectId", "issueId"],
               additionalProperties: false,
             },
             { type: "null" },
@@ -70,7 +73,7 @@ function schemaFor(subjects: readonly TrailSubject[]) {
 
 /** The exact chat-completions request body; exported so tests can assert what leaves the server. */
 export function buildRequestBody(question: string, trails: TrailsView, model: string) {
-  const intents = INTENTS.map((i) => `- ${i}: ${INTENT_LABELS[i]}`).join("\n");
+  const issues = ISSUES.map((issue) => `- ${issue.id}: ${issue.label}`).join("\n");
   const subjects = trails.subjects.map((s) => `- ${s.id} (${s.kind}): ${s.name}`).join("\n");
   return {
     model,
@@ -78,7 +81,7 @@ export function buildRequestBody(question: string, trails: TrailsView, model: st
     reasoning_effort: XAI_REASONING_EFFORT,
     messages: [
       { role: "system", content: SYSTEM_PROMPT },
-      { role: "user", content: `Intents:\n${intents}\n\nSubjects:\n${subjects}\n\nQuestion: ${question}` },
+      { role: "user", content: `Intents:\n${ASK_INTENTS.map((i) => `- ${i}: ${INTENT_LABELS[i]}`).join("\n")}\n\nIssues:\n${issues}\n\nSubjects:\n${subjects}\n\nQuestion: ${question}` },
     ],
     response_format: { type: "json_schema", json_schema: schemaFor(trails.subjects) },
   };
@@ -88,9 +91,12 @@ export function buildRequestBody(question: string, trails: TrailsView, model: st
 export function validateRoute(value: unknown, trails: TrailsView): Route | null {
   if (typeof value !== "object" || value === null) return null;
   const { intent, subjectId } = value as Record<string, unknown>;
-  if (typeof intent !== "string" || !isIntent(intent)) return null;
+  const issueId = (value as Record<string, unknown>).issueId;
+  if (typeof intent !== "string" || !isAskIntent(intent)) return null;
   if (typeof subjectId !== "string" || !trails.subjects.some((s) => s.id === subjectId)) return null;
-  return { intent, subjectId };
+  if (issueId !== null && (typeof issueId !== "string" || !(ISSUE_IDS as readonly string[]).includes(issueId))) return null;
+  if (intent === "spender_issue" && issueId === null) return null;
+  return { intent, subjectId, issueId: intent === "spender_issue" ? (issueId as IssueId) : null };
 }
 
 /** Pulls `choices[0].message.content` out of a chat-completions body and parses `{ route }` from it. */

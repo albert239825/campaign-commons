@@ -28,7 +28,7 @@ export function seedResolution(question: string, route: Route | null, trails: Tr
   if (route === null || subject === undefined) {
     return { ...resolveQuestion(question, trails.subjects, trails.examples), via: "fallback" };
   }
-  return { ...resolveRoute(route.intent, subject, trails.subjects), via: "llm" };
+  return { ...resolveRoute(route.intent, subject, trails.subjects, subject.id, route.issueId), via: "llm" };
 }
 
 export async function routeQuestion(question: string, trails: TrailsForRouting, opts: ClassifyOptions = {}): Promise<AskRouteResponse> {

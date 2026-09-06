@@ -28,6 +28,7 @@ import { ISSUE_IDS } from "./issues";
  *   issue_focus.json                    -> HandIssueFocusFile
  *   ad_issues.json                      -> HandAdIssuesFile
  *   ie_issues.json                      -> HandIeIssuesFile
+ *   issue_positions.json                -> HandIssuePositionsFile
  *   vendor_aliases.json                 -> HandVendorAliasesFile
  *   vendor_ad_links.json                -> HandVendorAdLinksFile
  *
@@ -363,6 +364,15 @@ export const IssueFocusSchema = focusVariants({
   basis: BasisSchema, // verified (org site / Wayback / FEC Form 1 connected org) with source_urls
 });
 
+/** A spender's publicly stated position on one issue, in its own words, coded against ISSUE_AXES[issue_id]. Distinct from issue_focus (what it exists for) and from what its ads said. */
+export const IssuePositionSchema = z.object({
+  issue_id: IssueIdSchema,
+  direction: DirectionSchema, // +2 strongly `plus` … -2 strongly `minus` per ISSUE_AXES; 0 = takes a position but neither side
+  quote: z.string().min(1), // verbatim excerpt from source_url
+  source_url: z.string().url(),
+  basis: BasisSchema, // inferred (model-read, checked_by = model id) | verified (a person confirmed quote + coding)
+});
+
 export const EntitySchema = z.object({
   entity_id: z.string(),
   race_id: z.string(),
@@ -404,6 +414,8 @@ export const EntitySchema = z.object({
   vendors: z.array(EntityVendorRowSchema).optional(),
   // Block 2 (campaign_commons.issues): present only for hand-tagged committees
   issue_focus: IssueFocusSchema.optional(),
+  // Block 2 (campaign_commons.issues_enrich)
+  issue_positions: z.array(IssuePositionSchema).optional(),
 });
 
 // ---------------------------------------------------------------------------
@@ -1043,6 +1055,7 @@ export const IssueSpendingSchema = z.object({
     ads_total: z.number().int(),
     ies_tagged: z.number().int(),
     ie_dollars_tagged: z.number(),
+    spenders_with_positions: z.number().int().optional(),
   }),
   notes: z.array(z.string()), // shown under the cards: coverage, midpoint caveat, "focus is the spender's, not the dollars'"
 });
@@ -1090,6 +1103,23 @@ export const HandIssueFocusRowSchema = focusVariants({
   tagged_at: z.string(),
 });
 export const HandIssueFocusFileSchema = HandFileBase.extend({ rows: z.array(HandIssueFocusRowSchema) });
+
+export const HandIssuePositionRowSchema = z.object({
+  entity_id: z.string(),
+  name: z.string(),
+  issue_id: IssueIdSchema,
+  direction: DirectionSchema,
+  quote: z.string().min(1),
+  source_url: z.string().url(),
+  status: z.enum(["model", "verified"]),
+  tagged_by: z.string(),
+  tagged_at: z.string(),
+});
+export const HandIssuePositionsFileSchema = HandFileBase.extend({
+  rows: z.array(HandIssuePositionRowSchema),
+  /** per entity: pages the stage fetched and when (so a reviewer can re-read them) */
+  pages: z.array(z.object({ entity_id: z.string(), url: z.string().url(), fetched_at: z.string(), chars: z.number().int() })),
+});
 
 export const HandAdIssueRowSchema = z.object({
   ad_id: z.string(),
@@ -1144,6 +1174,7 @@ export type SupportOppose = z.infer<typeof SupportOpposeSchema>;
 export type EntityVendorRow = z.infer<typeof EntityVendorRowSchema>;
 export type FocusKind = z.infer<typeof FocusKindSchema>;
 export type IssueFocus = z.infer<typeof IssueFocusSchema>;
+export type IssuePosition = z.infer<typeof IssuePositionSchema>;
 export type ChainNodeKind = z.infer<typeof ChainNodeKindSchema>;
 export type ChainEdgeKind = z.infer<typeof ChainEdgeKindSchema>;
 export type AdVendorLink = z.infer<typeof AdVendorLinkSchema>;
@@ -1157,6 +1188,7 @@ export type SearchItemKind = z.infer<typeof SearchItemKindSchema>;
 export type SearchItem = z.infer<typeof SearchItemSchema>;
 export type SearchIndex = z.infer<typeof SearchIndexSchema>;
 export type HandIssueFocusFile = z.infer<typeof HandIssueFocusFileSchema>;
+export type HandIssuePositionsFile = z.infer<typeof HandIssuePositionsFileSchema>;
 export type HandAdIssuesFile = z.infer<typeof HandAdIssuesFileSchema>;
 export type HandIeIssuesFile = z.infer<typeof HandIeIssuesFileSchema>;
 export type HandVendorAliasesFile = z.infer<typeof HandVendorAliasesFileSchema>;
@@ -1235,6 +1267,7 @@ export const FILE_SCHEMAS = {
 /** data/hand/<race_id>/<file> → schema */
 export const HAND_FILE_SCHEMAS = {
   "issue_focus.json": HandIssueFocusFileSchema,
+  "issue_positions.json": HandIssuePositionsFileSchema,
   "ad_issues.json": HandAdIssuesFileSchema,
   "ie_issues.json": HandIeIssuesFileSchema,
   "vendor_aliases.json": HandVendorAliasesFileSchema,
