@@ -33,6 +33,7 @@ it came from.
 | 17:30–18:30 | Whiteboard → ontology | Race nav, docs wiki (FAQ / QUESTIONS / DECISIONS), `ONTOLOGY.md` (questions × surfaces, ER diagram, sources, V0/V1/V2 scope) |
 | 20:30–21:30 | Money Trails (`feature/ask-money-trails`) | `TrailsSchema` + `trails.json`, deterministic question resolver, `/races/<race>/ask` answer pages (D-73) |
 | 23:00–00:30 | Money Trails LLM router (`feature/ask-llm-router`) | `/api/ask-route` + `ask-llm.ts`: Grok picks the route from the closed set, resolver still decides the page, deterministic fallback (D-75) |
+| 01:00–03:00 | Money Trails graph mode (`feature/ask-graph`) | Local Neo4j loaded from `data/out`; `/api/ask-graph`: four allowlisted operations, source-backed facts, Grok narrates only from them and is withheld when it strays (D-77) |
 
 ## Challenges and how we overcame them
 
@@ -186,6 +187,49 @@ this deploy, so it is per warm instance, and stated as such.
 2,638 prompt tokens per ask (2,560 served from cache on repeat), ~160 reasoning + 20 output tokens; at list price
 $2 / $6 per M ≈ $0.006 per ask cold, ≈ $0.002 cached. Tests 23 → 57 (16 classifier, 15 route handler, 3 limiter, all offline with a
 mocked `fetch`); serverless functions 0 → 1; static pages unchanged.
+
+### 15. Money Trails — graph mode: the model may narrate, but only what the graph returned (D-77)
+**Ask.** Two kinds of question the route resolver cannot serve even with D-75 behind it: traversal ("does Elon Musk's money
+reach Bob Casey?") and aggregation across subjects ("who do WinSenate and Women Vote share as funders?", "who funds
+McCormick's funders?"). No precomputed page holds those, and the router can only pick pages. The direction agreed: not
+unrestricted Grok answers; route-only stays canonical; a graph path for traversal questions where Grok writes a narrative
+*only after* the server has validated the race, the subjects and the relationship, run an allowlisted query and got
+source-backed facts back.
+**Problem.** Three ways this goes wrong and each needed a wall: the model picks a subject that is not in the race (or a
+homonym), the query becomes a place to smuggle text into Cypher, and the narrative states a number the records do not
+contain (a sum, a rounded figure, a "12 gifts" from general knowledge). And there was no graph: the chain walk is pandas
+over static JSON (see "Graph database?" below — the trigger it named, ad-hoc runtime traversal, is this).
+**How.** A local `neo4j:5` in docker, loaded by `web/scripts/load-graph.ts` from what the pipeline already publishes: 86
+chains, 2,000 entity pages, 50 donor pages, 500 ads, ledger, trails → 35,995 `Entity` nodes and 77,236 edges in five types
+(`GAVE` 75,831 · `PAID` 314 · `PLACED` 550 · `TARGETED` 539 · `CAMPAIGN_OF` 2). Money and targeting never share a type, so
+Musk → Senate Leadership Fund → Casey is `GAVE` then `TARGETED` and the fact sentence says "spent $52,799,240 opposing Bob Casey
+(independent spending; none of it goes to the candidate)". Every row keeps its `source_url`. `graphRows()` is pure and
+tested against the real artifacts; the loader MERGEs on keys so a regenerate is a re-run (`--reset` drops the race first).
+Server side (`web/src/lib/graph/`), `answerGraphQuestion` runs a fixed sequence and stops at the first failure with a typed
+refusal: Neo4j configured → key present → Grok classifies into one of four operations (`shared_funders`, `money_path`,
+`funder_reach`, `upstream`) plus subjects under a strict schema whose id enum is `trails.subjects` — a free-text `mention` is
+allowed only for people and organizations that are not on that list — re-validated in code → subjects resolved by id, or by
+name tokens with an exact-cover rule (two Jeff Yass ids collapse into one subject; "John Smith" against two different Smiths
+refuses with both names) → kinds checked per position (candidate → campaign committee on the funding side; the candidate node
+itself for a money path) → one fixed Cypher statement per operation with `$race`, `$a`, `$b` as its only parameters, ≤ 40
+facts → *then* the narrator, which sees the question and the numbered fact sentences only, returns one field, and is checked:
+each sentence with a number cites `[n]`, each number is a fact's amount/count/year/name digit, no URLs, ≤ 1,200 chars. A
+narrative that fails is withheld with the reason and the facts render anyway. `/api/ask-graph` sits behind its own limiter
+(6/min per client, 2 in flight). The browser tries it only after `/api/ask-route` said unsupported, in a separate
+`GraphAnswer` component whose header says what was asked of the graph and whose narrative is labelled model-written; every
+fact below it is a deterministic sentence with a source link. `/api/ask-route`, `answer.tsx`, the resolver and the answer
+pages are byte-for-byte what D-75 left.
+**Dead ends.** Chains alone gave Musk → Casey zero paths: campaign committees' receipts live on entity pages, not in chains,
+so those (and donors' own gifts) went into the projection. The narrator shared the classifier's 6 s budget and timed out
+on every ask (6–11 s observed) — it has its own 15 s. Grok puts citations after the period ("… fund. [1]") and Neo4j's
+uppercase names carry periods ("NAU, JOHN L. MR. III") and digits ("2024 THUNE …"), all of which the first guard rejected as
+uncited or unknown; the guard now normalises citation placement, does not split inside uppercase names, and allows digits
+that appear in a fact's name. Neo4j Community has no node-key constraints (`IS UNIQUE` instead) and no `CALL … IN
+TRANSACTIONS` inside an explicit transaction (reset is one `DETACH DELETE`). D-76 was taken meanwhile; this is D-77.
+**Numbers.** Live on PA-Sen: Musk → Casey `money_path` 8 facts, narrative ok; WinSenate ∩ Women Vote `shared_funders` → SMP,
+2 facts; McCormick `upstream` 30 facts; Yass `funder_reach` 17 facts. Classifier 2–4 s, narrator 6–11 s. Tests 59 → 126 (9
+schema on real artifacts, 14 queries, 23 classifier/narrator/guard, 13 orchestration, 8 endpoint incl. limiter and an
+`/api/ask-route`-unchanged check; all offline with `fetch` and the Neo4j runner faked). Serverless functions 1 → 2.
 
 ## Research and dead ends worth mentioning
 

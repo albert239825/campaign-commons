@@ -24,6 +24,10 @@ docs/        README.md (index) · FAQ.md · LOG.md · ONTOLOGY.md · QUESTIONS.m
 # web (works immediately against data/out)
 cd web && npm install && npm run dev            # http://localhost:3000
 
+# Money Trails graph mode (optional; D-77) — the ask box answers route-only without it
+docker run -d --name cc-neo4j -p 7474:7474 -p 7687:7687 -e NEO4J_AUTH=neo4j/<password> neo4j:5
+cd web && node --env-file=.env.local --import tsx scripts/load-graph.ts pa-sen-2024 --reset   # NEO4J_URI/USER/PASSWORD + XAI_API_KEY in web/.env.local
+
 # contracts
 cd contracts && npm install && npm run validate # validates data/out against schemas
 npm run jsonschema                              # regenerate contracts/jsonschema/ after schema edits
@@ -42,6 +46,7 @@ make all                                        # ingest ledger chains vendors a
   super PAC → candidate as money.
 - "Disclosed" ≠ "traceable". Super PACs disclose; dark = the hidden-donor layer (c4s, LLCs).
 - No causal language anywhere in copy. "Adjacent to", "alongside", never "bought", "influenced".
-- No LLM calls in the pipeline or at runtime.
+- No LLM calls in the pipeline. At runtime a model may pick a route from the closed set (D-75) or narrate facts the
+  server already fetched and sourced (D-77); it never authors a number or a page.
 - `data_status: "mock"` files are placeholders; the pipeline overwrites them in place.
 - Don't rewrite git history.
