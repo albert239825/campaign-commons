@@ -517,3 +517,8 @@ nullable when the ad has no dates), which the PA data does not yet exercise (0 v
 (placement is paid before air) and changed the copy everywhere to "in the week before and while this ad ran". Context rows
 611 → 728 across 280 → 284 ads (mixed-media vendors' digital portions now shown); links unchanged at 115 inferred, one rule
 text corrected. 171 pipeline tests.
+
+### 2026-09-06 — Phase 2a ad transcript enrichment
+
+Added the provenance-labelled YouTube transcript and xAI classification layer for ads. Machine rows remain separate from
+human issue tags, carry review status and response provenance, and are merged into optional `machine_issues` output only.

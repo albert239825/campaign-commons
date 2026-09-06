@@ -26,6 +26,7 @@ import { ISSUE_IDS } from "./issues";
  * Hand-maintained inputs (data/hand/<race_id>/, validated by the same tooling, merged in by the pipeline):
  *   issue_focus.json                    -> HandIssueFocusFile
  *   ad_issues.json                      -> HandAdIssuesFile
+ *   x_ad_issues.json                    -> HandXAdIssuesFile
  *   ie_issues.json                      -> HandIeIssuesFile
  *   vendor_aliases.json                 -> HandVendorAliasesFile
  *   vendor_ad_links.json                -> HandVendorAdLinksFile
@@ -148,6 +149,32 @@ export const BasisSchema = z.discriminatedUnion("basis", [
 export const IssueTagsSchema = z.object({
   issue_ids: z.array(IssueIdSchema).min(1).max(3), // first is primary
   basis: BasisSchema,
+});
+
+export const MachineProvenanceSchema = z.object({
+  tagged_by: z.string(),
+  tagged_at: z.string(),
+  model: z.string(),
+  prompt_version: z.string(),
+  tools: z.array(z.enum(["web_search", "x_search"])),
+  tool_filters: z.record(z.unknown()),
+  response_id: z.string().nullable(),
+  retrieved_at: z.string(),
+  citations: z.array(z.string().url()),
+  confidence: z.enum(["high", "medium", "low"]),
+  review_status: z.enum(["pending", "accepted", "rejected"]),
+  reviewed_by: z.string().nullable(),
+  reviewed_at: z.string().nullable(),
+  review_note: z.string().nullable(),
+});
+
+export const TranscriptKindSchema = z.enum(["auto_caption", "manual_caption", "whisper", "ad_text", "poster"]);
+
+export const MachineIssueTagsSchema = IssueTagsSchema.extend({
+  label: z.string(),
+  quote: z.string().nullable(),
+  transcript_kind: TranscriptKindSchema,
+  provenance: MachineProvenanceSchema,
 });
 
 /** What an independent expenditure paid for, classified from the filed `purpose` string. Raw purpose is always kept. */
@@ -599,6 +626,8 @@ export const AdSchema = z.object({
   vendor_links: z.array(AdVendorLinkSchema).optional(),
   /** every placeable-medium vendor the sponsor paid in the run window, linked or not — context for the reader, never an edge. */
   same_window_buys: z.array(SameWindowBuySchema).optional(),
+  /** machine-generated transcript classification; human `issues` remains authoritative */
+  machine_issues: MachineIssueTagsSchema.optional(),
 });
 
 
@@ -878,6 +907,18 @@ const HandFileBase = z.object({
   method: z.string(),
 });
 
+export const HandXAdIssueRowSchema = z.object({
+  ad_id: z.string(),
+  issue_ids: z.array(IssueIdSchema).max(2),
+  quote: z.string().max(280).nullable(),
+  rationale: z.string().max(200),
+  transcript_kind: TranscriptKindSchema,
+  source_urls: z.array(z.string().url()).min(1),
+  provenance: MachineProvenanceSchema,
+});
+
+export const HandXAdIssuesFileSchema = HandFileBase.extend({ rows: z.array(HandXAdIssueRowSchema) });
+
 export const HandIssueFocusRowSchema = focusVariants({
   entity_id: z.string(), // FEC committee id, or org:<NAME> chain-node id for a non-committee funder
   name: z.string(), // as filed, for humans reading the file
@@ -938,6 +979,11 @@ export const HandVendorAdLinksFileSchema = HandFileBase.extend({ rows: z.array(H
 export type EvidenceBasis = z.infer<typeof EvidenceBasisSchema>;
 export type Basis = z.infer<typeof BasisSchema>;
 export type IssueTags = z.infer<typeof IssueTagsSchema>;
+export type MachineProvenance = z.infer<typeof MachineProvenanceSchema>;
+export type TranscriptKind = z.infer<typeof TranscriptKindSchema>;
+export type HandXAdIssueRow = z.infer<typeof HandXAdIssueRowSchema>;
+export type HandXAdIssuesFile = z.infer<typeof HandXAdIssuesFileSchema>;
+export type MachineIssueTags = z.infer<typeof MachineIssueTagsSchema>;
 export type Medium = z.infer<typeof MediumSchema>;
 export type SupportOppose = z.infer<typeof SupportOpposeSchema>;
 export type EntityVendorRow = z.infer<typeof EntityVendorRowSchema>;
@@ -1017,6 +1063,7 @@ export const FILE_SCHEMAS = {
 export const HAND_FILE_SCHEMAS = {
   "issue_focus.json": HandIssueFocusFileSchema,
   "ad_issues.json": HandAdIssuesFileSchema,
+  "x_ad_issues.json": HandXAdIssuesFileSchema,
   "ie_issues.json": HandIeIssuesFileSchema,
   "vendor_aliases.json": HandVendorAliasesFileSchema,
   "vendor_ad_links.json": HandVendorAdLinksFileSchema,
