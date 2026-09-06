@@ -22,9 +22,13 @@ export async function POST(req: Request): Promise<NextResponse> {
   if (!hasTrails(raceId)) return NextResponse.json({ error: `No Money Trails for race ${raceId}.` }, { status: 404 });
 
   // 429s never reach the model; the browser answers such questions with its own matcher.
-  if (!askLimiter.take(clientKey(req.headers))) return tooMany("Too many questions; try again in a minute.");
+  // Global capacity first, so a request turned away as "busy" costs the client none of its own quota.
   const release = askLimiter.acquire();
   if (release === null) return tooMany("The router is busy; try again shortly.");
+  if (!askLimiter.take(clientKey(req.headers))) {
+    release();
+    return tooMany("Too many questions; try again in a minute.");
+  }
 
   try {
     const resolution = await routeQuestion(question, getTrails(raceId));

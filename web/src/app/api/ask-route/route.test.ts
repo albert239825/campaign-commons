@@ -76,12 +76,14 @@ describe("POST /api/ask-route spend guard", () => {
     vi.stubGlobal("fetch", f);
     const held = Array.from({ length: MAX_IN_FLIGHT }, (_, i) => ask(`who funds winsenate ${i}`));
     await vi.waitFor(() => expect(f).toHaveBeenCalledTimes(MAX_IN_FLIGHT));
-    expect((await ask("one more")).status).toBe(429);
+    // one client turned away as "busy" RATE_PER_MINUTE times keeps its own quota
+    const from = (q: string) => post({ raceId: "pa-sen-2024", question: q }, false, "203.0.113.77");
+    for (let i = 0; i < RATE_PER_MINUTE; i++) expect((await from(`one more ${i}`)).body).toEqual({ error: expect.stringContaining("busy") });
     expect(f).toHaveBeenCalledTimes(MAX_IN_FLIGHT);
     settle.forEach((s) => s());
     for (const h of held) expect((await h).status).toBe(200);
     stubCompletion(route("committee_funding", winsenate.id));
-    expect((await ask("who funds winsenate")).status).toBe(200);
+    expect((await from("who funds winsenate")).status).toBe(200);
   });
 });
 

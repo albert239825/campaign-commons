@@ -166,7 +166,11 @@ anything less than a valid route (no key, 6 s timeout, 4xx/5xx, malformed body, 
 the browser did. The route is guarded (`ask-limits.ts`): 10 asks/min per client address and 4 model calls in flight per
 instance, beyond which it answers 429 without calling the provider and the browser resolves locally. The ask box POSTs with its own 8 s budget and resolves locally
 if the call fails at all; suggestion chips never call the model. The response is a `Resolution` plus `via: "llm" | "fallback"`;
-no model text is in it. `answer.tsx`, `trails.json`, the resolver and its 23 tests are untouched. `next.config.ts` has no
+no model text is in it. Both pages end in a two-part receipt: how the question is read (web copy: model picks from the closed list, browser matcher
+otherwise, nothing it writes is shown) and how the answers were built (`trails.method`). That pipeline sentence used to say the
+question is "matched … in the browser; no language model or graph database is involved" — now stale, so `trails.py` says only
+that none is involved *in building* the answers, and `trails.json` was regenerated (`method` and `generated_at` are the only
+changed fields). `answer.tsx`, the resolver and its 23 tests are untouched. `next.config.ts` has no
 `output: "export"`, so the one route deploys as one serverless function and every page stays static. Both ask pages moved onto
 the record-page shell from PR #14 (detail banner, side section nav, paper/sand palette, square controls) via page composition and
 scoped `.ask-page` CSS; `answer.tsx` itself is untouched.
