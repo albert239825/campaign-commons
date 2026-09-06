@@ -1,5 +1,5 @@
 /**
- * Neo4j connection for the Money Trails graph (D-77). Server-only: reads NEO4J_URI / NEO4J_USER / NEO4J_PASSWORD.
+ * Neo4j connection for the Money Trails graph (D-78). Server-only: reads NEO4J_URI / NEO4J_USER / NEO4J_PASSWORD.
  * With no URI configured the graph is simply "not available" and the ask endpoint says so; nothing else in the site
  * depends on it. One driver per process (per warm function instance on Vercel), created lazily.
  */

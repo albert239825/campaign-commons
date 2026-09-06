@@ -188,6 +188,7 @@ export default async function ChainPage({
           action={
             <Legend
               items={[
+                { swatch: <span className="chain-legend-root" />, label: `you are here — ${chain.root_name}, the spender this page is about` },
                 { swatch: <Swatch color={VISIBILITY_COLORS.disclosed} />, label: "disclosed (FEC)" },
                 { swatch: <Swatch color={VISIBILITY_COLORS.inferable} />, label: "inferable (990, lagged)" },
                 { swatch: <Swatch color={UNWALKED_COLOR} />, label: "not walked (FEC committee, receipts outside this race's neighborhood)" },
@@ -221,12 +222,12 @@ export default async function ChainPage({
           {chain.edges.length === 0 ? (
             <p className="text-sm text-neutral-500">No receipts were traced for this spender in the 2024 cycle.</p>
           ) : (
-            <ChainDiagram wire={toWire(chain, links)} />
+            <ChainDiagram wire={toWire(chain, links)} hasTable />
           )}
           <p className="mt-2 text-xs text-neutral-500">
             Ribbon width is proportional to dollars; color is how the money is disclosed. Read left to right: sources → intermediaries → spender
-            {hasOut && " → vendors paid → ads ⇢ candidate targeted"}. Click a node for its details, the evidence behind each link, and the page or record
-            behind it; + / − expands or folds what hangs off it.
+            {hasOut && " → vendors paid → ads ⇢ candidate targeted"}. Hover a node or edge for the basics. Click a node for its details, the evidence behind each link, and the page or record
+            behind it; click an edge for its evidence and its row in the table below; + / − expands or folds what hangs off it.
           </p>
           {hasOut && (
             <p className="mt-1 text-xs text-neutral-500">
