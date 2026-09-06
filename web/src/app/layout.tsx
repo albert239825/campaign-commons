@@ -29,6 +29,9 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
               <Link href={routes.methodology()} className="hover:text-neutral-900">
                 Methodology
               </Link>
+              <a href="/deck/index.html" className="hover:text-neutral-900">
+                Slides
+              </a>
               <SearchBox />
             </nav>
           </div>

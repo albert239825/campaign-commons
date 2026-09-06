@@ -1,0 +1,57 @@
+/* Laptop variant: same slides and tokens, larger type and looser layout for a 13–15" screen. Loads after theme.css. */
+.reveal { font-size: 32px; }
+.reveal .slides section { padding: 48px 64px; }
+.brand-name { font-size: 26px; }
+.kicker { font-size: 16px; }
+.reveal h1 { font-size: 104px; }
+.reveal h2 { font-size: 66px; }
+
+/* cover */
+.cover-stats { max-width: 1100px; gap: 40px; }
+.cover-stats b { font-size: 68px; }
+.cover-stats span { font-size: 19px; }
+.reveal p.cover-foot { font-size: 15px; }
+.reveal .slides section.cover .cover-art { width: 720px; right: -80px; bottom: -140px; }
+
+/* video */
+.video-frame iframe, .video-poster img { width: 1200px; height: 675px; }
+.reveal p.caption { font-size: 28px; }
+
+/* questions */
+.reveal .questions li { font-size: 84px; padding-left: 120px; }
+.reveal .questions li::before { font-size: 24px; top: 18px; }
+
+/* today */
+.sites { grid-template-columns: repeat(3, 1fr); gap: 26px 40px; margin-top: 28px; }
+.sites b { font-size: 32px; }
+.sites span { font-size: 21px; }
+.reveal p.deadend { font-size: 36px; margin-top: 36px; }
+.bottom-line { padding-top: 26px; }
+.bottom-line .big { font-size: 64px; }
+
+/* demo */
+.demo h2 { font-size: 92px; }
+.reveal p.path { font-size: 30px; flex-wrap: wrap; gap: 14px 18px; }
+.path span { padding: 10px 22px; }
+.reveal .legend { font-size: 18px; }
+.sw { width: 14px; height: 14px; }
+
+/* architecture */
+.grid2 { gap: 24px; margin-top: 22px; }
+.grid2 .node { font-size: 30px; padding: 30px 36px; }
+.grid2 .node span { font-size: 16px; }
+
+/* next */
+.next { grid-template-columns: 1fr 1fr; gap: 40px 56px; margin-top: 60px; }
+.next b { font-size: 36px; }
+.next span { font-size: 26px; }
+
+/* closer */
+.reveal p.quote { font-size: 124px; }
+.reveal p.attrib { font-size: 32px; }
+.cover-body { max-width: 1050px; }
+.reveal .cover h1 { font-size: 96px; }
+
+/* in-app copy: way back to the live demo */
+.exit { position: fixed; right: 20px; bottom: 16px; z-index: 50; font: 500 13px/1 "Scto Grotesk A", sans-serif; letter-spacing: 0.04em; color: #fff; mix-blend-mode: difference; opacity: 0.5; text-decoration: none; }
+.exit:hover { opacity: 0.9; }
