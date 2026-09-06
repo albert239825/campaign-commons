@@ -57,6 +57,8 @@ on the 26 cached ads tells us.
 
 ## 3. Spender self-description
 
+**Phase 2b implementation: in progress — website-only `web_search` enrichment with cached FEC/page verification and pending human review.**
+
 `web_search` with `filters.allowed_domains = [committee website]` when FEC lists one (About page — how the human rows were
 made); otherwise open web, row written only if the found page names the committee/FEC id. **No `x_search` for spenders**
 (Albert). Output mirrors `HandIssueFocusRow` (kind, ≤3 issues, description, quote, source_urls) +

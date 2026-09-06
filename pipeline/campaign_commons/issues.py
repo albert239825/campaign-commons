@@ -177,6 +177,56 @@ def patch_focus(refs: RowRefs, rows: list[dict]) -> int:
     return changed
 
 
+def machine_focus_payload(row: dict) -> dict:
+    provenance = row["provenance"]
+    status = provenance["review_status"]
+    accepted = status == "accepted"
+    return {
+        "kind": row["kind"],
+        "issue_ids": list(row["issue_ids"]),
+        "description": row["description"],
+        "basis": {
+            "basis": "verified" if accepted else "inferred",
+            "rule": "x_issue_focus",
+            "source_urls": list(row["source_urls"]),
+            "checked_by": provenance["reviewed_by"] if accepted else None,
+            "checked_at": provenance["reviewed_at"] if accepted else None,
+        },
+        "label": (
+            f"Machine-tagged from the committee's own website "
+            f"({provenance['model']}, {provenance['tagged_at']}); not part of the record"
+        ),
+        "quote": row["quote"],
+        "provenance": provenance,
+    }
+
+
+def patch_machine_focus(refs: RowRefs, rows: list[dict]) -> int:
+    """Replace machine issue-focus blocks while leaving human focus untouched."""
+    by_id = {str(row["entity_id"]): row for row in rows}
+    changed = 0
+    entities_dir = refs.out_dir / "entities"
+    if not entities_dir.exists():
+        return 0
+    for path in sorted(entities_dir.glob("*.json")):
+        entity = read_json(path)
+        dirty = False
+        enrichment = entity.get("x_enrichment")
+        if isinstance(enrichment, dict) and "issue_focus" in enrichment:
+            del enrichment["issue_focus"]
+            dirty = True
+            if not enrichment:
+                entity.pop("x_enrichment", None)
+        row = by_id.get(str(entity.get("entity_id")))
+        if row is not None and row.get("provenance", {}).get("review_status") != "rejected":
+            entity.setdefault("x_enrichment", {})["issue_focus"] = machine_focus_payload(row)
+            dirty = True
+        if dirty:
+            write_json(path, entity)
+            changed += 1
+    return changed
+
+
 # ---------------------------------------------------------------------------
 # Layer B: ie_issues.json -> entities/<spender>.json IE rows; ad_issues.json x ads.json
 # ---------------------------------------------------------------------------
@@ -389,13 +439,16 @@ def build(race_id: str, refs: RowRefs) -> dict:
     dollars_total = float(ledger["traceability"]["outside_total"])
 
     focus_rows = _hand_rows(refs.hand_dir / "issue_focus.json")
+    x_focus_rows = _hand_rows(refs.hand_dir / "x_issue_focus.json")
     ie_rows = _hand_rows(refs.hand_dir / "ie_issues.json")
     ad_rows = _hand_rows(refs.hand_dir / "ad_issues.json")
 
     focus_changed = patch_focus(refs, focus_rows)
+    x_focus_changed = patch_machine_focus(refs, x_focus_rows)
     ie_records, ie_changed = patch_ies(refs, ie_rows)
     ad_records, ads_total = tagged_ads(refs, ad_rows)
     print(f"issue_focus: {len(focus_rows)} rows, {focus_changed} entity files changed")
+    print(f"x_issue_focus: {len(x_focus_rows)} rows, {x_focus_changed} entity files changed")
     print(f"ie_issues: {len(ie_rows)} rows, {len(ie_records)} matched, {ie_changed} entity files changed")
     print(f"ad_issues: {len(ad_rows)} rows, {len(ad_records)} matched of {ads_total} ads")
 
