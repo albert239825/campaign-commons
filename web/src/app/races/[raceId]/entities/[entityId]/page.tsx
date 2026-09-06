@@ -3,10 +3,11 @@ import { SectionNav } from "@/components/ui/detail-layout";
 import Link from "next/link";
 import { getAdsBySponsor, getEntity, getRace, getVendors, hasChain, listEntityIds, listRaceIds } from "@/lib/data";
 import { pct, routes } from "@/lib/format";
-import { AdjacencyNote, Breadcrumbs, Card, DataStatusBanner, Money } from "@/components/ui";
+import { AdjacencyNote, Card, Money } from "@/components/ui";
+import { RaceShell } from "@/components/ui/race-shell";
 import { VISIBILITY_COLORS } from "@campaign-commons/contracts";
 import { BarLegend, MONEY_COLORS, StackedBar, visibilitySegments } from "@/components/ui/stacked-bar";
-import { EntityHeader } from "@/components/entity/entity-header";
+import { EntityHeader, EntityProfile } from "@/components/entity/entity-header";
 import { FocusChip } from "@/components/entity/focus-chip";
 import { FlowsTable } from "@/components/entity/flows-table";
 import { IeTable } from "@/components/entity/ie-table";
@@ -36,14 +37,18 @@ export default async function EntityPage({ params }: { params: Promise<{ raceId:
   const candidateNames = Object.fromEntries(race.candidates.map((c) => [c.candidate_id, c.name]));
 
   return (
-    <div className="detail-page entity-page">
+    <RaceShell
+      race={race}
+      section={null}
+      status={e.data_status}
+      crumbs={[{ label: e.name }]}
+      className="entity-page"
+      header={<EntityHeader raceId={raceId} e={e} chain={chain} />}
+    >
       <div>
-        <Breadcrumbs items={[{ href: routes.home(), label: "Races" }, { href: routes.race(raceId), label: race.label }, { label: e.name }]} />
-        <DataStatusBanner status={e.data_status} />
-        <EntityHeader raceId={raceId} e={e} chain={chain} />
+        <EntityProfile e={e} />
         {e.issue_focus && <FocusChip focus={e.issue_focus} />}
       </div>
-
       <div className="detail-sections">
         <aside className="detail-sidebar"><SectionNav items={[
           { id: "receipts", label: "Funding sources" }, { id: "inflows", label: "Money in" },
@@ -129,6 +134,6 @@ export default async function EntityPage({ params }: { params: Promise<{ raceId:
           Methodology
         </Link>
       </footer>
-    </div>
+    </RaceShell>
   );
 }

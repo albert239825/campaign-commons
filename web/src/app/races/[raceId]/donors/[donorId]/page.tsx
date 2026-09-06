@@ -1,7 +1,8 @@
 import { DetailHeader } from "@/components/ui/detail-layout";
 import { getAdsBySponsor, getDonor, getRace, listDonorKeys, listRaceIds } from "@/lib/data";
-import { date, money, routes } from "@/lib/format";
-import { AdjacencyNote, Breadcrumbs, Card, DataStatusBanner, Money, SourceLink, Stat } from "@/components/ui";
+import { date, money } from "@/lib/format";
+import { AdjacencyNote, Card, Money, SourceLink, Stat } from "@/components/ui";
+import { RaceShell } from "@/components/ui/race-shell";
 import { DonorTree } from "@/components/donor/donor-tree";
 import { CommitteeAdsLinks } from "@/components/donor/committee-ads-links";
 
@@ -17,17 +18,22 @@ export default async function DonorPage({ params }: { params: Promise<{ raceId: 
   const targeting = view.edges.filter((e) => e.kind === "targeting");
 
   return (
-    <div className="detail-page donor-page">
-      <Breadcrumbs items={[{ href: routes.home(), label: "Races" }, { href: routes.race(raceId), label: race.label }, { label: view.name }]} />
-      <DataStatusBanner status={view.data_status} />
-      <DetailHeader label={`Donor record · ${race.label}`} title={<>Where {view.name}&apos;s money went</>}>
-        <div className="flex flex-wrap items-center gap-x-4 gap-y-1 text-sm text-neutral-600">
-          <span className="capitalize">{view.kind}</span>
-          {donor && <SourceLink href={donor.source_url} label="FEC receipts under this name" />}
-          <span className="text-xs text-neutral-500">Forward walk over 2024-cycle money edges, ending at independent expenditures in this race.</span>
-        </div>
-      </DetailHeader>
-
+    <RaceShell
+      race={race}
+      section={null}
+      status={view.data_status}
+      crumbs={[{ label: view.name }]}
+      className="donor-page"
+      header={
+        <DetailHeader label={`Donor record · ${race.label}`} title={<>Where {view.name}&apos;s money went</>}>
+          <div className="flex flex-wrap items-center gap-x-4 gap-y-1 text-sm text-neutral-600">
+            <span className="capitalize">{view.kind}</span>
+            {donor && <SourceLink href={donor.source_url} label="FEC receipts under this name" />}
+            <span className="text-xs text-neutral-500">Forward walk over 2024-cycle money edges, ending at independent expenditures in this race.</span>
+          </div>
+        </DetailHeader>
+      }
+    >
       <Card>
         <div className="grid grid-cols-2 gap-4 md:grid-cols-4">
           <Stat label="Given to committees shown" value={<Money amount={view.total_given} />} sub={money(view.total_given, { compact: false })} />
@@ -58,6 +64,6 @@ export default async function DonorPage({ params }: { params: Promise<{ raceId: 
         </p>
         <p className="text-xs text-neutral-500">Generated {date(view.generated_at.slice(0, 10))}.</p>
       </footer>
-    </div>
+    </RaceShell>
   );
 }

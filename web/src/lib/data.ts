@@ -89,6 +89,23 @@ export const listChainIds = (raceId: string) => listIds(raceId, "chains");
 export const listDossierIds = (raceId: string) => listIds(raceId, "dossiers");
 export const listDonorKeys = (raceId: string) => listIds(raceId, "donors");
 export const listVendorIds = (raceId: string) => listIds(raceId, "vendors");
-/** Vendor count for nav tabs; 0 when the vendors stage has not run for this race. */
-export const countVendors = (raceId: string) => (existsSync(join(DATA_OUT, raceId, "vendors.json")) ? getVendors(raceId).vendors.length : 0);
+/** What the race nav needs on every race page. `vendors` is null when the vendors stage has not run for the race;
+ *  `trails` is whether Money Trails (`trails.json`, PR #16) has been generated for it. */
+export type RaceSections = { ads: number; vendors: number | null; stories: number; dossiers: string[]; trails: boolean };
+/** Memoised because ~3,000 pages ask for the same three files. */
+const raceSectionsCache = new Map<string, RaceSections>();
+export const getRaceSections = (raceId: string): RaceSections => {
+  let hit = raceSectionsCache.get(raceId);
+  if (!hit) {
+    hit = {
+      ads: getAds(raceId).ads.length,
+      vendors: existsSync(join(DATA_OUT, raceId, "vendors.json")) ? getVendors(raceId).vendors.length : null,
+      stories: getStories(raceId).stories.length,
+      dossiers: listDossierIds(raceId),
+      trails: existsSync(join(DATA_OUT, raceId, "trails.json")),
+    };
+    raceSectionsCache.set(raceId, hit);
+  }
+  return hit;
+};
 export const hasChain = (raceId: string, entityId: string) => existsSync(join(DATA_OUT, raceId, "chains", `${entityId}.json`));

@@ -56,7 +56,7 @@ export function VisibilityBadge({ visibility }: { visibility: Visibility }) {
   return (
     <span
       className="visibility-badge inline-flex items-center gap-1.5 rounded-full border px-2 py-0.5 text-xs font-medium"
-      style={{ borderColor: VISIBILITY_COLORS[visibility], color: `var(--visibility-${visibility}-text, ${VISIBILITY_COLORS[visibility]})` }}
+      style={{ borderColor: VISIBILITY_COLORS[visibility], color: `var(--color-${visibility}-text)` }}
     >
       <VisibilityDot visibility={visibility} />
       {VISIBILITY_LABELS[visibility]}

@@ -517,3 +517,27 @@ nullable when the ad has no dates), which the PA data does not yet exercise (0 v
 (placement is paid before air) and changed the copy everywhere to "in the week before and while this ad ran". Context rows
 611 → 728 across 280 → 284 ads (mixed-media vendors' digital portions now shown); links unchanged at 115 inferred, one rule
 text corrected. 171 pipeline tests.
+
+## 2026-09-06 ~00:30 — Design PR 1: one race shell, one nav, one header (design/race-shell)
+
+**What changed.** First of Patrick's five design PRs (plan in the session attachment). `RaceShell` wraps every race-scoped
+page — overview, ads wall, ad, vendors, vendor, stories, both dossiers, entity, chain, donor; the Money Trails pages (PR #16)
+are left alone, they are being redesigned separately — and owns breadcrumbs, the data-status banner
+and `RaceNav`; the pages pass their `DetailHeader` (or the overview banner) as `header` and keep only their content. `RaceNav`
+no longer takes `counts`/`active` props: `getRaceSections(raceId)` (memoised, one read per race per build) decides which tabs
+exist and their counts, dossier tabs come from `race.candidates`, a Money Trails tab appears once `trails.json` exists, and "Ledger"
+became "Overview". Active state is `aria-current="page"` on the section, `aria-current="true"` on the parent when the page is a
+record inside it. Tokens: `@theme` now defines paper/surface/ink/ink-soft/muted/rule/rule-strong, the visibility colours and
+their text variants, and `--font-sans`; the landing, dashboard and detail pages stop restating the header, footer, font and
+focus ring under `body:has(...)`. The 390px bug: the header row was `nowrap`, so the search box (fixed 14rem) was pushed past
+the viewport on every page and the whole document scrolled sideways. It now wraps to a second row below 680px; the race tabs
+scroll sideways in one row instead of stacking. `EntityHeader` split into the banner (`EntityHeader`) and the registration
+facts (`EntityProfile`) so the tabs sit under the banner on entity pages too. D-75.
+
+**Challenge.** Which tabs a race has is not a property of the page but of the data: PA has vendors and trails, a stub race has
+neither, and a "Vendors 0" tab would say the stage ran and found nothing. `vendors: number | null` keeps "absent" distinct from
+"zero" — the same missing ≠ none rule the pipeline follows. The overview page's banner + nav needed to stay one grid child so
+the dashboard's 88px row gap did not open between them; `RaceShell` has a `dashboard` variant for exactly that.
+
+**Numbers.** 2,960 pages build (no routes added or removed). `scrollWidth` at 390px: 417 → 375 (= viewport) on all 11
+sampled race pages. 32 `body:has(...)` header/font rules → 7 (landing hero only).
