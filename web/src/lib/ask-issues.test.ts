@@ -74,7 +74,7 @@ describe("buildSpenderIssueAnswer", () => {
       "No stated position found on its own site",
     ]);
     expect(result.counts).toEqual({ spenders: 4, with_position: 3, verified: 1, model: 2 });
-    expect(result.headline).toBe('4 groups reported independent expenditures for or against Bob Casey. 3 of them state a position on protect abortion access in federal law on their own sites: 1 toward "Protect abortion access in federal law", 1 toward "Restrict abortion access", 1 on neither side. 1 states none we could find.');
+    expect(result.headline).toBe('4 groups reported independent expenditures for or against Bob Casey. 3 of them state a position on abortion & reproductive rights on their own sites: 1 toward "Protect abortion access in federal law", 1 toward "Restrict abortion access", 1 on neither side. 1 states none we could find.');
     expect(result.caveats).toHaveLength(3);
     expect(result.groups[0].rows[0].spender.source_url).toBe("https://fec.example/p1");
     expect(result.groups[0].rows[0].position?.quote).toBe("We support access.");

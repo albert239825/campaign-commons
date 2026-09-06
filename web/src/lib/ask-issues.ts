@@ -5,7 +5,7 @@ import type {
   IssuePosition,
   TrailSubject,
 } from "@campaign-commons/contracts";
-import { ISSUE_AXES } from "@campaign-commons/contracts";
+import { ISSUE_AXES, ISSUE_BY_ID } from "@campaign-commons/contracts";
 import { getEntity, getIssues, getTrails, listEntityIds } from "./data";
 
 export type SpenderStance = {
@@ -56,7 +56,7 @@ export function buildSpenderIssueAnswer(
   const none = groups.get("none")?.length ?? 0;
   const axis = ISSUE_AXES[issueId];
   const withPosition = stances.length - none;
-  const headline = `${countWord(stances.length, "group", "groups")} reported independent expenditures for or against ${candidate.name}. ${withPosition} of them ${withPosition === 1 ? "states" : "state"} a position on ${axis.plus.toLowerCase()} on their own sites: ${plus} ${plus === 1 ? "toward" : "toward"} "${axis.plus}", ${minus} toward "${axis.minus}"${neither ? `, ${neither} on neither side` : ""}. ${none} ${none === 1 ? "states" : "state"} none we could find.`;
+  const headline = `${countWord(stances.length, "group", "groups")} reported independent expenditures for or against ${candidate.name}. ${withPosition} of them ${withPosition === 1 ? "states" : "state"} a position on ${ISSUE_BY_ID[issueId].label.toLowerCase()} on their own sites: ${plus} toward "${axis.plus}", ${minus} toward "${axis.minus}"${neither ? `, ${neither} on neither side` : ""}. ${none} ${none === 1 ? "states" : "state"} none we could find.`;
   const caveats = [
     "A stated position is what the group says on its own site, read by a language model and kept only where the quote appears verbatim on the fetched page; it is marked unverified until a person checks it. It is not what the group's ads or notices said, and not a claim about which dollars went where.",
     ...(coverage === null

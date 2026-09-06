@@ -9,7 +9,7 @@ function directionText(direction: number, issueId: SpenderIssueAnswer["issueId"]
   if (direction === 0) return "takes a position on neither side";
   const strength = Math.abs(direction) === 2 ? "strongly" : "leans";
   const side = direction > 0 ? ISSUE_AXES[issueId].plus : ISSUE_AXES[issueId].minus;
-  return `${strength} ${direction > 0 ? "toward" : "toward"} ${side}`;
+  return `${strength} toward: ${side}`;
 }
 
 function StanceRow({ stance, answer, raceId, entityIds }: { stance: SpenderStance; answer: SpenderIssueAnswer; raceId: string; entityIds: ReadonlySet<string> }) {
@@ -56,7 +56,6 @@ function StanceRow({ stance, answer, raceId, entityIds }: { stance: SpenderStanc
 export function IssueAnswerView({ answer, raceId, entityIds }: { answer: SpenderIssueAnswer; raceId: string; entityIds: ReadonlySet<string> }) {
   return (
     <div className="space-y-6">
-      <p className="max-w-3xl text-lg leading-snug text-neutral-900">{answer.headline}</p>
       {answer.groups.map((group) => (
         <Card key={group.key} title={<span>{group.label} <span className="font-normal text-neutral-500">({group.rows.length})</span></span>}>
           <ul>{group.rows.map((stance) => <StanceRow key={stance.spender.spender_id} stance={stance} answer={answer} raceId={raceId} entityIds={entityIds} />)}</ul>
