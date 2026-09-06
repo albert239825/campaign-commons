@@ -35,7 +35,16 @@ export function FundingExplorer({ views, raceId }: { views: FundingView[]; raceI
     const own = slices.filter(s => s.side === side);
     return { side, slices: own, total: own.reduce((sum, s) => sum + s.amount, 0) };
   });
-  const pick = (s: { id: string; group: Slice }) => { setSlice(s.group); setPicked(detailed ? s.id : null); };
+  const pick = (s: { id: string; group: Slice; viewId?: string; pickId?: string }) => {
+    setSlice(s.group);
+    if (s.viewId) {
+      const target = views.findIndex(v => v.id === s.viewId);
+      if (target >= 0) setIndex(target);
+      setPicked(s.pickId ?? null);
+      return;
+    }
+    setPicked(detailed ? s.id : null);
+  };
   const isPicked = (s: { id: string; group: Slice }) => (detailed ? picked === s.id : slice === s.group);
   const toggleDetail = () => { setDetailed(!detailed); setPicked(null); };
   const selectTab = (event: KeyboardEvent<HTMLButtonElement>, i: number) => {
@@ -103,7 +112,7 @@ export function FundingExplorer({ views, raceId }: { views: FundingView[]; raceI
           </div>
           <p className="funding-caption">
             Select a slice to explore it. Outside spending supports or opposes candidates; it does not go to their campaigns. The combined amount is not a campaign fundraising total.
-            {detailed && bySide.length > 1 && " Each side groups money working for one candidate: each side has its own hue; the darkest shade is the campaign's receipts, lighter shades are outside spending supporting them and opposing their opponent. Only the receipts reach the campaign; a side total is a comparison figure, not a fundraising total."}
+            {detailed && bySide.length > 1 && " Each side groups money working for one candidate: each side has its own hue; the darkest shade is the campaign's receipts, lighter shades are outside spending supporting them and opposing their opponent. Only the receipts reach the campaign; a side total is a comparison figure, not a fundraising total. Selecting a slice opens the candidate record it comes from."}
             {detailed && bySide.length <= 1 && " Darker slices are money to the campaign, by source; lighter slices are independent expenditures, by stance. Conduit receipts are already inside the individuals slice."}
           </p>
         </div>

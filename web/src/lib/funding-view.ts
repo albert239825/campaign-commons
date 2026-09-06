@@ -65,18 +65,20 @@ const OUTSIDE_SHADES = ["#8c7e6a", "#cbc1b0"];
 const SIDE_HUES = [
   ["#2f5d62", "#5f8a8b", "#a3c1bd"],
   ["#6f4a2b", "#a67c52", "#d2b48c"],
-  ["#4b3f6b", "#7d6f9e", "#b9afd0"],
-  ["#5a5e2a", "#8b8f55", "#c2c49a"],
 ];
 
-export type PieSlice = { id: string; group: SliceGroup; label: string; amount: number; color: string; side?: string };
+export type PieSlice = {
+  id: string; group: SliceGroup; label: string; amount: number; color: string;
+  /** By-side slices only: the side they belong to, and the candidate view + detail slice that hold the underlying record. */
+  side?: string; viewId?: string; pickId?: string;
+};
 
 /**
  * Summary: receipts vs outside. Detailed: receipts by source (individuals / committees / other) and outside by stance
  * (supporting / opposing). For the all-candidates view, detail is instead grouped by side — see `sideSlices`.
  */
 export function pieSlices(view: FundingView, detailed: boolean, candidates: FundingView[] = []): PieSlice[] {
-  if (detailed && view.id === "all" && candidates.length > 1) return sideSlices(candidates);
+  if (detailed && view.id === "all" && candidates.length === 2) return sideSlices(candidates);
   if (!detailed) {
     return [
       { id: "campaign", group: "campaign", label: "Campaign receipts", amount: view.campaign.receipts, color: GROUP_COLORS.campaign },
@@ -93,19 +95,20 @@ export function pieSlices(view: FundingView, detailed: boolean, candidates: Fund
 }
 
 /**
- * One side per candidate, contiguous: that candidate's receipts, outside spending supporting them, and outside spending
- * opposing their opponent(s) — "money working for" a side, never called a fundraising total (D-16 hues kept).
+ * Two-candidate races only: one contiguous side per candidate — their receipts, outside spending supporting them, and
+ * outside spending opposing the other candidate — so every dollar appears exactly once. "Money working for" a side is
+ * never called a fundraising total (D-16 hues kept). With more candidates an oppose total has no single side, so the
+ * all-candidates detail stays on the five-slice source/stance cut.
  */
-export function sideSlices(candidates: FundingView[]): PieSlice[] {
-  return candidates.flatMap((c, i) => {
-    const others = candidates.filter(o => o.id !== c.id);
-    const rival = others.length === 1 ? others[0].names : "opponents";
+export function sideSlices([a, b]: FundingView[]): PieSlice[] {
+  return [a, b].flatMap((c, i) => {
+    const rival = i === 0 ? b : a;
     const side = c.names;
-    const hue = SIDE_HUES[i % SIDE_HUES.length];
+    const hue = SIDE_HUES[i];
     return [
-      { id: `${c.id}-campaign`, group: "campaign" as const, side, label: `Receipts, ${c.names}`, amount: c.campaign.receipts, color: hue[0] },
-      { id: `${c.id}-support`, group: "outside" as const, side, label: `Supporting ${c.names}`, amount: c.outside.support, color: hue[1] },
-      { id: `${c.id}-oppose`, group: "outside" as const, side, label: `Opposing ${rival}`, amount: others.reduce((sum, o) => sum + o.outside.oppose, 0), color: hue[2] },
+      { id: `${c.id}-campaign`, group: "campaign" as const, side, viewId: c.id, label: `Receipts, ${c.names}`, amount: c.campaign.receipts, color: hue[0] },
+      { id: `${c.id}-support`, group: "outside" as const, side, viewId: c.id, pickId: "support", label: `Supporting ${c.names}`, amount: c.outside.support, color: hue[1] },
+      { id: `${c.id}-oppose`, group: "outside" as const, side, viewId: rival.id, pickId: "oppose", label: `Opposing ${rival.names}`, amount: rival.outside.oppose, color: hue[2] },
     ];
   });
 }

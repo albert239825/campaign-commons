@@ -724,7 +724,7 @@ view, tabs, captions, visibility bar, methodology `<details>` and source records
 changes; `page.tsx` untouched. D-81. On the **all-candidates** tab, detail instead groups the pie by side (Albert): one
 contiguous half per candidate — their receipts, outside spending supporting them, outside spending opposing their
 opponent(s) — each side in its own non-party hue (teal-slate / umber-ochre; darkest shade = receipts, lighter = outside
-spending) and a "Working for <candidate>" subtotal heading in the legend (`sideSlices`, `SIDE_HUES`). The caption says the side total is a comparison figure, not a fundraising total.
+spending) and a "Working for <candidate>" subtotal heading in the legend (`sideSlices`, `SIDE_HUES`). The caption says the side total is a comparison figure, not a fundraising total. Review pass: by-side is two-candidate only (with N>2 an oppose total has no single side and would be counted N-1 times; the all-candidates detail falls back to the five-slice cut), and selecting a by-side slice opens the candidate record it comes from (`viewId`/`pickId`) instead of leaving the race-wide panel up.
 
 **Challenge.** This is the third cut of the same PR: the Sep 5 critique asked for per-candidate support/oppose pairs,
 Albert then asked for one three-slice "Money working for <candidate>" pie per candidate, and Patrick settled on the
