@@ -2,7 +2,7 @@
   "root_entity_id": "C00647966",
   "root_name": "RURAL FREEDOM NETWORK",
   "race_id": "pa-sen-2024",
-  "generated_at": "2026-09-06T05:02:45+00:00",
+  "generated_at": "2026-09-06T14:25:41+00:00",
   "data_status": "real",
   "nodes": [
     {
@@ -571,6 +571,8 @@
   "summary": {
     "total_in": 576457.0,
     "disclosed_share": 0.9902,
+    "disclosed_individuals_share": 0.9902,
+    "disclosed_organizations_share": 0.0,
     "inferable_share": 0.0,
     "unwalked_share": 0.0,
     "dark_share": 0.0098,
@@ -583,5 +585,5 @@
     "max_out_depth": 2
   },
   "flags": [],
-  "method": "Backward walk over money edges only (Schedule A receipts from individuals and organizations, committee-to-committee transfers) into RURAL FREEDOM NETWORK, 1 hop(s) deep; independent expenditures are targeting edges and never appear. The walk starts from $576,457 of itemized 2023–2024 receipts as loaded from FEC bulk data (unitemized receipts, loans and offsets are not edges), and every expanded committee conserves dollars: its inbound edges sum to its receipts. Inbound edges under 1% of a committee's receipts are rolled into one 'other contributors' node, which counts as disclosed except for the organization dollars inside it. Each dollar takes the visibility of where the walk stopped: named individuals (including earmarks through ActBlue/WinRed, attributed to the person) are disclosed. Organizations that are not registered committees are classified from their name alone (no IRS lookup): a union or a business giving from its own treasury is disclosed — the named entity is the source; an LLC, trust, advocacy nonprofit (501(c)(4)-style names) or unclassifiable organization is dark, because whoever funds it is not on file with the FEC. Visibility shares are preliminary; no 990 lookups were performed, so nothing is marked inferable. Spending side (right of the spender): Schedule E payments to vendors are money edges; vendor → ad and spender → ad edges are placement (no dollars) and carry the evidence basis they were drawn on; edges into a candidate are targeting (for/against) and never carry money to the candidate. Ad dollars are the midpoint of the Google-reported spend range."
+  "method": "Backward walk over money edges only (Schedule A receipts from individuals and organizations, committee-to-committee transfers) into RURAL FREEDOM NETWORK, 1 hop(s) deep; independent expenditures are targeting edges and never appear. The walk starts from $576,457 of itemized 2023–2024 receipts as loaded from FEC bulk data (unitemized receipts, loans and offsets are not edges), and every expanded committee conserves dollars: its inbound edges sum to its receipts. Inbound edges under 1% of a committee's receipts are rolled into one 'other contributors' node, which counts as disclosed except for the organization dollars inside it. Each dollar takes the visibility of where the walk stopped: named individuals (including earmarks through ActBlue/WinRed, attributed to the person) are disclosed to a person. Organizations that are not registered committees are classified from their name alone (no IRS lookup): a union or a business giving from its own treasury is disclosed to an organization — the named entity is the source, but its own funders are not walked; an LLC, trust, advocacy nonprofit (501(c)(4)-style names) or unclassifiable organization is dark, because whoever funds it is not on file with the FEC. The disclosed share is reported in total and split into the part that resolves to people and the part that stops at a named business or union. Visibility shares are preliminary; no 990 lookups were performed, so nothing is marked inferable. Spending side (right of the spender): Schedule E payments to vendors are money edges; vendor → ad and spender → ad edges are placement (no dollars) and carry the evidence basis they were drawn on; edges into a candidate are targeting (for/against) and never carry money to the candidate. Ad dollars are the midpoint of the Google-reported spend range."
 }

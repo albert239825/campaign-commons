@@ -42,7 +42,7 @@ export default async function IssueAnswerPage({ params }: { params: Promise<{ ra
           items={[
             { href: routes.home(), label: "Races" },
             { href: routes.race(raceId), label: race.label },
-            { href: routes.ask(raceId), label: "Money Trails" },
+            { href: routes.ask(raceId), label: "Ask" },
             { label: INTENT_LABELS.spender_issue },
           ]}
         />

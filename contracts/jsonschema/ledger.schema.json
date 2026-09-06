@@ -234,6 +234,16 @@
                     "minimum": 0,
                     "maximum": 1
                   },
+                  "disclosed_individuals": {
+                    "type": "number",
+                    "minimum": 0,
+                    "maximum": 1
+                  },
+                  "disclosed_organizations": {
+                    "type": "number",
+                    "minimum": 0,
+                    "maximum": 1
+                  },
                   "inferable": {
                     "type": "number",
                     "minimum": 0,
@@ -309,6 +319,9 @@
                   "type": "number"
                 },
                 "traced_to_individuals": {
+                  "type": "number"
+                },
+                "traced_to_organizations": {
                   "type": "number"
                 },
                 "inferable": {

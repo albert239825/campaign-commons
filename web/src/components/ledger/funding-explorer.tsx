@@ -7,13 +7,21 @@ import { money, pct, routes } from "@/lib/format";
 import { Money, SourceLink } from "@/components/ui";
 
 type Slice = SliceGroup;
-const VISIBILITY = [
-  { key: "disclosed", label: "Disclosed", color: "#4c645c", detail: "Resolves to a named individual, business, or union in filings." },
+type VisibilityKey = keyof FundingView["visibility"];
+type VisibilityRow = { key: VisibilityKey; label: string; color: string; detail: string };
+const DISCLOSED_ROWS: { total: VisibilityRow[]; split: VisibilityRow[] } = {
+  total: [{ key: "disclosed", label: "Disclosed", color: "#4c645c", detail: "Resolves to a named individual, business, or union in filings." }],
+  split: [
+    { key: "disclosed_individuals", label: "Disclosed · individuals", color: "#4c645c", detail: "Resolves to a named person in filings." },
+    { key: "disclosed_organizations", label: "Disclosed · organizations", color: "#8aa89c", detail: "Stops at a named business or union giving from its own treasury; its own funders are not walked." },
+  ],
+};
+const OTHER_ROWS: VisibilityRow[] = [
   { key: "inferable", label: "Inferable", color: "#a68a5e", detail: "Potentially reconstructable from other public records." },
   { key: "unwalked", label: "Not walked", color: "#92908a", detail: "The source chain was not followed further; neither disclosed nor dark." },
   { key: "dark", label: "Undisclosed (dark)", color: "#67534e", detail: "Stops at an organization whose own funding is not on file." },
   { key: "unavailable", label: "Breakdown unavailable", color: "#d4d0c9", detail: "No source breakdown is available in this view." },
-] as const;
+];
 
 function sector(start: number, end: number) {
   const point = (angle: number) => [160 + 144 * Math.cos(angle), 160 + 144 * Math.sin(angle)];
@@ -29,6 +37,7 @@ export function FundingExplorer({ views, raceId }: { views: FundingView[]; raceI
   const [picked, setPicked] = useState<string | null>(null);
   const view = views[index];
   const total = view.campaign.receipts + view.outside.total;
+  const VISIBILITY = [...(view.hasSplit ? DISCLOSED_ROWS.split : DISCLOSED_ROWS.total), ...OTHER_ROWS];
   const slices = pieSectors(pieSlices(view, detailed, views.filter(v => v.id !== "all")));
   const sides = [...new Set(slices.map(s => s.side).filter((s): s is string => !!s))];
   const bySide = sides.map(side => {

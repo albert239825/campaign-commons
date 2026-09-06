@@ -190,7 +190,19 @@ export function SpendersTable({
                   {s.traceability_score === null ? (
                     <span className="text-xs text-neutral-400">—</span>
                   ) : (
-                    pct(s.traceability_score)
+                    <>
+                      {pct(s.traceability_score)}
+                      {s.visibility_shares?.disclosed_organizations !== undefined && (
+                        <div
+                          className="whitespace-nowrap text-[11px] text-neutral-500"
+                          title="Of the disclosed share: dollars that resolve to a named person vs to a named business or union"
+                        >
+                          people {pct(s.visibility_shares.disclosed_individuals ?? s.visibility_shares.disclosed - s.visibility_shares.disclosed_organizations)}
+                          {" · "}
+                          orgs {pct(s.visibility_shares.disclosed_organizations)}
+                        </div>
+                      )}
+                    </>
                   )}
                 </Td>
                 <Td>
@@ -230,6 +242,8 @@ export function SpendersTable({
         className="mt-2"
         segments={visibilitySegments({
           disclosed: 1,
+          disclosed_individuals: 0.5,
+          disclosed_organizations: 0.5,
           inferable: 1,
           unwalked: 1,
           dark: 1,

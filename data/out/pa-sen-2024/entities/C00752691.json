@@ -609,5 +609,19 @@
       "last_date": "2024-09-13",
       "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00752691&payee_name=FUTURISTIC+FILMS%2C+INC."
     }
-  ]
+  ],
+  "issue_focus": {
+    "kind": "general_partisan",
+    "issue_ids": [],
+    "description": "The One For All Committee 'delivers political persuasion ads to moderate white women to ensure victory in key battleground states' and 'persuades moderate women to vote for an America that works for everyone.' Describes an audience and an electoral goal, not an issue.",
+    "basis": {
+      "basis": "verified",
+      "rule": "Self-described focus from the organisation's own material; says what the org is for, not what its dollars bought",
+      "source_urls": [
+        "https://oneforallcommittee.org/"
+      ],
+      "checked_by": "devin-block2-issues",
+      "checked_at": "2026-09-05"
+    }
+  }
 }

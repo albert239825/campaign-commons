@@ -27,13 +27,16 @@ Algorithm (docs/DECISIONS.md D-05..D-07, D-32..D-36):
                                                    neighborhood at 2,000 committees)
       otherwise                                 -> expand, up to CHAIN_MAX_DEPTH hops
     Dollars conserve at every expanded node: sum(inbound edges incl. agg) == node.amount_in.
-  Shares (disclosed, inferable, unwalked, dark): each root dollar takes the visibility of its terminus, mixed
-  proportionally through intermediate nodes. A depth_cap terminus is unwalked (neither disclosed nor dark); a pruned
-  bucket is disclosed except for its ORG dollars; a cycle node reuses the mix of the node it refers to.
+  Shares (disclosed, inferable, unwalked, dark, disclosed_organizations): each root dollar takes the visibility of
+  its terminus, mixed proportionally through intermediate nodes. A depth_cap terminus is unwalked (neither disclosed
+  nor dark); a pruned bucket is disclosed except for its dark ORG dollars; a cycle node reuses the mix of the node it
+  refers to. `disclosed` is further split by what it resolves to: a person (individuals, conduit earmarks) or a named
+  business/union giving from its own treasury (disclosed_organizations); the split never changes the total.
 
 Traceability (ledger.traceability, preliminary): every Sched E dollar in the race weighted by its spender's
-disclosed_share; unwalked dollars are reported separately and do not raise the score; Form 5 filers (type I, no
-receipts) count as dark. Per-candidate score in candidates[].
+disclosed_share (score); traced_to_individuals / traced_to_organizations split that disclosed money; unwalked dollars
+are reported separately and do not raise the score; Form 5 filers (type I, no receipts) count as dark. Per-candidate
+score in candidates[].
 
 Flags (entities + ledger spenders): popup, single_transfer_funded, dead_end_dark, transfer_mismatch, shell_cluster,
 one_way_valve_violation — see chains_flags.py. Stories: chains_stories.py.
@@ -104,7 +107,7 @@ def _edge_source_url(src: Node, dst_id: str, cycle: int) -> str:
 
 def chain_json(race: Race, w: Walk, shares: dict[str, Shares], flags: list[dict]) -> dict:
     parent_of = {e.src: e.dst for e in w.edges}
-    d, i, u, k = shares[w.root]
+    d, i, u, k, o = shares[w.root]
     counts: dict[str, int] = {}
     nodes = []
     for n in w.nodes.values():
@@ -157,6 +160,8 @@ def chain_json(race: Race, w: Walk, shares: dict[str, Shares], flags: list[dict]
         "summary": {
             "total_in": w.total_in,
             "disclosed_share": round(d, 4),
+            "disclosed_individuals_share": round(d - o, 4),
+            "disclosed_organizations_share": round(o, 4),
             "inferable_share": round(i, 4),
             "unwalked_share": round(u, 4),
             "dark_share": round(k, 4),
@@ -178,10 +183,12 @@ def chain_method(w: Walk, counts: dict[str, int]) -> str:
         f"conserves dollars: its inbound edges sum to its receipts. Inbound edges under 1% of a committee's receipts "
         f"are rolled into one 'other contributors' node, which counts as disclosed except for the organization dollars "
         f"inside it. Each dollar takes the visibility of where the walk stopped: named individuals (including earmarks "
-        f"through ActBlue/WinRed, attributed to the person) are disclosed. Organizations that are not registered "
-        f"committees are classified from their name alone (no IRS lookup): a union or a business giving from its own "
-        f"treasury is disclosed — the named entity is the source; an LLC, trust, advocacy nonprofit (501(c)(4)-style "
-        f"names) or unclassifiable organization is dark, because whoever funds it is not on file with the FEC."
+        f"through ActBlue/WinRed, attributed to the person) are disclosed to a person. Organizations that are not "
+        f"registered committees are classified from their name alone (no IRS lookup): a union or a business giving "
+        f"from its own treasury is disclosed to an organization — the named entity is the source, but its own funders "
+        f"are not walked; an LLC, trust, advocacy nonprofit (501(c)(4)-style names) or unclassifiable organization is "
+        f"dark, because whoever funds it is not on file with the FEC. The disclosed share is reported in total and "
+        f"split into the part that resolves to people and the part that stops at a named business or union."
     ]
     if counts.get("depth_cap"):
         parts.append(
@@ -214,15 +221,16 @@ def traceability(
         "SELECT committee_id, candidate_id, sum(expenditure_amount) FROM ies GROUP BY committee_id, candidate_id"
     ).fetchall()
     per_cand: dict[str, list[float]] = {c.candidate_id: [0.0, 0.0] for c in race.candidates}  # total, disclosed
-    total = traced = unwalked_total = dark_total = 0.0
+    total = traced = orgs_total = unwalked_total = dark_total = 0.0
     unchained = 0.0
     for cid, cand, amt in rows:
         total += amt
         bucket = per_cand.setdefault(cand, [0.0, 0.0])
         bucket[0] += amt
         if cid in shares:
-            disclosed, _, unwalked, dark = shares[cid]
+            disclosed, _, unwalked, dark, orgs = shares[cid]
             traced += amt * disclosed
+            orgs_total += amt * orgs
             unwalked_total += amt * unwalked
             dark_total += amt * dark
             bucket[1] += amt * disclosed
@@ -235,7 +243,8 @@ def traceability(
         f"(${total:,.0f} across both candidates, support and oppose) is weighted by the disclosed share of the "
         f"spending committee's own receipts, as computed by the chain walk in chains/<committee>.json: the share of "
         f"its money that traces back, through any number of committee-to-committee transfers, to a named individual "
-        f"on an FEC filing or to a named business or union giving from its own treasury. The remainder is dark — it "
+        f"on an FEC filing (${traced - orgs_total:,.0f}) or to a named business or union giving from its own treasury "
+        f"(${orgs_total:,.0f}; the organization is named, its own funders are not walked). The remainder is dark — it "
         f"stopped at an LLC, trust, advocacy nonprofit or unclassifiable organization whose own funding is not on "
         f"file (classified by name; no IRS lookup). ${unchained:,.0f} was spent by Form 5 filers (organizations that "
         f"are not registered committees and report no receipts); those dollars are counted as dark. "
@@ -247,7 +256,8 @@ def traceability(
     result = {
         "score": round(traced / total, 4) if total else 0.0,
         "outside_total": round(total, 2),
-        "traced_to_individuals": round(traced, 2),
+        "traced_to_individuals": round(traced - orgs_total, 2),
+        "traced_to_organizations": round(orgs_total, 2),
         "inferable": 0.0,
         "unwalked": round(unwalked_total, 2),
         "dark": round(dark_total, 2),
@@ -303,9 +313,11 @@ def write_back(
         s["has_chain"] = eid in shares
         s["traceability_score"] = round(shares[eid][0], 4) if eid in shares else None
         if eid in shares:
-            d, i, u, k = shares[eid]
+            d, i, u, k, o = shares[eid]
             s["visibility_shares"] = {
                 "disclosed": round(d, 4),
+                "disclosed_individuals": round(d - o, 4),
+                "disclosed_organizations": round(o, 4),
                 "inferable": round(i, 4),
                 "unwalked": round(u, 4),
                 "dark": round(k, 4),

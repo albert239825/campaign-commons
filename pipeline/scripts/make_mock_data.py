@@ -201,9 +201,23 @@ def main() -> None:
                 "by_candidate": [{"candidate_id": c, "support_oppose": so, "amount": a} for c, so, a in by],
                 "traceability_score": 0.2 if "dead_end_dark" in flags else 0.7,
                 "visibility_shares": (
-                    {"disclosed": 0.2, "inferable": 0.0, "unwalked": 0.4, "dark": 0.4}
+                    {
+                        "disclosed": 0.2,
+                        "disclosed_individuals": 0.15,
+                        "disclosed_organizations": 0.05,
+                        "inferable": 0.0,
+                        "unwalked": 0.4,
+                        "dark": 0.4,
+                    }
                     if "dead_end_dark" in flags
-                    else {"disclosed": 0.7, "inferable": 0.0, "unwalked": 0.3, "dark": 0.0}
+                    else {
+                        "disclosed": 0.7,
+                        "disclosed_individuals": 0.6,
+                        "disclosed_organizations": 0.1,
+                        "inferable": 0.0,
+                        "unwalked": 0.3,
+                        "dark": 0.0,
+                    }
                 ),
                 "flags": flags,
                 "has_chain": True,
@@ -222,7 +236,8 @@ def main() -> None:
         "traceability": {
             "score": 0.41,
             "outside_total": outside_total,
-            "traced_to_individuals": round(outside_total * 0.41),
+            "traced_to_individuals": round(outside_total * 0.35),
+            "traced_to_organizations": round(outside_total * 0.06),
             "inferable": round(outside_total * 0.12),
             "unwalked": round(outside_total * 0.10),
             "dark": round(outside_total * 0.37),
@@ -528,6 +543,8 @@ def main() -> None:
             "summary": {
                 "total_in": total,
                 "disclosed_share": round(1 - dark_share - 0.1, 2),
+                "disclosed_individuals_share": round(1 - dark_share - 0.2, 2),
+                "disclosed_organizations_share": 0.1,
                 "inferable_share": 0.0,
                 "unwalked_share": 0.1,
                 "dark_share": dark_share,

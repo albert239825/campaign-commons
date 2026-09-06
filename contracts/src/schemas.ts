@@ -262,6 +262,10 @@ export const CandidateLedgerSchema = RaceCandidateSchema.extend({
  */
 export const VisibilitySharesSchema = z.object({
   disclosed: z.number().min(0).max(1),
+  /** split of `disclosed` by what the dollar resolves to: a named person, or a named business/union whose own
+   *  funders are not walked; the two sum to `disclosed`. Absent on artifacts built before the split. */
+  disclosed_individuals: z.number().min(0).max(1).optional(),
+  disclosed_organizations: z.number().min(0).max(1).optional(),
   inferable: z.number().min(0).max(1),
   unwalked: z.number().min(0).max(1),
   dark: z.number().min(0).max(1),
@@ -289,10 +293,14 @@ export const OutsideSpenderSchema = z.object({
 });
 
 export const TraceabilitySchema = z.object({
-  /** headline number for the race: share of all outside dollars that resolve to a named human */
+  /** headline number for the race: share of all outside dollars that resolve to a named source (person or
+   *  business/union) = (traced_to_individuals + traced_to_organizations) / outside_total */
   score: z.number().min(0).max(1),
   outside_total: z.number(),
+  /** dollars resolving to a named person on an FEC filing */
   traced_to_individuals: z.number(),
+  /** dollars stopping at a named business or union giving from its own treasury; absent on older artifacts */
+  traced_to_organizations: z.number().optional(),
   inferable: z.number(),
   /** dollars that reached an FEC committee the walk did not read; counted neither as disclosed nor as dark */
   unwalked: z.number().optional(),
@@ -571,6 +579,9 @@ export const ChainSchema = z.object({
   summary: z.object({
     total_in: z.number(),
     disclosed_share: z.number().min(0).max(1),
+    /** split of disclosed_share: resolves to a person vs. stops at a named business/union; sum to disclosed_share */
+    disclosed_individuals_share: z.number().min(0).max(1).optional(),
+    disclosed_organizations_share: z.number().min(0).max(1).optional(),
     inferable_share: z.number().min(0).max(1),
     /** share that stopped at depth_cap termini (unwalked FEC committees); neither disclosed nor dark */
     unwalked_share: z.number().min(0).max(1).optional(),
