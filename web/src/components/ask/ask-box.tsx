@@ -7,9 +7,16 @@ import { z } from "zod";
 import type { TrailSubject } from "@campaign-commons/contracts";
 import { canonicalQuestion, isIntent, resolveQuestion, type Resolution } from "@/lib/ask";
 import { routes } from "@/lib/format";
+import { AskGraphResponseSchema, type AskGraphResponse } from "@/lib/graph/facts";
+import { GraphAnswer } from "./graph-answer";
 
 /** Client-side budget for /api/ask-route; the server's own LLM timeout is shorter, so this only trips on a stalled network. */
 const ASK_ROUTE_TIMEOUT_MS = 8000;
+/** Client-side budget for /api/ask-graph: a classifier call, the graph query and a narrator call, each bounded on the server. */
+const ASK_GRAPH_TIMEOUT_MS = 30_000;
+
+/** Graph refusals worth showing under the route refusal: they carry deterministic detail (which names matched) the route could not know. */
+const GRAPH_REFUSAL_SHOWN = new Set<Extract<AskGraphResponse, { kind: "unsupported" }>["reason"]>(["ambiguous_subject", "subject_not_found", "wrong_kind"]);
 
 /** What /api/ask-route may return; the subject is only carried as an id and re-bound to this page's own subject list. */
 const AskRouteBody = z.discriminatedUnion("kind", [
@@ -31,8 +38,10 @@ const AskRouteBody = z.discriminatedUnion("kind", [
 /**
  * Plain-English question box. A typed question is POSTed to /api/ask-route, where an LLM may pick the route
  * (intent, subject) from the closed set before the deterministic resolver (src/lib/ask.ts) has the final say; if the
- * call fails for any reason the same resolver runs here in the browser. Either way the result is a link to a statically
- * generated answer page — nothing the model writes is shown.
+ * call fails for any reason the same resolver runs here in the browser. When that route is an answer, the result is a
+ * link to a statically generated answer page. Only when the route path cannot answer is /api/ask-graph tried (D-77):
+ * its facts are read from the filings graph and rendered by GraphAnswer, with the model's summary labelled as such;
+ * if the graph call fails or refuses, the route refusal stands.
  */
 export function AskBox({
   raceId,
@@ -50,22 +59,39 @@ export function AskBox({
   const router = useRouter();
   const [question, setQuestion] = useState(initial);
   const [result, setResult] = useState<Resolution | null>(null);
-  const [pending, setPending] = useState(false);
+  const [graph, setGraph] = useState<AskGraphResponse | null>(null);
+  const [pending, setPending] = useState<null | "route" | "graph">(null);
 
   const submit = async (e: FormEvent) => {
     e.preventDefault();
     if (pending) return;
-    setPending(true);
+    setPending("route");
     setResult(null);
+    setGraph(null);
     let r: Resolution;
     try {
       r = question.trim() === "" ? resolveQuestion(question, subjects, examples) : await askRoute(raceId, question, subjects);
     } catch {
       r = resolveQuestion(question, subjects, examples);
     }
-    setPending(false);
-    setResult(r);
-    if (r.kind === "answer") router.push(routes.answer(raceId, r.intent, r.subject.id));
+    if (r.kind === "answer") {
+      setPending(null);
+      setResult(r);
+      router.push(routes.answer(raceId, r.intent, r.subject.id));
+      return;
+    }
+    let g: AskGraphResponse | null = null;
+    if (r.reason !== "empty") {
+      setPending("graph");
+      try {
+        g = await askGraph(raceId, question);
+      } catch {
+        g = null;
+      }
+    }
+    setPending(null);
+    setGraph(g);
+    setResult(g?.kind === "graph" ? null : r);
   };
 
   return (
@@ -77,6 +103,7 @@ export function AskBox({
           onChange={(e) => {
             setQuestion(e.target.value);
             setResult(null);
+            setGraph(null);
           }}
           placeholder={examples[0] ?? "Who funds …?"}
           autoFocus={autoFocus}
@@ -85,7 +112,7 @@ export function AskBox({
         />
         <button
           type="submit"
-          disabled={pending}
+          disabled={pending !== null}
           className="rounded-md bg-neutral-900 px-4 py-2 text-sm font-medium text-white hover:bg-neutral-700 disabled:opacity-50"
         >
           Ask
@@ -94,7 +121,7 @@ export function AskBox({
 
       {pending && (
         <p className="text-xs text-neutral-500" role="status">
-          Looking up…
+          {pending === "route" ? "Looking up…" : "No precomputed page answers this; reading the filings graph…"}
         </p>
       )}
 
@@ -108,6 +135,12 @@ export function AskBox({
       {result?.kind === "unsupported" && (
         <div className="ask-box-refusal rounded-md border border-amber-300 bg-amber-50 p-3 text-sm text-amber-900">
           <p>{result.message}</p>
+          {graph?.kind === "unsupported" && GRAPH_REFUSAL_SHOWN.has(graph.reason) && (
+            <p className="ask-box-graph-refusal mt-2">
+              {graph.message}
+              {graph.matches.length > 0 ? ` (${graph.matches.map((m) => m.name).join("; ")})` : ""}
+            </p>
+          )}
           {result.suggestions.length > 0 && (
             <ul className="mt-2 flex flex-wrap gap-2">
               {result.suggestions.map((s) => (
@@ -119,8 +152,32 @@ export function AskBox({
           )}
         </div>
       )}
+
+      {graph?.kind === "graph" && (
+        <div className="ask-box-graph rounded-md border border-neutral-200 bg-white p-4">
+          <GraphAnswer result={graph} />
+        </div>
+      )}
     </div>
   );
+}
+
+/** Asks the graph endpoint; throws on any transport, timeout, or shape problem so the caller can keep the route refusal. */
+async function askGraph(raceId: string, question: string): Promise<AskGraphResponse> {
+  const controller = new AbortController();
+  const timer = setTimeout(() => controller.abort(), ASK_GRAPH_TIMEOUT_MS);
+  try {
+    const res = await fetch("/api/ask-graph", {
+      method: "POST",
+      headers: { "content-type": "application/json" },
+      body: JSON.stringify({ raceId, question }),
+      signal: controller.signal,
+    });
+    if (!res.ok) throw new Error(`ask-graph ${res.status}`);
+    return AskGraphResponseSchema.parse(await res.json());
+  } finally {
+    clearTimeout(timer);
+  }
 }
 
 /** Asks the server to route the question; throws on any transport, timeout, or shape problem so the caller can resolve locally. */
