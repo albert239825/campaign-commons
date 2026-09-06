@@ -754,3 +754,7 @@ ledger and chains are untouched. `make validate` 2455 + 9 ok; `contracts npm run
 
 **Dead ends.** Repairs count against `max_calls`, so 600 was not enough for 495 units in one pass; the cache made the
 rerun cost $0.35 rather than a budget bump.
+
+### 2026-09-06 — Shared race tab shell
+
+The race ledger, ads, and policies tabs now share one route-group layout: the seal, race title, election date, notable candidates, data-status banner, and Ledger · Ads · Policies navigation remain fixed while only the tab content changes. `RaceNav` derives its active tab from the pathname, so record pages keep the same parent-tab behavior without passing an active prop.

@@ -71,7 +71,6 @@ export default async function DossierPage({ params }: { params: Promise<{ raceId
       <RaceNav
         race={race}
         counts={{ ads: getAds(raceId).ads.length }}
-        active={routes.candidate(raceId, candidateId)}
       />
 
       <aside className="detail-callout">
