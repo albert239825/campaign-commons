@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Campaign Commons — DNHacks 2026</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/reveal.css" />
+  <link rel="stylesheet" href="theme.css" />
+</head>
+<body>
+<div class="reveal">
+  <div class="slides">
+
+    <!-- 1 · Title -->
+    <section class="cover" data-background-gradient="linear-gradient(180deg, #2e558b 0%, #627793 40%, #a8a39e 75%, #eacba6 100%)">
+      <img class="cover-art" src="../web/public/images/landing-capitol.png" alt="" />
+      <header class="brand">
+        <span class="brand-name">Campaign Commons</span>
+        <span class="brand-tag">receipts, not conclusions</span>
+      </header>
+      <div class="cover-body">
+        <p class="kicker">DNHacks 2026 · Health &amp; Public Service</p>
+        <h1>Follow the money<br />behind your ballot.</h1>
+        <p class="lede">Every dollar in a US election is already public. Nobody can follow it. We made it navigable — for citizens, not agencies.</p>
+      </div>
+      <footer class="cover-stats">
+        <div><b>$233M</b><span>outside spending, PA Senate 2024</span></div>
+        <div><b>98</b><span>outside groups, 2,000 committees</span></div>
+        <div><b class="dark">26%</b><span>ends in an organization that never has to say where it came from</span></div>
+      </footer>
+    </section>
+
+    <!-- 2 · The citizen -->
+    <section class="paper" data-background-color="#f2efeb">
+      <header class="brand ink"><span class="brand-name">Campaign Commons</span><span class="slide-no">02</span></header>
+      <p class="kicker">The user</p>
+      <h2>A voter in Pennsylvania saw the ad.<br />The screen said <em>“Paid for by WinSenate PAC.”</em></h2>
+      <div class="cols">
+        <div class="col">
+          <p class="muted">What it takes to answer “who is that?” today:</p>
+          <ol class="deadends">
+            <li><b>fec.gov</b> — Schedule E CSV, committee IDs, no chain</li>
+            <li><b>Google ad library</b> — 1,849 PA ads, legal names, no “paid for by”</li>
+            <li><b>OpenSecrets</b> — summaries, no filing rows</li>
+            <li><b>senate.gov</b> — roll-call XML for what the candidate actually did</li>
+            <li><b>congress.gov</b>, <b>Wayback</b> — bills, deleted issue pages</li>
+          </ol>
+        </div>
+        <div class="col callout">
+          <p>Six sites. Zero links between them. Each one a dead end.</p>
+          <p class="big">Disclosure without navigability<br />is obfuscation.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3 · What it is -->
+    <section class="paper" data-background-color="#f2efeb">
+      <header class="brand ink"><span class="brand-name">Campaign Commons</span><span class="slide-no">03</span></header>
+      <p class="kicker">What it is</p>
+      <h2>A political money &amp; policy <em>provenance engine</em>.</h2>
+      <div class="flow">
+        <div class="node src"><span>Sources</span>FEC bulk + OpenFEC · Google Ad Transparency · senate.gov votes · congress.gov · Wayback</div>
+        <div class="arrow">→</div>
+        <div class="node"><span>Pipeline</span>DuckDB / Parquet · chains walked to termination · Zod + JSON-Schema contracts</div>
+        <div class="arrow">→</div>
+        <div class="node"><span>Graph</span>2,096 static pages · 86 funding chains · 500 ads · 2 dossiers</div>
+        <div class="arrow">→</div>
+        <div class="node ai"><span>Ask</span>plain English → allowlisted graph op → source-linked facts + graph</div>
+      </div>
+      <div class="rules">
+        <div><b>Rule 1</b> Every number links to its primary record.</div>
+        <div><b>Rule 2</b> Money edges and <i>targeting</i> edges never mix — an ad <i>about</i> a candidate is never money the candidate received.</div>
+      </div>
+      <div class="legend"><i class="sw disclosed"></i>disclosed <i class="sw inferable"></i>inferable <i class="sw dark"></i>dark <i class="sw targeting"></i>targeting</div>
+    </section>
+
+    <!-- 4 · AI you can check -->
+    <section class="ink-bg" data-background-color="#1b1b1a">
+      <header class="brand"><span class="brand-name">Campaign Commons</span><span class="slide-no">06</span></header>
+      <p class="kicker">Best use of AI</p>
+      <h2>The model never produces a number.</h2>
+      <div class="three">
+        <div><b>Routes</b><p>Question → one of four allowlisted graph operations + subjects. Fixed Cypher runs; the model never writes a query.</p></div>
+        <div><b>Classifies</b><p>Ad transcript → issue. Org self-description → focus. Candidate statement → stance. Each with a verified quote and source.</p></div>
+        <div><b>Summarizes only from facts</b><p>Numeric-claim guards. A summary that can't be grounded in the computed facts is withheld.</p></div>
+      </div>
+      <div class="layer">
+        <span class="chip">Machine summary · not part of the record</span>
+        <span class="chip pending">review_status: pending</span>
+        <span class="chip verified">accepted → verified</span>
+        <p>model · prompt version · response ID · citations · confidence · reviewer. Pending rows never enter a headline.</p>
+      </div>
+      <p class="foot">Remove the model: every number still stands. Keep it: a citizen can ask in English and get a graph back. ≈ $5–10 per race, cached.</p>
+    </section>
+
+  </div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/reveal.js"></script>
+<script>Reveal.initialize({ hash: true, width: 1600, height: 900, margin: 0, transition: "fade", controls: false, progress: false });</script>
+</body>
+</html>

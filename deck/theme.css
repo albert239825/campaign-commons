@@ -1,0 +1,79 @@
+/* Campaign Commons deck theme — same tokens as web/src/app/globals.css (warm paper, ink, tan, visibility colours). */
+@font-face { font-family: "Scto Grotesk A"; src: url("../web/public/fonts/scto-grotesk-a-regular.woff2") format("woff2"); font-weight: 400; }
+@font-face { font-family: "Scto Grotesk A"; src: url("../web/public/fonts/scto-grotesk-a-medium.woff2") format("woff2"); font-weight: 500; }
+@font-face { font-family: "Cinzel"; src: url("../web/public/fonts/cinzel-regular.woff2") format("woff2"); font-weight: 400; }
+
+:root {
+  --paper: #f2efeb; --surface: #e9e5df; --ink: #1b1b1a; --muted: #6f6d69; --rule: rgb(155 151 146 / 35%);
+  --tan: #b7ab98; --red: #a53131;
+  --disclosed: #1d9e75; --inferable: #ef9f27; --dark: #e24b4a; --targeting: #73726c;
+}
+
+.reveal { font-family: "Scto Grotesk A", Arial, sans-serif; font-size: 26px; color: var(--ink); }
+.reveal .slides section { text-align: left; top: 0; height: 900px !important; padding: 56px 72px; box-sizing: border-box; display: flex !important; flex-direction: column; }
+.reveal .slides section.paper { background: var(--paper); }
+.reveal .slides section.ink-bg { background: var(--ink); color: var(--paper); }
+.reveal h1, .reveal h2 { font-family: "Scto Grotesk A", Arial, sans-serif; font-weight: 400; letter-spacing: -.03em; text-transform: none; margin: 0; }
+.reveal h1 { font-size: 88px; line-height: 1.0; }
+.reveal h2 { font-size: 54px; line-height: 1.08; margin-bottom: 34px; }
+.reveal h2 em { font-style: normal; color: var(--red); }
+.reveal .ink-bg h2 em { color: var(--tan); }
+.reveal p { margin: 0; line-height: 1.35; }
+.reveal .muted { color: var(--muted); }
+.reveal .ink-bg .muted { color: #c9c5bf; }
+
+.brand { display: flex; justify-content: space-between; align-items: baseline; font-size: 21px; letter-spacing: -.045em; margin-bottom: 40px; }
+.brand-name { font-family: "Cinzel", serif; letter-spacing: .04em; font-size: 22px; }
+.brand-tag { font-size: 13px; letter-spacing: 0; color: rgb(242 239 235 / 75%); margin-left: 14px; }
+.brand.ink .brand-tag, .slide-no { color: var(--muted); }
+.slide-no { font-size: 13px; font-variant-numeric: tabular-nums; }
+.kicker { font-size: 13px; text-transform: uppercase; letter-spacing: .12em; color: var(--muted); margin-bottom: 18px !important; }
+.ink-bg .kicker, .cover .kicker { color: var(--tan); }
+
+/* cover */
+.cover { color: var(--paper); position: relative; }
+.reveal .slides section.cover { overflow: hidden; position: absolute; }
+.reveal .slides section.cover .cover-art { position: absolute !important; display: block; position: absolute; right: -60px; bottom: -120px; width: 820px; max-width: none; margin: 0; z-index: 0; opacity: .92;
+  -webkit-mask-image: linear-gradient(90deg, transparent 0%, #000 22%); mask-image: linear-gradient(90deg, transparent 0%, #000 22%); }
+.cover > * { position: relative; z-index: 1; }
+.cover-body { flex: 1; display: flex; flex-direction: column; justify-content: center; max-width: 900px; }
+.cover h1, .cover .lede { text-shadow: 0 1px 24px rgb(27 27 26 / 35%); }
+.cover .lede { font-size: 28px; margin-top: 28px; max-width: 900px; color: rgb(242 239 235 / 85%); }
+.cover-stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px; max-width: 900px; border-top: 1px solid rgb(242 239 235 / 30%); padding-top: 22px; }
+.cover-stats b { display: block; font-size: 52px; font-weight: 400; letter-spacing: -.04em; font-variant-numeric: tabular-nums; }
+.cover-stats b.dark { color: var(--dark); }
+.cover-stats span { font-size: 15px; color: rgb(242 239 235 / 75%); }
+
+/* citizen */
+.cols { display: grid; grid-template-columns: 1.1fr 1fr; gap: 56px; flex: 1; }
+.deadends { margin: 16px 0 0 0; padding-left: 1.2em; font-size: 24px; line-height: 1.6; }
+.deadends b { font-weight: 500; }
+.callout { background: var(--surface); padding: 40px; border-left: 4px solid var(--red); display: flex; flex-direction: column; justify-content: center; gap: 24px; }
+.callout .big { font-size: 40px; line-height: 1.1; letter-spacing: -.02em; }
+
+/* flow */
+.flow { display: grid; grid-template-columns: 1fr auto 1fr auto 1fr auto 1fr; align-items: stretch; gap: 14px; margin-top: 8px; }
+.node { background: var(--surface); padding: 22px 24px; font-size: 19px; line-height: 1.4; color: var(--ink); border-top: 3px solid var(--tan); }
+.node span { display: block; font-size: 12px; text-transform: uppercase; letter-spacing: .12em; color: var(--muted); margin-bottom: 10px; }
+.node.src { border-top-color: var(--disclosed); }
+.node.ai { border-top-color: var(--red); }
+.arrow { align-self: center; color: var(--tan); font-size: 34px; }
+.rules { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; margin-top: 48px; font-size: 24px; line-height: 1.35; padding-top: 28px; border-top: 1px solid var(--rule); }
+.rules b { display: block; font-weight: 500; font-size: 13px; text-transform: uppercase; letter-spacing: .12em; color: var(--red); margin-bottom: 8px; }
+.reveal .legend { margin-top: auto; font-size: 14px; color: var(--muted); display: flex; gap: 22px; align-items: center; }
+.sw { display: inline-block; width: 12px; height: 12px; border-radius: 50%; margin-right: 8px; vertical-align: -1px; }
+.sw.disclosed { background: var(--disclosed); } .sw.inferable { background: var(--inferable); } .sw.dark { background: var(--dark); } .sw.targeting { background: var(--targeting); }
+
+/* ai */
+.three { display: grid; grid-template-columns: repeat(3, 1fr); gap: 36px; margin-top: 10px; }
+.three > div { border-top: 1px solid rgb(242 239 235 / 30%); padding-top: 18px; }
+.three b { display: block; font-weight: 500; font-size: 28px; margin-bottom: 12px; }
+.three p { font-size: 20px; color: #c9c5bf; }
+.layer { margin-top: 48px; background: rgb(242 239 235 / 6%); padding: 26px 30px; border-left: 4px solid var(--tan); }
+.layer p { font-size: 18px; color: #c9c5bf; margin-top: 14px; }
+.chip { display: inline-block; font-size: 14px; padding: 5px 12px; border: 1px solid rgb(242 239 235 / 40%); border-radius: 999px; margin-right: 10px; font-variant-numeric: tabular-nums; }
+.chip.pending { border-color: var(--inferable); color: var(--inferable); }
+.chip.verified { border-color: var(--disclosed); color: var(--disclosed); }
+.reveal p.foot { margin-top: auto; font-size: 22px; color: var(--tan); }
+
+html, body { background: #1b1b1a; }
