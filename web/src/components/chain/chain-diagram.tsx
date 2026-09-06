@@ -8,6 +8,7 @@ import {
   type FocusEvent,
   type KeyboardEvent,
   type MouseEvent,
+  type ReactNode,
   type PointerEvent,
 } from "react";
 import {
@@ -151,6 +152,7 @@ function NodeBox({
   onSelect,
   onToggle,
   pointing,
+  rootLabel,
 }: {
   ln: LaidOutNode;
   domId: string;
@@ -161,6 +163,7 @@ function NodeBox({
   onSelect: (id: string) => void;
   onToggle: (n: VisibleNode) => void;
   pointing: Pointing;
+  rootLabel: string;
 }) {
   const { node: n, x, y, h } = ln;
   const isDark =
@@ -225,7 +228,7 @@ function NodeBox({
   const chipLines = isRoot ? fitLines(n.name, [NODE_W - 20, NODE_W - 20], 12) : [];
   const chipH = 8 + chipLines.length * 15;
   const term = terminusLabel(n);
-  const label = `${n.name} · ${kindLabel(n)}${isRoot ? " · the spender this page is about" : ""} · ${money(n.amount_in, { compact: false })}${term ? ` · ${term}` : ""} · click for details`;
+  const label = `${n.name} · ${kindLabel(n)}${isRoot ? ` · the ${rootLabel} this page is about` : ""} · ${money(n.amount_in, { compact: false })}${term ? ` · ${term}` : ""} · click for details`;
   const body: TipBody = { kind: "node", node: n, out };
   // Semantic zoom: the `data-k` buckets at which this box is under 20 px tall and hides its amount and sub-labels (globals.css).
   const short = shortBuckets(h).map((b) => `chain-short-k${b}`);
@@ -304,7 +307,7 @@ function NodeBox({
             letterSpacing={1}
             fill={ROOT_COLOR}
           >
-            YOU ARE HERE · THE SPENDER
+            YOU ARE HERE · THE {rootLabel.toUpperCase()}
           </text>
           <text x={x + TEXT_X} y={y + chipH + 34} fontSize={SUB_FONT} fill="#737373">
             {ellipsize(subLabel(n, txns), innerW, SUB_FONT)}
@@ -529,13 +532,25 @@ const TIP_W = 280;
  * Hovering or focusing a node or edge shows a tooltip; clicking a node opens its panel (basics, evidence, links,
  * expand / collapse / hide), clicking an edge opens the edge panel and, when the page has one, its table row.
  */
-export function ChainDiagram({ wire, hasTable = false }: { wire: ChainViewWire; hasTable?: boolean }) {
+export function ChainDiagram({
+  wire,
+  hasTable = false,
+  openAll = false,
+  caption,
+  rootLabel = "spender",
+}: {
+  wire: ChainViewWire;
+  hasTable?: boolean;
+  openAll?: boolean;
+  caption?: ReactNode;
+  rootLabel?: string;
+}) {
   const view = useMemo(() => fromWire(wire), [wire]);
-  const [controls, setControls] = useState<GraphControls>({
-    opened: new Set(),
+  const [controls, setControls] = useState<GraphControls>(() => ({
+    opened: openAll ? new Set(view.nodes.filter((n) => n.side === "in").map((n) => n.id)) : new Set(),
     collapsed: new Set(),
     hidden: new Set(),
-  });
+  }));
   const [selection, setSelection] = useState<Selection>(null);
   const [tip, setTip] = useState<TipBody | null>(null);
   /** Keyboard cursor (a node id) and the node under the pointer; either lights its route. */
@@ -837,7 +852,7 @@ export function ChainDiagram({ wire, hasTable = false }: { wire: ChainViewWire; 
               fill="#a3a3a3"
               letterSpacing={0.5}
             >
-              {columnLabel(c)}
+              {columnLabel(c, rootLabel)}
             </text>
           ))}
         {L.ribbons.map((r) => (
@@ -854,6 +869,7 @@ export function ChainDiagram({ wire, hasTable = false }: { wire: ChainViewWire; 
           <NodeBox
             key={ln.node.id}
             ln={ln}
+            rootLabel={rootLabel}
             domId={nodeDomId(ln.node.id)}
             txns={txnsFrom.get(ln.node.id) ?? 0}
             out={moneyOut.get(ln.node.id) ?? 0}
@@ -923,16 +939,20 @@ export function ChainDiagram({ wire, hasTable = false }: { wire: ChainViewWire; 
         </div>
       )}
       <figcaption className="mt-1 text-xs text-neutral-500">
-        Drawn: the spender, its direct sources and every node carrying at least{" "}
-        {Math.round(MATERIAL_SHARE * 100)}% of its receipts
-        {graph.hidden.nodes > 0 &&
-          ` — ${graph.hidden.nodes} smaller ${graph.hidden.nodes === 1 ? "source" : "sources"} (${money(graph.hidden.amount)}) folded into dashed “other” nodes`}
-        {closed > 0 &&
-          `; ${closed} ${closed === 1 ? "committee has" : "committees have"} sources not drawn — click + to show them`}
-        {graph.hasOut &&
-          "; to the right, what the spender paid for and whom it targeted"}
-        . Hover for the basics; click any node for its details and evidence
-        {hasTable ? ", any edge for its evidence and its row in the table below" : ", any edge for its evidence"}.
+        {caption ?? (
+          <>
+            Drawn: the spender, its direct sources and every node carrying at least{" "}
+            {Math.round(MATERIAL_SHARE * 100)}% of its receipts
+            {graph.hidden.nodes > 0 &&
+              ` — ${graph.hidden.nodes} smaller ${graph.hidden.nodes === 1 ? "source" : "sources"} (${money(graph.hidden.amount)}) folded into dashed “other” nodes`}
+            {closed > 0 &&
+              `; ${closed} ${closed === 1 ? "committee has" : "committees have"} sources not drawn — click + to show them`}
+            {graph.hasOut &&
+              "; to the right, what the spender paid for and whom it targeted"}
+            . Hover for the basics; click any node for its details and evidence
+            {hasTable ? ", any edge for its evidence and its row in the table below" : ", any edge for its evidence"}.
+          </>
+        )}
         {graph.userHidden > 0 && (
           <>
             {" "}

@@ -907,3 +907,5 @@ The race ledger, ads, and policies tabs now share one route-group layout: the se
 
 ## 2026-09-06 — D-87: bounded graph selections on Money Trails answers
 Each precomputed answer now carries a deterministic `graph` selection copied from the existing chain files. The selection is re-rooted for the question, capped at five nodes per layer, records truncation counts, and preserves copied basis, visibility and source URLs. Funding nodes never connect directly to ads; subjects with no chain and nothing to draw carry `graph: null`.
+
+Money Trails answer pages now draw each bounded graph selection with the chain page's `ChainDiagram`; candidate-rooted pictures stop at the funding/targeting side.
