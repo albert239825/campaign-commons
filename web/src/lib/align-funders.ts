@@ -10,6 +10,7 @@ export type AlignFunder = {
   name: string;
   href: string | null;
   amount: number;
+  amount_basis: "ledger" | "listed_gifts";
   source_url: string | null;
   tag_layer: "machine" | "position" | "focus";
   position: { direction: number; quote: string; source_url: string } | null;
@@ -33,15 +34,29 @@ function positionFor(raceId: string, entityId: string, issueId: IssueId): AlignP
     : null;
 }
 
-function entityTag(raceId: string, entityId: string, issueId: IssueId): "focus" | "position" | null {
+function entityTag(raceId: string, entityId: string, issueId: IssueId): "focus" | "position" | "machine" | null {
   if (!hasEntity(raceId, entityId)) return null;
   const entity = getEntity(raceId, entityId);
   if (entity.issue_focus?.issue_ids.includes(issueId)) return "focus";
   if (entity.issue_positions?.some((row) => row.issue_id === issueId)) return "position";
+  if (entity.x_enrichment?.issue_focus?.issue_ids.includes(issueId)) return "machine";
   return null;
 }
 
-function graphFunders(raceId: string, issueId: IssueId, facts: GraphFact[]): AlignFunder[] {
+type GraphFunderScope = { kind: "race" } | { kind: "candidate"; committeeId: string };
+
+function ledgerAmount(raceId: string, entityId: string, scope: GraphFunderScope): { amount: number; source_url: string | null } | null {
+  const ledger = getLedger(raceId);
+  if (scope.kind === "race") {
+    const spender = ledger.top_outside_spenders.find((row) => row.entity_id === entityId);
+    return spender ? { amount: spender.total, source_url: spender.source_url } : null;
+  }
+  if (!hasEntity(raceId, scope.committeeId)) return null;
+  const transfer = getEntity(raceId, scope.committeeId).inflows.find((row) => row.from_entity_id === entityId);
+  return transfer ? { amount: transfer.amount, source_url: transfer.source_url } : null;
+}
+
+function graphFunders(raceId: string, issueId: IssueId, facts: GraphFact[], scope: GraphFunderScope): AlignFunder[] {
   const byId = new Map<string, AlignFunder>();
   for (const fact of facts) {
     const id = fact.from.id;
@@ -56,12 +71,21 @@ function graphFunders(raceId: string, issueId: IssueId, facts: GraphFact[]): Ali
       name: fact.from.name,
       href: fact.from.href,
       amount: fact.amount,
+      amount_basis: "listed_gifts",
       source_url: fact.source_url,
       tag_layer: fact.tag?.layer ?? "machine",
       position: positionFor(raceId, id, issueId),
     });
   }
-  return [...byId.values()].sort((a, b) => b.amount - a.amount).slice(0, 5);
+  return [...byId.values()]
+    .map((funder) => {
+      const ledger = ledgerAmount(raceId, funder.entity_id, scope);
+      return ledger
+        ? { ...funder, amount: ledger.amount, amount_basis: "ledger" as const, source_url: ledger.source_url }
+        : funder;
+    })
+    .sort((a, b) => b.amount - a.amount)
+    .slice(0, 5);
 }
 
 function staticFunders(raceId: string, candidateId: string, issueId: IssueId): AlignFundersResponse {
@@ -75,6 +99,7 @@ function staticFunders(raceId: string, candidateId: string, issueId: IssueId): A
       name: spender.name,
       href: routes.entity(raceId, spender.entity_id),
       amount: spender.total,
+      amount_basis: "ledger",
       source_url: spender.source_url,
       tag_layer: tag,
       position: positionFor(raceId, spender.entity_id, issueId),
@@ -95,6 +120,7 @@ function staticFunders(raceId: string, candidateId: string, issueId: IssueId): A
         name: transfer.from_name,
         href: routes.entity(raceId, transfer.from_entity_id),
         amount: transfer.amount,
+        amount_basis: "ledger",
         source_url: transfer.source_url,
         tag_layer: tag,
         position: positionFor(raceId, transfer.from_entity_id, issueId),
@@ -126,7 +152,11 @@ export async function alignFunders(
         runOperation(deps.run, raceId, "funders_by_issue", [subject], issueId),
         runOperation(deps.run, raceId, "issue_funders", [], issueId),
       ]);
-      return { via: "graph", candidate: graphFunders(raceId, issueId, candidateFacts), race: graphFunders(raceId, issueId, raceFacts) };
+      return {
+        via: "graph",
+        candidate: graphFunders(raceId, issueId, candidateFacts, { kind: "candidate", committeeId: candidate.principal_committee_id }),
+        race: graphFunders(raceId, issueId, raceFacts, { kind: "race" }),
+      };
     } catch {
       // The published artifacts remain available when Neo4j is down.
     }

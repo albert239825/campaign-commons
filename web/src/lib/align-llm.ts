@@ -36,8 +36,6 @@ export type AlignOptions = {
   model?: string;
   timeoutMs?: number;
   fetch?: typeof fetch;
-  /** Tests can disable URL validation while keeping provider fetch assertions focused. */
-  checkUrls?: boolean;
 };
 
 type CachePayload = Omit<AskAlignResponse, "cached">;
@@ -220,19 +218,6 @@ export function parseStatements(body: unknown): Statement[] {
   return statements;
 }
 
-async function headCheck(url: string, doFetch: typeof fetch): Promise<boolean> {
-  const controller = new AbortController();
-  const timer = setTimeout(() => controller.abort(), 3_000);
-  try {
-    const response = await doFetch(url, { method: "HEAD", signal: controller.signal });
-    return response.status < 400;
-  } catch {
-    return true;
-  } finally {
-    clearTimeout(timer);
-  }
-}
-
 async function request(body: Record<string, unknown>, opts: AlignOptions, timeoutMs: number): Promise<unknown> {
   const apiKey = opts.apiKey ?? process.env.XAI_API_KEY;
   if (!apiKey) return null;
@@ -275,21 +260,19 @@ export async function alignCandidate(
   candidateId: string,
   opts: AlignOptions = {},
 ): Promise<AskAlignResponse> {
-  const key = `${raceId}|${issueId}|${candidateId}`;
+  const model = opts.model ?? process.env.XAI_MODEL ?? ALIGN_DEFAULT_MODEL;
+  const key = `${model}|${raceId}|${issueId}|${candidateId}`;
   const now = Date.now();
   const cached = cache.get(key);
   if (cached && cached.expires > now) return { ...cached.payload, cached: true };
   if (cached) cache.delete(key);
-  const model = opts.model ?? process.env.XAI_MODEL ?? ALIGN_DEFAULT_MODEL;
   const body = await request(buildAlignRequestBody(raceLabel, candidateName, issueId, model), opts, opts.timeoutMs ?? ALIGN_LLM_TIMEOUT_MS);
   if (body === null) return unavailable();
   const parsed = parsedOutput(body);
   if (typeof parsed !== "object" || parsed === null || !Array.isArray((parsed as { statements?: unknown }).statements)) return unavailable();
   const statements = parseStatements(body);
-  const doFetch = opts.fetch ?? fetch;
-  const checked = opts.checkUrls === false ? statements : (await Promise.all(statements.map(async (s) => (await headCheck(s.source_url, doFetch) ? s : null)))).filter((s): s is Statement => s !== null);
   const payload: CachePayload = {
-    statements: checked,
+    statements,
     via: "llm",
     model,
     retrieved_at: new Date().toISOString(),
