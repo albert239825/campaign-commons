@@ -16,6 +16,10 @@ def run(race_id: str, status: str = "pending", kind: str = "ads") -> int:
         hand_path = DATA / "hand" / race_id / "x_issue_focus.json"
         ads = []
         by_id = {}
+    elif kind == "funders":
+        hand_path = DATA / "hand" / race_id / "x_funder_focus.json"
+        ads = []
+        by_id = {}
     else:
         ads = read_json(race.out_dir / "ads.json").get("ads", [])
         by_id = {str(ad["ad_id"]): ad for ad in ads if isinstance(ad, dict)}
@@ -39,7 +43,7 @@ def run(race_id: str, status: str = "pending", kind: str = "ads") -> int:
             kinds[row["kind"]] += 1
         if status and row_status != status:
             continue
-        if kind == "spenders":
+        if kind in {"spenders", "funders"}:
             print(
                 f"{row.get('entity_id')}: name={row.get('name', '')}; kind={row.get('kind', '')}; "
                 f"issue_ids={issue_ids}; confidence={provenance.get('confidence')}; quote={row.get('quote')!r}; "
@@ -57,7 +61,7 @@ def run(race_id: str, status: str = "pending", kind: str = "ads") -> int:
             )
         shown += 1
     summary = f"shown {shown}; by status {dict(statuses)}; by primary issue {dict(primary)}"
-    if kind == "spenders":
+    if kind in {"spenders", "funders"}:
         summary += f"; by kind {dict(kinds)}"
     print(summary)
     return 0
@@ -67,7 +71,7 @@ def main() -> int:
     parser = argparse.ArgumentParser()
     parser.add_argument("race")
     parser.add_argument("--status", default="pending")
-    parser.add_argument("--kind", choices=["ads", "spenders"], default="ads")
+    parser.add_argument("--kind", choices=["ads", "spenders", "funders"], default="ads")
     args = parser.parse_args()
     return run(args.race, args.status, args.kind)
 

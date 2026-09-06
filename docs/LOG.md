@@ -637,4 +637,6 @@ Added website-only `enrich_spenders.py`, cached FEC committee/page verification 
 `--only`, `--max-calls`, `--max-usd`, `--model`, and `--refresh-reviewed`; machine focus remains separate from human
 `issue_focus`, with pending/accepted provenance and Wayback fallback. 192 pipeline tests.
 Overlong or incomplete model outputs now get one cached, no-tools repair call before validation.
+Added `enrich_funders.py` for ranked upstream `org:` funders, open-web self-description checks, donor-view materialization,
+and `enrich-funders`/`enrich-review --kind funders`.
 ||||||| 97993eb

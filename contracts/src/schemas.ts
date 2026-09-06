@@ -781,6 +781,11 @@ export const DonorViewSchema = z.object({
   allocation_note: z.string().nullable(),
   truncated: z.boolean(),
   method: z.string(),
+  x_enrichment: z
+    .object({
+      issue_focus: MachineIssueFocusSchema.optional(),
+    })
+    .optional(),
 });
 
 // ---------------------------------------------------------------------------
@@ -1091,6 +1096,7 @@ export const HAND_FILE_SCHEMAS = {
   "ad_issues.json": HandAdIssuesFileSchema,
   "x_ad_issues.json": HandXAdIssuesFileSchema,
   "x_issue_focus.json": HandXIssueFocusFileSchema,
+  "x_funder_focus.json": HandXIssueFocusFileSchema,
   "ie_issues.json": HandIeIssuesFileSchema,
   "vendor_aliases.json": HandVendorAliasesFileSchema,
   "vendor_ad_links.json": HandVendorAdLinksFileSchema,

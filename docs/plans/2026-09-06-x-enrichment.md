@@ -66,6 +66,12 @@ provenance → `entities/<id>.x_enrichment.issue_focus`; human `issue_focus` unt
 only unless Albert wants accepted rows in (Q5). A single no-tools repair call may shorten overlong descriptions/quotes or
 add required issue ids while preserving the cited source URL.
 
+## Step 4 — upstream funders
+
+Upstream `org:` funders are ranked from aggregate entity inflows, classified from their own sites with
+open `web_search`, and materialized as a separate `x_funder_focus.json` layer on donor views. A cited page
+must name the organization; third-party and record-only sites are rejected, and rows remain pending review.
+
 ## 4. Common machinery
 
 ```ts
