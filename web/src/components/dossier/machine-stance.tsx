@@ -1,17 +1,54 @@
 import type { IssueId, MachineStance as MachineStanceRow } from "@campaign-commons/contracts";
-import { Chip, type ChipTone } from "@/components/ui";
+import { Chip, SourceLink, type ChipTone } from "@/components/ui";
 import { directionLabel } from "@/lib/alignment";
 import { date } from "@/lib/format";
 
 const CONFIDENCE_TONE: Record<MachineStanceRow["confidence"], ChipTone> = { high: "green", medium: "amber", low: "muted" };
 
+function splitSummary(summary: string): { lead: string; rest: string | null } {
+  if (summary.length <= 240) return { lead: summary, rest: null };
+  const match = /(?:\.(?:”)?)(?=\s+[A-Z])/.exec(summary);
+  if (!match || match.index === undefined) return { lead: summary, rest: null };
+  const end = match.index + match[0].length;
+  const lead = summary.slice(0, end);
+  const rest = summary.slice(end).trim();
+  return rest ? { lead, rest } : { lead: summary, rest: null };
+}
+
+function hostname(url: string): string {
+  return new URL(url).hostname.replace(/^www\./, "");
+}
+
+function sourceKind(url: string): "official" | "news / web" {
+  return hostname(url).endsWith(".gov") ? "official" : "news / web";
+}
+
+function provenanceDate(stance: MachineStanceRow): string {
+  const value = stance.provenance.tagged_at || stance.provenance.retrieved_at;
+  return value ? date(value.slice(0, 10)) : stance.label;
+}
+
 export function MachineStance({ issueId, stance }: { issueId: IssueId; stance: MachineStanceRow }) {
   const status = stance.provenance.review_status;
+  const { lead, rest } = splitSummary(stance.summary);
+  const verifiedSources = stance.sources.filter((source) => source.excerpt_verified).length;
+  const visiblePosts = stance.posts.slice(0, 3);
+  const remainingPosts = stance.posts.slice(3);
   return (
-    <div className="machine-stance mt-3 rounded-md border border-dashed border-violet-300 bg-violet-50/40 p-3">
-      <div className="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-1">
-        <div className="text-xs uppercase tracking-wide text-violet-700">Machine-summarised · not part of the record</div>
-        <div className="flex gap-1">
+    <div className="machine-stance">
+      <div className="machine-head">Machine summary · not part of the record</div>
+      <div className="machine-position">
+        <p className="machine-summary">{lead}</p>
+        {rest && (
+          <details className="policies-evidence-more">
+            <summary>
+              <span className="policies-evidence-more-closed">Show full summary</span>
+              <span className="policies-evidence-more-open">Full summary</span>
+            </summary>
+            <p className="machine-summary">{rest}</p>
+          </details>
+        )}
+        <div className="flex flex-wrap gap-1">
           <Chip tone={CONFIDENCE_TONE[stance.confidence]} title="Model-reported confidence in the summary">
             {stance.confidence} confidence
           </Chip>
@@ -20,49 +57,84 @@ export function MachineStance({ issueId, stance }: { issueId: IssueId; stance: M
               proposed: {directionLabel(issueId, stance.direction_proposed)}
             </Chip>
           )}
-          <Chip tone={status === "accepted" ? "green" : "amber"} title="Human review status of this machine row">
-            {status === "accepted" ? "human-accepted" : "pending review"}
-          </Chip>
         </div>
       </div>
-      <p className="mt-2 text-sm leading-relaxed">{stance.summary}</p>
-      <div className="mt-3 text-xs uppercase tracking-wide text-neutral-500">
+
+      <div className="machine-list-head">
         Sources · {stance.sources.length} {stance.sources.length === 1 ? "page" : "pages"}
       </div>
-      <ul className="mt-1 space-y-2">
+      <ol className="evidence-list divide-y divide-neutral-100">
         {stance.sources.map((s) => (
-          <li key={s.url} className="text-sm">
-            <a href={s.url} className="underline decoration-dotted underline-offset-2 hover:text-neutral-900" target="_blank" rel="noreferrer">
-              {s.publisher}
-            </a>
-            {s.published_on && <span className="text-xs text-neutral-500"> · {date(s.published_on)}</span>}
-            {!s.excerpt_verified && (
-              <Chip tone="amber" className="ml-1" title="The page could not be fetched to confirm this excerpt">unverified excerpt</Chip>
-            )}
-            <blockquote className="mt-0.5 border-l-2 border-neutral-200 pl-2 text-sm text-neutral-700">“{s.excerpt}”</blockquote>
+          <li key={s.url} className="grid gap-x-4 gap-y-1 py-2 text-sm sm:grid-cols-[7.5rem_1fr_auto]">
+            <div className="flex flex-col items-start gap-2">
+              <Chip tone={sourceKind(s.url) === "official" ? "neutral" : "muted"}>{sourceKind(s.url)}</Chip>
+              {!s.excerpt_verified && (
+                <Chip tone="amber" title="The page could not be fetched to confirm this excerpt">
+                  unverified excerpt
+                </Chip>
+              )}
+            </div>
+            <div className="min-w-0">
+              <div className="font-medium leading-snug">{s.publisher}</div>
+              <div className="text-xs text-neutral-500">{s.published_on ? date(s.published_on) : "—"}</div>
+              <p className="mt-1 text-xs leading-relaxed text-neutral-600">“{s.excerpt}”</p>
+            </div>
+            <div className="sm:text-right">
+              <SourceLink href={s.url} label={hostname(s.url)} />
+              {s.wayback_url && <SourceLink href={s.wayback_url} label="archived" className="ml-3" />}
+            </div>
           </li>
         ))}
-      </ul>
+      </ol>
       {stance.posts.length > 0 && (
         <>
-          <div className="mt-3 text-xs uppercase tracking-wide text-neutral-500">In their own words · {stance.posts.length} verified X posts</div>
-          <div className="mt-1 flex gap-2 overflow-x-auto pb-1">
-            {stance.posts.map((p) => (
-              <a
-                key={p.url}
-                href={p.url}
-                target="_blank"
-                rel="noreferrer"
-                className="w-64 shrink-0 rounded border border-neutral-200 bg-white p-2 text-xs leading-relaxed hover:border-neutral-400"
-              >
-                <p className="text-neutral-800">{p.excerpt}</p>
-                <p className="mt-1 text-neutral-500">{p.posted_on ? date(p.posted_on) : "x.com"} →</p>
-              </a>
+          <div className="machine-list-head">In their own words · {stance.posts.length} verified X posts</div>
+          <ol className="evidence-list divide-y divide-neutral-100">
+            {visiblePosts.map((p) => (
+              <li key={p.url} className="grid gap-x-4 gap-y-1 py-2 text-sm sm:grid-cols-[7.5rem_1fr_auto]">
+                <div className="flex flex-col items-start gap-2">
+                  <Chip tone="muted">X post</Chip>
+                </div>
+                <div className="min-w-0">
+                  <div className="font-medium leading-snug">{p.excerpt}</div>
+                  <div className="text-xs text-neutral-500">{p.posted_on ? date(p.posted_on) : "—"}</div>
+                </div>
+                <div className="sm:text-right">
+                  <SourceLink href={p.url} label="x.com" />
+                </div>
+              </li>
             ))}
-          </div>
+          </ol>
+          {remainingPosts.length > 0 && (
+            <details className="policies-evidence-more">
+              <summary>
+                <span className="policies-evidence-more-closed">Show all {remainingPosts.length} posts</span>
+                <span className="policies-evidence-more-open">Showing all {remainingPosts.length} posts</span>
+              </summary>
+              <ol className="evidence-list divide-y divide-neutral-100">
+                {remainingPosts.map((p) => (
+                  <li key={p.url} className="grid gap-x-4 gap-y-1 py-2 text-sm sm:grid-cols-[7.5rem_1fr_auto]">
+                    <div className="flex flex-col items-start gap-2">
+                      <Chip tone="muted">X post</Chip>
+                    </div>
+                    <div className="min-w-0">
+                      <div className="font-medium leading-snug">{p.excerpt}</div>
+                      <div className="text-xs text-neutral-500">{p.posted_on ? date(p.posted_on) : "—"}</div>
+                    </div>
+                    <div className="sm:text-right">
+                      <SourceLink href={p.url} label="x.com" />
+                    </div>
+                  </li>
+                ))}
+              </ol>
+            </details>
+          )}
         </>
       )}
-      <p className="mt-2 text-[11px] text-neutral-500">{stance.label}</p>
+      <p className="machine-provenance">
+        {stance.provenance.model} · {provenanceDate(stance)} · {verifiedSources} of {stance.sources.length} excerpts verified ·{" "}
+        {stance.posts.length} posts verified · {status === "accepted" ? "human-accepted" : "pending review"}
+      </p>
     </div>
   );
 }
