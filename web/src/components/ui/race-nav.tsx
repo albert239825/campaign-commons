@@ -10,6 +10,7 @@ export function RaceNav({ race, counts, active }: { race: RaceSummary; counts: {
   const items: Item[] = [
     { href: routes.race(raceId), label: "Ledger" },
     { href: routes.ads(raceId), label: "Ads", count: counts.ads },
+    { href: routes.policies(raceId), label: "Policies" },
     { href: routes.vendors(raceId), label: "Vendors", count: counts.vendors },
     { href: routes.stories(raceId), label: "Stories", count: counts.stories },
     ...race.candidates.map((c) => ({ href: routes.candidate(raceId, c.candidate_id), label: `${c.name.split(" ").at(-1)} dossier` })),

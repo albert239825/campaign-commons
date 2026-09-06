@@ -92,3 +92,5 @@ export const listVendorIds = (raceId: string) => listIds(raceId, "vendors");
 /** Vendor count for nav tabs; 0 when the vendors stage has not run for this race. */
 export const countVendors = (raceId: string) => (existsSync(join(DATA_OUT, raceId, "vendors.json")) ? getVendors(raceId).vendors.length : 0);
 export const hasChain = (raceId: string, entityId: string) => existsSync(join(DATA_OUT, raceId, "chains", `${entityId}.json`));
+export const hasEntity = (raceId: string, entityId: string) => existsSync(join(DATA_OUT, raceId, "entities", `${entityId}.json`));
+export const hasDossier = (raceId: string, candidateId: string) => existsSync(join(DATA_OUT, raceId, "dossiers", `${candidateId}.json`));
