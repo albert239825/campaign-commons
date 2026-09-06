@@ -280,7 +280,7 @@ def _searched_tool_urls(response: dict[str, object], tool_type: str) -> tuple[li
 
 def _host_denied(url: str) -> bool:
     host = (urlsplit(url).hostname or "").lower().removeprefix("www.")
-    return "news" in host or any(host == denied or host.endswith(f".{denied}") for denied in STANCE_DENYLIST)
+    return any(host == denied or host.endswith(f".{denied}") for denied in STANCE_DENYLIST)
 
 
 def _validate_primary(result: object, searched: list[str]) -> str | None:
