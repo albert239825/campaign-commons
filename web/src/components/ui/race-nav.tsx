@@ -4,7 +4,7 @@ import type { RaceSummary } from "@campaign-commons/contracts";
 
 type Item = { href: string; label: string; count?: number };
 
-/** Section tabs for one race: ledger, ads, stories, and a dossier per candidate. */
+/** Section tabs for one race: ledger, ads, vendors, stories, and the candidates' stances. */
 export function RaceNav({ race, counts, active }: { race: RaceSummary; counts: { ads: number; stories: number; vendors?: number }; active: string }) {
   const raceId = race.race_id;
   const items: Item[] = [
@@ -12,7 +12,7 @@ export function RaceNav({ race, counts, active }: { race: RaceSummary; counts: {
     { href: routes.ads(raceId), label: "Ads", count: counts.ads },
     { href: routes.vendors(raceId), label: "Vendors", count: counts.vendors },
     { href: routes.stories(raceId), label: "Stories", count: counts.stories },
-    ...race.candidates.map((c) => ({ href: routes.candidate(raceId, c.candidate_id), label: `${c.name.split(" ").at(-1)} dossier` })),
+    { href: routes.stances(raceId), label: "Stances" },
   ];
   return (
     <nav aria-label="Race sections" className="flex flex-wrap gap-1 border-b border-neutral-200 text-sm">

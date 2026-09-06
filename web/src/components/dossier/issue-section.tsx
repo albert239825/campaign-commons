@@ -27,15 +27,30 @@ function kindSummary(evidence: Stance["evidence"]): string {
     .join(" · ");
 }
 
-/** One issue of a dossier. `actions` is the right-hand slot in the section header (empty today). */
-export function IssueSection({ issue, stance, actions }: { issue: (typeof ISSUES)[number]; stance: Stance | undefined; actions?: ReactNode }) {
+/**
+ * One candidate's record on one issue. Headed by the issue unless `title`/`subtitle` name the candidate instead
+ * (side-by-side layout). `actions` is the right-hand slot in the section header (empty today).
+ */
+export function IssueSection({
+  issue,
+  stance,
+  title,
+  subtitle,
+  actions,
+}: {
+  issue: (typeof ISSUES)[number];
+  stance: Stance | undefined;
+  title?: ReactNode;
+  subtitle?: ReactNode;
+  actions?: ReactNode;
+}) {
   const axis = ISSUE_AXES[issue.id];
   return (
-    <section id={issue.id} className="issue-record scroll-mt-20 rounded-lg border border-neutral-200 bg-white p-4">
+    <section className="issue-record scroll-mt-20 rounded-lg border border-neutral-200 bg-white p-4">
       <header className="dossier-section-header">
         <div className="min-w-0">
-          <h2 className="text-base font-semibold tracking-tight">{issue.label}</h2>
-          <p className="text-xs text-neutral-500">{issue.description}</p>
+          <h2 className="text-base font-semibold tracking-tight">{title ?? issue.label}</h2>
+          <p className="text-xs text-neutral-500">{subtitle ?? issue.description}</p>
         </div>
         {actions && <div className="dossier-section-actions">{actions}</div>}
       </header>

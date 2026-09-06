@@ -953,10 +953,29 @@ body:has(.detail-page) :is(a, button, input, select, summary, [tabindex]):focus-
 .dossier-stance-meta dd { margin-top: 6px; color: var(--detail-ink); line-height: 1.5; overflow-wrap: anywhere; }
 .dossier-stance-meta small { display: block; margin-top: 4px; font-size: 12px; line-height: 1.6; color: var(--detail-muted); }
 .dossier-stance-meta + div { border-color: var(--detail-rule); padding-top: 20px; }
+/* Stances page: every candidate's record on the selected issue, side by side. */
+.stances-notes { grid-template-columns: minmax(0, 1fr) minmax(0, 2.4fr); }
+.stances-candidates { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 12px; }
+.stances-candidate { display: flex; flex-direction: column; min-width: 0; }
+.stances-candidate h2 { font-size: 16px; }
+.stances-candidate > p:first-of-type { max-width: none; margin-top: 6px; font-size: 13px; line-height: 1.6; }
+.stances-candidate > p:last-child { margin-top: 10px; }
+.stances-summary { margin-top: 8px; font-size: 13px; }
+.stances-summary summary { cursor: pointer; font-size: 12px; color: #555550; text-decoration: underline; text-decoration-style: dotted; text-underline-offset: 3px; }
+.stances-summary summary:hover { color: var(--detail-ink); }
+.stances-issue { display: grid; gap: 20px; }
+.stances-issue-header h2 { font-size: 22px; font-weight: 400; letter-spacing: -.03em; }
+.stances-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 380px), 1fr)); gap: 32px; align-items: start; }
+.detail-page .stances-grid .issue-record { padding: 0 0 0 20px; border: 0; border-left: 1px solid var(--detail-rule); border-radius: 0; background: transparent; }
+.stances-grid .issue-record h2 { font-size: 16px; }
+.stances-grid .dossier-stance-meta { grid-template-columns: minmax(0, 1fr); gap: 12px; padding: 16px 20px; }
+.stances-grid .dossier-stance-meta > div { display: grid; grid-template-columns: 120px minmax(0, 1fr); gap: 12px; }
+.stances-grid .dossier-stance-meta dd { margin-top: 0; }
 @media (max-width: 1050px) {
   .dossier-issues { grid-template-columns: 180px minmax(0, 1fr); gap: 28px; }
   .dossier-issue-nav [role="tablist"] { padding-right: 12px; }
   .dossier-stance-meta { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .stances-notes { grid-template-columns: minmax(0, 1fr); gap: 16px; }
 }
 @media (max-width: 680px) {
   .candidate-page .detail-banner h1 { font-size: 30px; }
