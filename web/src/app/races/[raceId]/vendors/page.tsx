@@ -1,9 +1,10 @@
 // OWNER: Block 2 — vendors.
 import Link from "next/link";
-import { getAds, getRace, getStories, getVendors, listRaceIds } from "@/lib/data";
+import { getRace, getVendors, listRaceIds } from "@/lib/data";
 import { date, pct, routes } from "@/lib/format";
-import { Breadcrumbs, Card, Chip, DataStatusBanner, Money, SourceLink, Stat } from "@/components/ui";
-import { RaceNav } from "@/components/ui/race-nav";
+import { Card, Chip, Money, SourceLink, Stat } from "@/components/ui";
+import { DetailHeader } from "@/components/ui/detail-layout";
+import { RaceShell } from "@/components/ui/race-shell";
 import { EmptyRow, Table, Td, Th } from "@/components/ui/table";
 import { MediumBar, MediumBasisNote, MediumMix } from "@/components/vendors/medium";
 import { TargetsLine } from "@/components/vendors/targets-line";
@@ -21,19 +22,22 @@ export default async function VendorsPage({ params }: { params: Promise<{ raceId
   const classified = index.by_medium.filter((m) => m.medium !== "other").reduce((s, m) => s + m.amount, 0);
 
   return (
-    <div className="space-y-6">
-      <Breadcrumbs items={[{ href: routes.home(), label: "Races" }, { href: routes.race(raceId), label: race.label }, { label: "Vendors" }]} />
-      <DataStatusBanner status={index.data_status} />
-      <header className="space-y-2">
-        <h1 className="text-2xl font-semibold tracking-tight">Vendors · {race.label}</h1>
-        <p className="max-w-3xl text-sm text-neutral-600">
-          Where outside money went: every independent expenditure in this race names a payee on Schedule E. Payee strings are folded
-          into one vendor per firm; each vendor links to the fec.gov rows behind it. These are money edges from spender to vendor —
-          the candidate named on a buy received nothing.
-        </p>
-      </header>
-      <RaceNav race={race} counts={{ ads: getAds(raceId).ads.length, stories: getStories(raceId).stories.length, vendors: index.vendors.length }} active={routes.vendors(raceId)} />
-
+    <RaceShell
+      race={race}
+      section="vendors"
+      status={index.data_status}
+      crumbs={[{ label: "Vendors" }]}
+      className="vendors-page"
+      header={
+        <DetailHeader label={race.label} title="Vendors">
+          <p className="max-w-3xl text-sm text-neutral-600">
+            Where outside money went: every independent expenditure in this race names a payee on Schedule E. Payee strings are folded
+            into one vendor per firm; each vendor links to the fec.gov rows behind it. These are money edges from spender to vendor —
+            the candidate named on a buy received nothing.
+          </p>
+        </DetailHeader>
+      }
+    >
       <Card>
         <div className="grid grid-cols-2 gap-4 md:grid-cols-4">
           <Stat label="Paid to vendors" value={<Money amount={index.total} />} sub="equals the race's outside total" />
@@ -128,6 +132,6 @@ export default async function VendorsPage({ params }: { params: Promise<{ raceId
           ))}
         </ul>
       )}
-    </div>
+    </RaceShell>
   );
 }

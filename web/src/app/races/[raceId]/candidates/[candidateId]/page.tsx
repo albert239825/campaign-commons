@@ -3,11 +3,12 @@ import Link from "next/link";
 import { DetailHeader } from "@/components/ui/detail-layout";
 import { notFound } from "next/navigation";
 import { ISSUES, type Dossier, type IssueId } from "@campaign-commons/contracts";
-import { getAds, getDossier, getRace, getStories, listDossierIds, listRaceIds } from "@/lib/data";
+import { getDossier, getRace, listDossierIds, listRaceIds } from "@/lib/data";
 import { date, routes } from "@/lib/format";
-import { AdjacencyNote, Breadcrumbs, Chip, DataStatusBanner, SourceLink } from "@/components/ui";
+import { AdjacencyNote, Chip, SourceLink } from "@/components/ui";
 import { IssueNav } from "@/components/dossier/issue-nav";
-import { RaceNav } from "@/components/ui/race-nav";
+import { candidateSection } from "@/components/ui/race-nav";
+import { RaceShell } from "@/components/ui/race-shell";
 import { IssueSection } from "@/components/dossier/issue-section";
 
 export const generateStaticParams = () =>
@@ -40,39 +41,41 @@ export default async function DossierPage({ params }: { params: Promise<{ raceId
   const others = race.candidates.filter((c) => c.candidate_id !== candidateId && listDossierIds(raceId).includes(c.candidate_id));
 
   return (
-    <div className="detail-page candidate-page">
-      <Breadcrumbs items={[{ href: routes.home(), label: "Races" }, { href: routes.race(raceId), label: race.label }, { label: d.name }]} />
-      <DataStatusBanner status={d.data_status} />
-
-      <DetailHeader label={`Candidate profile · ${race.label}`} title={d.name} actions={
-        <div className="flex flex-wrap gap-x-4 gap-y-1 text-sm">
-            <Link href={routes.race(raceId)} className="underline decoration-dotted underline-offset-2 hover:text-neutral-900">
-              Race ledger →
-            </Link>
-            {others.map((c) => (
-              <Link key={c.candidate_id} href={routes.candidate(raceId, c.candidate_id)} className="underline decoration-dotted underline-offset-2 hover:text-neutral-900">
-                Compare: {c.name} →
+    <RaceShell
+      race={race}
+      section={candidateSection(candidateId)}
+      status={d.data_status}
+      crumbs={[{ label: d.name }]}
+      className="candidate-page"
+      header={
+        <DetailHeader
+          label={`Candidate profile · ${race.label}`}
+          title={d.name}
+          actions={
+            <div className="flex flex-wrap gap-x-4 gap-y-1 text-sm">
+              <Link href={routes.race(raceId)} className="underline decoration-dotted underline-offset-2 hover:text-neutral-900">
+                Race overview →
               </Link>
-            ))}
+              {others.map((c) => (
+                <Link key={c.candidate_id} href={routes.candidate(raceId, c.candidate_id)} className="underline decoration-dotted underline-offset-2 hover:text-neutral-900">
+                  Compare: {c.name} →
+                </Link>
+              ))}
+            </div>
+          }
+        >
+          <p className="detail-candidate-role">{PARTY[d.party]} · {d.role}</p>
+          <p className="text-sm text-neutral-600">
+            {BASIS[d.evidence_basis]} {covered.size} of {ISSUES.length} issues have a record · {evidenceCount} evidence records · generated {date(d.generated_at.slice(0, 10))}.
+          </p>
+          <div className="flex flex-wrap gap-x-4 gap-y-1 text-xs">
+            <SourceLink href={d.links.fec_url} label="FEC candidate record" />
+            {d.links.congress_url && <SourceLink href={d.links.congress_url} label="congress.gov member page" />}
+            {d.links.campaign_site && <SourceLink href={d.links.campaign_site} label="campaign website" />}
           </div>
-      }>
-        <p className="detail-candidate-role">{PARTY[d.party]} · {d.role}</p>
-        <p className="text-sm text-neutral-600">
-          {BASIS[d.evidence_basis]} {covered.size} of {ISSUES.length} issues have a record · {evidenceCount} evidence records · generated {date(d.generated_at.slice(0, 10))}.
-        </p>
-        <div className="flex flex-wrap gap-x-4 gap-y-1 text-xs">
-          <SourceLink href={d.links.fec_url} label="FEC candidate record" />
-          {d.links.congress_url && <SourceLink href={d.links.congress_url} label="congress.gov member page" />}
-          {d.links.campaign_site && <SourceLink href={d.links.campaign_site} label="campaign website" />}
-        </div>
-      </DetailHeader>
-
-      <RaceNav
-        race={race}
-        counts={{ ads: getAds(raceId).ads.length, stories: getStories(raceId).stories.length }}
-        active={routes.candidate(raceId, candidateId)}
-      />
-
+        </DetailHeader>
+      }
+    >
       <aside className="detail-callout">
         <div className="text-xs font-semibold uppercase tracking-wide text-neutral-500">Read this first</div>
         <p className="mt-1 leading-relaxed">{d.asymmetry_note}</p>
@@ -99,6 +102,6 @@ export default async function DossierPage({ params }: { params: Promise<{ raceId
       </div>
 
       <AdjacencyNote />
-    </div>
+    </RaceShell>
   );
 }

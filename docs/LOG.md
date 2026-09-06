@@ -525,3 +525,27 @@ the contract test on vendor detail files caught the stale values first, which is
 
 **Numbers.** Vendor→ad links 612 → 115 (497 adjacent removed, 115 inferred kept, 0 verified in PA yet); 280 of 500 ads carry
 same-window context (611 rows); 169 pipeline tests, 2,455 out + 5 hand files validate.
+
+## 2026-09-06 ~00:30 — Design PR 1: one race shell, one nav, one header (design/race-shell)
+
+**What changed.** First of Patrick's five design PRs (plan in the session attachment; based on the integration branch that
+merges the D-74 stack with Money Trails). `RaceShell` wraps every race-scoped page — overview, ads wall, ad, vendors, vendor,
+stories, both dossiers, Money Trails index and answers, entity, chain, donor — and owns breadcrumbs, the data-status banner
+and `RaceNav`; the pages pass their `DetailHeader` (or the overview banner) as `header` and keep only their content. `RaceNav`
+no longer takes `counts`/`active` props: `getRaceSections(raceId)` (memoised, one read per race per build) decides which tabs
+exist and their counts, dossier tabs come from `race.candidates`, Money Trails appears when `trails.json` exists, and "Ledger"
+became "Overview". Active state is `aria-current="page"` on the section, `aria-current="true"` on the parent when the page is a
+record inside it. Tokens: `@theme` now defines paper/surface/ink/ink-soft/muted/rule/rule-strong, the visibility colours and
+their text variants, and `--font-sans`; the landing, dashboard and detail pages stop restating the header, footer, font and
+focus ring under `body:has(...)`. The 390px bug: the header row was `nowrap`, so the search box (fixed 14rem) was pushed past
+the viewport on every page and the whole document scrolled sideways. It now wraps to a second row below 680px; the race tabs
+scroll sideways in one row instead of stacking. `EntityHeader` split into the banner (`EntityHeader`) and the registration
+facts (`EntityProfile`) so the tabs sit under the banner on entity pages too. D-75.
+
+**Challenge.** Which tabs a race has is not a property of the page but of the data: PA has vendors and trails, a stub race has
+neither, and a "Vendors 0" tab would say the stage ran and found nothing. `vendors: number | null` keeps "absent" distinct from
+"zero" — the same missing ≠ none rule the pipeline follows. The overview page's banner + nav needed to stay one grid child so
+the dashboard's 88px row gap did not open between them; `RaceShell` has a `dashboard` variant for exactly that.
+
+**Numbers.** 3,064 pages build (was 3,064 on the integration branch; no routes added or removed). `scrollWidth` at 390px:
+417 → 375 (= viewport) on all 13 sampled race pages. 32 `body:has(...)` header/font rules → 7 (landing hero only). 23 web tests.

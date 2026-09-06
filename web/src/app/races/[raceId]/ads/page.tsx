@@ -1,11 +1,11 @@
 // OWNER: Frontend B (ad gallery).
 import Link from "next/link";
 import { DetailHeader } from "@/components/ui/detail-layout";
-import { getAds, getRace, getStories, listChainIds, listEntityIds, listRaceIds } from "@/lib/data";
+import { getAds, getRace, listChainIds, listEntityIds, listRaceIds } from "@/lib/data";
 import { money, range, routes } from "@/lib/format";
-import { Breadcrumbs, Card, DataStatusBanner, Stat } from "@/components/ui";
+import { Card, Stat } from "@/components/ui";
 import { AdGallery } from "@/components/ads/ad-gallery";
-import { RaceNav } from "@/components/ui/race-nav";
+import { RaceShell } from "@/components/ui/race-shell";
 
 export const generateStaticParams = () => listRaceIds().map((raceId) => ({ raceId }));
 
@@ -23,21 +23,25 @@ export default async function AdsPage({ params }: { params: Promise<{ raceId: st
   const sponsors = new Set(gallery.ads.map((a) => a.advertiser_id)).size;
 
   return (
-    <div className="detail-page ads-page">
-      <Breadcrumbs items={[{ href: routes.home(), label: "Races" }, { href: routes.race(raceId), label: race.label }, { label: "Ads" }]} />
-      <DataStatusBanner status={gallery.data_status} />
-      <DetailHeader label={race.label} title="Political ads">
-        <p className="max-w-3xl text-sm text-neutral-600">
-          Ads about this race from platform transparency libraries ({gallery.sources.join(", ") || "none loaded"}). Spend and impressions are the ranges the
-          platform publishes, not exact figures. Where the advertiser resolves to an FEC committee, the card links to its{" "}
-          <Link href={routes.race(raceId)} className="underline decoration-dotted underline-offset-2 hover:text-neutral-900">
-            ledger entry
-          </Link>{" "}
-          and funding chain.
-        </p>
-      </DetailHeader>
-      <RaceNav race={race} counts={{ ads: gallery.ads.length, stories: getStories(raceId).stories.length }} active={routes.ads(raceId)} />
-
+    <RaceShell
+      race={race}
+      section="ads"
+      status={gallery.data_status}
+      crumbs={[{ label: "Ads" }]}
+      className="ads-page"
+      header={
+        <DetailHeader label={race.label} title="Political ads">
+          <p className="max-w-3xl text-sm text-neutral-600">
+            Ads about this race from platform transparency libraries ({gallery.sources.join(", ") || "none loaded"}). Spend and impressions are the ranges the
+            platform publishes, not exact figures. Where the advertiser resolves to an FEC committee, the card links to its{" "}
+            <Link href={routes.race(raceId)} className="underline decoration-dotted underline-offset-2 hover:text-neutral-900">
+              ledger entry
+            </Link>{" "}
+            and funding chain.
+          </p>
+        </DetailHeader>
+      }
+    >
       <Card>
         <div className="grid grid-cols-2 gap-4 md:grid-cols-4">
           <Stat label="Ads" value={gallery.ads.length} sub={`${sponsors} ${sponsors === 1 ? "advertiser" : "advertisers"}`} />
@@ -56,6 +60,6 @@ export default async function AdsPage({ params }: { params: Promise<{ raceId: st
           ))}
         </ul>
       )}
-    </div>
+    </RaceShell>
   );
 }

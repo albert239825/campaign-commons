@@ -4,7 +4,8 @@ import { notFound } from "next/navigation";
 import { getRace, getTrails, hasTrails, listChainIds, listEntityIds, listRaceIds } from "@/lib/data";
 import { routes } from "@/lib/format";
 import { canonicalQuestion, INTENT_LABELS, isIntent } from "@/lib/ask";
-import { Breadcrumbs, DataStatusBanner } from "@/components/ui";
+import { DetailHeader } from "@/components/ui/detail-layout";
+import { RaceShell } from "@/components/ui/race-shell";
 import { AskBox } from "@/components/ask/ask-box";
 import { Headline, TrailAnswerView } from "@/components/ask/answer";
 
@@ -27,23 +28,20 @@ export default async function AnswerPage({ params }: { params: Promise<{ raceId:
   const related = trails.answers.filter((a) => a.subject_id === subjectId && a.intent !== intent);
 
   return (
-    <div className="space-y-6">
-      <Breadcrumbs
-        items={[
-          { href: routes.home(), label: "Races" },
-          { href: routes.race(raceId), label: race.label },
-          { href: routes.ask(raceId), label: "Money Trails" },
-          { label: INTENT_LABELS[intent] },
-        ]}
-      />
-      <DataStatusBanner status={trails.data_status} />
-
+    <RaceShell
+      race={race}
+      section="trails"
+      record
+      status={trails.data_status}
+      crumbs={[{ href: routes.ask(raceId), label: "Money Trails" }, { label: INTENT_LABELS[intent] }]}
+      className="ask-page"
+      header={
+        <DetailHeader label={`Money Trails · ${race.label}`} title={question}>
+          <Headline answer={answer} />
+        </DetailHeader>
+      }
+    >
       <AskBox raceId={raceId} subjects={trails.subjects} examples={trails.examples} initial={question} />
-
-      <header className="space-y-3">
-        <h1 className="text-2xl font-semibold tracking-tight">{question}</h1>
-        <Headline answer={answer} />
-      </header>
 
       <TrailAnswerView answer={answer} raceId={raceId} pages={pages} />
 
@@ -61,6 +59,6 @@ export default async function AnswerPage({ params }: { params: Promise<{ raceId:
         </p>
       )}
       <p className="text-xs text-neutral-500">{trails.method}</p>
-    </div>
+    </RaceShell>
   );
 }

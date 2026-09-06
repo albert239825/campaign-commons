@@ -1,10 +1,11 @@
 // OWNER: Block 2 — vendors.
 import Link from "next/link";
-import { getAds, getEntity, getRace, getStories, getVendor, getVendors, listEntityIds, listRaceIds, listVendorIds } from "@/lib/data";
+import { getAds, getEntity, getRace, getVendor, getVendors, listEntityIds, listRaceIds, listVendorIds } from "@/lib/data";
 import { BASIS_LABELS, BASIS_MEANING } from "@/lib/evidence";
 import { date, pct, routes } from "@/lib/format";
-import { AdjacencyNote, Breadcrumbs, Card, Chip, DataStatusBanner, Money, SourceLink, Stat } from "@/components/ui";
-import { RaceNav } from "@/components/ui/race-nav";
+import { AdjacencyNote, Card, Chip, Money, SourceLink, Stat } from "@/components/ui";
+import { DetailHeader } from "@/components/ui/detail-layout";
+import { RaceShell } from "@/components/ui/race-shell";
 import { Table, Td, Th } from "@/components/ui/table";
 import { MEDIUM_LABELS, MediumBar, MediumBasisNote } from "@/components/vendors/medium";
 import { TargetsLine } from "@/components/vendors/targets-line";
@@ -30,50 +31,45 @@ export default async function VendorPage({ params }: { params: Promise<{ raceId:
   }
 
   return (
-    <div className="space-y-6">
-      <Breadcrumbs
-        items={[
-          { href: routes.home(), label: "Races" },
-          { href: routes.race(raceId), label: race.label },
-          { href: routes.vendors(raceId), label: "Vendors" },
-          { label: v.name },
-        ]}
-      />
-      <DataStatusBanner status={v.data_status} />
-      <header className="space-y-2">
-        <div className="flex flex-wrap items-baseline gap-x-3 gap-y-1">
-          <h1 className="text-2xl font-semibold tracking-tight">{v.name}</h1>
-          <span className="text-sm text-neutral-500">
-            vendor · #{rank} of {index.vendors.length} in {race.label}
-          </span>
-          <SourceLink href={v.source_url} label="all Schedule E rows for this payee on fec.gov" />
-        </div>
-        <div className="flex flex-wrap items-center gap-1.5 text-xs text-neutral-600">
-          <span className="font-medium uppercase tracking-wide text-neutral-400">filed as</span>
-          {v.aliases.map((a) => (
-            <Chip key={a} tone="muted">
-              {a}
-            </Chip>
-          ))}
-        </div>
-        <p className="max-w-3xl text-[11px] text-neutral-500">
-          <span className="font-medium uppercase tracking-wide text-neutral-400" title={BASIS_MEANING[n.basis]}>
-            {BASIS_LABELS[n.basis]} · rule
-          </span>{" "}
-          {n.rule}
-          {n.basis === "verified" && (
-            <>
-              {" "}
-              — checked by {n.checked_by} on {date(n.checked_at)}
-            </>
-          )}
-          {n.source_urls.map((u, i) => (
-            <SourceLink key={u} href={u} label={i === 0 ? "fec.gov" : "source"} className="ml-1.5" />
-          ))}
-        </p>
-      </header>
-      <RaceNav race={race} counts={{ ads: gallery.ads.length, stories: getStories(raceId).stories.length, vendors: index.vendors.length }} active={routes.vendors(raceId)} />
-
+    <RaceShell
+      race={race}
+      section="vendors"
+      record
+      status={v.data_status}
+      crumbs={[{ href: routes.vendors(raceId), label: "Vendors" }, { label: v.name }]}
+      className="vendor-page"
+      header={
+        <DetailHeader
+          label={`Vendor · #${rank} of ${index.vendors.length} · ${race.label}`}
+          title={v.name}
+          actions={<SourceLink href={v.source_url} label="all Schedule E rows for this payee on fec.gov" />}
+        >
+          <div className="flex flex-wrap items-center gap-1.5 text-xs text-neutral-600">
+            <span className="font-medium uppercase tracking-wide text-neutral-400">filed as</span>
+            {v.aliases.map((a) => (
+              <Chip key={a} tone="muted">
+                {a}
+              </Chip>
+            ))}
+          </div>
+          <p className="max-w-3xl text-[11px] text-neutral-500">
+            <span className="font-medium uppercase tracking-wide text-neutral-400" title={BASIS_MEANING[n.basis]}>
+              {BASIS_LABELS[n.basis]} · rule
+            </span>{" "}
+            {n.rule}
+            {n.basis === "verified" && (
+              <>
+                {" "}
+                — checked by {n.checked_by} on {date(n.checked_at)}
+              </>
+            )}
+            {n.source_urls.map((u, i) => (
+              <SourceLink key={u} href={u} label={i === 0 ? "fec.gov" : "source"} className="ml-1.5" />
+            ))}
+          </p>
+        </DetailHeader>
+      }
+    >
       <Card>
         <div className="grid grid-cols-2 gap-4 md:grid-cols-4">
           <Stat label="Paid in this race" value={<Money amount={v.total} />} sub={`${pct(share, 1)} of outside spending`} />
@@ -200,6 +196,6 @@ export default async function VendorPage({ params }: { params: Promise<{ raceId:
           Methodology
         </Link>
       </footer>
-    </div>
+    </RaceShell>
   );
 }

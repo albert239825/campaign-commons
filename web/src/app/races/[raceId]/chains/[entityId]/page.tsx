@@ -20,9 +20,7 @@ import {
 } from "@/lib/data";
 import { money, routes } from "@/lib/format";
 import {
-  Breadcrumbs,
   Card,
-  DataStatusBanner,
   FlagBadge,
   Legend,
   Money,
@@ -31,6 +29,7 @@ import {
   Stat,
   Swatch,
 } from "@/components/ui";
+import { RaceShell } from "@/components/ui/race-shell";
 import {
   PLACEMENT_COLOR,
   ChainDiagram,
@@ -92,43 +91,40 @@ export default async function ChainPage({
   const candidateCount = outNodes.filter((n) => n.kind === "candidate").length;
 
   return (
-    <div className="detail-page chain-page">
-      <Breadcrumbs
-        items={[
-          { href: routes.home(), label: "Races" },
-          { href: routes.race(raceId), label: race.label },
-          { href: routes.entity(raceId, entityId), label: chain.root_name },
-          { label: "Funding chain" },
-        ]}
-      />
-      <DataStatusBanner status={chain.data_status} />
-
-      <DetailHeader label={`Funding chain · ${race.label}`} title={hasOut ? <>Where {chain.root_name}&apos;s money came from — and went</> : <>Where {chain.root_name}&apos;s money came from</>}>
-        <div className="flex flex-wrap items-center gap-3">
-          {chain.flags.map((f) => (
-            <FlagBadge key={f.id} flag={f} />
-          ))}
-        </div>
-        <div className="flex flex-wrap items-center gap-x-4 gap-y-1 text-sm text-neutral-600">
-          <Link
-            href={routes.entity(raceId, entityId)}
-            className="font-medium text-neutral-900 hover:underline"
-          >
-            ← Entity page
-          </Link>
-          {root?.source_url && (
-            <SourceLink href={root.source_url} label="FEC committee record" />
-          )}
-          <span className="text-xs text-neutral-500">
-            Backward walk over 2024-cycle receipts, {chain.summary.max_depth}{" "}
-            {chain.summary.max_depth === 1 ? "hop" : "hops"} deep.{" "}
-            {hasOut
-              ? "To the right: Schedule E payments to vendors, the ads it ran, and the candidate those dollars were aimed at."
-              : "Money edges only; this spender reported no independent expenditures or ads in this race, so there is no spending side to draw."}
-          </span>
-        </div>
-      </DetailHeader>
-
+    <RaceShell
+      race={race}
+      section={null}
+      status={chain.data_status}
+      crumbs={[{ href: routes.entity(raceId, entityId), label: chain.root_name }, { label: "Funding chain" }]}
+      className="chain-page"
+      header={
+        <DetailHeader label={`Funding chain · ${race.label}`} title={hasOut ? <>Where {chain.root_name}&apos;s money came from — and went</> : <>Where {chain.root_name}&apos;s money came from</>}>
+          <div className="flex flex-wrap items-center gap-3">
+            {chain.flags.map((f) => (
+              <FlagBadge key={f.id} flag={f} />
+            ))}
+          </div>
+          <div className="flex flex-wrap items-center gap-x-4 gap-y-1 text-sm text-neutral-600">
+            <Link
+              href={routes.entity(raceId, entityId)}
+              className="font-medium text-neutral-900 hover:underline"
+            >
+              ← Entity page
+            </Link>
+            {root?.source_url && (
+              <SourceLink href={root.source_url} label="FEC committee record" />
+            )}
+            <span className="text-xs text-neutral-500">
+              Backward walk over 2024-cycle receipts, {chain.summary.max_depth}{" "}
+              {chain.summary.max_depth === 1 ? "hop" : "hops"} deep.{" "}
+              {hasOut
+                ? "To the right: Schedule E payments to vendors, the ads it ran, and the candidate those dollars were aimed at."
+                : "Money edges only; this spender reported no independent expenditures or ads in this race, so there is no spending side to draw."}
+            </span>
+          </div>
+        </DetailHeader>
+      }
+    >
       <SeenAdsStrip ads={verifiedAds} raceId={raceId} />
       <div className="detail-jump-nav"><SectionNav items={[{ id: "overview", label: "Overview" }, { id: "funding-map", label: "Funding map" }, { id: "receipts", label: "Every receipt" }]} /></div>
       <div id="overview" className="detail-section">
@@ -250,6 +246,6 @@ export default async function ChainPage({
         <span className="font-medium text-neutral-700">Method.</span>{" "}
         {chain.method}
       </p>
-    </div>
+    </RaceShell>
   );
 }

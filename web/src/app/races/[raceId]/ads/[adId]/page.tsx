@@ -3,7 +3,9 @@ import { notFound } from "next/navigation";
 import { TARGETING_COLOR, VISIBILITY_COLORS } from "@campaign-commons/contracts";
 import { getAds, getChain, getEntity, getRace, hasChain, listDonorKeys, listDossierIds, listEntityIds, listRaceIds } from "@/lib/data";
 import { date, money, pct, range, routes } from "@/lib/format";
-import { Breadcrumbs, Card, Chip, DataStatusBanner, Legend, SourceLink, Stat, Swatch } from "@/components/ui";
+import { Card, Chip, Legend, SourceLink, Stat, Swatch } from "@/components/ui";
+import { DetailHeader } from "@/components/ui/detail-layout";
+import { RaceShell } from "@/components/ui/race-shell";
 import { AD_TYPE_LABEL, Creative, IssueChips, SameWindowBuys, VendorLines, isVerified } from "@/components/ads/ad-card";
 import { adFocusWire, adTitle, spendMidpoint } from "@/components/chain/ad-view";
 import { ChainDiagram, PLACEMENT_COLOR } from "@/components/chain/chain-diagram";
@@ -37,40 +39,35 @@ export default async function AdPage({ params }: { params: Promise<{ raceId: str
   const title = adTitle(ad);
 
   return (
-    <div className="space-y-6">
-      <Breadcrumbs
-        items={[
-          { href: routes.home(), label: "Races" },
-          { href: routes.race(raceId), label: race.label },
-          { href: routes.ads(raceId), label: "Ads" },
-          { label: title },
-        ]}
-      />
-      <DataStatusBanner status={gallery.data_status} />
-
-      <header className="space-y-2">
-        <h1 className="text-2xl font-semibold tracking-tight">
-          {AD_TYPE_LABEL[ad.ad_type]} by {ad.advertiser_name}
-        </h1>
-        <div className="flex flex-wrap items-center gap-x-4 gap-y-1 text-sm text-neutral-600">
-          {sponsor && (
-            <Link href={routes.entity(raceId, sponsor.entity_id)} className="font-medium text-neutral-900 hover:underline">
-              Sponsor: {sponsor.name}
-            </Link>
-          )}
-          {chain && (
-            <Link href={routes.chain(raceId, chain.root_entity_id)} className="font-medium text-neutral-900 hover:underline">
-              Sponsor&apos;s full chain →
-            </Link>
-          )}
-          <SourceLink href={ad.creative_url} label="ad library record" />
-          {verified &&
-            ad.verification?.evidence_urls
-              .filter((u) => u.startsWith("https://www.fec.gov/"))
-              .map((u) => <SourceLink key={u} href={u} label="fec.gov record" />)}
-        </div>
-      </header>
-
+    <RaceShell
+      race={race}
+      section="ads"
+      record
+      status={gallery.data_status}
+      crumbs={[{ href: routes.ads(raceId), label: "Ads" }, { label: title }]}
+      className="ad-page"
+      header={
+        <DetailHeader label={`Political ad · ${race.label}`} title={`${AD_TYPE_LABEL[ad.ad_type]} by ${ad.advertiser_name}`}>
+          <div className="flex flex-wrap items-center gap-x-4 gap-y-1 text-sm text-neutral-600">
+            {sponsor && (
+              <Link href={routes.entity(raceId, sponsor.entity_id)} className="font-medium text-neutral-900 hover:underline">
+                Sponsor: {sponsor.name}
+              </Link>
+            )}
+            {chain && (
+              <Link href={routes.chain(raceId, chain.root_entity_id)} className="font-medium text-neutral-900 hover:underline">
+                Sponsor&apos;s full chain →
+              </Link>
+            )}
+            <SourceLink href={ad.creative_url} label="ad library record" />
+            {verified &&
+              ad.verification?.evidence_urls
+                .filter((u) => u.startsWith("https://www.fec.gov/"))
+                .map((u) => <SourceLink key={u} href={u} label="fec.gov record" />)}
+          </div>
+        </DetailHeader>
+      }
+    >
       <div className="grid gap-6 lg:grid-cols-[3fr_2fr]">
         <Card>
           <Creative ad={ad} className="max-h-[28rem]" />
@@ -222,6 +219,6 @@ export default async function AdPage({ params }: { params: Promise<{ raceId: str
           .
         </p>
       )}
-    </div>
+    </RaceShell>
   );
 }

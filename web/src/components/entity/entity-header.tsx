@@ -25,9 +25,8 @@ function Field({ label, children }: { label: string; children: React.ReactNode }
   );
 }
 
+/** The full-bleed banner: name, type, visibility and flags, and the chain call to action. */
 export function EntityHeader({ raceId, e, chain }: { raceId: string; e: Entity; chain: boolean }) {
-  const addr = e.address;
-  const addrLine = addr && [addr.street, [addr.city, addr.state].filter(Boolean).join(", "), addr.zip].filter(Boolean).join(" · ");
   const typeLabel = e.committee_type ? COMMITTEE_TYPE_LABELS[e.committee_type] : e.committee_type_label;
   return (
     <header className="entity-profile">
@@ -60,7 +59,16 @@ export function EntityHeader({ raceId, e, chain }: { raceId: string; e: Entity; 
           </Link>
         )}
       </div>
+    </header>
+  );
+}
 
+/** Registration facts and cycle totals, each dollar with its fec.gov query. */
+export function EntityProfile({ e }: { e: Entity }) {
+  const addr = e.address;
+  const addrLine = addr && [addr.street, [addr.city, addr.state].filter(Boolean).join(", "), addr.zip].filter(Boolean).join(" · ");
+  return (
+    <section className="entity-profile" aria-label="Committee record">
       <dl className="entity-fields">
         <Field label="FEC ID">
           <span className="font-mono">{e.entity_id}</span>
@@ -89,6 +97,6 @@ export function EntityHeader({ raceId, e, chain }: { raceId: string; e: Entity; 
         <SourceLink href={fecReceipts(e.entity_id)} label="FEC receipts" />
         <SourceLink href={fecDisbursements(e.entity_id)} label="FEC disbursements" />
       </div>
-    </header>
+    </section>
   );
 }
