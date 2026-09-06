@@ -35,7 +35,6 @@ export const routes = {
   vendor: (raceId: string, vendorId: string) => `/races/${raceId}/vendors/${vendorId}`,
   stories: (raceId: string) => `/races/${raceId}/stories`,
   donor: (raceId: string, donorKey: string) => `/races/${raceId}/donors/${donorKey}`,
-  stances: (raceId: string) => `/races/${raceId}/stances`,
   candidate: (raceId: string, candidateId: string) => `/races/${raceId}/candidates/${candidateId}`,
   personalize: () => "/personalize",
   methodology: () => "/methodology",
