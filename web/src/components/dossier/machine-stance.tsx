@@ -108,8 +108,8 @@ export function MachineStance({ issueId, stance }: { issueId: IssueId; stance: M
           {remainingPosts.length > 0 && (
             <details className="policies-evidence-more">
               <summary>
-                <span className="policies-evidence-more-closed">Show all {remainingPosts.length} posts</span>
-                <span className="policies-evidence-more-open">Showing all {remainingPosts.length} posts</span>
+                <span className="policies-evidence-more-closed">Show all {stance.posts.length} posts</span>
+                <span className="policies-evidence-more-open">Showing all {stance.posts.length} posts</span>
               </summary>
               <ol className="evidence-list divide-y divide-neutral-100">
                 {remainingPosts.map((p) => (
