@@ -15,9 +15,9 @@ export function RaceNav({ race, counts, trails = false }: { race: RaceSummary; c
   const raceId = race.race_id;
   const items: Item[] = [
     { href: routes.race(raceId), label: "Ledger" },
+    ...(trails ? [{ href: routes.ask(raceId), label: "Ask" }] : []),
     { href: routes.ads(raceId), label: "Ads", count: counts.ads },
     { href: routes.policies(raceId), label: "Policies" },
-    ...(trails ? [{ href: routes.ask(raceId), label: "Money Trails" }] : []),
   ];
   return (
     <nav aria-label="Race sections" className="flex flex-wrap gap-1 border-b border-neutral-200 text-sm">
