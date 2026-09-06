@@ -70,7 +70,7 @@ export const GRAPH_OP_SPEC: Record<GraphOp, { arity: 0 | 1 | 2; kinds: readonly 
 
 export const MAX_FACTS = 40;
 
-const NODE = "{id: $n.id, name: $n.name, kind: $n.kind, href: $n.href}";
+const NODE = "{id: $n.id, name: $n.name, kind: $n.kind, href: $n.href, title: $n.title}";
 const node = (v: string) => NODE.replaceAll("$n", v);
 export const edge = (a: string, r: string, b: string, path = "null") =>
   `{from: ${node(a)}, to: ${node(b)}, rel: type(${r}), amount: ${r}.amount, count: ${r}.count, support_oppose: ${r}.support_oppose,

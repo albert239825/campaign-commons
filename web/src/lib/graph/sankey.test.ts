@@ -2,7 +2,7 @@ import { describe, expect, it } from "vitest";
 import { sankeyFromRows } from "./sankey";
 import type { ExploreRow } from "./explore";
 
-const node = (id: string, name: string) => ({ id, name, kind: "committee" as const, href: null });
+const node = (id: string, name: string) => ({ id, name, kind: "committee" as const, href: null, title: null });
 const fact = (
   n: number,
   from: string,
@@ -67,8 +67,8 @@ describe("sankeyFromRows", () => {
     const gave = fact(1, "A", "C", 100);
     const ownership = {
       ...fact(2, "C", "D", 0, "CAMPAIGN_OF"),
-      from: { id: "C", name: "COMMITTEE", kind: "committee" as const, href: null },
-      to: { id: "D", name: "CANDIDATE", kind: "candidate" as const, href: null },
+      from: { id: "C", name: "COMMITTEE", kind: "committee" as const, href: null, title: null },
+      to: { id: "D", name: "CANDIDATE", kind: "candidate" as const, href: null, title: null },
     };
     const result = sankeyFromRows(rows(gave), [ownership]);
     expect(result).toMatchObject({ ok: true, links: [{ rel: "GAVE", amount: 100 }, { rel: "CAMPAIGN_OF", amount: 100 }] });
@@ -77,8 +77,8 @@ describe("sankeyFromRows", () => {
   it("does not draw campaign ownership when no money reached the committee", () => {
     const ownership = {
       ...fact(2, "C", "D", 0, "CAMPAIGN_OF"),
-      from: { id: "C", name: "COMMITTEE", kind: "committee" as const, href: null },
-      to: { id: "D", name: "CANDIDATE", kind: "candidate" as const, href: null },
+      from: { id: "C", name: "COMMITTEE", kind: "committee" as const, href: null, title: null },
+      to: { id: "D", name: "CANDIDATE", kind: "candidate" as const, href: null, title: null },
     };
     const result = sankeyFromRows(rows(fact(1, "A", "B", 100)), [ownership]);
     expect(result).toMatchObject({ ok: true, links: [{ rel: "GAVE", amount: 100 }] });

@@ -655,6 +655,14 @@ export const AdSchema = z.object({
   ad_type: z.enum(["video", "image", "text", "unknown"]),
   creative_url: z.string().url(), // external ad-library URL (never hot-embed in demo)
   cached_creative_path: z.string().nullable(), // path under web/public/, e.g. /creatives/pa-sen-2024/CR123.png
+  /** YouTube title of a video ad, read from the public oEmbed endpoint; source_url is the watch URL. */
+  video: z.object({
+    video_id: z.string(),
+    title: z.string(),
+    channel: z.string().nullable(),
+    source_url: z.string().url(),
+    fetched_at: z.string(),
+  }).nullable().optional(),
   regions: z.array(z.string()),
   source_url: z.string().url(),
   // hand-checked ad -> committee link (pipeline/campaign_commons/data/ad_verifications.json); absent on older files
@@ -1140,7 +1148,7 @@ export const IssueSpendingSchema = z.object({
 // search.json — static client-side index over every page (pipeline/campaign_commons/search.py, Block 2)
 // ---------------------------------------------------------------------------
 
-export const SearchItemKindSchema = z.enum(["race", "candidate", "committee", "vendor", "donor", "organization"]);
+export const SearchItemKindSchema = z.enum(["race", "candidate", "committee", "vendor", "donor", "organization", "ad"]);
 
 export const SearchItemSchema = z.object({
   id: z.string(),

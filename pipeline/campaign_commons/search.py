@@ -1,7 +1,7 @@
 """search.json: one static, client-side index over every page the web app renders (Block 2).
 
 No race argument: every race that has a directory under data/out is indexed into a single file. Items are built only
-from artifacts already in data/out (races.json, ledger.json, entities/, donors/, dossiers/, vendors.json), so the index
+from artifacts already in data/out (races.json, ledger.json, entities/, donors/, dossiers/, vendors.json, ads.json), so the index
 never knows more than the pages do. Hrefs mirror `routes.*` in web/src/lib/format.ts; `weight` is dollars (see D-62).
 
 Kept small on purpose (compact JSON, no descriptions, aliases capped at MAX_ALIASES): the browser fetches the whole file
@@ -63,6 +63,10 @@ def donor_href(race_id: str, donor_key: str) -> str:
 
 def vendor_href(race_id: str, vendor_id: str) -> str:
     return f"/races/{race_id}/vendors/{vendor_id}"
+
+
+def ad_href(race_id: str, ad_id: str) -> str:
+    return f"/races/{race_id}/ads/{ad_id}"
 
 
 # --- helpers ---------------------------------------------------------------------------------------------------------
@@ -220,6 +224,33 @@ def vendor_item(race_id: str, vendor: dict) -> SearchItem:
     )
 
 
+def ad_items(race_id: str, gallery: dict) -> list[SearchItem]:
+    items: list[SearchItem] = []
+    for ad in gallery.get("ads", []):
+        video = ad.get("video")
+        if not isinstance(video, dict):
+            continue
+        spend = ad["spend_range"]
+        minimum = float(spend["min"])
+        maximum = spend.get("max")
+        upper = f"{money_short(float(maximum))}" if maximum is not None else f"{money_short(minimum)}+"
+        items.append(
+            SearchItem(
+                id=ad["ad_id"],
+                kind="ad",
+                race_id=race_id,
+                label=video["title"],
+                sublabel=f"Video ad · {ad['advertiser_name']} · {money_short(minimum)}–{upper}"
+                if maximum is not None
+                else f"Video ad · {ad['advertiser_name']} · {upper}",
+                aliases=cap_aliases(video["title"], [ad["advertiser_name"], ad["ad_id"], video["video_id"]]),
+                href=ad_href(race_id, ad["ad_id"]),
+                weight=round(float(maximum) if maximum is not None else minimum),
+            )
+        )
+    return items
+
+
 # --- assembly --------------------------------------------------------------------------------------------------------
 
 
@@ -254,6 +285,11 @@ def build_items(out: Path = OUT) -> list[SearchItem]:
             )
         else:
             items.extend(vendor_item(race_id, v) for v in vendors["vendors"])
+        ads = _optional(race_dir / "ads.json")
+        if ads is None:
+            print(f"note {race_id}: ads.json not present; no ad items")
+        else:
+            items.extend(ad_items(race_id, ads))
     return dedupe_and_rank(items)
 
 

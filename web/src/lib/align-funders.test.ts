@@ -6,8 +6,8 @@ import type { GraphFact } from "./graph/facts";
 import type { Runner } from "./graph/neo4j";
 
 const edge = (fromId: string, fromName: string, amount: number, toId = "C00431056", source = "https://example.com/source"): Omit<GraphFact, "n"> => ({
-  from: { id: fromId, name: fromName, kind: "organization", href: null },
-  to: { id: toId, name: "BOB CASEY FOR SENATE INC", kind: "committee", href: null },
+  from: { id: fromId, name: fromName, kind: "organization", href: null, title: null },
+  to: { id: toId, name: "BOB CASEY FOR SENATE INC", kind: "committee", href: null, title: null },
   rel: "GAVE",
   amount,
   count: null,

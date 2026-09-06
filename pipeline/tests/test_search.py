@@ -30,6 +30,7 @@ ROUTE_PATTERNS = {
     "organization": re.compile(r"^/races/[a-z0-9-]+/(entities|donors)/[A-Za-z0-9_-]+$"),
     "donor": re.compile(r"^/races/[a-z0-9-]+/donors/[A-Za-z0-9_-]+$"),
     "vendor": re.compile(r"^/races/[a-z0-9-]+/vendors/vendor:[a-z0-9-]+$"),
+    "ad": re.compile(r"^/races/[a-z0-9-]+/ads/[A-Za-z0-9_-]+$"),
 }
 
 
@@ -236,6 +237,50 @@ def test_races_json_only_yields_race_and_candidate_items(tmp_path: Path) -> None
 
 def test_missing_races_json_yields_empty_index(tmp_path: Path) -> None:
     assert build_items(tmp_path) == []
+
+
+def test_video_ads_are_indexed_by_title(tmp_path: Path) -> None:
+    root = tmp_path / "out"
+    write(root / "races.json", races_json(with_stub=False))
+    (root / RACE).mkdir()
+    write(
+        root / RACE / "ads.json",
+        {
+            "ads": [
+                {
+                    "ad_id": "AD1",
+                    "advertiser_name": "Sponsor",
+                    "spend_range": {"min": 1000, "max": None},
+                    "video": {
+                        "video_id": "VID1",
+                        "title": "A Video",
+                        "channel": None,
+                        "source_url": "https://youtube.com/watch?v=VID1",
+                        "fetched_at": "now",
+                    },
+                },
+                {
+                    "ad_id": "AD2",
+                    "advertiser_name": "Sponsor",
+                    "spend_range": {"min": 1000, "max": 2000},
+                    "video": None,
+                },
+            ],
+        },
+    )
+    ads = [item for item in build_items(root) if item["kind"] == "ad"]
+    assert ads == [
+        {
+            "id": "AD1",
+            "kind": "ad",
+            "race_id": RACE,
+            "label": "A Video",
+            "sublabel": "Video ad · Sponsor · $1K+",
+            "aliases": ["Sponsor", "AD1", "VID1"],
+            "href": f"/races/{RACE}/ads/AD1",
+            "weight": 1000,
+        }
+    ]
 
 
 def test_written_index_validates_against_contract_and_is_compact(out: Path, tmp_path: Path) -> None:

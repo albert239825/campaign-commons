@@ -36,12 +36,19 @@ export default async function AdPage({ params }: { params: Promise<{ raceId: str
   const targets = ad.candidate_ids.map((id) => candidateNames[id] ?? id);
   const platform = ad.platform.charAt(0).toUpperCase() + ad.platform.slice(1);
   const fecEvidenceUrls = verified ? (ad.verification?.evidence_urls ?? []).filter((u) => u.startsWith("https://www.fec.gov/")) : [];
+  const title = ad.video?.title ?? `${AD_TYPE_LABEL[ad.ad_type]} by ${ad.advertiser_name}`;
 
   return (
     <div className="ad-page detail-page">
       <Link href={routes.ads(raceId)} className="text-sm text-neutral-600 hover:text-neutral-900">
         ← All ads
       </Link>
+
+      <header className="space-y-2">
+        <h1 className="text-2xl font-semibold tracking-tight">{title}</h1>
+        {ad.video && <p className="text-sm text-neutral-600">{AD_TYPE_LABEL[ad.ad_type]} by {ad.advertiser_name}</p>}
+        {ad.video && <SourceLink href={ad.video.source_url} label="Title from YouTube" />}
+      </header>
 
       <section className="ad-page-section space-y-3">
         <h2>Creative</h2>

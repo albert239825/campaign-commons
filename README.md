@@ -39,6 +39,8 @@ make mock                                       # regenerate mock fixtures
 make all                                        # ingest ledger chains vendors ads ads-enrich issues dossier chains-out search validate (RACE=pa-sen-2024)
 ```
 
+Video title enrichment is a separate network stage: run `make -C pipeline enrich-video-titles RACE=pa-sen-2024` after `ads-enrich`.
+
 ## Rules of the road
 
 - Every visible number has a `source_url`. No exceptions.

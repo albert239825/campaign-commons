@@ -121,6 +121,7 @@ function nodeRef(value: unknown): GraphNodeRef {
     name: typeof p.name === "string" ? p.name : "",
     kind,
     href: typeof p.href === "string" ? p.href : null,
+    title: typeof p.title === "string" ? p.title : null,
   };
 }
 

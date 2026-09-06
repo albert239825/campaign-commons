@@ -20,7 +20,7 @@ const neverResolving = vi.fn<typeof fetch>(
     }),
 );
 
-const node = (id: string, name: string, kind: GraphNodeRef["kind"] = "committee"): GraphNodeRef => ({ id, name, kind, href: null });
+const node = (id: string, name: string, kind: GraphNodeRef["kind"] = "committee"): GraphNodeRef => ({ id, name, kind, href: null, title: null });
 const musk = node("ind:MUSK_ELON|1", "MUSK, ELON", "individual");
 const slf = node("C00571703", "SENATE LEADERSHIP FUND");
 const thune = node("C1", "2024 THUNE REPUBLICAN SENATE VICTORY");
@@ -170,6 +170,11 @@ describe("factSentence / allowedNumbers", () => {
     expect(factSentence(facts[1])).toBe("SENATE LEADERSHIP FUND spent $52,799,240 opposing Bob Casey (independent spending; none of it goes to the candidate).");
     expect(factSentence(facts[0])).toBe("MUSK, ELON gave $10,000,000 to SENATE LEADERSHIP FUND (2 contributions).");
     expect(factSentence(facts[2])).toBe("2024 THUNE REPUBLICAN SENATE VICTORY gave $150,591 to SENATE LEADERSHIP FUND [inferable].");
+  });
+  it("uses a video title while retaining the ad name as provenance context", () => {
+    const ad = node("AD1", "Video ad · 2024-10-01 – 2024-10-02", "ad");
+    const fact: GraphFact = { ...facts[0], from: slf, to: { ...ad, title: "Keep Moving" }, rel: "PLACED" };
+    expect(factSentence(fact)).toBe('SENATE LEADERSHIP FUND placed the ad "Keep Moving" (Video ad · 2024-10-01 – 2024-10-02).');
   });
   it("allows amounts, counts, years, digits in names and the fact count", () => {
     const allowed = allowedNumbers(facts);

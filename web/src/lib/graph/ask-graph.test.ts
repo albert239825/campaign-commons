@@ -12,7 +12,7 @@ const casey = trails.subjects.find((s) => s.name === "Bob Casey")!;
 const caseyCommittee = trails.subjects.find((s) => s.id === casey.principal_committee_id)!;
 const winsenate = trails.subjects.find((s) => s.name === "WINSENATE")!;
 
-const node = (id: string, name: string, kind: GraphNodeRef["kind"] = "committee"): GraphNodeRef => ({ id, name, kind, href: null });
+const node = (id: string, name: string, kind: GraphNodeRef["kind"] = "committee"): GraphNodeRef => ({ id, name, kind, href: null, title: null });
 const musk = node("ind:MUSK_ELON|1", "MUSK, ELON", "individual");
 const slf = node("C00571703", "SENATE LEADERSHIP FUND");
 const edge = (from: GraphNodeRef, to: GraphNodeRef, amount: number, extra: Partial<Omit<GraphFact, "n">> = {}): Omit<GraphFact, "n"> => ({

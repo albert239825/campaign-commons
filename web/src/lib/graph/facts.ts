@@ -53,7 +53,7 @@ export const issueLabel = (id: IssueId) => ISSUE_BY_ID[id].label;
 export const NODE_KINDS = ["committee", "individual", "aggregate", "organization", "conduit", "vendor", "ad", "candidate"] as const;
 export type NodeKind = (typeof NODE_KINDS)[number];
 
-export const GraphNodeRefSchema = z.object({ id: z.string(), name: z.string(), kind: z.enum(NODE_KINDS), href: z.string().nullable() });
+export const GraphNodeRefSchema = z.object({ id: z.string(), name: z.string(), kind: z.enum(NODE_KINDS), href: z.string().nullable(), title: z.string().nullable() });
 export type GraphNodeRef = z.infer<typeof GraphNodeRefSchema>;
 
 /** One edge read from the graph. `n` is its 1-based citation index within a result. */
@@ -125,7 +125,7 @@ export function factSentence(f: GraphFact): string {
     case "PAID":
       return `${a} paid ${dollars(f.amount)} to ${b}.`;
     case "PLACED":
-      return `${a} placed the ad "${b}".`;
+      return `${a} placed the ad ${f.to.kind === "ad" && f.to.title ? `"${f.to.title}" (${b})` : `"${b}"`}.`;
     case "TARGETED":
       return f.support_oppose === "S"
         ? `${a} spent ${dollars(f.amount)} supporting ${b}.`

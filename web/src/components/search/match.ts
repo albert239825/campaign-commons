@@ -18,6 +18,7 @@ export const KIND_LABELS: Record<SearchItemKind, string> = {
   organization: "Organizations",
   donor: "Donors",
   vendor: "Vendors",
+  ad: "Ads",
 };
 
 export const normalize = (s: string) => s.toLowerCase().replace(/\s+/g, " ").trim();

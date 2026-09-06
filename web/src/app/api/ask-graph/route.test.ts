@@ -39,8 +39,8 @@ const stubGraph = (run: Runner) => {
   vi.spyOn(neo4j, "runnerFor").mockReturnValue(run);
   return run;
 };
-const w = { id: winsenate.id, name: winsenate.name, kind: "committee", href: null };
-const slf = { id: "C00571703", name: "SENATE LEADERSHIP FUND", kind: "committee", href: null };
+const w = { id: winsenate.id, name: winsenate.name, kind: "committee", href: null, title: null };
+const slf = { id: "C00571703", name: "SENATE LEADERSHIP FUND", kind: "committee", href: null, title: null };
 const tinyGraph: Runner = async (cypher) => {
   if (cypher.includes("$ids")) return [{ node: w }];
   if (cypher.includes("$tokens")) return [];

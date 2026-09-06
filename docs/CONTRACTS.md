@@ -10,7 +10,7 @@ Source of truth: [`contracts/src/schemas.ts`](../contracts/src/schemas.ts). This
 | `<race_id>/ledger.json` | `Ledger` | `campaign_commons.ledger`, then `campaign_commons.chains` fills `traceability` + spender `flags`/`traceability_score` | `/races/[raceId]` |
 | `<race_id>/entities/<entity_id>.json` | `Entity` | `campaign_commons.ledger`, then `campaign_commons.chains` fills `flags` | `/races/[raceId]/entities/[entityId]` |
 | `<race_id>/chains/<entity_id>.json` | `Chain` | `campaign_commons.chains` | `/races/[raceId]/chains/[entityId]` |
-| `<race_id>/ads.json` | `AdGallery` | `campaign_commons.ads` | `/races/[raceId]/ads` |
+| `<race_id>/ads.json` | `AdGallery` | `campaign_commons.ads` (then `ads_enrich` and optional `enrich_video_titles` patch `ads[].video`) | `/races/[raceId]/ads` |
 | `<race_id>/dossiers/<candidate_id>.json` | `Dossier` | `campaign_commons.dossier` | `/races/[raceId]/candidates/[candidateId]` |
 | `<race_id>/stories.json` | `Stories` | `campaign_commons.chains` | `/races/[raceId]/stories`, ledger strip |
 | `<race_id>/donors/<donor_key>.json` | `DonorView` | `campaign_commons.donors` | `/races/[raceId]/donors/[key]` |
@@ -22,6 +22,9 @@ Source of truth: [`contracts/src/schemas.ts`](../contracts/src/schemas.ts). This
 Block 2 also *patches* existing files in place: `campaign_commons.vendors` adds `vendors[]` and per-IE `vendor_id`/`medium` to
 `entities/*.json`; `campaign_commons.issues` adds `issue_focus` and optional `issue_positions` to entities and `issues` (`{issue_ids, basis}`) to ads and IE rows; `campaign_commons.ads` adds
 `sponsor_visibility_shares` and `vendor_links[]` to ads. All additive optional fields — V0 files stay valid.
+
+Video ads may carry optional nullable `video` metadata: the YouTube `video_id`, oEmbed `title`, nullable channel, watch
+`source_url`, and `fetched_at`. Text and image ads remain untitled.
 
 ## Hand-maintained inputs (`data/hand/<race_id>/`)
 

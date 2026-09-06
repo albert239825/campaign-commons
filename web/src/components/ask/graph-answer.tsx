@@ -33,7 +33,7 @@ export function GraphAnswer({ result }: { result: GraphResult }) {
           {result.subjects.map((s, i) => (
             <span key={s.ids.join("|")}>
               {i > 0 ? " and " : ""}
-              <Name node={{ id: s.ids[0], name: s.name, kind: s.kind, href: s.href }} />
+              <Name node={{ id: s.ids[0], name: s.name, kind: s.kind, href: s.href, title: null }} />
             </span>
           ))}
           {result.subjects.length === 0 && result.issue ? <span>Every funder in the race tagged on {issueLabel(result.issue)}</span> : null}
