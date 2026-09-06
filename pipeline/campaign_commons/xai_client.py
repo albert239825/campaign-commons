@@ -40,11 +40,11 @@ class XaiClient:
                     response = requests.post(f"{self.base_url}/responses", headers=headers, json=payload, timeout=120)
                     status, body = response.status_code, response.json()
                 if status == 429 or status >= 500:
-                    raise _RetryableResponse(status, body)
+                    raise RetryableResponse(status, body)
                 if status >= 400:
                     raise RuntimeError(f"xAI Responses API returned HTTP {status}: {body}")
                 return body
-            except _RetryableResponse as exc:
+            except RetryableResponse as exc:
                 last_error = exc
             except (requests.RequestException, ConnectionError, TimeoutError) as exc:
                 last_error = exc
@@ -54,7 +54,9 @@ class XaiClient:
         raise last_error
 
 
-class _RetryableResponse(RuntimeError):
+class RetryableResponse(RuntimeError):
+    """HTTP 429 or 5xx from the Responses API; safe to retry."""
+
     def __init__(self, status: int, body: object) -> None:
         super().__init__(f"xAI Responses API returned retryable HTTP {status}: {body}")
         self.status = status
