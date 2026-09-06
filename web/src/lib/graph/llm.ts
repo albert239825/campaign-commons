@@ -12,9 +12,9 @@
  * Shares the endpoint, model and timeout constants with the route classifier (../ask-llm.ts) but is a separate module, so
  * /api/ask-route is untouched by anything here.
  */
-import type { TrailSubject } from "@campaign-commons/contracts";
+import { ISSUES, ISSUE_IDS, type IssueId, type TrailSubject } from "@campaign-commons/contracts";
 import { ASK_LLM_TIMEOUT_MS, XAI_CHAT_COMPLETIONS_URL, XAI_DEFAULT_MODEL, XAI_REASONING_EFFORT } from "../ask-llm";
-import { GRAPH_OPS, factSentence, isGraphOp, type GraphFact, type GraphOp, type WithheldReason } from "./facts";
+import { GRAPH_OPS, TAG_PROVENANCE, factSentence, isGraphOp, isIssueId, type GraphFact, type GraphOp, type WithheldReason } from "./facts";
 import { NODE_KINDS } from "./facts";
 import type { ExploreRow } from "./explore";
 import { rowSentence } from "./explore-format";
@@ -35,13 +35,14 @@ export type LlmOptions = {
 
 /** What the classifier may say: an operation and one or two subjects, each an id from the closed list or a name as typed. */
 export type SubjectPick = { id: string | null; mention: string | null };
-export type GraphPick = { op: GraphOp; subjects: SubjectPick[] };
+export type GraphPick = { op: GraphOp; subjects: SubjectPick[]; issue: IssueId | null };
 
 const CLASSIFY_SYSTEM = [
   "You classify questions about campaign money in one US election race into one of a fixed list of graph operations, or none.",
   "Each operation takes one or two subjects. For each subject, if the question names a candidate or committee from the closed list you are given, return its id in `id` and null in `mention`;",
   "otherwise (a person, company, union or other group not on the list) return null in `id` and the name exactly as the question wrote it in `mention`.",
   "Order subjects the way the operation describes them (e.g. money_path: from, then to). Return op \"none\" if the question does not fit any operation or is about something other than money in this race.",
+  "Operations marked `needs issue` are about funders tagged on one issue: set `issue` to the one id from the issue list the question is about (e.g. crypto → crypto_fintech); for every other operation set `issue` to null.",
   "Never answer the question, never add commentary, never invent an id.",
 ].join(" ");
 
@@ -63,23 +64,25 @@ export function classifySchema(subjects: readonly TrailSubject[]) {
       properties: {
         op: { type: "string", enum: [...GRAPH_OPS, "none"] },
         subjects: { type: "array", items: pick, minItems: 0, maxItems: 2 },
+        issue: { anyOf: [{ type: "string", enum: [...ISSUE_IDS] }, { type: "null" }] },
       },
-      required: ["op", "subjects"],
+      required: ["op", "subjects", "issue"],
       additionalProperties: false,
     },
   };
 }
 
 export function buildClassifyBody(question: string, subjects: readonly TrailSubject[], model: string) {
-  const ops = GRAPH_OPS.map((o) => `- ${o} (${GRAPH_OP_SPEC[o].arity} subject${GRAPH_OP_SPEC[o].arity === 2 ? "s" : ""}): ${GRAPH_OP_SPEC[o].describe}`).join("\n");
+  const ops = GRAPH_OPS.map((o) => `- ${o} (${GRAPH_OP_SPEC[o].arity} subject${GRAPH_OP_SPEC[o].arity === 1 ? "" : "s"}${GRAPH_OP_SPEC[o].issue ? ", needs issue" : ""}): ${GRAPH_OP_SPEC[o].describe}`).join("\n");
   const list = subjects.map((s) => `- ${s.id} (${s.kind}): ${s.name}`).join("\n");
+  const issues = ISSUES.map((i) => `- ${i.id}: ${i.label} — ${i.description}`).join("\n");
   return {
     model,
     temperature: 0,
     reasoning_effort: XAI_REASONING_EFFORT,
     messages: [
       { role: "system", content: CLASSIFY_SYSTEM },
-      { role: "user", content: `Operations:\n${ops}\n\nSubjects on the closed list:\n${list}\n\nQuestion: ${question}` },
+      { role: "user", content: `Operations:\n${ops}\n\nSubjects on the closed list:\n${list}\n\nIssue list:\n${issues}\n\nQuestion: ${question}` },
     ],
     response_format: { type: "json_schema", json_schema: classifySchema(subjects) },
   };
@@ -88,9 +91,14 @@ export function buildClassifyBody(question: string, subjects: readonly TrailSubj
 /** Closed-set check of a parsed pick: known op, right arity, ids on the list, mentions short and non-empty. */
 export function validatePick(value: unknown, subjects: readonly TrailSubject[]): GraphPick | null {
   if (typeof value !== "object" || value === null) return null;
-  const { op, subjects: picks } = value as Record<string, unknown>;
+  const { op, subjects: picks, issue } = value as Record<string, unknown>;
   if (typeof op !== "string" || !isGraphOp(op) || !Array.isArray(picks)) return null;
   if (picks.length !== GRAPH_OP_SPEC[op].arity) return null;
+  let issueId: IssueId | null = null;
+  if (GRAPH_OP_SPEC[op].issue) {
+    if (typeof issue !== "string" || !isIssueId(issue)) return null;
+    issueId = issue;
+  }
   const out: SubjectPick[] = [];
   for (const p of picks) {
     if (typeof p !== "object" || p === null) return null;
@@ -104,7 +112,7 @@ export function validatePick(value: unknown, subjects: readonly TrailSubject[]):
       return null;
     }
   }
-  return { op, subjects: out };
+  return { op, subjects: out, issue: issueId };
 }
 
 function content(body: unknown): unknown {
@@ -164,6 +172,7 @@ const NARRATE_SYSTEM = [
   "Write every dollar amount exactly as it appears in the facts (full digits with commas, e.g. $10,000,000); do not round, sum, or write amounts in words.",
   "Do not include links or URLs. Do not repeat the question.",
   "'Opposing' spending is independent expenditure against a candidate: say so if relevant, and never say that money reached, went to, or funded a candidate unless a fact says a committee is that candidate's campaign committee.",
+  `Some facts say a funder is tagged on an issue. Such a tag is not a filed record: whenever you mention one, say where it comes from in the fact's own words — "${TAG_PROVENANCE.machine}" for a machine tag, "${TAG_PROVENANCE.position}" for a stated position — and never present a tag as something the filings show, as a fact about the recipient, or as a reason the money was given.`,
 ].join(" ");
 
 export const NARRATE_SCHEMA = {

@@ -2,7 +2,7 @@
 import Link from "next/link";
 import type { ReactNode } from "react";
 import { SourceLink, VisibilityBadge } from "@/components/ui";
-import { factSentence, GRAPH_OP_LABELS, type AskGraphResponse, type GraphFact, type GraphNodeRef } from "@/lib/graph/facts";
+import { factSentence, GRAPH_OP_LABELS, issueLabel, TAG_PROVENANCE, type AskGraphResponse, type GraphFact, type GraphNodeRef } from "@/lib/graph/facts";
 
 type GraphResult = Extract<AskGraphResponse, { kind: "graph" }>;
 
@@ -26,7 +26,8 @@ export function GraphAnswer({ result }: { result: GraphResult }) {
     <section className="graph-answer space-y-4" aria-label="Graph answer">
       <header className="space-y-1">
         <p className="text-xs uppercase tracking-wide text-neutral-500">
-          {GRAPH_OP_LABELS[result.op]} · {result.facts.length} record{result.facts.length === 1 ? "" : "s"} read from the filings graph
+          {GRAPH_OP_LABELS[result.op]}
+          {result.issue ? ` · ${issueLabel(result.issue)}` : ""} · {result.facts.length} record{result.facts.length === 1 ? "" : "s"} read from the filings graph
         </p>
         <p className="text-sm text-neutral-700">
           {result.subjects.map((s, i) => (
@@ -35,6 +36,7 @@ export function GraphAnswer({ result }: { result: GraphResult }) {
               <Name node={{ id: s.ids[0], name: s.name, kind: s.kind, href: s.href }} />
             </span>
           ))}
+          {result.subjects.length === 0 && result.issue ? <span>Every funder in the race tagged on {issueLabel(result.issue)}</span> : null}
           {result.note ? <span className="text-neutral-500"> — {result.note}</span> : null}
         </p>
       </header>
@@ -80,7 +82,10 @@ function FactList({ facts }: { facts: readonly GraphFact[] }) {
       {facts.map((f) => (
         <li key={f.n} id={`fact-${f.n}`} className="flex items-baseline gap-3 py-2">
           <span className="w-8 shrink-0 tabular-nums text-xs text-neutral-500">[{f.n}]</span>
-          <span className="flex-1 text-neutral-900">{factSentence(f)}</span>
+          <span className="flex-1 text-neutral-900">
+            {factSentence(f)}
+            {f.tag ? <TagBadge tag={f.tag} /> : null}
+          </span>
           <span className="flex shrink-0 items-baseline gap-2">
             {f.visibility !== "disclosed" && <VisibilityBadge visibility={f.visibility} />}
             {f.source_url ? <SourceLink href={f.source_url} /> : <span className="text-xs text-neutral-400">no source url</span>}
@@ -88,6 +93,15 @@ function FactList({ facts }: { facts: readonly GraphFact[] }) {
         </li>
       ))}
     </ol>
+  );
+}
+
+/** The provenance of an issue tag, set apart from the filed record it sits next to; the machine row's own label when it has one. */
+function TagBadge({ tag }: { tag: NonNullable<GraphFact["tag"]> }) {
+  return (
+    <span className="graph-tag ml-2 inline-block rounded border border-dashed border-amber-400 bg-amber-50 px-1.5 py-0.5 text-[11px] text-amber-900" title={tag.label ?? TAG_PROVENANCE[tag.layer]}>
+      {issueLabel(tag.issue_id)} · {TAG_PROVENANCE[tag.layer]}
+    </span>
   );
 }
 

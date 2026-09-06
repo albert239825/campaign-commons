@@ -129,6 +129,7 @@ describe("answerGraphQuestion: facts and narration", () => {
       kind: "graph",
       op: "upstream",
       subjects: [{ name: winsenate.name, kind: "committee", ids: [winsenate.id], href: null }],
+      issue: null,
       note: null,
       facts: [expect.objectContaining({ n: 1, from: slf, to: w, amount: 1_000_000, source_url: "https://www.fec.gov/x" })],
       narrative: { status: "ok", text: "SENATE LEADERSHIP FUND gave $1,000,000 to WINSENATE [1]." },
@@ -153,5 +154,46 @@ describe("answerGraphQuestion: facts and narration", () => {
     const r = await ask("does Musk's money reach WinSenate", graph([musk, w], []), f);
     expect(r).toMatchObject({ kind: "graph", facts: [], narrative: { status: "unavailable" } });
     expect(f).toHaveBeenCalledTimes(1);
+  });
+});
+
+describe("answerGraphQuestion: issue-tagged funders (machine layer, D-82 / spender positions, D-84)", () => {
+  const w = node(winsenate.id, winsenate.name);
+  const fairshake = node("org:FAIRSHAKE", "FAIRSHAKE", "organization");
+  const tag = { issue_id: "crypto_fintech", layer: "machine", label: "Machine-tagged from the organization's own website (grok-4.3, 2026-09-06); not part of the record" } as const;
+
+  it("funders_by_issue: passes the closed-set issue id to the graph as a parameter, labels the tag's provenance in the prompt and the response", async () => {
+    const run = graph([w], [edge(fairshake, w, 250_000, { tag })]);
+    const f = model({ op: "funders_by_issue", subjects: [{ id: winsenate.id, mention: null }], issue: "crypto_fintech" }, { narrative: "FAIRSHAKE, which is machine-tagged, not part of the record, on crypto, gave $250,000 to WINSENATE [1]." });
+    const r = await ask("which funders of winsenate are tagged on crypto", run, f);
+    expect(r).toMatchObject({
+      kind: "graph",
+      op: "funders_by_issue",
+      issue: "crypto_fintech",
+      subjects: [{ ids: [winsenate.id] }],
+      facts: [expect.objectContaining({ n: 1, from: fairshake, to: w, amount: 250_000, source_url: "https://www.fec.gov/x", tag })],
+      narrative: { status: "ok" },
+    });
+    expect((r as { note: string }).note).toContain("machine-tagged, not part of the record");
+    const opCall = run.mock.calls.find(([cypher]) => cypher.includes("$issue"))!;
+    expect(opCall[1]).toMatchObject({ race: "pa-sen-2024", a: [winsenate.id], issue: "crypto_fintech" });
+    expect(opCall[0]).not.toContain("crypto");
+    const narrator = JSON.parse(f.mock.calls[1][1]!.body as string) as { messages: { content: string }[] };
+    expect(narrator.messages[0].content).toContain("machine-tagged, not part of the record");
+    expect(narrator.messages[0].content).toContain("position read from the spender's own site");
+    expect(narrator.messages[1].content).toContain("[1] FAIRSHAKE gave $250,000 to WINSENATE. FAIRSHAKE is tagged on Crypto & financial regulation (machine-tagged, not part of the record).");
+    expect(narrator.messages[1].content).not.toContain("grok-4.3");
+  });
+
+  it("issue_funders: takes no subject and never resolves one; a pick without an issue is refused as no_operation", async () => {
+    const run = graph([w], [edge(fairshake, w, 250_000, { tag })]);
+    const r = await ask("who in this race is tagged on crypto", run, model({ op: "issue_funders", subjects: [], issue: "crypto_fintech" }));
+    expect(r).toMatchObject({ kind: "graph", op: "issue_funders", issue: "crypto_fintech", subjects: [], facts: [expect.objectContaining({ tag })] });
+    expect(run.mock.calls.every(([cypher]) => !cypher.includes("$ids") && !cypher.includes("$tokens"))).toBe(true);
+
+    const bad = model({ op: "issue_funders", subjects: [], issue: null });
+    expect(await ask("who is tagged on crypto", graph([w]), bad)).toMatchObject({ kind: "unsupported", reason: "no_operation" });
+    const unknown = model({ op: "funders_by_issue", subjects: [{ id: winsenate.id, mention: null }], issue: "bitcoin" });
+    expect(await ask("crypto funders of winsenate", graph([w]), unknown)).toMatchObject({ kind: "unsupported", reason: "no_operation" });
   });
 });

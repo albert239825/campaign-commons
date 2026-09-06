@@ -34,7 +34,35 @@ export type GraphNodeRow = {
   class_basis: "rule" | "inferred" | "verified" | null;
   source_url: string | null;
   href: string | null;
+  /**
+   * Machine issue layer (D-82): a donor/committee's `x_enrichment.issue_focus` — issue ids the model read off the
+   * organization's own website, its focus kind, and the label the page shows ("Machine-tagged … not part of the record").
+   * Kept under their own names so no record property ever carries model output; empty/null when there is no machine row.
+   */
+  machine_issue_ids: string[];
+  machine_kind: string | null;
+  machine_label: string | null;
+  /** Spender issue layer (D-84): issue ids of `Entity.issue_positions`, read from the spender's own site. */
+  issue_position_ids: string[];
 };
+
+/** The machine-layer node properties; every node row carries them so the loader's SET is uniform. */
+export type MachineTags = Pick<GraphNodeRow, "machine_issue_ids" | "machine_kind" | "machine_label" | "issue_position_ids">;
+
+export const NO_TAGS: MachineTags = { machine_issue_ids: [], machine_kind: null, machine_label: null, issue_position_ids: [] };
+
+export function machineTags(src: {
+  x_enrichment?: { issue_focus?: { kind: string; issue_ids: readonly string[]; label: string } | undefined } | undefined;
+  issue_positions?: readonly { issue_id: string }[] | undefined;
+}): MachineTags {
+  const focus = src.x_enrichment?.issue_focus;
+  return {
+    machine_issue_ids: focus ? [...focus.issue_ids] : [],
+    machine_kind: focus?.kind ?? null,
+    machine_label: focus?.label ?? null,
+    issue_position_ids: [...new Set((src.issue_positions ?? []).map((p) => p.issue_id))],
+  };
+}
 
 export type GraphEdgeRow = {
   type: RelType;
@@ -101,14 +129,27 @@ export function graphRows(src: GraphSources): { nodes: GraphNodeRow[]; edges: Gr
   const kindOf = (id: string): GraphNodeRow["kind"] => (id.startsWith("ind:") ? "individual" : id.startsWith("org:") ? "organization" : id.startsWith("agg:") ? "aggregate" : "committee");
   const hrefFor = (kind: GraphNodeRow["kind"], id: string) =>
     kind === "candidate" ? `/races/${raceId}/candidates/${id}` : kind === "committee" || kind === "conduit" ? `/races/${raceId}/entities/${id}` : null;
-  const putNode = (row: GraphNodeRow) => {
+  const putNode = (row: Omit<GraphNodeRow, keyof MachineTags>) => {
     const prev = nodes.get(row.id);
     if (prev && prev.source_url !== null) return;
     nodes.set(row.id, {
+      ...NO_TAGS,
+      ...prev,
       ...row,
       class_basis: row.class_basis ?? prev?.class_basis ?? null,
       source_url: row.source_url ?? prev?.source_url ?? null,
       href: row.href ?? prev?.href ?? hrefFor(row.kind, row.id),
+    });
+  };
+  const tagNode = (id: string, tags: MachineTags) => {
+    const prev = nodes.get(id);
+    if (!prev) return;
+    nodes.set(id, {
+      ...prev,
+      machine_issue_ids: tags.machine_issue_ids.length > 0 ? tags.machine_issue_ids : prev.machine_issue_ids,
+      machine_kind: tags.machine_kind ?? prev.machine_kind,
+      machine_label: tags.machine_label ?? prev.machine_label,
+      issue_position_ids: tags.issue_position_ids.length > 0 ? tags.issue_position_ids : prev.issue_position_ids,
     });
   };
   const putEdge = (row: Omit<GraphEdgeRow, "key" | "chains">, chain: string | null) => {
@@ -172,6 +213,7 @@ export function graphRows(src: GraphSources): { nodes: GraphNodeRow[]; edges: Gr
 
   for (const ent of entities) {
     putNode({ id: ent.entity_id, name: ent.name, name_lc: ent.name.toLowerCase(), kind: ent.kind, committee_type: ent.committee_type, visibility: ent.visibility, class_basis: null, source_url: ent.source_url, href: null });
+    tagNode(ent.entity_id, machineTags(ent));
     for (const t of [...ent.inflows, ...ent.outflows]) {
       putNode({ id: t.from_entity_id, name: t.from_name, name_lc: t.from_name.toLowerCase(), kind: kindOf(t.from_entity_id), committee_type: null, visibility: "disclosed", class_basis: t.class_basis ?? null, source_url: null, href: null });
       putNode({ id: t.to_entity_id, name: t.to_name, name_lc: t.to_name.toLowerCase(), kind: kindOf(t.to_entity_id), committee_type: null, visibility: "disclosed", class_basis: null, source_url: null, href: null });
@@ -193,6 +235,7 @@ export function graphRows(src: GraphSources): { nodes: GraphNodeRow[]; edges: Gr
     for (const n of d.nodes) {
       putNode({ id: n.id, name: n.name, name_lc: n.name.toLowerCase(), kind: n.kind, committee_type: n.committee_type, visibility: "disclosed", class_basis: null, source_url: n.source_url, href: null });
     }
+    tagNode(d.donor_id, machineTags(d));
     for (const e of d.edges) {
       // only the donor's own gifts: deeper donor-page edges are pooled totals the chains and ledger already carry
       if (e.kind !== "money" || e.from !== d.donor_id) continue;

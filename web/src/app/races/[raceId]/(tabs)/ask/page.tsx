@@ -2,11 +2,11 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { ISSUE_BY_ID, ISSUE_IDS } from "@campaign-commons/contracts";
-import { getRace, getTrails, hasTrails, listRaceIds } from "@/lib/data";
+import { getTrails, hasTrails, listRaceIds } from "@/lib/data";
 import { routes } from "@/lib/format";
 import { ASK_INTENTS, canonicalQuestion, INTENT_LABELS } from "@/lib/ask";
-import { Breadcrumbs, Card, DataStatusBanner } from "@/components/ui";
-import { DetailHeader, SectionNav } from "@/components/ui/detail-layout";
+import { Card } from "@/components/ui";
+import { SectionNav } from "@/components/ui/detail-layout";
 import { AskBox, SuggestionLink } from "@/components/ask/ask-box";
 import { AskMethod } from "@/components/ask/method";
 
@@ -14,7 +14,6 @@ export const generateStaticParams = () => listRaceIds().filter(hasTrails).map((r
 
 export default async function AskPage({ params }: { params: Promise<{ raceId: string }> }) {
   const { raceId } = await params;
-  const race = getRace(raceId);
   if (!hasTrails(raceId)) notFound();
   const trails = getTrails(raceId);
   const candidates = trails.subjects.filter((s) => s.kind === "candidate");
@@ -22,25 +21,10 @@ export default async function AskPage({ params }: { params: Promise<{ raceId: st
 
   return (
     <div className="detail-page ask-page">
-      <div>
-        <Breadcrumbs items={[{ href: routes.home(), label: "Races" }, { href: routes.race(raceId), label: race.label }, { label: "Money Trails" }]} />
-        <DataStatusBanner status={trails.data_status} />
-        <DetailHeader
-          label={race.label}
-          title="Money Trails"
-          actions={
-            <div>
-              <Link href={routes.race(raceId)}>Race dashboard →</Link>
-              <Link href={routes.ads(raceId)}>Ad gallery →</Link>
-              <Link href={routes.methodology()}>Methodology →</Link>
-            </div>
-          }
-        >
-          <p>
-            Ask a plain-English money question about this race. A language model writes a read-only query over the filings graph, and every returned row links to where it was filed. Matching precomputed pages are offered as related links.
-          </p>
-        </DetailHeader>
-      </div>
+      <p className="max-w-3xl text-sm text-neutral-600">
+        Ask a plain-English money question about this race. A language model writes a read-only query over the filings graph, and every returned row links to where it was filed. Matching precomputed pages are offered as related links.{" "}
+        <Link href={routes.methodology()}>Methodology →</Link>
+      </p>
 
       <Card>
         <AskBox raceId={raceId} subjects={trails.subjects} examples={trails.examples} autoFocus />
