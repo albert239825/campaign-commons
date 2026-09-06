@@ -3,7 +3,7 @@ import { pct } from "@/lib/format";
 
 export type Shares = Omit<VisibilityShares, "unwalked"> & { unwalked?: number };
 
-type Bucket = keyof VisibilityShares;
+type Bucket = "disclosed" | "inferable" | "unwalked" | "dark";
 const ORDER: Bucket[] = ["disclosed", "inferable", "unwalked", "dark"];
 export const BUCKET_COLORS: Record<Bucket, string> = { ...VISIBILITY_COLORS, unwalked: UNWALKED_COLOR };
 export const BUCKET_LABELS: Record<Bucket, string> = { ...VISIBILITY_LABELS, unwalked: UNWALKED_LABEL };

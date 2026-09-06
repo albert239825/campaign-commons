@@ -18,7 +18,7 @@ export function TraceabilityCard({ t }: { t: Traceability | null }) {
       </Card>
     );
   }
-  const segs = visibilitySegments({ disclosed: t.traced_to_individuals, inferable: t.inferable, unwalked: t.unwalked, dark: t.dark });
+  const segs = visibilitySegments({ disclosed: t.traced_to_individuals + (t.traced_to_organizations ?? 0), inferable: t.inferable, unwalked: t.unwalked, dark: t.dark });
   return (
     <Card title="Traceability of outside money">
       <div className="traceability-summary flex flex-wrap items-end gap-x-8 gap-y-4">
