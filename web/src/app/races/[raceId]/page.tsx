@@ -2,9 +2,10 @@
 import Link from "next/link";
 import Image from "next/image";
 import type { Party } from "@citizen-gotham/contracts";
-import { getLedger, getRace, getStories, hasChain, listRaceIds } from "@/lib/data";
+import { getAds, getLedger, getRace, getStories, hasChain, listRaceIds } from "@/lib/data";
 import { date, routes } from "@/lib/format";
 import { AdjacencyNote, Card, DataStatusBanner } from "@/components/ui";
+import { RaceNav } from "@/components/ui/race-nav";
 import { RaceSections } from "@/components/ledger/race-sections";
 import { FundingExplorer } from "@/components/ledger/funding-explorer";
 import { buildFundingViews } from "@/lib/funding-view";
@@ -34,6 +35,7 @@ export default async function RaceLedgerPage({ params }: { params: Promise<{ rac
   const parties = Array.from(new Set(race.candidates.map((c) => c.party)));
   const officeName = { S: "US Senate", H: "US House", P: "US President" }[race.office];
   const stateName = race.label.split("·")[0].trim();
+  const adCount = getAds(raceId).ads.length;
 
   return (
     <div className="race-dashboard">
@@ -86,6 +88,7 @@ export default async function RaceLedgerPage({ params }: { params: Promise<{ rac
             </section>
           </div>
         </header>
+        <RaceNav race={race} counts={{ ads: adCount, stories: stories.stories.length }} active={routes.race(raceId)} />
       </div>
 
       <RaceSections
