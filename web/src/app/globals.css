@@ -716,6 +716,16 @@ body:has(.detail-page) :is(a, button, input, select, summary, [tabindex]):focus-
 .evidence-list > li > div:last-child { max-width: 190px; }
 .evidence-list > li > div:first-child { gap: 8px; }
 .evidence-list p { line-height: 1.8; }
+.machine-stance, .machine-focus { margin-top: 24px; padding: 20px 0 0 24px; border-top: 1px solid var(--detail-rule); border-left: 2px solid #7a63b8; }
+.machine-head, .machine-list-head { font-size: 11px; letter-spacing: .04em; text-transform: uppercase; }
+.machine-head { color: #6b52a8; }
+.machine-list-head { margin-top: 24px; padding-top: 20px; border-top: 1px solid var(--detail-rule); color: var(--detail-muted); }
+.machine-position { display: flex; flex-direction: column; gap: 16px; margin-top: 16px; }
+.machine-summary { max-width: 75ch; font-size: 16px; line-height: 1.8; }
+.machine-focus .machine-summary { font-size: 15px; }
+.machine-quote { max-width: 75ch; margin-top: 12px; padding-left: 16px; border-left: 2px solid var(--detail-rule); font-size: 14px; line-height: 1.8; color: #555550; }
+.machine-provenance { margin-top: 20px; font-size: 12px; line-height: 1.8; color: var(--detail-muted); }
+.machine-stance .policies-evidence-more > summary { font-size: 13px; }
 .entity-fields { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 24px 32px; margin-block: 32px; padding: 32px; background: var(--detail-surface); }
 .entity-fields dt { margin-bottom: 10px; font-size: 12px; text-transform: none; letter-spacing: 0; color: var(--detail-muted); }
 .entity-fields dd { font-size: 15px; overflow-wrap: anywhere; }
@@ -956,6 +966,8 @@ svg[data-k="9"] .chain-short-k9 :is(.chain-amount, .chain-sub) { display: none; 
   .detail-jump-nav ul { flex-wrap: nowrap; }
   .detail-content { gap: 32px; }
   .detail-summary > p:first-of-type, .issue-position > p { font-size: 15px; }
+  .machine-summary { font-size: 15px; }
+  .machine-stance, .machine-focus { padding-left: 16px; }
   .evidence-list > li { grid-template-columns: minmax(0, 1fr); padding-block: 24px; }
   .evidence-list > li > div:first-child { flex-direction: row; align-items: baseline; flex-wrap: wrap; gap: 12px; }
   .evidence-list > li > div:last-child { grid-column: 1; max-width: none; }
