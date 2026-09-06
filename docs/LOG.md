@@ -33,7 +33,7 @@ it came from.
 | 17:30–18:30 | Whiteboard → ontology | Race nav, docs wiki (FAQ / QUESTIONS / DECISIONS), `ONTOLOGY.md` (questions × surfaces, ER diagram, sources, V0/V1/V2 scope) |
 | 20:30–21:30 | Money Trails (`feature/ask-money-trails`) | `TrailsSchema` + `trails.json`, deterministic question resolver, `/races/<race>/ask` answer pages (D-73) |
 | 23:00–00:30 | Money Trails LLM router (`feature/ask-llm-router`) | `/api/ask-route` + `ask-llm.ts`: Grok picks the route from the closed set, resolver still decides the page, deterministic fallback (D-75) |
-| 01:00–03:00 | Money Trails graph mode (`feature/ask-graph`) | Local Neo4j loaded from `data/out`; `/api/ask-graph`: four allowlisted operations, source-backed facts, Grok narrates only from them and is withheld when it strays (D-78) |
+| 01:00–03:00 | Money Trails graph mode (`feature/ask-graph`) | Local Neo4j loaded from `data/out`; `/api/ask-graph`: four allowlisted operations, source-backed facts, Grok narrates only from them and is withheld when it strays (D-79) |
 
 ## Challenges and how we overcame them
 
@@ -188,7 +188,7 @@ this deploy, so it is per warm instance, and stated as such.
 $2 / $6 per M ≈ $0.006 per ask cold, ≈ $0.002 cached. Tests 23 → 57 (16 classifier, 15 route handler, 3 limiter, all offline with a
 mocked `fetch`); serverless functions 0 → 1; static pages unchanged.
 
-### 15. Money Trails — graph mode: the model may narrate, but only what the graph returned (D-78)
+### 15. Money Trails — graph mode: the model may narrate, but only what the graph returned (D-79)
 **Ask.** Two kinds of question the route resolver cannot serve even with D-75 behind it: traversal ("does Elon Musk's money
 reach Bob Casey?") and aggregation across subjects ("who do WinSenate and Women Vote share as funders?", "who funds
 McCormick's funders?"). No precomputed page holds those, and the router can only pick pages. The direction agreed: not
@@ -225,7 +225,7 @@ on every ask (6–11 s observed) — it has its own 15 s. Grok puts citations af
 uppercase names carry periods ("NAU, JOHN L. MR. III") and digits ("2024 THUNE …"), all of which the first guard rejected as
 uncited or unknown; the guard now normalises citation placement, does not split inside uppercase names, and allows digits
 that appear in a fact's name. Neo4j Community has no node-key constraints (`IS UNIQUE` instead) and no `CALL … IN
-TRANSACTIONS` inside an explicit transaction (reset is one `DETACH DELETE`). D-76 and D-77 were taken meanwhile; this is D-78.
+TRANSACTIONS` inside an explicit transaction (reset is one `DETACH DELETE`). D-76–D-78 were taken meanwhile; this is D-79.
 **Numbers.** Live on PA-Sen: Musk → Casey `money_path` 8 facts, narrative ok; WinSenate ∩ Women Vote `shared_funders` → SMP,
 2 facts; McCormick `upstream` 30 facts; Yass `funder_reach` 17 facts. Classifier 2–4 s, narrator 6–11 s. Tests 59 → 126 (9
 schema on real artifacts, 14 queries, 23 classifier/narrator/guard, 13 orchestration, 8 endpoint incl. limiter and an
@@ -654,6 +654,76 @@ positioning is written straight to the element's style on `mousemove` so hoverin
 **Numbers.** WINSENATE: 487 edges in the table, 100 rendered on load, table folded; 54 ads folded into the roll-up; the
 root chip fits `AMERICAN HOSPITAL ASSOCIATION PAC` on two rows. Wire edge tuple 8 → 9 slots. `npm run lint`, `tsc
 --noEmit`, `next build` clean; no data or contract changes.
+
+## 2026-09-06 ~08:00 — Block 3 child H1a: a viewBox camera and a zoom toolbar for the chain picture
+
+**What changed.** The chain SVG gets a camera. `chain/camera.ts` is pure math over `{x, y, w, h}` in layout units —
+`fitAll`, `zoomAbout` (k' = k·f, the layout point under the pointer stays put), `pan`, `clamp` (scale in [fit, kMax],
+never showing space outside the graph), `fitToNodes`, `scaleOf`, plus `kBucket`/`shortBuckets` for the semantic-zoom
+classes — with 13 unit tests. `chain/use-camera.ts` writes it straight to the existing `<svg viewBox>` once per animation
+frame; the server-rendered layout is never recomputed and React never re-renders on a gesture (D-24, no layout flash: the
+first camera *is* the server's viewBox). `kMax` = 18 / 11 ≈ 1.64, the scale at which 11-pt labels render at 18 px. Gestures:
+plain wheel is left alone (the page scrolls — Albert's call), `Ctrl`/`⌘`+wheel and trackpad pinch zoom about the pointer,
+touch pinch zooms, one-finger touch or a mouse drag on empty canvas pans, double-click on empty canvas zooms 2×.
+A toolbar above the map — `[+] [−] [⤢ fit] [1:1]`, real buttons with `aria-label`s, a live "zoom 1.0×" readout — and
+keys on the focused wrapper (`+`/`=`, `-`, `0` fit, `Shift`+arrows pan). The wrapper is one focusable region whose label
+now describes the map and its controls instead of claiming to scroll. **Semantic zoom**: the hook writes `data-k`
+(scale × 10) on the SVG and each box carries the buckets at which it would be under 20 px tall, so CSS drops its amount
+and sub-label rather than drawing 4 px text. Selected strokes use `vector-effect: non-scaling-stroke`; focus rings are
+CSS outlines and were already in px. `.chain-map-scroll` no longer scrolls horizontally (`overflow: hidden`; the 880 px
+max-height cap stays); below 720 px the picture still fits at first paint and pinch/pan explores it. Caption gains one
+sentence on how to zoom. D-78.
+
+**Challenge.** The first cut kept the scale bucket in React state so the toolbar readout could render it; every bucket
+change re-rendered the whole WINSENATE SVG and a wheel sweep dropped ~1 frame in 7 (avg 20 ms, p95 50 ms). Moving
+`data-k` and the readout text to direct DOM writes, like the viewBox itself, took a 180-frame `Ctrl`+wheel sweep on
+WINSENATE to avg 17.5 ms, p95 16.8 ms, 8 frames over 20 ms, on the 2-vCPU software-rendered test VM (idle frames on the
+same VM: 16.7 ms flat). The spec's zoom formula (`x' = px − (px − x)·f`) is written for a scale-space camera; in viewBox
+space the width divides by f and so does the pointer offset — the unit test pins the invariant rather than the formula.
+`web/` had no test runner; rather than add one, `npm test` compiles `src/**/*.test.ts` with `tsc` and runs `node --test`.
+
+**Numbers.** WINSENATE at 1440 px: labels 6.4 px at fit → 11 px after `[1:1]`, 18 px at kMax; `[fit]` restores the exact
+server viewBox (`0 0 2250 948.49`); plain wheel scrolls the page 200 px and leaves the camera alone; `Ctrl`+wheel leaves
+`scrollY` unchanged and holds the pointer's layout point to 0.2 units. 13 boxes hide their amount at the fit bucket.
+`npm run lint`, `npm run typecheck`, `npm test` (13/13) clean; no data or contract changes.
+
+## 2026-09-06 ~03:00 — Block 3 child H1b: keyboard graph cursor + path highlighting
+
+**What changed.** The picture now answers "how does this money reach the spender" on hover instead of asking the reader to
+trace a 6px ribbon. `chain/graph-nav.ts` (new, pure) indexes the `VisibleGraph` once per layout: `ancestors` /
+`descendants` BFS along every edge kind, `pathSet(id)` = the nodes and edges on any path between `id` and the root (for a
+spending-side node, also everything downstream of it, so an ad lights sponsor → placement spine → ad → targeting arrow),
+and a cursor — `left` = largest-amount upstream neighbour, `right` = largest downstream, `up`/`down` = neighbour in the same
+drawn column, `home` = root. `chain-diagram.tsx` derives one `lit` set from pinned selection, then hover, then cursor, and
+stamps `data-lit="1|0"` on every node, ribbon and spine; CSS (`globals.css`, additive `.chain-*`) fades the unlit 25% and
+deepens lit ribbons. Highlight is opacity only: a targeting arrow keeps its 2px stroke and arrowhead, a spine keeps its
+basis dash, no width or fill changes, no sums along the route anywhere. Clicking a node pins its route until `Esc` or a
+click on bare canvas. The map wrapper is now the **single tab stop** (`role="application"`, `aria-roledescription="funding
+map"`, `aria-activedescendant` on the cursor node); the 47–59 node `<g>`s and the ribbons lost their `tabIndex` but stay
+clickable. `←→↑↓` move the cursor, `Home` returns to the root, `Enter`/`Space` open the node panel, `Esc` clears cursor and
+pin. The cursor draws a blue `non-scaling-stroke` ring and shows the same tooltip the pointer would, and a visually hidden
+`aria-live="polite"` region (`chain/graph-announce.ts`) says the node in records language — *"FUND FOR POLICY REFORM,
+non-committee organization; gave $60M to DEMOCRACY PAC, dark (no disclosure); dark wall, no further sources on record; 3
+edges lit"*, *"Dave McCormick, candidate — aimed at by 6 opposing ads, $60M in independent expenditures; no money reaches
+the candidate; 12 edges lit"*. `prefers-reduced-motion` drops the fade transitions; `forced-colors` uses `Highlight` for the
+ring and lit borders. C's tooltip and edge→row reveal fire on the same events as before.
+
+**Tests.** The repo had no JS test runner; `npm test` now compiles `src/**/*.test.ts` with `tsconfig.test.json` and runs
+Node's built-in `node --test` — no new dependency. `graph-nav.test.ts` (10 tests) covers a fixture with money, placement and
+targeting edges: reachability both ways across all kinds, the WINSENATE-shaped path set (FFPR → Democracy PAC → SMP → root,
+three edges, nothing else), root lights everything, candidate and ad path sets, each cursor move, `Home`, and a null cursor
+landing on the root.
+
+**Challenge.** Keyboard focus and pointer clicks both want to place the cursor: focusing the wrapper by Tab should land on
+the root (or the pinned node), but a click on a node also focuses the wrapper, and the root-landing then stole the ring
+from the clicked node. A `pointerdown` flag on the wrapper tells the two apart. H1a is adding a viewBox camera to the same
+file, so all graph logic lives in the two new modules and the diagram edits are the `data-lit` attributes, the wrapper
+attributes/handlers, the ring, and the live region.
+
+**Numbers.** WINSENATE: tab stops inside the figure 59 → 0 (one on the wrapper); hovering FUND FOR POLICY REFORM lights 4
+nodes and 3 ribbons, dims 93 elements. `npm run lint`, `npm run typecheck`, `npm test` (10/10) clean; no data or contract
+changes. Not exercised in the running app: an ad page with both a placement spine and a targeting arrow — no ad in the PA
+data has a walked sponsor chain *and* a `candidate_ids` entry — so that shape is covered by the unit fixture only.
 
 ## 2026-09-06 ~06:00 — Spender issue positions (Money Trails follow-up)
 
