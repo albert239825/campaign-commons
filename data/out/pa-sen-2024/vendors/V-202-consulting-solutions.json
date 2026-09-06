@@ -1,0 +1,140 @@
+{
+  "vendor_id": "V-202-consulting-solutions",
+  "name": "202 CONSULTING SOLUTIONS LLC",
+  "aliases": [
+    "202 CONSULTING SOLUTIONS LLC"
+  ],
+  "normalization": {
+    "basis": "inferred",
+    "rule": "case/punctuation/suffix normalisation + token-set ≥0.92 (numeric tokens must match); aliases file",
+    "source_urls": [
+      "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&payee_name=202+CONSULTING+SOLUTIONS+LLC"
+    ],
+    "checked_by": null,
+    "checked_at": null
+  },
+  "total": 2281.8,
+  "count": 6,
+  "media_mix": [
+    {
+      "medium": "digital",
+      "amount": 2281.8,
+      "count": 6
+    }
+  ],
+  "spenders": [
+    {
+      "entity_id": "C00341396",
+      "name": "MOVEON.ORG POLITICAL ACTION",
+      "amount": 2281.8,
+      "count": 6
+    }
+  ],
+  "targets": [
+    {
+      "candidate_id": "S6PA00217",
+      "support_oppose": "S",
+      "amount": 2281.8
+    }
+  ],
+  "first_date": "2024-10-09",
+  "last_date": "2024-10-30",
+  "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&payee_name=202+CONSULTING+SOLUTIONS+LLC",
+  "race_id": "pa-sen-2024",
+  "generated_at": "2026-09-05T19:33:04+00:00",
+  "data_status": "real",
+  "expenditures": [
+    {
+      "ie_id": "C00341396-ie-1895567-500063942",
+      "spender_entity_id": "C00341396",
+      "spender_name": "MOVEON.ORG POLITICAL ACTION",
+      "candidate_id": "S6PA00217",
+      "candidate_name": "Bob Casey",
+      "support_oppose": "S",
+      "amount": 217.5,
+      "date": "2024-10-30",
+      "purpose": "DIGITAL AD",
+      "payee": "202 CONSULTING SOLUTIONS LLC",
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202506169762172362",
+      "vendor_id": "V-202-consulting-solutions",
+      "medium": "digital"
+    },
+    {
+      "ie_id": "C00341396-ie-1895567-500063941",
+      "spender_entity_id": "C00341396",
+      "spender_name": "MOVEON.ORG POLITICAL ACTION",
+      "candidate_id": "S6PA00217",
+      "candidate_name": "Bob Casey",
+      "support_oppose": "S",
+      "amount": 567.0,
+      "date": "2024-10-30",
+      "purpose": "DIGITAL AD",
+      "payee": "202 CONSULTING SOLUTIONS LLC",
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202506169762172362",
+      "vendor_id": "V-202-consulting-solutions",
+      "medium": "digital"
+    },
+    {
+      "ie_id": "C00341396-ie-1895567-500063872",
+      "spender_entity_id": "C00341396",
+      "spender_name": "MOVEON.ORG POLITICAL ACTION",
+      "candidate_id": "S6PA00217",
+      "candidate_name": "Bob Casey",
+      "support_oppose": "S",
+      "amount": 217.5,
+      "date": "2024-10-24",
+      "purpose": "DIGITAL AD",
+      "payee": "202 CONSULTING SOLUTIONS LLC",
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202506169762172358",
+      "vendor_id": "V-202-consulting-solutions",
+      "medium": "digital"
+    },
+    {
+      "ie_id": "C00341396-ie-1895567-500063871",
+      "spender_entity_id": "C00341396",
+      "spender_name": "MOVEON.ORG POLITICAL ACTION",
+      "candidate_id": "S6PA00217",
+      "candidate_name": "Bob Casey",
+      "support_oppose": "S",
+      "amount": 567.0,
+      "date": "2024-10-23",
+      "purpose": "DIGITAL AD",
+      "payee": "202 CONSULTING SOLUTIONS LLC",
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202506169762172352",
+      "vendor_id": "V-202-consulting-solutions",
+      "medium": "digital"
+    },
+    {
+      "ie_id": "C00341396-ie-1895551-500063870",
+      "spender_entity_id": "C00341396",
+      "spender_name": "MOVEON.ORG POLITICAL ACTION",
+      "candidate_id": "S6PA00217",
+      "candidate_name": "Bob Casey",
+      "support_oppose": "S",
+      "amount": 356.4,
+      "date": "2024-10-16",
+      "purpose": "DIGITAL AD",
+      "payee": "202 CONSULTING SOLUTIONS LLC",
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202506169762160424",
+      "vendor_id": "V-202-consulting-solutions",
+      "medium": "digital"
+    },
+    {
+      "ie_id": "C00341396-ie-1895551-500063869",
+      "spender_entity_id": "C00341396",
+      "spender_name": "MOVEON.ORG POLITICAL ACTION",
+      "candidate_id": "S6PA00217",
+      "candidate_name": "Bob Casey",
+      "support_oppose": "S",
+      "amount": 356.4,
+      "date": "2024-10-09",
+      "purpose": "DIGITAL AD",
+      "payee": "202 CONSULTING SOLUTIONS LLC",
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202506169762160415",
+      "vendor_id": "V-202-consulting-solutions",
+      "medium": "digital"
+    }
+  ],
+  "ads": [],
+  "method": "Every Schedule E independent expenditure names a payee. Payee strings are normalised (case, punctuation, legal suffixes, token order), near-duplicates are folded with a difflib ratio ≥ 0.92 when their numeric tokens match, and hand alias rows from data/hand/<race>/vendor_aliases.json override the rule. Medium is classified from the purpose the spender filed (ordered keyword table in gotham/vendors.py); the FEC does not record which buy placed which ad, so vendor ↔ ad links are empty until a human verifies one. Totals are the filed amounts, grouped, never re-estimated."
+}

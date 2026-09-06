@@ -627,7 +627,9 @@
       "date": "2024-12-05",
       "purpose": "CANVASSING",
       "payee": "BASE BUILDER",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202505069759038083"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202505069759038083",
+      "vendor_id": "V-base-builder",
+      "medium": "other"
     },
     {
       "ie_id": "C00606962-ie-1883554-SE.213820",
@@ -640,7 +642,9 @@
       "date": "2024-10-01",
       "purpose": "CANVASSING 1818938",
       "payee": "BASE BUILDER",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202504029755013664"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202504029755013664",
+      "vendor_id": "V-base-builder",
+      "medium": "other"
     },
     {
       "ie_id": "C00606962-ie-1883551-SE.201246",
@@ -653,7 +657,9 @@
       "date": "2024-09-26",
       "purpose": "ESTIMATED CANVASSING #1818938",
       "payee": "BASE BUILDER",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202504029755013421"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202504029755013421",
+      "vendor_id": "V-base-builder",
+      "medium": "other"
     },
     {
       "ie_id": "C00606962-ie-1883554-SE.213819",
@@ -666,7 +672,9 @@
       "date": "2024-10-01",
       "purpose": "CANVASSING 1818496",
       "payee": "BASE BUILDER",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202504029755013664"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202504029755013664",
+      "vendor_id": "V-base-builder",
+      "medium": "other"
     },
     {
       "ie_id": "C00606962-ie-1883551-SE.201244",
@@ -679,7 +687,9 @@
       "date": "2024-09-22",
       "purpose": "ESTIMATED CANVASSING #1818496",
       "payee": "BASE BUILDER",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202504029755013417"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202504029755013417",
+      "vendor_id": "V-base-builder",
+      "medium": "other"
     },
     {
       "ie_id": "C00606962-ie-1883651-SE.213833",
@@ -692,7 +702,9 @@
       "date": "2024-11-20",
       "purpose": "CANVASSING 1823264",
       "payee": "BASE BUILDER",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202504029755025412"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202504029755025412",
+      "vendor_id": "V-base-builder",
+      "medium": "other"
     },
     {
       "ie_id": "C00606962-ie-1883554-SE.202603",
@@ -705,7 +717,9 @@
       "date": "2024-10-11",
       "purpose": "CANVASSING #1823264",
       "payee": "BASE BUILDER",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202504029755013667"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202504029755013667",
+      "vendor_id": "V-base-builder",
+      "medium": "other"
     },
     {
       "ie_id": "C00606962-ie-1883651-SE.208395",
@@ -718,7 +732,9 @@
       "date": "2024-10-23",
       "purpose": "DIRECT MAIL 1842954",
       "payee": "CCM&CO",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202504029755025418"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202504029755025418",
+      "vendor_id": "V-ccm",
+      "medium": "mail"
     }
   ],
   "flags": [
@@ -731,5 +747,53 @@
   ],
   "has_chain": true,
   "source_url": "https://www.fec.gov/data/committee/C00606962/?cycle=2024",
-  "data_status": "real"
+  "data_status": "real",
+  "vendors": [
+    {
+      "vendor_id": "V-base-builder",
+      "name": "BASE BUILDER",
+      "amount": 343427.6,
+      "count": 7,
+      "media_mix": [
+        {
+          "medium": "other",
+          "amount": 343427.6,
+          "count": 7
+        }
+      ],
+      "targets": [
+        {
+          "candidate_id": "S6PA00217",
+          "support_oppose": "S",
+          "amount": 343427.6
+        }
+      ],
+      "first_date": "2024-09-22",
+      "last_date": "2024-12-05",
+      "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00606962&payee_name=BASE+BUILDER"
+    },
+    {
+      "vendor_id": "V-ccm",
+      "name": "CCM&CO",
+      "amount": 6666.67,
+      "count": 1,
+      "media_mix": [
+        {
+          "medium": "mail",
+          "amount": 6666.67,
+          "count": 1
+        }
+      ],
+      "targets": [
+        {
+          "candidate_id": "S6PA00217",
+          "support_oppose": "S",
+          "amount": 6666.67
+        }
+      ],
+      "first_date": "2024-10-23",
+      "last_date": "2024-10-23",
+      "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00606962&payee_name=CCM%26CO"
+    }
+  ]
 }

@@ -1,0 +1,140 @@
+{
+  "vendor_id": "V-california-nurses-association",
+  "name": "CALIFORNIA NURSES ASSOCIATION",
+  "aliases": [
+    "CALIFORNIA NURSES ASSOCIATION"
+  ],
+  "normalization": {
+    "basis": "inferred",
+    "rule": "case/punctuation/suffix normalisation + token-set ≥0.92 (numeric tokens must match); aliases file",
+    "source_urls": [
+      "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&payee_name=CALIFORNIA+NURSES+ASSOCIATION"
+    ],
+    "checked_by": null,
+    "checked_at": null
+  },
+  "total": 35636.72,
+  "count": 5,
+  "media_mix": [
+    {
+      "medium": "other",
+      "amount": 15458.51,
+      "count": 1
+    },
+    {
+      "medium": "phones",
+      "amount": 12047.33,
+      "count": 2
+    },
+    {
+      "medium": "digital",
+      "amount": 8090.89,
+      "count": 1
+    },
+    {
+      "medium": "production",
+      "amount": 39.99,
+      "count": 1
+    }
+  ],
+  "spenders": [
+    {
+      "entity_id": "C00490375",
+      "name": "NATIONAL NURSES UNITED FOR PATIENT PROTECTION",
+      "amount": 35636.72,
+      "count": 5
+    }
+  ],
+  "targets": [
+    {
+      "candidate_id": "S6PA00217",
+      "support_oppose": "S",
+      "amount": 35636.72
+    }
+  ],
+  "first_date": "2024-09-30",
+  "last_date": "2024-11-01",
+  "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&payee_name=CALIFORNIA+NURSES+ASSOCIATION",
+  "race_id": "pa-sen-2024",
+  "generated_at": "2026-09-05T19:33:04+00:00",
+  "data_status": "real",
+  "expenditures": [
+    {
+      "ie_id": "C00490375-ie-1906778-B891452",
+      "spender_entity_id": "C00490375",
+      "spender_name": "NATIONAL NURSES UNITED FOR PATIENT PROTECTION",
+      "candidate_id": "S6PA00217",
+      "candidate_name": "Bob Casey",
+      "support_oppose": "S",
+      "amount": 6009.72,
+      "date": "2024-11-01",
+      "purpose": "REIMBURSEMENT FOR PHONE BANKING",
+      "payee": "CALIFORNIA NURSES ASSOCIATION",
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202507299764308524",
+      "vendor_id": "V-california-nurses-association",
+      "medium": "phones"
+    },
+    {
+      "ie_id": "C00490375-ie-1906778-B882642",
+      "spender_entity_id": "C00490375",
+      "spender_name": "NATIONAL NURSES UNITED FOR PATIENT PROTECTION",
+      "candidate_id": "S6PA00217",
+      "candidate_name": "Bob Casey",
+      "support_oppose": "S",
+      "amount": 8090.89,
+      "date": "2024-11-01",
+      "purpose": "PARTIAL REIMBURSEMENT FOR META PLATFORMS ADS REPORTED ON 9/04/24 24-HR IE REPORT (TRANS ID:B882642)",
+      "payee": "CALIFORNIA NURSES ASSOCIATION",
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202507299764308524",
+      "vendor_id": "V-california-nurses-association",
+      "medium": "digital"
+    },
+    {
+      "ie_id": "C00490375-ie-1906778-B890836",
+      "spender_entity_id": "C00490375",
+      "spender_name": "NATIONAL NURSES UNITED FOR PATIENT PROTECTION",
+      "candidate_id": "S6PA00217",
+      "candidate_name": "Bob Casey",
+      "support_oppose": "S",
+      "amount": 6037.61,
+      "date": "2024-10-28",
+      "purpose": "REIMBURSEMENT FOR PHONE BANKING",
+      "payee": "CALIFORNIA NURSES ASSOCIATION",
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202507299764308523",
+      "vendor_id": "V-california-nurses-association",
+      "medium": "phones"
+    },
+    {
+      "ie_id": "C00490375-ie-1875388-B886772",
+      "spender_entity_id": "C00490375",
+      "spender_name": "NATIONAL NURSES UNITED FOR PATIENT PROTECTION",
+      "candidate_id": "S6PA00217",
+      "candidate_name": "Bob Casey",
+      "support_oppose": "S",
+      "amount": 15458.51,
+      "date": "2024-10-01",
+      "purpose": "REIMBURSEMENT FOR STAFF EXPENSES.",
+      "payee": "CALIFORNIA NURSES ASSOCIATION",
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202502109753368233",
+      "vendor_id": "V-california-nurses-association",
+      "medium": "other"
+    },
+    {
+      "ie_id": "C00490375-ie-1875388-B882822",
+      "spender_entity_id": "C00490375",
+      "spender_name": "NATIONAL NURSES UNITED FOR PATIENT PROTECTION",
+      "candidate_id": "S6PA00217",
+      "candidate_name": "Bob Casey",
+      "support_oppose": "S",
+      "amount": 39.99,
+      "date": "2024-09-30",
+      "purpose": "REIMBURSEMENT FOR VIDEO CLIPS FOR ADS PRODUCTION",
+      "payee": "CALIFORNIA NURSES ASSOCIATION",
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202502109753368232",
+      "vendor_id": "V-california-nurses-association",
+      "medium": "production"
+    }
+  ],
+  "ads": [],
+  "method": "Every Schedule E independent expenditure names a payee. Payee strings are normalised (case, punctuation, legal suffixes, token order), near-duplicates are folded with a difflib ratio ≥ 0.92 when their numeric tokens match, and hand alias rows from data/hand/<race>/vendor_aliases.json override the rule. Medium is classified from the purpose the spender filed (ordered keyword table in gotham/vendors.py); the FEC does not record which buy placed which ad, so vendor ↔ ad links are empty until a human verifies one. Totals are the filed amounts, grouped, never re-estimated."
+}

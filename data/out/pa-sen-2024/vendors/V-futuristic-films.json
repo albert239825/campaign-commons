@@ -1,0 +1,65 @@
+{
+  "vendor_id": "V-futuristic-films",
+  "name": "FUTURISTIC FILMS, INC.",
+  "aliases": [
+    "FUTURISTIC FILMS, INC."
+  ],
+  "normalization": {
+    "basis": "inferred",
+    "rule": "case/punctuation/suffix normalisation + token-set ≥0.92 (numeric tokens must match); aliases file",
+    "source_urls": [
+      "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&payee_name=FUTURISTIC+FILMS%2C+INC."
+    ],
+    "checked_by": null,
+    "checked_at": null
+  },
+  "total": 12422.54,
+  "count": 1,
+  "media_mix": [
+    {
+      "medium": "digital",
+      "amount": 12422.54,
+      "count": 1
+    }
+  ],
+  "spenders": [
+    {
+      "entity_id": "C00752691",
+      "name": "ONE FOR ALL COMMITTEE",
+      "amount": 12422.54,
+      "count": 1
+    }
+  ],
+  "targets": [
+    {
+      "candidate_id": "S6PA00217",
+      "support_oppose": "S",
+      "amount": 12422.54
+    }
+  ],
+  "first_date": "2024-09-13",
+  "last_date": "2024-09-13",
+  "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&payee_name=FUTURISTIC+FILMS%2C+INC.",
+  "race_id": "pa-sen-2024",
+  "generated_at": "2026-09-05T19:33:04+00:00",
+  "data_status": "real",
+  "expenditures": [
+    {
+      "ie_id": "C00752691-ie-1871335-500693352",
+      "spender_entity_id": "C00752691",
+      "spender_name": "ONE FOR ALL COMMITTEE",
+      "candidate_id": "S6PA00217",
+      "candidate_name": "Bob Casey",
+      "support_oppose": "S",
+      "amount": 12422.54,
+      "date": "2024-09-13",
+      "purpose": "DIGITAL ADVERTISING",
+      "payee": "FUTURISTIC FILMS, INC.",
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202501319748875405",
+      "vendor_id": "V-futuristic-films",
+      "medium": "digital"
+    }
+  ],
+  "ads": [],
+  "method": "Every Schedule E independent expenditure names a payee. Payee strings are normalised (case, punctuation, legal suffixes, token order), near-duplicates are folded with a difflib ratio ≥ 0.92 when their numeric tokens match, and hand alias rows from data/hand/<race>/vendor_aliases.json override the rule. Medium is classified from the purpose the spender filed (ordered keyword table in gotham/vendors.py); the FEC does not record which buy placed which ad, so vendor ↔ ad links are empty until a human verifies one. Totals are the filed amounts, grouped, never re-estimated."
+}

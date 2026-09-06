@@ -1,0 +1,95 @@
+{
+  "vendor_id": "V-hbp-marketing",
+  "name": "HBP MARKETING LLC",
+  "aliases": [
+    "HBP MARKETING LLC"
+  ],
+  "normalization": {
+    "basis": "inferred",
+    "rule": "case/punctuation/suffix normalisation + token-set ≥0.92 (numeric tokens must match); aliases file",
+    "source_urls": [
+      "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&payee_name=HBP+MARKETING+LLC"
+    ],
+    "checked_by": null,
+    "checked_at": null
+  },
+  "total": 183758.22,
+  "count": 3,
+  "media_mix": [
+    {
+      "medium": "mail",
+      "amount": 183758.22,
+      "count": 3
+    }
+  ],
+  "spenders": [
+    {
+      "entity_id": "C00053553",
+      "name": "NATIONAL RIFLE ASSOCIATION OF AMERICA POLITICAL VICTORY FUND",
+      "amount": 183758.22,
+      "count": 3
+    }
+  ],
+  "targets": [
+    {
+      "candidate_id": "S2PA00661",
+      "support_oppose": "S",
+      "amount": 183758.22
+    }
+  ],
+  "first_date": "2024-09-19",
+  "last_date": "2024-10-22",
+  "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&payee_name=HBP+MARKETING+LLC",
+  "race_id": "pa-sen-2024",
+  "generated_at": "2026-09-05T19:33:04+00:00",
+  "data_status": "real",
+  "expenditures": [
+    {
+      "ie_id": "C00053553-ie-1859893-SE.91",
+      "spender_entity_id": "C00053553",
+      "spender_name": "NATIONAL RIFLE ASSOCIATION OF AMERICA POLITICAL VICTORY FUND",
+      "candidate_id": "S2PA00661",
+      "candidate_name": "Dave McCormick",
+      "support_oppose": "S",
+      "amount": 76146.29,
+      "date": "2024-10-22",
+      "purpose": "PRINTING / POSTAGE",
+      "payee": "HBP MARKETING LLC",
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202412129739890378",
+      "vendor_id": "V-hbp-marketing",
+      "medium": "mail"
+    },
+    {
+      "ie_id": "C00053553-ie-1849413-SE.86",
+      "spender_entity_id": "C00053553",
+      "spender_name": "NATIONAL RIFLE ASSOCIATION OF AMERICA POLITICAL VICTORY FUND",
+      "candidate_id": "S2PA00661",
+      "candidate_name": "Dave McCormick",
+      "support_oppose": "S",
+      "amount": 106986.33,
+      "date": "2024-09-27",
+      "purpose": "PRINTING / POSTAGE",
+      "payee": "HBP MARKETING LLC",
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202411219720014380",
+      "vendor_id": "V-hbp-marketing",
+      "medium": "mail"
+    },
+    {
+      "ie_id": "C00053553-ie-1849413-SE.60",
+      "spender_entity_id": "C00053553",
+      "spender_name": "NATIONAL RIFLE ASSOCIATION OF AMERICA POLITICAL VICTORY FUND",
+      "candidate_id": "S2PA00661",
+      "candidate_name": "Dave McCormick",
+      "support_oppose": "S",
+      "amount": 625.6,
+      "date": "2024-09-19",
+      "purpose": "PRINTING / POSTAGE",
+      "payee": "HBP MARKETING LLC",
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202411219720014367",
+      "vendor_id": "V-hbp-marketing",
+      "medium": "mail"
+    }
+  ],
+  "ads": [],
+  "method": "Every Schedule E independent expenditure names a payee. Payee strings are normalised (case, punctuation, legal suffixes, token order), near-duplicates are folded with a difflib ratio ≥ 0.92 when their numeric tokens match, and hand alias rows from data/hand/<race>/vendor_aliases.json override the rule. Medium is classified from the purpose the spender filed (ordered keyword table in gotham/vendors.py); the FEC does not record which buy placed which ad, so vendor ↔ ad links are empty until a human verifies one. Totals are the filed amounts, grouped, never re-estimated."
+}

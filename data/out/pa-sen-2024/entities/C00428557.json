@@ -432,7 +432,9 @@
       "date": "2024-10-26",
       "purpose": "AUTO-DIALER SERVICES",
       "payee": "TOSKR INC",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202502139753429447"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202502139753429447",
+      "vendor_id": "V-toskr",
+      "medium": "phones"
     },
     {
       "ie_id": "C00428557-ie-1876196-500690407",
@@ -445,7 +447,9 @@
       "date": "2024-10-28",
       "purpose": "AUTO-DIALER SERVICES",
       "payee": "TOSKR INC",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202502139753429448"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202502139753429448",
+      "vendor_id": "V-toskr",
+      "medium": "phones"
     }
   ],
   "flags": [
@@ -458,5 +462,30 @@
   ],
   "has_chain": true,
   "source_url": "https://www.fec.gov/data/committee/C00428557/?cycle=2024",
-  "data_status": "real"
+  "data_status": "real",
+  "vendors": [
+    {
+      "vendor_id": "V-toskr",
+      "name": "TOSKR INC",
+      "amount": 45.06,
+      "count": 2,
+      "media_mix": [
+        {
+          "medium": "phones",
+          "amount": 45.06,
+          "count": 2
+        }
+      ],
+      "targets": [
+        {
+          "candidate_id": "S6PA00217",
+          "support_oppose": "S",
+          "amount": 45.06
+        }
+      ],
+      "first_date": "2024-10-26",
+      "last_date": "2024-10-28",
+      "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00428557&payee_name=TOSKR+INC"
+    }
+  ]
 }

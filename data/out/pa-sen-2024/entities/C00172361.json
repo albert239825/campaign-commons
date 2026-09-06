@@ -40,7 +40,9 @@
       "date": "2024-10-15",
       "purpose": "DESIGN, PRINTING & MAILING OF FALL 2024 GEN ELECTION VOTERS GUIDE",
       "payee": "ERDMAN ADVERTISING, MARKETING & DESIGN",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202410249710311106"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202410249710311106",
+      "vendor_id": "V-erdman-advertising-marketing-design",
+      "medium": "production"
     },
     {
       "ie_id": "C00172361-ie-1838929-SE.16891",
@@ -53,7 +55,9 @@
       "date": "2024-10-15",
       "purpose": "DESIGN, PRINTING & MAILING OF FALL 2024 GEN ELECTION VOTERS GUIDE",
       "payee": "ERDMAN ADVERTISING, MARKETING & DESIGN",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202410249710311106"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202410249710311106",
+      "vendor_id": "V-erdman-advertising-marketing-design",
+      "medium": "production"
     },
     {
       "ie_id": "C00172361-ie-1769054-SE.16773",
@@ -66,7 +70,9 @@
       "date": "2024-04-03",
       "purpose": "SPRING VOTERS GUIDE PRINTING & PACKAGE DESIGN",
       "payee": "ERDMAN ADVERTISING, MARKETING & DESIGN",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202404099627502234"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202404099627502234",
+      "vendor_id": "V-erdman-advertising-marketing-design",
+      "medium": "production"
     },
     {
       "ie_id": "C00172361-ie-1769054-SE.16775",
@@ -79,7 +85,9 @@
       "date": "2024-04-03",
       "purpose": "SPRING VOTERS GUIDE PRINTING & DESIGN",
       "payee": "ERDMAN ADVERTISING, MARKETING & DESIGN",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202404099627502236"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202404099627502236",
+      "vendor_id": "V-erdman-advertising-marketing-design",
+      "medium": "production"
     },
     {
       "ie_id": "C00172361-ie-1769054-SE.16767",
@@ -92,7 +100,9 @@
       "date": "2024-03-19",
       "purpose": "POSTAGE FOR SPRING VOTERS GUIDE",
       "payee": "U.S. POSTMASTER",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202404099627502240"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202404099627502240",
+      "vendor_id": "V-united-states-postal-service",
+      "medium": "mail"
     },
     {
       "ie_id": "C00172361-ie-1769054-SE.16768",
@@ -105,7 +115,9 @@
       "date": "2024-03-19",
       "purpose": "POSTAGE FOR SPRING VOTERS GUIDE",
       "payee": "U.S. POSTMASTER",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202404099627502240"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202404099627502240",
+      "vendor_id": "V-united-states-postal-service",
+      "medium": "mail"
     },
     {
       "ie_id": "C00172361-ie-1838929-SE.16811",
@@ -118,7 +130,9 @@
       "date": "2024-10-03",
       "purpose": "POSTAGE FOR FALL 2024 GENERAL ELECTION VOTERS GUIDE",
       "payee": "U.S. POSTMASTER",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202410249710311138"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202410249710311138",
+      "vendor_id": "V-united-states-postal-service",
+      "medium": "mail"
     },
     {
       "ie_id": "C00172361-ie-1838929-SE.16813",
@@ -131,7 +145,9 @@
       "date": "2024-10-03",
       "purpose": "POSTAGE FOR FALL 2024 GENERAL ELECTION VOTERS GUIDE",
       "payee": "U.S. POSTMASTER",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202410249710311138"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202410249710311138",
+      "vendor_id": "V-united-states-postal-service",
+      "medium": "mail"
     },
     {
       "ie_id": "C00172361-ie-1865762-SE.16939",
@@ -144,7 +160,9 @@
       "date": "2024-12-19",
       "purpose": "LATE ADDITIONAL BILL FOR FALL VOTER'S GUIDE MAILING",
       "payee": "ERDMAN ADVERTISING, MARKETING & DESIGN",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202501259747761907"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202501259747761907",
+      "vendor_id": "V-erdman-advertising-marketing-design",
+      "medium": "mail"
     },
     {
       "ie_id": "C00172361-ie-1865762-SE.16940",
@@ -157,11 +175,76 @@
       "date": "2024-12-19",
       "purpose": "LATE ADDITIONAL BILL FOR FALL VOTER'S GUIDE MAILING",
       "payee": "ERDMAN ADVERTISING, MARKETING & DESIGN",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202501259747761907"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202501259747761907",
+      "vendor_id": "V-erdman-advertising-marketing-design",
+      "medium": "mail"
     }
   ],
   "flags": [],
   "has_chain": false,
   "source_url": "https://www.fec.gov/data/committee/C00172361/?cycle=2024",
-  "data_status": "real"
+  "data_status": "real",
+  "vendors": [
+    {
+      "vendor_id": "V-erdman-advertising-marketing-design",
+      "name": "ERDMAN ADVERTISING, MARKETING & DESIGN",
+      "amount": 4176.58,
+      "count": 6,
+      "media_mix": [
+        {
+          "medium": "production",
+          "amount": 4114.79,
+          "count": 4
+        },
+        {
+          "medium": "mail",
+          "amount": 61.79,
+          "count": 2
+        }
+      ],
+      "targets": [
+        {
+          "candidate_id": "S2PA00661",
+          "support_oppose": "S",
+          "amount": 2088.3
+        },
+        {
+          "candidate_id": "S6PA00217",
+          "support_oppose": "O",
+          "amount": 2088.28
+        }
+      ],
+      "first_date": "2024-04-03",
+      "last_date": "2024-12-19",
+      "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00172361&payee_name=ERDMAN+ADVERTISING%2C+MARKETING+%26+DESIGN"
+    },
+    {
+      "vendor_id": "V-united-states-postal-service",
+      "name": "United States Postal Service",
+      "amount": 1280.18,
+      "count": 4,
+      "media_mix": [
+        {
+          "medium": "mail",
+          "amount": 1280.18,
+          "count": 4
+        }
+      ],
+      "targets": [
+        {
+          "candidate_id": "S2PA00661",
+          "support_oppose": "S",
+          "amount": 640.1
+        },
+        {
+          "candidate_id": "S6PA00217",
+          "support_oppose": "O",
+          "amount": 640.08
+        }
+      ],
+      "first_date": "2024-03-19",
+      "last_date": "2024-10-03",
+      "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00172361&payee_name=U.S.+POSTMASTER"
+    }
+  ]
 }

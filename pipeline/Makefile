@@ -37,7 +37,7 @@ validate:         ## validate data/out and data/hand against contracts/jsonschem
 	$(PY) -m gotham.validate
 
 # Block 2 children add their stage (vendors, issues, search) here when the module lands
-all: ingest ledger chains ads dossier validate
+all: ingest ledger vendors chains ads dossier validate
 
 lint:
 	ruff check . && ruff format --check .

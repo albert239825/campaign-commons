@@ -1,0 +1,85 @@
+{
+  "vendor_id": "V-logan-circle-group",
+  "name": "LOGAN CIRCLE GROUP",
+  "aliases": [
+    "LOGAN CIRCLE GROUP"
+  ],
+  "normalization": {
+    "basis": "inferred",
+    "rule": "case/punctuation/suffix normalisation + token-set ≥0.92 (numeric tokens must match); aliases file",
+    "source_urls": [
+      "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&payee_name=LOGAN+CIRCLE+GROUP"
+    ],
+    "checked_by": null,
+    "checked_at": null
+  },
+  "total": 740000.0,
+  "count": 2,
+  "media_mix": [
+    {
+      "medium": "digital",
+      "amount": 740000.0,
+      "count": 2
+    }
+  ],
+  "spenders": [
+    {
+      "entity_id": "C00544387",
+      "name": "AMERICAN PRINCIPLES PROJECT PAC",
+      "amount": 740000.0,
+      "count": 2
+    }
+  ],
+  "targets": [
+    {
+      "candidate_id": "S2PA00661",
+      "support_oppose": "S",
+      "amount": 550000.0
+    },
+    {
+      "candidate_id": "S6PA00217",
+      "support_oppose": "O",
+      "amount": 190000.0
+    }
+  ],
+  "first_date": "2024-08-23",
+  "last_date": "2024-10-06",
+  "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&payee_name=LOGAN+CIRCLE+GROUP",
+  "race_id": "pa-sen-2024",
+  "generated_at": "2026-09-05T19:33:04+00:00",
+  "data_status": "real",
+  "expenditures": [
+    {
+      "ie_id": "C00544387-ie-1838225-SE.8658",
+      "spender_entity_id": "C00544387",
+      "spender_name": "AMERICAN PRINCIPLES PROJECT PAC",
+      "candidate_id": "S2PA00661",
+      "candidate_name": "Dave McCormick",
+      "support_oppose": "S",
+      "amount": 550000.0,
+      "date": "2024-10-06",
+      "purpose": "DIGITAL ADVERTISING (ACTUAL COST OF ESTIMATED IE ON 48-HR RPT FILED 10/8/24) - SEE SCH B",
+      "payee": "LOGAN CIRCLE GROUP",
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202410249710202370",
+      "vendor_id": "V-logan-circle-group",
+      "medium": "digital"
+    },
+    {
+      "ie_id": "C00544387-ie-1827890-SE.8627",
+      "spender_entity_id": "C00544387",
+      "spender_name": "AMERICAN PRINCIPLES PROJECT PAC",
+      "candidate_id": "S6PA00217",
+      "candidate_name": "Bob Casey",
+      "support_oppose": "O",
+      "amount": 190000.0,
+      "date": "2024-08-23",
+      "purpose": "DIGITAL ADVERTISING",
+      "payee": "LOGAN CIRCLE GROUP",
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202410159687670967",
+      "vendor_id": "V-logan-circle-group",
+      "medium": "digital"
+    }
+  ],
+  "ads": [],
+  "method": "Every Schedule E independent expenditure names a payee. Payee strings are normalised (case, punctuation, legal suffixes, token order), near-duplicates are folded with a difflib ratio ≥ 0.92 when their numeric tokens match, and hand alias rows from data/hand/<race>/vendor_aliases.json override the rule. Medium is classified from the purpose the spender filed (ordered keyword table in gotham/vendors.py); the FEC does not record which buy placed which ad, so vendor ↔ ad links are empty until a human verifies one. Totals are the filed amounts, grouped, never re-estimated."
+}

@@ -416,7 +416,9 @@
       "date": "2024-10-17",
       "purpose": "MEDIA PLACEMENT/VIDEO ADS",
       "payee": "HULU, LLC",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202412059721255495"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202412059721255495",
+      "vendor_id": "V-hulu",
+      "medium": "digital"
     },
     {
       "ie_id": "C00747121-ie-1840432-E48B78FCB22C74AF8AC6",
@@ -429,7 +431,9 @@
       "date": "2024-10-11",
       "purpose": "MEDIA PLACEMENT/VIDEO ADS",
       "payee": "HULU, LLC",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202410249710517008"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202410249710517008",
+      "vendor_id": "V-hulu",
+      "medium": "digital"
     },
     {
       "ie_id": "C00747121-ie-1856632-E03A7987454D1408B821",
@@ -442,7 +446,9 @@
       "date": "2024-11-01",
       "purpose": "MEDIA PRODUCTION",
       "payee": "IF IT IS LLC",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202412059721255591"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202412059721255591",
+      "vendor_id": "V-if-it-is",
+      "medium": "production"
     },
     {
       "ie_id": "C00747121-ie-1856632-E66D009E6CE994D86AC9",
@@ -455,7 +461,9 @@
       "date": "2024-10-17",
       "purpose": "MEDIA PLACEMENT/VIDEO ADS",
       "payee": "DISNEY ADVERTISING",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202412059721255484"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202412059721255484",
+      "vendor_id": "V-disney-advertising",
+      "medium": "tv"
     },
     {
       "ie_id": "C00747121-ie-1856632-EC4FC4EDE49CD4DCBA09",
@@ -468,7 +476,9 @@
       "date": "2024-10-24",
       "purpose": "MEDIA PLACEMENT/VIDEO ADS",
       "payee": "DISNEY ADVERTISING",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202412059721255559"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202412059721255559",
+      "vendor_id": "V-disney-advertising",
+      "medium": "tv"
     },
     {
       "ie_id": "C00747121-ie-1856632-EF3D6F6C383624F19B73",
@@ -481,7 +491,9 @@
       "date": "2024-10-23",
       "purpose": "MEDIA PLACEMENT/VIDEO ADS",
       "payee": "NBCUNIVERSAL, LLC",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202412059721255544"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202412059721255544",
+      "vendor_id": "V-nbcuniversal",
+      "medium": "tv"
     },
     {
       "ie_id": "C00747121-ie-1747790-E814AF794E5BF4A30B5B",
@@ -494,7 +506,9 @@
       "date": "2023-09-15",
       "purpose": "IE MEDIA PRODUCTION",
       "payee": "IF IT IS LLC",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202401299600571522"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202401299600571522",
+      "vendor_id": "V-if-it-is",
+      "medium": "production"
     },
     {
       "ie_id": "C00747121-ie-1747790-E76B900FA10604056B7B",
@@ -507,7 +521,9 @@
       "date": "2023-09-15",
       "purpose": "IE MEDIA PRODUCTION",
       "payee": "IF IT IS LLC",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202401299600571530"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202401299600571530",
+      "vendor_id": "V-if-it-is",
+      "medium": "production"
     },
     {
       "ie_id": "C00747121-ie-1856632-ED2AFA349C5CE4F73B6F",
@@ -520,7 +536,9 @@
       "date": "2024-10-31",
       "purpose": "DIGITAL ADS",
       "payee": "GOOGLE",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202412059721255569"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202412059721255569",
+      "vendor_id": "V-google",
+      "medium": "digital"
     },
     {
       "ie_id": "C00747121-ie-1856632-E0BA75316A3084BFE9DE",
@@ -533,7 +551,9 @@
       "date": "2024-10-31",
       "purpose": "DIGITAL ADS",
       "payee": "GOOGLE",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202412059721255571"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202412059721255571",
+      "vendor_id": "V-google",
+      "medium": "digital"
     },
     {
       "ie_id": "C00747121-ie-1840432-E2E2B086146E247B9B20",
@@ -546,7 +566,9 @@
       "date": "2024-10-03",
       "purpose": "DIGITAL ADS",
       "payee": "GOOGLE",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202410249710517054"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202410249710517054",
+      "vendor_id": "V-google",
+      "medium": "digital"
     },
     {
       "ie_id": "C00747121-ie-1840432-EF7E2BF5692CE482B8BF",
@@ -559,7 +581,9 @@
       "date": "2024-10-03",
       "purpose": "DIGITAL ADS",
       "payee": "GOOGLE",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202410249710517050"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202410249710517050",
+      "vendor_id": "V-google",
+      "medium": "digital"
     },
     {
       "ie_id": "C00747121-ie-1823303-E488CC6ABB64743E89B7",
@@ -572,7 +596,9 @@
       "date": "2024-09-30",
       "purpose": "DIGITAL ADS",
       "payee": "GOOGLE",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202410119684892396"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202410119684892396",
+      "vendor_id": "V-google",
+      "medium": "digital"
     },
     {
       "ie_id": "C00747121-ie-1823303-ED74B93B480CD4E3FA57",
@@ -585,7 +611,9 @@
       "date": "2024-09-30",
       "purpose": "DIGITAL ADS",
       "payee": "GOOGLE",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202410119684892397"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202410119684892397",
+      "vendor_id": "V-google",
+      "medium": "digital"
     },
     {
       "ie_id": "C00747121-ie-1856632-EC5E77153A96D449981A",
@@ -598,7 +626,9 @@
       "date": "2024-11-01",
       "purpose": "DIGITAL ADS",
       "payee": "GOOGLE",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202412059721255588"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202412059721255588",
+      "vendor_id": "V-google",
+      "medium": "digital"
     },
     {
       "ie_id": "C00747121-ie-1856632-EA0324C5236054917B67",
@@ -611,7 +641,9 @@
       "date": "2024-11-01",
       "purpose": "DIGITAL ADS",
       "payee": "GOOGLE",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202412059721255587"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202412059721255587",
+      "vendor_id": "V-google",
+      "medium": "digital"
     },
     {
       "ie_id": "C00747121-ie-1823303-E81BB152B8E1D46DD8AD",
@@ -624,7 +656,9 @@
       "date": "2024-09-30",
       "purpose": "DIGITAL ADS",
       "payee": "GOOGLE",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202410119684892388"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202410119684892388",
+      "vendor_id": "V-google",
+      "medium": "digital"
     },
     {
       "ie_id": "C00747121-ie-1823303-EAB96329D402848CFB51",
@@ -637,7 +671,9 @@
       "date": "2024-09-30",
       "purpose": "DIGITAL ADS",
       "payee": "GOOGLE",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202410119684892389"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202410119684892389",
+      "vendor_id": "V-google",
+      "medium": "digital"
     },
     {
       "ie_id": "C00747121-ie-1747790-EA1C610CB2B934C73893",
@@ -650,7 +686,9 @@
       "date": "2023-09-15",
       "purpose": "IE MEDIA PRODUCTION",
       "payee": "IF IT IS LLC",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202401299600571521"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202401299600571521",
+      "vendor_id": "V-if-it-is",
+      "medium": "production"
     },
     {
       "ie_id": "C00747121-ie-1856632-E5FD9A64652D14A119F3",
@@ -663,7 +701,9 @@
       "date": "2024-10-22",
       "purpose": "DIGITAL ADS",
       "payee": "GOOGLE",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202412059721255528"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202412059721255528",
+      "vendor_id": "V-google",
+      "medium": "digital"
     },
     {
       "ie_id": "C00747121-ie-1856632-EF852AF3D97FE4247B10",
@@ -676,7 +716,9 @@
       "date": "2024-10-22",
       "purpose": "DIGITAL ADS",
       "payee": "GOOGLE",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202412059721255530"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202412059721255530",
+      "vendor_id": "V-google",
+      "medium": "digital"
     },
     {
       "ie_id": "C00747121-ie-1823303-E96947120EB4A41DDA58",
@@ -689,7 +731,9 @@
       "date": "2024-09-30",
       "purpose": "DIGITAL ADS",
       "payee": "GOOGLE",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202410119684892407"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202410119684892407",
+      "vendor_id": "V-google",
+      "medium": "digital"
     },
     {
       "ie_id": "C00747121-ie-1823303-E2E0E347A27D04830958",
@@ -702,7 +746,9 @@
       "date": "2024-09-30",
       "purpose": "DIGITAL ADS",
       "payee": "GOOGLE",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202410119684892409"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202410119684892409",
+      "vendor_id": "V-google",
+      "medium": "digital"
     },
     {
       "ie_id": "C00747121-ie-1856632-EAF16D2C10B304348B57",
@@ -715,7 +761,9 @@
       "date": "2024-11-02",
       "purpose": "YOUTUBE ADS",
       "payee": "GOOGLE",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202412059721255457"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202412059721255457",
+      "vendor_id": "V-google",
+      "medium": "digital"
     },
     {
       "ie_id": "C00747121-ie-1869512-EF8B7E5FB36234AF8932",
@@ -728,7 +776,9 @@
       "date": "2024-12-04",
       "purpose": "PMT FOR EST FROM 11/2/2024. YOUTUBE ADS",
       "payee": "GOOGLE",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202501309748716446"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202501309748716446",
+      "vendor_id": "V-google",
+      "medium": "digital"
     },
     {
       "ie_id": "C00747121-ie-1840432-E9706A250083D4547B68",
@@ -741,7 +791,9 @@
       "date": "2024-10-04",
       "purpose": "DIGITAL ADS",
       "payee": "GOOGLE",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202410249710517057"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202410249710517057",
+      "vendor_id": "V-google",
+      "medium": "digital"
     },
     {
       "ie_id": "C00747121-ie-1840432-EA8DA4E0FD2104395A0E",
@@ -754,7 +806,9 @@
       "date": "2024-10-04",
       "purpose": "DIGITAL ADS",
       "payee": "GOOGLE",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202410249710517060"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202410249710517060",
+      "vendor_id": "V-google",
+      "medium": "digital"
     },
     {
       "ie_id": "C00747121-ie-1869512-E69DAFDCD723C4059A81",
@@ -767,7 +821,9 @@
       "date": "2024-12-04",
       "purpose": "PMT FOR EST FROM 11/1/2024. YOUTUBE ADS",
       "payee": "GOOGLE",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202501309748716431"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202501309748716431",
+      "vendor_id": "V-google",
+      "medium": "digital"
     },
     {
       "ie_id": "C00747121-ie-1856632-EC7220447373843C3817",
@@ -780,7 +836,9 @@
       "date": "2024-11-01",
       "purpose": "YOUTUBE ADS",
       "payee": "GOOGLE",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202412059721255443"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202412059721255443",
+      "vendor_id": "V-google",
+      "medium": "digital"
     },
     {
       "ie_id": "C00747121-ie-1840432-EAEB9609E40A34A3A850",
@@ -793,7 +851,9 @@
       "date": "2024-10-07",
       "purpose": "DIGITAL ADS",
       "payee": "GOOGLE",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202410249710517088"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202410249710517088",
+      "vendor_id": "V-google",
+      "medium": "digital"
     },
     {
       "ie_id": "C00747121-ie-1840432-EE33F4E639939419A969",
@@ -806,7 +866,9 @@
       "date": "2024-10-07",
       "purpose": "DIGITAL ADS",
       "payee": "GOOGLE",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202410249710517093"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202410249710517093",
+      "vendor_id": "V-google",
+      "medium": "digital"
     },
     {
       "ie_id": "C00747121-ie-1840432-E32BD43961C8E41C89F5",
@@ -819,7 +881,9 @@
       "date": "2024-10-02",
       "purpose": "DIGITAL ADS",
       "payee": "GOOGLE",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202410249710517047"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202410249710517047",
+      "vendor_id": "V-google",
+      "medium": "digital"
     },
     {
       "ie_id": "C00747121-ie-1840432-EA22B0362C3EE4418AA3",
@@ -832,7 +896,9 @@
       "date": "2024-10-02",
       "purpose": "DIGITAL ADS",
       "payee": "GOOGLE",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202410249710517047"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202410249710517047",
+      "vendor_id": "V-google",
+      "medium": "digital"
     },
     {
       "ie_id": "C00747121-ie-1856632-EF09A489915A344CAB41",
@@ -845,7 +911,9 @@
       "date": "2024-11-02",
       "purpose": "DIGITAL ADS",
       "payee": "GOOGLE",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202412059721255600"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202412059721255600",
+      "vendor_id": "V-google",
+      "medium": "digital"
     },
     {
       "ie_id": "C00747121-ie-1856632-EB1A622192C484270B88",
@@ -858,7 +926,9 @@
       "date": "2024-11-02",
       "purpose": "DIGITAL ADS",
       "payee": "GOOGLE",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202412059721255603"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202412059721255603",
+      "vendor_id": "V-google",
+      "medium": "digital"
     },
     {
       "ie_id": "C00747121-ie-1856632-E84D35997C1FA41A782F",
@@ -871,7 +941,9 @@
       "date": "2024-10-31",
       "purpose": "DIGITAL ADS",
       "payee": "GOOGLE",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202412059721255567"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202412059721255567",
+      "vendor_id": "V-google",
+      "medium": "digital"
     },
     {
       "ie_id": "C00747121-ie-1856632-ED5D5E0577C414764904",
@@ -884,7 +956,9 @@
       "date": "2024-10-31",
       "purpose": "DIGITAL ADS",
       "payee": "GOOGLE",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202412059721255565"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202412059721255565",
+      "vendor_id": "V-google",
+      "medium": "digital"
     },
     {
       "ie_id": "C00747121-ie-1747790-E51DD9C7CDD02493199C",
@@ -897,7 +971,9 @@
       "date": "2023-09-15",
       "purpose": "IE MEDIA PRODUCTION",
       "payee": "IF IT IS LLC",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202401299600571529"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202401299600571529",
+      "vendor_id": "V-if-it-is",
+      "medium": "production"
     },
     {
       "ie_id": "C00747121-ie-1823303-E1DE6F34CC6FD4E04B8F",
@@ -910,7 +986,9 @@
       "date": "2024-09-30",
       "purpose": "DIGITAL ADS",
       "payee": "GOOGLE",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202410119684892446"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202410119684892446",
+      "vendor_id": "V-google",
+      "medium": "digital"
     },
     {
       "ie_id": "C00747121-ie-1823303-E463149FF4A2D4D07949",
@@ -923,7 +1001,9 @@
       "date": "2024-09-30",
       "purpose": "DIGITAL ADS",
       "payee": "GOOGLE",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202410119684892440"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202410119684892440",
+      "vendor_id": "V-google",
+      "medium": "digital"
     },
     {
       "ie_id": "C00747121-ie-1840432-E2FF3474E25D34B93B57",
@@ -936,7 +1016,9 @@
       "date": "2024-10-01",
       "purpose": "DIGITAL ADS",
       "payee": "GOOGLE",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202410249710517037"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202410249710517037",
+      "vendor_id": "V-google",
+      "medium": "digital"
     },
     {
       "ie_id": "C00747121-ie-1840432-E31F1CC8B0AD74C82BF0",
@@ -949,7 +1031,9 @@
       "date": "2024-10-01",
       "purpose": "DIGITAL ADS",
       "payee": "GOOGLE",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202410249710517036"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202410249710517036",
+      "vendor_id": "V-google",
+      "medium": "digital"
     },
     {
       "ie_id": "C00747121-ie-1823303-E80CC68AE412E4228B73",
@@ -962,7 +1046,9 @@
       "date": "2024-09-30",
       "purpose": "DIGITAL ADS",
       "payee": "GOOGLE",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202410119684892455"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202410119684892455",
+      "vendor_id": "V-google",
+      "medium": "digital"
     },
     {
       "ie_id": "C00747121-ie-1823303-E6EB8049C86714A269C4",
@@ -975,7 +1061,9 @@
       "date": "2024-09-30",
       "purpose": "DIGITAL ADS",
       "payee": "GOOGLE",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202410119684892454"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202410119684892454",
+      "vendor_id": "V-google",
+      "medium": "digital"
     },
     {
       "ie_id": "C00747121-ie-1823303-ED1A92DECDFE5499C941",
@@ -988,7 +1076,9 @@
       "date": "2024-09-13",
       "purpose": "DIGITAL ADS",
       "payee": "GOOGLE",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202410119684892320"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202410119684892320",
+      "vendor_id": "V-google",
+      "medium": "digital"
     },
     {
       "ie_id": "C00747121-ie-1823303-EEFF1E9CF613D486EAC6",
@@ -1001,7 +1091,9 @@
       "date": "2024-09-13",
       "purpose": "DIGITAL ADS",
       "payee": "GOOGLE",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202410119684892322"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202410119684892322",
+      "vendor_id": "V-google",
+      "medium": "digital"
     },
     {
       "ie_id": "C00747121-ie-1747790-ED1E2D64B6BBE4B6BA6D",
@@ -1014,7 +1106,9 @@
       "date": "2023-09-15",
       "purpose": "IE MEDIA PRODUCTION",
       "payee": "IF IT IS LLC",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202401299600571526"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202401299600571526",
+      "vendor_id": "V-if-it-is",
+      "medium": "production"
     },
     {
       "ie_id": "C00747121-ie-1840432-E762CD1630B8E43FDA66",
@@ -1027,7 +1121,9 @@
       "date": "2024-10-05",
       "purpose": "DIGITAL ADS",
       "payee": "GOOGLE",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202410249710517072"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202410249710517072",
+      "vendor_id": "V-google",
+      "medium": "digital"
     },
     {
       "ie_id": "C00747121-ie-1840432-E0AF38489317B4FF5A17",
@@ -1040,7 +1136,9 @@
       "date": "2024-10-05",
       "purpose": "DIGITAL ADS",
       "payee": "GOOGLE",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202410249710517067"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202410249710517067",
+      "vendor_id": "V-google",
+      "medium": "digital"
     },
     {
       "ie_id": "C00747121-ie-1840432-E3A5AE56FE49345708CF",
@@ -1053,7 +1151,9 @@
       "date": "2024-10-10",
       "purpose": "DIGITAL ADS",
       "payee": "GOOGLE",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202410249710517114"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202410249710517114",
+      "vendor_id": "V-google",
+      "medium": "digital"
     },
     {
       "ie_id": "C00747121-ie-1840432-EF26836F8CACF46F1B4A",
@@ -1066,7 +1166,9 @@
       "date": "2024-10-10",
       "purpose": "DIGITAL ADS",
       "payee": "GOOGLE",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202410249710517119"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202410249710517119",
+      "vendor_id": "V-google",
+      "medium": "digital"
     },
     {
       "ie_id": "C00747121-ie-1823303-E91B0A526EE1B4889A73",
@@ -1079,7 +1181,9 @@
       "date": "2024-09-13",
       "purpose": "DIGITAL ADS",
       "payee": "GOOGLE",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202410119684892289"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202410119684892289",
+      "vendor_id": "V-google",
+      "medium": "digital"
     },
     {
       "ie_id": "C00747121-ie-1823303-E11168B7687DE4C5786E",
@@ -1092,7 +1196,9 @@
       "date": "2024-09-13",
       "purpose": "DIGITAL ADS",
       "payee": "GOOGLE",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202410119684892290"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202410119684892290",
+      "vendor_id": "V-google",
+      "medium": "digital"
     },
     {
       "ie_id": "C00747121-ie-1747790-E74A5A3BE720E4ACFAC9",
@@ -1105,7 +1211,9 @@
       "date": "2023-09-30",
       "purpose": "VIDEO ADS",
       "payee": "GOOGLE",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202401299600571514"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202401299600571514",
+      "vendor_id": "V-google",
+      "medium": "digital"
     },
     {
       "ie_id": "C00747121-ie-1747790-E4CB998FD60914406B23",
@@ -1118,7 +1226,9 @@
       "date": "2023-11-01",
       "purpose": "VIDEO ADS",
       "payee": "GOOGLE",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202401299600571516"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202401299600571516",
+      "vendor_id": "V-google",
+      "medium": "digital"
     },
     {
       "ie_id": "C00747121-ie-1823303-E5AB7ED5722A14EBEA0F",
@@ -1131,7 +1241,9 @@
       "date": "2024-09-30",
       "purpose": "DIGITAL ADS",
       "payee": "GOOGLE",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202410119684892380"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202410119684892380",
+      "vendor_id": "V-google",
+      "medium": "digital"
     },
     {
       "ie_id": "C00747121-ie-1823303-E406ED9149985459EA7D",
@@ -1144,7 +1256,9 @@
       "date": "2024-09-30",
       "purpose": "DIGITAL ADS",
       "payee": "GOOGLE",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202410119684892383"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202410119684892383",
+      "vendor_id": "V-google",
+      "medium": "digital"
     },
     {
       "ie_id": "C00747121-ie-1823303-E957DB659C8674048A74",
@@ -1157,7 +1271,9 @@
       "date": "2024-09-30",
       "purpose": "DIGITAL ADS",
       "payee": "GOOGLE",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202410119684892359"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202410119684892359",
+      "vendor_id": "V-google",
+      "medium": "digital"
     },
     {
       "ie_id": "C00747121-ie-1823303-E03A5FB3AE8184427A01",
@@ -1170,7 +1286,9 @@
       "date": "2024-09-30",
       "purpose": "DIGITAL ADS",
       "payee": "GOOGLE",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202410119684892352"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202410119684892352",
+      "vendor_id": "V-google",
+      "medium": "digital"
     },
     {
       "ie_id": "C00747121-ie-1856632-E3DF6BF5E245549E5B30",
@@ -1183,7 +1301,9 @@
       "date": "2024-10-22",
       "purpose": "DIGITAL ADS",
       "payee": "GOOGLE",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202412059721255537"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202412059721255537",
+      "vendor_id": "V-google",
+      "medium": "digital"
     },
     {
       "ie_id": "C00747121-ie-1856632-E1532CB9E435A46D088A",
@@ -1196,7 +1316,9 @@
       "date": "2024-10-22",
       "purpose": "DIGITAL ADS",
       "payee": "GOOGLE",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202412059721255540"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202412059721255540",
+      "vendor_id": "V-google",
+      "medium": "digital"
     },
     {
       "ie_id": "C00747121-ie-1823303-E6A7F43090E9547958A0",
@@ -1209,7 +1331,9 @@
       "date": "2024-09-30",
       "purpose": "DIGITAL ADS",
       "payee": "GOOGLE",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202410119684892351"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202410119684892351",
+      "vendor_id": "V-google",
+      "medium": "digital"
     },
     {
       "ie_id": "C00747121-ie-1823303-E78F07721C7EB4BD0B53",
@@ -1222,7 +1346,9 @@
       "date": "2024-09-30",
       "purpose": "DIGITAL ADS",
       "payee": "GOOGLE",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202410119684892345"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202410119684892345",
+      "vendor_id": "V-google",
+      "medium": "digital"
     },
     {
       "ie_id": "C00747121-ie-1823303-EF7AE504DEB414B68AD9",
@@ -1235,7 +1361,9 @@
       "date": "2024-09-30",
       "purpose": "DIGITAL ADS",
       "payee": "GOOGLE",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202410119684892367"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202410119684892367",
+      "vendor_id": "V-google",
+      "medium": "digital"
     },
     {
       "ie_id": "C00747121-ie-1823303-E16CCC76534C64B71982",
@@ -1248,7 +1376,9 @@
       "date": "2024-09-30",
       "purpose": "DIGITAL ADS",
       "payee": "GOOGLE",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202410119684892362"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202410119684892362",
+      "vendor_id": "V-google",
+      "medium": "digital"
     },
     {
       "ie_id": "C00747121-ie-1823303-EE30A9DAFBDA1403BB7E",
@@ -1261,7 +1391,9 @@
       "date": "2024-09-23",
       "purpose": "DIGITAL ADS",
       "payee": "GOOGLE",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202410119684892336"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202410119684892336",
+      "vendor_id": "V-google",
+      "medium": "digital"
     },
     {
       "ie_id": "C00747121-ie-1823303-EF07BA8B4401A43D2A5A",
@@ -1274,7 +1406,9 @@
       "date": "2024-09-23",
       "purpose": "DIGITAL ADS",
       "payee": "GOOGLE",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202410119684892334"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202410119684892334",
+      "vendor_id": "V-google",
+      "medium": "digital"
     },
     {
       "ie_id": "C00747121-ie-1823303-EBC5F28F7998F4F79980",
@@ -1287,7 +1421,9 @@
       "date": "2024-09-30",
       "purpose": "DIGITAL ADS",
       "payee": "GOOGLE",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202410119684892375"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202410119684892375",
+      "vendor_id": "V-google",
+      "medium": "digital"
     },
     {
       "ie_id": "C00747121-ie-1823303-E1E5264B8E8374482B28",
@@ -1300,7 +1436,9 @@
       "date": "2024-09-30",
       "purpose": "DIGITAL ADS",
       "payee": "GOOGLE",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202410119684892373"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202410119684892373",
+      "vendor_id": "V-google",
+      "medium": "digital"
     },
     {
       "ie_id": "C00747121-ie-1840432-E2DEC16EBBEE240EEA01",
@@ -1313,7 +1451,9 @@
       "date": "2024-10-08",
       "purpose": "DIGITAL ADS",
       "payee": "GOOGLE",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202410249710517095"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202410249710517095",
+      "vendor_id": "V-google",
+      "medium": "digital"
     },
     {
       "ie_id": "C00747121-ie-1840432-ED1932E17ADF9487EB00",
@@ -1326,7 +1466,9 @@
       "date": "2024-10-08",
       "purpose": "DIGITAL ADS",
       "payee": "GOOGLE",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202410249710517102"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202410249710517102",
+      "vendor_id": "V-google",
+      "medium": "digital"
     },
     {
       "ie_id": "C00747121-ie-1856632-E92E4072FA7784FCE9BC",
@@ -1339,7 +1481,9 @@
       "date": "2024-10-18",
       "purpose": "PMT FOR EST FROM 10/16/2024. DIGITAL ADS",
       "payee": "GOOGLE",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202412059721255499"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202412059721255499",
+      "vendor_id": "V-google",
+      "medium": "digital"
     },
     {
       "ie_id": "C00747121-ie-1840432-E0D96297500154717B81",
@@ -1352,7 +1496,9 @@
       "date": "2024-10-16",
       "purpose": "DIGITAL ADS",
       "payee": "GOOGLE",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202410249710517025"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202410249710517025",
+      "vendor_id": "V-google",
+      "medium": "digital"
     },
     {
       "ie_id": "C00747121-ie-1856632-E9FBBFEF78E6B48EDB55",
@@ -1365,7 +1511,9 @@
       "date": "2024-10-18",
       "purpose": "PMT FOR EST FROM 10/16/2024. DIGITAL ADS",
       "payee": "GOOGLE",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202412059721255501"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202412059721255501",
+      "vendor_id": "V-google",
+      "medium": "digital"
     },
     {
       "ie_id": "C00747121-ie-1840432-E70B4925FE42E49B6BCB",
@@ -1378,7 +1526,9 @@
       "date": "2024-10-16",
       "purpose": "DIGITAL ADS",
       "payee": "GOOGLE",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202410249710517022"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202410249710517022",
+      "vendor_id": "V-google",
+      "medium": "digital"
     },
     {
       "ie_id": "C00747121-ie-1823303-EB94E2853BD0F4EA9957",
@@ -1391,7 +1541,9 @@
       "date": "2024-09-23",
       "purpose": "DIGITAL ADS",
       "payee": "GOOGLE",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202410119684892323"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202410119684892323",
+      "vendor_id": "V-google",
+      "medium": "digital"
     },
     {
       "ie_id": "C00747121-ie-1823303-EFF1F948A9AAE42B192B",
@@ -1404,7 +1556,9 @@
       "date": "2024-09-23",
       "purpose": "DIGITAL ADS",
       "payee": "GOOGLE",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202410119684892326"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202410119684892326",
+      "vendor_id": "V-google",
+      "medium": "digital"
     },
     {
       "ie_id": "C00747121-ie-1856632-EE9736289431040BA823",
@@ -1417,7 +1571,9 @@
       "date": "2024-10-20",
       "purpose": "DIGITAL ADS",
       "payee": "GOOGLE",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202412059721255513"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202412059721255513",
+      "vendor_id": "V-google",
+      "medium": "digital"
     },
     {
       "ie_id": "C00747121-ie-1856632-E3E7A749A3967497E86D",
@@ -1430,7 +1586,9 @@
       "date": "2024-10-20",
       "purpose": "DIGITAL ADS",
       "payee": "GOOGLE",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202412059721255515"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202412059721255515",
+      "vendor_id": "V-google",
+      "medium": "digital"
     },
     {
       "ie_id": "C00747121-ie-1840432-E046760B29A024B939E4",
@@ -1443,7 +1601,9 @@
       "date": "2024-10-09",
       "purpose": "DIGITAL ADS",
       "payee": "GOOGLE",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202410249710517106"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202410249710517106",
+      "vendor_id": "V-google",
+      "medium": "digital"
     },
     {
       "ie_id": "C00747121-ie-1840432-E212986227B1147BA828",
@@ -1456,7 +1616,9 @@
       "date": "2024-10-09",
       "purpose": "DIGITAL ADS",
       "payee": "GOOGLE",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202410249710517108"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202410249710517108",
+      "vendor_id": "V-google",
+      "medium": "digital"
     },
     {
       "ie_id": "C00747121-ie-1840432-EB3042713DA59494DA4C",
@@ -1469,7 +1631,9 @@
       "date": "2024-10-16",
       "purpose": "DIGITAL ADS",
       "payee": "GOOGLE",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202410249710517159"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202410249710517159",
+      "vendor_id": "V-google",
+      "medium": "digital"
     },
     {
       "ie_id": "C00747121-ie-1840432-E9C9160CCA66B486FB16",
@@ -1482,7 +1646,9 @@
       "date": "2024-10-16",
       "purpose": "DIGITAL ADS",
       "payee": "GOOGLE",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202410249710517162"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202410249710517162",
+      "vendor_id": "V-google",
+      "medium": "digital"
     },
     {
       "ie_id": "C00747121-ie-1823303-E34B3085D3EBE4E029D4",
@@ -1495,7 +1661,9 @@
       "date": "2024-09-30",
       "purpose": "DIGITAL ADS",
       "payee": "GOOGLE",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202410119684892420"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202410119684892420",
+      "vendor_id": "V-google",
+      "medium": "digital"
     },
     {
       "ie_id": "C00747121-ie-1823303-EFEE7895B4E144A5CA20",
@@ -1508,7 +1676,9 @@
       "date": "2024-09-30",
       "purpose": "DIGITAL ADS",
       "payee": "GOOGLE",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202410119684892421"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202410119684892421",
+      "vendor_id": "V-google",
+      "medium": "digital"
     },
     {
       "ie_id": "C00747121-ie-1823303-EB2BFC05EB0F64898A8C",
@@ -1521,7 +1691,9 @@
       "date": "2024-09-30",
       "purpose": "DIGITAL ADS",
       "payee": "GOOGLE",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202410119684892430"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202410119684892430",
+      "vendor_id": "V-google",
+      "medium": "digital"
     },
     {
       "ie_id": "C00747121-ie-1823303-E073EF16BBBCB4C96A80",
@@ -1534,7 +1706,9 @@
       "date": "2024-09-30",
       "purpose": "DIGITAL ADS",
       "payee": "GOOGLE",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202410119684892427"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202410119684892427",
+      "vendor_id": "V-google",
+      "medium": "digital"
     },
     {
       "ie_id": "C00747121-ie-1823303-E804F6D1268B547F9983",
@@ -1547,7 +1721,9 @@
       "date": "2024-09-23",
       "purpose": "DIGITAL ADS",
       "payee": "GOOGLE",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202410119684892339"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202410119684892339",
+      "vendor_id": "V-google",
+      "medium": "digital"
     },
     {
       "ie_id": "C00747121-ie-1823303-EA3076CA4390847D0990",
@@ -1560,7 +1736,9 @@
       "date": "2024-09-23",
       "purpose": "DIGITAL ADS",
       "payee": "GOOGLE",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202410119684892343"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202410119684892343",
+      "vendor_id": "V-google",
+      "medium": "digital"
     },
     {
       "ie_id": "C00747121-ie-1856632-E5A52C28C578B44FAB2E",
@@ -1573,7 +1751,9 @@
       "date": "2024-10-17",
       "purpose": "PMT FOR EST FROM 10/15/2024. DIGITAL ADS",
       "payee": "GOOGLE",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202412059721255491"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202412059721255491",
+      "vendor_id": "V-google",
+      "medium": "digital"
     },
     {
       "ie_id": "C00747121-ie-1856632-ED450A314A41941D3BA7",
@@ -1586,7 +1766,9 @@
       "date": "2024-10-17",
       "purpose": "PMT FOR EST FROM 10/15/2024. DIGITAL ADS",
       "payee": "GOOGLE",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202412059721255497"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202412059721255497",
+      "vendor_id": "V-google",
+      "medium": "digital"
     },
     {
       "ie_id": "C00747121-ie-1840432-E71D6E998603F4CCDA3E",
@@ -1599,7 +1781,9 @@
       "date": "2024-10-15",
       "purpose": "DIGITAL ADS",
       "payee": "GOOGLE",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202410249710517019"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202410249710517019",
+      "vendor_id": "V-google",
+      "medium": "digital"
     },
     {
       "ie_id": "C00747121-ie-1840432-E5074514B4E654FC4A70",
@@ -1612,7 +1796,9 @@
       "date": "2024-10-15",
       "purpose": "DIGITAL ADS",
       "payee": "GOOGLE",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202410249710517015"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202410249710517015",
+      "vendor_id": "V-google",
+      "medium": "digital"
     },
     {
       "ie_id": "C00747121-ie-1823303-E6C1114EF3E3C4CECA2D",
@@ -1625,7 +1811,9 @@
       "date": "2024-09-30",
       "purpose": "DIGITAL ADS",
       "payee": "GOOGLE",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202410119684892438"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202410119684892438",
+      "vendor_id": "V-google",
+      "medium": "digital"
     },
     {
       "ie_id": "C00747121-ie-1823303-EA82F015332A64A03887",
@@ -1638,7 +1826,9 @@
       "date": "2024-09-30",
       "purpose": "DIGITAL ADS",
       "payee": "GOOGLE",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202410119684892432"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202410119684892432",
+      "vendor_id": "V-google",
+      "medium": "digital"
     },
     {
       "ie_id": "C00747121-ie-1840432-E676D22B48EB84D3CABE",
@@ -1651,7 +1841,9 @@
       "date": "2024-10-06",
       "purpose": "DIGITAL ADS",
       "payee": "GOOGLE",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202410249710517079"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202410249710517079",
+      "vendor_id": "V-google",
+      "medium": "digital"
     },
     {
       "ie_id": "C00747121-ie-1840432-E2CF01747CC094372A34",
@@ -1664,7 +1856,9 @@
       "date": "2024-10-06",
       "purpose": "DIGITAL ADS",
       "payee": "GOOGLE",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202410249710517078"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202410249710517078",
+      "vendor_id": "V-google",
+      "medium": "digital"
     },
     {
       "ie_id": "C00747121-ie-1856632-ED2627C3A19904F8F873",
@@ -1677,7 +1871,9 @@
       "date": "2024-11-03",
       "purpose": "DIGITAL ADS",
       "payee": "GOOGLE",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202412059721255609"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202412059721255609",
+      "vendor_id": "V-google",
+      "medium": "digital"
     },
     {
       "ie_id": "C00747121-ie-1856632-ED6591E2EEE1942E28FD",
@@ -1690,7 +1886,9 @@
       "date": "2024-11-03",
       "purpose": "DIGITAL ADS",
       "payee": "GOOGLE",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202412059721255608"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202412059721255608",
+      "vendor_id": "V-google",
+      "medium": "digital"
     },
     {
       "ie_id": "C00747121-ie-1856632-E7E7543D93BFA4AA0AE9",
@@ -1703,7 +1901,9 @@
       "date": "2024-10-24",
       "purpose": "DIGITAL ADS",
       "payee": "GOOGLE",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202412059721255548"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202412059721255548",
+      "vendor_id": "V-google",
+      "medium": "digital"
     },
     {
       "ie_id": "C00747121-ie-1856632-E7EC0210644594159A16",
@@ -1716,7 +1916,9 @@
       "date": "2024-10-24",
       "purpose": "DIGITAL ADS",
       "payee": "GOOGLE",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202412059721255546"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202412059721255546",
+      "vendor_id": "V-google",
+      "medium": "digital"
     },
     {
       "ie_id": "C00747121-ie-1789138-E70BDC4265BC54788883",
@@ -1729,7 +1931,9 @@
       "date": "2024-05-31",
       "purpose": "DIGITAL ADS",
       "payee": "GOOGLE",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202406139649014226"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202406139649014226",
+      "vendor_id": "V-google",
+      "medium": "digital"
     },
     {
       "ie_id": "C00747121-ie-1789138-E43CC202FE06343EBBFC",
@@ -1742,7 +1946,9 @@
       "date": "2024-05-31",
       "purpose": "DIGITAL ADS",
       "payee": "GOOGLE",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202406139649014228"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202406139649014228",
+      "vendor_id": "V-google",
+      "medium": "digital"
     },
     {
       "ie_id": "C00747121-ie-1823303-E501BB95BD3EB4E2CB53",
@@ -1755,7 +1961,9 @@
       "date": "2024-09-13",
       "purpose": "DIGITAL ADS",
       "payee": "GOOGLE",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202410119684892312"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202410119684892312",
+      "vendor_id": "V-google",
+      "medium": "digital"
     },
     {
       "ie_id": "C00747121-ie-1823303-ED5827E1647914E44AC6",
@@ -1768,7 +1976,9 @@
       "date": "2024-09-13",
       "purpose": "DIGITAL ADS",
       "payee": "GOOGLE",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202410119684892317"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202410119684892317",
+      "vendor_id": "V-google",
+      "medium": "digital"
     },
     {
       "ie_id": "C00747121-ie-1840432-E8DAABFC832DB47F4880",
@@ -1781,7 +1991,9 @@
       "date": "2024-10-11",
       "purpose": "DIGITAL ADS",
       "payee": "GOOGLE",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202410249710517127"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202410249710517127",
+      "vendor_id": "V-google",
+      "medium": "digital"
     },
     {
       "ie_id": "C00747121-ie-1840432-E436E780E8C674C67A55",
@@ -1794,7 +2006,9 @@
       "date": "2024-10-11",
       "purpose": "DIGITAL ADS",
       "payee": "GOOGLE",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202410249710517132"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202410249710517132",
+      "vendor_id": "V-google",
+      "medium": "digital"
     },
     {
       "ie_id": "C00747121-ie-1789138-EA395058D88F3428787F",
@@ -1807,7 +2021,9 @@
       "date": "2024-05-31",
       "purpose": "DIGITAL ADS",
       "payee": "GOOGLE",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202406139649014232"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202406139649014232",
+      "vendor_id": "V-google",
+      "medium": "digital"
     },
     {
       "ie_id": "C00747121-ie-1789138-E188482A8954045FAA97",
@@ -1820,7 +2036,9 @@
       "date": "2024-05-31",
       "purpose": "DIGITAL ADS",
       "payee": "GOOGLE",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202406139649014233"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202406139649014233",
+      "vendor_id": "V-google",
+      "medium": "digital"
     },
     {
       "ie_id": "C00747121-ie-1789138-EFDEB264FD1254545AC9",
@@ -1833,7 +2051,9 @@
       "date": "2024-05-31",
       "purpose": "DIGITAL ADS",
       "payee": "GOOGLE",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202406139649014230"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202406139649014230",
+      "vendor_id": "V-google",
+      "medium": "digital"
     },
     {
       "ie_id": "C00747121-ie-1789138-E7F475E11E3F1412E929",
@@ -1846,7 +2066,9 @@
       "date": "2024-05-31",
       "purpose": "DIGITAL ADS",
       "payee": "GOOGLE",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202406139649014231"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202406139649014231",
+      "vendor_id": "V-google",
+      "medium": "digital"
     },
     {
       "ie_id": "C00747121-ie-1808506-E1DA8738F35C143F2882",
@@ -1859,7 +2081,9 @@
       "date": "2024-07-25",
       "purpose": "DIGITAL ADS",
       "payee": "GOOGLE",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202408079666111525"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202408079666111525",
+      "vendor_id": "V-google",
+      "medium": "digital"
     },
     {
       "ie_id": "C00747121-ie-1808506-EAA3FBE4C441B45FDB0E",
@@ -1872,7 +2096,9 @@
       "date": "2024-07-25",
       "purpose": "DIGITAL ADS",
       "payee": "GOOGLE",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202408079666111524"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202408079666111524",
+      "vendor_id": "V-google",
+      "medium": "digital"
     },
     {
       "ie_id": "C00747121-ie-1823303-EC55EB85D2C52474F827",
@@ -1885,7 +2111,9 @@
       "date": "2024-09-23",
       "purpose": "DIGITAL ADS",
       "payee": "GOOGLE",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202410119684892329"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202410119684892329",
+      "vendor_id": "V-google",
+      "medium": "digital"
     },
     {
       "ie_id": "C00747121-ie-1823303-E10449E3D5CFF49CFA83",
@@ -1898,7 +2126,9 @@
       "date": "2024-09-23",
       "purpose": "DIGITAL ADS",
       "payee": "GOOGLE",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202410119684892330"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202410119684892330",
+      "vendor_id": "V-google",
+      "medium": "digital"
     },
     {
       "ie_id": "C00747121-ie-1789138-E29D7159BA921426D985",
@@ -1911,7 +2141,9 @@
       "date": "2024-05-31",
       "purpose": "DIGITAL ADS",
       "payee": "GOOGLE",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202406139649014247"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202406139649014247",
+      "vendor_id": "V-google",
+      "medium": "digital"
     },
     {
       "ie_id": "C00747121-ie-1789138-E3F8879B78C7F45FBA97",
@@ -1924,7 +2156,9 @@
       "date": "2024-05-31",
       "purpose": "DIGITAL ADS",
       "payee": "GOOGLE",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202406139649014248"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202406139649014248",
+      "vendor_id": "V-google",
+      "medium": "digital"
     },
     {
       "ie_id": "C00747121-ie-1815418-E783781B91A3040CD967",
@@ -1937,7 +2171,9 @@
       "date": "2024-08-24",
       "purpose": "DIGITAL ADS",
       "payee": "GOOGLE",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202409139675433669"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202409139675433669",
+      "vendor_id": "V-google",
+      "medium": "digital"
     },
     {
       "ie_id": "C00747121-ie-1815418-E949F1EA7461B4E19AFE",
@@ -1950,7 +2186,9 @@
       "date": "2024-08-24",
       "purpose": "DIGITAL ADS",
       "payee": "GOOGLE",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202409139675433672"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202409139675433672",
+      "vendor_id": "V-google",
+      "medium": "digital"
     },
     {
       "ie_id": "C00747121-ie-1808506-E4531395151234BE7900",
@@ -1963,7 +2201,9 @@
       "date": "2024-07-31",
       "purpose": "DIGITAL ADS",
       "payee": "GOOGLE",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202408079666111549"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202408079666111549",
+      "vendor_id": "V-google",
+      "medium": "digital"
     },
     {
       "ie_id": "C00747121-ie-1808506-E0CDDED8D10054907B29",
@@ -1976,7 +2216,9 @@
       "date": "2024-07-31",
       "purpose": "DIGITAL ADS",
       "payee": "GOOGLE",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202408079666111550"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202408079666111550",
+      "vendor_id": "V-google",
+      "medium": "digital"
     },
     {
       "ie_id": "C00747121-ie-1808506-E8D6605DD9CE845FDA0F",
@@ -1989,7 +2231,9 @@
       "date": "2024-07-25",
       "purpose": "DIGITAL ADS",
       "payee": "GOOGLE",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202408079666111531"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202408079666111531",
+      "vendor_id": "V-google",
+      "medium": "digital"
     },
     {
       "ie_id": "C00747121-ie-1808506-E1ECB2DAEB2574DCFA8A",
@@ -2002,7 +2246,9 @@
       "date": "2024-07-25",
       "purpose": "DIGITAL ADS",
       "payee": "GOOGLE",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202408079666111530"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202408079666111530",
+      "vendor_id": "V-google",
+      "medium": "digital"
     },
     {
       "ie_id": "C00747121-ie-1815418-E5859A69B4DF84BD8B62",
@@ -2015,7 +2261,9 @@
       "date": "2024-08-24",
       "purpose": "DIGITAL ADS",
       "payee": "GOOGLE",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202409139675433698"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202409139675433698",
+      "vendor_id": "V-google",
+      "medium": "digital"
     },
     {
       "ie_id": "C00747121-ie-1815418-E5B0F81186F34486EB66",
@@ -2028,7 +2276,9 @@
       "date": "2024-08-24",
       "purpose": "DIGITAL ADS",
       "payee": "GOOGLE",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202409139675433697"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202409139675433697",
+      "vendor_id": "V-google",
+      "medium": "digital"
     },
     {
       "ie_id": "C00747121-ie-1815418-ED84F846394D34E459C8",
@@ -2041,7 +2291,9 @@
       "date": "2024-08-24",
       "purpose": "DIGITAL ADS",
       "payee": "GOOGLE",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202409139675433677"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202409139675433677",
+      "vendor_id": "V-google",
+      "medium": "digital"
     },
     {
       "ie_id": "C00747121-ie-1815418-ECF9C1FD1264B44DDAA1",
@@ -2054,7 +2306,9 @@
       "date": "2024-08-24",
       "purpose": "DIGITAL ADS",
       "payee": "GOOGLE",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202409139675433678"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202409139675433678",
+      "vendor_id": "V-google",
+      "medium": "digital"
     },
     {
       "ie_id": "C00747121-ie-1815418-EB9CF071C62E9437F919",
@@ -2067,7 +2321,9 @@
       "date": "2024-08-24",
       "purpose": "DIGITAL ADS",
       "payee": "GOOGLE",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202409139675433691"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202409139675433691",
+      "vendor_id": "V-google",
+      "medium": "digital"
     },
     {
       "ie_id": "C00747121-ie-1815418-ECCD58CA8E9D74242A73",
@@ -2080,7 +2336,9 @@
       "date": "2024-08-24",
       "purpose": "DIGITAL ADS",
       "payee": "GOOGLE",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202409139675433690"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202409139675433690",
+      "vendor_id": "V-google",
+      "medium": "digital"
     },
     {
       "ie_id": "C00747121-ie-1795589-E895A2863BB574BC8B5B",
@@ -2093,7 +2351,9 @@
       "date": "2024-06-28",
       "purpose": "DIGITAL ADS",
       "payee": "GOOGLE",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202407109652767322"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202407109652767322",
+      "vendor_id": "V-google",
+      "medium": "digital"
     },
     {
       "ie_id": "C00747121-ie-1795589-E6C8F68CE25544C10A4C",
@@ -2106,7 +2366,9 @@
       "date": "2024-06-28",
       "purpose": "DIGITAL ADS",
       "payee": "GOOGLE",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202407109652767321"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202407109652767321",
+      "vendor_id": "V-google",
+      "medium": "digital"
     },
     {
       "ie_id": "C00747121-ie-1789138-EBEA693C25B984B61ABE",
@@ -2119,7 +2381,9 @@
       "date": "2024-05-31",
       "purpose": "DIGITAL ADS",
       "payee": "GOOGLE",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202406139649014262"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202406139649014262",
+      "vendor_id": "V-google",
+      "medium": "digital"
     },
     {
       "ie_id": "C00747121-ie-1789138-EFEE4C8CBF4704FDE998",
@@ -2132,7 +2396,9 @@
       "date": "2024-05-31",
       "purpose": "DIGITAL ADS",
       "payee": "GOOGLE",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202406139649014261"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202406139649014261",
+      "vendor_id": "V-google",
+      "medium": "digital"
     },
     {
       "ie_id": "C00747121-ie-1808506-E12ECCD537C4E4C96868",
@@ -2145,7 +2411,9 @@
       "date": "2024-07-25",
       "purpose": "DIGITAL ADS",
       "payee": "GOOGLE",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202408079666111506"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202408079666111506",
+      "vendor_id": "V-google",
+      "medium": "digital"
     },
     {
       "ie_id": "C00747121-ie-1808506-E6D9E7C67A3E7435BBB6",
@@ -2158,7 +2426,9 @@
       "date": "2024-07-25",
       "purpose": "DIGITAL ADS",
       "payee": "GOOGLE",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202408079666111505"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202408079666111505",
+      "vendor_id": "V-google",
+      "medium": "digital"
     },
     {
       "ie_id": "C00747121-ie-1789138-E4DBCF53A8090445DBA3",
@@ -2171,7 +2441,9 @@
       "date": "2024-05-31",
       "purpose": "DIGITAL ADS",
       "payee": "GOOGLE",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202406139649014253"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202406139649014253",
+      "vendor_id": "V-google",
+      "medium": "digital"
     },
     {
       "ie_id": "C00747121-ie-1789138-EEC2CDA3F300845DD892",
@@ -2184,7 +2456,9 @@
       "date": "2024-05-31",
       "purpose": "DIGITAL ADS",
       "payee": "GOOGLE",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202406139649014252"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202406139649014252",
+      "vendor_id": "V-google",
+      "medium": "digital"
     },
     {
       "ie_id": "C00747121-ie-1783053-E773969BF1D0A477FA72",
@@ -2197,7 +2471,9 @@
       "date": "2024-04-30",
       "purpose": "DIGITAL ADS",
       "payee": "GOOGLE",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202405159646006235"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202405159646006235",
+      "vendor_id": "V-google",
+      "medium": "digital"
     },
     {
       "ie_id": "C00747121-ie-1783053-EA82E94C75A7C40A99FC",
@@ -2210,7 +2486,9 @@
       "date": "2024-04-30",
       "purpose": "DIGITAL ADS",
       "payee": "GOOGLE",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202405159646006236"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202405159646006236",
+      "vendor_id": "V-google",
+      "medium": "digital"
     },
     {
       "ie_id": "C00747121-ie-1789138-EDA0781CDCEA34C8199F",
@@ -2223,7 +2501,9 @@
       "date": "2024-05-31",
       "purpose": "DIGITAL ADS",
       "payee": "GOOGLE",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202406139649014238"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202406139649014238",
+      "vendor_id": "V-google",
+      "medium": "digital"
     },
     {
       "ie_id": "C00747121-ie-1789138-EB07321208C714C38B33",
@@ -2236,7 +2516,9 @@
       "date": "2024-05-31",
       "purpose": "DIGITAL ADS",
       "payee": "GOOGLE",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202406139649014237"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202406139649014237",
+      "vendor_id": "V-google",
+      "medium": "digital"
     },
     {
       "ie_id": "C00747121-ie-1783053-ED5B8504711EF47B1A86",
@@ -2249,7 +2531,9 @@
       "date": "2024-04-30",
       "purpose": "DIGITAL ADS",
       "payee": "GOOGLE",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202405159646006248"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202405159646006248",
+      "vendor_id": "V-google",
+      "medium": "digital"
     },
     {
       "ie_id": "C00747121-ie-1783053-E4F5D82DC6E1640E19FF",
@@ -2262,7 +2546,9 @@
       "date": "2024-04-30",
       "purpose": "DIGITAL ADS",
       "payee": "GOOGLE",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202405159646006246"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202405159646006246",
+      "vendor_id": "V-google",
+      "medium": "digital"
     },
     {
       "ie_id": "C00747121-ie-1823303-EB49E443A6AA64B419E0",
@@ -2275,7 +2561,9 @@
       "date": "2024-09-13",
       "purpose": "DIGITAL ADS",
       "payee": "GOOGLE",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202410119684892301"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202410119684892301",
+      "vendor_id": "V-google",
+      "medium": "digital"
     },
     {
       "ie_id": "C00747121-ie-1823303-E1C29850E4AB44EA2B0A",
@@ -2288,7 +2576,9 @@
       "date": "2024-09-13",
       "purpose": "DIGITAL ADS",
       "payee": "GOOGLE",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202410119684892301"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202410119684892301",
+      "vendor_id": "V-google",
+      "medium": "digital"
     },
     {
       "ie_id": "C00747121-ie-1783053-ED34FD50EA18A4650A46",
@@ -2301,7 +2591,9 @@
       "date": "2024-04-30",
       "purpose": "DIGITAL ADS",
       "payee": "GOOGLE",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202405159646006240"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202405159646006240",
+      "vendor_id": "V-google",
+      "medium": "digital"
     },
     {
       "ie_id": "C00747121-ie-1783053-E8B99806E159747A0BCF",
@@ -2314,7 +2606,9 @@
       "date": "2024-04-30",
       "purpose": "DIGITAL ADS",
       "payee": "GOOGLE",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202405159646006240"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202405159646006240",
+      "vendor_id": "V-google",
+      "medium": "digital"
     },
     {
       "ie_id": "C00747121-ie-1815418-EF59D686EEDC84AAC82E",
@@ -2327,7 +2621,9 @@
       "date": "2024-08-24",
       "purpose": "DIGITAL ADS",
       "payee": "GOOGLE",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202409139675433652"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202409139675433652",
+      "vendor_id": "V-google",
+      "medium": "digital"
     },
     {
       "ie_id": "C00747121-ie-1815418-EE912031879D140498A9",
@@ -2340,7 +2636,9 @@
       "date": "2024-08-24",
       "purpose": "DIGITAL ADS",
       "payee": "GOOGLE",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202409139675433651"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202409139675433651",
+      "vendor_id": "V-google",
+      "medium": "digital"
     },
     {
       "ie_id": "C00747121-ie-1789138-E2838990261334D408DB",
@@ -2353,7 +2651,9 @@
       "date": "2024-05-31",
       "purpose": "DIGITAL ADS",
       "payee": "GOOGLE",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202406139649014235"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202406139649014235",
+      "vendor_id": "V-google",
+      "medium": "digital"
     },
     {
       "ie_id": "C00747121-ie-1789138-E5C9C6E66B9D64DCD881",
@@ -2366,7 +2666,9 @@
       "date": "2024-05-31",
       "purpose": "DIGITAL ADS",
       "payee": "GOOGLE",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202406139649014237"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202406139649014237",
+      "vendor_id": "V-google",
+      "medium": "digital"
     },
     {
       "ie_id": "C00747121-ie-1808506-E04E4EC806AC142DE8D6",
@@ -2379,7 +2681,9 @@
       "date": "2024-07-31",
       "purpose": "DIGITAL ADS",
       "payee": "GOOGLE",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202408079666111539"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202408079666111539",
+      "vendor_id": "V-google",
+      "medium": "digital"
     },
     {
       "ie_id": "C00747121-ie-1808506-E342CA841597D4A8A94E",
@@ -2392,7 +2696,9 @@
       "date": "2024-07-31",
       "purpose": "DIGITAL ADS",
       "payee": "GOOGLE",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202408079666111538"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202408079666111538",
+      "vendor_id": "V-google",
+      "medium": "digital"
     },
     {
       "ie_id": "C00747121-ie-1808506-EBB63C9F64A774A8EADB",
@@ -2405,7 +2711,9 @@
       "date": "2024-07-31",
       "purpose": "DIGITAL ADS",
       "payee": "GOOGLE",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202408079666111532"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202408079666111532",
+      "vendor_id": "V-google",
+      "medium": "digital"
     },
     {
       "ie_id": "C00747121-ie-1808506-E3E16AC465A404EB391D",
@@ -2418,7 +2726,9 @@
       "date": "2024-07-31",
       "purpose": "DIGITAL ADS",
       "payee": "GOOGLE",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202408079666111533"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202408079666111533",
+      "vendor_id": "V-google",
+      "medium": "digital"
     },
     {
       "ie_id": "C00747121-ie-1789138-E6D0180F2607F4E20A5C",
@@ -2431,7 +2741,9 @@
       "date": "2024-05-31",
       "purpose": "DIGITAL ADS",
       "payee": "GOOGLE",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202406139649014240"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202406139649014240",
+      "vendor_id": "V-google",
+      "medium": "digital"
     },
     {
       "ie_id": "C00747121-ie-1789138-E70B8F429373C4AE1AF3",
@@ -2444,7 +2756,9 @@
       "date": "2024-05-31",
       "purpose": "DIGITAL ADS",
       "payee": "GOOGLE",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202406139649014242"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202406139649014242",
+      "vendor_id": "V-google",
+      "medium": "digital"
     },
     {
       "ie_id": "C00747121-ie-1840432-E695A4C7034F749E8B08",
@@ -2457,7 +2771,9 @@
       "date": "2024-10-12",
       "purpose": "DIGITAL ADS",
       "payee": "GOOGLE",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202410249710517136"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202410249710517136",
+      "vendor_id": "V-google",
+      "medium": "digital"
     },
     {
       "ie_id": "C00747121-ie-1840432-EC6B07BE1FB4D403FBE2",
@@ -2470,7 +2786,9 @@
       "date": "2024-10-12",
       "purpose": "DIGITAL ADS",
       "payee": "GOOGLE",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202410249710517140"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202410249710517140",
+      "vendor_id": "V-google",
+      "medium": "digital"
     },
     {
       "ie_id": "C00747121-ie-1808506-ED8BBDDCF96074627955",
@@ -2483,7 +2801,9 @@
       "date": "2024-07-25",
       "purpose": "DIGITAL ADS",
       "payee": "GOOGLE",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202408079666111519"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202408079666111519",
+      "vendor_id": "V-google",
+      "medium": "digital"
     },
     {
       "ie_id": "C00747121-ie-1808506-E42D3F0815C624B4D949",
@@ -2496,7 +2816,9 @@
       "date": "2024-07-25",
       "purpose": "DIGITAL ADS",
       "payee": "GOOGLE",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202408079666111518"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202408079666111518",
+      "vendor_id": "V-google",
+      "medium": "digital"
     },
     {
       "ie_id": "C00747121-ie-1808506-EEADD11F230CA44B3838",
@@ -2509,7 +2831,9 @@
       "date": "2024-07-25",
       "purpose": "DIGITAL ADS",
       "payee": "GOOGLE",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202408079666111509"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202408079666111509",
+      "vendor_id": "V-google",
+      "medium": "digital"
     },
     {
       "ie_id": "C00747121-ie-1808506-EF849C599F24442E0A8A",
@@ -2522,7 +2846,9 @@
       "date": "2024-07-25",
       "purpose": "DIGITAL ADS",
       "payee": "GOOGLE",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202408079666111510"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202408079666111510",
+      "vendor_id": "V-google",
+      "medium": "digital"
     },
     {
       "ie_id": "C00747121-ie-1808506-E6A3025039E584BACADF",
@@ -2535,7 +2861,9 @@
       "date": "2024-07-31",
       "purpose": "DIGITAL ADS",
       "payee": "GOOGLE",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202408079666111554"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202408079666111554",
+      "vendor_id": "V-google",
+      "medium": "digital"
     },
     {
       "ie_id": "C00747121-ie-1808506-EA08C3464532048E3B0C",
@@ -2548,7 +2876,9 @@
       "date": "2024-07-31",
       "purpose": "DIGITAL ADS",
       "payee": "GOOGLE",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202408079666111553"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202408079666111553",
+      "vendor_id": "V-google",
+      "medium": "digital"
     },
     {
       "ie_id": "C00747121-ie-1823303-E5B840198264F472C8BB",
@@ -2561,7 +2891,9 @@
       "date": "2024-09-13",
       "purpose": "DIGITAL ADS",
       "payee": "GOOGLE",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202410119684892294"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202410119684892294",
+      "vendor_id": "V-google",
+      "medium": "digital"
     },
     {
       "ie_id": "C00747121-ie-1823303-E6E7F858F62A741918A3",
@@ -2574,7 +2906,9 @@
       "date": "2024-09-13",
       "purpose": "DIGITAL ADS",
       "payee": "GOOGLE",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202410119684892294"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202410119684892294",
+      "vendor_id": "V-google",
+      "medium": "digital"
     },
     {
       "ie_id": "C00747121-ie-1815418-EFF666673DB9A4018807",
@@ -2587,7 +2921,9 @@
       "date": "2024-08-31",
       "purpose": "DIGITAL ADS",
       "payee": "GOOGLE",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202409139675433777"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202409139675433777",
+      "vendor_id": "V-google",
+      "medium": "digital"
     },
     {
       "ie_id": "C00747121-ie-1815418-E4A1B65D21BB84F788E1",
@@ -2600,7 +2936,9 @@
       "date": "2024-08-31",
       "purpose": "DIGITAL ADS",
       "payee": "GOOGLE",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202409139675433777"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202409139675433777",
+      "vendor_id": "V-google",
+      "medium": "digital"
     },
     {
       "ie_id": "C00747121-ie-1789138-EAE41CC7E0332460FA81",
@@ -2613,7 +2951,9 @@
       "date": "2024-05-31",
       "purpose": "DIGITAL ADS",
       "payee": "GOOGLE",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202406139649014264"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202406139649014264",
+      "vendor_id": "V-google",
+      "medium": "digital"
     },
     {
       "ie_id": "C00747121-ie-1789138-E4EBA182B0AA9480F9D6",
@@ -2626,7 +2966,9 @@
       "date": "2024-05-31",
       "purpose": "DIGITAL ADS",
       "payee": "GOOGLE",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202406139649014266"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202406139649014266",
+      "vendor_id": "V-google",
+      "medium": "digital"
     },
     {
       "ie_id": "C00747121-ie-1789138-E3B1105C46AE940A1B38",
@@ -2639,7 +2981,9 @@
       "date": "2024-05-31",
       "purpose": "DIGITAL ADS",
       "payee": "GOOGLE",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202406139649014260"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202406139649014260",
+      "vendor_id": "V-google",
+      "medium": "digital"
     },
     {
       "ie_id": "C00747121-ie-1789138-EB0D35EFB81004A7B881",
@@ -2652,7 +2996,9 @@
       "date": "2024-05-31",
       "purpose": "DIGITAL ADS",
       "payee": "GOOGLE",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202406139649014258"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202406139649014258",
+      "vendor_id": "V-google",
+      "medium": "digital"
     },
     {
       "ie_id": "C00747121-ie-1815418-E84F42B0CE912403D969",
@@ -2665,7 +3011,9 @@
       "date": "2024-08-24",
       "purpose": "DIGITAL ADS",
       "payee": "GOOGLE",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202409139675433676"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202409139675433676",
+      "vendor_id": "V-google",
+      "medium": "digital"
     },
     {
       "ie_id": "C00747121-ie-1815418-E76474C368CC24B93A2D",
@@ -2678,7 +3026,9 @@
       "date": "2024-08-24",
       "purpose": "DIGITAL ADS",
       "payee": "GOOGLE",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202409139675433675"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202409139675433675",
+      "vendor_id": "V-google",
+      "medium": "digital"
     },
     {
       "ie_id": "C00747121-ie-1815418-E3FE99790CDA74896BD5",
@@ -2691,7 +3041,9 @@
       "date": "2024-08-24",
       "purpose": "DIGITAL ADS",
       "payee": "GOOGLE",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202409139675433655"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202409139675433655",
+      "vendor_id": "V-google",
+      "medium": "digital"
     },
     {
       "ie_id": "C00747121-ie-1815418-E8C1638B84A1846F1AE4",
@@ -2704,7 +3056,9 @@
       "date": "2024-08-24",
       "purpose": "DIGITAL ADS",
       "payee": "GOOGLE",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202409139675433655"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202409139675433655",
+      "vendor_id": "V-google",
+      "medium": "digital"
     },
     {
       "ie_id": "C00747121-ie-1789138-EFCE4D12242524DF4A21",
@@ -2717,7 +3071,9 @@
       "date": "2024-05-31",
       "purpose": "DIGITAL ADS",
       "payee": "GOOGLE",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202406139649014223"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202406139649014223",
+      "vendor_id": "V-google",
+      "medium": "digital"
     },
     {
       "ie_id": "C00747121-ie-1789138-E8027B2575BB64B34B51",
@@ -2730,7 +3086,9 @@
       "date": "2024-05-31",
       "purpose": "DIGITAL ADS",
       "payee": "GOOGLE",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202406139649014222"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202406139649014222",
+      "vendor_id": "V-google",
+      "medium": "digital"
     },
     {
       "ie_id": "C00747121-ie-1815418-E6B536C75B7F544CE9EF",
@@ -2743,7 +3101,9 @@
       "date": "2024-08-24",
       "purpose": "DIGITAL ADS",
       "payee": "GOOGLE",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202409139675433664"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202409139675433664",
+      "vendor_id": "V-google",
+      "medium": "digital"
     },
     {
       "ie_id": "C00747121-ie-1815418-E7151C66CFE534E8D9ED",
@@ -2756,7 +3116,9 @@
       "date": "2024-08-24",
       "purpose": "DIGITAL ADS",
       "payee": "GOOGLE",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202409139675433662"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202409139675433662",
+      "vendor_id": "V-google",
+      "medium": "digital"
     },
     {
       "ie_id": "C00747121-ie-1789138-E83C33811CB7F46C282A",
@@ -2769,7 +3131,9 @@
       "date": "2024-05-31",
       "purpose": "DIGITAL ADS",
       "payee": "GOOGLE",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202406139649014224"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202406139649014224",
+      "vendor_id": "V-google",
+      "medium": "digital"
     },
     {
       "ie_id": "C00747121-ie-1789138-E54848FCF8C864727A05",
@@ -2782,7 +3146,9 @@
       "date": "2024-05-31",
       "purpose": "DIGITAL ADS",
       "payee": "GOOGLE",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202406139649014225"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202406139649014225",
+      "vendor_id": "V-google",
+      "medium": "digital"
     },
     {
       "ie_id": "C00747121-ie-1808506-EC2B2C4B733B04F92A80",
@@ -2795,7 +3161,9 @@
       "date": "2024-07-31",
       "purpose": "DIGITAL ADS",
       "payee": "GOOGLE",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202408079666111545"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202408079666111545",
+      "vendor_id": "V-google",
+      "medium": "digital"
     },
     {
       "ie_id": "C00747121-ie-1808506-E34EC1D74CA334978AA6",
@@ -2808,7 +3176,9 @@
       "date": "2024-07-31",
       "purpose": "DIGITAL ADS",
       "payee": "GOOGLE",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202408079666111544"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202408079666111544",
+      "vendor_id": "V-google",
+      "medium": "digital"
     },
     {
       "ie_id": "C00747121-ie-1815418-EAC6BC3AF08A941DE81F",
@@ -2821,7 +3191,9 @@
       "date": "2024-08-24",
       "purpose": "DIGITAL ADS",
       "payee": "GOOGLE",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202409139675433703"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202409139675433703",
+      "vendor_id": "V-google",
+      "medium": "digital"
     },
     {
       "ie_id": "C00747121-ie-1815418-E9FA1D65C21394699BFA",
@@ -2834,7 +3206,9 @@
       "date": "2024-08-24",
       "purpose": "DIGITAL ADS",
       "payee": "GOOGLE",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202409139675433703"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202409139675433703",
+      "vendor_id": "V-google",
+      "medium": "digital"
     },
     {
       "ie_id": "C00747121-ie-1789138-ED3D4C95499284EA4A33",
@@ -2847,7 +3221,9 @@
       "date": "2024-05-31",
       "purpose": "DIGITAL ADS",
       "payee": "GOOGLE",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202406139649014245"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202406139649014245",
+      "vendor_id": "V-google",
+      "medium": "digital"
     },
     {
       "ie_id": "C00747121-ie-1789138-EFA7D2E22A0F341638D6",
@@ -2860,7 +3236,9 @@
       "date": "2024-05-31",
       "purpose": "DIGITAL ADS",
       "payee": "GOOGLE",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202406139649014243"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202406139649014243",
+      "vendor_id": "V-google",
+      "medium": "digital"
     },
     {
       "ie_id": "C00747121-ie-1815418-EDD5100E7A405475D8E1",
@@ -2873,7 +3251,9 @@
       "date": "2024-08-24",
       "purpose": "DIGITAL ADS",
       "payee": "GOOGLE",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202409139675433659"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202409139675433659",
+      "vendor_id": "V-google",
+      "medium": "digital"
     },
     {
       "ie_id": "C00747121-ie-1815418-EEAD0FE347DA944ADA61",
@@ -2886,7 +3266,9 @@
       "date": "2024-08-24",
       "purpose": "DIGITAL ADS",
       "payee": "GOOGLE",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202409139675433661"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202409139675433661",
+      "vendor_id": "V-google",
+      "medium": "digital"
     },
     {
       "ie_id": "C00747121-ie-1815418-E6705B74D6D4C46B0BBD",
@@ -2899,7 +3281,9 @@
       "date": "2024-08-24",
       "purpose": "DIGITAL ADS",
       "payee": "GOOGLE",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202409139675433684"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202409139675433684",
+      "vendor_id": "V-google",
+      "medium": "digital"
     },
     {
       "ie_id": "C00747121-ie-1815418-E4D283E8723504FD99C0",
@@ -2912,7 +3296,9 @@
       "date": "2024-08-24",
       "purpose": "DIGITAL ADS",
       "payee": "GOOGLE",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202409139675433683"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202409139675433683",
+      "vendor_id": "V-google",
+      "medium": "digital"
     },
     {
       "ie_id": "C00747121-ie-1808506-E575E1D17FBA94DF6A0D",
@@ -2925,7 +3311,9 @@
       "date": "2024-07-25",
       "purpose": "DIGITAL ADS",
       "payee": "GOOGLE",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202408079666111513"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202408079666111513",
+      "vendor_id": "V-google",
+      "medium": "digital"
     },
     {
       "ie_id": "C00747121-ie-1808506-EC3DB705716FD4275B92",
@@ -2938,7 +3326,9 @@
       "date": "2024-07-25",
       "purpose": "DIGITAL ADS",
       "payee": "GOOGLE",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202408079666111516"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202408079666111516",
+      "vendor_id": "V-google",
+      "medium": "digital"
     },
     {
       "ie_id": "C00747121-ie-1789138-EC80D030BE9414C7388F",
@@ -2951,7 +3341,9 @@
       "date": "2024-05-31",
       "purpose": "DIGITAL ADS",
       "payee": "GOOGLE",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202406139649014254"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202406139649014254",
+      "vendor_id": "V-google",
+      "medium": "digital"
     },
     {
       "ie_id": "C00747121-ie-1789138-E50F7DE6D9E794B53B2E",
@@ -2964,7 +3356,9 @@
       "date": "2024-05-31",
       "purpose": "DIGITAL ADS",
       "payee": "GOOGLE",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202406139649014256"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202406139649014256",
+      "vendor_id": "V-google",
+      "medium": "digital"
     },
     {
       "ie_id": "C00747121-ie-1795589-E7B9961CA804D44469EB",
@@ -2977,7 +3371,9 @@
       "date": "2024-06-28",
       "purpose": "DIGITAL ADS",
       "payee": "GOOGLE",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202407109652767323"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202407109652767323",
+      "vendor_id": "V-google",
+      "medium": "digital"
     },
     {
       "ie_id": "C00747121-ie-1795589-E577AADD446C64BA3A22",
@@ -2990,7 +3386,9 @@
       "date": "2024-06-28",
       "purpose": "DIGITAL ADS",
       "payee": "GOOGLE",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202407109652767325"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202407109652767325",
+      "vendor_id": "V-google",
+      "medium": "digital"
     },
     {
       "ie_id": "C00747121-ie-1795589-EF751F8DF50A14A33A31",
@@ -3003,7 +3401,9 @@
       "date": "2024-06-28",
       "purpose": "DIGITAL ADS",
       "payee": "GOOGLE",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202407109652767328"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202407109652767328",
+      "vendor_id": "V-google",
+      "medium": "digital"
     },
     {
       "ie_id": "C00747121-ie-1795589-ECF1D3D37A4254241B64",
@@ -3016,7 +3416,9 @@
       "date": "2024-06-28",
       "purpose": "DIGITAL ADS",
       "payee": "GOOGLE",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202407109652767330"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202407109652767330",
+      "vendor_id": "V-google",
+      "medium": "digital"
     },
     {
       "ie_id": "C00747121-ie-1789138-EC8874015E48B438DBEE",
@@ -3029,7 +3431,9 @@
       "date": "2024-05-31",
       "purpose": "DIGITAL ADS",
       "payee": "GOOGLE",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202406139649014266"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202406139649014266",
+      "vendor_id": "V-google",
+      "medium": "digital"
     },
     {
       "ie_id": "C00747121-ie-1789138-E8A2C93C3BBC244FDBEA",
@@ -3042,7 +3446,9 @@
       "date": "2024-05-31",
       "purpose": "DIGITAL ADS",
       "payee": "GOOGLE",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202406139649014268"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202406139649014268",
+      "vendor_id": "V-google",
+      "medium": "digital"
     },
     {
       "ie_id": "C00747121-ie-1747790-EEF5609DAF056483EB80",
@@ -3055,7 +3461,9 @@
       "date": "2023-12-08",
       "purpose": "DIGITAL ADS",
       "payee": "GOOGLE",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202401299600571520"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202401299600571520",
+      "vendor_id": "V-google",
+      "medium": "digital"
     },
     {
       "ie_id": "C00747121-ie-1756263-E30F68BBA718D4CFB8AD",
@@ -3068,7 +3476,9 @@
       "date": "2024-01-02",
       "purpose": "PMT FOR EST FROM 12/8/2023. DIGITAL ADS",
       "payee": "GOOGLE",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202402169619782683"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202402169619782683",
+      "vendor_id": "V-google",
+      "medium": "digital"
     },
     {
       "ie_id": "C00747121-ie-1808506-E20766DB3B58E4727914",
@@ -3081,7 +3491,9 @@
       "date": "2024-07-25",
       "purpose": "DIGITAL ADS",
       "payee": "GOOGLE",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202408079666111520"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202408079666111520",
+      "vendor_id": "V-google",
+      "medium": "digital"
     },
     {
       "ie_id": "C00747121-ie-1808506-EA2E118E0AA33466B81B",
@@ -3094,7 +3506,9 @@
       "date": "2024-07-25",
       "purpose": "DIGITAL ADS",
       "payee": "GOOGLE",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202408079666111523"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202408079666111523",
+      "vendor_id": "V-google",
+      "medium": "digital"
     },
     {
       "ie_id": "C00747121-ie-1789138-E6E06A63FEA8F44BCA54",
@@ -3107,7 +3521,9 @@
       "date": "2024-05-31",
       "purpose": "DIGITAL ADS",
       "payee": "GOOGLE",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202406139649014272"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202406139649014272",
+      "vendor_id": "V-google",
+      "medium": "digital"
     },
     {
       "ie_id": "C00747121-ie-1789138-EF0130536F5F44C6094C",
@@ -3120,7 +3536,9 @@
       "date": "2024-05-31",
       "purpose": "DIGITAL ADS",
       "payee": "GOOGLE",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202406139649014272"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202406139649014272",
+      "vendor_id": "V-google",
+      "medium": "digital"
     },
     {
       "ie_id": "C00747121-ie-1815418-E4A5F34435EB64CE4AB2",
@@ -3133,7 +3551,9 @@
       "date": "2024-08-24",
       "purpose": "DIGITAL ADS",
       "payee": "GOOGLE",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202409139675433706"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202409139675433706",
+      "vendor_id": "V-google",
+      "medium": "digital"
     },
     {
       "ie_id": "C00747121-ie-1815418-E24DA28068C5B47C3B26",
@@ -3146,7 +3566,9 @@
       "date": "2024-08-24",
       "purpose": "DIGITAL ADS",
       "payee": "GOOGLE",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202409139675433707"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202409139675433707",
+      "vendor_id": "V-google",
+      "medium": "digital"
     },
     {
       "ie_id": "C00747121-ie-1815418-E5533B2F5EC434C4C9DD",
@@ -3159,7 +3581,9 @@
       "date": "2024-08-24",
       "purpose": "DIGITAL ADS",
       "payee": "GOOGLE",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202409139675433667"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202409139675433667",
+      "vendor_id": "V-google",
+      "medium": "digital"
     },
     {
       "ie_id": "C00747121-ie-1815418-E31E6686B33414A4B831",
@@ -3172,7 +3596,9 @@
       "date": "2024-08-24",
       "purpose": "DIGITAL ADS",
       "payee": "GOOGLE",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202409139675433668"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202409139675433668",
+      "vendor_id": "V-google",
+      "medium": "digital"
     },
     {
       "ie_id": "C00747121-ie-1783053-E99961CB133BA41CA98D",
@@ -3185,7 +3611,9 @@
       "date": "2024-04-30",
       "purpose": "DIGITAL ADS",
       "payee": "GOOGLE",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202405159646006251"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202405159646006251",
+      "vendor_id": "V-google",
+      "medium": "digital"
     },
     {
       "ie_id": "C00747121-ie-1783053-EB66FA8D7062145EBA91",
@@ -3198,7 +3626,9 @@
       "date": "2024-04-30",
       "purpose": "DIGITAL ADS",
       "payee": "GOOGLE",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202405159646006250"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202405159646006250",
+      "vendor_id": "V-google",
+      "medium": "digital"
     },
     {
       "ie_id": "C00747121-ie-1789138-E00F885D04EED49AD90D",
@@ -3211,7 +3641,9 @@
       "date": "2024-05-31",
       "purpose": "DIGITAL ADS",
       "payee": "GOOGLE",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202406139649014269"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202406139649014269",
+      "vendor_id": "V-google",
+      "medium": "digital"
     },
     {
       "ie_id": "C00747121-ie-1789138-EBAF8FE7CC0724C3B97A",
@@ -3224,7 +3656,9 @@
       "date": "2024-05-31",
       "purpose": "DIGITAL ADS",
       "payee": "GOOGLE",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202406139649014271"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202406139649014271",
+      "vendor_id": "V-google",
+      "medium": "digital"
     },
     {
       "ie_id": "C00747121-ie-1823303-EA9D27183E57E4FA19E6",
@@ -3237,7 +3671,9 @@
       "date": "2024-09-13",
       "purpose": "DIGITAL ADS",
       "payee": "GOOGLE",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202410119684892285"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202410119684892285",
+      "vendor_id": "V-google",
+      "medium": "digital"
     },
     {
       "ie_id": "C00747121-ie-1823303-E1892E24B5EF44BF19F8",
@@ -3250,7 +3686,9 @@
       "date": "2024-09-13",
       "purpose": "DIGITAL ADS",
       "payee": "GOOGLE",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202410119684892288"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202410119684892288",
+      "vendor_id": "V-google",
+      "medium": "digital"
     },
     {
       "ie_id": "C00747121-ie-1815418-EDA4A5CD7CCFD4334A74",
@@ -3263,7 +3701,9 @@
       "date": "2024-08-24",
       "purpose": "DIGITAL ADS",
       "payee": "GOOGLE",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202409139675433685"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202409139675433685",
+      "vendor_id": "V-google",
+      "medium": "digital"
     },
     {
       "ie_id": "C00747121-ie-1815418-E8F076ECDB68345A3836",
@@ -3276,7 +3716,9 @@
       "date": "2024-08-24",
       "purpose": "DIGITAL ADS",
       "payee": "GOOGLE",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202409139675433688"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202409139675433688",
+      "vendor_id": "V-google",
+      "medium": "digital"
     },
     {
       "ie_id": "C00747121-ie-1789138-E41EF58479A4A4C869F6",
@@ -3289,7 +3731,9 @@
       "date": "2024-05-31",
       "purpose": "DIGITAL ADS",
       "payee": "GOOGLE",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202406139649014203"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202406139649014203",
+      "vendor_id": "V-google",
+      "medium": "digital"
     },
     {
       "ie_id": "C00747121-ie-1789138-E26B8F4B6135D44C4AB8",
@@ -3302,7 +3746,9 @@
       "date": "2024-05-31",
       "purpose": "DIGITAL ADS",
       "payee": "GOOGLE",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202406139649014202"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202406139649014202",
+      "vendor_id": "V-google",
+      "medium": "digital"
     },
     {
       "ie_id": "C00747121-ie-1815418-EC718D7AF235C4116B5B",
@@ -3315,7 +3761,9 @@
       "date": "2024-08-24",
       "purpose": "DIGITAL ADS",
       "payee": "GOOGLE",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202409139675433693"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202409139675433693",
+      "vendor_id": "V-google",
+      "medium": "digital"
     },
     {
       "ie_id": "C00747121-ie-1815418-EA79DE9D890E14B56B62",
@@ -3328,7 +3776,9 @@
       "date": "2024-08-24",
       "purpose": "DIGITAL ADS",
       "payee": "GOOGLE",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202409139675433694"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202409139675433694",
+      "vendor_id": "V-google",
+      "medium": "digital"
     },
     {
       "ie_id": "C00747121-ie-1795589-E2748CFA78658431C92B",
@@ -3341,7 +3791,9 @@
       "date": "2024-06-28",
       "purpose": "DIGITAL ADS",
       "payee": "GOOGLE",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202407109652767368"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202407109652767368",
+      "vendor_id": "V-google",
+      "medium": "digital"
     },
     {
       "ie_id": "C00747121-ie-1795589-EF28A33F6484B43FEA20",
@@ -3354,7 +3806,9 @@
       "date": "2024-06-28",
       "purpose": "DIGITAL ADS",
       "payee": "GOOGLE",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202407109652767366"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202407109652767366",
+      "vendor_id": "V-google",
+      "medium": "digital"
     },
     {
       "ie_id": "C00747121-ie-1823303-ECBFB5D38C1E8465B833",
@@ -3367,7 +3821,9 @@
       "date": "2024-09-13",
       "purpose": "DIGITAL ADS",
       "payee": "GOOGLE",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202410119684892274"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202410119684892274",
+      "vendor_id": "V-google",
+      "medium": "digital"
     },
     {
       "ie_id": "C00747121-ie-1823303-E77858E2C747A456AA87",
@@ -3380,7 +3836,9 @@
       "date": "2024-09-13",
       "purpose": "DIGITAL ADS",
       "payee": "GOOGLE",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202410119684892277"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202410119684892277",
+      "vendor_id": "V-google",
+      "medium": "digital"
     },
     {
       "ie_id": "C00747121-ie-1783053-E5AC824A0B0434E26B8D",
@@ -3393,7 +3851,9 @@
       "date": "2024-04-30",
       "purpose": "DIGITAL ADS",
       "payee": "GOOGLE",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202405159646006253"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202405159646006253",
+      "vendor_id": "V-google",
+      "medium": "digital"
     },
     {
       "ie_id": "C00747121-ie-1783053-E880201FFDF864DF6AB3",
@@ -3406,7 +3866,9 @@
       "date": "2024-04-30",
       "purpose": "DIGITAL ADS",
       "payee": "GOOGLE",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202405159646006252"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202405159646006252",
+      "vendor_id": "V-google",
+      "medium": "digital"
     },
     {
       "ie_id": "C00747121-ie-1815418-EC0E353671B96487AA93",
@@ -3419,7 +3881,9 @@
       "date": "2024-08-24",
       "purpose": "DIGITAL ADS",
       "payee": "GOOGLE",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202409139675433717"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202409139675433717",
+      "vendor_id": "V-google",
+      "medium": "digital"
     },
     {
       "ie_id": "C00747121-ie-1815418-E01579BC9C6AE42F4895",
@@ -3432,7 +3896,9 @@
       "date": "2024-08-24",
       "purpose": "DIGITAL ADS",
       "payee": "GOOGLE",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202409139675433716"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202409139675433716",
+      "vendor_id": "V-google",
+      "medium": "digital"
     },
     {
       "ie_id": "C00747121-ie-1789138-EB204EB9FE624491FBB5",
@@ -3445,7 +3911,9 @@
       "date": "2024-05-31",
       "purpose": "DIGITAL ADS",
       "payee": "GOOGLE",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202406139649014208"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202406139649014208",
+      "vendor_id": "V-google",
+      "medium": "digital"
     },
     {
       "ie_id": "C00747121-ie-1789138-EAD7093B622084CE98CC",
@@ -3458,7 +3926,9 @@
       "date": "2024-05-31",
       "purpose": "DIGITAL ADS",
       "payee": "GOOGLE",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202406139649014208"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202406139649014208",
+      "vendor_id": "V-google",
+      "medium": "digital"
     },
     {
       "ie_id": "C00747121-ie-1840432-E13FC83D080B44373ABD",
@@ -3471,7 +3941,9 @@
       "date": "2024-10-15",
       "purpose": "DIGITAL ADS",
       "payee": "GOOGLE",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202410249710517155"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202410249710517155",
+      "vendor_id": "V-google",
+      "medium": "digital"
     },
     {
       "ie_id": "C00747121-ie-1840432-E3734659646C848CDBA6",
@@ -3484,7 +3956,9 @@
       "date": "2024-10-15",
       "purpose": "DIGITAL ADS",
       "payee": "GOOGLE",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202410249710517155"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202410249710517155",
+      "vendor_id": "V-google",
+      "medium": "digital"
     },
     {
       "ie_id": "C00747121-ie-1795589-E9691B72600264B9195A",
@@ -3497,7 +3971,9 @@
       "date": "2024-06-28",
       "purpose": "DIGITAL ADS",
       "payee": "GOOGLE",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202407109652767348"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202407109652767348",
+      "vendor_id": "V-google",
+      "medium": "digital"
     },
     {
       "ie_id": "C00747121-ie-1795589-EBE7F8C1406D14BB4BD3",
@@ -3510,7 +3986,9 @@
       "date": "2024-06-28",
       "purpose": "DIGITAL ADS",
       "payee": "GOOGLE",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202407109652767349"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202407109652767349",
+      "vendor_id": "V-google",
+      "medium": "digital"
     },
     {
       "ie_id": "C00747121-ie-1795589-EDF9B79A25A27464C915",
@@ -3523,7 +4001,9 @@
       "date": "2024-06-28",
       "purpose": "DIGITAL ADS",
       "payee": "GOOGLE",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202407109652767357"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202407109652767357",
+      "vendor_id": "V-google",
+      "medium": "digital"
     },
     {
       "ie_id": "C00747121-ie-1795589-E2E51364AD51441029EC",
@@ -3536,7 +4016,9 @@
       "date": "2024-06-28",
       "purpose": "DIGITAL ADS",
       "payee": "GOOGLE",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202407109652767356"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202407109652767356",
+      "vendor_id": "V-google",
+      "medium": "digital"
     },
     {
       "ie_id": "C00747121-ie-1808506-E854951428D974B9898E",
@@ -3549,7 +4031,9 @@
       "date": "2024-07-31",
       "purpose": "DIGITAL ADS",
       "payee": "GOOGLE",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202408079666111557"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202408079666111557",
+      "vendor_id": "V-google",
+      "medium": "digital"
     },
     {
       "ie_id": "C00747121-ie-1808506-EB80AE030704C44599C0",
@@ -3562,7 +4046,9 @@
       "date": "2024-07-31",
       "purpose": "DIGITAL ADS",
       "payee": "GOOGLE",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202408079666111559"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202408079666111559",
+      "vendor_id": "V-google",
+      "medium": "digital"
     },
     {
       "ie_id": "C00747121-ie-1808506-E4F7874AFBF434A35AFA",
@@ -3575,7 +4061,9 @@
       "date": "2024-07-31",
       "purpose": "DIGITAL ADS",
       "payee": "GOOGLE",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202408079666111541"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202408079666111541",
+      "vendor_id": "V-google",
+      "medium": "digital"
     },
     {
       "ie_id": "C00747121-ie-1808506-E462985169EE14B29B33",
@@ -3588,7 +4076,9 @@
       "date": "2024-07-31",
       "purpose": "DIGITAL ADS",
       "payee": "GOOGLE",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202408079666111542"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202408079666111542",
+      "vendor_id": "V-google",
+      "medium": "digital"
     },
     {
       "ie_id": "C00747121-ie-1783053-EFFFD01AD44004D25991",
@@ -3601,7 +4091,9 @@
       "date": "2024-04-30",
       "purpose": "DIGITAL ADS",
       "payee": "GOOGLE",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202405159646006243"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202405159646006243",
+      "vendor_id": "V-google",
+      "medium": "digital"
     },
     {
       "ie_id": "C00747121-ie-1783053-E7F38165052BC4BDDA2F",
@@ -3614,7 +4106,9 @@
       "date": "2024-04-30",
       "purpose": "DIGITAL ADS",
       "payee": "GOOGLE",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202405159646006242"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202405159646006242",
+      "vendor_id": "V-google",
+      "medium": "digital"
     },
     {
       "ie_id": "C00747121-ie-1823303-E8BB204738BFB43C58B9",
@@ -3627,7 +4121,9 @@
       "date": "2024-09-13",
       "purpose": "DIGITAL ADS",
       "payee": "GOOGLE",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202410119684892305"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202410119684892305",
+      "vendor_id": "V-google",
+      "medium": "digital"
     },
     {
       "ie_id": "C00747121-ie-1823303-E3166503A5AE24976BD5",
@@ -3640,7 +4136,9 @@
       "date": "2024-09-13",
       "purpose": "DIGITAL ADS",
       "payee": "GOOGLE",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202410119684892307"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202410119684892307",
+      "vendor_id": "V-google",
+      "medium": "digital"
     },
     {
       "ie_id": "C00747121-ie-1789138-E6502381A4DAD489FB14",
@@ -3653,7 +4151,9 @@
       "date": "2024-05-31",
       "purpose": "DIGITAL ADS",
       "payee": "GOOGLE",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202406139649014250"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202406139649014250",
+      "vendor_id": "V-google",
+      "medium": "digital"
     },
     {
       "ie_id": "C00747121-ie-1789138-EF961B6E18D3F4638866",
@@ -3666,7 +4166,9 @@
       "date": "2024-05-31",
       "purpose": "DIGITAL ADS",
       "payee": "GOOGLE",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202406139649014251"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202406139649014251",
+      "vendor_id": "V-google",
+      "medium": "digital"
     },
     {
       "ie_id": "C00747121-ie-1795589-E11A145CC76664486B2B",
@@ -3679,7 +4181,9 @@
       "date": "2024-06-28",
       "purpose": "DIGITAL ADS",
       "payee": "GOOGLE",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202407109652767371"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202407109652767371",
+      "vendor_id": "V-google",
+      "medium": "digital"
     },
     {
       "ie_id": "C00747121-ie-1795589-EF8EC68AEB9254092858",
@@ -3692,7 +4196,9 @@
       "date": "2024-06-28",
       "purpose": "DIGITAL ADS",
       "payee": "GOOGLE",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202407109652767370"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202407109652767370",
+      "vendor_id": "V-google",
+      "medium": "digital"
     },
     {
       "ie_id": "C00747121-ie-1823303-E839FA54E9AC14367A43",
@@ -3705,7 +4211,9 @@
       "date": "2024-09-13",
       "purpose": "DIGITAL ADS",
       "payee": "GOOGLE",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202410119684892310"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202410119684892310",
+      "vendor_id": "V-google",
+      "medium": "digital"
     },
     {
       "ie_id": "C00747121-ie-1823303-E5195586E5C7B404C876",
@@ -3718,7 +4226,9 @@
       "date": "2024-09-13",
       "purpose": "DIGITAL ADS",
       "payee": "GOOGLE",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202410119684892311"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202410119684892311",
+      "vendor_id": "V-google",
+      "medium": "digital"
     },
     {
       "ie_id": "C00747121-ie-1795589-EBC63CDE3F03040D984F",
@@ -3731,7 +4241,9 @@
       "date": "2024-06-28",
       "purpose": "DIGITAL ADS",
       "payee": "GOOGLE",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202407109652767375"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202407109652767375",
+      "vendor_id": "V-google",
+      "medium": "digital"
     },
     {
       "ie_id": "C00747121-ie-1795589-ED1CC4A649B5B494597A",
@@ -3744,7 +4256,9 @@
       "date": "2024-06-28",
       "purpose": "DIGITAL ADS",
       "payee": "GOOGLE",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202407109652767376"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202407109652767376",
+      "vendor_id": "V-google",
+      "medium": "digital"
     },
     {
       "ie_id": "C00747121-ie-1795589-E786AA3EC6D0144EEAD9",
@@ -3757,7 +4271,9 @@
       "date": "2024-06-28",
       "purpose": "DIGITAL ADS",
       "payee": "GOOGLE",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202407109652767337"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202407109652767337",
+      "vendor_id": "V-google",
+      "medium": "digital"
     },
     {
       "ie_id": "C00747121-ie-1795589-ECD608723FA4F49D68BD",
@@ -3770,7 +4286,9 @@
       "date": "2024-06-28",
       "purpose": "DIGITAL ADS",
       "payee": "GOOGLE",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202407109652767335"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202407109652767335",
+      "vendor_id": "V-google",
+      "medium": "digital"
     },
     {
       "ie_id": "C00747121-ie-1795589-EA70769E2BC6A4820A45",
@@ -3783,7 +4301,9 @@
       "date": "2024-06-28",
       "purpose": "DIGITAL ADS",
       "payee": "GOOGLE",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202407109652767344"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202407109652767344",
+      "vendor_id": "V-google",
+      "medium": "digital"
     },
     {
       "ie_id": "C00747121-ie-1795589-EDA75BF8F01884EB0B90",
@@ -3796,7 +4316,9 @@
       "date": "2024-06-28",
       "purpose": "DIGITAL ADS",
       "payee": "GOOGLE",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202407109652767343"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202407109652767343",
+      "vendor_id": "V-google",
+      "medium": "digital"
     },
     {
       "ie_id": "C00747121-ie-1815418-E5E389FEBF7884E86913",
@@ -3809,7 +4331,9 @@
       "date": "2024-08-24",
       "purpose": "DIGITAL ADS",
       "payee": "GOOGLE",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202409139675433710"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202409139675433710",
+      "vendor_id": "V-google",
+      "medium": "digital"
     },
     {
       "ie_id": "C00747121-ie-1815418-E900C90FFAA424490ABB",
@@ -3822,7 +4346,9 @@
       "date": "2024-08-24",
       "purpose": "DIGITAL ADS",
       "payee": "GOOGLE",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202409139675433710"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202409139675433710",
+      "vendor_id": "V-google",
+      "medium": "digital"
     },
     {
       "ie_id": "C00747121-ie-1823303-E5A5FC16004C346DE9FE",
@@ -3835,7 +4361,9 @@
       "date": "2024-09-13",
       "purpose": "DIGITAL ADS",
       "payee": "GOOGLE",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202410119684892283"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202410119684892283",
+      "vendor_id": "V-google",
+      "medium": "digital"
     },
     {
       "ie_id": "C00747121-ie-1823303-E81F81406783A4A2691B",
@@ -3848,7 +4376,9 @@
       "date": "2024-09-13",
       "purpose": "DIGITAL ADS",
       "payee": "GOOGLE",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202410119684892282"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202410119684892282",
+      "vendor_id": "V-google",
+      "medium": "digital"
     },
     {
       "ie_id": "C00747121-ie-1789138-EA46F036907D041DB8A5",
@@ -3861,7 +4391,9 @@
       "date": "2024-05-31",
       "purpose": "DIGITAL ADS",
       "payee": "GOOGLE",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202406139649014213"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202406139649014213",
+      "vendor_id": "V-google",
+      "medium": "digital"
     },
     {
       "ie_id": "C00747121-ie-1789138-EA99F13459E6E4FCA954",
@@ -3874,7 +4406,9 @@
       "date": "2024-05-31",
       "purpose": "DIGITAL ADS",
       "payee": "GOOGLE",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202406139649014213"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202406139649014213",
+      "vendor_id": "V-google",
+      "medium": "digital"
     },
     {
       "ie_id": "C00747121-ie-1795589-EC1BBBFE0C2C04FB8BC9",
@@ -3887,7 +4421,9 @@
       "date": "2024-06-28",
       "purpose": "DIGITAL ADS",
       "payee": "GOOGLE",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202407109652767331"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202407109652767331",
+      "vendor_id": "V-google",
+      "medium": "digital"
     },
     {
       "ie_id": "C00747121-ie-1795589-EEA645DFABC384CC0A7A",
@@ -3900,7 +4436,9 @@
       "date": "2024-06-28",
       "purpose": "DIGITAL ADS",
       "payee": "GOOGLE",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202407109652767333"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202407109652767333",
+      "vendor_id": "V-google",
+      "medium": "digital"
     },
     {
       "ie_id": "C00747121-ie-1783053-EE760C728B5B944008EB",
@@ -3913,7 +4451,9 @@
       "date": "2024-04-30",
       "purpose": "DIGITAL ADS",
       "payee": "GOOGLE",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202405159646006246"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202405159646006246",
+      "vendor_id": "V-google",
+      "medium": "digital"
     },
     {
       "ie_id": "C00747121-ie-1783053-E31C69BBA5DD24550910",
@@ -3926,7 +4466,9 @@
       "date": "2024-04-30",
       "purpose": "DIGITAL ADS",
       "payee": "GOOGLE",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202405159646006245"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202405159646006245",
+      "vendor_id": "V-google",
+      "medium": "digital"
     },
     {
       "ie_id": "C00747121-ie-1795589-ED4FAA10112D34D1F820",
@@ -3939,7 +4481,9 @@
       "date": "2024-06-28",
       "purpose": "DIGITAL ADS",
       "payee": "GOOGLE",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202407109652767397"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202407109652767397",
+      "vendor_id": "V-google",
+      "medium": "digital"
     },
     {
       "ie_id": "C00747121-ie-1795589-E16F660FEB02F45BBA7B",
@@ -3952,7 +4496,9 @@
       "date": "2024-06-28",
       "purpose": "DIGITAL ADS",
       "payee": "GOOGLE",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202407109652767397"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202407109652767397",
+      "vendor_id": "V-google",
+      "medium": "digital"
     },
     {
       "ie_id": "C00747121-ie-1795589-E6F4534F8C9FB4A50B0F",
@@ -3965,7 +4511,9 @@
       "date": "2024-06-28",
       "purpose": "DIGITAL ADS",
       "payee": "GOOGLE",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202407109652767353"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202407109652767353",
+      "vendor_id": "V-google",
+      "medium": "digital"
     },
     {
       "ie_id": "C00747121-ie-1795589-E426701A825AB4F7C836",
@@ -3978,7 +4526,9 @@
       "date": "2024-06-28",
       "purpose": "DIGITAL ADS",
       "payee": "GOOGLE",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202407109652767352"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202407109652767352",
+      "vendor_id": "V-google",
+      "medium": "digital"
     },
     {
       "ie_id": "C00747121-ie-1789138-ECD4792B6AA6447F4979",
@@ -3991,7 +4541,9 @@
       "date": "2024-05-31",
       "purpose": "DIGITAL ADS",
       "payee": "GOOGLE",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202406139649014204"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202406139649014204",
+      "vendor_id": "V-google",
+      "medium": "digital"
     },
     {
       "ie_id": "C00747121-ie-1789138-E112FA25E43AC4196A3D",
@@ -4004,7 +4556,9 @@
       "date": "2024-05-31",
       "purpose": "DIGITAL ADS",
       "payee": "GOOGLE",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202406139649014204"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202406139649014204",
+      "vendor_id": "V-google",
+      "medium": "digital"
     },
     {
       "ie_id": "C00747121-ie-1789138-E983EE056F4954C2DA61",
@@ -4017,7 +4571,9 @@
       "date": "2024-05-31",
       "purpose": "DIGITAL ADS",
       "payee": "GOOGLE",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202406139649014218"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202406139649014218",
+      "vendor_id": "V-google",
+      "medium": "digital"
     },
     {
       "ie_id": "C00747121-ie-1789138-ECCDC492CC6524CEB89E",
@@ -4030,7 +4586,9 @@
       "date": "2024-05-31",
       "purpose": "DIGITAL ADS",
       "payee": "GOOGLE",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202406139649014220"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202406139649014220",
+      "vendor_id": "V-google",
+      "medium": "digital"
     },
     {
       "ie_id": "C00747121-ie-1795589-E09BFA9995FAC4CE4AED",
@@ -4043,7 +4601,9 @@
       "date": "2024-06-28",
       "purpose": "DIGITAL ADS",
       "payee": "GOOGLE",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202407109652767363"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202407109652767363",
+      "vendor_id": "V-google",
+      "medium": "digital"
     },
     {
       "ie_id": "C00747121-ie-1795589-EBE880FA9610C4ABE8E4",
@@ -4056,7 +4616,9 @@
       "date": "2024-06-28",
       "purpose": "DIGITAL ADS",
       "payee": "GOOGLE",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202407109652767361"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202407109652767361",
+      "vendor_id": "V-google",
+      "medium": "digital"
     },
     {
       "ie_id": "C00747121-ie-1795589-E41C919AD90C24DA9A1C",
@@ -4069,7 +4631,9 @@
       "date": "2024-06-28",
       "purpose": "DIGITAL ADS",
       "payee": "GOOGLE",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202407109652767317"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202407109652767317",
+      "vendor_id": "V-google",
+      "medium": "digital"
     },
     {
       "ie_id": "C00747121-ie-1795589-E1F2746E172CF4043812",
@@ -4082,7 +4646,9 @@
       "date": "2024-06-28",
       "purpose": "DIGITAL ADS",
       "payee": "GOOGLE",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202407109652767317"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202407109652767317",
+      "vendor_id": "V-google",
+      "medium": "digital"
     },
     {
       "ie_id": "C00747121-ie-1795589-E88693C878D444888B6D",
@@ -4095,7 +4661,9 @@
       "date": "2024-06-28",
       "purpose": "DIGITAL ADS",
       "payee": "GOOGLE",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202407109652767361"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202407109652767361",
+      "vendor_id": "V-google",
+      "medium": "digital"
     },
     {
       "ie_id": "C00747121-ie-1795589-EE1A440E9E39941D89BD",
@@ -4108,7 +4676,9 @@
       "date": "2024-06-28",
       "purpose": "DIGITAL ADS",
       "payee": "GOOGLE",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202407109652767358"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202407109652767358",
+      "vendor_id": "V-google",
+      "medium": "digital"
     },
     {
       "ie_id": "C00747121-ie-1795589-EEC33E8E273BE487BA2A",
@@ -4121,7 +4691,9 @@
       "date": "2024-06-28",
       "purpose": "DIGITAL ADS",
       "payee": "GOOGLE",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202407109652767341"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202407109652767341",
+      "vendor_id": "V-google",
+      "medium": "digital"
     },
     {
       "ie_id": "C00747121-ie-1795589-E8F63CE6A918341CC831",
@@ -4134,7 +4706,9 @@
       "date": "2024-06-28",
       "purpose": "DIGITAL ADS",
       "payee": "GOOGLE",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202407109652767340"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202407109652767340",
+      "vendor_id": "V-google",
+      "medium": "digital"
     },
     {
       "ie_id": "C00747121-ie-1815418-EF581249CCFC441B6A61",
@@ -4147,7 +4721,9 @@
       "date": "2024-08-24",
       "purpose": "DIGITAL ADS",
       "payee": "GOOGLE",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202409139675433724"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202409139675433724",
+      "vendor_id": "V-google",
+      "medium": "digital"
     },
     {
       "ie_id": "C00747121-ie-1815418-EE7E9AA8AD1C240EEADC",
@@ -4160,7 +4736,9 @@
       "date": "2024-08-24",
       "purpose": "DIGITAL ADS",
       "payee": "GOOGLE",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202409139675433726"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202409139675433726",
+      "vendor_id": "V-google",
+      "medium": "digital"
     },
     {
       "ie_id": "C00747121-ie-1808506-E2EB24E9005D8496987D",
@@ -4173,7 +4751,9 @@
       "date": "2024-07-25",
       "purpose": "DIGITAL ADS",
       "payee": "GOOGLE",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202408079666111449"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202408079666111449",
+      "vendor_id": "V-google",
+      "medium": "digital"
     },
     {
       "ie_id": "C00747121-ie-1808506-E811686621B9548B495D",
@@ -4186,7 +4766,9 @@
       "date": "2024-07-25",
       "purpose": "DIGITAL ADS",
       "payee": "GOOGLE",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202408079666111448"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202408079666111448",
+      "vendor_id": "V-google",
+      "medium": "digital"
     },
     {
       "ie_id": "C00747121-ie-1808506-EF2DEB3FB223648A5B8D",
@@ -4199,7 +4781,9 @@
       "date": "2024-07-25",
       "purpose": "DIGITAL ADS",
       "payee": "GOOGLE",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202408079666111460"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202408079666111460",
+      "vendor_id": "V-google",
+      "medium": "digital"
     },
     {
       "ie_id": "C00747121-ie-1808506-EE5636261BD4540E4AE2",
@@ -4212,7 +4796,9 @@
       "date": "2024-07-25",
       "purpose": "DIGITAL ADS",
       "payee": "GOOGLE",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202408079666111461"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202408079666111461",
+      "vendor_id": "V-google",
+      "medium": "digital"
     },
     {
       "ie_id": "C00747121-ie-1795589-EFBA9FD4971CE420E954",
@@ -4225,7 +4811,9 @@
       "date": "2024-06-28",
       "purpose": "DIGITAL ADS",
       "payee": "GOOGLE",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202407109652767400"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202407109652767400",
+      "vendor_id": "V-google",
+      "medium": "digital"
     },
     {
       "ie_id": "C00747121-ie-1795589-E20C077C057FA479C8BD",
@@ -4238,7 +4826,9 @@
       "date": "2024-06-28",
       "purpose": "DIGITAL ADS",
       "payee": "GOOGLE",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202407109652767401"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202407109652767401",
+      "vendor_id": "V-google",
+      "medium": "digital"
     },
     {
       "ie_id": "C00747121-ie-1789138-E64F593FC9C814E3D988",
@@ -4251,7 +4841,9 @@
       "date": "2024-05-31",
       "purpose": "DIGITAL ADS",
       "payee": "GOOGLE",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202406139649014216"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202406139649014216",
+      "vendor_id": "V-google",
+      "medium": "digital"
     },
     {
       "ie_id": "C00747121-ie-1789138-E6B00E6B59BC5462682A",
@@ -4264,7 +4856,9 @@
       "date": "2024-05-31",
       "purpose": "DIGITAL ADS",
       "payee": "GOOGLE",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202406139649014216"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202406139649014216",
+      "vendor_id": "V-google",
+      "medium": "digital"
     },
     {
       "ie_id": "C00747121-ie-1815418-E857D43B86D244F73A46",
@@ -4277,7 +4871,9 @@
       "date": "2024-08-31",
       "purpose": "DIGITAL ADS",
       "payee": "GOOGLE",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202409139675433781"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202409139675433781",
+      "vendor_id": "V-google",
+      "medium": "digital"
     },
     {
       "ie_id": "C00747121-ie-1815418-EE14A216231E44F74A25",
@@ -4290,7 +4886,9 @@
       "date": "2024-08-31",
       "purpose": "DIGITAL ADS",
       "payee": "GOOGLE",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202409139675433782"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202409139675433782",
+      "vendor_id": "V-google",
+      "medium": "digital"
     },
     {
       "ie_id": "C00747121-ie-1795589-E0A32EC70F3754C8EB63",
@@ -4303,7 +4901,9 @@
       "date": "2024-06-28",
       "purpose": "DIGITAL ADS",
       "payee": "GOOGLE",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202407109652767312"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202407109652767312",
+      "vendor_id": "V-google",
+      "medium": "digital"
     },
     {
       "ie_id": "C00747121-ie-1795589-EB9FC8E05D6014471A65",
@@ -4316,7 +4916,9 @@
       "date": "2024-06-28",
       "purpose": "DIGITAL ADS",
       "payee": "GOOGLE",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202407109652767311"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202407109652767311",
+      "vendor_id": "V-google",
+      "medium": "digital"
     },
     {
       "ie_id": "C00747121-ie-1815418-E9A325FE62C47494689A",
@@ -4329,7 +4931,9 @@
       "date": "2024-08-24",
       "purpose": "DIGITAL ADS",
       "payee": "GOOGLE",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202409139675433739"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202409139675433739",
+      "vendor_id": "V-google",
+      "medium": "digital"
     },
     {
       "ie_id": "C00747121-ie-1815418-E19F47991A86D4C128FA",
@@ -4342,7 +4946,9 @@
       "date": "2024-08-24",
       "purpose": "DIGITAL ADS",
       "payee": "GOOGLE",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202409139675433737"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202409139675433737",
+      "vendor_id": "V-google",
+      "medium": "digital"
     },
     {
       "ie_id": "C00747121-ie-1808506-EAD0C0EAF36A644AEBB2",
@@ -4355,7 +4961,9 @@
       "date": "2024-07-25",
       "purpose": "DIGITAL ADS",
       "payee": "GOOGLE",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202408079666111488"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202408079666111488",
+      "vendor_id": "V-google",
+      "medium": "digital"
     },
     {
       "ie_id": "C00747121-ie-1808506-EF37503B922E64A70BAE",
@@ -4368,7 +4976,9 @@
       "date": "2024-07-25",
       "purpose": "DIGITAL ADS",
       "payee": "GOOGLE",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202408079666111487"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202408079666111487",
+      "vendor_id": "V-google",
+      "medium": "digital"
     },
     {
       "ie_id": "C00747121-ie-1789138-E91D4C8B23B384196AF1",
@@ -4381,7 +4991,9 @@
       "date": "2024-05-31",
       "purpose": "DIGITAL ADS",
       "payee": "GOOGLE",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202406139649014211"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202406139649014211",
+      "vendor_id": "V-google",
+      "medium": "digital"
     },
     {
       "ie_id": "C00747121-ie-1789138-EF3965391DDBC46C2AB2",
@@ -4394,7 +5006,9 @@
       "date": "2024-05-31",
       "purpose": "DIGITAL ADS",
       "payee": "GOOGLE",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202406139649014210"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202406139649014210",
+      "vendor_id": "V-google",
+      "medium": "digital"
     },
     {
       "ie_id": "C00747121-ie-1815418-E43C24207A5CD438B9FC",
@@ -4407,7 +5021,9 @@
       "date": "2024-08-24",
       "purpose": "DIGITAL ADS",
       "payee": "GOOGLE",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202409139675433721"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202409139675433721",
+      "vendor_id": "V-google",
+      "medium": "digital"
     },
     {
       "ie_id": "C00747121-ie-1815418-E6AA2B899D72E4302A59",
@@ -4420,7 +5036,9 @@
       "date": "2024-08-24",
       "purpose": "DIGITAL ADS",
       "payee": "GOOGLE",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202409139675433720"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202409139675433720",
+      "vendor_id": "V-google",
+      "medium": "digital"
     },
     {
       "ie_id": "C00747121-ie-1808506-E0586EB6465C643998CE",
@@ -4433,7 +5051,9 @@
       "date": "2024-07-25",
       "purpose": "DIGITAL ADS",
       "payee": "GOOGLE",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202408079666111452"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202408079666111452",
+      "vendor_id": "V-google",
+      "medium": "digital"
     },
     {
       "ie_id": "C00747121-ie-1808506-E9953D9DA4E4040A5972",
@@ -4446,7 +5066,9 @@
       "date": "2024-07-25",
       "purpose": "DIGITAL ADS",
       "payee": "GOOGLE",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202408079666111454"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202408079666111454",
+      "vendor_id": "V-google",
+      "medium": "digital"
     },
     {
       "ie_id": "C00747121-ie-1808506-E0F45D7D7508942849D8",
@@ -4459,7 +5081,9 @@
       "date": "2024-07-25",
       "purpose": "DIGITAL ADS",
       "payee": "GOOGLE",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202408079666111466"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202408079666111466",
+      "vendor_id": "V-google",
+      "medium": "digital"
     },
     {
       "ie_id": "C00747121-ie-1808506-EE0D2055E6F064C6FA1A",
@@ -4472,7 +5096,9 @@
       "date": "2024-07-25",
       "purpose": "DIGITAL ADS",
       "payee": "GOOGLE",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202408079666111468"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202408079666111468",
+      "vendor_id": "V-google",
+      "medium": "digital"
     },
     {
       "ie_id": "C00747121-ie-1808506-E143BA00DB1854E1693F",
@@ -4485,7 +5111,9 @@
       "date": "2024-07-25",
       "purpose": "DIGITAL ADS",
       "payee": "GOOGLE",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202408079666111471"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202408079666111471",
+      "vendor_id": "V-google",
+      "medium": "digital"
     },
     {
       "ie_id": "C00747121-ie-1808506-EABF5637D8778461A8D8",
@@ -4498,7 +5126,9 @@
       "date": "2024-07-25",
       "purpose": "DIGITAL ADS",
       "payee": "GOOGLE",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202408079666111470"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202408079666111470",
+      "vendor_id": "V-google",
+      "medium": "digital"
     },
     {
       "ie_id": "C00747121-ie-1808506-EDBEB80A8577644DF9F8",
@@ -4511,7 +5141,9 @@
       "date": "2024-07-25",
       "purpose": "DIGITAL ADS",
       "payee": "GOOGLE",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202408079666111504"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202408079666111504",
+      "vendor_id": "V-google",
+      "medium": "digital"
     },
     {
       "ie_id": "C00747121-ie-1808506-E8AF3E8E0BC594001927",
@@ -4524,7 +5156,9 @@
       "date": "2024-07-25",
       "purpose": "DIGITAL ADS",
       "payee": "GOOGLE",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202408079666111502"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202408079666111502",
+      "vendor_id": "V-google",
+      "medium": "digital"
     },
     {
       "ie_id": "C00747121-ie-1823303-ED414916623E744D392E",
@@ -4537,7 +5171,9 @@
       "date": "2024-09-13",
       "purpose": "DIGITAL ADS",
       "payee": "GOOGLE",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202410119684892264"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202410119684892264",
+      "vendor_id": "V-google",
+      "medium": "digital"
     },
     {
       "ie_id": "C00747121-ie-1823303-E0EE87F9315CD481C90F",
@@ -4550,7 +5186,9 @@
       "date": "2024-09-13",
       "purpose": "DIGITAL ADS",
       "payee": "GOOGLE",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202410119684892265"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202410119684892265",
+      "vendor_id": "V-google",
+      "medium": "digital"
     },
     {
       "ie_id": "C00747121-ie-1808506-E20541BA104864815919",
@@ -4563,7 +5201,9 @@
       "date": "2024-07-25",
       "purpose": "DIGITAL ADS",
       "payee": "GOOGLE",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202408079666111490"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202408079666111490",
+      "vendor_id": "V-google",
+      "medium": "digital"
     },
     {
       "ie_id": "C00747121-ie-1808506-E5EAD86E25CCD4428AD7",
@@ -4576,7 +5216,9 @@
       "date": "2024-07-25",
       "purpose": "DIGITAL ADS",
       "payee": "GOOGLE",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202408079666111492"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202408079666111492",
+      "vendor_id": "V-google",
+      "medium": "digital"
     },
     {
       "ie_id": "C00747121-ie-1808506-E02AC9C8DAFEE412B838",
@@ -4589,7 +5231,9 @@
       "date": "2024-07-25",
       "purpose": "DIGITAL ADS",
       "payee": "GOOGLE",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202408079666111464"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202408079666111464",
+      "vendor_id": "V-google",
+      "medium": "digital"
     },
     {
       "ie_id": "C00747121-ie-1808506-E239ABB9A625D4BE3B75",
@@ -4602,7 +5246,9 @@
       "date": "2024-07-25",
       "purpose": "DIGITAL ADS",
       "payee": "GOOGLE",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202408079666111464"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202408079666111464",
+      "vendor_id": "V-google",
+      "medium": "digital"
     },
     {
       "ie_id": "C00747121-ie-1789138-E05CA23337EBF4BFDBAE",
@@ -4615,7 +5261,9 @@
       "date": "2024-05-31",
       "purpose": "DIGITAL ADS",
       "payee": "GOOGLE",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202406139649014278"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202406139649014278",
+      "vendor_id": "V-google",
+      "medium": "digital"
     },
     {
       "ie_id": "C00747121-ie-1789138-E78EBCDCC4E564E3797F",
@@ -4628,7 +5276,9 @@
       "date": "2024-05-31",
       "purpose": "DIGITAL ADS",
       "payee": "GOOGLE",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202406139649014279"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202406139649014279",
+      "vendor_id": "V-google",
+      "medium": "digital"
     },
     {
       "ie_id": "C00747121-ie-1808506-E4CB4482492244247BD6",
@@ -4641,7 +5291,9 @@
       "date": "2024-07-25",
       "purpose": "DIGITAL ADS",
       "payee": "GOOGLE",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202408079666111498"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202408079666111498",
+      "vendor_id": "V-google",
+      "medium": "digital"
     },
     {
       "ie_id": "C00747121-ie-1808506-EFF6C358F726F445B839",
@@ -4654,7 +5306,9 @@
       "date": "2024-07-25",
       "purpose": "DIGITAL ADS",
       "payee": "GOOGLE",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202408079666111499"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202408079666111499",
+      "vendor_id": "V-google",
+      "medium": "digital"
     },
     {
       "ie_id": "C00747121-ie-1789138-EE7903C5C3DF84EC788B",
@@ -4667,7 +5321,9 @@
       "date": "2024-05-31",
       "purpose": "DIGITAL ADS",
       "payee": "GOOGLE",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202406139649014281"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202406139649014281",
+      "vendor_id": "V-google",
+      "medium": "digital"
     },
     {
       "ie_id": "C00747121-ie-1789138-EFED6D95B88184D8DB6C",
@@ -4680,7 +5336,9 @@
       "date": "2024-05-31",
       "purpose": "DIGITAL ADS",
       "payee": "GOOGLE",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202406139649014282"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202406139649014282",
+      "vendor_id": "V-google",
+      "medium": "digital"
     },
     {
       "ie_id": "C00747121-ie-1795589-E4590CECEEC4D41AF951",
@@ -4693,7 +5351,9 @@
       "date": "2024-06-28",
       "purpose": "DIGITAL ADS",
       "payee": "GOOGLE",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202407109652767388"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202407109652767388",
+      "vendor_id": "V-google",
+      "medium": "digital"
     },
     {
       "ie_id": "C00747121-ie-1795589-EEEA1A0D14D4D462FB61",
@@ -4706,7 +5366,9 @@
       "date": "2024-06-28",
       "purpose": "DIGITAL ADS",
       "payee": "GOOGLE",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202407109652767386"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202407109652767386",
+      "vendor_id": "V-google",
+      "medium": "digital"
     },
     {
       "ie_id": "C00747121-ie-1789138-E71A0FB32270C4177874",
@@ -4719,7 +5381,9 @@
       "date": "2024-05-31",
       "purpose": "DIGITAL ADS",
       "payee": "GOOGLE",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202406139649014276"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202406139649014276",
+      "vendor_id": "V-google",
+      "medium": "digital"
     },
     {
       "ie_id": "C00747121-ie-1789138-E90BFA14BB82145FBBEF",
@@ -4732,7 +5396,9 @@
       "date": "2024-05-31",
       "purpose": "DIGITAL ADS",
       "payee": "GOOGLE",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202406139649014274"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202406139649014274",
+      "vendor_id": "V-google",
+      "medium": "digital"
     },
     {
       "ie_id": "C00747121-ie-1795589-EEA5F8C20CE2246F5B3E",
@@ -4745,7 +5411,9 @@
       "date": "2024-06-28",
       "purpose": "DIGITAL ADS",
       "payee": "GOOGLE",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202407109652767378"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202407109652767378",
+      "vendor_id": "V-google",
+      "medium": "digital"
     },
     {
       "ie_id": "C00747121-ie-1795589-E5BE8A9FBE1D14CACB7E",
@@ -4758,7 +5426,9 @@
       "date": "2024-06-28",
       "purpose": "DIGITAL ADS",
       "payee": "GOOGLE",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202407109652767379"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202407109652767379",
+      "vendor_id": "V-google",
+      "medium": "digital"
     },
     {
       "ie_id": "C00747121-ie-1795589-EDA315F0EBA8F4B43934",
@@ -4771,7 +5441,9 @@
       "date": "2024-06-28",
       "purpose": "DIGITAL ADS",
       "payee": "GOOGLE",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202407109652767384"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202407109652767384",
+      "vendor_id": "V-google",
+      "medium": "digital"
     },
     {
       "ie_id": "C00747121-ie-1795589-EFBA64DC340694086A65",
@@ -4784,7 +5456,9 @@
       "date": "2024-06-28",
       "purpose": "DIGITAL ADS",
       "payee": "GOOGLE",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202407109652767384"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202407109652767384",
+      "vendor_id": "V-google",
+      "medium": "digital"
     },
     {
       "ie_id": "C00747121-ie-1856632-E2E81437B57C44E2DB18",
@@ -4797,7 +5471,9 @@
       "date": "2024-10-21",
       "purpose": "DIGITAL ADS",
       "payee": "GOOGLE",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202412059721255520"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202412059721255520",
+      "vendor_id": "V-google",
+      "medium": "digital"
     },
     {
       "ie_id": "C00747121-ie-1856632-EC41A96B2DB644A03BD5",
@@ -4810,7 +5486,9 @@
       "date": "2024-10-21",
       "purpose": "DIGITAL ADS",
       "payee": "GOOGLE",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202412059721255521"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202412059721255521",
+      "vendor_id": "V-google",
+      "medium": "digital"
     },
     {
       "ie_id": "C00747121-ie-1823303-E616FC98981284C60924",
@@ -4823,7 +5501,9 @@
       "date": "2024-09-13",
       "purpose": "DIGITAL ADS",
       "payee": "GOOGLE",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202410119684892260"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202410119684892260",
+      "vendor_id": "V-google",
+      "medium": "digital"
     },
     {
       "ie_id": "C00747121-ie-1823303-E5E95BC374168409A919",
@@ -4836,7 +5516,9 @@
       "date": "2024-09-13",
       "purpose": "DIGITAL ADS",
       "payee": "GOOGLE",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202410119684892259"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202410119684892259",
+      "vendor_id": "V-google",
+      "medium": "digital"
     },
     {
       "ie_id": "C00747121-ie-1815418-E2B7E0EC86CEF40ADBEE",
@@ -4849,7 +5531,9 @@
       "date": "2024-08-24",
       "purpose": "DIGITAL ADS",
       "payee": "GOOGLE",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202409139675433736"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202409139675433736",
+      "vendor_id": "V-google",
+      "medium": "digital"
     },
     {
       "ie_id": "C00747121-ie-1815418-E3BD5E1FDD236456E8B1",
@@ -4862,7 +5546,9 @@
       "date": "2024-08-24",
       "purpose": "DIGITAL ADS",
       "payee": "GOOGLE",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202409139675433733"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202409139675433733",
+      "vendor_id": "V-google",
+      "medium": "digital"
     },
     {
       "ie_id": "C00747121-ie-1795589-ECD609FBBB53D4B449AB",
@@ -4875,7 +5561,9 @@
       "date": "2024-06-28",
       "purpose": "DIGITAL ADS",
       "payee": "GOOGLE",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202407109652767406"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202407109652767406",
+      "vendor_id": "V-google",
+      "medium": "digital"
     },
     {
       "ie_id": "C00747121-ie-1795589-E566FDAFEBCC840FEA6D",
@@ -4888,7 +5576,9 @@
       "date": "2024-06-28",
       "purpose": "DIGITAL ADS",
       "payee": "GOOGLE",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202407109652767404"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202407109652767404",
+      "vendor_id": "V-google",
+      "medium": "digital"
     },
     {
       "ie_id": "C00747121-ie-1808506-E3840B363D3F34FDBA87",
@@ -4901,7 +5591,9 @@
       "date": "2024-07-25",
       "purpose": "DIGITAL ADS",
       "payee": "GOOGLE",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202408079666111478"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202408079666111478",
+      "vendor_id": "V-google",
+      "medium": "digital"
     },
     {
       "ie_id": "C00747121-ie-1808506-E8721CA559CE343F4858",
@@ -4914,7 +5606,9 @@
       "date": "2024-07-25",
       "purpose": "DIGITAL ADS",
       "payee": "GOOGLE",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202408079666111478"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202408079666111478",
+      "vendor_id": "V-google",
+      "medium": "digital"
     },
     {
       "ie_id": "C00747121-ie-1808506-E1A0A5437037444CF9FF",
@@ -4927,7 +5621,9 @@
       "date": "2024-07-25",
       "purpose": "DIGITAL ADS",
       "payee": "GOOGLE",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202408079666111494"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202408079666111494",
+      "vendor_id": "V-google",
+      "medium": "digital"
     },
     {
       "ie_id": "C00747121-ie-1808506-EA390968FB35F4323ADD",
@@ -4940,7 +5636,9 @@
       "date": "2024-07-25",
       "purpose": "DIGITAL ADS",
       "payee": "GOOGLE",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202408079666111494"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202408079666111494",
+      "vendor_id": "V-google",
+      "medium": "digital"
     },
     {
       "ie_id": "C00747121-ie-1808506-EF988291855DD4990A4C",
@@ -4953,7 +5651,9 @@
       "date": "2024-07-25",
       "purpose": "DIGITAL ADS",
       "payee": "GOOGLE",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202408079666111456"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202408079666111456",
+      "vendor_id": "V-google",
+      "medium": "digital"
     },
     {
       "ie_id": "C00747121-ie-1808506-EC089216079484B698B1",
@@ -4966,7 +5666,9 @@
       "date": "2024-07-25",
       "purpose": "DIGITAL ADS",
       "payee": "GOOGLE",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202408079666111455"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202408079666111455",
+      "vendor_id": "V-google",
+      "medium": "digital"
     },
     {
       "ie_id": "C00747121-ie-1789138-EB1D132D4F6D54918AC7",
@@ -4979,7 +5681,9 @@
       "date": "2024-05-31",
       "purpose": "DIGITAL ADS",
       "payee": "GOOGLE",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202406139649014285"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202406139649014285",
+      "vendor_id": "V-google",
+      "medium": "digital"
     },
     {
       "ie_id": "C00747121-ie-1789138-E72DE8C83790C4D20B2A",
@@ -4992,7 +5696,9 @@
       "date": "2024-05-31",
       "purpose": "DIGITAL ADS",
       "payee": "GOOGLE",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202406139649014285"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202406139649014285",
+      "vendor_id": "V-google",
+      "medium": "digital"
     },
     {
       "ie_id": "C00747121-ie-1808506-EEBEEDCD7498A443A845",
@@ -5005,7 +5711,9 @@
       "date": "2024-07-25",
       "purpose": "DIGITAL ADS",
       "payee": "GOOGLE",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202408079666111439"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202408079666111439",
+      "vendor_id": "V-google",
+      "medium": "digital"
     },
     {
       "ie_id": "C00747121-ie-1808506-EBD40ABD1622144F8B64",
@@ -5018,7 +5726,9 @@
       "date": "2024-07-25",
       "purpose": "DIGITAL ADS",
       "payee": "GOOGLE",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202408079666111440"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202408079666111440",
+      "vendor_id": "V-google",
+      "medium": "digital"
     },
     {
       "ie_id": "C00747121-ie-1808506-EA80579C68A6341D6B70",
@@ -5031,7 +5741,9 @@
       "date": "2024-07-25",
       "purpose": "DIGITAL ADS",
       "payee": "GOOGLE",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202408079666111475"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202408079666111475",
+      "vendor_id": "V-google",
+      "medium": "digital"
     },
     {
       "ie_id": "C00747121-ie-1808506-ECF01453B0ACC4C9D84E",
@@ -5044,7 +5756,9 @@
       "date": "2024-07-25",
       "purpose": "DIGITAL ADS",
       "payee": "GOOGLE",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202408079666111474"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202408079666111474",
+      "vendor_id": "V-google",
+      "medium": "digital"
     },
     {
       "ie_id": "C00747121-ie-1823303-EDF92CB88425C4600AA9",
@@ -5057,7 +5771,9 @@
       "date": "2024-09-13",
       "purpose": "DIGITAL ADS",
       "payee": "GOOGLE",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202410119684892271"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202410119684892271",
+      "vendor_id": "V-google",
+      "medium": "digital"
     },
     {
       "ie_id": "C00747121-ie-1823303-E119ED1487E2E486D99E",
@@ -5070,7 +5786,9 @@
       "date": "2024-09-13",
       "purpose": "DIGITAL ADS",
       "payee": "GOOGLE",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202410119684892269"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202410119684892269",
+      "vendor_id": "V-google",
+      "medium": "digital"
     },
     {
       "ie_id": "C00747121-ie-1815418-EF4D106997AC6400488B",
@@ -5083,7 +5801,9 @@
       "date": "2024-08-24",
       "purpose": "DIGITAL ADS",
       "payee": "GOOGLE",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202409139675433730"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202409139675433730",
+      "vendor_id": "V-google",
+      "medium": "digital"
     },
     {
       "ie_id": "C00747121-ie-1815418-E513D223A261043E8867",
@@ -5096,7 +5816,9 @@
       "date": "2024-08-24",
       "purpose": "DIGITAL ADS",
       "payee": "GOOGLE",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202409139675433730"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202409139675433730",
+      "vendor_id": "V-google",
+      "medium": "digital"
     },
     {
       "ie_id": "C00747121-ie-1795589-E25DE6377BCD34FA3920",
@@ -5109,7 +5831,9 @@
       "date": "2024-06-28",
       "purpose": "DIGITAL ADS",
       "payee": "GOOGLE",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202407109652767394"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202407109652767394",
+      "vendor_id": "V-google",
+      "medium": "digital"
     },
     {
       "ie_id": "C00747121-ie-1795589-E137C00FE42D44947BE6",
@@ -5122,7 +5846,9 @@
       "date": "2024-06-28",
       "purpose": "DIGITAL ADS",
       "payee": "GOOGLE",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202407109652767392"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202407109652767392",
+      "vendor_id": "V-google",
+      "medium": "digital"
     },
     {
       "ie_id": "C00747121-ie-1808506-E174342A1F7FA47AFBF1",
@@ -5135,7 +5861,9 @@
       "date": "2024-07-25",
       "purpose": "DIGITAL ADS",
       "payee": "GOOGLE",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202408079666111484"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202408079666111484",
+      "vendor_id": "V-google",
+      "medium": "digital"
     },
     {
       "ie_id": "C00747121-ie-1808506-ECC5338A08A464EE1A46",
@@ -5148,7 +5876,9 @@
       "date": "2024-07-25",
       "purpose": "DIGITAL ADS",
       "payee": "GOOGLE",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202408079666111482"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202408079666111482",
+      "vendor_id": "V-google",
+      "medium": "digital"
     },
     {
       "ie_id": "C00747121-ie-1795589-E610976472D584B728AC",
@@ -5161,7 +5891,9 @@
       "date": "2024-06-28",
       "purpose": "DIGITAL ADS",
       "payee": "GOOGLE",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202407109652767389"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202407109652767389",
+      "vendor_id": "V-google",
+      "medium": "digital"
     },
     {
       "ie_id": "C00747121-ie-1795589-EDD7D48C578604DF6B73",
@@ -5174,7 +5906,9 @@
       "date": "2024-06-28",
       "purpose": "DIGITAL ADS",
       "payee": "GOOGLE",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202407109652767388"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202407109652767388",
+      "vendor_id": "V-google",
+      "medium": "digital"
     },
     {
       "ie_id": "C00747121-ie-1808506-E8C40C83074D44EC59E4",
@@ -5187,7 +5921,9 @@
       "date": "2024-07-25",
       "purpose": "DIGITAL ADS",
       "payee": "GOOGLE",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202408079666111444"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202408079666111444",
+      "vendor_id": "V-google",
+      "medium": "digital"
     },
     {
       "ie_id": "C00747121-ie-1808506-E474CAD5351E94ADDBC5",
@@ -5200,7 +5936,9 @@
       "date": "2024-07-25",
       "purpose": "DIGITAL ADS",
       "payee": "GOOGLE",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202408079666111446"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202408079666111446",
+      "vendor_id": "V-google",
+      "medium": "digital"
     },
     {
       "ie_id": "C00747121-ie-1795589-E161F912CC1BA48C7A31",
@@ -5213,7 +5951,9 @@
       "date": "2024-06-28",
       "purpose": "DIGITAL ADS",
       "payee": "GOOGLE",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202407109652767314"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202407109652767314",
+      "vendor_id": "V-google",
+      "medium": "digital"
     },
     {
       "ie_id": "C00747121-ie-1795589-E93BAE7968C1944B6B24",
@@ -5226,7 +5966,9 @@
       "date": "2024-06-28",
       "purpose": "DIGITAL ADS",
       "payee": "GOOGLE",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202407109652767315"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202407109652767315",
+      "vendor_id": "V-google",
+      "medium": "digital"
     },
     {
       "ie_id": "C00747121-ie-1815418-EF1950097376443CF850",
@@ -5239,7 +5981,9 @@
       "date": "2024-08-31",
       "purpose": "DIGITAL ADS",
       "payee": "GOOGLE",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202409139675433773"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202409139675433773",
+      "vendor_id": "V-google",
+      "medium": "digital"
     },
     {
       "ie_id": "C00747121-ie-1815418-E2C9365C6251046E4803",
@@ -5252,7 +5996,9 @@
       "date": "2024-08-31",
       "purpose": "DIGITAL ADS",
       "payee": "GOOGLE",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202409139675433774"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202409139675433774",
+      "vendor_id": "V-google",
+      "medium": "digital"
     },
     {
       "ie_id": "C00747121-ie-1795589-E7CB9A83122AC4665B6D",
@@ -5265,7 +6011,9 @@
       "date": "2024-06-28",
       "purpose": "DIGITAL ADS",
       "payee": "GOOGLE",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202407109652767310"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202407109652767310",
+      "vendor_id": "V-google",
+      "medium": "digital"
     },
     {
       "ie_id": "C00747121-ie-1795589-E31203C00CF7B48C893D",
@@ -5278,7 +6026,9 @@
       "date": "2024-06-28",
       "purpose": "DIGITAL ADS",
       "payee": "GOOGLE",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202407109652767309"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202407109652767309",
+      "vendor_id": "V-google",
+      "medium": "digital"
     },
     {
       "ie_id": "C00747121-ie-1795589-E03B6663520DC4C5888B",
@@ -5291,7 +6041,9 @@
       "date": "2024-06-28",
       "purpose": "DIGITAL ADS",
       "payee": "GOOGLE",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202407109652767411"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202407109652767411",
+      "vendor_id": "V-google",
+      "medium": "digital"
     },
     {
       "ie_id": "C00747121-ie-1795589-EB1187AD0F0BE4FAF981",
@@ -5304,7 +6056,9 @@
       "date": "2024-06-28",
       "purpose": "DIGITAL ADS",
       "payee": "GOOGLE",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202407109652767408"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202407109652767408",
+      "vendor_id": "V-google",
+      "medium": "digital"
     },
     {
       "ie_id": "C00747121-ie-1815418-E36A6F89B6B904546B61",
@@ -5317,7 +6071,9 @@
       "date": "2024-08-31",
       "purpose": "DIGITAL ADS",
       "payee": "GOOGLE",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202409139675433764"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202409139675433764",
+      "vendor_id": "V-google",
+      "medium": "digital"
     },
     {
       "ie_id": "C00747121-ie-1815418-EE2F20675495B4A7DA2F",
@@ -5330,7 +6086,9 @@
       "date": "2024-08-31",
       "purpose": "DIGITAL ADS",
       "payee": "GOOGLE",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202409139675433762"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202409139675433762",
+      "vendor_id": "V-google",
+      "medium": "digital"
     },
     {
       "ie_id": "C00747121-ie-1815418-E5C4C4C73BB1A4724B40",
@@ -5343,7 +6101,9 @@
       "date": "2024-08-31",
       "purpose": "DIGITAL ADS",
       "payee": "GOOGLE",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202409139675433767"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202409139675433767",
+      "vendor_id": "V-google",
+      "medium": "digital"
     },
     {
       "ie_id": "C00747121-ie-1815418-E400A88CA15C34A4FBC2",
@@ -5356,7 +6116,9 @@
       "date": "2024-08-31",
       "purpose": "DIGITAL ADS",
       "payee": "GOOGLE",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202409139675433770"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202409139675433770",
+      "vendor_id": "V-google",
+      "medium": "digital"
     },
     {
       "ie_id": "C00747121-ie-1815418-EC18003284F564D27AE7",
@@ -5369,7 +6131,9 @@
       "date": "2024-08-24",
       "purpose": "DIGITAL ADS",
       "payee": "GOOGLE",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202409139675433749"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202409139675433749",
+      "vendor_id": "V-google",
+      "medium": "digital"
     },
     {
       "ie_id": "C00747121-ie-1815418-E22703D1D48FB4667A05",
@@ -5382,7 +6146,9 @@
       "date": "2024-08-24",
       "purpose": "DIGITAL ADS",
       "payee": "GOOGLE",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202409139675433748"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202409139675433748",
+      "vendor_id": "V-google",
+      "medium": "digital"
     },
     {
       "ie_id": "C00747121-ie-1856632-E113636CBC5154BC2ACC",
@@ -5395,7 +6161,9 @@
       "date": "2024-11-04",
       "purpose": "YOUTUBE ADS",
       "payee": "GOOGLE",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202412059721255470"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202412059721255470",
+      "vendor_id": "V-google",
+      "medium": "digital"
     },
     {
       "ie_id": "C00747121-ie-1869512-ED51F885BE03F47D7AE8",
@@ -5408,7 +6176,9 @@
       "date": "2024-12-04",
       "purpose": "PMT FOR EST FROM 11/4/2024. YOUTUBE ADS",
       "payee": "GOOGLE",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202501309748716419"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202501309748716419",
+      "vendor_id": "V-google",
+      "medium": "digital"
     },
     {
       "ie_id": "C00747121-ie-1856632-E88A11C83CF6B410F8A0",
@@ -5421,7 +6191,9 @@
       "date": "2024-11-03",
       "purpose": "YOUTUBE ADS",
       "payee": "GOOGLE",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202412059721255467"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202412059721255467",
+      "vendor_id": "V-google",
+      "medium": "digital"
     },
     {
       "ie_id": "C00747121-ie-1869512-EDEAD42C020F34F96A19",
@@ -5434,7 +6206,9 @@
       "date": "2024-12-04",
       "purpose": "PMT FOR EST FROM 11/3/2024. YOUTUBE ADS",
       "payee": "GOOGLE",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202501309748716427"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202501309748716427",
+      "vendor_id": "V-google",
+      "medium": "digital"
     },
     {
       "ie_id": "C00747121-ie-1815418-E75B7499233684177B3D",
@@ -5447,7 +6221,9 @@
       "date": "2024-08-31",
       "purpose": "DIGITAL ADS",
       "payee": "GOOGLE",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202409139675433758"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202409139675433758",
+      "vendor_id": "V-google",
+      "medium": "digital"
     },
     {
       "ie_id": "C00747121-ie-1815418-EF911BE723C1240A9B5F",
@@ -5460,7 +6236,9 @@
       "date": "2024-08-31",
       "purpose": "DIGITAL ADS",
       "payee": "GOOGLE",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202409139675433760"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202409139675433760",
+      "vendor_id": "V-google",
+      "medium": "digital"
     },
     {
       "ie_id": "C00747121-ie-1789138-E47D468D3C79F47F582E",
@@ -5473,7 +6251,9 @@
       "date": "2024-05-31",
       "purpose": "DIGITAL ADS",
       "payee": "GOOGLE",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202406139649014287"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202406139649014287",
+      "vendor_id": "V-google",
+      "medium": "digital"
     },
     {
       "ie_id": "C00747121-ie-1789138-E8293991D01E34618AF1",
@@ -5486,7 +6266,9 @@
       "date": "2024-05-31",
       "purpose": "DIGITAL ADS",
       "payee": "GOOGLE",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202406139649014287"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202406139649014287",
+      "vendor_id": "V-google",
+      "medium": "digital"
     },
     {
       "ie_id": "C00747121-ie-1815418-E10951B426E414480B47",
@@ -5499,7 +6281,9 @@
       "date": "2024-08-31",
       "purpose": "DIGITAL ADS",
       "payee": "GOOGLE",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202409139675433754"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202409139675433754",
+      "vendor_id": "V-google",
+      "medium": "digital"
     },
     {
       "ie_id": "C00747121-ie-1815418-ECAF2786F149940D4A04",
@@ -5512,7 +6296,9 @@
       "date": "2024-08-31",
       "purpose": "DIGITAL ADS",
       "payee": "GOOGLE",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202409139675433754"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202409139675433754",
+      "vendor_id": "V-google",
+      "medium": "digital"
     },
     {
       "ie_id": "C00747121-ie-1815418-EC85255249E034A5F981",
@@ -5525,7 +6311,9 @@
       "date": "2024-08-24",
       "purpose": "DIGITAL ADS",
       "payee": "GOOGLE",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202409139675433745"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202409139675433745",
+      "vendor_id": "V-google",
+      "medium": "digital"
     },
     {
       "ie_id": "C00747121-ie-1815418-E67CBD0EF207C4121862",
@@ -5538,7 +6326,9 @@
       "date": "2024-08-24",
       "purpose": "DIGITAL ADS",
       "payee": "GOOGLE",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202409139675433744"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202409139675433744",
+      "vendor_id": "V-google",
+      "medium": "digital"
     },
     {
       "ie_id": "C00747121-ie-1789138-E286DA09061D0464AADA",
@@ -5551,7 +6341,9 @@
       "date": "2024-05-31",
       "purpose": "DIGITAL ADS",
       "payee": "GOOGLE",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202406139649014200"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202406139649014200",
+      "vendor_id": "V-google",
+      "medium": "digital"
     },
     {
       "ie_id": "C00747121-ie-1789138-E71056F04789A40D8B2D",
@@ -5564,7 +6356,9 @@
       "date": "2024-05-31",
       "purpose": "DIGITAL ADS",
       "payee": "GOOGLE",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202406139649014200"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202406139649014200",
+      "vendor_id": "V-google",
+      "medium": "digital"
     },
     {
       "ie_id": "C00747121-ie-1795589-E4F52832F2F1741E0825",
@@ -5577,7 +6371,9 @@
       "date": "2024-06-01",
       "purpose": "PMT FOR EST FROM 5/31/2024. DIGITAL ADS",
       "payee": "GOOGLE",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202407109652767307"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202407109652767307",
+      "vendor_id": "V-google",
+      "medium": "digital"
     },
     {
       "ie_id": "C00747121-ie-1795589-EC4246E9725BE4D679F3",
@@ -5590,7 +6386,9 @@
       "date": "2024-06-01",
       "purpose": "PMT FOR EST FROM 5/31/2024. DIGITAL ADS",
       "payee": "GOOGLE",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202407109652767307"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202407109652767307",
+      "vendor_id": "V-google",
+      "medium": "digital"
     },
     {
       "ie_id": "C00747121-ie-1856632-E14AAD5384A8E4306B30",
@@ -5603,7 +6401,9 @@
       "date": "2024-11-05",
       "purpose": "YOUTUBE ADS",
       "payee": "GOOGLE",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202412059721255474"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202412059721255474",
+      "vendor_id": "V-google",
+      "medium": "digital"
     },
     {
       "ie_id": "C00747121-ie-1869512-E39174CC027A2481B9BC",
@@ -5616,11 +6416,135 @@
       "date": "2024-12-04",
       "purpose": "PMT FOR EST FROM 11/5/2024. YOUTUBE ADS",
       "payee": "GOOGLE",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202501309748716447"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202501309748716447",
+      "vendor_id": "V-google",
+      "medium": "digital"
     }
   ],
   "flags": [],
   "has_chain": true,
   "source_url": "https://www.fec.gov/data/committee/C00747121/?cycle=2024",
-  "data_status": "real"
+  "data_status": "real",
+  "vendors": [
+    {
+      "vendor_id": "V-google",
+      "name": "Google",
+      "amount": 76311.81,
+      "count": 390,
+      "media_mix": [
+        {
+          "medium": "digital",
+          "amount": 76311.81,
+          "count": 390
+        }
+      ],
+      "targets": [
+        {
+          "candidate_id": "S6PA00217",
+          "support_oppose": "O",
+          "amount": 40778.03
+        },
+        {
+          "candidate_id": "S2PA00661",
+          "support_oppose": "S",
+          "amount": 35533.78
+        }
+      ],
+      "first_date": "2023-09-30",
+      "last_date": "2024-12-04",
+      "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00747121&payee_name=GOOGLE"
+    },
+    {
+      "vendor_id": "V-hulu",
+      "name": "Hulu",
+      "amount": 39999.2,
+      "count": 2,
+      "media_mix": [
+        {
+          "medium": "digital",
+          "amount": 39999.2,
+          "count": 2
+        }
+      ],
+      "targets": [
+        {
+          "candidate_id": "S6PA00217",
+          "support_oppose": "O",
+          "amount": 39999.2
+        }
+      ],
+      "first_date": "2024-10-11",
+      "last_date": "2024-10-17",
+      "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00747121&payee_name=HULU%2C+LLC"
+    },
+    {
+      "vendor_id": "V-if-it-is",
+      "name": "IF IT IS LLC",
+      "amount": 20757.14,
+      "count": 6,
+      "media_mix": [
+        {
+          "medium": "production",
+          "amount": 20757.14,
+          "count": 6
+        }
+      ],
+      "targets": [
+        {
+          "candidate_id": "S6PA00217",
+          "support_oppose": "O",
+          "amount": 20757.14
+        }
+      ],
+      "first_date": "2023-09-15",
+      "last_date": "2024-11-01",
+      "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00747121&payee_name=IF+IT+IS+LLC"
+    },
+    {
+      "vendor_id": "V-disney-advertising",
+      "name": "DISNEY ADVERTISING",
+      "amount": 20000.0,
+      "count": 2,
+      "media_mix": [
+        {
+          "medium": "tv",
+          "amount": 20000.0,
+          "count": 2
+        }
+      ],
+      "targets": [
+        {
+          "candidate_id": "S6PA00217",
+          "support_oppose": "O",
+          "amount": 20000.0
+        }
+      ],
+      "first_date": "2024-10-17",
+      "last_date": "2024-10-24",
+      "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00747121&payee_name=DISNEY+ADVERTISING"
+    },
+    {
+      "vendor_id": "V-nbcuniversal",
+      "name": "NBCUNIVERSAL, LLC",
+      "amount": 8400.0,
+      "count": 1,
+      "media_mix": [
+        {
+          "medium": "tv",
+          "amount": 8400.0,
+          "count": 1
+        }
+      ],
+      "targets": [
+        {
+          "candidate_id": "S6PA00217",
+          "support_oppose": "O",
+          "amount": 8400.0
+        }
+      ],
+      "first_date": "2024-10-23",
+      "last_date": "2024-10-23",
+      "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00747121&payee_name=NBCUNIVERSAL%2C+LLC"
+    }
+  ]
 }

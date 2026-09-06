@@ -416,7 +416,9 @@
       "date": "2024-09-26",
       "purpose": "ESTIMATED COST - STAFF SALARIES & BENEFITS FOR STUDENT ELECTORAL ENGAGEMENT",
       "payee": "FEMINIST MAJORITY",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202410159686606454"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202410159686606454",
+      "vendor_id": "V-feminist-majority",
+      "medium": "other"
     },
     {
       "ie_id": "C00755363-ie-1827640-500034603",
@@ -429,7 +431,9 @@
       "date": "2024-09-26",
       "purpose": "ESTIMATED COST - T-SHIRTS, FLYERS & SHIPPING",
       "payee": "FEMINIST MAJORITY",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202410159686606456"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202410159686606456",
+      "vendor_id": "V-feminist-majority",
+      "medium": "other"
     },
     {
       "ie_id": "C00755363-ie-1827640-500034597",
@@ -442,7 +446,9 @@
       "date": "2024-09-26",
       "purpose": "ESTIMATED COST - BUTTONS",
       "payee": "DR DON'S BUTTONS",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202410159686606439"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202410159686606439",
+      "vendor_id": "V-dr-don-s-buttons",
+      "medium": "other"
     },
     {
       "ie_id": "C00755363-ie-1827640-500034600",
@@ -455,7 +461,9 @@
       "date": "2024-09-26",
       "purpose": "ESTIMATED COST - SIGNS",
       "payee": "SIR SPEEDY PRINTING",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202410159686606484"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202410159686606484",
+      "vendor_id": "V-sir-speedy-printing",
+      "medium": "other"
     }
   ],
   "flags": [
@@ -468,5 +476,76 @@
   ],
   "has_chain": true,
   "source_url": "https://www.fec.gov/data/committee/C00755363/?cycle=2024",
-  "data_status": "real"
+  "data_status": "real",
+  "vendors": [
+    {
+      "vendor_id": "V-feminist-majority",
+      "name": "FEMINIST MAJORITY",
+      "amount": 15995.94,
+      "count": 2,
+      "media_mix": [
+        {
+          "medium": "other",
+          "amount": 15995.94,
+          "count": 2
+        }
+      ],
+      "targets": [
+        {
+          "candidate_id": "S6PA00217",
+          "support_oppose": "S",
+          "amount": 15995.94
+        }
+      ],
+      "first_date": "2024-09-26",
+      "last_date": "2024-09-26",
+      "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00755363&payee_name=FEMINIST+MAJORITY"
+    },
+    {
+      "vendor_id": "V-dr-don-s-buttons",
+      "name": "DR DON'S BUTTONS",
+      "amount": 218.75,
+      "count": 1,
+      "media_mix": [
+        {
+          "medium": "other",
+          "amount": 218.75,
+          "count": 1
+        }
+      ],
+      "targets": [
+        {
+          "candidate_id": "S6PA00217",
+          "support_oppose": "S",
+          "amount": 218.75
+        }
+      ],
+      "first_date": "2024-09-26",
+      "last_date": "2024-09-26",
+      "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00755363&payee_name=DR+DON%27S+BUTTONS"
+    },
+    {
+      "vendor_id": "V-sir-speedy-printing",
+      "name": "SIR SPEEDY PRINTING",
+      "amount": 171.71,
+      "count": 1,
+      "media_mix": [
+        {
+          "medium": "other",
+          "amount": 171.71,
+          "count": 1
+        }
+      ],
+      "targets": [
+        {
+          "candidate_id": "S6PA00217",
+          "support_oppose": "S",
+          "amount": 171.71
+        }
+      ],
+      "first_date": "2024-09-26",
+      "last_date": "2024-09-26",
+      "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00755363&payee_name=SIR+SPEEDY+PRINTING"
+    }
+  ]
 }

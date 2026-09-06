@@ -5,11 +5,12 @@ import type { RaceSummary } from "@citizen-gotham/contracts";
 type Item = { href: string; label: string; count?: number };
 
 /** Section tabs for one race: ledger, ads, stories, and a dossier per candidate. */
-export function RaceNav({ race, counts, active }: { race: RaceSummary; counts: { ads: number; stories: number }; active: string }) {
+export function RaceNav({ race, counts, active }: { race: RaceSummary; counts: { ads: number; stories: number; vendors?: number }; active: string }) {
   const raceId = race.race_id;
   const items: Item[] = [
     { href: routes.race(raceId), label: "Ledger" },
     { href: routes.ads(raceId), label: "Ads", count: counts.ads },
+    { href: routes.vendors(raceId), label: "Vendors", count: counts.vendors },
     { href: routes.stories(raceId), label: "Stories", count: counts.stories },
     ...race.candidates.map((c) => ({ href: routes.candidate(raceId, c.candidate_id), label: `${c.name.split(" ").at(-1)} dossier` })),
   ];

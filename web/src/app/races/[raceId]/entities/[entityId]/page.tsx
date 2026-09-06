@@ -1,7 +1,7 @@
 import { SectionNav } from "@/components/ui/detail-layout";
 // OWNER: Frontend A (entity page).
 import Link from "next/link";
-import { getEntity, getRace, hasChain, listEntityIds, listRaceIds } from "@/lib/data";
+import { getEntity, getRace, getVendors, hasChain, listEntityIds, listRaceIds } from "@/lib/data";
 import { pct, routes } from "@/lib/format";
 import { AdjacencyNote, Breadcrumbs, Card, DataStatusBanner, Money } from "@/components/ui";
 import { VISIBILITY_COLORS } from "@citizen-gotham/contracts";
@@ -9,6 +9,7 @@ import { BarLegend, MONEY_COLORS, StackedBar, visibilitySegments } from "@/compo
 import { EntityHeader } from "@/components/entity/entity-header";
 import { FlowsTable } from "@/components/entity/flows-table";
 import { IeTable } from "@/components/entity/ie-table";
+import { WhereMoneyWent } from "@/components/entity/where-money-went";
 
 export const generateStaticParams = () =>
   listRaceIds().flatMap((raceId) => listEntityIds(raceId).map((entityId) => ({ raceId, entityId })));
@@ -27,6 +28,9 @@ export default async function EntityPage({ params }: { params: Promise<{ raceId:
     { label: "From orgs with funding not on file", value: e.totals.from_undisclosed, color: VISIBILITY_COLORS.dark },
   ].filter((s) => s.value > 0);
   const known = segs.reduce((s, x) => s + x.value, 0);
+  const vendorRows = e.vendors ?? [];
+  const mediumBasis = vendorRows.length > 0 ? getVendors(raceId).medium_basis : null;
+  const candidateNames = Object.fromEntries(race.candidates.map((c) => [c.candidate_id, c.name]));
 
   return (
     <div className="detail-page entity-page">
@@ -39,7 +43,8 @@ export default async function EntityPage({ params }: { params: Promise<{ raceId:
       <div className="detail-sections">
         <aside className="detail-sidebar"><SectionNav items={[
           { id: "receipts", label: "Funding sources" }, { id: "inflows", label: "Money in" },
-          { id: "outflows", label: "Money out" }, { id: "expenditures", label: "Outside spending" },
+          { id: "outflows", label: "Money out" }, ...(mediumBasis ? [{ id: "vendors", label: "Where the money went" }] : []),
+          { id: "expenditures", label: "Outside spending" },
         ]} /></aside>
         <div className="detail-content">
           <div id="receipts" className="detail-section">
@@ -93,6 +98,11 @@ export default async function EntityPage({ params }: { params: Promise<{ raceId:
               <FlowsTable raceId={raceId} rows={e.outflows} direction="out" raceEntityIds={raceEntityIds} emptyText="No committee-to-committee outflows on file." />
             </Card>
           </div>
+          {mediumBasis && (
+            <div id="vendors" className="detail-section">
+              <WhereMoneyWent raceId={raceId} rows={vendorRows} candidateNames={candidateNames} mediumBasis={mediumBasis} />
+            </div>
+          )}
           <div id="expenditures" className="detail-section">
             <Card title="Independent expenditures in this race">
               <p className="mb-2 text-xs text-neutral-500">

@@ -1,0 +1,170 @@
+{
+  "vendor_id": "V-national-campaign-resource-group",
+  "name": "NATIONAL CAMPAIGN RESOURCE GROUP",
+  "aliases": [
+    "NATIONAL CAMPAIGN RESOURCE GROUP"
+  ],
+  "normalization": {
+    "basis": "inferred",
+    "rule": "case/punctuation/suffix normalisation + token-set ≥0.92 (numeric tokens must match); aliases file",
+    "source_urls": [
+      "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&payee_name=NATIONAL+CAMPAIGN+RESOURCE+GROUP"
+    ],
+    "checked_by": null,
+    "checked_at": null
+  },
+  "total": 197236.0,
+  "count": 8,
+  "media_mix": [
+    {
+      "medium": "phones",
+      "amount": 197236.0,
+      "count": 8
+    }
+  ],
+  "spenders": [
+    {
+      "entity_id": "C00620971",
+      "name": "FOR OUR FUTURE",
+      "amount": 197236.0,
+      "count": 8
+    }
+  ],
+  "targets": [
+    {
+      "candidate_id": "S6PA00217",
+      "support_oppose": "S",
+      "amount": 197236.0
+    }
+  ],
+  "first_date": "2024-10-31",
+  "last_date": "2024-11-20",
+  "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&payee_name=NATIONAL+CAMPAIGN+RESOURCE+GROUP",
+  "race_id": "pa-sen-2024",
+  "generated_at": "2026-09-05T19:33:04+00:00",
+  "data_status": "real",
+  "expenditures": [
+    {
+      "ie_id": "C00620971-ie-1931997-500733501",
+      "spender_entity_id": "C00620971",
+      "spender_name": "FOR OUR FUTURE",
+      "candidate_id": "S6PA00217",
+      "candidate_name": "Bob Casey",
+      "support_oppose": "S",
+      "amount": 25000.0,
+      "date": "2024-11-20",
+      "purpose": "PHONEBANKING",
+      "payee": "NATIONAL CAMPAIGN RESOURCE GROUP",
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202601129793941672",
+      "vendor_id": "V-national-campaign-resource-group",
+      "medium": "phones"
+    },
+    {
+      "ie_id": "C00620971-ie-1931997-500733499",
+      "spender_entity_id": "C00620971",
+      "spender_name": "FOR OUR FUTURE",
+      "candidate_id": "S6PA00217",
+      "candidate_name": "Bob Casey",
+      "support_oppose": "S",
+      "amount": 37500.0,
+      "date": "2024-11-13",
+      "purpose": "PHONEBANKING",
+      "payee": "NATIONAL CAMPAIGN RESOURCE GROUP",
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202601129793941943",
+      "vendor_id": "V-national-campaign-resource-group",
+      "medium": "phones"
+    },
+    {
+      "ie_id": "C00620971-ie-1931997-500725819",
+      "spender_entity_id": "C00620971",
+      "spender_name": "FOR OUR FUTURE",
+      "candidate_id": "S6PA00217",
+      "candidate_name": "Bob Casey",
+      "support_oppose": "S",
+      "amount": 39875.0,
+      "date": "2024-11-12",
+      "purpose": "PHONEBANKING",
+      "payee": "NATIONAL CAMPAIGN RESOURCE GROUP",
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202601129793941922",
+      "vendor_id": "V-national-campaign-resource-group",
+      "medium": "phones"
+    },
+    {
+      "ie_id": "C00620971-ie-1931997-500774731",
+      "spender_entity_id": "C00620971",
+      "spender_name": "FOR OUR FUTURE",
+      "candidate_id": "S6PA00217",
+      "candidate_name": "Bob Casey",
+      "support_oppose": "S",
+      "amount": 5340.5,
+      "date": "2024-11-06",
+      "purpose": "PHONEBANKING",
+      "payee": "NATIONAL CAMPAIGN RESOURCE GROUP",
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202601129793941682",
+      "vendor_id": "V-national-campaign-resource-group",
+      "medium": "phones"
+    },
+    {
+      "ie_id": "C00620971-ie-1931997-500724553",
+      "spender_entity_id": "C00620971",
+      "spender_name": "FOR OUR FUTURE",
+      "candidate_id": "S6PA00217",
+      "candidate_name": "Bob Casey",
+      "support_oppose": "S",
+      "amount": 10000.0,
+      "date": "2024-11-06",
+      "purpose": "PHONEBANKING",
+      "payee": "NATIONAL CAMPAIGN RESOURCE GROUP",
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202601129793941749",
+      "vendor_id": "V-national-campaign-resource-group",
+      "medium": "phones"
+    },
+    {
+      "ie_id": "C00620971-ie-1931997-500725336",
+      "spender_entity_id": "C00620971",
+      "spender_name": "FOR OUR FUTURE",
+      "candidate_id": "S6PA00217",
+      "candidate_name": "Bob Casey",
+      "support_oppose": "S",
+      "amount": 27000.0,
+      "date": "2024-11-06",
+      "purpose": "PHONEBANKING",
+      "payee": "NATIONAL CAMPAIGN RESOURCE GROUP",
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202601129793941842",
+      "vendor_id": "V-national-campaign-resource-group",
+      "medium": "phones"
+    },
+    {
+      "ie_id": "C00620971-ie-1931997-500725202",
+      "spender_entity_id": "C00620971",
+      "spender_name": "FOR OUR FUTURE",
+      "candidate_id": "S6PA00217",
+      "candidate_name": "Bob Casey",
+      "support_oppose": "S",
+      "amount": 37500.0,
+      "date": "2024-11-06",
+      "purpose": "PHONEBANKING",
+      "payee": "NATIONAL CAMPAIGN RESOURCE GROUP",
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202601129793941701",
+      "vendor_id": "V-national-campaign-resource-group",
+      "medium": "phones"
+    },
+    {
+      "ie_id": "C00620971-ie-1931997-500723560",
+      "spender_entity_id": "C00620971",
+      "spender_name": "FOR OUR FUTURE",
+      "candidate_id": "S6PA00217",
+      "candidate_name": "Bob Casey",
+      "support_oppose": "S",
+      "amount": 15020.5,
+      "date": "2024-10-31",
+      "purpose": "PHONEBANKING",
+      "payee": "NATIONAL CAMPAIGN RESOURCE GROUP",
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202601129793941663",
+      "vendor_id": "V-national-campaign-resource-group",
+      "medium": "phones"
+    }
+  ],
+  "ads": [],
+  "method": "Every Schedule E independent expenditure names a payee. Payee strings are normalised (case, punctuation, legal suffixes, token order), near-duplicates are folded with a difflib ratio ≥ 0.92 when their numeric tokens match, and hand alias rows from data/hand/<race>/vendor_aliases.json override the rule. Medium is classified from the purpose the spender filed (ordered keyword table in gotham/vendors.py); the FEC does not record which buy placed which ad, so vendor ↔ ad links are empty until a human verifies one. Totals are the filed amounts, grouped, never re-estimated."
+}

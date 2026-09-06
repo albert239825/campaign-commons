@@ -40,7 +40,9 @@
       "date": "2024-10-23",
       "purpose": "PRINTING OF CAMPAIGN MATERIALS",
       "payee": "CENTER CITY PRINT",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202501319748780722"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202501319748780722",
+      "vendor_id": "V-center-city-print",
+      "medium": "mail"
     },
     {
       "ie_id": "C90022906-ie-1870264-F57.000006",
@@ -53,7 +55,9 @@
       "date": "2024-10-23",
       "purpose": "POSTAGE",
       "payee": "USPS",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202501319748780723"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202501319748780723",
+      "vendor_id": "V-united-states-postal-service",
+      "medium": "mail"
     },
     {
       "ie_id": "C90022906-ie-1870264-F57.000010",
@@ -66,7 +70,9 @@
       "date": "2024-10-23",
       "purpose": "MAILING SUPPLIES - ENVELOPES & LABELS",
       "payee": "AMAZON",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202501319748780725"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202501319748780725",
+      "vendor_id": "V-amazon",
+      "medium": "mail"
     },
     {
       "ie_id": "C90022906-ie-1870264-F57.000018",
@@ -79,7 +85,9 @@
       "date": "2024-10-23",
       "purpose": "GRAPHIC DESIGN FOR CAMPAIGN MATERIALS",
       "payee": "BRITTAIN, JESSICA",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202501319748780727"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202501319748780727",
+      "vendor_id": "V-brittain-jessica",
+      "medium": "production"
     },
     {
       "ie_id": "C90022906-ie-1870264-F57.000014",
@@ -92,7 +100,9 @@
       "date": "2024-10-23",
       "purpose": "GRAPHIC DESIGN FOR CAMPAIGN MATERIALS",
       "payee": "ROTHENBECKER, DENNIS JR.",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202501319748780726"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202501319748780726",
+      "vendor_id": "V-rothenbecker-dennis-jr",
+      "medium": "production"
     }
   ],
   "flags": [
@@ -105,5 +115,122 @@
   ],
   "has_chain": false,
   "source_url": "https://www.fec.gov/data/committee/C90022906/?cycle=2024",
-  "data_status": "real"
+  "data_status": "real",
+  "vendors": [
+    {
+      "vendor_id": "V-center-city-print",
+      "name": "CENTER CITY PRINT",
+      "amount": 2037.03,
+      "count": 1,
+      "media_mix": [
+        {
+          "medium": "mail",
+          "amount": 2037.03,
+          "count": 1
+        }
+      ],
+      "targets": [
+        {
+          "candidate_id": "S6PA00217",
+          "support_oppose": "S",
+          "amount": 2037.03
+        }
+      ],
+      "first_date": "2024-10-23",
+      "last_date": "2024-10-23",
+      "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C90022906&payee_name=CENTER+CITY+PRINT"
+    },
+    {
+      "vendor_id": "V-united-states-postal-service",
+      "name": "United States Postal Service",
+      "amount": 1916.25,
+      "count": 1,
+      "media_mix": [
+        {
+          "medium": "mail",
+          "amount": 1916.25,
+          "count": 1
+        }
+      ],
+      "targets": [
+        {
+          "candidate_id": "S6PA00217",
+          "support_oppose": "S",
+          "amount": 1916.25
+        }
+      ],
+      "first_date": "2024-10-23",
+      "last_date": "2024-10-23",
+      "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C90022906&payee_name=USPS"
+    },
+    {
+      "vendor_id": "V-amazon",
+      "name": "AMAZON",
+      "amount": 229.56,
+      "count": 1,
+      "media_mix": [
+        {
+          "medium": "mail",
+          "amount": 229.56,
+          "count": 1
+        }
+      ],
+      "targets": [
+        {
+          "candidate_id": "S6PA00217",
+          "support_oppose": "S",
+          "amount": 229.56
+        }
+      ],
+      "first_date": "2024-10-23",
+      "last_date": "2024-10-23",
+      "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C90022906&payee_name=AMAZON"
+    },
+    {
+      "vendor_id": "V-brittain-jessica",
+      "name": "BRITTAIN, JESSICA",
+      "amount": 61.3,
+      "count": 1,
+      "media_mix": [
+        {
+          "medium": "production",
+          "amount": 61.3,
+          "count": 1
+        }
+      ],
+      "targets": [
+        {
+          "candidate_id": "S6PA00217",
+          "support_oppose": "S",
+          "amount": 61.3
+        }
+      ],
+      "first_date": "2024-10-23",
+      "last_date": "2024-10-23",
+      "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C90022906&payee_name=BRITTAIN%2C+JESSICA"
+    },
+    {
+      "vendor_id": "V-rothenbecker-dennis-jr",
+      "name": "ROTHENBECKER, DENNIS JR.",
+      "amount": 15.63,
+      "count": 1,
+      "media_mix": [
+        {
+          "medium": "production",
+          "amount": 15.63,
+          "count": 1
+        }
+      ],
+      "targets": [
+        {
+          "candidate_id": "S6PA00217",
+          "support_oppose": "S",
+          "amount": 15.63
+        }
+      ],
+      "first_date": "2024-10-23",
+      "last_date": "2024-10-23",
+      "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C90022906&payee_name=ROTHENBECKER%2C+DENNIS+JR."
+    }
+  ]
 }

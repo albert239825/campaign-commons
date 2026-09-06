@@ -432,7 +432,9 @@
       "date": "2024-10-28",
       "purpose": "WEBSITE ENDORSEMENT",
       "payee": "SIERRA CLUB",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202502109753368560"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202502109753368560",
+      "vendor_id": "V-sierra-club",
+      "medium": "digital"
     }
   ],
   "flags": [
@@ -445,5 +447,30 @@
   ],
   "has_chain": true,
   "source_url": "https://www.fec.gov/data/committee/C00483693/?cycle=2024",
-  "data_status": "real"
+  "data_status": "real",
+  "vendors": [
+    {
+      "vendor_id": "V-sierra-club",
+      "name": "SIERRA CLUB",
+      "amount": 10.0,
+      "count": 1,
+      "media_mix": [
+        {
+          "medium": "digital",
+          "amount": 10.0,
+          "count": 1
+        }
+      ],
+      "targets": [
+        {
+          "candidate_id": "S6PA00217",
+          "support_oppose": "S",
+          "amount": 10.0
+        }
+      ],
+      "first_date": "2024-10-28",
+      "last_date": "2024-10-28",
+      "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00483693&payee_name=SIERRA+CLUB"
+    }
+  ]
 }

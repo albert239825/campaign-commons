@@ -1,0 +1,167 @@
+{
+  "vendor_id": "V-canvass-america",
+  "name": "CANVASS AMERICA LLC",
+  "aliases": [
+    "CANVASS AMERICA LLC",
+    "CANVASS AMERICA"
+  ],
+  "normalization": {
+    "basis": "inferred",
+    "rule": "case/punctuation/suffix normalisation + token-set ≥0.92 (numeric tokens must match); aliases file",
+    "source_urls": [
+      "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&payee_name=CANVASS+AMERICA+LLC&payee_name=CANVASS+AMERICA"
+    ],
+    "checked_by": null,
+    "checked_at": null
+  },
+  "total": 560582.74,
+  "count": 7,
+  "media_mix": [
+    {
+      "medium": "phones",
+      "amount": 370582.74,
+      "count": 3
+    },
+    {
+      "medium": "other",
+      "amount": 190000.0,
+      "count": 4
+    }
+  ],
+  "spenders": [
+    {
+      "entity_id": "C00811166",
+      "name": "THE SENTINEL ACTION FUND",
+      "amount": 370582.74,
+      "count": 3
+    },
+    {
+      "entity_id": "C00687103",
+      "name": "AMERICANS FOR PROSPERITY ACTION, INC. (AFP ACTION) DBA CVA ACTION AND DBA LIBRE ACTION",
+      "amount": 190000.0,
+      "count": 4
+    }
+  ],
+  "targets": [
+    {
+      "candidate_id": "S2PA00661",
+      "support_oppose": "S",
+      "amount": 560582.74
+    }
+  ],
+  "first_date": "2024-04-10",
+  "last_date": "2024-11-04",
+  "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&payee_name=CANVASS+AMERICA+LLC&payee_name=CANVASS+AMERICA",
+  "race_id": "pa-sen-2024",
+  "generated_at": "2026-09-05T19:33:04+00:00",
+  "data_status": "real",
+  "expenditures": [
+    {
+      "ie_id": "C00811166-ie-1857839-SE24.1460",
+      "spender_entity_id": "C00811166",
+      "spender_name": "THE SENTINEL ACTION FUND",
+      "candidate_id": "S2PA00661",
+      "candidate_name": "Dave McCormick",
+      "support_oppose": "S",
+      "amount": 60000.0,
+      "date": "2024-11-04",
+      "purpose": "PHONE CALLS AND TEXT MESSAGES",
+      "payee": "CANVASS AMERICA LLC",
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202412059731517245",
+      "vendor_id": "V-canvass-america",
+      "medium": "phones"
+    },
+    {
+      "ie_id": "C00811166-ie-1857839-SE24.1443",
+      "spender_entity_id": "C00811166",
+      "spender_name": "THE SENTINEL ACTION FUND",
+      "candidate_id": "S2PA00661",
+      "candidate_name": "Dave McCormick",
+      "support_oppose": "S",
+      "amount": 50000.0,
+      "date": "2024-10-29",
+      "purpose": "TEXT MESSAGES",
+      "payee": "CANVASS AMERICA LLC",
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202412059731517244",
+      "vendor_id": "V-canvass-america",
+      "medium": "phones"
+    },
+    {
+      "ie_id": "C00811166-ie-1857839-SE24.1212",
+      "spender_entity_id": "C00811166",
+      "spender_name": "THE SENTINEL ACTION FUND",
+      "candidate_id": "S2PA00661",
+      "candidate_name": "Dave McCormick",
+      "support_oppose": "S",
+      "amount": 260582.74,
+      "date": "2024-10-18",
+      "purpose": "PHONE CALLS",
+      "payee": "CANVASS AMERICA LLC",
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202412059731517242",
+      "vendor_id": "V-canvass-america",
+      "medium": "phones"
+    },
+    {
+      "ie_id": "C00687103-ie-1791790-SE24.28131",
+      "spender_entity_id": "C00687103",
+      "spender_name": "AMERICANS FOR PROSPERITY ACTION, INC. (AFP ACTION) DBA CVA ACTION AND DBA LIBRE ACTION",
+      "candidate_id": "S2PA00661",
+      "candidate_name": "Dave McCormick",
+      "support_oppose": "S",
+      "amount": 100000.0,
+      "date": "2024-05-16",
+      "purpose": "CANVASSING",
+      "payee": "CANVASS AMERICA LLC",
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202406209652364721",
+      "vendor_id": "V-canvass-america",
+      "medium": "other"
+    },
+    {
+      "ie_id": "C00687103-ie-1791790-SE24.28010",
+      "spender_entity_id": "C00687103",
+      "spender_name": "AMERICANS FOR PROSPERITY ACTION, INC. (AFP ACTION) DBA CVA ACTION AND DBA LIBRE ACTION",
+      "candidate_id": "S2PA00661",
+      "candidate_name": "Dave McCormick",
+      "support_oppose": "S",
+      "amount": 20000.0,
+      "date": "2024-05-01",
+      "purpose": "CANVASSING",
+      "payee": "CANVASS AMERICA LLC",
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202406209652364718",
+      "vendor_id": "V-canvass-america",
+      "medium": "other"
+    },
+    {
+      "ie_id": "C00687103-ie-1785282-SE24.27935",
+      "spender_entity_id": "C00687103",
+      "spender_name": "AMERICANS FOR PROSPERITY ACTION, INC. (AFP ACTION) DBA CVA ACTION AND DBA LIBRE ACTION",
+      "candidate_id": "S2PA00661",
+      "candidate_name": "Dave McCormick",
+      "support_oppose": "S",
+      "amount": 20000.0,
+      "date": "2024-04-24",
+      "purpose": "CANVASSING",
+      "payee": "CANVASS AMERICA",
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202405209648569210",
+      "vendor_id": "V-canvass-america",
+      "medium": "other"
+    },
+    {
+      "ie_id": "C00687103-ie-1785282-SE24.26807",
+      "spender_entity_id": "C00687103",
+      "spender_name": "AMERICANS FOR PROSPERITY ACTION, INC. (AFP ACTION) DBA CVA ACTION AND DBA LIBRE ACTION",
+      "candidate_id": "S2PA00661",
+      "candidate_name": "Dave McCormick",
+      "support_oppose": "S",
+      "amount": 50000.0,
+      "date": "2024-04-10",
+      "purpose": "CANVASSING",
+      "payee": "CANVASS AMERICA",
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202405209648569206",
+      "vendor_id": "V-canvass-america",
+      "medium": "other"
+    }
+  ],
+  "ads": [],
+  "method": "Every Schedule E independent expenditure names a payee. Payee strings are normalised (case, punctuation, legal suffixes, token order), near-duplicates are folded with a difflib ratio ≥ 0.92 when their numeric tokens match, and hand alias rows from data/hand/<race>/vendor_aliases.json override the rule. Medium is classified from the purpose the spender filed (ordered keyword table in gotham/vendors.py); the FEC does not record which buy placed which ad, so vendor ↔ ad links are empty until a human verifies one. Totals are the filed amounts, grouped, never re-estimated."
+}

@@ -1,0 +1,155 @@
+{
+  "vendor_id": "V-unite-here-local-25",
+  "name": "UNITE HERE Local 25",
+  "aliases": [
+    "LOCAL 25 UNITE HERE"
+  ],
+  "normalization": {
+    "basis": "verified",
+    "rule": "case/punctuation/suffix normalisation + token-set ≥0.92 (numeric tokens must match); aliases file — hand alias row folds 1 filed payee string(s) into one vendor",
+    "source_urls": [
+      "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&payee_name=LOCAL+25+UNITE+HERE"
+    ],
+    "checked_by": "devin-block2-vendors",
+    "checked_at": "2026-09-05"
+  },
+  "total": 34547.99,
+  "count": 7,
+  "media_mix": [
+    {
+      "medium": "other",
+      "amount": 34547.99,
+      "count": 7
+    }
+  ],
+  "spenders": [
+    {
+      "entity_id": "C00754051",
+      "name": "WORKERS VOTE",
+      "amount": 34547.99,
+      "count": 7
+    }
+  ],
+  "targets": [
+    {
+      "candidate_id": "S6PA00217",
+      "support_oppose": "S",
+      "amount": 34547.99
+    }
+  ],
+  "first_date": "2024-07-09",
+  "last_date": "2024-11-01",
+  "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&payee_name=LOCAL+25+UNITE+HERE",
+  "race_id": "pa-sen-2024",
+  "generated_at": "2026-09-05T19:33:04+00:00",
+  "data_status": "real",
+  "expenditures": [
+    {
+      "ie_id": "C00754051-ie-1859402-B891521",
+      "spender_entity_id": "C00754051",
+      "spender_name": "WORKERS VOTE",
+      "candidate_id": "S6PA00217",
+      "candidate_name": "Bob Casey",
+      "support_oppose": "S",
+      "amount": 1490.39,
+      "date": "2024-11-01",
+      "purpose": "CANVASSER SALARIES AND BENEFITS FOR 11/2 - 11/5 (PHILLY)",
+      "payee": "LOCAL 25 UNITE HERE",
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202412079739740008",
+      "vendor_id": "V-unite-here-local-25",
+      "medium": "other"
+    },
+    {
+      "ie_id": "C00754051-ie-1859402-B890667",
+      "spender_entity_id": "C00754051",
+      "spender_name": "WORKERS VOTE",
+      "candidate_id": "S6PA00217",
+      "candidate_name": "Bob Casey",
+      "support_oppose": "S",
+      "amount": 3135.48,
+      "date": "2024-10-24",
+      "purpose": "CANVASSER SALARIES AND BENEFITS FOR 10/25 - 11/5 IN PHILLY",
+      "payee": "LOCAL 25 UNITE HERE",
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202412079739740006",
+      "vendor_id": "V-unite-here-local-25",
+      "medium": "other"
+    },
+    {
+      "ie_id": "C00754051-ie-1859402-B890299",
+      "spender_entity_id": "C00754051",
+      "spender_name": "WORKERS VOTE",
+      "candidate_id": "S6PA00217",
+      "candidate_name": "Bob Casey",
+      "support_oppose": "S",
+      "amount": 6601.43,
+      "date": "2024-10-22",
+      "purpose": "CANVASSER SALARIES AND BENEFITS FOR 10/22 - 11/5 IN PHILLY",
+      "payee": "LOCAL 25 UNITE HERE",
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202412079739739996",
+      "vendor_id": "V-unite-here-local-25",
+      "medium": "other"
+    },
+    {
+      "ie_id": "C00754051-ie-1842186-B887428",
+      "spender_entity_id": "C00754051",
+      "spender_name": "WORKERS VOTE",
+      "candidate_id": "S6PA00217",
+      "candidate_name": "Bob Casey",
+      "support_oppose": "S",
+      "amount": 5527.1,
+      "date": "2024-10-02",
+      "purpose": "CANVASSER SALARIES AND BENEFITS FOR 10/1/24 - 10/20/24",
+      "payee": "LOCAL 25 UNITE HERE",
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202410249719553357",
+      "vendor_id": "V-unite-here-local-25",
+      "medium": "other"
+    },
+    {
+      "ie_id": "C00754051-ie-1833966-B884393",
+      "spender_entity_id": "C00754051",
+      "spender_name": "WORKERS VOTE",
+      "candidate_id": "S6PA00217",
+      "candidate_name": "Bob Casey",
+      "support_oppose": "S",
+      "amount": 3611.94,
+      "date": "2024-09-17",
+      "purpose": "CANVASSER SALARIES AND BENEFITS FOR 9/16/2024 THROUGH 9/29/2024",
+      "payee": "LOCAL 25 UNITE HERE",
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202410209709587541",
+      "vendor_id": "V-unite-here-local-25",
+      "medium": "other"
+    },
+    {
+      "ie_id": "C00754051-ie-1833966-B882606",
+      "spender_entity_id": "C00754051",
+      "spender_name": "WORKERS VOTE",
+      "candidate_id": "S6PA00217",
+      "candidate_name": "Bob Casey",
+      "support_oppose": "S",
+      "amount": 3618.77,
+      "date": "2024-09-05",
+      "purpose": "CANVASSER SALARIES AND BENEFITS FOR 9/3/2024 THROUGH 9/15/2024",
+      "payee": "LOCAL 25 UNITE HERE",
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202410209709587540",
+      "vendor_id": "V-unite-here-local-25",
+      "medium": "other"
+    },
+    {
+      "ie_id": "C00754051-ie-1812264-B878083",
+      "spender_entity_id": "C00754051",
+      "spender_name": "WORKERS VOTE",
+      "candidate_id": "S6PA00217",
+      "candidate_name": "Bob Casey",
+      "support_oppose": "S",
+      "amount": 10562.88,
+      "date": "2024-07-09",
+      "purpose": "SALARIES AND BENEFITS FOR CANVASSERS FOR 7/12/24 - 8/31/2024",
+      "payee": "LOCAL 25 UNITE HERE",
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202408209674147915",
+      "vendor_id": "V-unite-here-local-25",
+      "medium": "other"
+    }
+  ],
+  "ads": [],
+  "method": "Every Schedule E independent expenditure names a payee. Payee strings are normalised (case, punctuation, legal suffixes, token order), near-duplicates are folded with a difflib ratio ≥ 0.92 when their numeric tokens match, and hand alias rows from data/hand/<race>/vendor_aliases.json override the rule. Medium is classified from the purpose the spender filed (ordered keyword table in gotham/vendors.py); the FEC does not record which buy placed which ad, so vendor ↔ ad links are empty until a human verifies one. Totals are the filed amounts, grouped, never re-estimated."
+}

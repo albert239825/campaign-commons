@@ -416,7 +416,9 @@
       "date": "2024-10-06",
       "purpose": "DIGITAL ADVERTISING (ACTUAL COST OF ESTIMATED IE ON 48-HR RPT FILED 10/8/24) - SEE SCH B",
       "payee": "LOGAN CIRCLE GROUP",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202410249710202370"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202410249710202370",
+      "vendor_id": "V-logan-circle-group",
+      "medium": "digital"
     },
     {
       "ie_id": "C00544387-ie-1827890-SE.8627",
@@ -429,11 +431,43 @@
       "date": "2024-08-23",
       "purpose": "DIGITAL ADVERTISING",
       "payee": "LOGAN CIRCLE GROUP",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202410159687670967"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202410159687670967",
+      "vendor_id": "V-logan-circle-group",
+      "medium": "digital"
     }
   ],
   "flags": [],
   "has_chain": true,
   "source_url": "https://www.fec.gov/data/committee/C00544387/?cycle=2024",
-  "data_status": "real"
+  "data_status": "real",
+  "vendors": [
+    {
+      "vendor_id": "V-logan-circle-group",
+      "name": "LOGAN CIRCLE GROUP",
+      "amount": 740000.0,
+      "count": 2,
+      "media_mix": [
+        {
+          "medium": "digital",
+          "amount": 740000.0,
+          "count": 2
+        }
+      ],
+      "targets": [
+        {
+          "candidate_id": "S2PA00661",
+          "support_oppose": "S",
+          "amount": 550000.0
+        },
+        {
+          "candidate_id": "S6PA00217",
+          "support_oppose": "O",
+          "amount": 190000.0
+        }
+      ],
+      "first_date": "2024-08-23",
+      "last_date": "2024-10-06",
+      "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00544387&payee_name=LOGAN+CIRCLE+GROUP"
+    }
+  ]
 }

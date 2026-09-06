@@ -792,11 +792,38 @@
       "date": "2024-08-06",
       "purpose": "YARD SIGNS",
       "payee": "BUMPERACTIVE",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202409189675524425"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202409189675524425",
+      "vendor_id": "V-bumperactive",
+      "medium": "other"
     }
   ],
   "flags": [],
   "has_chain": true,
   "source_url": "https://www.fec.gov/data/committee/C00418897/?cycle=2024",
-  "data_status": "real"
+  "data_status": "real",
+  "vendors": [
+    {
+      "vendor_id": "V-bumperactive",
+      "name": "BUMPERACTIVE",
+      "amount": 223.5,
+      "count": 1,
+      "media_mix": [
+        {
+          "medium": "other",
+          "amount": 223.5,
+          "count": 1
+        }
+      ],
+      "targets": [
+        {
+          "candidate_id": "S6PA00217",
+          "support_oppose": "S",
+          "amount": 223.5
+        }
+      ],
+      "first_date": "2024-08-06",
+      "last_date": "2024-08-06",
+      "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00418897&payee_name=BUMPERACTIVE"
+    }
+  ]
 }

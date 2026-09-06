@@ -56,7 +56,9 @@
       "date": "2024-11-04",
       "purpose": "DIGITAL ADVERTSING",
       "payee": "HILTON MULTIMEDIA",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202501309748379589"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202501309748379589",
+      "vendor_id": "V-hilton-multimedia",
+      "medium": "digital"
     },
     {
       "ie_id": "C00825885-ie-1869036-SE.4508",
@@ -69,7 +71,9 @@
       "date": "2024-11-01",
       "purpose": "DIGITAL MEDIA",
       "payee": "HILTON MULTIMEDIA",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202501309748379582"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202501309748379582",
+      "vendor_id": "V-hilton-multimedia",
+      "medium": "digital"
     },
     {
       "ie_id": "C00825885-ie-1869036-SE.4487",
@@ -82,7 +86,9 @@
       "date": "2024-10-29",
       "purpose": "DIGITAL ADVERTISING",
       "payee": "HILTON MULTIMEDIA",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202501309748379578"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202501309748379578",
+      "vendor_id": "V-hilton-multimedia",
+      "medium": "digital"
     },
     {
       "ie_id": "C00825885-ie-1869036-SE.4546",
@@ -95,7 +101,9 @@
       "date": "2024-11-04",
       "purpose": "DIGITAL MEDIA",
       "payee": "HILTON MULTIMEDIA",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202501309748379591"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202501309748379591",
+      "vendor_id": "V-hilton-multimedia",
+      "medium": "digital"
     }
   ],
   "flags": [
@@ -114,5 +122,30 @@
   ],
   "has_chain": true,
   "source_url": "https://www.fec.gov/data/committee/C00825885/?cycle=2024",
-  "data_status": "real"
+  "data_status": "real",
+  "vendors": [
+    {
+      "vendor_id": "V-hilton-multimedia",
+      "name": "HILTON MULTIMEDIA",
+      "amount": 23620.0,
+      "count": 4,
+      "media_mix": [
+        {
+          "medium": "digital",
+          "amount": 23620.0,
+          "count": 4
+        }
+      ],
+      "targets": [
+        {
+          "candidate_id": "S2PA00661",
+          "support_oppose": "S",
+          "amount": 23620.0
+        }
+      ],
+      "first_date": "2024-10-29",
+      "last_date": "2024-11-04",
+      "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00825885&payee_name=HILTON+MULTIMEDIA"
+    }
+  ]
 }
