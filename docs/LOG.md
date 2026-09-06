@@ -552,14 +552,16 @@ positioning is written straight to the element's style on `mousemove` so hoverin
 root chip fits `AMERICAN HOSPITAL ASSOCIATION PAC` on two rows. Wire edge tuple 8 → 9 slots. `npm run lint`, `tsc
 --noEmit`, `next build` clean; no data or contract changes.
 
-## 2026-09-06 ~08:00 — Block 3 child E: the Policies tab, stances beside the spenders that say they care (child E)
+## 2026-09-06 ~08:00 — Block 3 child E: the Policies tab is the stance record, beside the spenders that say they care (child E)
 
 **What changed.** New top-level race tab `/races/<race>/policies` (T1–T3 in `docs/plans/2026-09-06-block3.md`). Ten issues in
 `ISSUES` order (D-26) in a sidebar tablist, one visible at a time, hash-synced so `#tax_budget` deep-links and the dossier's
-own `#<issue_id>` (child D) is the reverse trip. Left column: each candidate's dossier stance for the issue — position, coded
-direction via `directionLabel`/`ISSUE_AXES`, confidence, `needs review`, the first two evidence records by the contract's
-revealed-before-stated order, each with its `SourceLink`, and "Full dossier →"; "No record loaded" when the dossier has none.
-Right column: the `top_outside_spenders` whose *entity* record has `issue_focus.issue_ids` naming the issue, sorted by IE total
+own `#<issue_id>` (child D) is the reverse trip. Top row, the two candidates side by side: each
+candidate's **complete** stance record for the issue — position, coded direction via `directionLabel`/`ISSUE_AXES`, confidence,
+`needs review` / `verified`, and every evidence record (kind, vote, title, date, bill, Congress, roll call, description, `SourceLink`)
+in the contract's revealed-before-stated order; past five records the rest fold behind a native `<details>` "Show all N evidence
+records", still in the static HTML. "Full dossier →" keeps the per-candidate page reachable by URL; "No record loaded" when the
+dossier has none. Below, the funders and ads: the `top_outside_spenders` whose *entity* record has `issue_focus.issue_ids` naming the issue, sorted by IE total
 — name, committee type, focus kind, the hand-tagged description with the org's own source URL, the IE total with its fec.gov
 link, and the support/oppose sum per candidate from `by_candidate` ("Opposes Casey $7.0M · Supports McCormick $13M"), then
 "Funding chain →" when a chain exists and "Entity →". Under it, ads tagged with the issue: three by spend with ad-library links
@@ -580,3 +582,11 @@ costs have no frozen id; healthcare is the closest"), so the label is "Self-desc
 issues (health care 7, taxes 4, labor 4, energy 3, guns 3; defense, crypto, immigration, abortion and tech have stances but no
 self-described funder). 42 of 500 ads tagged. Both dossiers cover all 10 issues, so every panel has two stances. Built page HTML
 335 KB with all ten panels server-rendered (21 funder rows, 20 stance cards); the client island only toggles `hidden`.
+
+**Consolidation (same PR, Pat/Albert, Sep 6).** The dossier and the Policies tab were merged into one top-level tab: the stance
+cards went from a preview (top two records + "more in the dossier") to the whole record the dossier's `IssueSection` shows,
+adapted into `components/policies/stance-card.tsx` (nothing imported from `components/dossier`). Layout moved from
+stances-left / funders-right to stances side by side above a funders + ads row, so the two candidates are compared directly.
+The per-candidate dossier pages stay in the build and are reachable by URL and by "Full dossier →", but stop being a nav
+destination (child A's nav trim). Header copy now says this tab is the candidates' stance record for the race. PA: Casey's
+longest record is energy & climate at 10 evidence records (5 open, 5 folded); McCormick has one stated position per issue.

@@ -55,9 +55,9 @@ export default async function PoliciesPage({ params }: { params: Promise<{ raceI
       <DataStatusBanner status={ledger.data_status} />
       <DetailHeader label={race.label} title="Policies">
         <p>
-          Each of the ten issues, one at a time: what the record shows each candidate holds, beside the outside spenders that describe
-          themselves as focused on the same issue and what they spent for or against each candidate. Same topic is the only link
-          between the two columns.
+          The candidates&apos; stance record for this race, issue by issue: each candidate&apos;s position with every vote, bill and
+          statement behind it, side by side, alongside the outside spenders that describe themselves as focused on the same issue and
+          what they spent for or against each candidate. Same topic is the only link between the stances and the spenders.
         </p>
       </DetailHeader>
       <RaceNav race={race} counts={{ ads: gallery.ads.length, stories: getStories(raceId).stories.length }} active={routes.policies(raceId)} />
@@ -65,8 +65,10 @@ export default async function PoliciesPage({ params }: { params: Promise<{ raceI
       <aside className="detail-callout policies-howto" aria-label="How to read this page">
         <h2>How to read this</h2>
         <p>
-          <b>Candidate stances</b> come from the dossier record: a one-line position written by a person from roll-call votes, bills and
-          archived statements, each linked to its government record, with a coded direction where one exists. <b>Funder focus</b> is
+          <b>Candidate stances</b> are the full record, not a summary: a one-line position written by a person from roll-call votes,
+          bills and archived statements, every one of them listed and linked to its government record, with a coded direction where
+          one exists. Incumbents are judged on what they did; challengers can only be judged on what they say, and the evidence
+          kind on each record makes that difference visible. <b>Funder focus</b> is
           self-description: the organisation&apos;s own account of what it is for, sourced to its own material. It says what the group
           says it stands for, not what its dollars bought, and it carries no direction, so a funder appears beside a stance only
           because both name the same issue, never because it agrees with, backs or opposes that stance. The <b>support / oppose

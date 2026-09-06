@@ -10,8 +10,9 @@ const ADS_SHOWN = 3;
 export type CandidateStance = { candidate: RaceCandidate; stance: Stance | undefined; hasDossier: boolean };
 
 /**
- * One issue: the candidates' stances on the left, beside the outside spenders whose self-described focus names the same
- * issue on the right. Same topic is the only link between the two columns; no direction is claimed for any funder.
+ * One issue: the candidates' full stance records side by side on top, then the outside spenders whose self-described focus
+ * names the same issue and the ads tagged with it. Same topic is the only link between the two; no direction is claimed for
+ * any funder.
  */
 export function IssuePanel({ raceId, issue, stances, funders, ads, candidateNames }: {
   raceId: string;
@@ -34,18 +35,18 @@ export function IssuePanel({ raceId, issue, stances, funders, ads, candidateName
         </p>
       </header>
 
-      <div className="policies-columns">
-        <div className="policies-column">
-          <h3>
-            Candidate stances <small>from the dossier record</small>
-          </h3>
-          <div className="policies-stances">
-            {stances.map((s) => (
-              <StanceCard key={s.candidate.candidate_id} raceId={raceId} candidate={s.candidate} issueId={issue.id} stance={s.stance} hasDossier={s.hasDossier} />
-            ))}
-          </div>
+      <div className="policies-column policies-record">
+        <h3>
+          Candidate stances <small>the stance record: position, coded direction and every evidence record, each linked to its source</small>
+        </h3>
+        <div className="policies-stances">
+          {stances.map((s) => (
+            <StanceCard key={s.candidate.candidate_id} raceId={raceId} candidate={s.candidate} issueId={issue.id} stance={s.stance} hasDossier={s.hasDossier} />
+          ))}
         </div>
+      </div>
 
+      <div className="policies-columns">
         <div className="policies-column">
           <h3>
             Spenders that describe themselves as focused on {issue.label.toLowerCase()} <small>self-description, sourced to the organisation</small>
@@ -59,7 +60,9 @@ export function IssuePanel({ raceId, issue, stances, funders, ads, candidateName
               ))}
             </ol>
           )}
+        </div>
 
+        <div className="policies-column">
           <div className="policies-ads">
             <h3>
               Ads tagged with this issue <small>a person tagged the creative; platform spend ranges</small>
