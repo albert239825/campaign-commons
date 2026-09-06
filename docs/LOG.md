@@ -912,3 +912,7 @@ The ad detail page moved into the shared race shell, `RaceNav` now uses prefix m
 Built the two stacked alignment-view PRs. PR 1 added the deterministic verdict helper, Grok Responses API research endpoint with strict quote/source filtering and limits, and graph/static funder plumbing. PR 2 adds the Policies alignment panel: browser-local -2..2 views shared with personalization, record-first verdicts with model-proposed fallback, offline x_stances rows, on-demand Grok research, and lazy issue-tagged funders with graph/static fallback and adjacency copy. The panel keeps model-found material labelled unreviewed and does not send the user’s view to the server.
 
 Open items: the research cache is per process instance; graph funder amounts use complete ledger totals where available, while listed gift sums are labelled when no ledger total exists.
+
+### 2026-09-06 — Reader-focused alignment research follow-up
+
+Added an optional ≤200-character reader question to the Policies Grok research form. The question only steers the web search, is normalized and included in the cache key, and the browser still receives only provenance-filtered verbatim quotes and source URLs; the response shape and client-side privacy boundary are unchanged.

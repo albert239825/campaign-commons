@@ -16,9 +16,9 @@ export async function POST(req: Request): Promise<NextResponse> {
   }
   const parsed = AskAlignRequest.safeParse(body);
   if (!parsed.success) {
-    return NextResponse.json({ error: "Expected { raceId: string, issueId: string, candidateId: string }." }, { status: 400 });
+    return NextResponse.json({ error: "Expected { raceId: string, issueId: string, candidateId: string, question?: string }." }, { status: 400 });
   }
-  const { raceId, issueId, candidateId } = parsed.data;
+  const { raceId, issueId, candidateId, question } = parsed.data;
   let race;
   try {
     race = getRace(raceId);
@@ -35,7 +35,7 @@ export async function POST(req: Request): Promise<NextResponse> {
     return tooMany("Too many alignment requests; try again in a minute.");
   }
   try {
-    const response = await alignCandidate(race.label, candidate.name, raceId, issueId, candidateId);
+    const response = await alignCandidate(race.label, candidate.name, raceId, issueId, candidateId, { question });
     return NextResponse.json(response, { headers: { "cache-control": "no-store" } });
   } finally {
     release();
