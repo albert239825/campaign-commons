@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { UNWALKED_COLOR, UNWALKED_LABEL, VISIBILITY_COLORS, type Traceability } from "@campaign-commons/contracts";
+import { DISCLOSED_SPLIT_COLORS, UNWALKED_COLOR, UNWALKED_LABEL, VISIBILITY_COLORS, type Traceability } from "@campaign-commons/contracts";
 import { pct, routes } from "@/lib/format";
 import { Card, Money } from "@/components/ui";
 import { BarLegend, StackedBar, visibilitySegments } from "@/components/ui/stacked-bar";
@@ -18,7 +18,15 @@ export function TraceabilityCard({ t }: { t: Traceability | null }) {
       </Card>
     );
   }
-  const segs = visibilitySegments({ disclosed: t.traced_to_individuals + (t.traced_to_organizations ?? 0), inferable: t.inferable, unwalked: t.unwalked, dark: t.dark });
+  const split = t.traced_to_organizations !== undefined;
+  const segs = visibilitySegments({
+    disclosed: t.traced_to_individuals + (t.traced_to_organizations ?? 0),
+    disclosed_individuals: split ? t.traced_to_individuals : undefined,
+    disclosed_organizations: t.traced_to_organizations,
+    inferable: t.inferable,
+    unwalked: t.unwalked,
+    dark: t.dark,
+  });
   return (
     <Card title="Traceability of outside money">
       <div className="traceability-summary flex flex-wrap items-end gap-x-8 gap-y-4">
@@ -30,7 +38,7 @@ export function TraceabilityCard({ t }: { t: Traceability | null }) {
         </div>
         <div className="traceability-breakdown min-w-64 flex-1">
           <StackedBar segments={segs} height="h-4" />
-          <div className={`mt-1.5 grid gap-2 text-xs ${segs.length === 4 ? "grid-cols-4" : "grid-cols-3"}`}>
+          <div className={`mt-1.5 grid gap-2 text-xs ${segs.length >= 5 ? "grid-cols-5" : segs.length === 4 ? "grid-cols-4" : "grid-cols-3"}`}>
             {segs.map((s) => (
               <div key={s.label}>
                 <div className="flex items-center gap-1 text-neutral-600">
@@ -50,7 +58,12 @@ export function TraceabilityCard({ t }: { t: Traceability | null }) {
       <BarLegend
         className="mt-2"
         segments={[
-          { label: "Disclosed = resolves to a named individual, business or union in FEC filings", value: 1, color: VISIBILITY_COLORS.disclosed },
+          ...(split
+            ? [
+                { label: "Disclosed · individuals = resolves to a named person in FEC filings", value: 1, color: DISCLOSED_SPLIT_COLORS.disclosed_individuals },
+                { label: "Disclosed · organizations = stops at a named business or union giving from its own treasury; the organization is named, its own funders are not walked", value: 1, color: DISCLOSED_SPLIT_COLORS.disclosed_organizations },
+              ]
+            : [{ label: "Disclosed = resolves to a named individual, business or union in FEC filings", value: 1, color: VISIBILITY_COLORS.disclosed }]),
           { label: "Inferable = reconstructable from IRS 990s, lagged", value: 1, color: VISIBILITY_COLORS.inferable },
           ...(t.unwalked === undefined ? [] : [{ label: `${UNWALKED_LABEL} — neither disclosed nor dark`, value: 1, color: UNWALKED_COLOR }]),
           { label: "Dark = stops at an organization whose own funding is not on file (501(c)(4), LLC, trust)", value: 1, color: VISIBILITY_COLORS.dark },

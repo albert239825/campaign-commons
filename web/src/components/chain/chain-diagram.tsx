@@ -12,6 +12,7 @@ import {
 } from "react";
 import {
   COMMITTEE_TYPE_LABELS,
+  DISCLOSED_SPLIT_COLORS,
   TARGETING_COLOR,
   UNWALKED_COLOR,
   VISIBILITY_COLORS,
@@ -170,6 +171,7 @@ function NodeBox({
   const isRoot = isRootNode(n);
   const isOut = n.side === "out";
   const togglable = isTogglable(n);
+  const visibilityColor = n.kind === "organization" && n.visibility === "disclosed" ? DISCLOSED_SPLIT_COLORS.disclosed_organizations : VISIBILITY_COLORS[n.visibility];
   const showsMore = isOut ? n.state === "closed" : n.state !== "full";
   const isUnwalked = n.terminus_reason === "depth_cap";
   const stroke = selected
@@ -186,7 +188,7 @@ function NodeBox({
               ? TARGETING_COLOR
               : isUnwalked
                 ? UNWALKED_COLOR
-                : VISIBILITY_COLORS[n.visibility];
+                : visibilityColor;
   const accent = isDark
     ? VISIBILITY_COLORS.dark
     : isAgg
@@ -199,7 +201,7 @@ function NodeBox({
             ? TARGETING_COLOR
             : isUnwalked
               ? UNWALKED_COLOR
-              : VISIBILITY_COLORS[n.visibility];
+              : visibilityColor;
   const fill = isDark
     ? "url(#dark-hatch)"
     : isAgg
