@@ -622,7 +622,95 @@ nodes and 3 ribbons, dims 93 elements. `npm run lint`, `npm run typecheck`, `npm
 changes. Not exercised in the running app: an ad page with both a placement spine and a targeting arrow — no ad in the PA
 data has a walked sponsor chain *and* a `candidate_ids` entry — so that shape is covered by the unit fixture only.
 
-## 2026-09-06 ~08:30 — Block 3 child B: one pie, a "Show detail" toggle (child B)
+## 2026-09-06 ~08:00 — Block 3 child E: the Policies tab is the stance record, beside the spenders that say they care (child E)
+
+**What changed.** New top-level race tab `/races/<race>/policies` (T1–T3 in `docs/plans/2026-09-06-block3.md`). Ten issues in
+`ISSUES` order (D-26) in a sidebar tablist, one visible at a time, hash-synced so `#tax_budget` deep-links and the dossier's
+own `#<issue_id>` (child D) is the reverse trip. Top row, the two candidates side by side: each
+candidate's **complete** stance record for the issue — position, coded direction via `directionLabel`/`ISSUE_AXES`, confidence,
+`needs review` / `verified`, and every evidence record (kind, vote, title, date, bill, Congress, roll call, description, `SourceLink`)
+in the contract's revealed-before-stated order; past five records the rest fold behind a native `<details>` "Show all N evidence
+records", still in the static HTML. "Full dossier →" keeps the per-candidate page reachable by URL; "No record loaded" when the
+dossier has none. Below, the funders and ads: the `top_outside_spenders` whose *entity* record has `issue_focus.issue_ids` naming the issue, sorted by IE total
+— name, committee type, focus kind, the hand-tagged description with the org's own source URL, the IE total with its fec.gov
+link, and the support/oppose sum per candidate from `by_candidate` ("Opposes Casey $7.0M · Supports McCormick $13M"), then
+"Funding chain →" when a chain exists and "Entity →". Under it, ads tagged with the issue: three by spend with ad-library links
+and "N tagged ads on the ads wall →". A "How to read this" box said the three things the page must not blur: stances are the
+record, funder focus is self-description (D-66), the dollar figures are IEs targeting a candidate, not money to a campaign;
+Albert cut the box before merge, so the header paragraph, the "Self-described focus" label and the IE captions carry that
+alone. One `RaceNav` item after Ads; `routes.policies`; `hasEntity`/`hasDossier` existence checks in `lib/data.ts`; `.policies-*` CSS
+only. No contract, pipeline or data change.
+
+**Challenge.** The word "alongside" is the whole product decision. `issue_focus` says *what* a group says it is for, not *which
+way*, so the page can never say a funder agrees with, backs or is aligned with a stance — only that both name the same topic.
+The copy pattern from the ledger's Layer A card ("spenders that describe themselves as focused on X") carries over; the
+directional field is left for later as an explicitly labelled inference (D-79). The plan's ads-wall filter turned out not to
+exist (`?issue=` is not read by `AdGallery`, even though the ledger's issue card links with it), so the page lists ad titles and
+links to the wall unfiltered rather than a dead query string. The hand-tagged descriptions carry tagger notes ("caregiving
+costs have no frozen id; healthcare is the closest"), so the label is "Self-described focus", not "In its own words".
+
+**Numbers.** PA: 98 outside spenders, 23 with `issue_focus`, 15 naming at least one issue, 21 funder–issue pairs across 5 of 10
+issues (health care 7, taxes 4, labor 4, energy 3, guns 3; defense, crypto, immigration, abortion and tech have stances but no
+self-described funder). 42 of 500 ads tagged. Both dossiers cover all 10 issues, so every panel has two stances. Built page HTML
+335 KB with all ten panels server-rendered (21 funder rows, 20 stance cards); the client island only toggles `hidden`.
+
+**Consolidation (same PR, Pat/Albert, Sep 6).** The dossier and the Policies tab were merged into one top-level tab: the stance
+cards went from a preview (top two records + "more in the dossier") to the whole record the dossier's `IssueSection` shows,
+adapted into `components/policies/stance-card.tsx` (nothing imported from `components/dossier`). Layout moved from
+stances-left / funders-right to stances side by side above a funders + ads row, so the two candidates are compared directly.
+The per-candidate dossier pages stay in the build and are reachable by URL and by "Full dossier →", but stop being a nav
+destination (child A's nav trim). Header copy now says this tab is the candidates' stance record for the race. PA: Casey's
+longest record is energy & climate at 10 evidence records (5 open, 5 folded); McCormick has one stated position per issue.
+
+**Funders in two columns (Albert, same day).** The funder list under the stances is split into the same two columns as the
+cards above, by whose side the spender's FEC-coded IEs were on: support for X or opposition to the other counts *for* X
+(`targetingSide`, the P1 rule from the plan). A spender with labelled dollars on both sides, or none, goes in a full-width
+"No single side" row rather than being forced under a candidate; two-candidate races only, otherwise one list. The column is a
+targeting fact on file and the copy says so — it is still not agreement with the stance above it (D-79 unchanged). PA: all 21
+funder–issue pairs are one-sided (18 for Casey, 3 for McCormick); McCormick's column is empty on two issues, so the empty state
+carries the comparison. Ads move to a full-width block under the funders.
+
+## 2026-09-06 ~08:00 — Block 3 child A: one card-first "Top outside spenders" tab; nav down to Ledger · Ads
+
+**What changed.** Sep 5 critique (Albert, Eric, Patrick): "Funding highlights" and "Top outside spenders" were two tabs
+about the same committees, the highlight cards covered 18 of 98 spenders and led with a judgement ("Dark wall", "One
+source") plus a templated paragraph, and the race nav had six items. The ledger now has three sections — Funding overview ·
+Top outside spenders · Spending by issue. The spenders section (`components/ledger/spender-cards.tsx`, client island) is a
+card grid of every `ledger.top_outside_spenders` row sorted by total, with a **Cards | Table** toggle to the unchanged
+`SpendersTable` (flags legend still under it). Each card: committee name + type, total IE dollars with the FEC link, **% dark**
+as a big number over the bar (`visibility_shares.dark`, falling back to `1 − traceability_score`, "not computed" when the filer
+has no receipts to walk), one aggregated targeting line per (candidate, S/O) built from `by_candidate` with last names from
+`race.candidates`, and — when the entity file carries a hand-tagged `issue_focus` — a **self-described focus** block: the kind as a headline ("General partisan platform", "Single issue", "Multi-issue agenda", "Labor
+union"…), the tagged issues from `issue_ids` listed by name (plain text, dot-separated), the `basis.source_urls` link, and the group's own one-sentence
+description behind an "In its own words" disclosure (D-66: about the spender, not the dollars). For general-partisan platforms
+the headline also says which side the committee's declared IE targeting lands on in this race ("· Republican side in this
+race"), read off the same Schedule E rows as the targeting line above it — a derivation, not a judgement, and only when the
+rows point one way. `stories.json` only decorates: a story's `root_entity_id` gives that card the story kind as a filter category and
+the "Checked against fec.gov" chip when `verified`. A **Category** dropdown above the grid groups story kinds ("Highlight"),
+`spender.flags` ("Flag", reusing `FLAG_MEANINGS`) and `issue_focus.kind` ("Self-described focus"); the chosen category's
+one-line meaning renders under it with "N of 98 spenders · $X". The whole card navigates to the entity page (card-level click
+handler; the title is the real link; FEC / own-words / chain anchors are ordinary siblings so nothing nests). `lib/data.ts`
+gained `getIssueFocus(raceId, entityId)`; `page.tsx` reads it for each spender at build time and passes a plain
+`Record<entity_id, IssueFocus>` down. `RaceNav` is **Ledger · Ads** (ads count kept; `counts` is `{ ads }`); the six callers
+were trimmed to that. Dossiers stay one click away as an explicit "Dossier →" beside each candidate in the ledger header.
+Per Albert's correction mid-task, the stories and vendors list pages and their routes stay (reachable by URL and existing
+in-page links); only the tabs went. `story-slideshow.tsx` had no remaining caller and was deleted; `story-card.tsx` stays
+for the stories page. D-80.
+
+**Challenge.** "Whole card is a link" versus "every number keeps its source link": an `<a>` wrapping the card cannot contain
+the FEC, own-words and chain anchors. Went with an `article` click handler that ignores clicks landing on any `a`/`button`
+or on selected text, honours ⌘/ctrl-click, and keeps the title as a focusable `Link`, so keyboard and screen-reader users
+get one real link per card and the sourced numbers keep theirs. Second: the story kinds and the flags overlap
+(`dark_dead_end` ≈ `dead_end_dark`, `popup` ≈ `popup`, `single_transfer` ≈ `single_transfer_funded`) but not exactly — the
+story set is capped at 18 while flags cover 50 spenders — so both stay as separate groups in the dropdown rather than
+being merged into one taxonomy the data does not have.
+
+**Numbers.** PA: 98 spender cards, $233M; 86 with `visibility_shares`, 12 with no chain ("not computed"); 50 flagged; 18
+story-decorated; 23 with a self-described focus loaded from `entities/*.json` (34 hand-tag rows; the rest are not top
+spenders). Dropdown: 4 highlight kinds, 5 flags, 6 focus kinds. Nav items 6 → 2. Lint, tsc and the static build pass; the
+`/stories` and `/vendors` routes are still emitted.
+
+## 2026-09-06 ~09:30 — Block 3 child B: one pie, a "Show detail" toggle (child B)
 
 **What changed.** The ledger's "Funding overview" keeps its shape — one tab per view (all candidates, then each candidate),
 one pie per tab, campaign receipts vs outside spending, detail column on the right — and gains a **Show detail** button
@@ -633,7 +721,7 @@ slice opens its group in the detail column and highlights the matching line (`ar
 lists the five slices with amounts and shares of the pie total. `funding-view.ts` gains `pieSlices(view, detailed)`,
 `pieSectors`, `GROUP_COLORS`; the component draws sectors from cumulative angles instead of one split angle. Summary
 view, tabs, captions, visibility bar, methodology `<details>` and source records are unchanged; no contract or data
-changes; `page.tsx` untouched. D-79. On the **all-candidates** tab, detail instead groups the pie by side (Albert): one
+changes; `page.tsx` untouched. D-81. On the **all-candidates** tab, detail instead groups the pie by side (Albert): one
 contiguous half per candidate — their receipts, outside spending supporting them, outside spending opposing their
 opponent(s) — each side in its own non-party hue (teal-slate / umber-ochre; darkest shade = receipts, lighter = outside
 spending) and a "Working for <candidate>" subtotal heading in the legend (`sideSlices`, `SIDE_HUES`). The caption says the side total is a comparison figure, not a fundraising total.
