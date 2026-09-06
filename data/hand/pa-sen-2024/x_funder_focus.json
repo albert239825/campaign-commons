@@ -308,6 +308,49 @@
       }
     },
     {
+      "entity_id": "org:ALTRIA_CLIENT_SERVICES_LLC",
+      "name": "Altria Client Services Llc",
+      "kind": "business_trade",
+      "issue_ids": [],
+      "description": "Altria Client Services provides Altria Group and its companies with high-quality services in a financially disciplined way, including advanced analytics, compliance, government affairs, finance, legal, regulatory affairs and more.",
+      "quote": "Altria Client Services provides Altria Group and its companies with high-quality services in a financially disciplined way. These areas include: Advanced Analytics ● Compliance ● Consumer & Market Insights ● Corporate Citizenship ● Digital Marketing Services ● Engineering ● Finance",
+      "source_urls": [
+        "https://www.altria.com/Overlays/Companies-and-Brands/ALCS",
+        "http://web.archive.org/web/20260121002143/https://www.altria.com/Overlays/Companies-and-Brands/ALCS"
+      ],
+      "provenance": {
+        "tagged_by": "xai-grok-4.3-2026-09-06",
+        "tagged_at": "2026-09-06",
+        "model": "grok-4.3",
+        "prompt_version": "classify_funder.v1",
+        "tools": [
+          "web_search"
+        ],
+        "tool_filters": {},
+        "response_id": "7c573e0e-3276-989e-8050-9901a7b369aa",
+        "retrieved_at": "2026-09-06T03:54:57+00:00",
+        "citations": [
+          "https://www.altria.com/about-altria",
+          "https://www.altria.com/contact-us/investors",
+          "https://www.altria.com/contact-us",
+          "https://nhcsl.org/support/altria/",
+          "https://www.cwpma.org/companies/altria-client-services-llc",
+          "https://www.altria.com/responsibility/drive-responsibility-through-our-value-chain",
+          "https://www.altria.com/Overlays/Companies-and-Brands/ALCS",
+          "https://investor.altria.com/press-releases/news-details/2026/Altria-Celebrates-America-by-Investing-in-Our-Growers-Communities-Employees-and-Iconic-Brands/default.aspx",
+          "https://www.altria.com/people-and-careers/workforce-development-and-capability-building",
+          "https://www.altria.com/en/people-and-careers/careers",
+          "https://www.altria.com/-/media/Project/Altria/Altria/Investors/events-and-presentations/2025/2025-Q1/Press-Release.pdf",
+          "https://investor.altria.com/press-releases/news-details/2025/Altria-Group-Inc--Announces-Retirement-of-CEO-Billy-Gifford-and-Appointment-of-Sal-Mancuso-as-Successor/default.aspx"
+        ],
+        "confidence": "high",
+        "review_status": "pending",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "review_note": null
+      }
+    },
+    {
       "entity_id": "org:AMERICANS_TOGETHER_INC.",
       "name": "Americans Together Inc.",
       "kind": "general_partisan",
@@ -579,6 +622,52 @@
           "https://americanprinciplesproject.org/app-foundation/home/",
           "https://www.guidestar.org/profile/26-4613397",
           "https://americanprinciplesproject.org/appf-landing-page/"
+        ],
+        "confidence": "high",
+        "review_status": "pending",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "review_note": null
+      }
+    },
+    {
+      "entity_id": "org:AMERICAN_PROSPERITY_ALLIANCE",
+      "name": "American Prosperity Alliance",
+      "kind": "multi_issue",
+      "issue_ids": [
+        "tax_budget",
+        "healthcare",
+        "labor_trade"
+      ],
+      "description": "The American Prosperity Alliance (“APA”) is a 501(c)(4) social welfare organization whose primary purpose is to advocate for legislative and regulatory policies that advance economic prosperity in America, including reforms to grow the economy, lower national debt, fix healthcare, improve education, prepare the workforce, reduce regulations, create jobs, and promote free markets.",
+      "quote": "The American Prosperity Alliance (“APA”) is a 501(c)(4) social welfare organization. APA’s primary purpose is to advocate for legislative and regulatory policies that advance economic prosperity in America.",
+      "source_urls": [
+        "https://www.prosperityalliance.org/about"
+      ],
+      "provenance": {
+        "tagged_by": "xai-grok-4.3-2026-09-06",
+        "tagged_at": "2026-09-06",
+        "model": "grok-4.3",
+        "prompt_version": "classify_funder.v1",
+        "tools": [
+          "web_search"
+        ],
+        "tool_filters": {},
+        "response_id": "198f55b7-16bb-90de-9af0-4970e20cbc9c",
+        "retrieved_at": "2026-09-06T03:52:37+00:00",
+        "citations": [
+          "https://www.prosperityalliance.org/about",
+          "https://www.prosperityalliance.org",
+          "https://www.prosperityalliance.org/policies",
+          "https://impala.digital/public/profiles/88-2451891/overview",
+          "https://www.prosperityalliance.org/news",
+          "https://www.causeiq.com/organizations/american-prosperity-alliance%2C882451891/",
+          "https://americanprosperity.com/",
+          "https://www.opensecrets.org/outside-spending/donor_detail/2022?amp=&id=American+Prosperity+Alliance&super=N&type=O",
+          "https://app.candid.org/profile/15239709/american-prosperity-alliance-88-2451891",
+          "https://pluralistic.net/2022/08/11/rope-a-dope/",
+          "https://www.opensecrets.org/news/2022/08/two-dark-money-groups-bankrolled-pop-up-super-pac-spending-millions-gop-primaries",
+          "https://www.causeiq.com/organizations/american-prosperity-alliance,882451891/"
         ],
         "confidence": "high",
         "review_status": "pending",
@@ -4064,6 +4153,47 @@
           "https://www.genarchives..com/Towne-Bowditch/poems_Swikert_Charles_reunions.htm",
           "https://www.genarchives..com/Towne-Bowditch/g0/p520.htm",
           "https://www.genarchives..com/Towne-Bowditch/g0/p291.htm"
+        ],
+        "confidence": "high",
+        "review_status": "pending",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "review_note": null
+      }
+    },
+    {
+      "entity_id": "org:JUMP_CRYPTO",
+      "name": "Jump Crypto",
+      "kind": "business_trade",
+      "issue_ids": [
+        "crypto_fintech"
+      ],
+      "description": "Builders of blockchain technology revolutionizing open, community-driven networks. We identify real-world constraints and build decentralized consortiums to convert systemic bottlenecks into shared breakthroughs by contributing time, capital, and code through trade, build, and invest activities.",
+      "quote": "Our strategy is simple: identify real world constraints and build decentralized consortiums to convert systemic bottlenecks into shared breakthroughs. We do it by contributing time, capital, and code.",
+      "source_urls": [
+        "https://jumpcrypto.com/"
+      ],
+      "provenance": {
+        "tagged_by": "xai-grok-4.3-2026-09-06",
+        "tagged_at": "2026-09-06",
+        "model": "grok-4.3",
+        "prompt_version": "classify_funder.v1",
+        "tools": [
+          "web_search"
+        ],
+        "tool_filters": {},
+        "response_id": "fc616573-4720-917d-8e20-02c71ea8c69d",
+        "retrieved_at": "2026-09-06T03:52:04+00:00",
+        "citations": [
+          "https://jumpcrypto.com/",
+          "https://f4.fund/firms/jump-crypto",
+          "https://jumpcrypto.com/trade",
+          "https://www.caplight.com/investor/jumpcrypto",
+          "https://jumpcrypto.com/resources/introducing-jump-crypto",
+          "https://jumpcrypto.com/reintroducing-jump-crypto/",
+          "https://jumpcrypto.com/resources/shelby-decentralized-storage-designed-to-serve",
+          "https://jumpcrypto.com/resources/paradigms-for-on-chain-credit",
+          "https://jumpcrypto.com/resources/meet-us-at-breakpoint-in-abu-dhabi"
         ],
         "confidence": "high",
         "review_status": "pending",
