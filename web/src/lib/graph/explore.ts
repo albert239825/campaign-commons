@@ -3,7 +3,7 @@ import { z } from "zod";
 import type { TrailSubject } from "@campaign-commons/contracts";
 import { NODE_KINDS, GraphFactSchema, GraphNodeRefSchema, WITHHELD_REASONS, type GraphFact, type GraphNodeRef, type NodeKind } from "./facts";
 import { composeExplore, narrateExplore, type LlmOptions, type Narration } from "./llm";
-import { edge } from "./queries";
+import { COMPLETION, edge } from "./queries";
 import { type TypedRunner } from "./neo4j";
 import { ENTITY } from "./schema";
 import { sankeyFromRows, SankeyDataSchema, type SankeyData } from "./sankey";
@@ -29,6 +29,7 @@ export type ExploreResult = {
   narrative: Narration;
   truncated: boolean;
   diagram: SankeyData | null;
+  context: GraphFact[];
 };
 export type ExploreRefusal = {
   kind: "unsupported";
@@ -60,6 +61,7 @@ export const AskExploreResponseSchema = z.discriminatedUnion("kind", [
     narrative: ExploreNarrationSchema,
     truncated: z.boolean(),
     diagram: SankeyDataSchema.nullable(),
+    context: z.array(GraphFactSchema),
   }),
   z.object({
     kind: z.literal("unsupported"),
@@ -182,6 +184,39 @@ const refuse = (reason: ExploreRefusal["reason"], message: string): ExploreRefus
 
 export type ExploreDeps = { run: TypedRunner | null; llm?: LlmOptions };
 
+function completionIds(rows: readonly ExploreRow[]): string[] {
+  const ids = new Set<string>();
+  for (const row of rows) {
+    for (const cell of Object.values(row.cells)) {
+      if (cell.t === "node") {
+        if (cell.node.kind === "committee") ids.add(cell.node.id);
+      } else if (cell.t === "edge") {
+        if (cell.fact.from.kind === "committee") ids.add(cell.fact.from.id);
+        if (cell.fact.to.kind === "committee") ids.add(cell.fact.to.id);
+      }
+    }
+  }
+  return [...ids];
+}
+
+async function completeGraph(raceId: string, rows: readonly ExploreRow[], run: TypedRunner): Promise<GraphFact[]> {
+  const ids = completionIds(rows);
+  if (ids.length === 0) return [];
+  try {
+    const result = await run(COMPLETION, { race: raceId, ids }, { timeoutMs: EXPLORE_TIMEOUT_MS });
+    if (result.queryType !== "r") return [];
+    return result.records.flatMap((record, i) => {
+      try {
+        return [GraphFactSchema.parse({ ...(record.edge as Record<string, unknown>), n: rows.length + i + 1 })];
+      } catch {
+        return [];
+      }
+    });
+  } catch {
+    return [];
+  }
+}
+
 export async function exploreQuestion(
   raceId: string,
   question: string,
@@ -246,6 +281,7 @@ export async function exploreQuestion(
   if (!execution.ok) return refuse("rejected_query", "The exploratory query did not meet the graph's read-only rules.");
   if (execution.rows.length === 0) return refuse("empty", "The query ran and returned no rows: nothing in this race's filed records matches.");
 
+  const context = mode === "graph" ? await completeGraph(raceId, execution.rows, deps.run!) : [];
   const narrative = await narrateExplore(question, execution.rows, deps.llm);
   return {
     kind: "explore",
@@ -255,6 +291,7 @@ export async function exploreQuestion(
     rows: execution.rows,
     narrative,
     truncated: execution.truncated,
-    diagram: mode === "graph" ? sankeyFromRows(execution.rows) : null,
+    diagram: mode === "graph" ? sankeyFromRows(execution.rows, context) : null,
+    context,
   };
 }

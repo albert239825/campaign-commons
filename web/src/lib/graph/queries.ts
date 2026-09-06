@@ -58,6 +58,38 @@ export const edge = (a: string, r: string, b: string, path = "null") =>
 
 const E = `:${ENTITY}`;
 
+/** Fixed graph-only completion for @graph: carry drawn committees through targeting and campaign ownership. */
+export const COMPLETION = `
+CALL {
+  MATCH (c${E} {race_id: $race})-[t:${REL.TARGETED}]->(cand${E} {race_id: $race})
+  WHERE c.id IN $ids AND t.amount > 0
+  WITH c, t, cand ORDER BY t.amount DESC LIMIT 40
+  RETURN ${edge("c", "t", "cand")} AS edge
+}
+RETURN edge
+UNION ALL
+CALL {
+  MATCH (c${E} {race_id: $race})-[k:${REL.CAMPAIGN_OF}]->(cand${E} {race_id: $race})
+  WHERE c.id IN $ids
+  RETURN ${edge("c", "k", "cand")} AS edge
+}
+RETURN edge
+UNION ALL
+CALL {
+  MATCH (c${E} {race_id: $race})-[g:${REL.GAVE}]->(cc${E} {race_id: $race})-[k:${REL.CAMPAIGN_OF}]->(cand${E} {race_id: $race})
+  WHERE c.id IN $ids AND g.amount > 0
+  WITH c, g, cc ORDER BY g.amount DESC LIMIT 40
+  RETURN ${edge("c", "g", "cc")} AS edge
+}
+RETURN edge
+UNION ALL
+CALL {
+  MATCH (c${E} {race_id: $race})-[g:${REL.GAVE}]->(cc${E} {race_id: $race})-[k:${REL.CAMPAIGN_OF}]->(cand${E} {race_id: $race})
+  WHERE c.id IN $ids AND g.amount > 0
+  RETURN ${edge("cc", "k", "cand")} AS edge
+}
+RETURN edge`;
+
 /** The statements each operation runs. `$race`, `$a`, `$b` (id lists) are the only parameters. */
 export const CYPHER: Record<GraphOp, readonly string[]> = {
   shared_funders: [

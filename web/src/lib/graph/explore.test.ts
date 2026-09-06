@@ -2,6 +2,7 @@ import neo4j from "neo4j-driver";
 import { afterEach, describe, expect, it, vi } from "vitest";
 import type { TrailSubject } from "@campaign-commons/contracts";
 import { exploreQuestion, rowSentence, toCells, validateCypher, type ExploreRow } from "./explore";
+import { COMPLETION } from "./queries";
 
 const node = { properties: { id: "C1", name: "ONE NATION", kind: "committee", href: "/races/r/entities/C1" } };
 const relationship = { elementId: "rel-1" };
@@ -130,13 +131,35 @@ describe("exploreQuestion", () => {
     vi.spyOn(neo4j, "isPath").mockReturnValue(false);
     vi.spyOn(neo4j, "isRelationship").mockImplementation((value) => value === relationship);
     const fetch = stubResponses([{ cypher: good, description: "A flow." }], { narrative: "The query returned $1,234 [1]." });
-    const run = vi.fn(async (cypher: string) =>
-      cypher.includes("elementId(r)")
-        ? { records: [{ eid: "rel-1", edge: fact }], queryType: "r" }
-        : { records: [{ edge: relationship }], queryType: "r" },
-    );
+    const run = vi.fn(async (cypher: string) => {
+      if (cypher === COMPLETION) return { records: [{ edge: fact }], queryType: "r" };
+      if (cypher.includes("elementId(r)")) return { records: [{ eid: "rel-1", edge: fact }], queryType: "r" };
+      return { records: [{ edge: relationship }], queryType: "r" };
+    });
     const result = await exploreQuestion("race", "show flows", subjects, { run, llm: { apiKey: "key", fetch } }, "graph");
-    expect(result).toMatchObject({ kind: "explore", diagram: { ok: true, links: [{ n: 1, amount: 1234 }] } });
+    expect(result).toMatchObject({ kind: "explore", context: [{ n: 2, amount: 1234 }], diagram: { ok: true, links: [{ n: 1, amount: 1234 }] } });
+    expect(run).toHaveBeenCalledWith(COMPLETION, { race: "race", ids: ["C1"] }, { timeoutMs: 8000 });
+  });
+
+  it("keeps the answer when completion fails and never completes answer mode", async () => {
+    const fetch = stubResponses([{ cypher: good, description: "A result." }]);
+    const graphRun = vi.fn(async (cypher: string) => {
+      if (cypher === COMPLETION) throw new Error("completion unavailable");
+      if (cypher.includes("elementId(r)")) return { records: [{ eid: "rel-1", edge: fact }], queryType: "r" };
+      return { records: [{ edge: relationship }], queryType: "r" };
+    });
+    vi.spyOn(neo4j, "isPath").mockReturnValue(false);
+    vi.spyOn(neo4j, "isRelationship").mockImplementation((value) => value === relationship);
+    const graph = await exploreQuestion("race", "show flows", subjects, { run: graphRun, llm: { apiKey: "key", fetch } }, "graph");
+    expect(graph).toMatchObject({ kind: "explore", context: [] });
+
+    const answerRun = vi.fn(async (cypher: string) => {
+      void cypher;
+      return { records: [{ amount: 3 }], queryType: "r" };
+    });
+    const answer = await exploreQuestion("race", "how much?", subjects, { run: answerRun, llm: { apiKey: "key", fetch } });
+    expect(answer).toMatchObject({ kind: "explore", context: [], diagram: null });
+    expect(answerRun.mock.calls.some(([cypher]) => cypher === COMPLETION)).toBe(false);
   });
 
   it("returns rejected_query after two invalid queries", async () => {

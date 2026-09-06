@@ -60,6 +60,23 @@ export function ExploreAnswer({ result }: { result: ExploreResult }) {
         {result.truncated && <p className="mt-3 text-xs text-neutral-500">Showing the first 20 rows.</p>}
       </Card>
 
+      {result.context.length > 0 && (
+        <Card>
+          <p className="text-xs font-medium text-neutral-700">
+            Added by the site, not the model&apos;s query: filed spending for/against candidates and campaign ownership for the committees above
+          </p>
+          <ul className="mt-2 divide-y divide-neutral-100 text-sm">
+            {result.context.map((fact) => (
+              <li key={`${fact.n}-${fact.from.id}-${fact.to.id}-${fact.rel}`} className="flex flex-wrap items-baseline gap-2 py-2 text-neutral-900">
+                <span className="text-xs tabular-nums text-neutral-500">[{fact.n}]</span>
+                <span>{factSentence(fact)}</span>
+                {fact.source_url && <SourceLink href={fact.source_url} />}
+              </li>
+            ))}
+          </ul>
+        </Card>
+      )}
+
       {result.narrative.status === "ok" ? (
         <div className="graph-narrative border-l-2 border-neutral-300 pl-4">
           <p className="text-[11px] uppercase tracking-wide text-neutral-500">Model-written summary — Grok, from the records below only</p>

@@ -688,3 +688,5 @@ paths or connections, geography or sector—now refuse the nearest fixed intent 
 **Ask box.** The box is graph-first: every question goes to exploratory mode, with deterministic route/page matches shown as related-page links; fixed graph operations remain available at their endpoint.
 
 **Flow diagrams.** An `@graph` prefix asks exploration for whole, amount-bearing relationships and draws a Sankey from the returned rows; when those rows cannot form a flow, only the analysis refusal is shown.
+
+**Flow completion.** Graph mode now adds source-linked filed spending and campaign-ownership facts for committees returned by the model query, so the diagram can continue to candidate campaigns without changing the model's rows.

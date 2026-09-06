@@ -14,6 +14,7 @@ const MIN_H = 22;
 const PLOT_H = 360;
 const PAD = 8;
 const TARGETING_COLOR = "#7c3aed";
+const OWNERSHIP_COLOR = "#171717";
 
 type Placed = SankeyNode & { x: number; y: number; h: number; flow: number };
 type Ribbon = { link: SankeyLink; from: Placed; to: Placed; w: number; y0: number; y1: number };
@@ -82,9 +83,10 @@ const ribbonPath = (r: Ribbon) => {
   return `M${x0},${r.y0} C${c},${r.y0} ${c},${r.y1} ${x1},${r.y1}`;
 };
 
-const ribbonColor = (l: SankeyLink) => (l.rel === "TARGETED" ? TARGETING_COLOR : VISIBILITY_COLORS[l.visibility]);
+const ribbonColor = (l: SankeyLink) => (l.rel === "TARGETED" ? TARGETING_COLOR : l.rel === "CAMPAIGN_OF" ? OWNERSHIP_COLOR : VISIBILITY_COLORS[l.visibility]);
 
 const ribbonTitle = (l: SankeyLink, from: SankeyNode, to: SankeyNode) => {
+  if (l.rel === "CAMPAIGN_OF") return `[${l.n}] ${from.name} is the campaign committee of ${to.name} (${money(l.amount)} reached it in these rows)`;
   const verb = l.rel === "GAVE" ? "gave" : l.rel === "PAID" ? "paid" : l.rel === "TARGETED" ? (l.support_oppose === "O" ? "spent against" : "spent supporting") : l.rel.toLowerCase();
   return `[${l.n}] ${from.name} ${verb} ${money(l.amount)} → ${to.name} · ${VISIBILITY_LABELS[l.visibility]}`;
 };
@@ -95,8 +97,9 @@ function truncate(s: string, max = 26) {
 
 export function ExploreSankey({ data }: { data: Drawable }) {
   const { width, height, nodes, ribbons } = layoutSankey(data);
-  const visibilities = [...new Set(data.links.filter((l) => l.rel !== "TARGETED").map((l) => l.visibility))];
+  const visibilities = [...new Set(data.links.filter((l) => l.rel === "GAVE" || l.rel === "PAID").map((l) => l.visibility))];
   const hasTargeting = data.links.some((l) => l.rel === "TARGETED");
+  const hasOwnership = data.links.some((l) => l.rel === "CAMPAIGN_OF");
   return (
     <section className="explore-sankey space-y-2" aria-label="Flow diagram of the returned rows">
       <div className="flex flex-wrap items-center gap-2">
@@ -147,6 +150,11 @@ export function ExploreSankey({ data }: { data: Drawable }) {
         {hasTargeting && (
           <li className="flex items-center gap-1">
             <span className="inline-block h-2 w-4 rounded-sm" style={{ background: TARGETING_COLOR }} /> Independent spending for/against (never reaches the candidate)
+          </li>
+        )}
+        {hasOwnership && (
+          <li className="flex items-center gap-1">
+            <span className="inline-block h-2 w-4 rounded-sm" style={{ background: OWNERSHIP_COLOR }} /> Campaign committee → its candidate
           </li>
         )}
       </ul>
