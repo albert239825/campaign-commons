@@ -22,6 +22,7 @@ afterEach(() => {
 describe("ExploreAnswer paging", () => {
   it("shows Show more only for a truncated answer", () => {
     expect(canPageExploreResult(result(true), 20)).toBe(true);
+    expect(canPageExploreResult(result(true), 1)).toBe(true);
     expect(canPageExploreResult(result(false), 20)).toBe(false);
     expect(canPageExploreResult(result(true), 200)).toBe(false);
   });

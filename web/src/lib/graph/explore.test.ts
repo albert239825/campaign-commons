@@ -1,7 +1,7 @@
 import neo4j from "neo4j-driver";
 import { afterEach, describe, expect, it, vi } from "vitest";
 import type { TrailSubject } from "@campaign-commons/contracts";
-import { exploreQuestion, pageCypher, rowSentence, toCells, validateCypher, type ExploreRow } from "./explore";
+import { exploreQuestion, pageCypher, queryHasMoreRows, rowSentence, toCells, validateCypher, type ExploreRow } from "./explore";
 import { COMPLETION } from "./queries";
 
 const node = { properties: { id: "C1", name: "ONE NATION", kind: "committee", href: "/races/r/entities/C1" } };
@@ -76,6 +76,17 @@ describe("pageCypher", () => {
     ).toBe(
       "CALL {\nMATCH (x:Entity {race_id: $race}) RETURN x LIMIT 40 UNION MATCH (y:Entity {race_id: $race}) RETURN y LIMIT 30\n}\nRETURN *\nSKIP 20\nLIMIT 20",
     );
+  });
+});
+
+describe("queryHasMoreRows", () => {
+  it("detects a full UNION branch as having more rows", () => {
+    expect(queryHasMoreRows("RETURN 1 LIMIT 10 UNION RETURN 2 LIMIT 10", 10)).toBe(true);
+    expect(queryHasMoreRows("RETURN 1 LIMIT 10 UNION RETURN 2 LIMIT 10", 7)).toBe(false);
+  });
+
+  it("treats a full single-limit result as having more rows", () => {
+    expect(queryHasMoreRows("RETURN 1 LIMIT 20", 20)).toBe(true);
   });
 });
 

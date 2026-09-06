@@ -40,7 +40,7 @@ export function appendExplorePage(
 }
 
 export function canPageExploreResult(result: ExploreResult, rowCount: number): boolean {
-  return result.diagram === null && result.truncated && rowCount >= 20 && rowCount < 200;
+  return result.diagram === null && result.truncated && rowCount > 0 && rowCount < 200;
 }
 
 export function ExploreAnswer({ result, raceId, question }: { result: ExploreResult; raceId: string; question: string }) {
@@ -50,6 +50,7 @@ export function ExploreAnswer({ result, raceId, question }: { result: ExploreRes
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const [addedRange, setAddedRange] = useState<{ from: number; to: number } | null>(null);
+  const [firstPageRowCount, setFirstPageRowCount] = useState(result.rows.length);
 
   useEffect(() => {
     setRows(result.rows);
@@ -58,6 +59,7 @@ export function ExploreAnswer({ result, raceId, question }: { result: ExploreRes
     setLoading(false);
     setError(null);
     setAddedRange(null);
+    setFirstPageRowCount(result.rows.length);
   }, [result]);
 
   const offset = rows.length;
@@ -123,7 +125,10 @@ export function ExploreAnswer({ result, raceId, question }: { result: ExploreRes
             </tbody>
           </table>
         </div>
-        {result.rows.length > 0 && <p className="mt-3 text-xs text-neutral-500">Showing the first 20 rows.</p>}
+        <p className="mt-3 text-xs text-neutral-500">
+          Showing {rows.length} rows{truncated ? " — more available" : ""}
+          {addedRange ? ` (rows ${addedRange.from}–${addedRange.to} added; the summary above covers the first ${firstPageRowCount} only)` : ""}.
+        </p>
         {canShowMore && (
           <div className="mt-3 space-y-1">
             <button
@@ -137,7 +142,6 @@ export function ExploreAnswer({ result, raceId, question }: { result: ExploreRes
             {error && <p className="text-xs text-neutral-500">{error}</p>}
           </div>
         )}
-        {addedRange && <p className="mt-2 text-xs text-neutral-500">Rows {addedRange.from}–{addedRange.to} added; the summary above covers the first 20 only.</p>}
       </Card>
 
       {result.context.length > 0 && (

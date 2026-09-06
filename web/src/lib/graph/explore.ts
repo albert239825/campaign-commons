@@ -78,7 +78,7 @@ export const AskExploreRequest = z.object({
   page: z
     .object({
       cypher: z.string().trim().min(1).max(2_000),
-      offset: z.number().int().min(20).max(200).refine((value) => value % MAX_ROWS === 0),
+      offset: z.number().int().min(1).max(200),
     })
     .optional(),
 });
@@ -156,6 +156,7 @@ export async function toCells(
   records: Array<Record<string, unknown>>,
   hydrate: (ids: string[]) => Promise<ReadonlyMap<string, GraphFact>>,
   rowOffset = 0,
+  truncated = records.length > MAX_ROWS,
 ): Promise<{ ok: true; rows: ExploreRow[]; columns: string[]; truncated: boolean } | { ok: false; reason: string }> {
   for (const record of records) {
     if (Object.values(record).some((value) => neo4j.isPath(value))) return { ok: false, reason: "return nodes/relationships, not paths" };
@@ -187,7 +188,7 @@ export async function toCells(
     );
     return { n: row.n, cells };
   });
-  return { ok: true, rows, columns: [...columns], truncated: records.length > MAX_ROWS };
+  return { ok: true, rows, columns: [...columns], truncated };
 }
 
 function cleanDescription(description: string): string {
@@ -239,10 +240,20 @@ type Execution =
   | { ok: true; rows: ExploreRow[]; columns: string[]; truncated: boolean; queryType: string }
   | { ok: false; reason: string };
 
+export function queryRowCap(cypher: string): number {
+  const limits = [...cypher.matchAll(/\bLIMIT\s+(\d+)\b/gi)].map((match) => Number(match[1]));
+  return Math.min(MAX_ROWS, limits.length > 0 ? Math.min(...limits) : MAX_ROWS);
+}
+
+export function queryHasMoreRows(cypher: string, recordCount: number): boolean {
+  return recordCount >= queryRowCap(cypher);
+}
+
 async function executeQuery(raceId: string, deps: ExploreDeps, cypher: string, rowOffset = 0): Promise<Execution> {
   const result = await deps.run!(cypher, { race: raceId }, { timeoutMs: EXPLORE_TIMEOUT_MS });
   if (result.queryType !== "r") return { ok: false, reason: "the query was not read-only" };
-  if (result.records.length === 0) return { ok: true, rows: [], columns: [], truncated: false, queryType: result.queryType };
+  const truncated = queryHasMoreRows(cypher, result.records.length);
+  if (result.records.length === 0) return { ok: true, rows: [], columns: [], truncated, queryType: result.queryType };
   const converted = await toCells(
     result.records,
     async (ids) => {
@@ -257,6 +268,7 @@ async function executeQuery(raceId: string, deps: ExploreDeps, cypher: string, r
       );
     },
     rowOffset,
+    truncated,
   );
   if (!converted.ok) return converted;
   return { ...converted, queryType: result.queryType };
