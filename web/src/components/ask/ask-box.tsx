@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { useState, type FormEvent } from "react";
-import type { TrailSubject } from "@citizen-gotham/contracts";
+import type { TrailSubject } from "@campaign-commons/contracts";
 import { canonicalQuestion, resolveQuestion, type Resolution } from "@/lib/ask";
 import { routes } from "@/lib/format";
 

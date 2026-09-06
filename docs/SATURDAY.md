@@ -44,7 +44,7 @@ downloads ~3GB of FEC bulk once and caches it, then re-pulls Schedule E from the
 
 ## Methodology caveats a judge could poke at
 
-- **Visibility of organizations is a name heuristic** (`pipeline/gotham/orgs.py`, D-38): `union` and `business` are disclosed
+- **Visibility of organizations is a name heuristic** (`pipeline/campaign_commons/orgs.py`, D-38): `union` and `business` are disclosed
   termini; `llc`, `nonprofit`, `unknown` are dark. `LEAGUE OF CONSERVATION VOTERS, INC.` → nonprofit (advocacy vocabulary beats
   corporate suffix); bare `COINBASE` → unknown → dark. No IRS/990 lookup yet, so `inferable` is never emitted (D-34).
 - **`depth_cap` termini are a fourth "not walked" bucket** (C-06 fixed): committees outside the loaded neighborhood or past the
@@ -104,7 +104,7 @@ D-32 chain walk semantics, D-34 no `inferable` yet, D-36 Schedule E from API, D-
 | Surface | Human-verified | Pipeline-generated |
 | --- | --- | --- |
 | Stories ("Start here" strip, `/stories`) | nothing yet — every card carries "Unverified — pipeline-generated"; set `verified: true` + `verified_by_url` in `stories.json` after checking a story against fec.gov to flip it to "Checked against fec.gov" | ranking, titles, narratives, headline numbers (templated from chain data, D-45) |
-| Ad → chain links | 5 ads in `pipeline/gotham/data/ad_verifications.json` (WINSENATE, SLF, AFP Action, Keystone Renewal, DSCC): advertiser identity read on adstransparency.google.com, committee ID + PA-Sen Schedule E confirmed on fec.gov. Only these show "Verified paid-for-by → chain" and the "You may have seen this ad" strip on the chain page (D-46). Caveat: Google's ad page shows the advertiser's legal name / FEC ID, not a literal "Paid for by" line; AFP Action showed an EIN and was matched by name | the other 495 `matched_entity_id`s (name match, `match_confidence`), impressions/spend ranges, cached posters |
+| Ad → chain links | 5 ads in `pipeline/campaign_commons/data/ad_verifications.json` (WINSENATE, SLF, AFP Action, Keystone Renewal, DSCC): advertiser identity read on adstransparency.google.com, committee ID + PA-Sen Schedule E confirmed on fec.gov. Only these show "Verified paid-for-by → chain" and the "You may have seen this ad" strip on the chain page (D-46). Caveat: Google's ad page shows the advertiser's legal name / FEC ID, not a literal "Paid for by" line; AFP Action showed an EIN and was matched by name | the other 495 `matched_entity_id`s (name match, `match_confidence`), impressions/spend ranges, cached posters |
 | Donor forward views (`donors/*.json`, `/donors/[key]`) | nothing — the walk is mechanical | donor ranking, forward tree, `allocation_note` (D-47). Money edges and IE targeting edges are separate; no money edge ever ends at a candidate |
 
 Every number on these surfaces still links to an fec.gov or Google record; the verification adds a human reading on top, it does not replace the link.

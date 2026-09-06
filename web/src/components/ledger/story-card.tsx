@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { VISIBILITY_COLORS, type Story } from "@citizen-gotham/contracts";
+import { VISIBILITY_COLORS, type Story } from "@campaign-commons/contracts";
 import { pct, routes } from "@/lib/format";
 import { Chip, Money, SourceLink } from "@/components/ui";
 import { StackedBar } from "@/components/ui/stacked-bar";

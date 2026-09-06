@@ -1,4 +1,4 @@
-# Citizen Gotham
+# Campaign Commons
 
 Political money & policy provenance engine. DNHacks 2026 (Sept 5–6), Station DC. Team: Eric, Albert, Patrick.
 
@@ -15,7 +15,7 @@ pipeline/    Python: FEC bulk → DuckDB → filtered Parquet → static JSON. O
 data/fec/    Filtered FEC Parquet per race (committed, small).
 data/out/    JSON the web app reads (committed). races.json + <race_id>/{ledger,ads,stories}.json + entities/ chains/ dossiers/
 web/         Next.js 15 app. Reads data/out at build time. No backend, no runtime fetches.
-docs/        PLAN.md (technical plan) · CONTRACTS.md · DECISIONS.md (log) · SATURDAY.md (handoff)
+docs/        README.md (index) · FAQ.md · LOG.md · ONTOLOGY.md · QUESTIONS.md (open) · DECISIONS.md (log) · PLAN.md · CONTRACTS.md · SATURDAY.md
 ```
 
 ## Run it
@@ -32,7 +32,7 @@ npm run jsonschema                              # regenerate contracts/jsonschem
 cp .env.example .env                            # add FEC_API_KEY, CONGRESS_GOV_API_KEY
 cd pipeline && make setup && . .venv/bin/activate
 make mock                                       # regenerate mock fixtures
-make ingest ledger chains ads dossier validate  # real pipeline, RACE=pa-sen-2024
+make all                                        # ingest ledger chains vendors ads ads-enrich issues dossier chains-out search validate (RACE=pa-sen-2024)
 ```
 
 ## Rules of the road

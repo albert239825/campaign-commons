@@ -1,7 +1,7 @@
 import pandas as pd
 
-from gotham.fec_ie import IE_COLUMNS, iter_schedule_e, schedule_e_frame
-from gotham.ingest import dedupe_transfers
+from campaign_commons.fec_ie import IE_COLUMNS, iter_schedule_e, schedule_e_frame
+from campaign_commons.ingest import dedupe_transfers
 
 
 def _api_row(**overrides: object) -> dict:
@@ -74,7 +74,7 @@ def test_iter_schedule_e_follows_keyset_pagination(monkeypatch) -> None:
         calls.append(params)
         return pages[len(calls) - 1]
 
-    monkeypatch.setattr("gotham.fec_ie._get", fake_get)
+    monkeypatch.setattr("campaign_commons.fec_ie._get", fake_get)
     rows = list(iter_schedule_e(2024, {"S6PA00217", "S2PA00661"}))
     assert [r["transaction_id"] for r in rows] == ["SE1", "SE2", "SE3"]
     assert calls[0]["is_notice"] == "false" and calls[0]["most_recent"] == "true"

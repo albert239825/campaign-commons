@@ -1,0 +1,126 @@
+{
+  "vendor_id": "V-majority-strategies",
+  "name": "MAJORITY STRATEGIES LLC",
+  "aliases": [
+    "MAJORITY STRATEGIES LLC"
+  ],
+  "normalization": {
+    "basis": "inferred",
+    "rule": "case/punctuation/suffix normalisation + token-set ≥0.92 (numeric tokens must match); aliases file",
+    "source_urls": [
+      "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&payee_name=MAJORITY+STRATEGIES+LLC"
+    ],
+    "checked_by": null,
+    "checked_at": null
+  },
+  "total": 407451.41,
+  "count": 4,
+  "media_mix": [
+    {
+      "medium": "mail",
+      "amount": 382481.89,
+      "count": 3
+    },
+    {
+      "medium": "digital",
+      "amount": 24969.52,
+      "count": 1
+    }
+  ],
+  "spenders": [
+    {
+      "entity_id": "C00811166",
+      "name": "THE SENTINEL ACTION FUND",
+      "amount": 382481.89,
+      "count": 3
+    },
+    {
+      "entity_id": "C00880518",
+      "name": "BITCOIN VOTER PAC",
+      "amount": 24969.52,
+      "count": 1
+    }
+  ],
+  "targets": [
+    {
+      "candidate_id": "S2PA00661",
+      "support_oppose": "S",
+      "amount": 359525.23
+    },
+    {
+      "candidate_id": "S6PA00217",
+      "support_oppose": "O",
+      "amount": 47926.18
+    }
+  ],
+  "first_date": "2024-10-18",
+  "last_date": "2024-10-25",
+  "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&payee_name=MAJORITY+STRATEGIES+LLC",
+  "race_id": "pa-sen-2024",
+  "generated_at": "2026-09-05T20:34:15+00:00",
+  "data_status": "real",
+  "expenditures": [
+    {
+      "ie_id": "C00880518-ie-1853863-SE.4119",
+      "spender_entity_id": "C00880518",
+      "spender_name": "BITCOIN VOTER PAC",
+      "candidate_id": "S2PA00661",
+      "candidate_name": "Dave McCormick",
+      "support_oppose": "S",
+      "amount": 24969.52,
+      "date": "2024-10-25",
+      "purpose": "DIGITAL ADVERTISING",
+      "payee": "MAJORITY STRATEGIES LLC",
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202412049720416418",
+      "vendor_id": "V-majority-strategies",
+      "medium": "digital"
+    },
+    {
+      "ie_id": "C00811166-ie-1857839-SE24.1433",
+      "spender_entity_id": "C00811166",
+      "spender_name": "THE SENTINEL ACTION FUND",
+      "candidate_id": "S2PA00661",
+      "candidate_name": "Dave McCormick",
+      "support_oppose": "S",
+      "amount": 241619.99,
+      "date": "2024-10-24",
+      "purpose": "DIRECT MAIL",
+      "payee": "MAJORITY STRATEGIES LLC",
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202412059731517267",
+      "vendor_id": "V-majority-strategies",
+      "medium": "mail"
+    },
+    {
+      "ie_id": "C00811166-ie-1875736-SE24.1210",
+      "spender_entity_id": "C00811166",
+      "spender_name": "THE SENTINEL ACTION FUND",
+      "candidate_id": "S6PA00217",
+      "candidate_name": "Bob Casey",
+      "support_oppose": "O",
+      "amount": 47926.18,
+      "date": "2024-10-18",
+      "purpose": "DIRECT MAIL",
+      "payee": "MAJORITY STRATEGIES LLC",
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202502129753403018",
+      "vendor_id": "V-majority-strategies",
+      "medium": "mail"
+    },
+    {
+      "ie_id": "C00811166-ie-1857839-SE24.1217",
+      "spender_entity_id": "C00811166",
+      "spender_name": "THE SENTINEL ACTION FUND",
+      "candidate_id": "S2PA00661",
+      "candidate_name": "Dave McCormick",
+      "support_oppose": "S",
+      "amount": 92935.72,
+      "date": "2024-10-18",
+      "purpose": "DIRECT MAIL",
+      "payee": "MAJORITY STRATEGIES LLC",
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202412059731517264",
+      "vendor_id": "V-majority-strategies",
+      "medium": "mail"
+    }
+  ],
+  "ads": [],
+  "method": "Every Schedule E independent expenditure names a payee. Payee strings are normalised (case, punctuation, legal suffixes, token order), near-duplicates are folded with a difflib ratio ≥ 0.92 when their numeric tokens match, and hand alias rows from data/hand/<race>/vendor_aliases.json override the rule. Medium is classified from the purpose the spender filed (ordered keyword table in campaign_commons/vendors.py). The FEC does not record which buy placed which ad: vendor ↔ ad links are date-window adjacency (or single-digital-vendor inference) from campaign_commons.ads_enrich, each with its basis, and are only `verified` when a person found a source naming both. Totals are the filed amounts, grouped, never re-estimated."
+}

@@ -1,1 +1,0 @@
-"""Citizen Gotham offline pipeline."""

@@ -1,10 +1,11 @@
 // OWNER: Frontend A (race ledger).
 import Link from "next/link";
 import Image from "next/image";
-import type { Party } from "@citizen-gotham/contracts";
-import { getLedger, getRace, getStories, hasChain, hasTrails, listRaceIds } from "@/lib/data";
+import type { Party } from "@campaign-commons/contracts";
+import { countVendors, getAds, getIssues, getLedger, getRace, getStories, hasChain, hasTrails, listRaceIds } from "@/lib/data";
 import { date, routes } from "@/lib/format";
 import { AdjacencyNote, Card, DataStatusBanner } from "@/components/ui";
+import { RaceNav } from "@/components/ui/race-nav";
 import { RaceSections } from "@/components/ledger/race-sections";
 import { FundingExplorer } from "@/components/ledger/funding-explorer";
 import { buildFundingViews } from "@/lib/funding-view";
@@ -12,6 +13,7 @@ import { SpendersTable } from "@/components/ledger/spenders-table";
 import { FlagsLegend } from "@/components/ledger/flags-legend";
 import { StorySlideshow } from "@/components/ledger/story-slideshow";
 import { StoryCard } from "@/components/ledger/story-card";
+import { IssueCards } from "@/components/ledger/issue-cards";
 
 const PARTY_NAMES: Record<Party, string> = {
   DEM: "Democratic Party",
@@ -34,6 +36,8 @@ export default async function RaceLedgerPage({ params }: { params: Promise<{ rac
   const parties = Array.from(new Set(race.candidates.map((c) => c.party)));
   const officeName = { S: "US Senate", H: "US House", P: "US President" }[race.office];
   const stateName = race.label.split("·")[0].trim();
+  const adCount = getAds(raceId).ads.length;
+  const issues = getIssues(raceId);
 
   return (
     <div className="race-dashboard">
@@ -86,6 +90,7 @@ export default async function RaceLedgerPage({ params }: { params: Promise<{ rac
             </section>
           </div>
         </header>
+        <RaceNav race={race} counts={{ ads: adCount, stories: stories.stories.length, vendors: countVendors(raceId) }} active={routes.race(raceId)} />
         {hasTrails(raceId) && (
           <Link
             href={routes.ask(raceId)}
@@ -107,6 +112,14 @@ export default async function RaceLedgerPage({ params }: { params: Promise<{ rac
             <StoryCard key={s.story_id} story={s} raceId={raceId} hasChain={hasChain(raceId, s.root_entity_id)} expandable />
           ))} />
         ) : <Card title="Funding highlights"><p>No stories are available for this race yet.</p></Card>}
+        issues={issues ? (
+          <IssueCards
+            raceId={raceId}
+            issues={issues}
+            candidates={race.candidates}
+            spenders={ledger.top_outside_spenders.map((s) => ({ entity_id: s.entity_id, name: s.name }))}
+          />
+        ) : undefined}
         spenders={
           <Card
             title="Top outside spenders"

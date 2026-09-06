@@ -2,7 +2,7 @@
   "root_entity_id": "C00849489",
   "root_name": "KEYSTONE RENEWAL PAC",
   "race_id": "pa-sen-2024",
-  "generated_at": "2026-09-05T15:46:45+00:00",
+  "generated_at": "2026-09-05T19:53:48+00:00",
   "data_status": "real",
   "nodes": [
     {
@@ -1019,6 +1019,503 @@
       "terminus_reason": "pruned",
       "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00542217&two_year_transaction_period=2024",
       "contributor_count": 2
+    },
+    {
+      "id": "vendor:V-del-cielo-media",
+      "name": "DEL CIELO MEDIA LLC",
+      "kind": "vendor",
+      "committee_type": null,
+      "depth": 1,
+      "side": "out",
+      "visibility": "disclosed",
+      "amount_in": 35069621.47,
+      "is_terminus": false,
+      "terminus_reason": null,
+      "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00849489&payee_name=DEL+CIELO+MEDIA+LLC",
+      "href": "/races/pa-sen-2024/vendors/V-del-cielo-media",
+      "medium": "tv",
+      "basis": {
+        "basis": "filed",
+        "rule": "Schedule E payee, grouped by normalized vendor name (campaign_commons.vendors)",
+        "source_urls": [
+          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00849489&payee_name=DEL+CIELO+MEDIA+LLC"
+        ],
+        "checked_by": null,
+        "checked_at": null
+      }
+    },
+    {
+      "id": "vendor:V-invictus-advertising",
+      "name": "INVICTUS ADVERTISING",
+      "kind": "vendor",
+      "committee_type": null,
+      "depth": 1,
+      "side": "out",
+      "visibility": "disclosed",
+      "amount_in": 9362114.69,
+      "is_terminus": false,
+      "terminus_reason": null,
+      "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00849489&payee_name=INVICTUS+ADVERTISING",
+      "href": "/races/pa-sen-2024/vendors/V-invictus-advertising",
+      "medium": "tv",
+      "basis": {
+        "basis": "filed",
+        "rule": "Schedule E payee, grouped by normalized vendor name (campaign_commons.vendors)",
+        "source_urls": [
+          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00849489&payee_name=INVICTUS+ADVERTISING"
+        ],
+        "checked_by": null,
+        "checked_at": null
+      }
+    },
+    {
+      "id": "vendor:V-creative-strategic-solutions",
+      "name": "CREATIVE STRATEGIC SOLUTIONS LLC",
+      "kind": "vendor",
+      "committee_type": null,
+      "depth": 1,
+      "side": "out",
+      "visibility": "disclosed",
+      "amount_in": 2563132.0,
+      "is_terminus": false,
+      "terminus_reason": null,
+      "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00849489&payee_name=CREATIVE+STRATEGIC+SOLUTIONS+LLC",
+      "href": "/races/pa-sen-2024/vendors/V-creative-strategic-solutions",
+      "medium": "digital",
+      "basis": {
+        "basis": "filed",
+        "rule": "Schedule E payee, grouped by normalized vendor name (campaign_commons.vendors)",
+        "source_urls": [
+          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00849489&payee_name=CREATIVE+STRATEGIC+SOLUTIONS+LLC"
+        ],
+        "checked_by": null,
+        "checked_at": null
+      }
+    },
+    {
+      "id": "vendor:V-srcp-media",
+      "name": "SRCP MEDIA INC.",
+      "kind": "vendor",
+      "committee_type": null,
+      "depth": 1,
+      "side": "out",
+      "visibility": "disclosed",
+      "amount_in": 431610.0,
+      "is_terminus": false,
+      "terminus_reason": null,
+      "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00849489&payee_name=SRCP+MEDIA+INC.",
+      "href": "/races/pa-sen-2024/vendors/V-srcp-media",
+      "medium": "production",
+      "basis": {
+        "basis": "filed",
+        "rule": "Schedule E payee, grouped by normalized vendor name (campaign_commons.vendors)",
+        "source_urls": [
+          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00849489&payee_name=SRCP+MEDIA+INC."
+        ],
+        "checked_by": null,
+        "checked_at": null
+      }
+    },
+    {
+      "id": "vendor:V-ryff",
+      "name": "RYFF INC",
+      "kind": "vendor",
+      "committee_type": null,
+      "depth": 1,
+      "side": "out",
+      "visibility": "disclosed",
+      "amount_in": 390000.0,
+      "is_terminus": false,
+      "terminus_reason": null,
+      "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00849489&payee_name=RYFF+INC",
+      "href": "/races/pa-sen-2024/vendors/V-ryff",
+      "medium": "tv",
+      "basis": {
+        "basis": "filed",
+        "rule": "Schedule E payee, grouped by normalized vendor name (campaign_commons.vendors)",
+        "source_urls": [
+          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00849489&payee_name=RYFF+INC"
+        ],
+        "checked_by": null,
+        "checked_at": null
+      }
+    },
+    {
+      "id": "vendor:V-excelsior-gsc",
+      "name": "EXCELSIOR GSC LLC",
+      "kind": "vendor",
+      "committee_type": null,
+      "depth": 1,
+      "side": "out",
+      "visibility": "disclosed",
+      "amount_in": 250000.0,
+      "is_terminus": false,
+      "terminus_reason": null,
+      "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00849489&payee_name=EXCELSIOR+GSC+LLC",
+      "href": "/races/pa-sen-2024/vendors/V-excelsior-gsc",
+      "medium": "phones",
+      "basis": {
+        "basis": "filed",
+        "rule": "Schedule E payee, grouped by normalized vendor name (campaign_commons.vendors)",
+        "source_urls": [
+          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00849489&payee_name=EXCELSIOR+GSC+LLC"
+        ],
+        "checked_by": null,
+        "checked_at": null
+      }
+    },
+    {
+      "id": "vendor:V-red-maverick-media",
+      "name": "RED MAVERICK MEDIA LLC",
+      "kind": "vendor",
+      "committee_type": null,
+      "depth": 1,
+      "side": "out",
+      "visibility": "disclosed",
+      "amount_in": 132752.4,
+      "is_terminus": false,
+      "terminus_reason": null,
+      "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00849489&payee_name=RED+MAVERICK+MEDIA+LLC",
+      "href": "/races/pa-sen-2024/vendors/V-red-maverick-media",
+      "medium": "phones",
+      "basis": {
+        "basis": "filed",
+        "rule": "Schedule E payee, grouped by normalized vendor name (campaign_commons.vendors)",
+        "source_urls": [
+          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00849489&payee_name=RED+MAVERICK+MEDIA+LLC"
+        ],
+        "checked_by": null,
+        "checked_at": null
+      }
+    },
+    {
+      "id": "vendor:V-spectrum-marketing-companies",
+      "name": "SPECTRUM MARKETING COMPANIES",
+      "kind": "vendor",
+      "committee_type": null,
+      "depth": 1,
+      "side": "out",
+      "visibility": "disclosed",
+      "amount_in": 34896.8,
+      "is_terminus": false,
+      "terminus_reason": null,
+      "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00849489&payee_name=SPECTRUM+MARKETING+COMPANIES",
+      "href": "/races/pa-sen-2024/vendors/V-spectrum-marketing-companies",
+      "medium": "other",
+      "basis": {
+        "basis": "filed",
+        "rule": "Schedule E payee, grouped by normalized vendor name (campaign_commons.vendors)",
+        "source_urls": [
+          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00849489&payee_name=SPECTRUM+MARKETING+COMPANIES"
+        ],
+        "checked_by": null,
+        "checked_at": null
+      }
+    },
+    {
+      "id": "CR06215613208334434305",
+      "name": "Text ad · 2023-09-25 – 2024-09-10",
+      "kind": "ad",
+      "committee_type": null,
+      "depth": 2,
+      "side": "out",
+      "visibility": "disclosed",
+      "amount_in": 112500.0,
+      "is_terminus": false,
+      "terminus_reason": null,
+      "source_url": "https://adstransparency.google.com/advertiser/AR05305140614721961985/creative/CR06215613208334434305?political=&region=US",
+      "href": "/races/pa-sen-2024/ads/CR06215613208334434305",
+      "basis": {
+        "basis": "inferred",
+        "rule": "Google reports spend as a range ($100,000–$125,000); the midpoint is drawn",
+        "source_urls": [
+          "https://adstransparency.google.com/advertiser/AR05305140614721961985/creative/CR06215613208334434305?political=&region=US"
+        ],
+        "checked_by": null,
+        "checked_at": null
+      }
+    },
+    {
+      "id": "CR00337131121437310977",
+      "name": "Video ad · 2024-08-19 – 2024-08-28",
+      "kind": "ad",
+      "committee_type": null,
+      "depth": 2,
+      "side": "out",
+      "visibility": "disclosed",
+      "amount_in": 65000.0,
+      "is_terminus": false,
+      "terminus_reason": null,
+      "source_url": "https://adstransparency.google.com/advertiser/AR05305140614721961985/creative/CR00337131121437310977?political=&region=US",
+      "href": "/races/pa-sen-2024/ads/CR00337131121437310977",
+      "thumbnail_path": "/creatives/pa-sen-2024/CR00337131121437310977.jpg",
+      "basis": {
+        "basis": "inferred",
+        "rule": "Google reports spend as a range ($60,000–$70,000); the midpoint is drawn",
+        "source_urls": [
+          "https://adstransparency.google.com/advertiser/AR05305140614721961985/creative/CR00337131121437310977?political=&region=US"
+        ],
+        "checked_by": null,
+        "checked_at": null
+      }
+    },
+    {
+      "id": "CR08459320822597681153",
+      "name": "Video ad · 2024-08-03 – 2024-08-14",
+      "kind": "ad",
+      "committee_type": null,
+      "depth": 2,
+      "side": "out",
+      "visibility": "disclosed",
+      "amount_in": 42500.0,
+      "is_terminus": false,
+      "terminus_reason": null,
+      "source_url": "https://adstransparency.google.com/advertiser/AR05305140614721961985/creative/CR08459320822597681153?political=&region=US",
+      "href": "/races/pa-sen-2024/ads/CR08459320822597681153",
+      "basis": {
+        "basis": "inferred",
+        "rule": "Google reports spend as a range ($40,000–$45,000); the midpoint is drawn",
+        "source_urls": [
+          "https://adstransparency.google.com/advertiser/AR05305140614721961985/creative/CR08459320822597681153?political=&region=US"
+        ],
+        "checked_by": null,
+        "checked_at": null
+      }
+    },
+    {
+      "id": "CR15126906667989467137",
+      "name": "Video ad · 2024-07-26 – 2024-08-03",
+      "kind": "ad",
+      "committee_type": null,
+      "depth": 2,
+      "side": "out",
+      "visibility": "disclosed",
+      "amount_in": 32500.0,
+      "is_terminus": false,
+      "terminus_reason": null,
+      "source_url": "https://adstransparency.google.com/advertiser/AR05305140614721961985/creative/CR15126906667989467137?political=&region=US",
+      "href": "/races/pa-sen-2024/ads/CR15126906667989467137",
+      "basis": {
+        "basis": "inferred",
+        "rule": "Google reports spend as a range ($30,000–$35,000); the midpoint is drawn",
+        "source_urls": [
+          "https://adstransparency.google.com/advertiser/AR05305140614721961985/creative/CR15126906667989467137?political=&region=US"
+        ],
+        "checked_by": null,
+        "checked_at": null
+      }
+    },
+    {
+      "id": "CR02513366500287447041",
+      "name": "Text ad · 2024-10-16 – 2024-11-06",
+      "kind": "ad",
+      "committee_type": null,
+      "depth": 2,
+      "side": "out",
+      "visibility": "disclosed",
+      "amount_in": 27500.0,
+      "is_terminus": false,
+      "terminus_reason": null,
+      "source_url": "https://adstransparency.google.com/advertiser/AR05305140614721961985/creative/CR02513366500287447041?political=&region=US",
+      "href": "/races/pa-sen-2024/ads/CR02513366500287447041",
+      "basis": {
+        "basis": "inferred",
+        "rule": "Google reports spend as a range ($25,000–$30,000); the midpoint is drawn",
+        "source_urls": [
+          "https://adstransparency.google.com/advertiser/AR05305140614721961985/creative/CR02513366500287447041?political=&region=US"
+        ],
+        "checked_by": null,
+        "checked_at": null
+      }
+    },
+    {
+      "id": "CR02005452000099041281",
+      "name": "Video ad · 2024-08-29 – 2024-09-04",
+      "kind": "ad",
+      "committee_type": null,
+      "depth": 2,
+      "side": "out",
+      "visibility": "disclosed",
+      "amount_in": 27500.0,
+      "is_terminus": false,
+      "terminus_reason": null,
+      "source_url": "https://adstransparency.google.com/advertiser/AR05305140614721961985/creative/CR02005452000099041281?political=&region=US",
+      "href": "/races/pa-sen-2024/ads/CR02005452000099041281",
+      "basis": {
+        "basis": "inferred",
+        "rule": "Google reports spend as a range ($25,000–$30,000); the midpoint is drawn",
+        "source_urls": [
+          "https://adstransparency.google.com/advertiser/AR05305140614721961985/creative/CR02005452000099041281?political=&region=US"
+        ],
+        "checked_by": null,
+        "checked_at": null
+      }
+    },
+    {
+      "id": "CR15369039469390856193",
+      "name": "Video ad · 2024-08-29 – 2024-09-04",
+      "kind": "ad",
+      "committee_type": null,
+      "depth": 2,
+      "side": "out",
+      "visibility": "disclosed",
+      "amount_in": 27500.0,
+      "is_terminus": false,
+      "terminus_reason": null,
+      "source_url": "https://adstransparency.google.com/advertiser/AR05305140614721961985/creative/CR15369039469390856193?political=&region=US",
+      "href": "/races/pa-sen-2024/ads/CR15369039469390856193",
+      "basis": {
+        "basis": "inferred",
+        "rule": "Google reports spend as a range ($25,000–$30,000); the midpoint is drawn",
+        "source_urls": [
+          "https://adstransparency.google.com/advertiser/AR05305140614721961985/creative/CR15369039469390856193?political=&region=US"
+        ],
+        "checked_by": null,
+        "checked_at": null
+      }
+    },
+    {
+      "id": "CR11512100013710770177",
+      "name": "Video ad · 2024-08-23 – 2024-08-28",
+      "kind": "ad",
+      "committee_type": null,
+      "depth": 2,
+      "side": "out",
+      "visibility": "disclosed",
+      "amount_in": 27500.0,
+      "is_terminus": false,
+      "terminus_reason": null,
+      "source_url": "https://adstransparency.google.com/advertiser/AR05305140614721961985/creative/CR11512100013710770177?political=&region=US",
+      "href": "/races/pa-sen-2024/ads/CR11512100013710770177",
+      "basis": {
+        "basis": "inferred",
+        "rule": "Google reports spend as a range ($25,000–$30,000); the midpoint is drawn",
+        "source_urls": [
+          "https://adstransparency.google.com/advertiser/AR05305140614721961985/creative/CR11512100013710770177?political=&region=US"
+        ],
+        "checked_by": null,
+        "checked_at": null
+      }
+    },
+    {
+      "id": "CR02987728750319239169",
+      "name": "Video ad · 2024-08-03 – 2024-08-14",
+      "kind": "ad",
+      "committee_type": null,
+      "depth": 2,
+      "side": "out",
+      "visibility": "disclosed",
+      "amount_in": 27500.0,
+      "is_terminus": false,
+      "terminus_reason": null,
+      "source_url": "https://adstransparency.google.com/advertiser/AR05305140614721961985/creative/CR02987728750319239169?political=&region=US",
+      "href": "/races/pa-sen-2024/ads/CR02987728750319239169",
+      "basis": {
+        "basis": "inferred",
+        "rule": "Google reports spend as a range ($25,000–$30,000); the midpoint is drawn",
+        "source_urls": [
+          "https://adstransparency.google.com/advertiser/AR05305140614721961985/creative/CR02987728750319239169?political=&region=US"
+        ],
+        "checked_by": null,
+        "checked_at": null
+      }
+    },
+    {
+      "id": "CR14516585407136661505",
+      "name": "Text ad · 2024-10-16 – 2024-11-06",
+      "kind": "ad",
+      "committee_type": null,
+      "depth": 2,
+      "side": "out",
+      "visibility": "disclosed",
+      "amount_in": 22500.0,
+      "is_terminus": false,
+      "terminus_reason": null,
+      "source_url": "https://adstransparency.google.com/advertiser/AR05305140614721961985/creative/CR14516585407136661505?political=&region=US",
+      "href": "/races/pa-sen-2024/ads/CR14516585407136661505",
+      "basis": {
+        "basis": "inferred",
+        "rule": "Google reports spend as a range ($20,000–$25,000); the midpoint is drawn",
+        "source_urls": [
+          "https://adstransparency.google.com/advertiser/AR05305140614721961985/creative/CR14516585407136661505?political=&region=US"
+        ],
+        "checked_by": null,
+        "checked_at": null
+      }
+    },
+    {
+      "id": "agg:ads@C00849489",
+      "name": "5 more ads",
+      "kind": "aggregate",
+      "committee_type": null,
+      "depth": 2,
+      "side": "out",
+      "visibility": "disclosed",
+      "amount_in": 97500.0,
+      "is_terminus": true,
+      "terminus_reason": "pruned",
+      "source_url": null,
+      "href": "/races/pa-sen-2024/ads",
+      "contributor_count": 5,
+      "basis": {
+        "basis": "inferred",
+        "rule": "Sum of Google spend-range midpoints for the ads not drawn individually",
+        "source_urls": [
+          "https://adstransparency.google.com/advertiser/AR05305140614721961985/creative/CR08283124084246577153?political=&region=US",
+          "https://adstransparency.google.com/advertiser/AR05305140614721961985/creative/CR18357413444057038849?political=&region=US",
+          "https://adstransparency.google.com/advertiser/AR05305140614721961985/creative/CR17358786079758483457?political=&region=US",
+          "https://adstransparency.google.com/advertiser/AR05305140614721961985/creative/CR02015697249446658049?political=&region=US",
+          "https://adstransparency.google.com/advertiser/AR05305140614721961985/creative/CR06925071643047886849?political=&region=US"
+        ],
+        "checked_by": null,
+        "checked_at": null
+      }
+    },
+    {
+      "id": "S2PA00661",
+      "name": "Dave McCormick",
+      "kind": "candidate",
+      "committee_type": null,
+      "depth": 3,
+      "side": "out",
+      "visibility": "disclosed",
+      "amount_in": 13214028.64,
+      "is_terminus": true,
+      "terminus_reason": null,
+      "source_url": "https://www.fec.gov/data/candidate/S2PA00661/?cycle=2024&election_full=false",
+      "href": "/races/pa-sen-2024/candidates/S2PA00661",
+      "basis": {
+        "basis": "filed",
+        "rule": "Schedule E dollars naming this candidate as supported or opposed; nothing here reached the candidate",
+        "source_urls": [
+          "https://www.fec.gov/data/independent-expenditures/?committee_id=C00849489&cycle=2024&candidate_id=S2PA00661"
+        ],
+        "checked_by": null,
+        "checked_at": null
+      }
+    },
+    {
+      "id": "S6PA00217",
+      "name": "Bob Casey",
+      "kind": "candidate",
+      "committee_type": null,
+      "depth": 3,
+      "side": "out",
+      "visibility": "disclosed",
+      "amount_in": 35020098.72,
+      "is_terminus": true,
+      "terminus_reason": null,
+      "source_url": "https://www.fec.gov/data/candidate/S6PA00217/?cycle=2024&election_full=false",
+      "href": "/races/pa-sen-2024/candidates/S6PA00217",
+      "basis": {
+        "basis": "filed",
+        "rule": "Schedule E dollars naming this candidate as supported or opposed; nothing here reached the candidate",
+        "source_urls": [
+          "https://www.fec.gov/data/independent-expenditures/?committee_id=C00849489&cycle=2024&candidate_id=S6PA00217"
+        ],
+        "checked_by": null,
+        "checked_at": null
+      }
     }
   ],
   "edges": [
@@ -2321,6 +2818,838 @@
         "2024-08-13"
       ],
       "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00542217&two_year_transaction_period=2024"
+    },
+    {
+      "from": "C00849489",
+      "to": "vendor:V-del-cielo-media",
+      "kind": "money",
+      "amount": 35069621.47,
+      "visibility": "disclosed",
+      "depth": 1,
+      "transaction_types": [
+        "24E"
+      ],
+      "count": 17,
+      "date_range": [
+        "2024-05-07",
+        "2024-10-15"
+      ],
+      "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00849489&payee_name=DEL+CIELO+MEDIA+LLC",
+      "basis": {
+        "basis": "filed",
+        "rule": "Schedule E independent expenditure paid to this payee",
+        "source_urls": [
+          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00849489&payee_name=DEL+CIELO+MEDIA+LLC"
+        ],
+        "checked_by": null,
+        "checked_at": null
+      }
+    },
+    {
+      "from": "vendor:V-del-cielo-media",
+      "to": "S6PA00217",
+      "kind": "targeting",
+      "amount": 28643158.13,
+      "visibility": "disclosed",
+      "depth": 3,
+      "transaction_types": [],
+      "count": 0,
+      "date_range": null,
+      "source_url": "https://www.fec.gov/data/independent-expenditures/?committee_id=C00849489&cycle=2024&candidate_id=S6PA00217",
+      "support_oppose": "O",
+      "basis": {
+        "basis": "filed",
+        "rule": "Schedule E: this payee's buys named the candidate as supported/opposed",
+        "source_urls": [
+          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00849489&payee_name=DEL+CIELO+MEDIA+LLC"
+        ],
+        "checked_by": null,
+        "checked_at": null
+      }
+    },
+    {
+      "from": "vendor:V-del-cielo-media",
+      "to": "S2PA00661",
+      "kind": "targeting",
+      "amount": 6426463.34,
+      "visibility": "disclosed",
+      "depth": 3,
+      "transaction_types": [],
+      "count": 0,
+      "date_range": null,
+      "source_url": "https://www.fec.gov/data/independent-expenditures/?committee_id=C00849489&cycle=2024&candidate_id=S2PA00661",
+      "support_oppose": "S",
+      "basis": {
+        "basis": "filed",
+        "rule": "Schedule E: this payee's buys named the candidate as supported/opposed",
+        "source_urls": [
+          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00849489&payee_name=DEL+CIELO+MEDIA+LLC"
+        ],
+        "checked_by": null,
+        "checked_at": null
+      }
+    },
+    {
+      "from": "C00849489",
+      "to": "vendor:V-invictus-advertising",
+      "kind": "money",
+      "amount": 9362114.69,
+      "visibility": "disclosed",
+      "depth": 1,
+      "transaction_types": [
+        "24E"
+      ],
+      "count": 21,
+      "date_range": [
+        "2023-10-30",
+        "2024-10-15"
+      ],
+      "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00849489&payee_name=INVICTUS+ADVERTISING",
+      "basis": {
+        "basis": "filed",
+        "rule": "Schedule E independent expenditure paid to this payee",
+        "source_urls": [
+          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00849489&payee_name=INVICTUS+ADVERTISING"
+        ],
+        "checked_by": null,
+        "checked_at": null
+      }
+    },
+    {
+      "from": "vendor:V-invictus-advertising",
+      "to": "S6PA00217",
+      "kind": "targeting",
+      "amount": 4249524.69,
+      "visibility": "disclosed",
+      "depth": 3,
+      "transaction_types": [],
+      "count": 0,
+      "date_range": null,
+      "source_url": "https://www.fec.gov/data/independent-expenditures/?committee_id=C00849489&cycle=2024&candidate_id=S6PA00217",
+      "support_oppose": "O",
+      "basis": {
+        "basis": "filed",
+        "rule": "Schedule E: this payee's buys named the candidate as supported/opposed",
+        "source_urls": [
+          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00849489&payee_name=INVICTUS+ADVERTISING"
+        ],
+        "checked_by": null,
+        "checked_at": null
+      }
+    },
+    {
+      "from": "vendor:V-invictus-advertising",
+      "to": "S2PA00661",
+      "kind": "targeting",
+      "amount": 3771090.0,
+      "visibility": "disclosed",
+      "depth": 3,
+      "transaction_types": [],
+      "count": 0,
+      "date_range": null,
+      "source_url": "https://www.fec.gov/data/independent-expenditures/?committee_id=C00849489&cycle=2024&candidate_id=S2PA00661",
+      "support_oppose": "S",
+      "basis": {
+        "basis": "filed",
+        "rule": "Schedule E: this payee's buys named the candidate as supported/opposed",
+        "source_urls": [
+          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00849489&payee_name=INVICTUS+ADVERTISING"
+        ],
+        "checked_by": null,
+        "checked_at": null
+      }
+    },
+    {
+      "from": "vendor:V-invictus-advertising",
+      "to": "S2PA00661",
+      "kind": "targeting",
+      "amount": 860000.0,
+      "visibility": "disclosed",
+      "depth": 3,
+      "transaction_types": [],
+      "count": 0,
+      "date_range": null,
+      "source_url": "https://www.fec.gov/data/independent-expenditures/?committee_id=C00849489&cycle=2024&candidate_id=S2PA00661",
+      "support_oppose": "O",
+      "basis": {
+        "basis": "filed",
+        "rule": "Schedule E: this payee's buys named the candidate as supported/opposed",
+        "source_urls": [
+          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00849489&payee_name=INVICTUS+ADVERTISING"
+        ],
+        "checked_by": null,
+        "checked_at": null
+      }
+    },
+    {
+      "from": "vendor:V-invictus-advertising",
+      "to": "S6PA00217",
+      "kind": "targeting",
+      "amount": 481500.0,
+      "visibility": "disclosed",
+      "depth": 3,
+      "transaction_types": [],
+      "count": 0,
+      "date_range": null,
+      "source_url": "https://www.fec.gov/data/independent-expenditures/?committee_id=C00849489&cycle=2024&candidate_id=S6PA00217",
+      "support_oppose": "S",
+      "basis": {
+        "basis": "filed",
+        "rule": "Schedule E: this payee's buys named the candidate as supported/opposed",
+        "source_urls": [
+          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00849489&payee_name=INVICTUS+ADVERTISING"
+        ],
+        "checked_by": null,
+        "checked_at": null
+      }
+    },
+    {
+      "from": "C00849489",
+      "to": "vendor:V-creative-strategic-solutions",
+      "kind": "money",
+      "amount": 2563132.0,
+      "visibility": "disclosed",
+      "depth": 1,
+      "transaction_types": [
+        "24E"
+      ],
+      "count": 30,
+      "date_range": [
+        "2023-09-22",
+        "2024-09-05"
+      ],
+      "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00849489&payee_name=CREATIVE+STRATEGIC+SOLUTIONS+LLC",
+      "basis": {
+        "basis": "filed",
+        "rule": "Schedule E independent expenditure paid to this payee",
+        "source_urls": [
+          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00849489&payee_name=CREATIVE+STRATEGIC+SOLUTIONS+LLC"
+        ],
+        "checked_by": null,
+        "checked_at": null
+      }
+    },
+    {
+      "from": "vendor:V-creative-strategic-solutions",
+      "to": "S2PA00661",
+      "kind": "targeting",
+      "amount": 1019756.5,
+      "visibility": "disclosed",
+      "depth": 3,
+      "transaction_types": [],
+      "count": 0,
+      "date_range": null,
+      "source_url": "https://www.fec.gov/data/independent-expenditures/?committee_id=C00849489&cycle=2024&candidate_id=S2PA00661",
+      "support_oppose": "S",
+      "basis": {
+        "basis": "filed",
+        "rule": "Schedule E: this payee's buys named the candidate as supported/opposed",
+        "source_urls": [
+          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00849489&payee_name=CREATIVE+STRATEGIC+SOLUTIONS+LLC"
+        ],
+        "checked_by": null,
+        "checked_at": null
+      }
+    },
+    {
+      "from": "vendor:V-creative-strategic-solutions",
+      "to": "S6PA00217",
+      "kind": "targeting",
+      "amount": 946066.0,
+      "visibility": "disclosed",
+      "depth": 3,
+      "transaction_types": [],
+      "count": 0,
+      "date_range": null,
+      "source_url": "https://www.fec.gov/data/independent-expenditures/?committee_id=C00849489&cycle=2024&candidate_id=S6PA00217",
+      "support_oppose": "O",
+      "basis": {
+        "basis": "filed",
+        "rule": "Schedule E: this payee's buys named the candidate as supported/opposed",
+        "source_urls": [
+          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00849489&payee_name=CREATIVE+STRATEGIC+SOLUTIONS+LLC"
+        ],
+        "checked_by": null,
+        "checked_at": null
+      }
+    },
+    {
+      "from": "vendor:V-creative-strategic-solutions",
+      "to": "S6PA00217",
+      "kind": "targeting",
+      "amount": 411809.5,
+      "visibility": "disclosed",
+      "depth": 3,
+      "transaction_types": [],
+      "count": 0,
+      "date_range": null,
+      "source_url": "https://www.fec.gov/data/independent-expenditures/?committee_id=C00849489&cycle=2024&candidate_id=S6PA00217",
+      "support_oppose": "S",
+      "basis": {
+        "basis": "filed",
+        "rule": "Schedule E: this payee's buys named the candidate as supported/opposed",
+        "source_urls": [
+          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00849489&payee_name=CREATIVE+STRATEGIC+SOLUTIONS+LLC"
+        ],
+        "checked_by": null,
+        "checked_at": null
+      }
+    },
+    {
+      "from": "vendor:V-creative-strategic-solutions",
+      "to": "S2PA00661",
+      "kind": "targeting",
+      "amount": 185500.0,
+      "visibility": "disclosed",
+      "depth": 3,
+      "transaction_types": [],
+      "count": 0,
+      "date_range": null,
+      "source_url": "https://www.fec.gov/data/independent-expenditures/?committee_id=C00849489&cycle=2024&candidate_id=S2PA00661",
+      "support_oppose": "O",
+      "basis": {
+        "basis": "filed",
+        "rule": "Schedule E: this payee's buys named the candidate as supported/opposed",
+        "source_urls": [
+          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00849489&payee_name=CREATIVE+STRATEGIC+SOLUTIONS+LLC"
+        ],
+        "checked_by": null,
+        "checked_at": null
+      }
+    },
+    {
+      "from": "C00849489",
+      "to": "vendor:V-srcp-media",
+      "kind": "money",
+      "amount": 431610.0,
+      "visibility": "disclosed",
+      "depth": 1,
+      "transaction_types": [
+        "24E"
+      ],
+      "count": 16,
+      "date_range": [
+        "2024-03-28",
+        "2024-10-17"
+      ],
+      "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00849489&payee_name=SRCP+MEDIA+INC.",
+      "basis": {
+        "basis": "filed",
+        "rule": "Schedule E independent expenditure paid to this payee",
+        "source_urls": [
+          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00849489&payee_name=SRCP+MEDIA+INC."
+        ],
+        "checked_by": null,
+        "checked_at": null
+      }
+    },
+    {
+      "from": "vendor:V-srcp-media",
+      "to": "S6PA00217",
+      "kind": "targeting",
+      "amount": 275288.0,
+      "visibility": "disclosed",
+      "depth": 3,
+      "transaction_types": [],
+      "count": 0,
+      "date_range": null,
+      "source_url": "https://www.fec.gov/data/independent-expenditures/?committee_id=C00849489&cycle=2024&candidate_id=S6PA00217",
+      "support_oppose": "O",
+      "basis": {
+        "basis": "filed",
+        "rule": "Schedule E: this payee's buys named the candidate as supported/opposed",
+        "source_urls": [
+          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00849489&payee_name=SRCP+MEDIA+INC."
+        ],
+        "checked_by": null,
+        "checked_at": null
+      }
+    },
+    {
+      "from": "vendor:V-srcp-media",
+      "to": "S2PA00661",
+      "kind": "targeting",
+      "amount": 156322.0,
+      "visibility": "disclosed",
+      "depth": 3,
+      "transaction_types": [],
+      "count": 0,
+      "date_range": null,
+      "source_url": "https://www.fec.gov/data/independent-expenditures/?committee_id=C00849489&cycle=2024&candidate_id=S2PA00661",
+      "support_oppose": "S",
+      "basis": {
+        "basis": "filed",
+        "rule": "Schedule E: this payee's buys named the candidate as supported/opposed",
+        "source_urls": [
+          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00849489&payee_name=SRCP+MEDIA+INC."
+        ],
+        "checked_by": null,
+        "checked_at": null
+      }
+    },
+    {
+      "from": "C00849489",
+      "to": "vendor:V-ryff",
+      "kind": "money",
+      "amount": 390000.0,
+      "visibility": "disclosed",
+      "depth": 1,
+      "transaction_types": [
+        "24E"
+      ],
+      "count": 1,
+      "date_range": [
+        "2024-10-23",
+        "2024-10-23"
+      ],
+      "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00849489&payee_name=RYFF+INC",
+      "basis": {
+        "basis": "filed",
+        "rule": "Schedule E independent expenditure paid to this payee",
+        "source_urls": [
+          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00849489&payee_name=RYFF+INC"
+        ],
+        "checked_by": null,
+        "checked_at": null
+      }
+    },
+    {
+      "from": "vendor:V-ryff",
+      "to": "S2PA00661",
+      "kind": "targeting",
+      "amount": 390000.0,
+      "visibility": "disclosed",
+      "depth": 3,
+      "transaction_types": [],
+      "count": 0,
+      "date_range": null,
+      "source_url": "https://www.fec.gov/data/independent-expenditures/?committee_id=C00849489&cycle=2024&candidate_id=S2PA00661",
+      "support_oppose": "S",
+      "basis": {
+        "basis": "filed",
+        "rule": "Schedule E: this payee's buys named the candidate as supported/opposed",
+        "source_urls": [
+          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00849489&payee_name=RYFF+INC"
+        ],
+        "checked_by": null,
+        "checked_at": null
+      }
+    },
+    {
+      "from": "C00849489",
+      "to": "vendor:V-excelsior-gsc",
+      "kind": "money",
+      "amount": 250000.0,
+      "visibility": "disclosed",
+      "depth": 1,
+      "transaction_types": [
+        "24E"
+      ],
+      "count": 2,
+      "date_range": [
+        "2024-10-21",
+        "2024-10-21"
+      ],
+      "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00849489&payee_name=EXCELSIOR+GSC+LLC",
+      "basis": {
+        "basis": "filed",
+        "rule": "Schedule E independent expenditure paid to this payee",
+        "source_urls": [
+          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00849489&payee_name=EXCELSIOR+GSC+LLC"
+        ],
+        "checked_by": null,
+        "checked_at": null
+      }
+    },
+    {
+      "from": "vendor:V-excelsior-gsc",
+      "to": "S2PA00661",
+      "kind": "targeting",
+      "amount": 250000.0,
+      "visibility": "disclosed",
+      "depth": 3,
+      "transaction_types": [],
+      "count": 0,
+      "date_range": null,
+      "source_url": "https://www.fec.gov/data/independent-expenditures/?committee_id=C00849489&cycle=2024&candidate_id=S2PA00661",
+      "support_oppose": "S",
+      "basis": {
+        "basis": "filed",
+        "rule": "Schedule E: this payee's buys named the candidate as supported/opposed",
+        "source_urls": [
+          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00849489&payee_name=EXCELSIOR+GSC+LLC"
+        ],
+        "checked_by": null,
+        "checked_at": null
+      }
+    },
+    {
+      "from": "C00849489",
+      "to": "vendor:V-red-maverick-media",
+      "kind": "money",
+      "amount": 132752.4,
+      "visibility": "disclosed",
+      "depth": 1,
+      "transaction_types": [
+        "24E"
+      ],
+      "count": 2,
+      "date_range": [
+        "2024-06-27",
+        "2024-11-01"
+      ],
+      "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00849489&payee_name=RED+MAVERICK+MEDIA+LLC",
+      "basis": {
+        "basis": "filed",
+        "rule": "Schedule E independent expenditure paid to this payee",
+        "source_urls": [
+          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00849489&payee_name=RED+MAVERICK+MEDIA+LLC"
+        ],
+        "checked_by": null,
+        "checked_at": null
+      }
+    },
+    {
+      "from": "vendor:V-red-maverick-media",
+      "to": "S2PA00661",
+      "kind": "targeting",
+      "amount": 120000.0,
+      "visibility": "disclosed",
+      "depth": 3,
+      "transaction_types": [],
+      "count": 0,
+      "date_range": null,
+      "source_url": "https://www.fec.gov/data/independent-expenditures/?committee_id=C00849489&cycle=2024&candidate_id=S2PA00661",
+      "support_oppose": "S",
+      "basis": {
+        "basis": "filed",
+        "rule": "Schedule E: this payee's buys named the candidate as supported/opposed",
+        "source_urls": [
+          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00849489&payee_name=RED+MAVERICK+MEDIA+LLC"
+        ],
+        "checked_by": null,
+        "checked_at": null
+      }
+    },
+    {
+      "from": "vendor:V-red-maverick-media",
+      "to": "S6PA00217",
+      "kind": "targeting",
+      "amount": 12752.4,
+      "visibility": "disclosed",
+      "depth": 3,
+      "transaction_types": [],
+      "count": 0,
+      "date_range": null,
+      "source_url": "https://www.fec.gov/data/independent-expenditures/?committee_id=C00849489&cycle=2024&candidate_id=S6PA00217",
+      "support_oppose": "O",
+      "basis": {
+        "basis": "filed",
+        "rule": "Schedule E: this payee's buys named the candidate as supported/opposed",
+        "source_urls": [
+          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00849489&payee_name=RED+MAVERICK+MEDIA+LLC"
+        ],
+        "checked_by": null,
+        "checked_at": null
+      }
+    },
+    {
+      "from": "C00849489",
+      "to": "vendor:V-spectrum-marketing-companies",
+      "kind": "money",
+      "amount": 34896.8,
+      "visibility": "disclosed",
+      "depth": 1,
+      "transaction_types": [
+        "24E"
+      ],
+      "count": 1,
+      "date_range": [
+        "2024-09-17",
+        "2024-09-17"
+      ],
+      "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00849489&payee_name=SPECTRUM+MARKETING+COMPANIES",
+      "basis": {
+        "basis": "filed",
+        "rule": "Schedule E independent expenditure paid to this payee",
+        "source_urls": [
+          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00849489&payee_name=SPECTRUM+MARKETING+COMPANIES"
+        ],
+        "checked_by": null,
+        "checked_at": null
+      }
+    },
+    {
+      "from": "vendor:V-spectrum-marketing-companies",
+      "to": "S2PA00661",
+      "kind": "targeting",
+      "amount": 34896.8,
+      "visibility": "disclosed",
+      "depth": 3,
+      "transaction_types": [],
+      "count": 0,
+      "date_range": null,
+      "source_url": "https://www.fec.gov/data/independent-expenditures/?committee_id=C00849489&cycle=2024&candidate_id=S2PA00661",
+      "support_oppose": "S",
+      "basis": {
+        "basis": "filed",
+        "rule": "Schedule E: this payee's buys named the candidate as supported/opposed",
+        "source_urls": [
+          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00849489&payee_name=SPECTRUM+MARKETING+COMPANIES"
+        ],
+        "checked_by": null,
+        "checked_at": null
+      }
+    },
+    {
+      "from": "vendor:V-creative-strategic-solutions",
+      "to": "CR06215613208334434305",
+      "kind": "placement",
+      "amount": 112500.0,
+      "visibility": "disclosed",
+      "depth": 2,
+      "transaction_types": [],
+      "count": 30,
+      "date_range": [
+        "2023-09-25",
+        "2024-09-10"
+      ],
+      "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00849489&payee_name=CREATIVE+STRATEGIC+SOLUTIONS+LLC",
+      "basis": {
+        "basis": "inferred",
+        "rule": "Only digital vendor KEYSTONE RENEWAL PAC paid during this ad's run window (ran sep 25, 2023 – sep 10, 2024, counting buys dated up to 7 days before first shown) — inferred, not filed. KEYSTONE RENEWAL PAC reported $2,563,132 in digital buys to CREATIVE STRATEGIC SOLUTIONS LLC; Google ads are digital placements.",
+        "source_urls": [
+          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00849489&payee_name=CREATIVE+STRATEGIC+SOLUTIONS+LLC"
+        ],
+        "checked_by": null,
+        "checked_at": null
+      }
+    },
+    {
+      "from": "vendor:V-creative-strategic-solutions",
+      "to": "CR00337131121437310977",
+      "kind": "placement",
+      "amount": 65000.0,
+      "visibility": "disclosed",
+      "depth": 2,
+      "transaction_types": [],
+      "count": 2,
+      "date_range": [
+        "2024-08-19",
+        "2024-08-28"
+      ],
+      "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00849489&payee_name=CREATIVE+STRATEGIC+SOLUTIONS+LLC",
+      "basis": {
+        "basis": "inferred",
+        "rule": "Only digital vendor KEYSTONE RENEWAL PAC paid during this ad's run window (ran aug 19, 2024 – aug 28, 2024, counting buys dated up to 7 days before first shown) — inferred, not filed. KEYSTONE RENEWAL PAC reported $302,764 in digital buys to CREATIVE STRATEGIC SOLUTIONS LLC; Google ads are digital placements.",
+        "source_urls": [
+          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00849489&payee_name=CREATIVE+STRATEGIC+SOLUTIONS+LLC"
+        ],
+        "checked_by": null,
+        "checked_at": null
+      }
+    },
+    {
+      "from": "vendor:V-creative-strategic-solutions",
+      "to": "CR08459320822597681153",
+      "kind": "placement",
+      "amount": 42500.0,
+      "visibility": "disclosed",
+      "depth": 2,
+      "transaction_types": [],
+      "count": 2,
+      "date_range": [
+        "2024-08-03",
+        "2024-08-14"
+      ],
+      "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00849489&payee_name=CREATIVE+STRATEGIC+SOLUTIONS+LLC",
+      "basis": {
+        "basis": "inferred",
+        "rule": "Only digital vendor KEYSTONE RENEWAL PAC paid during this ad's run window (ran aug 3, 2024 – aug 14, 2024, counting buys dated up to 7 days before first shown) — inferred, not filed. KEYSTONE RENEWAL PAC reported $520,855 in digital buys to CREATIVE STRATEGIC SOLUTIONS LLC; Google ads are digital placements.",
+        "source_urls": [
+          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00849489&payee_name=CREATIVE+STRATEGIC+SOLUTIONS+LLC"
+        ],
+        "checked_by": null,
+        "checked_at": null
+      }
+    },
+    {
+      "from": "C00849489",
+      "to": "CR15126906667989467137",
+      "kind": "placement",
+      "amount": 32500.0,
+      "visibility": "disclosed",
+      "depth": 2,
+      "transaction_types": [],
+      "count": 1,
+      "date_range": null,
+      "source_url": "https://adstransparency.google.com/advertiser/AR05305140614721961985/creative/CR15126906667989467137?political=&region=US",
+      "basis": {
+        "basis": "inferred",
+        "rule": "Advertiser name matched to this committee by normalized name; Google's bulk data names the advertiser and carries no paid-for-by field for US ads",
+        "source_urls": [
+          "https://adstransparency.google.com/advertiser/AR05305140614721961985/creative/CR15126906667989467137?political=&region=US"
+        ],
+        "checked_by": null,
+        "checked_at": null
+      }
+    },
+    {
+      "from": "C00849489",
+      "to": "CR02513366500287447041",
+      "kind": "placement",
+      "amount": 27500.0,
+      "visibility": "disclosed",
+      "depth": 2,
+      "transaction_types": [],
+      "count": 1,
+      "date_range": null,
+      "source_url": "https://adstransparency.google.com/advertiser/AR05305140614721961985/creative/CR02513366500287447041?political=&region=US",
+      "basis": {
+        "basis": "inferred",
+        "rule": "Advertiser name matched to this committee by normalized name; Google's bulk data names the advertiser and carries no paid-for-by field for US ads",
+        "source_urls": [
+          "https://adstransparency.google.com/advertiser/AR05305140614721961985/creative/CR02513366500287447041?political=&region=US"
+        ],
+        "checked_by": null,
+        "checked_at": null
+      }
+    },
+    {
+      "from": "C00849489",
+      "to": "CR02005452000099041281",
+      "kind": "placement",
+      "amount": 27500.0,
+      "visibility": "disclosed",
+      "depth": 2,
+      "transaction_types": [],
+      "count": 1,
+      "date_range": null,
+      "source_url": "https://adstransparency.google.com/advertiser/AR05305140614721961985/creative/CR02005452000099041281?political=&region=US",
+      "basis": {
+        "basis": "inferred",
+        "rule": "Advertiser name matched to this committee by normalized name; Google's bulk data names the advertiser and carries no paid-for-by field for US ads",
+        "source_urls": [
+          "https://adstransparency.google.com/advertiser/AR05305140614721961985/creative/CR02005452000099041281?political=&region=US"
+        ],
+        "checked_by": null,
+        "checked_at": null
+      }
+    },
+    {
+      "from": "C00849489",
+      "to": "CR15369039469390856193",
+      "kind": "placement",
+      "amount": 27500.0,
+      "visibility": "disclosed",
+      "depth": 2,
+      "transaction_types": [],
+      "count": 1,
+      "date_range": null,
+      "source_url": "https://adstransparency.google.com/advertiser/AR05305140614721961985/creative/CR15369039469390856193?political=&region=US",
+      "basis": {
+        "basis": "inferred",
+        "rule": "Advertiser name matched to this committee by normalized name; Google's bulk data names the advertiser and carries no paid-for-by field for US ads",
+        "source_urls": [
+          "https://adstransparency.google.com/advertiser/AR05305140614721961985/creative/CR15369039469390856193?political=&region=US"
+        ],
+        "checked_by": null,
+        "checked_at": null
+      }
+    },
+    {
+      "from": "vendor:V-creative-strategic-solutions",
+      "to": "CR11512100013710770177",
+      "kind": "placement",
+      "amount": 27500.0,
+      "visibility": "disclosed",
+      "depth": 2,
+      "transaction_types": [],
+      "count": 2,
+      "date_range": [
+        "2024-08-23",
+        "2024-08-28"
+      ],
+      "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00849489&payee_name=CREATIVE+STRATEGIC+SOLUTIONS+LLC",
+      "basis": {
+        "basis": "inferred",
+        "rule": "Only digital vendor KEYSTONE RENEWAL PAC paid during this ad's run window (ran aug 23, 2024 – aug 28, 2024, counting buys dated up to 7 days before first shown) — inferred, not filed. KEYSTONE RENEWAL PAC reported $302,764 in digital buys to CREATIVE STRATEGIC SOLUTIONS LLC; Google ads are digital placements.",
+        "source_urls": [
+          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00849489&payee_name=CREATIVE+STRATEGIC+SOLUTIONS+LLC"
+        ],
+        "checked_by": null,
+        "checked_at": null
+      }
+    },
+    {
+      "from": "vendor:V-creative-strategic-solutions",
+      "to": "CR02987728750319239169",
+      "kind": "placement",
+      "amount": 27500.0,
+      "visibility": "disclosed",
+      "depth": 2,
+      "transaction_types": [],
+      "count": 2,
+      "date_range": [
+        "2024-08-03",
+        "2024-08-14"
+      ],
+      "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00849489&payee_name=CREATIVE+STRATEGIC+SOLUTIONS+LLC",
+      "basis": {
+        "basis": "inferred",
+        "rule": "Only digital vendor KEYSTONE RENEWAL PAC paid during this ad's run window (ran aug 3, 2024 – aug 14, 2024, counting buys dated up to 7 days before first shown) — inferred, not filed. KEYSTONE RENEWAL PAC reported $520,855 in digital buys to CREATIVE STRATEGIC SOLUTIONS LLC; Google ads are digital placements.",
+        "source_urls": [
+          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00849489&payee_name=CREATIVE+STRATEGIC+SOLUTIONS+LLC"
+        ],
+        "checked_by": null,
+        "checked_at": null
+      }
+    },
+    {
+      "from": "C00849489",
+      "to": "CR14516585407136661505",
+      "kind": "placement",
+      "amount": 22500.0,
+      "visibility": "disclosed",
+      "depth": 2,
+      "transaction_types": [],
+      "count": 1,
+      "date_range": null,
+      "source_url": "https://adstransparency.google.com/advertiser/AR05305140614721961985/creative/CR14516585407136661505?political=&region=US",
+      "basis": {
+        "basis": "inferred",
+        "rule": "Advertiser name matched to this committee by normalized name; Google's bulk data names the advertiser and carries no paid-for-by field for US ads",
+        "source_urls": [
+          "https://adstransparency.google.com/advertiser/AR05305140614721961985/creative/CR14516585407136661505?political=&region=US"
+        ],
+        "checked_by": null,
+        "checked_at": null
+      }
+    },
+    {
+      "from": "C00849489",
+      "to": "agg:ads@C00849489",
+      "kind": "placement",
+      "amount": 97500.0,
+      "visibility": "disclosed",
+      "depth": 2,
+      "transaction_types": [],
+      "count": 5,
+      "date_range": null,
+      "source_url": null,
+      "basis": {
+        "basis": "inferred",
+        "rule": "Advertiser name matched to this committee by normalized name",
+        "source_urls": [
+          "https://adstransparency.google.com/advertiser/AR05305140614721961985/creative/CR08283124084246577153?political=&region=US",
+          "https://adstransparency.google.com/advertiser/AR05305140614721961985/creative/CR18357413444057038849?political=&region=US",
+          "https://adstransparency.google.com/advertiser/AR05305140614721961985/creative/CR17358786079758483457?political=&region=US",
+          "https://adstransparency.google.com/advertiser/AR05305140614721961985/creative/CR02015697249446658049?political=&region=US",
+          "https://adstransparency.google.com/advertiser/AR05305140614721961985/creative/CR06925071643047886849?political=&region=US"
+        ],
+        "checked_by": null,
+        "checked_at": null
+      }
     }
   ],
   "summary": {
@@ -2335,8 +3664,10 @@
       "dark": 14,
       "organization": 10,
       "pruned": 7
-    }
+    },
+    "out_total": 48234127.36,
+    "max_out_depth": 3
   },
   "flags": [],
-  "method": "Backward walk over money edges only (Schedule A receipts from individuals and organizations, committee-to-committee transfers) into KEYSTONE RENEWAL PAC, 3 hop(s) deep; independent expenditures are targeting edges and never appear. The walk starts from $58,905,691 of itemized 2023–2024 receipts as loaded from FEC bulk data (unitemized receipts, loans and offsets are not edges), and every expanded committee conserves dollars: its inbound edges sum to its receipts. Inbound edges under 1% of a committee's receipts are rolled into one 'other contributors' node, which counts as disclosed except for the organization dollars inside it. Each dollar takes the visibility of where the walk stopped: named individuals (including earmarks through ActBlue/WinRed, attributed to the person) are disclosed. Organizations that are not registered committees are classified from their name alone (no IRS lookup): a union or a business giving from its own treasury is disclosed — the named entity is the source; an LLC, trust, advocacy nonprofit (501(c)(4)-style names) or unclassifiable organization is dark, because whoever funds it is not on file with the FEC. Visibility shares are preliminary; no 990 lookups were performed, so nothing is marked inferable."
+  "method": "Backward walk over money edges only (Schedule A receipts from individuals and organizations, committee-to-committee transfers) into KEYSTONE RENEWAL PAC, 3 hop(s) deep; independent expenditures are targeting edges and never appear. The walk starts from $58,905,691 of itemized 2023–2024 receipts as loaded from FEC bulk data (unitemized receipts, loans and offsets are not edges), and every expanded committee conserves dollars: its inbound edges sum to its receipts. Inbound edges under 1% of a committee's receipts are rolled into one 'other contributors' node, which counts as disclosed except for the organization dollars inside it. Each dollar takes the visibility of where the walk stopped: named individuals (including earmarks through ActBlue/WinRed, attributed to the person) are disclosed. Organizations that are not registered committees are classified from their name alone (no IRS lookup): a union or a business giving from its own treasury is disclosed — the named entity is the source; an LLC, trust, advocacy nonprofit (501(c)(4)-style names) or unclassifiable organization is dark, because whoever funds it is not on file with the FEC. Visibility shares are preliminary; no 990 lookups were performed, so nothing is marked inferable. Spending side (right of the spender): Schedule E payments to vendors are money edges; vendor → ad and spender → ad edges are placement (no dollars) and carry the evidence basis they were drawn on; edges into a candidate are targeting (for/against) and never carry money to the candidate. Ad dollars are the midpoint of the Google-reported spend range."
 }

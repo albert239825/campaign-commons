@@ -1,0 +1,140 @@
+{
+  "vendor_id": "V-if-it-is",
+  "name": "IF IT IS LLC",
+  "aliases": [
+    "IF IT IS LLC"
+  ],
+  "normalization": {
+    "basis": "inferred",
+    "rule": "case/punctuation/suffix normalisation + token-set ≥0.92 (numeric tokens must match); aliases file",
+    "source_urls": [
+      "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&payee_name=IF+IT+IS+LLC"
+    ],
+    "checked_by": null,
+    "checked_at": null
+  },
+  "total": 20757.14,
+  "count": 6,
+  "media_mix": [
+    {
+      "medium": "production",
+      "amount": 20757.14,
+      "count": 6
+    }
+  ],
+  "spenders": [
+    {
+      "entity_id": "C00747121",
+      "name": "RED SENATE",
+      "amount": 20757.14,
+      "count": 6
+    }
+  ],
+  "targets": [
+    {
+      "candidate_id": "S6PA00217",
+      "support_oppose": "O",
+      "amount": 20757.14
+    }
+  ],
+  "first_date": "2023-09-15",
+  "last_date": "2024-11-01",
+  "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&payee_name=IF+IT+IS+LLC",
+  "race_id": "pa-sen-2024",
+  "generated_at": "2026-09-05T20:34:15+00:00",
+  "data_status": "real",
+  "expenditures": [
+    {
+      "ie_id": "C00747121-ie-1856632-E03A7987454D1408B821",
+      "spender_entity_id": "C00747121",
+      "spender_name": "RED SENATE",
+      "candidate_id": "S6PA00217",
+      "candidate_name": "Bob Casey",
+      "support_oppose": "O",
+      "amount": 13757.14,
+      "date": "2024-11-01",
+      "purpose": "MEDIA PRODUCTION",
+      "payee": "IF IT IS LLC",
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202412059721255591",
+      "vendor_id": "V-if-it-is",
+      "medium": "production"
+    },
+    {
+      "ie_id": "C00747121-ie-1747790-ED1E2D64B6BBE4B6BA6D",
+      "spender_entity_id": "C00747121",
+      "spender_name": "RED SENATE",
+      "candidate_id": "S6PA00217",
+      "candidate_name": "Bob Casey",
+      "support_oppose": "O",
+      "amount": 675.0,
+      "date": "2023-09-15",
+      "purpose": "IE MEDIA PRODUCTION",
+      "payee": "IF IT IS LLC",
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202401299600571526",
+      "vendor_id": "V-if-it-is",
+      "medium": "production"
+    },
+    {
+      "ie_id": "C00747121-ie-1747790-E51DD9C7CDD02493199C",
+      "spender_entity_id": "C00747121",
+      "spender_name": "RED SENATE",
+      "candidate_id": "S6PA00217",
+      "candidate_name": "Bob Casey",
+      "support_oppose": "O",
+      "amount": 822.0,
+      "date": "2023-09-15",
+      "purpose": "IE MEDIA PRODUCTION",
+      "payee": "IF IT IS LLC",
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202401299600571529",
+      "vendor_id": "V-if-it-is",
+      "medium": "production"
+    },
+    {
+      "ie_id": "C00747121-ie-1747790-EA1C610CB2B934C73893",
+      "spender_entity_id": "C00747121",
+      "spender_name": "RED SENATE",
+      "candidate_id": "S6PA00217",
+      "candidate_name": "Bob Casey",
+      "support_oppose": "O",
+      "amount": 1250.0,
+      "date": "2023-09-15",
+      "purpose": "IE MEDIA PRODUCTION",
+      "payee": "IF IT IS LLC",
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202401299600571521",
+      "vendor_id": "V-if-it-is",
+      "medium": "production"
+    },
+    {
+      "ie_id": "C00747121-ie-1747790-E76B900FA10604056B7B",
+      "spender_entity_id": "C00747121",
+      "spender_name": "RED SENATE",
+      "candidate_id": "S6PA00217",
+      "candidate_name": "Bob Casey",
+      "support_oppose": "O",
+      "amount": 1950.0,
+      "date": "2023-09-15",
+      "purpose": "IE MEDIA PRODUCTION",
+      "payee": "IF IT IS LLC",
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202401299600571530",
+      "vendor_id": "V-if-it-is",
+      "medium": "production"
+    },
+    {
+      "ie_id": "C00747121-ie-1747790-E814AF794E5BF4A30B5B",
+      "spender_entity_id": "C00747121",
+      "spender_name": "RED SENATE",
+      "candidate_id": "S6PA00217",
+      "candidate_name": "Bob Casey",
+      "support_oppose": "O",
+      "amount": 2303.0,
+      "date": "2023-09-15",
+      "purpose": "IE MEDIA PRODUCTION",
+      "payee": "IF IT IS LLC",
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202401299600571522",
+      "vendor_id": "V-if-it-is",
+      "medium": "production"
+    }
+  ],
+  "ads": [],
+  "method": "Every Schedule E independent expenditure names a payee. Payee strings are normalised (case, punctuation, legal suffixes, token order), near-duplicates are folded with a difflib ratio ≥ 0.92 when their numeric tokens match, and hand alias rows from data/hand/<race>/vendor_aliases.json override the rule. Medium is classified from the purpose the spender filed (ordered keyword table in campaign_commons/vendors.py). The FEC does not record which buy placed which ad: vendor ↔ ad links are date-window adjacency (or single-digital-vendor inference) from campaign_commons.ads_enrich, each with its basis, and are only `verified` when a person found a source naming both. Totals are the filed amounts, grouped, never re-estimated."
+}

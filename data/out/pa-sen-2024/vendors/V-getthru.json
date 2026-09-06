@@ -1,0 +1,80 @@
+{
+  "vendor_id": "V-getthru",
+  "name": "GETTHRU",
+  "aliases": [
+    "GETTHRU"
+  ],
+  "normalization": {
+    "basis": "inferred",
+    "rule": "case/punctuation/suffix normalisation + token-set ≥0.92 (numeric tokens must match); aliases file",
+    "source_urls": [
+      "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&payee_name=GETTHRU"
+    ],
+    "checked_by": null,
+    "checked_at": null
+  },
+  "total": 30508.0,
+  "count": 2,
+  "media_mix": [
+    {
+      "medium": "phones",
+      "amount": 30508.0,
+      "count": 2
+    }
+  ],
+  "spenders": [
+    {
+      "entity_id": "C00490375",
+      "name": "NATIONAL NURSES UNITED FOR PATIENT PROTECTION",
+      "amount": 30508.0,
+      "count": 2
+    }
+  ],
+  "targets": [
+    {
+      "candidate_id": "S6PA00217",
+      "support_oppose": "S",
+      "amount": 30508.0
+    }
+  ],
+  "first_date": "2024-09-30",
+  "last_date": "2024-10-29",
+  "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&payee_name=GETTHRU",
+  "race_id": "pa-sen-2024",
+  "generated_at": "2026-09-05T20:34:15+00:00",
+  "data_status": "real",
+  "expenditures": [
+    {
+      "ie_id": "C00490375-ie-1906778-B890751",
+      "spender_entity_id": "C00490375",
+      "spender_name": "NATIONAL NURSES UNITED FOR PATIENT PROTECTION",
+      "candidate_id": "S6PA00217",
+      "candidate_name": "Bob Casey",
+      "support_oppose": "S",
+      "amount": 19437.0,
+      "date": "2024-10-29",
+      "purpose": "PHONE AND TEXT CAMPAIGN",
+      "payee": "GETTHRU",
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202507299764308523",
+      "vendor_id": "V-getthru",
+      "medium": "phones"
+    },
+    {
+      "ie_id": "C00490375-ie-1875388-B882793",
+      "spender_entity_id": "C00490375",
+      "spender_name": "NATIONAL NURSES UNITED FOR PATIENT PROTECTION",
+      "candidate_id": "S6PA00217",
+      "candidate_name": "Bob Casey",
+      "support_oppose": "S",
+      "amount": 11071.0,
+      "date": "2024-09-30",
+      "purpose": "PHONE AND TEXT CAMPAIGN BEGINNING 9/3/24. PRE-PAYMENTS REPORTED ON 2024 APRIL/JUNE QUARTERLY REPORTS",
+      "payee": "GETTHRU",
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202502109753368232",
+      "vendor_id": "V-getthru",
+      "medium": "phones"
+    }
+  ],
+  "ads": [],
+  "method": "Every Schedule E independent expenditure names a payee. Payee strings are normalised (case, punctuation, legal suffixes, token order), near-duplicates are folded with a difflib ratio ≥ 0.92 when their numeric tokens match, and hand alias rows from data/hand/<race>/vendor_aliases.json override the rule. Medium is classified from the purpose the spender filed (ordered keyword table in campaign_commons/vendors.py). The FEC does not record which buy placed which ad: vendor ↔ ad links are date-window adjacency (or single-digital-vendor inference) from campaign_commons.ads_enrich, each with its basis, and are only `verified` when a person found a source naming both. Totals are the filed amounts, grouped, never re-estimated."
+}

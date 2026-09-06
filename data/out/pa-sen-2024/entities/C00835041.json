@@ -432,7 +432,9 @@
       "date": "2024-10-02",
       "purpose": "DIGITAL ADVERTISING AND PRODUCTION",
       "payee": "MIDDLE SEAT",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202410249710201904"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202410249710201904",
+      "vendor_id": "V-middle-seat-consulting",
+      "medium": "production"
     },
     {
       "ie_id": "C00835041-ie-1838202-500109970",
@@ -445,7 +447,9 @@
       "date": "2024-10-02",
       "purpose": "DIGITAL ADVERTISING AND PRODUCTION",
       "payee": "MIDDLE SEAT",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202410249710201904"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202410249710201904",
+      "vendor_id": "V-middle-seat-consulting",
+      "medium": "production"
     },
     {
       "ie_id": "C00835041-ie-1855961-500136994",
@@ -458,7 +462,9 @@
       "date": "2024-11-13",
       "purpose": "VOTER OUTREACH TEXTING (ACTUAL COST OF IE REPORTED ON 10/10)",
       "payee": "SWITCHBOARD",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202412059720865726"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202412059720865726",
+      "vendor_id": "V-switchboard",
+      "medium": "phones"
     },
     {
       "ie_id": "C00835041-ie-1838202-500110884",
@@ -471,7 +477,9 @@
       "date": "2024-10-08",
       "purpose": "VOTER OUTREACH TEXTING - ESTIMATED COST",
       "payee": "SWITCHBOARD",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202410249710201908"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202410249710201908",
+      "vendor_id": "V-switchboard",
+      "medium": "phones"
     },
     {
       "ie_id": "C00835041-ie-1855961-500129731",
@@ -484,7 +492,9 @@
       "date": "2024-11-13",
       "purpose": "VOTER OUTREACH TEXTING (ACTUAL COST OF IE REPORTED ON 11/05)",
       "payee": "SWITCHBOARD",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202412059720865722"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202412059720865722",
+      "vendor_id": "V-switchboard",
+      "medium": "phones"
     },
     {
       "ie_id": "C00835041-ie-1855961-500117764",
@@ -497,7 +507,9 @@
       "date": "2024-11-13",
       "purpose": "VOTER OUTREACH TEXTING (ACTUAL COST OF IE REPORTED ON 10/19)",
       "payee": "SWITCHBOARD",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202412059720865711"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202412059720865711",
+      "vendor_id": "V-switchboard",
+      "medium": "phones"
     },
     {
       "ie_id": "C00835041-ie-1855961-500127186",
@@ -510,11 +522,66 @@
       "date": "2024-11-13",
       "purpose": "VOTER OUTREACH TEXTING (ACTUAL COST OF IE REPORTED ON 10/26)",
       "payee": "SWITCHBOARD",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202412059720865713"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202412059720865713",
+      "vendor_id": "V-switchboard",
+      "medium": "phones"
     }
   ],
   "flags": [],
   "has_chain": true,
   "source_url": "https://www.fec.gov/data/committee/C00835041/?cycle=2024",
-  "data_status": "real"
+  "data_status": "real",
+  "vendors": [
+    {
+      "vendor_id": "V-middle-seat-consulting",
+      "name": "Middle Seat Consulting",
+      "amount": 114000.0,
+      "count": 2,
+      "media_mix": [
+        {
+          "medium": "production",
+          "amount": 114000.0,
+          "count": 2
+        }
+      ],
+      "targets": [
+        {
+          "candidate_id": "S6PA00217",
+          "support_oppose": "S",
+          "amount": 76000.0
+        },
+        {
+          "candidate_id": "S2PA00661",
+          "support_oppose": "O",
+          "amount": 38000.0
+        }
+      ],
+      "first_date": "2024-10-02",
+      "last_date": "2024-10-02",
+      "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00835041&payee_name=MIDDLE+SEAT"
+    },
+    {
+      "vendor_id": "V-switchboard",
+      "name": "SWITCHBOARD",
+      "amount": 7861.93,
+      "count": 5,
+      "media_mix": [
+        {
+          "medium": "phones",
+          "amount": 7861.93,
+          "count": 5
+        }
+      ],
+      "targets": [
+        {
+          "candidate_id": "S6PA00217",
+          "support_oppose": "S",
+          "amount": 7861.93
+        }
+      ],
+      "first_date": "2024-10-08",
+      "last_date": "2024-11-13",
+      "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00835041&payee_name=SWITCHBOARD"
+    }
+  ]
 }

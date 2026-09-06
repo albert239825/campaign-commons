@@ -777,7 +777,9 @@
       "date": "2024-11-05",
       "purpose": "INDEPENDENT EXPENDITURE: GOTV TEXTS",
       "payee": "IN FIELD PRO",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202412049720237294"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202412049720237294",
+      "vendor_id": "V-in-field-pro",
+      "medium": "phones"
     },
     {
       "ie_id": "C00634774-ie-1853216-E3C87A5859E0A4654BAD",
@@ -790,7 +792,9 @@
       "date": "2024-10-21",
       "purpose": "INDEPENDENT EXPENDITURE: GOTV TEXTS",
       "payee": "IN FIELD PRO",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202412049720237290"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202412049720237290",
+      "vendor_id": "V-in-field-pro",
+      "medium": "phones"
     },
     {
       "ie_id": "C00634774-ie-1853216-E4DB6AAD13EA948B4978",
@@ -803,11 +807,61 @@
       "date": "2024-10-30",
       "purpose": "INDEPENDENT EXPENDITURE: MEDIA PRODUCTION COSTS",
       "payee": "BRAVE NEW TELEVISION",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202412049720237284"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202412049720237284",
+      "vendor_id": "V-brave-new-television",
+      "medium": "production"
     }
   ],
   "flags": [],
   "has_chain": true,
   "source_url": "https://www.fec.gov/data/committee/C00634774/?cycle=2024",
-  "data_status": "real"
+  "data_status": "real",
+  "vendors": [
+    {
+      "vendor_id": "V-in-field-pro",
+      "name": "IN FIELD PRO",
+      "amount": 181484.25,
+      "count": 2,
+      "media_mix": [
+        {
+          "medium": "phones",
+          "amount": 181484.25,
+          "count": 2
+        }
+      ],
+      "targets": [
+        {
+          "candidate_id": "S2PA00661",
+          "support_oppose": "S",
+          "amount": 181484.25
+        }
+      ],
+      "first_date": "2024-10-21",
+      "last_date": "2024-11-05",
+      "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00634774&payee_name=IN+FIELD+PRO"
+    },
+    {
+      "vendor_id": "V-brave-new-television",
+      "name": "BRAVE NEW TELEVISION",
+      "amount": 412.5,
+      "count": 1,
+      "media_mix": [
+        {
+          "medium": "production",
+          "amount": 412.5,
+          "count": 1
+        }
+      ],
+      "targets": [
+        {
+          "candidate_id": "S2PA00661",
+          "support_oppose": "S",
+          "amount": 412.5
+        }
+      ],
+      "first_date": "2024-10-30",
+      "last_date": "2024-10-30",
+      "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00634774&payee_name=BRAVE+NEW+TELEVISION"
+    }
+  ]
 }

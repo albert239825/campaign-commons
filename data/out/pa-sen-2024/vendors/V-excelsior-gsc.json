@@ -1,0 +1,80 @@
+{
+  "vendor_id": "V-excelsior-gsc",
+  "name": "EXCELSIOR GSC LLC",
+  "aliases": [
+    "EXCELSIOR GSC LLC"
+  ],
+  "normalization": {
+    "basis": "inferred",
+    "rule": "case/punctuation/suffix normalisation + token-set ≥0.92 (numeric tokens must match); aliases file",
+    "source_urls": [
+      "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&payee_name=EXCELSIOR+GSC+LLC"
+    ],
+    "checked_by": null,
+    "checked_at": null
+  },
+  "total": 250000.0,
+  "count": 2,
+  "media_mix": [
+    {
+      "medium": "phones",
+      "amount": 250000.0,
+      "count": 2
+    }
+  ],
+  "spenders": [
+    {
+      "entity_id": "C00849489",
+      "name": "KEYSTONE RENEWAL PAC",
+      "amount": 250000.0,
+      "count": 2
+    }
+  ],
+  "targets": [
+    {
+      "candidate_id": "S2PA00661",
+      "support_oppose": "S",
+      "amount": 250000.0
+    }
+  ],
+  "first_date": "2024-10-21",
+  "last_date": "2024-10-21",
+  "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&payee_name=EXCELSIOR+GSC+LLC",
+  "race_id": "pa-sen-2024",
+  "generated_at": "2026-09-05T20:34:15+00:00",
+  "data_status": "real",
+  "expenditures": [
+    {
+      "ie_id": "C00849489-ie-1890576-SE.3",
+      "spender_entity_id": "C00849489",
+      "spender_name": "KEYSTONE RENEWAL PAC",
+      "candidate_id": "S2PA00661",
+      "candidate_name": "Dave McCormick",
+      "support_oppose": "S",
+      "amount": 50000.0,
+      "date": "2024-10-21",
+      "purpose": "PHONE CALLS",
+      "payee": "EXCELSIOR GSC LLC",
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202504309758895714",
+      "vendor_id": "V-excelsior-gsc",
+      "medium": "phones"
+    },
+    {
+      "ie_id": "C00849489-ie-1890576-SE.2",
+      "spender_entity_id": "C00849489",
+      "spender_name": "KEYSTONE RENEWAL PAC",
+      "candidate_id": "S2PA00661",
+      "candidate_name": "Dave McCormick",
+      "support_oppose": "S",
+      "amount": 200000.0,
+      "date": "2024-10-21",
+      "purpose": "IN KIND OFFSET: PHONE CALLS",
+      "payee": "EXCELSIOR GSC LLC",
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202504309758895713",
+      "vendor_id": "V-excelsior-gsc",
+      "medium": "phones"
+    }
+  ],
+  "ads": [],
+  "method": "Every Schedule E independent expenditure names a payee. Payee strings are normalised (case, punctuation, legal suffixes, token order), near-duplicates are folded with a difflib ratio ≥ 0.92 when their numeric tokens match, and hand alias rows from data/hand/<race>/vendor_aliases.json override the rule. Medium is classified from the purpose the spender filed (ordered keyword table in campaign_commons/vendors.py). The FEC does not record which buy placed which ad: vendor ↔ ad links are date-window adjacency (or single-digital-vendor inference) from campaign_commons.ads_enrich, each with its basis, and are only `verified` when a person found a source naming both. Totals are the filed amounts, grouped, never re-estimated."
+}

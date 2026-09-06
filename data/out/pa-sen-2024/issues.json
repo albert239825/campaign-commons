@@ -1,0 +1,498 @@
+{
+  "race_id": "pa-sen-2024",
+  "generated_at": "2026-09-05T19:54:13+00:00",
+  "data_status": "partial",
+  "by_ad_issue": [
+    {
+      "issue_id": "tax_budget",
+      "ad_count": 13,
+      "spend_min": 1855000.0,
+      "spend_max": 2165000.0,
+      "spend_midpoint": 2010000.0,
+      "ie_amount": 0.0,
+      "ie_count": 0,
+      "by_candidate": [],
+      "basis": {
+        "basis": "verified",
+        "rule": "Issue tags are human: a person read each 24/48-hour notice (IE rows) or watched/read each creative (ads). Google reports ad spend as a range; spend_min/spend_max are the summed bounds and spend_midpoint their midpoint, kept separate from FEC IE dollars. A record tagged with several issues counts its full amount under each. Coverage is in `coverage`.",
+        "source_urls": [
+          "https://adstransparency.google.com/advertiser/AR12988012301746438145/creative/CR11789922739211468801?political=&region=US",
+          "https://adstransparency.google.com/advertiser/AR12988012301746438145/creative/CR09843875118978170881?political=&region=US",
+          "https://adstransparency.google.com/advertiser/AR07109796124864544769/creative/CR16164832502010085377?political=&region=US",
+          "https://adstransparency.google.com/advertiser/AR12988012301746438145/creative/CR16183465650688098305?political=&region=US",
+          "https://adstransparency.google.com/advertiser/AR12988012301746438145/creative/CR14846206348760186881?political=&region=US",
+          "https://adstransparency.google.com/advertiser/AR12988012301746438145/creative/CR09482672355114221569?political=&region=US",
+          "https://adstransparency.google.com/advertiser/AR00340999924898332673/creative/CR17834934589508812801?political=&region=US",
+          "https://adstransparency.google.com/advertiser/AR00340999924898332673/creative/CR06950645183998328833?political=&region=US",
+          "https://adstransparency.google.com/advertiser/AR12988012301746438145/creative/CR01265011784436154369?political=&region=US",
+          "https://adstransparency.google.com/advertiser/AR12988012301746438145/creative/CR01683002124851478529?political=&region=US",
+          "https://adstransparency.google.com/advertiser/AR07109796124864544769/creative/CR01871250335276728321?political=&region=US",
+          "https://adstransparency.google.com/advertiser/AR07109796124864544769/creative/CR17444495536584392705?political=&region=US",
+          "https://adstransparency.google.com/advertiser/AR12988012301746438145/creative/CR17268551685907677185?political=&region=US"
+        ],
+        "checked_by": "devin-block2-media",
+        "checked_at": "2026-09-05"
+      }
+    },
+    {
+      "issue_id": "abortion",
+      "ad_count": 13,
+      "spend_min": 1810000.0,
+      "spend_max": 2135000.0,
+      "spend_midpoint": 1972500.0,
+      "ie_amount": 0.0,
+      "ie_count": 0,
+      "by_candidate": [],
+      "basis": {
+        "basis": "verified",
+        "rule": "Issue tags are human: a person read each 24/48-hour notice (IE rows) or watched/read each creative (ads). Google reports ad spend as a range; spend_min/spend_max are the summed bounds and spend_midpoint their midpoint, kept separate from FEC IE dollars. A record tagged with several issues counts its full amount under each. Coverage is in `coverage`.",
+        "source_urls": [
+          "https://adstransparency.google.com/advertiser/AR07109796124864544769/creative/CR10478813122326953985?political=&region=US",
+          "https://adstransparency.google.com/advertiser/AR07109796124864544769/creative/CR12341671143046905857?political=&region=US",
+          "https://adstransparency.google.com/advertiser/AR07109796124864544769/creative/CR03071815602860457985?political=&region=US",
+          "https://adstransparency.google.com/advertiser/AR07109796124864544769/creative/CR15884613992212070401?political=&region=US",
+          "https://adstransparency.google.com/advertiser/AR07109796124864544769/creative/CR03840237839694430209?political=&region=US",
+          "https://adstransparency.google.com/advertiser/AR07109796124864544769/creative/CR14255135835702689793?political=&region=US",
+          "https://adstransparency.google.com/advertiser/AR00340999924898332673/creative/CR02577931420798287873?political=&region=US",
+          "https://adstransparency.google.com/advertiser/AR09271326703924281345/creative/CR03497255684309778433?political=&region=US",
+          "https://adstransparency.google.com/advertiser/AR07109796124864544769/creative/CR02170178134932979713?political=&region=US",
+          "https://adstransparency.google.com/advertiser/AR07109796124864544769/creative/CR16672726609693769729?political=&region=US",
+          "https://adstransparency.google.com/advertiser/AR07109796124864544769/creative/CR00279342491088453633?political=&region=US",
+          "https://adstransparency.google.com/advertiser/AR07109796124864544769/creative/CR13008203887897739265?political=&region=US",
+          "https://adstransparency.google.com/advertiser/AR07109796124864544769/creative/CR05421010431412011009?political=&region=US"
+        ],
+        "checked_by": "devin-block2-media",
+        "checked_at": "2026-09-05"
+      }
+    },
+    {
+      "issue_id": "labor_trade",
+      "ad_count": 10,
+      "spend_min": 1840000.0,
+      "spend_max": 2080000.0,
+      "spend_midpoint": 1960000.0,
+      "ie_amount": 0.0,
+      "ie_count": 0,
+      "by_candidate": [],
+      "basis": {
+        "basis": "verified",
+        "rule": "Issue tags are human: a person read each 24/48-hour notice (IE rows) or watched/read each creative (ads). Google reports ad spend as a range; spend_min/spend_max are the summed bounds and spend_midpoint their midpoint, kept separate from FEC IE dollars. A record tagged with several issues counts its full amount under each. Coverage is in `coverage`.",
+        "source_urls": [
+          "https://adstransparency.google.com/advertiser/AR07109796124864544769/creative/CR05870211732231684097?political=&region=US",
+          "https://adstransparency.google.com/advertiser/AR15050660931082125313/creative/CR05367732770854404097?political=&region=US",
+          "https://adstransparency.google.com/advertiser/AR07109796124864544769/creative/CR15747662947024896001?political=&region=US",
+          "https://adstransparency.google.com/advertiser/AR07472449934839513089/creative/CR13534678092823396353?political=&region=US",
+          "https://adstransparency.google.com/advertiser/AR15050660931082125313/creative/CR16821231048187707393?political=&region=US",
+          "https://adstransparency.google.com/advertiser/AR07109796124864544769/creative/CR14004507606169681921?political=&region=US",
+          "https://adstransparency.google.com/advertiser/AR07109796124864544769/creative/CR05179166475151212545?political=&region=US",
+          "https://adstransparency.google.com/advertiser/AR07109796124864544769/creative/CR16220568893905698817?political=&region=US",
+          "https://adstransparency.google.com/advertiser/AR07109796124864544769/creative/CR07452900497838571521?political=&region=US",
+          "https://adstransparency.google.com/advertiser/AR07109796124864544769/creative/CR01871250335276728321?political=&region=US"
+        ],
+        "checked_by": "devin-block2-media",
+        "checked_at": "2026-09-05"
+      }
+    },
+    {
+      "issue_id": "immigration",
+      "ad_count": 6,
+      "spend_min": 815000.0,
+      "spend_max": 945000.0,
+      "spend_midpoint": 880000.0,
+      "ie_amount": 0.0,
+      "ie_count": 0,
+      "by_candidate": [
+        {
+          "candidate_id": "S6PA00217",
+          "support_oppose": "S",
+          "spend_midpoint": 85000.0,
+          "ie_amount": 0.0
+        }
+      ],
+      "basis": {
+        "basis": "verified",
+        "rule": "Issue tags are human: a person read each 24/48-hour notice (IE rows) or watched/read each creative (ads). Google reports ad spend as a range; spend_min/spend_max are the summed bounds and spend_midpoint their midpoint, kept separate from FEC IE dollars. A record tagged with several issues counts its full amount under each. Coverage is in `coverage`.",
+        "source_urls": [
+          "https://adstransparency.google.com/advertiser/AR12988012301746438145/creative/CR00368842737589420033?political=&region=US",
+          "https://adstransparency.google.com/advertiser/AR12988012301746438145/creative/CR13454551182949220353?political=&region=US",
+          "https://adstransparency.google.com/advertiser/AR12988012301746438145/creative/CR04370227784589508609?political=&region=US",
+          "https://adstransparency.google.com/advertiser/AR15961232480741097473/creative/CR10442306037749907457?political=&region=US",
+          "https://adstransparency.google.com/advertiser/AR12988012301746438145/creative/CR01265011784436154369?political=&region=US",
+          "https://adstransparency.google.com/advertiser/AR12988012301746438145/creative/CR01683002124851478529?political=&region=US"
+        ],
+        "checked_by": "devin-block2-media",
+        "checked_at": "2026-09-05"
+      }
+    },
+    {
+      "issue_id": "energy_climate",
+      "ad_count": 2,
+      "spend_min": 425000.0,
+      "spend_max": 475000.0,
+      "spend_midpoint": 450000.0,
+      "ie_amount": 0.0,
+      "ie_count": 0,
+      "by_candidate": [
+        {
+          "candidate_id": "S2PA00661",
+          "support_oppose": "S",
+          "spend_midpoint": 237500.0,
+          "ie_amount": 0.0
+        }
+      ],
+      "basis": {
+        "basis": "verified",
+        "rule": "Issue tags are human: a person read each 24/48-hour notice (IE rows) or watched/read each creative (ads). Google reports ad spend as a range; spend_min/spend_max are the summed bounds and spend_midpoint their midpoint, kept separate from FEC IE dollars. A record tagged with several issues counts its full amount under each. Coverage is in `coverage`.",
+        "source_urls": [
+          "https://adstransparency.google.com/advertiser/AR18145382539424956417/creative/CR14499067438127120385?political=&region=US",
+          "https://adstransparency.google.com/advertiser/AR07472449934839513089/creative/CR13534678092823396353?political=&region=US"
+        ],
+        "checked_by": "devin-block2-media",
+        "checked_at": "2026-09-05"
+      }
+    },
+    {
+      "issue_id": "healthcare",
+      "ad_count": 3,
+      "spend_min": 285000.0,
+      "spend_max": 330000.0,
+      "spend_midpoint": 307500.0,
+      "ie_amount": 0.0,
+      "ie_count": 0,
+      "by_candidate": [
+        {
+          "candidate_id": "S6PA00217",
+          "support_oppose": "S",
+          "spend_midpoint": 85000.0,
+          "ie_amount": 0.0
+        }
+      ],
+      "basis": {
+        "basis": "verified",
+        "rule": "Issue tags are human: a person read each 24/48-hour notice (IE rows) or watched/read each creative (ads). Google reports ad spend as a range; spend_min/spend_max are the summed bounds and spend_midpoint their midpoint, kept separate from FEC IE dollars. A record tagged with several issues counts its full amount under each. Coverage is in `coverage`.",
+        "source_urls": [
+          "https://adstransparency.google.com/advertiser/AR07109796124864544769/creative/CR15884613992212070401?political=&region=US",
+          "https://adstransparency.google.com/advertiser/AR15961232480741097473/creative/CR17089338712283676673?political=&region=US",
+          "https://adstransparency.google.com/advertiser/AR07109796124864544769/creative/CR01871250335276728321?political=&region=US"
+        ],
+        "checked_by": "devin-block2-media",
+        "checked_at": "2026-09-05"
+      }
+    },
+    {
+      "issue_id": "guns",
+      "ad_count": 1,
+      "spend_min": 100000.0,
+      "spend_max": 125000.0,
+      "spend_midpoint": 112500.0,
+      "ie_amount": 0.0,
+      "ie_count": 0,
+      "by_candidate": [],
+      "basis": {
+        "basis": "verified",
+        "rule": "Issue tags are human: a person read each 24/48-hour notice (IE rows) or watched/read each creative (ads). Google reports ad spend as a range; spend_min/spend_max are the summed bounds and spend_midpoint their midpoint, kept separate from FEC IE dollars. A record tagged with several issues counts its full amount under each. Coverage is in `coverage`.",
+        "source_urls": [
+          "https://adstransparency.google.com/advertiser/AR16042297274033766401/creative/CR16237396970908418049?political=&region=US"
+        ],
+        "checked_by": "devin-block2-media",
+        "checked_at": "2026-09-05"
+      }
+    }
+  ],
+  "by_spender_focus": [
+    {
+      "kind": "general_partisan",
+      "issue_id": null,
+      "primary_only": true,
+      "amount": 138811228.71,
+      "spender_ids": [
+        "C00865444",
+        "C00571703",
+        "C00042366",
+        "C00487363",
+        "C00752691",
+        "C00724203",
+        "C00811166"
+      ],
+      "traceability_score": 0.7319,
+      "dark_share": 0.2564
+    },
+    {
+      "kind": "candidate_aligned",
+      "issue_id": null,
+      "primary_only": true,
+      "amount": 48234127.36,
+      "spender_ids": [
+        "C00849489"
+      ],
+      "traceability_score": 0.8659,
+      "dark_share": 0.1341
+    },
+    {
+      "kind": "multi_issue",
+      "issue_id": "tax_budget",
+      "primary_only": true,
+      "amount": 21393343.41,
+      "spender_ids": [
+        "C00687103",
+        "C00620971"
+      ],
+      "traceability_score": 0.6364,
+      "dark_share": 0.3636
+    },
+    {
+      "kind": "single_issue",
+      "issue_id": "energy_climate",
+      "primary_only": true,
+      "amount": 7060845.94,
+      "spender_ids": [
+        "C00486845",
+        "C00740225"
+      ],
+      "traceability_score": 0.2159,
+      "dark_share": 0.7841
+    },
+    {
+      "kind": "multi_issue",
+      "issue_id": "healthcare",
+      "primary_only": true,
+      "amount": 5536789.56,
+      "spender_ids": [
+        "C00744920",
+        "C00609388"
+      ],
+      "traceability_score": 0.3311,
+      "dark_share": 0.658
+    },
+    {
+      "kind": "single_issue",
+      "issue_id": "guns",
+      "primary_only": true,
+      "amount": 2762121.76,
+      "spender_ids": [
+        "C00053553",
+        "C00688655",
+        "C00540443"
+      ],
+      "traceability_score": 0.6768,
+      "dark_share": 0.3232
+    },
+    {
+      "kind": "labor",
+      "issue_id": null,
+      "primary_only": true,
+      "amount": 2313966.35,
+      "spender_ids": [
+        "C00490375",
+        "C00745745",
+        "C00754051",
+        "C00011114"
+      ],
+      "traceability_score": 0.9156,
+      "dark_share": 0.0728
+    },
+    {
+      "kind": "single_issue",
+      "issue_id": "healthcare",
+      "primary_only": true,
+      "amount": 740000.0,
+      "spender_ids": [
+        "C00544387"
+      ],
+      "traceability_score": 0.9331,
+      "dark_share": 0.0664
+    },
+    {
+      "kind": "business_trade",
+      "issue_id": null,
+      "primary_only": true,
+      "amount": 450000.0,
+      "spender_ids": [
+        "C00106146"
+      ],
+      "traceability_score": 0.8437,
+      "dark_share": 0.0
+    },
+    {
+      "kind": "general_partisan",
+      "issue_id": null,
+      "primary_only": false,
+      "amount": 138811228.71,
+      "spender_ids": [
+        "C00865444",
+        "C00571703",
+        "C00042366",
+        "C00487363",
+        "C00752691",
+        "C00724203",
+        "C00811166"
+      ],
+      "traceability_score": 0.7319,
+      "dark_share": 0.2564
+    },
+    {
+      "kind": "candidate_aligned",
+      "issue_id": null,
+      "primary_only": false,
+      "amount": 48234127.36,
+      "spender_ids": [
+        "C00849489"
+      ],
+      "traceability_score": 0.8659,
+      "dark_share": 0.1341
+    },
+    {
+      "kind": "multi_issue",
+      "issue_id": "tax_budget",
+      "primary_only": false,
+      "amount": 26930132.97,
+      "spender_ids": [
+        "C00687103",
+        "C00744920",
+        "C00609388",
+        "C00620971"
+      ],
+      "traceability_score": 0.5737,
+      "dark_share": 0.4241
+    },
+    {
+      "kind": "multi_issue",
+      "issue_id": "healthcare",
+      "primary_only": false,
+      "amount": 7337530.76,
+      "spender_ids": [
+        "C00744920",
+        "C00609388",
+        "C00620971"
+      ],
+      "traceability_score": 0.3659,
+      "dark_share": 0.6259
+    },
+    {
+      "kind": "single_issue",
+      "issue_id": "energy_climate",
+      "primary_only": false,
+      "amount": 7060845.94,
+      "spender_ids": [
+        "C00486845",
+        "C00740225"
+      ],
+      "traceability_score": 0.2159,
+      "dark_share": 0.7841
+    },
+    {
+      "kind": "single_issue",
+      "issue_id": "guns",
+      "primary_only": false,
+      "amount": 2762121.76,
+      "spender_ids": [
+        "C00053553",
+        "C00688655",
+        "C00540443"
+      ],
+      "traceability_score": 0.6768,
+      "dark_share": 0.3232
+    },
+    {
+      "kind": "multi_issue",
+      "issue_id": "energy_climate",
+      "primary_only": false,
+      "amount": 2670699.56,
+      "spender_ids": [
+        "C00609388"
+      ],
+      "traceability_score": 0.2962,
+      "dark_share": 0.7038
+    },
+    {
+      "kind": "labor",
+      "issue_id": null,
+      "primary_only": false,
+      "amount": 2313966.35,
+      "spender_ids": [
+        "C00490375",
+        "C00745745",
+        "C00754051",
+        "C00011114"
+      ],
+      "traceability_score": 0.9156,
+      "dark_share": 0.0728
+    },
+    {
+      "kind": "labor",
+      "issue_id": "labor_trade",
+      "primary_only": false,
+      "amount": 2313966.35,
+      "spender_ids": [
+        "C00490375",
+        "C00745745",
+        "C00754051",
+        "C00011114"
+      ],
+      "traceability_score": 0.9156,
+      "dark_share": 0.0728
+    },
+    {
+      "kind": "labor",
+      "issue_id": "healthcare",
+      "primary_only": false,
+      "amount": 1388467.91,
+      "spender_ids": [
+        "C00490375",
+        "C00745745"
+      ],
+      "traceability_score": 0.9293,
+      "dark_share": 0.0514
+    },
+    {
+      "kind": "single_issue",
+      "issue_id": "healthcare",
+      "primary_only": false,
+      "amount": 740000.0,
+      "spender_ids": [
+        "C00544387"
+      ],
+      "traceability_score": 0.9331,
+      "dark_share": 0.0664
+    },
+    {
+      "kind": "business_trade",
+      "issue_id": null,
+      "primary_only": false,
+      "amount": 450000.0,
+      "spender_ids": [
+        "C00106146"
+      ],
+      "traceability_score": 0.8437,
+      "dark_share": 0.0
+    },
+    {
+      "kind": "business_trade",
+      "issue_id": "healthcare",
+      "primary_only": false,
+      "amount": 450000.0,
+      "spender_ids": [
+        "C00106146"
+      ],
+      "traceability_score": 0.8437,
+      "dark_share": 0.0
+    }
+  ],
+  "coverage": {
+    "spenders_tagged": 23,
+    "spenders_total": 98,
+    "dollars_tagged": 227302423.09,
+    "dollars_total": 233396761.46,
+    "ads_tagged": 42,
+    "ads_total": 500,
+    "ies_tagged": 0,
+    "ie_dollars_tagged": 0
+  },
+  "notes": [
+    "Two layers, never summed: by_ad_issue is what tagged ads and filed notices were about (attributable to those records' dollars); by_spender_focus is what the spender says it exists for (about the spender, not the dollars). They are not comparable and must not be added.",
+    "Google reports ad spend as a range. spend_min and spend_max are the summed bounds; spend_midpoint is the summed midpoint and is shown as an estimate. Midpoints are never added to FEC independent-expenditure dollars.",
+    "A record tagged with more than one issue counts its full amount under every tag; dollars are not split. Issue rows therefore overlap and do not sum to a total. An ad aimed at several candidates counts its full midpoint under each.",
+    "by_spender_focus primary_only=true counts each spender once (its first issue, or its kind when the kind names no issue), so those buckets partition the tagged dollars; primary_only=false counts a spender under every issue it names and overlaps.",
+    "General partisan / leadership committees say they exist to win seats or a majority, not for an issue; they carry issue_id null. Spenders with no sourced self-description are untagged and counted in coverage, not guessed."
+  ]
+}

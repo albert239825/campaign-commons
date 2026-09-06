@@ -1,8 +1,9 @@
 import { DetailHeader } from "@/components/ui/detail-layout";
-import { getDonor, getRace, listDonorKeys, listRaceIds } from "@/lib/data";
+import { getAdsBySponsor, getDonor, getRace, listDonorKeys, listRaceIds } from "@/lib/data";
 import { date, money, routes } from "@/lib/format";
 import { AdjacencyNote, Breadcrumbs, Card, DataStatusBanner, Money, SourceLink, Stat } from "@/components/ui";
 import { DonorTree } from "@/components/donor/donor-tree";
+import { CommitteeAdsLinks } from "@/components/donor/committee-ads-links";
 
 export const generateStaticParams = () => listRaceIds().flatMap((raceId) => listDonorKeys(raceId).map((donorId) => ({ raceId, donorId })));
 
@@ -47,6 +48,8 @@ export default async function DonorPage({ params }: { params: Promise<{ raceId: 
           name a candidate but move no money to them.{view.truncated && " Tree cut at 200 nodes; smaller branches are not shown."}
         </p>
       </Card>
+
+      <CommitteeAdsLinks view={view} raceId={raceId} adsBySponsor={getAdsBySponsor(raceId)} />
 
       <footer className="space-y-2 border-t border-neutral-200 pt-4">
         <AdjacencyNote />

@@ -2,11 +2,12 @@
 import Link from "next/link";
 import { DetailHeader } from "@/components/ui/detail-layout";
 import { notFound } from "next/navigation";
-import { ISSUES, type Dossier, type IssueId } from "@citizen-gotham/contracts";
-import { getDossier, getRace, listDossierIds, listRaceIds } from "@/lib/data";
+import { ISSUES, type Dossier, type IssueId } from "@campaign-commons/contracts";
+import { getAds, getDossier, getRace, getStories, listDossierIds, listRaceIds } from "@/lib/data";
 import { date, routes } from "@/lib/format";
 import { AdjacencyNote, Breadcrumbs, Chip, DataStatusBanner, SourceLink } from "@/components/ui";
 import { IssueNav } from "@/components/dossier/issue-nav";
+import { RaceNav } from "@/components/ui/race-nav";
 import { IssueSection } from "@/components/dossier/issue-section";
 
 export const generateStaticParams = () =>
@@ -65,6 +66,12 @@ export default async function DossierPage({ params }: { params: Promise<{ raceId
           {d.links.campaign_site && <SourceLink href={d.links.campaign_site} label="campaign website" />}
         </div>
       </DetailHeader>
+
+      <RaceNav
+        race={race}
+        counts={{ ads: getAds(raceId).ads.length, stories: getStories(raceId).stories.length }}
+        active={routes.candidate(raceId, candidateId)}
+      />
 
       <aside className="detail-callout">
         <div className="text-xs font-semibold uppercase tracking-wide text-neutral-500">Read this first</div>

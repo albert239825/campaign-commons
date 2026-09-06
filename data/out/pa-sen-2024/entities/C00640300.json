@@ -416,7 +416,9 @@
       "date": "2024-10-22",
       "purpose": "PHONE BANK",
       "payee": "SCALE TO WIN",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202504249756391692"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202504249756391692",
+      "vendor_id": "V-scale-to-win",
+      "medium": "phones"
     },
     {
       "ie_id": "C00640300-ie-1890164-XEALC1435",
@@ -429,11 +431,61 @@
       "date": "2024-10-22",
       "purpose": "VOTER FILE",
       "payee": "AMERICA VOTES",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202504249756391682"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202504249756391682",
+      "vendor_id": "V-america-votes",
+      "medium": "consulting"
     }
   ],
   "flags": [],
   "has_chain": true,
   "source_url": "https://www.fec.gov/data/committee/C00640300/?cycle=2024",
-  "data_status": "real"
+  "data_status": "real",
+  "vendors": [
+    {
+      "vendor_id": "V-scale-to-win",
+      "name": "SCALE TO WIN",
+      "amount": 775.18,
+      "count": 1,
+      "media_mix": [
+        {
+          "medium": "phones",
+          "amount": 775.18,
+          "count": 1
+        }
+      ],
+      "targets": [
+        {
+          "candidate_id": "S6PA00217",
+          "support_oppose": "S",
+          "amount": 775.18
+        }
+      ],
+      "first_date": "2024-10-22",
+      "last_date": "2024-10-22",
+      "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00640300&payee_name=SCALE+TO+WIN"
+    },
+    {
+      "vendor_id": "V-america-votes",
+      "name": "AMERICA VOTES",
+      "amount": 446.79,
+      "count": 1,
+      "media_mix": [
+        {
+          "medium": "consulting",
+          "amount": 446.79,
+          "count": 1
+        }
+      ],
+      "targets": [
+        {
+          "candidate_id": "S6PA00217",
+          "support_oppose": "S",
+          "amount": 446.79
+        }
+      ],
+      "first_date": "2024-10-22",
+      "last_date": "2024-10-22",
+      "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00640300&payee_name=AMERICA+VOTES"
+    }
+  ]
 }

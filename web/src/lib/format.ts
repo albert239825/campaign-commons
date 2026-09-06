@@ -20,7 +20,7 @@ export function date(iso: string | null): string {
   return d.toLocaleDateString("en-US", { year: "numeric", month: "short", day: "numeric", timeZone: "UTC" });
 }
 
-/** File stem of a donor view for a chain-node id; mirrors pipeline/gotham/donors.py `donor_key`. */
+/** File stem of a donor view for a chain-node id; mirrors pipeline/campaign_commons/donors.py `donor_key`. */
 export const donorKey = (nodeId: string) => nodeId.split("@")[0].replace(/[^A-Za-z0-9_-]/g, "-");
 
 /** Routes, in one place so children don't drift. */
@@ -30,6 +30,9 @@ export const routes = {
   entity: (raceId: string, entityId: string) => `/races/${raceId}/entities/${entityId}`,
   chain: (raceId: string, entityId: string) => `/races/${raceId}/chains/${entityId}`,
   ads: (raceId: string) => `/races/${raceId}/ads`,
+  ad: (raceId: string, adId: string) => `/races/${raceId}/ads/${adId}`,
+  vendors: (raceId: string) => `/races/${raceId}/vendors`,
+  vendor: (raceId: string, vendorId: string) => `/races/${raceId}/vendors/${vendorId}`,
   stories: (raceId: string) => `/races/${raceId}/stories`,
   donor: (raceId: string, donorKey: string) => `/races/${raceId}/donors/${donorKey}`,
   candidate: (raceId: string, candidateId: string) => `/races/${raceId}/candidates/${candidateId}`,

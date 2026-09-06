@@ -792,7 +792,9 @@
       "date": "2024-10-15",
       "purpose": "RADIO ADVERTISING & PRODUCTION",
       "payee": "SAGE MEDIA PLANNING & PLACEMENT, INC.",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202410249710503678"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202410249710503678",
+      "vendor_id": "V-sage-media-planning-placement",
+      "medium": "production"
     },
     {
       "ie_id": "C00710848-ie-1840303-500687396",
@@ -805,7 +807,9 @@
       "date": "2024-10-10",
       "purpose": "PRINT ADVERTISING: PAID 9/27/2024 - SEE SCHEDULE B",
       "payee": "MIDATLANTIC MEDIA",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202410249710503677"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202410249710503677",
+      "vendor_id": "V-midatlantic-media",
+      "medium": "mail"
     },
     {
       "ie_id": "C00710848-ie-1855449-500689877",
@@ -818,7 +822,9 @@
       "date": "2024-10-24",
       "purpose": "PRINT ADVERTISING: PAID 9/27, SEE SCHEDULE B",
       "payee": "MIDATLANTIC MEDIA",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202412059720735161"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202412059720735161",
+      "vendor_id": "V-midatlantic-media",
+      "medium": "mail"
     },
     {
       "ie_id": "C00710848-ie-1855449-500689925",
@@ -831,7 +837,9 @@
       "date": "2024-10-25",
       "purpose": "PRINT ADVERTISING: PAID 9/30, SEE SCHEDULE B",
       "payee": "PITTSBURGH JEWISH CHRONICLE",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202412059720735167"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202412059720735167",
+      "vendor_id": "V-pittsburgh-jewish-chronicle",
+      "medium": "mail"
     },
     {
       "ie_id": "C00710848-ie-1855449-500690976",
@@ -844,11 +852,107 @@
       "date": "2024-11-01",
       "purpose": "PRINT ADVERTISING: PAID 9/30, SEE SCHEDULE B",
       "payee": "THE REPORTER GROUP",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202412059720735174"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202412059720735174",
+      "vendor_id": "V-the-reporter-group",
+      "medium": "mail"
     }
   ],
   "flags": [],
   "has_chain": true,
   "source_url": "https://www.fec.gov/data/committee/C00710848/?cycle=2024",
-  "data_status": "real"
+  "data_status": "real",
+  "vendors": [
+    {
+      "vendor_id": "V-sage-media-planning-placement",
+      "name": "SAGE MEDIA PLANNING & PLACEMENT, INC.",
+      "amount": 250000.0,
+      "count": 1,
+      "media_mix": [
+        {
+          "medium": "production",
+          "amount": 250000.0,
+          "count": 1
+        }
+      ],
+      "targets": [
+        {
+          "candidate_id": "S6PA00217",
+          "support_oppose": "S",
+          "amount": 250000.0
+        }
+      ],
+      "first_date": "2024-10-15",
+      "last_date": "2024-10-15",
+      "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00710848&payee_name=SAGE+MEDIA+PLANNING+%26+PLACEMENT%2C+INC."
+    },
+    {
+      "vendor_id": "V-midatlantic-media",
+      "name": "MIDATLANTIC MEDIA",
+      "amount": 10000.0,
+      "count": 2,
+      "media_mix": [
+        {
+          "medium": "mail",
+          "amount": 10000.0,
+          "count": 2
+        }
+      ],
+      "targets": [
+        {
+          "candidate_id": "S6PA00217",
+          "support_oppose": "S",
+          "amount": 10000.0
+        }
+      ],
+      "first_date": "2024-10-10",
+      "last_date": "2024-10-24",
+      "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00710848&payee_name=MIDATLANTIC+MEDIA"
+    },
+    {
+      "vendor_id": "V-pittsburgh-jewish-chronicle",
+      "name": "PITTSBURGH JEWISH CHRONICLE",
+      "amount": 1430.0,
+      "count": 1,
+      "media_mix": [
+        {
+          "medium": "mail",
+          "amount": 1430.0,
+          "count": 1
+        }
+      ],
+      "targets": [
+        {
+          "candidate_id": "S6PA00217",
+          "support_oppose": "S",
+          "amount": 1430.0
+        }
+      ],
+      "first_date": "2024-10-25",
+      "last_date": "2024-10-25",
+      "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00710848&payee_name=PITTSBURGH+JEWISH+CHRONICLE"
+    },
+    {
+      "vendor_id": "V-the-reporter-group",
+      "name": "THE REPORTER GROUP",
+      "amount": 1165.0,
+      "count": 1,
+      "media_mix": [
+        {
+          "medium": "mail",
+          "amount": 1165.0,
+          "count": 1
+        }
+      ],
+      "targets": [
+        {
+          "candidate_id": "S6PA00217",
+          "support_oppose": "S",
+          "amount": 1165.0
+        }
+      ],
+      "first_date": "2024-11-01",
+      "last_date": "2024-11-01",
+      "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00710848&payee_name=THE+REPORTER+GROUP"
+    }
+  ]
 }

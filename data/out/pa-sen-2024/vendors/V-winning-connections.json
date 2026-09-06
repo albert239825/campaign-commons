@@ -1,0 +1,95 @@
+{
+  "vendor_id": "V-winning-connections",
+  "name": "WINNING CONNECTIONS",
+  "aliases": [
+    "WINNING CONNECTIONS"
+  ],
+  "normalization": {
+    "basis": "inferred",
+    "rule": "case/punctuation/suffix normalisation + token-set ≥0.92 (numeric tokens must match); aliases file",
+    "source_urls": [
+      "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&payee_name=WINNING+CONNECTIONS"
+    ],
+    "checked_by": null,
+    "checked_at": null
+  },
+  "total": 238014.51,
+  "count": 3,
+  "media_mix": [
+    {
+      "medium": "phones",
+      "amount": 238014.51,
+      "count": 3
+    }
+  ],
+  "spenders": [
+    {
+      "entity_id": "C00738674",
+      "name": "REPRODUCTIVE FREEDOM FOR ALL FREEDOM FUND",
+      "amount": 238014.51,
+      "count": 3
+    }
+  ],
+  "targets": [
+    {
+      "candidate_id": "S6PA00217",
+      "support_oppose": "S",
+      "amount": 238014.51
+    }
+  ],
+  "first_date": "2024-10-15",
+  "last_date": "2024-10-31",
+  "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&payee_name=WINNING+CONNECTIONS",
+  "race_id": "pa-sen-2024",
+  "generated_at": "2026-09-05T20:34:15+00:00",
+  "data_status": "real",
+  "expenditures": [
+    {
+      "ie_id": "C00738674-ie-1910195-500002462",
+      "spender_entity_id": "C00738674",
+      "spender_name": "REPRODUCTIVE FREEDOM FOR ALL FREEDOM FUND",
+      "candidate_id": "S6PA00217",
+      "candidate_name": "Bob Casey",
+      "support_oppose": "S",
+      "amount": 43117.48,
+      "date": "2024-10-31",
+      "purpose": "PHONE CALLS",
+      "payee": "WINNING CONNECTIONS",
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202508059789386129",
+      "vendor_id": "V-winning-connections",
+      "medium": "phones"
+    },
+    {
+      "ie_id": "C00738674-ie-1910195-500002423",
+      "spender_entity_id": "C00738674",
+      "spender_name": "REPRODUCTIVE FREEDOM FOR ALL FREEDOM FUND",
+      "candidate_id": "S6PA00217",
+      "candidate_name": "Bob Casey",
+      "support_oppose": "S",
+      "amount": 43554.72,
+      "date": "2024-10-28",
+      "purpose": "PHONE CALLS",
+      "payee": "WINNING CONNECTIONS",
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202508059789386125",
+      "vendor_id": "V-winning-connections",
+      "medium": "phones"
+    },
+    {
+      "ie_id": "C00738674-ie-1840866-500002348",
+      "spender_entity_id": "C00738674",
+      "spender_name": "REPRODUCTIVE FREEDOM FOR ALL FREEDOM FUND",
+      "candidate_id": "S6PA00217",
+      "candidate_name": "Bob Casey",
+      "support_oppose": "S",
+      "amount": 151342.31,
+      "date": "2024-10-15",
+      "purpose": "TELEPHONE CALLS",
+      "payee": "WINNING CONNECTIONS",
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202410249710668522",
+      "vendor_id": "V-winning-connections",
+      "medium": "phones"
+    }
+  ],
+  "ads": [],
+  "method": "Every Schedule E independent expenditure names a payee. Payee strings are normalised (case, punctuation, legal suffixes, token order), near-duplicates are folded with a difflib ratio ≥ 0.92 when their numeric tokens match, and hand alias rows from data/hand/<race>/vendor_aliases.json override the rule. Medium is classified from the purpose the spender filed (ordered keyword table in campaign_commons/vendors.py). The FEC does not record which buy placed which ad: vendor ↔ ad links are date-window adjacency (or single-digital-vendor inference) from campaign_commons.ads_enrich, each with its basis, and are only `verified` when a person found a source naming both. Totals are the filed amounts, grouped, never re-estimated."
+}

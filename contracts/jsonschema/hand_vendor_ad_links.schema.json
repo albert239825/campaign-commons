@@ -1,0 +1,75 @@
+{
+  "$ref": "#/definitions/hand_vendor_ad_links",
+  "definitions": {
+    "hand_vendor_ad_links": {
+      "type": "object",
+      "properties": {
+        "race_id": {
+          "type": "string"
+        },
+        "method": {
+          "type": "string"
+        },
+        "rows": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "ad_id": {
+                "type": "string"
+              },
+              "vendor_id": {
+                "type": "string"
+              },
+              "role": {
+                "type": "string",
+                "enum": [
+                  "produced",
+                  "placed",
+                  "produced_and_placed"
+                ]
+              },
+              "source_urls": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "format": "uri"
+                },
+                "minItems": 1
+              },
+              "quote": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "tagged_by": {
+                "type": "string"
+              },
+              "tagged_at": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "ad_id",
+              "vendor_id",
+              "role",
+              "source_urls",
+              "quote",
+              "tagged_by",
+              "tagged_at"
+            ],
+            "additionalProperties": false
+          }
+        }
+      },
+      "required": [
+        "race_id",
+        "method",
+        "rows"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "$schema": "http://json-schema.org/draft-07/schema#"
+}

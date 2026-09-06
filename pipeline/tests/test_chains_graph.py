@@ -1,7 +1,7 @@
 """Synthetic graph for the chain walk: 3 hops, a cycle, a conduit, a dark org, a pruned tail, a depth-capped
 (unloaded) committee and a super PAC -> candidate valve violation."""
 
-from gotham.chains_graph import Edge, Graph, node_shares, walk
+from campaign_commons.chains_graph import Edge, Graph, node_shares, walk
 
 ROOT, PAC, PARTY, OUTSIDE, CAND, SUPER = "C1", "C2", "C3", "C9", "S1", "C7"
 
@@ -103,7 +103,7 @@ def test_build_graph_resolves_committees_misfiled_as_org() -> None:
     import duckdb
     import pandas as pd
 
-    from gotham.chains_graph import build_graph
+    from campaign_commons.chains_graph import build_graph
 
     con = duckdb.connect()
     con.register(

@@ -1,4 +1,4 @@
-import { ISSUES, type IssueId } from "@citizen-gotham/contracts";
+import { ISSUES, type IssueId } from "@campaign-commons/contracts";
 import { SectionNav } from "@/components/ui/detail-layout";
 
 export function IssueNav({ covered }: { covered: Set<IssueId> }) {

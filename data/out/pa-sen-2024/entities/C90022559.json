@@ -40,7 +40,9 @@
       "date": "2024-10-29",
       "purpose": "DIRECT MAIL PRODUCTION AND DISTRIBUTION - ACTUAL COST (EST. ON 10/30/2024 REPORT)",
       "payee": "PENDULUM CREATIVE GROUP",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202510069790705742"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202510069790705742",
+      "vendor_id": "V-pendulum-creative-group",
+      "medium": "production"
     },
     {
       "ie_id": "C90022559-ie-1917757-2024120011",
@@ -53,7 +55,9 @@
       "date": "2024-10-16",
       "purpose": "DIRECT MAIL PRODUCTION AND DISTRIBUTION - ACTUAL COST (EST. ON 10/18/2024 REPORT)",
       "payee": "PENDULUM CREATIVE GROUP",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202510069790705742"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202510069790705742",
+      "vendor_id": "V-pendulum-creative-group",
+      "medium": "production"
     },
     {
       "ie_id": "C90022559-ie-1917757-2024120014",
@@ -66,7 +70,9 @@
       "date": "2024-10-30",
       "purpose": "CALL CENTER FACILITY & SOFTWARE USAGE - ACTUAL COST (EST. ON 11/01/2024 REPORT)",
       "payee": "SEIU-CC LLC",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202510069790705743"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202510069790705743",
+      "vendor_id": "V-seiu-cc",
+      "medium": "phones"
     },
     {
       "ie_id": "C90022559-ie-1917757-2024120012",
@@ -79,7 +85,9 @@
       "date": "2024-10-16",
       "purpose": "CALL CENTER FACILITY & SOFTWARE USAGE - ACTUAL COST (EST. ON 10/18/2024 REPORT)",
       "payee": "SEIU-CC LLC",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202510069790705742"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202510069790705742",
+      "vendor_id": "V-seiu-cc",
+      "medium": "phones"
     },
     {
       "ie_id": "C90022559-ie-1917757-2024120010",
@@ -92,11 +100,61 @@
       "date": "2024-10-07",
       "purpose": "CALL CENTER FACILITY & SOFTWARE USAGE - ACTUAL COST (EST. ON 10/18/2024 REPORT)",
       "payee": "SEIU-CC LLC",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202510069790705741"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202510069790705741",
+      "vendor_id": "V-seiu-cc",
+      "medium": "phones"
     }
   ],
   "flags": [],
   "has_chain": false,
   "source_url": "https://www.fec.gov/data/committee/C90022559/?cycle=2024",
-  "data_status": "real"
+  "data_status": "real",
+  "vendors": [
+    {
+      "vendor_id": "V-pendulum-creative-group",
+      "name": "PENDULUM CREATIVE GROUP LLC",
+      "amount": 1736.12,
+      "count": 2,
+      "media_mix": [
+        {
+          "medium": "production",
+          "amount": 1736.12,
+          "count": 2
+        }
+      ],
+      "targets": [
+        {
+          "candidate_id": "S6PA00217",
+          "support_oppose": "S",
+          "amount": 1736.12
+        }
+      ],
+      "first_date": "2024-10-16",
+      "last_date": "2024-10-29",
+      "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C90022559&payee_name=PENDULUM+CREATIVE+GROUP"
+    },
+    {
+      "vendor_id": "V-seiu-cc",
+      "name": "SEIU-CC LLC",
+      "amount": 7.88,
+      "count": 3,
+      "media_mix": [
+        {
+          "medium": "phones",
+          "amount": 7.88,
+          "count": 3
+        }
+      ],
+      "targets": [
+        {
+          "candidate_id": "S6PA00217",
+          "support_oppose": "S",
+          "amount": 7.88
+        }
+      ],
+      "first_date": "2024-10-07",
+      "last_date": "2024-10-30",
+      "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C90022559&payee_name=SEIU-CC+LLC"
+    }
+  ]
 }

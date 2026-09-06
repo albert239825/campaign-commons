@@ -1,0 +1,235 @@
+{
+  "vendor_id": "V-fp1-strategies",
+  "name": "FP1 STRATEGIES LLC",
+  "aliases": [
+    "FP1 STRATEGIES LLC"
+  ],
+  "normalization": {
+    "basis": "inferred",
+    "rule": "case/punctuation/suffix normalisation + token-set ≥0.92 (numeric tokens must match); aliases file",
+    "source_urls": [
+      "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&payee_name=FP1+STRATEGIES+LLC"
+    ],
+    "checked_by": null,
+    "checked_at": null
+  },
+  "total": 143000.0,
+  "count": 12,
+  "media_mix": [
+    {
+      "medium": "production",
+      "amount": 143000.0,
+      "count": 12
+    }
+  ],
+  "spenders": [
+    {
+      "entity_id": "C00687103",
+      "name": "AMERICANS FOR PROSPERITY ACTION, INC. (AFP ACTION) DBA CVA ACTION AND DBA LIBRE ACTION",
+      "amount": 143000.0,
+      "count": 12
+    }
+  ],
+  "targets": [
+    {
+      "candidate_id": "S2PA00661",
+      "support_oppose": "S",
+      "amount": 71500.0
+    },
+    {
+      "candidate_id": "S6PA00217",
+      "support_oppose": "O",
+      "amount": 71500.0
+    }
+  ],
+  "first_date": "2024-02-29",
+  "last_date": "2024-10-16",
+  "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&payee_name=FP1+STRATEGIES+LLC",
+  "race_id": "pa-sen-2024",
+  "generated_at": "2026-09-05T20:34:15+00:00",
+  "data_status": "real",
+  "expenditures": [
+    {
+      "ie_id": "C00687103-ie-1841778-SE24.32416",
+      "spender_entity_id": "C00687103",
+      "spender_name": "AMERICANS FOR PROSPERITY ACTION, INC. (AFP ACTION) DBA CVA ACTION AND DBA LIBRE ACTION",
+      "candidate_id": "S6PA00217",
+      "candidate_name": "Bob Casey",
+      "support_oppose": "O",
+      "amount": 8625.0,
+      "date": "2024-10-16",
+      "purpose": "MEDIA PRODUCTION",
+      "payee": "FP1 STRATEGIES LLC",
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202410249713957712",
+      "vendor_id": "V-fp1-strategies",
+      "medium": "production"
+    },
+    {
+      "ie_id": "C00687103-ie-1841778-SE24.32415",
+      "spender_entity_id": "C00687103",
+      "spender_name": "AMERICANS FOR PROSPERITY ACTION, INC. (AFP ACTION) DBA CVA ACTION AND DBA LIBRE ACTION",
+      "candidate_id": "S2PA00661",
+      "candidate_name": "Dave McCormick",
+      "support_oppose": "S",
+      "amount": 8625.0,
+      "date": "2024-10-16",
+      "purpose": "MEDIA PRODUCTION",
+      "payee": "FP1 STRATEGIES LLC",
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202410249713957711",
+      "vendor_id": "V-fp1-strategies",
+      "medium": "production"
+    },
+    {
+      "ie_id": "C00687103-ie-1841778-SE24.32414",
+      "spender_entity_id": "C00687103",
+      "spender_name": "AMERICANS FOR PROSPERITY ACTION, INC. (AFP ACTION) DBA CVA ACTION AND DBA LIBRE ACTION",
+      "candidate_id": "S6PA00217",
+      "candidate_name": "Bob Casey",
+      "support_oppose": "O",
+      "amount": 8625.0,
+      "date": "2024-10-16",
+      "purpose": "MEDIA PRODUCTION",
+      "payee": "FP1 STRATEGIES LLC",
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202410249713957711",
+      "vendor_id": "V-fp1-strategies",
+      "medium": "production"
+    },
+    {
+      "ie_id": "C00687103-ie-1841778-SE24.32413",
+      "spender_entity_id": "C00687103",
+      "spender_name": "AMERICANS FOR PROSPERITY ACTION, INC. (AFP ACTION) DBA CVA ACTION AND DBA LIBRE ACTION",
+      "candidate_id": "S2PA00661",
+      "candidate_name": "Dave McCormick",
+      "support_oppose": "S",
+      "amount": 8625.0,
+      "date": "2024-10-16",
+      "purpose": "MEDIA PRODUCTION",
+      "payee": "FP1 STRATEGIES LLC",
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202410249713957710",
+      "vendor_id": "V-fp1-strategies",
+      "medium": "production"
+    },
+    {
+      "ie_id": "C00687103-ie-1841778-SE24.31694",
+      "spender_entity_id": "C00687103",
+      "spender_name": "AMERICANS FOR PROSPERITY ACTION, INC. (AFP ACTION) DBA CVA ACTION AND DBA LIBRE ACTION",
+      "candidate_id": "S6PA00217",
+      "candidate_name": "Bob Casey",
+      "support_oppose": "O",
+      "amount": 17250.0,
+      "date": "2024-10-16",
+      "purpose": "MEDIA PRODUCTION",
+      "payee": "FP1 STRATEGIES LLC",
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202410249713957696",
+      "vendor_id": "V-fp1-strategies",
+      "medium": "production"
+    },
+    {
+      "ie_id": "C00687103-ie-1841778-SE24.31693",
+      "spender_entity_id": "C00687103",
+      "spender_name": "AMERICANS FOR PROSPERITY ACTION, INC. (AFP ACTION) DBA CVA ACTION AND DBA LIBRE ACTION",
+      "candidate_id": "S2PA00661",
+      "candidate_name": "Dave McCormick",
+      "support_oppose": "S",
+      "amount": 17250.0,
+      "date": "2024-10-16",
+      "purpose": "MEDIA PRODUCTION",
+      "payee": "FP1 STRATEGIES LLC",
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202410249713957695",
+      "vendor_id": "V-fp1-strategies",
+      "medium": "production"
+    },
+    {
+      "ie_id": "C00687103-ie-1833909-SE24.31066",
+      "spender_entity_id": "C00687103",
+      "spender_name": "AMERICANS FOR PROSPERITY ACTION, INC. (AFP ACTION) DBA CVA ACTION AND DBA LIBRE ACTION",
+      "candidate_id": "S6PA00217",
+      "candidate_name": "Bob Casey",
+      "support_oppose": "O",
+      "amount": 8625.0,
+      "date": "2024-09-09",
+      "purpose": "MEDIA PRODUCTION",
+      "payee": "FP1 STRATEGIES LLC",
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202410209709511549",
+      "vendor_id": "V-fp1-strategies",
+      "medium": "production"
+    },
+    {
+      "ie_id": "C00687103-ie-1833909-SE24.31065",
+      "spender_entity_id": "C00687103",
+      "spender_name": "AMERICANS FOR PROSPERITY ACTION, INC. (AFP ACTION) DBA CVA ACTION AND DBA LIBRE ACTION",
+      "candidate_id": "S2PA00661",
+      "candidate_name": "Dave McCormick",
+      "support_oppose": "S",
+      "amount": 8625.0,
+      "date": "2024-09-09",
+      "purpose": "MEDIA PRODUCTION",
+      "payee": "FP1 STRATEGIES LLC",
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202410209709511549",
+      "vendor_id": "V-fp1-strategies",
+      "medium": "production"
+    },
+    {
+      "ie_id": "C00687103-ie-1805180-SE24.29182",
+      "spender_entity_id": "C00687103",
+      "spender_name": "AMERICANS FOR PROSPERITY ACTION, INC. (AFP ACTION) DBA CVA ACTION AND DBA LIBRE ACTION",
+      "candidate_id": "S6PA00217",
+      "candidate_name": "Bob Casey",
+      "support_oppose": "O",
+      "amount": 11125.0,
+      "date": "2024-06-17",
+      "purpose": "MEDIA PRODUCTION",
+      "payee": "FP1 STRATEGIES LLC",
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202407209665370806",
+      "vendor_id": "V-fp1-strategies",
+      "medium": "production"
+    },
+    {
+      "ie_id": "C00687103-ie-1805180-SE24.29181",
+      "spender_entity_id": "C00687103",
+      "spender_name": "AMERICANS FOR PROSPERITY ACTION, INC. (AFP ACTION) DBA CVA ACTION AND DBA LIBRE ACTION",
+      "candidate_id": "S2PA00661",
+      "candidate_name": "Dave McCormick",
+      "support_oppose": "S",
+      "amount": 11125.0,
+      "date": "2024-06-17",
+      "purpose": "MEDIA PRODUCTION",
+      "payee": "FP1 STRATEGIES LLC",
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202407209665370805",
+      "vendor_id": "V-fp1-strategies",
+      "medium": "production"
+    },
+    {
+      "ie_id": "C00687103-ie-1765897-SE24.26661",
+      "spender_entity_id": "C00687103",
+      "spender_name": "AMERICANS FOR PROSPERITY ACTION, INC. (AFP ACTION) DBA CVA ACTION AND DBA LIBRE ACTION",
+      "candidate_id": "S6PA00217",
+      "candidate_name": "Bob Casey",
+      "support_oppose": "O",
+      "amount": 17250.0,
+      "date": "2024-02-29",
+      "purpose": "MEDIA PRODUCTION",
+      "payee": "FP1 STRATEGIES LLC",
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202403209627377893",
+      "vendor_id": "V-fp1-strategies",
+      "medium": "production"
+    },
+    {
+      "ie_id": "C00687103-ie-1765897-SE24.26660",
+      "spender_entity_id": "C00687103",
+      "spender_name": "AMERICANS FOR PROSPERITY ACTION, INC. (AFP ACTION) DBA CVA ACTION AND DBA LIBRE ACTION",
+      "candidate_id": "S2PA00661",
+      "candidate_name": "Dave McCormick",
+      "support_oppose": "S",
+      "amount": 17250.0,
+      "date": "2024-02-29",
+      "purpose": "MEDIA PRODUCTION",
+      "payee": "FP1 STRATEGIES LLC",
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202403209627377893",
+      "vendor_id": "V-fp1-strategies",
+      "medium": "production"
+    }
+  ],
+  "ads": [],
+  "method": "Every Schedule E independent expenditure names a payee. Payee strings are normalised (case, punctuation, legal suffixes, token order), near-duplicates are folded with a difflib ratio ≥ 0.92 when their numeric tokens match, and hand alias rows from data/hand/<race>/vendor_aliases.json override the rule. Medium is classified from the purpose the spender filed (ordered keyword table in campaign_commons/vendors.py). The FEC does not record which buy placed which ad: vendor ↔ ad links are date-window adjacency (or single-digital-vendor inference) from campaign_commons.ads_enrich, each with its basis, and are only `verified` when a person found a source naming both. Totals are the filed amounts, grouped, never re-estimated."
+}

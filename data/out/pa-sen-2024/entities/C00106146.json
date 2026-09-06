@@ -792,11 +792,55 @@
       "date": "2024-10-01",
       "purpose": "TV, RADIO & DIGITAL ADS & PRODUCTION",
       "payee": "ALIGNCO LLC",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202410249710358299"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202410249710358299",
+      "vendor_id": "V-alignco",
+      "medium": "production"
     }
   ],
   "flags": [],
   "has_chain": true,
   "source_url": "https://www.fec.gov/data/committee/C00106146/?cycle=2024",
-  "data_status": "real"
+  "data_status": "real",
+  "vendors": [
+    {
+      "vendor_id": "V-alignco",
+      "name": "ALIGNCO LLC",
+      "amount": 450000.0,
+      "count": 1,
+      "media_mix": [
+        {
+          "medium": "production",
+          "amount": 450000.0,
+          "count": 1
+        }
+      ],
+      "targets": [
+        {
+          "candidate_id": "S6PA00217",
+          "support_oppose": "S",
+          "amount": 450000.0
+        }
+      ],
+      "first_date": "2024-10-01",
+      "last_date": "2024-10-01",
+      "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00106146&payee_name=ALIGNCO+LLC"
+    }
+  ],
+  "issue_focus": {
+    "kind": "business_trade",
+    "issue_ids": [
+      "healthcare"
+    ],
+    "description": "'The AHA Political Action Committee (AHAPAC) allows eligible hospital leaders to make voluntary donations toward the support of federal candidates of both political parties who support the hospital policy agenda.' The AHA 'represents and serves all types of hospitals, health care networks, and their patients and communities.'",
+    "basis": {
+      "basis": "verified",
+      "rule": "Self-described focus from the organisation's own material; says what the org is for, not what its dollars bought",
+      "source_urls": [
+        "https://www.aha.org/advocacy/action-center",
+        "https://www.aha.org/about"
+      ],
+      "checked_by": "devin-block2-issues",
+      "checked_at": "2026-09-05"
+    }
+  }
 }

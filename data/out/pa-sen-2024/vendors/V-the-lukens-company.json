@@ -1,0 +1,120 @@
+{
+  "vendor_id": "V-the-lukens-company",
+  "name": "The Lukens Company",
+  "aliases": [
+    "THE LUKENS COMPANY"
+  ],
+  "normalization": {
+    "basis": "verified",
+    "rule": "case/punctuation/suffix normalisation + token-set ≥0.92 (numeric tokens must match); aliases file — hand alias row folds 1 filed payee string(s) into one vendor",
+    "source_urls": [
+      "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&payee_name=THE+LUKENS+COMPANY"
+    ],
+    "checked_by": "devin-block2-vendors",
+    "checked_at": "2026-09-05"
+  },
+  "total": 354065.66,
+  "count": 4,
+  "media_mix": [
+    {
+      "medium": "mail",
+      "amount": 332241.5,
+      "count": 2
+    },
+    {
+      "medium": "phones",
+      "amount": 21824.16,
+      "count": 2
+    }
+  ],
+  "spenders": [
+    {
+      "entity_id": "C00530766",
+      "name": "WOMEN SPEAK OUT PAC",
+      "amount": 354065.66,
+      "count": 4
+    }
+  ],
+  "targets": [
+    {
+      "candidate_id": "S2PA00661",
+      "support_oppose": "S",
+      "amount": 177032.83
+    },
+    {
+      "candidate_id": "S6PA00217",
+      "support_oppose": "O",
+      "amount": 177032.83
+    }
+  ],
+  "first_date": "2024-10-28",
+  "last_date": "2024-11-01",
+  "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&payee_name=THE+LUKENS+COMPANY",
+  "race_id": "pa-sen-2024",
+  "generated_at": "2026-09-05T20:34:15+00:00",
+  "data_status": "real",
+  "expenditures": [
+    {
+      "ie_id": "C00530766-ie-1883568-SE24.30719",
+      "spender_entity_id": "C00530766",
+      "spender_name": "WOMEN SPEAK OUT PAC",
+      "candidate_id": "S6PA00217",
+      "candidate_name": "Bob Casey",
+      "support_oppose": "O",
+      "amount": 10912.08,
+      "date": "2024-11-01",
+      "purpose": "TEXT MESSAGING",
+      "payee": "THE LUKENS COMPANY",
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202504029755014183",
+      "vendor_id": "V-the-lukens-company",
+      "medium": "phones"
+    },
+    {
+      "ie_id": "C00530766-ie-1883568-SE24.30718",
+      "spender_entity_id": "C00530766",
+      "spender_name": "WOMEN SPEAK OUT PAC",
+      "candidate_id": "S2PA00661",
+      "candidate_name": "Dave McCormick",
+      "support_oppose": "S",
+      "amount": 10912.08,
+      "date": "2024-11-01",
+      "purpose": "TEXT MESSAGING",
+      "payee": "THE LUKENS COMPANY",
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202504029755014183",
+      "vendor_id": "V-the-lukens-company",
+      "medium": "phones"
+    },
+    {
+      "ie_id": "C00530766-ie-1883568-SE24.30708",
+      "spender_entity_id": "C00530766",
+      "spender_name": "WOMEN SPEAK OUT PAC",
+      "candidate_id": "S2PA00661",
+      "candidate_name": "Dave McCormick",
+      "support_oppose": "S",
+      "amount": 166120.75,
+      "date": "2024-10-28",
+      "purpose": "MAILER",
+      "payee": "THE LUKENS COMPANY",
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202504029755014178",
+      "vendor_id": "V-the-lukens-company",
+      "medium": "mail"
+    },
+    {
+      "ie_id": "C00530766-ie-1883568-SE24.30707",
+      "spender_entity_id": "C00530766",
+      "spender_name": "WOMEN SPEAK OUT PAC",
+      "candidate_id": "S6PA00217",
+      "candidate_name": "Bob Casey",
+      "support_oppose": "O",
+      "amount": 166120.75,
+      "date": "2024-10-28",
+      "purpose": "MAILER",
+      "payee": "THE LUKENS COMPANY",
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202504029755014177",
+      "vendor_id": "V-the-lukens-company",
+      "medium": "mail"
+    }
+  ],
+  "ads": [],
+  "method": "Every Schedule E independent expenditure names a payee. Payee strings are normalised (case, punctuation, legal suffixes, token order), near-duplicates are folded with a difflib ratio ≥ 0.92 when their numeric tokens match, and hand alias rows from data/hand/<race>/vendor_aliases.json override the rule. Medium is classified from the purpose the spender filed (ordered keyword table in campaign_commons/vendors.py). The FEC does not record which buy placed which ad: vendor ↔ ad links are date-window adjacency (or single-digital-vendor inference) from campaign_commons.ads_enrich, each with its basis, and are only `verified` when a person found a source naming both. Totals are the filed amounts, grouped, never re-estimated."
+}

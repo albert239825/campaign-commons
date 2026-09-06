@@ -416,7 +416,9 @@
       "date": "2024-09-21",
       "purpose": "9/6-9/15 INTERNET ADS",
       "payee": "FACEBOOK",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202410169698539441"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202410169698539441",
+      "vendor_id": "V-meta-platforms",
+      "medium": "digital"
     },
     {
       "ie_id": "C00754242-ie-1842226-SE.5893",
@@ -429,7 +431,9 @@
       "date": "2024-10-11",
       "purpose": "INTERNET ADS 10/3-10/10/24",
       "payee": "FACEBOOK",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202410259719572890"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202410259719572890",
+      "vendor_id": "V-meta-platforms",
+      "medium": "digital"
     },
     {
       "ie_id": "C00754242-ie-1859100-SE.6210",
@@ -442,7 +446,9 @@
       "date": "2024-10-18",
       "purpose": "INTERNET ADS",
       "payee": "FACEBOOK",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202412069739730783"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202412069739730783",
+      "vendor_id": "V-meta-platforms",
+      "medium": "digital"
     },
     {
       "ie_id": "C00754242-ie-1829759-SE.5825",
@@ -455,7 +461,9 @@
       "date": "2024-09-30",
       "purpose": "9/22-9/30/24 INTERNET ADS",
       "payee": "FACEBOOK",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202410169698539445"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202410169698539445",
+      "vendor_id": "V-meta-platforms",
+      "medium": "digital"
     },
     {
       "ie_id": "C00754242-ie-1842226-SE.5848",
@@ -468,11 +476,38 @@
       "date": "2024-10-03",
       "purpose": "9/29 - 10/3/24 INTERNET ADS",
       "payee": "FACEBOOK",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202410259719572879"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202410259719572879",
+      "vendor_id": "V-meta-platforms",
+      "medium": "digital"
     }
   ],
   "flags": [],
   "has_chain": true,
   "source_url": "https://www.fec.gov/data/committee/C00754242/?cycle=2024",
-  "data_status": "real"
+  "data_status": "real",
+  "vendors": [
+    {
+      "vendor_id": "V-meta-platforms",
+      "name": "Meta Platforms",
+      "amount": 2864.56,
+      "count": 5,
+      "media_mix": [
+        {
+          "medium": "digital",
+          "amount": 2864.56,
+          "count": 5
+        }
+      ],
+      "targets": [
+        {
+          "candidate_id": "S6PA00217",
+          "support_oppose": "S",
+          "amount": 2864.56
+        }
+      ],
+      "first_date": "2024-09-21",
+      "last_date": "2024-10-18",
+      "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00754242&payee_name=FACEBOOK"
+    }
+  ]
 }

@@ -1,0 +1,199 @@
+{
+  "vendor_id": "V-second-street-associates",
+  "name": "SECOND STREET ASSOCIATES, LLC",
+  "aliases": [
+    "SECOND STREET ASSOCIATES, LLC",
+    "SECOND STREET ASSOCIATES",
+    "SECOND STREET ASSOCIATES LLC"
+  ],
+  "normalization": {
+    "basis": "inferred",
+    "rule": "case/punctuation/suffix normalisation + token-set ≥0.92 (numeric tokens must match); aliases file",
+    "source_urls": [
+      "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&payee_name=SECOND+STREET+ASSOCIATES%2C+LLC&payee_name=SECOND+STREET+ASSOCIATES&payee_name=SECOND+STREET+ASSOCIATES+LLC"
+    ],
+    "checked_by": null,
+    "checked_at": null
+  },
+  "total": 713579.3,
+  "count": 9,
+  "media_mix": [
+    {
+      "medium": "field",
+      "amount": 713579.3,
+      "count": 9
+    }
+  ],
+  "spenders": [
+    {
+      "entity_id": "C00620971",
+      "name": "FOR OUR FUTURE",
+      "amount": 448079.3,
+      "count": 6
+    },
+    {
+      "entity_id": "C00724203",
+      "name": "SOMOS PAC",
+      "amount": 150000.0,
+      "count": 2
+    },
+    {
+      "entity_id": "C00760801",
+      "name": "THE TURNOUT PROJECT",
+      "amount": 115500.0,
+      "count": 1
+    }
+  ],
+  "targets": [
+    {
+      "candidate_id": "S6PA00217",
+      "support_oppose": "S",
+      "amount": 713579.3
+    }
+  ],
+  "first_date": "2024-09-26",
+  "last_date": "2024-10-29",
+  "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&payee_name=SECOND+STREET+ASSOCIATES%2C+LLC&payee_name=SECOND+STREET+ASSOCIATES&payee_name=SECOND+STREET+ASSOCIATES+LLC",
+  "race_id": "pa-sen-2024",
+  "generated_at": "2026-09-05T20:34:15+00:00",
+  "data_status": "real",
+  "expenditures": [
+    {
+      "ie_id": "C00760801-ie-1852199-SE.4599",
+      "spender_entity_id": "C00760801",
+      "spender_name": "THE TURNOUT PROJECT",
+      "candidate_id": "S6PA00217",
+      "candidate_name": "Bob Casey",
+      "support_oppose": "S",
+      "amount": 115500.0,
+      "date": "2024-10-29",
+      "purpose": "CANVASS OPERATIONS",
+      "payee": "SECOND STREET ASSOCIATES LLC",
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202412039720160958",
+      "vendor_id": "V-second-street-associates",
+      "medium": "field"
+    },
+    {
+      "ie_id": "C00724203-ie-1858137-500194286",
+      "spender_entity_id": "C00724203",
+      "spender_name": "SOMOS PAC",
+      "candidate_id": "S6PA00217",
+      "candidate_name": "Bob Casey",
+      "support_oppose": "S",
+      "amount": 75000.0,
+      "date": "2024-10-24",
+      "purpose": "CANVASSING",
+      "payee": "SECOND STREET ASSOCIATES",
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202412059731711660",
+      "vendor_id": "V-second-street-associates",
+      "medium": "field"
+    },
+    {
+      "ie_id": "C00620971-ie-1931997-500724991",
+      "spender_entity_id": "C00620971",
+      "spender_name": "FOR OUR FUTURE",
+      "candidate_id": "S6PA00217",
+      "candidate_name": "Bob Casey",
+      "support_oppose": "S",
+      "amount": 75000.0,
+      "date": "2024-10-24",
+      "purpose": "FIELD CANVASSING",
+      "payee": "SECOND STREET ASSOCIATES, LLC",
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202601129793941696",
+      "vendor_id": "V-second-street-associates",
+      "medium": "field"
+    },
+    {
+      "ie_id": "C00620971-ie-1931997-500719501",
+      "spender_entity_id": "C00620971",
+      "spender_name": "FOR OUR FUTURE",
+      "candidate_id": "S6PA00217",
+      "candidate_name": "Bob Casey",
+      "support_oppose": "S",
+      "amount": 92499.0,
+      "date": "2024-10-18",
+      "purpose": "FIELD CANVASSING",
+      "payee": "SECOND STREET ASSOCIATES, LLC",
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202601129793941675",
+      "vendor_id": "V-second-street-associates",
+      "medium": "field"
+    },
+    {
+      "ie_id": "C00620971-ie-1909400-500718675",
+      "spender_entity_id": "C00620971",
+      "spender_name": "FOR OUR FUTURE",
+      "candidate_id": "S6PA00217",
+      "candidate_name": "Bob Casey",
+      "support_oppose": "S",
+      "amount": 33916.3,
+      "date": "2024-10-16",
+      "purpose": "FIELD CANVASSING",
+      "payee": "SECOND STREET ASSOCIATES, LLC",
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202507319779669467",
+      "vendor_id": "V-second-street-associates",
+      "medium": "field"
+    },
+    {
+      "ie_id": "C00620971-ie-1909400-500701822",
+      "spender_entity_id": "C00620971",
+      "spender_name": "FOR OUR FUTURE",
+      "candidate_id": "S6PA00217",
+      "candidate_name": "Bob Casey",
+      "support_oppose": "S",
+      "amount": 73999.2,
+      "date": "2024-10-16",
+      "purpose": "FIELD CANVASSING",
+      "payee": "SECOND STREET ASSOCIATES, LLC",
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202507319779669434",
+      "vendor_id": "V-second-street-associates",
+      "medium": "field"
+    },
+    {
+      "ie_id": "C00620971-ie-1909400-500718310",
+      "spender_entity_id": "C00620971",
+      "spender_name": "FOR OUR FUTURE",
+      "candidate_id": "S6PA00217",
+      "candidate_name": "Bob Casey",
+      "support_oppose": "S",
+      "amount": 73999.2,
+      "date": "2024-10-07",
+      "purpose": "FIELD CANVASSING",
+      "payee": "SECOND STREET ASSOCIATES, LLC",
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202507319779669415",
+      "vendor_id": "V-second-street-associates",
+      "medium": "field"
+    },
+    {
+      "ie_id": "C00724203-ie-1865339-500191458",
+      "spender_entity_id": "C00724203",
+      "spender_name": "SOMOS PAC",
+      "candidate_id": "S6PA00217",
+      "candidate_name": "Bob Casey",
+      "support_oppose": "S",
+      "amount": 75000.0,
+      "date": "2024-10-07",
+      "purpose": "CANVASSING",
+      "payee": "SECOND STREET ASSOCIATES",
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202501239747734156",
+      "vendor_id": "V-second-street-associates",
+      "medium": "field"
+    },
+    {
+      "ie_id": "C00620971-ie-1909370-500711335",
+      "spender_entity_id": "C00620971",
+      "spender_name": "FOR OUR FUTURE",
+      "candidate_id": "S6PA00217",
+      "candidate_name": "Bob Casey",
+      "support_oppose": "S",
+      "amount": 98665.6,
+      "date": "2024-09-26",
+      "purpose": "FIELD CANVASSING",
+      "payee": "SECOND STREET ASSOCIATES, LLC",
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202507319779664232",
+      "vendor_id": "V-second-street-associates",
+      "medium": "field"
+    }
+  ],
+  "ads": [],
+  "method": "Every Schedule E independent expenditure names a payee. Payee strings are normalised (case, punctuation, legal suffixes, token order), near-duplicates are folded with a difflib ratio ≥ 0.92 when their numeric tokens match, and hand alias rows from data/hand/<race>/vendor_aliases.json override the rule. Medium is classified from the purpose the spender filed (ordered keyword table in campaign_commons/vendors.py). The FEC does not record which buy placed which ad: vendor ↔ ad links are date-window adjacency (or single-digital-vendor inference) from campaign_commons.ads_enrich, each with its basis, and are only `verified` when a person found a source naming both. Totals are the filed amounts, grouped, never re-estimated."
+}

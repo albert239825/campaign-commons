@@ -1,5 +1,5 @@
 import Link from "next/link";
-import type { DonorEdge, DonorNode, DonorView } from "@citizen-gotham/contracts";
+import type { DonorEdge, DonorNode, DonorView } from "@campaign-commons/contracts";
 import { money, routes } from "@/lib/format";
 import { Chip, SourceLink } from "@/components/ui";
 

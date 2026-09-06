@@ -3,7 +3,7 @@
  * keyword lists and whole-word alias matching over `Trails.subjects`, or a typed refusal. No model, no ranking
  * heuristics beyond "longest alias wins"; the same question always resolves the same way.
  */
-import type { TrailIntent, TrailSubject } from "@citizen-gotham/contracts";
+import type { TrailIntent, TrailSubject } from "@campaign-commons/contracts";
 
 export type Resolution =
   | { kind: "answer"; intent: TrailIntent; subject: TrailSubject; matched: string; note: string | null }

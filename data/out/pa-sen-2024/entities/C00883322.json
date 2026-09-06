@@ -206,11 +206,38 @@
       "date": "2024-10-21",
       "purpose": "RADIO ADVERTISEMENTS",
       "payee": "ADVERTISING ASSOCIATES/DOROTHY BAKER",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202504049755048981"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202504049755048981",
+      "vendor_id": "V-advertising-associates-dorothy-baker",
+      "medium": "radio"
     }
   ],
   "flags": [],
   "has_chain": true,
   "source_url": "https://www.fec.gov/data/committee/C00883322/?cycle=2024",
-  "data_status": "real"
+  "data_status": "real",
+  "vendors": [
+    {
+      "vendor_id": "V-advertising-associates-dorothy-baker",
+      "name": "ADVERTISING ASSOCIATES/DOROTHY BAKER",
+      "amount": 64250.0,
+      "count": 1,
+      "media_mix": [
+        {
+          "medium": "radio",
+          "amount": 64250.0,
+          "count": 1
+        }
+      ],
+      "targets": [
+        {
+          "candidate_id": "S2PA00661",
+          "support_oppose": "S",
+          "amount": 64250.0
+        }
+      ],
+      "first_date": "2024-10-21",
+      "last_date": "2024-10-21",
+      "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00883322&payee_name=ADVERTISING+ASSOCIATES%2FDOROTHY+BAKER"
+    }
+  ]
 }

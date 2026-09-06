@@ -7,7 +7,7 @@
  *
  * Server-only: reads `process.env.XAI_API_KEY` / `XAI_MODEL`. Never import from a client component.
  */
-import type { TrailIntent, TrailSubject } from "@citizen-gotham/contracts";
+import type { TrailIntent, TrailSubject } from "@campaign-commons/contracts";
 import { INTENT_LABELS, INTENTS, isIntent } from "./ask";
 
 export const XAI_CHAT_COMPLETIONS_URL = "https://api.x.ai/v1/chat/completions";
