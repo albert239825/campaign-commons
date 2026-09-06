@@ -20,6 +20,7 @@ export const AskAlignRequest = z.object({
   raceId: z.string().min(1).max(64),
   issueId: IssueIdSchema,
   candidateId: z.string().min(1),
+  question: z.string().trim().min(3).max(200).optional(),
 });
 
 export const AskAlignResponseSchema = z.object({
@@ -36,6 +37,7 @@ export type AlignOptions = {
   model?: string;
   timeoutMs?: number;
   fetch?: typeof fetch;
+  question?: string;
 };
 
 type CachePayload = Omit<AskAlignResponse, "cached">;
@@ -46,6 +48,7 @@ const SYSTEM_PROMPT = [
   "Return only statements directly attributable to the candidate, with each quote copied verbatim from its source page and no quote longer than 400 characters.",
   "Use the exact HTTPS page URL, publisher, and publication date in YYYY-MM-DD format when available, otherwise null.",
   "Code direction on the supplied issue axis from -2 to 2, or null when the statement cannot be coded.",
+  "Include a statement only if the quote itself addresses the named issue; skip quotes about other topics even when the source page mentions the issue.",
   "Never summarize, add commentary, or return an item without a URL.",
 ].join(" ");
 
@@ -79,23 +82,29 @@ export function buildAlignRequestBody(
   candidateName: string,
   issueId: IssueId,
   model: string,
+  question?: string,
 ): Record<string, unknown> {
   const issue = ISSUE_BY_ID[issueId];
   const axis = ISSUE_AXES[issueId];
+  const normalizedQuestion = normalizeQuestion(question);
+  const prompt = [
+    `Race: ${raceLabel}`,
+    `Candidate: ${candidateName}`,
+    `Issue: ${issue.label} — ${issue.description}`,
+    `Axis minus: ${axis.minus}`,
+    `Axis plus: ${axis.plus}`,
+    "Cutoff: statements from 2023-01-01 to today.",
+    ...(normalizedQuestion
+      ? [`Reader question (use only to focus the search; still return only verbatim statements BY the candidate about the issue): "${normalizedQuestion}"`]
+      : []),
+  ];
   return {
     model,
     input: [
       { role: "system", content: SYSTEM_PROMPT },
       {
         role: "user",
-        content: [
-          `Race: ${raceLabel}`,
-          `Candidate: ${candidateName}`,
-          `Issue: ${issue.label} — ${issue.description}`,
-          `Axis minus: ${axis.minus}`,
-          `Axis plus: ${axis.plus}`,
-          "Cutoff: statements from 2023-01-01 to today.",
-        ].join("\n"),
+        content: prompt.join("\n"),
       },
     ],
     store: false,
@@ -111,6 +120,12 @@ export function buildAlignRequestBody(
       },
     },
   };
+}
+
+function normalizeQuestion(question?: string): string | undefined {
+  if (typeof question !== "string") return undefined;
+  const normalized = question.replace(/[\u0000-\u001f\u007f]/g, " ").replace(/\s+/g, " ").trim();
+  return normalized || undefined;
 }
 
 function outputText(body: unknown): string | null {
@@ -261,12 +276,17 @@ export async function alignCandidate(
   opts: AlignOptions = {},
 ): Promise<AskAlignResponse> {
   const model = opts.model ?? process.env.XAI_MODEL ?? ALIGN_DEFAULT_MODEL;
-  const key = `${model}|${raceId}|${issueId}|${candidateId}`;
+  const question = normalizeQuestion(opts.question);
+  const key = `${model}|${raceId}|${issueId}|${candidateId}|${question?.toLowerCase() ?? ""}`;
   const now = Date.now();
   const cached = cache.get(key);
   if (cached && cached.expires > now) return { ...cached.payload, cached: true };
   if (cached) cache.delete(key);
-  const body = await request(buildAlignRequestBody(raceLabel, candidateName, issueId, model), opts, opts.timeoutMs ?? ALIGN_LLM_TIMEOUT_MS);
+  const body = await request(
+    buildAlignRequestBody(raceLabel, candidateName, issueId, model, question),
+    opts,
+    opts.timeoutMs ?? ALIGN_LLM_TIMEOUT_MS,
+  );
   if (body === null) return unavailable();
   const parsed = parsedOutput(body);
   if (typeof parsed !== "object" || parsed === null || !Array.isArray((parsed as { statements?: unknown }).statements)) return unavailable();

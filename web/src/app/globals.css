@@ -1215,7 +1215,11 @@ svg[data-k="9"] .chain-short-k9 :is(.chain-amount, .chain-sub) { display: none; 
 .policies-align-research { display: grid; gap: 12px; padding-top: 16px; border-top: 1px solid var(--detail-rule); }
 .policies-align-research > h4, .policies-align-funders-details > summary, .policies-align-funders h4 { display: grid; gap: 4px; font-size: 14px; font-weight: 500; }
 .policies-align-research > h4 small, .policies-align-funders-details > summary small { font-size: 12px; font-weight: 400; color: var(--detail-muted); }
+.policies-align-research-form { display: flex; flex-wrap: wrap; gap: 8px; align-items: stretch; }
 .policies-align-action { justify-self: start; font-size: 12px; }
+.policies-align-question { flex: 1 1 260px; min-width: min(100%, 260px); width: 100%; min-height: 34px; padding: 6px 10px; border: 1px solid var(--detail-ink); border-radius: 0; background: var(--detail-paper); color: var(--detail-ink); font: inherit; font-size: 13px; line-height: 1.3; }
+.policies-align-question::placeholder { color: var(--detail-muted); }
+.policies-align-question:focus-visible { outline: 2px solid #2563eb; outline-offset: 2px; }
 .policies-align-offline, .policies-align-live { display: grid; gap: 10px; }
 .policies-align-summary { font-size: 14px; line-height: 1.65; color: var(--detail-muted); }
 .policies-align-sources, .policies-align-funder-list { display: grid; gap: 12px; }

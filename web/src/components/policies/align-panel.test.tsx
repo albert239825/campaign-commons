@@ -97,4 +97,42 @@ describe("AlignPanel", () => {
 
     expect(await screen.findByText(/Live research is unavailable/)).toBeTruthy();
   });
+
+  it("submits a trimmed question and shows the focused-on copy", async () => {
+    const fetcher = vi.fn<typeof fetch>(async () =>
+      Response.json({
+        statements: [{ quote: "A direct statement.", source_url: "https://example.com/question", publisher: "Example", published_at: null, direction: null }],
+        via: "llm",
+        cached: false,
+        model: "grok-4.5",
+        retrieved_at: "2026-09-06T00:00:00.000Z",
+      }),
+    );
+    vi.stubGlobal("fetch", fetcher);
+    renderPanel();
+
+    const input = await screen.findByRole("textbox", { name: "Research question" });
+    fireEvent.change(input, { target: { value: "  How did they vote?  " } });
+    fireEvent.submit(input.closest("form") as HTMLFormElement);
+
+    expect(await screen.findByRole("blockquote")).toBeTruthy();
+    expect(fetcher).toHaveBeenCalledWith("/api/ask-align", expect.objectContaining({
+      body: JSON.stringify({ raceId: "pa-sen-2024", issueId: "guns", candidateId: "C1", question: "How did they vote?" }),
+    }));
+    expect(screen.getByText("Focused on: “How did they vote?”")).toBeTruthy();
+  });
+
+  it("omits an empty question from the research request", async () => {
+    const fetcher = vi.fn<typeof fetch>(async () =>
+      Response.json({ statements: [], via: "llm", cached: false, model: "grok-4.5", retrieved_at: "2026-09-06T00:00:00.000Z" }),
+    );
+    vi.stubGlobal("fetch", fetcher);
+    renderPanel();
+
+    const input = await screen.findByRole("textbox", { name: "Research question" });
+    fireEvent.submit(input.closest("form") as HTMLFormElement);
+
+    await waitFor(() => expect(fetcher).toHaveBeenCalledTimes(1));
+    expect(JSON.parse((fetcher.mock.calls[0][1]?.body as string))).not.toHaveProperty("question");
+  });
 });

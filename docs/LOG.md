@@ -913,6 +913,10 @@ Built the two stacked alignment-view PRs. PR 1 added the deterministic verdict h
 
 Open items: the research cache is per process instance; graph funder amounts use complete ledger totals where available, while listed gift sums are labelled when no ledger total exists.
 
+### 2026-09-06 — Reader-focused alignment research follow-up
+
+Added an optional ≤200-character reader question to the Policies Grok research form. The question only steers the web search, is normalized and included in the cache key, and the browser still receives only provenance-filtered verbatim quotes and source URLs; the response shape and client-side privacy boundary are unchanged.
+
 ### 2026-09-06 — Landing page Ask box
 
 Added a text box at the bottom of the landing page that navigates to `/races/<id>/ask?q=`. The Ask page reads `q` client-side via `useSearchParams` inside Suspense so it stays prerendered, then auto-submits once on mount; the landing page makes no model call.
