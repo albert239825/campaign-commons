@@ -55,7 +55,8 @@
       "visibility": "dark",
       "transaction_type": "10",
       "limit": null,
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00542217&two_year_transaction_period=2024&contributor_name=CONSERVATIVE+MAJORITY+PROJECT"
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00542217&two_year_transaction_period=2024&contributor_name=CONSERVATIVE+MAJORITY+PROJECT",
+      "class_basis": "rule"
     },
     {
       "transfer_id": "C00542217-in-org:ENERGY_TRANSFER",
@@ -70,7 +71,8 @@
       "visibility": "disclosed",
       "transaction_type": "10",
       "limit": null,
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00542217&two_year_transaction_period=2024&contributor_name=ENERGY+TRANSFER"
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00542217&two_year_transaction_period=2024&contributor_name=ENERGY+TRANSFER",
+      "class_basis": "rule"
     },
     {
       "transfer_id": "C00542217-in-org:TAYLOR_FARMS_TEXAS,_INC.",
@@ -85,7 +87,8 @@
       "visibility": "disclosed",
       "transaction_type": "10",
       "limit": null,
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00542217&two_year_transaction_period=2024&contributor_name=TAYLOR+FARMS+TEXAS%2C+INC."
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00542217&two_year_transaction_period=2024&contributor_name=TAYLOR+FARMS+TEXAS%2C+INC.",
+      "class_basis": "rule"
     },
     {
       "transfer_id": "C00542217-in-ind:ROWAN_MARC_J.|10022",
@@ -115,7 +118,8 @@
       "visibility": "disclosed",
       "transaction_type": "10",
       "limit": null,
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00542217&two_year_transaction_period=2024&contributor_name=WESTMARK+HOTELS%2C+INC."
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00542217&two_year_transaction_period=2024&contributor_name=WESTMARK+HOTELS%2C+INC.",
+      "class_basis": "rule"
     },
     {
       "transfer_id": "C00542217-in-org:ROONEY_HOLDINGS,_INC.",
@@ -130,7 +134,8 @@
       "visibility": "dark",
       "transaction_type": "10",
       "limit": null,
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00542217&two_year_transaction_period=2024&contributor_name=ROONEY+HOLDINGS%2C+INC."
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00542217&two_year_transaction_period=2024&contributor_name=ROONEY+HOLDINGS%2C+INC.",
+      "class_basis": "rule"
     },
     {
       "transfer_id": "C00542217-in-ind:PFAUTCH_ROY|63108",

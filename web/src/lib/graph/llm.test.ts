@@ -4,7 +4,7 @@ import { afterEach, describe, expect, it, vi } from "vitest";
 import { TrailsSchema } from "@campaign-commons/contracts";
 import { ASK_LLM_TIMEOUT_MS, XAI_CHAT_COMPLETIONS_URL } from "../ask-llm";
 import { factSentence, type GraphFact, type GraphNodeRef } from "./facts";
-import { allowedNumbers, buildClassifyBody, buildNarrateBody, checkNarrative, classifyGraph, narrate, NARRATE_TIMEOUT_MS, NARRATIVE_MAX_CHARS, validatePick } from "./llm";
+import { allowedNumbers, buildClassifyBody, buildComposeBody, buildNarrateBody, checkNarrative, classifyGraph, narrate, NARRATE_TIMEOUT_MS, NARRATIVE_MAX_CHARS, validatePick } from "./llm";
 
 const trails = TrailsSchema.parse(JSON.parse(readFileSync(join(process.cwd(), "..", "data", "out", "pa-sen-2024", "trails.json"), "utf8")));
 const casey = trails.subjects.find((s) => s.name === "Bob Casey")!;
@@ -48,6 +48,38 @@ describe("buildClassifyBody", () => {
     expect(text).toContain(`${winsenate.id} (committee): WINSENATE`);
     expect(text).not.toContain(trails.answers[0].headline);
     expect(text).not.toContain("MATCH");
+  });
+});
+
+describe("buildComposeBody", () => {
+  it("adds the flow-diagram instruction only in graph mode", () => {
+    const phrase = "The reader wants a flow diagram of this answer.";
+    expect(JSON.stringify(buildComposeBody("who paid?", [casey], "grok-4.5"))).not.toContain(phrase);
+    expect(JSON.stringify(buildComposeBody("who paid?", [casey], "grok-4.5", undefined, "graph"))).toContain(
+      "The reader wants a flow diagram of this answer. Return whole relationships (GAVE, PAID, TARGETED) with their endpoints — not aggregates or bare names — so each row is one money flow with a filed amount, ordered by amount.",
+    );
+  });
+
+  it("instructs the composer to answer ad questions with money edges", () => {
+    const body = JSON.stringify(buildComposeBody("who paid for negative ads?", [casey], "grok-4.5", undefined, "graph"));
+    expect(body).toContain(
+      "Ads: questions about ads, attack ads, negative ads or advertising for/against a candidate are answered with the money that paid for them",
+    );
+    expect(body).toContain("every question about who paid, spent, gave, funded, supported or opposed is answerable");
+  });
+});
+
+describe("organization classification provenance", () => {
+  it("labels inferred organization GAVE facts as model-read and unverified", () => {
+    const organization = node("org:TRUIST", "TRUIST", "organization");
+    const fact: GraphFact = {
+      ...facts[0],
+      from: organization,
+      to: slf,
+      visibility: "disclosed",
+      class_basis: "inferred",
+    };
+    expect(factSentence(fact)).toBe("TRUIST gave $10,000,000 to SENATE LEADERSHIP FUND (2 contributions) [disclosed — model-read, unverified].");
   });
 });
 

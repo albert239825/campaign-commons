@@ -23,8 +23,8 @@
     "independent_expenditures": 40661820.61,
     "from_individuals": 50731448.52,
     "from_committees": 0.0,
-    "from_organizations": 97025000.0,
-    "from_undisclosed": 69667432.0
+    "from_organizations": 166682432.0,
+    "from_undisclosed": 10000.0
   },
   "inflows": [
     {
@@ -37,10 +37,11 @@
       "date": "2024-12-20",
       "first_date": "2023-11-03",
       "count": 4,
-      "visibility": "dark",
+      "visibility": "disclosed",
       "transaction_type": "10",
       "limit": "unlimited",
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00835959&two_year_transaction_period=2024&contributor_name=COINBASE"
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00835959&two_year_transaction_period=2024&contributor_name=COINBASE",
+      "class_basis": "inferred"
     },
     {
       "transfer_id": "C00835959-in-org:RIPPLE_LABS_INC.",
@@ -55,7 +56,8 @@
       "visibility": "disclosed",
       "transaction_type": "10",
       "limit": "unlimited",
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00835959&two_year_transaction_period=2024&contributor_name=RIPPLE+LABS+INC."
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00835959&two_year_transaction_period=2024&contributor_name=RIPPLE+LABS+INC.",
+      "class_basis": "rule"
     },
     {
       "transfer_id": "C00835959-in-org:JUMP_CRYPTO",
@@ -70,7 +72,8 @@
       "visibility": "disclosed",
       "transaction_type": "10",
       "limit": "unlimited",
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00835959&two_year_transaction_period=2024&contributor_name=JUMP+CRYPTO"
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00835959&two_year_transaction_period=2024&contributor_name=JUMP+CRYPTO",
+      "class_basis": "rule"
     },
     {
       "transfer_id": "C00835959-in-org:COINBASE_COMMERCE_(EXCHANGE)",
@@ -85,7 +88,8 @@
       "visibility": "disclosed",
       "transaction_type": "10",
       "limit": "unlimited",
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00835959&two_year_transaction_period=2024&contributor_name=COINBASE+COMMERCE+%28EXCHANGE%29"
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00835959&two_year_transaction_period=2024&contributor_name=COINBASE+COMMERCE+%28EXCHANGE%29",
+      "class_basis": "rule"
     },
     {
       "transfer_id": "C00835959-in-org:RIPPLE_LABS_INC",
@@ -100,7 +104,8 @@
       "visibility": "disclosed",
       "transaction_type": "10",
       "limit": "unlimited",
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00835959&two_year_transaction_period=2024&contributor_name=RIPPLE+LABS+INC"
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00835959&two_year_transaction_period=2024&contributor_name=RIPPLE+LABS+INC",
+      "class_basis": "rule"
     },
     {
       "transfer_id": "C00835959-in-ind:WINKLEVOSS_TYLER|10010",
@@ -160,7 +165,8 @@
       "visibility": "disclosed",
       "transaction_type": "10",
       "limit": "unlimited",
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00835959&two_year_transaction_period=2024&contributor_name=PAYWARD%2C+INC."
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00835959&two_year_transaction_period=2024&contributor_name=PAYWARD%2C+INC.",
+      "class_basis": "rule"
     },
     {
       "transfer_id": "C00835959-in-org:CIRCLE_INTERNET_FINANCIAL",
@@ -172,10 +178,11 @@
       "date": "2023-12-19",
       "first_date": "2023-12-19",
       "count": 1,
-      "visibility": "dark",
+      "visibility": "disclosed",
       "transaction_type": "10",
       "limit": "unlimited",
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00835959&two_year_transaction_period=2024&contributor_name=CIRCLE+INTERNET+FINANCIAL"
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00835959&two_year_transaction_period=2024&contributor_name=CIRCLE+INTERNET+FINANCIAL",
+      "class_basis": "inferred"
     },
     {
       "transfer_id": "C00835959-in-ind:POTTER_PHIL|10024",
@@ -205,7 +212,8 @@
       "visibility": "disclosed",
       "transaction_type": "10",
       "limit": "unlimited",
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00835959&two_year_transaction_period=2024&contributor_name=CONSENSYS+SOFTWARE+INC."
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00835959&two_year_transaction_period=2024&contributor_name=CONSENSYS+SOFTWARE+INC.",
+      "class_basis": "rule"
     },
     {
       "transfer_id": "C00835959-in-ind:CASARES_WENCES|94062",
@@ -235,7 +243,8 @@
       "visibility": "disclosed",
       "transaction_type": "10",
       "limit": "unlimited",
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00835959&two_year_transaction_period=2024&contributor_name=LIGHTSPARK+GROUP"
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00835959&two_year_transaction_period=2024&contributor_name=LIGHTSPARK+GROUP",
+      "class_basis": "rule"
     },
     {
       "transfer_id": "C00835959-in-org:ARK_INVEST",
@@ -247,10 +256,11 @@
       "date": "2023-12-12",
       "first_date": "2023-12-12",
       "count": 2,
-      "visibility": "dark",
+      "visibility": "disclosed",
       "transaction_type": "10",
       "limit": "unlimited",
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00835959&two_year_transaction_period=2024&contributor_name=ARK+INVEST"
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00835959&two_year_transaction_period=2024&contributor_name=ARK+INVEST",
+      "class_basis": "inferred"
     },
     {
       "transfer_id": "C00835959-in-ind:WINKELVOSS_CAMERON|10010",
@@ -310,7 +320,8 @@
       "visibility": "disclosed",
       "transaction_type": "10",
       "limit": "unlimited",
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00835959&two_year_transaction_period=2024&contributor_name=ACTION+FACTORY%2C+INC."
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00835959&two_year_transaction_period=2024&contributor_name=ACTION+FACTORY%2C+INC.",
+      "class_basis": "rule"
     },
     {
       "transfer_id": "C00835959-in-ind:STUBE_BRIAN|22101",
@@ -355,7 +366,8 @@
       "visibility": "dark",
       "transaction_type": "10",
       "limit": "unlimited",
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00835959&two_year_transaction_period=2024&contributor_name=UNOFFICIAL+LLC"
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00835959&two_year_transaction_period=2024&contributor_name=UNOFFICIAL+LLC",
+      "class_basis": "rule"
     },
     {
       "transfer_id": "C00835959-in-ind:POLLAK_JESSE|94114",

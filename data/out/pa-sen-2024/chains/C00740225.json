@@ -2,7 +2,7 @@
   "root_entity_id": "C00740225",
   "root_name": "NRDC ACTION VOTES",
   "race_id": "pa-sen-2024",
-  "generated_at": "2026-09-05T19:53:48+00:00",
+  "generated_at": "2026-09-06T05:02:45+00:00",
   "data_status": "real",
   "nodes": [
     {
@@ -28,7 +28,8 @@
       "is_terminus": true,
       "terminus_reason": "dark",
       "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00740225&two_year_transaction_period=2024&contributor_name=NRDC+ACTION+FUND",
-      "organization_class": "nonprofit"
+      "organization_class": "nonprofit",
+      "class_basis": "rule"
     },
     {
       "id": "vendor:V-gambit-strategies",
@@ -351,7 +352,8 @@
         "2023-01-01",
         "2024-12-31"
       ],
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00740225&two_year_transaction_period=2024&contributor_name=NRDC+ACTION+FUND"
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00740225&two_year_transaction_period=2024&contributor_name=NRDC+ACTION+FUND",
+      "class_basis": "rule"
     },
     {
       "from": "C00740225",

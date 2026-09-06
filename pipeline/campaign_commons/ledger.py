@@ -30,7 +30,14 @@ from pathlib import Path
 import pandas as pd
 
 from .config import FEC_WEB, KNOWN_CONDUITS, OUT, RACES, Candidate, Race
-from .orgs import classify_organization, committee_name_index, match_committee, organization_visibility
+from .orgs import (
+    classify_organization,
+    committee_name_index,
+    load_org_overrides,
+    match_committee,
+    organization_classification,
+    organization_visibility,
+)
 from .util import (
     fec_candidate_url,
     fec_committee_url,
@@ -236,8 +243,9 @@ def _transfer(
     source_url: str,
     count: int,
     first_date: str | None,
+    class_basis: str | None = None,
 ) -> dict:
-    return {
+    row = {
         "transfer_id": transfer_id,
         "from_entity_id": from_id,
         "from_name": from_name,
@@ -252,6 +260,9 @@ def _transfer(
         "limit": limit,
         "source_url": source_url,
     }
+    if class_basis is not None:
+        row["class_basis"] = class_basis
+    return row
 
 
 def _top_counterparties(
@@ -276,7 +287,7 @@ def _top_counterparties(
     return top.merge(modal_tt[[*keys, "tt"]], on=keys, how="left")
 
 
-def entity_inflows(t: Tables, cid: str, name: str, cycle: int) -> list[dict]:
+def entity_inflows(t: Tables, cid: str, name: str, cycle: int, overrides: dict | None = None) -> list[dict]:
     """Top counterparties paying into `cid`: committees (transfers), individuals and organizations (Sched A)."""
     limit = "unlimited" if t.committee_type(cid) in UNLIMITED_RECEIVER_TYPES else None
     rows: list[dict] = []
@@ -356,6 +367,7 @@ def entity_inflows(t: Tables, cid: str, name: str, cycle: int) -> list[dict]:
         org_rows, ["NAME"], "TRANSACTION_AMT", "LAST_DT", "TRANSACTION_TP", "NAME", "FIRST_DT", "N_TRANSACTIONS"
     )
     for r in orgs.itertuples():
+        org_class, class_basis = organization_classification(str(r.NAME), overrides)
         rows.append(
             _transfer(
                 f"{cid}-in-{organization_id(str(r.NAME))}",
@@ -365,12 +377,13 @@ def entity_inflows(t: Tables, cid: str, name: str, cycle: int) -> list[dict]:
                 name,
                 r.amount,
                 _date(r.last_dt),
-                organization_visibility(classify_organization(str(r.NAME))),
+                organization_visibility(org_class),
                 _str(r.tt),
                 limit,
                 fec_contributor_receipts_url(cid, str(r.NAME), cycle),
                 int(r.n),
                 _date(r.first_dt),
+                class_basis,
             )
         )
     return sorted(rows, key=lambda r: r["amount"], reverse=True)[:TOP_N_FLOWS]
@@ -423,13 +436,17 @@ def entity_ies(t: Tables, cid: str, name: str, race: Race) -> list[dict]:
     ]
 
 
-def entity_totals(t: Tables, cid: str, ies: list[dict]) -> dict:
+def entity_totals(t: Tables, cid: str, ies: list[dict], overrides: dict | None = None) -> dict:
     """Summary-file totals when the FEC publishes them for this committee, else itemized sums."""
     sched_a = t.sched_a(cid)
     _, orgs, misfiled = t.sched_a_split(cid)
     misfiled_covered = _num(misfiled.loc[misfiled["covered"], "TRANSACTION_AMT"].sum())
     misfiled_uncovered = _num(misfiled.loc[~misfiled["covered"], "TRANSACTION_AMT"].sum())
-    org_dark = orgs["NAME"].map(lambda n: organization_visibility(classify_organization(str(n))) == "dark").astype(bool)
+    org_dark = (
+        orgs["NAME"]
+        .map(lambda n: organization_visibility(classify_organization(str(n), overrides)) == "dark")
+        .astype(bool)
+    )
     from_undisclosed = _num(orgs.loc[org_dark, "TRANSACTION_AMT"].sum())
     from_orgs = _num(orgs.loc[~org_dark, "TRANSACTION_AMT"].sum())
     ie_total = round(sum(ie["amount"] for ie in ies), 2)
@@ -464,7 +481,7 @@ def entity_totals(t: Tables, cid: str, ies: list[dict]) -> dict:
     }
 
 
-def entity(t: Tables, cid: str, race: Race) -> dict:
+def entity(t: Tables, cid: str, race: Race, overrides: dict | None = None) -> dict:
     row = t.committees.loc[cid]
     name = str(row["CMTE_NM"])
     tp = t.committee_type(cid)
@@ -488,8 +505,8 @@ def entity(t: Tables, cid: str, race: Race) -> dict:
         },
         "visibility": "disclosed",
         "is_conduit": cid in KNOWN_CONDUITS,
-        "totals": entity_totals(t, cid, ies),
-        "inflows": entity_inflows(t, cid, name, race.cycle),
+        "totals": entity_totals(t, cid, ies, overrides),
+        "inflows": entity_inflows(t, cid, name, race.cycle, overrides),
         "outflows": entity_outflows(t, cid, name, race.cycle),
         "independent_expenditures": ies,
         "flags": [],
@@ -542,6 +559,7 @@ def _clear_dir(path: Path) -> None:
 def run(race_id: str) -> None:
     race = RACES[race_id]
     t = Tables(race)
+    overrides = load_org_overrides(race_id)
     candidates = [candidate_ledger(t, c, race) for c in race.candidates]
     spenders = top_outside_spenders(t, race)
     outside_total = _num(t.ies["expenditure_amount"].sum())
@@ -570,7 +588,7 @@ def run(race_id: str) -> None:
     entities_dir = race.out_dir / "entities"
     _clear_dir(entities_dir)
     for cid in t.committees.index:
-        write_json(entities_dir / f"{cid}.json", entity(t, str(cid), race))
+        write_json(entities_dir / f"{cid}.json", entity(t, str(cid), race, overrides))
     print(
         f"ledger: {len(spenders)} outside spenders, ${outside_total:,.0f} outside; "
         f"campaign ${campaign_total:,.0f}; {len(t.committees)} entity pages"

@@ -280,7 +280,8 @@
       "visibility": "dark",
       "transaction_type": "10",
       "limit": null,
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00099267&two_year_transaction_period=2024&contributor_name=TEXAS+DEMOCRATIC+PARTY+-+FEDERAL+ACCOUNT"
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00099267&two_year_transaction_period=2024&contributor_name=TEXAS+DEMOCRATIC+PARTY+-+FEDERAL+ACCOUNT",
+      "class_basis": "inferred"
     },
     {
       "transfer_id": "C00099267-in-ind:PRIMM_LYNN|75551",

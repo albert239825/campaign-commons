@@ -23,8 +23,8 @@
     "independent_expenditures": 0,
     "from_individuals": 0.0,
     "from_committees": 39303500.97,
-    "from_organizations": 172009.0,
-    "from_undisclosed": 333589.0
+    "from_organizations": 382009.0,
+    "from_undisclosed": 123589.0
   },
   "inflows": [
     {
@@ -112,10 +112,11 @@
       "date": "2023-09-01",
       "first_date": "2023-09-01",
       "count": 1,
-      "visibility": "dark",
+      "visibility": "disclosed",
       "transaction_type": "22Y",
       "limit": null,
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00762591&two_year_transaction_period=2024&contributor_name=RUFFIN+FLIGHT+DEPARTMENT"
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00762591&two_year_transaction_period=2024&contributor_name=RUFFIN+FLIGHT+DEPARTMENT",
+      "class_basis": "inferred"
     },
     {
       "transfer_id": "C00762591-in-org:108_MANAGEMENT_INC",
@@ -130,7 +131,8 @@
       "visibility": "disclosed",
       "transaction_type": "22Y",
       "limit": null,
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00762591&two_year_transaction_period=2024&contributor_name=108+MANAGEMENT+INC"
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00762591&two_year_transaction_period=2024&contributor_name=108+MANAGEMENT+INC",
+      "class_basis": "rule"
     },
     {
       "transfer_id": "C00762591-in-org:STA_JETS_INC.",
@@ -145,7 +147,8 @@
       "visibility": "disclosed",
       "transaction_type": "22Y",
       "limit": null,
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00762591&two_year_transaction_period=2024&contributor_name=STA+JETS+INC."
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00762591&two_year_transaction_period=2024&contributor_name=STA+JETS+INC.",
+      "class_basis": "rule"
     },
     {
       "transfer_id": "C00762591-in-org:THE_PAUL_MCLAREN_TRUST",
@@ -160,7 +163,8 @@
       "visibility": "dark",
       "transaction_type": "22Y",
       "limit": null,
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00762591&two_year_transaction_period=2024&contributor_name=THE+PAUL+MCLAREN+TRUST"
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00762591&two_year_transaction_period=2024&contributor_name=THE+PAUL+MCLAREN+TRUST",
+      "class_basis": "rule"
     },
     {
       "transfer_id": "C00762591-in-ind:FRIESS_LYNETTE|83002",
@@ -190,7 +194,8 @@
       "visibility": "dark",
       "transaction_type": "22Y",
       "limit": null,
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00762591&two_year_transaction_period=2024&contributor_name=860+JJC+LLC"
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00762591&two_year_transaction_period=2024&contributor_name=860+JJC+LLC",
+      "class_basis": "rule"
     },
     {
       "transfer_id": "C00762591-in-org:LMC_LEASING_LLC",
@@ -205,7 +210,8 @@
       "visibility": "dark",
       "transaction_type": "22Y",
       "limit": null,
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00762591&two_year_transaction_period=2024&contributor_name=LMC+LEASING+LLC"
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00762591&two_year_transaction_period=2024&contributor_name=LMC+LEASING+LLC",
+      "class_basis": "rule"
     },
     {
       "transfer_id": "C00762591-in-org:BOGGS_PROPERTIES_LLC",
@@ -220,7 +226,8 @@
       "visibility": "dark",
       "transaction_type": "22Y",
       "limit": null,
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00762591&two_year_transaction_period=2024&contributor_name=BOGGS+PROPERTIES+LLC"
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00762591&two_year_transaction_period=2024&contributor_name=BOGGS+PROPERTIES+LLC",
+      "class_basis": "rule"
     },
     {
       "transfer_id": "C00762591-in-C00672733",

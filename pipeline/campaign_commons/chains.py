@@ -52,6 +52,7 @@ from .chains_graph import Graph, Node, Shares, Walk, build_graph, node_shares, w
 from .chains_stories import stories
 from .config import CHAIN_MATERIALITY, CHAIN_MAX_DEPTH, FEC_WEB, OUT, RACES, Race
 from .donors import donor_json, donor_key, forward_walk, ie_targets, outbound_index, top_donors
+from .orgs import load_org_overrides
 from .util import (
     fec_committee_url,
     fec_contributor_receipts_url,
@@ -125,6 +126,8 @@ def chain_json(race: Race, w: Walk, shares: dict[str, Shares], flags: list[dict]
             out["contributor_count"] = n.contributor_count
         if n.organization_class is not None:
             out["organization_class"] = n.organization_class
+        if n.class_basis is not None:
+            out["class_basis"] = n.class_basis
         nodes.append(out)
     edges = [
         {
@@ -140,6 +143,9 @@ def chain_json(race: Race, w: Walk, shares: dict[str, Shares], flags: list[dict]
         }
         for e in w.edges
     ]
+    for edge, walk_edge in zip(edges, w.edges, strict=True):
+        if walk_edge.class_basis is not None:
+            edge["class_basis"] = walk_edge.class_basis
     return {
         "root_entity_id": w.root,
         "root_name": w.nodes[w.root].name,
@@ -335,7 +341,7 @@ def run(race_id: str) -> None:
     started = time.time()
     race = RACES[race_id]
     con = connect(race)
-    graph: Graph = build_graph(con)
+    graph: Graph = build_graph(con, load_org_overrides(race_id))
     ledger = read_json(race.out_dir / "ledger.json")
     spenders: list[dict] = ledger["top_outside_spenders"]
 

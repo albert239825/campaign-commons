@@ -23,8 +23,8 @@
     "independent_expenditures": 0,
     "from_individuals": 324107.14,
     "from_committees": 31500.0,
-    "from_organizations": 0.0,
-    "from_undisclosed": 22150.0
+    "from_organizations": 10000.0,
+    "from_undisclosed": 12150.0
   },
   "inflows": [
     {
@@ -115,7 +115,8 @@
       "visibility": "dark",
       "transaction_type": "11",
       "limit": null,
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00706507&two_year_transaction_period=2024&contributor_name=EASTERN+BAND+OF+CHEROKEE+INDIANS"
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00706507&two_year_transaction_period=2024&contributor_name=EASTERN+BAND+OF+CHEROKEE+INDIANS",
+      "class_basis": "rule"
     },
     {
       "transfer_id": "C00706507-in-ind:JENKINS_ROGER|77056",

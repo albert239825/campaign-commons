@@ -23,8 +23,8 @@
     "independent_expenditures": 0,
     "from_individuals": 11127388.93,
     "from_committees": 764262.87,
-    "from_organizations": 400000.0,
-    "from_undisclosed": 70000.0
+    "from_organizations": 470000.0,
+    "from_undisclosed": 0.0
   },
   "inflows": [
     {
@@ -145,7 +145,8 @@
       "visibility": "disclosed",
       "transaction_type": "15",
       "limit": null,
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00658476&two_year_transaction_period=2024&contributor_name=GRATON+RANCHERIA"
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00658476&two_year_transaction_period=2024&contributor_name=GRATON+RANCHERIA",
+      "class_basis": "rule"
     },
     {
       "transfer_id": "C00658476-in-ind:CAMAISA_ALLAN|92067",

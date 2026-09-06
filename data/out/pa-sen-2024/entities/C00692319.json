@@ -23,8 +23,8 @@
     "independent_expenditures": 3805083.66,
     "from_individuals": 4285778.72,
     "from_committees": 3500.0,
-    "from_organizations": 0.0,
-    "from_undisclosed": 25000.0
+    "from_organizations": 10000.0,
+    "from_undisclosed": 15000.0
   },
   "inflows": [
     {
@@ -85,7 +85,8 @@
       "visibility": "dark",
       "transaction_type": "10",
       "limit": null,
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00692319&two_year_transaction_period=2024&contributor_name=MONTEZUMA+WETLANDS+LLC"
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00692319&two_year_transaction_period=2024&contributor_name=MONTEZUMA+WETLANDS+LLC",
+      "class_basis": "rule"
     },
     {
       "transfer_id": "C00692319-in-ind:CONNEMAN_DIANE|14850",
@@ -112,10 +113,11 @@
       "date": "2024-02-28",
       "first_date": "2024-02-28",
       "count": 1,
-      "visibility": "dark",
+      "visibility": "disclosed",
       "transaction_type": "10",
       "limit": null,
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00692319&two_year_transaction_period=2024&contributor_name=CALIFORNIA+WASTE+SOLUTIONS"
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00692319&two_year_transaction_period=2024&contributor_name=CALIFORNIA+WASTE+SOLUTIONS",
+      "class_basis": "inferred"
     },
     {
       "transfer_id": "C00692319-in-ind:WHITE_MOLLY|37919",

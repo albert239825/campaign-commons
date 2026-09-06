@@ -130,7 +130,8 @@
       "visibility": "disclosed",
       "transaction_type": "10",
       "limit": "unlimited",
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00872549&two_year_transaction_period=2024&contributor_name=AFSCME+WORKING+FAMILIES+FUND"
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00872549&two_year_transaction_period=2024&contributor_name=AFSCME+WORKING+FAMILIES+FUND",
+      "class_basis": "rule"
     },
     {
       "transfer_id": "C00872549-in-org:ALL_HANDS_ON_DECK_NETWORK_INC._DBA_MOVEMENT_VOTER_PROJECT",
@@ -145,7 +146,8 @@
       "visibility": "dark",
       "transaction_type": "10",
       "limit": "unlimited",
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00872549&two_year_transaction_period=2024&contributor_name=ALL+HANDS+ON+DECK+NETWORK+INC.+DBA+MOVEMENT+VOTER+PROJECT"
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00872549&two_year_transaction_period=2024&contributor_name=ALL+HANDS+ON+DECK+NETWORK+INC.+DBA+MOVEMENT+VOTER+PROJECT",
+      "class_basis": "rule"
     },
     {
       "transfer_id": "C00872549-in-C00461418",
@@ -205,7 +207,8 @@
       "visibility": "disclosed",
       "transaction_type": "10",
       "limit": "unlimited",
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00872549&two_year_transaction_period=2024&contributor_name=AFT+SOLIDARITY"
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00872549&two_year_transaction_period=2024&contributor_name=AFT+SOLIDARITY",
+      "class_basis": "rule"
     },
     {
       "transfer_id": "C00872549-in-org:MI_FAMILIA_VOTA",
@@ -220,7 +223,8 @@
       "visibility": "dark",
       "transaction_type": "10",
       "limit": "unlimited",
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00872549&two_year_transaction_period=2024&contributor_name=MI+FAMILIA+VOTA"
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00872549&two_year_transaction_period=2024&contributor_name=MI+FAMILIA+VOTA",
+      "class_basis": "inferred"
     },
     {
       "transfer_id": "C00872549-in-org:WFP_NATIONAL_PAC",
@@ -265,7 +269,8 @@
       "visibility": "dark",
       "transaction_type": "10",
       "limit": "unlimited",
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00872549&two_year_transaction_period=2024&contributor_name=DOLORES+HUERTA+ACTION+FUND"
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00872549&two_year_transaction_period=2024&contributor_name=DOLORES+HUERTA+ACTION+FUND",
+      "class_basis": "rule"
     },
     {
       "transfer_id": "C00872549-in-ind:GROVE_KAREN|94025",
