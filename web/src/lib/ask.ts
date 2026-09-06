@@ -3,10 +3,11 @@
  * keyword lists and whole-word alias matching over `Trails.subjects`, or a typed refusal. No model, no ranking
  * heuristics beyond "longest alias wins"; the same question always resolves the same way.
  */
-import type { TrailIntent, TrailSubject } from "@campaign-commons/contracts";
+import { ISSUE_BY_ID, ISSUE_IDS, type IssueId, type TrailIntent, type TrailSubject } from "@campaign-commons/contracts";
 
+export type AskIntent = TrailIntent | "spender_issue";
 export type Resolution =
-  | { kind: "answer"; intent: TrailIntent; subject: TrailSubject; matched: string; note: string | null }
+  | { kind: "answer"; intent: AskIntent; subject: TrailSubject; matched: string; note: string | null; issueId: IssueId | null }
   | { kind: "unsupported"; reason: "empty" | "no_subject" | "ambiguous_subject" | "no_intent" | "wrong_kind"; message: string; suggestions: string[] };
 
 /** Phrase lists checked in this order; the first list with a hit decides the intent. */
@@ -81,10 +82,24 @@ export const INTENT_PHRASES: Record<TrailIntent, readonly string[]> = {
   ],
 };
 
-export const INTENT_LABELS: Record<TrailIntent, string> = {
+export const INTENT_LABELS: Record<AskIntent, string> = {
   candidate_ad_funding: "Who paid for the ads about a candidate",
   candidate_spender: "Who is spending for or against a candidate",
   committee_funding: "Who funds a committee",
+  spender_issue: "Where the groups spending on a candidate stand on an issue",
+};
+
+export const ISSUE_PHRASES: Record<IssueId, readonly string[]> = {
+  healthcare: ["healthcare", "health care", "medicare", "medicaid", "obamacare", "affordable care act", "drug prices", "drug pricing", "prescription drugs", "insurance coverage"],
+  energy_climate: ["climate", "climate change", "clean energy", "fossil fuel", "fossil fuels", "fracking", "oil and gas", "natural gas", "emissions", "environment", "environmental", "green energy", "pipelines"],
+  defense: ["defense", "military", "pentagon", "national security", "israel", "ukraine", "nato", "foreign aid", "veterans"],
+  crypto_fintech: ["crypto", "cryptocurrency", "bitcoin", "blockchain", "fintech", "digital assets", "wall street", "banks", "financial regulation"],
+  immigration: ["immigration", "immigrants", "border", "border security", "asylum", "deportation", "deportations", "migrants", "the wall"],
+  abortion: ["abortion", "abortions", "reproductive rights", "reproductive freedom", "pro choice", "pro life", "roe", "roe v wade", "dobbs", "planned parenthood", "ivf", "contraception", "reproductive health"],
+  guns: ["gun", "guns", "gun control", "gun rights", "firearm", "firearms", "second amendment", "2nd amendment", "nra", "assault weapons", "background checks"],
+  tax_budget: ["tax", "taxes", "tax cuts", "tax cut", "budget", "deficit", "national debt", "spending cuts", "irs", "social security"],
+  tech_ai: ["ai", "artificial intelligence", "big tech", "antitrust", "tech regulation", "section 230", "social media companies", "tiktok"],
+  labor_trade: ["union", "unions", "labor", "workers rights", "right to work", "minimum wage", "tariffs", "trade deal", "trade deals", "nafta", "outsourcing", "collective bargaining"],
 };
 
 export function normalize(q: string): string {
@@ -104,6 +119,14 @@ export function detectIntent(normalized: string): TrailIntent | null {
   const padded = ` ${normalized} `;
   for (const intent of ["candidate_ad_funding", "candidate_spender", "committee_funding"] as const) {
     if (INTENT_PHRASES[intent].some((p) => hasPhrase(padded, p))) return intent;
+  }
+  return null;
+}
+
+export function detectIssue(normalized: string): IssueId | null {
+  const padded = ` ${normalized} `;
+  for (const issueId of ISSUE_IDS) {
+    if (ISSUE_PHRASES[issueId].some((phrase) => hasPhrase(padded, phrase))) return issueId;
   }
   return null;
 }
@@ -154,15 +177,18 @@ export function resolveQuestion(question: string, subjects: readonly TrailSubjec
 
   const subject = top.subject;
   // Intent words inside the subject's own name ("... Independent Expenditure Committee", "... Fund") are not the question's.
-  let intent = detectIntent(` ${normalized} `.replace(` ${top.alias} `, " ").trim());
+  const stripped = ` ${normalized} `.replace(` ${top.alias} `, " ").trim();
+  const issue = detectIssue(stripped);
+  if (issue !== null) return resolveRoute("spender_issue", subject, subjects, top.alias, issue);
+  let intent = detectIntent(stripped);
   if (intent === null) {
     if (subject.kind === "committee") intent = "committee_funding";
     else {
       return {
         kind: "unsupported",
         reason: "no_intent",
-        message: `Two questions are supported about ${subject.name}: who is spending for or against them, and who paid for the ads about them.`,
-        suggestions: [canonicalQuestion("candidate_spender", subject), canonicalQuestion("candidate_ad_funding", subject)],
+        message: `Three questions are supported about ${subject.name}: who is spending for or against them, who paid for the ads about them, and where those groups stand on an issue.`,
+        suggestions: [canonicalQuestion("candidate_spender", subject), canonicalQuestion("candidate_ad_funding", subject), canonicalQuestion("spender_issue", subject, "abortion")],
       };
     }
   }
@@ -175,7 +201,20 @@ export function resolveQuestion(question: string, subjects: readonly TrailSubjec
  * candidate is read as one about their principal committee (with a note), and a spending/ad question about a committee
  * is refused with the supported question suggested. `matched` records how the subject was picked (an alias, or its id).
  */
-export function resolveRoute(intent: TrailIntent, subject: TrailSubject, subjects: readonly TrailSubject[], matched: string = subject.id): Resolution {
+export function resolveRoute(intent: AskIntent, subject: TrailSubject, subjects: readonly TrailSubject[], matched: string = subject.id, issueId: IssueId | null = null): Resolution {
+  if (intent === "spender_issue") {
+    if (issueId === null) intent = "candidate_spender";
+    else if (subject.kind === "committee") {
+      return {
+        kind: "unsupported",
+        reason: "wrong_kind",
+        message: `Issue positions are answered for the groups spending for or against a candidate, not for one committee. For ${subject.name}, the supported question is who funds it; its own stated positions, if any, are on its record page.`,
+        suggestions: [canonicalQuestion("committee_funding", subject)],
+      };
+    } else {
+      return { kind: "answer", intent: "spender_issue", subject, matched, note: null, issueId };
+    }
+  }
   if (intent === "committee_funding" && subject.kind === "candidate") {
     if (subject.principal_committee_id === null) {
       return {
@@ -200,6 +239,7 @@ export function resolveRoute(intent: TrailIntent, subject: TrailSubject, subject
       subject: committee,
       matched,
       note: `Read as a question about ${subject.name}'s campaign committee, ${committee.name}. Outside groups' money never reaches a candidate; for that, ask who is spending for or against ${subject.name}.`,
+      issueId: null,
     };
   }
   if (intent !== "committee_funding" && subject.kind === "committee") {
@@ -210,14 +250,14 @@ export function resolveRoute(intent: TrailIntent, subject: TrailSubject, subject
       suggestions: [canonicalQuestion("committee_funding", subject)],
     };
   }
-  return { kind: "answer", intent, subject, matched, note: null };
+  return { kind: "answer", intent, subject, matched, note: null, issueId: null };
 }
 
 export function defaultIntent(subject: TrailSubject): TrailIntent {
   return subject.kind === "committee" ? "committee_funding" : "candidate_spender";
 }
 
-export function canonicalQuestion(intent: TrailIntent, subject: TrailSubject): string {
+export function canonicalQuestion(intent: AskIntent, subject: TrailSubject, issueId: IssueId | null = null): string {
   const name = subject.kind === "committee" ? titleCase(subject.name) : subject.name;
   switch (intent) {
     case "candidate_spender":
@@ -226,6 +266,8 @@ export function canonicalQuestion(intent: TrailIntent, subject: TrailSubject): s
       return `Who paid for the ads about ${name}?`;
     case "committee_funding":
       return `Who funds ${name}?`;
+    case "spender_issue":
+      return issueId === null ? `Who is spending for or against ${name}?` : `Where do the groups spending for or against ${name} stand on ${ISSUE_BY_ID[issueId].label.toLowerCase()}?`;
   }
 }
 
@@ -240,3 +282,5 @@ export function titleCase(s: string): string {
 
 export const INTENTS: readonly TrailIntent[] = ["candidate_ad_funding", "candidate_spender", "committee_funding"];
 export const isIntent = (s: string): s is TrailIntent => (INTENTS as readonly string[]).includes(s);
+export const ASK_INTENTS = [...INTENTS, "spender_issue"] as const;
+export const isAskIntent = (s: string): s is AskIntent => (ASK_INTENTS as readonly string[]).includes(s);

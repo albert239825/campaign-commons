@@ -970,6 +970,134 @@
               "additionalProperties": false
             }
           ]
+        },
+        "issue_positions": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "issue_id": {
+                "type": "string",
+                "enum": [
+                  "healthcare",
+                  "energy_climate",
+                  "defense",
+                  "crypto_fintech",
+                  "immigration",
+                  "abortion",
+                  "guns",
+                  "tax_budget",
+                  "tech_ai",
+                  "labor_trade"
+                ]
+              },
+              "direction": {
+                "type": "integer",
+                "minimum": -2,
+                "maximum": 2
+              },
+              "quote": {
+                "type": "string",
+                "minLength": 1
+              },
+              "source_url": {
+                "type": "string",
+                "format": "uri"
+              },
+              "basis": {
+                "anyOf": [
+                  {
+                    "type": "object",
+                    "properties": {
+                      "basis": {
+                        "type": "string",
+                        "const": "verified"
+                      },
+                      "rule": {
+                        "type": "string",
+                        "minLength": 1
+                      },
+                      "source_urls": {
+                        "type": "array",
+                        "items": {
+                          "type": "string",
+                          "format": "uri"
+                        },
+                        "minItems": 1
+                      },
+                      "checked_by": {
+                        "type": "string",
+                        "minLength": 1
+                      },
+                      "checked_at": {
+                        "type": "string",
+                        "minLength": 1
+                      }
+                    },
+                    "required": [
+                      "basis",
+                      "rule",
+                      "source_urls",
+                      "checked_by",
+                      "checked_at"
+                    ],
+                    "additionalProperties": false
+                  },
+                  {
+                    "type": "object",
+                    "properties": {
+                      "basis": {
+                        "type": "string",
+                        "enum": [
+                          "filed",
+                          "inferred"
+                        ]
+                      },
+                      "rule": {
+                        "type": "string",
+                        "minLength": 1
+                      },
+                      "source_urls": {
+                        "type": "array",
+                        "items": {
+                          "type": "string",
+                          "format": "uri"
+                        }
+                      },
+                      "checked_by": {
+                        "type": [
+                          "string",
+                          "null"
+                        ]
+                      },
+                      "checked_at": {
+                        "type": [
+                          "string",
+                          "null"
+                        ]
+                      }
+                    },
+                    "required": [
+                      "basis",
+                      "rule",
+                      "source_urls",
+                      "checked_by",
+                      "checked_at"
+                    ],
+                    "additionalProperties": false
+                  }
+                ]
+              }
+            },
+            "required": [
+              "issue_id",
+              "direction",
+              "quote",
+              "source_url",
+              "basis"
+            ],
+            "additionalProperties": false
+          }
         }
       },
       "required": [

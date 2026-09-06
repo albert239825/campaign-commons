@@ -32,7 +32,8 @@ describe("buildRequestBody", () => {
     expect(body.response_format.type).toBe("json_schema");
     expect(body.response_format.json_schema.strict).toBe(true);
     const routeSchema = body.response_format.json_schema.schema.properties.route.anyOf[0];
-    expect(routeSchema.properties?.intent.enum).toEqual(["candidate_ad_funding", "candidate_spender", "committee_funding"]);
+    expect(routeSchema.properties?.intent.enum).toEqual(["candidate_ad_funding", "candidate_spender", "committee_funding", "spender_issue"]);
+    expect(routeSchema.properties?.issueId).toBeDefined();
     expect(routeSchema.properties?.subjectId.enum).toEqual(trails.subjects.map((s) => s.id));
     expect(text).toContain(`${winsenate.id} (committee): WINSENATE`);
     expect(text).toContain("Who funds a committee");
@@ -44,18 +45,22 @@ describe("buildRequestBody", () => {
 
 describe("validateRoute / parseCompletion (layer 2)", () => {
   it("accepts a route whose intent and subject are both in the closed sets", () => {
-    expect(validateRoute({ intent: "committee_funding", subjectId: winsenate.id }, trails)).toEqual({ intent: "committee_funding", subjectId: winsenate.id });
+    expect(validateRoute({ intent: "committee_funding", subjectId: winsenate.id, issueId: null }, trails)).toEqual({ intent: "committee_funding", subjectId: winsenate.id, issueId: null });
   });
   it("rejects a well-formed route with a hallucinated subject id", () => {
-    expect(validateRoute({ intent: "committee_funding", subjectId: "C00000000" }, trails)).toBeNull();
+    expect(validateRoute({ intent: "committee_funding", subjectId: "C00000000", issueId: null }, trails)).toBeNull();
   });
   it("rejects an off-set intent", () => {
-    expect(validateRoute({ intent: "committee_spending", subjectId: winsenate.id }, trails)).toBeNull();
+    expect(validateRoute({ intent: "committee_spending", subjectId: winsenate.id, issueId: null }, trails)).toBeNull();
   });
   it("rejects non-objects and missing fields", () => {
     expect(validateRoute(null, trails)).toBeNull();
     expect(validateRoute("committee_funding", trails)).toBeNull();
-    expect(validateRoute({ intent: "committee_funding" }, trails)).toBeNull();
+    expect(validateRoute({ intent: "committee_funding", issueId: null }, trails)).toBeNull();
+    expect(validateRoute({ intent: "spender_issue", subjectId: casey.id, issueId: "abortion" }, trails)).toEqual({ intent: "spender_issue", subjectId: casey.id, issueId: "abortion" });
+    expect(validateRoute({ intent: "spender_issue", subjectId: casey.id, issueId: "climate_hoax" }, trails)).toBeNull();
+    expect(validateRoute({ intent: "spender_issue", subjectId: casey.id, issueId: null }, trails)).toBeNull();
+    expect(validateRoute({ intent: "candidate_spender", subjectId: casey.id, issueId: "abortion" }, trails)).toEqual({ intent: "candidate_spender", subjectId: casey.id, issueId: null });
   });
   it("returns null for malformed JSON, empty choices, null route, or non-string content", () => {
     expect(parseCompletion(completion("{not json"), trails)).toBeNull();
@@ -68,9 +73,9 @@ describe("validateRoute / parseCompletion (layer 2)", () => {
 
 describe("classify", () => {
   it("returns the validated route from a structured completion and sends the key only as a bearer header", async () => {
-    const f = fetchReturning(completion(JSON.stringify({ route: { intent: "candidate_spender", subjectId: casey.id } })));
+    const f = fetchReturning(completion(JSON.stringify({ route: { intent: "candidate_spender", subjectId: casey.id, issueId: null } })));
     const r = await classify("who is going after casey", trails, { apiKey: "test-key", fetch: f });
-    expect(r).toEqual({ intent: "candidate_spender", subjectId: casey.id });
+    expect(r).toEqual({ intent: "candidate_spender", subjectId: casey.id, issueId: null });
     expect(f).toHaveBeenCalledTimes(1);
     const [url, init] = f.mock.calls[0];
     expect(url).toBe(XAI_CHAT_COMPLETIONS_URL);
@@ -81,11 +86,11 @@ describe("classify", () => {
     expect(await classify("q", trails, { apiKey: "k", fetch: fetchReturning(completion("{oops")) })).toBeNull();
   });
   it("hallucinated subject id → null", async () => {
-    const f = fetchReturning(completion(JSON.stringify({ route: { intent: "committee_funding", subjectId: "C99999999" } })));
+    const f = fetchReturning(completion(JSON.stringify({ route: { intent: "committee_funding", subjectId: "C99999999", issueId: null } })));
     expect(await classify("q", trails, { apiKey: "k", fetch: f })).toBeNull();
   });
   it("off-set intent → null", async () => {
-    const f = fetchReturning(completion(JSON.stringify({ route: { intent: "answer_freely", subjectId: casey.id } })));
+    const f = fetchReturning(completion(JSON.stringify({ route: { intent: "answer_freely", subjectId: casey.id, issueId: null } })));
     expect(await classify("q", trails, { apiKey: "k", fetch: f })).toBeNull();
   });
   it("provider error status → null", async () => {
@@ -109,7 +114,7 @@ describe("classify", () => {
   });
   it("missing XAI_API_KEY → null with no network call", async () => {
     vi.stubEnv("XAI_API_KEY", "");
-    const f = fetchReturning(completion(JSON.stringify({ route: { intent: "candidate_spender", subjectId: casey.id } })));
+    const f = fetchReturning(completion(JSON.stringify({ route: { intent: "candidate_spender", subjectId: casey.id, issueId: null } })));
     expect(await classify("who is spending against casey", trails, { fetch: f })).toBeNull();
     expect(f).not.toHaveBeenCalled();
   });

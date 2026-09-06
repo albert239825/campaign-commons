@@ -4,8 +4,8 @@ import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { useState, type FormEvent } from "react";
 import { z } from "zod";
-import type { TrailSubject } from "@campaign-commons/contracts";
-import { canonicalQuestion, isIntent, resolveQuestion, type Resolution } from "@/lib/ask";
+import { ISSUE_IDS, type IssueId, type TrailSubject } from "@campaign-commons/contracts";
+import { canonicalQuestion, isAskIntent, resolveQuestion, type AskIntent, type Resolution } from "@/lib/ask";
 import { routes } from "@/lib/format";
 import { AskGraphResponseSchema, type AskGraphResponse } from "@/lib/graph/facts";
 import { GraphAnswer } from "./graph-answer";
@@ -22,10 +22,11 @@ const GRAPH_REFUSAL_SHOWN = new Set<Extract<AskGraphResponse, { kind: "unsupport
 const AskRouteBody = z.discriminatedUnion("kind", [
   z.object({
     kind: z.literal("answer"),
-    intent: z.string().refine(isIntent),
+    intent: z.string().refine(isAskIntent),
     subject: z.object({ id: z.string() }),
     matched: z.string(),
     note: z.string().nullable(),
+    issueId: z.string().refine((s): s is IssueId => (ISSUE_IDS as readonly string[]).includes(s)).nullable(),
   }),
   z.object({
     kind: z.literal("unsupported"),
@@ -77,7 +78,7 @@ export function AskBox({
     if (r.kind === "answer") {
       setPending(null);
       setResult(r);
-      router.push(routes.answer(raceId, r.intent, r.subject.id));
+      router.push(r.intent === "spender_issue" && r.issueId ? routes.issueAnswer(raceId, r.issueId, r.subject.id) : routes.answer(raceId, r.intent, r.subject.id));
       return;
     }
     let g: AskGraphResponse | null = null;
@@ -127,7 +128,7 @@ export function AskBox({
 
       {result?.kind === "answer" && (
         <p className="text-xs text-neutral-500">
-          Opening: {canonicalQuestion(result.intent, result.subject)}
+          Opening: {canonicalQuestion(result.intent, result.subject, result.issueId)}
           {result.note ? ` — ${result.note}` : ""}
         </p>
       )}
@@ -196,7 +197,7 @@ async function askRoute(raceId: string, question: string, subjects: readonly Tra
     if (body.kind === "unsupported") return body;
     const subject = subjects.find((s) => s.id === body.subject.id);
     if (!subject) throw new Error(`ask-route: unknown subject ${body.subject.id}`);
-    return { kind: "answer", intent: body.intent, subject, matched: body.matched, note: body.note };
+    return { kind: "answer", intent: body.intent as AskIntent, subject, matched: body.matched, note: body.note, issueId: body.issueId };
   } finally {
     clearTimeout(timer);
   }
@@ -208,7 +209,7 @@ export function SuggestionLink({ raceId, subjects, question }: { raceId: string;
   if (r.kind !== "answer") return <span className="text-xs text-neutral-500">{question}</span>;
   return (
     <Link
-      href={routes.answer(raceId, r.intent, r.subject.id)}
+      href={r.intent === "spender_issue" && r.issueId ? routes.issueAnswer(raceId, r.issueId, r.subject.id) : routes.answer(raceId, r.intent, r.subject.id)}
       className="ask-suggestion inline-block rounded-full border border-neutral-300 bg-white px-3 py-1 text-xs text-neutral-700 hover:border-neutral-900 hover:text-neutral-900"
     >
       {question}
