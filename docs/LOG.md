@@ -904,3 +904,5 @@ paths or connections, geography or sector—now refuse the nearest fixed intent 
 ### 2026-09-06 — Shared race tab shell
 
 The race ledger, ads, and policies tabs now share one route-group layout: the seal, race title, election date, notable candidates, data-status banner, and Ledger · Ads · Policies navigation remain fixed while only the tab content changes. `RaceNav` derives its active tab from the pathname, so record pages keep the same parent-tab behavior without passing an active prop.
+
+The ad detail page moved into the shared race shell, `RaceNav` now uses prefix matching for nested tabs while keeping Ledger exact, and the page was restyled to match the warm paper, sand, and ink Ads gallery/Ledger design.
