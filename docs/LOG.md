@@ -541,3 +541,30 @@ the dashboard's 88px row gap did not open between them; `RaceShell` has a `dashb
 
 **Numbers.** 2,960 pages build (no routes added or removed). `scrollWidth` at 390px: 417 → 375 (= viewport) on all 11
 sampled race pages. `body:has(...)` rules 38 → 7 (landing hero only); palette hexes 75 → 21 (the rest are in `@theme` or page-local tints).
+
+## 2026-09-06 ~02:00 — Design PR 2: the Vendors index reads top-down (design/2-vendors)
+
+**What changed.** Second of Patrick's five design PRs. `/races/[raceId]/vendors` drops its eight-column table for an editorial
+page inside the PR 1 shell: header (eyebrow, "Vendors", one sentence, one assumption line), a four-figure summary strip
+(vendors · reported payments · vendors linked to ads · ads with same-window context), an assumptions callout, then a
+`SectionNav`-ed column — Largest reported payments (top 10), Vendors linked to ads, Paid during ad windows (a collapsed
+`<details>`), By medium (the bar and per-medium figures kept, `MediumBasisNote` kept), All vendors. Every list is a
+`VendorRow` (`components/vendors/vendor-row.tsx`): name → medium · payments · dates · linked ads · ad windows · alias basis,
+targets line; on the right the reported total, sponsors (linked, first two), one evidence chip and the FEC link — so nothing
+the table showed is gone, it is just no longer eight columns wide. The evidence chip comes from the ads, not the vendor file:
+`lib/vendors.ts::vendorAdContext` folds `Ad.vendor_links` into per-vendor verified/inferred counts and `Ad.same_window_buys`
+into a per-vendor count of ad windows (context, D-74). `VendorIndex` (client) filters the full list by name/alias, medium,
+sponsor, ad-link evidence (`any · has verified · has inferred · no linked ads`) and minimum reported, mirrors the state to
+`?q=&medium=&sponsor=&evidence=&min=` with `replaceState` (read after mount; the page is still static), pages 25 rows until
+"Show all" or a filter, and hides the controls behind a "Filters" button below 680px. D-77.
+
+**Challenge.** The one number that looked wrong was right. A first cut excluded a linked vendor from an ad's same-window
+context, on the theory that a link supersedes context — and got 256 ads, not the 284 the pipeline logs. The contract says
+`same_window_buys` lists every placeable-medium vendor paid in the window, *linked or not*; the pipeline and the ad pages count
+it that way, so the index does too, and the section copy says "whether or not the pair also met the bar for a link". The other
+trap was the sponsor `<select>`: 98 committee names, one of them 90 characters, and a `<select>` sizes to its longest option,
+so `?sponsor=…` scrolled the page sideways at every width until the control got `width: 100%; min-width: 0`.
+
+**Numbers.** 2,960 pages build (no routes added or removed); vendors route 3.87 kB first-load JS on top of the shared 129 kB.
+Index: 310 vendors, $233M, 9 linked (0 verified, 9 inferred, 115 ads), 42 vendors paid during the windows of 284 of 500 ads.
+`scrollWidth` at 390px stays 375 with and without `?medium=digital&evidence=inferred`. `npm test`: no script on this branch.
