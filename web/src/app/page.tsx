@@ -1,15 +1,18 @@
 // OWNER: Frontend A (race table).
 import Link from "next/link";
 import Image from "next/image";
-import { getRaces } from "@/lib/data";
+import { getRaces, getTrails, hasTrails } from "@/lib/data";
 import { date, routes } from "@/lib/format";
 import { DataStatusBanner } from "@/components/ui";
 import { BarLegend, MONEY_COLORS } from "@/components/ui/stacked-bar";
 import { RaceTable } from "@/components/race-table/race-table";
+import { LandingAsk } from "@/components/home/landing-ask";
 
 export default function RaceTablePage() {
   const { races, generated_at } = getRaces();
   const live = races.filter((r) => r.status !== "stub");
+  const askRaces = live.map((r) => ({ race_id: r.race_id, label: r.label }));
+  const askExamples = askRaces[0] && hasTrails(askRaces[0].race_id) ? getTrails(askRaces[0].race_id).examples.slice(0, 4) : [];
   const worst = live.some((r) => r.data_status === "mock") ? "mock" : live.some((r) => r.data_status === "partial") ? "partial" : "real";
   return (
     <div className="landing-page">
@@ -62,6 +65,7 @@ export default function RaceTablePage() {
           {" "}Index generated {date(generated_at.slice(0, 10))}.
         </p>
       </section>
+      <LandingAsk races={askRaces} examples={askExamples} />
     </div>
   );
 }

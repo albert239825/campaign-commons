@@ -1,8 +1,8 @@
 "use client";
 
 import Link from "next/link";
-import { useRouter } from "next/navigation";
-import { useState, type FormEvent } from "react";
+import { useRouter, useSearchParams } from "next/navigation";
+import { useCallback, useEffect, useRef, useState, type FormEvent } from "react";
 import type { TrailSubject } from "@campaign-commons/contracts";
 import { INTENT_LABELS, resolveQuestion, type Resolution } from "@/lib/ask";
 import { routes } from "@/lib/format";
@@ -26,15 +26,19 @@ export function AskBox({
   examples,
   initial = "",
   autoFocus = false,
+  autoSubmit = false,
 }: {
   raceId: string;
   subjects: TrailSubject[];
   examples: string[];
   initial?: string;
   autoFocus?: boolean;
+  autoSubmit?: boolean;
 }) {
   const router = useRouter();
-  const [question, setQuestion] = useState(initial);
+  const searchParams = useSearchParams();
+  const initialQuestion = initial || (autoSubmit ? searchParams.get("q") ?? "" : "");
+  const [question, setQuestion] = useState(initialQuestion);
   const [result, setResult] = useState<Resolution | null>(null);
   const [explore, setExplore] = useState<AskExploreResponse | null>(null);
   const [submittedQuestion, setSubmittedQuestion] = useState("");
@@ -42,12 +46,12 @@ export function AskBox({
   const [graphMode, setGraphMode] = useState(false);
   const diagram = explore?.kind === "explore" ? explore.diagram : null;
 
-  const submit = async (e: FormEvent) => {
-    e.preventDefault();
+  const autoSubmitted = useRef(false);
+  const runSubmit = useCallback(async (raw: string) => {
     if (pending) return;
     setResult(null);
     setExplore(null);
-    const trimmed = question.trim();
+    const trimmed = raw.trim();
     const nextGraphMode = /^@graph(?:\s|$)/i.test(trimmed);
     const graphQuestion = nextGraphMode ? trimmed.replace(/^@graph(?:\s|$)/i, "").trim() : trimmed;
     setSubmittedQuestion(graphQuestion);
@@ -72,11 +76,24 @@ export function AskBox({
         router.push(relatedPageHref(raceId, related));
       }
     }
-  };
+  }, [examples, pending, raceId, router, subjects]);
+
+  useEffect(() => {
+    if (!autoSubmit || autoSubmitted.current) return;
+    if (initialQuestion.trim() === "") return;
+    autoSubmitted.current = true;
+    void runSubmit(initialQuestion);
+  }, [autoSubmit, initialQuestion, runSubmit]);
 
   return (
     <div className="ask-box space-y-3">
-      <form onSubmit={submit} className="ask-box-form flex gap-2">
+      <form
+        onSubmit={(e: FormEvent) => {
+          e.preventDefault();
+          void runSubmit(question);
+        }}
+        className="ask-box-form flex gap-2"
+      >
         <input
           type="text"
           value={question}

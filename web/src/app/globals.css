@@ -308,6 +308,68 @@ body:has(.landing-page) .site-header nav a:hover {
 .landing-races td { padding-block: 22px; }
 .landing-method-note { margin-top: 24px; font-size: 12px; line-height: 1.65; color: #6f6d69; }
 .landing-method-note a { text-decoration: underline; text-underline-offset: 3px; }
+.landing-ask {
+  max-width: 1360px;
+  margin-inline: auto;
+  padding: 60px 40px 76px;
+  border-top: 1px solid var(--landing-rule);
+}
+.landing-ask-heading {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: end;
+  gap: 64px;
+  padding-bottom: 36px;
+}
+.landing-ask-heading h2 {
+  font-size: clamp(32px, calc(26.6667px + 1.4815vw), 48px);
+  font-weight: 400;
+  line-height: 1.1;
+  letter-spacing: -.03em;
+}
+.landing-ask-heading > p {
+  max-width: 420px;
+  color: #6f6d69;
+  font-size: 16px;
+  line-height: 1.6;
+}
+.landing-ask-form { display: flex; gap: 8px; max-width: 720px; }
+.landing-ask-input {
+  flex: 1;
+  border: 1px solid var(--landing-ink);
+  border-radius: 0;
+  background: #fff;
+  padding: 12px 14px;
+  font-size: 15px;
+}
+.landing-ask-input:focus { outline: 2px solid var(--landing-ink); outline-offset: 2px; }
+.landing-ask-select {
+  border: 1px solid var(--landing-ink);
+  border-radius: 0;
+  background: #fff;
+  padding: 12px 14px;
+  font-size: 15px;
+}
+.landing-ask-select:focus { outline: 2px solid var(--landing-ink); outline-offset: 2px; }
+.landing-ask-button {
+  border-radius: 0;
+  background: var(--landing-ink);
+  color: var(--landing-paper);
+  padding: 12px 20px;
+  font-weight: 500;
+}
+.landing-ask-button:hover:not(:disabled) { background: #30302e; }
+.landing-ask-button:disabled { opacity: .45; cursor: not-allowed; }
+.landing-ask-scope { margin-top: 10px; color: #6f6d69; font-size: 12px; }
+.landing-ask-examples {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 24px;
+  margin-top: 18px;
+  padding: 0;
+  list-style: none;
+}
+.landing-ask-chip { border: 0; background: none; color: var(--landing-ink); font: inherit; cursor: pointer; }
 
 .race-table-container { scroll-margin-top: 32px; }
 .race-list-table tr[data-reveal="pending"] { opacity: 0; }
@@ -375,6 +437,10 @@ body:has(.landing-page) a:focus-visible {
   .landing-fade { height: 180px; }
   .landing-races { padding: 48px 24px 40px; margin-inline: 20px; }
   .landing-races-heading { grid-template-columns: 1fr; gap: 24px; padding-bottom: 36px; }
+  .landing-ask { padding: 40px 24px; margin-inline: 20px; }
+  .landing-ask-heading { grid-template-columns: 1fr; gap: 24px; }
+  .landing-ask-form { flex-direction: column; }
+  .landing-ask-button { width: 100%; }
   .landing-table-label { align-items: flex-start; }
   body:has(.landing-page) .site-footer { padding: 28px 24px; margin-inline: 20px; }
 }
