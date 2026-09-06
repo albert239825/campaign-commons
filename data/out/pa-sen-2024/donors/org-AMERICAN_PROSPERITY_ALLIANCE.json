@@ -163,5 +163,58 @@
   ],
   "allocation_note": "Amounts past this donor's own gifts are the reported totals between the two parties, not this donor's share. Once money is pooled in a committee it is fungible, so how much of it reached any spender or ad is not determinable.",
   "truncated": false,
-  "method": "Forward walk over the same money edges as the chain walk (Schedule A receipts and committee-to-committee transfers from FEC bulk data, refunds excluded), starting from AMERICAN PROSPERITY ALLIANCE: the 2 committee(s) it gave to in the 2024 cycle, then the outside spenders in this race that received transfers from those committees (2 spender(s) reached), then each spender's independent expenditures for or against a candidate. Independent expenditures are targeting edges: they move no money to the candidate and are drawn separately. Amounts on money edges are the reported totals between the two parties, not a share of this donor's dollars — once pooled, a donor's money is fungible, so no allocation is made past the first hop. `total_given` is the sum of the first-hop edges shown (itemized receipts reported under this name); `total_in_chains`, used only to rank donors, sums this donor's edges across every spender chain in the race, so the same gift counts once per chain it appears in."
+  "method": "Forward walk over the same money edges as the chain walk (Schedule A receipts and committee-to-committee transfers from FEC bulk data, refunds excluded), starting from AMERICAN PROSPERITY ALLIANCE: the 2 committee(s) it gave to in the 2024 cycle, then the outside spenders in this race that received transfers from those committees (2 spender(s) reached), then each spender's independent expenditures for or against a candidate. Independent expenditures are targeting edges: they move no money to the candidate and are drawn separately. Amounts on money edges are the reported totals between the two parties, not a share of this donor's dollars — once pooled, a donor's money is fungible, so no allocation is made past the first hop. `total_given` is the sum of the first-hop edges shown (itemized receipts reported under this name); `total_in_chains`, used only to rank donors, sums this donor's edges across every spender chain in the race, so the same gift counts once per chain it appears in.",
+  "x_enrichment": {
+    "issue_focus": {
+      "kind": "multi_issue",
+      "issue_ids": [
+        "tax_budget",
+        "healthcare",
+        "labor_trade"
+      ],
+      "description": "The American Prosperity Alliance (“APA”) is a 501(c)(4) social welfare organization whose primary purpose is to advocate for legislative and regulatory policies that advance economic prosperity in America, including reforms to grow the economy, lower national debt, fix healthcare, improve education, prepare the workforce, reduce regulations, create jobs, and promote free markets.",
+      "basis": {
+        "basis": "inferred",
+        "rule": "x_funder_focus",
+        "source_urls": [
+          "https://www.prosperityalliance.org/about"
+        ],
+        "checked_by": null,
+        "checked_at": null
+      },
+      "label": "Machine-tagged from the organization's own website (grok-4.3, 2026-09-06); not part of the record",
+      "quote": "The American Prosperity Alliance (“APA”) is a 501(c)(4) social welfare organization. APA’s primary purpose is to advocate for legislative and regulatory policies that advance economic prosperity in America.",
+      "provenance": {
+        "tagged_by": "xai-grok-4.3-2026-09-06",
+        "tagged_at": "2026-09-06",
+        "model": "grok-4.3",
+        "prompt_version": "classify_funder.v1",
+        "tools": [
+          "web_search"
+        ],
+        "tool_filters": {},
+        "response_id": "198f55b7-16bb-90de-9af0-4970e20cbc9c",
+        "retrieved_at": "2026-09-06T03:52:37+00:00",
+        "citations": [
+          "https://www.prosperityalliance.org/about",
+          "https://www.prosperityalliance.org",
+          "https://www.prosperityalliance.org/policies",
+          "https://impala.digital/public/profiles/88-2451891/overview",
+          "https://www.prosperityalliance.org/news",
+          "https://www.causeiq.com/organizations/american-prosperity-alliance%2C882451891/",
+          "https://americanprosperity.com/",
+          "https://www.opensecrets.org/outside-spending/donor_detail/2022?amp=&id=American+Prosperity+Alliance&super=N&type=O",
+          "https://app.candid.org/profile/15239709/american-prosperity-alliance-88-2451891",
+          "https://pluralistic.net/2022/08/11/rope-a-dope/",
+          "https://www.opensecrets.org/news/2022/08/two-dark-money-groups-bankrolled-pop-up-super-pac-spending-millions-gop-primaries",
+          "https://www.causeiq.com/organizations/american-prosperity-alliance,882451891/"
+        ],
+        "confidence": "high",
+        "review_status": "pending",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "review_note": null
+      }
+    }
+  }
 }
