@@ -147,6 +147,9 @@ export const BasisSchema = z.discriminatedUnion("basis", [
   }),
 ]);
 
+export const ClassBasisSchema = z.enum(["rule", "inferred", "verified"]);
+export type ClassBasis = z.infer<typeof ClassBasisSchema>;
+
 /** Issue tags always travel with the basis that says who tagged them and from what. */
 export const IssueTagsSchema = z.object({
   issue_ids: z.array(IssueIdSchema).min(1).max(3), // first is primary
@@ -324,6 +327,7 @@ export const TransferSchema = z.object({
   first_date: z.string().nullable().optional(), // earliest transaction date; equals `date` for a single transaction
   count: z.number().int().optional(), // underlying transactions rolled into this row
   visibility: VisibilitySchema,
+  class_basis: ClassBasisSchema.optional(),
   transaction_type: z.string().nullable(), // modal FEC transaction type code (15, 15E, 18G, 18K, 24K, ...)
   limit: z.union([z.number(), z.literal("unlimited")]).nullable(), // statutory cap
   source_url: z.string().url(),
@@ -498,6 +502,7 @@ const chainNodeFields = {
   source_url: z.string().url().nullable(),
   contributor_count: z.number().int().optional(), // pruned aggregates: how many counterparties were rolled up
   organization_class: OrganizationClassSchema.optional(), // kind === "organization": how the name was classified
+  class_basis: ClassBasisSchema.optional(),
   // spending-side extras
   medium: MediumSchema.optional(), // kind === "vendor": dominant medium
   thumbnail_path: z.string().nullable().optional(), // kind === "ad": cached creative under web/public
@@ -538,6 +543,7 @@ const chainEdgeFields = {
   date_range: z.tuple([z.string(), z.string()]).nullable(),
   source_url: z.string().url().nullable(),
   support_oppose: SupportOpposeSchema.nullable().optional(), // targeting edges
+  class_basis: ClassBasisSchema.optional(),
 };
 
 /** A placement (vendor → ad) edge is never filed anywhere, so it cannot exist without saying how it was derived. */
@@ -873,6 +879,7 @@ export const TrailMoneyEdgeSchema = z.object({
   to_name: z.string(),
   amount: z.number(),
   visibility: VisibilitySchema, // of `from`: whether its own funding is on file
+  class_basis: ClassBasisSchema.optional(),
   depth: z.number().int().min(1), // 1 = gave directly to the subject committee; 2 = gave to a depth-1 funder; ...
   contributor_count: z.number().int().optional(), // aggregate "other contributors" nodes
   source_url: z.string().url(),
@@ -922,6 +929,7 @@ export const TrailTerminusSchema = z.object({
   name: z.string(),
   kind: EntityKindSchema,
   organization_class: OrganizationClassSchema.optional(),
+  class_basis: ClassBasisSchema.optional(),
   visibility: VisibilitySchema,
   gave_to_id: z.string(),
   gave_to_name: z.string(),

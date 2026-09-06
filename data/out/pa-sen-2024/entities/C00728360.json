@@ -250,7 +250,8 @@
       "visibility": "dark",
       "transaction_type": "10",
       "limit": null,
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00728360&two_year_transaction_period=2024&contributor_name=LIVING+UNITED+FOR+CHANGE+IN+ARIZONA+-LUCHA"
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00728360&two_year_transaction_period=2024&contributor_name=LIVING+UNITED+FOR+CHANGE+IN+ARIZONA+-LUCHA",
+      "class_basis": "inferred"
     },
     {
       "transfer_id": "C00728360-in-ind:DELUCIA_WILLIAM|09880",
@@ -325,7 +326,8 @@
       "visibility": "dark",
       "transaction_type": "10",
       "limit": null,
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00728360&two_year_transaction_period=2024&contributor_name=BUELOW+BAMBINI+LLC"
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00728360&two_year_transaction_period=2024&contributor_name=BUELOW+BAMBINI+LLC",
+      "class_basis": "rule"
     },
     {
       "transfer_id": "C00728360-in-ind:COFRIN_MARY_ANN|02842",

@@ -85,7 +85,8 @@
       "visibility": "dark",
       "transaction_type": "10",
       "limit": null,
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00519413&two_year_transaction_period=2024&contributor_name=GREENLEAF+TRUST"
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00519413&two_year_transaction_period=2024&contributor_name=GREENLEAF+TRUST",
+      "class_basis": "rule"
     },
     {
       "transfer_id": "C00519413-in-ind:RITCHIE_ALIX_L|07095",
@@ -400,7 +401,8 @@
       "visibility": "dark",
       "transaction_type": "10",
       "limit": null,
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00519413&two_year_transaction_period=2024&contributor_name=CHRISTY+WEBBER+LANDSCAPES"
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00519413&two_year_transaction_period=2024&contributor_name=CHRISTY+WEBBER+LANDSCAPES",
+      "class_basis": "rule"
     }
   ],
   "outflows": [

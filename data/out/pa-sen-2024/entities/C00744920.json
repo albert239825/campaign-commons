@@ -40,7 +40,8 @@
       "visibility": "dark",
       "transaction_type": "10",
       "limit": null,
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00744920&two_year_transaction_period=2024&contributor_name=AMERICA+VOTES"
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00744920&two_year_transaction_period=2024&contributor_name=AMERICA+VOTES",
+      "class_basis": "rule"
     },
     {
       "transfer_id": "C00744920-in-org:PIVOTAL_VENTURES",
@@ -55,7 +56,8 @@
       "visibility": "disclosed",
       "transaction_type": "10",
       "limit": null,
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00744920&two_year_transaction_period=2024&contributor_name=PIVOTAL+VENTURES"
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00744920&two_year_transaction_period=2024&contributor_name=PIVOTAL+VENTURES",
+      "class_basis": "rule"
     },
     {
       "transfer_id": "C00744920-in-C00492520",
@@ -100,7 +102,8 @@
       "visibility": "dark",
       "transaction_type": "10",
       "limit": null,
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00744920&two_year_transaction_period=2024&contributor_name=GLOBAL+IMPACT+SOCIAL+WELFARE+FUND"
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00744920&two_year_transaction_period=2024&contributor_name=GLOBAL+IMPACT+SOCIAL+WELFARE+FUND",
+      "class_basis": "rule"
     },
     {
       "transfer_id": "C00744920-in-org:REBUILD_USA",
@@ -115,7 +118,8 @@
       "visibility": "dark",
       "transaction_type": "10",
       "limit": null,
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00744920&two_year_transaction_period=2024&contributor_name=REBUILD+USA"
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00744920&two_year_transaction_period=2024&contributor_name=REBUILD+USA",
+      "class_basis": "rule"
     },
     {
       "transfer_id": "C00744920-in-org:OHIO_PROGRESSIVE_COLLABORATIVE",
@@ -130,7 +134,8 @@
       "visibility": "dark",
       "transaction_type": "10",
       "limit": null,
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00744920&two_year_transaction_period=2024&contributor_name=OHIO+PROGRESSIVE+COLLABORATIVE"
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00744920&two_year_transaction_period=2024&contributor_name=OHIO+PROGRESSIVE+COLLABORATIVE",
+      "class_basis": "inferred"
     },
     {
       "transfer_id": "C00744920-in-org:FORWARD_ACTION_FUND",
@@ -145,7 +150,8 @@
       "visibility": "dark",
       "transaction_type": "10",
       "limit": null,
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00744920&two_year_transaction_period=2024&contributor_name=FORWARD+ACTION+FUND"
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00744920&two_year_transaction_period=2024&contributor_name=FORWARD+ACTION+FUND",
+      "class_basis": "rule"
     },
     {
       "transfer_id": "C00744920-in-org:SIXTEEN_THIRTY_FUND",
@@ -160,7 +166,8 @@
       "visibility": "dark",
       "transaction_type": "10",
       "limit": null,
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00744920&two_year_transaction_period=2024&contributor_name=SIXTEEN+THIRTY+FUND"
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00744920&two_year_transaction_period=2024&contributor_name=SIXTEEN+THIRTY+FUND",
+      "class_basis": "rule"
     },
     {
       "transfer_id": "C00744920-in-C00882100",
@@ -205,7 +212,8 @@
       "visibility": "dark",
       "transaction_type": "10",
       "limit": null,
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00744920&two_year_transaction_period=2024&contributor_name=MAP+USA"
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00744920&two_year_transaction_period=2024&contributor_name=MAP+USA",
+      "class_basis": "inferred"
     },
     {
       "transfer_id": "C00744920-in-C00697755",
@@ -265,7 +273,8 @@
       "visibility": "dark",
       "transaction_type": "10",
       "limit": null,
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00744920&two_year_transaction_period=2024&contributor_name=CLEAN+VIRGINIA+FUND"
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00744920&two_year_transaction_period=2024&contributor_name=CLEAN+VIRGINIA+FUND",
+      "class_basis": "rule"
     },
     {
       "transfer_id": "C00744920-in-C00344531",
@@ -355,7 +364,8 @@
       "visibility": "dark",
       "transaction_type": "10",
       "limit": null,
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00744920&two_year_transaction_period=2024&contributor_name=GEORGIA+INVESTOR+ACTION+FUND"
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00744920&two_year_transaction_period=2024&contributor_name=GEORGIA+INVESTOR+ACTION+FUND",
+      "class_basis": "rule"
     },
     {
       "transfer_id": "C00744920-in-ind:KERN_DEBORAH|53217",
@@ -824,41 +834,6 @@
       "first_date": "2024-08-28",
       "last_date": "2024-10-08",
       "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00744920&payee_name=THE+PIVOT+GROUP%2C+INC."
-    }
-  ],
-  "issue_focus": {
-    "kind": "multi_issue",
-    "issue_ids": [
-      "healthcare",
-      "tax_budget"
-    ],
-    "description": "The Campaign for a Family Friendly Economy PAC 'wins elections by talking to voters in battleground states ... about where candidates stand on policies that lower costs, especially the cost of caregiving' — child care, elder care, paid leave and health care. Caregiving costs have no frozen id; healthcare is the closest, tax_budget stands in for 'lower costs'.",
-    "basis": {
-      "basis": "verified",
-      "rule": "Self-described focus from the organisation's own material; says what the org is for, not what its dollars bought",
-      "source_urls": [
-        "https://www.familyfriendlyeconomy.org/",
-        "https://www.fec.gov/data/committee/C00744920/"
-      ],
-      "checked_by": "devin-block2-issues",
-      "checked_at": "2026-09-05"
-    }
-  },
-  "issue_positions": [
-    {
-      "issue_id": "healthcare",
-      "direction": 2,
-      "quote": "We should all be able to afford the health care and prescription drugs we need to live healthy, fulfilling lives.",
-      "source_url": "https://www.familyfriendlyeconomy.org/",
-      "basis": {
-        "basis": "inferred",
-        "rule": "Stated position read from the organisation's own site by a language model and kept only where the quote appears verbatim on the fetched page; says what the org says, not what its dollars bought",
-        "source_urls": [
-          "https://www.familyfriendlyeconomy.org/"
-        ],
-        "checked_by": "grok-4.5",
-        "checked_at": "2026-09-06"
-      }
     }
   ]
 }

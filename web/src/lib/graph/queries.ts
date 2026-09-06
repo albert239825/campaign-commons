@@ -52,11 +52,43 @@ export const MAX_FACTS = 40;
 
 const NODE = "{id: $n.id, name: $n.name, kind: $n.kind, href: $n.href}";
 const node = (v: string) => NODE.replaceAll("$n", v);
-const edge = (a: string, r: string, b: string, path = "null") =>
+export const edge = (a: string, r: string, b: string, path = "null") =>
   `{from: ${node(a)}, to: ${node(b)}, rel: type(${r}), amount: ${r}.amount, count: ${r}.count, support_oppose: ${r}.support_oppose,
-    visibility: ${r}.visibility, first_date: ${r}.first_date, last_date: ${r}.last_date, source_url: ${r}.source_url, path: ${path}}`;
+    visibility: ${r}.visibility, class_basis: ${r}.class_basis, first_date: ${r}.first_date, last_date: ${r}.last_date, source_url: ${r}.source_url, path: ${path}}`;
 
 const E = `:${ENTITY}`;
+
+/** Fixed graph-only completion for @graph: carry drawn committees through targeting and campaign ownership. */
+export const COMPLETION = `
+CALL {
+  MATCH (c${E} {race_id: $race})-[t:${REL.TARGETED}]->(cand${E} {race_id: $race})
+  WHERE c.id IN $ids AND t.amount > 0 AND (size($cands) = 0 OR cand.id IN $cands)
+  WITH c, t, cand ORDER BY t.amount DESC LIMIT 40
+  RETURN ${edge("c", "t", "cand")} AS edge
+}
+RETURN edge
+UNION ALL
+CALL {
+  MATCH (c${E} {race_id: $race})-[k:${REL.CAMPAIGN_OF}]->(cand${E} {race_id: $race})
+  WHERE c.id IN $ids AND (size($cands) = 0 OR cand.id IN $cands)
+  RETURN ${edge("c", "k", "cand")} AS edge
+}
+RETURN edge
+UNION ALL
+CALL {
+  MATCH (c${E} {race_id: $race})-[g:${REL.GAVE}]->(cc${E} {race_id: $race})-[k:${REL.CAMPAIGN_OF}]->(cand${E} {race_id: $race})
+  WHERE c.id IN $ids AND g.amount > 0 AND (size($cands) = 0 OR cand.id IN $cands)
+  WITH c, g, cc ORDER BY g.amount DESC LIMIT 40
+  RETURN ${edge("c", "g", "cc")} AS edge
+}
+RETURN edge
+UNION ALL
+CALL {
+  MATCH (c${E} {race_id: $race})-[g:${REL.GAVE}]->(cc${E} {race_id: $race})-[k:${REL.CAMPAIGN_OF}]->(cand${E} {race_id: $race})
+  WHERE c.id IN $ids AND g.amount > 0 AND (size($cands) = 0 OR cand.id IN $cands)
+  RETURN ${edge("cc", "k", "cand")} AS edge
+}
+RETURN edge`;
 
 /** The statements each operation runs. `$race`, `$a`, `$b` (id lists) are the only parameters. */
 export const CYPHER: Record<GraphOp, readonly string[]> = {

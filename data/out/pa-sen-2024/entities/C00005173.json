@@ -23,8 +23,8 @@
     "independent_expenditures": 0,
     "from_individuals": 193327.99,
     "from_committees": 4694056.39,
-    "from_organizations": 0.0,
-    "from_undisclosed": 25000.0
+    "from_organizations": 25000.0,
+    "from_undisclosed": 0.0
   },
   "inflows": [
     {
@@ -127,10 +127,11 @@
       "date": "2024-08-02",
       "first_date": "2024-08-02",
       "count": 1,
-      "visibility": "dark",
+      "visibility": "disclosed",
       "transaction_type": "11",
       "limit": null,
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00005173&two_year_transaction_period=2024&contributor_name=POARCH+BAND+OF+CREEK+INDIANS"
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00005173&two_year_transaction_period=2024&contributor_name=POARCH+BAND+OF+CREEK+INDIANS",
+      "class_basis": "inferred"
     },
     {
       "transfer_id": "C00005173-in-C00077305",

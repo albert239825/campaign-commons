@@ -36,6 +36,7 @@ export const GraphFactSchema = z.object({
   count: z.number().nullable(),
   support_oppose: z.enum(["S", "O"]).nullable(),
   visibility: z.enum(["disclosed", "inferable", "dark"]),
+  class_basis: z.enum(["rule", "inferred", "verified"]).nullable().optional(),
   first_date: z.string().nullable(),
   last_date: z.string().nullable(),
   source_url: z.string().nullable(),
@@ -80,7 +81,13 @@ export function factSentence(f: GraphFact): string {
   const b = f.to.name;
   switch (f.rel) {
     case "GAVE":
-      return `${a} gave ${dollars(f.amount)} to ${b}${f.count && f.count > 1 ? ` (${f.count} contributions)` : ""}${f.visibility === "disclosed" ? "" : ` [${f.visibility}]`}.`;
+      const suffix =
+        f.class_basis === "inferred" && (f.from.kind === "organization" || f.to.kind === "organization")
+          ? ` [${f.visibility} — model-read, unverified]`
+          : f.visibility === "disclosed"
+            ? ""
+            : ` [${f.visibility}]`;
+      return `${a} gave ${dollars(f.amount)} to ${b}${f.count && f.count > 1 ? ` (${f.count} contributions)` : ""}${suffix}.`;
     case "PAID":
       return `${a} paid ${dollars(f.amount)} to ${b}.`;
     case "PLACED":

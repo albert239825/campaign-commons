@@ -1431,38 +1431,5 @@
       "last_date": "2024-09-05",
       "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00053553&payee_name=CYWB+OPERATOR+LLC"
     }
-  ],
-  "issue_focus": {
-    "kind": "single_issue",
-    "issue_ids": [
-      "guns"
-    ],
-    "description": "The NRA Political Victory Fund 'is NRA's political action committee' and 'ranks political candidates - irrespective of party affiliation - based on voting records, public statements and their responses to an NRA-PVF questionnaire'; the NRA's stated premise is that 'gun control' schemes are an infringement on the Second Amendment.",
-    "basis": {
-      "basis": "verified",
-      "rule": "Self-described focus from the organisation's own material; says what the org is for, not what its dollars bought",
-      "source_urls": [
-        "https://www.nrapvf.org/about-pvf.aspx"
-      ],
-      "checked_by": "devin-block2-issues",
-      "checked_at": "2026-09-05"
-    }
-  },
-  "issue_positions": [
-    {
-      "issue_id": "guns",
-      "direction": -2,
-      "quote": "NRA relies on a very simple premise: when provided with the facts, the nation's elected officials will recognize that \"gun control\" schemes are an infringement on the Second Amendment and a proven failure in fighting crime.",
-      "source_url": "https://www.nrapvf.org/about-pvf.aspx",
-      "basis": {
-        "basis": "inferred",
-        "rule": "Stated position read from the organisation's own site by a language model and kept only where the quote appears verbatim on the fetched page; says what the org says, not what its dollars bought",
-        "source_urls": [
-          "https://www.nrapvf.org/about-pvf.aspx"
-        ],
-        "checked_by": "grok-4.5",
-        "checked_at": "2026-09-06"
-      }
-    }
   ]
 }

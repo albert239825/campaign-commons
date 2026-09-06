@@ -40,7 +40,8 @@
       "visibility": "dark",
       "transaction_type": "10",
       "limit": "unlimited",
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00688655&two_year_transaction_period=2024&contributor_name=EVERYTOWN+FOR+GUN+SAFETY+ACTION+FUND+INC"
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00688655&two_year_transaction_period=2024&contributor_name=EVERYTOWN+FOR+GUN+SAFETY+ACTION+FUND+INC",
+      "class_basis": "rule"
     },
     {
       "transfer_id": "C00688655-in-C00878009",
@@ -892,40 +893,6 @@
       "first_date": "2024-09-05",
       "last_date": "2024-10-30",
       "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00688655&payee_name=HUBDIALER+LLC"
-    }
-  ],
-  "issue_focus": {
-    "kind": "single_issue",
-    "issue_ids": [
-      "guns"
-    ],
-    "description": "Everytown for Gun Safety describes itself as 'the largest gun violence prevention organization in America' building a movement to 'register voters', 'elect gun safety candidates' and pass 'evidence-based solutions' to end gun violence; the Victory Fund is its federal super PAC.",
-    "basis": {
-      "basis": "verified",
-      "rule": "Self-described focus from the organisation's own material; says what the org is for, not what its dollars bought",
-      "source_urls": [
-        "https://www.everytown.org/about-everytown/",
-        "https://www.everytown.org/who-we-are/everytown-for-gun-safety-victory-fund/"
-      ],
-      "checked_by": "devin-block2-issues",
-      "checked_at": "2026-09-05"
-    }
-  },
-  "issue_positions": [
-    {
-      "issue_id": "guns",
-      "direction": 2,
-      "quote": "Lawmakers must act to require background checks on all gun sales, support Extreme Risk laws that provide a process to temporarily remove guns from people showing warning signs, keep guns out of the hands of domestic abusers , and restrict assault weapons and high-capacity magazines",
-      "source_url": "https://www.everytown.org/issues/mass-shootings/",
-      "basis": {
-        "basis": "inferred",
-        "rule": "Stated position read from the organisation's own site by a language model and kept only where the quote appears verbatim on the fetched page; says what the org says, not what its dollars bought",
-        "source_urls": [
-          "https://www.everytown.org/issues/mass-shootings/"
-        ],
-        "checked_by": "grok-4.5",
-        "checked_at": "2026-09-06"
-      }
     }
   ]
 }

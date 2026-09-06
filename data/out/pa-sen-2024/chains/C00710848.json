@@ -2,7 +2,7 @@
   "root_entity_id": "C00710848",
   "root_name": "DMFI PAC",
   "race_id": "pa-sen-2024",
-  "generated_at": "2026-09-05T19:53:48+00:00",
+  "generated_at": "2026-09-06T05:02:45+00:00",
   "data_status": "real",
   "nodes": [
     {
@@ -28,7 +28,8 @@
       "is_terminus": true,
       "terminus_reason": "dark",
       "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00710848&two_year_transaction_period=2024&contributor_name=DEMOCRATIC+MAJORITY+FOR+ISRAEL",
-      "organization_class": "nonprofit"
+      "organization_class": "nonprofit",
+      "class_basis": "rule"
     },
     {
       "id": "ind:SIMON_DEBORAH|46032",
@@ -417,7 +418,8 @@
         "2023-12-22",
         "2024-10-16"
       ],
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00710848&two_year_transaction_period=2024&contributor_name=DEMOCRATIC+MAJORITY+FOR+ISRAEL"
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00710848&two_year_transaction_period=2024&contributor_name=DEMOCRATIC+MAJORITY+FOR+ISRAEL",
+      "class_basis": "rule"
     },
     {
       "from": "ind:SIMON_DEBORAH|46032",

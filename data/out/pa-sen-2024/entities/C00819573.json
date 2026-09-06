@@ -23,8 +23,8 @@
     "independent_expenditures": 0,
     "from_individuals": 828324.0,
     "from_committees": 29550.0,
-    "from_organizations": 5500.0,
-    "from_undisclosed": 22000.0
+    "from_organizations": 17500.0,
+    "from_undisclosed": 10000.0
   },
   "inflows": [
     {
@@ -262,10 +262,11 @@
       "date": "2023-07-30",
       "first_date": "2023-07-30",
       "count": 1,
-      "visibility": "dark",
+      "visibility": "disclosed",
       "transaction_type": "15",
       "limit": null,
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00819573&two_year_transaction_period=2024&contributor_name=FAGUNDES%2C+FAGUNDES%2C+FAGUNDES"
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00819573&two_year_transaction_period=2024&contributor_name=FAGUNDES%2C+FAGUNDES%2C+FAGUNDES",
+      "class_basis": "inferred"
     },
     {
       "transfer_id": "C00819573-in-ind:GALLO_THOMAS|95358",

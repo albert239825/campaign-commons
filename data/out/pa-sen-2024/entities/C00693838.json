@@ -23,8 +23,8 @@
     "independent_expenditures": 19943506.23,
     "from_individuals": 16424400.0,
     "from_committees": 2000000.0,
-    "from_organizations": 777500.0,
-    "from_undisclosed": 1008000.0
+    "from_organizations": 877500.0,
+    "from_undisclosed": 908000.0
   },
   "inflows": [
     {
@@ -115,7 +115,8 @@
       "visibility": "dark",
       "transaction_type": "10",
       "limit": "unlimited",
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00693838&two_year_transaction_period=2024&contributor_name=CANNAE+HOLDINGS%2C+LLC"
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00693838&two_year_transaction_period=2024&contributor_name=CANNAE+HOLDINGS%2C+LLC",
+      "class_basis": "rule"
     },
     {
       "transfer_id": "C00693838-in-ind:REES-JONES_TREVOR_D|75225",
@@ -145,7 +146,8 @@
       "visibility": "disclosed",
       "transaction_type": "10",
       "limit": "unlimited",
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00693838&two_year_transaction_period=2024&contributor_name=FIDELITY+NATIONAL+FINANCIAL%2C+INC."
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00693838&two_year_transaction_period=2024&contributor_name=FIDELITY+NATIONAL+FINANCIAL%2C+INC.",
+      "class_basis": "rule"
     },
     {
       "transfer_id": "C00693838-in-ind:DUCHOSSOIS_CRAIG|60606",
@@ -235,7 +237,8 @@
       "visibility": "dark",
       "transaction_type": "10",
       "limit": "unlimited",
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00693838&two_year_transaction_period=2024&contributor_name=ARDLEIGH+IMPACT+CORP"
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00693838&two_year_transaction_period=2024&contributor_name=ARDLEIGH+IMPACT+CORP",
+      "class_basis": "rule"
     },
     {
       "transfer_id": "C00693838-in-org:SENATE_WORKING_GROUP",
@@ -250,7 +253,8 @@
       "visibility": "disclosed",
       "transaction_type": "10",
       "limit": "unlimited",
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00693838&two_year_transaction_period=2024&contributor_name=SENATE+WORKING+GROUP"
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00693838&two_year_transaction_period=2024&contributor_name=SENATE+WORKING+GROUP",
+      "class_basis": "rule"
     },
     {
       "transfer_id": "C00693838-in-ind:MIZEL_LARRY_A|80237",
@@ -280,7 +284,8 @@
       "visibility": "disclosed",
       "transaction_type": "10",
       "limit": "unlimited",
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00693838&two_year_transaction_period=2024&contributor_name=ROCKY+MOUNTAIN+SUPPORT+SERVICES+INC"
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00693838&two_year_transaction_period=2024&contributor_name=ROCKY+MOUNTAIN+SUPPORT+SERVICES+INC",
+      "class_basis": "rule"
     },
     {
       "transfer_id": "C00693838-in-org:THE_SCOTTS_COMPANY_LLC",
@@ -295,7 +300,8 @@
       "visibility": "dark",
       "transaction_type": "10",
       "limit": "unlimited",
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00693838&two_year_transaction_period=2024&contributor_name=THE+SCOTTS+COMPANY+LLC"
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00693838&two_year_transaction_period=2024&contributor_name=THE+SCOTTS+COMPANY+LLC",
+      "class_basis": "rule"
     },
     {
       "transfer_id": "C00693838-in-ind:STEPHENS_WARREN_A|72201",
@@ -352,10 +358,11 @@
       "date": "2024-08-09",
       "first_date": "2024-08-09",
       "count": 1,
-      "visibility": "dark",
+      "visibility": "disclosed",
       "transaction_type": "10",
       "limit": "unlimited",
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00693838&two_year_transaction_period=2024&contributor_name=FIDELITY+AND+GUARANTY+LIFE+BUSINESS"
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00693838&two_year_transaction_period=2024&contributor_name=FIDELITY+AND+GUARANTY+LIFE+BUSINESS",
+      "class_basis": "inferred"
     },
     {
       "transfer_id": "C00693838-in-org:GOOD_GROWTH_ALLIANCE",
@@ -370,7 +377,8 @@
       "visibility": "dark",
       "transaction_type": "10",
       "limit": "unlimited",
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00693838&two_year_transaction_period=2024&contributor_name=GOOD+GROWTH+ALLIANCE"
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00693838&two_year_transaction_period=2024&contributor_name=GOOD+GROWTH+ALLIANCE",
+      "class_basis": "rule"
     },
     {
       "transfer_id": "C00693838-in-ind:WARREN_KELCY|75225",

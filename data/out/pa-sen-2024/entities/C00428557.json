@@ -55,7 +55,8 @@
       "visibility": "dark",
       "transaction_type": "10",
       "limit": null,
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00428557&two_year_transaction_period=2024&contributor_name=JORDAN%2FDELANEY+FAMILY+TRUST"
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00428557&two_year_transaction_period=2024&contributor_name=JORDAN%2FDELANEY+FAMILY+TRUST",
+      "class_basis": "rule"
     },
     {
       "transfer_id": "C00428557-in-C00489815",
@@ -100,7 +101,8 @@
       "visibility": "dark",
       "transaction_type": "10",
       "limit": null,
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00428557&two_year_transaction_period=2024&contributor_name=PROPEL+CAPITAL+NETWORK"
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00428557&two_year_transaction_period=2024&contributor_name=PROPEL+CAPITAL+NETWORK",
+      "class_basis": "rule"
     },
     {
       "transfer_id": "C00428557-in-org:AMERICA_VOTES",
@@ -115,7 +117,8 @@
       "visibility": "dark",
       "transaction_type": "10",
       "limit": null,
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00428557&two_year_transaction_period=2024&contributor_name=AMERICA+VOTES"
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00428557&two_year_transaction_period=2024&contributor_name=AMERICA+VOTES",
+      "class_basis": "rule"
     },
     {
       "transfer_id": "C00428557-in-org:COLOROFCHANGE.ORG",
@@ -130,7 +133,8 @@
       "visibility": "dark",
       "transaction_type": "10",
       "limit": null,
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00428557&two_year_transaction_period=2024&contributor_name=COLOROFCHANGE.ORG"
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00428557&two_year_transaction_period=2024&contributor_name=COLOROFCHANGE.ORG",
+      "class_basis": "inferred"
     },
     {
       "transfer_id": "C00428557-in-C00728360",
@@ -235,7 +239,8 @@
       "visibility": "dark",
       "transaction_type": "10",
       "limit": null,
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00428557&two_year_transaction_period=2024&contributor_name=NANCY+MEYER+REVOCABLE+TRUST"
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00428557&two_year_transaction_period=2024&contributor_name=NANCY+MEYER+REVOCABLE+TRUST",
+      "class_basis": "rule"
     },
     {
       "transfer_id": "C00428557-in-ind:THOMPSON_MARK|98296",
@@ -385,7 +390,8 @@
       "visibility": "dark",
       "transaction_type": "20Y",
       "limit": null,
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00428557&two_year_transaction_period=2024&contributor_name=BILL.COM"
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00428557&two_year_transaction_period=2024&contributor_name=BILL.COM",
+      "class_basis": "rule"
     },
     {
       "transfer_id": "C00428557-in-ind:ABERCROMBIE_PARKER|91101",

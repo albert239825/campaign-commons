@@ -23,8 +23,8 @@
     "independent_expenditures": 503317964.13,
     "from_individuals": 0.0,
     "from_committees": 5000.0,
-    "from_organizations": 2466658.0,
-    "from_undisclosed": 300728775.0
+    "from_organizations": 6370084.0,
+    "from_undisclosed": 296825349.0
   },
   "inflows": [
     {
@@ -40,7 +40,8 @@
       "visibility": "dark",
       "transaction_type": "10",
       "limit": null,
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00669259&two_year_transaction_period=2024&contributor_name=FUTURE+FORWARD+USA+ACTION"
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00669259&two_year_transaction_period=2024&contributor_name=FUTURE+FORWARD+USA+ACTION",
+      "class_basis": "rule"
     },
     {
       "transfer_id": "C00669259-in-ind:MOSKOVITZ_DUSTIN_A|94126",
@@ -130,7 +131,8 @@
       "visibility": "dark",
       "transaction_type": "10",
       "limit": null,
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00669259&two_year_transaction_period=2024&contributor_name=EVIDENCE+FOR+IMPACT"
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00669259&two_year_transaction_period=2024&contributor_name=EVIDENCE+FOR+IMPACT",
+      "class_basis": "rule"
     },
     {
       "transfer_id": "C00669259-in-C00693382",
@@ -235,7 +237,8 @@
       "visibility": "dark",
       "transaction_type": "10",
       "limit": null,
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00669259&two_year_transaction_period=2024&contributor_name=AMERICA+VOTES"
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00669259&two_year_transaction_period=2024&contributor_name=AMERICA+VOTES",
+      "class_basis": "rule"
     },
     {
       "transfer_id": "C00669259-in-C00707844",
@@ -385,7 +388,8 @@
       "visibility": "dark",
       "transaction_type": "10",
       "limit": null,
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00669259&two_year_transaction_period=2024&contributor_name=PACIFIC+ENVIRONMENTAL+COALITION"
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00669259&two_year_transaction_period=2024&contributor_name=PACIFIC+ENVIRONMENTAL+COALITION",
+      "class_basis": "rule"
     },
     {
       "transfer_id": "C00669259-in-org:SIXTEEN_THIRTY_FUND",
@@ -400,7 +404,8 @@
       "visibility": "dark",
       "transaction_type": "10",
       "limit": null,
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00669259&two_year_transaction_period=2024&contributor_name=SIXTEEN+THIRTY+FUND"
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00669259&two_year_transaction_period=2024&contributor_name=SIXTEEN+THIRTY+FUND",
+      "class_basis": "rule"
     }
   ],
   "outflows": [

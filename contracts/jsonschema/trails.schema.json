@@ -472,6 +472,14 @@
                                   "dark"
                                 ]
                               },
+                              "class_basis": {
+                                "type": "string",
+                                "enum": [
+                                  "rule",
+                                  "inferred",
+                                  "verified"
+                                ]
+                              },
                               "depth": {
                                 "type": "integer",
                                 "minimum": 1
@@ -774,6 +782,14 @@
                             "dark"
                           ]
                         },
+                        "class_basis": {
+                          "type": "string",
+                          "enum": [
+                            "rule",
+                            "inferred",
+                            "verified"
+                          ]
+                        },
                         "depth": {
                           "type": "integer",
                           "minimum": 1
@@ -872,6 +888,14 @@
                             "dark"
                           ]
                         },
+                        "class_basis": {
+                          "type": "string",
+                          "enum": [
+                            "rule",
+                            "inferred",
+                            "verified"
+                          ]
+                        },
                         "depth": {
                           "type": "integer",
                           "minimum": 1
@@ -929,6 +953,14 @@
                             "llc",
                             "nonprofit",
                             "unknown"
+                          ]
+                        },
+                        "class_basis": {
+                          "type": "string",
+                          "enum": [
+                            "rule",
+                            "inferred",
+                            "verified"
                           ]
                         },
                         "visibility": {

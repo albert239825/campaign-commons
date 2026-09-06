@@ -23,8 +23,8 @@
     "independent_expenditures": 0,
     "from_individuals": 28500.0,
     "from_committees": 258000.0,
-    "from_organizations": 10000.0,
-    "from_undisclosed": 42800.0
+    "from_organizations": 47000.0,
+    "from_undisclosed": 5800.0
   },
   "inflows": [
     {
@@ -307,10 +307,11 @@
       "date": "2024-02-22",
       "first_date": "2023-08-31",
       "count": 2,
-      "visibility": "dark",
+      "visibility": "disclosed",
       "transaction_type": "11",
       "limit": null,
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00569871&two_year_transaction_period=2024&contributor_name=MORONGO+BAND+OF+MISSION+INDIANS"
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00569871&two_year_transaction_period=2024&contributor_name=MORONGO+BAND+OF+MISSION+INDIANS",
+      "class_basis": "inferred"
     },
     {
       "transfer_id": "C00569871-in-org:FEDERATED_INDIANS_OF_GRATON_RANCHERIA",
@@ -325,7 +326,8 @@
       "visibility": "disclosed",
       "transaction_type": "11",
       "limit": null,
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00569871&two_year_transaction_period=2024&contributor_name=FEDERATED+INDIANS+OF+GRATON+RANCHERIA"
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00569871&two_year_transaction_period=2024&contributor_name=FEDERATED+INDIANS+OF+GRATON+RANCHERIA",
+      "class_basis": "rule"
     },
     {
       "transfer_id": "C00569871-in-org:POARCH_BAND_OF_CREEK_INDIANS",
@@ -337,10 +339,11 @@
       "date": "2024-04-26",
       "first_date": "2023-05-11",
       "count": 2,
-      "visibility": "dark",
+      "visibility": "disclosed",
       "transaction_type": "11",
       "limit": null,
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00569871&two_year_transaction_period=2024&contributor_name=POARCH+BAND+OF+CREEK+INDIANS"
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00569871&two_year_transaction_period=2024&contributor_name=POARCH+BAND+OF+CREEK+INDIANS",
+      "class_basis": "inferred"
     },
     {
       "transfer_id": "C00569871-in-org:CHEROKEE_NATION",
@@ -355,7 +358,8 @@
       "visibility": "dark",
       "transaction_type": "11",
       "limit": null,
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00569871&two_year_transaction_period=2024&contributor_name=CHEROKEE+NATION"
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00569871&two_year_transaction_period=2024&contributor_name=CHEROKEE+NATION",
+      "class_basis": "rule"
     },
     {
       "transfer_id": "C00569871-in-C00144766",
