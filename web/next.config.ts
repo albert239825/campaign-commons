@@ -10,9 +10,14 @@ const nextConfig: NextConfig = {
     "/**": ["../data/out/**/*"],
   },
   // contracts is symlinked (file:../contracts) and has no node_modules of its own;
-  // resolve its imports (zod) through web/node_modules instead of the realpath
+  // let its imports (zod) fall back to web/node_modules. Keep symlink resolution on
+  // so webpack sees contracts at its real path (not node_modules/, which the build
+  // cache treats as immutable and would serve stale).
   webpack: (config) => {
-    config.resolve.symlinks = false;
+    config.resolve.modules = [
+      ...(config.resolve.modules ?? ["node_modules"]),
+      path.join(__dirname, "node_modules"),
+    ];
     return config;
   },
 };
