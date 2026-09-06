@@ -51,7 +51,7 @@ export function kindLabel(n: ViewNode): string {
   }
 }
 
-function BasisLine({ basis, prefix }: { basis: BasisWire; prefix?: string }) {
+export function BasisLine({ basis, prefix }: { basis: BasisWire; prefix?: string }) {
   const [kind, rule, urls] = basis;
   return (
     <div className="text-xs text-neutral-700">

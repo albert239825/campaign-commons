@@ -518,6 +518,40 @@ nullable when the ad has no dates), which the PA data does not yet exercise (0 v
 611 → 728 across 280 → 284 ads (mixed-media vendors' digital portions now shown); links unchanged at 115 inferred, one rule
 text corrected. 171 pipeline tests.
 
+## 2026-09-06 ~06:30 — Block 3 child C: the chain page after the Sep 5 critique (no zoom/pan)
+
+**What changed.** Five of the six chain-page items from the critique (G1–G5; G6 zoom/pan is child G). The **root** is now
+unmistakable: a 3px ink outline with a soft halo, its name in a filled ink chip, a "YOU ARE HERE · THE SPENDER" caption, and
+a matching legend entry — page ink, not a party or a visibility colour. **Labels fit**: `chain/label.ts` estimates text width
+from a glyph-advance table (Arial/Helvetica metrics, 4% safety) so `layout.ts` and the SVG agree without measuring in the
+browser; a name that cannot share one row with its amount wraps to two rows (fixed-height out-side boxes grow from 28 to
+42px) and is ellipsised after that, with the full name in the accessible label, the tooltip and the panel. "Greater New
+York Hospital Association Management Corporation" reads as two rows plus an ellipsis; the 12 longest labels in `chains/*.json`
+are all `Other contributors to …` folds (up to 245 characters) and now truncate cleanly instead of running out of the box.
+**Misc ads** (`54 more ads` on WINSENATE) sort to the foot of the ads column with a 12px gap, in the smaller grey face.
+**Edge table** starts folded behind "Show all 487 edges, each with its record"; rows carry `id="edge-<i>"` where `i` is
+the edge's position in `chain.edges`, the diagram wire carries the same index as a ninth tuple slot (additive; `-1` for
+client-side folds), and clicking a ribbon or spine dispatches a `chain:reveal-edge` event that the ledger listens for:
+opens the fold (and the long tail if the row lives there), `scrollIntoView`, marks the row. `#edge-<i>` in the URL does the
+same, so a row is linkable. The click also opens a new **edge panel** under the picture — both ends (clickable into their
+node panels), the dollars with what they are ("$19,673,929" for money; "…in independent expenditures — no dollars reach the
+candidate" for targeting; "est. ad spend (range midpoint) — no dollars move on this edge" for placement), visibility and
+transaction count, `BasisLine` with the rule and sources for derived edges, and "Show its row in the table ↓". **Hover /
+focus** on any node or edge shows a small HTML tooltip by the pointer (or beside the focused element for keyboard users):
+kind, name, amount in and money out (root: receipts traced / out to vendors), visibility and terminus for sources, edge
+amount and basis label for edges, the cached creative for ad nodes that have one (name-only otherwise, Q3-10 default).
+Ribbons and spines are now focusable buttons with full accessible labels. Node click → node panel is unchanged. D-77.
+
+**Challenge.** The picture is a client island and the table is server-rendered a card below it, so "click an edge, light
+its row" had no shared state to go through; a DOM event plus a stable row id keeps the table server-rendered (100 rows in
+the HTML, the tail as data) and the wire additive. Text fitting had to be deterministic on both sides of hydration, which
+ruled out `getComputedTextLength`; a metric table is within a few percent of the real font and errs wide. Tooltip
+positioning is written straight to the element's style on `mousemove` so hovering does not re-render a 60-node SVG.
+
+**Numbers.** WINSENATE: 487 edges in the table, 100 rendered on load, table folded; 54 ads folded into the roll-up; the
+root chip fits `AMERICAN HOSPITAL ASSOCIATION PAC` on two rows. Wire edge tuple 8 → 9 slots. `npm run lint`, `tsc
+--noEmit`, `next build` clean; no data or contract changes.
+
 ## 2026-09-06 ~06:30 — Block 3 D1: dossier reads one issue at a time (child D)
 
 **What changed.** The critique meeting called the dossier "a vertical scroll of ten sections". The page is now a two-column
@@ -532,7 +566,7 @@ it (mirrors `dossier.record_confidence`), review status, an evidence header with
 `EvidenceList` (Yea/Nay still neutral ink). Header, "Read this first" and summary stay, laid out side by side and tightened so
 the selected issue is on screen at 1440×900. "Compare: <other> →" (`compare-link.tsx`) reads the hash via
 `useSyncExternalStore` and carries it to the other dossier. `IssueSection` takes an optional `actions` slot in its header for
-the later Enrich child (F); nothing renders there yet. Old `IssueNav` deleted.
+the later Enrich child (F); nothing renders there yet. Old `IssueNav` deleted. D-78.
 
 **Challenge.** A vertical tablist that also handled Left/Right swallowed Alt+Left — the browser's back shortcut — while a tab had
 focus, so back/forward silently broke exactly where the hash was meant to make them work. Dropped Left/Right (race-sections
@@ -543,3 +577,26 @@ below the new panel; `select` now scrolls the tablist back to the top only when 
 "partial coverage" marker is exercised only by the `No record loaded` branch, since both PA dossiers are complete). Lint, tsc,
 build (2,960 pages) pass; candidate route 1.25 kB / 107 kB first load. Checked in the browser: click → `#guns`, Down/Down/Up →
 `#tax_budget` with focus following, back → `#guns`, Compare → other dossier opens on `#guns`.
+
+## 2026-09-06 ~08:10 — Block 3: the two dossiers become one Stances tab (child D, after review)
+
+**What changed.** Patrick's read of the D1 PR: two dossier tabs still meant two pages to compare one issue — "a single tab
+that displays both … rename it as Stances and consolidate in the same way that it is built now." So `/races/<race>/stances`
+(`app/races/[raceId]/stances/page.tsx`) is the one place stances live: the same ten-issue tablist (D-78), but the selected
+issue's panel holds every candidate's `IssueSection` side by side in race order — Casey on the left, McCormick on the right —
+each with its own party tag, role, evidence basis, position, direction, confidence, review state and D-26-ordered evidence
+list with its sources. Nothing is merged or averaged across the pair; the sidebar count is simply the sum of both candidates'
+records for that issue. The header is "Where the candidates stand": one card per candidate (basis, issues covered, records,
+summary behind `<details>`, FEC / Congress / campaign source links), then the shared "Read this first" asymmetry note.
+`RaceNav` gets one "Stances" item in place of "Casey dossier" / "McCormick dossier"; `/candidates/<id>` 308-redirects to the
+Stances tab (unknown ids still 404), so old links keep working; the Compare link is gone because there is nothing left to
+compare across. `IssueSection` takes an optional `title`/`subtitle` so the candidate's name can head each column while the
+issue heading sits once above both. Still all server-rendered; the island only toggles `hidden`. D-79.
+
+**Challenge.** Two sections of very different length (7 Casey roll-calls next to one McCormick statement) in one row: the
+columns are `align-items: start` on a 380px-minimum auto-fit grid so the short one does not stretch, and the stance meta
+block reflows to one column per candidate so its labels stay legible at half width; below ~800px the candidates stack and
+the tablist scrolls horizontally as before.
+
+**Numbers.** 1 tab instead of 2; 10 issues × 2 candidates = 20 server-rendered sections behind one visible panel; 73 records
+(63 + 10). Build 2,961 pages (one new route, two redirects), lint and tsc clean; no data or contract changes.
