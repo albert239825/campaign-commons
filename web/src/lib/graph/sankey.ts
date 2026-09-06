@@ -1,4 +1,4 @@
-// OWNER: Money Trails exploratory mode (D-80) — @graph flow diagrams.
+// OWNER: Money Trails exploratory mode (D-81) — @graph flow diagrams.
 import { z } from "zod";
 import { GraphNodeRefSchema, type GraphFact } from "./facts";
 import type { ExploreRow } from "./explore";
