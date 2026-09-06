@@ -1,11 +1,16 @@
+"use client";
+
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { routes } from "@/lib/format";
 import type { RaceSummary } from "@campaign-commons/contracts";
 
 type Item = { href: string; label: string; count?: number };
 
 /** Top-level tabs for one race. Dossiers and vendor pages are reached from the ledger, not from here. */
-export function RaceNav({ race, counts, active }: { race: RaceSummary; counts: { ads: number }; active: string }) {
+export function RaceNav({ race, counts }: { race: RaceSummary; counts: { ads: number } }) {
+  const pathname = usePathname() ?? "";
+  const current = pathname.length > 1 ? pathname.replace(/\/+$/, "") : pathname;
   const raceId = race.race_id;
   const items: Item[] = [
     { href: routes.race(raceId), label: "Ledger" },
@@ -15,7 +20,8 @@ export function RaceNav({ race, counts, active }: { race: RaceSummary; counts: {
   return (
     <nav aria-label="Race sections" className="flex flex-wrap gap-1 border-b border-neutral-200 text-sm">
       {items.map((it) => {
-        const on = it.href === active;
+        const href = it.href.length > 1 ? it.href.replace(/\/+$/, "") : it.href;
+        const on = href === current;
         return (
           <Link
             key={it.href}
