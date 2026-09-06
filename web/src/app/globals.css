@@ -493,7 +493,8 @@ body:has(.race-dashboard) :is(a, button):focus-visible { outline: 2px solid curr
 .funding-pie { display: block; width: min(100%, 340px); margin: 12px auto; overflow: visible; }
 .funding-pie [role="button"] { cursor: pointer; transition: opacity 160ms ease; }
 .funding-pie [role="button"]:hover { opacity: .8; }
-.funding-pie [role="button"]:focus-visible { outline: none; stroke: #1b1b1a; stroke-width: 5; }
+.funding-pie [role="button"]:focus { outline: none; }
+.funding-pie [role="button"]:focus-visible { stroke: #1b1b1a; stroke-width: 5; }
 .funding-chart-total { text-align: center; font-size: 40px; line-height: 1.2; letter-spacing: -.035em; }
 .funding-chart-total > span:last-child { display: block; margin-top: 8px; color: #6f6d69; font-size: 12px; letter-spacing: 0; }
 .funding-slice-controls { display: grid; gap: 8px; margin-top: 32px; }
