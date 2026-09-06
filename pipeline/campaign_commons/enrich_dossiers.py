@@ -5,6 +5,7 @@ from __future__ import annotations
 import argparse
 import hashlib
 import json
+import re
 import sys
 from collections.abc import Callable
 from urllib.parse import urlsplit
@@ -14,7 +15,6 @@ import requests
 from .config import DATA, RACES, ROOT, XAI_API_KEY
 from .dossier import issue_ids
 from .enrich_common import is_normalized_substring
-from .enrich_funders import DENYLIST
 from .enrich_spenders import (
     _cached_page,
     _default_page_fetcher,
@@ -32,10 +32,26 @@ X_PROMPT_PATH = ROOT / "pipeline" / "campaign_commons" / "prompts" / "enrich" / 
 ISSUES_TAXONOMY = ROOT / "contracts" / "jsonschema" / "issues_taxonomy.json"
 REPAIRABLE_ERRORS = {
     "summary is missing or too long",
-    "excerpt is missing or too long",
     "sources is required for stance",
 }
-STANCE_DENYLIST = (DENYLIST - {"fec.gov", "irs.gov"}) | {"wikipedia.org"}
+SOURCE_EXCERPT_ERROR = "excerpt is missing or too long"
+STANCE_DENYLIST = {
+    "x.com",
+    "twitter.com",
+    "facebook.com",
+    "instagram.com",
+    "linkedin.com",
+    "youtube.com",
+    "tiktok.com",
+    "reddit.com",
+    "wikipedia.org",
+    "opensecrets.org",
+    "influencewatch.org",
+    "littlesis.org",
+    "followthemoney.org",
+}
+SUMMARY_LIMIT = 800
+EXCERPT_LIMIT = 400
 FROM_DATE = "2023-01-01"
 TO_DATE = "2024-11-05"
 
@@ -121,7 +137,7 @@ def _stance_schema() -> dict[str, object]:
         "required": ["found", "summary", "direction_proposed", "confidence", "sources"],
         "properties": {
             "found": {"type": "boolean"},
-            "summary": {"type": "string", "maxLength": 600},
+            "summary": {"type": "string", "maxLength": SUMMARY_LIMIT},
             "direction_proposed": {"type": ["integer", "null"], "minimum": -2, "maximum": 2},
             "confidence": {"type": "string", "enum": ["high", "medium", "low"]},
             "sources": {
@@ -136,7 +152,7 @@ def _stance_schema() -> dict[str, object]:
                         "url": {"type": "string"},
                         "publisher": {"type": "string"},
                         "published_on": {"type": ["string", "null"]},
-                        "excerpt": {"type": "string", "maxLength": 280},
+                        "excerpt": {"type": "string", "maxLength": EXCERPT_LIMIT},
                     },
                 },
             },
@@ -159,7 +175,7 @@ def _posts_schema() -> dict[str, object]:
                     "required": ["url", "excerpt", "posted_on"],
                     "properties": {
                         "url": {"type": "string"},
-                        "excerpt": {"type": "string", "maxLength": 280},
+                        "excerpt": {"type": "string", "maxLength": EXCERPT_LIMIT},
                         "posted_on": {"type": ["string", "null"]},
                     },
                 },
@@ -283,6 +299,11 @@ def _host_denied(url: str) -> bool:
     return any(host == denied or host.endswith(f".{denied}") for denied in STANCE_DENYLIST)
 
 
+def _excerpt_matches(excerpt: str, text: str) -> bool:
+    fragments = [fragment.strip() for fragment in re.split(r"\.\.\.|…", excerpt) if fragment.strip()]
+    return bool(fragments) and all(is_normalized_substring(fragment, text) for fragment in fragments)
+
+
 def _validate_primary(result: object, searched: list[str]) -> str | None:
     if not isinstance(result, dict):
         return "response JSON is not an object"
@@ -291,7 +312,7 @@ def _validate_primary(result: object, searched: list[str]) -> str | None:
     if result.get("found") is not True:
         return "found is invalid"
     summary = result.get("summary")
-    if not isinstance(summary, str) or len(summary) > 600:
+    if not isinstance(summary, str) or len(summary) > SUMMARY_LIMIT:
         return "summary is missing or too long"
     sources = result.get("sources")
     if not isinstance(sources, list) or not sources:
@@ -306,22 +327,22 @@ def _validate_primary(result: object, searched: list[str]) -> str | None:
         return "direction_proposed is invalid"
     if result.get("confidence") not in {"high", "medium", "low"}:
         return "confidence is invalid"
-    for source in sources:
-        if not isinstance(source, dict):
-            return "source is not an object"
-        if not isinstance(source.get("url"), str) or not any(
-            _url_key(source["url"]) == _url_key(searched_url) for searched_url in searched
-        ):
-            return "source_url was not opened by web_search"
-        if _host_denied(source["url"]):
-            return "source_url is not the organization's own site"
-        excerpt = source.get("excerpt")
-        if not isinstance(excerpt, str) or not excerpt or len(excerpt) > 280:
-            return "excerpt is missing or too long"
-        if not isinstance(source.get("publisher"), str) or not isinstance(
-            source.get("published_on"), (str, type(None))
-        ):
-            return "source metadata is invalid"
+    return None
+
+
+def _source_error(source: object, searched: list[str]) -> str | None:
+    if not isinstance(source, dict):
+        return "source is not an object"
+    url = source.get("url")
+    if not isinstance(url, str) or not any(_url_key(url) == _url_key(searched_url) for searched_url in searched):
+        return "source_url was not opened by web_search"
+    if _host_denied(url):
+        return "source host is not allowed"
+    excerpt = source.get("excerpt")
+    if not isinstance(excerpt, str) or not excerpt or len(excerpt) > EXCERPT_LIMIT:
+        return SOURCE_EXCERPT_ERROR
+    if not isinstance(source.get("publisher"), str) or not isinstance(source.get("published_on"), (str, type(None))):
+        return "source metadata is invalid"
     return None
 
 
@@ -330,7 +351,7 @@ def _fetch_source(
     excerpt: str,
     page_fetcher: Callable[[str], tuple[int, str]] | None,
     wayback_fetcher: Callable[[str], str | None] | None,
-) -> tuple[bool, str | None]:
+) -> tuple[bool, str | None, str | None]:
     page_fetcher = page_fetcher or _default_page_fetcher
     wayback_fetcher = wayback_fetcher or _default_wayback_fetcher
     cached = _cached_page(url)
@@ -348,13 +369,15 @@ def _fetch_source(
     status = cached.get("status")
     text = cached.get("text") if isinstance(cached.get("text"), str) else ""
     if status == 200:
-        return is_normalized_substring(excerpt, text), None
+        if _excerpt_matches(excerpt, text):
+            return True, None, None
+        return False, None, "fetched-page excerpt mismatch"
     try:
         snapshot_url = wayback_fetcher(url)
     except Exception:
         snapshot_url = None
     if not snapshot_url:
-        return False, None
+        return False, None, None
     archived = _cached_page(snapshot_url)
     if archived is None:
         try:
@@ -368,8 +391,10 @@ def _fetch_source(
         )
         archived = {"status": archived_status, "text": archived_text}
     if archived.get("status") == 200 and isinstance(archived.get("text"), str):
-        return is_normalized_substring(excerpt, archived["text"]), snapshot_url
-    return False, None
+        if _excerpt_matches(excerpt, archived["text"]):
+            return True, snapshot_url, None
+        return False, None, "fetched-page excerpt mismatch"
+    return False, None, None
 
 
 def _oembed_default(url: str) -> dict[str, object]:
@@ -426,14 +451,14 @@ def _verify_posts(
         if searched_exposed and not any(_url_key(url) == _url_key(item) for item in searched):
             continue
         excerpt = post.get("excerpt")
-        if not isinstance(excerpt, str) or not excerpt or len(excerpt) > 280:
+        if not isinstance(excerpt, str) or not excerpt or len(excerpt) > EXCERPT_LIMIT:
             continue
         embed = _oembed(url, oembed_fetcher)
         author = _handle_from_url(embed.get("author_url"))
         html = embed.get("html")
         if author not in allowed or not isinstance(html, str):
             continue
-        if not is_normalized_substring(excerpt, _page_text(html)):
+        if not _excerpt_matches(excerpt, _page_text(html)):
             continue
         row: dict[str, object] = {
             "url": url,
@@ -605,11 +630,27 @@ def run(
             continue
         searched, _ = _searched_tool_urls(response, "web")
         error = _validate_primary(result, searched)
+        source_errors = (
+            [_source_error(source, searched) for source in result.get("sources", [])]
+            if isinstance(result, dict) and isinstance(result.get("sources"), list)
+            else []
+        )
+        repair_reason = error
+        if (
+            repair_reason is None
+            and source_errors
+            and all(source_error == SOURCE_EXCERPT_ERROR for source_error in source_errors)
+        ):
+            repair_reason = SOURCE_EXCERPT_ERROR
         if isinstance(result, dict) and result.get("found") is False:
             if budget_hit:
                 break
             continue
-        if error in REPAIRABLE_ERRORS and isinstance(result, dict) and result.get("found") is True:
+        if (
+            repair_reason in REPAIRABLE_ERRORS | {SOURCE_EXCERPT_ERROR}
+            and isinstance(result, dict)
+            and result.get("found") is True
+        ):
             repair_path = cache_dir / f"{key}.repair.json"
             if repair_path.exists():
                 repair_entry = read_json(repair_path)
@@ -617,7 +658,7 @@ def run(
                 print(f"budget exhausted: {calls} calls used; remaining units are left unprocessed", file=sys.stderr)
                 exit_code, budget_hit, repair_entry = 3, True, None
             else:
-                repair_request = _repair_payload(model, prompt, plan, result, error)
+                repair_request = _repair_payload(model, prompt, plan, result, repair_reason)
                 repair_response = client.create_response(repair_request)
                 timestamp = now_iso()
                 repair_entry = {"request": repair_request, "response": repair_response, "retrieved_at": timestamp}
@@ -668,13 +709,27 @@ def run(
         elif isinstance(result, dict):
             verified_sources: list[dict[str, object]] = []
             for source in result["sources"]:
-                verified, wayback_url = _fetch_source(
+                source_error = _source_error(source, searched)
+                if source_error:
+                    print(
+                        f"WARN {plan['candidate_id']} {plan['issue_id']}: dropped source ({source_error})",
+                        file=sys.stderr,
+                    )
+                    continue
+                verified, wayback_url, fetch_error = _fetch_source(
                     str(source["url"]), str(source["excerpt"]), page_fetcher, wayback_fetcher
                 )
+                if fetch_error:
+                    print(
+                        f"WARN {plan['candidate_id']} {plan['issue_id']}: dropped source ({fetch_error})",
+                        file=sys.stderr,
+                    )
+                    continue
                 if not verified:
-                    direct_page = _cached_page(str(source["url"]))
-                    if wayback_url is not None or (isinstance(direct_page, dict) and direct_page.get("status") == 200):
-                        continue
+                    print(
+                        f"WARN {plan['candidate_id']} {plan['issue_id']}: source fetch failed; retained unverified",
+                        file=sys.stderr,
+                    )
                 source_row = dict(source)
                 source_row["excerpt_verified"] = bool(verified)
                 if wayback_url:

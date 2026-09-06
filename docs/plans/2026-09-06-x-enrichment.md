@@ -46,13 +46,14 @@ on the 26 cached ads tells us.
 - **Call 1 (primary)** per candidate × issue: `web_search`, no domain restriction but the prompt names preferred sources
   (news outlets, congress.gov/senate.gov, votesmart.org, ballotpedia.org, the campaign site) and forbids opinion/social
   sources; the 2023–24 window goes in the prompt (`web_search` has no documented date filter). Output: `summary` (≤3 sentences, each tied to a citation), `sources[]` {url, publisher,
-  published_on as reported, excerpt ≤280}, `confidence`, `direction_proposed`.
+  published_on as reported, excerpt ≤280; hard limit 400}, `confidence`, `direction_proposed`.
 - **Call 2 (supplement)**: `x_search` with `allowed_x_handles` = verified handles (`x_accounts.json`, pending confirmation for the
   seeded Casey and McCormick accounts) — `@SenBobCasey`, `@Bob_Casey`, `@DaveMcCormickPA`, same window. Output:
   `posts[]` {url, excerpt, posted_on} — shown as "in their own words", never as the summary's basis.
 - **Verification**: every web URL must be surfaced by the primary response's searched/opened URLs; X posts are checked via X's public oEmbed
   (`publish.twitter.com/oembed`, no key) for excerpt text and canonical author → `excerpt_verified`. Web
-  excerpts: fetch the page, substring check where the page is static; else `excerpt_verified: false` and human review.
+  excerpts: fetch the page, tolerate ellipses between independently matched fragments, and use Wayback when a fetch is non-200;
+  an unavailable page remains `excerpt_verified: false` for human review.
 - **Renders** under each issue's record evidence as a labelled block: "Machine-summarised from news/web (<model>, <date>);
   not part of the record" + source list + "On X" strip. `Stance.evidence`, `EvidenceKind`, `direction`, dossier `summary`
   stay record-only (D-23, D-76). The future runtime Enrich button makes the same two calls with the user's prompt appended.

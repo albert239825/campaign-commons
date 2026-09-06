@@ -693,14 +693,14 @@ export const MachineStanceSourceSchema = z.object({
   url: z.string().url(),
   publisher: z.string(),
   published_on: z.string().nullable(),
-  excerpt: z.string().max(280),
+  excerpt: z.string().max(400),
   excerpt_verified: z.boolean(),
   wayback_url: z.string().url().optional(),
 });
 
 export const MachineStancePostSchema = z.object({
   url: z.string().url(),
-  excerpt: z.string().max(280),
+  excerpt: z.string().max(400),
   posted_on: z.string().nullable(),
 });
 

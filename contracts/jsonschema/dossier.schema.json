@@ -281,7 +281,7 @@
                         },
                         "excerpt": {
                           "type": "string",
-                          "maxLength": 280
+                          "maxLength": 400
                         },
                         "excerpt_verified": {
                           "type": "boolean"
@@ -313,7 +313,7 @@
                         },
                         "excerpt": {
                           "type": "string",
-                          "maxLength": 280
+                          "maxLength": 400
                         },
                         "posted_on": {
                           "type": [

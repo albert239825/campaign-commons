@@ -173,6 +173,79 @@ def test_excerpt_mismatch_drops_source_but_keeps_other_verified(
     assert [source["excerpt_verified"] for source in sources] == [True]
 
 
+def test_ellipsis_excerpt_checks_each_fragment(monkeypatch: pytest.MonkeyPatch, tmp_path: Path) -> None:
+    _, hand = _setup(monkeypatch, tmp_path)
+    url = "https://ellipsis.example/about"
+    result = _stance_result([url])
+    result["sources"][0]["excerpt"] = "The candidate supports ... this issue."
+    client = FakeClient([_web_response(result, [url])])
+
+    def fetcher(source_url: str) -> tuple[int, str]:
+        if source_url == url:
+            return 200, "<p>The candidate supports this issue.</p>"
+        return 404, ""
+
+    assert enrich_dossiers.run("race", client=client, page_fetcher=fetcher, no_x=True) == 0
+    source = json.loads((hand / "x_stances.json").read_text())["rows"][0]["sources"][0]
+    assert source["excerpt_verified"] is True
+
+
+def test_invalid_source_is_dropped_but_valid_source_keeps_stance(
+    monkeypatch: pytest.MonkeyPatch, tmp_path: Path
+) -> None:
+    _, hand = _setup(monkeypatch, tmp_path)
+    urls = ["https://too-long.example/about", "https://good.example/about"]
+    result = _stance_result(urls)
+    result["sources"][0]["excerpt"] = "x" * 401
+    client = FakeClient([_web_response(result, urls)])
+    assert enrich_dossiers.run("race", client=client, page_fetcher=_page_fetcher, no_x=True) == 0
+    sources = json.loads((hand / "x_stances.json").read_text())["rows"][0]["sources"]
+    assert [source["url"] for source in sources] == [urls[1]]
+
+
+def test_ballotpedia_is_not_denylisted(monkeypatch: pytest.MonkeyPatch, tmp_path: Path) -> None:
+    _, hand = _setup(monkeypatch, tmp_path)
+    url = "https://ballotpedia.org/Example_Candidate"
+    client = FakeClient([_web_response(_stance_result([url]), [url])])
+
+    def fetcher(source_url: str) -> tuple[int, str]:
+        if source_url == url:
+            return 200, "<p>The candidate supports this issue.</p>"
+        return 404, ""
+
+    assert enrich_dossiers.run("race", client=client, page_fetcher=fetcher, no_x=True) == 0
+    assert len(json.loads((hand / "x_stances.json").read_text())["rows"]) == 1
+
+
+def test_non_200_page_uses_wayback_and_records_both_urls(monkeypatch: pytest.MonkeyPatch, tmp_path: Path) -> None:
+    _, hand = _setup(monkeypatch, tmp_path)
+    url = "https://votesmart.org/candidate/example"
+    wayback_url = "https://web.archive.org/web/20241001id/https://votesmart.org/candidate/example"
+    client = FakeClient([_web_response(_stance_result([url]), [url])])
+
+    def fetcher(source_url: str) -> tuple[int, str]:
+        if source_url == url:
+            return 403, ""
+        if source_url == wayback_url:
+            return 200, "<p>The candidate supports this issue.</p>"
+        return 404, ""
+
+    assert (
+        enrich_dossiers.run(
+            "race",
+            client=client,
+            page_fetcher=fetcher,
+            wayback_fetcher=lambda source_url: wayback_url if source_url == url else None,
+            no_x=True,
+        )
+        == 0
+    )
+    row = json.loads((hand / "x_stances.json").read_text())["rows"][0]
+    assert row["sources"][0]["excerpt_verified"] is True
+    assert row["sources"][0]["wayback_url"] == wayback_url
+    assert row["provenance"]["citations"] == [url, wayback_url]
+
+
 def test_no_verified_source_drops_stance(monkeypatch: pytest.MonkeyPatch, tmp_path: Path) -> None:
     _, hand = _setup(monkeypatch, tmp_path)
     urls = ["https://mismatch.example/about"]
@@ -257,7 +330,7 @@ def test_repair_is_cached_and_has_no_search_tool(monkeypatch: pytest.MonkeyPatch
     _, hand = _setup(monkeypatch, tmp_path)
     url = "https://good.example/about"
     invalid = _stance_result([url])
-    invalid["summary"] = "x" * 601
+    invalid["summary"] = "x" * 801
     repaired = _stance_result([url])
     client = FakeClient([_web_response(invalid, [url]), _web_response(repaired, [])])
     assert enrich_dossiers.run("race", client=client, page_fetcher=_page_fetcher, no_x=True) == 0
@@ -266,6 +339,18 @@ def test_repair_is_cached_and_has_no_search_tool(monkeypatch: pytest.MonkeyPatch
     assert "tools" not in repair_payload
     assert json.dumps(invalid) in repair_payload["input"][1]["content"]
     assert (tmp_path / "raw" / "xai" / "stance-S1-healthcare.repair.json").exists()
+    assert len(json.loads((hand / "x_stances.json").read_text())["rows"]) == 1
+
+
+def test_repair_runs_when_every_source_excerpt_is_invalid(monkeypatch: pytest.MonkeyPatch, tmp_path: Path) -> None:
+    _, hand = _setup(monkeypatch, tmp_path)
+    url = "https://good.example/about"
+    invalid = _stance_result([url])
+    invalid["sources"][0]["excerpt"] = "x" * 401
+    repaired = _stance_result([url])
+    client = FakeClient([_web_response(invalid, [url]), _web_response(repaired, [])])
+    assert enrich_dossiers.run("race", client=client, page_fetcher=_page_fetcher, no_x=True) == 0
+    assert client.calls == 2
     assert len(json.loads((hand / "x_stances.json").read_text())["rows"]) == 1
 
 
