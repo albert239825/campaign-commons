@@ -92,6 +92,18 @@ def _page(url: str) -> tuple[int, str]:
     return 404, ""
 
 
+def test_url_key_matches_www_and_trailing_slash_without_matching_path() -> None:
+    assert enrich_spenders._url_key("https://www.x.org/") == enrich_spenders._url_key("https://x.org")
+    assert enrich_spenders._url_key("https://x.org/about") != enrich_spenders._url_key("https://x.org")
+
+
+def test_spender_schema_enforces_output_limits() -> None:
+    schema = enrich_spenders._schema(["healthcare"])
+    assert schema["properties"]["description"]["maxLength"] == 300
+    assert schema["properties"]["quote"]["maxLength"] == 400
+    assert schema["properties"]["issue_ids"]["maxItems"] == 3
+
+
 def test_spender_happy_path_validates_and_skips_tagged(monkeypatch: pytest.MonkeyPatch, tmp_path: Path) -> None:
     _, hand = _setup(monkeypatch, tmp_path)
     result = {

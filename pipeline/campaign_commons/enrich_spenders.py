@@ -308,6 +308,17 @@ def _searched_urls(response: dict[str, object]) -> list[str]:
     return list(dict.fromkeys(urls))
 
 
+def _url_key(url: str) -> str:
+    parsed = urlsplit(url)
+    host = (parsed.hostname or "").lower()
+    if host.startswith("www."):
+        host = host[4:]
+    if parsed.port is not None:
+        host = f"{host}:{parsed.port}"
+    path = parsed.path.rstrip("/")
+    return f"{host}{path}{'?' + parsed.query if parsed.query else ''}"
+
+
 def _host_allowed(url: str, domain: str | None) -> bool:
     if not domain:
         return True
@@ -346,7 +357,9 @@ def _validate_result(
     if not isinstance(quote, str) or not quote or len(quote) > 400:
         return "quote is missing or too long"
     source_url = result.get("source_url")
-    if not isinstance(source_url, str) or source_url not in searched_urls:
+    if not isinstance(source_url, str) or not any(
+        _url_key(source_url) == _url_key(searched_url) for searched_url in searched_urls
+    ):
         return "source_url was not opened by web_search"
     if not _host_allowed(source_url, domain):
         return "source_url is outside the FEC-listed domain"
@@ -617,7 +630,7 @@ def run(
             and isinstance(result, dict)
             and result.get("found") is True
             and isinstance(result.get("source_url"), str)
-            and result["source_url"] in searched
+            and any(_url_key(result["source_url"]) == _url_key(searched_url) for searched_url in searched)
             and _host_allowed(result["source_url"], plan["domain"])
         ):
             repair_path = cache_dir / f"{key}.repair.json"
@@ -675,7 +688,8 @@ def run(
                     if repair_error is None and (
                         not isinstance(repaired_result, dict)
                         or repaired_result.get("found") is not True
-                        or repaired_result.get("source_url") != result.get("source_url")
+                        or not isinstance(repaired_result.get("source_url"), str)
+                        or _url_key(repaired_result["source_url"]) != _url_key(result["source_url"])
                     ):
                         repair_error = "source_url changed during repair"
                 if repair_error is None:
