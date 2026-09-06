@@ -233,8 +233,8 @@ export default async function ChainPage({
               <span className="font-medium text-neutral-700">Assumptions on the spending side.</span>{" "}
               Vendor dollars are Schedule E payments as filed. Ad dollars are the midpoint of the range Google reports, not a filed figure. A vendor →
               ad edge is drawn only when a person verified it from a source naming both (solid), or the vendor was the only digital vendor the spender
-              paid while the ad ran (dashed, inferred). FEC does not record which buy placed which ad, so an ad with no such link hangs off the spender
-              alone; vendors merely paid in the same window are named on the ad&apos;s page as a sentence, never drawn as an edge. Targeting edges never
+              paid in the week before and while the ad ran (dashed, inferred). FEC does not record which buy placed which ad, so an ad with no such link
+              hangs off the spender alone; vendors merely paid in that window are named on the ad&apos;s page as a sentence, never drawn as an edge. Targeting edges never
               carry money to the candidate.
             </p>
           )}

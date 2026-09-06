@@ -122,7 +122,7 @@ export function AdGallery({
             ))}
           </select>
         </label>
-        <label className="inline-flex items-center gap-2 text-neutral-600" title="A vendor link exists only when a person verified it or the sponsor paid exactly one digital vendor while the ad ran; overlapping dates alone never make a link">
+        <label className="inline-flex items-center gap-2 text-neutral-600" title="A vendor link exists only when a person verified it or the sponsor paid exactly one digital vendor in the week before and while the ad ran; overlapping dates alone never make a link">
           Vendor links
           <select value={linkBasis} onChange={(e) => setLinkBasis(e.target.value as LinkBasis | "")} className="rounded-sm border border-neutral-300 bg-white px-2 py-1 text-sm text-neutral-900">
             <option value="">Any ({linkedCount} linked)</option>
@@ -156,7 +156,7 @@ export function AdGallery({
       )}
       {vendor !== null && (
         <p className="flex flex-wrap items-center gap-2 text-sm">
-          <span className="rounded-sm border border-neutral-300 bg-white px-2 py-0.5" title="Ads linked to this vendor (verified by a person, or the only digital vendor the sponsor paid while the ad ran); the basis on each card says which">
+          <span className="rounded-sm border border-neutral-300 bg-white px-2 py-0.5" title="Ads linked to this vendor (verified by a person, or the only digital vendor the sponsor paid in the week before and while the ad ran); the basis on each card says which">
             Linked to vendor: <span className="font-medium">{vendorName}</span>
           </span>
           <button type="button" onClick={() => setVendor(null)} className="text-xs text-neutral-600 underline decoration-dotted underline-offset-2 hover:text-neutral-900">

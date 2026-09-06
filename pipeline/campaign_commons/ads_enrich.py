@@ -8,10 +8,12 @@ notes are replaced, `generated_at` is untouched).
 1. sponsor_visibility_shares <- chains/<matched_entity_id>.json summary shares; null when unmatched or no chain.
 2. issues <- data/hand/<race>/ad_issues.json (a person tagged the creative); absent when untagged.
 3. same_window_buys[] <- the sponsor's `vendors[]` rows (entities/<sponsor>.json, written by campaign_commons.vendors) whose IE rows
-   are dated inside the ad's window [first_shown - 7 days, last_shown], limited to media that could place or produce a Google
-   creative. Context only: the FEC does not say which buy placed which ad, so this is never a link or an edge.
-4. vendor_links[] <- the subset of those vendors joined to the ad by a rule or a person: `inferred` when exactly one vendor with
-   digital buys sits in the window (Google ads are digital placements); `verified` only from data/hand/<race>/vendor_ad_links.json.
+   are dated inside the ad's window [first_shown - 7 days, last_shown], counting only the buys for media that could place or
+   produce a Google creative (a vendor's TV dollars in the window are neither shown nor summed). Context only: the FEC does
+   not say which buy placed which ad, so this is never a link or an edge.
+4. vendor_links[] <- vendors joined to the ad by a rule or a person: `inferred` when exactly one vendor with digital buys sits
+   in the window (Google ads are digital placements); `verified` only from data/hand/<race>/vendor_ad_links.json, kept even
+   when no payment is dated in the window (the source, not a filing, is the evidence; `window` is null when the ad has no dates).
    Date overlap alone (the former `adjacent` basis) is not a link (D-74). Reverse side: vendors/<vendor_id>.json.ads[] gets
    {ad_id, sponsor_entity_id, basis}. Without `vendors[]` on the sponsor (campaign_commons.vendors not run yet) steps 3-4 are
    no-ops and say so in the notes.
@@ -157,28 +159,39 @@ def _dominant_medium(buys: list[Buy], vendor: JsonDict) -> str:
 PLACEABLE_MEDIA = frozenset({"digital", "production", "other"})
 
 
-def _buys_in_window(ad: JsonDict, entity: JsonDict) -> tuple[dict[str, list[Buy]], date, date] | None:
-    first, last = _iso(ad.get("first_shown")), _iso(ad.get("last_shown"))
+def _placeable(buys: list[Buy]) -> list[Buy]:
+    """Buy by buy, not by the vendor's dominant medium: a firm's TV dollars in the window neither hide nor inflate its digital ones."""
+    return [b for b in buys if b.medium is None or b.medium in PLACEABLE_MEDIA]
+
+
+def _buys_in_window(ad: JsonDict, entity: JsonDict) -> tuple[dict[str, list[Buy]], date | None, date | None] | None:
+    """Sponsor buys per vendor dated in [first_shown - WINDOW_LEAD_DAYS, last_shown]; empty when the ad has no dates."""
     vendors = _vendor_rows(entity)
-    if first is None or last is None or not vendors:
+    if not vendors:
         return None
+    first, last = _iso(ad.get("first_shown")), _iso(ad.get("last_shown"))
     in_win: dict[str, list[Buy]] = {}
-    for b in sponsor_buys(entity):
-        if b.vendor_id in vendors and in_window(b.day, first, last):
-            in_win.setdefault(b.vendor_id, []).append(b)
+    if first is not None and last is not None:
+        for b in sponsor_buys(entity):
+            if b.vendor_id in vendors and in_window(b.day, first, last):
+                in_win.setdefault(b.vendor_id, []).append(b)
     return in_win, first, last
 
 
 def same_window_buys(ad: JsonDict, entity: JsonDict) -> list[JsonDict]:
-    """Every PLACEABLE_MEDIA vendor the sponsor paid inside the ad's window, by dollars in the window. Context for the reader
-    ("while this ad ran, the sponsor reported digital buys to A and B"); carries no basis because it asserts no relationship."""
+    """Every vendor the sponsor paid for placeable media inside the ad's window, by those dollars. Context for the reader
+    ("in the week before and while this ad ran, the sponsor reported digital buys to A and B"); carries no basis because it
+    asserts no relationship. Amount, count and medium come from the placeable buys only."""
     found = _buys_in_window(ad, entity)
     if found is None:
         return []
     in_win, _, _ = found
     vendors = _vendor_rows(entity)
     rows: list[JsonDict] = []
-    for vendor_id, buys in in_win.items():
+    for vendor_id, all_buys in in_win.items():
+        buys = _placeable(all_buys)
+        if not buys:
+            continue
         vendor = vendors[vendor_id]
         medium = _dominant_medium(buys, vendor)
         if medium not in PLACEABLE_MEDIA:
@@ -207,11 +220,17 @@ def vendor_links(ad: JsonDict, entity: JsonDict, hand_links: dict[tuple[str, str
     sponsor = str(entity.get("name") or ad["advertiser_name"])
     ad_id = str(ad["ad_id"])
     digital_vendors = {vid for vid, buys in in_win.items() if any(b.medium == "digital" for b in buys)}
-    window_text = f"Ran {_human(first)} – {_human(last)}"
+    window = [first.isoformat(), last.isoformat()] if first is not None and last is not None else None
+    window_text = (
+        f"Ran {_human(first)} – {_human(last)}" if first is not None and last is not None else "Run dates not reported"
+    )
+    # A verified pair rests on its source, not on a dated payment: it is kept even when no buy falls in the window.
+    hand_vendors = {vid for (aid, vid) in hand_links if aid == ad_id and vid in vendors}
     links: list[JsonDict] = []
-    for vendor_id, buys in in_win.items():
+    for vendor_id in set(in_win) | hand_vendors:
         vendor = vendors[vendor_id]
         vendor_name = str(vendor["name"])
+        buys = _placeable(in_win.get(vendor_id, []))
         amount = round(sum(b.amount for b in buys), 2)
         medium = _dominant_medium(buys, vendor)
         source_urls = [str(vendor["source_url"])]
@@ -220,11 +239,16 @@ def vendor_links(ad: JsonDict, entity: JsonDict, hand_links: dict[tuple[str, str
         if hand is not None:
             role = str(hand["role"]).replace("_", " ")
             quote = hand.get("quote")
+            paid = (
+                f"{sponsor} reported ${amount:,.0f} in {medium} buys to {vendor_name} in that window"
+                if buys
+                else f"no {sponsor} payment to {vendor_name} for placeable media is dated in that window"
+            )
             basis = {
                 "basis": "verified",
                 "rule": f"{vendor_name} {role} this ad for {sponsor} — a source names both sides"
                 + (f': "{quote}"' if isinstance(quote, str) and quote else "")
-                + f". {window_text}; {sponsor} reported ${amount:,.0f} in {medium} buys to {vendor_name} in that window.",
+                + f". {window_text}; {paid}.",
                 "source_urls": list(hand["source_urls"]),
                 "checked_by": hand["tagged_by"],
                 "checked_at": hand["tagged_at"],
@@ -246,7 +270,7 @@ def vendor_links(ad: JsonDict, entity: JsonDict, hand_links: dict[tuple[str, str
                 "vendor_id": vendor_id,
                 "vendor_name": vendor_name,
                 "medium": medium,
-                "window": [first.isoformat(), last.isoformat()],
+                "window": window,
                 "amount_in_window": amount,
                 "buys_in_window": len(buys),
                 "basis": basis,
@@ -258,10 +282,10 @@ def vendor_links(ad: JsonDict, entity: JsonDict, hand_links: dict[tuple[str, str
 _BASIS_ORDER = {"verified": 0, "inferred": 1}
 
 
-def _link_order(link: JsonDict) -> tuple[int, float]:
+def _link_order(link: JsonDict) -> tuple[int, float, str]:
     basis = link["basis"]
     assert isinstance(basis, dict)
-    return _BASIS_ORDER[str(basis["basis"])], -float(str(link["amount_in_window"]))
+    return _BASIS_ORDER[str(basis["basis"])], -float(str(link["amount_in_window"])), str(link["vendor_id"])
 
 
 def patch_vendor_ads(vendor: JsonDict, ad_id: str, sponsor_entity_id: str, basis: JsonDict) -> bool:

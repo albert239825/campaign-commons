@@ -102,7 +102,8 @@ export function VendorLines({ links, raceId }: { links: AdVendorLink[]; raceId: 
 }
 
 /**
- * The date-overlap fact as a sentence, never as a relationship: who the sponsor paid for placeable media while the ad ran.
+ * The date-overlap fact as a sentence, never as a relationship: who the sponsor paid for placeable media in the week before
+ * and while the ad ran (the pipeline's window is [first_shown - 7 days, last_shown]; placement is usually paid before air).
  * Vendors already named in `vendor_links` are left out so the reader is not shown the same firm twice.
  */
 export function SameWindowBuys({ ad, raceId, sponsorName }: { ad: Ad; raceId: string; sponsorName: string }) {
@@ -111,7 +112,7 @@ export function SameWindowBuys({ ad, raceId, sponsorName }: { ad: Ad; raceId: st
   if (buys.length === 0) return null;
   return (
     <p className="text-xs text-neutral-600">
-      While this ad ran, {sponsorName} reported{" "}
+      In the week before and while this ad ran, {sponsorName} reported{" "}
       {buys.map((b, i) => (
         <span key={b.vendor_id}>
           {i > 0 && (i === buys.length - 1 ? " and " : ", ")}
@@ -124,7 +125,7 @@ export function SameWindowBuys({ ad, raceId, sponsorName }: { ad: Ad; raceId: st
           <SourceLink href={b.source_url} label="FEC" />)
         </span>
       ))}
-      . FEC records do not identify which vendor placed this ad, so these are not drawn as links.
+      . Same-window payments only: FEC records do not identify which vendor placed this ad, so these are not drawn as links.
     </p>
   );
 }
@@ -136,7 +137,7 @@ function VendorSummary({ ad, raceId }: { ad: Ad; raceId: string }) {
   return (
     <p
       className="border-t border-neutral-100 pt-2 text-xs text-neutral-600"
-      title="A vendor is linked only when a person verified it from a source naming both, or it was the only digital vendor the sponsor paid while the ad ran. Overlapping dates alone never make a link."
+      title="A vendor is linked only when a person verified it from a source naming both, or it was the only digital vendor the sponsor paid in the week before and while the ad ran. Overlapping dates alone never make a link."
     >
       <span className="text-neutral-500">Linked vendors: </span>
       {links.map((link, i) => (

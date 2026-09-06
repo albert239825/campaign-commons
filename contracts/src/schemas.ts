@@ -541,8 +541,8 @@ export const AdVendorLinkSchema = z.object({
   vendor_id: z.string(),
   vendor_name: z.string(),
   medium: MediumSchema,
-  window: z.tuple([z.string(), z.string()]), // the ad's [first_shown, last_shown] used for the overlap
-  amount_in_window: z.number(), // sponsor → vendor IE dollars whose date falls in the window
+  window: z.tuple([z.string(), z.string()]).nullable(), // the ad's [first_shown, last_shown] used for the overlap; null when the ad has no dates (verified links only)
+  amount_in_window: z.number(), // sponsor → vendor IE dollars for placeable media whose date falls in the window
   buys_in_window: z.number().int(),
   basis: BasisSchema,
 });

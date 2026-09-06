@@ -12,7 +12,8 @@ type Row = { link: Vendor["ads"][number]; ad: Ad };
 
 /**
  * Ads whose run window overlapped this vendor's buys but that are not linked to it: the date fact as a sentence, drawn
- * from each ad's `same_window_buys`. Says who was paying while what ran; never that this vendor placed anything.
+ * from each ad's `same_window_buys` (window = the week before first shown through last shown). Says who was paying while
+ * what ran; never that this vendor placed anything.
  */
 function SameWindowAds({ raceId, vendor, ads, sponsorNames }: { raceId: string; vendor: Vendor; ads: Ad[]; sponsorNames: Record<string, string> }) {
   const linked = new Set(vendor.ads.map((l) => l.ad_id));
@@ -25,7 +26,7 @@ function SameWindowAds({ raceId, vendor, ads, sponsorNames }: { raceId: string; 
   }
   return (
     <p className="text-xs text-neutral-600">
-      Separately, {overlapping.length} other {overlapping.length === 1 ? "ad" : "ads"} ran while this vendor was being paid for placeable media —{" "}
+      Separately, {overlapping.length} other {overlapping.length === 1 ? "ad" : "ads"} ran within a week of this vendor being paid for placeable media —{" "}
       {[...bySponsor.entries()].map(([id, n], i) => (
         <span key={id}>
           {i > 0 && (i === bySponsor.size - 1 ? " and " : ", ")}
@@ -66,8 +67,8 @@ export function VendorAds({
       <Card title="Ads linked to this vendor">
         <div className="space-y-2">
           <p className="text-xs text-neutral-500">
-            None. An ad is linked only when a person verified it from a source naming both, or when this was the only digital vendor its sponsor paid while
-            it ran — the FEC does not record which buy placed which ad, so this is not evidence that the vendor made no ads.
+            None. An ad is linked only when a person verified it from a source naming both, or when this was the only digital vendor its sponsor paid in the
+            week before and while it ran — the FEC does not record which buy placed which ad, so this is not evidence that the vendor made no ads.
           </p>
           {sameWindow}
         </div>

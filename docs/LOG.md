@@ -505,3 +505,15 @@ the contract test on vendor detail files caught the stale values first, which is
 
 **Numbers.** Vendor→ad links 612 → 115 (497 adjacent removed, 115 inferred kept, 0 verified in PA yet); 280 of 500 ads carry
 same-window context (611 rows); 169 pipeline tests, 2,455 out + 5 hand files validate.
+
+**Review fixes (same PR).** Three findings from review, all real: (1) a vendor's in-window buys were grouped as one lump under
+its *dominant* medium, so a TV-dominant firm with digital buys was dropped from context, and a phones-dominant firm was
+inferred as the "only digital vendor" with a rule reading "$20,138 in phones buys" (California Nurses Association) — now
+context and links count only the vendor's placeable buys (digital/production/other) and the medium is the dominant one among
+those; (2) `vendor_links` iterated only vendors with an in-window buy, so a hand-verified pair with no dated payment would
+silently vanish — verified links are now emitted regardless (rule says "no payment … is dated in that window"; `window`
+nullable when the ad has no dates), which the PA data does not yet exercise (0 verified rows) but the contract must hold;
+(3) the pipeline window has a 7-day lead (`WINDOW_LEAD_DAYS`) while every sentence said "while this ad ran" — kept the lead
+(placement is paid before air) and changed the copy everywhere to "in the week before and while this ad ran". Context rows
+611 → 728 across 280 → 284 ads (mixed-media vendors' digital portions now shown); links unchanged at 115 inferred, one rule
+text corrected. 171 pipeline tests.

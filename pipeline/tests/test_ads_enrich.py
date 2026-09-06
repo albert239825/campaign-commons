@@ -188,6 +188,78 @@ def test_no_links_when_run_dates_are_missing() -> None:
     assert vendor_links(_ad(last=None), _entity(), {}) == []
 
 
+def _with_buy(entity: JsonDict, vendor_id: str, day: str, amount: float, medium: str) -> JsonDict:
+    ies = entity["independent_expenditures"]
+    assert isinstance(ies, list)
+    ies.append(
+        {
+            **ies[0],
+            "ie_id": f"{vendor_id}-{day}",
+            "vendor_id": vendor_id,
+            "date": day,
+            "amount": amount,
+            "medium": medium,
+        }
+    )
+    return entity
+
+
+def test_mixed_media_vendor_counts_only_its_placeable_buys() -> None:
+    """A vendor paid for both TV and digital in the window: its TV dollars neither hide its digital buys (when TV dominates)
+    nor inflate them (when digital dominates). Context and link amounts come from the placeable buys alone."""
+    # pixel: digital $110K in window + a $1M TV buy in window -> still digital, still $110K / 2 buys
+    entity = _with_buy(_entity(), "vendor:pixel-placement", "2024-09-20", 1_000_000.0, "tv")
+    (pixel,) = same_window_buys(_ad(), entity)
+    assert (pixel["medium"], pixel["amount_in_window"], pixel["buys_in_window"]) == ("digital", 110000.0, 2)
+    (link,) = vendor_links(_ad(), entity, {})
+    assert (link["basis"]["basis"], link["amount_in_window"], link["buys_in_window"]) == ("inferred", 110000.0, 2)
+    assert "$110,000 in digital buys" in str(link["basis"]["rule"])
+    # broadcast: $500K TV in window + a $5K digital buy -> listed as a $5K digital context row, and a second digital vendor
+    # means nobody is inferred any more
+    entity = _with_buy(_entity(), "vendor:broadcast-buyers", "2024-09-25", 5000.0, "digital")
+    rows = {str(b["vendor_id"]): b for b in same_window_buys(_ad(), entity)}
+    assert set(rows) == {"vendor:pixel-placement", "vendor:broadcast-buyers"}
+    assert (rows["vendor:broadcast-buyers"]["medium"], rows["vendor:broadcast-buyers"]["amount_in_window"]) == (
+        "digital",
+        5000.0,
+    )
+    assert rows["vendor:broadcast-buyers"]["buys_in_window"] == 1
+    assert vendor_links(_ad(), entity, {}) == []
+
+
+def test_verified_link_does_not_need_a_payment_in_the_window() -> None:
+    """A person naming both sides is the evidence; a dated buy is not required (and its absence is said out loud)."""
+    hand = {
+        ("CR1", "vendor:stream-ads"): {**HAND_LINK, "vendor_id": "vendor:stream-ads"}
+    }  # stream's only buy is 10-25, outside
+    links = {str(link["vendor_id"]): link for link in vendor_links(_ad(), _entity(), hand)}
+    assert set(links) == {"vendor:stream-ads", "vendor:pixel-placement"}
+    stream = links["vendor:stream-ads"]
+    assert stream["basis"]["basis"] == "verified"
+    assert (stream["amount_in_window"], stream["buys_in_window"], stream["medium"]) == (0.0, 0, "digital")
+    assert stream["window"] == ["2024-09-17", "2024-10-01"]
+    assert "no EXAMPLE VICTORY FUND payment to Stream Ads for placeable media is dated in that window" in str(
+        stream["basis"]["rule"]
+    )
+    assert (
+        links["vendor:pixel-placement"]["basis"]["basis"] == "inferred"
+    )  # still the only digital vendor *paid* in the window
+    # no run dates at all: the verified link survives with a null window; nothing can be inferred
+    (only,) = vendor_links(_ad(first=None), _entity(), hand)
+    assert only["vendor_id"] == "vendor:stream-ads" and only["basis"]["basis"] == "verified" and only["window"] is None
+    assert "Run dates not reported" in str(only["basis"]["rule"])
+    gallery = _gallery(_ad(first=None, last=None))
+    enrich(
+        gallery,
+        {},
+        {SPONSOR: _entity()},
+        {},
+        EMPTY_HAND,
+        {**EMPTY_HAND, "rows": [{**HAND_LINK, "vendor_id": "vendor:stream-ads"}]},
+    )
+    _validate_gallery(gallery)
+
+
 # --- basis ------------------------------------------------------------------------------------------------------------
 
 
@@ -209,7 +281,10 @@ def test_two_digital_vendors_in_window_get_no_link_only_same_window_context() ->
     ad = _ad(first="2024-10-18", last="2024-10-25")
     assert vendor_links(ad, _entity(), {}) == []
     buys = same_window_buys(ad, _entity())
-    assert [str(b["vendor_id"]) for b in buys] == ["vendor:pixel-placement", "vendor:stream-ads"]  # by dollars in window
+    assert [str(b["vendor_id"]) for b in buys] == [
+        "vendor:pixel-placement",
+        "vendor:stream-ads",
+    ]  # by dollars in window
     for b in buys:
         assert "basis" not in b
         assert set(b) == {"vendor_id", "vendor_name", "medium", "amount_in_window", "buys_in_window", "source_url"}

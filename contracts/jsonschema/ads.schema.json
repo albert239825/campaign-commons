@@ -372,15 +372,22 @@
                       ]
                     },
                     "window": {
-                      "type": "array",
-                      "minItems": 2,
-                      "maxItems": 2,
-                      "items": [
+                      "anyOf": [
                         {
-                          "type": "string"
+                          "type": "array",
+                          "minItems": 2,
+                          "maxItems": 2,
+                          "items": [
+                            {
+                              "type": "string"
+                            },
+                            {
+                              "type": "string"
+                            }
+                          ]
                         },
                         {
-                          "type": "string"
+                          "type": "null"
                         }
                       ]
                     },

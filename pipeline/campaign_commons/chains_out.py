@@ -129,7 +129,7 @@ def _ad_parent_edge(ad: dict, ad_node_id: str, root: str, vendor_ids: set[str], 
                 amount,
                 depth,
                 count=int(link["buys_in_window"]),
-                date_range=list(link["window"]),
+                date_range=list(link["window"]) if link.get("window") else None,
                 source_url=(link["basis"]["source_urls"] or [None])[0],
                 basis=link["basis"],
             )

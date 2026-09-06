@@ -150,7 +150,7 @@ export default async function AdPage({ params }: { params: Promise<{ raceId: str
               <>
                 <p className="text-xs text-neutral-600">
                   A vendor is linked to this ad only when a person verified it from a source naming both, or when it was the only digital vendor the sponsor
-                  paid while the ad ran (inferred). Each link says what it rests on.
+                  paid in the week before and while the ad ran (inferred). Each link says what it rests on.
                 </p>
                 <VendorLines links={vendorLinks} raceId={raceId} />
               </>
@@ -207,8 +207,9 @@ export default async function AdPage({ params }: { params: Promise<{ raceId: str
           <p className="mt-1 text-xs text-neutral-500">
             <span className="font-medium text-neutral-700">Assumptions.</span> Vendor dollars are Schedule E payments as filed. The ad&apos;s dollars are the
             midpoint of the range Google reports, not a filed figure, and are never added to the vendor dollars. A vendor → ad edge is drawn only when a person
-            verified it from a source naming both (solid) or that vendor was the only digital vendor the sponsor paid while the ad ran (dashed, inferred).
-            Other vendors paid in the same window are listed above as a sentence, not drawn: overlapping dates are not evidence of who placed the ad. Donor
+            verified it from a source naming both (solid) or that vendor was the only digital vendor the sponsor paid in the week before and while the ad ran
+            (dashed, inferred). Other vendors paid in that window are listed above as a sentence, not drawn: overlapping dates are not evidence of who placed
+            the ad. Donor
             dollars on the left are pooled: none of them can be said to have bought this ad. Nothing here reaches the candidate.
           </p>
         </Card>
