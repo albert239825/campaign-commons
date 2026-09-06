@@ -270,7 +270,7 @@ def build_out_side(
                 d_ad,
                 amount,
                 ad["source_url"],
-                f"{ads_href}#{ad['ad_id']}",
+                f"{ads_href}/{ad['ad_id']}",
                 thumbnail_path=ad.get("cached_creative_path"),
                 basis=_inferred(f"Google reports spend as a range ({rng}); the midpoint is drawn", [ad["source_url"]]),
             )

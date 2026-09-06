@@ -12,7 +12,7 @@ export type NodeLinks = {
 
 /**
  * Internal page for the node when one exists, otherwise null. Spending-side nodes carry their own `href` from the
- * pipeline (vendor page, ad-card anchor, dossier); funding-side nodes resolve to the entity page or donor forward view.
+ * pipeline (vendor page, ad page, dossier); funding-side nodes resolve to the entity page or donor forward view.
  */
 export function pageHref(
   n: Pick<ChainNode, "id" | "kind" | "href">,

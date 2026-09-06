@@ -20,7 +20,7 @@ export function SeenAdsStrip({ ads, raceId }: { ads: Ad[]; raceId: string }) {
       {ads.map((ad) => (
         <Link
           key={ad.ad_id}
-          href={`${routes.ads(raceId)}#${ad.ad_id}`}
+          href={routes.ad(raceId, ad.ad_id)}
           className="flex items-center gap-2 rounded-md border border-neutral-200 p-1 pr-2 hover:bg-neutral-50"
           title={`${ad.advertiser_name}: ${range(ad.impressions_range.min, ad.impressions_range.max)} impressions`}
         >
