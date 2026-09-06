@@ -120,8 +120,9 @@ def _committee_cache(
             cached[entity_id] = _committee_details(read_json(path))
         else:
             uncached.append(entity_id)
-    for offset in range(0, len(uncached), 100):
-        chunk = uncached[offset : offset + 100]
+    chunk_size = 100 if fetcher else 1  # default fetcher is per-committee; persist each before the next call
+    for offset in range(0, len(uncached), chunk_size):
+        chunk = uncached[offset : offset + chunk_size]
         results = (fetcher or _committee_batch_fetch)(chunk)
         by_id = {
             str(result.get("committee_id")): result for result in results if isinstance(result.get("committee_id"), str)
