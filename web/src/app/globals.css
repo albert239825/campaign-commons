@@ -722,6 +722,28 @@ body:has(.detail-page) :is(a, button, input, select, summary, [tabindex]):focus-
 .chain-node:hover, .chain-node:focus-visible { opacity: .85; }
 .chain-node:focus-visible, .chain-ribbon:focus-visible { outline: 2px solid #2563eb; outline-offset: 2px; }
 .chain-ribbon:hover, .chain-ribbon:focus-visible { fill-opacity: .7; }
+/* Path highlight (H1b): while a route is lit, everything off it fades; lit ribbons deepen. Opacity and stroke only —
+   spines keep their width, dash and arrowhead, so a targeting arrow never reads as a money band. */
+.chain-map-scroll:focus-visible { outline: 2px solid #2563eb; outline-offset: -2px; }
+.chain-node, .chain-ribbon, .chain-spine { transition: opacity .15s ease, fill-opacity .15s ease; }
+.chain-map-scroll[data-lit-mode] .chain-node[data-lit="0"],
+.chain-map-scroll[data-lit-mode] .chain-ribbon[data-lit="0"],
+.chain-map-scroll[data-lit-mode] .chain-spine[data-lit="0"] { opacity: .25; }
+.chain-map-scroll[data-lit-mode] .chain-node[data-lit="0"]:hover { opacity: .6; }
+.chain-map-scroll[data-lit-mode] .chain-ribbon[data-lit="1"] { fill-opacity: .7; }
+.chain-map-scroll[data-lit-mode] .chain-spine[data-lit="1"] > path:nth-child(2) { stroke-opacity: 1; }
+.chain-map-scroll[data-lit-mode] .chain-spine[data-lit="1"] > path:first-child { stroke-opacity: .9; }
+.chain-cursor { stroke: #2563eb; stroke-width: 2.5px; vector-effect: non-scaling-stroke; }
+@media (prefers-reduced-motion: reduce) {
+  .chain-node, .chain-ribbon, .chain-spine { transition: none; }
+}
+@media (forced-colors: active) {
+  .chain-map-scroll[data-lit-mode] .chain-node[data-lit="0"],
+  .chain-map-scroll[data-lit-mode] .chain-ribbon[data-lit="0"],
+  .chain-map-scroll[data-lit-mode] .chain-spine[data-lit="0"] { opacity: .5; }
+  .chain-map-scroll[data-lit-mode] .chain-node[data-lit="1"] > rect { stroke: Highlight; }
+  .chain-cursor { stroke: Highlight; stroke-width: 3px; }
+}
 .chain-tip { position: absolute; z-index: 20; width: max-content; max-width: 280px; padding: 8px 10px; border: 1px solid #d4d4d4; border-radius: 4px; background: #fff; box-shadow: 0 6px 20px rgb(0 0 0 / 12%); color: #171717; font-size: 12px; line-height: 1.45; pointer-events: none; }
 .chain-tip-kind { font-size: 10px; letter-spacing: .04em; text-transform: uppercase; color: #737373; }
 .chain-tip-name { font-weight: 600; overflow-wrap: anywhere; }
