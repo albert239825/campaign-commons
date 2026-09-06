@@ -1,4 +1,4 @@
-import { UNWALKED_COLOR, VISIBILITY_COLORS, type VisibilityShares } from "@campaign-commons/contracts";
+import { DISCLOSED_SPLIT_COLORS, DISCLOSED_SPLIT_LABELS, UNWALKED_COLOR, VISIBILITY_COLORS, type VisibilityShares } from "@campaign-commons/contracts";
 
 export type BarSegment = { label: string; value: number; color: string };
 
@@ -41,9 +41,19 @@ export function BarLegend({ segments, className = "" }: { segments: BarSegment[]
 /** Neutral palette for campaign-vs-outside comparisons (not a visibility statement). */
 export const MONEY_COLORS = { campaign: "#1f2937", outside: "#a3a3a3" } as const;
 
-/** Disclosed / inferable / (not walked) / dark, in that order; `unwalked` is omitted when the data predates the bucket. */
-export const visibilitySegments = (v: Omit<VisibilityShares, "unwalked"> & { unwalked?: number }): BarSegment[] => [
-  { label: "Disclosed", value: v.disclosed, color: VISIBILITY_COLORS.disclosed },
+export type VisibilityInput = Omit<VisibilityShares, "unwalked"> & { unwalked?: number };
+
+/**
+ * Disclosed / inferable / (not walked) / dark, in that order; `unwalked` is omitted when the data predates the bucket.
+ * When the individuals / organizations split is present, disclosed is drawn as two adjacent segments of the same hue.
+ */
+export const visibilitySegments = (v: VisibilityInput): BarSegment[] => [
+  ...(v.disclosed_organizations === undefined
+    ? [{ label: "Disclosed", value: v.disclosed, color: VISIBILITY_COLORS.disclosed }]
+    : [
+        { label: DISCLOSED_SPLIT_LABELS.disclosed_individuals, value: v.disclosed_individuals ?? v.disclosed - v.disclosed_organizations, color: DISCLOSED_SPLIT_COLORS.disclosed_individuals },
+        { label: "Disclosed · organizations", value: v.disclosed_organizations, color: DISCLOSED_SPLIT_COLORS.disclosed_organizations },
+      ]),
   { label: "Inferable", value: v.inferable, color: VISIBILITY_COLORS.inferable },
   ...(v.unwalked === undefined ? [] : [{ label: "Not walked", value: v.unwalked, color: UNWALKED_COLOR }]),
   { label: "Dark", value: v.dark, color: VISIBILITY_COLORS.dark },

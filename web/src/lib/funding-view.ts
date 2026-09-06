@@ -20,21 +20,31 @@ export function buildFundingViews(ledger: Ledger) {
         ? sum(c => c.campaign.cash_on_hand!) : null,
     };
     const outside = { total: sum(c => c.outside.total), support: sum(c => c.outside.support), oppose: sum(c => c.outside.oppose) };
-    const visibility = { disclosed: 0, inferable: 0, unwalked: 0, dark: 0, unavailable: 0 };
+    // `disclosed` = individuals + organizations; the split is shown when the artifacts carry it.
+    const visibility = { disclosed: 0, disclosed_individuals: 0, disclosed_organizations: 0, inferable: 0, unwalked: 0, dark: 0, unavailable: 0 };
+    let hasSplit = false;
     if (id === "all" && ledger.traceability) {
       const t = ledger.traceability;
       visibility.disclosed = t.traced_to_individuals + (t.traced_to_organizations ?? 0);
+      visibility.disclosed_individuals = t.traced_to_individuals;
+      visibility.disclosed_organizations = t.traced_to_organizations ?? 0;
       visibility.inferable = t.inferable;
       visibility.unwalked = t.unwalked ?? 0;
       visibility.dark = t.dark;
+      hasSplit = t.traced_to_organizations !== undefined;
     } else {
       for (const spender of ledger.top_outside_spenders) {
         const amount = spender.by_candidate.filter(c => ids.has(c.candidate_id)).reduce((total, c) => total + c.amount, 0);
-        if (!spender.visibility_shares) continue;
+        const shares = spender.visibility_shares;
+        if (!shares) continue;
         // Estimate the source composition of spending using the spender's reported receipt shares.
         for (const key of ["disclosed", "inferable", "unwalked", "dark"] as const) {
-          visibility[key] += amount * spender.visibility_shares[key];
+          visibility[key] += amount * shares[key];
         }
+        const organizations = shares.disclosed_organizations ?? 0;
+        visibility.disclosed_organizations += amount * organizations;
+        visibility.disclosed_individuals += amount * (shares.disclosed_individuals ?? shares.disclosed - organizations);
+        if (shares.disclosed_organizations !== undefined) hasSplit = true;
       }
     }
     // Missing chains and spenders outside the loaded list remain unknown, never assumed dark.
@@ -44,6 +54,7 @@ export function buildFundingViews(ledger: Ledger) {
       id, label, names: candidates.map(c => c.name).join(" & "), campaign, outside, visibility,
       sources: candidates.map(c => ({ id: c.candidate_id, name: c.name, campaign: c.campaign.source_url, outside: c.outside.source_url })),
       publishedVisibility: id === "all" && ledger.traceability !== null,
+      hasSplit,
       method: id === "all" ? ledger.traceability?.method ?? null : null,
     };
   };

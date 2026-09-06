@@ -13,6 +13,20 @@ export const VISIBILITY_LABELS: Record<Visibility, string> = {
   dark: "Dark (no disclosure)",
 };
 
+/**
+ * Sub-buckets of `disclosed`: dollars that stop at a named person vs at a named business or union giving from its own
+ * treasury. Same hue as disclosed (individuals = the disclosed color itself), organizations a lighter tint.
+ */
+export const DISCLOSED_SPLIT_COLORS = {
+  disclosed_individuals: VISIBILITY_COLORS.disclosed,
+  disclosed_organizations: "#8FD4BB",
+} as const;
+
+export const DISCLOSED_SPLIT_LABELS = {
+  disclosed_individuals: "Disclosed · individuals",
+  disclosed_organizations: "Disclosed · organizations (business or union treasury)",
+} as const;
+
 /** Targeting edges (independent expenditures) are not money edges; render neutral. */
 export const TARGETING_COLOR = "#73726c";
 
