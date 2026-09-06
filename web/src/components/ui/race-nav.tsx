@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { routes } from "@/lib/format";
-import type { RaceSummary } from "@citizen-gotham/contracts";
+import type { RaceSummary } from "@campaign-commons/contracts";
 
 type Item = { href: string; label: string; count?: number };
 

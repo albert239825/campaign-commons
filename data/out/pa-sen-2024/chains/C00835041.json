@@ -2,7 +2,7 @@
   "root_entity_id": "C00835041",
   "root_name": "FORWARD BLUE",
   "race_id": "pa-sen-2024",
-  "generated_at": "2026-09-05T15:46:45+00:00",
+  "generated_at": "2026-09-05T19:53:48+00:00",
   "data_status": "real",
   "nodes": [
     {
@@ -46,7 +46,7 @@
       "medium": "production",
       "basis": {
         "basis": "filed",
-        "rule": "Schedule E payee, grouped by normalized vendor name (gotham.vendors)",
+        "rule": "Schedule E payee, grouped by normalized vendor name (campaign_commons.vendors)",
         "source_urls": [
           "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00835041&payee_name=MIDDLE+SEAT"
         ],
@@ -70,7 +70,7 @@
       "medium": "phones",
       "basis": {
         "basis": "filed",
-        "rule": "Schedule E payee, grouped by normalized vendor name (gotham.vendors)",
+        "rule": "Schedule E payee, grouped by normalized vendor name (campaign_commons.vendors)",
         "source_urls": [
           "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00835041&payee_name=SWITCHBOARD"
         ],
@@ -102,29 +102,6 @@
       }
     },
     {
-      "id": "CR10109674083533717505",
-      "name": "Video ad · 2024-09-26 – 2024-10-11",
-      "kind": "ad",
-      "committee_type": null,
-      "depth": 2,
-      "side": "out",
-      "visibility": "disclosed",
-      "amount_in": 17500.0,
-      "is_terminus": false,
-      "terminus_reason": null,
-      "source_url": "https://adstransparency.google.com/advertiser/AR17388283829248065537/creative/CR10109674083533717505?political=&region=US",
-      "href": "/races/pa-sen-2024/ads#CR10109674083533717505",
-      "basis": {
-        "basis": "inferred",
-        "rule": "Google reports spend as a range ($15,000–$20,000); the midpoint is drawn",
-        "source_urls": [
-          "https://adstransparency.google.com/advertiser/AR17388283829248065537/creative/CR10109674083533717505?political=&region=US"
-        ],
-        "checked_by": null,
-        "checked_at": null
-      }
-    },
-    {
       "id": "CR13942237366426009601",
       "name": "Video ad · 2024-09-26 – 2024-10-11",
       "kind": "ad",
@@ -142,6 +119,29 @@
         "rule": "Google reports spend as a range ($15,000–$20,000); the midpoint is drawn",
         "source_urls": [
           "https://adstransparency.google.com/advertiser/AR17388283829248065537/creative/CR13942237366426009601?political=&region=US"
+        ],
+        "checked_by": null,
+        "checked_at": null
+      }
+    },
+    {
+      "id": "CR10109674083533717505",
+      "name": "Video ad · 2024-09-26 – 2024-10-11",
+      "kind": "ad",
+      "committee_type": null,
+      "depth": 2,
+      "side": "out",
+      "visibility": "disclosed",
+      "amount_in": 17500.0,
+      "is_terminus": false,
+      "terminus_reason": null,
+      "source_url": "https://adstransparency.google.com/advertiser/AR17388283829248065537/creative/CR10109674083533717505?political=&region=US",
+      "href": "/races/pa-sen-2024/ads#CR10109674083533717505",
+      "basis": {
+        "basis": "inferred",
+        "rule": "Google reports spend as a range ($15,000–$20,000); the midpoint is drawn",
+        "source_urls": [
+          "https://adstransparency.google.com/advertiser/AR17388283829248065537/creative/CR10109674083533717505?political=&region=US"
         ],
         "checked_by": null,
         "checked_at": null
@@ -401,75 +401,6 @@
     },
     {
       "from": "vendor:V-middle-seat-consulting",
-      "to": "CR10109674083533717505",
-      "kind": "placement",
-      "amount": 0,
-      "visibility": "disclosed",
-      "depth": 2,
-      "transaction_types": [],
-      "count": 2,
-      "date_range": [
-        "2024-09-26",
-        "2024-10-11"
-      ],
-      "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00835041&payee_name=MIDDLE+SEAT",
-      "basis": {
-        "basis": "adjacent",
-        "rule": "Ran Sep 26, 2024 – Oct 11, 2024. In that window (buys dated up to 7 days before first shown through last shown) FORWARD BLUE reported production buys to Middle Seat Consulting ($114,000); the FEC does not record which buy placed which ad.",
-        "source_urls": [
-          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00835041&payee_name=MIDDLE+SEAT"
-        ],
-        "checked_by": null,
-        "checked_at": null
-      }
-    },
-    {
-      "from": "vendor:V-switchboard",
-      "to": "CR10109674083533717505",
-      "kind": "placement",
-      "amount": 0,
-      "visibility": "disclosed",
-      "depth": 2,
-      "transaction_types": [],
-      "count": 1,
-      "date_range": [
-        "2024-09-26",
-        "2024-10-11"
-      ],
-      "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00835041&payee_name=SWITCHBOARD",
-      "basis": {
-        "basis": "adjacent",
-        "rule": "Ran Sep 26, 2024 – Oct 11, 2024. In that window (buys dated up to 7 days before first shown through last shown) FORWARD BLUE reported phones buys to SWITCHBOARD ($1,875); the FEC does not record which buy placed which ad.",
-        "source_urls": [
-          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00835041&payee_name=SWITCHBOARD"
-        ],
-        "checked_by": null,
-        "checked_at": null
-      }
-    },
-    {
-      "from": "C00835041",
-      "to": "CR10109674083533717505",
-      "kind": "placement",
-      "amount": 17500.0,
-      "visibility": "disclosed",
-      "depth": 2,
-      "transaction_types": [],
-      "count": 1,
-      "date_range": null,
-      "source_url": "https://adstransparency.google.com/advertiser/AR17388283829248065537/creative/CR10109674083533717505?political=&region=US",
-      "basis": {
-        "basis": "inferred",
-        "rule": "Advertiser name matched to this committee by normalized name; Google shows the advertiser, not the paid-for-by line",
-        "source_urls": [
-          "https://adstransparency.google.com/advertiser/AR17388283829248065537/creative/CR10109674083533717505?political=&region=US"
-        ],
-        "checked_by": null,
-        "checked_at": null
-      }
-    },
-    {
-      "from": "vendor:V-middle-seat-consulting",
       "to": "CR13942237366426009601",
       "kind": "placement",
       "amount": 0,
@@ -532,6 +463,75 @@
         "rule": "Advertiser name matched to this committee by normalized name; Google shows the advertiser, not the paid-for-by line",
         "source_urls": [
           "https://adstransparency.google.com/advertiser/AR17388283829248065537/creative/CR13942237366426009601?political=&region=US"
+        ],
+        "checked_by": null,
+        "checked_at": null
+      }
+    },
+    {
+      "from": "vendor:V-middle-seat-consulting",
+      "to": "CR10109674083533717505",
+      "kind": "placement",
+      "amount": 0,
+      "visibility": "disclosed",
+      "depth": 2,
+      "transaction_types": [],
+      "count": 2,
+      "date_range": [
+        "2024-09-26",
+        "2024-10-11"
+      ],
+      "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00835041&payee_name=MIDDLE+SEAT",
+      "basis": {
+        "basis": "adjacent",
+        "rule": "Ran Sep 26, 2024 – Oct 11, 2024. In that window (buys dated up to 7 days before first shown through last shown) FORWARD BLUE reported production buys to Middle Seat Consulting ($114,000); the FEC does not record which buy placed which ad.",
+        "source_urls": [
+          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00835041&payee_name=MIDDLE+SEAT"
+        ],
+        "checked_by": null,
+        "checked_at": null
+      }
+    },
+    {
+      "from": "vendor:V-switchboard",
+      "to": "CR10109674083533717505",
+      "kind": "placement",
+      "amount": 0,
+      "visibility": "disclosed",
+      "depth": 2,
+      "transaction_types": [],
+      "count": 1,
+      "date_range": [
+        "2024-09-26",
+        "2024-10-11"
+      ],
+      "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00835041&payee_name=SWITCHBOARD",
+      "basis": {
+        "basis": "adjacent",
+        "rule": "Ran Sep 26, 2024 – Oct 11, 2024. In that window (buys dated up to 7 days before first shown through last shown) FORWARD BLUE reported phones buys to SWITCHBOARD ($1,875); the FEC does not record which buy placed which ad.",
+        "source_urls": [
+          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00835041&payee_name=SWITCHBOARD"
+        ],
+        "checked_by": null,
+        "checked_at": null
+      }
+    },
+    {
+      "from": "C00835041",
+      "to": "CR10109674083533717505",
+      "kind": "placement",
+      "amount": 17500.0,
+      "visibility": "disclosed",
+      "depth": 2,
+      "transaction_types": [],
+      "count": 1,
+      "date_range": null,
+      "source_url": "https://adstransparency.google.com/advertiser/AR17388283829248065537/creative/CR10109674083533717505?political=&region=US",
+      "basis": {
+        "basis": "inferred",
+        "rule": "Advertiser name matched to this committee by normalized name; Google shows the advertiser, not the paid-for-by line",
+        "source_urls": [
+          "https://adstransparency.google.com/advertiser/AR17388283829248065537/creative/CR10109674083533717505?political=&region=US"
         ],
         "checked_by": null,
         "checked_at": null

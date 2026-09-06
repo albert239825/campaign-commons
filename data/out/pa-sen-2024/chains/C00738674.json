@@ -2,7 +2,7 @@
   "root_entity_id": "C00738674",
   "root_name": "REPRODUCTIVE FREEDOM FOR ALL FREEDOM FUND",
   "race_id": "pa-sen-2024",
-  "generated_at": "2026-09-05T15:46:45+00:00",
+  "generated_at": "2026-09-05T19:53:48+00:00",
   "data_status": "real",
   "nodes": [
     {
@@ -5659,7 +5659,7 @@
       "medium": "phones",
       "basis": {
         "basis": "filed",
-        "rule": "Schedule E payee, grouped by normalized vendor name (gotham.vendors)",
+        "rule": "Schedule E payee, grouped by normalized vendor name (campaign_commons.vendors)",
         "source_urls": [
           "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00738674&payee_name=WINNING+CONNECTIONS"
         ],
@@ -5683,7 +5683,7 @@
       "medium": "phones",
       "basis": {
         "basis": "filed",
-        "rule": "Schedule E payee, grouped by normalized vendor name (gotham.vendors)",
+        "rule": "Schedule E payee, grouped by normalized vendor name (campaign_commons.vendors)",
         "source_urls": [
           "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00738674&payee_name=SCALE+TO+WIN"
         ],
@@ -5707,7 +5707,7 @@
       "medium": "other",
       "basis": {
         "basis": "filed",
-        "rule": "Schedule E payee, grouped by normalized vendor name (gotham.vendors)",
+        "rule": "Schedule E payee, grouped by normalized vendor name (campaign_commons.vendors)",
         "source_urls": [
           "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00738674&payee_name=REPRODUCTIVE+FREEDOM+FOR+ALL+PAC"
         ],
@@ -5731,32 +5731,9 @@
       "medium": "phones",
       "basis": {
         "basis": "filed",
-        "rule": "Schedule E payee, grouped by normalized vendor name (gotham.vendors)",
+        "rule": "Schedule E payee, grouped by normalized vendor name (campaign_commons.vendors)",
         "source_urls": [
           "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00738674&payee_name=HUBDIALER"
-        ],
-        "checked_by": null,
-        "checked_at": null
-      }
-    },
-    {
-      "id": "CR16898073441951809537",
-      "name": "Video ad · 2024-10-30 – 2024-11-04",
-      "kind": "ad",
-      "committee_type": null,
-      "depth": 2,
-      "side": "out",
-      "visibility": "disclosed",
-      "amount_in": 55000.0,
-      "is_terminus": false,
-      "terminus_reason": null,
-      "source_url": "https://adstransparency.google.com/advertiser/AR06193761582963490817/creative/CR16898073441951809537?political=&region=US",
-      "href": "/races/pa-sen-2024/ads#CR16898073441951809537",
-      "basis": {
-        "basis": "inferred",
-        "rule": "Google reports spend as a range ($50,000–$60,000); the midpoint is drawn",
-        "source_urls": [
-          "https://adstransparency.google.com/advertiser/AR06193761582963490817/creative/CR16898073441951809537?political=&region=US"
         ],
         "checked_by": null,
         "checked_at": null
@@ -5780,6 +5757,29 @@
         "rule": "Google reports spend as a range ($50,000–$60,000); the midpoint is drawn",
         "source_urls": [
           "https://adstransparency.google.com/advertiser/AR06193761582963490817/creative/CR11678766786567733249?political=&region=US"
+        ],
+        "checked_by": null,
+        "checked_at": null
+      }
+    },
+    {
+      "id": "CR16898073441951809537",
+      "name": "Video ad · 2024-10-30 – 2024-11-04",
+      "kind": "ad",
+      "committee_type": null,
+      "depth": 2,
+      "side": "out",
+      "visibility": "disclosed",
+      "amount_in": 55000.0,
+      "is_terminus": false,
+      "terminus_reason": null,
+      "source_url": "https://adstransparency.google.com/advertiser/AR06193761582963490817/creative/CR16898073441951809537?political=&region=US",
+      "href": "/races/pa-sen-2024/ads#CR16898073441951809537",
+      "basis": {
+        "basis": "inferred",
+        "rule": "Google reports spend as a range ($50,000–$60,000); the midpoint is drawn",
+        "source_urls": [
+          "https://adstransparency.google.com/advertiser/AR06193761582963490817/creative/CR16898073441951809537?political=&region=US"
         ],
         "checked_by": null,
         "checked_at": null
@@ -13543,6 +13543,27 @@
       }
     },
     {
+      "from": "C00738674",
+      "to": "CR11678766786567733249",
+      "kind": "placement",
+      "amount": 55000.0,
+      "visibility": "disclosed",
+      "depth": 2,
+      "transaction_types": [],
+      "count": 1,
+      "date_range": null,
+      "source_url": "https://adstransparency.google.com/advertiser/AR06193761582963490817/creative/CR11678766786567733249?political=&region=US",
+      "basis": {
+        "basis": "inferred",
+        "rule": "Advertiser name matched to this committee by normalized name; Google shows the advertiser, not the paid-for-by line",
+        "source_urls": [
+          "https://adstransparency.google.com/advertiser/AR06193761582963490817/creative/CR11678766786567733249?political=&region=US"
+        ],
+        "checked_by": null,
+        "checked_at": null
+      }
+    },
+    {
       "from": "vendor:V-winning-connections",
       "to": "CR16898073441951809537",
       "kind": "placement",
@@ -13654,27 +13675,6 @@
         "rule": "Advertiser name matched to this committee by normalized name; Google shows the advertiser, not the paid-for-by line",
         "source_urls": [
           "https://adstransparency.google.com/advertiser/AR06193761582963490817/creative/CR16898073441951809537?political=&region=US"
-        ],
-        "checked_by": null,
-        "checked_at": null
-      }
-    },
-    {
-      "from": "C00738674",
-      "to": "CR11678766786567733249",
-      "kind": "placement",
-      "amount": 55000.0,
-      "visibility": "disclosed",
-      "depth": 2,
-      "transaction_types": [],
-      "count": 1,
-      "date_range": null,
-      "source_url": "https://adstransparency.google.com/advertiser/AR06193761582963490817/creative/CR11678766786567733249?political=&region=US",
-      "basis": {
-        "basis": "inferred",
-        "rule": "Advertiser name matched to this committee by normalized name; Google shows the advertiser, not the paid-for-by line",
-        "source_urls": [
-          "https://adstransparency.google.com/advertiser/AR06193761582963490817/creative/CR11678766786567733249?political=&region=US"
         ],
         "checked_by": null,
         "checked_at": null

@@ -2,7 +2,7 @@
 import Link from "next/link";
 import { DetailHeader } from "@/components/ui/detail-layout";
 import { notFound } from "next/navigation";
-import { ISSUES, type Dossier, type IssueId } from "@citizen-gotham/contracts";
+import { ISSUES, type Dossier, type IssueId } from "@campaign-commons/contracts";
 import { getAds, getDossier, getRace, getStories, listDossierIds, listRaceIds } from "@/lib/data";
 import { date, routes } from "@/lib/format";
 import { AdjacencyNote, Breadcrumbs, Chip, DataStatusBanner, SourceLink } from "@/components/ui";

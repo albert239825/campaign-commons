@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { useEffect, useMemo, useState } from "react";
-import { ISSUE_AXES, ISSUES, type Dossier, type IssueId, type RaceSummary } from "@citizen-gotham/contracts";
+import { ISSUE_AXES, ISSUES, type Dossier, type IssueId, type RaceSummary } from "@campaign-commons/contracts";
 import { alignRaces, directionLabel, type CandidateAlignment, type RaceAlignment } from "@/lib/alignment";
 import { EMPTY_PREFS, loadPrefs, savePrefs, type UserPrefs } from "@/lib/prefs";
 import { pct, routes } from "@/lib/format";

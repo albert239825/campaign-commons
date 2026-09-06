@@ -6,7 +6,7 @@ import {
   type ChainEdgeKind,
   type ChainNode,
   type Visibility,
-} from "@citizen-gotham/contracts";
+} from "@campaign-commons/contracts";
 import { BASIS_LABELS, toBasisWire, type BasisWire } from "./basis";
 import { date, money } from "@/lib/format";
 import { pageHref, type NodeLinks } from "./links";

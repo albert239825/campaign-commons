@@ -6,9 +6,9 @@ from pathlib import Path
 import jsonschema
 import pytest
 
-from gotham.chains_out import MAX_AD_NODES, build_out_side, midpoint, patch_chain, strip_out_side
-from gotham.config import PA_SEN_2024
-from gotham.config import ROOT as REPO_ROOT
+from campaign_commons.chains_out import MAX_AD_NODES, build_out_side, midpoint, patch_chain, strip_out_side
+from campaign_commons.config import PA_SEN_2024
+from campaign_commons.config import ROOT as REPO_ROOT
 
 RACE = PA_SEN_2024
 SPENDER = "C00000001"

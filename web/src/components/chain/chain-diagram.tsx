@@ -6,7 +6,7 @@ import {
   TARGETING_COLOR,
   UNWALKED_COLOR,
   VISIBILITY_COLORS,
-} from "@citizen-gotham/contracts";
+} from "@campaign-commons/contracts";
 import { money } from "@/lib/format";
 import { BASIS_DASH, BASIS_LABELS } from "./basis";
 import {

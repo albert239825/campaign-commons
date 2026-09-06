@@ -1,4 +1,4 @@
-"""gotham.issues: hand issue files -> entity patches + issues.json, on a small fixture race."""
+"""campaign_commons.issues: hand issue files -> entity patches + issues.json, on a small fixture race."""
 
 from __future__ import annotations
 
@@ -7,7 +7,7 @@ from pathlib import Path
 
 import pytest
 
-from gotham.issues import FOCUS_RULE, IE_TAG_RULE, RowRefs, build
+from campaign_commons.issues import FOCUS_RULE, IE_TAG_RULE, RowRefs, build
 
 TAG = {"tagged_by": "tester", "tagged_at": "2026-09-05"}
 SRC = "https://example.org/about"

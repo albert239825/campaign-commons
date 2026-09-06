@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { ISSUES, type IssueId, type Party } from "@citizen-gotham/contracts";
+import { ISSUES, type IssueId, type Party } from "@campaign-commons/contracts";
 import { directionLabel, type CandidateAlignment, type RaceAlignment } from "@/lib/alignment";
 import { routes } from "@/lib/format";
 

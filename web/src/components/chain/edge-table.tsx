@@ -1,4 +1,4 @@
-import type { Chain, ChainEdge } from "@citizen-gotham/contracts";
+import type { Chain, ChainEdge } from "@campaign-commons/contracts";
 import { EdgeRows, fromWireRows, toWireRows } from "./edge-rows";
 import { EdgeTail } from "./edge-tail";
 import type { NodeLinks } from "./links";

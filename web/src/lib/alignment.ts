@@ -1,4 +1,4 @@
-import { ISSUE_AXES, ISSUES, type Dossier, type IssueId, type RaceSummary, type Stance, type Party } from "@citizen-gotham/contracts";
+import { ISSUE_AXES, ISSUES, type Dossier, type IssueId, type RaceSummary, type Stance, type Party } from "@campaign-commons/contracts";
 import type { UserPrefs } from "./prefs";
 
 export const CONFIDENCE_WEIGHT: Record<Stance["confidence"], number> = { high: 1, medium: 0.7, low: 0.4 };

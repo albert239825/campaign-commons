@@ -10,7 +10,7 @@ import {
   type IssueSpending,
   type RaceCandidate,
   type SpenderFocusSpending,
-} from "@citizen-gotham/contracts";
+} from "@campaign-commons/contracts";
 import { money, pct, routes } from "@/lib/format";
 import { Card, Money } from "@/components/ui";
 import { FOCUS_KIND_LABELS, NON_ISSUE_KIND_ORDER } from "@/components/issues/focus-kind";

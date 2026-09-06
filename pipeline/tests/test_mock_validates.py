@@ -2,8 +2,8 @@ import subprocess
 import sys
 from pathlib import Path
 
-from gotham.config import ROOT
-from gotham.validate import validate_dir
+from campaign_commons.config import ROOT
+from campaign_commons.validate import validate_dir
 
 
 def test_mock_generator_output_validates(tmp_path: Path) -> None:

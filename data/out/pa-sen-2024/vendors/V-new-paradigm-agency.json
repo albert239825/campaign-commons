@@ -41,7 +41,7 @@
   "last_date": "2024-10-23",
   "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&payee_name=NEW+PARADIGM+AGENCY",
   "race_id": "pa-sen-2024",
-  "generated_at": "2026-09-05T19:33:04+00:00",
+  "generated_at": "2026-09-05T19:53:50+00:00",
   "data_status": "real",
   "expenditures": [
     {
@@ -101,19 +101,6 @@
       }
     },
     {
-      "ad_id": "CR15398839034822262785",
-      "sponsor_entity_id": "C00747998",
-      "basis": {
-        "basis": "inferred",
-        "rule": "Only digital vendor CARE IN ACTION PAC paid during this ad's run window (ran oct 8, 2024 – nov 5, 2024, counting buys dated up to 7 days before first shown) — inferred, not filed. CARE IN ACTION PAC reported $10,000 in digital buys to NEW PARADIGM AGENCY; Google ads are digital placements.",
-        "source_urls": [
-          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00747998&payee_name=NEW+PARADIGM+AGENCY"
-        ],
-        "checked_by": null,
-        "checked_at": null
-      }
-    },
-    {
       "ad_id": "CR02540706956423725057",
       "sponsor_entity_id": "C00747998",
       "basis": {
@@ -125,7 +112,20 @@
         "checked_by": null,
         "checked_at": null
       }
+    },
+    {
+      "ad_id": "CR15398839034822262785",
+      "sponsor_entity_id": "C00747998",
+      "basis": {
+        "basis": "inferred",
+        "rule": "Only digital vendor CARE IN ACTION PAC paid during this ad's run window (ran oct 8, 2024 – nov 5, 2024, counting buys dated up to 7 days before first shown) — inferred, not filed. CARE IN ACTION PAC reported $10,000 in digital buys to NEW PARADIGM AGENCY; Google ads are digital placements.",
+        "source_urls": [
+          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00747998&payee_name=NEW+PARADIGM+AGENCY"
+        ],
+        "checked_by": null,
+        "checked_at": null
+      }
     }
   ],
-  "method": "Every Schedule E independent expenditure names a payee. Payee strings are normalised (case, punctuation, legal suffixes, token order), near-duplicates are folded with a difflib ratio ≥ 0.92 when their numeric tokens match, and hand alias rows from data/hand/<race>/vendor_aliases.json override the rule. Medium is classified from the purpose the spender filed (ordered keyword table in gotham/vendors.py); the FEC does not record which buy placed which ad, so vendor ↔ ad links are empty until a human verifies one. Totals are the filed amounts, grouped, never re-estimated."
+  "method": "Every Schedule E independent expenditure names a payee. Payee strings are normalised (case, punctuation, legal suffixes, token order), near-duplicates are folded with a difflib ratio ≥ 0.92 when their numeric tokens match, and hand alias rows from data/hand/<race>/vendor_aliases.json override the rule. Medium is classified from the purpose the spender filed (ordered keyword table in campaign_commons/vendors.py); the FEC does not record which buy placed which ad, so vendor ↔ ad links are empty until a human verifies one. Totals are the filed amounts, grouped, never re-estimated."
 }

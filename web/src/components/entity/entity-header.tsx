@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { COMMITTEE_TYPE_LABELS, type Entity } from "@citizen-gotham/contracts";
+import { COMMITTEE_TYPE_LABELS, type Entity } from "@campaign-commons/contracts";
 import { date, routes } from "@/lib/format";
 import { FlagBadge, Money, SourceLink, VisibilityBadge } from "@/components/ui";
 

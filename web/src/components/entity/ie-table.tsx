@@ -1,5 +1,5 @@
 import Link from "next/link";
-import type { IndependentExpenditure } from "@citizen-gotham/contracts";
+import type { IndependentExpenditure } from "@campaign-commons/contracts";
 import { date, routes } from "@/lib/format";
 import { Money, SourceLink } from "@/components/ui";
 import { EmptyRow, Table, Td, Th } from "@/components/ui/table";

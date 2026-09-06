@@ -61,7 +61,7 @@
   "last_date": "2024-10-15",
   "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&payee_name=INVICTUS+ADVERTISING",
   "race_id": "pa-sen-2024",
-  "generated_at": "2026-09-05T19:33:04+00:00",
+  "generated_at": "2026-09-05T19:53:50+00:00",
   "data_status": "real",
   "expenditures": [
     {
@@ -447,19 +447,6 @@
       }
     },
     {
-      "ad_id": "CR15369039469390856193",
-      "sponsor_entity_id": "C00849489",
-      "basis": {
-        "basis": "adjacent",
-        "rule": "Ran Aug 29, 2024 – Sep 4, 2024. In that window (buys dated up to 7 days before first shown through last shown) KEYSTONE RENEWAL PAC reported tv buys to INVICTUS ADVERTISING ($901,750); the FEC does not record which buy placed which ad.",
-        "source_urls": [
-          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00849489&payee_name=INVICTUS+ADVERTISING"
-        ],
-        "checked_by": null,
-        "checked_at": null
-      }
-    },
-    {
       "ad_id": "CR02005452000099041281",
       "sponsor_entity_id": "C00849489",
       "basis": {
@@ -473,11 +460,11 @@
       }
     },
     {
-      "ad_id": "CR02987728750319239169",
+      "ad_id": "CR15369039469390856193",
       "sponsor_entity_id": "C00849489",
       "basis": {
         "basis": "adjacent",
-        "rule": "Ran Aug 3, 2024 – Aug 14, 2024. In that window (buys dated up to 7 days before first shown through last shown) KEYSTONE RENEWAL PAC reported tv buys to INVICTUS ADVERTISING ($1,341,500); the FEC does not record which buy placed which ad.",
+        "rule": "Ran Aug 29, 2024 – Sep 4, 2024. In that window (buys dated up to 7 days before first shown through last shown) KEYSTONE RENEWAL PAC reported tv buys to INVICTUS ADVERTISING ($901,750); the FEC does not record which buy placed which ad.",
         "source_urls": [
           "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00849489&payee_name=INVICTUS+ADVERTISING"
         ],
@@ -499,11 +486,11 @@
       }
     },
     {
-      "ad_id": "CR08283124084246577153",
+      "ad_id": "CR02987728750319239169",
       "sponsor_entity_id": "C00849489",
       "basis": {
         "basis": "adjacent",
-        "rule": "Ran Jul 26, 2024 – Aug 3, 2024. In that window (buys dated up to 7 days before first shown through last shown) KEYSTONE RENEWAL PAC reported tv buys to INVICTUS ADVERTISING ($1,000,000); the FEC does not record which buy placed which ad.",
+        "rule": "Ran Aug 3, 2024 – Aug 14, 2024. In that window (buys dated up to 7 days before first shown through last shown) KEYSTONE RENEWAL PAC reported tv buys to INVICTUS ADVERTISING ($1,341,500); the FEC does not record which buy placed which ad.",
         "source_urls": [
           "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00849489&payee_name=INVICTUS+ADVERTISING"
         ],
@@ -517,6 +504,32 @@
       "basis": {
         "basis": "adjacent",
         "rule": "Ran Oct 16, 2024 – Nov 6, 2024. In that window (buys dated up to 7 days before first shown through last shown) KEYSTONE RENEWAL PAC reported production buys to INVICTUS ADVERTISING ($531,500); the FEC does not record which buy placed which ad.",
+        "source_urls": [
+          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00849489&payee_name=INVICTUS+ADVERTISING"
+        ],
+        "checked_by": null,
+        "checked_at": null
+      }
+    },
+    {
+      "ad_id": "CR08283124084246577153",
+      "sponsor_entity_id": "C00849489",
+      "basis": {
+        "basis": "adjacent",
+        "rule": "Ran Jul 26, 2024 – Aug 3, 2024. In that window (buys dated up to 7 days before first shown through last shown) KEYSTONE RENEWAL PAC reported tv buys to INVICTUS ADVERTISING ($1,000,000); the FEC does not record which buy placed which ad.",
+        "source_urls": [
+          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00849489&payee_name=INVICTUS+ADVERTISING"
+        ],
+        "checked_by": null,
+        "checked_at": null
+      }
+    },
+    {
+      "ad_id": "CR17358786079758483457",
+      "sponsor_entity_id": "C00849489",
+      "basis": {
+        "basis": "adjacent",
+        "rule": "Ran Aug 29, 2024 – Sep 4, 2024. In that window (buys dated up to 7 days before first shown through last shown) KEYSTONE RENEWAL PAC reported tv buys to INVICTUS ADVERTISING ($901,750); the FEC does not record which buy placed which ad.",
         "source_urls": [
           "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00849489&payee_name=INVICTUS+ADVERTISING"
         ],
@@ -549,20 +562,7 @@
         "checked_by": null,
         "checked_at": null
       }
-    },
-    {
-      "ad_id": "CR17358786079758483457",
-      "sponsor_entity_id": "C00849489",
-      "basis": {
-        "basis": "adjacent",
-        "rule": "Ran Aug 29, 2024 – Sep 4, 2024. In that window (buys dated up to 7 days before first shown through last shown) KEYSTONE RENEWAL PAC reported tv buys to INVICTUS ADVERTISING ($901,750); the FEC does not record which buy placed which ad.",
-        "source_urls": [
-          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00849489&payee_name=INVICTUS+ADVERTISING"
-        ],
-        "checked_by": null,
-        "checked_at": null
-      }
     }
   ],
-  "method": "Every Schedule E independent expenditure names a payee. Payee strings are normalised (case, punctuation, legal suffixes, token order), near-duplicates are folded with a difflib ratio ≥ 0.92 when their numeric tokens match, and hand alias rows from data/hand/<race>/vendor_aliases.json override the rule. Medium is classified from the purpose the spender filed (ordered keyword table in gotham/vendors.py); the FEC does not record which buy placed which ad, so vendor ↔ ad links are empty until a human verifies one. Totals are the filed amounts, grouped, never re-estimated."
+  "method": "Every Schedule E independent expenditure names a payee. Payee strings are normalised (case, punctuation, legal suffixes, token order), near-duplicates are folded with a difflib ratio ≥ 0.92 when their numeric tokens match, and hand alias rows from data/hand/<race>/vendor_aliases.json override the rule. Medium is classified from the purpose the spender filed (ordered keyword table in campaign_commons/vendors.py); the FEC does not record which buy placed which ad, so vendor ↔ ad links are empty until a human verifies one. Totals are the filed amounts, grouped, never re-estimated."
 }

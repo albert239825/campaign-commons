@@ -2,7 +2,7 @@
 
 import { useRouter } from "next/navigation";
 import { useCallback, useEffect, useId, useMemo, useRef, useState } from "react";
-import type { SearchIndex, SearchItem } from "@citizen-gotham/contracts";
+import type { SearchIndex, SearchItem } from "@campaign-commons/contracts";
 import { KIND_LABELS, prepare, search, type Prepared } from "./match";
 
 /** Fetched once per page load on first focus and shared by every box instance. */

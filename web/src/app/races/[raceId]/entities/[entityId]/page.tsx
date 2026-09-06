@@ -4,7 +4,7 @@ import Link from "next/link";
 import { getAdsBySponsor, getEntity, getRace, getVendors, hasChain, listEntityIds, listRaceIds } from "@/lib/data";
 import { pct, routes } from "@/lib/format";
 import { AdjacencyNote, Breadcrumbs, Card, DataStatusBanner, Money } from "@/components/ui";
-import { VISIBILITY_COLORS } from "@citizen-gotham/contracts";
+import { VISIBILITY_COLORS } from "@campaign-commons/contracts";
 import { BarLegend, MONEY_COLORS, StackedBar, visibilitySegments } from "@/components/ui/stacked-bar";
 import { EntityHeader } from "@/components/entity/entity-header";
 import { FocusChip } from "@/components/entity/focus-chip";

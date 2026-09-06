@@ -1,5 +1,5 @@
 import Link from "next/link";
-import type { Basis, EntityVendorRow } from "@citizen-gotham/contracts";
+import type { Basis, EntityVendorRow } from "@campaign-commons/contracts";
 import { date, routes } from "@/lib/format";
 import { Card, Money, SourceLink } from "@/components/ui";
 import { Table, Td, Th } from "@/components/ui/table";

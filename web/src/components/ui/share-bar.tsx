@@ -1,4 +1,4 @@
-import { UNWALKED_COLOR, UNWALKED_LABEL, VISIBILITY_COLORS, VISIBILITY_LABELS, type VisibilityShares } from "@citizen-gotham/contracts";
+import { UNWALKED_COLOR, UNWALKED_LABEL, VISIBILITY_COLORS, VISIBILITY_LABELS, type VisibilityShares } from "@campaign-commons/contracts";
 import { pct } from "@/lib/format";
 
 export type Shares = Omit<VisibilityShares, "unwalked"> & { unwalked?: number };

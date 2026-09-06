@@ -1,4 +1,4 @@
-import type { ChainNode, OrganizationClass } from "@citizen-gotham/contracts";
+import type { ChainNode, OrganizationClass } from "@campaign-commons/contracts";
 
 const DARK_ORG_LABELS: Record<OrganizationClass, string> = {
   nonprofit: "Advocacy nonprofit — funders not on file",

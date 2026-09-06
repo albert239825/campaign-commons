@@ -1,4 +1,4 @@
-import type { ChainNode } from "@citizen-gotham/contracts";
+import type { ChainNode } from "@campaign-commons/contracts";
 import { donorKey, routes } from "@/lib/format";
 
 /** Which chain nodes have a page of their own in this race. */

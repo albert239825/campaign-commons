@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { ISSUE_BY_ID, type Ad, type AdVendorLink } from "@citizen-gotham/contracts";
+import { ISSUE_BY_ID, type Ad, type AdVendorLink } from "@campaign-commons/contracts";
 import { date, money, pct, range, routes } from "@/lib/format";
 import { Chip, SourceLink } from "@/components/ui";
 import type { ChipTone } from "@/components/ui";

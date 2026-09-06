@@ -5,7 +5,7 @@ import {
   COMMITTEE_TYPE_LABELS,
   VISIBILITY_COLORS,
   VISIBILITY_LABELS,
-} from "@citizen-gotham/contracts";
+} from "@campaign-commons/contracts";
 import { money } from "@/lib/format";
 import { BASIS_LABELS, BASIS_MEANING, type BasisWire } from "./basis";
 import { terminusLabel } from "./terminus";

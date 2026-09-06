@@ -1,4 +1,4 @@
-"""Stage: patch <race>/ads.json in place with everything Block 2 adds to an ad (runs after gotham.ads and gotham.vendors).
+"""Stage: patch <race>/ads.json in place with everything Block 2 adds to an ad (runs after campaign_commons.ads and campaign_commons.vendors).
 
 This module owns every field written to ads.json after the ads stage: `sponsor_visibility_shares`, `issues`,
 `vendor_links[]`, and the enrichment notes. It never re-downloads the Google bundle; it reads what is already in data/out
@@ -7,11 +7,11 @@ notes are replaced, `generated_at` is untouched).
 
 1. sponsor_visibility_shares <- chains/<matched_entity_id>.json summary shares; null when unmatched or no chain.
 2. issues <- data/hand/<race>/ad_issues.json (a person tagged the creative); absent when untagged.
-3. vendor_links[] <- the sponsor's `vendors[]` rows (entities/<sponsor>.json, written by gotham.vendors) whose IE rows are
+3. vendor_links[] <- the sponsor's `vendors[]` rows (entities/<sponsor>.json, written by campaign_commons.vendors) whose IE rows are
    dated inside the ad's window [first_shown - 7 days, last_shown]. Basis: `adjacent` by default; `inferred` when exactly one
    vendor with digital buys sits in the window (Google ads are digital placements); `verified` only from
    data/hand/<race>/vendor_ad_links.json. Reverse side: vendors/<vendor_id>.json.ads[] gets {ad_id, sponsor_entity_id, basis}.
-   Without `vendors[]` on the sponsor (gotham.vendors not run yet) the step is a no-op and says so in the notes.
+   Without `vendors[]` on the sponsor (campaign_commons.vendors not run yet) the step is a no-op and says so in the notes.
 """
 
 from __future__ import annotations
@@ -26,7 +26,7 @@ from .config import RACES, ROOT
 from .util import read_json, write_json
 
 WINDOW_LEAD_DAYS = 7
-NOTE_PREFIX = "Enrichment (gotham.ads_enrich): "
+NOTE_PREFIX = "Enrichment (campaign_commons.ads_enrich): "
 TAGGING_RULE = "Tagged by a person from the creative"
 WINDOW_RULE = (
     f"A vendor is linked to an ad when any of the sponsor's independent-expenditure rows paid to that vendor is dated from "
@@ -112,7 +112,7 @@ def in_window(day: date, first: date, last: date) -> bool:
 
 
 def sponsor_buys(entity: JsonDict) -> list[Buy]:
-    """The sponsor's IE rows that gotham.vendors resolved to a vendor. Empty when the vendors stage has not run."""
+    """The sponsor's IE rows that campaign_commons.vendors resolved to a vendor. Empty when the vendors stage has not run."""
     ies = entity.get("independent_expenditures", [])
     out: list[Buy] = []
     for ie in ies if isinstance(ies, list) else []:
@@ -251,10 +251,10 @@ def enrich_notes(c: EnrichCounts, tagger_count: int) -> list[str]:
     links_total = sum(c.links_by_basis.values())
     by_basis = ", ".join(f"{c.links_by_basis[b]} {b}" for b in ("verified", "inferred", "adjacent"))
     vendor_note = (
-        f"{c.sponsors_with_vendors} sponsor committees carry vendor rows (gotham.vendors); {c.sponsors_without_vendors} do not, "
+        f"{c.sponsors_with_vendors} sponsor committees carry vendor rows (campaign_commons.vendors); {c.sponsors_without_vendors} do not, "
         "so their ads have no vendor links yet."
         if c.sponsors_with_vendors
-        else "No sponsor committee carries vendor rows yet (gotham.vendors has not run), so no ad has vendor links."
+        else "No sponsor committee carries vendor rows yet (campaign_commons.vendors has not run), so no ad has vendor links."
     )
     return [
         NOTE_PREFIX

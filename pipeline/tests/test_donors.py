@@ -3,8 +3,8 @@
 import pytest
 from test_chains_graph import CAND, PAC, ROOT, SUPER, graph, walk
 
-from gotham.config import PA_SEN_2024
-from gotham.donors import (
+from campaign_commons.config import PA_SEN_2024
+from campaign_commons.donors import (
     ALLOCATION_NOTE,
     IETarget,
     donor_json,
