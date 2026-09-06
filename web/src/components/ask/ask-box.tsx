@@ -8,15 +8,19 @@ import { ISSUE_IDS, type IssueId, type TrailSubject } from "@campaign-commons/co
 import { canonicalQuestion, isAskIntent, resolveQuestion, type AskIntent, type Resolution } from "@/lib/ask";
 import { routes } from "@/lib/format";
 import { AskGraphResponseSchema, type AskGraphResponse } from "@/lib/graph/facts";
+import { AskExploreResponseSchema, type AskExploreResponse } from "@/lib/graph/explore";
 import { GraphAnswer } from "./graph-answer";
+import { ExploreAnswer } from "./explore-answer";
 
 /** Client-side budget for /api/ask-route; the server's own LLM timeout is shorter, so this only trips on a stalled network. */
 const ASK_ROUTE_TIMEOUT_MS = 8000;
 /** Client-side budget for /api/ask-graph: a classifier call, the graph query and a narrator call, each bounded on the server. */
 const ASK_GRAPH_TIMEOUT_MS = 30_000;
+const ASK_EXPLORE_TIMEOUT_MS = 60_000;
 
 /** Graph refusals worth showing under the route refusal: they carry deterministic detail (which names matched) the route could not know. */
 const GRAPH_REFUSAL_SHOWN = new Set<Extract<AskGraphResponse, { kind: "unsupported" }>["reason"]>(["ambiguous_subject", "subject_not_found", "wrong_kind"]);
+const EXPLORE_REFUSAL_SHOWN = new Set<Extract<AskExploreResponse, { kind: "unsupported" }>["reason"]>(["no_query", "rejected_query", "query_failed", "empty"]);
 
 /** What /api/ask-route may return; the subject is only carried as an id and re-bound to this page's own subject list. */
 const AskRouteBody = z.discriminatedUnion("kind", [
@@ -61,7 +65,8 @@ export function AskBox({
   const [question, setQuestion] = useState(initial);
   const [result, setResult] = useState<Resolution | null>(null);
   const [graph, setGraph] = useState<AskGraphResponse | null>(null);
-  const [pending, setPending] = useState<null | "route" | "graph">(null);
+  const [explore, setExplore] = useState<AskExploreResponse | null>(null);
+  const [pending, setPending] = useState<null | "route" | "graph" | "explore">(null);
 
   const submit = async (e: FormEvent) => {
     e.preventDefault();
@@ -69,6 +74,7 @@ export function AskBox({
     setPending("route");
     setResult(null);
     setGraph(null);
+    setExplore(null);
     let r: Resolution;
     try {
       r = question.trim() === "" ? resolveQuestion(question, subjects, examples) : await askRoute(raceId, question, subjects);
@@ -82,6 +88,7 @@ export function AskBox({
       return;
     }
     let g: AskGraphResponse | null = null;
+    let x: AskExploreResponse | null = null;
     if (r.reason !== "empty") {
       setPending("graph");
       try {
@@ -89,10 +96,19 @@ export function AskBox({
       } catch {
         g = null;
       }
+      if (g?.kind === "unsupported" && g.reason === "no_operation") {
+        setPending("explore");
+        try {
+          x = await askExplore(raceId, question);
+        } catch {
+          x = null;
+        }
+      }
     }
     setPending(null);
     setGraph(g);
-    setResult(g?.kind === "graph" ? null : r);
+    setExplore(x);
+    setResult(g?.kind === "graph" || x?.kind === "explore" ? null : r);
   };
 
   return (
@@ -105,6 +121,7 @@ export function AskBox({
             setQuestion(e.target.value);
             setResult(null);
             setGraph(null);
+            setExplore(null);
           }}
           placeholder={examples[0] ?? "Who funds …?"}
           autoFocus={autoFocus}
@@ -122,7 +139,11 @@ export function AskBox({
 
       {pending && (
         <p className="text-xs text-neutral-500" role="status">
-          {pending === "route" ? "Looking up…" : "No precomputed page answers this; reading the filings graph…"}
+          {pending === "route"
+            ? "Looking up…"
+            : pending === "graph"
+              ? "No precomputed page answers this; reading the filings graph…"
+              : "No fixed question fits; composing a one-off query over the filings graph…"}
         </p>
       )}
 
@@ -142,6 +163,7 @@ export function AskBox({
               {graph.matches.length > 0 ? ` (${graph.matches.map((m) => m.name).join("; ")})` : ""}
             </p>
           )}
+          {explore?.kind === "unsupported" && EXPLORE_REFUSAL_SHOWN.has(explore.reason) && <p className="ask-box-graph-refusal mt-2">{explore.message}</p>}
           {result.suggestions.length > 0 && (
             <ul className="mt-2 flex flex-wrap gap-2">
               {result.suggestions.map((s) => (
@@ -157,6 +179,11 @@ export function AskBox({
       {graph?.kind === "graph" && (
         <div className="ask-box-graph rounded-md border border-neutral-200 bg-white p-4">
           <GraphAnswer result={graph} />
+        </div>
+      )}
+      {explore?.kind === "explore" && (
+        <div className="ask-box-graph rounded-md border border-neutral-200 bg-white p-4">
+          <ExploreAnswer result={explore} />
         </div>
       )}
     </div>
@@ -176,6 +203,23 @@ async function askGraph(raceId: string, question: string): Promise<AskGraphRespo
     });
     if (!res.ok) throw new Error(`ask-graph ${res.status}`);
     return AskGraphResponseSchema.parse(await res.json());
+  } finally {
+    clearTimeout(timer);
+  }
+}
+
+async function askExplore(raceId: string, question: string): Promise<AskExploreResponse> {
+  const controller = new AbortController();
+  const timer = setTimeout(() => controller.abort(), ASK_EXPLORE_TIMEOUT_MS);
+  try {
+    const res = await fetch("/api/ask-explore", {
+      method: "POST",
+      headers: { "content-type": "application/json" },
+      body: JSON.stringify({ raceId, question }),
+      signal: controller.signal,
+    });
+    if (!res.ok) throw new Error(`ask-explore ${res.status}`);
+    return AskExploreResponseSchema.parse(await res.json());
   } finally {
     clearTimeout(timer);
   }

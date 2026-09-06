@@ -636,3 +636,14 @@ to the fixed issue-position pages before ordinary intent detection.
 spenders with hand-provided URLs and skipped 75 for want of a URL after FEC website discovery hit a DEMO_KEY 429.
 
 **Open.** Rerun with `FEC_API_KEY` to cover the tail, then have a human verify the 30 rows.
+
+## 2026-09-06 ~07:00 — Exploratory graph mode (Money Trails follow-up)
+
+**What changed.** Added a fallback after the route resolver and fixed graph operations refuse: Grok can compose one Cypher query
+over the documented filings graph. The server validates the query as read-only, allows only `$race`, caps it at 20 rows and 8
+seconds, runs it through a READ transaction, hydrates returned relationships with their source URLs, and shows the query and
+every returned row. A second model call narrates only those rows, with the same citation and number guard as fixed graph mode.
+
+**Trade-off.** Exploratory mode is labelled separately because the model may frame a question wrongly and cannot know what the
+graph does not contain. The query is shown as a hypothesis; the source-linked rows are the evidence. Existing route and fixed
+graph behavior remain unchanged.

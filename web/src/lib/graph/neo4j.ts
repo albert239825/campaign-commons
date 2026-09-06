@@ -47,3 +47,20 @@ export function runnerFor(driver: Driver, database?: string): Runner {
     return records.map((r) => r.toObject());
   };
 }
+
+export type TypedRunner = (
+  cypher: string,
+  params: Record<string, unknown>,
+  opts: { timeoutMs: number },
+) => Promise<{ records: Array<Record<string, unknown>>; queryType: string }>;
+
+export function typedRunnerFor(driver: Driver, database?: string): TypedRunner {
+  return async (cypher, params, opts) => {
+    const { records, summary } = await driver.executeQuery(cypher, params, {
+      database,
+      routing: "READ",
+      transactionConfig: { timeout: opts.timeoutMs },
+    });
+    return { records: records.map((r) => r.toObject()), queryType: summary.queryType };
+  };
+}
