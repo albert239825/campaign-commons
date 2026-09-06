@@ -1,5 +1,469 @@
 {
   "race_id": "pa-sen-2024",
-  "rows": [],
-  "method": "Hand-tagged self-described focus of the top outside spenders/funders, from each org's own site (or Wayback) and FEC Form 1. One row per entity; first issue is primary. Tagged by the Block 2 issue-focus child; every row cites its source."
+  "rows": [
+    {
+      "entity_id": "C00865444",
+      "name": "WINSENATE",
+      "kind": "general_partisan",
+      "issue_ids": [],
+      "description": "WinSenate reports Senate Majority PAC (SMP) as its connected organization; SMP describes itself as founded 'with one mission: To win Senate races' and 'solely dedicated to building a Democratic majority in the U.S. Senate.'",
+      "quote": "Senate Majority PAC was founded by experienced, aggressive Democratic strategists with one mission: To win Senate races.",
+      "source_urls": [
+        "https://www.fec.gov/data/committee/C00865444/",
+        "https://web.archive.org/web/20241014000000/https://www.senatemajority.com/about/",
+        "https://www.senatemajority.com/about/"
+      ],
+      "tagged_by": "devin-block2-issues",
+      "tagged_at": "2026-09-05"
+    },
+    {
+      "entity_id": "C00571703",
+      "name": "SENATE LEADERSHIP FUND",
+      "kind": "general_partisan",
+      "issue_ids": [],
+      "description": "Describes itself as 'the only outside organization solely dedicated to protecting and expanding the Republican Senate Majority'; its 2024 site stated 'one goal: to build a Republican Senate majority'.",
+      "quote": "As an independent Super PAC, the Senate Leadership Fund has one goal: to build a Republican Senate majority that will defend America from Chuck Schumer and Senate Democrats' destructive far-left agenda.",
+      "source_urls": [
+        "https://web.archive.org/web/20241014215743/https://www.senateleadershipfund.org/",
+        "https://senateleadershipfund.org/about/"
+      ],
+      "tagged_by": "devin-block2-issues",
+      "tagged_at": "2026-09-05"
+    },
+    {
+      "entity_id": "C00849489",
+      "name": "KEYSTONE RENEWAL PAC",
+      "kind": "candidate_aligned",
+      "issue_ids": [],
+      "description": "Its 2024 site said it is 'fighting to protect our conservative values by supporting Republican candidates in Pennsylvania'; the committee's filed independent expenditures in this cycle are all in the PA Senate race (support McCormick / oppose Casey). No issue is named.",
+      "quote": "Keystone Renewal is fighting to protect our conservative values by supporting Republican candidates in Pennsylvania. We will take on the challenges facing Pennsylvania Republicans and serve as an avenue to address important issues and bring renewal to the keystone state.",
+      "source_urls": [
+        "https://web.archive.org/web/20241106000000/https://www.keystonerenewal.com/",
+        "https://www.fec.gov/data/committee/C00849489/"
+      ],
+      "tagged_by": "devin-block2-issues",
+      "tagged_at": "2026-09-05"
+    },
+    {
+      "entity_id": "C00687103",
+      "name": "AMERICANS FOR PROSPERITY ACTION, INC. (AFP ACTION) DBA CVA ACTION AND DBA LIBRE ACTION",
+      "kind": "multi_issue",
+      "issue_ids": ["tax_budget"],
+      "description": "AFP Action says it is 'committed to electing candidates who will drive policy change and facilitate the building of broad policy coalitions that remove barriers to opportunity'. Its About page names no specific policy area; tax_budget is the closest frozen id to its stated economic-opportunity agenda and is a loose fit.",
+      "quote": "AFP Action is committed to electing candidates who will drive policy change and facilitate the building of broad policy coalitions that remove barriers to opportunity and help people improve their lives.",
+      "source_urls": [
+        "https://afpaction.com/about/",
+        "https://web.archive.org/web/20241013000000/https://afpaction.com/"
+      ],
+      "tagged_by": "devin-block2-issues",
+      "tagged_at": "2026-09-05"
+    },
+    {
+      "entity_id": "C00042366",
+      "name": "DSCC",
+      "kind": "general_partisan",
+      "issue_ids": [],
+      "description": "The Democratic Senatorial Campaign Committee's 2024 site: 'Senate Democrats made history in 2022 -- and we're fighting to do it again in 2024 by defending and expanding our Senate majority.' A party committee; names no issue as its purpose.",
+      "quote": "We're Working to Protect Our Senate Majority. Senate Democrats made history in 2022 -- and we're fighting to do it again in 2024 by defending and expanding our Senate majority.",
+      "source_urls": [
+        "https://web.archive.org/web/20241014000000/https://www.dscc.org/",
+        "https://www.fec.gov/data/committee/C00042366/"
+      ],
+      "tagged_by": "devin-block2-issues",
+      "tagged_at": "2026-09-05"
+    },
+    {
+      "entity_id": "C00487363",
+      "name": "AMERICAN CROSSROADS",
+      "kind": "general_partisan",
+      "issue_ids": [],
+      "description": "American Crossroads says it raises money 'from a whole lot of volunteer donors' and spends it 'to promote people who have the courage, integrity and good ideas to get this country back on track'; its 2024 site asked supporters to 'help defeat the radical left'. No single issue is named.",
+      "quote": "We raise money from a whole lot of volunteer donors all across the country. And we spend it to promote people who have the courage, integrity and good ideas to get this country back on track.",
+      "source_urls": [
+        "https://www.americancrossroads.org/about/",
+        "https://web.archive.org/web/20241015000000/https://www.americancrossroads.org/"
+      ],
+      "tagged_by": "devin-block2-issues",
+      "tagged_at": "2026-09-05"
+    },
+    {
+      "entity_id": "C00486845",
+      "name": "LCV VICTORY FUND",
+      "kind": "single_issue",
+      "issue_ids": ["energy_climate"],
+      "description": "LCV Victory Fund 'runs independent campaigns to defeat federal candidates who will undermine environmental progress and elect environmental champions who will prioritize just and equitable climate solutions.'",
+      "quote": "LCV Victory Fund runs independent campaigns to defeat federal candidates who will undermine environmental progress and elect environmental champions who will prioritize just and equitable climate solutions.",
+      "source_urls": [
+        "https://www.lcv.org/lcv-victory-fund/",
+        "https://www.lcv.org/about/"
+      ],
+      "tagged_by": "devin-block2-issues",
+      "tagged_at": "2026-09-05"
+    },
+    {
+      "entity_id": "C00744920",
+      "name": "CFFE PAC",
+      "kind": "multi_issue",
+      "issue_ids": ["healthcare", "tax_budget"],
+      "description": "The Campaign for a Family Friendly Economy PAC 'wins elections by talking to voters in battleground states ... about where candidates stand on policies that lower costs, especially the cost of caregiving' — child care, elder care, paid leave and health care. Caregiving costs have no frozen id; healthcare is the closest, tax_budget stands in for 'lower costs'.",
+      "quote": "The Campaign for a Family Friendly Economy PAC wins elections by talking to voters in battleground states around the country about where candidates stand on policies that lower costs, especially the cost of caregiving.",
+      "source_urls": [
+        "https://www.familyfriendlyeconomy.org/",
+        "https://www.fec.gov/data/committee/C00744920/"
+      ],
+      "tagged_by": "devin-block2-issues",
+      "tagged_at": "2026-09-05"
+    },
+    {
+      "entity_id": "C00609388",
+      "name": "BLACKPAC",
+      "kind": "multi_issue",
+      "issue_ids": ["healthcare", "energy_climate", "tax_budget"],
+      "description": "BlackPAC's mission is 'to engage and activate our community around the issues that matter most', listing racism and white supremacy, voting rights, environmental racism and climate change, a fair economy and public schools, criminal justice reform, and 'an equitable healthcare system'. Voting rights and criminal justice have no frozen id.",
+      "quote": "Our mission is to engage and activate our community around the issues that matter most: fighting racism and white supremacy; protecting our voting rights and access to the ballot box; defending our neighborhoods from environmental racism, climate change, and violence; creating a fair economy and access to high-quality public schools; criminal justice reform and police accountability; and an equitable healthcare system.",
+      "source_urls": [
+        "https://blackpac.com/",
+        "https://blackpac.com/about/"
+      ],
+      "tagged_by": "devin-block2-issues",
+      "tagged_at": "2026-09-05"
+    },
+    {
+      "entity_id": "C00740225",
+      "name": "NRDC ACTION VOTES",
+      "kind": "single_issue",
+      "issue_ids": ["energy_climate"],
+      "description": "NRDC Action Votes 'is an independent expenditure political committee that works to avert dangerous climate change, support healthy people and thriving communities, and conserve and protect nature and wildlife.'",
+      "quote": "NRDC Action Votes is an independent expenditure political committee that works to avert dangerous climate change, support healthy people and thriving communities, and conserve and protect nature and wildlife.",
+      "source_urls": [
+        "https://web.archive.org/web/20241215185416/https://www.nrdcactionvotes.org/"
+      ],
+      "tagged_by": "devin-block2-issues",
+      "tagged_at": "2026-09-05"
+    },
+    {
+      "entity_id": "C00620971",
+      "name": "FOR OUR FUTURE",
+      "kind": "multi_issue",
+      "issue_ids": ["tax_budget", "healthcare"],
+      "description": "For Our Future 'builds progressive power through voter engagement, issue advocacy, and community organizing to create shared economic prosperity, strengthen public education, and advance social and racial justice.' Its issues page leads with costs of housing, healthcare, childcare and groceries. Public education and racial justice have no frozen id.",
+      "quote": "For Our Future builds progressive power through voter engagement, issue advocacy, and community organizing to create shared economic prosperity, strengthen public education, and advance social and racial justice.",
+      "source_urls": [
+        "https://forourfuturefund.org/issues",
+        "https://www.fec.gov/data/committee/C00620971/"
+      ],
+      "tagged_by": "devin-block2-issues",
+      "tagged_at": "2026-09-05"
+    },
+    {
+      "entity_id": "C00752691",
+      "name": "ONE FOR ALL COMMITTEE",
+      "kind": "general_partisan",
+      "issue_ids": [],
+      "description": "The One For All Committee 'delivers political persuasion ads to moderate white women to ensure victory in key battleground states' and 'persuades moderate women to vote for an America that works for everyone.' Describes an audience and an electoral goal, not an issue.",
+      "quote": "The One For All Committee delivers political persuasion ads to moderate white women to ensure victory in key battleground states. One For All is a 527 nonprofit organization.",
+      "source_urls": [
+        "https://oneforallcommittee.org/"
+      ],
+      "tagged_by": "devin-block2-issues",
+      "tagged_at": "2026-09-05"
+    },
+    {
+      "entity_id": "C00724203",
+      "name": "SOMOS PAC",
+      "kind": "general_partisan",
+      "issue_ids": [],
+      "description": "Somos PAC 'works to empower hardworking Latinos in shaping the future of our democracy by increasing our participation in elections and by electing progressive candidates', in support of 'candidates who will fight for an economy that works for everyone.' A voter-engagement and electoral mission; no issue from the frozen taxonomy is named.",
+      "quote": "Somos PAC works to empower hardworking Latinos in shaping the future of our democracy by increasing our participation in elections and by electing progressive candidates.",
+      "source_urls": [
+        "https://www.somospac.org/"
+      ],
+      "tagged_by": "devin-block2-issues",
+      "tagged_at": "2026-09-05"
+    },
+    {
+      "entity_id": "C00053553",
+      "name": "NATIONAL RIFLE ASSOCIATION OF AMERICA POLITICAL VICTORY FUND",
+      "kind": "single_issue",
+      "issue_ids": ["guns"],
+      "description": "The NRA Political Victory Fund 'is NRA's political action committee' and 'ranks political candidates - irrespective of party affiliation - based on voting records, public statements and their responses to an NRA-PVF questionnaire'; the NRA's stated premise is that 'gun control' schemes are an infringement on the Second Amendment.",
+      "quote": "The NRA Political Victory Fund (NRA-PVF) is NRA's political action committee. The NRA-PVF ranks political candidates - irrespective of party affiliation - based on voting records, public statements and their responses to an NRA-PVF questionnaire.",
+      "source_urls": [
+        "https://www.nrapvf.org/about-pvf.aspx"
+      ],
+      "tagged_by": "devin-block2-issues",
+      "tagged_at": "2026-09-05"
+    },
+    {
+      "entity_id": "C00811166",
+      "name": "THE SENTINEL ACTION FUND",
+      "kind": "general_partisan",
+      "issue_ids": [],
+      "description": "Sentinel Action Fund's 2024 site: 'We back conservative champions. Help retake the Senate Majority in 2024.' It calls itself 'the only conservative Super PAC with a year-round ground game committed to turning out absentee, early vote, and \"day of\" voters.' No issue named.",
+      "quote": "The Sentinel Action Fund is the only conservative Super PAC with a year-round ground game committed to turning out absentee, early vote, and \"day of\" voters.",
+      "source_urls": [
+        "https://web.archive.org/web/20241015000000/https://sentinelactionfund.com/",
+        "https://sentinelactionfund.com/"
+      ],
+      "tagged_by": "devin-block2-issues",
+      "tagged_at": "2026-09-05"
+    },
+    {
+      "entity_id": "C00688655",
+      "name": "EVERYTOWN FOR GUN SAFETY VICTORY FUND (EVERYTOWN VICTORY FUND)",
+      "kind": "single_issue",
+      "issue_ids": ["guns"],
+      "description": "Everytown for Gun Safety describes itself as 'the largest gun violence prevention organization in America' building a movement to 'register voters', 'elect gun safety candidates' and pass 'evidence-based solutions' to end gun violence; the Victory Fund is its federal super PAC.",
+      "quote": "We're the largest gun violence prevention organization in America—and we're winning.",
+      "source_urls": [
+        "https://www.everytown.org/about-everytown/",
+        "https://www.everytown.org/who-we-are/everytown-for-gun-safety-victory-fund/"
+      ],
+      "tagged_by": "devin-block2-issues",
+      "tagged_at": "2026-09-05"
+    },
+    {
+      "entity_id": "C00544387",
+      "name": "AMERICAN PRINCIPLES PROJECT PAC",
+      "kind": "single_issue",
+      "issue_ids": ["healthcare"],
+      "description": "American Principles Project says its 'mission is to make the family the most powerful, respected, and well-represented voice in Washington, D.C.' and that it is 'the only national pro-family organization primarily dedicated to direct engagement in the political arena', naming parental rights and 'radical gender ideology' as its fights. Family/parental-rights policy has no id in the frozen taxonomy; healthcare is the closest available id and is a loose fit.",
+      "quote": "Our mission is to make the family the most powerful, respected, and well-represented voice in Washington, D.C. ... We are the only national pro-family organization primarily dedicated to direct engagement in the political arena: running campaigns and fighting in elections.",
+      "source_urls": [
+        "https://americanprinciplesproject.org/about/"
+      ],
+      "tagged_by": "devin-block2-issues",
+      "tagged_at": "2026-09-05"
+    },
+    {
+      "entity_id": "C00490375",
+      "name": "NATIONAL NURSES UNITED FOR PATIENT PROTECTION",
+      "kind": "labor",
+      "issue_ids": ["healthcare", "labor_trade"],
+      "description": "National Nurses United, 'with more than 225,000 members nationwide, is the largest union and professional association of registered nurses in U.S. history', founded 'to counter the national assault by the health care industry on patient care conditions and standards for nurses'. The committee is its independent-expenditure arm.",
+      "quote": "National Nurses United, with more than 225,000 members nationwide, is the largest union and professional association of registered nurses in U.S. history.",
+      "source_urls": [
+        "https://www.nationalnursesunited.org/about",
+        "https://www.fec.gov/data/committee/C00490375/"
+      ],
+      "tagged_by": "devin-block2-issues",
+      "tagged_at": "2026-09-05"
+    },
+    {
+      "entity_id": "C00745745",
+      "name": "IN UNION USA",
+      "kind": "labor",
+      "issue_ids": ["labor_trade", "healthcare"],
+      "description": "In Union describes itself as 'Of By and For Working People' — 'a reliable source for people who want real news about the issues affecting our day-to-day lives—jobs and the economy, schools and education, health care, and so much more.' Its FEC filings list no connected organization.",
+      "quote": "So we started In Union to cut through the noise and provide a reliable source for people who want real news about the issues affecting our day-to-day lives—jobs and the economy, schools and education, health care, and so much more.",
+      "source_urls": [
+        "https://inunionusa.com/about",
+        "https://www.fec.gov/data/committee/C00745745/"
+      ],
+      "tagged_by": "devin-block2-issues",
+      "tagged_at": "2026-09-05"
+    },
+    {
+      "entity_id": "C00754051",
+      "name": "WORKERS VOTE",
+      "kind": "labor",
+      "issue_ids": ["labor_trade"],
+      "description": "UNITE HERE describes Workers Vote as 'an independent expenditure PAC that's been registered with the Federal Election Commission since 2020' which 'played a critical role' in its 2020 swing-state campaigns and supports 'pro-worker and pro-union candidates'.",
+      "quote": "Workers Vote is an independent expenditure PAC that's been registered with the Federal Election Commission since 2020, when it raised over $22.3 million and played a critical role in defeating Donald Trump in the swing states of Nevada, Pennsylvania, and Arizona.",
+      "source_urls": [
+        "https://unitehere.org/about-unite-here-pacs/",
+        "https://www.fec.gov/data/committee/C00754051/"
+      ],
+      "tagged_by": "devin-block2-issues",
+      "tagged_at": "2026-09-05"
+    },
+    {
+      "entity_id": "C00540443",
+      "name": "GIFFORDS PAC",
+      "kind": "single_issue",
+      "issue_ids": ["guns"],
+      "description": "'GIFFORDS PAC is fighting to end the gun lobby's stranglehold on our political system.' Giffords: 'We're on a mission to end gun violence.'",
+      "quote": "Our country is in the grip of a gun violence epidemic. Every American will know a victim of gun violence in their lifetime—this is not normal, and it doesn't have to be this way. GIFFORDS PAC is fighting to end the gun lobby's stranglehold on our political system.",
+      "source_urls": [
+        "https://giffords.org/pac/",
+        "https://giffords.org/about/"
+      ],
+      "tagged_by": "devin-block2-issues",
+      "tagged_at": "2026-09-05"
+    },
+    {
+      "entity_id": "C00106146",
+      "name": "AMERICAN HOSPITAL ASSOCIATION PAC",
+      "kind": "business_trade",
+      "issue_ids": ["healthcare"],
+      "description": "'The AHA Political Action Committee (AHAPAC) allows eligible hospital leaders to make voluntary donations toward the support of federal candidates of both political parties who support the hospital policy agenda.' The AHA 'represents and serves all types of hospitals, health care networks, and their patients and communities.'",
+      "quote": "The AHA Political Action Committee (AHAPAC) allows eligible hospital leaders to make voluntary donations toward the support of federal candidates of both political parties who support the hospital policy agenda. AHAPAC is bipartisan, working with state hospital associations and others.",
+      "source_urls": [
+        "https://www.aha.org/advocacy/action-center",
+        "https://www.aha.org/about"
+      ],
+      "tagged_by": "devin-block2-issues",
+      "tagged_at": "2026-09-05"
+    },
+    {
+      "entity_id": "C00011114",
+      "name": "AMERICAN FEDERATION OF STATE COUNTY & MUNICIPAL EMPLOYEES  P E O P L E",
+      "kind": "labor",
+      "issue_ids": ["labor_trade"],
+      "description": "AFSCME PEOPLE is the union's federal PAC. AFSCME: 'With members in hundreds of different occupations, AFSCME advocates for fairness in the workplace, excellence in public services and prosperity and opportunity for all working families.'",
+      "quote": "With members in hundreds of different occupations, AFSCME advocates for fairness in the workplace, excellence in public services and prosperity and opportunity for all working families.",
+      "source_urls": [
+        "https://www.afscme.org/about",
+        "https://www.fec.gov/data/committee/C00011114/"
+      ],
+      "tagged_by": "devin-block2-issues",
+      "tagged_at": "2026-09-05"
+    },
+    {
+      "entity_id": "org:LEAGUE_OF_CONSERVATION_VOTERS,_INC.",
+      "name": "LEAGUE OF CONSERVATION VOTERS, INC.",
+      "kind": "single_issue",
+      "issue_ids": ["energy_climate"],
+      "description": "'The League of Conservation Voters builds political power to protect people and the planet – because our Earth is worth fighting for.' LCV envisions 'tackling the climate crisis, confronting environmental injustice, and strengthening our democracy'.",
+      "quote": "The League of Conservation Voters builds political power to protect people and the planet – because our Earth is worth fighting for.",
+      "source_urls": [
+        "https://www.lcv.org/about/"
+      ],
+      "tagged_by": "devin-block2-issues",
+      "tagged_at": "2026-09-05"
+    },
+    {
+      "entity_id": "org:MAJORITY_FORWARD",
+      "name": "MAJORITY FORWARD",
+      "kind": "general_partisan",
+      "issue_ids": [],
+      "description": "Majority Forward is the 501(c)(4) affiliate of Senate Majority PAC, which describes itself as 'solely dedicated to building a Democratic majority in the U.S. Senate.' Majority Forward publishes no separate mission page; the affiliation is per SMP's own disclosure and FEC receipts. No issue named.",
+      "quote": null,
+      "source_urls": [
+        "https://www.senatemajority.com/about/",
+        "https://www.fec.gov/data/receipts/?contributor_name=MAJORITY+FORWARD&two_year_transaction_period=2024"
+      ],
+      "tagged_by": "devin-block2-issues",
+      "tagged_at": "2026-09-05"
+    },
+    {
+      "entity_id": "org:EVERYTOWN_FOR_GUN_SAFETY_ACTION_FUND_INC",
+      "name": "EVERYTOWN FOR GUN SAFETY ACTION FUND INC",
+      "kind": "single_issue",
+      "issue_ids": ["guns"],
+      "description": "Everytown for Gun Safety describes itself as 'the largest gun violence prevention organization in America'; the Action Fund is its 501(c)(4) arm and the funder of the Victory Fund.",
+      "quote": "We're the largest gun violence prevention organization in America—and we're winning.",
+      "source_urls": [
+        "https://www.everytown.org/about-everytown/"
+      ],
+      "tagged_by": "devin-block2-issues",
+      "tagged_at": "2026-09-05"
+    },
+    {
+      "entity_id": "org:FUTURE_FORWARD_USA_ACTION",
+      "name": "FUTURE FORWARD USA ACTION",
+      "kind": "multi_issue",
+      "issue_ids": ["tax_budget"],
+      "description": "Future Forward USA Action's 2024 site: 'Our mission is to help rebuild America's middle class — and American democracy — by advancing new ideas and fresh perspectives.' No frozen id covers 'rebuild the middle class'; tax_budget is the closest and a loose fit.",
+      "quote": "Our mission is to help rebuild America's middle class — and American democracy — by advancing new ideas and fresh perspectives.",
+      "source_urls": [
+        "https://web.archive.org/web/20241002212233/https://www.futureforwardusa.org/",
+        "https://www.futureforwardusa.org/"
+      ],
+      "tagged_by": "devin-block2-issues",
+      "tagged_at": "2026-09-05"
+    },
+    {
+      "entity_id": "org:UNITED_BROTHERHOOD_OF_CARPENTERS_AND_JOINERS",
+      "name": "UNITED BROTHERHOOD OF CARPENTERS AND JOINERS",
+      "kind": "labor",
+      "issue_ids": ["labor_trade"],
+      "description": "'The United Brotherhood of Carpenters and Joiners of America (UBC) is one of North America's largest building trades unions, with over a half-million members.'",
+      "quote": "The United Brotherhood of Carpenters and Joiners of America (UBC) is one of North America's largest building trades unions, with over a half-million members.",
+      "source_urls": [
+        "https://www.carpenters.org/about-ubc/"
+      ],
+      "tagged_by": "devin-block2-issues",
+      "tagged_at": "2026-09-05"
+    },
+    {
+      "entity_id": "org:ENVIRONMENTAL_DEFENSE_ACTION_FUND",
+      "name": "ENVIRONMENTAL DEFENSE ACTION FUND",
+      "kind": "single_issue",
+      "issue_ids": ["energy_climate"],
+      "description": "'EDF Action builds political power to protect our environment and the health of American families. As the advocacy partner of Environmental Defense Fund ... We focus on science, law and technology to advance good public policy that leads to action on climate.'",
+      "quote": "EDF Action builds political power to protect our environment and the health of American families.",
+      "source_urls": [
+        "https://www.edfaction.org/about"
+      ],
+      "tagged_by": "devin-block2-issues",
+      "tagged_at": "2026-09-05"
+    },
+    {
+      "entity_id": "org:INTERNATIONAL_UNION_OF_OPERATING_ENGINEERS",
+      "name": "INTERNATIONAL UNION OF OPERATING ENGINEERS",
+      "kind": "labor",
+      "issue_ids": ["labor_trade"],
+      "description": "'The International Union of Operating Engineers (IUOE) is a progressive, diversified trade union that primarily represents operating engineers, who work as heavy equipment operators, mechanics, and surveyors in the construction industry, and stationary engineers.'",
+      "quote": "The International Union of Operating Engineers (IUOE) is a progressive, diversified trade union that primarily represents operating engineers, who work as heavy equipment operators, mechanics, and surveyors in the construction industry, and stationary engineers, who work in operations and maintenance in building and industrial complexes, and in the service industries.",
+      "source_urls": [
+        "https://www.iuoe.org/about-iuoe"
+      ],
+      "tagged_by": "devin-block2-issues",
+      "tagged_at": "2026-09-05"
+    },
+    {
+      "entity_id": "org:CLIMATE_POWER",
+      "name": "CLIMATE POWER",
+      "kind": "single_issue",
+      "issue_ids": ["energy_climate"],
+      "description": "'Climate Power exists to win the politics of climate. ... Through research, communications, cultural engagement, digital organizing, campaigns, and partnerships, we make clean energy part of everyday life—and impossible for politicians to ignore.'",
+      "quote": "Climate Power exists to win the politics of climate.",
+      "source_urls": [
+        "https://climatepower.us/about/"
+      ],
+      "tagged_by": "devin-block2-issues",
+      "tagged_at": "2026-09-05"
+    },
+    {
+      "entity_id": "org:UNITED_FOOD_AND_COMMERCIAL_WORKERS_INTERNATIONAL_UNION",
+      "name": "UNITED FOOD AND COMMERCIAL WORKERS INTERNATIONAL UNION",
+      "kind": "labor",
+      "issue_ids": ["labor_trade", "healthcare"],
+      "description": "'The United Food and Commercial Workers International Union (UFCW) is a labor union made up of 1.2 million hard-working men and women in the U.S. and Canada.' Its About page lists 'Fighting for Better Wages and Benefits', 'Access to Affordable Healthcare' and 'Protecting Good Jobs' among what it fights for.",
+      "quote": "The United Food and Commercial Workers International Union (UFCW) is a labor union made up of 1.2 million hard-working men and women in the U.S. and Canada.",
+      "source_urls": [
+        "https://www.ufcw.org/about/"
+      ],
+      "tagged_by": "devin-block2-issues",
+      "tagged_at": "2026-09-05"
+    },
+    {
+      "entity_id": "org:ONE_NATION",
+      "name": "ONE NATION",
+      "kind": "general_partisan",
+      "issue_ids": [],
+      "description": "'One Nation is an issue advocacy organization dedicated to promoting commonsense conservative policies and ensuring America adheres to the vision of the Founders'. Names an ideology, not a policy area; no issue from the frozen taxonomy.",
+      "quote": "One Nation is an issue advocacy organization dedicated to promoting commonsense conservative policies and ensuring America adheres to the vision of the Founders: a nation forged from different cultures, countries, creeds and classes – yet unified by a common commitment to freedom, responsible governance, and guaranteed individual liberties.",
+      "source_urls": [
+        "https://www.onenationamerica.org/about/"
+      ],
+      "tagged_by": "devin-block2-issues",
+      "tagged_at": "2026-09-05"
+    },
+    {
+      "entity_id": "org:AMERICA_VOTES",
+      "name": "AMERICA VOTES",
+      "kind": "general_partisan",
+      "issue_ids": [],
+      "description": "'America Votes is the coordination hub of the progressive community, working with more than 400 state and national partner organizations to strengthen democracy, win elections, and protect every American's right to vote.' Voting rights and elections have no id in the frozen taxonomy.",
+      "quote": "America Votes is the coordination hub of the progressive community, working with more than 400 state and national partner organizations to strengthen democracy, win elections, and protect every American's right to vote.",
+      "source_urls": [
+        "https://americavotes.org/about/"
+      ],
+      "tagged_by": "devin-block2-issues",
+      "tagged_at": "2026-09-05"
+    }
+  ],
+  "method": "Hand-tagged self-described focus of the top outside spenders/funders, from each org's own site (or Wayback) and FEC Form 1. One row per entity; first issue is primary. Tagged by the Block 2 issue-focus child; every row cites its source. Rows are the org's own words (quote or close paraphrase); orgs whose self-description could not be found (no site, JS-only FEC page, 403/404) are omitted and counted in coverage."
 }

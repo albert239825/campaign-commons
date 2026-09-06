@@ -3184,5 +3184,23 @@
       "last_date": "2024-10-30",
       "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00620971&payee_name=STAPLES"
     }
-  ]
+  ],
+  "issue_focus": {
+    "kind": "multi_issue",
+    "issue_ids": [
+      "tax_budget",
+      "healthcare"
+    ],
+    "description": "For Our Future 'builds progressive power through voter engagement, issue advocacy, and community organizing to create shared economic prosperity, strengthen public education, and advance social and racial justice.' Its issues page leads with costs of housing, healthcare, childcare and groceries. Public education and racial justice have no frozen id.",
+    "basis": {
+      "basis": "verified",
+      "rule": "Self-described focus from the organisation's own material; says what the org is for, not what its dollars bought",
+      "source_urls": [
+        "https://forourfuturefund.org/issues",
+        "https://www.fec.gov/data/committee/C00620971/"
+      ],
+      "checked_by": "devin-block2-issues",
+      "checked_at": "2026-09-05"
+    }
+  }
 }

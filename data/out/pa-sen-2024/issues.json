@@ -1,0 +1,302 @@
+{
+  "race_id": "pa-sen-2024",
+  "generated_at": "2026-09-05T19:28:41+00:00",
+  "data_status": "partial",
+  "by_ad_issue": [],
+  "by_spender_focus": [
+    {
+      "kind": "general_partisan",
+      "issue_id": null,
+      "primary_only": true,
+      "amount": 138811228.71,
+      "spender_ids": [
+        "C00865444",
+        "C00571703",
+        "C00042366",
+        "C00487363",
+        "C00752691",
+        "C00724203",
+        "C00811166"
+      ],
+      "traceability_score": 0.7319,
+      "dark_share": 0.2564
+    },
+    {
+      "kind": "candidate_aligned",
+      "issue_id": null,
+      "primary_only": true,
+      "amount": 48234127.36,
+      "spender_ids": [
+        "C00849489"
+      ],
+      "traceability_score": 0.8659,
+      "dark_share": 0.1341
+    },
+    {
+      "kind": "multi_issue",
+      "issue_id": "tax_budget",
+      "primary_only": true,
+      "amount": 21393343.41,
+      "spender_ids": [
+        "C00687103",
+        "C00620971"
+      ],
+      "traceability_score": 0.6364,
+      "dark_share": 0.3636
+    },
+    {
+      "kind": "single_issue",
+      "issue_id": "energy_climate",
+      "primary_only": true,
+      "amount": 7060845.94,
+      "spender_ids": [
+        "C00486845",
+        "C00740225"
+      ],
+      "traceability_score": 0.2159,
+      "dark_share": 0.7841
+    },
+    {
+      "kind": "multi_issue",
+      "issue_id": "healthcare",
+      "primary_only": true,
+      "amount": 5536789.56,
+      "spender_ids": [
+        "C00744920",
+        "C00609388"
+      ],
+      "traceability_score": 0.3311,
+      "dark_share": 0.658
+    },
+    {
+      "kind": "single_issue",
+      "issue_id": "guns",
+      "primary_only": true,
+      "amount": 2762121.76,
+      "spender_ids": [
+        "C00053553",
+        "C00688655",
+        "C00540443"
+      ],
+      "traceability_score": 0.6768,
+      "dark_share": 0.3232
+    },
+    {
+      "kind": "labor",
+      "issue_id": null,
+      "primary_only": true,
+      "amount": 2313966.35,
+      "spender_ids": [
+        "C00490375",
+        "C00745745",
+        "C00754051",
+        "C00011114"
+      ],
+      "traceability_score": 0.9156,
+      "dark_share": 0.0728
+    },
+    {
+      "kind": "single_issue",
+      "issue_id": "healthcare",
+      "primary_only": true,
+      "amount": 740000.0,
+      "spender_ids": [
+        "C00544387"
+      ],
+      "traceability_score": 0.9331,
+      "dark_share": 0.0664
+    },
+    {
+      "kind": "business_trade",
+      "issue_id": null,
+      "primary_only": true,
+      "amount": 450000.0,
+      "spender_ids": [
+        "C00106146"
+      ],
+      "traceability_score": 0.8437,
+      "dark_share": 0.0
+    },
+    {
+      "kind": "general_partisan",
+      "issue_id": null,
+      "primary_only": false,
+      "amount": 138811228.71,
+      "spender_ids": [
+        "C00865444",
+        "C00571703",
+        "C00042366",
+        "C00487363",
+        "C00752691",
+        "C00724203",
+        "C00811166"
+      ],
+      "traceability_score": 0.7319,
+      "dark_share": 0.2564
+    },
+    {
+      "kind": "candidate_aligned",
+      "issue_id": null,
+      "primary_only": false,
+      "amount": 48234127.36,
+      "spender_ids": [
+        "C00849489"
+      ],
+      "traceability_score": 0.8659,
+      "dark_share": 0.1341
+    },
+    {
+      "kind": "multi_issue",
+      "issue_id": "tax_budget",
+      "primary_only": false,
+      "amount": 26930132.97,
+      "spender_ids": [
+        "C00687103",
+        "C00744920",
+        "C00609388",
+        "C00620971"
+      ],
+      "traceability_score": 0.5737,
+      "dark_share": 0.4241
+    },
+    {
+      "kind": "multi_issue",
+      "issue_id": "healthcare",
+      "primary_only": false,
+      "amount": 7337530.76,
+      "spender_ids": [
+        "C00744920",
+        "C00609388",
+        "C00620971"
+      ],
+      "traceability_score": 0.3659,
+      "dark_share": 0.6259
+    },
+    {
+      "kind": "single_issue",
+      "issue_id": "energy_climate",
+      "primary_only": false,
+      "amount": 7060845.94,
+      "spender_ids": [
+        "C00486845",
+        "C00740225"
+      ],
+      "traceability_score": 0.2159,
+      "dark_share": 0.7841
+    },
+    {
+      "kind": "single_issue",
+      "issue_id": "guns",
+      "primary_only": false,
+      "amount": 2762121.76,
+      "spender_ids": [
+        "C00053553",
+        "C00688655",
+        "C00540443"
+      ],
+      "traceability_score": 0.6768,
+      "dark_share": 0.3232
+    },
+    {
+      "kind": "multi_issue",
+      "issue_id": "energy_climate",
+      "primary_only": false,
+      "amount": 2670699.56,
+      "spender_ids": [
+        "C00609388"
+      ],
+      "traceability_score": 0.2962,
+      "dark_share": 0.7038
+    },
+    {
+      "kind": "labor",
+      "issue_id": null,
+      "primary_only": false,
+      "amount": 2313966.35,
+      "spender_ids": [
+        "C00490375",
+        "C00745745",
+        "C00754051",
+        "C00011114"
+      ],
+      "traceability_score": 0.9156,
+      "dark_share": 0.0728
+    },
+    {
+      "kind": "labor",
+      "issue_id": "labor_trade",
+      "primary_only": false,
+      "amount": 2313966.35,
+      "spender_ids": [
+        "C00490375",
+        "C00745745",
+        "C00754051",
+        "C00011114"
+      ],
+      "traceability_score": 0.9156,
+      "dark_share": 0.0728
+    },
+    {
+      "kind": "labor",
+      "issue_id": "healthcare",
+      "primary_only": false,
+      "amount": 1388467.91,
+      "spender_ids": [
+        "C00490375",
+        "C00745745"
+      ],
+      "traceability_score": 0.9293,
+      "dark_share": 0.0514
+    },
+    {
+      "kind": "single_issue",
+      "issue_id": "healthcare",
+      "primary_only": false,
+      "amount": 740000.0,
+      "spender_ids": [
+        "C00544387"
+      ],
+      "traceability_score": 0.9331,
+      "dark_share": 0.0664
+    },
+    {
+      "kind": "business_trade",
+      "issue_id": null,
+      "primary_only": false,
+      "amount": 450000.0,
+      "spender_ids": [
+        "C00106146"
+      ],
+      "traceability_score": 0.8437,
+      "dark_share": 0.0
+    },
+    {
+      "kind": "business_trade",
+      "issue_id": "healthcare",
+      "primary_only": false,
+      "amount": 450000.0,
+      "spender_ids": [
+        "C00106146"
+      ],
+      "traceability_score": 0.8437,
+      "dark_share": 0.0
+    }
+  ],
+  "coverage": {
+    "spenders_tagged": 23,
+    "spenders_total": 98,
+    "dollars_tagged": 227302423.09,
+    "dollars_total": 233396761.46,
+    "ads_tagged": 0,
+    "ads_total": 500,
+    "ies_tagged": 0,
+    "ie_dollars_tagged": 0
+  },
+  "notes": [
+    "Two layers, never summed: by_ad_issue is what tagged ads and filed notices were about (attributable to those records' dollars); by_spender_focus is what the spender says it exists for (about the spender, not the dollars). They are not comparable and must not be added.",
+    "Google reports ad spend as a range. spend_min and spend_max are the summed bounds; spend_midpoint is the summed midpoint and is shown as an estimate. Midpoints are never added to FEC independent-expenditure dollars.",
+    "A record tagged with more than one issue counts its full amount under every tag; dollars are not split. Issue rows therefore overlap and do not sum to a total. An ad aimed at several candidates counts its full midpoint under each.",
+    "by_spender_focus primary_only=true counts each spender once (its first issue, or its kind when the kind names no issue), so those buckets partition the tagged dollars; primary_only=false counts a spender under every issue it names and overlaps.",
+    "General partisan / leadership committees say they exist to win seats or a majority, not for an issue; they carry issue_id null. Spenders with no sourced self-description are untagged and counted in coverage, not guessed."
+  ]
+}

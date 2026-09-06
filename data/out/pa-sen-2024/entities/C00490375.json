@@ -654,5 +654,23 @@
       "last_date": "2024-08-02",
       "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00490375&payee_name=TARGETSMART+COMMUNICATIONS"
     }
-  ]
+  ],
+  "issue_focus": {
+    "kind": "labor",
+    "issue_ids": [
+      "healthcare",
+      "labor_trade"
+    ],
+    "description": "National Nurses United, 'with more than 225,000 members nationwide, is the largest union and professional association of registered nurses in U.S. history', founded 'to counter the national assault by the health care industry on patient care conditions and standards for nurses'. The committee is its independent-expenditure arm.",
+    "basis": {
+      "basis": "verified",
+      "rule": "Self-described focus from the organisation's own material; says what the org is for, not what its dollars bought",
+      "source_urls": [
+        "https://www.nationalnursesunited.org/about",
+        "https://www.fec.gov/data/committee/C00490375/"
+      ],
+      "checked_by": "devin-block2-issues",
+      "checked_at": "2026-09-05"
+    }
+  }
 }

@@ -469,5 +469,21 @@
       "last_date": "2024-10-06",
       "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00544387&payee_name=LOGAN+CIRCLE+GROUP"
     }
-  ]
+  ],
+  "issue_focus": {
+    "kind": "single_issue",
+    "issue_ids": [
+      "healthcare"
+    ],
+    "description": "American Principles Project says its 'mission is to make the family the most powerful, respected, and well-represented voice in Washington, D.C.' and that it is 'the only national pro-family organization primarily dedicated to direct engagement in the political arena', naming parental rights and 'radical gender ideology' as its fights. Family/parental-rights policy has no id in the frozen taxonomy; healthcare is the closest available id and is a loose fit.",
+    "basis": {
+      "basis": "verified",
+      "rule": "Self-described focus from the organisation's own material; says what the org is for, not what its dollars bought",
+      "source_urls": [
+        "https://americanprinciplesproject.org/about/"
+      ],
+      "checked_by": "devin-block2-issues",
+      "checked_at": "2026-09-05"
+    }
+  }
 }

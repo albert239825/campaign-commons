@@ -721,5 +721,24 @@
       "last_date": "2024-10-31",
       "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00609388&payee_name=GOOD+FIGHT+POLITICAL+INC"
     }
-  ]
+  ],
+  "issue_focus": {
+    "kind": "multi_issue",
+    "issue_ids": [
+      "healthcare",
+      "energy_climate",
+      "tax_budget"
+    ],
+    "description": "BlackPAC's mission is 'to engage and activate our community around the issues that matter most', listing racism and white supremacy, voting rights, environmental racism and climate change, a fair economy and public schools, criminal justice reform, and 'an equitable healthcare system'. Voting rights and criminal justice have no frozen id.",
+    "basis": {
+      "basis": "verified",
+      "rule": "Self-described focus from the organisation's own material; says what the org is for, not what its dollars bought",
+      "source_urls": [
+        "https://blackpac.com/",
+        "https://blackpac.com/about/"
+      ],
+      "checked_by": "devin-block2-issues",
+      "checked_at": "2026-09-05"
+    }
+  }
 }

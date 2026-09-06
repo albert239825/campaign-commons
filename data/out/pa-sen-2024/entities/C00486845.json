@@ -1464,5 +1464,22 @@
       "last_date": "2024-11-27",
       "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00486845&payee_name=LONG+VIEW+MEDIA+LLC"
     }
-  ]
+  ],
+  "issue_focus": {
+    "kind": "single_issue",
+    "issue_ids": [
+      "energy_climate"
+    ],
+    "description": "LCV Victory Fund 'runs independent campaigns to defeat federal candidates who will undermine environmental progress and elect environmental champions who will prioritize just and equitable climate solutions.'",
+    "basis": {
+      "basis": "verified",
+      "rule": "Self-described focus from the organisation's own material; says what the org is for, not what its dollars bought",
+      "source_urls": [
+        "https://www.lcv.org/lcv-victory-fund/",
+        "https://www.lcv.org/about/"
+      ],
+      "checked_by": "devin-block2-issues",
+      "checked_at": "2026-09-05"
+    }
+  }
 }
