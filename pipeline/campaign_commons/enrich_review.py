@@ -20,6 +20,10 @@ def run(race_id: str, status: str = "pending", kind: str = "ads") -> int:
         hand_path = DATA / "hand" / race_id / "x_funder_focus.json"
         ads = []
         by_id = {}
+    elif kind == "dossiers":
+        hand_path = DATA / "hand" / race_id / "x_stances.json"
+        ads = []
+        by_id = {}
     else:
         ads = read_json(race.out_dir / "ads.json").get("ads", [])
         by_id = {str(ad["ad_id"]): ad for ad in ads if isinstance(ad, dict)}
@@ -50,6 +54,14 @@ def run(race_id: str, status: str = "pending", kind: str = "ads") -> int:
                 f"description={row.get('description')!r}; source_url={row.get('source_urls', [''])[0]}; "
                 f"review_status={row_status}"
             )
+        elif kind == "dossiers":
+            posts = row.get("posts", [])
+            print(
+                f"{row.get('candidate_id')}: issue_id={row.get('issue_id')}; "
+                f"direction={row.get('direction_proposed')}; confidence={provenance.get('confidence')}; "
+                f"summary={row.get('summary')!r}; source_urls={[source.get('url') for source in row.get('sources', [])]}; "
+                f"post_count={len(posts) if isinstance(posts, list) else 0}; review_status={row_status}"
+            )
         else:
             ad = by_id.get(str(row.get("ad_id")), {})
             human = ad.get("issues", {}).get("issue_ids", []) if isinstance(ad.get("issues"), dict) else []
@@ -61,7 +73,7 @@ def run(race_id: str, status: str = "pending", kind: str = "ads") -> int:
             )
         shown += 1
     summary = f"shown {shown}; by status {dict(statuses)}; by primary issue {dict(primary)}"
-    if kind in {"spenders", "funders"}:
+    if kind in {"spenders", "funders", "dossiers"}:
         summary += f"; by kind {dict(kinds)}"
     print(summary)
     return 0
@@ -71,7 +83,7 @@ def main() -> int:
     parser = argparse.ArgumentParser()
     parser.add_argument("race")
     parser.add_argument("--status", default="pending")
-    parser.add_argument("--kind", choices=["ads", "spenders", "funders"], default="ads")
+    parser.add_argument("--kind", choices=["ads", "spenders", "funders", "dossiers"], default="ads")
     args = parser.parse_args()
     return run(args.race, args.status, args.kind)
 

@@ -639,4 +639,6 @@ Added website-only `enrich_spenders.py`, cached FEC committee/page verification 
 Overlong or incomplete model outputs now get one cached, no-tools repair call before validation.
 Added `enrich_funders.py` for ranked upstream `org:` funders, open-web self-description checks, donor-view materialization,
 and `enrich-funders`/`enrich-review --kind funders`.
+Added `enrich_dossiers.py`, optional X-post verification, `x_accounts.json`, and dossier materialization for pending
+machine stance suggestions.
 ||||||| 97993eb
