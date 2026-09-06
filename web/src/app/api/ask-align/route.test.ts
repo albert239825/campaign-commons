@@ -37,12 +37,20 @@ it("returns unavailable without a provider call when the key is absent", async (
 });
 
 it("returns a valid provider response and applies the limiter", async () => {
-  const fetcher = vi.fn<typeof fetch>(async (_url, init) => {
-    if (init?.method === "HEAD") return new Response(null, { status: 200 });
-    return Response.json({ output: [{ content: [{ type: "output_text", text: JSON.stringify({ statements: [
-      { quote: "A statement", source_url: "https://example.com/a", publisher: "Example", published_at: null, direction: 1 },
-    ] }) }] }] });
-  });
+  const fetcher = vi.fn<typeof fetch>(async () =>
+    Response.json({
+      output: [{
+        content: [{
+          type: "output_text",
+          text: JSON.stringify({
+            statements: [
+              { quote: "A statement", source_url: "https://example.com/a", publisher: "Example", published_at: null, direction: 1 },
+            ],
+          }),
+        }],
+      }],
+    }),
+  );
   vi.stubGlobal("fetch", fetcher);
   const result = await post({ raceId: "pa-sen-2024", issueId: "guns", candidateId: "S6PA00217" });
   expect(result).toMatchObject({ status: 200, body: { via: "llm", statements: [{ source_url: "https://example.com/a" }] } });

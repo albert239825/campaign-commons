@@ -67,16 +67,27 @@ describe("alignCandidate", () => {
       expect((init?.body as string)).toContain('"tools":[{"type":"web_search"}]');
       return output([{ quote: "A statement", source_url: "https://example.com/a", publisher: "Example", published_at: "2024-01-01", direction: 2 }]);
     });
-    const first = await alignCandidate("PA Senate", "Bob Casey", "r", "guns", "c", { apiKey: "k", fetch: fetcher, checkUrls: false });
-    const second = await alignCandidate("PA Senate", "Bob Casey", "r", "guns", "c", { apiKey: "k", fetch: fetcher, checkUrls: false });
+    const first = await alignCandidate("PA Senate", "Bob Casey", "r", "guns", "c", { apiKey: "k", fetch: fetcher });
+    const second = await alignCandidate("PA Senate", "Bob Casey", "r", "guns", "c", { apiKey: "k", fetch: fetcher });
     expect(first).toMatchObject({ via: "llm", cached: false, model: "grok-4.5", statements: [{ direction: 2 }] });
     expect(second).toMatchObject({ via: "llm", cached: true });
     expect(fetcher).toHaveBeenCalledTimes(1);
   });
 
+  it("keys successful cache entries by model", async () => {
+    const fetcher = vi.fn<typeof fetch>(async () =>
+      output([{ quote: "A statement", source_url: "https://example.com/a", publisher: "Example", published_at: null, direction: 2 }]),
+    );
+    const first = await alignCandidate("PA Senate", "Bob Casey", "r", "guns", "c", { apiKey: "k", model: "grok-one", fetch: fetcher });
+    const second = await alignCandidate("PA Senate", "Bob Casey", "r", "guns", "c", { apiKey: "k", model: "grok-two", fetch: fetcher });
+    expect(first).toMatchObject({ via: "llm", cached: false, model: "grok-one" });
+    expect(second).toMatchObject({ via: "llm", cached: false, model: "grok-two" });
+    expect(fetcher).toHaveBeenCalledTimes(2);
+  });
+
   it("returns unavailable on malformed provider JSON", async () => {
     const fetcher = vi.fn<typeof fetch>(async () => Response.json({ output: [{ content: [{ type: "output_text", text: "{bad" }] }] }));
-    const result = await alignCandidate("PA Senate", "Bob Casey", "r", "guns", "bad", { apiKey: "k", fetch: fetcher, checkUrls: false });
+    const result = await alignCandidate("PA Senate", "Bob Casey", "r", "guns", "bad", { apiKey: "k", fetch: fetcher });
     expect(result).toMatchObject({ via: "unavailable", statements: [] });
     expect(ALIGN_LLM_TIMEOUT_MS).toBe(12_000);
   });
