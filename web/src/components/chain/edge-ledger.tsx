@@ -25,7 +25,7 @@ export function EdgeLedger({
 }) {
   const [open, setOpen] = useState(false);
   const [tailOpen, setTailOpen] = useState(false);
-  const [target, setTarget] = useState<number | null>(null);
+  const [target, setTarget] = useState<{ index: number; seq: number } | null>(null);
   const bodyRef = useRef<HTMLDivElement>(null);
   const tailRows = useMemo(() => fromWireRows(tail), [tail]);
   const tailIndex = useMemo(() => new Set(tailRows.map((r) => r.index)), [tailRows]);
@@ -35,7 +35,7 @@ export function EdgeLedger({
     const reveal = (index: number) => {
       setOpen(true);
       if (tailIndex.has(index)) setTailOpen(true);
-      setTarget(index);
+      setTarget((t) => ({ index, seq: (t?.seq ?? 0) + 1 }));
     };
     const onEvent = (ev: Event) => reveal((ev as CustomEvent<number>).detail);
     const onHash = () => {
@@ -57,7 +57,7 @@ export function EdgeLedger({
     if (!body) return;
     for (const el of body.querySelectorAll(`.${TARGET_CLASS}`)) el.classList.remove(TARGET_CLASS);
     if (target === null || !open) return;
-    const row = document.getElementById(edgeRowId(target));
+    const row = document.getElementById(edgeRowId(target.index));
     if (!row) return;
     row.classList.add(TARGET_CLASS);
     row.scrollIntoView({ block: "center", behavior: "smooth" });
