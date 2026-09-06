@@ -11,7 +11,7 @@
 <div class="reveal">
   <div class="slides">
 
-    <!-- 1 · Title -->
+    <!-- 1 · Cover -->
     <section class="cover" data-background-gradient="linear-gradient(180deg, #2e558b 0%, #627793 40%, #a8a39e 75%, #eacba6 100%)">
       <img class="cover-art" src="../web/public/images/landing-capitol.png" alt="" />
       <header class="brand">
@@ -20,77 +20,109 @@
       </header>
       <div class="cover-body">
         <p class="kicker">DNHacks 2026 · Health &amp; Public Service</p>
-        <h1>Follow the money<br />behind your ballot.</h1>
-        <p class="lede">Every dollar in a US election is already public. Nobody can follow it. We made it navigable — for citizens, not agencies.</p>
+        <h1>The campaign-finance<br />provenance engine.</h1>
       </div>
       <footer class="cover-stats">
-        <div><b>$233M</b><span>outside spending, PA Senate 2024</span></div>
-        <div><b>98</b><span>outside groups, 2,000 committees</span></div>
-        <div><b class="dark">26%</b><span>ends in an organization that never has to say where it came from</span></div>
+        <div><b>$328M</b><span>spent on one Senate seat</span></div>
+        <div><b>$233M</b><span>of it outside the campaigns</span></div>
+        <div><b>98</b><span>outside groups</span></div>
       </footer>
+      <p class="cover-foot">Pennsylvania · U.S. Senate · 2024</p>
     </section>
 
-    <!-- 2 · The citizen -->
+    <!-- 2 · The ad -->
+    <section class="ink-bg video" data-background-color="#1b1b1a">
+      <header class="brand"><span class="brand-name">Campaign Commons</span><span class="slide-no">02</span></header>
+      <p class="kicker">Pennsylvania · October 2024</p>
+      <div class="video-frame">
+        <iframe src="https://www.youtube.com/embed/rYqFtSAY9co?rel=0&modestbranding=1" title="Ad" allow="autoplay; fullscreen" allowfullscreen></iframe>
+      </div>
+      <p class="caption">Paid for by WinSenate PAC.</p>
+    </section>
+
+    <!-- 3 · Three questions -->
     <section class="paper" data-background-color="#f2efeb">
-      <header class="brand ink"><span class="brand-name">Campaign Commons</span><span class="slide-no">02</span></header>
-      <p class="kicker">The user</p>
-      <h2>A voter in Pennsylvania saw the ad.<br />The screen said <em>“Paid for by WinSenate PAC.”</em></h2>
-      <div class="cols">
-        <div class="col">
-          <p class="muted">What it takes to answer “who is that?” today:</p>
-          <ol class="deadends">
-            <li><b>fec.gov</b> — Schedule E CSV, committee IDs, no chain</li>
-            <li><b>Google ad library</b> — 1,849 PA ads, legal names, no “paid for by”</li>
-            <li><b>OpenSecrets</b> — summaries, no filing rows</li>
-            <li><b>senate.gov</b> — roll-call XML for what the candidate actually did</li>
-            <li><b>congress.gov</b>, <b>Wayback</b> — bills, deleted issue pages</li>
-          </ol>
-        </div>
-        <div class="col callout">
-          <p>Six sites. Zero links between them. Each one a dead end.</p>
-          <p class="big">Disclosure without navigability<br />is obfuscation.</p>
-        </div>
+      <header class="brand ink"><span class="brand-name">Campaign Commons</span><span class="slide-no">03</span></header>
+      <p class="kicker">You ask yourself</p>
+      <ol class="questions">
+        <li>How much was spent on this ad?</li>
+        <li>Where did the money come from?</li>
+        <li>What do the funders want?</li>
+      </ol>
+    </section>
+
+    <!-- 4 · Today → Campaign Commons -->
+    <section class="paper" data-background-color="#f2efeb">
+      <header class="brand ink"><span class="brand-name">Campaign Commons</span><span class="slide-no">04</span></header>
+      <p class="kicker">What it takes today</p>
+      <div class="sites">
+        <div><b>FEC.gov</b><span>Schedule E CSVs, committee IDs</span></div>
+        <div><b>FEC bulk</b><span>receipts, one committee at a time</span></div>
+        <div><b>Google Ad Library</b><span>1,849 PA ads, legal names</span></div>
+        <div><b>senate.gov</b><span>roll-call XML</span></div>
+        <div><b>congress.gov</b><span>bill text</span></div>
+        <div><b>OpenSecrets</b><span>summaries, no receipts</span></div>
+      </div>
+      <p class="deadend">Six sites. Zero links between them. Each one a dead end.</p>
+      <div class="bottom-line">
+        <p class="kicker red">Campaign Commons</p>
+        <p class="big">Connects them.<br />Every number keeps its receipt.</p>
       </div>
     </section>
 
-    <!-- 3 · What it is -->
-    <section class="paper" data-background-color="#f2efeb">
-      <header class="brand ink"><span class="brand-name">Campaign Commons</span><span class="slide-no">03</span></header>
-      <p class="kicker">What it is</p>
-      <h2>A political money &amp; policy <em>provenance engine</em>.</h2>
+    <!-- 5 · Demo -->
+    <section class="paper demo" data-background-color="#f2efeb">
+      <header class="brand ink"><span class="brand-name">Campaign Commons</span><span class="slide-no">05</span></header>
+      <div class="demo-body">
+        <p class="kicker">Demo</p>
+        <h2>Start with the ad you saw.</h2>
+        <p class="path"><span>Ask</span><i>→</i><span>Chain</span><i>→</i><span>Race</span><i>→</i><span>Spenders</span><i>→</i><span>Policies</span><i>→</i><span>You</span></p>
+      </div>
+      <div class="legend"><i class="sw disclosed"></i>disclosed <i class="sw dark"></i>dark <i class="sw targeting"></i>not walked</div>
+    </section>
+
+    <!-- 6 · Architecture -->
+    <section class="ink-bg" data-background-color="#1b1b1a">
+      <header class="brand"><span class="brand-name">Campaign Commons</span><span class="slide-no">06</span></header>
+      <p class="kicker">How it works</p>
+      <h2>Public records in. One graph out.</h2>
       <div class="flow">
-        <div class="node src"><span>Sources</span>FEC bulk + OpenFEC · Google Ad Transparency · senate.gov votes · congress.gov · Wayback</div>
+        <div class="node src"><span>Sources</span>FEC bulk + OpenFEC · Google Ad Transparency · senate.gov · congress.gov · Wayback</div>
         <div class="arrow">→</div>
-        <div class="node"><span>Pipeline</span>DuckDB / Parquet · chains walked to termination · Zod + JSON-Schema contracts</div>
+        <div class="node"><span>Pipeline</span>Entity resolution · chains walked to termination · contracts on every artifact</div>
         <div class="arrow">→</div>
-        <div class="node"><span>Graph</span>2,096 static pages · 86 funding chains · 500 ads · 2 dossiers</div>
+        <div class="node"><span>Graph</span>2,000 committees · 86 funding chains · 500 ads · 2 dossiers</div>
         <div class="arrow">→</div>
-        <div class="node ai"><span>Ask</span>plain English → allowlisted graph op → source-linked facts + graph</div>
+        <div class="node ai"><span>Ask · Enrich</span>Grok routes to an allowlisted graph op · classifies with a quoted source · never produces a number</div>
       </div>
       <div class="rules">
         <div><b>Rule 1</b> Every number links to its primary record.</div>
-        <div><b>Rule 2</b> Money edges and <i>targeting</i> edges never mix — an ad <i>about</i> a candidate is never money the candidate received.</div>
+        <div><b>Rule 2</b> Money edges and targeting edges never mix.</div>
+        <div><b>Rule 3</b> Machine output is labelled, review-gated, and never a headline.</div>
       </div>
-      <div class="legend"><i class="sw disclosed"></i>disclosed <i class="sw inferable"></i>inferable <i class="sw dark"></i>dark <i class="sw targeting"></i>targeting</div>
     </section>
 
-    <!-- 4 · AI you can check -->
-    <section class="ink-bg" data-background-color="#1b1b1a">
-      <header class="brand"><span class="brand-name">Campaign Commons</span><span class="slide-no">06</span></header>
-      <p class="kicker">Best use of AI</p>
-      <h2>The model never produces a number.</h2>
-      <div class="three">
-        <div><b>Routes</b><p>Question → one of four allowlisted graph operations + subjects. Fixed Cypher runs; the model never writes a query.</p></div>
-        <div><b>Classifies</b><p>Ad transcript → issue. Org self-description → focus. Candidate statement → stance. Each with a verified quote and source.</p></div>
-        <div><b>Summarizes only from facts</b><p>Numeric-claim guards. A summary that can't be grounded in the computed facts is withheld.</p></div>
+    <!-- 7 · Next -->
+    <section class="paper" data-background-color="#f2efeb">
+      <header class="brand ink"><span class="brand-name">Campaign Commons</span><span class="slide-no">07</span></header>
+      <p class="kicker">What's next</p>
+      <h2>Same pipeline. New race ID.</h2>
+      <div class="next">
+        <div><b>Coverage</b><span>Every 2026 Senate race</span></div>
+        <div><b>Sources</b><span>Meta ads · television</span></div>
+        <div><b>Cadence</b><span>Refresh as filings land</span></div>
+        <div><b>Closer to home</b><span>House, state and local races</span></div>
       </div>
-      <div class="layer">
-        <span class="chip">Machine summary · not part of the record</span>
-        <span class="chip pending">review_status: pending</span>
-        <span class="chip verified">accepted → verified</span>
-        <p>model · prompt version · response ID · citations · confidence · reviewer. Pending rows never enter a headline.</p>
+    </section>
+
+    <!-- 8 · Closer -->
+    <section class="ink-bg closer" data-background-color="#1b1b1a">
+      <header class="brand"><span class="brand-name">Campaign Commons</span><span class="slide-no">08</span></header>
+      <div class="closer-body">
+        <p class="quote">“Democracy Dies<br />in Darkness.”</p>
+        <p class="attrib">The Washington Post, masthead</p>
       </div>
-      <p class="foot">Remove the model: every number still stands. Keep it: a citizen can ask in English and get a graph back. ≈ $5–10 per race, cached.</p>
+      <p class="tagline">We don't tell you who to vote for. We show you the receipts.</p>
     </section>
 
   </div>
