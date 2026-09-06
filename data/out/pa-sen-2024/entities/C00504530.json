@@ -23,8 +23,8 @@
     "independent_expenditures": 216785222.48,
     "from_individuals": 0.0,
     "from_committees": 1217180.24,
-    "from_organizations": 26749859.0,
-    "from_undisclosed": 69550233.0
+    "from_organizations": 29559859.0,
+    "from_undisclosed": 66740233.0
   },
   "inflows": [
     {
@@ -40,7 +40,8 @@
       "visibility": "dark",
       "transaction_type": "10",
       "limit": null,
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00504530&two_year_transaction_period=2024&contributor_name=AMERICAN+ACTION+NETWORK"
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00504530&two_year_transaction_period=2024&contributor_name=AMERICAN+ACTION+NETWORK",
+      "class_basis": "rule"
     },
     {
       "transfer_id": "C00504530-in-ind:GRIFFIN_KENNETH_C.|60611",
@@ -205,7 +206,8 @@
       "visibility": "disclosed",
       "transaction_type": "10",
       "limit": null,
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00504530&two_year_transaction_period=2024&contributor_name=RAI+SERVICES+COMPANY"
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00504530&two_year_transaction_period=2024&contributor_name=RAI+SERVICES+COMPANY",
+      "class_basis": "rule"
     },
     {
       "transfer_id": "C00504530-in-ind:REYES_M._JUDE|33401",
@@ -250,7 +252,8 @@
       "visibility": "disclosed",
       "transaction_type": "10",
       "limit": null,
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00504530&two_year_transaction_period=2024&contributor_name=LEON+RACHEL+CORP"
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00504530&two_year_transaction_period=2024&contributor_name=LEON+RACHEL+CORP",
+      "class_basis": "rule"
     },
     {
       "transfer_id": "C00504530-in-org:ALTRIA_CLIENT_SERVICES_LLC",
@@ -265,7 +268,8 @@
       "visibility": "dark",
       "transaction_type": "10",
       "limit": null,
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00504530&two_year_transaction_period=2024&contributor_name=ALTRIA+CLIENT+SERVICES+LLC"
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00504530&two_year_transaction_period=2024&contributor_name=ALTRIA+CLIENT+SERVICES+LLC",
+      "class_basis": "rule"
     },
     {
       "transfer_id": "C00504530-in-ind:BUCKLEY_MARJORIE_B.|33408",
@@ -310,7 +314,8 @@
       "visibility": "dark",
       "transaction_type": "10",
       "limit": null,
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00504530&two_year_transaction_period=2024&contributor_name=HILLWOOD+DEVELOPMENT+COMPANY+LLC"
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00504530&two_year_transaction_period=2024&contributor_name=HILLWOOD+DEVELOPMENT+COMPANY+LLC",
+      "class_basis": "rule"
     },
     {
       "transfer_id": "C00504530-in-org:AMERICAN_FUND",
@@ -325,7 +330,8 @@
       "visibility": "dark",
       "transaction_type": "10",
       "limit": null,
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00504530&two_year_transaction_period=2024&contributor_name=AMERICAN+FUND"
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00504530&two_year_transaction_period=2024&contributor_name=AMERICAN+FUND",
+      "class_basis": "rule"
     },
     {
       "transfer_id": "C00504530-in-org:AMERICAN_PETROLEUM_INSTITUTE",
@@ -340,7 +346,8 @@
       "visibility": "dark",
       "transaction_type": "10",
       "limit": null,
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00504530&two_year_transaction_period=2024&contributor_name=AMERICAN+PETROLEUM+INSTITUTE"
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00504530&two_year_transaction_period=2024&contributor_name=AMERICAN+PETROLEUM+INSTITUTE",
+      "class_basis": "rule"
     },
     {
       "transfer_id": "C00504530-in-ind:STEPHENS_WARREN_A.|72201",
@@ -370,7 +377,8 @@
       "visibility": "disclosed",
       "transaction_type": "10",
       "limit": null,
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00504530&two_year_transaction_period=2024&contributor_name=CHEVRON+CORPORATION"
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00504530&two_year_transaction_period=2024&contributor_name=CHEVRON+CORPORATION",
+      "class_basis": "rule"
     },
     {
       "transfer_id": "C00504530-in-org:CONOCOPHILLIPS_ANS_MARKETING_COMPANY",
@@ -385,7 +393,8 @@
       "visibility": "disclosed",
       "transaction_type": "10",
       "limit": null,
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00504530&two_year_transaction_period=2024&contributor_name=CONOCOPHILLIPS+ANS+MARKETING+COMPANY"
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00504530&two_year_transaction_period=2024&contributor_name=CONOCOPHILLIPS+ANS+MARKETING+COMPANY",
+      "class_basis": "rule"
     },
     {
       "transfer_id": "C00504530-in-ind:SCHWAB_CHARLES_R.|33480",

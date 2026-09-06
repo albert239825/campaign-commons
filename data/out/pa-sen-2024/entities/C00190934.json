@@ -100,7 +100,8 @@
       "visibility": "dark",
       "transaction_type": "10",
       "limit": null,
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00190934&two_year_transaction_period=2024&contributor_name=CHICKSAW+NATION"
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00190934&two_year_transaction_period=2024&contributor_name=CHICKSAW+NATION",
+      "class_basis": "rule"
     },
     {
       "transfer_id": "C00190934-in-org:JOHN_ORR_ESTATE",
@@ -115,7 +116,8 @@
       "visibility": "dark",
       "transaction_type": "10",
       "limit": null,
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00190934&two_year_transaction_period=2024&contributor_name=JOHN+ORR+ESTATE"
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00190934&two_year_transaction_period=2024&contributor_name=JOHN+ORR+ESTATE",
+      "class_basis": "rule"
     },
     {
       "transfer_id": "C00190934-in-C00789081",
@@ -145,7 +147,8 @@
       "visibility": "dark",
       "transaction_type": "10",
       "limit": null,
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00190934&two_year_transaction_period=2024&contributor_name=CHEROKEE+NATION"
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00190934&two_year_transaction_period=2024&contributor_name=CHEROKEE+NATION",
+      "class_basis": "rule"
     },
     {
       "transfer_id": "C00190934-in-ind:SCHMIDT_ERIC|94301",

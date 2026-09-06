@@ -374,6 +374,9 @@
             },
             "ie_dollars_tagged": {
               "type": "number"
+            },
+            "spenders_with_positions": {
+              "type": "integer"
             }
           },
           "required": [

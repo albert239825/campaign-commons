@@ -2,7 +2,7 @@
   "root_entity_id": "C00684969",
   "root_name": "JDCA PAC",
   "race_id": "pa-sen-2024",
-  "generated_at": "2026-09-05T19:53:48+00:00",
+  "generated_at": "2026-09-06T05:02:45+00:00",
   "data_status": "real",
   "nodes": [
     {
@@ -341,7 +341,8 @@
       "is_terminus": true,
       "terminus_reason": "dark",
       "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00693382&two_year_transaction_period=2024&contributor_name=FUND+FOR+POLICY+REFORM",
-      "organization_class": "nonprofit"
+      "organization_class": "nonprofit",
+      "class_basis": "rule"
     },
     {
       "id": "org:GEOSOR_CORPORATION",
@@ -354,7 +355,8 @@
       "is_terminus": true,
       "terminus_reason": "organization",
       "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00693382&two_year_transaction_period=2024&contributor_name=GEOSOR+CORPORATION",
-      "organization_class": "business"
+      "organization_class": "business",
+      "class_basis": "rule"
     },
     {
       "id": "org:GLOBAL_OAK_HOLDINGS_LLC",
@@ -367,7 +369,8 @@
       "is_terminus": true,
       "terminus_reason": "dark",
       "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00693382&two_year_transaction_period=2024&contributor_name=GLOBAL+OAK+HOLDINGS+LLC",
-      "organization_class": "llc"
+      "organization_class": "llc",
+      "class_basis": "rule"
     },
     {
       "id": "agg:other@C00693382",
@@ -995,7 +998,8 @@
         "2024-01-11",
         "2024-01-11"
       ],
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00693382&two_year_transaction_period=2024&contributor_name=FUND+FOR+POLICY+REFORM"
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00693382&two_year_transaction_period=2024&contributor_name=FUND+FOR+POLICY+REFORM",
+      "class_basis": "rule"
     },
     {
       "from": "org:GEOSOR_CORPORATION",
@@ -1011,7 +1015,8 @@
         "2024-09-19",
         "2024-09-19"
       ],
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00693382&two_year_transaction_period=2024&contributor_name=GEOSOR+CORPORATION"
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00693382&two_year_transaction_period=2024&contributor_name=GEOSOR+CORPORATION",
+      "class_basis": "rule"
     },
     {
       "from": "org:GLOBAL_OAK_HOLDINGS_LLC",
@@ -1027,7 +1032,8 @@
         "2024-01-31",
         "2024-06-28"
       ],
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00693382&two_year_transaction_period=2024&contributor_name=GLOBAL+OAK+HOLDINGS+LLC"
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00693382&two_year_transaction_period=2024&contributor_name=GLOBAL+OAK+HOLDINGS+LLC",
+      "class_basis": "rule"
     },
     {
       "from": "agg:other@C00693382",

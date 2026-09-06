@@ -20,6 +20,7 @@ import {
   RacesIndexSchema,
   SearchIndexSchema,
   StoriesSchema,
+  TrailsSchema,
   VendorIndexSchema,
   VendorSchema,
 } from "@campaign-commons/contracts";
@@ -74,6 +75,8 @@ export const getDossier = (raceId: string, candidateId: string) =>
   load(DossierSchema, raceId, "dossiers", `${candidateId}.json`);
 export const getStories = (raceId: string) => load(StoriesSchema, raceId, "stories.json");
 export const getDonor = (raceId: string, donorKey: string) => load(DonorViewSchema, raceId, "donors", `${donorKey}.json`);
+export const getTrails = (raceId: string) => load(TrailsSchema, raceId, "trails.json");
+export const hasTrails = (raceId: string) => existsSync(join(DATA_OUT, raceId, "trails.json"));
 export const getVendors = (raceId: string) => load(VendorIndexSchema, raceId, "vendors.json");
 export const getVendor = (raceId: string, vendorId: string) => load(VendorSchema, raceId, "vendors", `${vendorId}.json`);
 /** Cross-race client index (`make search`); served to the browser by app/search.json/route.ts. */

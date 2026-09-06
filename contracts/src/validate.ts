@@ -22,6 +22,7 @@ import {
   RacesIndexSchema,
   SearchIndexSchema,
   StoriesSchema,
+  TrailsSchema,
   VendorIndexSchema,
   VendorSchema,
 } from "./schemas";
@@ -44,6 +45,7 @@ function schemaFor(rel: string, isHand: boolean): ZodTypeAny | null {
     if (parts[1] === "ledger.json") return LedgerSchema;
     if (parts[1] === "ads.json") return AdGallerySchema;
     if (parts[1] === "stories.json") return StoriesSchema;
+    if (parts[1] === "trails.json") return TrailsSchema;
     if (parts[1] === "vendors.json") return VendorIndexSchema;
     if (parts[1] === "issues.json") return IssueSpendingSchema;
   }

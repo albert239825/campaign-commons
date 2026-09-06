@@ -23,8 +23,8 @@
     "independent_expenditures": 0,
     "from_individuals": 1280052455.32,
     "from_committees": 13426410.02,
-    "from_organizations": 4588900.0,
-    "from_undisclosed": 6505800.0
+    "from_organizations": 6503100.0,
+    "from_undisclosed": 4591600.0
   },
   "inflows": [
     {
@@ -310,7 +310,8 @@
       "visibility": "disclosed",
       "transaction_type": "15",
       "limit": null,
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00744946&two_year_transaction_period=2024&contributor_name=PUYALLUP+TRIBE+OF+INDIANS"
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00744946&two_year_transaction_period=2024&contributor_name=PUYALLUP+TRIBE+OF+INDIANS",
+      "class_basis": "rule"
     },
     {
       "transfer_id": "C00744946-in-ind:CAMPION_TOM|98177",
@@ -370,7 +371,8 @@
       "visibility": "disclosed",
       "transaction_type": "15",
       "limit": null,
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00744946&two_year_transaction_period=2024&contributor_name=THE+LYTTON+RANCHERIA+OF+CALIFORNIA"
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00744946&two_year_transaction_period=2024&contributor_name=THE+LYTTON+RANCHERIA+OF+CALIFORNIA",
+      "class_basis": "rule"
     },
     {
       "transfer_id": "C00744946-in-ind:LAUFER_MARSHA|33462",

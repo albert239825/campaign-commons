@@ -270,6 +270,7 @@ def test_coverage_and_reconciliation(race: RowRefs) -> None:
         "ads_total": 3,
         "ies_tagged": 2,
         "ie_dollars_tagged": 700.0,
+        "spenders_with_positions": 0,
     }
     ledger = _read(race.out_dir / "ledger.json")
     totals = {s["entity_id"]: s["total"] for s in ledger["top_outside_spenders"]}

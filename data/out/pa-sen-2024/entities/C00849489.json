@@ -23,8 +23,8 @@
     "independent_expenditures": 54394982.49,
     "from_individuals": 45918584.09,
     "from_committees": 5210000.0,
-    "from_organizations": 1963000.0,
-    "from_undisclosed": 6976891.0
+    "from_organizations": 2213000.0,
+    "from_undisclosed": 6726891.0
   },
   "inflows": [
     {
@@ -100,7 +100,8 @@
       "visibility": "dark",
       "transaction_type": "10",
       "limit": "unlimited",
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00849489&two_year_transaction_period=2024&contributor_name=ANTONIO+J+GRACIAS+REVOCABLE+TRUST"
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00849489&two_year_transaction_period=2024&contributor_name=ANTONIO+J+GRACIAS+REVOCABLE+TRUST",
+      "class_basis": "rule"
     },
     {
       "transfer_id": "C00849489-in-ind:SCHWARZMAN_STEPHEN_A|10154",
@@ -160,7 +161,8 @@
       "visibility": "dark",
       "transaction_type": "10",
       "limit": "unlimited",
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00849489&two_year_transaction_period=2024&contributor_name=MANZANITA+MANAGEMENT+GROUP+LLC"
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00849489&two_year_transaction_period=2024&contributor_name=MANZANITA+MANAGEMENT+GROUP+LLC",
+      "class_basis": "rule"
     },
     {
       "transfer_id": "C00849489-in-C00668905",
@@ -310,7 +312,8 @@
       "visibility": "disclosed",
       "transaction_type": "10",
       "limit": "unlimited",
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00849489&two_year_transaction_period=2024&contributor_name=AMERICAN+ADVANCEMENT+INC."
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00849489&two_year_transaction_period=2024&contributor_name=AMERICAN+ADVANCEMENT+INC.",
+      "class_basis": "rule"
     },
     {
       "transfer_id": "C00849489-in-C00884262",
@@ -355,7 +358,8 @@
       "visibility": "dark",
       "transaction_type": "10",
       "limit": "unlimited",
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00849489&two_year_transaction_period=2024&contributor_name=AMERICAN+JOBS+AND+GROWTH+FUND"
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00849489&two_year_transaction_period=2024&contributor_name=AMERICAN+JOBS+AND+GROWTH+FUND",
+      "class_basis": "rule"
     },
     {
       "transfer_id": "C00849489-in-ind:REES-JONES_TREVOR_D_MR.|75225",
@@ -385,7 +389,8 @@
       "visibility": "dark",
       "transaction_type": "10",
       "limit": "unlimited",
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00849489&two_year_transaction_period=2024&contributor_name=ECONOMIC+FUTURE+FUND+INC"
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00849489&two_year_transaction_period=2024&contributor_name=ECONOMIC+FUTURE+FUND+INC",
+      "class_basis": "rule"
     },
     {
       "transfer_id": "C00849489-in-ind:FISHER_KENNETH_L|75093",
@@ -1995,20 +2000,5 @@
       "last_date": "2024-09-17",
       "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00849489&payee_name=SPECTRUM+MARKETING+COMPANIES"
     }
-  ],
-  "issue_focus": {
-    "kind": "candidate_aligned",
-    "issue_ids": [],
-    "description": "Its 2024 site said it is 'fighting to protect our conservative values by supporting Republican candidates in Pennsylvania'; the committee's filed independent expenditures in this cycle are all in the PA Senate race (support McCormick / oppose Casey). No issue is named.",
-    "basis": {
-      "basis": "verified",
-      "rule": "Self-described focus from the organisation's own material; says what the org is for, not what its dollars bought",
-      "source_urls": [
-        "https://web.archive.org/web/20241106000000/https://www.keystonerenewal.com/",
-        "https://www.fec.gov/data/committee/C00849489/"
-      ],
-      "checked_by": "devin-block2-issues",
-      "checked_at": "2026-09-05"
-    }
-  }
+  ]
 }

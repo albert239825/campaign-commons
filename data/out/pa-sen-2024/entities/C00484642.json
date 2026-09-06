@@ -23,8 +23,8 @@
     "independent_expenditures": 0,
     "from_individuals": 171562736.73,
     "from_committees": 73685085.21,
-    "from_organizations": 15736062.0,
-    "from_undisclosed": 101395000.0
+    "from_organizations": 16696062.0,
+    "from_undisclosed": 100435000.0
   },
   "inflows": [
     {
@@ -40,7 +40,8 @@
       "visibility": "dark",
       "transaction_type": "10",
       "limit": "unlimited",
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00484642&two_year_transaction_period=2024&contributor_name=MAJORITY+FORWARD"
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00484642&two_year_transaction_period=2024&contributor_name=MAJORITY+FORWARD",
+      "class_basis": "rule"
     },
     {
       "transfer_id": "C00484642-in-C00490847",
@@ -100,7 +101,8 @@
       "visibility": "dark",
       "transaction_type": "10",
       "limit": "unlimited",
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00484642&two_year_transaction_period=2024&contributor_name=GREATER+NEW+YORK+HOSPITAL+ASSOCIATION+MANAGEMENT+CORPORATION"
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00484642&two_year_transaction_period=2024&contributor_name=GREATER+NEW+YORK+HOSPITAL+ASSOCIATION+MANAGEMENT+CORPORATION",
+      "class_basis": "rule"
     },
     {
       "transfer_id": "C00484642-in-ind:SIMONS_JAMES|10010",
@@ -190,7 +192,8 @@
       "visibility": "disclosed",
       "transaction_type": "10",
       "limit": "unlimited",
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00484642&two_year_transaction_period=2024&contributor_name=IBEW+PAC+EDUCATIONAL+FUND"
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00484642&two_year_transaction_period=2024&contributor_name=IBEW+PAC+EDUCATIONAL+FUND",
+      "class_basis": "rule"
     },
     {
       "transfer_id": "C00484642-in-ind:CHAN_MICHELLE|94111",
@@ -385,7 +388,8 @@
       "visibility": "disclosed",
       "transaction_type": "10",
       "limit": "unlimited",
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00484642&two_year_transaction_period=2024&contributor_name=SAN+PABLO+LYTTON+CASINO"
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00484642&two_year_transaction_period=2024&contributor_name=SAN+PABLO+LYTTON+CASINO",
+      "class_basis": "rule"
     },
     {
       "transfer_id": "C00484642-in-ind:MARCUS_GEORGE_M.|94304",

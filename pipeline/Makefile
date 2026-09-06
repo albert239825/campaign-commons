@@ -1,7 +1,7 @@
 RACE ?= pa-sen-2024
 PY ?= python3
 
-.PHONY: setup mock ingest ledger chains vendors ads ads-enrich enrich-transcripts enrich-ads enrich-review enrich-spenders enrich-funders enrich-dossiers dossier-enrich issues search dossier validate all lint test
+.PHONY: setup mock ingest ledger chains vendors ads ads-enrich enrich-transcripts enrich-ads enrich-review enrich-spenders enrich-funders enrich-dossiers dossier-enrich issues search dossier validate all lint test issues-enrich
 
 setup:            ## install pipeline deps (creates .venv)
 	$(PY) -m venv .venv && . .venv/bin/activate && pip install -q -e ".[dev]"
@@ -51,21 +51,27 @@ dossier-enrich:   ## Materialize machine dossier stances into existing dossier f
 issues:           ## Block 2: data/hand/$(RACE)/{issue_focus,ad_issues,ie_issues}.json -> issues.json; patches entities + ads
 	$(PY) -m campaign_commons.issues $(RACE)
 
+issues-enrich:    ## Block 2: fetch spender sites and record model-read issue positions; needs network + XAI_API_KEY
+	$(PY) -m campaign_commons.issues_enrich $(RACE)
+
 search:           ## Block 2: every page -> data/out/search.json (client-side index)
 	$(PY) -m campaign_commons.search
 
 dossier:          ## congress.gov -> dossiers/*.json
 	$(PY) -m campaign_commons.dossier $(RACE)
 
+trails:           ## ledger + ads + chains + entities -> trails.json (Money Trails answers; no new downloads)
+	$(PY) -m campaign_commons.trails $(RACE)
+
+validate:         ## validate data/out against contracts/jsonschema
+	$(PY) -m campaign_commons.validate
+
 chains-out:       ## Block 2: spending side of chains/*.json (root -> vendor -> ad -> candidate); runs after vendors/ads/dossier
 	$(PY) -m campaign_commons.chains_out $(RACE)
 
-validate:         ## validate data/out and data/hand against contracts/jsonschema
-	$(PY) -m campaign_commons.validate
-
 # Stage order: chains before vendors (vendors reconciles against ledger.traceability, which chains writes);
 # ads-enrich and issues read vendors/ads; chains-out reads all of them; search last
-all: ingest ledger chains vendors ads ads-enrich issues dossier chains-out search validate
+all: ingest ledger chains vendors ads ads-enrich issues dossier chains-out search trails validate
 
 lint:
 	ruff check . && ruff format --check .

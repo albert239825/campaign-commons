@@ -43,6 +43,7 @@ def _schema_name(rel: Path, hand: bool = False) -> str | None:
             "ledger.json": "ledger",
             "ads.json": "ads",
             "stories.json": "stories",
+            "trails.json": "trails",
             "vendors.json": "vendors",
             "issues.json": "issues",
         }.get(parts[1])

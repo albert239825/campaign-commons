@@ -1,6 +1,6 @@
 // OWNER: Frontend A (race ledger).
 import Link from "next/link";
-import { getIssueFocus, getIssues, getLedger, getRace, getStories, listRaceIds } from "@/lib/data";
+import { getIssueFocus, getIssues, getLedger, getRace, getStories, hasTrails, listRaceIds } from "@/lib/data";
 import { date, routes } from "@/lib/format";
 import { AdjacencyNote, Card } from "@/components/ui";
 import { RaceSections } from "@/components/ledger/race-sections";
@@ -26,6 +26,19 @@ export default async function RaceLedgerPage({ params }: { params: Promise<{ rac
 
   return (
     <>
+      {hasTrails(raceId) && (
+        <Link
+          href={routes.ask(raceId)}
+          className="mt-4 flex flex-wrap items-baseline justify-between gap-2 rounded-md border border-neutral-300 bg-white px-3 py-2 text-sm hover:border-neutral-900"
+        >
+          <span>
+            <span className="font-medium">Money Trails</span> — ask in plain English: who funds a committee, who is spending for or against a candidate, who paid
+            for the ads about them.
+          </span>
+          <span className="text-xs text-neutral-500">Ask →</span>
+        </Link>
+      )}
+
       <RaceSections
         funding={<FundingExplorer views={buildFundingViews(ledger)} raceId={raceId} />}
         issues={issues ? (

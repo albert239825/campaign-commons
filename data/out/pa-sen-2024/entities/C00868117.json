@@ -23,8 +23,8 @@
     "independent_expenditures": 0,
     "from_individuals": 131500.0,
     "from_committees": 32500.0,
-    "from_organizations": 100000.0,
-    "from_undisclosed": 128900.0
+    "from_organizations": 182600.0,
+    "from_undisclosed": 46300.0
   },
   "inflows": [
     {
@@ -40,7 +40,8 @@
       "visibility": "disclosed",
       "transaction_type": "11",
       "limit": null,
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00868117&two_year_transaction_period=2024&contributor_name=FEDERATED+INDIANS+OF+GRANTON+RANCHERIA"
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00868117&two_year_transaction_period=2024&contributor_name=FEDERATED+INDIANS+OF+GRANTON+RANCHERIA",
+      "class_basis": "rule"
     },
     {
       "transfer_id": "C00868117-in-org:YOCHA_DEHE_WINTUN_NATION",
@@ -55,7 +56,8 @@
       "visibility": "dark",
       "transaction_type": "11",
       "limit": null,
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00868117&two_year_transaction_period=2024&contributor_name=YOCHA+DEHE+WINTUN+NATION"
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00868117&two_year_transaction_period=2024&contributor_name=YOCHA+DEHE+WINTUN+NATION",
+      "class_basis": "rule"
     },
     {
       "transfer_id": "C00868117-in-org:MORONGO_BAND_OF_MISSION_INDIANS",
@@ -67,10 +69,11 @@
       "date": "2024-03-28",
       "first_date": "2024-03-28",
       "count": 1,
-      "visibility": "dark",
+      "visibility": "disclosed",
       "transaction_type": "11",
       "limit": null,
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00868117&two_year_transaction_period=2024&contributor_name=MORONGO+BAND+OF+MISSION+INDIANS"
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00868117&two_year_transaction_period=2024&contributor_name=MORONGO+BAND+OF+MISSION+INDIANS",
+      "class_basis": "inferred"
     },
     {
       "transfer_id": "C00868117-in-org:SANTA_YNEZ_BAND_OF_MISSION_INDIANS",
@@ -82,10 +85,11 @@
       "date": "2024-06-11",
       "first_date": "2024-06-11",
       "count": 1,
-      "visibility": "dark",
+      "visibility": "disclosed",
       "transaction_type": "11",
       "limit": null,
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00868117&two_year_transaction_period=2024&contributor_name=SANTA+YNEZ+BAND+OF+MISSION+INDIANS"
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00868117&two_year_transaction_period=2024&contributor_name=SANTA+YNEZ+BAND+OF+MISSION+INDIANS",
+      "class_basis": "inferred"
     },
     {
       "transfer_id": "C00868117-in-ind:JORDAN_WAYNE|94612",
