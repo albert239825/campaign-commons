@@ -207,9 +207,9 @@ export function ribbonSpine(r: Ribbon): string {
 }
 
 /** Column caption: what kind of thing sits in this column. */
-export function columnLabel(col: Column): string {
+export function columnLabel(col: Column, rootLabel = "spender"): string {
   if (col.side === "in")
-    return col.depth === 0 ? "SPENDER" : `HOP ${col.depth}`;
+    return col.depth === 0 ? rootLabel.toUpperCase() : `HOP ${col.depth}`;
   const kinds = new Set(col.nodes.map((n) => n.kind));
   if (kinds.has("candidate"))
     return kinds.size === 1 ? "TARGETED" : "ADS · TARGETED";

@@ -140,5 +140,17 @@ describe("truncationSentence", () => {
         ],
       }),
     ).toBe("Showing the 5 largest of 8 outside spenders and the 5 largest of 65 direct funders.");
+    expect(
+      truncationSentence(
+        {
+          ...candidateGraph,
+          truncated: [
+            { layer: "spenders", kept: 5, hidden: 3 },
+            { layer: "ads", kept: 5, hidden: 28 },
+          ],
+        },
+        new Set(["spenders", "funders_1", "funders_2", "sponsors"]),
+      ),
+    ).toBe("Showing the 5 largest of 8 outside spenders.");
   });
 });

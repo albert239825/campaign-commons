@@ -1,6 +1,6 @@
 "use client";
 
-import { useMemo, useState } from "react";
+import { useMemo, useState, type ReactNode } from "react";
 import {
   COMMITTEE_TYPE_LABELS,
   TARGETING_COLOR,
@@ -340,7 +340,17 @@ function RibbonShape({ r }: { r: Ribbon }) {
  * are ribbons, placement / targeting edges are thin spines styled by their evidence basis (solid / dashed / dotted).
  * Clicking a node opens its panel (basics, evidence, links, expand / collapse / hide) — Palantir-Vertex style.
  */
-export function ChainDiagram({ wire, openAll = false }: { wire: ChainViewWire; openAll?: boolean }) {
+export function ChainDiagram({
+  wire,
+  openAll = false,
+  caption,
+  rootLabel = "spender",
+}: {
+  wire: ChainViewWire;
+  openAll?: boolean;
+  caption?: ReactNode;
+  rootLabel?: string;
+}) {
   const view = useMemo(() => fromWire(wire), [wire]);
   const [controls, setControls] = useState<GraphControls>(() => ({
     opened: openAll ? new Set(view.nodes.filter((n) => n.side === "in").map((n) => n.id)) : new Set(),
@@ -457,7 +467,7 @@ export function ChainDiagram({ wire, openAll = false }: { wire: ChainViewWire; o
               fill="#a3a3a3"
               letterSpacing={0.5}
             >
-              {columnLabel(c)}
+              {columnLabel(c, rootLabel)}
             </text>
           ))}
         {L.ribbons.map((r, i) => (
@@ -499,16 +509,20 @@ export function ChainDiagram({ wire, openAll = false }: { wire: ChainViewWire; o
         </div>
       )}
       <figcaption className="mt-1 text-xs text-neutral-500">
-        Drawn: the spender, its direct sources and every node carrying at least{" "}
-        {Math.round(MATERIAL_SHARE * 100)}% of its receipts
-        {graph.hidden.nodes > 0 &&
-          ` — ${graph.hidden.nodes} smaller ${graph.hidden.nodes === 1 ? "source" : "sources"} (${money(graph.hidden.amount)}) folded into dashed “other” nodes`}
-        {closed > 0 &&
-          `; ${closed} ${closed === 1 ? "committee has" : "committees have"} sources not drawn — click + to show them`}
-        {graph.hasOut &&
-          "; to the right, what the spender paid for and whom it targeted"}
-        . Click any node for its details and evidence. Every edge is in the
-        table below.
+        {caption ?? (
+          <>
+            Drawn: the spender, its direct sources and every node carrying at least{" "}
+            {Math.round(MATERIAL_SHARE * 100)}% of its receipts
+            {graph.hidden.nodes > 0 &&
+              ` — ${graph.hidden.nodes} smaller ${graph.hidden.nodes === 1 ? "source" : "sources"} (${money(graph.hidden.amount)}) folded into dashed “other” nodes`}
+            {closed > 0 &&
+              `; ${closed} ${closed === 1 ? "committee has" : "committees have"} sources not drawn — click + to show them`}
+            {graph.hasOut &&
+              "; to the right, what the spender paid for and whom it targeted"}
+            . Click any node for its details and evidence. Every edge is in the
+            table below.
+          </>
+        )}
         {graph.userHidden > 0 && (
           <>
             {" "}

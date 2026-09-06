@@ -358,7 +358,7 @@ export function visibleGraph(
       }
       if (showAll || material.has(child.id)) {
         edges.push(e);
-        placeIn(child);
+        if (!placed.has(child.id)) placeIn(child);
       } else {
         folded.push(e);
         foldedSmall.nodes += 1;

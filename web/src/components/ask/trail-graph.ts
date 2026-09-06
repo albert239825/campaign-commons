@@ -36,8 +36,14 @@ export function trailGraphWire(answer: TrailAnswer, graph: TrailGraph, links: No
   return wire;
 }
 
-export function truncationSentence(graph: TrailGraph): string | null {
-  if (graph.truncated.length === 0) return null;
-  const parts = graph.truncated.map((t) => `the ${t.kept} largest of ${t.kept + t.hidden} ${LAYER_LABELS[t.layer]}`);
+export function truncationSentence(
+  graph: TrailGraph,
+  layers?: ReadonlySet<TrailGraphTruncation["layer"]>,
+): string | null {
+  const truncations = layers ? graph.truncated.filter((t) => layers.has(t.layer)) : graph.truncated;
+  if (truncations.length === 0) return null;
+  const parts = truncations.map(
+    (t) => `the ${t.kept} largest of ${t.kept + t.hidden} ${LAYER_LABELS[t.layer]}`,
+  );
   return `Showing ${parts.join(" and ")}.`;
 }
