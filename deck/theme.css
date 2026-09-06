@@ -71,6 +71,10 @@ html, body { background: #1b1b1a; }
 /* video */
 .video-frame { flex: 1; display: flex; align-items: center; justify-content: center; min-height: 0; }
 .video-frame iframe { width: 1120px; height: 630px; border: 0; background: #000; box-shadow: 0 30px 80px rgb(0 0 0 / 50%); }
+.video-poster { display: none; }
+.static .video-frame iframe { display: none; }
+.static .video-poster { display: block; }
+.video-poster img { width: 1120px; height: 630px; object-fit: cover; margin: 0; display: block; box-shadow: 0 30px 80px rgb(0 0 0 / 50%); }
 .reveal p.caption { margin-top: 26px; text-align: center; font-size: 22px; color: var(--tan); }
 
 /* questions */
