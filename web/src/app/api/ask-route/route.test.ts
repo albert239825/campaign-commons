@@ -32,7 +32,7 @@ const stubCompletion = (content: string) => {
   vi.stubGlobal("fetch", f);
   return f;
 };
-const route = (intent: string, subjectId: string) => JSON.stringify({ route: { intent, subjectId } });
+const route = (intent: string, subjectId: string, issueId: string | null = null) => JSON.stringify({ route: { intent, subjectId, issueId } });
 
 beforeEach(() => vi.stubEnv("VERCEL", "1"));
 afterEach(() => {
@@ -188,10 +188,17 @@ describe("POST /api/ask-route with a valid route (via: llm)", () => {
     expect(body.intent).toBe("candidate_ad_funding");
     expect(body.subject.id).toBe(casey.id);
   });
+  it("4d. candidate + spender_issue carries the closed issue id", async () => {
+    vi.stubEnv("XAI_API_KEY", "k");
+    stubCompletion(route("spender_issue", casey.id, "abortion"));
+    const { body } = await ask("where do the groups spending for Casey stand on abortion");
+    expect(body).toEqual({ ...resolveRoute("spender_issue", casey, trails.subjects, casey.id, "abortion"), via: "llm" });
+    expect(body).toMatchObject({ kind: "answer", intent: "spender_issue", issueId: "abortion", via: "llm" });
+  });
   it("every valid (intent, subject) on the ledger seeds to that subject (or its principal committee), never to an ambiguity", () => {
     for (const subject of trails.subjects) {
       for (const intent of INTENTS) {
-        const r = seedResolution("irrelevant", { intent, subjectId: subject.id }, trails);
+        const r = seedResolution("irrelevant", { intent, subjectId: subject.id, issueId: null }, trails);
         expect(r.via).toBe("llm");
         if (r.kind === "answer") {
           expect([subject.id, subject.principal_committee_id]).toContain(r.subject.id);
@@ -209,13 +216,13 @@ describe("POST /api/ask-route with a valid route (via: llm)", () => {
     // re-seeding by text (the old `"<intent> <aliases[0]>"`) lands on the other subject; the routed path cannot
     const byText = resolveQuestion(`committee_funding ${working.aliases[0]}`, t.subjects);
     expect(byText.kind === "answer" && byText.subject.id).toBe(america.id);
-    const r = seedResolution("who backs working america", { intent: "committee_funding", subjectId: working.id }, t);
-    expect(r).toEqual({ kind: "answer", intent: "committee_funding", subject: working, matched: working.id, note: null, via: "llm" });
+    const r = seedResolution("who backs working america", { intent: "committee_funding", subjectId: working.id, issueId: null }, t);
+    expect(r).toEqual({ kind: "answer", intent: "committee_funding", subject: working, matched: working.id, note: null, issueId: null, via: "llm" });
   });
   it("the response is exactly a Resolution plus `via`; no model text passes through", async () => {
     vi.stubEnv("XAI_API_KEY", "k");
     stubCompletion(route("committee_funding", winsenate.id));
     const { body } = await ask("who funds winsenate");
-    expect(Object.keys(body).sort()).toEqual(["intent", "kind", "matched", "note", "subject", "via"]);
+    expect(Object.keys(body).sort()).toEqual(["intent", "issueId", "kind", "matched", "note", "subject", "via"]);
   });
 });

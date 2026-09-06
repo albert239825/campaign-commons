@@ -1,9 +1,10 @@
 // OWNER: Money Trails (D-73).
 import Link from "next/link";
 import { notFound } from "next/navigation";
+import { ISSUE_BY_ID, ISSUE_IDS } from "@campaign-commons/contracts";
 import { getRace, getTrails, hasTrails, listRaceIds } from "@/lib/data";
 import { routes } from "@/lib/format";
-import { canonicalQuestion, INTENT_LABELS, INTENTS } from "@/lib/ask";
+import { ASK_INTENTS, canonicalQuestion, INTENT_LABELS } from "@/lib/ask";
 import { Breadcrumbs, Card, DataStatusBanner } from "@/components/ui";
 import { DetailHeader, SectionNav } from "@/components/ui/detail-layout";
 import { AskBox, SuggestionLink } from "@/components/ask/ask-box";
@@ -36,7 +37,7 @@ export default async function AskPage({ params }: { params: Promise<{ raceId: st
           }
         >
           <p>
-            Ask a plain-English money question about this race. Three kinds are answered, each from the filed records already on this site. A model
+            Ask a plain-English money question about this race. Four kinds are answered, each from the filed records already on this site. A model
             only reads the question to pick which; every answer is precomputed, and every number links to where it was read.
           </p>
         </DetailHeader>
@@ -57,15 +58,20 @@ export default async function AskPage({ params }: { params: Promise<{ raceId: st
         <aside className="detail-sidebar">
           <SectionNav
             label="Questions answered"
-            items={INTENTS.map((intent) => ({
+            items={ASK_INTENTS.map((intent) => ({
               id: intent,
               label: INTENT_LABELS[intent],
-              note: intent === "committee_funding" ? `${committees.length} committees` : `${candidates.length} candidates`,
+              note:
+                intent === "committee_funding"
+                  ? `${committees.length} committees`
+                  : intent === "spender_issue"
+                    ? `${candidates.length} candidates × ${ISSUE_IDS.length} issues`
+                    : `${candidates.length} candidates`,
             }))}
           />
         </aside>
         <div className="detail-content">
-          {INTENTS.map((intent) => {
+          {ASK_INTENTS.map((intent) => {
             const subjects = intent === "committee_funding" ? committees : candidates;
             const shown = subjects.slice(0, intent === "committee_funding" ? 12 : subjects.length);
             return (
@@ -74,7 +80,20 @@ export default async function AskPage({ params }: { params: Promise<{ raceId: st
                   <ul className="ask-question-list">
                     {shown.map((s) => (
                       <li key={s.id}>
-                        <Link href={routes.answer(raceId, intent, s.id)}>{canonicalQuestion(intent, s)}</Link>
+                        {intent === "spender_issue" ? (
+                          <>
+                            <span className="font-medium">{s.name}</span>
+                            <span className="ml-2 inline-flex flex-wrap gap-x-2 gap-y-1">
+                              {ISSUE_IDS.map((issueId) => (
+                                <Link key={issueId} href={routes.issueAnswer(raceId, issueId, s.id)} className="text-xs">
+                                  {ISSUE_BY_ID[issueId].label}
+                                </Link>
+                              ))}
+                            </span>
+                          </>
+                        ) : (
+                          <Link href={routes.answer(raceId, intent, s.id)}>{canonicalQuestion(intent, s)}</Link>
+                        )}
                       </li>
                     ))}
                   </ul>
