@@ -2,7 +2,7 @@
   "root_entity_id": "C00541433",
   "root_name": "HUNTER ACTION FUND (HAF)",
   "race_id": "pa-sen-2024",
-  "generated_at": "2026-09-05T19:53:48+00:00",
+  "generated_at": "2026-09-06T05:02:45+00:00",
   "data_status": "real",
   "nodes": [
     {
@@ -28,7 +28,8 @@
       "is_terminus": true,
       "terminus_reason": "dark",
       "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00541433&two_year_transaction_period=2024&contributor_name=SAFARI+CLUB+INTERNATIONAL",
-      "organization_class": "unknown"
+      "organization_class": "nonprofit",
+      "class_basis": "inferred"
     },
     {
       "id": "ind:ANDERSON_DENNIS|92817",
@@ -53,7 +54,8 @@
       "is_terminus": true,
       "terminus_reason": "dark",
       "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00541433&two_year_transaction_period=2024&contributor_name=LOUISIANA+ACADIANA+SCI+CHAPTER",
-      "organization_class": "unknown"
+      "organization_class": "unknown",
+      "class_basis": "rule"
     },
     {
       "id": "ind:INGRAM_MICHAEL|85258",
@@ -78,7 +80,8 @@
       "is_terminus": true,
       "terminus_reason": "dark",
       "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00541433&two_year_transaction_period=2024&contributor_name=ATWOOD+%26+ASSOCIATES",
-      "organization_class": "unknown"
+      "organization_class": "unknown",
+      "class_basis": "rule"
     },
     {
       "id": "ind:WOODRUFF_RICHARD|30339",
@@ -347,7 +350,8 @@
         "2023-01-31",
         "2024-02-29"
       ],
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00541433&two_year_transaction_period=2024&contributor_name=SAFARI+CLUB+INTERNATIONAL"
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00541433&two_year_transaction_period=2024&contributor_name=SAFARI+CLUB+INTERNATIONAL",
+      "class_basis": "inferred"
     },
     {
       "from": "ind:ANDERSON_DENNIS|92817",
@@ -379,7 +383,8 @@
         "2023-04-02",
         "2024-09-30"
       ],
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00541433&two_year_transaction_period=2024&contributor_name=LOUISIANA+ACADIANA+SCI+CHAPTER"
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00541433&two_year_transaction_period=2024&contributor_name=LOUISIANA+ACADIANA+SCI+CHAPTER",
+      "class_basis": "rule"
     },
     {
       "from": "ind:INGRAM_MICHAEL|85258",
@@ -411,7 +416,8 @@
         "2024-02-01",
         "2024-02-01"
       ],
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00541433&two_year_transaction_period=2024&contributor_name=ATWOOD+%26+ASSOCIATES"
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00541433&two_year_transaction_period=2024&contributor_name=ATWOOD+%26+ASSOCIATES",
+      "class_basis": "rule"
     },
     {
       "from": "ind:WOODRUFF_RICHARD|30339",

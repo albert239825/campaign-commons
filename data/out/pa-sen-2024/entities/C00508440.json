@@ -115,7 +115,8 @@
       "visibility": "dark",
       "transaction_type": "10",
       "limit": "unlimited",
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00508440&two_year_transaction_period=2024&contributor_name=HUMAN+RIGHTS+CAMPAIGN"
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00508440&two_year_transaction_period=2024&contributor_name=HUMAN+RIGHTS+CAMPAIGN",
+      "class_basis": "inferred"
     },
     {
       "transfer_id": "C00508440-in-ind:DESINO_CHRISTOPHER|34482",

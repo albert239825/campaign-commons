@@ -23,8 +23,8 @@
     "independent_expenditures": 0,
     "from_individuals": 1487692.38,
     "from_committees": 49750.0,
-    "from_organizations": 4750.0,
-    "from_undisclosed": 55800.0
+    "from_organizations": 6750.0,
+    "from_undisclosed": 53800.0
   },
   "inflows": [
     {
@@ -130,7 +130,8 @@
       "visibility": "dark",
       "transaction_type": "11",
       "limit": null,
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00577361&two_year_transaction_period=2024&contributor_name=CHEROKEE+NATION"
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00577361&two_year_transaction_period=2024&contributor_name=CHEROKEE+NATION",
+      "class_basis": "rule"
     },
     {
       "transfer_id": "C00577361-in-ind:PEMBERTON_LEWIS_PECK|73099",

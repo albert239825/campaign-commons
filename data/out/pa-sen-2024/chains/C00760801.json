@@ -2,7 +2,7 @@
   "root_entity_id": "C00760801",
   "root_name": "THE TURNOUT PROJECT",
   "race_id": "pa-sen-2024",
-  "generated_at": "2026-09-05T19:53:48+00:00",
+  "generated_at": "2026-09-06T05:02:45+00:00",
   "data_status": "real",
   "nodes": [
     {
@@ -28,7 +28,8 @@
       "is_terminus": true,
       "terminus_reason": "organization",
       "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00760801&two_year_transaction_period=2024&contributor_name=GREATER+PA+CARPENTERS+PEC",
-      "organization_class": "union"
+      "organization_class": "union",
+      "class_basis": "rule"
     },
     {
       "id": "C00884288",
@@ -53,7 +54,8 @@
       "is_terminus": true,
       "terminus_reason": "organization",
       "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00760801&two_year_transaction_period=2024&contributor_name=IBEW+LOCAL+UNION+164",
-      "organization_class": "union"
+      "organization_class": "union",
+      "class_basis": "rule"
     },
     {
       "id": "org:GROWING_ECONOMIC_OPPORTUNITIES",
@@ -66,7 +68,8 @@
       "is_terminus": true,
       "terminus_reason": "dark",
       "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00760801&two_year_transaction_period=2024&contributor_name=GROWING+ECONOMIC+OPPORTUNITIES",
-      "organization_class": "unknown"
+      "organization_class": "unknown",
+      "class_basis": "rule"
     },
     {
       "id": "agg:other@C00760801",
@@ -74,7 +77,7 @@
       "kind": "aggregate",
       "committee_type": null,
       "depth": 1,
-      "visibility": "dark",
+      "visibility": "disclosed",
       "amount_in": 37000.0,
       "is_terminus": true,
       "terminus_reason": "pruned",
@@ -601,7 +604,8 @@
         "2024-06-04",
         "2024-10-25"
       ],
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00760801&two_year_transaction_period=2024&contributor_name=GREATER+PA+CARPENTERS+PEC"
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00760801&two_year_transaction_period=2024&contributor_name=GREATER+PA+CARPENTERS+PEC",
+      "class_basis": "rule"
     },
     {
       "from": "C00884288",
@@ -633,7 +637,8 @@
         "2023-04-13",
         "2023-04-13"
       ],
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00760801&two_year_transaction_period=2024&contributor_name=IBEW+LOCAL+UNION+164"
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00760801&two_year_transaction_period=2024&contributor_name=IBEW+LOCAL+UNION+164",
+      "class_basis": "rule"
     },
     {
       "from": "org:GROWING_ECONOMIC_OPPORTUNITIES",
@@ -649,13 +654,14 @@
         "2024-05-29",
         "2024-05-29"
       ],
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00760801&two_year_transaction_period=2024&contributor_name=GROWING+ECONOMIC+OPPORTUNITIES"
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00760801&two_year_transaction_period=2024&contributor_name=GROWING+ECONOMIC+OPPORTUNITIES",
+      "class_basis": "rule"
     },
     {
       "from": "agg:other@C00760801",
       "to": "C00760801",
       "amount": 37000.0,
-      "visibility": "dark",
+      "visibility": "disclosed",
       "depth": 1,
       "transaction_types": [
         "10",
@@ -1343,10 +1349,10 @@
   ],
   "summary": {
     "total_in": 1137000.0,
-    "disclosed_share": 0.9551,
+    "disclosed_share": 0.9639,
     "inferable_share": 0.0,
     "unwalked_share": 0.0,
-    "dark_share": 0.0449,
+    "dark_share": 0.0361,
     "max_depth": 2,
     "terminus_counts": {
       "organization": 2,

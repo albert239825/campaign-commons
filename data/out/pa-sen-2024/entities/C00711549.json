@@ -85,7 +85,8 @@
       "visibility": "disclosed",
       "transaction_type": "10",
       "limit": null,
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00711549&two_year_transaction_period=2024&contributor_name=AB+DATA%2C+LTD"
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00711549&two_year_transaction_period=2024&contributor_name=AB+DATA%2C+LTD",
+      "class_basis": "rule"
     },
     {
       "transfer_id": "C00711549-in-ind:BUNTING_DAVID_G.|07901",
@@ -130,7 +131,8 @@
       "visibility": "disclosed",
       "transaction_type": "10",
       "limit": null,
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00711549&two_year_transaction_period=2024&contributor_name=REPUBLIC+BANK+-+CORPORATE"
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00711549&two_year_transaction_period=2024&contributor_name=REPUBLIC+BANK+-+CORPORATE",
+      "class_basis": "rule"
     }
   ],
   "outflows": [

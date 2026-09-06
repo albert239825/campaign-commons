@@ -23,8 +23,8 @@
     "independent_expenditures": 0,
     "from_individuals": 206380.0,
     "from_committees": 256300.0,
-    "from_organizations": 19250.0,
-    "from_undisclosed": 29800.0
+    "from_organizations": 27850.0,
+    "from_undisclosed": 21200.0
   },
   "inflows": [
     {
@@ -385,7 +385,8 @@
       "visibility": "dark",
       "transaction_type": "11",
       "limit": null,
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00540732&two_year_transaction_period=2024&contributor_name=HABEMATOLEL+POMO+OF+UPPER+LAKE"
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00540732&two_year_transaction_period=2024&contributor_name=HABEMATOLEL+POMO+OF+UPPER+LAKE",
+      "class_basis": "rule"
     },
     {
       "transfer_id": "C00540732-in-org:TURTLE_MOUNTAIN_BAND_OF_CHIPPEWA",
@@ -400,7 +401,8 @@
       "visibility": "dark",
       "transaction_type": "11",
       "limit": null,
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00540732&two_year_transaction_period=2024&contributor_name=TURTLE+MOUNTAIN+BAND+OF+CHIPPEWA"
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00540732&two_year_transaction_period=2024&contributor_name=TURTLE+MOUNTAIN+BAND+OF+CHIPPEWA",
+      "class_basis": "rule"
     }
   ],
   "outflows": [

@@ -1,0 +1,234 @@
+// OWNER: Money Trails exploratory mode (D-85) — @graph flow diagrams.
+"use client";
+
+import Link from "next/link";
+import { useRef, useState, type MouseEvent } from "react";
+import { VISIBILITY_COLORS, VISIBILITY_LABELS } from "@campaign-commons/contracts";
+import { Chip } from "@/components/ui";
+import { money } from "@/lib/format";
+import type { SankeyData, SankeyLink, SankeyNode } from "@/lib/graph/sankey";
+
+type Drawable = Extract<SankeyData, { ok: true }>;
+
+const NODE_W = 180;
+const COL_GAP = 120;
+const NODE_GAP = 12;
+const MIN_H = 22;
+const PLOT_H = 360;
+const PAD = 8;
+const TARGETING_COLOR = "#7c3aed";
+const OWNERSHIP_COLOR = "#171717";
+
+type Placed = SankeyNode & { x: number; y: number; h: number; flow: number };
+type Ribbon = { link: SankeyLink; from: Placed; to: Placed; w: number; y0: number; y1: number };
+
+/**
+ * Layered left-to-right Sankey of the cited rows (same hand-rolled approach as the chain page, D-24): column = layer
+ * from `sankeyFromRows`, node height and ribbon width share one dollar scale, ribbons are cubic Béziers coloured by
+ * visibility (targeting edges in purple since that money never reaches the candidate). Deterministic: no layout solver.
+ */
+export function layoutSankey(data: Drawable): { width: number; height: number; nodes: Placed[]; ribbons: Ribbon[] } {
+  const flowOf = new Map<string, number>();
+  for (const l of data.links) {
+    flowOf.set(l.source, (flowOf.get(l.source) ?? 0) + l.amount);
+  }
+  const inflow = new Map<string, number>();
+  for (const l of data.links) inflow.set(l.target, (inflow.get(l.target) ?? 0) + l.amount);
+  const flow = (id: string) => Math.max(flowOf.get(id) ?? 0, inflow.get(id) ?? 0);
+
+  const byLayer: SankeyNode[][] = Array.from({ length: data.layers }, () => []);
+  for (const n of data.nodes) byLayer[n.layer].push(n);
+  for (const col of byLayer) col.sort((a, b) => flow(b.id) - flow(a.id) || a.name.localeCompare(b.name));
+
+  const colTotal = (col: SankeyNode[]) => col.reduce((s, n) => s + flow(n.id), 0);
+  const busiest = Math.max(...byLayer.map((col) => colTotal(col) || 1));
+  const rows = Math.max(...byLayer.map((col) => col.length));
+  const usable = Math.max(PLOT_H - PAD * 2 - NODE_GAP * (rows - 1), rows * MIN_H);
+  const pxPerDollar = usable / busiest;
+
+  const nodes: Placed[] = [];
+  byLayer.forEach((col, i) => {
+    const x = PAD + i * (NODE_W + COL_GAP);
+    const heights = col.map((n) => Math.max(MIN_H, flow(n.id) * pxPerDollar));
+    const total = heights.reduce((s, h) => s + h, 0) + NODE_GAP * (col.length - 1);
+    let y = PAD + Math.max(0, (usable - total) / 2);
+    col.forEach((n, j) => {
+      nodes.push({ ...n, x, y, h: heights[j], flow: flow(n.id) });
+      y += heights[j] + NODE_GAP;
+    });
+  });
+  const placed = new Map(nodes.map((n) => [n.id, n]));
+
+  const outCursor = new Map<string, number>();
+  const inCursor = new Map<string, number>();
+  const ribbons: Ribbon[] = [];
+  for (const link of [...data.links].sort((a, b) => b.amount - a.amount)) {
+    const from = placed.get(link.source);
+    const to = placed.get(link.target);
+    if (!from || !to) continue;
+    const w = Math.max(1.5, link.amount * pxPerDollar);
+    const o = outCursor.get(from.id) ?? 0;
+    const t = inCursor.get(to.id) ?? 0;
+    ribbons.push({ link, from, to, w, y0: from.y + o + w / 2, y1: to.y + t + w / 2 });
+    outCursor.set(from.id, o + w);
+    inCursor.set(to.id, t + w);
+  }
+
+  const width = PAD * 2 + data.layers * NODE_W + (data.layers - 1) * COL_GAP;
+  const height = Math.max(...nodes.map((n) => n.y + n.h)) + PAD;
+  return { width, height, nodes, ribbons };
+}
+
+const ribbonPath = (r: Ribbon) => {
+  const x0 = r.from.x + NODE_W;
+  const x1 = r.to.x;
+  const c = (x0 + x1) / 2;
+  return `M${x0},${r.y0} C${c},${r.y0} ${c},${r.y1} ${x1},${r.y1}`;
+};
+
+const ribbonColor = (l: SankeyLink) => (l.rel === "TARGETED" ? TARGETING_COLOR : l.rel === "CAMPAIGN_OF" ? OWNERSHIP_COLOR : VISIBILITY_COLORS[l.visibility]);
+
+export const ribbonTitle = (l: SankeyLink, from: SankeyNode, to: SankeyNode) => {
+  const basis = l.class_basis === "inferred" ? " · model-read, unverified" : "";
+  if (l.rel === "CAMPAIGN_OF") return `[${l.n}] ${from.name} is the campaign committee of ${to.name} (${money(l.amount)} reached it in these rows)${basis}`;
+  const verb = l.rel === "GAVE" ? "gave" : l.rel === "PAID" ? "paid" : l.rel === "TARGETED" ? (l.support_oppose === "O" ? "spent against" : "spent supporting") : l.rel.toLowerCase();
+  return `[${l.n}] ${from.name} ${verb} ${money(l.amount)} → ${to.name} · ${VISIBILITY_LABELS[l.visibility]}${basis}`;
+};
+
+function truncate(s: string, max = 26) {
+  return s.length > max ? `${s.slice(0, max - 1)}…` : s;
+}
+
+export function ExploreSankey({ data }: { data: Drawable }) {
+  const { width, height, nodes, ribbons } = layoutSankey(data);
+  const plotRef = useRef<HTMLDivElement>(null);
+  const [hover, setHover] = useState<{ text: string; x: number; y: number } | null>(null);
+  const [hoveredLinkKey, setHoveredLinkKey] = useState<string | null>(null);
+  const visibilities = [...new Set(data.links.filter((l) => l.rel === "GAVE" || l.rel === "PAID").map((l) => l.visibility))];
+  const hasTargeting = data.links.some((l) => l.rel === "TARGETED");
+  const hasOwnership = data.links.some((l) => l.rel === "CAMPAIGN_OF");
+  const linkKey = (r: Ribbon) => `${r.link.n}-${r.link.source}-${r.link.target}`;
+  const updateHover = (text: string, event: MouseEvent<SVGElement>) => {
+    const rect = plotRef.current?.getBoundingClientRect();
+    if (!rect) return;
+    setHover({ text, x: event.clientX - rect.left, y: event.clientY - rect.top });
+  };
+  const clearHover = () => {
+    setHover(null);
+    setHoveredLinkKey(null);
+  };
+  return (
+    <section className="explore-sankey space-y-2" aria-label="Flow diagram of the returned rows">
+      <div className="flex flex-wrap items-center gap-2">
+        <Chip tone="amber">Flow diagram — drawn from the rows below only</Chip>
+        <span className="text-xs text-neutral-500">
+          {data.links.length} flows between {data.nodes.length} parties; ribbon width ∝ filed dollars; bracketed numbers are row citations.
+        </span>
+      </div>
+      <div ref={plotRef} className="relative overflow-x-auto rounded-md border border-neutral-200 bg-white">
+        <svg width={width} height={height} viewBox={`0 0 ${width} ${height}`} role="img" aria-label="Money flows, left to right">
+          {ribbons.map((r) => {
+            const key = linkKey(r);
+            const x0 = r.from.x + NODE_W;
+            const x1 = r.to.x;
+            return (
+              <g key={key}>
+                <path
+                  d={ribbonPath(r)}
+                  fill="none"
+                  stroke={ribbonColor(r.link)}
+                  strokeWidth={r.w}
+                  strokeOpacity={hoveredLinkKey === key ? 0.85 : 0.45}
+                  onMouseEnter={(event) => {
+                    setHoveredLinkKey(key);
+                    updateHover(ribbonTitle(r.link, r.from, r.to), event);
+                  }}
+                  onMouseMove={(event) => updateHover(ribbonTitle(r.link, r.from, r.to), event)}
+                  onMouseLeave={clearHover}
+                >
+                  <title>{ribbonTitle(r.link, r.from, r.to)}</title>
+                </path>
+                {r.w >= 14 && (
+                  <text
+                    x={(x0 + x1) / 2}
+                    y={(r.y0 + r.y1) / 2}
+                    fontSize={10}
+                    textAnchor="middle"
+                    fill="#171717"
+                    pointerEvents="none"
+                  >
+                    {money(r.link.amount)}
+                  </text>
+                )}
+              </g>
+            );
+          })}
+          {nodes.map((n) => {
+            const label = (
+              <>
+                <rect x={n.x} y={n.y} width={NODE_W} height={n.h} rx={2} fill="#fafafa" stroke="#d4d4d4" />
+                <rect x={n.x} y={n.y} width={4} height={n.h} fill="#171717" />
+                <text x={n.x + 10} y={n.y + Math.min(n.h / 2 + 4, 16)} fontSize={11} fontWeight={600} fill="#171717">
+                  {truncate(n.name)}
+                </text>
+                {n.h >= 30 && (
+                  <text x={n.x + 10} y={n.y + Math.min(n.h / 2 + 18, 30)} fontSize={10} fill="#737373">
+                    {money(n.flow)} · {n.kind}
+                  </text>
+                )}
+                <title>{`${n.name} (${n.kind}) — ${money(n.flow)}`}</title>
+              </>
+            );
+            return n.href ? (
+              <Link key={n.id} href={n.href}>
+                <g
+                  className="cursor-pointer"
+                  onMouseEnter={(event) => updateHover(`${n.name} (${n.kind}) — ${money(n.flow)}`, event)}
+                  onMouseMove={(event) => updateHover(`${n.name} (${n.kind}) — ${money(n.flow)}`, event)}
+                  onMouseLeave={clearHover}
+                >
+                  {label}
+                </g>
+              </Link>
+            ) : (
+              <g
+                key={n.id}
+                onMouseEnter={(event) => updateHover(`${n.name} (${n.kind}) — ${money(n.flow)}`, event)}
+                onMouseMove={(event) => updateHover(`${n.name} (${n.kind}) — ${money(n.flow)}`, event)}
+                onMouseLeave={clearHover}
+              >
+                {label}
+              </g>
+            );
+          })}
+        </svg>
+        {hover && (
+          <div
+            role="tooltip"
+            className="pointer-events-none absolute z-10 rounded bg-neutral-900 px-2 py-1 text-xs text-white shadow"
+            style={{ left: hover.x + 12, top: hover.y + 12 }}
+          >
+            {hover.text}
+          </div>
+        )}
+      </div>
+      <ul className="flex flex-wrap gap-3 text-xs text-neutral-600">
+        {visibilities.map((v) => (
+          <li key={v} className="flex items-center gap-1">
+            <span className="inline-block h-2 w-4 rounded-sm" style={{ background: VISIBILITY_COLORS[v] }} /> {VISIBILITY_LABELS[v]}
+          </li>
+        ))}
+        {hasTargeting && (
+          <li className="flex items-center gap-1">
+            <span className="inline-block h-2 w-4 rounded-sm" style={{ background: TARGETING_COLOR }} /> Independent spending for/against (never reaches the candidate)
+          </li>
+        )}
+        {hasOwnership && (
+          <li className="flex items-center gap-1">
+            <span className="inline-block h-2 w-4 rounded-sm" style={{ background: OWNERSHIP_COLOR }} /> Campaign committee → its candidate
+          </li>
+        )}
+      </ul>
+    </section>
+  );
+}

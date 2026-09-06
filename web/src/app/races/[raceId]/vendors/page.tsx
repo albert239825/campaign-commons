@@ -32,7 +32,7 @@ export default async function VendorsPage({ params }: { params: Promise<{ raceId
           the candidate named on a buy received nothing.
         </p>
       </header>
-      <RaceNav race={race} counts={{ ads: getAds(raceId).ads.length }} active={routes.vendors(raceId)} />
+      <RaceNav race={race} counts={{ ads: getAds(raceId).ads.length }} />
 
       <Card>
         <div className="grid grid-cols-2 gap-4 md:grid-cols-4">

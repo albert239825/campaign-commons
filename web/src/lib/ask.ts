@@ -8,7 +8,7 @@ import { ISSUE_BY_ID, ISSUE_IDS, type IssueId, type TrailIntent, type TrailSubje
 export type AskIntent = TrailIntent | "spender_issue";
 export type Resolution =
   | { kind: "answer"; intent: AskIntent; subject: TrailSubject; matched: string; note: string | null; issueId: IssueId | null }
-  | { kind: "unsupported"; reason: "empty" | "no_subject" | "ambiguous_subject" | "no_intent" | "wrong_kind"; message: string; suggestions: string[] };
+  | { kind: "unsupported"; reason: "empty" | "no_subject" | "ambiguous_subject" | "no_intent" | "wrong_kind" | "beyond_page"; message: string; suggestions: string[] };
 
 /** Phrase lists checked in this order; the first list with a hit decides the intent. */
 export const INTENT_PHRASES: Record<TrailIntent, readonly string[]> = {
@@ -102,6 +102,14 @@ export const ISSUE_PHRASES: Record<IssueId, readonly string[]> = {
   labor_trade: ["union", "unions", "labor", "workers rights", "right to work", "minimum wage", "tariffs", "trade deal", "trade deals", "nafta", "outsourcing", "collective bargaining"],
 };
 
+export const QUALIFIER_PHRASES: Record<string, readonly string[]> = {
+  "dark or undisclosed money": ["dark money", "dark", "undisclosed", "anonymous", "hidden", "secret", "shell", "llc", "llcs", "nonprofit", "nonprofits", "501c", "501c4", "c4"],
+  "individual people": ["individual", "individuals", "people", "person", "donor", "donors", "billionaire", "billionaires", "millionaire", "wealthy", "rich", "notable", "famous", "celebrity", "celebrities", "who is behind", "behind"],
+  vendors: ["vendor", "vendors", "consultant", "consultants", "media buyer"],
+  "money paths between entities": ["path", "reach", "reaches", "reached", "connected", "connection", "link between", "flow from", "upstream", "shared", "both", "in common"],
+  "geography or sector": ["out of state", "out-of-state", "foreign", "corporate", "corporations", "companies", "union", "unions", "industry"],
+};
+
 export function normalize(q: string): string {
   return q
     .toLowerCase()
@@ -131,7 +139,32 @@ export function detectIssue(normalized: string): IssueId | null {
   return null;
 }
 
+export function detectQualifier(normalized: string): string | null {
+  const padded = ` ${normalized} `;
+  for (const [label, phrases] of Object.entries(QUALIFIER_PHRASES)) {
+    if (phrases.some((phrase) => hasPhrase(padded, phrase))) return label;
+  }
+  return null;
+}
+
 export type SubjectMatch = { subject: TrailSubject; alias: string };
+
+export function stripSubjectAlias(normalized: string, alias: string): string {
+  return ` ${normalized} `.replace(` ${alias} `, " ").trim();
+}
+
+export function beyondPageResolution(subject: TrailSubject, label: string): Extract<Resolution, { kind: "unsupported" }> {
+  const suggestions =
+    subject.kind === "committee"
+      ? [canonicalQuestion("committee_funding", subject)]
+      : [canonicalQuestion("candidate_spender", subject), canonicalQuestion("candidate_ad_funding", subject), canonicalQuestion("spender_issue", subject, "abortion")];
+  return {
+    kind: "unsupported",
+    reason: "beyond_page",
+    message: `The fixed pages do not break money down by ${label}; that needs the filings graph.`,
+    suggestions,
+  };
+}
 
 /** All subjects whose alias appears as whole words in the question, longest alias first. */
 export function matchSubjects(normalized: string, subjects: readonly TrailSubject[]): SubjectMatch[] {
@@ -177,10 +210,15 @@ export function resolveQuestion(question: string, subjects: readonly TrailSubjec
 
   const subject = top.subject;
   // Intent words inside the subject's own name ("... Independent Expenditure Committee", "... Fund") are not the question's.
-  const stripped = ` ${normalized} `.replace(` ${top.alias} `, " ").trim();
+  const stripped = stripSubjectAlias(normalized, top.alias);
   const issue = detectIssue(stripped);
   if (issue !== null) return resolveRoute("spender_issue", subject, subjects, top.alias, issue);
-  let intent = detectIntent(stripped);
+  const detectedIntent = detectIntent(stripped);
+  const qualifier = detectQualifier(stripped);
+  if (!(subject.kind === "committee" && qualifier === "individual people" && detectedIntent === "committee_funding") && qualifier !== null) {
+    return beyondPageResolution(subject, qualifier);
+  }
+  let intent = detectedIntent;
   if (intent === null) {
     if (subject.kind === "committee") intent = "committee_funding";
     else {

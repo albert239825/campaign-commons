@@ -37,8 +37,7 @@ export default async function AskPage({ params }: { params: Promise<{ raceId: st
           }
         >
           <p>
-            Ask a plain-English money question about this race. Four kinds are answered, each from the filed records already on this site. A model
-            only reads the question to pick which; every answer is precomputed, and every number links to where it was read.
+            Ask a plain-English money question about this race. A language model writes a read-only query over the filings graph, and every returned row links to where it was filed. Matching precomputed pages are offered as related links.
           </p>
         </DetailHeader>
       </div>
