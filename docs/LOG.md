@@ -906,3 +906,7 @@ paths or connections, geography or sector—now refuse the nearest fixed intent 
 The race ledger, ads, and policies tabs now share one route-group layout: the seal, race title, election date, notable candidates, data-status banner, and Ledger · Ads · Policies navigation remain fixed while only the tab content changes. `RaceNav` derives its active tab from the pathname, so record pages keep the same parent-tab behavior without passing an active prop.
 
 The ad detail page moved into the shared race shell, `RaceNav` now uses prefix matching for nested tabs while keeping Ledger exact, and the page was restyled to match the warm paper, sand, and ink Ads gallery/Ledger design.
+
+### 2026-09-06 — Landing page Ask box
+
+Added a text box at the bottom of the landing page that navigates to `/races/<id>/ask?q=`. The Ask page reads `q` client-side via `useSearchParams` inside Suspense so it stays prerendered, then auto-submits once on mount; the landing page makes no model call.

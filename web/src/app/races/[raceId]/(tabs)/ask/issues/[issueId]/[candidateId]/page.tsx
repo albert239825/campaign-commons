@@ -1,6 +1,7 @@
 // OWNER: Money Trails (D-73).
 import Link from "next/link";
 import { notFound } from "next/navigation";
+import { Suspense } from "react";
 import { ISSUE_BY_ID, ISSUE_IDS, type IssueId } from "@campaign-commons/contracts";
 import { getRace, hasTrails, getTrails, listEntityIds, listRaceIds } from "@/lib/data";
 import { canonicalQuestion, INTENT_LABELS } from "@/lib/ask";
@@ -90,7 +91,9 @@ export default async function IssueAnswerPage({ params }: { params: Promise<{ ra
         </aside>
         <div className="detail-content">
           <Card>
-            <AskBox raceId={raceId} subjects={trails.subjects} examples={trails.examples} initial={question} />
+            <Suspense fallback={null}>
+              <AskBox raceId={raceId} subjects={trails.subjects} examples={trails.examples} initial={question} />
+            </Suspense>
           </Card>
           <IssueAnswerView answer={answer} raceId={raceId} entityIds={entityIds} />
         </div>
