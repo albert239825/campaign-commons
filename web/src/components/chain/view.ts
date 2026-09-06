@@ -97,12 +97,15 @@ export type ChainViewWire = {
 export const sideOf = (n: Pick<ChainNode, "side">): Side =>
   n.side === "out" ? "out" : "in";
 
-export function toWire(chain: Chain, links: NodeLinks): ChainViewWire {
-  const index = new Map(chain.nodes.map((n, i) => [n.id, i]));
+export function graphToWire(
+  g: { rootId: string; rootName: string; nodes: ChainNode[]; edges: ChainEdge[] },
+  links: NodeLinks,
+): ChainViewWire {
+  const index = new Map(g.nodes.map((n, i) => [n.id, i]));
   return {
-    rootId: chain.root_entity_id,
-    rootName: chain.root_name,
-    nodes: chain.nodes.map((n) => {
+    rootId: g.rootId,
+    rootName: g.rootName,
+    nodes: g.nodes.map((n) => {
       const page = pageHref(n, links);
       return [
         n.id,
@@ -122,7 +125,7 @@ export function toWire(chain: Chain, links: NodeLinks): ChainViewWire {
         n.thumbnail_path ?? null,
       ];
     }),
-    edges: chain.edges.flatMap((e) => {
+    edges: g.edges.flatMap((e) => {
       const from = index.get(e.from);
       const to = index.get(e.to);
       if (from === undefined || to === undefined) return [];
@@ -141,6 +144,18 @@ export function toWire(chain: Chain, links: NodeLinks): ChainViewWire {
       ];
     }),
   };
+}
+
+export function toWire(chain: Chain, links: NodeLinks): ChainViewWire {
+  return graphToWire(
+    {
+      rootId: chain.root_entity_id,
+      rootName: chain.root_name,
+      nodes: chain.nodes,
+      edges: chain.edges,
+    },
+    links,
+  );
 }
 
 export function fromWire(w: ChainViewWire): ChainView {

@@ -340,13 +340,13 @@ function RibbonShape({ r }: { r: Ribbon }) {
  * are ribbons, placement / targeting edges are thin spines styled by their evidence basis (solid / dashed / dotted).
  * Clicking a node opens its panel (basics, evidence, links, expand / collapse / hide) — Palantir-Vertex style.
  */
-export function ChainDiagram({ wire }: { wire: ChainViewWire }) {
+export function ChainDiagram({ wire, openAll = false }: { wire: ChainViewWire; openAll?: boolean }) {
   const view = useMemo(() => fromWire(wire), [wire]);
-  const [controls, setControls] = useState<GraphControls>({
-    opened: new Set(),
+  const [controls, setControls] = useState<GraphControls>(() => ({
+    opened: openAll ? new Set(view.nodes.filter((n) => n.side === "in").map((n) => n.id)) : new Set(),
     collapsed: new Set(),
     hidden: new Set(),
-  });
+  }));
   const [selectedId, setSelectedId] = useState<string | null>(null);
   const flip = (key: keyof GraphControls, id: string) =>
     setControls((prev) => {

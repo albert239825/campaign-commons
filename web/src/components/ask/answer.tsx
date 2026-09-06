@@ -9,9 +9,12 @@ import type {
 } from "@campaign-commons/contracts";
 import { Card, Chip, Money, ShareBar, SourceLink, Stat, VisibilityBadge } from "@/components/ui";
 import { date, pct, routes } from "@/lib/format";
+import { ChainDiagram } from "@/components/chain/chain-diagram";
+import type { NodeLinks } from "@/components/chain/links";
 import { Caveats, EdgeLegend, Fig, MoneyEdgeRow, RangeFig, TargetingRow } from "./figures";
+import { trailGraphWire, truncationSentence } from "./trail-graph";
 
-type Pages = { entityIds: Set<string>; chainIds: Set<string> };
+type Pages = NodeLinks & { chainIds: Set<string> };
 
 /** Records behind the numbers quoted in the headline sentence, so the sentence itself is sourced. */
 export function headlineSources(a: TrailAnswer): { label: string; url: string }[] {
@@ -69,6 +72,45 @@ export function Headline({ answer }: { answer: TrailAnswer }) {
   );
 }
 
+export function TrailPicture({
+  answer,
+  links,
+  chainHref,
+}: {
+  answer: TrailAnswer;
+  raceId: string;
+  links: NodeLinks;
+  chainHref: string | null;
+}) {
+  if (answer.graph === null) return null;
+  const title =
+    answer.intent === "committee_funding"
+      ? `Who funds ${answer.subject_name}, and what it paid for`
+      : answer.intent === "candidate_spender"
+        ? `Who spent about ${answer.subject_name}, and who funds them`
+        : "Who ran the ads, and who funds them";
+  const truncation = truncationSentence(answer.graph);
+  return (
+    <section id="picture" className="detail-section">
+      <Card title={title}>
+        <ChainDiagram wire={trailGraphWire(answer, answer.graph, links)} openAll />
+        <p className="text-xs text-neutral-500">
+          {truncation}
+          {truncation && chainHref ? " " : ""}
+          {answer.intent === "committee_funding" && chainHref && <Link href={chainHref}>Full chain →</Link>}
+          {answer.intent === "candidate_ad_funding" && (
+            <>
+              {truncation || chainHref ? " " : ""}
+              Ads are listed below by sponsor; the picture stops at the sponsor because pooled receipts cannot be tied to a particular ad.
+            </>
+          )}
+        </p>
+        <EdgeLegend money targeting />
+      </Card>
+    </section>
+  );
+}
+
 function SpenderAnswer({ a, raceId, pages }: { a: CandidateSpenderAnswer; raceId: string; pages: Pages }) {
   return (
     <div className="space-y-6">
@@ -79,6 +121,7 @@ function SpenderAnswer({ a, raceId, pages }: { a: CandidateSpenderAnswer; raceId
           <Stat label="All independent expenditures" value={<Fig figure={a.total} />} sub="paid to the spenders' vendors, not to the candidate" />
         </div>
       </Card>
+      <TrailPicture answer={a} raceId={raceId} links={pages} chainHref={null} />
 
       <Card title={`Who declared spending about ${a.subject_name}`}>
         {a.spenders.length === 0 ? (
@@ -196,6 +239,7 @@ function SponsorBlock({ s, candidateName, raceId, pages }: { s: AdSponsorTrail; 
 function AdFundingAnswer({ a, raceId, pages }: { a: CandidateAdFundingAnswer; raceId: string; pages: Pages }) {
   return (
     <div className="space-y-6">
+      <TrailPicture answer={a} raceId={raceId} links={pages} chainHref={null} />
       {a.sponsors.length === 0 ? (
         <Card>
           <p className="text-sm text-neutral-500">No ads in the library are tied to a committee that filed about this candidate.</p>
@@ -246,6 +290,12 @@ function FundingAnswer({ a, raceId, pages }: { a: CommitteeFundingAnswer; raceId
           </div>
         )}
       </Card>
+      <TrailPicture
+        answer={a}
+        raceId={raceId}
+        links={pages}
+        chainHref={pages.chainIds.has(a.subject_id) ? routes.chain(raceId, a.subject_id) : null}
+      />
 
       <Card title={`Who gave to ${a.subject_name}`}>
         {a.funders.length === 0 ? (

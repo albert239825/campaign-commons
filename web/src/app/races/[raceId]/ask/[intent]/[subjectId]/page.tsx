@@ -1,7 +1,7 @@
 // OWNER: Money Trails (D-73).
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { getRace, getTrails, hasTrails, listChainIds, listEntityIds, listRaceIds } from "@/lib/data";
+import { getRace, getTrails, hasTrails, listChainIds, listDonorKeys, listEntityIds, listRaceIds } from "@/lib/data";
 import { routes } from "@/lib/format";
 import { canonicalQuestion, INTENT_LABELS, isIntent } from "@/lib/ask";
 import { Breadcrumbs, Card, DataStatusBanner } from "@/components/ui";
@@ -24,7 +24,12 @@ export default async function AnswerPage({ params }: { params: Promise<{ raceId:
   const subject = trails.subjects.find((s) => s.id === subjectId);
   if (!answer || !subject) notFound();
   const question = canonicalQuestion(intent, subject);
-  const pages = { entityIds: new Set(listEntityIds(raceId)), chainIds: new Set(listChainIds(raceId)) };
+  const pages = {
+    raceId,
+    entityIds: new Set(listEntityIds(raceId)),
+    chainIds: new Set(listChainIds(raceId)),
+    donorKeys: new Set(listDonorKeys(raceId)),
+  };
 
   const related = trails.answers.filter((a) => a.subject_id === subjectId && a.intent !== intent);
   const subjectPage =
