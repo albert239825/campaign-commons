@@ -1,6 +1,6 @@
 import pytest
 
-from gotham.orgs import classify_organization, committee_name_index, match_committee, organization_visibility
+from campaign_commons.orgs import classify_organization, committee_name_index, match_committee, organization_visibility
 
 
 @pytest.mark.parametrize(

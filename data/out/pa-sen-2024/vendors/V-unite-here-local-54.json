@@ -17,7 +17,7 @@
   "count": 11,
   "media_mix": [
     {
-      "medium": "other",
+      "medium": "field",
       "amount": 81461.87,
       "count": 11
     }
@@ -41,7 +41,7 @@
   "last_date": "2024-11-01",
   "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&payee_name=UNITE+HERE+LOCAL+54",
   "race_id": "pa-sen-2024",
-  "generated_at": "2026-09-05T19:33:04+00:00",
+  "generated_at": "2026-09-05T20:34:15+00:00",
   "data_status": "real",
   "expenditures": [
     {
@@ -57,7 +57,7 @@
       "payee": "UNITE HERE LOCAL 54",
       "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202412079739740009",
       "vendor_id": "V-unite-here-local-54",
-      "medium": "other"
+      "medium": "field"
     },
     {
       "ie_id": "C00754051-ie-1859402-B890637",
@@ -72,7 +72,7 @@
       "payee": "UNITE HERE LOCAL 54",
       "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202412079739740002",
       "vendor_id": "V-unite-here-local-54",
-      "medium": "other"
+      "medium": "field"
     },
     {
       "ie_id": "C00754051-ie-1859402-B890355",
@@ -87,7 +87,7 @@
       "payee": "UNITE HERE LOCAL 54",
       "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202412079739739999",
       "vendor_id": "V-unite-here-local-54",
-      "medium": "other"
+      "medium": "field"
     },
     {
       "ie_id": "C00754051-ie-1859402-B890315",
@@ -102,7 +102,7 @@
       "payee": "UNITE HERE LOCAL 54",
       "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202412079739739994",
       "vendor_id": "V-unite-here-local-54",
-      "medium": "other"
+      "medium": "field"
     },
     {
       "ie_id": "C00754051-ie-1842186-B889309",
@@ -117,7 +117,7 @@
       "payee": "UNITE HERE LOCAL 54",
       "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202410249719553365",
       "vendor_id": "V-unite-here-local-54",
-      "medium": "other"
+      "medium": "field"
     },
     {
       "ie_id": "C00754051-ie-1842186-B887272",
@@ -132,7 +132,7 @@
       "payee": "UNITE HERE LOCAL 54",
       "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202410249719553363",
       "vendor_id": "V-unite-here-local-54",
-      "medium": "other"
+      "medium": "field"
     },
     {
       "ie_id": "C00754051-ie-1842186-B887434",
@@ -147,7 +147,7 @@
       "payee": "UNITE HERE LOCAL 54",
       "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202410249719553359",
       "vendor_id": "V-unite-here-local-54",
-      "medium": "other"
+      "medium": "field"
     },
     {
       "ie_id": "C00754051-ie-1833966-B885010",
@@ -162,7 +162,7 @@
       "payee": "UNITE HERE LOCAL 54",
       "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202410209709587548",
       "vendor_id": "V-unite-here-local-54",
-      "medium": "other"
+      "medium": "field"
     },
     {
       "ie_id": "C00754051-ie-1833966-B884400",
@@ -177,7 +177,7 @@
       "payee": "UNITE HERE LOCAL 54",
       "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202410209709587545",
       "vendor_id": "V-unite-here-local-54",
-      "medium": "other"
+      "medium": "field"
     },
     {
       "ie_id": "C00754051-ie-1833966-B882619",
@@ -192,7 +192,7 @@
       "payee": "UNITE HERE LOCAL 54",
       "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202410209709587535",
       "vendor_id": "V-unite-here-local-54",
-      "medium": "other"
+      "medium": "field"
     },
     {
       "ie_id": "C00754051-ie-1812264-B878089",
@@ -207,9 +207,9 @@
       "payee": "UNITE HERE LOCAL 54",
       "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202408209674147909",
       "vendor_id": "V-unite-here-local-54",
-      "medium": "other"
+      "medium": "field"
     }
   ],
   "ads": [],
-  "method": "Every Schedule E independent expenditure names a payee. Payee strings are normalised (case, punctuation, legal suffixes, token order), near-duplicates are folded with a difflib ratio ≥ 0.92 when their numeric tokens match, and hand alias rows from data/hand/<race>/vendor_aliases.json override the rule. Medium is classified from the purpose the spender filed (ordered keyword table in gotham/vendors.py); the FEC does not record which buy placed which ad, so vendor ↔ ad links are empty until a human verifies one. Totals are the filed amounts, grouped, never re-estimated."
+  "method": "Every Schedule E independent expenditure names a payee. Payee strings are normalised (case, punctuation, legal suffixes, token order), near-duplicates are folded with a difflib ratio ≥ 0.92 when their numeric tokens match, and hand alias rows from data/hand/<race>/vendor_aliases.json override the rule. Medium is classified from the purpose the spender filed (ordered keyword table in campaign_commons/vendors.py). The FEC does not record which buy placed which ad: vendor ↔ ad links are date-window adjacency (or single-digital-vendor inference) from campaign_commons.ads_enrich, each with its basis, and are only `verified` when a person found a source naming both. Totals are the filed amounts, grouped, never re-estimated."
 }

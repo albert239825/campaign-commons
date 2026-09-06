@@ -1,4 +1,5 @@
-import type { Basis, Medium } from "@citizen-gotham/contracts";
+import type { Basis, Medium } from "@campaign-commons/contracts";
+import { BASIS_LABELS, BASIS_MEANING } from "@/lib/evidence";
 import { pct } from "@/lib/format";
 import { Chip, SourceLink } from "@/components/ui";
 import { BarLegend, StackedBar, type BarSegment } from "@/components/ui/stacked-bar";
@@ -13,6 +14,7 @@ export const MEDIUM_LABELS: Record<Medium, string> = {
   phones: "phones",
   production: "production",
   consulting: "consulting",
+  field: "field",
   other: "other",
 };
 
@@ -25,10 +27,11 @@ export const MEDIUM_COLORS: Record<Medium, string> = {
   phones: "#b5bcc6",
   production: "#c9ced6",
   consulting: "#dde1e6",
+  field: "#e6e9ed",
   other: "#eef0f3",
 };
 
-const MEDIUM_ORDER: Medium[] = ["tv", "digital", "radio", "mail", "phones", "production", "consulting", "other"];
+const MEDIUM_ORDER: Medium[] = ["tv", "digital", "radio", "mail", "phones", "production", "consulting", "field", "other"];
 
 export const mediumSegments = (mix: MediumSlice[]): BarSegment[] =>
   MEDIUM_ORDER.filter((m) => mix.some((s) => s.medium === m && s.amount > 0)).map((m) => ({
@@ -76,7 +79,10 @@ export function MediumBasisNote({ basis, className = "" }: { basis: Basis; class
     <div className={`space-y-1 text-[11px] text-neutral-500 ${className}`}>
       <p>Medium is classified from the purpose the spender filed; the FEC does not record which buy placed which ad.</p>
       <p>
-        <span className="font-medium uppercase tracking-wide text-neutral-400">{basis.basis} · rule</span> {basis.rule}
+        <span className="font-medium uppercase tracking-wide text-neutral-400" title={BASIS_MEANING[basis.basis]}>
+          {BASIS_LABELS[basis.basis]} · rule
+        </span>{" "}
+        {basis.rule}
         {basis.source_urls.map((u) => (
           <SourceLink key={u} href={u} label="Schedule E fields" className="ml-1.5" />
         ))}

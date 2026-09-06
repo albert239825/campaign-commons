@@ -1,4 +1,4 @@
-import type { CandidateLedger, Ledger, Party } from "@citizen-gotham/contracts";
+import type { CandidateLedger, Ledger, Party } from "@campaign-commons/contracts";
 
 const PARTY_LABELS: Record<Party, string> = {
   DEM: "Democratic", REP: "Republican", LIB: "Libertarian", GRE: "Green",

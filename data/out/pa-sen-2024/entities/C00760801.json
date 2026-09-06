@@ -329,7 +329,7 @@
       "payee": "SECOND STREET ASSOCIATES LLC",
       "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202412039720160958",
       "vendor_id": "V-second-street-associates",
-      "medium": "other"
+      "medium": "field"
     },
     {
       "ie_id": "C00760801-ie-1852199-SE.4602",
@@ -344,7 +344,7 @@
       "payee": "HIGHPOINT CAMPAIGNS",
       "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202412039720160956",
       "vendor_id": "V-highpoint-campaigns",
-      "medium": "other"
+      "medium": "field"
     }
   ],
   "flags": [],
@@ -359,7 +359,7 @@
       "count": 1,
       "media_mix": [
         {
-          "medium": "other",
+          "medium": "field",
           "amount": 115500.0,
           "count": 1
         }
@@ -382,7 +382,7 @@
       "count": 1,
       "media_mix": [
         {
-          "medium": "other",
+          "medium": "field",
           "amount": 2755.62,
           "count": 1
         }

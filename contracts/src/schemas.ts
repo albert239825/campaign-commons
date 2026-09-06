@@ -2,7 +2,7 @@ import { z } from "zod";
 import { ISSUE_IDS } from "./issues";
 
 /**
- * Citizen Gotham data contracts.
+ * Campaign Commons data contracts.
  *
  * The pipeline (Python) writes JSON files under data/out/ that MUST validate against
  * these schemas (`npm run validate` in contracts/). The web app (Next.js) imports the
@@ -116,9 +116,10 @@ export const SourceRefSchema = z.object({
  *                       paid-for-by, the org's own site). `source_urls` + `checked_by` required.
  *   inferred  dashed  — derived by an explicit rule stated in `rule` (e.g. "only digital vendor this sponsor paid
  *                       during the ad's run window"). Never presented as fact.
- *   adjacent  dotted  — co-occurrence only (date-window overlap, shared sponsor). `rule` must say what is NOT known.
+ * Co-occurrence alone (two records overlapping in time) is not a basis and is never drawn as an edge; see
+ * `AdSchema.same_window_buys` for how that fact is carried as context instead.
  */
-export const EvidenceBasisSchema = z.enum(["filed", "verified", "inferred", "adjacent"]);
+export const EvidenceBasisSchema = z.enum(["filed", "verified", "inferred"]);
 
 const basisFields = {
   /** one plain-English sentence shown to the user: what the record says, or how this was derived and why it is uncertain */
@@ -135,7 +136,7 @@ export const BasisSchema = z.discriminatedUnion("basis", [
     checked_at: z.string().min(1), // ISO date
   }),
   z.object({
-    basis: z.enum(["filed", "inferred", "adjacent"]),
+    basis: z.enum(["filed", "inferred"]),
     ...basisFields,
     source_urls: z.array(z.string().url()),
     checked_by: z.string().nullable(),
@@ -158,6 +159,7 @@ export const MediumSchema = z.enum([
   "phones", // phone, text, robocall
   "production", // creative production, not placement
   "consulting", // strategy, research, polling, list acquisition
+  "field", // canvassing, door-knocking, GOTV
   "other",
 ]);
 
@@ -311,10 +313,10 @@ export const IndependentExpenditureSchema = z.object({
   purpose: z.string().nullable(),
   payee: z.string().nullable(),
   source_url: z.string().url(),
-  // Block 2 (gotham.vendors): normalized payee and classified medium; null when payee is empty
+  // Block 2 (campaign_commons.vendors): normalized payee and classified medium; null when payee is empty
   vendor_id: z.string().nullable().optional(),
   medium: MediumSchema.optional(),
-  // Block 2 (gotham.issues, from data/hand/<race>/ie_issues.json): what the notice says the ad was about
+  // Block 2 (campaign_commons.issues, from data/hand/<race>/ie_issues.json): what the notice says the ad was about
   issues: IssueTagsSchema.optional(),
 });
 
@@ -397,9 +399,9 @@ export const EntitySchema = z.object({
   has_chain: z.boolean(),
   source_url: z.string().url(), // FEC committee page
   data_status: DataStatusSchema,
-  // Block 2 (gotham.vendors): IEs grouped by normalized payee; sum equals sum(independent_expenditures.amount)
+  // Block 2 (campaign_commons.vendors): IEs grouped by normalized payee; sum equals sum(independent_expenditures.amount)
   vendors: z.array(EntityVendorRowSchema).optional(),
-  // Block 2 (gotham.issues): present only for hand-tagged committees
+  // Block 2 (campaign_commons.issues): present only for hand-tagged committees
   issue_focus: IssueFocusSchema.optional(),
 });
 
@@ -407,7 +409,7 @@ export const EntitySchema = z.object({
 // <race_id>/chains/<entity_id>.json
 // ---------------------------------------------------------------------------
 
-// Name-based classification of a Schedule A ENTITY_TP=ORG contributor (pipeline/gotham/orgs.py, D-38).
+// Name-based classification of a Schedule A ENTITY_TP=ORG contributor (pipeline/campaign_commons/orgs.py, D-38).
 export const OrganizationClassSchema = z.enum(["union", "business", "llc", "nonprofit", "unknown"]);
 
 export const TerminusReasonSchema = z.enum([
@@ -446,7 +448,7 @@ const chainNodeFields = {
   // spending-side extras
   medium: MediumSchema.optional(), // kind === "vendor": dominant medium
   thumbnail_path: z.string().nullable().optional(), // kind === "ad": cached creative under web/public
-  href: z.string().optional(), // in-app page for this node (entity / vendor / ad-card anchor / dossier)
+  href: z.string().optional(), // in-app page for this node (entity / vendor / ad page / dossier)
 };
 
 /** Spending-side kinds (vendor / ad / candidate) are derived, so they must say how (`basis`); funding-side nodes are read off
@@ -467,7 +469,7 @@ export const ChainNodeSchema = z.union([
 
 export const ChainEdgeKindSchema = z.enum([
   "money", // dollars move from → to (transfer, contribution, IE payment to a vendor)
-  "placement", // vendor → ad: produced/placed; no dollars; carries a Basis (verified / inferred / adjacent)
+  "placement", // vendor → ad: produced/placed; no dollars; carries a Basis (verified / inferred only)
   "targeting", // ad or root → candidate: for/against; no dollars reach the candidate
 ]);
 
@@ -530,20 +532,35 @@ export const ChainSchema = z.object({
 
 /**
  * Ad ⇠ vendor relationship. FEC records sponsor → vendor → $; the ad library records sponsor → creative. Nothing filed
- * joins the two, so every link carries a Basis:
- *   adjacent — the ad's run window overlaps this vendor's buys for the same sponsor (rule must say the pair is unknown)
- *   inferred — the sponsor paid exactly one vendor of this medium during the window
+ * joins the two, so a link exists only when a rule or a person joins them, and every link carries a Basis:
+ *   inferred — the sponsor paid exactly one digital vendor during the ad's run window
  *   verified — a source names both (vendor portfolio, FCC PB-18, Meta paid-for-by), via data/hand/<race>/vendor_ad_links.json
+ * Mere date overlap is NOT a link (it used to be, as `adjacent`); it is carried on the ad as `same_window_buys` context.
  */
 export const AdVendorLinkSchema = z.object({
   vendor_id: z.string(),
   vendor_name: z.string(),
   medium: MediumSchema,
-  window: z.tuple([z.string(), z.string()]), // the ad's [first_shown, last_shown] used for the overlap
-  amount_in_window: z.number(), // sponsor → vendor IE dollars whose date falls in the window
+  window: z.tuple([z.string(), z.string()]).nullable(), // the ad's [first_shown, last_shown] used for the overlap; null when the ad has no dates (verified links only)
+  amount_in_window: z.number(), // sponsor → vendor IE dollars for placeable media whose date falls in the window
   buys_in_window: z.number().int(),
   basis: BasisSchema,
 });
+
+/**
+ * Context, not a relationship: a vendor the sponsor paid, for a medium that could place or produce a platform ad, inside
+ * the ad's run window. The FEC does not record which buy placed which ad, so the UI renders these as a sentence
+ * ("while this ad ran, the sponsor reported digital buys to A and B") and never as a vendor → ad edge or link label.
+ */
+export const SameWindowBuySchema = z.object({
+  vendor_id: z.string(),
+  vendor_name: z.string(),
+  medium: MediumSchema,
+  amount_in_window: z.number(), // sponsor → vendor IE dollars dated in the window
+  buys_in_window: z.number().int(),
+  source_url: z.string().url(), // the vendor's Schedule E search on fec.gov
+});
+export type SameWindowBuy = z.infer<typeof SameWindowBuySchema>;
 
 export const AdVerificationSchema = z.object({
   status: z.enum(["verified", "unverified"]),
@@ -570,7 +587,7 @@ export const AdSchema = z.object({
   cached_creative_path: z.string().nullable(), // path under web/public/, e.g. /creatives/pa-sen-2024/CR123.png
   regions: z.array(z.string()),
   source_url: z.string().url(),
-  // hand-checked ad -> committee link (pipeline/gotham/data/ad_verifications.json); absent on older files
+  // hand-checked ad -> committee link (pipeline/campaign_commons/data/ad_verifications.json); absent on older files
   verification: AdVerificationSchema.optional(),
   // ---- Block 2 ----
   /** the sponsor committee's chain summary shares (chains/<matched_entity_id>.json); null when unmatched or no chain.
@@ -578,8 +595,10 @@ export const AdSchema = z.object({
   sponsor_visibility_shares: VisibilitySharesSchema.nullable().optional(),
   /** what the ad's content is about (data/hand/<race>/ad_issues.json); basis.source_urls = [creative_url], checked_by = tagger */
   issues: IssueTagsSchema.optional(),
-  /** vendors the sponsor paid whose buys relate to this ad. Each link says how (adjacent / inferred / verified). */
+  /** vendors joined to this ad by a rule or a person. Each link says how (inferred / verified); date overlap alone never qualifies. */
   vendor_links: z.array(AdVendorLinkSchema).optional(),
+  /** every placeable-medium vendor the sponsor paid in the run window, linked or not — context for the reader, never an edge. */
+  same_window_buys: z.array(SameWindowBuySchema).optional(),
 });
 
 
@@ -680,7 +699,7 @@ export const StoriesSchema = z.object({
 });
 
 // ---------------------------------------------------------------------------
-// <race_id>/donors/<donor_key>.json — forward walk from one of the largest chain sources (pipeline/gotham/donors.py)
+// <race_id>/donors/<donor_key>.json — forward walk from one of the largest chain sources (pipeline/campaign_commons/donors.py)
 // ---------------------------------------------------------------------------
 
 export const DonorNodeSchema = z.object({
@@ -723,7 +742,7 @@ export const DonorViewSchema = z.object({
 });
 
 // ---------------------------------------------------------------------------
-// <race_id>/vendors.json + <race_id>/vendors/<vendor_id>.json — Schedule E payees (pipeline/gotham/vendors.py, Block 2)
+// <race_id>/vendors.json + <race_id>/vendors/<vendor_id>.json — Schedule E payees (pipeline/campaign_commons/vendors.py, Block 2)
 // ---------------------------------------------------------------------------
 
 export const VendorSummarySchema = z.object({
@@ -773,7 +792,7 @@ export const VendorIndexSchema = z.object({
 });
 
 // ---------------------------------------------------------------------------
-// <race_id>/issues.json — outside spending by issue (pipeline/gotham/issues.py, Block 2)
+// <race_id>/issues.json — outside spending by issue (pipeline/campaign_commons/issues.py, Block 2)
 // Two layers, never merged: what the ADS were about (attributable — the ad is the spending) vs what the SPENDERS say
 // they are for (not attributable — a party PAC's dollars are not "about" anything).
 // ---------------------------------------------------------------------------
@@ -827,7 +846,7 @@ export const IssueSpendingSchema = z.object({
 });
 
 // ---------------------------------------------------------------------------
-// search.json — static client-side index over every page (pipeline/gotham/search.py, Block 2)
+// search.json — static client-side index over every page (pipeline/campaign_commons/search.py, Block 2)
 // ---------------------------------------------------------------------------
 
 export const SearchItemKindSchema = z.enum(["race", "candidate", "committee", "vendor", "donor", "organization"]);
@@ -920,6 +939,7 @@ export type EvidenceBasis = z.infer<typeof EvidenceBasisSchema>;
 export type Basis = z.infer<typeof BasisSchema>;
 export type IssueTags = z.infer<typeof IssueTagsSchema>;
 export type Medium = z.infer<typeof MediumSchema>;
+export type SupportOppose = z.infer<typeof SupportOpposeSchema>;
 export type EntityVendorRow = z.infer<typeof EntityVendorRowSchema>;
 export type FocusKind = z.infer<typeof FocusKindSchema>;
 export type IssueFocus = z.infer<typeof IssueFocusSchema>;

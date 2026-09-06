@@ -1,6 +1,6 @@
 """Dossier stage: primary records -> data/out/<race>/dossiers/<candidate_id>.json (DossierSchema).
 
-Inputs are hand-curated literals in gotham.dossier_curated (which roll calls, which bills, which archived statements,
+Inputs are hand-curated literals in campaign_commons.dossier_curated (which roll calls, which bills, which archived statements,
 and the one-sentence positions). This module fetches the records they point at, verifies them, and assembles the JSON:
 
 - Incumbent (Casey): senate.gov roll-call XML gives the recorded vote, question, measure, result and date for each

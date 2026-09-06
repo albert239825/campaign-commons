@@ -1,4 +1,4 @@
-# Technical plan — Citizen Gotham V0
+# Technical plan — Campaign Commons V0
 
 Product scope: see the PRD (Albert). This is the how.
 
@@ -14,7 +14,7 @@ Google political ads    ─┘
 
 Runtime = lookups + rendering. Everything else is offline and reproducible (`make all`).
 
-## Pipeline stages (`pipeline/gotham/`)
+## Pipeline stages (`pipeline/campaign_commons/`)
 
 | Stage | Input | Output | Owner |
 | --- | --- | --- | --- |
@@ -34,7 +34,7 @@ Runtime = lookups + rendering. Everything else is offline and reproducible (`mak
 - Everything is 2024-cycle rows only (`TRANSACTION_PGI`/dates 2023-01-01..2024-12-31).
 
 ### Chains details
-See `gotham/chains.py` docstring and DECISIONS D-05..D-07. Non-committee payers: `ENTITY_TP` in `{ORG, COM?}` with no committee master match → `org:` node, visibility `dark` (V0 doesn't do 990 lookups; `inferable` is reserved).
+See `campaign_commons/chains.py` docstring and DECISIONS D-05..D-07. Non-committee payers: `ENTITY_TP` in `{ORG, COM?}` with no committee master match → `org:` node, visibility `dark` (V0 doesn't do 990 lookups; `inferable` is reserved).
 
 ### Dossier details
 Casey (bioguide `C001070`): sponsored/cosponsored bills 117th–118th via `https://api.congress.gov/v3/member/C001070/sponsored-legislation`; roll calls via senate.gov XML. Hand-tag to the 10 issues. Seed votes worth pulling: IRA (117-2 #325), CHIPS (117-2 #271), PACT Act, Respect for Marriage, Fiscal Responsibility Act (118-1 #149), H.J.Res.109 SAB 121 (118-2 #174), border bill cloture (118-2 #33), FISA reauth, Laken Riley Act, TikTok divestiture/foreign aid supplemental (118-2 #151). McCormick: Wayback snapshot of davemccormickpa.com/issues, one `stated_position` per issue present.

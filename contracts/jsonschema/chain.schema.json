@@ -140,6 +140,7 @@
                       "phones",
                       "production",
                       "consulting",
+                      "field",
                       "other"
                     ]
                   },
@@ -206,8 +207,7 @@
                             "type": "string",
                             "enum": [
                               "filed",
-                              "inferred",
-                              "adjacent"
+                              "inferred"
                             ]
                           },
                           "rule": {
@@ -377,6 +377,7 @@
                       "phones",
                       "production",
                       "consulting",
+                      "field",
                       "other"
                     ]
                   },
@@ -445,8 +446,7 @@
                             "type": "string",
                             "enum": [
                               "filed",
-                              "inferred",
-                              "adjacent"
+                              "inferred"
                             ]
                           },
                           "rule": {
@@ -634,8 +634,7 @@
                             "type": "string",
                             "enum": [
                               "filed",
-                              "inferred",
-                              "adjacent"
+                              "inferred"
                             ]
                           },
                           "rule": {
@@ -820,8 +819,7 @@
                             "type": "string",
                             "enum": [
                               "filed",
-                              "inferred",
-                              "adjacent"
+                              "inferred"
                             ]
                           },
                           "rule": {

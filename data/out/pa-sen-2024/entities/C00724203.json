@@ -418,7 +418,7 @@
       "payee": "OTG STRATEGIES",
       "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202412059731711651",
       "vendor_id": "V-otg-strategies",
-      "medium": "other"
+      "medium": "field"
     },
     {
       "ie_id": "C00724203-ie-1858137-500195202",
@@ -433,7 +433,7 @@
       "payee": "OTG STRATEGIES",
       "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202412059731711648",
       "vendor_id": "V-otg-strategies",
-      "medium": "other"
+      "medium": "field"
     },
     {
       "ie_id": "C00724203-ie-1858137-500193234",
@@ -448,7 +448,7 @@
       "payee": "OTG STRATEGIES",
       "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202412059731711644",
       "vendor_id": "V-otg-strategies",
-      "medium": "other"
+      "medium": "field"
     },
     {
       "ie_id": "C00724203-ie-1865339-500189094",
@@ -463,7 +463,7 @@
       "payee": "OTG STRATEGIES",
       "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202501239747734144",
       "vendor_id": "V-otg-strategies",
-      "medium": "other"
+      "medium": "field"
     },
     {
       "ie_id": "C00724203-ie-1833852-500188400",
@@ -478,7 +478,7 @@
       "payee": "OTG STRATEGIES",
       "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202410209709491640",
       "vendor_id": "V-otg-strategies",
-      "medium": "other"
+      "medium": "field"
     },
     {
       "ie_id": "C00724203-ie-1865339-500191456",
@@ -493,7 +493,7 @@
       "payee": "OTG STRATEGIES",
       "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202501239747734152",
       "vendor_id": "V-otg-strategies",
-      "medium": "other"
+      "medium": "field"
     },
     {
       "ie_id": "C00724203-ie-1833852-500186653",
@@ -508,7 +508,7 @@
       "payee": "OTG STRATEGIES",
       "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202410209709491635",
       "vendor_id": "V-otg-strategies",
-      "medium": "other"
+      "medium": "field"
     },
     {
       "ie_id": "C00724203-ie-1865339-500190213",
@@ -523,7 +523,7 @@
       "payee": "OTG STRATEGIES",
       "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202501239747734148",
       "vendor_id": "V-otg-strategies",
-      "medium": "other"
+      "medium": "field"
     },
     {
       "ie_id": "C00724203-ie-1858137-500194286",
@@ -538,7 +538,7 @@
       "payee": "SECOND STREET ASSOCIATES",
       "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202412059731711660",
       "vendor_id": "V-second-street-associates",
-      "medium": "other"
+      "medium": "field"
     },
     {
       "ie_id": "C00724203-ie-1865339-500191458",
@@ -553,7 +553,7 @@
       "payee": "SECOND STREET ASSOCIATES",
       "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202501239747734156",
       "vendor_id": "V-second-street-associates",
-      "medium": "other"
+      "medium": "field"
     },
     {
       "ie_id": "C00724203-ie-1858137-500193956",
@@ -755,7 +755,7 @@
       "count": 8,
       "media_mix": [
         {
-          "medium": "other",
+          "medium": "field",
           "amount": 1033374.93,
           "count": 8
         }
@@ -778,7 +778,7 @@
       "count": 2,
       "media_mix": [
         {
-          "medium": "other",
+          "medium": "field",
           "amount": 150000.0,
           "count": 2
         }
@@ -840,5 +840,19 @@
       "last_date": "2024-10-17",
       "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00724203&payee_name=STONES%27+PHONES"
     }
-  ]
+  ],
+  "issue_focus": {
+    "kind": "general_partisan",
+    "issue_ids": [],
+    "description": "Somos PAC 'works to empower hardworking Latinos in shaping the future of our democracy by increasing our participation in elections and by electing progressive candidates', in support of 'candidates who will fight for an economy that works for everyone.' A voter-engagement and electoral mission; no issue from the frozen taxonomy is named.",
+    "basis": {
+      "basis": "verified",
+      "rule": "Self-described focus from the organisation's own material; says what the org is for, not what its dollars bought",
+      "source_urls": [
+        "https://www.somospac.org/"
+      ],
+      "checked_by": "devin-block2-issues",
+      "checked_at": "2026-09-05"
+    }
+  }
 }

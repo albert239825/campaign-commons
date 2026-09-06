@@ -182,6 +182,81 @@ not record which buy placed which ad"). Issues became two separate arrays in `is
 **Next.** Four children in parallel (vendors · media wall · issue focus · search), then the chain extension and the
 Vertex-style node panel on master, then critic round 3.
 
+## 2026-09-05 ~19:30 — Block 2 child 3: issue focus (two layers, never summed)
+
+**What changed.** `data/hand/pa-sen-2024/issue_focus.json` — 34 sourced rows (23 of the 98 outside spenders incl. the whole top
+20, plus 11 organisation funders that appear as chain termini: Majority Forward, LCV Inc., Everytown Action Fund, Future Forward
+USA Action, Carpenters, EDF Action, IUOE, Climate Power, UFCW, One Nation, America Votes), each with the org's own words, a verbatim
+quote where one fit, and ≥1 primary URL (org site, Wayback 2024 snapshot, or fec.gov committee page). `pipeline/gotham/issues.py`
+(`make issues`, now in `all` between `ads` and `dossier`): patches `Entity.issue_focus` and `IndependentExpenditure.issues` in place
+with a `verified` Basis, joins `ad_issues.json × ads.json` on `ad_id` without writing `ads.json`, emits `issues.json`
+(`by_ad_issue`, `by_spender_focus` primary-only and all-tags, `coverage`, `notes`). 10 tests on a fixture race (merge, midpoint
+sums, candidate split, dollar-weighted traceability/dark share, general_partisan null bucket, coverage arithmetic, reconciliation
+to per-spender totals, idempotence, missing hand file → no-op). Web: `getIssues()` (null when absent), two side-by-side cards on
+the ledger with the non-summability note between them, `FocusChip` on the entity page (kind · primary issue, description, source
+links, `basis.rule` as title and footer).
+
+**Numbers.** Layer A covers 23/98 spenders and $227.3M of $233.4M outside (97.4%). Primary-only buckets: general partisan /
+leadership committees that name no issue **$138.8M (59.5%)**, 7 committees, weighted traceability 0.73 / dark 0.26;
+candidate-aligned $48.2M (Keystone Renewal, 1); taxes & budget (multi-issue: AFP Action, Club for Growth Action) $21.4M;
+energy & climate (LCV Victory Fund, NRDC Action Votes) $7.1M, dark 0.78; healthcare (multi-issue) $5.5M; guns $2.8M (3 committees
+on both sides); labor $2.3M (4); healthcare single-issue $0.7M; business/trade $0.45M. Layer B: **0 of 500 ads and 0 IEs tagged**
+— `by_ad_issue` is empty and the card says so. Static pages unchanged at 2,147; contract-validated files 2,143 + 5 hand files;
+pipeline tests 67 → 77.
+
+**Challenge.** The IE half of Layer B needs the "purpose" line of each 24/48-hour notice. The local FEC rows carry only generic
+purposes (`MEDIA BUY`, `TV ADVERTISING`, `DIGITAL ADVERTISING`, `PRODUCTION`) for all of the ~60 largest IEs, and every
+docquery.fec.gov filing image returned HTTP 403 from this box (webfetch and curl). Under rule 8 (tags only from the source) and
+the assignment ("never tag from the spender's name or from Layer A") the honest result is zero IE rows; `ie_issues.json.method`
+records what was tried. `ad_issues.json` belongs to child 2 and was empty at build time; the join code is exercised by tests.
+
+**How solved / decided.** D-66..D-69: two layers never summed; midpoint of the Google range, never added to FEC dollars;
+multi-tag records count in full under every tag (primary-only partitions, all-tags overlaps); `general_partisan` = names an
+electoral/ideological goal and no policy area (SLF, WinSenate, DSCC, NRSC-aligned Sentinel, American Crossroads, One Nation,
+America Votes, Somos). Descriptions that fit no frozen id (Future Forward USA Action "rebuild the middle class", American
+Principles Project "the family") take the closest id and say "loose fit" in the description rather than inventing a taxonomy
+entry. Copy discipline: every Layer A sentence is "spenders who describe themselves as … account for $Y", never "spent on".
+
+**Dead ends.** OpenFEC with `DEMO_KEY` rate-limited within minutes — used the local parquet committee table and fec.gov pages
+instead. WinSenate's own 2024 site is gone and no Wayback capture rendered; its row cites the FEC committee page and the Senate
+Majority PAC parent. Defend Our Constitution PAC, Persephone LLC, Geosor Corp., Fund for Policy Reform, Evidence for Impact have
+no self-description anywhere primary — omitted and counted in coverage. Planned Parenthood Votes' About page returned 500.
+
+**Next.** Once docquery is reachable (or from a different network), read the top ~50 notices into `ie_issues.json`; Layer B fills
+in with no code change. Child 2's `ad_issues.json` rows will populate `by_ad_issue` on the next `make issues`.
+
+## 2026-09-05 ~19:40 — Block 2 child 4: static search ("type a name → jump to its page")
+
+**What changed.** `pipeline/gotham/search.py` (`make search`, no race arg) walks every race under `data/out` and writes one
+`data/out/search.json` (`SearchIndex`): 2,053 rows — 1 race, 2 candidates, 2,000 committees, 23 organizations, 27 donors,
+0 vendors (`vendors.json` not there yet; indexed when it is, one-line note when it is not). `search` is the last stage before
+`validate` in `make all`. Web: `getSearchIndex()` in `lib/data.ts`, a `force-static` route handler at `app/search.json/route.ts`
+so `next build` emits the index as a static asset, and a header `SearchBox` (client component, `components/search/`) with a
+plain-TypeScript matcher in `components/search/match.ts`. No new dependency; contracts untouched.
+
+**Challenge.** Two thousand FEC names people type in a dozen ways ("Senate Leadership Fund", "SLF", "C00571703", "sen lead"),
+delivered without a backend and without shipping a fuzzy-search library. And the header `<nav>` was the only place we could put
+the box.
+
+**How we solved it.** One index, one fetch on first focus (cached in module state), `⌘K`/`Ctrl+K` to focus. Matcher: normalise
+(lowercase, collapse whitespace), then a row matches if the query is a substring of its label or any alias, OR every query token is
+a prefix of some label/alias token. Rank by match quality (exact > prefix > substring > token-prefix), then `weight`, then label;
+top 8, grouped by kind in the order their best hit ranked. `weight` is the row's dollars (race: campaign + outside; committee:
+receipts + IEs, or the largest available total; organization/donor: itemized total given), rounded to whole dollars — it is a
+tiebreak, never rendered. Candidate rows link to the dossier when `dossiers/<id>.json` exists, else the race page. Candidate
+aliases carry the last name and "Sen. X" for incumbents; committee aliases carry `Entity.aliases` plus the FEC id so the id
+itself is searchable. Manual check in the built site: "Senate Leadership Fund", "sen lead", "C00571703", "Casey", "Adelson"
+all resolve and Enter navigates.
+
+**Numbers.** Index 446 KB compact JSON (70 KB gzipped; indented it was 452 KB), 2,053 rows; static pages 2,147 → 2,148
+(`/search.json`); pipeline tests 67 → 78; contract-validated files 2,142 → 2,143. Target was ≤400 KB: the labels + hrefs +
+aliases for 2,000 committees are the floor, so we took the ~11% overshoot rather than dropping aliases (which is what makes
+"SLF" work).
+
+**Dead ends.** `KIND_ORDER` for a fixed group ordering — worse than "group by kind in rank order" because the best hit should
+always be first. Copying `search.json` into `public/` — needs a copy step and drifts from `data/out`; the route handler reads the
+same file the pages read.
+
 ## 2026-09-05 ~20:00 — Block 2 child 1: vendors ("Where the money went")
 
 **What changed.** `pipeline/gotham/vendors.py` (`make vendors`, in `all:` before `chains`) turns the 2,235 deduped Schedule E
@@ -220,3 +295,225 @@ distinct from any "MAIN STREET MEDIA").
 **Gaps.** `Vendor.ads[]` is empty until the media-wall child links creatives; `other` still holds $14.2M, ~$12M of it
 `CANVASSING` / field payroll (door-knocking is not a medium in the enum) plus bare `ADVERTISING`/`BILLBOARD` — left
 unclassified on purpose rather than guessed.
+
+## 2026-09-05 ~21:00 — Block 2 media wall: dark share as a number, hand-tagged issues, vendor links with a basis (media-wall child)
+
+**What changed.** New stage `gotham.ads_enrich` (`make ads-enrich`, in `all` after `ads`) patches `data/out/pa-sen-2024/ads.json`
+in place: `sponsor_visibility_shares` copied from the sponsor's chain summary (366 of 500 ads), `issues` from the hand file
+`data/hand/pa-sen-2024/ad_issues.json` (42 of 500 ads, basis `verified` "Tagged by a person from the creative"), `vendor_links[]`
+from the sponsor's `vendors[]` + IE rows under a 7-day-lead inclusive window (D-63, D-64), reverse `vendors/<id>.json.ads[]`, and
+three `Enrichment (…)` notes with the counts. 79 pipeline tests (was 67); 12 new ones cover the share join, both window
+boundaries, single-digital inference vs two digital vendors, verified override + ordering, no-op without `vendors[]`, reverse
+dedupe, idempotence, and that `amount_in_window`/`buys_in_window` reconcile to the fixture's IE rows. Web: ad cards show
+"N% of this sponsor's traced money is dark" (linked to the chain page), issue chips titled with `issues.basis.rule`, and a
+"Vendors in this window" block that prints each `basis.rule` verbatim with an `adjacent` / `inferred` / `verified ✓` label and
+source links; the gallery sorts by dark share, filters by issue and by vendor-link basis, accepts `?sponsor=<committee_id>`, and
+says "42 of 500 ads tagged by a person". Entity pages get an ads strip (count, spend-range sum, thumbnails → `#<ad_id>`, "Google
+shows the advertiser, not the paid-for-by line"); donor pages list committees in the forward walk that ran ads ("{committee},
+which received $x from this donor, ran N ads →"; past the first hop the copy says the amount is a pooled total).
+
+**Challenge.** (1) Child 1's `vendors[]`/IE `vendor_id` rows do not exist yet, so the vendor-link step had nothing real to
+run on. (2) Hand-tagging 40+ creatives without an LLM: Google's ad page renders the creative inside a `googlesyndication`
+frame that the browser's ad blocker refused, and the video ads have no visible text.
+
+**How we solved it.** (1) A fixture under `pipeline/tests/fixtures/block2_sponsor_vendors.json` shaped exactly like
+`EntityVendorRow` + `IndependentExpenditure` (one digital, one TV, one streaming vendor, dated around a fixed ad window) drives
+the tests; on real data the stage detects that no sponsor carries `vendors[]`, writes empty `vendor_links` and a note saying
+so. (2) Pulled the YouTube embed id out of the frame URL and read YouTube's auto-captions with `yt-dlp` (one ad, a text-message
+style video hosted on googlevideo, was read from ffmpeg frame tiles instead); text ads were read off the page. 60 top ads by
+`spend_range.min` reviewed, 42 tagged (abortion 13, tax_budget 13, labor_trade 10, immigration 6, healthcare 3,
+energy_climate 2, guns 1; sponsors: WinSenate 20, SLF 11, DSCC 3, LCV 2, Casey 2, McCormick 1, NRDC Action Votes 1, NRA-PVF 1,
+Future Pennsylvania PAC 1). 18 read but left untagged because the creative names no issue in the frozen taxonomy: 11 fundraising
+/ biography / residency / values spots, 5 SLF "Bring Back" trans-athlete spots, WinSenate "Addicted" (fentanyl / China
+investments), Casey "Fleeced" (price gouging / FTC). 0 unavailable after retrying the 429s. Every `note` quotes the line in the
+creative that supports the tag.
+
+**Numbers.** ads with sponsor shares 0 → 366 / 500; tagged 0 → 42; vendor links 0 → 0 (expected: `gotham.vendors` has not
+run; the stage says so in `notes`); pipeline tests 67 → 79; static pages 2,147 → 2,147; validated files 2,142 + 5 hand.
+
+**Dead ends.** `useSearchParams` for `?sponsor=` forced a Suspense fallback into the static `ads.html` (the whole gallery
+became client-only); reading `window.location.search` in an effect keeps the 500 cards in the prerendered HTML. `yt-dlp --print`
+silently implies `--simulate` and skips writing subtitle files — needs `--no-simulate`. `patch_vendor_ads` first implemented
+as delete-then-append, which reordered `ads[]` on the second run and broke idempotence; replaced in place instead.
+
+## 2026-09-05 ~23:00 — Block 2: the chain now has a spending side (master)
+
+**What changed.** `chains_out.py` patches every `chains/<id>.json` with out-side nodes and edges: root → vendor (`money`, Schedule
+E as filed), vendor → ad (`placement`, Basis verified/inferred/adjacent), root → ad (`placement`, Basis = how the sponsor was
+matched), root/ad → candidate (`targeting`, support/oppose). Idempotent; no-ops on vendor nodes until `vendors.json` exists. The
+web graph was rebuilt around it: side-aware layout (funding left, spending right), evidence-styled spines, a Vertex-style node
+panel, and hide/expand/fold controls. 105 targeting and 140 placement edges across 86 chains (135 inferred, 5 verified) —
+numbers from before the vendors stage landed; superseded by the integration entry below. AMERICA PAC, WINSENATE and 24 other
+spenders now draw their ads and targets.
+
+**Challenge.** Two things fought each other: a Sankey wants every edge to be a dollar ribbon, and the new edges are not dollars
+(an ad's spend is Google's range midpoint; a targeting edge is money aimed *at* someone, none of which reaches them). Drawing
+them as ribbons would have said "money flows to the candidate" — exactly the claim the product must not make. Also, the
+first-click panel had to say *why* every link exists, per node kind, without a backend.
+
+**How we solved it.** `ChainEdge.kind` decides the geometry: `money` → ribbon, `placement`/`targeting` → thin spine with an
+arrowhead and a Basis dash pattern. Each `ViewNode`/`ViewEdge` carries a compact `[basis, rule, source_urls]` tuple so the panel
+renders the sentence and links client-side from the same wire the SVG uses. Copy in the panel and the edge table is explicit:
+"est. ad spend, range midpoint; no dollars move on this edge", "IE dollars aimed at the candidate; none reach them". The
+assumptions paragraph under the graph states the midpoint, the adjacent/inferred/verified rules and "FEC does not record which
+buy placed which ad". D-61.
+
+**Numbers.** Largest chain page 562KB → 764KB (the ad nodes and Basis tuples); pipeline tests 67 → 78; contracts 17 schemas,
+2,142 + 5 files validate; web build 2,147 pages.
+
+**Next.** Merge the four children (vendors · media wall · issue focus · search) into this branch so vendor nodes appear between the
+spender and its ads; critic round 3.
+
+## 2026-09-06 ~00:30 — Block 2 integration: four children + the spending side in one pipeline (master)
+
+**What changed.** PRs #6 (search), #7 (vendors), #10 (media wall), #9 (issue focus) merged into the chain branch (PR #8), in that
+order, and every stage re-run against the others' real output. Stage order is now `ingest ledger chains vendors ads ads-enrich
+issues dossier chains-out search validate` (`chains` before `vendors` since D-70: vendors reconciles against
+`ledger.traceability.outside_total`, which `chains` writes): `ads-enrich` needs `vendors[]` on the sponsor to draw vendor↔ad
+links, `chains-out` needs those links to hang ads off vendor nodes, `search` indexes whatever exists last.
+
+**Challenge.** Each child branched from the contracts branch and appended its own `D-57..`, its own `LOG.md` entry, its own
+`Makefile all:` line and its own imports on the shared entity/ledger pages — four-way conflicts on four files, plus 23 generated
+`entities/*.json` where vendors (`vendors[]`, `vendor_id`) and issues (`issue_focus`) both patched the same files.
+
+**How solved.** Docs: keep master's numbering, renumber each child on merge (media wall → D-63..65, issues → D-66..69; LOG entries
+placed by their timestamps; cross-references in the entries and `search.py` fixed). Code: union of imports, both sections kept
+on the entity page ("Where the money went" + "Ads this committee ran"). Generated JSON: take the vendors side, then re-run
+`make issues` so the issue patch is applied on top rather than hand-merging JSON. The vendors test asserted `Vendor.ads == []`
+(true before the media wall existed); it now checks every linked ad's sponsor is one of that vendor's spenders and its basis is
+verified/inferred/adjacent — the invariant that matters.
+
+**Numbers.** With vendors present the media wall produced 1,090 vendor↔ad links (115 inferred, 975 adjacent; 26 sponsors with
+vendor rows, 2 without). In the chain graph: 314 vendor nodes, 132 ad nodes; vendor→ad 42 inferred + 295 adjacent, sponsor→ad
+96 inferred + 2 verified, 347 targeting edges, across 86 chains. Issues: 23/98 spenders focus-tagged covering $227.3M of
+$233.4M, 42/500 ads tagged, 0 IE notices (see the issue-focus entry). Search 2,363 items (310 vendors), 514 KB. Largest chain
+JSON 644 KB; chain page HTML 692 KB; ads page 4.0 MB (the thumbnails' data, not a regression to leave — Q for the design pass).
+Pipeline tests 137 → 159; web build 2,455 static pages.
+
+**Next.** Critic round 3 on the integrated branch; FCC political files as the TV leg of vendor→ad; fill `ie_issues.json` once
+docquery is reachable.
+
+## 2026-09-06 ~01:00 — Rename: Citizen Gotham → Campaign Commons (master)
+
+**What changed.** Albert renamed the project: the data of campaigns brought to the masses, into the "commons". Mechanical
+refactor on its own branch (stacked on PR #8): `@citizen-gotham/contracts` → `@campaign-commons/contracts` (49 import sites,
+`next.config.ts` `transpilePackages`, lockfiles), `pipeline/gotham` → `pipeline/campaign_commons` (Makefile `-m` targets,
+tests, docs references), pyproject `campaign-commons-pipeline`, README/site title. Every stage re-run so the `method` / `rule`
+strings in generated JSON (`campaign_commons.vendors`, `campaign_commons.ads_enrich`, …) name the real modules. D-70.
+
+**Not renamed.** The GitHub repo (Albert's; old URLs redirect), and history: earlier LOG entries, CRITIQUE rounds 1–2, and the
+design mockups keep "Citizen Gotham" as written at the time.
+
+**Gotcha for existing checkouts.** `.gitignore` hides `pipeline/gotham/__pycache__`, which survives the branch switch and makes
+`pip install -e .` fail with "Multiple top-level packages discovered in a flat-layout". `pyproject.toml` now pins
+`[tool.setuptools] packages = ["campaign_commons"]`; `rm -rf pipeline/gotham` also clears it.
+
+## 2026-09-06 ~02:30 — Critic round 3: the vendor page shows its receipts, the graph stops drawing Google ranges as dollars (master)
+
+**What changed.** Round 3 of the read-only critic (`docs/CRITIQUE.md` § Round 3, 15 findings, 0 P0 / 3 P1 / 12 P2) reviewed the
+integrated Block 2 stack. Fixes, in one stacked PR on top of the rename:
+
+- *C-45 (P1)* The vendor page never rendered `Vendor.ads[]` even though 74 vendor files carried links, and its `method` footer
+  said links "are empty until a human verifies one". New `VendorAds` card: thumbnails, sponsor, dates, basis label + meaning +
+  rule + source links, grouped by basis, with a "see in the ads wall" link that opens the gallery filtered by `?vendor=<id>`.
+  The card says in words that the FEC does not record which buy placed which ad.
+- *C-46 (P1)* `layout.ts` sized ad nodes and `agg:ads` on the same dollar scale as Schedule E payments — a $550k Google
+  midpoint drawn as tall as a $550k filed payment, under copy that says the two are never added. Out-side `ad`/`aggregate`
+  nodes are now fixed-height; the `$` range stays in the panel text only.
+- *C-47 (P1)* `ads_enrich` popped `issues` then re-assigned it, so the key moved after `vendor_links` on the second run: 1,226
+  reordered lines, zero semantic diffs, dirty `git status` after one re-run. Enrichment keys are now rebuilt in a fixed order and
+  the test compares `json.dumps` with key order intact.
+- *C-48* `generated_at` churned on `issues.json`, `search.json` and all 311 vendor files with no content change. `util.write_json`
+  (and search's compact writer) now keep the previous stamp when everything else is byte-equal; a changed file still gets a fresh
+  one. Tests cover unchanged / changed / corrupt-previous / non-dict.
+- *C-49* `make vendors` wrote `"ads": []` unconditionally, wiping the reverse links until `ads-enrich` re-ran. It now preserves
+  the existing file's `ads[]`; `ads_enrich` remains the only writer of that field and now also prunes rows whose ad no longer
+  links to the vendor.
+- *C-50* Two midpoint conventions and a latent `float(None)` on Google's open top bucket (`max: null`). One `range_midpoint` in
+  `util.py` (open top → floor); `issues.py` counts `open_ended` in coverage and says so in its basis rule.
+- *C-51* Adjacent links paired a Google creative with *any* same-window buy, so an NRA ad card listed a mail vendor, a phone
+  vendor and "other" as if they were its vendors. Adjacent is now offered only for `digital`/`production`/`other` media
+  (`ADJACENT_MEDIA`); verified and inferred links are never dropped; the rule text says what was excluded.
+- *C-52* No `field` medium: OTG STRATEGIES ($8.6M, "CANVASSING" ×24), Second Street, The Outreach Team and 79% of CampaignHQ
+  sat in `other`, the 4th-largest medium in the race. `field` (CANVASS / DOOR / FIELD / GOTV) added to the contract, the
+  classifier, `MEDIUM_LABELS` and the chain node-panel.
+- *C-53* Vendor page per-medium chips always read "100%" (`MediumMix mix={[m]}`); now `pct(m.amount / v.total)`.
+- *C-54* Three spellings of the same evidence basis (ads wall, chain, raw enum on issue cards and focus chips). One vocabulary
+  in `web/src/lib/evidence.ts` (`BASIS_LABELS`, `BASIS_MEANING`, `BASIS_TONE`, `BASIS_DASH`); chain `basis.ts` re-exports it.
+- *C-55* Docs drift: README `make` example, LOG stage order, CONTRACTS `ads[]` writer, superseded edge counts — corrected.
+- *C-56* `[tool.setuptools] packages` pinned (see the rename entry's gotcha).
+- *C-57* "Google shows the advertiser, not the paid-for-by line" was false at the source (the Transparency Center renders
+  "Paid for by …" inside the creative). Reworded everywhere to what is true: Google's *bulk data* carries no paid-for-by field
+  for US ads; the match is on advertiser name.
+- Delete list: the always-empty "verified vendor link" gallery filter is hidden until a row exists (basis options with zero ads
+  are not rendered).
+
+**Challenge.** Proving idempotence. After the fixes a re-run still showed `generated_at` changes on 75 vendor files and
+`search.json` — a real content change (`other` → `field` in the vendor sublabels and `media_mix`), not the bug. The check that
+settled it: stage all output, run `vendors ads-enrich issues chains-out search` again, `git diff --stat data/out` empty. That
+is now the acceptance test for every pipeline PR. Second gotcha: Next's persistent webpack cache served a stale copy of
+`contracts/src/schemas.ts` (symlinked package, `resolve.symlinks = false`) and failed the build on `medium: "field"` until
+`.next/cache` was removed — Vercel clones fresh, so it does not see this.
+
+**Numbers.** Vendor↔ad links 1,090 → 612 (115 inferred unchanged, adjacent 975 → 497); ads with any link 280; vendor files
+carrying `ads[]` 74 → 38 (the rest only had TV/mail/phone adjacency). Medium `other` $14.2M → $0.3M; `field` $13.9M. Pipeline
+tests 159 → 167; 2,459 static pages; ads page HTML 4.0 MB → 3.3 MB (fewer serialised links; C-58 proper is still open). Second
+run of every Block 2 stage: 0 files changed.
+
+**Left open (P2).** C-58 wire size (server-render the ad cards, template the `rule` prose); C-59 duplicate `_date_range` and
+`visibility: "disclosed"` on out-side nodes (midpoint half is done).
+
+## 2026-09-06 ~03:30 — Per-ad pages: the chain walked backward from one creative (master)
+
+**What changed.** Albert's read of the Block 2 UI: "a little cluttered visually", and "each ad should have its own page so we
+can see the chain / graph going backward". New static route `/races/<race>/ads/<ad_id>` (500 pages in PA; 2,959 total, was
+2,459): creative large, Google ranges with the midpoint labelled, sponsor match and dark share (worded as the sponsor's funding,
+not the ad's), issue tags with their tagger, the full vendor-link list (medium, basis, rule, sources), and a `ChainDiagram` fed
+by `adFocusWire` — the sponsor's funding side plus only what touches this ad on the spending side. The wall card lost its vendor
+rule/source block (one line "Vendors in window: X (inferred), Y (adjacent)") and links to the page from the creative, the title
+and the footer; every other ad link in the app (entity thumbnails, chain "seen ads" strip, vendor page reverse links, chain ad
+nodes) now lands on the page instead of a `#anchor` in the 500-card wall. Assumptions text repeated on the page: vendor dollars
+filed, ad dollars a Google midpoint never added to them, link semantics per basis, donor dollars pooled, nothing reaches the
+candidate. D-72.
+
+**Challenge.** The chain files only carry the top 10 ads per sponsor as nodes (D-61 keeps the picture legible), so 368 of 500 ads
+had no graph to show. Options: emit every ad as a node and fold client-side (bigger files, and the spender page gets busier),
+or build the ad's out-side in the web layer from `Ad.vendor_links`, which already carries every basis, window and amount. Took
+the second; `ad-view.ts` mirrors `chains_out._ad_parent_edge` (strong link → hangs off the vendor with the midpoint; adjacent
+only → dotted zero-amount edge from the vendor plus a placement edge from the sponsor with the match basis). Two
+implementations of one rule is a maintenance risk, noted in D-72 for the next critic round.
+
+**Numbers.** Ads wall HTML 3.0 MB → 2.8 MB (the card is still dense; C-58 server-rendered compact cards stays open). Ad page
+~24 KB HTML + the sponsor's chain wire.
+
+## 2026-09-06 ~05:00 — D-74: adjacent vendor→ad links dropped; date overlap becomes a sentence (master)
+
+**What changed.** Albert, reviewing the three link kinds: "it's more confusing now to have the implied links." The `adjacent`
+basis (any digital/production/other buy overlapping the ad's run dates, drawn as a dotted edge) asserted nothing beyond
+co-occurrence, but drawn as an edge it read as a relationship. Removed it end to end: `adjacent` is gone from `Basis`,
+`AdVendorLink.basis` and the JSON schemas; `ads_enrich.vendor_links` emits only `verified` (hand file) and `inferred` (exactly
+one digital vendor in the window, D-64); `chains_out._ad_parent_edge` and the ad page's `ad-view.ts` both filter to those two so
+a stale record can never become an edge. The date fact is kept as **context**: `Ad.same_window_buys[]` — vendor, medium, dollars
+and buy count inside the window, source URL, deliberately no `basis` — rendered as one sentence on the ad page ("While this ad
+ran, WINSENATE reported digital buys to Gambit ($…) and Waterfront ($…). FEC records do not identify which vendor placed this
+ad, so these are not drawn as links.") and, in reverse, on the vendor page ("N ads by X ran during this vendor's buys; not linked").
+Legends read `solid = filed or verified · dashed = inferred`; the wall filter lost "adjacent"; every assumptions block says
+the same-window vendors are listed as prose, not edges. D-74; Q-12 closed.
+
+**Challenge.** Regenerated artifacts still carried `adjacent` until `make`-order was respected (ads-enrich → chains-out → search);
+the contract test on vendor detail files caught the stale values first, which is what it is for. Second run byte-identical.
+
+**Numbers.** Vendor→ad links 612 → 115 (497 adjacent removed, 115 inferred kept, 0 verified in PA yet); 280 of 500 ads carry
+same-window context (611 rows); 169 pipeline tests, 2,455 out + 5 hand files validate.
+
+**Review fixes (same PR).** Three findings from review, all real: (1) a vendor's in-window buys were grouped as one lump under
+its *dominant* medium, so a TV-dominant firm with digital buys was dropped from context, and a phones-dominant firm was
+inferred as the "only digital vendor" with a rule reading "$20,138 in phones buys" (California Nurses Association) — now
+context and links count only the vendor's placeable buys (digital/production/other) and the medium is the dominant one among
+those; (2) `vendor_links` iterated only vendors with an in-window buy, so a hand-verified pair with no dated payment would
+silently vanish — verified links are now emitted regardless (rule says "no payment … is dated in that window"; `window`
+nullable when the ad has no dates), which the PA data does not yet exercise (0 verified rows) but the contract must hold;
+(3) the pipeline window has a 7-day lead (`WINDOW_LEAD_DAYS`) while every sentence said "while this ad ran" — kept the lead
+(placement is paid before air) and changed the copy everywhere to "in the week before and while this ad ran". Context rows
+611 → 728 across 280 → 284 ads (mixed-media vendors' digital portions now shown); links unchanged at 115 inferred, one rule
+text corrected. 171 pipeline tests.

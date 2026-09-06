@@ -1,5 +1,5 @@
 import Link from "next/link";
-import type { EntityVendorRow } from "@citizen-gotham/contracts";
+import type { EntityVendorRow } from "@campaign-commons/contracts";
 import { money, routes } from "@/lib/format";
 
 export type Target = EntityVendorRow["targets"][number];

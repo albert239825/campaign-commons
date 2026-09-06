@@ -1,4 +1,4 @@
-import type { ChainNode, OrganizationClass } from "@citizen-gotham/contracts";
+import type { ChainNode, OrganizationClass } from "@campaign-commons/contracts";
 
 const DARK_ORG_LABELS: Record<OrganizationClass, string> = {
   nonprofit: "Advocacy nonprofit — funders not on file",
@@ -9,12 +9,18 @@ const DARK_ORG_LABELS: Record<OrganizationClass, string> = {
 };
 
 /** Plain-language reason a chain stops at this node. */
-export function terminusLabel(n: Pick<ChainNode, "terminus_reason" | "kind" | "organization_class">): string | null {
+export function terminusLabel(
+  n: Pick<ChainNode, "terminus_reason" | "kind" | "organization_class">,
+): string | null {
   switch (n.terminus_reason) {
     case "dark":
-      return n.kind === "organization" ? DARK_ORG_LABELS[n.organization_class ?? "unknown"] : "No donor disclosure required";
+      return n.kind === "organization"
+        ? DARK_ORG_LABELS[n.organization_class ?? "unknown"]
+        : "No donor disclosure required";
     case "organization":
-      return n.organization_class === "union" ? "Union treasury — named source" : "Business treasury — named source";
+      return n.organization_class === "union"
+        ? "Union treasury — named source"
+        : "Business treasury — named source";
     case "inferable":
       return "Funding reconstructable from IRS 990s (lagged)";
     case "individual":

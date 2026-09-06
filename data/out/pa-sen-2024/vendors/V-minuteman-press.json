@@ -18,8 +18,13 @@
   "media_mix": [
     {
       "medium": "other",
-      "amount": 6370.86,
-      "count": 6
+      "amount": 5824.44,
+      "count": 5
+    },
+    {
+      "medium": "field",
+      "amount": 546.42,
+      "count": 1
     },
     {
       "medium": "mail",
@@ -63,7 +68,7 @@
   "last_date": "2024-11-04",
   "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&payee_name=MINUTEMAN+PRESS",
   "race_id": "pa-sen-2024",
-  "generated_at": "2026-09-05T19:33:04+00:00",
+  "generated_at": "2026-09-05T20:34:15+00:00",
   "data_status": "real",
   "expenditures": [
     {
@@ -109,7 +114,7 @@
       "payee": "MINUTEMAN PRESS",
       "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202502169753435139",
       "vendor_id": "V-minuteman-press",
-      "medium": "other"
+      "medium": "field"
     },
     {
       "ie_id": "C00890053-ie-1862032-SE.4583",
@@ -188,5 +193,5 @@
     }
   ],
   "ads": [],
-  "method": "Every Schedule E independent expenditure names a payee. Payee strings are normalised (case, punctuation, legal suffixes, token order), near-duplicates are folded with a difflib ratio ≥ 0.92 when their numeric tokens match, and hand alias rows from data/hand/<race>/vendor_aliases.json override the rule. Medium is classified from the purpose the spender filed (ordered keyword table in gotham/vendors.py); the FEC does not record which buy placed which ad, so vendor ↔ ad links are empty until a human verifies one. Totals are the filed amounts, grouped, never re-estimated."
+  "method": "Every Schedule E independent expenditure names a payee. Payee strings are normalised (case, punctuation, legal suffixes, token order), near-duplicates are folded with a difflib ratio ≥ 0.92 when their numeric tokens match, and hand alias rows from data/hand/<race>/vendor_aliases.json override the rule. Medium is classified from the purpose the spender filed (ordered keyword table in campaign_commons/vendors.py). The FEC does not record which buy placed which ad: vendor ↔ ad links are date-window adjacency (or single-digital-vendor inference) from campaign_commons.ads_enrich, each with its basis, and are only `verified` when a person found a source naming both. Totals are the filed amounts, grouped, never re-estimated."
 }

@@ -3,7 +3,7 @@ from pathlib import Path
 
 import pytest
 
-from gotham.ads_verify import VERIFICATIONS_PATH, AdVerification, apply_verifications, load_verifications
+from campaign_commons.ads_verify import VERIFICATIONS_PATH, AdVerification, apply_verifications, load_verifications
 
 
 def _ad(ad_id: str, entity: str | None) -> dict[str, object]:

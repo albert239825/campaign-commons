@@ -28,7 +28,7 @@
       "count": 11
     },
     {
-      "medium": "other",
+      "medium": "field",
       "amount": 14649.0,
       "count": 7
     },
@@ -69,7 +69,7 @@
   "last_date": "2024-12-05",
   "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&payee_name=PENDULUM+CREATIVE+GROUP+LLC&payee_name=PENDULUM+CREATIVE+GROUP",
   "race_id": "pa-sen-2024",
-  "generated_at": "2026-09-05T19:33:04+00:00",
+  "generated_at": "2026-09-05T20:34:15+00:00",
   "data_status": "real",
   "expenditures": [
     {
@@ -235,7 +235,7 @@
       "payee": "PENDULUM CREATIVE GROUP LLC",
       "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202412109739858307",
       "vendor_id": "V-pendulum-creative-group",
-      "medium": "other"
+      "medium": "field"
     },
     {
       "ie_id": "C90022559-ie-1917757-2024120011",
@@ -265,7 +265,7 @@
       "payee": "PENDULUM CREATIVE GROUP LLC",
       "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202412109739858511",
       "vendor_id": "V-pendulum-creative-group",
-      "medium": "other"
+      "medium": "field"
     },
     {
       "ie_id": "C00685693-ie-1859744-500010722",
@@ -280,7 +280,7 @@
       "payee": "PENDULUM CREATIVE GROUP LLC",
       "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202412109739858304",
       "vendor_id": "V-pendulum-creative-group",
-      "medium": "other"
+      "medium": "field"
     },
     {
       "ie_id": "C00685693-ie-1859744-500010725",
@@ -295,7 +295,7 @@
       "payee": "PENDULUM CREATIVE GROUP LLC",
       "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202412109739858306",
       "vendor_id": "V-pendulum-creative-group",
-      "medium": "other"
+      "medium": "field"
     },
     {
       "ie_id": "C00685693-ie-1859744-500010644",
@@ -370,7 +370,7 @@
       "payee": "PENDULUM CREATIVE GROUP LLC",
       "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202410229710099382",
       "vendor_id": "V-pendulum-creative-group",
-      "medium": "other"
+      "medium": "field"
     },
     {
       "ie_id": "C00685693-ie-1835901-500009917",
@@ -385,7 +385,7 @@
       "payee": "PENDULUM CREATIVE GROUP LLC",
       "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202410229710099385",
       "vendor_id": "V-pendulum-creative-group",
-      "medium": "other"
+      "medium": "field"
     },
     {
       "ie_id": "C00685693-ie-1835901-500009913",
@@ -400,7 +400,7 @@
       "payee": "PENDULUM CREATIVE GROUP LLC",
       "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202410229710099383",
       "vendor_id": "V-pendulum-creative-group",
-      "medium": "other"
+      "medium": "field"
     },
     {
       "ie_id": "C00685693-ie-1835901-500010139",
@@ -434,5 +434,5 @@
     }
   ],
   "ads": [],
-  "method": "Every Schedule E independent expenditure names a payee. Payee strings are normalised (case, punctuation, legal suffixes, token order), near-duplicates are folded with a difflib ratio ≥ 0.92 when their numeric tokens match, and hand alias rows from data/hand/<race>/vendor_aliases.json override the rule. Medium is classified from the purpose the spender filed (ordered keyword table in gotham/vendors.py); the FEC does not record which buy placed which ad, so vendor ↔ ad links are empty until a human verifies one. Totals are the filed amounts, grouped, never re-estimated."
+  "method": "Every Schedule E independent expenditure names a payee. Payee strings are normalised (case, punctuation, legal suffixes, token order), near-duplicates are folded with a difflib ratio ≥ 0.92 when their numeric tokens match, and hand alias rows from data/hand/<race>/vendor_aliases.json override the rule. Medium is classified from the purpose the spender filed (ordered keyword table in campaign_commons/vendors.py). The FEC does not record which buy placed which ad: vendor ↔ ad links are date-window adjacency (or single-digital-vendor inference) from campaign_commons.ads_enrich, each with its basis, and are only `verified` when a person found a source naming both. Totals are the filed amounts, grouped, never re-estimated."
 }

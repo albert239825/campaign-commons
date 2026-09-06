@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { UNWALKED_COLOR, UNWALKED_LABEL, VISIBILITY_COLORS, type Traceability } from "@citizen-gotham/contracts";
+import { UNWALKED_COLOR, UNWALKED_LABEL, VISIBILITY_COLORS, type Traceability } from "@campaign-commons/contracts";
 import { pct, routes } from "@/lib/format";
 import { Card, Money } from "@/components/ui";
 import { BarLegend, StackedBar, visibilitySegments } from "@/components/ui/stacked-bar";

@@ -845,5 +845,22 @@
       "last_date": "2024-09-24",
       "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00011114&payee_name=RED+HORSE+STRATEGIES"
     }
-  ]
+  ],
+  "issue_focus": {
+    "kind": "labor",
+    "issue_ids": [
+      "labor_trade"
+    ],
+    "description": "AFSCME PEOPLE is the union's federal PAC. AFSCME: 'With members in hundreds of different occupations, AFSCME advocates for fairness in the workplace, excellence in public services and prosperity and opportunity for all working families.'",
+    "basis": {
+      "basis": "verified",
+      "rule": "Self-described focus from the organisation's own material; says what the org is for, not what its dollars bought",
+      "source_urls": [
+        "https://www.afscme.org/about",
+        "https://www.fec.gov/data/committee/C00011114/"
+      ],
+      "checked_by": "devin-block2-issues",
+      "checked_at": "2026-09-05"
+    }
+  }
 }
