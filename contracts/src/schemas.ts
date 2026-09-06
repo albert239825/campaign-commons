@@ -390,7 +390,7 @@ export const IssueFocusSchema = focusVariants({
 });
 
 export const MachineIssueFocusSchema = focusVariants({
-  description: z.string().max(300),
+  description: z.string().max(400),
   basis: BasisSchema,
   label: z.string(),
   quote: z.string().max(400),
@@ -935,7 +935,7 @@ export const HandXAdIssuesFileSchema = HandFileBase.extend({ rows: z.array(HandX
 export const HandXIssueFocusRowSchema = focusVariants({
   entity_id: z.string(),
   name: z.string(),
-  description: z.string().max(300),
+  description: z.string().max(400),
   quote: z.string().max(400),
   source_urls: z.array(z.string().url()).min(1),
   provenance: MachineProvenanceSchema,

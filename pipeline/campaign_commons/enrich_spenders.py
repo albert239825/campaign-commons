@@ -221,7 +221,7 @@ def _schema(issue_ids_: list[str]) -> dict[str, object]:
                 "maxItems": 3,
                 "items": {"type": "string", "enum": issue_ids_},
             },
-            "description": {"type": "string", "maxLength": 300},
+            "description": {"type": "string", "maxLength": 400},
             "quote": {"type": ["string", "null"], "maxLength": 400},
             "source_url": {"type": ["string", "null"]},
             "confidence": {"type": "string", "enum": ["high", "medium", "low"]},
@@ -351,7 +351,7 @@ def _validate_result(
     if kind in {"single_issue", "multi_issue"} and not issue_values:
         return "issue_ids is required for issue focus"
     description = result.get("description")
-    if not isinstance(description, str) or len(description) > 300:
+    if not isinstance(description, str) or len(description) > 400:
         return "description is missing or too long"
     quote = result.get("quote")
     if not isinstance(quote, str) or not quote or len(quote) > 400:

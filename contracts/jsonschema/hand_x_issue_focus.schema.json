@@ -52,7 +52,7 @@
                   },
                   "description": {
                     "type": "string",
-                    "maxLength": 300
+                    "maxLength": 400
                   },
                   "quote": {
                     "type": "string",
@@ -216,7 +216,7 @@
                   },
                   "description": {
                     "type": "string",
-                    "maxLength": 300
+                    "maxLength": 400
                   },
                   "quote": {
                     "type": "string",

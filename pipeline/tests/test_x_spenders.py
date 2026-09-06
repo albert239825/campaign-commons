@@ -99,7 +99,7 @@ def test_url_key_matches_www_and_trailing_slash_without_matching_path() -> None:
 
 def test_spender_schema_enforces_output_limits() -> None:
     schema = enrich_spenders._schema(["healthcare"])
-    assert schema["properties"]["description"]["maxLength"] == 300
+    assert schema["properties"]["description"]["maxLength"] == 400
     assert schema["properties"]["quote"]["maxLength"] == 400
     assert schema["properties"]["issue_ids"]["maxItems"] == 3
 
@@ -228,7 +228,7 @@ def _valid_result() -> dict[str, object]:
 def test_repair_writes_row_and_is_cached(monkeypatch: pytest.MonkeyPatch, tmp_path: Path) -> None:
     _, hand = _setup(monkeypatch, tmp_path)
     primary = _valid_result()
-    primary["description"] = "x" * 301
+    primary["description"] = "x" * 401
     client = FakeClient([primary, _valid_result()])
     assert enrich_spenders.run("race", client=client, fec_fetcher=_fec, page_fetcher=_page, limit=1) == 0
     assert len(json.loads((hand / "x_issue_focus.json").read_text())["rows"]) == 1
@@ -246,9 +246,9 @@ def test_invalid_repair_is_dropped(
 ) -> None:
     _, hand = _setup(monkeypatch, tmp_path)
     primary = _valid_result()
-    primary["description"] = "x" * 301
+    primary["description"] = "x" * 401
     invalid_repair = _valid_result()
-    invalid_repair["description"] = "x" * 301
+    invalid_repair["description"] = "x" * 401
     client = FakeClient([primary, invalid_repair])
     assert enrich_spenders.run("race", client=client, fec_fetcher=_fec, page_fetcher=_page, limit=1) == 0
     assert json.loads((hand / "x_issue_focus.json").read_text())["rows"] == []
@@ -260,7 +260,7 @@ def test_repair_source_change_is_dropped(
 ) -> None:
     _, hand = _setup(monkeypatch, tmp_path)
     primary = _valid_result()
-    primary["description"] = "x" * 301
+    primary["description"] = "x" * 401
     changed = _valid_result()
     changed["source_url"] = "https://other.example/about"
     client = FakeClient([primary, changed])

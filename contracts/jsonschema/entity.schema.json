@@ -1008,7 +1008,7 @@
                     },
                     "description": {
                       "type": "string",
-                      "maxLength": 300
+                      "maxLength": 400
                     },
                     "basis": {
                       "anyOf": [
@@ -1244,7 +1244,7 @@
                     },
                     "description": {
                       "type": "string",
-                      "maxLength": 300
+                      "maxLength": 400
                     },
                     "basis": {
                       "anyOf": [
