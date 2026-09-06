@@ -23,8 +23,8 @@
     "independent_expenditures": 323688.45,
     "from_individuals": 1566328.4,
     "from_committees": 1117355.04,
-    "from_organizations": 116000.0,
-    "from_undisclosed": 106000.0
+    "from_organizations": 126000.0,
+    "from_undisclosed": 96000.0
   },
   "inflows": [
     {
@@ -85,7 +85,8 @@
       "visibility": "disclosed",
       "transaction_type": "10",
       "limit": "unlimited",
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00828608&two_year_transaction_period=2024&contributor_name=SOUTH+DEVELOPMENT+CORP."
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00828608&two_year_transaction_period=2024&contributor_name=SOUTH+DEVELOPMENT+CORP.",
+      "class_basis": "rule"
     },
     {
       "transfer_id": "C00828608-in-ind:COOPER_DERICK|32964",
@@ -160,7 +161,8 @@
       "visibility": "dark",
       "transaction_type": "10",
       "limit": "unlimited",
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00828608&two_year_transaction_period=2024&contributor_name=MAVERICK+QUANTUM"
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00828608&two_year_transaction_period=2024&contributor_name=MAVERICK+QUANTUM",
+      "class_basis": "rule"
     },
     {
       "transfer_id": "C00828608-in-ind:HILDEBRAND_MELINDA|77019",
@@ -310,7 +312,8 @@
       "visibility": "disclosed",
       "transaction_type": "10",
       "limit": "unlimited",
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00828608&two_year_transaction_period=2024&contributor_name=MTX+GROUP+INC."
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00828608&two_year_transaction_period=2024&contributor_name=MTX+GROUP+INC.",
+      "class_basis": "rule"
     },
     {
       "transfer_id": "C00828608-in-org:THREE_GALLERIA_TOWER",
@@ -325,7 +328,8 @@
       "visibility": "dark",
       "transaction_type": "10",
       "limit": "unlimited",
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00828608&two_year_transaction_period=2024&contributor_name=THREE+GALLERIA+TOWER"
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00828608&two_year_transaction_period=2024&contributor_name=THREE+GALLERIA+TOWER",
+      "class_basis": "rule"
     },
     {
       "transfer_id": "C00828608-in-org:DIALCARE_LLC",
@@ -340,7 +344,8 @@
       "visibility": "dark",
       "transaction_type": "10",
       "limit": "unlimited",
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00828608&two_year_transaction_period=2024&contributor_name=DIALCARE+LLC"
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00828608&two_year_transaction_period=2024&contributor_name=DIALCARE+LLC",
+      "class_basis": "rule"
     },
     {
       "transfer_id": "C00828608-in-ind:HUDSON_KATE|30305",

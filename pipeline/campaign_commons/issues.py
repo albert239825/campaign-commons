@@ -7,6 +7,8 @@ Two layers that are never summed:
     its IE total in this race, never dollars "spent on" the focus.
   Layer B — record content (`IndependentExpenditure.issues`, tagged ads): what a specific filed notice or ad was about,
     from `ie_issues.json` and `ad_issues.json`. Attributable to that record's dollars.
+  Layer C — spender positions (`issue_positions.json`): what the spender explicitly says on the frozen issue axes, read
+    from its own site. This is model-read until a person verifies it and is never a claim about its spending.
 
 Reads `ad_issues.json` directly (joined to `ads.json` on `ad_id`) so it does not depend on `ads_enrich`; never writes
 `ads.json`. Every hand file is optional: a missing file or an empty `rows` is a no-op for that layer.
@@ -35,6 +37,10 @@ ISSUE_KINDS = ("single_issue", "multi_issue")
 FOCUS_RULE = (
     "Self-described focus from the organisation's own material; says what the org is for, not what its dollars bought"
 )
+POSITION_RULE = (
+    "Stated position read from the organisation's own site by a language model and kept only where the quote appears "
+    "verbatim on the fetched page; says what the org says, not what its dollars bought"
+)
 IE_TAG_RULE = "Tagged by a person from the filed notice"
 AD_ISSUE_RULE = (
     "Issue tags are human: a person read each 24/48-hour notice (IE rows) or watched/read each creative (ads). Google "
@@ -56,6 +62,8 @@ NOTES = [
     "names and overlaps.",
     "General partisan / leadership committees say they exist to win seats or a majority, not for an issue; they carry "
     "issue_id null. Spenders with no sourced self-description are untagged and counted in coverage, not guessed.",
+    "issue_positions on entities are model-read from each spender's own site (basis inferred until a person verifies); "
+    "they are about the spender's stated views, never about what its ads or notices said.",
 ]
 
 
@@ -175,6 +183,44 @@ def patch_focus(refs: RowRefs, rows: list[dict]) -> int:
             write_json(path, entity)
             changed += 1
     return changed
+
+
+def position_payload(row: dict) -> dict:
+    return {
+        "issue_id": row["issue_id"],
+        "direction": row["direction"],
+        "quote": row["quote"],
+        "source_url": row["source_url"],
+        "basis": {
+            "basis": "verified" if row["status"] == "verified" else "inferred",
+            "rule": POSITION_RULE,
+            "source_urls": [row["source_url"]],
+            "checked_by": row["tagged_by"],
+            "checked_at": row["tagged_at"],
+        },
+    }
+
+
+def patch_positions(refs: RowRefs, rows: list[dict]) -> tuple[int, int]:
+    """Write or clear `issue_positions` on every entity file."""
+    by_entity: dict[str, list[dict]] = defaultdict(list)
+    for row in rows:
+        by_entity[row["entity_id"]].append(row)
+    changed = 0
+    for path in (refs.out_dir / "entities").glob("*.json"):
+        entity = read_json(path)
+        entity_id = entity.get("entity_id", path.stem)
+        wanted = [position_payload(row) for row in by_entity.get(entity_id, [])]
+        wanted.sort(key=lambda position: position["issue_id"])
+        if wanted and entity.get("issue_positions") != wanted:
+            entity["issue_positions"] = wanted
+            write_json(path, entity)
+            changed += 1
+        elif not wanted and "issue_positions" in entity:
+            del entity["issue_positions"]
+            write_json(path, entity)
+            changed += 1
+    return changed, len([entity_id for entity_id, entity_rows in by_entity.items() if entity_rows])
 
 
 def machine_focus_payload(row: dict, *, rule: str = "x_issue_focus", subject: str = "committee") -> dict:
@@ -471,17 +517,20 @@ def build(race_id: str, refs: RowRefs) -> dict:
     dollars_total = float(ledger["traceability"]["outside_total"])
 
     focus_rows = _hand_rows(refs.hand_dir / "issue_focus.json")
+    position_rows = _hand_rows(refs.hand_dir / "issue_positions.json")
     x_focus_rows = _hand_rows(refs.hand_dir / "x_issue_focus.json")
     x_funder_rows = _hand_rows(refs.hand_dir / "x_funder_focus.json")
     ie_rows = _hand_rows(refs.hand_dir / "ie_issues.json")
     ad_rows = _hand_rows(refs.hand_dir / "ad_issues.json")
 
     focus_changed = patch_focus(refs, focus_rows)
+    positions_changed, _ = patch_positions(refs, position_rows)
     x_focus_changed = patch_machine_focus(refs, x_focus_rows)
     x_funder_changed, x_funder_unmatched = patch_machine_funder(refs, x_funder_rows)
     ie_records, ie_changed = patch_ies(refs, ie_rows)
     ad_records, ads_total = tagged_ads(refs, ad_rows)
     print(f"issue_focus: {len(focus_rows)} rows, {focus_changed} entity files changed")
+    print(f"issue_positions: {len(position_rows)} rows, {positions_changed} entity files changed")
     print(f"x_issue_focus: {len(x_focus_rows)} rows, {x_focus_changed} entity files changed")
     print(
         f"x_funder_focus: {len(x_funder_rows)} rows, {x_funder_changed} donor files changed; "
@@ -491,6 +540,7 @@ def build(race_id: str, refs: RowRefs) -> dict:
     print(f"ad_issues: {len(ad_rows)} rows, {len(ad_records)} matched of {ads_total} ads")
 
     tagged_spenders = sorted({r["entity_id"] for r in focus_rows if r["entity_id"] in spenders})
+    positioned_spenders = {r["entity_id"] for r in position_rows if r["entity_id"] in spenders}
     coverage = {
         "spenders_tagged": len(tagged_spenders),
         "spenders_total": len(spenders),
@@ -500,6 +550,7 @@ def build(race_id: str, refs: RowRefs) -> dict:
         "ads_total": ads_total,
         "ies_tagged": len(ie_records),
         "ie_dollars_tagged": _round(sum(r.ie_amount for r in ie_records)),
+        "spenders_with_positions": len(positioned_spenders),
     }
     complete = coverage["spenders_tagged"] == coverage["spenders_total"] and bool(ie_records) and bool(ad_records)
     return {

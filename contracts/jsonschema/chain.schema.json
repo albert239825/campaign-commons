@@ -130,6 +130,14 @@
                       "unknown"
                     ]
                   },
+                  "class_basis": {
+                    "type": "string",
+                    "enum": [
+                      "rule",
+                      "inferred",
+                      "verified"
+                    ]
+                  },
                   "medium": {
                     "type": "string",
                     "enum": [
@@ -367,6 +375,14 @@
                       "unknown"
                     ]
                   },
+                  "class_basis": {
+                    "type": "string",
+                    "enum": [
+                      "rule",
+                      "inferred",
+                      "verified"
+                    ]
+                  },
                   "medium": {
                     "type": "string",
                     "enum": [
@@ -584,6 +600,14 @@
                       }
                     ]
                   },
+                  "class_basis": {
+                    "type": "string",
+                    "enum": [
+                      "rule",
+                      "inferred",
+                      "verified"
+                    ]
+                  },
                   "kind": {
                     "type": "string",
                     "const": "placement"
@@ -764,6 +788,14 @@
                       {
                         "type": "null"
                       }
+                    ]
+                  },
+                  "class_basis": {
+                    "type": "string",
+                    "enum": [
+                      "rule",
+                      "inferred",
+                      "verified"
                     ]
                   },
                   "kind": {

@@ -100,7 +100,8 @@
       "visibility": "dark",
       "transaction_type": "10",
       "limit": "unlimited",
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00882381&two_year_transaction_period=2024&contributor_name=COMMONWEALTH+COMMUNICATIONS"
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00882381&two_year_transaction_period=2024&contributor_name=COMMONWEALTH+COMMUNICATIONS",
+      "class_basis": "inferred"
     },
     {
       "transfer_id": "C00882381-in-org:SEIU_STATE_COUNCIL",
@@ -115,7 +116,8 @@
       "visibility": "disclosed",
       "transaction_type": "10",
       "limit": "unlimited",
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00882381&two_year_transaction_period=2024&contributor_name=SEIU+STATE+COUNCIL"
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00882381&two_year_transaction_period=2024&contributor_name=SEIU+STATE+COUNCIL",
+      "class_basis": "rule"
     },
     {
       "transfer_id": "C00882381-in-ind:LUDWIG_EUGENE_A.|20007",
@@ -145,7 +147,8 @@
       "visibility": "dark",
       "transaction_type": "10",
       "limit": "unlimited",
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00882381&two_year_transaction_period=2024&contributor_name=RESET+TECH+ACTION"
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00882381&two_year_transaction_period=2024&contributor_name=RESET+TECH+ACTION",
+      "class_basis": "rule"
     }
   ],
   "outflows": [

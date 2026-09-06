@@ -40,7 +40,8 @@
       "visibility": "dark",
       "transaction_type": "10",
       "limit": "unlimited",
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00528455&two_year_transaction_period=2024&contributor_name=INTERNATIONAL+ALLIANCE+OF+THEATRICAL+STAGE+EMPLOYEES+%28IATSE%29"
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00528455&two_year_transaction_period=2024&contributor_name=INTERNATIONAL+ALLIANCE+OF+THEATRICAL+STAGE+EMPLOYEES+%28IATSE%29",
+      "class_basis": "rule"
     },
     {
       "transfer_id": "C00528455-in-org:LOCAL_0008_IATSE_PAC",
@@ -115,7 +116,8 @@
       "visibility": "disclosed",
       "transaction_type": "10",
       "limit": "unlimited",
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00528455&two_year_transaction_period=2024&contributor_name=IATSE+LOCAL+44%2C+AFFILIATED+PROPERTY+CRAFTSPERSONS"
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00528455&two_year_transaction_period=2024&contributor_name=IATSE+LOCAL+44%2C+AFFILIATED+PROPERTY+CRAFTSPERSONS",
+      "class_basis": "rule"
     },
     {
       "transfer_id": "C00528455-in-org:IATSE_LOCAL_729,_MOTION_PICTURE_SET_PAINTERS_&_SIGN_WRITERS",
@@ -130,7 +132,8 @@
       "visibility": "disclosed",
       "transaction_type": "10",
       "limit": "unlimited",
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00528455&two_year_transaction_period=2024&contributor_name=IATSE+LOCAL+729%2C+MOTION+PICTURE+SET+PAINTERS+%26+SIGN+WRITERS"
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00528455&two_year_transaction_period=2024&contributor_name=IATSE+LOCAL+729%2C+MOTION+PICTURE+SET+PAINTERS+%26+SIGN+WRITERS",
+      "class_basis": "rule"
     },
     {
       "transfer_id": "C00528455-in-org:IATSE_LOCAL_892,_COSTUME_DESIGNERS_GUILD",
@@ -145,7 +148,8 @@
       "visibility": "disclosed",
       "transaction_type": "10",
       "limit": "unlimited",
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00528455&two_year_transaction_period=2024&contributor_name=IATSE+LOCAL+892%2C+COSTUME+DESIGNERS+GUILD"
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00528455&two_year_transaction_period=2024&contributor_name=IATSE+LOCAL+892%2C+COSTUME+DESIGNERS+GUILD",
+      "class_basis": "rule"
     }
   ],
   "outflows": [

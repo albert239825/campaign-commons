@@ -23,8 +23,8 @@
     "independent_expenditures": 37859810.12,
     "from_individuals": 69324509.06,
     "from_committees": 0.0,
-    "from_organizations": 856850.0,
-    "from_undisclosed": 15589318.0
+    "from_organizations": 1238850.0,
+    "from_undisclosed": 15207318.0
   },
   "inflows": [
     {
@@ -40,7 +40,8 @@
       "visibility": "dark",
       "transaction_type": "10",
       "limit": "unlimited",
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00799031&two_year_transaction_period=2024&contributor_name=AMERICAN+ISRAEL+PUBLIC+AFFAIRS+COMMITTEE"
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00799031&two_year_transaction_period=2024&contributor_name=AMERICAN+ISRAEL+PUBLIC+AFFAIRS+COMMITTEE",
+      "class_basis": "rule"
     },
     {
       "transfer_id": "C00799031-in-ind:KOUM_JAN|94010",
@@ -190,7 +191,8 @@
       "visibility": "dark",
       "transaction_type": "10",
       "limit": "unlimited",
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00799031&two_year_transaction_period=2024&contributor_name=KRAFT+GROUP+LLC"
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00799031&two_year_transaction_period=2024&contributor_name=KRAFT+GROUP+LLC",
+      "class_basis": "rule"
     },
     {
       "transfer_id": "C00799031-in-ind:DE_TOLEDO_PHIL|91423",

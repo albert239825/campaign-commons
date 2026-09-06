@@ -2,7 +2,7 @@
   "root_entity_id": "C00685693",
   "root_name": "CASA IN ACTION PAC",
   "race_id": "pa-sen-2024",
-  "generated_at": "2026-09-06T14:11:15+00:00",
+  "generated_at": "2026-09-06T14:25:40+00:00",
   "data_status": "real",
   "nodes": [
     {
@@ -28,7 +28,8 @@
       "is_terminus": true,
       "terminus_reason": "dark",
       "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00685693&two_year_transaction_period=2024&contributor_name=CASA+IN+ACTION",
-      "organization_class": "nonprofit"
+      "organization_class": "nonprofit",
+      "class_basis": "rule"
     },
     {
       "id": "C00728360",
@@ -53,7 +54,8 @@
       "is_terminus": true,
       "terminus_reason": "dark",
       "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00685693&two_year_transaction_period=2024&contributor_name=CLEAN+VIRGINIA+FUND",
-      "organization_class": "nonprofit"
+      "organization_class": "nonprofit",
+      "class_basis": "rule"
     },
     {
       "id": "C00697755",
@@ -78,7 +80,8 @@
       "is_terminus": true,
       "terminus_reason": "dark",
       "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00685693&two_year_transaction_period=2024&contributor_name=VIRGINIA+PLUS+PAC",
-      "organization_class": "nonprofit"
+      "organization_class": "nonprofit",
+      "class_basis": "rule"
     },
     {
       "id": "C00004036",
@@ -115,7 +118,8 @@
       "is_terminus": true,
       "terminus_reason": "dark",
       "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00685693&two_year_transaction_period=2024&contributor_name=WELLNESS+ADVOCACY+FUND",
-      "organization_class": "nonprofit"
+      "organization_class": "nonprofit",
+      "class_basis": "rule"
     },
     {
       "id": "ind:SMITH_S._SONJIA|22901",
@@ -152,7 +156,8 @@
       "is_terminus": true,
       "terminus_reason": "organization",
       "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00685693&two_year_transaction_period=2024&contributor_name=COMMUNICATIONS+WORKERS+OF+AMERICA+WORKING+VOICES",
-      "organization_class": "union"
+      "organization_class": "union",
+      "class_basis": "rule"
     },
     {
       "id": "org:COMMONWEALTH_COMMUNICATIONS",
@@ -165,7 +170,8 @@
       "is_terminus": true,
       "terminus_reason": "dark",
       "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00685693&two_year_transaction_period=2024&contributor_name=COMMONWEALTH+COMMUNICATIONS",
-      "organization_class": "unknown"
+      "organization_class": "nonprofit",
+      "class_basis": "inferred"
     },
     {
       "id": "agg:other@C00685693",
@@ -347,7 +353,8 @@
       "is_terminus": true,
       "terminus_reason": "dark",
       "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00728360&two_year_transaction_period=2024&contributor_name=LIVING+UNITED+FOR+CHANGE+IN+ARIZONA+-LUCHA",
-      "organization_class": "unknown"
+      "organization_class": "nonprofit",
+      "class_basis": "inferred"
     },
     {
       "id": "ind:GEDDES_PATRICK|94941",
@@ -470,7 +477,8 @@
       "is_terminus": true,
       "terminus_reason": "organization",
       "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00488486&two_year_transaction_period=2024&contributor_name=COMMUNICATIONS+WORKERS+OF+AMERICA",
-      "organization_class": "union"
+      "organization_class": "union",
+      "class_basis": "rule"
     },
     {
       "id": "agg:other@C00488486",
@@ -496,7 +504,8 @@
       "is_terminus": true,
       "terminus_reason": "organization",
       "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00835587&two_year_transaction_period=2024&contributor_name=CROOKED+MEDIA%2C+INC.",
-      "organization_class": "business"
+      "organization_class": "business",
+      "class_basis": "rule"
     },
     {
       "id": "ind:TAMLER_JULIE|05346",
@@ -2401,7 +2410,8 @@
         "2023-02-15",
         "2024-11-21"
       ],
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00685693&two_year_transaction_period=2024&contributor_name=CASA+IN+ACTION"
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00685693&two_year_transaction_period=2024&contributor_name=CASA+IN+ACTION",
+      "class_basis": "rule"
     },
     {
       "from": "C00728360",
@@ -2433,7 +2443,8 @@
         "2023-05-08",
         "2023-05-08"
       ],
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00685693&two_year_transaction_period=2024&contributor_name=CLEAN+VIRGINIA+FUND"
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00685693&two_year_transaction_period=2024&contributor_name=CLEAN+VIRGINIA+FUND",
+      "class_basis": "rule"
     },
     {
       "from": "C00697755",
@@ -2465,7 +2476,8 @@
         "2023-10-05",
         "2024-10-07"
       ],
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00685693&two_year_transaction_period=2024&contributor_name=VIRGINIA+PLUS+PAC"
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00685693&two_year_transaction_period=2024&contributor_name=VIRGINIA+PLUS+PAC",
+      "class_basis": "rule"
     },
     {
       "from": "C00004036",
@@ -2513,7 +2525,8 @@
         "2024-05-21",
         "2024-05-21"
       ],
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00685693&two_year_transaction_period=2024&contributor_name=WELLNESS+ADVOCACY+FUND"
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00685693&two_year_transaction_period=2024&contributor_name=WELLNESS+ADVOCACY+FUND",
+      "class_basis": "rule"
     },
     {
       "from": "ind:SMITH_S._SONJIA|22901",
@@ -2561,7 +2574,8 @@
         "2023-09-14",
         "2023-09-14"
       ],
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00685693&two_year_transaction_period=2024&contributor_name=COMMUNICATIONS+WORKERS+OF+AMERICA+WORKING+VOICES"
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00685693&two_year_transaction_period=2024&contributor_name=COMMUNICATIONS+WORKERS+OF+AMERICA+WORKING+VOICES",
+      "class_basis": "rule"
     },
     {
       "from": "org:COMMONWEALTH_COMMUNICATIONS",
@@ -2577,7 +2591,8 @@
         "2023-10-05",
         "2024-10-17"
       ],
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00685693&two_year_transaction_period=2024&contributor_name=COMMONWEALTH+COMMUNICATIONS"
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00685693&two_year_transaction_period=2024&contributor_name=COMMONWEALTH+COMMUNICATIONS",
+      "class_basis": "inferred"
     },
     {
       "from": "agg:other@C00685693",
@@ -2818,7 +2833,8 @@
         "2024-04-29",
         "2024-04-29"
       ],
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00728360&two_year_transaction_period=2024&contributor_name=LIVING+UNITED+FOR+CHANGE+IN+ARIZONA+-LUCHA"
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00728360&two_year_transaction_period=2024&contributor_name=LIVING+UNITED+FOR+CHANGE+IN+ARIZONA+-LUCHA",
+      "class_basis": "inferred"
     },
     {
       "from": "ind:GEDDES_PATRICK|94941",
@@ -2983,7 +2999,8 @@
         "2023-03-27",
         "2024-12-10"
       ],
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00488486&two_year_transaction_period=2024&contributor_name=COMMUNICATIONS+WORKERS+OF+AMERICA"
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00488486&two_year_transaction_period=2024&contributor_name=COMMUNICATIONS+WORKERS+OF+AMERICA",
+      "class_basis": "rule"
     },
     {
       "from": "agg:other@C00488486",
@@ -3017,7 +3034,8 @@
         "2023-07-01",
         "2024-12-02"
       ],
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00835587&two_year_transaction_period=2024&contributor_name=CROOKED+MEDIA%2C+INC."
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00835587&two_year_transaction_period=2024&contributor_name=CROOKED+MEDIA%2C+INC.",
+      "class_basis": "rule"
     },
     {
       "from": "ind:TAMLER_JULIE|05346",

@@ -2,7 +2,7 @@
   "root_entity_id": "C00865444",
   "root_name": "WINSENATE",
   "race_id": "pa-sen-2024",
-  "generated_at": "2026-09-06T14:11:14+00:00",
+  "generated_at": "2026-09-06T14:25:40+00:00",
   "data_status": "real",
   "nodes": [
     {
@@ -40,7 +40,8 @@
       "is_terminus": true,
       "terminus_reason": "dark",
       "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00484642&two_year_transaction_period=2024&contributor_name=MAJORITY+FORWARD",
-      "organization_class": "nonprofit"
+      "organization_class": "nonprofit",
+      "class_basis": "rule"
     },
     {
       "id": "C00490847",
@@ -89,7 +90,8 @@
       "is_terminus": true,
       "terminus_reason": "dark",
       "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00484642&two_year_transaction_period=2024&contributor_name=GREATER+NEW+YORK+HOSPITAL+ASSOCIATION+MANAGEMENT+CORPORATION",
-      "organization_class": "nonprofit"
+      "organization_class": "nonprofit",
+      "class_basis": "rule"
     },
     {
       "id": "ind:SIMONS_JAMES|10010",
@@ -162,7 +164,8 @@
       "is_terminus": true,
       "terminus_reason": "organization",
       "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00484642&two_year_transaction_period=2024&contributor_name=IBEW+PAC+EDUCATIONAL+FUND",
-      "organization_class": "union"
+      "organization_class": "union",
+      "class_basis": "rule"
     },
     {
       "id": "ind:CHAN_MICHELLE|94111",
@@ -332,7 +335,8 @@
       "is_terminus": true,
       "terminus_reason": "organization",
       "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00490847&two_year_transaction_period=2024&contributor_name=UNITED+BROTHERHOOD+OF+CARPENTERS+AND+JOINERS",
-      "organization_class": "union"
+      "organization_class": "union",
+      "class_basis": "rule"
     },
     {
       "id": "org:FUND_FOR_POLICY_REFORM",
@@ -345,7 +349,8 @@
       "is_terminus": true,
       "terminus_reason": "dark",
       "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00693382&two_year_transaction_period=2024&contributor_name=FUND+FOR+POLICY+REFORM",
-      "organization_class": "nonprofit"
+      "organization_class": "nonprofit",
+      "class_basis": "rule"
     },
     {
       "id": "org:GEOSOR_CORPORATION",
@@ -358,7 +363,8 @@
       "is_terminus": true,
       "terminus_reason": "organization",
       "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00693382&two_year_transaction_period=2024&contributor_name=GEOSOR+CORPORATION",
-      "organization_class": "business"
+      "organization_class": "business",
+      "class_basis": "rule"
     },
     {
       "id": "org:GLOBAL_OAK_HOLDINGS_LLC",
@@ -371,7 +377,8 @@
       "is_terminus": true,
       "terminus_reason": "dark",
       "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00693382&two_year_transaction_period=2024&contributor_name=GLOBAL+OAK+HOLDINGS+LLC",
-      "organization_class": "llc"
+      "organization_class": "llc",
+      "class_basis": "rule"
     },
     {
       "id": "agg:other@C00693382",
@@ -397,7 +404,8 @@
       "is_terminus": true,
       "terminus_reason": "organization",
       "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00624817&two_year_transaction_period=2024&contributor_name=INTERNATIONAL+UNION+OF+OPERATING+ENGINEERS",
-      "organization_class": "union"
+      "organization_class": "union",
+      "class_basis": "rule"
     },
     {
       "id": "ind:NEA_ADVOCACY_FUND_ASSOCIATION|20005",
@@ -786,7 +794,8 @@
       "is_terminus": true,
       "terminus_reason": "organization",
       "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00484253&two_year_transaction_period=2024&contributor_name=UNITED+FOOD+AND+COMMERCIAL+WORKERS+INTERNATIONAL+UNION",
-      "organization_class": "union"
+      "organization_class": "union",
+      "class_basis": "rule"
     },
     {
       "id": "ind:REBESCO_JOSEPH|46356",
@@ -6073,7 +6082,8 @@
         "2023-01-03",
         "2024-12-17"
       ],
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00484642&two_year_transaction_period=2024&contributor_name=MAJORITY+FORWARD"
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00484642&two_year_transaction_period=2024&contributor_name=MAJORITY+FORWARD",
+      "class_basis": "rule"
     },
     {
       "from": "C00490847",
@@ -6139,7 +6149,8 @@
         "2023-05-10",
         "2024-10-16"
       ],
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00484642&two_year_transaction_period=2024&contributor_name=GREATER+NEW+YORK+HOSPITAL+ASSOCIATION+MANAGEMENT+CORPORATION"
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00484642&two_year_transaction_period=2024&contributor_name=GREATER+NEW+YORK+HOSPITAL+ASSOCIATION+MANAGEMENT+CORPORATION",
+      "class_basis": "rule"
     },
     {
       "from": "ind:SIMONS_JAMES|10010",
@@ -6236,7 +6247,8 @@
         "2023-06-29",
         "2024-10-22"
       ],
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00484642&two_year_transaction_period=2024&contributor_name=IBEW+PAC+EDUCATIONAL+FUND"
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00484642&two_year_transaction_period=2024&contributor_name=IBEW+PAC+EDUCATIONAL+FUND",
+      "class_basis": "rule"
     },
     {
       "from": "ind:CHAN_MICHELLE|94111",
@@ -6471,7 +6483,8 @@
         "2023-04-10",
         "2024-10-28"
       ],
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00490847&two_year_transaction_period=2024&contributor_name=UNITED+BROTHERHOOD+OF+CARPENTERS+AND+JOINERS"
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00490847&two_year_transaction_period=2024&contributor_name=UNITED+BROTHERHOOD+OF+CARPENTERS+AND+JOINERS",
+      "class_basis": "rule"
     },
     {
       "from": "org:FUND_FOR_POLICY_REFORM",
@@ -6487,7 +6500,8 @@
         "2024-01-11",
         "2024-01-11"
       ],
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00693382&two_year_transaction_period=2024&contributor_name=FUND+FOR+POLICY+REFORM"
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00693382&two_year_transaction_period=2024&contributor_name=FUND+FOR+POLICY+REFORM",
+      "class_basis": "rule"
     },
     {
       "from": "org:GEOSOR_CORPORATION",
@@ -6503,7 +6517,8 @@
         "2024-09-19",
         "2024-09-19"
       ],
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00693382&two_year_transaction_period=2024&contributor_name=GEOSOR+CORPORATION"
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00693382&two_year_transaction_period=2024&contributor_name=GEOSOR+CORPORATION",
+      "class_basis": "rule"
     },
     {
       "from": "org:GLOBAL_OAK_HOLDINGS_LLC",
@@ -6519,7 +6534,8 @@
         "2024-01-31",
         "2024-06-28"
       ],
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00693382&two_year_transaction_period=2024&contributor_name=GLOBAL+OAK+HOLDINGS+LLC"
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00693382&two_year_transaction_period=2024&contributor_name=GLOBAL+OAK+HOLDINGS+LLC",
+      "class_basis": "rule"
     },
     {
       "from": "agg:other@C00693382",
@@ -6551,7 +6567,8 @@
         "2023-08-02",
         "2024-10-28"
       ],
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00624817&two_year_transaction_period=2024&contributor_name=INTERNATIONAL+UNION+OF+OPERATING+ENGINEERS"
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00624817&two_year_transaction_period=2024&contributor_name=INTERNATIONAL+UNION+OF+OPERATING+ENGINEERS",
+      "class_basis": "rule"
     },
     {
       "from": "ind:NEA_ADVOCACY_FUND_ASSOCIATION|20005",
@@ -7096,7 +7113,8 @@
         "2023-05-19",
         "2024-10-10"
       ],
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00484253&two_year_transaction_period=2024&contributor_name=UNITED+FOOD+AND+COMMERCIAL+WORKERS+INTERNATIONAL+UNION"
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00484253&two_year_transaction_period=2024&contributor_name=UNITED+FOOD+AND+COMMERCIAL+WORKERS+INTERNATIONAL+UNION",
+      "class_basis": "rule"
     },
     {
       "from": "ind:REBESCO_JOSEPH|46356",
@@ -14112,12 +14130,12 @@
   ],
   "summary": {
     "total_in": 312850000.0,
-    "disclosed_share": 0.6386,
+    "disclosed_share": 0.6415,
     "disclosed_individuals_share": 0.5151,
-    "disclosed_organizations_share": 0.1235,
+    "disclosed_organizations_share": 0.1264,
     "inferable_share": 0.0,
     "unwalked_share": 0.0257,
-    "dark_share": 0.3357,
+    "dark_share": 0.3328,
     "max_depth": 5,
     "terminus_counts": {
       "dark": 4,
@@ -14140,7 +14158,7 @@
     {
       "id": "dead_end_dark",
       "label": "Chain ends at undisclosed donors",
-      "detail": "34% of WINSENATE's receipts stop at organizations whose own funding is not on file (advocacy nonprofits, LLCs, trusts) rather than at named individuals, businesses or unions.",
+      "detail": "33% of WINSENATE's receipts stop at organizations whose own funding is not on file (advocacy nonprofits, LLCs, trusts) rather than at named individuals, businesses or unions.",
       "evidence_url": "https://www.fec.gov/data/committee/C00865444/?cycle=2024"
     },
     {

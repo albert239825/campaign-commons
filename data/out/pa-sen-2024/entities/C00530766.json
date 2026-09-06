@@ -23,8 +23,8 @@
     "independent_expenditures": 7003104.0,
     "from_individuals": 345524.85,
     "from_committees": 11491901.96,
-    "from_organizations": 13.0,
-    "from_undisclosed": 14902.0
+    "from_organizations": 14915.0,
+    "from_undisclosed": 0.0
   },
   "inflows": [
     {
@@ -112,10 +112,11 @@
       "date": "2024-12-31",
       "first_date": "2023-11-01",
       "count": 7,
-      "visibility": "dark",
+      "visibility": "disclosed",
       "transaction_type": "10",
       "limit": "unlimited",
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00530766&two_year_transaction_period=2024&contributor_name=FEDERATED+HERMES+INTERNATIONAL"
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00530766&two_year_transaction_period=2024&contributor_name=FEDERATED+HERMES+INTERNATIONAL",
+      "class_basis": "inferred"
     },
     {
       "transfer_id": "C00530766-in-ind:MEZIERE_DON|92027",

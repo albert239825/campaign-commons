@@ -20,7 +20,7 @@ Source of truth: [`contracts/src/schemas.ts`](../contracts/src/schemas.ts). This
 | `search.json` | `SearchIndex` | `campaign_commons.search` (Block 2) | header search box (client) |
 
 Block 2 also *patches* existing files in place: `campaign_commons.vendors` adds `vendors[]` and per-IE `vendor_id`/`medium` to
-`entities/*.json`; `campaign_commons.issues` adds `issue_focus` to entities and `issues` (`{issue_ids, basis}`) to ads and IE rows; `campaign_commons.ads` adds
+`entities/*.json`; `campaign_commons.issues` adds `issue_focus` and optional `issue_positions` to entities and `issues` (`{issue_ids, basis}`) to ads and IE rows; `campaign_commons.ads` adds
 `sponsor_visibility_shares` and `vendor_links[]` to ads. All additive optional fields — V0 files stay valid.
 
 ## Hand-maintained inputs (`data/hand/<race_id>/`)
@@ -28,6 +28,7 @@ Block 2 also *patches* existing files in place: `campaign_commons.vendors` adds 
 | File | Schema | Edited by | Consumed by |
 | --- | --- | --- | --- |
 | `issue_focus.json` | `HandIssueFocusFile` | issue-focus child, teammates | `campaign_commons.issues` → `Entity.issue_focus`, `issues.json.by_spender_focus` |
+| `issue_positions.json` | `HandIssuePositionsFile` | issue-enrichment stage, human reviewers | `campaign_commons.issues_enrich` → `Entity.issue_positions` |
 | `ad_issues.json` | `HandAdIssuesFile` | media-wall child, teammates | `campaign_commons.issues` → `Ad.issues`, `issues.json.by_ad_issue` |
 | `x_ad_issues.json` | `HandXAdIssuesFile` | enrichment stage, reviewers | `campaign_commons.ads_enrich` → optional `Ad.machine_issues` (transcript, rationale, confidence, provenance, review status) |
 | `x_issue_focus.json` | `HandXIssueFocusFile` | enrichment stage, reviewers | `campaign_commons.issues` → optional `Entity.x_enrichment.issue_focus` (website description, quote, provenance, review status) |

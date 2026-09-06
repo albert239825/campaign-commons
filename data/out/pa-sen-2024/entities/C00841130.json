@@ -23,8 +23,8 @@
     "independent_expenditures": 0,
     "from_individuals": 32943295.63,
     "from_committees": 5419299.98,
-    "from_organizations": 98350.0,
-    "from_undisclosed": 44584.0
+    "from_organizations": 108350.0,
+    "from_undisclosed": 34584.0
   },
   "inflows": [
     {
@@ -130,7 +130,8 @@
       "visibility": "disclosed",
       "transaction_type": "10",
       "limit": null,
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00841130&two_year_transaction_period=2024&contributor_name=CDR+ENTERPRISES+INC."
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00841130&two_year_transaction_period=2024&contributor_name=CDR+ENTERPRISES+INC.",
+      "class_basis": "rule"
     },
     {
       "transfer_id": "C00841130-in-ind:VALLENCOURT_KATHRYN|32073",
@@ -190,7 +191,8 @@
       "visibility": "disclosed",
       "transaction_type": "10",
       "limit": null,
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00841130&two_year_transaction_period=2024&contributor_name=THE+VESTCOR+COMPANIES+INC."
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00841130&two_year_transaction_period=2024&contributor_name=THE+VESTCOR+COMPANIES+INC.",
+      "class_basis": "rule"
     },
     {
       "transfer_id": "C00841130-in-org:RING_POWER_CORPORATION",
@@ -205,7 +207,8 @@
       "visibility": "disclosed",
       "transaction_type": "10",
       "limit": null,
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00841130&two_year_transaction_period=2024&contributor_name=RING+POWER+CORPORATION"
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00841130&two_year_transaction_period=2024&contributor_name=RING+POWER+CORPORATION",
+      "class_basis": "rule"
     },
     {
       "transfer_id": "C00841130-in-ind:KOSLOSKE_MICHAEL|33613",

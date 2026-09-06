@@ -2,7 +2,7 @@
   "root_entity_id": "C00873877",
   "root_name": "SOLIDARITY VICTORY PAC",
   "race_id": "pa-sen-2024",
-  "generated_at": "2026-09-06T14:11:15+00:00",
+  "generated_at": "2026-09-06T14:25:40+00:00",
   "data_status": "real",
   "nodes": [
     {
@@ -220,7 +220,8 @@
       "is_terminus": true,
       "terminus_reason": "dark",
       "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00728360&two_year_transaction_period=2024&contributor_name=LIVING+UNITED+FOR+CHANGE+IN+ARIZONA+-LUCHA",
-      "organization_class": "unknown"
+      "organization_class": "nonprofit",
+      "class_basis": "inferred"
     },
     {
       "id": "ind:GEDDES_PATRICK|94941",
@@ -674,7 +675,8 @@
         "2024-04-29",
         "2024-04-29"
       ],
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00728360&two_year_transaction_period=2024&contributor_name=LIVING+UNITED+FOR+CHANGE+IN+ARIZONA+-LUCHA"
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00728360&two_year_transaction_period=2024&contributor_name=LIVING+UNITED+FOR+CHANGE+IN+ARIZONA+-LUCHA",
+      "class_basis": "inferred"
     },
     {
       "from": "ind:GEDDES_PATRICK|94941",

@@ -23,8 +23,8 @@
     "independent_expenditures": 37764477.49,
     "from_individuals": 48995645.94,
     "from_committees": 116873.04,
-    "from_organizations": 3414800.0,
-    "from_undisclosed": 92180813.0
+    "from_organizations": 4463300.0,
+    "from_undisclosed": 91132313.0
   },
   "inflows": [
     {
@@ -40,7 +40,8 @@
       "visibility": "dark",
       "transaction_type": "10",
       "limit": "unlimited",
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00834077&two_year_transaction_period=2024&contributor_name=EMPOWER+PARENTS+PAC"
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00834077&two_year_transaction_period=2024&contributor_name=EMPOWER+PARENTS+PAC",
+      "class_basis": "rule"
     },
     {
       "transfer_id": "C00834077-in-ind:BIGELOW_ROBERT_T.|89119",
@@ -70,7 +71,8 @@
       "visibility": "dark",
       "transaction_type": "10",
       "limit": "unlimited",
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00834077&two_year_transaction_period=2024&contributor_name=FAITHFUL+%26+STRONG+POLICIES+INC."
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00834077&two_year_transaction_period=2024&contributor_name=FAITHFUL+%26+STRONG+POLICIES+INC.",
+      "class_basis": "rule"
     },
     {
       "transfer_id": "C00834077-in-ind:LEONE_DOUGLAS_M.|94027",
@@ -232,10 +234,11 @@
       "date": "2023-08-10",
       "first_date": "2023-08-10",
       "count": 1,
-      "visibility": "dark",
+      "visibility": "disclosed",
       "transaction_type": "10",
       "limit": "unlimited",
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00834077&two_year_transaction_period=2024&contributor_name=SEMINOLE+GAMING"
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00834077&two_year_transaction_period=2024&contributor_name=SEMINOLE+GAMING",
+      "class_basis": "inferred"
     },
     {
       "transfer_id": "C00834077-in-org:PULLEY_MANAGEMENT_SERVICES_INC.",
@@ -250,7 +253,8 @@
       "visibility": "disclosed",
       "transaction_type": "10",
       "limit": "unlimited",
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00834077&two_year_transaction_period=2024&contributor_name=PULLEY+MANAGEMENT+SERVICES+INC."
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00834077&two_year_transaction_period=2024&contributor_name=PULLEY+MANAGEMENT+SERVICES+INC.",
+      "class_basis": "rule"
     },
     {
       "transfer_id": "C00834077-in-ind:MITZNER_IRA|77010",
@@ -280,7 +284,8 @@
       "visibility": "disclosed",
       "transaction_type": "10",
       "limit": "unlimited",
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00834077&two_year_transaction_period=2024&contributor_name=HERZOG+RAILROAD+SERVICES+INC."
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00834077&two_year_transaction_period=2024&contributor_name=HERZOG+RAILROAD+SERVICES+INC.",
+      "class_basis": "rule"
     },
     {
       "transfer_id": "C00834077-in-org:BUCKLEY",
@@ -295,7 +300,8 @@
       "visibility": "dark",
       "transaction_type": "10",
       "limit": "unlimited",
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00834077&two_year_transaction_period=2024&contributor_name=BUCKLEY"
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00834077&two_year_transaction_period=2024&contributor_name=BUCKLEY",
+      "class_basis": "rule"
     },
     {
       "transfer_id": "C00834077-in-ind:CULVERHOUSE_HUGH_F._JR.|33134",

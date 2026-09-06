@@ -55,7 +55,8 @@
       "visibility": "disclosed",
       "transaction_type": "10",
       "limit": "unlimited",
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00488742&two_year_transaction_period=2024&contributor_name=NORTHERN+NEVADA+REGIONAL+MLS+INC."
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00488742&two_year_transaction_period=2024&contributor_name=NORTHERN+NEVADA+REGIONAL+MLS+INC.",
+      "class_basis": "rule"
     },
     {
       "transfer_id": "C00488742-in-org:GREATER_LANSING_ASSOCIATION_OF_REALTORS",
@@ -70,7 +71,8 @@
       "visibility": "dark",
       "transaction_type": "10",
       "limit": "unlimited",
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00488742&two_year_transaction_period=2024&contributor_name=GREATER+LANSING+ASSOCIATION+OF+REALTORS"
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00488742&two_year_transaction_period=2024&contributor_name=GREATER+LANSING+ASSOCIATION+OF+REALTORS",
+      "class_basis": "rule"
     }
   ],
   "outflows": [

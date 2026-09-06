@@ -2,7 +2,7 @@
   "root_entity_id": "C00042366",
   "root_name": "DSCC",
   "race_id": "pa-sen-2024",
-  "generated_at": "2026-09-06T14:11:14+00:00",
+  "generated_at": "2026-09-06T14:25:40+00:00",
   "data_status": "real",
   "nodes": [
     {
@@ -1029,7 +1029,8 @@
       "is_terminus": true,
       "terminus_reason": "organization",
       "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00658476&two_year_transaction_period=2024&contributor_name=GRATON+RANCHERIA",
-      "organization_class": "business"
+      "organization_class": "business",
+      "class_basis": "rule"
     },
     {
       "id": "ind:WILSON_STEVE_S|40202",
@@ -2132,7 +2133,8 @@
       "is_terminus": true,
       "terminus_reason": "dark",
       "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00849026&two_year_transaction_period=2024&contributor_name=CUNEO+GILBERT+%26+LADUCA+LLP",
-      "organization_class": "llc"
+      "organization_class": "llc",
+      "class_basis": "rule"
     },
     {
       "id": "ind:GOODISON_JACK_L.|02852",
@@ -4375,7 +4377,8 @@
       "is_terminus": true,
       "terminus_reason": "dark",
       "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00859306&two_year_transaction_period=2024&contributor_name=CHEROKEE+NATION",
-      "organization_class": "unknown"
+      "organization_class": "unknown",
+      "class_basis": "rule"
     },
     {
       "id": "ind:STAISEY_NANCY|19958",
@@ -9145,7 +9148,8 @@
         "2023-04-03",
         "2023-04-03"
       ],
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00658476&two_year_transaction_period=2024&contributor_name=GRATON+RANCHERIA"
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00658476&two_year_transaction_period=2024&contributor_name=GRATON+RANCHERIA",
+      "class_basis": "rule"
     },
     {
       "from": "ind:WILSON_STEVE_S|40202",
@@ -10719,7 +10723,8 @@
         "2024-09-04",
         "2024-09-04"
       ],
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00849026&two_year_transaction_period=2024&contributor_name=CUNEO+GILBERT+%26+LADUCA+LLP"
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00849026&two_year_transaction_period=2024&contributor_name=CUNEO+GILBERT+%26+LADUCA+LLP",
+      "class_basis": "rule"
     },
     {
       "from": "ind:GOODISON_JACK_L.|02852",
@@ -13757,7 +13762,8 @@
         "2024-10-22",
         "2024-10-22"
       ],
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00859306&two_year_transaction_period=2024&contributor_name=CHEROKEE+NATION"
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00859306&two_year_transaction_period=2024&contributor_name=CHEROKEE+NATION",
+      "class_basis": "rule"
     },
     {
       "from": "ind:STAISEY_NANCY|19958",
@@ -18274,12 +18280,12 @@
   ],
   "summary": {
     "total_in": 195918710.0,
-    "disclosed_share": 0.991,
+    "disclosed_share": 0.9968,
     "disclosed_individuals_share": 0.9845,
-    "disclosed_organizations_share": 0.0065,
+    "disclosed_organizations_share": 0.0123,
     "inferable_share": 0.0,
     "unwalked_share": 0.0005,
-    "dark_share": 0.0085,
+    "dark_share": 0.0027,
     "max_depth": 4,
     "terminus_counts": {
       "pruned": 41,

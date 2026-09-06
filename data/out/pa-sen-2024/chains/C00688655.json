@@ -2,7 +2,7 @@
   "root_entity_id": "C00688655",
   "root_name": "EVERYTOWN FOR GUN SAFETY VICTORY FUND (EVERYTOWN VICTORY FUND)",
   "race_id": "pa-sen-2024",
-  "generated_at": "2026-09-06T14:11:15+00:00",
+  "generated_at": "2026-09-06T14:25:40+00:00",
   "data_status": "real",
   "nodes": [
     {
@@ -28,7 +28,8 @@
       "is_terminus": true,
       "terminus_reason": "dark",
       "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00688655&two_year_transaction_period=2024&contributor_name=EVERYTOWN+FOR+GUN+SAFETY+ACTION+FUND+INC",
-      "organization_class": "nonprofit"
+      "organization_class": "nonprofit",
+      "class_basis": "rule"
     },
     {
       "id": "C00878009",
@@ -139,7 +140,8 @@
       "is_terminus": true,
       "terminus_reason": "dark",
       "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00495028&two_year_transaction_period=2024&contributor_name=HOUSE+MAJORITY+FORWARD",
-      "organization_class": "nonprofit"
+      "organization_class": "nonprofit",
+      "class_basis": "rule"
     },
     {
       "id": "C00490847",
@@ -224,7 +226,8 @@
       "is_terminus": true,
       "terminus_reason": "organization",
       "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00495028&two_year_transaction_period=2024&contributor_name=IBEW+PAC+EDUCATIONAL+FUND",
-      "organization_class": "union"
+      "organization_class": "union",
+      "class_basis": "rule"
     },
     {
       "id": "ind:SIMONS_ELIZABETH_D.|94027",
@@ -333,7 +336,8 @@
       "is_terminus": true,
       "terminus_reason": "organization",
       "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00495028&two_year_transaction_period=2024&contributor_name=AFT+SOLIDARITY+527",
-      "organization_class": "union"
+      "organization_class": "union",
+      "class_basis": "rule"
     },
     {
       "id": "agg:other@C00495028",
@@ -359,7 +363,8 @@
       "is_terminus": true,
       "terminus_reason": "organization",
       "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00490847&two_year_transaction_period=2024&contributor_name=UNITED+BROTHERHOOD+OF+CARPENTERS+AND+JOINERS",
-      "organization_class": "union"
+      "organization_class": "union",
+      "class_basis": "rule"
     },
     {
       "id": "org:FUND_FOR_POLICY_REFORM",
@@ -372,7 +377,8 @@
       "is_terminus": true,
       "terminus_reason": "dark",
       "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00693382&two_year_transaction_period=2024&contributor_name=FUND+FOR+POLICY+REFORM",
-      "organization_class": "nonprofit"
+      "organization_class": "nonprofit",
+      "class_basis": "rule"
     },
     {
       "id": "org:GEOSOR_CORPORATION",
@@ -385,7 +391,8 @@
       "is_terminus": true,
       "terminus_reason": "organization",
       "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00693382&two_year_transaction_period=2024&contributor_name=GEOSOR+CORPORATION",
-      "organization_class": "business"
+      "organization_class": "business",
+      "class_basis": "rule"
     },
     {
       "id": "org:GLOBAL_OAK_HOLDINGS_LLC",
@@ -398,7 +405,8 @@
       "is_terminus": true,
       "terminus_reason": "dark",
       "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00693382&two_year_transaction_period=2024&contributor_name=GLOBAL+OAK+HOLDINGS+LLC",
-      "organization_class": "llc"
+      "organization_class": "llc",
+      "class_basis": "rule"
     },
     {
       "id": "agg:other@C00693382",
@@ -3728,7 +3736,8 @@
         "2023-01-31",
         "2024-12-31"
       ],
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00688655&two_year_transaction_period=2024&contributor_name=EVERYTOWN+FOR+GUN+SAFETY+ACTION+FUND+INC"
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00688655&two_year_transaction_period=2024&contributor_name=EVERYTOWN+FOR+GUN+SAFETY+ACTION+FUND+INC",
+      "class_basis": "rule"
     },
     {
       "from": "C00878009",
@@ -3874,7 +3883,8 @@
         "2023-01-10",
         "2024-12-30"
       ],
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00495028&two_year_transaction_period=2024&contributor_name=HOUSE+MAJORITY+FORWARD"
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00495028&two_year_transaction_period=2024&contributor_name=HOUSE+MAJORITY+FORWARD",
+      "class_basis": "rule"
     },
     {
       "from": "C00490847",
@@ -3986,7 +3996,8 @@
         "2023-09-27",
         "2024-10-30"
       ],
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00495028&two_year_transaction_period=2024&contributor_name=IBEW+PAC+EDUCATIONAL+FUND"
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00495028&two_year_transaction_period=2024&contributor_name=IBEW+PAC+EDUCATIONAL+FUND",
+      "class_basis": "rule"
     },
     {
       "from": "ind:SIMONS_ELIZABETH_D.|94027",
@@ -4130,7 +4141,8 @@
         "2023-12-20",
         "2024-09-30"
       ],
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00495028&two_year_transaction_period=2024&contributor_name=AFT+SOLIDARITY+527"
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00495028&two_year_transaction_period=2024&contributor_name=AFT+SOLIDARITY+527",
+      "class_basis": "rule"
     },
     {
       "from": "agg:other@C00495028",
@@ -4167,7 +4179,8 @@
         "2023-04-10",
         "2024-10-28"
       ],
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00490847&two_year_transaction_period=2024&contributor_name=UNITED+BROTHERHOOD+OF+CARPENTERS+AND+JOINERS"
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00490847&two_year_transaction_period=2024&contributor_name=UNITED+BROTHERHOOD+OF+CARPENTERS+AND+JOINERS",
+      "class_basis": "rule"
     },
     {
       "from": "org:FUND_FOR_POLICY_REFORM",
@@ -4183,7 +4196,8 @@
         "2024-01-11",
         "2024-01-11"
       ],
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00693382&two_year_transaction_period=2024&contributor_name=FUND+FOR+POLICY+REFORM"
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00693382&two_year_transaction_period=2024&contributor_name=FUND+FOR+POLICY+REFORM",
+      "class_basis": "rule"
     },
     {
       "from": "org:GEOSOR_CORPORATION",
@@ -4199,7 +4213,8 @@
         "2024-09-19",
         "2024-09-19"
       ],
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00693382&two_year_transaction_period=2024&contributor_name=GEOSOR+CORPORATION"
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00693382&two_year_transaction_period=2024&contributor_name=GEOSOR+CORPORATION",
+      "class_basis": "rule"
     },
     {
       "from": "org:GLOBAL_OAK_HOLDINGS_LLC",
@@ -4215,7 +4230,8 @@
         "2024-01-31",
         "2024-06-28"
       ],
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00693382&two_year_transaction_period=2024&contributor_name=GLOBAL+OAK+HOLDINGS+LLC"
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00693382&two_year_transaction_period=2024&contributor_name=GLOBAL+OAK+HOLDINGS+LLC",
+      "class_basis": "rule"
     },
     {
       "from": "agg:other@C00693382",
@@ -8620,12 +8636,12 @@
   ],
   "summary": {
     "total_in": 22475647.0,
-    "disclosed_share": 0.3415,
+    "disclosed_share": 0.3416,
     "disclosed_individuals_share": 0.3381,
-    "disclosed_organizations_share": 0.0033,
+    "disclosed_organizations_share": 0.0035,
     "inferable_share": 0.0,
     "unwalked_share": 0.0,
-    "dark_share": 0.6585,
+    "dark_share": 0.6584,
     "max_depth": 5,
     "terminus_counts": {
       "dark": 4,

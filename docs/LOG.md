@@ -31,6 +31,9 @@ it came from.
 | 16:30 | Critic round 2 (child) | 16 findings; 2 P0 |
 | 16:30–17:30 | Repo move + round-2 fixes (master) | Single "Initial commit" on `DN-Hacks-2026`; PR #1 closes C-29..C-36; outside total $235.7M → $233.4M |
 | 17:30–18:30 | Whiteboard → ontology | Race nav, docs wiki (FAQ / QUESTIONS / DECISIONS), `ONTOLOGY.md` (questions × surfaces, ER diagram, sources, V0/V1/V2 scope) |
+| 20:30–21:30 | Money Trails (`feature/ask-money-trails`) | `TrailsSchema` + `trails.json`, deterministic question resolver, `/races/<race>/ask` answer pages (D-73) |
+| 23:00–00:30 | Money Trails LLM router (`feature/ask-llm-router`) | `/api/ask-route` + `ask-llm.ts`: Grok picks the route from the closed set, resolver still decides the page, deterministic fallback (D-75) |
+| 01:00–03:00 | Money Trails graph mode (`feature/ask-graph`) | Local Neo4j loaded from `data/out`; `/api/ask-graph`: four allowlisted operations, source-backed facts, Grok narrates only from them and is withheld when it strays (D-83) |
 
 ## Challenges and how we overcame them
 
@@ -127,6 +130,106 @@ exactly 38 rows.
 **Problem.** Pre-hackathon prototype work existed on another repo with 60+ commits.
 **Decision.** Copy the tree to `DN-Hacks-2026` as a single "Initial commit" — no history rewriting, no backdating, no fake
 authorship. Disclose pre-built work if asked rather than hide it.
+
+### 13. Money Trails — plain-English answers without a model (D-73)
+**Ask.** "Who is spending against Casey?", "Who paid for the ads about McCormick?", "Who funds WinSenate?" — typed, answered
+in one sourced sentence, weekend scope, no LLM and no graph database.
+**Problem.** Free text invites either a model (unauditable, can invent) or a brittle parser. And the ad question is a trap:
+Google records a sponsor and a spend *range* per ad, the FEC records the sponsor's for/against dollars and its funders, and
+nothing joins a funder to an ad — pooled money cannot be allocated.
+**How.** Precompute every answer the parser can reach (`pipeline/gotham/trails.py`, from the existing ledger/ads/chains/entities;
+no downloads) into `trails.json` under a new `TrailsSchema`, then resolve the typed question in the browser by whole-word alias
+matching over the emitted `subjects[].aliases` plus ordered keyword lists (ads > stance > funding). Money and targeting are
+separate schema types and separate visual rows; the ad answer shows *ads it ran* / *what it declared about the candidate* /
+*money into the sponsor* as three columns with a pooled-funds line under the third. Anything the parser cannot place returns a
+typed refusal with the questions it *can* answer.
+**Dead ends.** Committee names carry intent words ("… Independent Expenditure Committee", "… Fund") and hijacked the intent;
+fixed by removing the matched alias before detecting intent. The first WINSENATE headline named "Other contributors" as the
+largest funder — aggregate nodes are now excluded from prose but kept as sourced rows. A `method` string inside the shares
+object failed validation and was moved to answer caveats.
+**Numbers.** PA-Sen: 102 subjects, 104 answers (2 + 2 candidate, 100 committee), 1,937 FEC + 76 Google source links in one
+file, 1.2 MB; 14 pipeline tests + 23 resolver tests; static pages 2,147 → 2,252; validated files 2,142 → 2,143.
+
+### 14. Money Trails — let a model read the question, never write the answer (D-75)
+**Ask.** The D-73 resolver refuses anything it cannot alias-match: "who's bankrolling the attack ads on Casey", "AFP Action
+donors", "which super PACs are going after McCormick" all fall through. Add an LLM for recall without giving up the property
+that every rendered number and sentence is precomputed and source-linked.
+**Problem.** A model that answers can invent; a model that only *routes* cannot — but only if the route is checked, since
+structured output can still emit a well-formed id that is not in the race. And the site was fully static; this is the first
+request that runs code on Vercel.
+**How.** `web/src/lib/ask-llm.ts` sends xAI (`grok-4.5`, `reasoning_effort: low`) the three intents with their labels and the
+race's `{id, kind, name}` list, and constrains the reply with a strict `json_schema` whose enums *are* those two closed sets
+(`{route: {intent, subjectId} | null}`). Layer two re-validates the parsed values with `isIntent()` and `subjects.some()`.
+`web/src/app/api/ask-route/route.ts` (`runtime = "nodejs"`, `force-dynamic`) then hands a valid route to `resolveRoute(intent,
+subject)` — the kind rules split out of `resolveQuestion` (which still calls them) — so candidate-funding still lands on the
+principal committee with its note and committee-spend still gets the typed refusal, for the exact subject the model picked;
+anything less than a valid route (no key, 6 s timeout, 4xx/5xx, malformed body, off-set value) resolves the raw text exactly as
+the browser did. The route is guarded (`ask-limits.ts`): 10 asks/min per client address (the address is taken from the forwarding header only on Vercel, which
+overwrites it; off Vercel a caller could forge it, so everyone shares one bucket) and 4 model calls in flight per instance, beyond which it answers 429 without calling the provider and the browser resolves locally. The ask box POSTs with its own 8 s budget and resolves locally
+if the call fails at all; suggestion chips never call the model. The response is a `Resolution` plus `via: "llm" | "fallback"`;
+no model text is in it. Both pages end in a two-part receipt: how the question is read (web copy: model picks from the closed list, browser matcher
+otherwise, nothing it writes is shown) and how the answers were built (`trails.method`). That pipeline sentence used to say the
+question is "matched … in the browser; no language model or graph database is involved" — now stale, so `trails.py` says only
+that none is involved *in building* the answers, and `trails.json` was regenerated (`method` and `generated_at` are the only
+changed fields). `answer.tsx`, the resolver and its 23 tests are untouched. `next.config.ts` has no
+`output: "export"`, so the one route deploys as one serverless function and every page stays static. Both ask pages moved onto
+the record-page shell from PR #14 (detail banner, side section nav, paper/sand palette, square controls) via page composition and
+scoped `.ask-page` CSS; `answer.tsx` itself is untouched.
+**Dead ends.** `grok-4.5` at its default reasoning effort took 4–8 s per route; `low` brings most asks to 2–3 s but two of ten
+live questions still took 7 s and 13 s — the budget is 6 s and those fall back rather than wait. The Next `route.ts` may export
+only handler fields, so the seed/fallback logic lives in `ask-router.ts` where it can be unit-tested; a `vitest.config.mts`
+mirrors the `@/` path alias for the handler test. One live miss: "who bankrolls bob" routed to *spending against* Casey
+(a real, sourced page, wrong intent) — the model can be wrong, it cannot fabricate. First cut re-seeded a valid route as text
+(`"<intent> <aliases[0]>"`); review caught that a shared alias (two committees both answering to "america") would then land on
+whichever sorts first — hence `resolveRoute` taking the subject itself. The rate limit is in-memory: there is no shared store in
+this deploy, so it is per warm instance, and stated as such.
+**Numbers.** Live with the key (PA-Sen): 8/10 questions routed, 2 correctly null ("tell me about casey", weather); p50 ≈ 2.8 s;
+2,638 prompt tokens per ask (2,560 served from cache on repeat), ~160 reasoning + 20 output tokens; at list price
+$2 / $6 per M ≈ $0.006 per ask cold, ≈ $0.002 cached. Tests 23 → 57 (16 classifier, 15 route handler, 3 limiter, all offline with a
+mocked `fetch`); serverless functions 0 → 1; static pages unchanged.
+
+### 15. Money Trails — graph mode: the model may narrate, but only what the graph returned (D-83)
+**Ask.** Two kinds of question the route resolver cannot serve even with D-75 behind it: traversal ("does Elon Musk's money
+reach Bob Casey?") and aggregation across subjects ("who do WinSenate and Women Vote share as funders?", "who funds
+McCormick's funders?"). No precomputed page holds those, and the router can only pick pages. The direction agreed: not
+unrestricted Grok answers; route-only stays canonical; a graph path for traversal questions where Grok writes a narrative
+*only after* the server has validated the race, the subjects and the relationship, run an allowlisted query and got
+source-backed facts back.
+**Problem.** Three ways this goes wrong and each needed a wall: the model picks a subject that is not in the race (or a
+homonym), the query becomes a place to smuggle text into Cypher, and the narrative states a number the records do not
+contain (a sum, a rounded figure, a "12 gifts" from general knowledge). And there was no graph: the chain walk is pandas
+over static JSON (see "Graph database?" below — the trigger it named, ad-hoc runtime traversal, is this).
+**How.** A local `neo4j:5` in docker, loaded by `web/scripts/load-graph.ts` from what the pipeline already publishes: 86
+chains, 2,000 entity pages, 50 donor pages, 500 ads, ledger, trails → 35,995 `Entity` nodes and 77,236 edges in five types
+(`GAVE` 75,831 · `PAID` 314 · `PLACED` 550 · `TARGETED` 539 · `CAMPAIGN_OF` 2). Money and targeting never share a type, so
+Musk → Senate Leadership Fund → Casey is `GAVE` then `TARGETED` and the fact sentence says "spent $52,799,240 opposing Bob Casey
+(independent spending; none of it goes to the candidate)". Every row keeps its `source_url`. `graphRows()` is pure and
+tested against the real artifacts; the loader MERGEs on keys so a regenerate is a re-run (`--reset` drops the race first).
+Server side (`web/src/lib/graph/`), `answerGraphQuestion` runs a fixed sequence and stops at the first failure with a typed
+refusal: Neo4j configured → key present → Grok classifies into one of four operations (`shared_funders`, `money_path`,
+`funder_reach`, `upstream`) plus subjects under a strict schema whose id enum is `trails.subjects` — a free-text `mention` is
+allowed only for people and organizations that are not on that list — re-validated in code → subjects resolved by id, or by
+name tokens with an exact-cover rule (two Jeff Yass ids collapse into one subject; "John Smith" against two different Smiths
+refuses with both names) → kinds checked per position (candidate → campaign committee on the funding side; the candidate node
+itself for a money path) → one fixed Cypher statement per operation with `$race`, `$a`, `$b` as its only parameters, ≤ 40
+facts → *then* the narrator, which sees the question and the numbered fact sentences only, returns one field, and is checked:
+each sentence with a number cites `[n]`, each number is a fact's amount/count/year/name digit, no URLs, ≤ 1,200 chars. A
+narrative that fails is withheld with the reason and the facts render anyway. `/api/ask-graph` sits behind its own limiter
+(6/min per client, 2 in flight). The browser tries it only after `/api/ask-route` said unsupported, in a separate
+`GraphAnswer` component whose header says what was asked of the graph and whose narrative is labelled model-written; every
+fact below it is a deterministic sentence with a source link. `/api/ask-route`, `answer.tsx`, the resolver and the answer
+pages are byte-for-byte what D-75 left.
+**Dead ends.** Chains alone gave Musk → Casey zero paths: campaign committees' receipts live on entity pages, not in chains,
+so those (and donors' own gifts) went into the projection. The narrator shared the classifier's 6 s budget and timed out
+on every ask (6–11 s observed) — it has its own 15 s. Grok puts citations after the period ("… fund. [1]") and Neo4j's
+uppercase names carry periods ("NAU, JOHN L. MR. III") and digits ("2024 THUNE …"), all of which the first guard rejected as
+uncited or unknown; the guard now normalises citation placement, does not split inside uppercase names, and allows digits
+that appear in a fact's name. Neo4j Community has no node-key constraints (`IS UNIQUE` instead) and no `CALL … IN
+TRANSACTIONS` inside an explicit transaction (reset is one `DETACH DELETE`). D-76–D-82 were taken meanwhile; this is D-83.
+**Numbers.** Live on PA-Sen: Musk → Casey `money_path` 8 facts, narrative ok; WinSenate ∩ Women Vote `shared_funders` → SMP,
+2 facts; McCormick `upstream` 30 facts; Yass `funder_reach` 17 facts. Classifier 2–4 s, narrator 6–11 s. Tests 59 → 126 (9
+schema on real artifacts, 14 queries, 23 classifier/narrator/guard, 13 orchestration, 8 endpoint incl. limiter and an
+`/api/ask-route`-unchanged check; all offline with `fetch` and the Neo4j runner faked). Serverless functions 1 → 2.
 
 ## Research and dead ends worth mentioning
 
@@ -622,6 +725,22 @@ nodes and 3 ribbons, dims 93 elements. `npm run lint`, `npm run typecheck`, `npm
 changes. Not exercised in the running app: an ad page with both a placement spine and a targeting arrow — no ad in the PA
 data has a walked sponsor chain *and* a `candidate_ids` entry — so that shape is covered by the unit fixture only.
 
+## 2026-09-06 ~06:00 — Spender issue positions (Money Trails follow-up)
+
+**What changed.** Added a third issue layer: an offline `grok-4.5` enrichment stage reads each outside spender's own site,
+keeps only rows whose quote appears verbatim on the fetched page, and writes 30 model-read positions across 17 spenders.
+The web adds a `spender_issue` intent and guard, plus static issue answer pages built from each candidate's existing spender
+answer and the entities' issue positions. Model rows are marked `inferred` until a person verifies them.
+
+**Challenge.** The question "ads supporting Casey about abortion" initially collapsed into ad-funding because the resolver
+saw the ad language first. Ad-level issue tags were too sparse to answer this reliably (13/500), so issue naming now routes
+to the fixed issue-position pages before ordinary intent detection.
+
+**Numbers.** 30 positions across 17 of 98 outside spenders; 8 rows dropped by the verbatim guard. The stage fetched 23
+spenders with hand-provided URLs and skipped 75 for want of a URL after FEC website discovery hit a DEMO_KEY 429.
+
+**Open.** Rerun with `FEC_API_KEY` to cover the tail, then have a human verify the 30 rows.
+
 ## 2026-09-06 ~08:00 — Block 3 child E: the Policies tab is the stance record, beside the spenders that say they care (child E)
 
 **What changed.** New top-level race tab `/races/<race>/policies` (T1–T3 in `docs/plans/2026-09-06-block3.md`). Ten issues in
@@ -728,6 +847,59 @@ Added `enrich_funders.py` for ranked upstream `org:` funders, open-web self-desc
 and `enrich-funders`/`enrich-review --kind funders`.
 Added `enrich_dossiers.py`, optional X-post verification, `x_accounts.json`, and dossier materialization for pending
 machine stance suggestions.
+
+### 2026-09-06 — Upstream funder enrichment scaled to every org ≥ $10k (parallel)
+
+**What changed.** `enrich_funders.py` gained `--min-total <usd>` (select every `org:` funder whose summed upstream
+dollars meet the threshold, ranked by total desc; `--top` unchanged when absent) and `--concurrency` (default 8): the
+per-plan Grok call now runs on a `ThreadPoolExecutor`. Cache hits never take a worker; `max_calls`/`max_usd` are reserved
+atomically under one lock that also guards cache writes and the in-memory ledger append (ledger written once at the end);
+submission stops as soon as a budget is hit (exit 3 as before). Rows are written sorted by `entity_id` so the JSON is
+byte-stable whatever the completion order. Inside a worker, 429/5xx and transport errors are retried three times with 1s/2s
+backoff; other errors fail fast; a unit that still fails is printed as `FAIL <entity_id>` on stderr and the run continues.
+`make enrich-funders ARGS="..."` passes flags through. Skips are unchanged: hand `issue_focus.json` entities and
+accepted/rejected machine rows (unless `--refresh-reviewed`). 223 pipeline tests.
+
+**Run.** Dry run: planned 495 units, cached 0, to-call 495, est. $19.80. Live at concurrency 8 (no rate limiting seen):
+600 calls (483 classify + 117 no-tools repairs) hit `--max-calls 600` with 486/495 processed, exit 3; a second pass with the
+same flags served the 486 from cache and finished the last 9 with 12 calls. Totals: 495 orgs planned · 198 classified ·
+0 failed calls · 297 dropped by page verification (page does not name the organization / quote not verified / quote
+missing or too long) · 612 API calls · est. $19.62. Kinds: business_trade 66 · general_partisan 57 · labor 29 ·
+candidate_aligned 19 · multi_issue 16 · single_issue 11; confidence high 196 / medium 2. Every row is `pending`. The 13
+earlier pending rows were re-classified as pending rows always are: 10 came back (AIPAC moved candidate_aligned →
+single_issue/defense), 3 were dropped this time by verification (Altria, American Prosperity Alliance, Jump Crypto).
+`make issues` put `x_enrichment.issue_focus` on the 5 of 50 published donor views that have a machine row; entities,
+ledger and chains are untouched. `make validate` 2455 + 9 ok; `contracts npm run validate` ok.
+
+**Dead ends.** Repairs count against `max_calls`, so 600 was not enough for 495 units in one pass; the cache made the
+rerun cost $0.35 rather than a budget bump.
+
+
+## 2026-09-06 ~07:00 — Exploratory graph mode (Money Trails follow-up, D-85)
+
+**What changed.** Added a fallback after the route resolver and fixed graph operations refuse: Grok can compose one Cypher query
+over the documented filings graph. The server validates the query as read-only, allows only `$race`, caps it at 20 rows and 8
+seconds, runs it through a READ transaction, hydrates returned relationships with their source URLs, and shows the query and
+every returned row. A second model call narrates only those rows, with the same citation and number guard as fixed graph mode.
+
+**Trade-off.** Exploratory mode is labelled separately because the model may frame a question wrongly and cannot know what the
+graph does not contain. The query is shown as a hypothesis; the source-linked rows are the evidence. Existing route and fixed
+graph behavior remain unchanged.
+
+**Routing guard.** Questions asking for breakdowns the fixed pages do not provide—dark money, people behind a candidate, vendors,
+paths or connections, geography or sector—now refuse the nearest fixed intent and proceed to the filings graph instead.
+
+**Ask box.** The box is graph-first: every question goes to exploratory mode, with deterministic route/page matches shown as related-page links; fixed graph operations remain available at their endpoint.
+
+**Flow diagrams.** An `@graph` prefix asks exploration for whole, amount-bearing relationships and draws a Sankey from the returned rows; when those rows cannot form a flow, only the analysis refusal is shown.
+
+**Flow completion.** Graph mode now adds source-linked filed spending and campaign-ownership facts for committees returned by the model query, so the diagram can continue to candidate campaigns without changing the model's rows.
+
+**Answer paging.** Answer-mode exploratory results now offer “Show more” for additional validated query rows; graph-mode Sankey responses remain unchanged.
+
+**Sankey interaction.** Completion now stays within candidates reached by the model rows, and flow ribbons expose pointer tooltips plus inline labels for larger amounts.
+
+**Organization classes.** For `pa-sen-2024` the offline Grok pass considered 262 unknown organizations over $10,000, kept 182 valid model classifications totaling $150,323,620.00, and dropped 80 `unknown` rows; the cached rerun made zero API requests. Traceability dark fell from $61,914,229.99 to $61,031,422.96 (a reduction of $882,807.03). `TRUIST` is model-read as `business` from `https://www.truist.com/about-us`, with `verified: false`; its $3,072,643 inflow is now disclosed with `class_basis: inferred`.
 
 ### 2026-09-06 — Shared race tab shell
 

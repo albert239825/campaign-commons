@@ -4,7 +4,7 @@
   "name": "REPUBLICAN STATE LEADERSHIP COMMITTEE",
   "kind": "organization",
   "race_id": "pa-sen-2024",
-  "generated_at": "2026-09-06T14:11:16+00:00",
+  "generated_at": "2026-09-06T14:25:42+00:00",
   "data_status": "real",
   "total_given": 19293000.0,
   "total_in_chains": 19293000.0,
@@ -68,7 +68,7 @@
     "issue_focus": {
       "kind": "general_partisan",
       "issue_ids": [],
-      "description": "The largest organization of Republican state leaders, focused on recruiting, training, and electing Republicans to down-ballot state offices including legislatures, lieutenant governors, secretaries of state, agriculture officials, and judges across all 50 states.",
+      "description": "RSLC is the largest organization of Republican state leaders and works to recruit, train, and elect Republicans to down-ballot state offices in all 50 states.",
       "basis": {
         "basis": "inferred",
         "rule": "x_funder_focus",
@@ -89,8 +89,8 @@
           "web_search"
         ],
         "tool_filters": {},
-        "response_id": "17479317-0c8d-936b-92b3-fc22f7c139a3",
-        "retrieved_at": "2026-09-06T03:53:22+00:00",
+        "response_id": "0c49830f-ce65-92bd-ba1c-6918adb0fc9b",
+        "retrieved_at": "2026-09-06T12:58:14+00:00",
         "citations": [
           "https://rslc.gop/",
           "https://rslc.gop/about/",

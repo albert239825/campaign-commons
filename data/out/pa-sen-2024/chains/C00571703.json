@@ -2,7 +2,7 @@
   "root_entity_id": "C00571703",
   "root_name": "SENATE LEADERSHIP FUND",
   "race_id": "pa-sen-2024",
-  "generated_at": "2026-09-06T14:11:14+00:00",
+  "generated_at": "2026-09-06T14:25:40+00:00",
   "data_status": "real",
   "nodes": [
     {
@@ -28,7 +28,8 @@
       "is_terminus": true,
       "terminus_reason": "dark",
       "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00571703&two_year_transaction_period=2024&contributor_name=ONE+NATION",
-      "organization_class": "unknown"
+      "organization_class": "nonprofit",
+      "class_basis": "inferred"
     },
     {
       "id": "ind:GRIFFIN_KENNETH_C.|33131",
@@ -197,7 +198,8 @@
       "is_terminus": true,
       "terminus_reason": "organization",
       "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00571703&two_year_transaction_period=2024&contributor_name=CHEVRON+CORPORATION",
-      "organization_class": "business"
+      "organization_class": "business",
+      "class_basis": "rule"
     },
     {
       "id": "ind:REYES_J._CHRISTOPHER|33401",
@@ -222,7 +224,8 @@
       "is_terminus": true,
       "terminus_reason": "organization",
       "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00571703&two_year_transaction_period=2024&contributor_name=OCCIDENTAL+PETROLEUM+CORP",
-      "organization_class": "business"
+      "organization_class": "business",
+      "class_basis": "rule"
     },
     {
       "id": "org:ALTRIA_CLIENT_SERVICES_LLC",
@@ -235,7 +238,8 @@
       "is_terminus": true,
       "terminus_reason": "dark",
       "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00571703&two_year_transaction_period=2024&contributor_name=ALTRIA+CLIENT+SERVICES+LLC",
-      "organization_class": "llc"
+      "organization_class": "llc",
+      "class_basis": "rule"
     },
     {
       "id": "ind:DUCHOSSOIS_CRAIG|60606",
@@ -260,7 +264,8 @@
       "is_terminus": true,
       "terminus_reason": "dark",
       "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00571703&two_year_transaction_period=2024&contributor_name=AMERICAN+PETROLEUM+INSTITUTE",
-      "organization_class": "nonprofit"
+      "organization_class": "nonprofit",
+      "class_basis": "rule"
     },
     {
       "id": "org:HILLWOOD_DEVELOPMENT_COMPANY_LLC",
@@ -273,7 +278,8 @@
       "is_terminus": true,
       "terminus_reason": "dark",
       "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00571703&two_year_transaction_period=2024&contributor_name=HILLWOOD+DEVELOPMENT+COMPANY+LLC",
-      "organization_class": "llc"
+      "organization_class": "llc",
+      "class_basis": "rule"
     },
     {
       "id": "org:RAI_SERVICES_COMPANY",
@@ -286,7 +292,8 @@
       "is_terminus": true,
       "terminus_reason": "organization",
       "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00571703&two_year_transaction_period=2024&contributor_name=RAI+SERVICES+COMPANY",
-      "organization_class": "business"
+      "organization_class": "business",
+      "class_basis": "rule"
     },
     {
       "id": "agg:other@C00571703",
@@ -312,7 +319,8 @@
       "is_terminus": true,
       "terminus_reason": "dark",
       "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00782664&two_year_transaction_period=2024&contributor_name=AMERICAN+PROSPERITY+ALLIANCE",
-      "organization_class": "nonprofit"
+      "organization_class": "nonprofit",
+      "class_basis": "rule"
     },
     {
       "id": "ind:FRIESE_DONALD_E|91311",
@@ -802,7 +810,8 @@
         "2023-12-11",
         "2024-12-19"
       ],
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00571703&two_year_transaction_period=2024&contributor_name=ONE+NATION"
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00571703&two_year_transaction_period=2024&contributor_name=ONE+NATION",
+      "class_basis": "inferred"
     },
     {
       "from": "ind:GRIFFIN_KENNETH_C.|33131",
@@ -1026,7 +1035,8 @@
         "2023-09-19",
         "2024-08-27"
       ],
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00571703&two_year_transaction_period=2024&contributor_name=CHEVRON+CORPORATION"
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00571703&two_year_transaction_period=2024&contributor_name=CHEVRON+CORPORATION",
+      "class_basis": "rule"
     },
     {
       "from": "ind:REYES_J._CHRISTOPHER|33401",
@@ -1058,7 +1068,8 @@
         "2023-06-02",
         "2024-03-13"
       ],
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00571703&two_year_transaction_period=2024&contributor_name=OCCIDENTAL+PETROLEUM+CORP"
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00571703&two_year_transaction_period=2024&contributor_name=OCCIDENTAL+PETROLEUM+CORP",
+      "class_basis": "rule"
     },
     {
       "from": "org:ALTRIA_CLIENT_SERVICES_LLC",
@@ -1074,7 +1085,8 @@
         "2023-08-03",
         "2024-12-27"
       ],
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00571703&two_year_transaction_period=2024&contributor_name=ALTRIA+CLIENT+SERVICES+LLC"
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00571703&two_year_transaction_period=2024&contributor_name=ALTRIA+CLIENT+SERVICES+LLC",
+      "class_basis": "rule"
     },
     {
       "from": "ind:DUCHOSSOIS_CRAIG|60606",
@@ -1106,7 +1118,8 @@
         "2023-12-01",
         "2024-08-28"
       ],
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00571703&two_year_transaction_period=2024&contributor_name=AMERICAN+PETROLEUM+INSTITUTE"
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00571703&two_year_transaction_period=2024&contributor_name=AMERICAN+PETROLEUM+INSTITUTE",
+      "class_basis": "rule"
     },
     {
       "from": "org:HILLWOOD_DEVELOPMENT_COMPANY_LLC",
@@ -1122,7 +1135,8 @@
         "2023-05-15",
         "2024-10-07"
       ],
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00571703&two_year_transaction_period=2024&contributor_name=HILLWOOD+DEVELOPMENT+COMPANY+LLC"
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00571703&two_year_transaction_period=2024&contributor_name=HILLWOOD+DEVELOPMENT+COMPANY+LLC",
+      "class_basis": "rule"
     },
     {
       "from": "org:RAI_SERVICES_COMPANY",
@@ -1138,7 +1152,8 @@
         "2023-11-09",
         "2024-09-20"
       ],
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00571703&two_year_transaction_period=2024&contributor_name=RAI+SERVICES+COMPANY"
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00571703&two_year_transaction_period=2024&contributor_name=RAI+SERVICES+COMPANY",
+      "class_basis": "rule"
     },
     {
       "from": "agg:other@C00571703",
@@ -1171,7 +1186,8 @@
         "2024-03-31",
         "2024-12-31"
       ],
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00782664&two_year_transaction_period=2024&contributor_name=AMERICAN+PROSPERITY+ALLIANCE"
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00782664&two_year_transaction_period=2024&contributor_name=AMERICAN+PROSPERITY+ALLIANCE",
+      "class_basis": "rule"
     },
     {
       "from": "ind:FRIESE_DONALD_E|91311",

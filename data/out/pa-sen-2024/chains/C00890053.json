@@ -2,7 +2,7 @@
   "root_entity_id": "C00890053",
   "root_name": "FUTURE PENNSYLVANIA PAC",
   "race_id": "pa-sen-2024",
-  "generated_at": "2026-09-06T14:11:15+00:00",
+  "generated_at": "2026-09-06T14:25:40+00:00",
   "data_status": "real",
   "nodes": [
     {
@@ -52,7 +52,8 @@
       "is_terminus": true,
       "terminus_reason": "dark",
       "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00890053&two_year_transaction_period=2024&contributor_name=PROJECT+26+PENNSYLVANIA",
-      "organization_class": "nonprofit"
+      "organization_class": "nonprofit",
+      "class_basis": "rule"
     },
     {
       "id": "agg:other@C00890053",
@@ -78,7 +79,8 @@
       "is_terminus": true,
       "terminus_reason": "dark",
       "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00741769&two_year_transaction_period=2024&contributor_name=STRATEGIC+VICTORY+FUND",
-      "organization_class": "nonprofit"
+      "organization_class": "nonprofit",
+      "class_basis": "rule"
     },
     {
       "id": "C00004036",
@@ -103,7 +105,8 @@
       "is_terminus": true,
       "terminus_reason": "dark",
       "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00741769&two_year_transaction_period=2024&contributor_name=STATE+ENGAGEMENT+FUND",
-      "organization_class": "nonprofit"
+      "organization_class": "nonprofit",
+      "class_basis": "rule"
     },
     {
       "id": "org:AMERICA_VOTES",
@@ -116,7 +119,8 @@
       "is_terminus": true,
       "terminus_reason": "dark",
       "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00741769&two_year_transaction_period=2024&contributor_name=AMERICA+VOTES",
-      "organization_class": "nonprofit"
+      "organization_class": "nonprofit",
+      "class_basis": "rule"
     },
     {
       "id": "org:THE_UNITED_BROTHERHOOD_OF_CARPENTERS_AND_JOINERS_OF_AMERICA",
@@ -129,7 +133,8 @@
       "is_terminus": true,
       "terminus_reason": "organization",
       "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00741769&two_year_transaction_period=2024&contributor_name=THE+UNITED+BROTHERHOOD+OF+CARPENTERS+AND+JOINERS+OF+AMERICA",
-      "organization_class": "union"
+      "organization_class": "union",
+      "class_basis": "rule"
     },
     {
       "id": "C00693382",
@@ -190,7 +195,8 @@
       "is_terminus": true,
       "terminus_reason": "dark",
       "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00741769&two_year_transaction_period=2024&contributor_name=PRIORITIES+USA",
-      "organization_class": "nonprofit"
+      "organization_class": "nonprofit",
+      "class_basis": "rule"
     },
     {
       "id": "agg:other@C00741769",
@@ -228,7 +234,8 @@
       "is_terminus": true,
       "terminus_reason": "dark",
       "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00882381&two_year_transaction_period=2024&contributor_name=COMMONWEALTH+COMMUNICATIONS",
-      "organization_class": "unknown"
+      "organization_class": "nonprofit",
+      "class_basis": "inferred"
     },
     {
       "id": "org:SEIU_STATE_COUNCIL",
@@ -241,7 +248,8 @@
       "is_terminus": true,
       "terminus_reason": "organization",
       "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00882381&two_year_transaction_period=2024&contributor_name=SEIU+STATE+COUNCIL",
-      "organization_class": "union"
+      "organization_class": "union",
+      "class_basis": "rule"
     },
     {
       "id": "org:RESET_TECH_ACTION",
@@ -254,7 +262,8 @@
       "is_terminus": true,
       "terminus_reason": "dark",
       "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00882381&two_year_transaction_period=2024&contributor_name=RESET+TECH+ACTION",
-      "organization_class": "nonprofit"
+      "organization_class": "nonprofit",
+      "class_basis": "rule"
     },
     {
       "id": "ind:LUDWIG_EUGENE_A.|20007",
@@ -328,7 +337,8 @@
       "is_terminus": true,
       "terminus_reason": "dark",
       "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00693382&two_year_transaction_period=2024&contributor_name=FUND+FOR+POLICY+REFORM",
-      "organization_class": "nonprofit"
+      "organization_class": "nonprofit",
+      "class_basis": "rule"
     },
     {
       "id": "org:GEOSOR_CORPORATION",
@@ -341,7 +351,8 @@
       "is_terminus": true,
       "terminus_reason": "organization",
       "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00693382&two_year_transaction_period=2024&contributor_name=GEOSOR+CORPORATION",
-      "organization_class": "business"
+      "organization_class": "business",
+      "class_basis": "rule"
     },
     {
       "id": "org:GLOBAL_OAK_HOLDINGS_LLC",
@@ -354,7 +365,8 @@
       "is_terminus": true,
       "terminus_reason": "dark",
       "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00693382&two_year_transaction_period=2024&contributor_name=GLOBAL+OAK+HOLDINGS+LLC",
-      "organization_class": "llc"
+      "organization_class": "llc",
+      "class_basis": "rule"
     },
     {
       "id": "agg:other@C00693382",
@@ -380,7 +392,8 @@
       "is_terminus": true,
       "terminus_reason": "organization",
       "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00624817&two_year_transaction_period=2024&contributor_name=INTERNATIONAL+UNION+OF+OPERATING+ENGINEERS",
-      "organization_class": "union"
+      "organization_class": "union",
+      "class_basis": "rule"
     },
     {
       "id": "org:LABORERS'_POLITICAL_LEAGUE_GREAT_LAKES_REGION",
@@ -393,7 +406,8 @@
       "is_terminus": true,
       "terminus_reason": "organization",
       "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00568964&two_year_transaction_period=2024&contributor_name=LABORERS%27+POLITICAL+LEAGUE+GREAT+LAKES+REGION",
-      "organization_class": "union"
+      "organization_class": "union",
+      "class_basis": "rule"
     },
     {
       "id": "org:CALIFORNIA_STATE_COUNCIL_OF_LABORERS_PAC",
@@ -406,7 +420,8 @@
       "is_terminus": true,
       "terminus_reason": "organization",
       "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00568964&two_year_transaction_period=2024&contributor_name=CALIFORNIA+STATE+COUNCIL+OF+LABORERS+PAC",
-      "organization_class": "union"
+      "organization_class": "union",
+      "class_basis": "rule"
     },
     {
       "id": "org:ILLINOIS_LABORERS'_LEGISLATIVE_COMMITTEE",
@@ -419,7 +434,8 @@
       "is_terminus": true,
       "terminus_reason": "organization",
       "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00568964&two_year_transaction_period=2024&contributor_name=ILLINOIS+LABORERS%27+LEGISLATIVE+COMMITTEE",
-      "organization_class": "union"
+      "organization_class": "union",
+      "class_basis": "rule"
     },
     {
       "id": "C00220566",
@@ -444,7 +460,8 @@
       "is_terminus": true,
       "terminus_reason": "dark",
       "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00568964&two_year_transaction_period=2024&contributor_name=NORTHWEST+REGION+ORGANIZING+COALITION+PAC",
-      "organization_class": "nonprofit"
+      "organization_class": "nonprofit",
+      "class_basis": "rule"
     },
     {
       "id": "org:MID-ATLANTIC_LABORERS'_POLITICAL_EDUCATION_FUND",
@@ -457,7 +474,8 @@
       "is_terminus": true,
       "terminus_reason": "organization",
       "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00568964&two_year_transaction_period=2024&contributor_name=MID-ATLANTIC+LABORERS%27+POLITICAL+EDUCATION+FUND",
-      "organization_class": "union"
+      "organization_class": "union",
+      "class_basis": "rule"
     },
     {
       "id": "org:DISTRICT_EIGHT_REGIONAL_ORGANIZING_COMMITTEE",
@@ -470,7 +488,8 @@
       "is_terminus": true,
       "terminus_reason": "dark",
       "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00568964&two_year_transaction_period=2024&contributor_name=DISTRICT+EIGHT+REGIONAL+ORGANIZING+COMMITTEE",
-      "organization_class": "nonprofit"
+      "organization_class": "nonprofit",
+      "class_basis": "rule"
     },
     {
       "id": "C00007922",
@@ -3518,7 +3537,8 @@
         "2024-10-13",
         "2024-11-25"
       ],
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00890053&two_year_transaction_period=2024&contributor_name=PROJECT+26+PENNSYLVANIA"
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00890053&two_year_transaction_period=2024&contributor_name=PROJECT+26+PENNSYLVANIA",
+      "class_basis": "rule"
     },
     {
       "from": "agg:other@C00890053",
@@ -3550,7 +3570,8 @@
         "2024-07-19",
         "2024-10-08"
       ],
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00741769&two_year_transaction_period=2024&contributor_name=STRATEGIC+VICTORY+FUND"
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00741769&two_year_transaction_period=2024&contributor_name=STRATEGIC+VICTORY+FUND",
+      "class_basis": "rule"
     },
     {
       "from": "C00004036",
@@ -3583,7 +3604,8 @@
         "2024-07-01",
         "2024-10-08"
       ],
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00741769&two_year_transaction_period=2024&contributor_name=STATE+ENGAGEMENT+FUND"
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00741769&two_year_transaction_period=2024&contributor_name=STATE+ENGAGEMENT+FUND",
+      "class_basis": "rule"
     },
     {
       "from": "org:AMERICA_VOTES",
@@ -3599,7 +3621,8 @@
         "2024-08-28",
         "2024-08-28"
       ],
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00741769&two_year_transaction_period=2024&contributor_name=AMERICA+VOTES"
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00741769&two_year_transaction_period=2024&contributor_name=AMERICA+VOTES",
+      "class_basis": "rule"
     },
     {
       "from": "org:THE_UNITED_BROTHERHOOD_OF_CARPENTERS_AND_JOINERS_OF_AMERICA",
@@ -3615,7 +3638,8 @@
         "2023-05-02",
         "2023-05-02"
       ],
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00741769&two_year_transaction_period=2024&contributor_name=THE+UNITED+BROTHERHOOD+OF+CARPENTERS+AND+JOINERS+OF+AMERICA"
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00741769&two_year_transaction_period=2024&contributor_name=THE+UNITED+BROTHERHOOD+OF+CARPENTERS+AND+JOINERS+OF+AMERICA",
+      "class_basis": "rule"
     },
     {
       "from": "C00693382",
@@ -3695,7 +3719,8 @@
         "2024-10-23",
         "2024-10-23"
       ],
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00741769&two_year_transaction_period=2024&contributor_name=PRIORITIES+USA"
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00741769&two_year_transaction_period=2024&contributor_name=PRIORITIES+USA",
+      "class_basis": "rule"
     },
     {
       "from": "agg:other@C00741769",
@@ -3744,7 +3769,8 @@
         "2024-10-15",
         "2024-10-15"
       ],
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00882381&two_year_transaction_period=2024&contributor_name=COMMONWEALTH+COMMUNICATIONS"
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00882381&two_year_transaction_period=2024&contributor_name=COMMONWEALTH+COMMUNICATIONS",
+      "class_basis": "inferred"
     },
     {
       "from": "org:SEIU_STATE_COUNCIL",
@@ -3760,7 +3786,8 @@
         "2024-10-24",
         "2024-10-24"
       ],
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00882381&two_year_transaction_period=2024&contributor_name=SEIU+STATE+COUNCIL"
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00882381&two_year_transaction_period=2024&contributor_name=SEIU+STATE+COUNCIL",
+      "class_basis": "rule"
     },
     {
       "from": "org:RESET_TECH_ACTION",
@@ -3776,7 +3803,8 @@
         "2024-10-18",
         "2024-10-18"
       ],
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00882381&two_year_transaction_period=2024&contributor_name=RESET+TECH+ACTION"
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00882381&two_year_transaction_period=2024&contributor_name=RESET+TECH+ACTION",
+      "class_basis": "rule"
     },
     {
       "from": "ind:LUDWIG_EUGENE_A.|20007",
@@ -3877,7 +3905,8 @@
         "2024-01-11",
         "2024-01-11"
       ],
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00693382&two_year_transaction_period=2024&contributor_name=FUND+FOR+POLICY+REFORM"
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00693382&two_year_transaction_period=2024&contributor_name=FUND+FOR+POLICY+REFORM",
+      "class_basis": "rule"
     },
     {
       "from": "org:GEOSOR_CORPORATION",
@@ -3893,7 +3922,8 @@
         "2024-09-19",
         "2024-09-19"
       ],
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00693382&two_year_transaction_period=2024&contributor_name=GEOSOR+CORPORATION"
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00693382&two_year_transaction_period=2024&contributor_name=GEOSOR+CORPORATION",
+      "class_basis": "rule"
     },
     {
       "from": "org:GLOBAL_OAK_HOLDINGS_LLC",
@@ -3909,7 +3939,8 @@
         "2024-01-31",
         "2024-06-28"
       ],
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00693382&two_year_transaction_period=2024&contributor_name=GLOBAL+OAK+HOLDINGS+LLC"
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00693382&two_year_transaction_period=2024&contributor_name=GLOBAL+OAK+HOLDINGS+LLC",
+      "class_basis": "rule"
     },
     {
       "from": "agg:other@C00693382",
@@ -3941,7 +3972,8 @@
         "2023-08-02",
         "2024-10-28"
       ],
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00624817&two_year_transaction_period=2024&contributor_name=INTERNATIONAL+UNION+OF+OPERATING+ENGINEERS"
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00624817&two_year_transaction_period=2024&contributor_name=INTERNATIONAL+UNION+OF+OPERATING+ENGINEERS",
+      "class_basis": "rule"
     },
     {
       "from": "org:LABORERS'_POLITICAL_LEAGUE_GREAT_LAKES_REGION",
@@ -3957,7 +3989,8 @@
         "2023-03-21",
         "2024-11-25"
       ],
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00568964&two_year_transaction_period=2024&contributor_name=LABORERS%27+POLITICAL+LEAGUE+GREAT+LAKES+REGION"
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00568964&two_year_transaction_period=2024&contributor_name=LABORERS%27+POLITICAL+LEAGUE+GREAT+LAKES+REGION",
+      "class_basis": "rule"
     },
     {
       "from": "org:CALIFORNIA_STATE_COUNCIL_OF_LABORERS_PAC",
@@ -3973,7 +4006,8 @@
         "2023-12-05",
         "2024-10-31"
       ],
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00568964&two_year_transaction_period=2024&contributor_name=CALIFORNIA+STATE+COUNCIL+OF+LABORERS+PAC"
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00568964&two_year_transaction_period=2024&contributor_name=CALIFORNIA+STATE+COUNCIL+OF+LABORERS+PAC",
+      "class_basis": "rule"
     },
     {
       "from": "org:ILLINOIS_LABORERS'_LEGISLATIVE_COMMITTEE",
@@ -3989,7 +4023,8 @@
         "2023-01-17",
         "2024-10-11"
       ],
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00568964&two_year_transaction_period=2024&contributor_name=ILLINOIS+LABORERS%27+LEGISLATIVE+COMMITTEE"
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00568964&two_year_transaction_period=2024&contributor_name=ILLINOIS+LABORERS%27+LEGISLATIVE+COMMITTEE",
+      "class_basis": "rule"
     },
     {
       "from": "C00220566",
@@ -4021,7 +4056,8 @@
         "2023-12-14",
         "2024-10-24"
       ],
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00568964&two_year_transaction_period=2024&contributor_name=NORTHWEST+REGION+ORGANIZING+COALITION+PAC"
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00568964&two_year_transaction_period=2024&contributor_name=NORTHWEST+REGION+ORGANIZING+COALITION+PAC",
+      "class_basis": "rule"
     },
     {
       "from": "org:MID-ATLANTIC_LABORERS'_POLITICAL_EDUCATION_FUND",
@@ -4037,7 +4073,8 @@
         "2024-07-23",
         "2024-12-06"
       ],
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00568964&two_year_transaction_period=2024&contributor_name=MID-ATLANTIC+LABORERS%27+POLITICAL+EDUCATION+FUND"
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00568964&two_year_transaction_period=2024&contributor_name=MID-ATLANTIC+LABORERS%27+POLITICAL+EDUCATION+FUND",
+      "class_basis": "rule"
     },
     {
       "from": "org:DISTRICT_EIGHT_REGIONAL_ORGANIZING_COMMITTEE",
@@ -4053,7 +4090,8 @@
         "2024-10-31",
         "2024-10-31"
       ],
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00568964&two_year_transaction_period=2024&contributor_name=DISTRICT+EIGHT+REGIONAL+ORGANIZING+COMMITTEE"
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00568964&two_year_transaction_period=2024&contributor_name=DISTRICT+EIGHT+REGIONAL+ORGANIZING+COMMITTEE",
+      "class_basis": "rule"
     },
     {
       "from": "C00007922",

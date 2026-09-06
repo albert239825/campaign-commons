@@ -2,7 +2,7 @@
   "root_entity_id": "C00849489",
   "root_name": "KEYSTONE RENEWAL PAC",
   "race_id": "pa-sen-2024",
-  "generated_at": "2026-09-06T14:11:14+00:00",
+  "generated_at": "2026-09-06T14:25:40+00:00",
   "data_status": "real",
   "nodes": [
     {
@@ -64,7 +64,8 @@
       "is_terminus": true,
       "terminus_reason": "dark",
       "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00849489&two_year_transaction_period=2024&contributor_name=ANTONIO+J+GRACIAS+REVOCABLE+TRUST",
-      "organization_class": "llc"
+      "organization_class": "llc",
+      "class_basis": "rule"
     },
     {
       "id": "ind:SINGER_PAUL|33480",
@@ -125,7 +126,8 @@
       "is_terminus": true,
       "terminus_reason": "dark",
       "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00849489&two_year_transaction_period=2024&contributor_name=MANZANITA+MANAGEMENT+GROUP+LLC",
-      "organization_class": "llc"
+      "organization_class": "llc",
+      "class_basis": "rule"
     },
     {
       "id": "C00668905",
@@ -246,7 +248,8 @@
       "is_terminus": true,
       "terminus_reason": "organization",
       "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00849489&two_year_transaction_period=2024&contributor_name=AMERICAN+ADVANCEMENT+INC.",
-      "organization_class": "business"
+      "organization_class": "business",
+      "class_basis": "rule"
     },
     {
       "id": "C00884262",
@@ -283,7 +286,8 @@
       "is_terminus": true,
       "terminus_reason": "dark",
       "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00849489&two_year_transaction_period=2024&contributor_name=AMERICAN+JOBS+AND+GROWTH+FUND",
-      "organization_class": "nonprofit"
+      "organization_class": "nonprofit",
+      "class_basis": "rule"
     },
     {
       "id": "ind:REES-JONES_TREVOR_D_MR.|75225",
@@ -308,7 +312,8 @@
       "is_terminus": true,
       "terminus_reason": "dark",
       "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00849489&two_year_transaction_period=2024&contributor_name=ECONOMIC+FUTURE+FUND+INC",
-      "organization_class": "nonprofit"
+      "organization_class": "nonprofit",
+      "class_basis": "rule"
     },
     {
       "id": "ind:FISHER_KENNETH_L|75093",
@@ -346,7 +351,8 @@
       "is_terminus": true,
       "terminus_reason": "dark",
       "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00876409&two_year_transaction_period=2024&contributor_name=NEW+HEIGHTS+FOR+AMERICA",
-      "organization_class": "nonprofit"
+      "organization_class": "nonprofit",
+      "class_basis": "rule"
     },
     {
       "id": "org:RAI_SERVICES_COMPANY",
@@ -359,7 +365,8 @@
       "is_terminus": true,
       "terminus_reason": "organization",
       "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00876409&two_year_transaction_period=2024&contributor_name=RAI+SERVICES+COMPANY",
-      "organization_class": "business"
+      "organization_class": "business",
+      "class_basis": "rule"
     },
     {
       "id": "org:LEON_RACHEL_CORP",
@@ -372,7 +379,8 @@
       "is_terminus": true,
       "terminus_reason": "organization",
       "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00876409&two_year_transaction_period=2024&contributor_name=LEON+RACHEL+CORP",
-      "organization_class": "business"
+      "organization_class": "business",
+      "class_basis": "rule"
     },
     {
       "id": "C00782664",
@@ -409,7 +417,8 @@
       "is_terminus": true,
       "terminus_reason": "organization",
       "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00876409&two_year_transaction_period=2024&contributor_name=OCCIDENTAL+PETROLEUM+CORPORATION",
-      "organization_class": "business"
+      "organization_class": "business",
+      "class_basis": "rule"
     },
     {
       "id": "C00488742",
@@ -446,7 +455,8 @@
       "is_terminus": true,
       "terminus_reason": "dark",
       "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00876409&two_year_transaction_period=2024&contributor_name=ALTRIA+CLIENT+SERVICES+LLC",
-      "organization_class": "llc"
+      "organization_class": "llc",
+      "class_basis": "rule"
     },
     {
       "id": "ind:STEPHENS_WARREN_A.|72201",
@@ -520,7 +530,8 @@
       "is_terminus": true,
       "terminus_reason": "dark",
       "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00528554&two_year_transaction_period=2024&contributor_name=REPUBLICAN+JEWISH+COALITION",
-      "organization_class": "nonprofit"
+      "organization_class": "nonprofit",
+      "class_basis": "rule"
     },
     {
       "id": "ind:KOUM_JAN|95051",
@@ -545,7 +556,8 @@
       "is_terminus": true,
       "terminus_reason": "organization",
       "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00528554&two_year_transaction_period=2024&contributor_name=LEON+RACHEL+CORP",
-      "organization_class": "business"
+      "organization_class": "business",
+      "class_basis": "rule"
     },
     {
       "id": "org:PROBITY_INTERNATIONAL_CORP",
@@ -558,7 +570,8 @@
       "is_terminus": true,
       "terminus_reason": "organization",
       "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00528554&two_year_transaction_period=2024&contributor_name=PROBITY+INTERNATIONAL+CORP",
-      "organization_class": "business"
+      "organization_class": "business",
+      "class_basis": "rule"
     },
     {
       "id": "org:KUA_VENTURES_LLC",
@@ -571,7 +584,8 @@
       "is_terminus": true,
       "terminus_reason": "dark",
       "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00528554&two_year_transaction_period=2024&contributor_name=KUA+VENTURES+LLC",
-      "organization_class": "llc"
+      "organization_class": "llc",
+      "class_basis": "rule"
     },
     {
       "id": "ind:FOX_SAUL|33139",
@@ -681,7 +695,8 @@
       "is_terminus": true,
       "terminus_reason": "dark",
       "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00668905&two_year_transaction_period=2024&contributor_name=AMERICAN+PROSPERITY+ALLIANCE",
-      "organization_class": "nonprofit"
+      "organization_class": "nonprofit",
+      "class_basis": "rule"
     },
     {
       "id": "ind:STEPHENS_WARREN_A|72201",
@@ -779,7 +794,8 @@
       "is_terminus": true,
       "terminus_reason": "dark",
       "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00884262&two_year_transaction_period=2024&contributor_name=ALTRIA+CLIENT+SERVICES+LLC",
-      "organization_class": "llc"
+      "organization_class": "llc",
+      "class_basis": "rule"
     },
     {
       "id": "org:RAI_SERVICES_COMPANY@C00884262",
@@ -792,7 +808,8 @@
       "is_terminus": true,
       "terminus_reason": "organization",
       "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00884262&two_year_transaction_period=2024&contributor_name=RAI+SERVICES+COMPANY",
-      "organization_class": "business"
+      "organization_class": "business",
+      "class_basis": "rule"
     },
     {
       "id": "org:ENERGY_TRANSFER_LP",
@@ -805,7 +822,8 @@
       "is_terminus": true,
       "terminus_reason": "dark",
       "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00884262&two_year_transaction_period=2024&contributor_name=ENERGY+TRANSFER+LP",
-      "organization_class": "llc"
+      "organization_class": "llc",
+      "class_basis": "rule"
     },
     {
       "id": "org:JUNIPER_GLOBAL_INVESTMENTS_LLC",
@@ -818,7 +836,8 @@
       "is_terminus": true,
       "terminus_reason": "dark",
       "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00884262&two_year_transaction_period=2024&contributor_name=JUNIPER+GLOBAL+INVESTMENTS+LLC",
-      "organization_class": "llc"
+      "organization_class": "llc",
+      "class_basis": "rule"
     },
     {
       "id": "org:AMERICAN_PROSPERITY_ALLIANCE@C00782664",
@@ -831,7 +850,8 @@
       "is_terminus": true,
       "terminus_reason": "dark",
       "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00782664&two_year_transaction_period=2024&contributor_name=AMERICAN+PROSPERITY+ALLIANCE",
-      "organization_class": "nonprofit"
+      "organization_class": "nonprofit",
+      "class_basis": "rule"
     },
     {
       "id": "ind:FRIESE_DONALD_E|91311",
@@ -942,7 +962,8 @@
       "is_terminus": true,
       "terminus_reason": "dark",
       "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00542217&two_year_transaction_period=2024&contributor_name=CONSERVATIVE+MAJORITY+PROJECT",
-      "organization_class": "nonprofit"
+      "organization_class": "nonprofit",
+      "class_basis": "rule"
     },
     {
       "id": "ind:SCHWARZMAN_STEPHEN_A.|10154@C00542217",
@@ -967,7 +988,8 @@
       "is_terminus": true,
       "terminus_reason": "organization",
       "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00542217&two_year_transaction_period=2024&contributor_name=ENERGY+TRANSFER",
-      "organization_class": "business"
+      "organization_class": "business",
+      "class_basis": "rule"
     },
     {
       "id": "org:TAYLOR_FARMS_TEXAS,_INC.",
@@ -980,7 +1002,8 @@
       "is_terminus": true,
       "terminus_reason": "organization",
       "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00542217&two_year_transaction_period=2024&contributor_name=TAYLOR+FARMS+TEXAS%2C+INC.",
-      "organization_class": "business"
+      "organization_class": "business",
+      "class_basis": "rule"
     },
     {
       "id": "org:WESTMARK_HOTELS,_INC.",
@@ -993,7 +1016,8 @@
       "is_terminus": true,
       "terminus_reason": "organization",
       "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00542217&two_year_transaction_period=2024&contributor_name=WESTMARK+HOTELS%2C+INC.",
-      "organization_class": "business"
+      "organization_class": "business",
+      "class_basis": "rule"
     },
     {
       "id": "ind:ROWAN_MARC_J.|10022",
@@ -1581,7 +1605,8 @@
         "2024-09-06",
         "2024-09-06"
       ],
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00849489&two_year_transaction_period=2024&contributor_name=ANTONIO+J+GRACIAS+REVOCABLE+TRUST"
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00849489&two_year_transaction_period=2024&contributor_name=ANTONIO+J+GRACIAS+REVOCABLE+TRUST",
+      "class_basis": "rule"
     },
     {
       "from": "ind:SINGER_PAUL|33480",
@@ -1661,7 +1686,8 @@
         "2024-10-03",
         "2024-10-03"
       ],
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00849489&two_year_transaction_period=2024&contributor_name=MANZANITA+MANAGEMENT+GROUP+LLC"
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00849489&two_year_transaction_period=2024&contributor_name=MANZANITA+MANAGEMENT+GROUP+LLC",
+      "class_basis": "rule"
     },
     {
       "from": "C00668905",
@@ -1821,7 +1847,8 @@
         "2024-03-28",
         "2024-03-28"
       ],
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00849489&two_year_transaction_period=2024&contributor_name=AMERICAN+ADVANCEMENT+INC."
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00849489&two_year_transaction_period=2024&contributor_name=AMERICAN+ADVANCEMENT+INC.",
+      "class_basis": "rule"
     },
     {
       "from": "C00884262",
@@ -1869,7 +1896,8 @@
         "2024-09-25",
         "2024-09-27"
       ],
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00849489&two_year_transaction_period=2024&contributor_name=AMERICAN+JOBS+AND+GROWTH+FUND"
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00849489&two_year_transaction_period=2024&contributor_name=AMERICAN+JOBS+AND+GROWTH+FUND",
+      "class_basis": "rule"
     },
     {
       "from": "ind:REES-JONES_TREVOR_D_MR.|75225",
@@ -1901,7 +1929,8 @@
         "2024-08-30",
         "2024-09-17"
       ],
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00849489&two_year_transaction_period=2024&contributor_name=ECONOMIC+FUTURE+FUND+INC"
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00849489&two_year_transaction_period=2024&contributor_name=ECONOMIC+FUTURE+FUND+INC",
+      "class_basis": "rule"
     },
     {
       "from": "ind:FISHER_KENNETH_L|75093",
@@ -1950,7 +1979,8 @@
         "2024-05-14",
         "2024-10-29"
       ],
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00876409&two_year_transaction_period=2024&contributor_name=NEW+HEIGHTS+FOR+AMERICA"
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00876409&two_year_transaction_period=2024&contributor_name=NEW+HEIGHTS+FOR+AMERICA",
+      "class_basis": "rule"
     },
     {
       "from": "org:RAI_SERVICES_COMPANY",
@@ -1966,7 +1996,8 @@
         "2024-08-13",
         "2024-08-13"
       ],
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00876409&two_year_transaction_period=2024&contributor_name=RAI+SERVICES+COMPANY"
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00876409&two_year_transaction_period=2024&contributor_name=RAI+SERVICES+COMPANY",
+      "class_basis": "rule"
     },
     {
       "from": "org:LEON_RACHEL_CORP",
@@ -1982,7 +2013,8 @@
         "2024-10-11",
         "2024-10-11"
       ],
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00876409&two_year_transaction_period=2024&contributor_name=LEON+RACHEL+CORP"
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00876409&two_year_transaction_period=2024&contributor_name=LEON+RACHEL+CORP",
+      "class_basis": "rule"
     },
     {
       "from": "C00782664",
@@ -2030,7 +2062,8 @@
         "2024-12-23",
         "2024-12-23"
       ],
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00876409&two_year_transaction_period=2024&contributor_name=OCCIDENTAL+PETROLEUM+CORPORATION"
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00876409&two_year_transaction_period=2024&contributor_name=OCCIDENTAL+PETROLEUM+CORPORATION",
+      "class_basis": "rule"
     },
     {
       "from": "C00488742",
@@ -2078,7 +2111,8 @@
         "2024-10-23",
         "2024-10-23"
       ],
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00876409&two_year_transaction_period=2024&contributor_name=ALTRIA+CLIENT+SERVICES+LLC"
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00876409&two_year_transaction_period=2024&contributor_name=ALTRIA+CLIENT+SERVICES+LLC",
+      "class_basis": "rule"
     },
     {
       "from": "ind:STEPHENS_WARREN_A.|72201",
@@ -2175,7 +2209,8 @@
         "2024-04-08",
         "2024-10-17"
       ],
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00528554&two_year_transaction_period=2024&contributor_name=REPUBLICAN+JEWISH+COALITION"
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00528554&two_year_transaction_period=2024&contributor_name=REPUBLICAN+JEWISH+COALITION",
+      "class_basis": "rule"
     },
     {
       "from": "ind:KOUM_JAN|95051",
@@ -2207,7 +2242,8 @@
         "2024-04-18",
         "2024-08-26"
       ],
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00528554&two_year_transaction_period=2024&contributor_name=LEON+RACHEL+CORP"
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00528554&two_year_transaction_period=2024&contributor_name=LEON+RACHEL+CORP",
+      "class_basis": "rule"
     },
     {
       "from": "org:PROBITY_INTERNATIONAL_CORP",
@@ -2223,7 +2259,8 @@
         "2023-06-16",
         "2024-10-09"
       ],
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00528554&two_year_transaction_period=2024&contributor_name=PROBITY+INTERNATIONAL+CORP"
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00528554&two_year_transaction_period=2024&contributor_name=PROBITY+INTERNATIONAL+CORP",
+      "class_basis": "rule"
     },
     {
       "from": "org:KUA_VENTURES_LLC",
@@ -2239,7 +2276,8 @@
         "2024-09-13",
         "2024-09-13"
       ],
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00528554&two_year_transaction_period=2024&contributor_name=KUA+VENTURES+LLC"
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00528554&two_year_transaction_period=2024&contributor_name=KUA+VENTURES+LLC",
+      "class_basis": "rule"
     },
     {
       "from": "ind:FOX_SAUL|33139",
@@ -2383,7 +2421,8 @@
         "2024-10-15",
         "2024-10-15"
       ],
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00668905&two_year_transaction_period=2024&contributor_name=AMERICAN+PROSPERITY+ALLIANCE"
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00668905&two_year_transaction_period=2024&contributor_name=AMERICAN+PROSPERITY+ALLIANCE",
+      "class_basis": "rule"
     },
     {
       "from": "ind:STEPHENS_WARREN_A|72201",
@@ -2511,7 +2550,8 @@
         "2024-10-16",
         "2024-10-16"
       ],
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00884262&two_year_transaction_period=2024&contributor_name=ALTRIA+CLIENT+SERVICES+LLC"
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00884262&two_year_transaction_period=2024&contributor_name=ALTRIA+CLIENT+SERVICES+LLC",
+      "class_basis": "rule"
     },
     {
       "from": "org:RAI_SERVICES_COMPANY@C00884262",
@@ -2527,7 +2567,8 @@
         "2024-11-05",
         "2024-11-05"
       ],
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00884262&two_year_transaction_period=2024&contributor_name=RAI+SERVICES+COMPANY"
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00884262&two_year_transaction_period=2024&contributor_name=RAI+SERVICES+COMPANY",
+      "class_basis": "rule"
     },
     {
       "from": "org:ENERGY_TRANSFER_LP",
@@ -2543,7 +2584,8 @@
         "2024-09-06",
         "2024-09-06"
       ],
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00884262&two_year_transaction_period=2024&contributor_name=ENERGY+TRANSFER+LP"
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00884262&two_year_transaction_period=2024&contributor_name=ENERGY+TRANSFER+LP",
+      "class_basis": "rule"
     },
     {
       "from": "org:JUNIPER_GLOBAL_INVESTMENTS_LLC",
@@ -2559,7 +2601,8 @@
         "2024-10-24",
         "2024-10-24"
       ],
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00884262&two_year_transaction_period=2024&contributor_name=JUNIPER+GLOBAL+INVESTMENTS+LLC"
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00884262&two_year_transaction_period=2024&contributor_name=JUNIPER+GLOBAL+INVESTMENTS+LLC",
+      "class_basis": "rule"
     },
     {
       "from": "org:AMERICAN_PROSPERITY_ALLIANCE@C00782664",
@@ -2575,7 +2618,8 @@
         "2024-03-31",
         "2024-12-31"
       ],
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00782664&two_year_transaction_period=2024&contributor_name=AMERICAN+PROSPERITY+ALLIANCE"
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00782664&two_year_transaction_period=2024&contributor_name=AMERICAN+PROSPERITY+ALLIANCE",
+      "class_basis": "rule"
     },
     {
       "from": "ind:FRIESE_DONALD_E|91311",
@@ -2721,7 +2765,8 @@
         "2024-07-15",
         "2024-07-15"
       ],
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00542217&two_year_transaction_period=2024&contributor_name=CONSERVATIVE+MAJORITY+PROJECT"
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00542217&two_year_transaction_period=2024&contributor_name=CONSERVATIVE+MAJORITY+PROJECT",
+      "class_basis": "rule"
     },
     {
       "from": "ind:SCHWARZMAN_STEPHEN_A.|10154@C00542217",
@@ -2753,7 +2798,8 @@
         "2023-10-10",
         "2023-10-10"
       ],
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00542217&two_year_transaction_period=2024&contributor_name=ENERGY+TRANSFER"
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00542217&two_year_transaction_period=2024&contributor_name=ENERGY+TRANSFER",
+      "class_basis": "rule"
     },
     {
       "from": "org:TAYLOR_FARMS_TEXAS,_INC.",
@@ -2769,7 +2815,8 @@
         "2024-05-17",
         "2024-05-17"
       ],
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00542217&two_year_transaction_period=2024&contributor_name=TAYLOR+FARMS+TEXAS%2C+INC."
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00542217&two_year_transaction_period=2024&contributor_name=TAYLOR+FARMS+TEXAS%2C+INC.",
+      "class_basis": "rule"
     },
     {
       "from": "org:WESTMARK_HOTELS,_INC.",
@@ -2785,7 +2832,8 @@
         "2024-07-22",
         "2024-07-22"
       ],
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00542217&two_year_transaction_period=2024&contributor_name=WESTMARK+HOTELS%2C+INC."
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00542217&two_year_transaction_period=2024&contributor_name=WESTMARK+HOTELS%2C+INC.",
+      "class_basis": "rule"
     },
     {
       "from": "ind:ROWAN_MARC_J.|10022",
@@ -3654,12 +3702,12 @@
   ],
   "summary": {
     "total_in": 58905691.0,
-    "disclosed_share": 0.8659,
+    "disclosed_share": 0.8701,
     "disclosed_individuals_share": 0.8198,
-    "disclosed_organizations_share": 0.046,
+    "disclosed_organizations_share": 0.0503,
     "inferable_share": 0.0,
     "unwalked_share": 0.0,
-    "dark_share": 0.1341,
+    "dark_share": 0.1299,
     "max_depth": 3,
     "terminus_counts": {
       "individual": 42,

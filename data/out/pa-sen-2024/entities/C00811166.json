@@ -23,8 +23,8 @@
     "independent_expenditures": 11828541.98,
     "from_individuals": 28220295.67,
     "from_committees": 0.0,
-    "from_organizations": 1639976.0,
-    "from_undisclosed": 7076594.0
+    "from_organizations": 1664976.0,
+    "from_undisclosed": 7051594.0
   },
   "inflows": [
     {
@@ -70,7 +70,8 @@
       "visibility": "dark",
       "transaction_type": "10",
       "limit": "unlimited",
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00811166&two_year_transaction_period=2024&contributor_name=RIGHT+VOTE+INC."
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00811166&two_year_transaction_period=2024&contributor_name=RIGHT+VOTE+INC.",
+      "class_basis": "rule"
     },
     {
       "transfer_id": "C00811166-in-org:PARADIGM_OPERATIONS_LP",
@@ -85,7 +86,8 @@
       "visibility": "dark",
       "transaction_type": "10",
       "limit": "unlimited",
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00811166&two_year_transaction_period=2024&contributor_name=PARADIGM+OPERATIONS+LP"
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00811166&two_year_transaction_period=2024&contributor_name=PARADIGM+OPERATIONS+LP",
+      "class_basis": "rule"
     },
     {
       "transfer_id": "C00811166-in-ind:MUSK_ELON|78734",
@@ -175,7 +177,8 @@
       "visibility": "disclosed",
       "transaction_type": "10",
       "limit": "unlimited",
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00811166&two_year_transaction_period=2024&contributor_name=LEON+RACHEL+CORPORATION"
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00811166&two_year_transaction_period=2024&contributor_name=LEON+RACHEL+CORPORATION",
+      "class_basis": "rule"
     },
     {
       "transfer_id": "C00811166-in-org:MULTICOIN_CAPITAL_GP_LLC",
@@ -190,7 +193,8 @@
       "visibility": "dark",
       "transaction_type": "10",
       "limit": "unlimited",
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00811166&two_year_transaction_period=2024&contributor_name=MULTICOIN+CAPITAL+GP+LLC"
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00811166&two_year_transaction_period=2024&contributor_name=MULTICOIN+CAPITAL+GP+LLC",
+      "class_basis": "rule"
     },
     {
       "transfer_id": "C00811166-in-ind:CHILDS_JOHN_W.|32963",
@@ -250,7 +254,8 @@
       "visibility": "dark",
       "transaction_type": "10",
       "limit": "unlimited",
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00811166&two_year_transaction_period=2024&contributor_name=HERITAGE+ACTION+FOR+AMERICA"
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00811166&two_year_transaction_period=2024&contributor_name=HERITAGE+ACTION+FOR+AMERICA",
+      "class_basis": "rule"
     },
     {
       "transfer_id": "C00811166-in-org:NOSEK_CAPITAL_LLC",
@@ -265,7 +270,8 @@
       "visibility": "dark",
       "transaction_type": "10",
       "limit": "unlimited",
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00811166&two_year_transaction_period=2024&contributor_name=NOSEK+CAPITAL+LLC"
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00811166&two_year_transaction_period=2024&contributor_name=NOSEK+CAPITAL+LLC",
+      "class_basis": "rule"
     },
     {
       "transfer_id": "C00811166-in-ind:STEPHENS_WARREN|72201",
@@ -752,5 +758,22 @@
       "checked_by": "devin-block2-issues",
       "checked_at": "2026-09-05"
     }
-  }
+  },
+  "issue_positions": [
+    {
+      "issue_id": "crypto_fintech",
+      "direction": -1,
+      "quote": "Republicans Must Continue Building on Pro-Innovation Digital Asset Policies",
+      "source_url": "https://sentinelactionfund.com/",
+      "basis": {
+        "basis": "inferred",
+        "rule": "Stated position read from the organisation's own site by a language model and kept only where the quote appears verbatim on the fetched page; says what the org says, not what its dollars bought",
+        "source_urls": [
+          "https://sentinelactionfund.com/"
+        ],
+        "checked_by": "grok-4.5",
+        "checked_at": "2026-09-06"
+      }
+    }
+  ]
 }

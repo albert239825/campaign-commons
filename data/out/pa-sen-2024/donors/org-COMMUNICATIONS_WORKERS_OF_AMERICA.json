@@ -4,7 +4,7 @@
   "name": "COMMUNICATIONS WORKERS OF AMERICA",
   "kind": "organization",
   "race_id": "pa-sen-2024",
-  "generated_at": "2026-09-06T14:11:16+00:00",
+  "generated_at": "2026-09-06T14:25:42+00:00",
   "data_status": "real",
   "total_given": 16524861.0,
   "total_in_chains": 130623888.0,
@@ -462,7 +462,7 @@
     "issue_focus": {
       "kind": "labor",
       "issue_ids": [],
-      "description": "CWA represents workers in private and public sector employment in 1,200 chartered local unions across communications, media, airlines, public service, health care, manufacturing, high tech and more.",
+      "description": "CWA is one of America’s largest and most diverse unions, representing workers in communications, media, airlines, public service, health care, manufacturing, tech and more in 1,200 local unions across private and public sectors.",
       "basis": {
         "basis": "inferred",
         "rule": "x_funder_focus",
@@ -483,17 +483,14 @@
           "web_search"
         ],
         "tool_filters": {},
-        "response_id": "8fe7ddda-75d2-962b-be68-6150519b6333",
-        "retrieved_at": "2026-09-06T03:53:40+00:00",
+        "response_id": "23d61c69-f526-9839-9bdd-87db94ff14e6",
+        "retrieved_at": "2026-09-06T12:58:12+00:00",
         "citations": [
           "https://cwa-union.org/about",
           "https://cwa-union.org/for-members",
           "https://cwa-union.org/about/cwa-overview",
           "https://cwa-union.org/workers-rights/health-care-retirement-security",
-          "https://cwa-union.org/",
-          "https://cwa-union.org/news/releases/wikimedia-foundation-workers-overwhelmingly-vote-form-union-cwa",
-          "https://cwa-union.org/pages/about_cwa_and_sierra_club",
-          "https://cwa-union.org/cwa-convention-proceedings-and-biennial-reports"
+          "https://cwa-union.org/"
         ],
         "confidence": "high",
         "review_status": "pending",

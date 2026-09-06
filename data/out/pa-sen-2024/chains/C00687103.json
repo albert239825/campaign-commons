@@ -2,7 +2,7 @@
   "root_entity_id": "C00687103",
   "root_name": "AMERICANS FOR PROSPERITY ACTION, INC. (AFP ACTION) DBA CVA ACTION AND DBA LIBRE ACTION",
   "race_id": "pa-sen-2024",
-  "generated_at": "2026-09-06T14:11:14+00:00",
+  "generated_at": "2026-09-06T14:25:40+00:00",
   "data_status": "real",
   "nodes": [
     {
@@ -28,7 +28,8 @@
       "is_terminus": true,
       "terminus_reason": "organization",
       "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00687103&two_year_transaction_period=2024&contributor_name=KOCH+INDUSTRIES+INC.",
-      "organization_class": "business"
+      "organization_class": "business",
+      "class_basis": "rule"
     },
     {
       "id": "org:STAND_TOGETHER_CHAMBER_OF_COMMERCE",
@@ -41,7 +42,8 @@
       "is_terminus": true,
       "terminus_reason": "dark",
       "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00687103&two_year_transaction_period=2024&contributor_name=STAND+TOGETHER+CHAMBER+OF+COMMERCE",
-      "organization_class": "nonprofit"
+      "organization_class": "nonprofit",
+      "class_basis": "rule"
     },
     {
       "id": "org:STAND_TOGETHER_CHAMBER_OF_COMMERCE@C00687103",
@@ -54,7 +56,8 @@
       "is_terminus": true,
       "terminus_reason": "dark",
       "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00687103&two_year_transaction_period=2024&contributor_name=STAND+TOGETHER+CHAMBER+OF+COMMERCE",
-      "organization_class": "nonprofit"
+      "organization_class": "nonprofit",
+      "class_basis": "rule"
     },
     {
       "id": "org:KOCH_INDUSTRIES_INC",
@@ -67,7 +70,8 @@
       "is_terminus": true,
       "terminus_reason": "organization",
       "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00687103&two_year_transaction_period=2024&contributor_name=KOCH+INDUSTRIES+INC",
-      "organization_class": "business"
+      "organization_class": "business",
+      "class_basis": "rule"
     },
     {
       "id": "ind:WALTON_JIM_C.|72712",
@@ -92,7 +96,8 @@
       "is_terminus": true,
       "terminus_reason": "dark",
       "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00687103&two_year_transaction_period=2024&contributor_name=IN+PURSUIT+OF+LLC",
-      "organization_class": "llc"
+      "organization_class": "llc",
+      "class_basis": "rule"
     },
     {
       "id": "ind:WALTON_ROB|72712",
@@ -172,12 +177,13 @@
       "kind": "organization",
       "committee_type": null,
       "depth": 1,
-      "visibility": "dark",
+      "visibility": "disclosed",
       "amount_in": 3072643.0,
       "is_terminus": true,
-      "terminus_reason": "dark",
+      "terminus_reason": "organization",
       "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00687103&two_year_transaction_period=2024&contributor_name=TRUIST",
-      "organization_class": "unknown"
+      "organization_class": "business",
+      "class_basis": "inferred"
     },
     {
       "id": "org:UNITED_STATES_POSTAL_SERVICE",
@@ -190,7 +196,8 @@
       "is_terminus": true,
       "terminus_reason": "dark",
       "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00687103&two_year_transaction_period=2024&contributor_name=UNITED+STATES+POSTAL+SERVICE",
-      "organization_class": "unknown"
+      "organization_class": "unknown",
+      "class_basis": "rule"
     },
     {
       "id": "ind:LAUFER_WAYNE_L.|33957",
@@ -778,7 +785,8 @@
         "2023-05-19",
         "2023-05-19"
       ],
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00687103&two_year_transaction_period=2024&contributor_name=KOCH+INDUSTRIES+INC."
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00687103&two_year_transaction_period=2024&contributor_name=KOCH+INDUSTRIES+INC.",
+      "class_basis": "rule"
     },
     {
       "from": "org:STAND_TOGETHER_CHAMBER_OF_COMMERCE",
@@ -794,7 +802,8 @@
         "2023-05-11",
         "2023-05-11"
       ],
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00687103&two_year_transaction_period=2024&contributor_name=STAND+TOGETHER+CHAMBER+OF+COMMERCE"
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00687103&two_year_transaction_period=2024&contributor_name=STAND+TOGETHER+CHAMBER+OF+COMMERCE",
+      "class_basis": "rule"
     },
     {
       "from": "org:STAND_TOGETHER_CHAMBER_OF_COMMERCE@C00687103",
@@ -810,7 +819,8 @@
         "2024-09-12",
         "2024-11-22"
       ],
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00687103&two_year_transaction_period=2024&contributor_name=STAND+TOGETHER+CHAMBER+OF+COMMERCE"
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00687103&two_year_transaction_period=2024&contributor_name=STAND+TOGETHER+CHAMBER+OF+COMMERCE",
+      "class_basis": "rule"
     },
     {
       "from": "org:KOCH_INDUSTRIES_INC",
@@ -826,7 +836,8 @@
         "2024-07-31",
         "2024-07-31"
       ],
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00687103&two_year_transaction_period=2024&contributor_name=KOCH+INDUSTRIES+INC"
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00687103&two_year_transaction_period=2024&contributor_name=KOCH+INDUSTRIES+INC",
+      "class_basis": "rule"
     },
     {
       "from": "ind:WALTON_JIM_C.|72712",
@@ -858,7 +869,8 @@
         "2024-05-14",
         "2024-05-14"
       ],
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00687103&two_year_transaction_period=2024&contributor_name=IN+PURSUIT+OF+LLC"
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00687103&two_year_transaction_period=2024&contributor_name=IN+PURSUIT+OF+LLC",
+      "class_basis": "rule"
     },
     {
       "from": "ind:WALTON_ROB|72712",
@@ -960,7 +972,7 @@
       "from": "org:TRUIST",
       "to": "C00687103",
       "amount": 3072643.0,
-      "visibility": "dark",
+      "visibility": "disclosed",
       "depth": 1,
       "transaction_types": [
         "10"
@@ -970,7 +982,8 @@
         "2023-07-31",
         "2024-10-31"
       ],
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00687103&two_year_transaction_period=2024&contributor_name=TRUIST"
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00687103&two_year_transaction_period=2024&contributor_name=TRUIST",
+      "class_basis": "inferred"
     },
     {
       "from": "org:UNITED_STATES_POSTAL_SERVICE",
@@ -986,7 +999,8 @@
         "2024-11-14",
         "2024-11-14"
       ],
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00687103&two_year_transaction_period=2024&contributor_name=UNITED+STATES+POSTAL+SERVICE"
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00687103&two_year_transaction_period=2024&contributor_name=UNITED+STATES+POSTAL+SERVICE",
+      "class_basis": "rule"
     },
     {
       "from": "ind:LAUFER_WAYNE_L.|33957",
@@ -1840,16 +1854,16 @@
   ],
   "summary": {
     "total_in": 176190145.0,
-    "disclosed_share": 0.6515,
+    "disclosed_share": 0.6695,
     "disclosed_individuals_share": 0.4176,
-    "disclosed_organizations_share": 0.2339,
+    "disclosed_organizations_share": 0.2519,
     "inferable_share": 0.0,
     "unwalked_share": 0.0,
-    "dark_share": 0.3485,
+    "dark_share": 0.3305,
     "max_depth": 1,
     "terminus_counts": {
-      "organization": 2,
-      "dark": 5,
+      "organization": 3,
+      "dark": 4,
       "individual": 10,
       "pruned": 1
     },
@@ -1860,7 +1874,7 @@
     {
       "id": "dead_end_dark",
       "label": "Chain ends at undisclosed donors",
-      "detail": "35% of AMERICANS FOR PROSPERITY ACTION, INC. (AFP ACTION) DBA CVA ACTION AND DBA LIBRE ACTION's receipts stop at organizations whose own funding is not on file (advocacy nonprofits, LLCs, trusts) rather than at named individuals, businesses or unions.",
+      "detail": "33% of AMERICANS FOR PROSPERITY ACTION, INC. (AFP ACTION) DBA CVA ACTION AND DBA LIBRE ACTION's receipts stop at organizations whose own funding is not on file (advocacy nonprofits, LLCs, trusts) rather than at named individuals, businesses or unions.",
       "evidence_url": "https://www.fec.gov/data/committee/C00687103/?cycle=2024"
     }
   ],

@@ -2,7 +2,7 @@
   "root_entity_id": "C00811166",
   "root_name": "THE SENTINEL ACTION FUND",
   "race_id": "pa-sen-2024",
-  "generated_at": "2026-09-06T14:11:15+00:00",
+  "generated_at": "2026-09-06T14:25:40+00:00",
   "data_status": "real",
   "nodes": [
     {
@@ -52,7 +52,8 @@
       "is_terminus": true,
       "terminus_reason": "dark",
       "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00811166&two_year_transaction_period=2024&contributor_name=RIGHT+VOTE+INC.",
-      "organization_class": "nonprofit"
+      "organization_class": "nonprofit",
+      "class_basis": "rule"
     },
     {
       "id": "org:PARADIGM_OPERATIONS_LP",
@@ -65,7 +66,8 @@
       "is_terminus": true,
       "terminus_reason": "dark",
       "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00811166&two_year_transaction_period=2024&contributor_name=PARADIGM+OPERATIONS+LP",
-      "organization_class": "llc"
+      "organization_class": "llc",
+      "class_basis": "rule"
     },
     {
       "id": "ind:MUSK_ELON|78734",
@@ -138,7 +140,8 @@
       "is_terminus": true,
       "terminus_reason": "organization",
       "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00811166&two_year_transaction_period=2024&contributor_name=LEON+RACHEL+CORPORATION",
-      "organization_class": "business"
+      "organization_class": "business",
+      "class_basis": "rule"
     },
     {
       "id": "org:MULTICOIN_CAPITAL_GP_LLC",
@@ -151,7 +154,8 @@
       "is_terminus": true,
       "terminus_reason": "dark",
       "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00811166&two_year_transaction_period=2024&contributor_name=MULTICOIN+CAPITAL+GP+LLC",
-      "organization_class": "llc"
+      "organization_class": "llc",
+      "class_basis": "rule"
     },
     {
       "id": "ind:CHILDS_JOHN_W.|32963",
@@ -200,7 +204,8 @@
       "is_terminus": true,
       "terminus_reason": "dark",
       "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00811166&two_year_transaction_period=2024&contributor_name=HERITAGE+ACTION+FOR+AMERICA",
-      "organization_class": "nonprofit"
+      "organization_class": "nonprofit",
+      "class_basis": "rule"
     },
     {
       "id": "org:NOSEK_CAPITAL_LLC",
@@ -213,7 +218,8 @@
       "is_terminus": true,
       "terminus_reason": "dark",
       "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00811166&two_year_transaction_period=2024&contributor_name=NOSEK+CAPITAL+LLC",
-      "organization_class": "llc"
+      "organization_class": "llc",
+      "class_basis": "rule"
     },
     {
       "id": "agg:other@C00811166",
@@ -443,7 +449,8 @@
         "2024-09-17",
         "2024-12-19"
       ],
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00811166&two_year_transaction_period=2024&contributor_name=RIGHT+VOTE+INC."
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00811166&two_year_transaction_period=2024&contributor_name=RIGHT+VOTE+INC.",
+      "class_basis": "rule"
     },
     {
       "from": "org:PARADIGM_OPERATIONS_LP",
@@ -459,7 +466,8 @@
         "2024-06-26",
         "2024-09-16"
       ],
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00811166&two_year_transaction_period=2024&contributor_name=PARADIGM+OPERATIONS+LP"
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00811166&two_year_transaction_period=2024&contributor_name=PARADIGM+OPERATIONS+LP",
+      "class_basis": "rule"
     },
     {
       "from": "ind:MUSK_ELON|78734",
@@ -556,7 +564,8 @@
         "2024-10-01",
         "2024-10-01"
       ],
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00811166&two_year_transaction_period=2024&contributor_name=LEON+RACHEL+CORPORATION"
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00811166&two_year_transaction_period=2024&contributor_name=LEON+RACHEL+CORPORATION",
+      "class_basis": "rule"
     },
     {
       "from": "org:MULTICOIN_CAPITAL_GP_LLC",
@@ -572,7 +581,8 @@
         "2024-07-26",
         "2024-07-26"
       ],
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00811166&two_year_transaction_period=2024&contributor_name=MULTICOIN+CAPITAL+GP+LLC"
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00811166&two_year_transaction_period=2024&contributor_name=MULTICOIN+CAPITAL+GP+LLC",
+      "class_basis": "rule"
     },
     {
       "from": "ind:CHILDS_JOHN_W.|32963",
@@ -636,7 +646,8 @@
         "2023-03-02",
         "2023-06-25"
       ],
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00811166&two_year_transaction_period=2024&contributor_name=HERITAGE+ACTION+FOR+AMERICA"
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00811166&two_year_transaction_period=2024&contributor_name=HERITAGE+ACTION+FOR+AMERICA",
+      "class_basis": "rule"
     },
     {
       "from": "org:NOSEK_CAPITAL_LLC",
@@ -652,7 +663,8 @@
         "2024-11-01",
         "2024-11-01"
       ],
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00811166&two_year_transaction_period=2024&contributor_name=NOSEK+CAPITAL+LLC"
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00811166&two_year_transaction_period=2024&contributor_name=NOSEK+CAPITAL+LLC",
+      "class_basis": "rule"
     },
     {
       "from": "agg:other@C00811166",
@@ -960,12 +972,12 @@
   ],
   "summary": {
     "total_in": 36861169.0,
-    "disclosed_share": 0.808,
+    "disclosed_share": 0.8087,
     "disclosed_individuals_share": 0.7635,
-    "disclosed_organizations_share": 0.0445,
+    "disclosed_organizations_share": 0.0452,
     "inferable_share": 0.0,
     "unwalked_share": 0.0,
-    "dark_share": 0.192,
+    "dark_share": 0.1913,
     "max_depth": 1,
     "terminus_counts": {
       "individual": 10,

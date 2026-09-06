@@ -2,7 +2,7 @@
   "root_entity_id": "C00299396",
   "root_name": "ITALIAN AMERICAN DEMOCRATIC LEADERSHIP COUNCIL",
   "race_id": "pa-sen-2024",
-  "generated_at": "2026-09-06T14:11:15+00:00",
+  "generated_at": "2026-09-06T14:25:41+00:00",
   "data_status": "real",
   "nodes": [
     {
@@ -40,7 +40,8 @@
       "is_terminus": true,
       "terminus_reason": "organization",
       "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00299396&two_year_transaction_period=2024&contributor_name=THE+INTERNATIONAL+UNION+OF+BRICKLAYERS+%26+ALLIED+CRAFTWORKERS",
-      "organization_class": "union"
+      "organization_class": "union",
+      "class_basis": "rule"
     },
     {
       "id": "C00007542",
@@ -113,7 +114,8 @@
       "is_terminus": true,
       "terminus_reason": "dark",
       "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00299396&two_year_transaction_period=2024&contributor_name=GENOVA%2C+BURNS+%26+GIANTOMASI",
-      "organization_class": "unknown"
+      "organization_class": "unknown",
+      "class_basis": "rule"
     },
     {
       "id": "C00000885",
@@ -210,7 +212,8 @@
       "is_terminus": true,
       "terminus_reason": "organization",
       "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00299396&two_year_transaction_period=2024&contributor_name=LABORER%27S+INTERNATIONAL+UNION",
-      "organization_class": "union"
+      "organization_class": "union",
+      "class_basis": "rule"
     },
     {
       "id": "ind:DECONCINI_DENNIS_W.|92037",
@@ -343,7 +346,8 @@
       "is_terminus": true,
       "terminus_reason": "dark",
       "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00299396&two_year_transaction_period=2024&contributor_name=PATUXENT+CONSULTING",
-      "organization_class": "unknown"
+      "organization_class": "unknown",
+      "class_basis": "rule"
     },
     {
       "id": "agg:other@C00299396",
@@ -6830,7 +6834,8 @@
         "2024-08-08",
         "2024-08-08"
       ],
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00299396&two_year_transaction_period=2024&contributor_name=THE+INTERNATIONAL+UNION+OF+BRICKLAYERS+%26+ALLIED+CRAFTWORKERS"
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00299396&two_year_transaction_period=2024&contributor_name=THE+INTERNATIONAL+UNION+OF+BRICKLAYERS+%26+ALLIED+CRAFTWORKERS",
+      "class_basis": "rule"
     },
     {
       "from": "C00007542",
@@ -6931,7 +6936,8 @@
         "2024-08-30",
         "2024-10-11"
       ],
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00299396&two_year_transaction_period=2024&contributor_name=GENOVA%2C+BURNS+%26+GIANTOMASI"
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00299396&two_year_transaction_period=2024&contributor_name=GENOVA%2C+BURNS+%26+GIANTOMASI",
+      "class_basis": "rule"
     },
     {
       "from": "C00000885",
@@ -7059,7 +7065,8 @@
         "2024-08-14",
         "2024-08-14"
       ],
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00299396&two_year_transaction_period=2024&contributor_name=LABORER%27S+INTERNATIONAL+UNION"
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00299396&two_year_transaction_period=2024&contributor_name=LABORER%27S+INTERNATIONAL+UNION",
+      "class_basis": "rule"
     },
     {
       "from": "ind:DECONCINI_DENNIS_W.|92037",
@@ -7236,7 +7243,8 @@
         "2024-06-04",
         "2024-06-17"
       ],
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00299396&two_year_transaction_period=2024&contributor_name=PATUXENT+CONSULTING"
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00299396&two_year_transaction_period=2024&contributor_name=PATUXENT+CONSULTING",
+      "class_basis": "rule"
     },
     {
       "from": "agg:other@C00299396",

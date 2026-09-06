@@ -4,7 +4,7 @@
   "name": "MEDIA MATTERS FOR AMERICA",
   "kind": "organization",
   "race_id": "pa-sen-2024",
-  "generated_at": "2026-09-06T14:11:16+00:00",
+  "generated_at": "2026-09-06T14:25:42+00:00",
   "data_status": "real",
   "total_given": 2000000.0,
   "total_in_chains": 27000000.0,
@@ -209,5 +209,57 @@
   ],
   "allocation_note": "Amounts past this donor's own gifts are the reported totals between the two parties, not this donor's share. Once money is pooled in a committee it is fungible, so how much of it reached any spender or ad is not determinable.",
   "truncated": false,
-  "method": "Forward walk over the same money edges as the chain walk (Schedule A receipts and committee-to-committee transfers from FEC bulk data, refunds excluded), starting from MEDIA MATTERS FOR AMERICA: the 1 committee(s) it gave to in the 2024 cycle, then the outside spenders in this race that received transfers from those committees (5 spender(s) reached), then each spender's independent expenditures for or against a candidate. Independent expenditures are targeting edges: they move no money to the candidate and are drawn separately. Amounts on money edges are the reported totals between the two parties, not a share of this donor's dollars — once pooled, a donor's money is fungible, so no allocation is made past the first hop. `total_given` is the sum of the first-hop edges shown (itemized receipts reported under this name); `total_in_chains`, used only to rank donors, sums this donor's edges across every spender chain in the race, so the same gift counts once per chain it appears in."
+  "method": "Forward walk over the same money edges as the chain walk (Schedule A receipts and committee-to-committee transfers from FEC bulk data, refunds excluded), starting from MEDIA MATTERS FOR AMERICA: the 1 committee(s) it gave to in the 2024 cycle, then the outside spenders in this race that received transfers from those committees (5 spender(s) reached), then each spender's independent expenditures for or against a candidate. Independent expenditures are targeting edges: they move no money to the candidate and are drawn separately. Amounts on money edges are the reported totals between the two parties, not a share of this donor's dollars — once pooled, a donor's money is fungible, so no allocation is made past the first hop. `total_given` is the sum of the first-hop edges shown (itemized receipts reported under this name); `total_in_chains`, used only to rank donors, sums this donor's edges across every spender chain in the race, so the same gift counts once per chain it appears in.",
+  "x_enrichment": {
+    "issue_focus": {
+      "kind": "general_partisan",
+      "issue_ids": [],
+      "description": "Media Matters for America is a web-based, not-for-profit, 501(c)(3) progressive research and information center dedicated to comprehensively monitoring, analyzing, and correcting conservative misinformation in the U.S. media.",
+      "basis": {
+        "basis": "inferred",
+        "rule": "x_funder_focus",
+        "source_urls": [
+          "https://www.mediamatters.org/about-us"
+        ],
+        "checked_by": null,
+        "checked_at": null
+      },
+      "label": "Machine-tagged from the organization's own website (grok-4.3, 2026-09-06); not part of the record",
+      "quote": "Media Matters for America is a web-based, not-for-profit, 501 (c)(3) progressive research and information center dedicated to comprehensively monitoring, analyzing, and correcting conservative misinformation in the U.S. media.",
+      "provenance": {
+        "tagged_by": "xai-grok-4.3-2026-09-06",
+        "tagged_at": "2026-09-06",
+        "model": "grok-4.3",
+        "prompt_version": "classify_funder.v1",
+        "tools": [
+          "web_search"
+        ],
+        "tool_filters": {},
+        "response_id": "3dfc098d-6f99-9322-8387-eb24e996fd2d",
+        "retrieved_at": "2026-09-06T13:00:21+00:00",
+        "citations": [
+          "https://www.mediamatters.org/about-us",
+          "https://www.mediamatters.org/contact-us",
+          "https://www.mediamatters.org/",
+          "https://www.mediamatters.org/about-us/leadership",
+          "https://web.archive.org/web/20250911013207/https://www.mediamatters.org/",
+          "https://www.mediamatters.org/white-nationalism/far-right-media-have-repeatedly-hosted-leader-whites-only-community",
+          "https://cloudfront.mediamatters.org/static/D8File/2025/06/09/fy23-mmfa-form-990-public-disclosure.pdf",
+          "https://www.mediamatters.org/new-york-times/meet-anti-abortion-group-ny-times-cant-seem-quit",
+          "https://www.mediamatters.org/new-york-times/how-journalists-can-avoid-spreading-misinformation-about-anti-lgbtq-conversion",
+          "https://www.mediamatters.org/steve-bannon/moms-liberty-co-founder-calls-conservative-search-firms-find-new-educational-leaders",
+          "https://www.mediamatters.org/project-2025/definitive-guide-project-2025",
+          "https://www.mediamatters.org/david-horowitz/guide-david-horowitzs-discoverthenetworks",
+          "https://www.mediamatters.org/white-nationalism/supremacy-cause-inside-white-nationalist-movement",
+          "https://www.mediamatters.org/tiktok/right-wing-organization-today-america-fueling-extremist-network-young-conservative",
+          "https://www.mediamatters.org/alliance-defending-freedom/these-national-anti-lgbtq-groups-are-working-make-anti-trans"
+        ],
+        "confidence": "high",
+        "review_status": "pending",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "review_note": null
+      }
+    }
+  }
 }

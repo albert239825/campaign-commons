@@ -23,8 +23,8 @@
     "independent_expenditures": 376948786.7,
     "from_individuals": 300452259.98,
     "from_committees": 14759411.25,
-    "from_organizations": 24374953.0,
-    "from_undisclosed": 58970183.0
+    "from_organizations": 24649953.0,
+    "from_undisclosed": 58695183.0
   },
   "inflows": [
     {
@@ -55,7 +55,8 @@
       "visibility": "dark",
       "transaction_type": "10",
       "limit": "unlimited",
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00825851&two_year_transaction_period=2024&contributor_name=SECURING+AMERICAN+GREATNESS"
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00825851&two_year_transaction_period=2024&contributor_name=SECURING+AMERICAN+GREATNESS",
+      "class_basis": "rule"
     },
     {
       "transfer_id": "C00825851-in-ind:MCMAHON_LINDA_E|06831",
@@ -130,7 +131,8 @@
       "visibility": "disclosed",
       "transaction_type": "10",
       "limit": "unlimited",
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00825851&two_year_transaction_period=2024&contributor_name=RAI+SERVICES+COMPANY"
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00825851&two_year_transaction_period=2024&contributor_name=RAI+SERVICES+COMPANY",
+      "class_basis": "rule"
     },
     {
       "transfer_id": "C00825851-in-C00881805",
@@ -160,7 +162,8 @@
       "visibility": "disclosed",
       "transaction_type": "10",
       "limit": "unlimited",
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00825851&two_year_transaction_period=2024&contributor_name=CAPITAL+INSTITUTIONAL+SERVICES+INC"
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00825851&two_year_transaction_period=2024&contributor_name=CAPITAL+INSTITUTIONAL+SERVICES+INC",
+      "class_basis": "rule"
     },
     {
       "transfer_id": "C00825851-in-ind:LUTNICK_HOWARD_W|10021",
@@ -400,7 +403,8 @@
       "visibility": "disclosed",
       "transaction_type": "10",
       "limit": "unlimited",
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00825851&two_year_transaction_period=2024&contributor_name=CONTINENTAL+RESOURCES+INC"
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00825851&two_year_transaction_period=2024&contributor_name=CONTINENTAL+RESOURCES+INC",
+      "class_basis": "rule"
     }
   ],
   "outflows": [

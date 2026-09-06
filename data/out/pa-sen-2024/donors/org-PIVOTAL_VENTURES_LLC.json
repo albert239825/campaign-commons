@@ -4,7 +4,7 @@
   "name": "PIVOTAL VENTURES LLC",
   "kind": "organization",
   "race_id": "pa-sen-2024",
-  "generated_at": "2026-09-06T14:11:16+00:00",
+  "generated_at": "2026-09-06T14:25:42+00:00",
   "data_status": "real",
   "total_given": 2500000.0,
   "total_in_chains": 30000000.0,
@@ -82,5 +82,64 @@
   ],
   "allocation_note": "Amounts past this donor's own gifts are the reported totals between the two parties, not this donor's share. Once money is pooled in a committee it is fungible, so how much of it reached any spender or ad is not determinable.",
   "truncated": false,
-  "method": "Forward walk over the same money edges as the chain walk (Schedule A receipts and committee-to-committee transfers from FEC bulk data, refunds excluded), starting from PIVOTAL VENTURES LLC: the 1 committee(s) it gave to in the 2024 cycle, then the outside spenders in this race that received transfers from those committees (1 spender(s) reached), then each spender's independent expenditures for or against a candidate. Independent expenditures are targeting edges: they move no money to the candidate and are drawn separately. Amounts on money edges are the reported totals between the two parties, not a share of this donor's dollars — once pooled, a donor's money is fungible, so no allocation is made past the first hop. `total_given` is the sum of the first-hop edges shown (itemized receipts reported under this name); `total_in_chains`, used only to rank donors, sums this donor's edges across every spender chain in the race, so the same gift counts once per chain it appears in."
+  "method": "Forward walk over the same money edges as the chain walk (Schedule A receipts and committee-to-committee transfers from FEC bulk data, refunds excluded), starting from PIVOTAL VENTURES LLC: the 1 committee(s) it gave to in the 2024 cycle, then the outside spenders in this race that received transfers from those committees (1 spender(s) reached), then each spender's independent expenditures for or against a candidate. Independent expenditures are targeting edges: they move no money to the candidate and are drawn separately. Amounts on money edges are the reported totals between the two parties, not a share of this donor's dollars — once pooled, a donor's money is fungible, so no allocation is made past the first hop. `total_given` is the sum of the first-hop edges shown (itemized receipts reported under this name); `total_in_chains`, used only to rank donors, sums this donor's edges across every spender chain in the race, so the same gift counts once per chain it appears in.",
+  "x_enrichment": {
+    "issue_focus": {
+      "kind": "business_trade",
+      "issue_ids": [],
+      "description": "Founded by Melinda French Gates, Pivotal is a group of organizations (including Pivotal Ventures, LLC) working to accelerate social progress for women and young people worldwide through philanthropy, investments, and advocacy to expand women’s power and influence.",
+      "basis": {
+        "basis": "inferred",
+        "rule": "x_funder_focus",
+        "source_urls": [
+          "https://www.pivotal.com/about",
+          "http://web.archive.org/web/20260608084228/https://www.pivotal.com/about"
+        ],
+        "checked_by": null,
+        "checked_at": null
+      },
+      "label": "Machine-tagged from the organization's own website (grok-4.3, 2026-09-06); not part of the record",
+      "quote": "Founded by Melinda French Gates, Pivotal is a group of organizations working to accelerate the pace of social progress for women and young people in the U.S. and around the world. We use philanthropy, investments, and advocacy to drive momentum where we see the biggest opportunities for impact.",
+      "provenance": {
+        "tagged_by": "xai-grok-4.3-2026-09-06",
+        "tagged_at": "2026-09-06",
+        "model": "grok-4.3",
+        "prompt_version": "classify_funder.v1",
+        "tools": [
+          "web_search"
+        ],
+        "tool_filters": {},
+        "response_id": "87201489-0c6f-9333-99ed-f9fff600050a",
+        "retrieved_at": "2026-09-06T13:00:17+00:00",
+        "citations": [
+          "https://www.pivotal.com/investments",
+          "https://www.pivotalventures.org/latest",
+          "https://image.pivotal.com/-/media/Files/Pivotal/media/Pivotal-Strategy-Overview-Investments.pdf?hash=22D08AC273046B5405E21C95730B41C3&rev=664162b5db214a0b813f51e05eaff8c8",
+          "https://www.linkedin.com/company/pivotalventures",
+          "https://www.zoominfo.com/c/pivotal-ventures-llc/467334792",
+          "https://www.influencewatch.org/for-profit/pivotal-ventures-llc/",
+          "https://pitchbook.com/profiles/limited-partner/229207-69",
+          "https://image.pivotal.com/-/media/Files/Pivotal/women-in-politics/Pivotal-Strategy-Overview-Womens-Political-Power.pdf?hash=81027C14A8B5D59C59303319FFD42B81&rev=93ae3a84e0c445949aa4841a65e945e0",
+          "https://www.opensecrets.org/orgs/pivotal-ventures/summary?id=D000087351",
+          "https://ghdx.healthdata.org/organizations/pivotal-ventures",
+          "https://www.pivotalventures.org/media/aspen-institute-and-pivotal-announce-nationwide-workplace-grant-competition",
+          "https://www.pivotalventures.org/work/caregiving",
+          "https://www.pivotalventures.org/articles/what-the-berlin-wall-can-teach-us-right-now",
+          "https://www.pivotalventures.org/articles/its-time-for-breakthroughs-in-womens-health",
+          "https://www.pivotalventures.org/",
+          "https://www.pivotalventures.org/articles/time-for-philanthropy-invest-women-girls-of-color",
+          "https://pivotalventures.org/articles/sonya-passi-number-one-obstacle-safety-survivors-economic-insecurity?utm_source=EM&utm_medium=PV_OG&utm_campaign=SP&utm_content=42925",
+          "https://www.pivotalventures.org/articles/pivotal-ventures-launch-new-fund-mental-health-young-people-color-lgbtq-youth",
+          "https://www.pivotalventures.org/articles/the-daunting-damning-number-that-should-spur-us-to-action",
+          "https://www.pivotalventures.org/articles/melinda-french-gates-time-pass-paid-leave-congress",
+          "https://www.pivotal.com/about"
+        ],
+        "confidence": "high",
+        "review_status": "pending",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "review_note": null
+      }
+    }
+  }
 }

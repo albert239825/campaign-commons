@@ -2,7 +2,7 @@
   "root_entity_id": "C00744920",
   "root_name": "CFFE PAC",
   "race_id": "pa-sen-2024",
-  "generated_at": "2026-09-06T14:11:14+00:00",
+  "generated_at": "2026-09-06T14:25:40+00:00",
   "data_status": "real",
   "nodes": [
     {
@@ -28,7 +28,8 @@
       "is_terminus": true,
       "terminus_reason": "dark",
       "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00744920&two_year_transaction_period=2024&contributor_name=AMERICA+VOTES",
-      "organization_class": "nonprofit"
+      "organization_class": "nonprofit",
+      "class_basis": "rule"
     },
     {
       "id": "org:PIVOTAL_VENTURES",
@@ -41,7 +42,8 @@
       "is_terminus": true,
       "terminus_reason": "organization",
       "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00744920&two_year_transaction_period=2024&contributor_name=PIVOTAL+VENTURES",
-      "organization_class": "business"
+      "organization_class": "business",
+      "class_basis": "rule"
     },
     {
       "id": "C00492520",
@@ -78,7 +80,8 @@
       "is_terminus": true,
       "terminus_reason": "dark",
       "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00744920&two_year_transaction_period=2024&contributor_name=GLOBAL+IMPACT+SOCIAL+WELFARE+FUND",
-      "organization_class": "nonprofit"
+      "organization_class": "nonprofit",
+      "class_basis": "rule"
     },
     {
       "id": "org:REBUILD_USA",
@@ -91,7 +94,8 @@
       "is_terminus": true,
       "terminus_reason": "dark",
       "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00744920&two_year_transaction_period=2024&contributor_name=REBUILD+USA",
-      "organization_class": "unknown"
+      "organization_class": "unknown",
+      "class_basis": "rule"
     },
     {
       "id": "org:OHIO_PROGRESSIVE_COLLABORATIVE",
@@ -104,7 +108,8 @@
       "is_terminus": true,
       "terminus_reason": "dark",
       "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00744920&two_year_transaction_period=2024&contributor_name=OHIO+PROGRESSIVE+COLLABORATIVE",
-      "organization_class": "unknown"
+      "organization_class": "nonprofit",
+      "class_basis": "inferred"
     },
     {
       "id": "org:FORWARD_ACTION_FUND",
@@ -117,7 +122,8 @@
       "is_terminus": true,
       "terminus_reason": "dark",
       "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00744920&two_year_transaction_period=2024&contributor_name=FORWARD+ACTION+FUND",
-      "organization_class": "nonprofit"
+      "organization_class": "nonprofit",
+      "class_basis": "rule"
     },
     {
       "id": "org:SIXTEEN_THIRTY_FUND",
@@ -130,7 +136,8 @@
       "is_terminus": true,
       "terminus_reason": "dark",
       "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00744920&two_year_transaction_period=2024&contributor_name=SIXTEEN+THIRTY+FUND",
-      "organization_class": "nonprofit"
+      "organization_class": "nonprofit",
+      "class_basis": "rule"
     },
     {
       "id": "C00882100",
@@ -167,7 +174,8 @@
       "is_terminus": true,
       "terminus_reason": "dark",
       "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00744920&two_year_transaction_period=2024&contributor_name=MAP+USA",
-      "organization_class": "unknown"
+      "organization_class": "nonprofit",
+      "class_basis": "inferred"
     },
     {
       "id": "agg:other@C00744920",
@@ -205,7 +213,8 @@
       "is_terminus": true,
       "terminus_reason": "dark",
       "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00492520&two_year_transaction_period=2024&contributor_name=AMERICA+VOTES",
-      "organization_class": "nonprofit"
+      "organization_class": "nonprofit",
+      "class_basis": "rule"
     },
     {
       "id": "org:MEDIA_MATTERS_FOR_AMERICA",
@@ -218,7 +227,8 @@
       "is_terminus": true,
       "terminus_reason": "dark",
       "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00492520&two_year_transaction_period=2024&contributor_name=MEDIA+MATTERS+FOR+AMERICA",
-      "organization_class": "nonprofit"
+      "organization_class": "nonprofit",
+      "class_basis": "rule"
     },
     {
       "id": "org:AB_FOUNDATION",
@@ -231,7 +241,8 @@
       "is_terminus": true,
       "terminus_reason": "dark",
       "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00492520&two_year_transaction_period=2024&contributor_name=AB+FOUNDATION",
-      "organization_class": "nonprofit"
+      "organization_class": "nonprofit",
+      "class_basis": "rule"
     },
     {
       "id": "org:AMERICAN_BRIDGE_21ST_CENTURY_FOUNDATION",
@@ -244,7 +255,8 @@
       "is_terminus": true,
       "terminus_reason": "dark",
       "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00492520&two_year_transaction_period=2024&contributor_name=AMERICAN+BRIDGE+21ST+CENTURY+FOUNDATION",
-      "organization_class": "nonprofit"
+      "organization_class": "nonprofit",
+      "class_basis": "rule"
     },
     {
       "id": "cycle:C00489815@C00492520",
@@ -281,7 +293,8 @@
       "is_terminus": true,
       "terminus_reason": "dark",
       "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00492520&two_year_transaction_period=2024&contributor_name=MEDIA+MATTERS+FOR+AMERICA",
-      "organization_class": "nonprofit"
+      "organization_class": "nonprofit",
+      "class_basis": "rule"
     },
     {
       "id": "org:SERVICE_EMPLOYEES_INTERNATIONAL_UNION_(SEIU)",
@@ -294,7 +307,8 @@
       "is_terminus": true,
       "terminus_reason": "organization",
       "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00492520&two_year_transaction_period=2024&contributor_name=SERVICE+EMPLOYEES+INTERNATIONAL+UNION+%28SEIU%29",
-      "organization_class": "union"
+      "organization_class": "union",
+      "class_basis": "rule"
     },
     {
       "id": "agg:other@C00492520",
@@ -320,7 +334,8 @@
       "is_terminus": true,
       "terminus_reason": "dark",
       "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00484642&two_year_transaction_period=2024&contributor_name=MAJORITY+FORWARD",
-      "organization_class": "nonprofit"
+      "organization_class": "nonprofit",
+      "class_basis": "rule"
     },
     {
       "id": "C00490847",
@@ -369,7 +384,8 @@
       "is_terminus": true,
       "terminus_reason": "dark",
       "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00484642&two_year_transaction_period=2024&contributor_name=GREATER+NEW+YORK+HOSPITAL+ASSOCIATION+MANAGEMENT+CORPORATION",
-      "organization_class": "nonprofit"
+      "organization_class": "nonprofit",
+      "class_basis": "rule"
     },
     {
       "id": "ind:SIMONS_JAMES|10010",
@@ -442,7 +458,8 @@
       "is_terminus": true,
       "terminus_reason": "organization",
       "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00484642&two_year_transaction_period=2024&contributor_name=IBEW+PAC+EDUCATIONAL+FUND",
-      "organization_class": "union"
+      "organization_class": "union",
+      "class_basis": "rule"
     },
     {
       "id": "ind:CHAN_MICHELLE|94111",
@@ -648,7 +665,8 @@
       "is_terminus": true,
       "terminus_reason": "dark",
       "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00473918&two_year_transaction_period=2024&contributor_name=PIVOTAL+VENTURES+LLC",
-      "organization_class": "llc"
+      "organization_class": "llc",
+      "class_basis": "rule"
     },
     {
       "id": "ind:DELANEY_MARY|94612",
@@ -812,12 +830,13 @@
       "kind": "organization",
       "committee_type": null,
       "depth": 3,
-      "visibility": "dark",
+      "visibility": "disclosed",
       "amount_in": 377953.0,
       "is_terminus": true,
-      "terminus_reason": "dark",
+      "terminus_reason": "organization",
       "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00473918&two_year_transaction_period=2024&contributor_name=WATERFRONT+STRATEGIES",
-      "organization_class": "unknown"
+      "organization_class": "business",
+      "class_basis": "inferred"
     },
     {
       "id": "ind:QUILLIN_PATTY|95060",
@@ -855,7 +874,8 @@
       "is_terminus": true,
       "terminus_reason": "organization",
       "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00490847&two_year_transaction_period=2024&contributor_name=UNITED+BROTHERHOOD+OF+CARPENTERS+AND+JOINERS",
-      "organization_class": "union"
+      "organization_class": "union",
+      "class_basis": "rule"
     },
     {
       "id": "org:FUND_FOR_POLICY_REFORM",
@@ -868,7 +888,8 @@
       "is_terminus": true,
       "terminus_reason": "dark",
       "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00693382&two_year_transaction_period=2024&contributor_name=FUND+FOR+POLICY+REFORM",
-      "organization_class": "nonprofit"
+      "organization_class": "nonprofit",
+      "class_basis": "rule"
     },
     {
       "id": "org:GEOSOR_CORPORATION",
@@ -881,7 +902,8 @@
       "is_terminus": true,
       "terminus_reason": "organization",
       "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00693382&two_year_transaction_period=2024&contributor_name=GEOSOR+CORPORATION",
-      "organization_class": "business"
+      "organization_class": "business",
+      "class_basis": "rule"
     },
     {
       "id": "org:GLOBAL_OAK_HOLDINGS_LLC",
@@ -894,7 +916,8 @@
       "is_terminus": true,
       "terminus_reason": "dark",
       "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00693382&two_year_transaction_period=2024&contributor_name=GLOBAL+OAK+HOLDINGS+LLC",
-      "organization_class": "llc"
+      "organization_class": "llc",
+      "class_basis": "rule"
     },
     {
       "id": "agg:other@C00693382",
@@ -920,7 +943,8 @@
       "is_terminus": true,
       "terminus_reason": "organization",
       "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00624817&two_year_transaction_period=2024&contributor_name=INTERNATIONAL+UNION+OF+OPERATING+ENGINEERS",
-      "organization_class": "union"
+      "organization_class": "union",
+      "class_basis": "rule"
     },
     {
       "id": "C00142851",
@@ -1297,7 +1321,8 @@
       "is_terminus": true,
       "terminus_reason": "organization",
       "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00484253&two_year_transaction_period=2024&contributor_name=UNITED+FOOD+AND+COMMERCIAL+WORKERS+INTERNATIONAL+UNION",
-      "organization_class": "union"
+      "organization_class": "union",
+      "class_basis": "rule"
     },
     {
       "id": "org:FUTURE_FORWARD_USA_ACTION",
@@ -1310,7 +1335,8 @@
       "is_terminus": true,
       "terminus_reason": "dark",
       "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00669259&two_year_transaction_period=2024&contributor_name=FUTURE+FORWARD+USA+ACTION",
-      "organization_class": "nonprofit"
+      "organization_class": "nonprofit",
+      "class_basis": "rule"
     },
     {
       "id": "ind:MOSKOVITZ_DUSTIN_A|94126",
@@ -1383,7 +1409,8 @@
       "is_terminus": true,
       "terminus_reason": "dark",
       "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00669259&two_year_transaction_period=2024&contributor_name=EVIDENCE+FOR+IMPACT",
-      "organization_class": "nonprofit"
+      "organization_class": "nonprofit",
+      "class_basis": "rule"
     },
     {
       "id": "cycle:C00693382@C00669259",
@@ -1456,7 +1483,8 @@
       "is_terminus": true,
       "terminus_reason": "dark",
       "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00669259&two_year_transaction_period=2024&contributor_name=AMERICA+VOTES",
-      "organization_class": "nonprofit"
+      "organization_class": "nonprofit",
+      "class_basis": "rule"
     },
     {
       "id": "C00707844",
@@ -7020,7 +7048,8 @@
       "is_terminus": true,
       "terminus_reason": "dark",
       "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00486845&two_year_transaction_period=2024&contributor_name=LEAGUE+OF+CONSERVATION+VOTERS%2C+INC.",
-      "organization_class": "nonprofit"
+      "organization_class": "nonprofit",
+      "class_basis": "rule"
     },
     {
       "id": "cycle:C00492520@C00486845",
@@ -7057,7 +7086,8 @@
       "is_terminus": true,
       "terminus_reason": "dark",
       "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00486845&two_year_transaction_period=2024&contributor_name=AMERICA+VOTES",
-      "organization_class": "nonprofit"
+      "organization_class": "nonprofit",
+      "class_basis": "rule"
     },
     {
       "id": "ind:GRANTHAM_ROBERT|02108",
@@ -7082,7 +7112,8 @@
       "is_terminus": true,
       "terminus_reason": "organization",
       "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00486845&two_year_transaction_period=2024&contributor_name=SAVE+OUR+HOME+PLANET+ACTION+INC.",
-      "organization_class": "business"
+      "organization_class": "business",
+      "class_basis": "rule"
     },
     {
       "id": "ind:KARPLUS_BARBARA|91320",
@@ -7119,7 +7150,8 @@
       "is_terminus": true,
       "terminus_reason": "dark",
       "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00486845&two_year_transaction_period=2024&contributor_name=OUR+AMERICAN+FUTURE+ACTION",
-      "organization_class": "nonprofit"
+      "organization_class": "nonprofit",
+      "class_basis": "rule"
     },
     {
       "id": "ind:WINTER_NANCY|05091",
@@ -7157,7 +7189,8 @@
       "is_terminus": true,
       "terminus_reason": "dark",
       "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00817536&two_year_transaction_period=2024&contributor_name=CLIMATE+POWER",
-      "organization_class": "nonprofit"
+      "organization_class": "nonprofit",
+      "class_basis": "rule"
     },
     {
       "id": "org:ENVIRONMENTAL_DEFENSE_ACTION_FUND",
@@ -7170,7 +7203,8 @@
       "is_terminus": true,
       "terminus_reason": "dark",
       "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00707844&two_year_transaction_period=2024&contributor_name=ENVIRONMENTAL+DEFENSE+ACTION+FUND",
-      "organization_class": "nonprofit"
+      "organization_class": "nonprofit",
+      "class_basis": "rule"
     },
     {
       "id": "ind:MANDEL_SUSAN_Z.|06831",
@@ -7573,7 +7607,8 @@
         "2023-03-10",
         "2024-11-01"
       ],
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00744920&two_year_transaction_period=2024&contributor_name=AMERICA+VOTES"
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00744920&two_year_transaction_period=2024&contributor_name=AMERICA+VOTES",
+      "class_basis": "rule"
     },
     {
       "from": "org:PIVOTAL_VENTURES",
@@ -7589,7 +7624,8 @@
         "2023-09-01",
         "2024-04-12"
       ],
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00744920&two_year_transaction_period=2024&contributor_name=PIVOTAL+VENTURES"
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00744920&two_year_transaction_period=2024&contributor_name=PIVOTAL+VENTURES",
+      "class_basis": "rule"
     },
     {
       "from": "C00492520",
@@ -7637,7 +7673,8 @@
         "2024-10-30",
         "2024-10-31"
       ],
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00744920&two_year_transaction_period=2024&contributor_name=GLOBAL+IMPACT+SOCIAL+WELFARE+FUND"
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00744920&two_year_transaction_period=2024&contributor_name=GLOBAL+IMPACT+SOCIAL+WELFARE+FUND",
+      "class_basis": "rule"
     },
     {
       "from": "org:REBUILD_USA",
@@ -7653,7 +7690,8 @@
         "2024-10-17",
         "2024-10-17"
       ],
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00744920&two_year_transaction_period=2024&contributor_name=REBUILD+USA"
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00744920&two_year_transaction_period=2024&contributor_name=REBUILD+USA",
+      "class_basis": "rule"
     },
     {
       "from": "org:OHIO_PROGRESSIVE_COLLABORATIVE",
@@ -7669,7 +7707,8 @@
         "2024-10-21",
         "2024-10-28"
       ],
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00744920&two_year_transaction_period=2024&contributor_name=OHIO+PROGRESSIVE+COLLABORATIVE"
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00744920&two_year_transaction_period=2024&contributor_name=OHIO+PROGRESSIVE+COLLABORATIVE",
+      "class_basis": "inferred"
     },
     {
       "from": "org:FORWARD_ACTION_FUND",
@@ -7685,7 +7724,8 @@
         "2024-11-01",
         "2024-11-27"
       ],
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00744920&two_year_transaction_period=2024&contributor_name=FORWARD+ACTION+FUND"
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00744920&two_year_transaction_period=2024&contributor_name=FORWARD+ACTION+FUND",
+      "class_basis": "rule"
     },
     {
       "from": "org:SIXTEEN_THIRTY_FUND",
@@ -7701,7 +7741,8 @@
         "2023-08-02",
         "2024-10-30"
       ],
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00744920&two_year_transaction_period=2024&contributor_name=SIXTEEN+THIRTY+FUND"
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00744920&two_year_transaction_period=2024&contributor_name=SIXTEEN+THIRTY+FUND",
+      "class_basis": "rule"
     },
     {
       "from": "C00882100",
@@ -7749,7 +7790,8 @@
         "2024-10-17",
         "2024-10-17"
       ],
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00744920&two_year_transaction_period=2024&contributor_name=MAP+USA"
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00744920&two_year_transaction_period=2024&contributor_name=MAP+USA",
+      "class_basis": "inferred"
     },
     {
       "from": "agg:other@C00744920",
@@ -7801,7 +7843,8 @@
         "2024-06-28",
         "2024-12-10"
       ],
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00492520&two_year_transaction_period=2024&contributor_name=AMERICA+VOTES"
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00492520&two_year_transaction_period=2024&contributor_name=AMERICA+VOTES",
+      "class_basis": "rule"
     },
     {
       "from": "org:MEDIA_MATTERS_FOR_AMERICA",
@@ -7817,7 +7860,8 @@
         "2024-10-01",
         "2024-10-01"
       ],
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00492520&two_year_transaction_period=2024&contributor_name=MEDIA+MATTERS+FOR+AMERICA"
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00492520&two_year_transaction_period=2024&contributor_name=MEDIA+MATTERS+FOR+AMERICA",
+      "class_basis": "rule"
     },
     {
       "from": "org:AB_FOUNDATION",
@@ -7833,7 +7877,8 @@
         "2024-10-16",
         "2024-10-16"
       ],
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00492520&two_year_transaction_period=2024&contributor_name=AB+FOUNDATION"
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00492520&two_year_transaction_period=2024&contributor_name=AB+FOUNDATION",
+      "class_basis": "rule"
     },
     {
       "from": "org:AMERICAN_BRIDGE_21ST_CENTURY_FOUNDATION",
@@ -7849,7 +7894,8 @@
         "2024-10-23",
         "2024-10-23"
       ],
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00492520&two_year_transaction_period=2024&contributor_name=AMERICAN+BRIDGE+21ST+CENTURY+FOUNDATION"
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00492520&two_year_transaction_period=2024&contributor_name=AMERICAN+BRIDGE+21ST+CENTURY+FOUNDATION",
+      "class_basis": "rule"
     },
     {
       "from": "cycle:C00489815@C00492520",
@@ -7898,7 +7944,8 @@
         "2024-10-30",
         "2024-10-30"
       ],
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00492520&two_year_transaction_period=2024&contributor_name=MEDIA+MATTERS+FOR+AMERICA"
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00492520&two_year_transaction_period=2024&contributor_name=MEDIA+MATTERS+FOR+AMERICA",
+      "class_basis": "rule"
     },
     {
       "from": "org:SERVICE_EMPLOYEES_INTERNATIONAL_UNION_(SEIU)",
@@ -7914,7 +7961,8 @@
         "2023-03-07",
         "2023-03-07"
       ],
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00492520&two_year_transaction_period=2024&contributor_name=SERVICE+EMPLOYEES+INTERNATIONAL+UNION+%28SEIU%29"
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00492520&two_year_transaction_period=2024&contributor_name=SERVICE+EMPLOYEES+INTERNATIONAL+UNION+%28SEIU%29",
+      "class_basis": "rule"
     },
     {
       "from": "agg:other@C00492520",
@@ -7949,7 +7997,8 @@
         "2023-01-03",
         "2024-12-17"
       ],
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00484642&two_year_transaction_period=2024&contributor_name=MAJORITY+FORWARD"
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00484642&two_year_transaction_period=2024&contributor_name=MAJORITY+FORWARD",
+      "class_basis": "rule"
     },
     {
       "from": "C00490847",
@@ -8015,7 +8064,8 @@
         "2023-05-10",
         "2024-10-16"
       ],
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00484642&two_year_transaction_period=2024&contributor_name=GREATER+NEW+YORK+HOSPITAL+ASSOCIATION+MANAGEMENT+CORPORATION"
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00484642&two_year_transaction_period=2024&contributor_name=GREATER+NEW+YORK+HOSPITAL+ASSOCIATION+MANAGEMENT+CORPORATION",
+      "class_basis": "rule"
     },
     {
       "from": "ind:SIMONS_JAMES|10010",
@@ -8112,7 +8162,8 @@
         "2023-06-29",
         "2024-10-22"
       ],
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00484642&two_year_transaction_period=2024&contributor_name=IBEW+PAC+EDUCATIONAL+FUND"
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00484642&two_year_transaction_period=2024&contributor_name=IBEW+PAC+EDUCATIONAL+FUND",
+      "class_basis": "rule"
     },
     {
       "from": "ind:CHAN_MICHELLE|94111",
@@ -8396,7 +8447,8 @@
         "2024-05-31",
         "2024-08-14"
       ],
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00473918&two_year_transaction_period=2024&contributor_name=PIVOTAL+VENTURES+LLC"
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00473918&two_year_transaction_period=2024&contributor_name=PIVOTAL+VENTURES+LLC",
+      "class_basis": "rule"
     },
     {
       "from": "ind:DELANEY_MARY|94612",
@@ -8614,7 +8666,7 @@
       "from": "org:WATERFRONT_STRATEGIES",
       "to": "C00473918",
       "amount": 377953.0,
-      "visibility": "dark",
+      "visibility": "disclosed",
       "depth": 3,
       "transaction_types": [
         "10"
@@ -8624,7 +8676,8 @@
         "2023-08-03",
         "2023-12-11"
       ],
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00473918&two_year_transaction_period=2024&contributor_name=WATERFRONT+STRATEGIES"
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00473918&two_year_transaction_period=2024&contributor_name=WATERFRONT+STRATEGIES",
+      "class_basis": "inferred"
     },
     {
       "from": "ind:QUILLIN_PATTY|95060",
@@ -8675,7 +8728,8 @@
         "2023-04-10",
         "2024-10-28"
       ],
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00490847&two_year_transaction_period=2024&contributor_name=UNITED+BROTHERHOOD+OF+CARPENTERS+AND+JOINERS"
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00490847&two_year_transaction_period=2024&contributor_name=UNITED+BROTHERHOOD+OF+CARPENTERS+AND+JOINERS",
+      "class_basis": "rule"
     },
     {
       "from": "org:FUND_FOR_POLICY_REFORM",
@@ -8691,7 +8745,8 @@
         "2024-01-11",
         "2024-01-11"
       ],
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00693382&two_year_transaction_period=2024&contributor_name=FUND+FOR+POLICY+REFORM"
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00693382&two_year_transaction_period=2024&contributor_name=FUND+FOR+POLICY+REFORM",
+      "class_basis": "rule"
     },
     {
       "from": "org:GEOSOR_CORPORATION",
@@ -8707,7 +8762,8 @@
         "2024-09-19",
         "2024-09-19"
       ],
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00693382&two_year_transaction_period=2024&contributor_name=GEOSOR+CORPORATION"
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00693382&two_year_transaction_period=2024&contributor_name=GEOSOR+CORPORATION",
+      "class_basis": "rule"
     },
     {
       "from": "org:GLOBAL_OAK_HOLDINGS_LLC",
@@ -8723,7 +8779,8 @@
         "2024-01-31",
         "2024-06-28"
       ],
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00693382&two_year_transaction_period=2024&contributor_name=GLOBAL+OAK+HOLDINGS+LLC"
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00693382&two_year_transaction_period=2024&contributor_name=GLOBAL+OAK+HOLDINGS+LLC",
+      "class_basis": "rule"
     },
     {
       "from": "agg:other@C00693382",
@@ -8755,7 +8812,8 @@
         "2023-08-02",
         "2024-10-28"
       ],
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00624817&two_year_transaction_period=2024&contributor_name=INTERNATIONAL+UNION+OF+OPERATING+ENGINEERS"
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00624817&two_year_transaction_period=2024&contributor_name=INTERNATIONAL+UNION+OF+OPERATING+ENGINEERS",
+      "class_basis": "rule"
     },
     {
       "from": "C00142851",
@@ -9284,7 +9342,8 @@
         "2023-05-19",
         "2024-10-10"
       ],
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00484253&two_year_transaction_period=2024&contributor_name=UNITED+FOOD+AND+COMMERCIAL+WORKERS+INTERNATIONAL+UNION"
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00484253&two_year_transaction_period=2024&contributor_name=UNITED+FOOD+AND+COMMERCIAL+WORKERS+INTERNATIONAL+UNION",
+      "class_basis": "rule"
     },
     {
       "from": "org:FUTURE_FORWARD_USA_ACTION",
@@ -9300,7 +9359,8 @@
         "2023-06-30",
         "2024-12-31"
       ],
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00669259&two_year_transaction_period=2024&contributor_name=FUTURE+FORWARD+USA+ACTION"
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00669259&two_year_transaction_period=2024&contributor_name=FUTURE+FORWARD+USA+ACTION",
+      "class_basis": "rule"
     },
     {
       "from": "ind:MOSKOVITZ_DUSTIN_A|94126",
@@ -9396,7 +9456,8 @@
         "2024-09-16",
         "2024-10-16"
       ],
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00669259&two_year_transaction_period=2024&contributor_name=EVIDENCE+FOR+IMPACT"
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00669259&two_year_transaction_period=2024&contributor_name=EVIDENCE+FOR+IMPACT",
+      "class_basis": "rule"
     },
     {
       "from": "cycle:C00693382@C00669259",
@@ -9492,7 +9553,8 @@
         "2024-10-16",
         "2024-10-31"
       ],
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00669259&two_year_transaction_period=2024&contributor_name=AMERICA+VOTES"
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00669259&two_year_transaction_period=2024&contributor_name=AMERICA+VOTES",
+      "class_basis": "rule"
     },
     {
       "from": "C00707844",
@@ -16919,7 +16981,8 @@
         "2023-01-20",
         "2024-10-24"
       ],
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00486845&two_year_transaction_period=2024&contributor_name=LEAGUE+OF+CONSERVATION+VOTERS%2C+INC."
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00486845&two_year_transaction_period=2024&contributor_name=LEAGUE+OF+CONSERVATION+VOTERS%2C+INC.",
+      "class_basis": "rule"
     },
     {
       "from": "cycle:C00492520@C00486845",
@@ -16968,7 +17031,8 @@
         "2024-02-05",
         "2024-11-01"
       ],
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00486845&two_year_transaction_period=2024&contributor_name=AMERICA+VOTES"
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00486845&two_year_transaction_period=2024&contributor_name=AMERICA+VOTES",
+      "class_basis": "rule"
     },
     {
       "from": "ind:GRANTHAM_ROBERT|02108",
@@ -17000,7 +17064,8 @@
         "2024-08-16",
         "2024-10-22"
       ],
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00486845&two_year_transaction_period=2024&contributor_name=SAVE+OUR+HOME+PLANET+ACTION+INC."
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00486845&two_year_transaction_period=2024&contributor_name=SAVE+OUR+HOME+PLANET+ACTION+INC.",
+      "class_basis": "rule"
     },
     {
       "from": "ind:KARPLUS_BARBARA|91320",
@@ -17048,7 +17113,8 @@
         "2024-06-28",
         "2024-06-28"
       ],
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00486845&two_year_transaction_period=2024&contributor_name=OUR+AMERICAN+FUTURE+ACTION"
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00486845&two_year_transaction_period=2024&contributor_name=OUR+AMERICAN+FUTURE+ACTION",
+      "class_basis": "rule"
     },
     {
       "from": "ind:WINTER_NANCY|05091",
@@ -17098,7 +17164,8 @@
         "2024-03-31",
         "2024-11-30"
       ],
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00817536&two_year_transaction_period=2024&contributor_name=CLIMATE+POWER"
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00817536&two_year_transaction_period=2024&contributor_name=CLIMATE+POWER",
+      "class_basis": "rule"
     },
     {
       "from": "org:ENVIRONMENTAL_DEFENSE_ACTION_FUND",
@@ -17114,7 +17181,8 @@
         "2023-01-31",
         "2024-12-31"
       ],
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00707844&two_year_transaction_period=2024&contributor_name=ENVIRONMENTAL+DEFENSE+ACTION+FUND"
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00707844&two_year_transaction_period=2024&contributor_name=ENVIRONMENTAL+DEFENSE+ACTION+FUND",
+      "class_basis": "rule"
     },
     {
       "from": "ind:MANDEL_SUSAN_Z.|06831",
@@ -17647,16 +17715,16 @@
   ],
   "summary": {
     "total_in": 16202679.0,
-    "disclosed_share": 0.3637,
+    "disclosed_share": 0.3639,
     "disclosed_individuals_share": 0.166,
-    "disclosed_organizations_share": 0.1976,
+    "disclosed_organizations_share": 0.1979,
     "inferable_share": 0.0,
     "unwalked_share": 0.021,
-    "dark_share": 0.6153,
+    "dark_share": 0.615,
     "max_depth": 5,
     "terminus_counts": {
-      "dark": 26,
-      "organization": 8,
+      "dark": 25,
+      "organization": 9,
       "depth_cap": 46,
       "pruned": 31,
       "individual": 449,
