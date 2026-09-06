@@ -684,6 +684,10 @@ export function ChainDiagram({ wire, hasTable = false }: { wire: ChainViewWire; 
     pointerDownRef.current = true;
     pressAt.current = [ev.clientX, ev.clientY];
   };
+  // Focus, if the press moves it, arrives before pointerup; a press on an already-focused map must not mark the next Tab.
+  const onMapPointerUp = () => {
+    pointerDownRef.current = false;
+  };
   const onMapFocus = (ev: FocusEvent<HTMLDivElement>) => {
     const byPointer = pointerDownRef.current;
     pointerDownRef.current = false;
@@ -769,6 +773,7 @@ export function ChainDiagram({ wire, hasTable = false }: { wire: ChainViewWire; 
         onFocus={onMapFocus}
         onBlur={onMapBlur}
         onPointerDown={onMapPointerDown}
+        onPointerUp={onMapPointerUp}
       >
       <svg
         ref={svgRef}
