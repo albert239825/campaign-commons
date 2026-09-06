@@ -517,3 +517,32 @@ nullable when the ad has no dates), which the PA data does not yet exercise (0 v
 (placement is paid before air) and changed the copy everywhere to "in the week before and while this ad ran". Context rows
 611 → 728 across 280 → 284 ads (mixed-media vendors' digital portions now shown); links unchanged at 115 inferred, one rule
 text corrected. 171 pipeline tests.
+
+## 2026-09-06 ~08:00 — Block 3 child E: the Policies tab, stances beside the spenders that say they care (child E)
+
+**What changed.** New top-level race tab `/races/<race>/policies` (T1–T3 in `docs/plans/2026-09-06-block3.md`). Ten issues in
+`ISSUES` order (D-26) in a sidebar tablist, one visible at a time, hash-synced so `#tax_budget` deep-links and the dossier's
+own `#<issue_id>` (child D) is the reverse trip. Left column: each candidate's dossier stance for the issue — position, coded
+direction via `directionLabel`/`ISSUE_AXES`, confidence, `needs review`, the first two evidence records by the contract's
+revealed-before-stated order, each with its `SourceLink`, and "Full dossier →"; "No record loaded" when the dossier has none.
+Right column: the `top_outside_spenders` whose *entity* record has `issue_focus.issue_ids` naming the issue, sorted by IE total
+— name, committee type, focus kind, the hand-tagged description with the org's own source URL, the IE total with its fec.gov
+link, and the support/oppose sum per candidate from `by_candidate` ("Opposes Casey $7.0M · Supports McCormick $13M"), then
+"Funding chain →" when a chain exists and "Entity →". Under it, ads tagged with the issue: three by spend with ad-library links
+and "N tagged ads on the ads wall →". A "How to read this" box says the three things the page must not blur: stances are the
+record, funder focus is self-description (D-66), the dollar figures are IEs targeting a candidate, not money to a campaign.
+One `RaceNav` item after Ads; `routes.policies`; `hasEntity`/`hasDossier` existence checks in `lib/data.ts`; `.policies-*` CSS
+only. No contract, pipeline or data change.
+
+**Challenge.** The word "alongside" is the whole product decision. `issue_focus` says *what* a group says it is for, not *which
+way*, so the page can never say a funder agrees with, backs or is aligned with a stance — only that both name the same topic.
+The copy pattern from the ledger's Layer A card ("spenders that describe themselves as focused on X") carries over; the
+directional field is left for later as an explicitly labelled inference (D-77). The plan's ads-wall filter turned out not to
+exist (`?issue=` is not read by `AdGallery`, even though the ledger's issue card links with it), so the page lists ad titles and
+links to the wall unfiltered rather than a dead query string. The hand-tagged descriptions carry tagger notes ("caregiving
+costs have no frozen id; healthcare is the closest"), so the label is "Self-described focus", not "In its own words".
+
+**Numbers.** PA: 98 outside spenders, 23 with `issue_focus`, 15 naming at least one issue, 21 funder–issue pairs across 5 of 10
+issues (health care 7, taxes 4, labor 4, energy 3, guns 3; defense, crypto, immigration, abortion and tech have stances but no
+self-described funder). 42 of 500 ads tagged. Both dossiers cover all 10 issues, so every panel has two stances. Built page HTML
+335 KB with all ten panels server-rendered (21 funder rows, 20 stance cards); the client island only toggles `hidden`.
