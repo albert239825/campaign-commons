@@ -517,3 +517,29 @@ nullable when the ad has no dates), which the PA data does not yet exercise (0 v
 (placement is paid before air) and changed the copy everywhere to "in the week before and while this ad ran". Context rows
 611 → 728 across 280 → 284 ads (mixed-media vendors' digital portions now shown); links unchanged at 115 inferred, one rule
 text corrected. 171 pipeline tests.
+
+## 2026-09-06 ~06:30 — Block 3 D1: dossier reads one issue at a time (child D)
+
+**What changed.** The critique meeting called the dossier "a vertical scroll of ten sections". The page is now a two-column
+read: a left sidebar lists the ten `ISSUES` in the frozen D-26 order (so Casey and McCormick line up row for row), each with a
+record count or "No record loaded", and the body shows exactly one `IssueSection`. The sidebar is a real `tablist`
+(`components/dossier/issue-tabs.tsx`, the `race-sections.tsx` pattern: roving tabindex, Up/Down/Home/End); the selected issue
+is the URL hash (`#healthcare`), pushed with `history.pushState` so links share and back/forward work; default is the first
+issue with a record. All ten panels are still server-rendered into the HTML — the island only toggles `hidden` — so nothing
+about the dossier is fetched or computed in the browser and the page ships 1.25 kB of route JS. The section body got more
+detailed, not less: position, the `directionLabel` against its `ISSUE_AXES` poles, confidence with the count rule that produced
+it (mirrors `dossier.record_confidence`), review status, an evidence header with per-kind counts, then the same D-26-ordered
+`EvidenceList` (Yea/Nay still neutral ink). Header, "Read this first" and summary stay, laid out side by side and tightened so
+the selected issue is on screen at 1440×900. "Compare: <other> →" (`compare-link.tsx`) reads the hash via
+`useSyncExternalStore` and carries it to the other dossier. `IssueSection` takes an optional `actions` slot in its header for
+the later Enrich child (F); nothing renders there yet. Old `IssueNav` deleted.
+
+**Challenge.** A vertical tablist that also handled Left/Right swallowed Alt+Left — the browser's back shortcut — while a tab had
+focus, so back/forward silently broke exactly where the hash was meant to make them work. Dropped Left/Right (race-sections
+never had them) and bail on any modifier key. Second: switching from a long section to a short one left the viewport parked
+below the new panel; `select` now scrolls the tablist back to the top only when it has scrolled off.
+
+**Numbers.** 10 tabs, 1 visible panel per dossier; Casey 10/10 issues, 63 records; McCormick 10/10, 10 stated positions (the
+"partial coverage" marker is exercised only by the `No record loaded` branch, since both PA dossiers are complete). Lint, tsc,
+build (2,960 pages) pass; candidate route 1.25 kB / 107 kB first load. Checked in the browser: click → `#guns`, Down/Down/Up →
+`#tax_budget` with focus following, back → `#guns`, Compare → other dossier opens on `#guns`.

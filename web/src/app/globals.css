@@ -915,3 +915,58 @@ body:has(.detail-page) :is(a, button, input, select, summary, [tabindex]):focus-
   .alignment-breakdown-body { padding: 20px; gap: 24px; }
   .alignment-candidate h3 { font-size: 24px; }
 }
+
+/* Candidate dossier: sidebar issue tablist, one issue at a time (D-77). */
+.candidate-page { gap: 24px; }
+.candidate-page > .breadcrumbs { margin-bottom: -24px; }
+.candidate-page .detail-banner { padding-block: 26px; }
+.candidate-page .detail-banner h1 { font-size: clamp(30px, 2.8vw, 40px); }
+.candidate-page .detail-eyebrow { margin-bottom: 10px; }
+.candidate-page .detail-introduction { margin-top: 12px; gap: 8px; font-size: 14px; line-height: 1.6; }
+.candidate-page .detail-introduction .detail-candidate-role { font-size: 16px; }
+.dossier-notes { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 2.4fr); gap: 20px; align-items: stretch; }
+.dossier-notes .detail-callout { padding: 16px 20px; font-size: 13px; line-height: 1.65; }
+.dossier-notes .detail-summary { padding: 16px 24px 18px; }
+.dossier-notes .detail-summary h2 { font-size: 16px; }
+.dossier-notes .detail-summary > p:first-of-type { max-width: none; margin-top: 8px; font-size: 13px; line-height: 1.65; }
+.dossier-notes .detail-summary > p:last-child { margin-top: 10px; }
+.dossier-issues { display: grid; grid-template-columns: 220px minmax(0, 1fr); gap: 40px; align-items: start; scroll-margin-top: 24px; }
+.dossier-issue-nav { position: sticky; top: 24px; min-width: 0; }
+.dossier-issue-nav > p { margin-bottom: 12px; font-size: 12px; color: var(--detail-muted); }
+.dossier-issue-nav [role="tablist"] { display: grid; gap: 2px; padding-right: 20px; border-right: 1px solid var(--detail-rule); }
+.dossier-issue-nav button { display: grid; gap: 2px; min-height: 44px; padding: 8px 12px; text-align: left; border-left: 2px solid transparent; font-size: 14px; line-height: 1.4; color: #555550; cursor: pointer; }
+.dossier-issue-nav button:hover, .dossier-issue-nav button:focus-visible { background: var(--detail-surface); border-left-color: var(--detail-ink); color: var(--detail-ink); }
+.dossier-issue-nav button[aria-selected="true"] { color: var(--detail-ink); border-left-color: currentColor; background: #e9e5df; }
+.dossier-issue-nav button small { font-size: 11px; color: var(--detail-muted); }
+.dossier-issue-nav button[data-covered="true"] small::before { content: ""; display: inline-block; width: 6px; height: 6px; margin-right: 6px; border-radius: 50%; background: var(--detail-ink); vertical-align: 1px; }
+.dossier-issue-nav button[data-covered="false"] > span { color: var(--detail-muted); }
+.dossier-issue-panel { grid-column: 2; grid-row: 1; min-width: 0; }
+.dossier-issue-panel[hidden] { display: none; }
+.dossier-issue-panel:focus-visible { outline: 2px solid currentColor; outline-offset: 6px; }
+.detail-page .dossier-issue-panel .issue-record { padding-bottom: 0; border-bottom: 0; }
+.dossier-section-header { display: flex; align-items: flex-start; justify-content: space-between; gap: 16px 24px; }
+.dossier-section-header > div > p { margin-top: 6px; font-size: 13px; }
+.dossier-section-actions { display: flex; flex-shrink: 0; gap: 8px; }
+.dossier-issue-panel .issue-position { margin-bottom: 20px; }
+.dossier-stance-meta { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px 24px; margin-bottom: 24px; padding: 20px 24px; background: var(--detail-surface); font-size: 14px; }
+.dossier-stance-meta dt { font-size: 11px; text-transform: uppercase; letter-spacing: .04em; color: var(--detail-muted); }
+.dossier-stance-meta dd { margin-top: 6px; color: var(--detail-ink); line-height: 1.5; overflow-wrap: anywhere; }
+.dossier-stance-meta small { display: block; margin-top: 4px; font-size: 12px; line-height: 1.6; color: var(--detail-muted); }
+.dossier-stance-meta + div { border-color: var(--detail-rule); padding-top: 20px; }
+@media (max-width: 1050px) {
+  .dossier-issues { grid-template-columns: 180px minmax(0, 1fr); gap: 28px; }
+  .dossier-issue-nav [role="tablist"] { padding-right: 12px; }
+  .dossier-stance-meta { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (max-width: 680px) {
+  .candidate-page .detail-banner h1 { font-size: 30px; }
+  .dossier-notes { grid-template-columns: minmax(0, 1fr); gap: 16px; }
+  .dossier-issues { grid-template-columns: minmax(0, 1fr); gap: 24px; }
+  .dossier-issue-nav { position: static; }
+  .dossier-issue-nav [role="tablist"] { display: flex; overflow-x: auto; gap: 8px; padding: 0 0 12px; border: 0; border-bottom: 1px solid var(--detail-rule); }
+  .dossier-issue-nav button { flex-shrink: 0; border: 1px solid var(--detail-rule); font-size: 13px; }
+  .dossier-issue-nav button[aria-selected="true"] { border-color: var(--detail-ink); }
+  .dossier-issue-panel { grid-column: 1; grid-row: auto; }
+  .dossier-section-header { flex-direction: column; }
+  .dossier-stance-meta { grid-template-columns: minmax(0, 1fr); padding: 20px; }
+}

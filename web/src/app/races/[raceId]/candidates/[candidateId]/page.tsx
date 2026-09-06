@@ -6,9 +6,10 @@ import { ISSUES, type Dossier, type IssueId } from "@campaign-commons/contracts"
 import { getAds, getDossier, getRace, getStories, listDossierIds, listRaceIds } from "@/lib/data";
 import { date, routes } from "@/lib/format";
 import { AdjacencyNote, Breadcrumbs, Chip, DataStatusBanner, SourceLink } from "@/components/ui";
-import { IssueNav } from "@/components/dossier/issue-nav";
 import { RaceNav } from "@/components/ui/race-nav";
+import { CompareLink } from "@/components/dossier/compare-link";
 import { IssueSection } from "@/components/dossier/issue-section";
+import { IssueTabs } from "@/components/dossier/issue-tabs";
 
 export const generateStaticParams = () =>
   listRaceIds().flatMap((raceId) => listDossierIds(raceId).map((candidateId) => ({ raceId, candidateId })));
@@ -38,6 +39,7 @@ export default async function DossierPage({ params }: { params: Promise<{ raceId
   const covered = new Set<IssueId>(byIssue.keys());
   const evidenceCount = d.stances.reduce((n, s) => n + s.evidence.length, 0);
   const others = race.candidates.filter((c) => c.candidate_id !== candidateId && listDossierIds(raceId).includes(c.candidate_id));
+  const defaultIssue = ISSUES.find((issue) => covered.has(issue.id)) ?? ISSUES[0];
 
   return (
     <div className="detail-page candidate-page">
@@ -50,9 +52,9 @@ export default async function DossierPage({ params }: { params: Promise<{ raceId
               Race ledger →
             </Link>
             {others.map((c) => (
-              <Link key={c.candidate_id} href={routes.candidate(raceId, c.candidate_id)} className="underline decoration-dotted underline-offset-2 hover:text-neutral-900">
+              <CompareLink key={c.candidate_id} href={routes.candidate(raceId, c.candidate_id)} className="underline decoration-dotted underline-offset-2 hover:text-neutral-900">
                 Compare: {c.name} →
-              </Link>
+              </CompareLink>
             ))}
           </div>
       }>
@@ -73,30 +75,27 @@ export default async function DossierPage({ params }: { params: Promise<{ raceId
         active={routes.candidate(raceId, candidateId)}
       />
 
-      <aside className="detail-callout">
-        <div className="text-xs font-semibold uppercase tracking-wide text-neutral-500">Read this first</div>
-        <p className="mt-1 leading-relaxed">{d.asymmetry_note}</p>
-      </aside>
+      <div className="dossier-notes">
+        <aside className="detail-callout">
+          <div className="text-xs font-semibold uppercase tracking-wide text-neutral-500">Read this first</div>
+          <p className="mt-1 leading-relaxed">{d.asymmetry_note}</p>
+        </aside>
 
-      <section className="detail-summary">
-        <div className="flex items-baseline justify-between gap-4">
-          <h2 className="text-xs uppercase tracking-wide text-neutral-500">Summary</h2>
-          {d.summary_needs_review && <Chip tone="amber" title="Summary not yet checked by a human">needs review</Chip>}
-        </div>
-        <p className="mt-2 text-sm leading-relaxed">{d.summary}</p>
-        <p className="mt-2 text-xs text-neutral-500">Written from the structured record below only; every claim traces to an evidence record.</p>
-      </section>
-
-      <div className="detail-sections">
-        <div className="detail-sidebar">
-          <IssueNav covered={covered} />
-        </div>
-        <div className="detail-content">
-          {ISSUES.map((issue) => (
-            <IssueSection key={issue.id} issue={issue} stance={byIssue.get(issue.id)} />
-          ))}
-        </div>
+        <section className="detail-summary">
+          <div className="flex items-baseline justify-between gap-4">
+            <h2 className="text-xs uppercase tracking-wide text-neutral-500">Summary</h2>
+            {d.summary_needs_review && <Chip tone="amber" title="Summary not yet checked by a human">needs review</Chip>}
+          </div>
+          <p className="mt-2 text-sm leading-relaxed">{d.summary}</p>
+          <p className="mt-2 text-xs text-neutral-500">Written from the structured record below only; every claim traces to an evidence record.</p>
+        </section>
       </div>
+
+      <IssueTabs
+        items={ISSUES.map((issue) => ({ id: issue.id, label: issue.label, records: byIssue.get(issue.id)?.evidence.length ?? 0 }))}
+        defaultId={defaultIssue.id}
+        panels={Object.fromEntries(ISSUES.map((issue) => [issue.id, <IssueSection key={issue.id} issue={issue} stance={byIssue.get(issue.id)} />]))}
+      />
 
       <AdjacencyNote />
     </div>
