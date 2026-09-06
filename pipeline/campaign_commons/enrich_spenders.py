@@ -127,7 +127,7 @@ def _committee_cache(
         }
         for entity_id in chunk:
             result = by_id.get(entity_id, {})
-            write_json(DATA / "raw" / "fec" / f"{entity_id}.json", result)
+            write_json(DATA / "raw" / "fec" / "committee" / f"{entity_id}.json", result)
             cached[entity_id] = result
     return cached
 
