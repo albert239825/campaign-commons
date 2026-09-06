@@ -493,7 +493,8 @@ body:has(.race-dashboard) :is(a, button):focus-visible { outline: 2px solid curr
 .funding-pie { display: block; width: min(100%, 340px); margin: 12px auto; overflow: visible; }
 .funding-pie [role="button"] { cursor: pointer; transition: opacity 160ms ease; }
 .funding-pie [role="button"]:hover { opacity: .8; }
-.funding-pie [role="button"]:focus-visible { outline: none; stroke: #1b1b1a; stroke-width: 5; }
+.funding-pie [role="button"]:focus { outline: none; }
+.funding-pie [role="button"]:focus-visible { stroke: #1b1b1a; stroke-width: 5; }
 .funding-chart-total { text-align: center; font-size: 40px; line-height: 1.2; letter-spacing: -.035em; }
 .funding-chart-total > span:last-child { display: block; margin-top: 8px; color: #6f6d69; font-size: 12px; letter-spacing: 0; }
 .funding-slice-controls { display: grid; gap: 8px; margin-top: 32px; }
@@ -525,6 +526,15 @@ body:has(.race-dashboard) :is(a, button):focus-visible { outline: 2px solid curr
 .funding-sources h4 { margin: 0 0 12px; font-size: 12px; color: #6f6d69; }
 .funding-sources > div { display: flex; justify-content: space-between; gap: 16px; font-size: 13px; margin-top: 8px; }
 .funding-sources a:hover { text-decoration: underline; }
+.funding-detail-toggle { display: flex; align-items: center; gap: 12px; margin-top: 24px; font-size: 12px; color: #6f6d69; }
+.funding-detail-toggle button { padding: 6px 12px; border: 1px solid var(--race-rule); border-radius: 999px; font-size: 12px; color: #1b1b1a; cursor: pointer; }
+.funding-detail-toggle button:hover { background: #e9e5df; }
+.funding-detail-toggle button[aria-pressed="true"] { background: #1b1b1a; border-color: #1b1b1a; color: #f2efeb; }
+.funding-side { display: grid; gap: 8px; }
+.funding-side + .funding-side { margin-top: 12px; }
+.funding-side-heading { display: grid; grid-template-columns: 1fr auto 40px; align-items: baseline; gap: 12px; padding: 8px 12px 4px; border-bottom: 1px solid var(--race-rule); font-size: 13px; }
+.funding-side-heading > span:last-child { text-align: right; color: #6f6d69; font-size: 12px; }
+.funding-lines > .funding-line-selected { background: #f2efeb; box-shadow: inset 3px 0 0 #1b1b1a; margin-inline: -12px; padding-inline: 12px; font-weight: 600; }
 @media (max-width: 1050px) {
   .funding-panel { gap: 32px; }
   .funding-detail { padding: 24px; }

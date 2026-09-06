@@ -54,3 +54,72 @@ export function buildFundingViews(ledger: Ledger) {
 }
 
 export type FundingView = ReturnType<typeof buildFundingViews>[number];
+
+export type SliceGroup = "campaign" | "outside";
+
+/** Campaign money in one hue, outside spending in another (D-16); the detailed view uses shades of the same two hues. */
+export const GROUP_COLORS: Record<SliceGroup, string> = { campaign: "#343f49", outside: "#b7ab98" };
+const CAMPAIGN_SHADES = ["#343f49", "#5b6874", "#8a95a0"];
+const OUTSIDE_SHADES = ["#8c7e6a", "#cbc1b0"];
+/** By-side view: one non-party hue per side (never party red/blue, D-16); darkest = receipts, lighter = outside spending. */
+const SIDE_HUES = [
+  ["#2f5d62", "#5f8a8b", "#a3c1bd"],
+  ["#6f4a2b", "#a67c52", "#d2b48c"],
+];
+
+export type PieSlice = {
+  id: string; group: SliceGroup; label: string; amount: number; color: string;
+  /** By-side slices only: the side they belong to, and the candidate view + detail slice that hold the underlying record. */
+  side?: string; viewId?: string; pickId?: string;
+};
+
+/**
+ * Summary: receipts vs outside. Detailed: receipts by source (individuals / committees / other) and outside by stance
+ * (supporting / opposing). For the all-candidates view, detail is instead grouped by side — see `sideSlices`.
+ */
+export function pieSlices(view: FundingView, detailed: boolean, candidates: FundingView[] = []): PieSlice[] {
+  if (detailed && view.id === "all" && candidates.length === 2) return sideSlices(candidates);
+  if (!detailed) {
+    return [
+      { id: "campaign", group: "campaign", label: "Campaign receipts", amount: view.campaign.receipts, color: GROUP_COLORS.campaign },
+      { id: "outside", group: "outside", label: "Outside spending", amount: view.outside.total, color: GROUP_COLORS.outside },
+    ];
+  }
+  return [
+    { id: "individuals", group: "campaign", label: "Receipts from individuals", amount: view.campaign.individuals, color: CAMPAIGN_SHADES[0] },
+    { id: "committees", group: "campaign", label: "Receipts from committees", amount: view.campaign.committees, color: CAMPAIGN_SHADES[1] },
+    { id: "other", group: "campaign", label: "Other receipts", amount: view.campaign.other, color: CAMPAIGN_SHADES[2] },
+    { id: "support", group: "outside", label: "Outside spending supporting", amount: view.outside.support, color: OUTSIDE_SHADES[0] },
+    { id: "oppose", group: "outside", label: "Outside spending opposing", amount: view.outside.oppose, color: OUTSIDE_SHADES[1] },
+  ];
+}
+
+/**
+ * Two-candidate races only: one contiguous side per candidate — their receipts, outside spending supporting them, and
+ * outside spending opposing the other candidate — so every dollar appears exactly once. "Money working for" a side is
+ * never called a fundraising total (D-16 hues kept). With more candidates an oppose total has no single side, so the
+ * all-candidates detail stays on the five-slice source/stance cut.
+ */
+export function sideSlices([a, b]: FundingView[]): PieSlice[] {
+  return [a, b].flatMap((c, i) => {
+    const rival = i === 0 ? b : a;
+    const side = c.names;
+    const hue = SIDE_HUES[i];
+    return [
+      { id: `${c.id}-campaign`, group: "campaign" as const, side, viewId: c.id, label: `Receipts, ${c.names}`, amount: c.campaign.receipts, color: hue[0] },
+      { id: `${c.id}-support`, group: "outside" as const, side, viewId: c.id, pickId: "support", label: `Supporting ${c.names}`, amount: c.outside.support, color: hue[1] },
+      { id: `${c.id}-oppose`, group: "outside" as const, side, viewId: rival.id, pickId: "oppose", label: `Opposing ${rival.names}`, amount: rival.outside.oppose, color: hue[2] },
+    ];
+  });
+}
+
+/** Adds start/end angles (clockwise from 12 o'clock) so the pie can be drawn with hand-rolled sectors. */
+export function pieSectors(slices: PieSlice[]) {
+  const total = slices.reduce((sum, s) => sum + Math.max(0, s.amount), 0);
+  let angle = -Math.PI / 2;
+  return slices.map(s => {
+    const start = angle;
+    angle += total > 0 ? (Math.max(0, s.amount) / total) * Math.PI * 2 : 0;
+    return { ...s, start, end: angle, share: total > 0 ? s.amount / total : 0 };
+  });
+}
