@@ -26,6 +26,7 @@ export const donorKey = (nodeId: string) => nodeId.split("@")[0].replace(/[^A-Za
 /** Routes, in one place so children don't drift. */
 export const routes = {
   home: () => "/",
+  races: () => "/#races",
   race: (raceId: string) => `/races/${raceId}`,
   entity: (raceId: string, entityId: string) => `/races/${raceId}/entities/${entityId}`,
   chain: (raceId: string, entityId: string) => `/races/${raceId}/chains/${entityId}`,
@@ -36,6 +37,7 @@ export const routes = {
   stories: (raceId: string) => `/races/${raceId}/stories`,
   donor: (raceId: string, donorKey: string) => `/races/${raceId}/donors/${donorKey}`,
   candidate: (raceId: string, candidateId: string) => `/races/${raceId}/candidates/${candidateId}`,
+  ask: (raceId: string) => `/races/${raceId}/ask`,
   personalize: () => "/personalize",
   methodology: () => "/methodology",
 };

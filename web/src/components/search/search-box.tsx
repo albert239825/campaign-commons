@@ -98,7 +98,7 @@ export function SearchBox() {
   };
 
   return (
-    <div className="relative -my-1">
+    <div className="site-search">
       <input
         ref={inputRef}
         type="search"
@@ -123,31 +123,26 @@ export function SearchBox() {
           setOpen(true);
         }}
         onKeyDown={onKeyDown}
-        className="w-[4.5rem] rounded-md border border-neutral-300 bg-white px-2 py-0.5 text-sm text-neutral-900 transition-[width] placeholder:text-neutral-400 focus:border-neutral-500 focus:outline-none sm:w-56 sm:focus:w-64"
       />
-      {query === "" && (
-        <kbd className="pointer-events-none absolute top-1/2 right-2 hidden -translate-y-1/2 font-sans text-[11px] text-neutral-400 sm:inline">
-          ⌘K
-        </kbd>
-      )}
+      {query === "" && <kbd>⌘K</kbd>}
       {showList && (
         <ul
           id={listId}
           role="listbox"
           aria-label="Search results"
           onMouseDown={(e) => e.preventDefault()}
-          className="absolute right-0 z-20 mt-1 max-h-[70vh] w-[26rem] max-w-[calc(100vw-2rem)] overflow-y-auto rounded-md border border-neutral-200 bg-white py-1 text-sm shadow-lg"
+          className="site-search-results text-ink"
         >
-          {status === "loading" && <li className="px-3 py-2 text-neutral-500">Loading index…</li>}
-          {status === "error" && <li className="px-3 py-2 text-neutral-500">Search index unavailable.</li>}
+          {status === "loading" && <li className="px-3 py-2 text-muted">Loading index…</li>}
+          {status === "error" && <li className="px-3 py-2 text-muted">Search index unavailable.</li>}
           {status === "ready" && flat.length === 0 && (
-            <li className="px-3 py-2 text-neutral-500">
+            <li className="px-3 py-2 text-muted">
               No match for “{trimmed}”. Try a last name, committee name, or FEC ID (C0…).
             </li>
           )}
           {groups.map((g) => (
             <li key={g.kind} role="presentation">
-              <div className="px-3 pt-2 pb-0.5 text-[11px] font-medium uppercase tracking-wide text-neutral-500">
+              <div className="px-3 pt-2 pb-0.5 text-[11px] font-medium uppercase tracking-wide text-muted">
                 {KIND_LABELS[g.kind]}
               </div>
               <ul role="group" aria-label={KIND_LABELS[g.kind]}>
@@ -161,10 +156,10 @@ export function SearchBox() {
                       aria-selected={isActive}
                       onMouseEnter={() => setActive(flat.indexOf(item))}
                       onClick={() => go(item)}
-                      className={`cursor-pointer px-3 py-1.5 ${isActive ? "bg-neutral-100 text-neutral-900" : "text-neutral-800"}`}
+                      className={`cursor-pointer px-3 py-1.5 ${isActive ? "bg-surface text-ink" : "text-ink-soft"}`}
                     >
                       <div className="truncate">{item.label}</div>
-                      {item.sublabel && <div className="truncate text-xs text-neutral-500">{item.sublabel}</div>}
+                      {item.sublabel && <div className="truncate text-xs text-muted">{item.sublabel}</div>}
                     </li>
                   );
                 })}

@@ -517,3 +517,54 @@ nullable when the ad has no dates), which the PA data does not yet exercise (0 v
 (placement is paid before air) and changed the copy everywhere to "in the week before and while this ad ran". Context rows
 611 → 728 across 280 → 284 ads (mixed-media vendors' digital portions now shown); links unchanged at 115 inferred, one rule
 text corrected. 171 pipeline tests.
+
+## 2026-09-06 ~00:30 — Design PR 1: one race shell, one nav, one header (design/race-shell)
+
+**What changed.** First of Patrick's five design PRs (plan in the session attachment). `RaceShell` wraps every race-scoped
+page — overview, ads wall, ad, vendors, vendor, stories, both dossiers, entity, chain, donor; the Money Trails pages (PR #16)
+are left alone, they are being redesigned separately — and owns breadcrumbs, the data-status banner
+and `RaceNav`; the pages pass their `DetailHeader` (or the overview banner) as `header` and keep only their content. `RaceNav`
+no longer takes `counts`/`active` props: `getRaceSections(raceId)` (memoised, one read per race per build) decides which tabs
+exist and their counts, dossier tabs come from `race.candidates`, a Money Trails tab appears once `trails.json` exists, and "Ledger"
+became "Overview". Active state is `aria-current="page"` on the section, `aria-current="true"` on the parent when the page is a
+record inside it. Tokens: `@theme` now defines paper/surface/ink/ink-soft/muted/rule/rule-strong, the visibility colours and
+their text variants, and `--font-sans`; the landing, dashboard and detail pages stop restating the header, footer, font and
+focus ring under `body:has(...)`. The 390px bug: the header row was `nowrap`, so the search box (fixed 14rem) was pushed past
+the viewport on every page and the whole document scrolled sideways. It now wraps to a second row below 680px; the race tabs
+scroll sideways in one row instead of stacking. `EntityHeader` split into the banner (`EntityHeader`) and the registration
+facts (`EntityProfile`) so the tabs sit under the banner on entity pages too. D-75.
+
+**Challenge.** Which tabs a race has is not a property of the page but of the data: PA has vendors and trails, a stub race has
+neither, and a "Vendors 0" tab would say the stage ran and found nothing. `vendors: number | null` keeps "absent" distinct from
+"zero" — the same missing ≠ none rule the pipeline follows. The overview page's banner + nav needed to stay one grid child so
+the dashboard's 88px row gap did not open between them; `RaceShell` has a `dashboard` variant for exactly that.
+
+**Numbers.** 2,960 pages build (no routes added or removed). `scrollWidth` at 390px: 417 → 375 (= viewport) on all 11
+sampled race pages. `body:has(...)` rules 38 → 7 (landing hero only); palette hexes 75 → 21 (the rest are in `@theme` or page-local tints).
+
+## 2026-09-06 ~02:00 — Design PR 2: the Vendors index reads top-down (design/2-vendors)
+
+**What changed.** Second of Patrick's five design PRs. `/races/[raceId]/vendors` drops its eight-column table for an editorial
+page inside the PR 1 shell: header (eyebrow, "Vendors", one sentence, one assumption line), a four-figure summary strip
+(vendors · reported payments · vendors linked to ads · ads with same-window context), an assumptions callout, then a
+`SectionNav`-ed column — Largest reported payments (top 10), Vendors linked to ads, Paid during ad windows (a collapsed
+`<details>`), By medium (the bar and per-medium figures kept, `MediumBasisNote` kept), All vendors. Every list is a
+`VendorRow` (`components/vendors/vendor-row.tsx`): name → medium · payments · dates · linked ads · ad windows · alias basis,
+targets line; on the right the reported total, sponsors (linked, first two), one evidence chip and the FEC link — so nothing
+the table showed is gone, it is just no longer eight columns wide. The evidence chip comes from the ads, not the vendor file:
+`lib/vendors.ts::vendorAdContext` folds `Ad.vendor_links` into per-vendor verified/inferred counts and `Ad.same_window_buys`
+into a per-vendor count of ad windows (context, D-74). `VendorIndex` (client) filters the full list by name/alias, medium,
+sponsor, ad-link evidence (`any · has verified · has inferred · no linked ads`) and minimum reported, mirrors the state to
+`?q=&medium=&sponsor=&evidence=&min=` with `replaceState` (read after mount; the page is still static), pages 25 rows until
+"Show all" or a filter, and hides the controls behind a "Filters" button below 680px. D-77.
+
+**Challenge.** The one number that looked wrong was right. A first cut excluded a linked vendor from an ad's same-window
+context, on the theory that a link supersedes context — and got 256 ads, not the 284 the pipeline logs. The contract says
+`same_window_buys` lists every placeable-medium vendor paid in the window, *linked or not*; the pipeline and the ad pages count
+it that way, so the index does too, and the section copy says "whether or not the pair also met the bar for a link". The other
+trap was the sponsor `<select>`: 98 committee names, one of them 90 characters, and a `<select>` sizes to its longest option,
+so `?sponsor=…` scrolled the page sideways at every width until the control got `width: 100%; min-width: 0`.
+
+**Numbers.** 2,960 pages build (no routes added or removed); vendors route 3.87 kB first-load JS on top of the shared 129 kB.
+Index: 310 vendors, $233M, 9 linked (0 verified, 9 inferred, 115 ads), 42 vendors paid during the windows of 284 of 500 ads.
+`scrollWidth` at 390px stays 375 with and without `?medium=digital&evidence=inferred`. `npm test`: no script on this branch.
