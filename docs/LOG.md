@@ -520,5 +520,8 @@ text corrected. 171 pipeline tests.
 
 ### 2026-09-06 — Phase 2a ad transcript enrichment
 
-Added the provenance-labelled YouTube transcript and xAI classification layer for ads. Machine rows remain separate from
-human issue tags, carry review status and response provenance, and are merged into optional `machine_issues` output only.
+Added `enrich_transcripts.py`, `enrich_ads.py`, `enrich_review.py`, and the `enrich-transcripts`, `enrich-ads`, and
+`enrich-review` targets. Classification supports `--dry-run`, `--limit`, `--only`, `--max-calls`, `--max-usd`, `--model`,
+and `--refresh-reviewed`; caches live under `data/raw/yt` and `data/raw/xai`. The transcript step runs locally because
+YouTube blocks cloud IPs. Machine rows remain separate from human issue tags, carry review status and response provenance,
+and are merged into optional `machine_issues` output only. 183 pipeline tests.

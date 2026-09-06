@@ -8,10 +8,12 @@ from __future__ import annotations
 import argparse
 import sys
 import time
+from collections.abc import Callable
 from pathlib import Path
-from typing import Any
 
-from youtube_transcript_api import YouTubeTranscriptApi
+import requests
+from youtube_transcript_api import FetchedTranscript, Transcript, YouTubeTranscriptApi
+from youtube_transcript_api._errors import IpBlocked, RequestBlocked
 
 from .ads_creatives import youtube_video_id
 from .config import DATA, RACES
@@ -21,44 +23,25 @@ YT_DIR = DATA / "raw" / "yt"
 VIDEO_IDS = YT_DIR / "video_ids.json"
 
 
-def _field(obj: object, name: str, default: Any = None) -> Any:
-    if isinstance(obj, dict):
-        return obj.get(name, default)
-    return getattr(obj, name, default)
-
-
-def _raw_segments(fetched: object) -> list[dict[str, Any]]:
-    raw = fetched.to_raw_data() if hasattr(fetched, "to_raw_data") else fetched
-    segments: list[dict[str, Any]] = []
-    for segment in raw if isinstance(raw, list) else []:
-        start = _field(segment, "start")
-        duration = _field(segment, "duration")
-        text = _field(segment, "text")
-        if isinstance(text, str):
-            segments.append({"start": float(start or 0), "duration": float(duration or 0), "text": text})
-    return segments
-
-
-def _choose_transcript(transcripts: list[object]) -> object | None:
-    english_manual = [
-        t
-        for t in transcripts
-        if str(_field(t, "language_code", "")).lower().startswith("en") and not _field(t, "is_generated", False)
+def _raw_segments(fetched: FetchedTranscript) -> list[dict[str, float | str]]:
+    return [
+        {"start": float(segment["start"]), "duration": float(segment["duration"]), "text": str(segment["text"])}
+        for segment in fetched.to_raw_data()
     ]
+
+
+def _choose_transcript(transcripts: list[Transcript]) -> Transcript | None:
+    english_manual = [t for t in transcripts if t.language_code.lower().startswith("en") and not t.is_generated]
     if english_manual:
         return english_manual[0]
-    english_generated = [
-        t
-        for t in transcripts
-        if str(_field(t, "language_code", "")).lower().startswith("en") and _field(t, "is_generated", False)
-    ]
+    english_generated = [t for t in transcripts if t.language_code.lower().startswith("en") and t.is_generated]
     if english_generated:
         return english_generated[0]
     return transcripts[0] if transcripts else None
 
 
 def _is_blocked(exc: BaseException) -> bool:
-    return exc.__class__.__name__ in {"RequestBlocked", "IpBlocked"}
+    return isinstance(exc, (RequestBlocked, IpBlocked))
 
 
 def _video_id_cache() -> dict[str, str | None]:
@@ -76,7 +59,7 @@ def _ad_transcript_path(video_id: str) -> Path:
     return YT_DIR / f"{video_id}.json"
 
 
-def fetch_transcript(video_id: str, ad_id: str, api: Any) -> dict[str, Any]:
+def fetch_transcript(video_id: str, ad_id: str, api: YouTubeTranscriptApi) -> dict[str, object]:
     fetched_at = now_iso()
     try:
         listed = list(api.list(video_id))
@@ -87,15 +70,9 @@ def fetch_transcript(video_id: str, ad_id: str, api: Any) -> dict[str, Any]:
         return {
             "video_id": video_id,
             "ad_id": ad_id,
-            "kind": "auto_caption"
-            if _field(transcript, "is_generated", False)
-            else (
-                "manual_caption"
-                if str(_field(transcript, "language_code", "")).lower().startswith("en")
-                else "manual_caption"
-            ),
-            "language": str(_field(transcript, "language_code", "")),
-            "is_generated": bool(_field(transcript, "is_generated", False)),
+            "kind": "auto_caption" if transcript.is_generated else "manual_caption",
+            "language": transcript.language_code,
+            "is_generated": transcript.is_generated,
             "text": " ".join(str(s["text"]) for s in segments),
             "segments": segments,
             "fetched_at": fetched_at,
@@ -112,8 +89,8 @@ def run(
     limit: int | None = None,
     only: str | None = None,
     sleep_seconds: float = 0.5,
-    api: Any | None = None,
-    resolver: Any | None = None,
+    api: YouTubeTranscriptApi | None = None,
+    resolver: Callable[[str, str, requests.Session], str | None] | None = None,
 ) -> int:
     race = RACES[race_id]
     ads_path = race.out_dir / "ads.json"
@@ -124,7 +101,7 @@ def run(
     YT_DIR.mkdir(parents=True, exist_ok=True)
     resolver = resolver or youtube_video_id
     api = api or YouTubeTranscriptApi()
-    session = __import__("requests").Session()
+    session = requests.Session()
     counts = {"resolved": 0, "fetched": 0, "no_transcript": 0, "skipped": 0}
     selected = [
         ad

@@ -28,7 +28,6 @@ ads-enrich:       ## Block 2: patch ads.json in place with sponsor shares, hand 
 	$(PY) -m campaign_commons.ads_enrich $(RACE)
 
 enrich-transcripts: ## Fetch YouTube captions locally; run from a residential IP because YouTube blocks cloud IPs
-	# run enrich-transcripts from a residential IP; YouTube blocks cloud IPs
 	$(PY) -m campaign_commons.enrich_transcripts $(RACE)
 
 enrich-ads:       ## Classify cached ad transcripts with xAI (requires XAI_API_KEY)

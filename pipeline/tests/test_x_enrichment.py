@@ -2,10 +2,12 @@ from __future__ import annotations
 
 import json
 import shutil
+from dataclasses import dataclass
 from pathlib import Path
 
 import pytest
 from jsonschema import Draft7Validator
+from youtube_transcript_api._errors import RequestBlocked
 
 import campaign_commons.enrich_ads as enrich_ads
 import campaign_commons.enrich_transcripts as enrich_transcripts
@@ -40,6 +42,7 @@ def _setup(monkeypatch: pytest.MonkeyPatch, tmp_path: Path, *, texts: dict[str, 
     hand = tmp_path / "hand"
     raw = tmp_path / "raw"
     (out / "race").mkdir(parents=True, exist_ok=True)
+    shutil.rmtree(hand / "race", ignore_errors=True)
     (hand / "race").mkdir(parents=True, exist_ok=True)
     (raw / "yt").mkdir(parents=True, exist_ok=True)
     shutil.rmtree(raw / "xai", ignore_errors=True)
@@ -176,11 +179,26 @@ def test_reviewed_rows_preserved_unless_refresh(monkeypatch: pytest.MonkeyPatch,
     )
 
 
+def test_only_preserves_pending_rows_outside_run(monkeypatch: pytest.MonkeyPatch, tmp_path: Path) -> None:
+    hand_dir, _ = _setup(monkeypatch, tmp_path, texts={"A1": "Healthcare matters.", "A2": "Healthcare matters."})
+    old_rows = [
+        {"ad_id": "A1", "provenance": {"review_status": "pending"}, "quote": "old A1"},
+        {"ad_id": "A2", "provenance": {"review_status": "pending"}, "quote": "old A2"},
+    ]
+    (hand_dir / "x_ad_issues.json").write_text(json.dumps({"race_id": "race", "rows": old_rows}))
+    client = FakeClient({"issue_ids": ["healthcare"], "quote": "Healthcare", "rationale": "new", "confidence": "high"})
+    assert enrich_ads.run("race", client=client, only="A1") == 0
+    rows = json.loads((hand_dir / "x_ad_issues.json").read_text())["rows"]
+    assert {row["ad_id"] for row in rows} == {"A1", "A2"}
+    assert next(row for row in rows if row["ad_id"] == "A2") == old_rows[1]
+
+
 def test_max_calls_stops_after_one_call(monkeypatch: pytest.MonkeyPatch, tmp_path: Path) -> None:
-    _, _ = _setup(monkeypatch, tmp_path, texts={"A1": "Healthcare matters.", "A2": "Healthcare matters."})
+    hand_dir, _ = _setup(monkeypatch, tmp_path, texts={"A1": "Healthcare matters.", "A2": "Healthcare matters."})
     client = FakeClient({"issue_ids": ["healthcare"], "quote": "Healthcare", "rationale": "new", "confidence": "low"})
     assert enrich_ads.run("race", client=client, max_calls=1) == 3
     assert client.calls == 1
+    assert [row["ad_id"] for row in json.loads((hand_dir / "x_ad_issues.json").read_text())["rows"]] == ["A1"]
 
 
 def test_xai_client_retries_429(monkeypatch: pytest.MonkeyPatch) -> None:
@@ -270,12 +288,21 @@ def test_ads_enrich_keeps_human_and_patches_machine() -> None:
     assert ads[2]["machine_issues"]["basis"]["checked_by"] == "reviewer"
 
 
-class _Transcript:
-    language_code = "en"
-    is_generated = True
+@dataclass
+class _FetchedTranscript:
+    segments: list[dict[str, object]]
 
-    def fetch(self) -> list[dict[str, object]]:
-        return [{"start": 0, "duration": 1, "text": "hello"}]
+    def to_raw_data(self) -> list[dict[str, object]]:
+        return self.segments
+
+
+@dataclass
+class _Transcript:
+    language_code: str = "en"
+    is_generated: bool = True
+
+    def fetch(self) -> _FetchedTranscript:
+        return _FetchedTranscript([{"start": 0, "duration": 1, "text": "hello"}])
 
 
 class _Api:
@@ -301,12 +328,9 @@ def test_transcript_fetch_writes_auto_caption(monkeypatch: pytest.MonkeyPatch, t
 
 
 def test_transcript_request_blocked_exits_two(monkeypatch: pytest.MonkeyPatch, tmp_path: Path) -> None:
-    class RequestBlocked(Exception):
-        pass
-
     class BlockedApi:
         def list(self, video_id: str) -> list[object]:
-            raise RequestBlocked()
+            raise RequestBlocked(video_id)
 
     out = tmp_path / "out" / "race"
     out.mkdir(parents=True)

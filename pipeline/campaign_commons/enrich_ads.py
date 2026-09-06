@@ -236,11 +236,13 @@ def run(
     rows_by_id: dict[str, dict[str, Any]] = {}
     calls = 0
     spent = 0.0
+    exit_code = 0
     ledger_path = cache_dir / "ledger.json"
     ledger = read_json(ledger_path) if ledger_path.exists() else []
     if not isinstance(ledger, list):
         ledger = []
     for ad, transcript, key in plans:
+        budget_hit = False
         cache_path = cache_dir / f"{key}.json"
         if cache_path.exists():
             entry = read_json(cache_path)
@@ -250,7 +252,8 @@ def run(
                     f"budget exhausted: {calls} calls used, {len(plans) - len(rows_by_id)} units remain",
                     file=sys.stderr,
                 )
-                return 3
+                exit_code = 3
+                break
             payload = _payload(model, prompt, issue_id_list, transcript)
             response = client.create_response(payload)
             retrieved_at = now_iso()
@@ -277,29 +280,28 @@ def run(
             write_json(ledger_path, ledger)
             if spent > max_usd:
                 print(f"budget exhausted: ${spent:.6f} used, ${max(0.0, max_usd - spent):.6f} left", file=sys.stderr)
-                return 3
+                exit_code = 3
+                budget_hit = True
         response = entry.get("response", {})
         try:
             parsed = _parse_response(response)
         except (ValueError, json.JSONDecodeError) as exc:
             print(f"WARN {ad['ad_id']}: invalid xAI JSON ({exc})", file=sys.stderr)
-            continue
-        error = _validate_result(parsed, str(transcript["text"]), set(issue_id_list))
-        if error:
-            print(f"WARN {ad['ad_id']}: dropped classification ({error})", file=sys.stderr)
-            continue
-        rows_by_id[str(ad["ad_id"])] = _machine_row(ad, transcript, parsed, model, str(entry["retrieved_at"]), response)
+        else:
+            error = _validate_result(parsed, str(transcript["text"]), set(issue_id_list))
+            if error:
+                print(f"WARN {ad['ad_id']}: dropped classification ({error})", file=sys.stderr)
+            else:
+                rows_by_id[str(ad["ad_id"])] = _machine_row(
+                    ad, transcript, parsed, model, str(entry["retrieved_at"]), response
+                )
+        if budget_hit:
+            break
     hand_path = DATA / "hand" / race_id / "x_ad_issues.json"
     existing = read_json(hand_path) if hand_path.exists() else {"race_id": race_id, "method": "", "rows": []}
     old_rows = existing.get("rows", []) if isinstance(existing, dict) else []
-    kept = [
-        row
-        for row in old_rows
-        if isinstance(row, dict)
-        and isinstance(row.get("provenance"), dict)
-        and row["provenance"].get("review_status") in {"accepted", "rejected"}
-        and not refresh_reviewed
-    ]
+    processed = {str(ad["ad_id"]) for ad, _, _ in plans}
+    kept = [row for row in old_rows if isinstance(row, dict) and str(row.get("ad_id")) not in processed]
     output = {
         "race_id": race_id,
         "method": (
@@ -310,7 +312,7 @@ def run(
     }
     write_json(hand_path, output)
     print(f"classified {len(rows_by_id)} rows; {calls} API calls; estimated ${spent:.6f}")
-    return 0
+    return exit_code
 
 
 def main() -> int:
