@@ -472,5 +472,52 @@
       "last_date": "2024-10-28",
       "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00483693&payee_name=SIERRA+CLUB"
     }
-  ]
+  ],
+  "x_enrichment": {
+    "issue_focus": {
+      "kind": "single_issue",
+      "issue_ids": [
+        "energy_climate"
+      ],
+      "description": "Together, we’re committed to blocking the Trump agenda and defending the progress we’ve made. Our nationwide movement, made up of people like you, remains strong, determined, and ready for the work ahead. We’re already mobilizing our 64 chapters and millions of members to support local efforts and push for a clean energy future for all.",
+      "basis": {
+        "basis": "inferred",
+        "rule": "x_issue_focus",
+        "source_urls": [
+          "https://www.sierraclubindependentaction.org/",
+          "http://web.archive.org/web/20260821030919/https://www.sierraclubindependentaction.org/",
+          "https://www.fec.gov/data/committee/C00483693/"
+        ],
+        "checked_by": null,
+        "checked_at": null
+      },
+      "label": "Machine-tagged from the committee's own website (grok-4.3, 2026-09-06); not part of the record",
+      "quote": "Together, we’re committed to blocking the Trump agenda and defending the progress we’ve made. Our nationwide movement, made up of people like you, remains strong, determined, and ready for the work ahead. We’re already mobilizing our 64 chapters and millions of members to support local efforts and push for a clean energy future for all.",
+      "provenance": {
+        "tagged_by": "xai-grok-4.3-2026-09-06",
+        "tagged_at": "2026-09-06",
+        "model": "grok-4.3",
+        "prompt_version": "classify_spender.v1",
+        "tools": [
+          "web_search"
+        ],
+        "tool_filters": {
+          "allowed_domains": [
+            "sierraclubindependentaction.org"
+          ]
+        },
+        "response_id": "a467f248-6499-9325-8f6f-a743d2b1249b",
+        "retrieved_at": "2026-09-06T03:38:57+00:00",
+        "citations": [
+          "https://www.sierraclubindependentaction.org/",
+          "https://www.sierraclubindependentaction.org/endorsements"
+        ],
+        "confidence": "high",
+        "review_status": "pending",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "review_note": null
+      }
+    }
+  }
 }

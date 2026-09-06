@@ -193,5 +193,58 @@
       "last_date": "2024-11-08",
       "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00891549&payee_name=PROMPT.IO"
     }
-  ]
+  ],
+  "x_enrichment": {
+    "issue_focus": {
+      "kind": "general_partisan",
+      "issue_ids": [],
+      "description": "America First Action Fund was created to champion these ideals and advocate for the rights of diligent citizens.",
+      "basis": {
+        "basis": "inferred",
+        "rule": "x_issue_focus",
+        "source_urls": [
+          "https://americafirstactionfund.com/",
+          "https://www.fec.gov/data/committee/C00891549/"
+        ],
+        "checked_by": null,
+        "checked_at": null
+      },
+      "label": "Machine-tagged from the committee's own website (grok-4.3, 2026-09-06); not part of the record",
+      "quote": "America First Action Fund was created to champion these ideals and advocate for the rights of diligent citizens.",
+      "provenance": {
+        "tagged_by": "xai-grok-4.3-2026-09-06",
+        "tagged_at": "2026-09-06",
+        "model": "grok-4.3",
+        "prompt_version": "classify_spender.v1",
+        "tools": [
+          "web_search"
+        ],
+        "tool_filters": {},
+        "response_id": "8fc6d46d-cf97-97a0-8310-7607dafe8dfd",
+        "retrieved_at": "2026-09-06T03:26:22+00:00",
+        "citations": [
+          "https://americafirstactionfund.com/",
+          "https://ballotpedia.org/America_First_Action",
+          "https://www.a1apac.org/about/",
+          "https://www.americafirstpolicy.com/issues/center-for-american-security-overview",
+          "https://en.wikipedia.org/wiki/America_First_Action",
+          "https://www.linkedin.com/company/america-first-action",
+          "https://www.zoominfo.com/c/america-first-action-inc/420541238",
+          "https://acf.gov/about/acf-vision-mission-values",
+          "https://mediabiasfactcheck.com/america-first-action-superpac/",
+          "https://en.wikipedia.org/wiki/America_First_Policies",
+          "https://www.genarchives..com/Towne-Bowditch/g0/p496.htm",
+          "https://apexshield..com/",
+          "https://www.genarchives..com/Towne-Bowditch/g0/p721.htm",
+          "https://www.genarchives..com/Towne-Bowditch/g0/p586.htm",
+          "https://www.genarchives..com/Towne-Bowditch/g0/p346.htm"
+        ],
+        "confidence": "high",
+        "review_status": "pending",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "review_note": null
+      }
+    }
+  }
 }

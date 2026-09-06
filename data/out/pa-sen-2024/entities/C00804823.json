@@ -292,5 +292,57 @@
       "last_date": "2024-10-29",
       "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00804823&payee_name=SENA+KOZAR+STRATEGIES"
     }
-  ]
+  ],
+  "x_enrichment": {
+    "issue_focus": {
+      "kind": "general_partisan",
+      "issue_ids": [],
+      "description": "Mainstream Democrats PAC exists to meet this moment. We support pragmatic Democratic leaders and work to defeat extreme candidates whose stated objective is to weaken the party and obstruct its ability to lead the country.",
+      "basis": {
+        "basis": "inferred",
+        "rule": "x_issue_focus",
+        "source_urls": [
+          "https://mainstreamdemocrats.org/",
+          "https://www.fec.gov/data/committee/C00804823/"
+        ],
+        "checked_by": null,
+        "checked_at": null
+      },
+      "label": "Machine-tagged from the committee's own website (grok-4.3, 2026-09-06); not part of the record",
+      "quote": "Mainstream Democrats PAC exists to meet this moment. We support pragmatic Democratic leaders and work to defeat extreme candidates whose stated objective is to weaken the party and obstruct its ability to lead the country.",
+      "provenance": {
+        "tagged_by": "xai-grok-4.3-2026-09-06",
+        "tagged_at": "2026-09-06",
+        "model": "grok-4.3",
+        "prompt_version": "classify_spender.v1",
+        "tools": [
+          "web_search"
+        ],
+        "tool_filters": {
+          "allowed_domains": [
+            "mainstreamdemocrats.org"
+          ]
+        },
+        "response_id": "15666fb0-faae-91ce-9124-ed0df3165c09",
+        "retrieved_at": "2026-09-06T03:12:57+00:00",
+        "citations": [
+          "https://mainstreamdemocrats.org/",
+          "https://theintercept.com/2022/10/16/democratic-party-progressive-israel-aipac-dmfi/",
+          "https://www.newsweek.com/democrats-launch-centrist-group-as-trump-attacks-socialists-communists-12130096",
+          "https://www.cnn.com/2026/07/29/politics/democratic-socialists-mamdani-trump-communism-analysis",
+          "https://www.presidency.ucsb.edu/documents/2024-democratic-party-platform",
+          "https://www.thenation.com/article/politics/mainstream-democrat/",
+          "https://www.commondreams.org/opinion/progressives-save-dems",
+          "https://www.democracynow.org/2026/7/10/ashik_siddique_dsa_2026_midterms_democrats",
+          "https://commonsensedemocrats.us/",
+          "https://www.theguardian.com/commentisfree/2026/jul/01/democratic-socialists-versus-corporate-democrats"
+        ],
+        "confidence": "high",
+        "review_status": "pending",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "review_note": null
+      }
+    }
+  }
 }

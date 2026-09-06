@@ -560,5 +560,50 @@
       "last_date": "2024-09-23",
       "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00828608&payee_name=APEX+STRATEGIES"
     }
-  ]
+  ],
+  "x_enrichment": {
+    "issue_focus": {
+      "kind": "candidate_aligned",
+      "issue_ids": [],
+      "description": "Our mission at Hardworking Americans Inc. is to support federal candidates who believe we should always put the hardworking men and women of this country first.",
+      "basis": {
+        "basis": "inferred",
+        "rule": "x_issue_focus",
+        "source_urls": [
+          "https://www.hardworkingamericans.org/",
+          "https://www.fec.gov/data/committee/C00828608/"
+        ],
+        "checked_by": null,
+        "checked_at": null
+      },
+      "label": "Machine-tagged from the committee's own website (grok-4.3, 2026-09-06); not part of the record",
+      "quote": "Our mission at Hardworking Americans Inc. is to support federal candidates who believe we should always put the hardworking men and women of this country first. Small businesses, families, and communities all trying to achieve the American Dream are the backbone of this country — and Hardworking Americans Inc. stands with them.",
+      "provenance": {
+        "tagged_by": "xai-grok-4.3-2026-09-06",
+        "tagged_at": "2026-09-06",
+        "model": "grok-4.3",
+        "prompt_version": "classify_spender.v1",
+        "tools": [
+          "web_search"
+        ],
+        "tool_filters": {
+          "allowed_domains": [
+            "hardworkingamericans.org"
+          ]
+        },
+        "response_id": "981e43dc-3184-9445-bb4c-d958cbf70313",
+        "retrieved_at": "2026-09-06T03:18:03+00:00",
+        "citations": [
+          "https://www.hardworkingamericans.org",
+          "https://www.hardworkingamericans.org/",
+          "https://www.hardworkingamericans.org/terms-conditions"
+        ],
+        "confidence": "high",
+        "review_status": "pending",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "review_note": null
+      }
+    }
+  }
 }

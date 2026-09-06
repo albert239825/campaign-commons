@@ -583,5 +583,60 @@
       "last_date": "2024-11-13",
       "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00835041&payee_name=SWITCHBOARD"
     }
-  ]
+  ],
+  "x_enrichment": {
+    "issue_focus": {
+      "kind": "multi_issue",
+      "issue_ids": [
+        "abortion",
+        "labor_trade"
+      ],
+      "description": "We back leaders who show up for their communities, who refuse to apologize for believing in justice, who don’t flinch when extremists threaten them. We are not interested in politics as a hobby. We are here to change outcomes.",
+      "basis": {
+        "basis": "inferred",
+        "rule": "x_issue_focus",
+        "source_urls": [
+          "https://www.forwardblue.org/about",
+          "https://www.fec.gov/data/committee/C00835041/"
+        ],
+        "checked_by": null,
+        "checked_at": null
+      },
+      "label": "Machine-tagged from the committee's own website (grok-4.3, 2026-09-06); not part of the record",
+      "quote": "We back leaders who show up for their communities, who refuse to apologize for believing in justice, who don’t flinch when extremists threaten them. We are not interested in politics as a hobby. We are here to change outcomes.",
+      "provenance": {
+        "tagged_by": "xai-grok-4.3-2026-09-06",
+        "tagged_at": "2026-09-06",
+        "model": "grok-4.3",
+        "prompt_version": "classify_spender.v1",
+        "tools": [
+          "web_search"
+        ],
+        "tool_filters": {
+          "allowed_domains": [
+            "forwardblue.org"
+          ]
+        },
+        "response_id": "d2f6d942-3186-901b-8d9b-08a13cb1254b",
+        "retrieved_at": "2026-09-06T03:14:46+00:00",
+        "citations": [
+          "https://www.forwardblue.org/about",
+          "https://www.forwardblue.org/",
+          "https://victory.forwardblue.org/about",
+          "https://www.forwardblue.org/press",
+          "https://www.forwardblue.org/endorsements",
+          "https://www.forwardblue.org/contribution-rules",
+          "https://act.forwardblue.org/signup/202411-no-kings-act",
+          "https://www.forwardblue.org/privacy-policy",
+          "https://victory.forwardblue.org/p/americans-pay-more-trump-wants-save-act",
+          "https://victory.forwardblue.org/p/welcome-to-the-margin-of-victory"
+        ],
+        "confidence": "high",
+        "review_status": "pending",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "review_note": null
+      }
+    }
+  }
 }

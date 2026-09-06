@@ -494,5 +494,72 @@
       "last_date": "2024-10-25",
       "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00509893&payee_name=STRATEGY+GROUP+FOR+MEDIA+INC"
     }
-  ]
+  ],
+  "x_enrichment": {
+    "issue_focus": {
+      "kind": "single_issue",
+      "issue_ids": [
+        "abortion"
+      ],
+      "description": "The National Right to Life Victory Fund, established as an independent expenditure political action committee, is National Right to Life’s political arm. The Victory Fund works to elect pro-life men and women to Congress and the White House — men and women dedicated to enacting policies and passing laws that will protect innocent human life.",
+      "basis": {
+        "basis": "inferred",
+        "rule": "x_issue_focus",
+        "source_urls": [
+          "https://nrlc.org/donateinfo/",
+          "https://www.fec.gov/data/committee/C00509893/"
+        ],
+        "checked_by": null,
+        "checked_at": null
+      },
+      "label": "Machine-tagged from the committee's own website (grok-4.3, 2026-09-06); not part of the record",
+      "quote": "The National Right to Life Victory Fund, established as an independent expenditure political action committee, is National Right to Life’s political arm. The Victory Fund works to elect pro-life men and women to Congress and the White House — men and women dedicated to enacting policies and passing laws that will protect innocent human life.",
+      "provenance": {
+        "tagged_by": "xai-grok-4.3-2026-09-06",
+        "tagged_at": "2026-09-06",
+        "model": "grok-4.3",
+        "prompt_version": "classify_spender.v1",
+        "tools": [
+          "web_search"
+        ],
+        "tool_filters": {
+          "allowed_domains": [
+            "nrlc.org"
+          ]
+        },
+        "response_id": "730eeddd-5f92-9a55-9f85-3897397ae664",
+        "retrieved_at": "2026-09-06T03:26:49+00:00",
+        "citations": [
+          "https://nrlc.org/donateinfo/",
+          "https://nrlc.org/faq/",
+          "https://nrlc.org/communications/florida-amendment-4-fails-life-wins/",
+          "https://nrlc.org/news/12/fall12news/vfpage32/",
+          "https://nrlc.org/wp-content/uploads/2024/02/SeptOct2018News.pdf",
+          "https://nrlc.org/nrlnewstoday/2025/04/victory-210-million-to-help-moms-choose-life/",
+          "https://nrlc.org/nrlnewstoday/2018/09/the-national-right-to-life-victory-fund-needs-your-help-to-fight-an-historic-battle/",
+          "https://nrlc.org/daf/",
+          "https://nrlc.org/wp-content/uploads/2024/02/Oct2023NRLNews.pdf",
+          "https://nrlc.org/nrlnewstoday_tag/victory-fund/",
+          "https://nrlc.org/about/mission/",
+          "https://nrlc.org/about/",
+          "https://nrlc.org/nrlnewstoday/2025/06/our-interdependent-rights/",
+          "https://nrlc.org/nrlnewstoday/2026/01/presidential-message-on-national-sanctity-of-human-life-day-2026/",
+          "http://www.nrlc.org/uploads/ccpa/HJCReportCIANA042105.pdf",
+          "https://nrlc.org/wp-content/uploads/2024/02/March2021NRLNews.pdf",
+          "https://nrlc.org/wp-content/uploads/2024/02/NRLNewsJune2014.pdf",
+          "http://www.nrlc.org/uploads/DvSBA/ExhibitI-USCCBGeneralCounselMemoOnAbortionInPPACAandExecutiveOrder.pdf",
+          "https://nrlc.org/nrlnewstoday/2026/08/how-tiktok-creators-are-glamorizing-assisted-dying/",
+          "https://nrlc.org/nrlnewstoday/2019/05/palliative-care-strives-to-reduce-suffering-not-to-intentionally-end-life/",
+          "https://nrlc.org/nrlnewstoday/2015/05/i-cant-fix-this/",
+          "https://nrlc.org/nrlnewstoday/2025/02/care-net-and-icu-mobile-announce-strategic-merger-to-expand-network-of-life-affirming-care/",
+          "https://nrlc.org/nrlnewstoday/2018/03/the-perfect-facebook-video-for-world-down-syndrome-awareness-day/"
+        ],
+        "confidence": "high",
+        "review_status": "pending",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "review_note": null
+      }
+    }
+  }
 }

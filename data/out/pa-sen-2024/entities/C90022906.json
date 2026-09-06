@@ -232,5 +232,67 @@
       "last_date": "2024-10-23",
       "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C90022906&payee_name=ROTHENBECKER%2C+DENNIS+JR."
     }
-  ]
+  ],
+  "x_enrichment": {
+    "issue_focus": {
+      "kind": "multi_issue",
+      "issue_ids": [
+        "healthcare",
+        "energy_climate",
+        "guns"
+      ],
+      "description": "Action Together NEPA is a grassroots progressive organization dedicated to community action and political advocacy. We support bold progressive policies that will preserve our democracy and promote social and economic justice.",
+      "basis": {
+        "basis": "inferred",
+        "rule": "x_issue_focus",
+        "source_urls": [
+          "https://www.actiontogethernepa.org/",
+          "https://www.fec.gov/data/committee/C90022906/"
+        ],
+        "checked_by": null,
+        "checked_at": null
+      },
+      "label": "Machine-tagged from the committee's own website (grok-4.3, 2026-09-06); not part of the record",
+      "quote": "Our grassroots, progressive organization is dedicated to community action and political advocacy. We support bold progressive policies that will preserve our democracy and promote social and economic justice.",
+      "provenance": {
+        "tagged_by": "xai-grok-4.3-2026-09-06",
+        "tagged_at": "2026-09-06",
+        "model": "grok-4.3",
+        "prompt_version": "classify_spender.v1",
+        "tools": [
+          "web_search"
+        ],
+        "tool_filters": {},
+        "response_id": "02e10a63-26b5-9a61-a4e6-d9728429a2ea",
+        "retrieved_at": "2026-09-06T03:29:16+00:00",
+        "citations": [
+          "https://www.genarchives..com/Towne-Bowditch/g0/p621.htm",
+          "https://www.genarchives..com/Towne-Bowditch/g0/p555.htm",
+          "https://www.genarchives..com/Towne-Bowditch/g0/p732.htm",
+          "https://www.genarchives..com/Towne-Bowditch/g0/p360.htm",
+          "https://www.genarchives..com/Towne-Bowditch/g0/p58.htm",
+          "https://www.genarchives..com/Towne-Bowditch/g0/p206.htm",
+          "https://www.genarchives..com/Towne-Bowditch/g0/p10.htm",
+          "https://www.genarchives..com/Towne-Bowditch/g0/p489.htm",
+          "https://www.genarchives..com/Towne-Bowditch/g0/p466.htm",
+          "https://www.genarchives..com/Towne-Bowditch/g0/p353.htm",
+          "https://docquery.fec.gov/cgi-bin/forms/C90022906/f57",
+          "https://www.actiontogethernepa.org/we-believe",
+          "https://www.actiontogethernepa.org/",
+          "https://www.opensecrets.org/political-action-committees-pacs/action-together-nepa/C90022906/expenditures/2024",
+          "https://www.fec.gov/data/committee/C00740845/",
+          "https://fox56.com/news/local/action-together-nepa-expands-to-bigger-hq-in-downtown-wilkes-barre",
+          "https://impala.digital/public/profiles/82-1570948/overview",
+          "https://www.youtube.com/shorts/tUg68hHi99A",
+          "https://docquery.fec.gov/cgi-bin/forms/C90022906/1870264/",
+          "https://secure.actblue.com/donate/action-together-nepa--inc--1"
+        ],
+        "confidence": "high",
+        "review_status": "pending",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "review_note": null
+      }
+    }
+  }
 }
