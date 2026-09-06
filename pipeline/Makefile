@@ -1,7 +1,7 @@
 RACE ?= pa-sen-2024
 PY ?= python3
 
-.PHONY: setup mock ingest ledger chains vendors ads ads-enrich enrich-transcripts enrich-ads enrich-review enrich-spenders enrich-funders enrich-dossiers dossier-enrich issues search dossier validate all lint test issues-enrich
+.PHONY: setup mock ingest ledger chains vendors ads ads-enrich enrich-transcripts enrich-video-titles enrich-ads enrich-review enrich-spenders enrich-funders enrich-dossiers dossier-enrich issues search dossier validate all lint test issues-enrich
 
 setup:            ## install pipeline deps (creates .venv)
 	$(PY) -m venv .venv && . .venv/bin/activate && pip install -q -e ".[dev]"
@@ -29,6 +29,9 @@ ads-enrich:       ## Block 2: patch ads.json in place with sponsor shares, hand 
 
 enrich-transcripts: ## Fetch YouTube captions locally; run from a residential IP because YouTube blocks cloud IPs
 	$(PY) -m campaign_commons.enrich_transcripts $(RACE)
+
+enrich-video-titles: ## Fetch YouTube titles for video ads via oEmbed (no key); writes ads[].video
+	$(PY) -m campaign_commons.enrich_video_titles $(RACE)
 
 enrich-ads:       ## Classify cached ad transcripts with xAI (requires XAI_API_KEY)
 	$(PY) -m campaign_commons.enrich_ads $(RACE)
@@ -69,7 +72,8 @@ validate:         ## validate data/out against contracts/jsonschema
 chains-out:       ## Block 2: spending side of chains/*.json (root -> vendor -> ad -> candidate); runs after vendors/ads/dossier
 	$(PY) -m campaign_commons.chains_out $(RACE)
 
-# Stage order: chains before vendors (vendors reconciles against ledger.traceability, which chains writes);
+# Stage order: chains before vendors (vendors reconciles against ledger.traceability, which chains writes); ads -> ads-enrich -> enrich-video-titles
+# because ads regenerates ads.json and the title stage is a network enrichment.
 # ads-enrich and issues read vendors/ads; chains-out reads all of them; search last
 all: ingest ledger chains vendors ads ads-enrich issues dossier chains-out search trails validate
 

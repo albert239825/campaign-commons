@@ -18,6 +18,7 @@ from youtube_transcript_api._errors import IpBlocked, RequestBlocked
 from .ads_creatives import youtube_video_id
 from .config import DATA, RACES
 from .util import now_iso, read_json, write_json
+from .yt_cache import load_video_id_cache
 
 YT_DIR = DATA / "raw" / "yt"
 VIDEO_IDS = YT_DIR / "video_ids.json"
@@ -45,14 +46,7 @@ def _is_blocked(exc: BaseException) -> bool:
 
 
 def _video_id_cache() -> dict[str, str | None]:
-    if not VIDEO_IDS.exists():
-        return {}
-    loaded = read_json(VIDEO_IDS)
-    return (
-        {str(k): (str(v) if isinstance(v, str) else None) for k, v in loaded.items()}
-        if isinstance(loaded, dict)
-        else {}
-    )
+    return load_video_id_cache(VIDEO_IDS)
 
 
 def _ad_transcript_path(video_id: str) -> Path:

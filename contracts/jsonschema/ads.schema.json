@@ -152,6 +152,45 @@
                   "null"
                 ]
               },
+              "video": {
+                "anyOf": [
+                  {
+                    "type": "object",
+                    "properties": {
+                      "video_id": {
+                        "type": "string"
+                      },
+                      "title": {
+                        "type": "string"
+                      },
+                      "channel": {
+                        "type": [
+                          "string",
+                          "null"
+                        ]
+                      },
+                      "source_url": {
+                        "type": "string",
+                        "format": "uri"
+                      },
+                      "fetched_at": {
+                        "type": "string"
+                      }
+                    },
+                    "required": [
+                      "video_id",
+                      "title",
+                      "channel",
+                      "source_url",
+                      "fetched_at"
+                    ],
+                    "additionalProperties": false
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
               "regions": {
                 "type": "array",
                 "items": {
