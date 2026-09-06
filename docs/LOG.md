@@ -577,26 +577,3 @@ below the new panel; `select` now scrolls the tablist back to the top only when 
 "partial coverage" marker is exercised only by the `No record loaded` branch, since both PA dossiers are complete). Lint, tsc,
 build (2,960 pages) pass; candidate route 1.25 kB / 107 kB first load. Checked in the browser: click → `#guns`, Down/Down/Up →
 `#tax_budget` with focus following, back → `#guns`, Compare → other dossier opens on `#guns`.
-
-## 2026-09-06 ~08:10 — Block 3: the two dossiers become one Stances tab (child D, after review)
-
-**What changed.** Patrick's read of the D1 PR: two dossier tabs still meant two pages to compare one issue — "a single tab
-that displays both … rename it as Stances and consolidate in the same way that it is built now." So `/races/<race>/stances`
-(`app/races/[raceId]/stances/page.tsx`) is the one place stances live: the same ten-issue tablist (D-78), but the selected
-issue's panel holds every candidate's `IssueSection` side by side in race order — Casey on the left, McCormick on the right —
-each with its own party tag, role, evidence basis, position, direction, confidence, review state and D-26-ordered evidence
-list with its sources. Nothing is merged or averaged across the pair; the sidebar count is simply the sum of both candidates'
-records for that issue. The header is "Where the candidates stand": one card per candidate (basis, issues covered, records,
-summary behind `<details>`, FEC / Congress / campaign source links), then the shared "Read this first" asymmetry note.
-`RaceNav` gets one "Stances" item in place of "Casey dossier" / "McCormick dossier"; `/candidates/<id>` 308-redirects to the
-Stances tab (unknown ids still 404), so old links keep working; the Compare link is gone because there is nothing left to
-compare across. `IssueSection` takes an optional `title`/`subtitle` so the candidate's name can head each column while the
-issue heading sits once above both. Still all server-rendered; the island only toggles `hidden`. D-79.
-
-**Challenge.** Two sections of very different length (7 Casey roll-calls next to one McCormick statement) in one row: the
-columns are `align-items: start` on a 380px-minimum auto-fit grid so the short one does not stretch, and the stance meta
-block reflows to one column per candidate so its labels stay legible at half width; below ~800px the candidates stack and
-the tablist scrolls horizontally as before.
-
-**Numbers.** 1 tab instead of 2; 10 issues × 2 candidates = 20 server-rendered sections behind one visible panel; 73 records
-(63 + 10). Build 2,961 pages (one new route, two redirects), lint and tsc clean; no data or contract changes.
