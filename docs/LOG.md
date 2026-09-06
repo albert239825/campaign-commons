@@ -728,3 +728,7 @@ Added `enrich_funders.py` for ranked upstream `org:` funders, open-web self-desc
 and `enrich-funders`/`enrich-review --kind funders`.
 Added `enrich_dossiers.py`, optional X-post verification, `x_accounts.json`, and dossier materialization for pending
 machine stance suggestions.
+
+### 2026-09-06 — Shared race tab shell
+
+The race ledger, ads, and policies tabs now share one route-group layout: the seal, race title, election date, notable candidates, data-status banner, and Ledger · Ads · Policies navigation remain fixed while only the tab content changes. `RaceNav` derives its active tab from the pathname, so record pages keep the same parent-tab behavior without passing an active prop.

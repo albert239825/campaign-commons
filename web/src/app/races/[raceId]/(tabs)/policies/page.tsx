@@ -1,10 +1,7 @@
 // OWNER: Block 3 child E (policies tab).
 import { ISSUES, type IssueFocus, type IssueId } from "@campaign-commons/contracts";
-import { DetailHeader } from "@/components/ui/detail-layout";
 import { getAds, getDossier, getEntity, getLedger, getRace, hasDossier, hasEntity, listRaceIds } from "@/lib/data";
-import { routes } from "@/lib/format";
-import { AdjacencyNote, Breadcrumbs, DataStatusBanner } from "@/components/ui";
-import { RaceNav } from "@/components/ui/race-nav";
+import { AdjacencyNote } from "@/components/ui";
 import { PolicyTabs } from "@/components/policies/policy-tabs";
 import { IssuePanel, type CandidateStance } from "@/components/policies/issue-panel";
 import type { IssueFunder } from "@/components/policies/funder-row";
@@ -47,16 +44,11 @@ export default async function PoliciesPage({ params }: { params: Promise<{ raceI
 
   return (
     <div className="detail-page policies-page">
-      <Breadcrumbs items={[{ href: routes.home(), label: "Races" }, { href: routes.race(raceId), label: race.label }, { label: "Policies" }]} />
-      <DataStatusBanner status={ledger.data_status} />
-      <DetailHeader label={race.label} title="Policies">
-        <p>
-          The candidates&apos; stance record for this race, issue by issue: each candidate&apos;s position with every vote, bill and
-          statement behind it, side by side, alongside the outside spenders that describe themselves as focused on the same issue and
-          what they spent for or against each candidate. Same topic is the only link between the stances and the spenders.
-        </p>
-      </DetailHeader>
-      <RaceNav race={race} counts={{ ads: gallery.ads.length }} active={routes.policies(raceId)} />
+      <p className="text-sm text-neutral-600 max-w-3xl">
+        The candidates&apos; stance record for this race, issue by issue: each candidate&apos;s position with every vote, bill and
+        statement behind it, side by side, alongside the outside spenders that describe themselves as focused on the same issue and
+        what they spent for or against each candidate. Same topic is the only link between the stances and the spenders.
+      </p>
 
       <PolicyTabs
         items={byIssue.map((b) => ({
