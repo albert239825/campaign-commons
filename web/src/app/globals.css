@@ -970,8 +970,7 @@ body:has(.detail-page) :is(a, button, input, select, summary, [tabindex]):focus-
 .spender-card-agenda { display: grid; gap: 4px; padding-top: 10px; border-top: 1px solid var(--race-rule, #e5e2dc); font-size: 12px; line-height: 1.5; color: #555550; }
 .spender-card-agenda-label { font-size: 10px; font-weight: 500; letter-spacing: .06em; text-transform: uppercase; color: #8a877f; }
 .spender-card-agenda-head { font-size: 13px; font-weight: 500; color: #1b1b1a; }
-.spender-card-agenda-issues { display: flex; flex-wrap: wrap; gap: 4px; margin: 0; padding: 0; list-style: none; }
-.spender-card-agenda-issues li { border: 1px solid #d9d6cf; border-radius: 3px; padding: 1px 6px; font-size: 11px; line-height: 1.5; color: #3d3d3a; background: #faf9f6; }
+.spender-card-agenda-issues { margin: 0; font-size: 12px; color: #3d3d3a; }
 .spender-card-agenda-quote summary { cursor: pointer; color: #6b6963; text-decoration: underline dotted; text-underline-offset: 2px; font-size: 11px; }
 .spender-card-agenda-quote summary:hover { color: #1b1b1a; }
 .spender-card-agenda-quote p { margin: 4px 0 0; }

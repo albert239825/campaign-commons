@@ -16,7 +16,7 @@ import {
   type Story,
 } from "@campaign-commons/contracts";
 import { money, pct, routes } from "@/lib/format";
-import { Chip, FlagBadge, Money, SourceLink } from "@/components/ui";
+import { Chip, Money, SourceLink } from "@/components/ui";
 import { StackedBar } from "@/components/ui/stacked-bar";
 import { FOCUS_KIND_LABELS } from "@/components/issues/focus-kind";
 import { FLAG_MEANINGS, FlagsLegend } from "./flags-legend";
@@ -172,16 +172,11 @@ function SpenderCard({
           </Link>
         </h3>
         <div className="spender-card-type">{s.committee_type_label}</div>
-        {(isVerified(story) || s.flags.length > 0) && (
+        {isVerified(story) && (
           <div className="spender-card-chips">
-            {isVerified(story) && (
-              <Chip tone="green" title="A human checked the chain against the linked fec.gov record">
-                Checked against fec.gov
-              </Chip>
-            )}
-            {s.flags.map((f) => (
-              <FlagBadge key={f} flag={f} />
-            ))}
+            <Chip tone="green" title="A human checked the chain against the linked fec.gov record">
+              Checked against fec.gov
+            </Chip>
           </div>
         )}
       </div>
@@ -234,13 +229,14 @@ function SpenderCard({
             )}
           </p>
           {focus.issue_ids.length > 0 && (
-            <ul className="spender-card-agenda-issues" aria-label="Tagged issues">
-              {focus.issue_ids.map((id) => (
-                <li key={id} title={ISSUE_BY_ID[id].description}>
+            <p className="spender-card-agenda-issues">
+              {focus.issue_ids.map((id, i) => (
+                <span key={id} title={ISSUE_BY_ID[id].description}>
+                  {i > 0 && " · "}
                   {ISSUE_BY_ID[id].label}
-                </li>
+                </span>
               ))}
-            </ul>
+            </p>
           )}
           <details className="spender-card-agenda-quote">
             <summary>In its own words</summary>
