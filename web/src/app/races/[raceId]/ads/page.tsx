@@ -1,7 +1,7 @@
 // OWNER: Frontend B (ad gallery).
 import Link from "next/link";
 import { DetailHeader } from "@/components/ui/detail-layout";
-import { getAds, getRace, listChainIds, listEntityIds, listRaceIds } from "@/lib/data";
+import { getAds, getRace, hasTrails, listChainIds, listEntityIds, listRaceIds } from "@/lib/data";
 import { money, range, routes } from "@/lib/format";
 import { Breadcrumbs, Card, DataStatusBanner, Stat } from "@/components/ui";
 import { AdGallery } from "@/components/ads/ad-gallery";
@@ -36,7 +36,7 @@ export default async function AdsPage({ params }: { params: Promise<{ raceId: st
           and funding chain.
         </p>
       </DetailHeader>
-      <RaceNav race={race} counts={{ ads: gallery.ads.length }} active={routes.ads(raceId)} />
+      <RaceNav race={race} counts={{ ads: gallery.ads.length }} active={routes.ads(raceId)} trails={hasTrails(raceId)} />
 
       <Card>
         <div className="grid grid-cols-2 gap-4 md:grid-cols-4">

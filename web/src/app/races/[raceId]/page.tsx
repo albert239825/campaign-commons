@@ -95,7 +95,7 @@ export default async function RaceLedgerPage({ params }: { params: Promise<{ rac
             </section>
           </div>
         </header>
-        <RaceNav race={race} counts={{ ads: adCount }} active={routes.race(raceId)} />
+        <RaceNav race={race} counts={{ ads: adCount }} active={routes.race(raceId)} trails={hasTrails(raceId)} />
         {hasTrails(raceId) && (
           <Link
             href={routes.ask(raceId)}

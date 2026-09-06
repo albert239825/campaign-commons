@@ -2,11 +2,12 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { ISSUE_BY_ID, ISSUE_IDS } from "@campaign-commons/contracts";
-import { getRace, getTrails, hasTrails, listRaceIds } from "@/lib/data";
+import { getAds, getRace, getTrails, hasTrails, listRaceIds } from "@/lib/data";
 import { routes } from "@/lib/format";
 import { ASK_INTENTS, canonicalQuestion, INTENT_LABELS } from "@/lib/ask";
 import { Breadcrumbs, Card, DataStatusBanner } from "@/components/ui";
 import { DetailHeader, SectionNav } from "@/components/ui/detail-layout";
+import { RaceNav } from "@/components/ui/race-nav";
 import { AskBox, SuggestionLink } from "@/components/ask/ask-box";
 import { AskMethod } from "@/components/ask/method";
 
@@ -30,8 +31,6 @@ export default async function AskPage({ params }: { params: Promise<{ raceId: st
           title="Money Trails"
           actions={
             <div>
-              <Link href={routes.race(raceId)}>Race dashboard →</Link>
-              <Link href={routes.ads(raceId)}>Ad gallery →</Link>
               <Link href={routes.methodology()}>Methodology →</Link>
             </div>
           }
@@ -40,6 +39,7 @@ export default async function AskPage({ params }: { params: Promise<{ raceId: st
             Ask a plain-English money question about this race. A language model writes a read-only query over the filings graph, and every returned row links to where it was filed. Matching precomputed pages are offered as related links.
           </p>
         </DetailHeader>
+        <RaceNav race={race} counts={{ ads: getAds(raceId).ads.length }} active={routes.ask(raceId)} trails />
       </div>
 
       <Card>

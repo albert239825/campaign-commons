@@ -1,11 +1,12 @@
 // OWNER: Money Trails (D-73).
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { getRace, getTrails, hasTrails, listChainIds, listEntityIds, listRaceIds } from "@/lib/data";
+import { getAds, getRace, getTrails, hasTrails, listChainIds, listEntityIds, listRaceIds } from "@/lib/data";
 import { routes } from "@/lib/format";
 import { canonicalQuestion, INTENT_LABELS, isIntent } from "@/lib/ask";
 import { Breadcrumbs, Card, DataStatusBanner } from "@/components/ui";
 import { DetailHeader } from "@/components/ui/detail-layout";
+import { RaceNav } from "@/components/ui/race-nav";
 import { AskBox } from "@/components/ask/ask-box";
 import { AskMethod } from "@/components/ask/method";
 import { Headline, TrailAnswerView } from "@/components/ask/answer";
@@ -54,6 +55,7 @@ export default async function AnswerPage({ params }: { params: Promise<{ raceId:
         >
           <Headline answer={answer} />
         </DetailHeader>
+        <RaceNav race={race} counts={{ ads: getAds(raceId).ads.length }} active={routes.ask(raceId)} trails />
       </div>
 
       <div className="detail-sections">

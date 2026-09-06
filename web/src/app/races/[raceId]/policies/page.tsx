@@ -1,7 +1,7 @@
 // OWNER: Block 3 child E (policies tab).
 import { ISSUES, type IssueFocus, type IssueId } from "@campaign-commons/contracts";
 import { DetailHeader } from "@/components/ui/detail-layout";
-import { getAds, getDossier, getEntity, getLedger, getRace, hasDossier, hasEntity, listRaceIds } from "@/lib/data";
+import { getAds, getDossier, getEntity, getLedger, getRace, hasDossier, hasEntity, hasTrails, listRaceIds } from "@/lib/data";
 import { routes } from "@/lib/format";
 import { AdjacencyNote, Breadcrumbs, DataStatusBanner } from "@/components/ui";
 import { RaceNav } from "@/components/ui/race-nav";
@@ -56,7 +56,7 @@ export default async function PoliciesPage({ params }: { params: Promise<{ raceI
           what they spent for or against each candidate. Same topic is the only link between the stances and the spenders.
         </p>
       </DetailHeader>
-      <RaceNav race={race} counts={{ ads: gallery.ads.length }} active={routes.policies(raceId)} />
+      <RaceNav race={race} counts={{ ads: gallery.ads.length }} active={routes.policies(raceId)} trails={hasTrails(raceId)} />
 
       <PolicyTabs
         items={byIssue.map((b) => ({

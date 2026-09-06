@@ -1,5 +1,5 @@
 import { DetailHeader } from "@/components/ui/detail-layout";
-import { getAds, getRace, getStories, hasChain, listRaceIds } from "@/lib/data";
+import { getAds, getRace, getStories, hasChain, hasTrails, listRaceIds } from "@/lib/data";
 import { date, routes } from "@/lib/format";
 import { AdjacencyNote, Breadcrumbs, DataStatusBanner } from "@/components/ui";
 import { StoryCard } from "@/components/ledger/story-card";
@@ -24,7 +24,7 @@ export default async function StoriesPage({ params }: { params: Promise<{ raceId
           chain data; {verified} of {stories.stories.length} have been checked by a person against fec.gov.
         </p>
       </DetailHeader>
-      <RaceNav race={race} counts={{ ads: getAds(raceId).ads.length }} active={routes.stories(raceId)} />
+      <RaceNav race={race} counts={{ ads: getAds(raceId).ads.length }} active={routes.stories(raceId)} trails={hasTrails(raceId)} />
       {stories.stories.length === 0 && <p className="detail-empty">No funding highlights are available for this race yet.</p>}
       <div className="detail-stories-grid">
         {stories.stories.map((s) => (
