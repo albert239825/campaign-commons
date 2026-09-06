@@ -56,11 +56,18 @@ export class AskLimiter {
   }
 }
 
-/** Best-effort client id: first hop of `x-forwarded-for` (set by Vercel / any proxy), else one shared bucket. */
-export function clientKey(headers: Headers): string {
-  const xff = headers.get("x-forwarded-for");
-  const first = xff?.split(",")[0]?.trim();
-  return first && first.length > 0 ? first : headers.get("x-real-ip")?.trim() || "anonymous";
+/**
+ * Client id for the bucket. Forwarding headers are trusted only where the platform is known to overwrite them:
+ * on Vercel (`VERCEL=1`), `x-vercel-forwarded-for` / `x-forwarded-for` are set from the connection and cannot be
+ * supplied by the caller. Anywhere else (local dev, a self-hosted `next start` with no trusted proxy in front) a
+ * caller could pick its own address per request, so every caller shares one bucket instead: the cap still bounds
+ * spend, at the cost of one noisy client limiting the others.
+ */
+export function clientKey(headers: Headers, env: Record<string, string | undefined> = process.env): string {
+  if (!env.VERCEL) return "shared";
+  const forwarded = headers.get("x-vercel-forwarded-for") ?? headers.get("x-forwarded-for");
+  const first = forwarded?.split(",")[0]?.trim();
+  return first && first.length > 0 ? first : "shared";
 }
 
 export const askLimiter = new AskLimiter();

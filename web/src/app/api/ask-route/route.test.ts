@@ -1,4 +1,4 @@
-import { afterEach, describe, expect, it, vi } from "vitest";
+import { afterEach, beforeEach, describe, expect, it, vi } from "vitest";
 import type { TrailSubject } from "@campaign-commons/contracts";
 import { INTENTS, resolveQuestion, resolveRoute } from "@/lib/ask";
 import { MAX_IN_FLIGHT, RATE_PER_MINUTE } from "@/lib/ask-limits";
@@ -11,7 +11,8 @@ const trails = getTrails("pa-sen-2024");
 const casey = trails.subjects.find((s) => s.name === "Bob Casey")!;
 const winsenate = trails.subjects.find((s) => s.name === "WINSENATE")!;
 
-// Each call comes from its own address so the per-client limiter (tested below) stays out of the way elsewhere.
+// Each call comes from its own address so the per-client limiter (tested below) stays out of the way elsewhere;
+// addresses are only honoured under VERCEL=1 (see clientKey), which beforeEach sets.
 let nextClient = 0;
 const post = async (body: unknown, raw = false, client = `10.0.0.${++nextClient}`) => {
   const res = await POST(
@@ -33,6 +34,7 @@ const stubCompletion = (content: string) => {
 };
 const route = (intent: string, subjectId: string) => JSON.stringify({ route: { intent, subjectId } });
 
+beforeEach(() => vi.stubEnv("VERCEL", "1"));
 afterEach(() => {
   vi.unstubAllGlobals();
   vi.unstubAllEnvs();
@@ -68,6 +70,19 @@ describe("POST /api/ask-route spend guard", () => {
     expect(f).toHaveBeenCalledTimes(RATE_PER_MINUTE);
     // another address is unaffected
     expect((await ask("who funds winsenate")).status).toBe(200);
+  });
+  it("off Vercel, a caller rotating forged x-forwarded-for addresses cannot pick its own bucket", async () => {
+    vi.stubEnv("VERCEL", "");
+    vi.stubEnv("XAI_API_KEY", "k");
+    const f = stubCompletion(route("committee_funding", winsenate.id));
+    let status = 200;
+    for (let i = 0; i < RATE_PER_MINUTE + 1 && status === 200; i++) {
+      status = (await post({ raceId: "pa-sen-2024", question: `who funds winsenate ${i}` }, false, `203.0.113.${i}`)).status;
+    }
+    expect(status).toBe(429);
+    expect(f.mock.calls.length).toBeLessThanOrEqual(RATE_PER_MINUTE);
+    // a fresh forged address is still turned away
+    expect((await post({ raceId: "pa-sen-2024", question: "who funds winsenate" }, false, "198.51.100.1")).status).toBe(429);
   });
   it(`429 once ${MAX_IN_FLIGHT} questions are in flight, and slots free up when they settle`, async () => {
     vi.stubEnv("XAI_API_KEY", "k");

@@ -163,8 +163,8 @@ race's `{id, kind, name}` list, and constrains the reply with a strict `json_sch
 subject)` — the kind rules split out of `resolveQuestion` (which still calls them) — so candidate-funding still lands on the
 principal committee with its note and committee-spend still gets the typed refusal, for the exact subject the model picked;
 anything less than a valid route (no key, 6 s timeout, 4xx/5xx, malformed body, off-set value) resolves the raw text exactly as
-the browser did. The route is guarded (`ask-limits.ts`): 10 asks/min per client address and 4 model calls in flight per
-instance, beyond which it answers 429 without calling the provider and the browser resolves locally. The ask box POSTs with its own 8 s budget and resolves locally
+the browser did. The route is guarded (`ask-limits.ts`): 10 asks/min per client address (the address is taken from the forwarding header only on Vercel, which
+overwrites it; off Vercel a caller could forge it, so everyone shares one bucket) and 4 model calls in flight per instance, beyond which it answers 429 without calling the provider and the browser resolves locally. The ask box POSTs with its own 8 s budget and resolves locally
 if the call fails at all; suggestion chips never call the model. The response is a `Resolution` plus `via: "llm" | "fallback"`;
 no model text is in it. Both pages end in a two-part receipt: how the question is read (web copy: model picks from the closed list, browser matcher
 otherwise, nothing it writes is shown) and how the answers were built (`trails.method`). That pipeline sentence used to say the
