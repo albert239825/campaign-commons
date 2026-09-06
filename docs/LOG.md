@@ -155,3 +155,29 @@ authorship. Disclose pre-built work if asked rather than hide it.
 | Static pages | 2,021 | 2,096 | — | 2,147 |
 | Contract-validated files | 2,074 | 2,092 | — | 2,142 |
 | Pipeline tests | 28 | 43 | — | 67 |
+
+## 2026-09-05 ~19:00 — Block 2 kickoff: contracts first, again (master)
+
+**What changed.** The whiteboard session turned into an ontology (ONTOLOGY.md §0: V0/V1/V2 tables) and a Block 2 plan
+(plans/2026-09-05-block2.md). Before any child starts, the shared data model is frozen: `Basis` (evidence basis on every non-filed
+relationship), `Vendor`/`VendorIndex`, `IssueSpending` (two layers), `SearchIndex`, IE/Entity/Ad/Chain extensions
+(`vendor_id`, `medium`, `issue_focus`, `sponsor_visibility_shares`, `vendor_links`, out-side chain nodes `vendor|ad|candidate`
+with `placement|targeting` edges). Five hand-maintained input files under `data/hand/pa-sen-2024/` with their own schemas; both
+validators cover both roots. Contracts: 17 JSON Schemas (was 8); 2,142 V0 files still validate with zero changes.
+
+**Challenge.** Two "how honest can we be" problems surfaced in the discussion. (1) Nothing filed links an FEC payment to an
+ad-library creative — FEC sees {sponsor, vendor, $, purpose}, Google sees {sponsor, creative, spend range}, and the join is
+the vendor's private invoice. (2) "What is this money *for*" has two different answers: what the ad was about (attributable
+to dollars) and what the org says it exists for (not attributable — SLF's $52M isn't "about" anything). An earlier draft
+conflated them.
+
+**How we solved it.** A single `Basis` type with four values, styled differently in the graph and rendered as a sentence on
+every card: `filed` (solid), `verified` (solid + check, needs a source naming both sides), `inferred` (dashed, explicit rule
+— e.g. "only digital vendor paid in the ad's run window"), `adjacent` (dotted, "ran while the sponsor paid X and Y; FEC does
+not record which buy placed which ad"). Issues became two separate arrays in `issues.json` that the UI must never sum
+(`by_ad_issue`, `by_spender_focus`), with `coverage` so the cards can say how much of the money is tagged. D-55, D-56.
+
+**Dead end.** `z.lazy` for the Ad↔AdVendorLink reference — unnecessary once the schemas were ordered; removed.
+
+**Next.** Four children in parallel (vendors · media wall · issue focus · search), then the chain extension and the
+Vertex-style node panel on master, then critic round 3.

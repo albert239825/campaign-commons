@@ -69,3 +69,13 @@ Data access only through `src/lib/data.ts`. All dynamic routes export `generateS
 - Ads matching flaky → gallery stays `match_confidence: "none"`.
 - Dossier incomplete → issues render "No record loaded".
 - Any per-race JSON > 5MB → move that surface behind a route handler reading DuckDB (contracts unchanged).
+
+## Work blocks
+
+Per-block plans (scope, children, ownership, sequence) live in [`docs/plans/`](plans/). Merge the plan to `main` before the
+block starts so teammates see what is landing.
+
+| Block | Plan | Status |
+| --- | --- | --- |
+| V0 (Fri night) | this file, above | shipped |
+| V1 blocks | [plans/2026-09-05-block2.md](plans/2026-09-05-block2.md) — vendors · media wall · issue focus · search · interactive chain | in progress |

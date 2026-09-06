@@ -12,9 +12,48 @@ Source of truth: [`contracts/src/schemas.ts`](../contracts/src/schemas.ts). This
 | `<race_id>/chains/<entity_id>.json` | `Chain` | `gotham.chains` | `/races/[raceId]/chains/[entityId]` |
 | `<race_id>/ads.json` | `AdGallery` | `gotham.ads` | `/races/[raceId]/ads` |
 | `<race_id>/dossiers/<candidate_id>.json` | `Dossier` | `gotham.dossier` | `/races/[raceId]/candidates/[candidateId]` |
-| `<race_id>/stories.json` | `Stories` | `gotham.chains` | (demo prep; not rendered in V0) |
+| `<race_id>/stories.json` | `Stories` | `gotham.chains` | `/races/[raceId]/stories`, ledger strip |
+| `<race_id>/donors/<donor_key>.json` | `DonorView` | `gotham.donors` | `/races/[raceId]/donors/[key]` |
+| `<race_id>/vendors.json` | `VendorIndex` | `gotham.vendors` (Block 2) | entity page, vendor pages |
+| `<race_id>/vendors/<vendor_id>.json` | `Vendor` | `gotham.vendors`; `gotham.ads` fills `ads[]` | `/races/[raceId]/vendors/[vendorId]` |
+| `<race_id>/issues.json` | `IssueSpending` | `gotham.issues` (Block 2) | ledger issue cards |
+| `search.json` | `SearchIndex` | `gotham.search` (Block 2) | header search box (client) |
 
-Validate: `cd contracts && npm run validate` or `cd pipeline && make validate` (same schemas, via `contracts/jsonschema/`).
+Block 2 also *patches* existing files in place: `gotham.vendors` adds `vendors[]` and per-IE `vendor_id`/`medium` to
+`entities/*.json`; `gotham.issues` adds `issue_focus` to entities and `issues` (`{issue_ids, basis}`) to ads and IE rows; `gotham.ads` adds
+`sponsor_visibility_shares` and `vendor_links[]` to ads. All additive optional fields — V0 files stay valid.
+
+## Hand-maintained inputs (`data/hand/<race_id>/`)
+
+| File | Schema | Edited by | Consumed by |
+| --- | --- | --- | --- |
+| `issue_focus.json` | `HandIssueFocusFile` | issue-focus child, teammates | `gotham.issues` → `Entity.issue_focus`, `issues.json.by_spender_focus` |
+| `ad_issues.json` | `HandAdIssuesFile` | media-wall child, teammates | `gotham.issues` → `Ad.issues`, `issues.json.by_ad_issue` |
+| `ie_issues.json` | `HandIeIssuesFile` | issue-focus child | `gotham.issues` → IE `issues`, `issues.json.by_ad_issue.ie_*` |
+| `vendor_aliases.json` | `HandVendorAliasesFile` | vendors child | `gotham.vendors` (folds after automatic normalisation) |
+| `vendor_ad_links.json` | `HandVendorAdLinksFile` | anyone with a source | `gotham.ads` → `Ad.vendor_links[]` with `basis: verified` |
+
+Every file is `{race_id, method, rows[]}`; every row carries `source_url(s)` and `tagged_by`/`verified_by`. Empty `rows: []`
+is valid. Never hand-edit `data/out`.
+
+## Evidence basis (Block 2)
+
+`Basis {basis, rule, source_urls, checked_by, checked_at}` sits on every relationship or number that is not read straight off
+a filed record: vendor normalisation, vendor→ad links, issue tags, out-side chain nodes/edges. `filed` = on a government
+record · `verified` = a human found a source naming both sides · `inferred` = an explicit rule (stated in `rule`) ·
+`adjacent` = co-occurrence (date window) only. `verified` is a discriminated variant: it requires ≥1 `source_urls` and
+non-null `checked_by`/`checked_at`, so an unsupported verification claim fails validation. Issue tags always travel as
+`issues: {issue_ids, basis}`; a `placement` chain edge (vendor → ad) requires `basis`; every out-side chain node (`vendor` /
+`ad` / `candidate`) requires `basis`; `vendors.json.medium_basis` states the one rule by which every `medium` (IE rows,
+vendors, `by_medium`) was classified from `purpose`, so per-row mediums stay small and the UI renders that rule once per
+section. Focus kinds split by whether they *are* an issue: `single_issue` / `multi_issue` rows must name ≥1 `issue_ids` and
+their `by_spender_focus` buckets carry a non-null `issue_id`; `general_partisan` / `candidate_aligned` / `business_trade` /
+`labor` may have none. The UI must render `rule` wherever the relationship appears; chain edges style by basis (solid /
+solid+check / dashed / dotted).
+
+Validate: `cd contracts && npm run validate` or `cd pipeline && make validate` — both check `data/out` then `data/hand` by
+default. Pass a directory to check one root; add `--hand` to validate a directory that is not literally named `hand`
+(fixtures, temp copies) with the hand-file schemas. Same schemas, via `contracts/jsonschema/`.
 
 ## IDs
 

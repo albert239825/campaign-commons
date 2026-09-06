@@ -1,0 +1,563 @@
+{
+  "$ref": "#/definitions/vendor",
+  "definitions": {
+    "vendor": {
+      "type": "object",
+      "properties": {
+        "vendor_id": {
+          "type": "string"
+        },
+        "name": {
+          "type": "string"
+        },
+        "aliases": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "normalization": {
+          "anyOf": [
+            {
+              "type": "object",
+              "properties": {
+                "basis": {
+                  "type": "string",
+                  "const": "verified"
+                },
+                "rule": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "source_urls": {
+                  "type": "array",
+                  "items": {
+                    "type": "string",
+                    "format": "uri"
+                  },
+                  "minItems": 1
+                },
+                "checked_by": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "checked_at": {
+                  "type": "string",
+                  "minLength": 1
+                }
+              },
+              "required": [
+                "basis",
+                "rule",
+                "source_urls",
+                "checked_by",
+                "checked_at"
+              ],
+              "additionalProperties": false
+            },
+            {
+              "type": "object",
+              "properties": {
+                "basis": {
+                  "type": "string",
+                  "enum": [
+                    "filed",
+                    "inferred",
+                    "adjacent"
+                  ]
+                },
+                "rule": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "source_urls": {
+                  "type": "array",
+                  "items": {
+                    "type": "string",
+                    "format": "uri"
+                  }
+                },
+                "checked_by": {
+                  "type": [
+                    "string",
+                    "null"
+                  ]
+                },
+                "checked_at": {
+                  "type": [
+                    "string",
+                    "null"
+                  ]
+                }
+              },
+              "required": [
+                "basis",
+                "rule",
+                "source_urls",
+                "checked_by",
+                "checked_at"
+              ],
+              "additionalProperties": false
+            }
+          ]
+        },
+        "total": {
+          "type": "number"
+        },
+        "count": {
+          "type": "integer"
+        },
+        "media_mix": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "medium": {
+                "type": "string",
+                "enum": [
+                  "tv",
+                  "radio",
+                  "digital",
+                  "mail",
+                  "phones",
+                  "production",
+                  "consulting",
+                  "other"
+                ]
+              },
+              "amount": {
+                "type": "number"
+              },
+              "count": {
+                "type": "integer"
+              }
+            },
+            "required": [
+              "medium",
+              "amount",
+              "count"
+            ],
+            "additionalProperties": false
+          }
+        },
+        "spenders": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "entity_id": {
+                "type": "string"
+              },
+              "name": {
+                "type": "string"
+              },
+              "amount": {
+                "type": "number"
+              },
+              "count": {
+                "type": "integer"
+              }
+            },
+            "required": [
+              "entity_id",
+              "name",
+              "amount",
+              "count"
+            ],
+            "additionalProperties": false
+          }
+        },
+        "targets": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "candidate_id": {
+                "type": "string"
+              },
+              "support_oppose": {
+                "type": "string",
+                "enum": [
+                  "S",
+                  "O"
+                ]
+              },
+              "amount": {
+                "type": "number"
+              }
+            },
+            "required": [
+              "candidate_id",
+              "support_oppose",
+              "amount"
+            ],
+            "additionalProperties": false
+          }
+        },
+        "first_date": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "last_date": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "source_url": {
+          "type": "string",
+          "format": "uri"
+        },
+        "race_id": {
+          "type": "string"
+        },
+        "generated_at": {
+          "type": "string"
+        },
+        "data_status": {
+          "type": "string",
+          "enum": [
+            "real",
+            "mock",
+            "partial"
+          ]
+        },
+        "expenditures": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "ie_id": {
+                "type": "string"
+              },
+              "spender_entity_id": {
+                "type": "string"
+              },
+              "spender_name": {
+                "type": "string"
+              },
+              "candidate_id": {
+                "type": "string"
+              },
+              "candidate_name": {
+                "type": "string"
+              },
+              "support_oppose": {
+                "type": "string",
+                "enum": [
+                  "S",
+                  "O"
+                ]
+              },
+              "amount": {
+                "type": "number"
+              },
+              "date": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "purpose": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "payee": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "source_url": {
+                "type": "string",
+                "format": "uri"
+              },
+              "vendor_id": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "medium": {
+                "type": "string",
+                "enum": [
+                  "tv",
+                  "radio",
+                  "digital",
+                  "mail",
+                  "phones",
+                  "production",
+                  "consulting",
+                  "other"
+                ]
+              },
+              "issues": {
+                "type": "object",
+                "properties": {
+                  "issue_ids": {
+                    "type": "array",
+                    "items": {
+                      "type": "string",
+                      "enum": [
+                        "healthcare",
+                        "energy_climate",
+                        "defense",
+                        "crypto_fintech",
+                        "immigration",
+                        "abortion",
+                        "guns",
+                        "tax_budget",
+                        "tech_ai",
+                        "labor_trade"
+                      ]
+                    },
+                    "minItems": 1,
+                    "maxItems": 3
+                  },
+                  "basis": {
+                    "anyOf": [
+                      {
+                        "type": "object",
+                        "properties": {
+                          "basis": {
+                            "type": "string",
+                            "const": "verified"
+                          },
+                          "rule": {
+                            "type": "string",
+                            "minLength": 1
+                          },
+                          "source_urls": {
+                            "type": "array",
+                            "items": {
+                              "type": "string",
+                              "format": "uri"
+                            },
+                            "minItems": 1
+                          },
+                          "checked_by": {
+                            "type": "string",
+                            "minLength": 1
+                          },
+                          "checked_at": {
+                            "type": "string",
+                            "minLength": 1
+                          }
+                        },
+                        "required": [
+                          "basis",
+                          "rule",
+                          "source_urls",
+                          "checked_by",
+                          "checked_at"
+                        ],
+                        "additionalProperties": false
+                      },
+                      {
+                        "type": "object",
+                        "properties": {
+                          "basis": {
+                            "type": "string",
+                            "enum": [
+                              "filed",
+                              "inferred",
+                              "adjacent"
+                            ]
+                          },
+                          "rule": {
+                            "type": "string",
+                            "minLength": 1
+                          },
+                          "source_urls": {
+                            "type": "array",
+                            "items": {
+                              "type": "string",
+                              "format": "uri"
+                            }
+                          },
+                          "checked_by": {
+                            "type": [
+                              "string",
+                              "null"
+                            ]
+                          },
+                          "checked_at": {
+                            "type": [
+                              "string",
+                              "null"
+                            ]
+                          }
+                        },
+                        "required": [
+                          "basis",
+                          "rule",
+                          "source_urls",
+                          "checked_by",
+                          "checked_at"
+                        ],
+                        "additionalProperties": false
+                      }
+                    ]
+                  }
+                },
+                "required": [
+                  "issue_ids",
+                  "basis"
+                ],
+                "additionalProperties": false
+              }
+            },
+            "required": [
+              "ie_id",
+              "spender_entity_id",
+              "spender_name",
+              "candidate_id",
+              "candidate_name",
+              "support_oppose",
+              "amount",
+              "date",
+              "purpose",
+              "payee",
+              "source_url"
+            ],
+            "additionalProperties": false
+          }
+        },
+        "ads": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "ad_id": {
+                "type": "string"
+              },
+              "sponsor_entity_id": {
+                "type": "string"
+              },
+              "basis": {
+                "anyOf": [
+                  {
+                    "type": "object",
+                    "properties": {
+                      "basis": {
+                        "type": "string",
+                        "const": "verified"
+                      },
+                      "rule": {
+                        "type": "string",
+                        "minLength": 1
+                      },
+                      "source_urls": {
+                        "type": "array",
+                        "items": {
+                          "type": "string",
+                          "format": "uri"
+                        },
+                        "minItems": 1
+                      },
+                      "checked_by": {
+                        "type": "string",
+                        "minLength": 1
+                      },
+                      "checked_at": {
+                        "type": "string",
+                        "minLength": 1
+                      }
+                    },
+                    "required": [
+                      "basis",
+                      "rule",
+                      "source_urls",
+                      "checked_by",
+                      "checked_at"
+                    ],
+                    "additionalProperties": false
+                  },
+                  {
+                    "type": "object",
+                    "properties": {
+                      "basis": {
+                        "type": "string",
+                        "enum": [
+                          "filed",
+                          "inferred",
+                          "adjacent"
+                        ]
+                      },
+                      "rule": {
+                        "type": "string",
+                        "minLength": 1
+                      },
+                      "source_urls": {
+                        "type": "array",
+                        "items": {
+                          "type": "string",
+                          "format": "uri"
+                        }
+                      },
+                      "checked_by": {
+                        "type": [
+                          "string",
+                          "null"
+                        ]
+                      },
+                      "checked_at": {
+                        "type": [
+                          "string",
+                          "null"
+                        ]
+                      }
+                    },
+                    "required": [
+                      "basis",
+                      "rule",
+                      "source_urls",
+                      "checked_by",
+                      "checked_at"
+                    ],
+                    "additionalProperties": false
+                  }
+                ]
+              }
+            },
+            "required": [
+              "ad_id",
+              "sponsor_entity_id",
+              "basis"
+            ],
+            "additionalProperties": false
+          }
+        },
+        "method": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "vendor_id",
+        "name",
+        "aliases",
+        "normalization",
+        "total",
+        "count",
+        "media_mix",
+        "spenders",
+        "targets",
+        "first_date",
+        "last_date",
+        "source_url",
+        "race_id",
+        "generated_at",
+        "data_status",
+        "expenditures",
+        "ads",
+        "method"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "$schema": "http://json-schema.org/draft-07/schema#"
+}
