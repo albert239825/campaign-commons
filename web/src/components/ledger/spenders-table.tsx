@@ -24,7 +24,7 @@ const NAME_ACRONYMS = new Set([
   "PAC", "FEC", "LLC", "USA", "US", "DSCC", "LCV", "CFFE", "NRDC", "AFP", "DBA", "CVA",
   "DMFI", "SEIU", "COPE", "RJC", "JDCA", "API", "PA", "NAKASEC", "NEPA", "USW", "RSLC", "HAF", "CASA",
 ]);
-function displayName(name: string) {
+export function displayName(name: string) {
   if (name !== name.toUpperCase()) return name;
   return name.replace(/[A-Z]+(?:\.[A-Z]+)+\.?|[A-Z]+/g, word =>
     NAME_ACRONYMS.has(word) || word.includes(".") ? word : word[0] + word.slice(1).toLowerCase());
