@@ -2,7 +2,7 @@
   "root_entity_id": "C00862094",
   "root_name": "GREAT OPPORTUNITY PAC, INC.",
   "race_id": "pa-sen-2024",
-  "generated_at": "2026-09-06T04:49:10+00:00",
+  "generated_at": "2026-09-06T05:02:45+00:00",
   "data_status": "real",
   "nodes": [
     {
@@ -28,7 +28,8 @@
       "is_terminus": true,
       "terminus_reason": "dark",
       "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00862094&two_year_transaction_period=2024&contributor_name=GREAT+OPPORTUNITY+POLICY+INC",
-      "organization_class": "nonprofit"
+      "organization_class": "nonprofit",
+      "class_basis": "rule"
     },
     {
       "id": "ind:YASS_JEFF|19004",
@@ -55,6 +56,18 @@
       "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00862094&two_year_transaction_period=2024&contributor_name=ROWAN%2C+MARC"
     },
     {
+      "id": "ind:KASHIAN_EDWARD_M.|93720",
+      "name": "KASHIAN, EDWARD M.",
+      "kind": "individual",
+      "committee_type": null,
+      "depth": 1,
+      "visibility": "disclosed",
+      "amount_in": 50000.0,
+      "is_terminus": true,
+      "terminus_reason": "individual",
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00862094&two_year_transaction_period=2024&contributor_name=KASHIAN%2C+EDWARD+M."
+    },
+    {
       "id": "org:INTERNATIONAL_BANCSHARES_CORPORATION",
       "name": "INTERNATIONAL BANCSHARES CORPORATION",
       "kind": "organization",
@@ -65,7 +78,8 @@
       "is_terminus": true,
       "terminus_reason": "organization",
       "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00862094&two_year_transaction_period=2024&contributor_name=INTERNATIONAL+BANCSHARES+CORPORATION",
-      "organization_class": "business"
+      "organization_class": "business",
+      "class_basis": "rule"
     },
     {
       "id": "ind:STEWARD_DAVID_L.|63146",
@@ -78,18 +92,6 @@
       "is_terminus": true,
       "terminus_reason": "individual",
       "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00862094&two_year_transaction_period=2024&contributor_name=STEWARD%2C+DAVID+L."
-    },
-    {
-      "id": "ind:KASHIAN_EDWARD_M.|93720",
-      "name": "KASHIAN, EDWARD M.",
-      "kind": "individual",
-      "committee_type": null,
-      "depth": 1,
-      "visibility": "disclosed",
-      "amount_in": 50000.0,
-      "is_terminus": true,
-      "terminus_reason": "individual",
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00862094&two_year_transaction_period=2024&contributor_name=KASHIAN%2C+EDWARD+M."
     },
     {
       "id": "C00825158",
@@ -202,18 +204,6 @@
       "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00750182&two_year_transaction_period=2024&contributor_name=CHILDS%2C+JOHN+W"
     },
     {
-      "id": "ind:ISAAC_PAUL_J|10538",
-      "name": "ISAAC, PAUL J",
-      "kind": "individual",
-      "committee_type": null,
-      "depth": 3,
-      "visibility": "disclosed",
-      "amount_in": 10000.0,
-      "is_terminus": true,
-      "terminus_reason": "individual",
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00750182&two_year_transaction_period=2024&contributor_name=ISAAC%2C+PAUL+J"
-    },
-    {
       "id": "ind:HOBSON_H_LEE|75219",
       "name": "HOBSON, H LEE",
       "kind": "individual",
@@ -224,6 +214,18 @@
       "is_terminus": true,
       "terminus_reason": "individual",
       "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00750182&two_year_transaction_period=2024&contributor_name=HOBSON%2C+H+LEE"
+    },
+    {
+      "id": "ind:ISAAC_PAUL_J|10538",
+      "name": "ISAAC, PAUL J",
+      "kind": "individual",
+      "committee_type": null,
+      "depth": 3,
+      "visibility": "disclosed",
+      "amount_in": 10000.0,
+      "is_terminus": true,
+      "terminus_reason": "individual",
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00750182&two_year_transaction_period=2024&contributor_name=ISAAC%2C+PAUL+J"
     },
     {
       "id": "ind:ELLISON_LAWRENCE|94596",
@@ -382,7 +384,8 @@
         "2024-09-25",
         "2024-09-25"
       ],
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00862094&two_year_transaction_period=2024&contributor_name=GREAT+OPPORTUNITY+POLICY+INC"
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00862094&two_year_transaction_period=2024&contributor_name=GREAT+OPPORTUNITY+POLICY+INC",
+      "class_basis": "rule"
     },
     {
       "from": "ind:YASS_JEFF|19004",
@@ -417,6 +420,22 @@
       "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00862094&two_year_transaction_period=2024&contributor_name=ROWAN%2C+MARC"
     },
     {
+      "from": "ind:KASHIAN_EDWARD_M.|93720",
+      "to": "C00862094",
+      "amount": 50000.0,
+      "visibility": "disclosed",
+      "depth": 1,
+      "transaction_types": [
+        "10"
+      ],
+      "count": 1,
+      "date_range": [
+        "2024-10-07",
+        "2024-10-07"
+      ],
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00862094&two_year_transaction_period=2024&contributor_name=KASHIAN%2C+EDWARD+M."
+    },
+    {
       "from": "org:INTERNATIONAL_BANCSHARES_CORPORATION",
       "to": "C00862094",
       "amount": 50000.0,
@@ -430,7 +449,8 @@
         "2024-06-30",
         "2024-06-30"
       ],
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00862094&two_year_transaction_period=2024&contributor_name=INTERNATIONAL+BANCSHARES+CORPORATION"
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00862094&two_year_transaction_period=2024&contributor_name=INTERNATIONAL+BANCSHARES+CORPORATION",
+      "class_basis": "rule"
     },
     {
       "from": "ind:STEWARD_DAVID_L.|63146",
@@ -447,22 +467,6 @@
         "2024-10-08"
       ],
       "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00862094&two_year_transaction_period=2024&contributor_name=STEWARD%2C+DAVID+L."
-    },
-    {
-      "from": "ind:KASHIAN_EDWARD_M.|93720",
-      "to": "C00862094",
-      "amount": 50000.0,
-      "visibility": "disclosed",
-      "depth": 1,
-      "transaction_types": [
-        "10"
-      ],
-      "count": 1,
-      "date_range": [
-        "2024-10-07",
-        "2024-10-07"
-      ],
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00862094&two_year_transaction_period=2024&contributor_name=KASHIAN%2C+EDWARD+M."
     },
     {
       "from": "C00825158",
@@ -609,22 +613,6 @@
       "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00750182&two_year_transaction_period=2024&contributor_name=CHILDS%2C+JOHN+W"
     },
     {
-      "from": "ind:ISAAC_PAUL_J|10538",
-      "to": "C00750182",
-      "amount": 10000.0,
-      "visibility": "disclosed",
-      "depth": 3,
-      "transaction_types": [
-        "10"
-      ],
-      "count": 1,
-      "date_range": [
-        "2023-03-15",
-        "2023-03-15"
-      ],
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00750182&two_year_transaction_period=2024&contributor_name=ISAAC%2C+PAUL+J"
-    },
-    {
       "from": "ind:HOBSON_H_LEE|75219",
       "to": "C00750182",
       "amount": 10000.0,
@@ -639,6 +627,22 @@
         "2023-03-22"
       ],
       "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00750182&two_year_transaction_period=2024&contributor_name=HOBSON%2C+H+LEE"
+    },
+    {
+      "from": "ind:ISAAC_PAUL_J|10538",
+      "to": "C00750182",
+      "amount": 10000.0,
+      "visibility": "disclosed",
+      "depth": 3,
+      "transaction_types": [
+        "10"
+      ],
+      "count": 1,
+      "date_range": [
+        "2023-03-15",
+        "2023-03-15"
+      ],
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00750182&two_year_transaction_period=2024&contributor_name=ISAAC%2C+PAUL+J"
     },
     {
       "from": "ind:ELLISON_LAWRENCE|94596",

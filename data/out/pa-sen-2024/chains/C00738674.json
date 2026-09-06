@@ -2,7 +2,7 @@
   "root_entity_id": "C00738674",
   "root_name": "REPRODUCTIVE FREEDOM FOR ALL FREEDOM FUND",
   "race_id": "pa-sen-2024",
-  "generated_at": "2026-09-06T04:49:10+00:00",
+  "generated_at": "2026-09-06T05:02:45+00:00",
   "data_status": "real",
   "nodes": [
     {
@@ -28,7 +28,8 @@
       "is_terminus": true,
       "terminus_reason": "dark",
       "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00738674&two_year_transaction_period=2024&contributor_name=REPRODUCTIVE+FREEDOM+FOR+ALL",
-      "organization_class": "nonprofit"
+      "organization_class": "nonprofit",
+      "class_basis": "rule"
     },
     {
       "id": "C00693382",
@@ -67,19 +68,6 @@
       "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00738674&two_year_transaction_period=2024&contributor_name=ECK%2C+DENNIS"
     },
     {
-      "id": "org:GLOBAL_IMPACT_SOCIAL_WELFARE_FUND",
-      "name": "GLOBAL IMPACT SOCIAL WELFARE FUND",
-      "kind": "organization",
-      "committee_type": null,
-      "depth": 1,
-      "visibility": "dark",
-      "amount_in": 50000.0,
-      "is_terminus": true,
-      "terminus_reason": "dark",
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00738674&two_year_transaction_period=2024&contributor_name=GLOBAL+IMPACT+SOCIAL+WELFARE+FUND",
-      "organization_class": "nonprofit"
-    },
-    {
       "id": "ind:DELANEY_M._QUINN|94611",
       "name": "DELANEY, M. QUINN",
       "kind": "individual",
@@ -90,6 +78,20 @@
       "is_terminus": true,
       "terminus_reason": "individual",
       "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00738674&two_year_transaction_period=2024&contributor_name=DELANEY%2C+M.+QUINN"
+    },
+    {
+      "id": "org:GLOBAL_IMPACT_SOCIAL_WELFARE_FUND",
+      "name": "GLOBAL IMPACT SOCIAL WELFARE FUND",
+      "kind": "organization",
+      "committee_type": null,
+      "depth": 1,
+      "visibility": "dark",
+      "amount_in": 50000.0,
+      "is_terminus": true,
+      "terminus_reason": "dark",
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00738674&two_year_transaction_period=2024&contributor_name=GLOBAL+IMPACT+SOCIAL+WELFARE+FUND",
+      "organization_class": "nonprofit",
+      "class_basis": "rule"
     },
     {
       "id": "agg:other@C00738674",
@@ -115,7 +117,8 @@
       "is_terminus": true,
       "terminus_reason": "dark",
       "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00693382&two_year_transaction_period=2024&contributor_name=FUND+FOR+POLICY+REFORM",
-      "organization_class": "nonprofit"
+      "organization_class": "nonprofit",
+      "class_basis": "rule"
     },
     {
       "id": "org:GEOSOR_CORPORATION",
@@ -128,7 +131,8 @@
       "is_terminus": true,
       "terminus_reason": "organization",
       "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00693382&two_year_transaction_period=2024&contributor_name=GEOSOR+CORPORATION",
-      "organization_class": "business"
+      "organization_class": "business",
+      "class_basis": "rule"
     },
     {
       "id": "org:GLOBAL_OAK_HOLDINGS_LLC",
@@ -141,7 +145,8 @@
       "is_terminus": true,
       "terminus_reason": "dark",
       "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00693382&two_year_transaction_period=2024&contributor_name=GLOBAL+OAK+HOLDINGS+LLC",
-      "organization_class": "llc"
+      "organization_class": "llc",
+      "class_basis": "rule"
     },
     {
       "id": "agg:other@C00693382",
@@ -167,7 +172,8 @@
       "is_terminus": true,
       "terminus_reason": "dark",
       "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00484642&two_year_transaction_period=2024&contributor_name=MAJORITY+FORWARD",
-      "organization_class": "nonprofit"
+      "organization_class": "nonprofit",
+      "class_basis": "rule"
     },
     {
       "id": "C00490847",
@@ -216,7 +222,8 @@
       "is_terminus": true,
       "terminus_reason": "dark",
       "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00484642&two_year_transaction_period=2024&contributor_name=GREATER+NEW+YORK+HOSPITAL+ASSOCIATION+MANAGEMENT+CORPORATION",
-      "organization_class": "nonprofit"
+      "organization_class": "nonprofit",
+      "class_basis": "rule"
     },
     {
       "id": "ind:SIMONS_JAMES|10010",
@@ -289,7 +296,8 @@
       "is_terminus": true,
       "terminus_reason": "organization",
       "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00484642&two_year_transaction_period=2024&contributor_name=IBEW+PAC+EDUCATIONAL+FUND",
-      "organization_class": "union"
+      "organization_class": "union",
+      "class_basis": "rule"
     },
     {
       "id": "ind:CHAN_MICHELLE|94111",
@@ -459,7 +467,8 @@
       "is_terminus": true,
       "terminus_reason": "organization",
       "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00490847&two_year_transaction_period=2024&contributor_name=UNITED+BROTHERHOOD+OF+CARPENTERS+AND+JOINERS",
-      "organization_class": "union"
+      "organization_class": "union",
+      "class_basis": "rule"
     },
     {
       "id": "org:INTERNATIONAL_UNION_OF_OPERATING_ENGINEERS",
@@ -472,7 +481,8 @@
       "is_terminus": true,
       "terminus_reason": "organization",
       "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00624817&two_year_transaction_period=2024&contributor_name=INTERNATIONAL+UNION+OF+OPERATING+ENGINEERS",
-      "organization_class": "union"
+      "organization_class": "union",
+      "class_basis": "rule"
     },
     {
       "id": "ind:NEA_ADVOCACY_FUND_ASSOCIATION|20005",
@@ -861,7 +871,8 @@
       "is_terminus": true,
       "terminus_reason": "organization",
       "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00484253&two_year_transaction_period=2024&contributor_name=UNITED+FOOD+AND+COMMERCIAL+WORKERS+INTERNATIONAL+UNION",
-      "organization_class": "union"
+      "organization_class": "union",
+      "class_basis": "rule"
     },
     {
       "id": "ind:REBESCO_JOSEPH|46356",
@@ -1347,18 +1358,6 @@
       "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00432815&two_year_transaction_period=2024&contributor_name=PASIEKA%2C+ANDRZEJ"
     },
     {
-      "id": "ind:AUST_MICHAEL|60441",
-      "name": "AUST, MICHAEL",
-      "kind": "individual",
-      "committee_type": null,
-      "depth": 4,
-      "visibility": "disclosed",
-      "amount_in": 275.0,
-      "is_terminus": true,
-      "terminus_reason": "individual",
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00432815&two_year_transaction_period=2024&contributor_name=AUST%2C+MICHAEL"
-    },
-    {
       "id": "ind:PAGAN_RICARDO|60706",
       "name": "PAGAN, RICARDO",
       "kind": "individual",
@@ -1383,6 +1382,18 @@
       "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00432815&two_year_transaction_period=2024&contributor_name=HANSEN%2C+ERIK"
     },
     {
+      "id": "ind:AUST_MICHAEL|60441",
+      "name": "AUST, MICHAEL",
+      "kind": "individual",
+      "committee_type": null,
+      "depth": 4,
+      "visibility": "disclosed",
+      "amount_in": 275.0,
+      "is_terminus": true,
+      "terminus_reason": "individual",
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00432815&two_year_transaction_period=2024&contributor_name=AUST%2C+MICHAEL"
+    },
+    {
       "id": "ind:VON_THADEN_TRISTAN|60609",
       "name": "VON THADEN, TRISTAN",
       "kind": "individual",
@@ -1393,30 +1404,6 @@
       "is_terminus": true,
       "terminus_reason": "individual",
       "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00432815&two_year_transaction_period=2024&contributor_name=VON+THADEN%2C+TRISTAN"
-    },
-    {
-      "id": "ind:CUNNINGHAM_LUKE|60805",
-      "name": "CUNNINGHAM, LUKE",
-      "kind": "individual",
-      "committee_type": null,
-      "depth": 4,
-      "visibility": "disclosed",
-      "amount_in": 250.0,
-      "is_terminus": true,
-      "terminus_reason": "individual",
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00432815&two_year_transaction_period=2024&contributor_name=CUNNINGHAM%2C+LUKE"
-    },
-    {
-      "id": "ind:DEVRIES_KYLE|60467",
-      "name": "DEVRIES, KYLE",
-      "kind": "individual",
-      "committee_type": null,
-      "depth": 4,
-      "visibility": "disclosed",
-      "amount_in": 250.0,
-      "is_terminus": true,
-      "terminus_reason": "individual",
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00432815&two_year_transaction_period=2024&contributor_name=DEVRIES%2C+KYLE"
     },
     {
       "id": "ind:RAZIM_ROBERT|60534",
@@ -1443,6 +1430,30 @@
       "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00432815&two_year_transaction_period=2024&contributor_name=HOLGATE%2C+KEVIN"
     },
     {
+      "id": "ind:CUNNINGHAM_LUKE|60805",
+      "name": "CUNNINGHAM, LUKE",
+      "kind": "individual",
+      "committee_type": null,
+      "depth": 4,
+      "visibility": "disclosed",
+      "amount_in": 250.0,
+      "is_terminus": true,
+      "terminus_reason": "individual",
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00432815&two_year_transaction_period=2024&contributor_name=CUNNINGHAM%2C+LUKE"
+    },
+    {
+      "id": "ind:DEVRIES_KYLE|60467",
+      "name": "DEVRIES, KYLE",
+      "kind": "individual",
+      "committee_type": null,
+      "depth": 4,
+      "visibility": "disclosed",
+      "amount_in": 250.0,
+      "is_terminus": true,
+      "terminus_reason": "individual",
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00432815&two_year_transaction_period=2024&contributor_name=DEVRIES%2C+KYLE"
+    },
+    {
       "id": "ind:WESSEL_RYAN|60462",
       "name": "WESSEL, RYAN",
       "kind": "individual",
@@ -1453,30 +1464,6 @@
       "is_terminus": true,
       "terminus_reason": "individual",
       "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00432815&two_year_transaction_period=2024&contributor_name=WESSEL%2C+RYAN"
-    },
-    {
-      "id": "ind:CIVITO_FRANCO|60612",
-      "name": "CIVITO, FRANCO",
-      "kind": "individual",
-      "committee_type": null,
-      "depth": 4,
-      "visibility": "disclosed",
-      "amount_in": 225.0,
-      "is_terminus": true,
-      "terminus_reason": "individual",
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00432815&two_year_transaction_period=2024&contributor_name=CIVITO%2C+FRANCO"
-    },
-    {
-      "id": "ind:GONZALEZ_JULIO|60656",
-      "name": "GONZALEZ, JULIO",
-      "kind": "individual",
-      "committee_type": null,
-      "depth": 4,
-      "visibility": "disclosed",
-      "amount_in": 225.0,
-      "is_terminus": true,
-      "terminus_reason": "individual",
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00432815&two_year_transaction_period=2024&contributor_name=GONZALEZ%2C+JULIO"
     },
     {
       "id": "ind:GRACA_RYAN|60423",
@@ -1503,6 +1490,30 @@
       "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00432815&two_year_transaction_period=2024&contributor_name=DOWLING%2C+MICHAEL"
     },
     {
+      "id": "ind:CIVITO_FRANCO|60612",
+      "name": "CIVITO, FRANCO",
+      "kind": "individual",
+      "committee_type": null,
+      "depth": 4,
+      "visibility": "disclosed",
+      "amount_in": 225.0,
+      "is_terminus": true,
+      "terminus_reason": "individual",
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00432815&two_year_transaction_period=2024&contributor_name=CIVITO%2C+FRANCO"
+    },
+    {
+      "id": "ind:GONZALEZ_JULIO|60656",
+      "name": "GONZALEZ, JULIO",
+      "kind": "individual",
+      "committee_type": null,
+      "depth": 4,
+      "visibility": "disclosed",
+      "amount_in": 225.0,
+      "is_terminus": true,
+      "terminus_reason": "individual",
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00432815&two_year_transaction_period=2024&contributor_name=GONZALEZ%2C+JULIO"
+    },
+    {
       "id": "ind:KRUSWICKI_JOHN|60607",
       "name": "KRUSWICKI, JOHN",
       "kind": "individual",
@@ -1513,90 +1524,6 @@
       "is_terminus": true,
       "terminus_reason": "individual",
       "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00432815&two_year_transaction_period=2024&contributor_name=KRUSWICKI%2C+JOHN"
-    },
-    {
-      "id": "ind:TAVAREZ_DAVID|60657",
-      "name": "TAVAREZ, DAVID",
-      "kind": "individual",
-      "committee_type": null,
-      "depth": 4,
-      "visibility": "disclosed",
-      "amount_in": 200.0,
-      "is_terminus": true,
-      "terminus_reason": "individual",
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00432815&two_year_transaction_period=2024&contributor_name=TAVAREZ%2C+DAVID"
-    },
-    {
-      "id": "ind:GONZALEZ_JAVIER|46311",
-      "name": "GONZALEZ, JAVIER",
-      "kind": "individual",
-      "committee_type": null,
-      "depth": 4,
-      "visibility": "disclosed",
-      "amount_in": 200.0,
-      "is_terminus": true,
-      "terminus_reason": "individual",
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00432815&two_year_transaction_period=2024&contributor_name=GONZALEZ%2C+JAVIER"
-    },
-    {
-      "id": "ind:STOPKA_LUKASZ|60457",
-      "name": "STOPKA, LUKASZ",
-      "kind": "individual",
-      "committee_type": null,
-      "depth": 4,
-      "visibility": "disclosed",
-      "amount_in": 200.0,
-      "is_terminus": true,
-      "terminus_reason": "individual",
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00432815&two_year_transaction_period=2024&contributor_name=STOPKA%2C+LUKASZ"
-    },
-    {
-      "id": "ind:MILLER_STEVEN|60456",
-      "name": "MILLER, STEVEN",
-      "kind": "individual",
-      "committee_type": null,
-      "depth": 4,
-      "visibility": "disclosed",
-      "amount_in": 200.0,
-      "is_terminus": true,
-      "terminus_reason": "individual",
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00432815&two_year_transaction_period=2024&contributor_name=MILLER%2C+STEVEN"
-    },
-    {
-      "id": "ind:ACEVEDO_DAMIEN|60586",
-      "name": "ACEVEDO, DAMIEN",
-      "kind": "individual",
-      "committee_type": null,
-      "depth": 4,
-      "visibility": "disclosed",
-      "amount_in": 200.0,
-      "is_terminus": true,
-      "terminus_reason": "individual",
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00432815&two_year_transaction_period=2024&contributor_name=ACEVEDO%2C+DAMIEN"
-    },
-    {
-      "id": "ind:SHEEHAN_ADAM|60441",
-      "name": "SHEEHAN, ADAM",
-      "kind": "individual",
-      "committee_type": null,
-      "depth": 4,
-      "visibility": "disclosed",
-      "amount_in": 200.0,
-      "is_terminus": true,
-      "terminus_reason": "individual",
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00432815&two_year_transaction_period=2024&contributor_name=SHEEHAN%2C+ADAM"
-    },
-    {
-      "id": "ind:WIENCEK_THOMAS|60632",
-      "name": "WIENCEK, THOMAS",
-      "kind": "individual",
-      "committee_type": null,
-      "depth": 4,
-      "visibility": "disclosed",
-      "amount_in": 200.0,
-      "is_terminus": true,
-      "terminus_reason": "individual",
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00432815&two_year_transaction_period=2024&contributor_name=WIENCEK%2C+THOMAS"
     },
     {
       "id": "ind:MC_CARTHY_MICHAEL|60654",
@@ -1767,6 +1694,90 @@
       "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00432815&two_year_transaction_period=2024&contributor_name=CUPRISIN%2C+BRIAN"
     },
     {
+      "id": "ind:O'CONNOR_THOMAS|60091",
+      "name": "O'CONNOR, THOMAS",
+      "kind": "individual",
+      "committee_type": null,
+      "depth": 4,
+      "visibility": "disclosed",
+      "amount_in": 200.0,
+      "is_terminus": true,
+      "terminus_reason": "individual",
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00432815&two_year_transaction_period=2024&contributor_name=O%27CONNOR%2C+THOMAS"
+    },
+    {
+      "id": "ind:TAVAREZ_DAVID|60657",
+      "name": "TAVAREZ, DAVID",
+      "kind": "individual",
+      "committee_type": null,
+      "depth": 4,
+      "visibility": "disclosed",
+      "amount_in": 200.0,
+      "is_terminus": true,
+      "terminus_reason": "individual",
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00432815&two_year_transaction_period=2024&contributor_name=TAVAREZ%2C+DAVID"
+    },
+    {
+      "id": "ind:GONZALEZ_JAVIER|46311",
+      "name": "GONZALEZ, JAVIER",
+      "kind": "individual",
+      "committee_type": null,
+      "depth": 4,
+      "visibility": "disclosed",
+      "amount_in": 200.0,
+      "is_terminus": true,
+      "terminus_reason": "individual",
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00432815&two_year_transaction_period=2024&contributor_name=GONZALEZ%2C+JAVIER"
+    },
+    {
+      "id": "ind:STOPKA_LUKASZ|60457",
+      "name": "STOPKA, LUKASZ",
+      "kind": "individual",
+      "committee_type": null,
+      "depth": 4,
+      "visibility": "disclosed",
+      "amount_in": 200.0,
+      "is_terminus": true,
+      "terminus_reason": "individual",
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00432815&two_year_transaction_period=2024&contributor_name=STOPKA%2C+LUKASZ"
+    },
+    {
+      "id": "ind:MILLER_STEVEN|60456",
+      "name": "MILLER, STEVEN",
+      "kind": "individual",
+      "committee_type": null,
+      "depth": 4,
+      "visibility": "disclosed",
+      "amount_in": 200.0,
+      "is_terminus": true,
+      "terminus_reason": "individual",
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00432815&two_year_transaction_period=2024&contributor_name=MILLER%2C+STEVEN"
+    },
+    {
+      "id": "ind:ACEVEDO_DAMIEN|60586",
+      "name": "ACEVEDO, DAMIEN",
+      "kind": "individual",
+      "committee_type": null,
+      "depth": 4,
+      "visibility": "disclosed",
+      "amount_in": 200.0,
+      "is_terminus": true,
+      "terminus_reason": "individual",
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00432815&two_year_transaction_period=2024&contributor_name=ACEVEDO%2C+DAMIEN"
+    },
+    {
+      "id": "ind:SHEEHAN_ADAM|60441",
+      "name": "SHEEHAN, ADAM",
+      "kind": "individual",
+      "committee_type": null,
+      "depth": 4,
+      "visibility": "disclosed",
+      "amount_in": 200.0,
+      "is_terminus": true,
+      "terminus_reason": "individual",
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00432815&two_year_transaction_period=2024&contributor_name=SHEEHAN%2C+ADAM"
+    },
+    {
       "id": "agg:other@C00432815",
       "name": "Other contributors to LOCAL 399 INTERNATIONAL UNION OF OPERATING ENGINEERS FEDERAL PAC (LOCAL 399 IUOE FED PAC) (each <1% of receipts, or beyond the 40 largest)",
       "kind": "aggregate",
@@ -1850,102 +1861,6 @@
       "is_terminus": true,
       "terminus_reason": "individual",
       "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00065870&two_year_transaction_period=2024&contributor_name=CASTO%2C+JOSEPH+W+III"
-    },
-    {
-      "id": "ind:KLOPMAN_JACK_W_II|44136",
-      "name": "KLOPMAN, JACK W II",
-      "kind": "individual",
-      "committee_type": null,
-      "depth": 4,
-      "visibility": "disclosed",
-      "amount_in": 784.0,
-      "is_terminus": true,
-      "terminus_reason": "individual",
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00065870&two_year_transaction_period=2024&contributor_name=KLOPMAN%2C+JACK+W+II"
-    },
-    {
-      "id": "ind:CULLISON_JOHN_D|43844",
-      "name": "CULLISON, JOHN D",
-      "kind": "individual",
-      "committee_type": null,
-      "depth": 4,
-      "visibility": "disclosed",
-      "amount_in": 784.0,
-      "is_terminus": true,
-      "terminus_reason": "individual",
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00065870&two_year_transaction_period=2024&contributor_name=CULLISON%2C+JOHN+D"
-    },
-    {
-      "id": "ind:BERTOLONE_MICHAEL_R.|44077",
-      "name": "BERTOLONE, MICHAEL R.",
-      "kind": "individual",
-      "committee_type": null,
-      "depth": 4,
-      "visibility": "disclosed",
-      "amount_in": 784.0,
-      "is_terminus": true,
-      "terminus_reason": "individual",
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00065870&two_year_transaction_period=2024&contributor_name=BERTOLONE%2C+MICHAEL+R."
-    },
-    {
-      "id": "ind:UHL_FRANK_J_II|43130",
-      "name": "UHL, FRANK J II",
-      "kind": "individual",
-      "committee_type": null,
-      "depth": 4,
-      "visibility": "disclosed",
-      "amount_in": 784.0,
-      "is_terminus": true,
-      "terminus_reason": "individual",
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00065870&two_year_transaction_period=2024&contributor_name=UHL%2C+FRANK+J+II"
-    },
-    {
-      "id": "ind:LARKINS_THOMAS_E|43935",
-      "name": "LARKINS, THOMAS E",
-      "kind": "individual",
-      "committee_type": null,
-      "depth": 4,
-      "visibility": "disclosed",
-      "amount_in": 784.0,
-      "is_terminus": true,
-      "terminus_reason": "individual",
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00065870&two_year_transaction_period=2024&contributor_name=LARKINS%2C+THOMAS+E"
-    },
-    {
-      "id": "ind:CREEKS_CHAD|43056",
-      "name": "CREEKS, CHAD",
-      "kind": "individual",
-      "committee_type": null,
-      "depth": 4,
-      "visibility": "disclosed",
-      "amount_in": 784.0,
-      "is_terminus": true,
-      "terminus_reason": "individual",
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00065870&two_year_transaction_period=2024&contributor_name=CREEKS%2C+CHAD"
-    },
-    {
-      "id": "ind:HOOPES_DANIEL_W|44657",
-      "name": "HOOPES, DANIEL W",
-      "kind": "individual",
-      "committee_type": null,
-      "depth": 4,
-      "visibility": "disclosed",
-      "amount_in": 784.0,
-      "is_terminus": true,
-      "terminus_reason": "individual",
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00065870&two_year_transaction_period=2024&contributor_name=HOOPES%2C+DANIEL+W"
-    },
-    {
-      "id": "ind:SIESEL_KIPTON|44807",
-      "name": "SIESEL, KIPTON",
-      "kind": "individual",
-      "committee_type": null,
-      "depth": 4,
-      "visibility": "disclosed",
-      "amount_in": 784.0,
-      "is_terminus": true,
-      "terminus_reason": "individual",
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00065870&two_year_transaction_period=2024&contributor_name=SIESEL%2C+KIPTON"
     },
     {
       "id": "ind:STRACHAM_WESLEY|45122",
@@ -2054,6 +1969,102 @@
       "is_terminus": true,
       "terminus_reason": "individual",
       "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00065870&two_year_transaction_period=2024&contributor_name=STASH%2C+GREGORY+S"
+    },
+    {
+      "id": "ind:KLOPMAN_JACK_W_II|44136",
+      "name": "KLOPMAN, JACK W II",
+      "kind": "individual",
+      "committee_type": null,
+      "depth": 4,
+      "visibility": "disclosed",
+      "amount_in": 784.0,
+      "is_terminus": true,
+      "terminus_reason": "individual",
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00065870&two_year_transaction_period=2024&contributor_name=KLOPMAN%2C+JACK+W+II"
+    },
+    {
+      "id": "ind:CULLISON_JOHN_D|43844",
+      "name": "CULLISON, JOHN D",
+      "kind": "individual",
+      "committee_type": null,
+      "depth": 4,
+      "visibility": "disclosed",
+      "amount_in": 784.0,
+      "is_terminus": true,
+      "terminus_reason": "individual",
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00065870&two_year_transaction_period=2024&contributor_name=CULLISON%2C+JOHN+D"
+    },
+    {
+      "id": "ind:BERTOLONE_MICHAEL_R.|44077",
+      "name": "BERTOLONE, MICHAEL R.",
+      "kind": "individual",
+      "committee_type": null,
+      "depth": 4,
+      "visibility": "disclosed",
+      "amount_in": 784.0,
+      "is_terminus": true,
+      "terminus_reason": "individual",
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00065870&two_year_transaction_period=2024&contributor_name=BERTOLONE%2C+MICHAEL+R."
+    },
+    {
+      "id": "ind:UHL_FRANK_J_II|43130",
+      "name": "UHL, FRANK J II",
+      "kind": "individual",
+      "committee_type": null,
+      "depth": 4,
+      "visibility": "disclosed",
+      "amount_in": 784.0,
+      "is_terminus": true,
+      "terminus_reason": "individual",
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00065870&two_year_transaction_period=2024&contributor_name=UHL%2C+FRANK+J+II"
+    },
+    {
+      "id": "ind:LARKINS_THOMAS_E|43935",
+      "name": "LARKINS, THOMAS E",
+      "kind": "individual",
+      "committee_type": null,
+      "depth": 4,
+      "visibility": "disclosed",
+      "amount_in": 784.0,
+      "is_terminus": true,
+      "terminus_reason": "individual",
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00065870&two_year_transaction_period=2024&contributor_name=LARKINS%2C+THOMAS+E"
+    },
+    {
+      "id": "ind:CREEKS_CHAD|43056",
+      "name": "CREEKS, CHAD",
+      "kind": "individual",
+      "committee_type": null,
+      "depth": 4,
+      "visibility": "disclosed",
+      "amount_in": 784.0,
+      "is_terminus": true,
+      "terminus_reason": "individual",
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00065870&two_year_transaction_period=2024&contributor_name=CREEKS%2C+CHAD"
+    },
+    {
+      "id": "ind:HOOPES_DANIEL_W|44657",
+      "name": "HOOPES, DANIEL W",
+      "kind": "individual",
+      "committee_type": null,
+      "depth": 4,
+      "visibility": "disclosed",
+      "amount_in": 784.0,
+      "is_terminus": true,
+      "terminus_reason": "individual",
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00065870&two_year_transaction_period=2024&contributor_name=HOOPES%2C+DANIEL+W"
+    },
+    {
+      "id": "ind:SIESEL_KIPTON|44807",
+      "name": "SIESEL, KIPTON",
+      "kind": "individual",
+      "committee_type": null,
+      "depth": 4,
+      "visibility": "disclosed",
+      "amount_in": 784.0,
+      "is_terminus": true,
+      "terminus_reason": "individual",
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00065870&two_year_transaction_period=2024&contributor_name=SIESEL%2C+KIPTON"
     },
     {
       "id": "ind:MORGAN_CLAY|45601",
@@ -2189,42 +2200,6 @@
       "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00219568&two_year_transaction_period=2024&contributor_name=BRAND%2C+LUCAS+W."
     },
     {
-      "id": "ind:MCCLEMENT_SARKIS|91103",
-      "name": "MCCLEMENT, SARKIS",
-      "kind": "individual",
-      "committee_type": null,
-      "depth": 4,
-      "visibility": "disclosed",
-      "amount_in": 1464.0,
-      "is_terminus": true,
-      "terminus_reason": "individual",
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00219568&two_year_transaction_period=2024&contributor_name=MCCLEMENT%2C+SARKIS"
-    },
-    {
-      "id": "ind:DIFRANCO_NICHOLAS_JR.|91103",
-      "name": "DIFRANCO, NICHOLAS JR.",
-      "kind": "individual",
-      "committee_type": null,
-      "depth": 4,
-      "visibility": "disclosed",
-      "amount_in": 1464.0,
-      "is_terminus": true,
-      "terminus_reason": "individual",
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00219568&two_year_transaction_period=2024&contributor_name=DIFRANCO%2C+NICHOLAS+JR."
-    },
-    {
-      "id": "ind:READ_MATT_J.|91103",
-      "name": "READ, MATT J.",
-      "kind": "individual",
-      "committee_type": null,
-      "depth": 4,
-      "visibility": "disclosed",
-      "amount_in": 1464.0,
-      "is_terminus": true,
-      "terminus_reason": "individual",
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00219568&two_year_transaction_period=2024&contributor_name=READ%2C+MATT+J."
-    },
-    {
       "id": "ind:COLLINS_MARTIN_R.|91103",
       "name": "COLLINS, MARTIN R.",
       "kind": "individual",
@@ -2273,16 +2248,40 @@
       "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00219568&two_year_transaction_period=2024&contributor_name=ADAMS%2C+JOHN+W."
     },
     {
-      "id": "ind:KINSEY_SHAWN_O.|91103",
-      "name": "KINSEY, SHAWN O.",
+      "id": "ind:MCCLEMENT_SARKIS|91103",
+      "name": "MCCLEMENT, SARKIS",
       "kind": "individual",
       "committee_type": null,
       "depth": 4,
       "visibility": "disclosed",
-      "amount_in": 1446.0,
+      "amount_in": 1464.0,
       "is_terminus": true,
       "terminus_reason": "individual",
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00219568&two_year_transaction_period=2024&contributor_name=KINSEY%2C+SHAWN+O."
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00219568&two_year_transaction_period=2024&contributor_name=MCCLEMENT%2C+SARKIS"
+    },
+    {
+      "id": "ind:DIFRANCO_NICHOLAS_JR.|91103",
+      "name": "DIFRANCO, NICHOLAS JR.",
+      "kind": "individual",
+      "committee_type": null,
+      "depth": 4,
+      "visibility": "disclosed",
+      "amount_in": 1464.0,
+      "is_terminus": true,
+      "terminus_reason": "individual",
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00219568&two_year_transaction_period=2024&contributor_name=DIFRANCO%2C+NICHOLAS+JR."
+    },
+    {
+      "id": "ind:READ_MATT_J.|91103",
+      "name": "READ, MATT J.",
+      "kind": "individual",
+      "committee_type": null,
+      "depth": 4,
+      "visibility": "disclosed",
+      "amount_in": 1464.0,
+      "is_terminus": true,
+      "terminus_reason": "individual",
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00219568&two_year_transaction_period=2024&contributor_name=READ%2C+MATT+J."
     },
     {
       "id": "ind:HUNT_KENNETH_R.|91103",
@@ -2333,6 +2332,18 @@
       "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00219568&two_year_transaction_period=2024&contributor_name=GARBARINO%2C+DAVID+A."
     },
     {
+      "id": "ind:KINSEY_SHAWN_O.|91103",
+      "name": "KINSEY, SHAWN O.",
+      "kind": "individual",
+      "committee_type": null,
+      "depth": 4,
+      "visibility": "disclosed",
+      "amount_in": 1446.0,
+      "is_terminus": true,
+      "terminus_reason": "individual",
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00219568&two_year_transaction_period=2024&contributor_name=KINSEY%2C+SHAWN+O."
+    },
+    {
       "id": "ind:TZEC_HUGO_A.|91103",
       "name": "TZEC, HUGO A.",
       "kind": "individual",
@@ -2379,6 +2390,162 @@
       "is_terminus": true,
       "terminus_reason": "individual",
       "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00219568&two_year_transaction_period=2024&contributor_name=SIKORSKI%2C+DAVID+K."
+    },
+    {
+      "id": "ind:FLOT_JOHN_V.|91103",
+      "name": "FLOT, JOHN V.",
+      "kind": "individual",
+      "committee_type": null,
+      "depth": 4,
+      "visibility": "disclosed",
+      "amount_in": 1407.0,
+      "is_terminus": true,
+      "terminus_reason": "individual",
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00219568&two_year_transaction_period=2024&contributor_name=FLOT%2C+JOHN+V."
+    },
+    {
+      "id": "ind:FAULKNER_BRIAN|91103",
+      "name": "FAULKNER, BRIAN",
+      "kind": "individual",
+      "committee_type": null,
+      "depth": 4,
+      "visibility": "disclosed",
+      "amount_in": 1407.0,
+      "is_terminus": true,
+      "terminus_reason": "individual",
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00219568&two_year_transaction_period=2024&contributor_name=FAULKNER%2C+BRIAN"
+    },
+    {
+      "id": "ind:CROSS_LEONARD|91103",
+      "name": "CROSS, LEONARD",
+      "kind": "individual",
+      "committee_type": null,
+      "depth": 4,
+      "visibility": "disclosed",
+      "amount_in": 1407.0,
+      "is_terminus": true,
+      "terminus_reason": "individual",
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00219568&two_year_transaction_period=2024&contributor_name=CROSS%2C+LEONARD"
+    },
+    {
+      "id": "ind:JAMES_KEVIN|91103",
+      "name": "JAMES, KEVIN",
+      "kind": "individual",
+      "committee_type": null,
+      "depth": 4,
+      "visibility": "disclosed",
+      "amount_in": 1407.0,
+      "is_terminus": true,
+      "terminus_reason": "individual",
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00219568&two_year_transaction_period=2024&contributor_name=JAMES%2C+KEVIN"
+    },
+    {
+      "id": "ind:NEAL_DEON|91103",
+      "name": "NEAL, DEON",
+      "kind": "individual",
+      "committee_type": null,
+      "depth": 4,
+      "visibility": "disclosed",
+      "amount_in": 1407.0,
+      "is_terminus": true,
+      "terminus_reason": "individual",
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00219568&two_year_transaction_period=2024&contributor_name=NEAL%2C+DEON"
+    },
+    {
+      "id": "ind:FELLOWS_JEFFREY_D.|91103",
+      "name": "FELLOWS, JEFFREY D.",
+      "kind": "individual",
+      "committee_type": null,
+      "depth": 4,
+      "visibility": "disclosed",
+      "amount_in": 1407.0,
+      "is_terminus": true,
+      "terminus_reason": "individual",
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00219568&two_year_transaction_period=2024&contributor_name=FELLOWS%2C+JEFFREY+D."
+    },
+    {
+      "id": "ind:ABBOTT_JOE|91103",
+      "name": "ABBOTT, JOE",
+      "kind": "individual",
+      "committee_type": null,
+      "depth": 4,
+      "visibility": "disclosed",
+      "amount_in": 1407.0,
+      "is_terminus": true,
+      "terminus_reason": "individual",
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00219568&two_year_transaction_period=2024&contributor_name=ABBOTT%2C+JOE"
+    },
+    {
+      "id": "ind:MATTHEWS_ROBERT_D|91103",
+      "name": "MATTHEWS, ROBERT D",
+      "kind": "individual",
+      "committee_type": null,
+      "depth": 4,
+      "visibility": "disclosed",
+      "amount_in": 1407.0,
+      "is_terminus": true,
+      "terminus_reason": "individual",
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00219568&two_year_transaction_period=2024&contributor_name=MATTHEWS%2C+ROBERT+D"
+    },
+    {
+      "id": "ind:MENDENHALL_JAMES|91103",
+      "name": "MENDENHALL, JAMES",
+      "kind": "individual",
+      "committee_type": null,
+      "depth": 4,
+      "visibility": "disclosed",
+      "amount_in": 1407.0,
+      "is_terminus": true,
+      "terminus_reason": "individual",
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00219568&two_year_transaction_period=2024&contributor_name=MENDENHALL%2C+JAMES"
+    },
+    {
+      "id": "ind:SAINZ_JOSE|91103",
+      "name": "SAINZ, JOSE",
+      "kind": "individual",
+      "committee_type": null,
+      "depth": 4,
+      "visibility": "disclosed",
+      "amount_in": 1407.0,
+      "is_terminus": true,
+      "terminus_reason": "individual",
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00219568&two_year_transaction_period=2024&contributor_name=SAINZ%2C+JOSE"
+    },
+    {
+      "id": "ind:HALL_JUSTIN|91103",
+      "name": "HALL, JUSTIN",
+      "kind": "individual",
+      "committee_type": null,
+      "depth": 4,
+      "visibility": "disclosed",
+      "amount_in": 1407.0,
+      "is_terminus": true,
+      "terminus_reason": "individual",
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00219568&two_year_transaction_period=2024&contributor_name=HALL%2C+JUSTIN"
+    },
+    {
+      "id": "ind:LAMB_RUSSELL|91103",
+      "name": "LAMB, RUSSELL",
+      "kind": "individual",
+      "committee_type": null,
+      "depth": 4,
+      "visibility": "disclosed",
+      "amount_in": 1407.0,
+      "is_terminus": true,
+      "terminus_reason": "individual",
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00219568&two_year_transaction_period=2024&contributor_name=LAMB%2C+RUSSELL"
+    },
+    {
+      "id": "ind:SNODGRASS_DAVID|91103",
+      "name": "SNODGRASS, DAVID",
+      "kind": "individual",
+      "committee_type": null,
+      "depth": 4,
+      "visibility": "disclosed",
+      "amount_in": 1407.0,
+      "is_terminus": true,
+      "terminus_reason": "individual",
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00219568&two_year_transaction_period=2024&contributor_name=SNODGRASS%2C+DAVID"
     },
     {
       "id": "ind:BUNCH_ROSS_T.|91103",
@@ -2463,162 +2630,6 @@
       "is_terminus": true,
       "terminus_reason": "individual",
       "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00219568&two_year_transaction_period=2024&contributor_name=STANLEY%2C+RYAN"
-    },
-    {
-      "id": "ind:THURWACHTER_JOEL_L.|91103",
-      "name": "THURWACHTER, JOEL L.",
-      "kind": "individual",
-      "committee_type": null,
-      "depth": 4,
-      "visibility": "disclosed",
-      "amount_in": 1407.0,
-      "is_terminus": true,
-      "terminus_reason": "individual",
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00219568&two_year_transaction_period=2024&contributor_name=THURWACHTER%2C+JOEL+L."
-    },
-    {
-      "id": "ind:BRIERLEY_MICHAEL|91103",
-      "name": "BRIERLEY, MICHAEL",
-      "kind": "individual",
-      "committee_type": null,
-      "depth": 4,
-      "visibility": "disclosed",
-      "amount_in": 1407.0,
-      "is_terminus": true,
-      "terminus_reason": "individual",
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00219568&two_year_transaction_period=2024&contributor_name=BRIERLEY%2C+MICHAEL"
-    },
-    {
-      "id": "ind:GRANGER_BRIAN|91103",
-      "name": "GRANGER, BRIAN",
-      "kind": "individual",
-      "committee_type": null,
-      "depth": 4,
-      "visibility": "disclosed",
-      "amount_in": 1407.0,
-      "is_terminus": true,
-      "terminus_reason": "individual",
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00219568&two_year_transaction_period=2024&contributor_name=GRANGER%2C+BRIAN"
-    },
-    {
-      "id": "ind:BANUELOS_VICTOR|91103",
-      "name": "BANUELOS, VICTOR",
-      "kind": "individual",
-      "committee_type": null,
-      "depth": 4,
-      "visibility": "disclosed",
-      "amount_in": 1407.0,
-      "is_terminus": true,
-      "terminus_reason": "individual",
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00219568&two_year_transaction_period=2024&contributor_name=BANUELOS%2C+VICTOR"
-    },
-    {
-      "id": "ind:DRENNAN_THOMAS_C.|91103",
-      "name": "DRENNAN, THOMAS C.",
-      "kind": "individual",
-      "committee_type": null,
-      "depth": 4,
-      "visibility": "disclosed",
-      "amount_in": 1407.0,
-      "is_terminus": true,
-      "terminus_reason": "individual",
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00219568&two_year_transaction_period=2024&contributor_name=DRENNAN%2C+THOMAS+C."
-    },
-    {
-      "id": "ind:WOOD_JAKE|91103",
-      "name": "WOOD, JAKE",
-      "kind": "individual",
-      "committee_type": null,
-      "depth": 4,
-      "visibility": "disclosed",
-      "amount_in": 1407.0,
-      "is_terminus": true,
-      "terminus_reason": "individual",
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00219568&two_year_transaction_period=2024&contributor_name=WOOD%2C+JAKE"
-    },
-    {
-      "id": "ind:GORT_RAYMOND|91103",
-      "name": "GORT, RAYMOND",
-      "kind": "individual",
-      "committee_type": null,
-      "depth": 4,
-      "visibility": "disclosed",
-      "amount_in": 1407.0,
-      "is_terminus": true,
-      "terminus_reason": "individual",
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00219568&two_year_transaction_period=2024&contributor_name=GORT%2C+RAYMOND"
-    },
-    {
-      "id": "ind:FLOT_JOHN_V.|91103",
-      "name": "FLOT, JOHN V.",
-      "kind": "individual",
-      "committee_type": null,
-      "depth": 4,
-      "visibility": "disclosed",
-      "amount_in": 1407.0,
-      "is_terminus": true,
-      "terminus_reason": "individual",
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00219568&two_year_transaction_period=2024&contributor_name=FLOT%2C+JOHN+V."
-    },
-    {
-      "id": "ind:FAULKNER_BRIAN|91103",
-      "name": "FAULKNER, BRIAN",
-      "kind": "individual",
-      "committee_type": null,
-      "depth": 4,
-      "visibility": "disclosed",
-      "amount_in": 1407.0,
-      "is_terminus": true,
-      "terminus_reason": "individual",
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00219568&two_year_transaction_period=2024&contributor_name=FAULKNER%2C+BRIAN"
-    },
-    {
-      "id": "ind:CROSS_LEONARD|91103",
-      "name": "CROSS, LEONARD",
-      "kind": "individual",
-      "committee_type": null,
-      "depth": 4,
-      "visibility": "disclosed",
-      "amount_in": 1407.0,
-      "is_terminus": true,
-      "terminus_reason": "individual",
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00219568&two_year_transaction_period=2024&contributor_name=CROSS%2C+LEONARD"
-    },
-    {
-      "id": "ind:JAMES_KEVIN|91103",
-      "name": "JAMES, KEVIN",
-      "kind": "individual",
-      "committee_type": null,
-      "depth": 4,
-      "visibility": "disclosed",
-      "amount_in": 1407.0,
-      "is_terminus": true,
-      "terminus_reason": "individual",
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00219568&two_year_transaction_period=2024&contributor_name=JAMES%2C+KEVIN"
-    },
-    {
-      "id": "ind:NEAL_DEON|91103",
-      "name": "NEAL, DEON",
-      "kind": "individual",
-      "committee_type": null,
-      "depth": 4,
-      "visibility": "disclosed",
-      "amount_in": 1407.0,
-      "is_terminus": true,
-      "terminus_reason": "individual",
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00219568&two_year_transaction_period=2024&contributor_name=NEAL%2C+DEON"
-    },
-    {
-      "id": "ind:FELLOWS_JEFFREY_D.|91103",
-      "name": "FELLOWS, JEFFREY D.",
-      "kind": "individual",
-      "committee_type": null,
-      "depth": 4,
-      "visibility": "disclosed",
-      "amount_in": 1407.0,
-      "is_terminus": true,
-      "terminus_reason": "individual",
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00219568&two_year_transaction_period=2024&contributor_name=FELLOWS%2C+JEFFREY+D."
     },
     {
       "id": "agg:other@C00219568",
@@ -2742,18 +2753,6 @@
       "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00348540&two_year_transaction_period=2024&contributor_name=RICHARDSON%2C+APRIA"
     },
     {
-      "id": "ind:BOZIL_LISE|11212",
-      "name": "BOZIL, LISE",
-      "kind": "individual",
-      "committee_type": null,
-      "depth": 4,
-      "visibility": "disclosed",
-      "amount_in": 1200.0,
-      "is_terminus": true,
-      "terminus_reason": "individual",
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00348540&two_year_transaction_period=2024&contributor_name=BOZIL%2C+LISE"
-    },
-    {
       "id": "ind:GARCIA_ANTHONY|11706",
       "name": "GARCIA, ANTHONY",
       "kind": "individual",
@@ -2776,6 +2775,18 @@
       "is_terminus": true,
       "terminus_reason": "individual",
       "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00348540&two_year_transaction_period=2024&contributor_name=ESCOSIA%2C+LIZETTE"
+    },
+    {
+      "id": "ind:BOZIL_LISE|11212",
+      "name": "BOZIL, LISE",
+      "kind": "individual",
+      "committee_type": null,
+      "depth": 4,
+      "visibility": "disclosed",
+      "amount_in": 1200.0,
+      "is_terminus": true,
+      "terminus_reason": "individual",
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00348540&two_year_transaction_period=2024&contributor_name=BOZIL%2C+LISE"
     },
     {
       "id": "ind:HARTMAN_LAUREN|11216",
@@ -2862,18 +2873,6 @@
       "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00348540&two_year_transaction_period=2024&contributor_name=SAUSNER%2C+HARRIET"
     },
     {
-      "id": "ind:BEHROOZI_MITRA|12726",
-      "name": "BEHROOZI, MITRA",
-      "kind": "individual",
-      "committee_type": null,
-      "depth": 4,
-      "visibility": "disclosed",
-      "amount_in": 900.0,
-      "is_terminus": true,
-      "terminus_reason": "individual",
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00348540&two_year_transaction_period=2024&contributor_name=BEHROOZI%2C+MITRA"
-    },
-    {
       "id": "ind:SHAW_BRENDAN|07401",
       "name": "SHAW, BRENDAN",
       "kind": "individual",
@@ -2884,6 +2883,18 @@
       "is_terminus": true,
       "terminus_reason": "individual",
       "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00348540&two_year_transaction_period=2024&contributor_name=SHAW%2C+BRENDAN"
+    },
+    {
+      "id": "ind:BEHROOZI_MITRA|12726",
+      "name": "BEHROOZI, MITRA",
+      "kind": "individual",
+      "committee_type": null,
+      "depth": 4,
+      "visibility": "disclosed",
+      "amount_in": 900.0,
+      "is_terminus": true,
+      "terminus_reason": "individual",
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00348540&two_year_transaction_period=2024&contributor_name=BEHROOZI%2C+MITRA"
     },
     {
       "id": "ind:SAADALLAH_NAJLA|07010",
@@ -3079,18 +3090,6 @@
       "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00355289&two_year_transaction_period=2024&contributor_name=JOHN%2C+PAMELA"
     },
     {
-      "id": "ind:FRIEDLAENDER_LENORE|11377",
-      "name": "FRIEDLAENDER, LENORE",
-      "kind": "individual",
-      "committee_type": null,
-      "depth": 4,
-      "visibility": "disclosed",
-      "amount_in": 1760.0,
-      "is_terminus": true,
-      "terminus_reason": "individual",
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00355289&two_year_transaction_period=2024&contributor_name=FRIEDLAENDER%2C+LENORE"
-    },
-    {
       "id": "ind:HILL_ROBERT|11220",
       "name": "HILL, ROBERT",
       "kind": "individual",
@@ -3113,6 +3112,18 @@
       "is_terminus": true,
       "terminus_reason": "individual",
       "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00355289&two_year_transaction_period=2024&contributor_name=HOHENSTEIN%2C+MARYANNE"
+    },
+    {
+      "id": "ind:FRIEDLAENDER_LENORE|11377",
+      "name": "FRIEDLAENDER, LENORE",
+      "kind": "individual",
+      "committee_type": null,
+      "depth": 4,
+      "visibility": "disclosed",
+      "amount_in": 1760.0,
+      "is_terminus": true,
+      "terminus_reason": "individual",
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00355289&two_year_transaction_period=2024&contributor_name=FRIEDLAENDER%2C+LENORE"
     },
     {
       "id": "ind:DEVITA_DEAN|11554",
@@ -3175,18 +3186,6 @@
       "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00355289&two_year_transaction_period=2024&contributor_name=SMITH%2C+ROBERT"
     },
     {
-      "id": "ind:ORME_LORI|11743",
-      "name": "ORME, LORI",
-      "kind": "individual",
-      "committee_type": null,
-      "depth": 4,
-      "visibility": "disclosed",
-      "amount_in": 1185.0,
-      "is_terminus": true,
-      "terminus_reason": "individual",
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00355289&two_year_transaction_period=2024&contributor_name=ORME%2C+LORI"
-    },
-    {
       "id": "ind:SUGIMORI_AMY|11201",
       "name": "SUGIMORI, AMY",
       "kind": "individual",
@@ -3197,6 +3196,18 @@
       "is_terminus": true,
       "terminus_reason": "individual",
       "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00355289&two_year_transaction_period=2024&contributor_name=SUGIMORI%2C+AMY"
+    },
+    {
+      "id": "ind:ORME_LORI|11743",
+      "name": "ORME, LORI",
+      "kind": "individual",
+      "committee_type": null,
+      "depth": 4,
+      "visibility": "disclosed",
+      "amount_in": 1185.0,
+      "is_terminus": true,
+      "terminus_reason": "individual",
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00355289&two_year_transaction_period=2024&contributor_name=ORME%2C+LORI"
     },
     {
       "id": "ind:BAILEY_DOUGLAS|64119",
@@ -3283,54 +3294,6 @@
       "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00355289&two_year_transaction_period=2024&contributor_name=FRAZIER%2C+FRANK"
     },
     {
-      "id": "ind:AULISIO_JOSEPH|07079",
-      "name": "AULISIO, JOSEPH",
-      "kind": "individual",
-      "committee_type": null,
-      "depth": 4,
-      "visibility": "disclosed",
-      "amount_in": 700.0,
-      "is_terminus": true,
-      "terminus_reason": "individual",
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00355289&two_year_transaction_period=2024&contributor_name=AULISIO%2C+JOSEPH"
-    },
-    {
-      "id": "ind:CONTRERAS_JAIME|20740",
-      "name": "CONTRERAS, JAIME",
-      "kind": "individual",
-      "committee_type": null,
-      "depth": 4,
-      "visibility": "disclosed",
-      "amount_in": 700.0,
-      "is_terminus": true,
-      "terminus_reason": "individual",
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00355289&two_year_transaction_period=2024&contributor_name=CONTRERAS%2C+JAIME"
-    },
-    {
-      "id": "ind:SALDANA_CLAUDIO|07042",
-      "name": "SALDANA, CLAUDIO",
-      "kind": "individual",
-      "committee_type": null,
-      "depth": 4,
-      "visibility": "disclosed",
-      "amount_in": 700.0,
-      "is_terminus": true,
-      "terminus_reason": "individual",
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00355289&two_year_transaction_period=2024&contributor_name=SALDANA%2C+CLAUDIO"
-    },
-    {
-      "id": "ind:JOHNSTON_DENIS|07083",
-      "name": "JOHNSTON, DENIS",
-      "kind": "individual",
-      "committee_type": null,
-      "depth": 4,
-      "visibility": "disclosed",
-      "amount_in": 700.0,
-      "is_terminus": true,
-      "terminus_reason": "individual",
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00355289&two_year_transaction_period=2024&contributor_name=JOHNSTON%2C+DENIS"
-    },
-    {
       "id": "ind:COLLERD_SUZANNA|11415",
       "name": "COLLERD, SUZANNA",
       "kind": "individual",
@@ -3391,6 +3354,54 @@
       "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00355289&two_year_transaction_period=2024&contributor_name=CRUZ%2C+DAISY"
     },
     {
+      "id": "ind:AULISIO_JOSEPH|07079",
+      "name": "AULISIO, JOSEPH",
+      "kind": "individual",
+      "committee_type": null,
+      "depth": 4,
+      "visibility": "disclosed",
+      "amount_in": 700.0,
+      "is_terminus": true,
+      "terminus_reason": "individual",
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00355289&two_year_transaction_period=2024&contributor_name=AULISIO%2C+JOSEPH"
+    },
+    {
+      "id": "ind:CONTRERAS_JAIME|20740",
+      "name": "CONTRERAS, JAIME",
+      "kind": "individual",
+      "committee_type": null,
+      "depth": 4,
+      "visibility": "disclosed",
+      "amount_in": 700.0,
+      "is_terminus": true,
+      "terminus_reason": "individual",
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00355289&two_year_transaction_period=2024&contributor_name=CONTRERAS%2C+JAIME"
+    },
+    {
+      "id": "ind:SALDANA_CLAUDIO|07042",
+      "name": "SALDANA, CLAUDIO",
+      "kind": "individual",
+      "committee_type": null,
+      "depth": 4,
+      "visibility": "disclosed",
+      "amount_in": 700.0,
+      "is_terminus": true,
+      "terminus_reason": "individual",
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00355289&two_year_transaction_period=2024&contributor_name=SALDANA%2C+CLAUDIO"
+    },
+    {
+      "id": "ind:JOHNSTON_DENIS|07083",
+      "name": "JOHNSTON, DENIS",
+      "kind": "individual",
+      "committee_type": null,
+      "depth": 4,
+      "visibility": "disclosed",
+      "amount_in": 700.0,
+      "is_terminus": true,
+      "terminus_reason": "individual",
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00355289&two_year_transaction_period=2024&contributor_name=JOHNSTON%2C+DENIS"
+    },
+    {
       "id": "ind:PAGOULIDIS_IVONNE|11377",
       "name": "PAGOULIDIS, IVONNE",
       "kind": "individual",
@@ -3415,18 +3426,6 @@
       "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00355289&two_year_transaction_period=2024&contributor_name=SCHMIDT%2C+PETER"
     },
     {
-      "id": "ind:PASTERNAK_EUGENE|11238",
-      "name": "PASTERNAK, EUGENE",
-      "kind": "individual",
-      "committee_type": null,
-      "depth": 4,
-      "visibility": "disclosed",
-      "amount_in": 620.0,
-      "is_terminus": true,
-      "terminus_reason": "individual",
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00355289&two_year_transaction_period=2024&contributor_name=PASTERNAK%2C+EUGENE"
-    },
-    {
       "id": "ind:FIELDS_RONALD|11692",
       "name": "FIELDS, RONALD",
       "kind": "individual",
@@ -3437,6 +3436,18 @@
       "is_terminus": true,
       "terminus_reason": "individual",
       "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00355289&two_year_transaction_period=2024&contributor_name=FIELDS%2C+RONALD"
+    },
+    {
+      "id": "ind:PASTERNAK_EUGENE|11238",
+      "name": "PASTERNAK, EUGENE",
+      "kind": "individual",
+      "committee_type": null,
+      "depth": 4,
+      "visibility": "disclosed",
+      "amount_in": 620.0,
+      "is_terminus": true,
+      "terminus_reason": "individual",
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00355289&two_year_transaction_period=2024&contributor_name=PASTERNAK%2C+EUGENE"
     },
     {
       "id": "agg:other@C00355289",
@@ -3790,42 +3801,6 @@
       "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00148098&two_year_transaction_period=2024&contributor_name=FALTO%2C+VIVIAN"
     },
     {
-      "id": "ind:COOK_CHRISTINE_M|13027",
-      "name": "COOK, CHRISTINE M",
-      "kind": "individual",
-      "committee_type": null,
-      "depth": 4,
-      "visibility": "disclosed",
-      "amount_in": 660.0,
-      "is_terminus": true,
-      "terminus_reason": "individual",
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00148098&two_year_transaction_period=2024&contributor_name=COOK%2C+CHRISTINE+M"
-    },
-    {
-      "id": "ind:WELSH-LIEBROSS_JUDITH_L|11422",
-      "name": "WELSH-LIEBROSS, JUDITH L",
-      "kind": "individual",
-      "committee_type": null,
-      "depth": 4,
-      "visibility": "disclosed",
-      "amount_in": 660.0,
-      "is_terminus": true,
-      "terminus_reason": "individual",
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00148098&two_year_transaction_period=2024&contributor_name=WELSH-LIEBROSS%2C+JUDITH+L"
-    },
-    {
-      "id": "ind:KULYS_TADAS_R|11421",
-      "name": "KULYS, TADAS R",
-      "kind": "individual",
-      "committee_type": null,
-      "depth": 4,
-      "visibility": "disclosed",
-      "amount_in": 660.0,
-      "is_terminus": true,
-      "terminus_reason": "individual",
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00148098&two_year_transaction_period=2024&contributor_name=KULYS%2C+TADAS+R"
-    },
-    {
       "id": "ind:LADAY-HILL_CHARLENE_L|12402",
       "name": "LADAY-HILL, CHARLENE L",
       "kind": "individual",
@@ -3872,6 +3847,42 @@
       "is_terminus": true,
       "terminus_reason": "individual",
       "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00148098&two_year_transaction_period=2024&contributor_name=MURRAY%2C+GERALD"
+    },
+    {
+      "id": "ind:COOK_CHRISTINE_M|13027",
+      "name": "COOK, CHRISTINE M",
+      "kind": "individual",
+      "committee_type": null,
+      "depth": 4,
+      "visibility": "disclosed",
+      "amount_in": 660.0,
+      "is_terminus": true,
+      "terminus_reason": "individual",
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00148098&two_year_transaction_period=2024&contributor_name=COOK%2C+CHRISTINE+M"
+    },
+    {
+      "id": "ind:WELSH-LIEBROSS_JUDITH_L|11422",
+      "name": "WELSH-LIEBROSS, JUDITH L",
+      "kind": "individual",
+      "committee_type": null,
+      "depth": 4,
+      "visibility": "disclosed",
+      "amount_in": 660.0,
+      "is_terminus": true,
+      "terminus_reason": "individual",
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00148098&two_year_transaction_period=2024&contributor_name=WELSH-LIEBROSS%2C+JUDITH+L"
+    },
+    {
+      "id": "ind:KULYS_TADAS_R|11421",
+      "name": "KULYS, TADAS R",
+      "kind": "individual",
+      "committee_type": null,
+      "depth": 4,
+      "visibility": "disclosed",
+      "amount_in": 660.0,
+      "is_terminus": true,
+      "terminus_reason": "individual",
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00148098&two_year_transaction_period=2024&contributor_name=KULYS%2C+TADAS+R"
     },
     {
       "id": "ind:UYANNA_SUSAN_C|12065",
@@ -3970,6 +3981,18 @@
       "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00148098&two_year_transaction_period=2024&contributor_name=KARAMANOL%2C+PAUL+S"
     },
     {
+      "id": "ind:ROBERTS_WENDY|10466",
+      "name": "ROBERTS, WENDY",
+      "kind": "individual",
+      "committee_type": null,
+      "depth": 4,
+      "visibility": "disclosed",
+      "amount_in": 580.0,
+      "is_terminus": true,
+      "terminus_reason": "individual",
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00148098&two_year_transaction_period=2024&contributor_name=ROBERTS%2C+WENDY"
+    },
+    {
       "id": "ind:BRISKEY_BENJAMIN_K|14094",
       "name": "BRISKEY, BENJAMIN K",
       "kind": "individual",
@@ -3992,18 +4015,6 @@
       "is_terminus": true,
       "terminus_reason": "individual",
       "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00148098&two_year_transaction_period=2024&contributor_name=MACCLOUD-ROSEMOND%2C+FAWN"
-    },
-    {
-      "id": "ind:ROBERTS_WENDY|10466",
-      "name": "ROBERTS, WENDY",
-      "kind": "individual",
-      "committee_type": null,
-      "depth": 4,
-      "visibility": "disclosed",
-      "amount_in": 580.0,
-      "is_terminus": true,
-      "terminus_reason": "individual",
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00148098&two_year_transaction_period=2024&contributor_name=ROBERTS%2C+WENDY"
     },
     {
       "id": "ind:LERNER_NATHALIE|12983",
@@ -4295,18 +4306,6 @@
       "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00214643&two_year_transaction_period=2024&contributor_name=ALVAREZ%2C+HENRY"
     },
     {
-      "id": "ind:KING_LARRY_D|07304",
-      "name": "KING, LARRY D",
-      "kind": "individual",
-      "committee_type": null,
-      "depth": 4,
-      "visibility": "disclosed",
-      "amount_in": 922.0,
-      "is_terminus": true,
-      "terminus_reason": "individual",
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00214643&two_year_transaction_period=2024&contributor_name=KING%2C+LARRY+D"
-    },
-    {
       "id": "ind:FERNANDES_MANNY|08724",
       "name": "FERNANDES, MANNY",
       "kind": "individual",
@@ -4317,6 +4316,18 @@
       "is_terminus": true,
       "terminus_reason": "individual",
       "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00214643&two_year_transaction_period=2024&contributor_name=FERNANDES%2C+MANNY"
+    },
+    {
+      "id": "ind:KING_LARRY_D|07304",
+      "name": "KING, LARRY D",
+      "kind": "individual",
+      "committee_type": null,
+      "depth": 4,
+      "visibility": "disclosed",
+      "amount_in": 922.0,
+      "is_terminus": true,
+      "terminus_reason": "individual",
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00214643&two_year_transaction_period=2024&contributor_name=KING%2C+LARRY+D"
     },
     {
       "id": "ind:PIKALOV_OLEG|07204",
@@ -4476,6 +4487,18 @@
       "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00337733&two_year_transaction_period=2024&contributor_name=PAGUAY%2C+JOSE"
     },
     {
+      "id": "ind:ROSSITTO_GIUSEPPE|11354",
+      "name": "ROSSITTO, GIUSEPPE",
+      "kind": "individual",
+      "committee_type": null,
+      "depth": 4,
+      "visibility": "disclosed",
+      "amount_in": 1053.0,
+      "is_terminus": true,
+      "terminus_reason": "individual",
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00337733&two_year_transaction_period=2024&contributor_name=ROSSITTO%2C+GIUSEPPE"
+    },
+    {
       "id": "ind:ASTUDILLO_FREDDY|11369",
       "name": "ASTUDILLO, FREDDY",
       "kind": "individual",
@@ -4498,18 +4521,6 @@
       "is_terminus": true,
       "terminus_reason": "individual",
       "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00337733&two_year_transaction_period=2024&contributor_name=COYLE%2C+THOMAS"
-    },
-    {
-      "id": "ind:ROSSITTO_GIUSEPPE|11354",
-      "name": "ROSSITTO, GIUSEPPE",
-      "kind": "individual",
-      "committee_type": null,
-      "depth": 4,
-      "visibility": "disclosed",
-      "amount_in": 1053.0,
-      "is_terminus": true,
-      "terminus_reason": "individual",
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00337733&two_year_transaction_period=2024&contributor_name=ROSSITTO%2C+GIUSEPPE"
     },
     {
       "id": "ind:JUELA_EDISON|10458",
@@ -4584,18 +4595,6 @@
       "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00337733&two_year_transaction_period=2024&contributor_name=KOZIKOWSKI%2C+JACEK"
     },
     {
-      "id": "ind:MENDEZ_JOSE|07083",
-      "name": "MENDEZ, JOSE",
-      "kind": "individual",
-      "committee_type": null,
-      "depth": 4,
-      "visibility": "disclosed",
-      "amount_in": 1001.0,
-      "is_terminus": true,
-      "terminus_reason": "individual",
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00337733&two_year_transaction_period=2024&contributor_name=MENDEZ%2C+JOSE"
-    },
-    {
       "id": "ind:MANNING_PETER|11210",
       "name": "MANNING, PETER",
       "kind": "individual",
@@ -4608,16 +4607,16 @@
       "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00337733&two_year_transaction_period=2024&contributor_name=MANNING%2C+PETER"
     },
     {
-      "id": "ind:MARINO_JOHN|11576",
-      "name": "MARINO, JOHN",
+      "id": "ind:MENDEZ_JOSE|07083",
+      "name": "MENDEZ, JOSE",
       "kind": "individual",
       "committee_type": null,
       "depth": 4,
       "visibility": "disclosed",
-      "amount_in": 1000.0,
+      "amount_in": 1001.0,
       "is_terminus": true,
       "terminus_reason": "individual",
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00337733&two_year_transaction_period=2024&contributor_name=MARINO%2C+JOHN"
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00337733&two_year_transaction_period=2024&contributor_name=MENDEZ%2C+JOSE"
     },
     {
       "id": "ind:ST.BERNARD_KENRICK|11207",
@@ -4630,6 +4629,18 @@
       "is_terminus": true,
       "terminus_reason": "individual",
       "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00337733&two_year_transaction_period=2024&contributor_name=ST.BERNARD%2C+KENRICK"
+    },
+    {
+      "id": "ind:MARINO_JOHN|11576",
+      "name": "MARINO, JOHN",
+      "kind": "individual",
+      "committee_type": null,
+      "depth": 4,
+      "visibility": "disclosed",
+      "amount_in": 1000.0,
+      "is_terminus": true,
+      "terminus_reason": "individual",
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00337733&two_year_transaction_period=2024&contributor_name=MARINO%2C+JOHN"
     },
     {
       "id": "ind:BARNABY_ANDREW|11004",
@@ -4934,6 +4945,18 @@
       "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00342907&two_year_transaction_period=2024&contributor_name=SPARKS%2C+BRIAN"
     },
     {
+      "id": "ind:SPARKS_SCOTT_A|46307",
+      "name": "SPARKS, SCOTT A",
+      "kind": "individual",
+      "committee_type": null,
+      "depth": 4,
+      "visibility": "disclosed",
+      "amount_in": 3271.0,
+      "is_terminus": true,
+      "terminus_reason": "individual",
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00342907&two_year_transaction_period=2024&contributor_name=SPARKS%2C+SCOTT+A"
+    },
+    {
       "id": "ind:HENSON_RICKY_R._JR.|46322",
       "name": "HENSON, RICKY R. JR.",
       "kind": "individual",
@@ -4956,18 +4979,6 @@
       "is_terminus": true,
       "terminus_reason": "individual",
       "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00342907&two_year_transaction_period=2024&contributor_name=ROACH%2C+DONALD"
-    },
-    {
-      "id": "ind:SPARKS_SCOTT_A|46307",
-      "name": "SPARKS, SCOTT A",
-      "kind": "individual",
-      "committee_type": null,
-      "depth": 4,
-      "visibility": "disclosed",
-      "amount_in": 3271.0,
-      "is_terminus": true,
-      "terminus_reason": "individual",
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00342907&two_year_transaction_period=2024&contributor_name=SPARKS%2C+SCOTT+A"
     },
     {
       "id": "ind:DILLINGHAM_RONNY|46383",
@@ -5499,18 +5510,6 @@
       "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00253294&two_year_transaction_period=2024&contributor_name=PATTERSON%2C+RICHARD"
     },
     {
-      "id": "ind:MATEJA_JOSEPH|19123",
-      "name": "MATEJA, JOSEPH",
-      "kind": "individual",
-      "committee_type": null,
-      "depth": 5,
-      "visibility": "disclosed",
-      "amount_in": 2107.0,
-      "is_terminus": true,
-      "terminus_reason": "individual",
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00253294&two_year_transaction_period=2024&contributor_name=MATEJA%2C+JOSEPH"
-    },
-    {
       "id": "ind:BERROCAL_ELVIS|19123",
       "name": "BERROCAL, ELVIS",
       "kind": "individual",
@@ -5521,6 +5520,18 @@
       "is_terminus": true,
       "terminus_reason": "individual",
       "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00253294&two_year_transaction_period=2024&contributor_name=BERROCAL%2C+ELVIS"
+    },
+    {
+      "id": "ind:MATEJA_JOSEPH|19123",
+      "name": "MATEJA, JOSEPH",
+      "kind": "individual",
+      "committee_type": null,
+      "depth": 5,
+      "visibility": "disclosed",
+      "amount_in": 2107.0,
+      "is_terminus": true,
+      "terminus_reason": "individual",
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00253294&two_year_transaction_period=2024&contributor_name=MATEJA%2C+JOSEPH"
     },
     {
       "id": "ind:ROBINSON_JULIUS|19123",
@@ -5847,7 +5858,8 @@
         "2024-10-11",
         "2024-11-04"
       ],
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00738674&two_year_transaction_period=2024&contributor_name=REPRODUCTIVE+FREEDOM+FOR+ALL"
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00738674&two_year_transaction_period=2024&contributor_name=REPRODUCTIVE+FREEDOM+FOR+ALL",
+      "class_basis": "rule"
     },
     {
       "from": "C00693382",
@@ -5898,22 +5910,6 @@
       "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00738674&two_year_transaction_period=2024&contributor_name=ECK%2C+DENNIS"
     },
     {
-      "from": "org:GLOBAL_IMPACT_SOCIAL_WELFARE_FUND",
-      "to": "C00738674",
-      "amount": 50000.0,
-      "visibility": "dark",
-      "depth": 1,
-      "transaction_types": [
-        "10"
-      ],
-      "count": 1,
-      "date_range": [
-        "2024-10-31",
-        "2024-10-31"
-      ],
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00738674&two_year_transaction_period=2024&contributor_name=GLOBAL+IMPACT+SOCIAL+WELFARE+FUND"
-    },
-    {
       "from": "ind:DELANEY_M._QUINN|94611",
       "to": "C00738674",
       "amount": 50000.0,
@@ -5928,6 +5924,23 @@
         "2024-09-23"
       ],
       "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00738674&two_year_transaction_period=2024&contributor_name=DELANEY%2C+M.+QUINN"
+    },
+    {
+      "from": "org:GLOBAL_IMPACT_SOCIAL_WELFARE_FUND",
+      "to": "C00738674",
+      "amount": 50000.0,
+      "visibility": "dark",
+      "depth": 1,
+      "transaction_types": [
+        "10"
+      ],
+      "count": 1,
+      "date_range": [
+        "2024-10-31",
+        "2024-10-31"
+      ],
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00738674&two_year_transaction_period=2024&contributor_name=GLOBAL+IMPACT+SOCIAL+WELFARE+FUND",
+      "class_basis": "rule"
     },
     {
       "from": "agg:other@C00738674",
@@ -5959,7 +5972,8 @@
         "2024-01-11",
         "2024-01-11"
       ],
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00693382&two_year_transaction_period=2024&contributor_name=FUND+FOR+POLICY+REFORM"
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00693382&two_year_transaction_period=2024&contributor_name=FUND+FOR+POLICY+REFORM",
+      "class_basis": "rule"
     },
     {
       "from": "org:GEOSOR_CORPORATION",
@@ -5975,7 +5989,8 @@
         "2024-09-19",
         "2024-09-19"
       ],
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00693382&two_year_transaction_period=2024&contributor_name=GEOSOR+CORPORATION"
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00693382&two_year_transaction_period=2024&contributor_name=GEOSOR+CORPORATION",
+      "class_basis": "rule"
     },
     {
       "from": "org:GLOBAL_OAK_HOLDINGS_LLC",
@@ -5991,7 +6006,8 @@
         "2024-01-31",
         "2024-06-28"
       ],
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00693382&two_year_transaction_period=2024&contributor_name=GLOBAL+OAK+HOLDINGS+LLC"
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00693382&two_year_transaction_period=2024&contributor_name=GLOBAL+OAK+HOLDINGS+LLC",
+      "class_basis": "rule"
     },
     {
       "from": "agg:other@C00693382",
@@ -6023,7 +6039,8 @@
         "2023-01-03",
         "2024-12-17"
       ],
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00484642&two_year_transaction_period=2024&contributor_name=MAJORITY+FORWARD"
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00484642&two_year_transaction_period=2024&contributor_name=MAJORITY+FORWARD",
+      "class_basis": "rule"
     },
     {
       "from": "C00490847",
@@ -6089,7 +6106,8 @@
         "2023-05-10",
         "2024-10-16"
       ],
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00484642&two_year_transaction_period=2024&contributor_name=GREATER+NEW+YORK+HOSPITAL+ASSOCIATION+MANAGEMENT+CORPORATION"
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00484642&two_year_transaction_period=2024&contributor_name=GREATER+NEW+YORK+HOSPITAL+ASSOCIATION+MANAGEMENT+CORPORATION",
+      "class_basis": "rule"
     },
     {
       "from": "ind:SIMONS_JAMES|10010",
@@ -6186,7 +6204,8 @@
         "2023-06-29",
         "2024-10-22"
       ],
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00484642&two_year_transaction_period=2024&contributor_name=IBEW+PAC+EDUCATIONAL+FUND"
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00484642&two_year_transaction_period=2024&contributor_name=IBEW+PAC+EDUCATIONAL+FUND",
+      "class_basis": "rule"
     },
     {
       "from": "ind:CHAN_MICHELLE|94111",
@@ -6421,7 +6440,8 @@
         "2023-04-10",
         "2024-10-28"
       ],
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00490847&two_year_transaction_period=2024&contributor_name=UNITED+BROTHERHOOD+OF+CARPENTERS+AND+JOINERS"
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00490847&two_year_transaction_period=2024&contributor_name=UNITED+BROTHERHOOD+OF+CARPENTERS+AND+JOINERS",
+      "class_basis": "rule"
     },
     {
       "from": "org:INTERNATIONAL_UNION_OF_OPERATING_ENGINEERS",
@@ -6437,7 +6457,8 @@
         "2023-08-02",
         "2024-10-28"
       ],
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00624817&two_year_transaction_period=2024&contributor_name=INTERNATIONAL+UNION+OF+OPERATING+ENGINEERS"
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00624817&two_year_transaction_period=2024&contributor_name=INTERNATIONAL+UNION+OF+OPERATING+ENGINEERS",
+      "class_basis": "rule"
     },
     {
       "from": "ind:NEA_ADVOCACY_FUND_ASSOCIATION|20005",
@@ -6982,7 +7003,8 @@
         "2023-05-19",
         "2024-10-10"
       ],
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00484253&two_year_transaction_period=2024&contributor_name=UNITED+FOOD+AND+COMMERCIAL+WORKERS+INTERNATIONAL+UNION"
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00484253&two_year_transaction_period=2024&contributor_name=UNITED+FOOD+AND+COMMERCIAL+WORKERS+INTERNATIONAL+UNION",
+      "class_basis": "rule"
     },
     {
       "from": "ind:REBESCO_JOSEPH|46356",
@@ -7636,22 +7658,6 @@
       "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00432815&two_year_transaction_period=2024&contributor_name=PASIEKA%2C+ANDRZEJ"
     },
     {
-      "from": "ind:AUST_MICHAEL|60441",
-      "to": "C00432815",
-      "amount": 275.0,
-      "visibility": "disclosed",
-      "depth": 4,
-      "transaction_types": [
-        "15"
-      ],
-      "count": 10,
-      "date_range": [
-        "2023-08-07",
-        "2024-11-27"
-      ],
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00432815&two_year_transaction_period=2024&contributor_name=AUST%2C+MICHAEL"
-    },
-    {
       "from": "ind:PAGAN_RICARDO|60706",
       "to": "C00432815",
       "amount": 275.0,
@@ -7684,6 +7690,22 @@
       "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00432815&two_year_transaction_period=2024&contributor_name=HANSEN%2C+ERIK"
     },
     {
+      "from": "ind:AUST_MICHAEL|60441",
+      "to": "C00432815",
+      "amount": 275.0,
+      "visibility": "disclosed",
+      "depth": 4,
+      "transaction_types": [
+        "15"
+      ],
+      "count": 10,
+      "date_range": [
+        "2023-08-07",
+        "2024-11-27"
+      ],
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00432815&two_year_transaction_period=2024&contributor_name=AUST%2C+MICHAEL"
+    },
+    {
       "from": "ind:VON_THADEN_TRISTAN|60609",
       "to": "C00432815",
       "amount": 274.0,
@@ -7698,38 +7720,6 @@
         "2024-12-04"
       ],
       "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00432815&two_year_transaction_period=2024&contributor_name=VON+THADEN%2C+TRISTAN"
-    },
-    {
-      "from": "ind:CUNNINGHAM_LUKE|60805",
-      "to": "C00432815",
-      "amount": 250.0,
-      "visibility": "disclosed",
-      "depth": 4,
-      "transaction_types": [
-        "15"
-      ],
-      "count": 9,
-      "date_range": [
-        "2023-09-06",
-        "2024-12-04"
-      ],
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00432815&two_year_transaction_period=2024&contributor_name=CUNNINGHAM%2C+LUKE"
-    },
-    {
-      "from": "ind:DEVRIES_KYLE|60467",
-      "to": "C00432815",
-      "amount": 250.0,
-      "visibility": "disclosed",
-      "depth": 4,
-      "transaction_types": [
-        "15"
-      ],
-      "count": 9,
-      "date_range": [
-        "2023-09-22",
-        "2024-11-27"
-      ],
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00432815&two_year_transaction_period=2024&contributor_name=DEVRIES%2C+KYLE"
     },
     {
       "from": "ind:RAZIM_ROBERT|60534",
@@ -7764,6 +7754,38 @@
       "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00432815&two_year_transaction_period=2024&contributor_name=HOLGATE%2C+KEVIN"
     },
     {
+      "from": "ind:CUNNINGHAM_LUKE|60805",
+      "to": "C00432815",
+      "amount": 250.0,
+      "visibility": "disclosed",
+      "depth": 4,
+      "transaction_types": [
+        "15"
+      ],
+      "count": 9,
+      "date_range": [
+        "2023-09-06",
+        "2024-12-04"
+      ],
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00432815&two_year_transaction_period=2024&contributor_name=CUNNINGHAM%2C+LUKE"
+    },
+    {
+      "from": "ind:DEVRIES_KYLE|60467",
+      "to": "C00432815",
+      "amount": 250.0,
+      "visibility": "disclosed",
+      "depth": 4,
+      "transaction_types": [
+        "15"
+      ],
+      "count": 9,
+      "date_range": [
+        "2023-09-22",
+        "2024-11-27"
+      ],
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00432815&two_year_transaction_period=2024&contributor_name=DEVRIES%2C+KYLE"
+    },
+    {
       "from": "ind:WESSEL_RYAN|60462",
       "to": "C00432815",
       "amount": 249.0,
@@ -7778,38 +7800,6 @@
         "2024-12-04"
       ],
       "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00432815&two_year_transaction_period=2024&contributor_name=WESSEL%2C+RYAN"
-    },
-    {
-      "from": "ind:CIVITO_FRANCO|60612",
-      "to": "C00432815",
-      "amount": 225.0,
-      "visibility": "disclosed",
-      "depth": 4,
-      "transaction_types": [
-        "15"
-      ],
-      "count": 9,
-      "date_range": [
-        "2023-09-22",
-        "2024-11-27"
-      ],
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00432815&two_year_transaction_period=2024&contributor_name=CIVITO%2C+FRANCO"
-    },
-    {
-      "from": "ind:GONZALEZ_JULIO|60656",
-      "to": "C00432815",
-      "amount": 225.0,
-      "visibility": "disclosed",
-      "depth": 4,
-      "transaction_types": [
-        "15"
-      ],
-      "count": 9,
-      "date_range": [
-        "2023-09-06",
-        "2024-12-04"
-      ],
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00432815&two_year_transaction_period=2024&contributor_name=GONZALEZ%2C+JULIO"
     },
     {
       "from": "ind:GRACA_RYAN|60423",
@@ -7844,6 +7834,38 @@
       "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00432815&two_year_transaction_period=2024&contributor_name=DOWLING%2C+MICHAEL"
     },
     {
+      "from": "ind:CIVITO_FRANCO|60612",
+      "to": "C00432815",
+      "amount": 225.0,
+      "visibility": "disclosed",
+      "depth": 4,
+      "transaction_types": [
+        "15"
+      ],
+      "count": 9,
+      "date_range": [
+        "2023-09-22",
+        "2024-11-27"
+      ],
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00432815&two_year_transaction_period=2024&contributor_name=CIVITO%2C+FRANCO"
+    },
+    {
+      "from": "ind:GONZALEZ_JULIO|60656",
+      "to": "C00432815",
+      "amount": 225.0,
+      "visibility": "disclosed",
+      "depth": 4,
+      "transaction_types": [
+        "15"
+      ],
+      "count": 9,
+      "date_range": [
+        "2023-09-06",
+        "2024-12-04"
+      ],
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00432815&two_year_transaction_period=2024&contributor_name=GONZALEZ%2C+JULIO"
+    },
+    {
       "from": "ind:KRUSWICKI_JOHN|60607",
       "to": "C00432815",
       "amount": 224.0,
@@ -7858,118 +7880,6 @@
         "2024-10-18"
       ],
       "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00432815&two_year_transaction_period=2024&contributor_name=KRUSWICKI%2C+JOHN"
-    },
-    {
-      "from": "ind:TAVAREZ_DAVID|60657",
-      "to": "C00432815",
-      "amount": 200.0,
-      "visibility": "disclosed",
-      "depth": 4,
-      "transaction_types": [
-        "15"
-      ],
-      "count": 8,
-      "date_range": [
-        "2023-08-21",
-        "2024-11-27"
-      ],
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00432815&two_year_transaction_period=2024&contributor_name=TAVAREZ%2C+DAVID"
-    },
-    {
-      "from": "ind:GONZALEZ_JAVIER|46311",
-      "to": "C00432815",
-      "amount": 200.0,
-      "visibility": "disclosed",
-      "depth": 4,
-      "transaction_types": [
-        "15"
-      ],
-      "count": 7,
-      "date_range": [
-        "2023-07-10",
-        "2024-11-26"
-      ],
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00432815&two_year_transaction_period=2024&contributor_name=GONZALEZ%2C+JAVIER"
-    },
-    {
-      "from": "ind:STOPKA_LUKASZ|60457",
-      "to": "C00432815",
-      "amount": 200.0,
-      "visibility": "disclosed",
-      "depth": 4,
-      "transaction_types": [
-        "15"
-      ],
-      "count": 8,
-      "date_range": [
-        "2023-09-22",
-        "2024-11-27"
-      ],
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00432815&two_year_transaction_period=2024&contributor_name=STOPKA%2C+LUKASZ"
-    },
-    {
-      "from": "ind:MILLER_STEVEN|60456",
-      "to": "C00432815",
-      "amount": 200.0,
-      "visibility": "disclosed",
-      "depth": 4,
-      "transaction_types": [
-        "15"
-      ],
-      "count": 8,
-      "date_range": [
-        "2023-08-07",
-        "2024-12-04"
-      ],
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00432815&two_year_transaction_period=2024&contributor_name=MILLER%2C+STEVEN"
-    },
-    {
-      "from": "ind:ACEVEDO_DAMIEN|60586",
-      "to": "C00432815",
-      "amount": 200.0,
-      "visibility": "disclosed",
-      "depth": 4,
-      "transaction_types": [
-        "15"
-      ],
-      "count": 14,
-      "date_range": [
-        "2023-09-22",
-        "2024-11-26"
-      ],
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00432815&two_year_transaction_period=2024&contributor_name=ACEVEDO%2C+DAMIEN"
-    },
-    {
-      "from": "ind:SHEEHAN_ADAM|60441",
-      "to": "C00432815",
-      "amount": 200.0,
-      "visibility": "disclosed",
-      "depth": 4,
-      "transaction_types": [
-        "15"
-      ],
-      "count": 8,
-      "date_range": [
-        "2023-08-07",
-        "2024-12-04"
-      ],
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00432815&two_year_transaction_period=2024&contributor_name=SHEEHAN%2C+ADAM"
-    },
-    {
-      "from": "ind:WIENCEK_THOMAS|60632",
-      "to": "C00432815",
-      "amount": 200.0,
-      "visibility": "disclosed",
-      "depth": 4,
-      "transaction_types": [
-        "15"
-      ],
-      "count": 8,
-      "date_range": [
-        "2023-08-21",
-        "2024-11-26"
-      ],
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00432815&two_year_transaction_period=2024&contributor_name=WIENCEK%2C+THOMAS"
     },
     {
       "from": "ind:MC_CARTHY_MICHAEL|60654",
@@ -8196,6 +8106,118 @@
       "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00432815&two_year_transaction_period=2024&contributor_name=CUPRISIN%2C+BRIAN"
     },
     {
+      "from": "ind:O'CONNOR_THOMAS|60091",
+      "to": "C00432815",
+      "amount": 200.0,
+      "visibility": "disclosed",
+      "depth": 4,
+      "transaction_types": [
+        "15"
+      ],
+      "count": 8,
+      "date_range": [
+        "2023-08-07",
+        "2024-12-04"
+      ],
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00432815&two_year_transaction_period=2024&contributor_name=O%27CONNOR%2C+THOMAS"
+    },
+    {
+      "from": "ind:TAVAREZ_DAVID|60657",
+      "to": "C00432815",
+      "amount": 200.0,
+      "visibility": "disclosed",
+      "depth": 4,
+      "transaction_types": [
+        "15"
+      ],
+      "count": 8,
+      "date_range": [
+        "2023-08-21",
+        "2024-11-27"
+      ],
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00432815&two_year_transaction_period=2024&contributor_name=TAVAREZ%2C+DAVID"
+    },
+    {
+      "from": "ind:GONZALEZ_JAVIER|46311",
+      "to": "C00432815",
+      "amount": 200.0,
+      "visibility": "disclosed",
+      "depth": 4,
+      "transaction_types": [
+        "15"
+      ],
+      "count": 7,
+      "date_range": [
+        "2023-07-10",
+        "2024-11-26"
+      ],
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00432815&two_year_transaction_period=2024&contributor_name=GONZALEZ%2C+JAVIER"
+    },
+    {
+      "from": "ind:STOPKA_LUKASZ|60457",
+      "to": "C00432815",
+      "amount": 200.0,
+      "visibility": "disclosed",
+      "depth": 4,
+      "transaction_types": [
+        "15"
+      ],
+      "count": 8,
+      "date_range": [
+        "2023-09-22",
+        "2024-11-27"
+      ],
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00432815&two_year_transaction_period=2024&contributor_name=STOPKA%2C+LUKASZ"
+    },
+    {
+      "from": "ind:MILLER_STEVEN|60456",
+      "to": "C00432815",
+      "amount": 200.0,
+      "visibility": "disclosed",
+      "depth": 4,
+      "transaction_types": [
+        "15"
+      ],
+      "count": 8,
+      "date_range": [
+        "2023-08-07",
+        "2024-12-04"
+      ],
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00432815&two_year_transaction_period=2024&contributor_name=MILLER%2C+STEVEN"
+    },
+    {
+      "from": "ind:ACEVEDO_DAMIEN|60586",
+      "to": "C00432815",
+      "amount": 200.0,
+      "visibility": "disclosed",
+      "depth": 4,
+      "transaction_types": [
+        "15"
+      ],
+      "count": 14,
+      "date_range": [
+        "2023-09-22",
+        "2024-11-26"
+      ],
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00432815&two_year_transaction_period=2024&contributor_name=ACEVEDO%2C+DAMIEN"
+    },
+    {
+      "from": "ind:SHEEHAN_ADAM|60441",
+      "to": "C00432815",
+      "amount": 200.0,
+      "visibility": "disclosed",
+      "depth": 4,
+      "transaction_types": [
+        "15"
+      ],
+      "count": 8,
+      "date_range": [
+        "2023-08-07",
+        "2024-12-04"
+      ],
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00432815&two_year_transaction_period=2024&contributor_name=SHEEHAN%2C+ADAM"
+    },
+    {
       "from": "agg:other@C00432815",
       "to": "C00432815",
       "amount": 9785.0,
@@ -8306,134 +8328,6 @@
         "2024-10-16"
       ],
       "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00065870&two_year_transaction_period=2024&contributor_name=CASTO%2C+JOSEPH+W+III"
-    },
-    {
-      "from": "ind:KLOPMAN_JACK_W_II|44136",
-      "to": "C00065870",
-      "amount": 784.0,
-      "visibility": "disclosed",
-      "depth": 4,
-      "transaction_types": [
-        "15"
-      ],
-      "count": 6,
-      "date_range": [
-        "2023-06-30",
-        "2024-12-31"
-      ],
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00065870&two_year_transaction_period=2024&contributor_name=KLOPMAN%2C+JACK+W+II"
-    },
-    {
-      "from": "ind:CULLISON_JOHN_D|43844",
-      "to": "C00065870",
-      "amount": 784.0,
-      "visibility": "disclosed",
-      "depth": 4,
-      "transaction_types": [
-        "15"
-      ],
-      "count": 6,
-      "date_range": [
-        "2023-06-30",
-        "2024-12-31"
-      ],
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00065870&two_year_transaction_period=2024&contributor_name=CULLISON%2C+JOHN+D"
-    },
-    {
-      "from": "ind:BERTOLONE_MICHAEL_R.|44077",
-      "to": "C00065870",
-      "amount": 784.0,
-      "visibility": "disclosed",
-      "depth": 4,
-      "transaction_types": [
-        "15"
-      ],
-      "count": 6,
-      "date_range": [
-        "2023-06-30",
-        "2024-12-31"
-      ],
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00065870&two_year_transaction_period=2024&contributor_name=BERTOLONE%2C+MICHAEL+R."
-    },
-    {
-      "from": "ind:UHL_FRANK_J_II|43130",
-      "to": "C00065870",
-      "amount": 784.0,
-      "visibility": "disclosed",
-      "depth": 4,
-      "transaction_types": [
-        "15"
-      ],
-      "count": 6,
-      "date_range": [
-        "2023-06-30",
-        "2024-12-31"
-      ],
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00065870&two_year_transaction_period=2024&contributor_name=UHL%2C+FRANK+J+II"
-    },
-    {
-      "from": "ind:LARKINS_THOMAS_E|43935",
-      "to": "C00065870",
-      "amount": 784.0,
-      "visibility": "disclosed",
-      "depth": 4,
-      "transaction_types": [
-        "15"
-      ],
-      "count": 6,
-      "date_range": [
-        "2023-06-30",
-        "2024-12-31"
-      ],
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00065870&two_year_transaction_period=2024&contributor_name=LARKINS%2C+THOMAS+E"
-    },
-    {
-      "from": "ind:CREEKS_CHAD|43056",
-      "to": "C00065870",
-      "amount": 784.0,
-      "visibility": "disclosed",
-      "depth": 4,
-      "transaction_types": [
-        "15"
-      ],
-      "count": 6,
-      "date_range": [
-        "2023-06-30",
-        "2024-12-31"
-      ],
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00065870&two_year_transaction_period=2024&contributor_name=CREEKS%2C+CHAD"
-    },
-    {
-      "from": "ind:HOOPES_DANIEL_W|44657",
-      "to": "C00065870",
-      "amount": 784.0,
-      "visibility": "disclosed",
-      "depth": 4,
-      "transaction_types": [
-        "15"
-      ],
-      "count": 6,
-      "date_range": [
-        "2023-06-30",
-        "2024-12-31"
-      ],
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00065870&two_year_transaction_period=2024&contributor_name=HOOPES%2C+DANIEL+W"
-    },
-    {
-      "from": "ind:SIESEL_KIPTON|44807",
-      "to": "C00065870",
-      "amount": 784.0,
-      "visibility": "disclosed",
-      "depth": 4,
-      "transaction_types": [
-        "15"
-      ],
-      "count": 6,
-      "date_range": [
-        "2023-06-30",
-        "2024-12-31"
-      ],
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00065870&two_year_transaction_period=2024&contributor_name=SIESEL%2C+KIPTON"
     },
     {
       "from": "ind:STRACHAM_WESLEY|45122",
@@ -8578,6 +8472,134 @@
         "2024-12-31"
       ],
       "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00065870&two_year_transaction_period=2024&contributor_name=STASH%2C+GREGORY+S"
+    },
+    {
+      "from": "ind:KLOPMAN_JACK_W_II|44136",
+      "to": "C00065870",
+      "amount": 784.0,
+      "visibility": "disclosed",
+      "depth": 4,
+      "transaction_types": [
+        "15"
+      ],
+      "count": 6,
+      "date_range": [
+        "2023-06-30",
+        "2024-12-31"
+      ],
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00065870&two_year_transaction_period=2024&contributor_name=KLOPMAN%2C+JACK+W+II"
+    },
+    {
+      "from": "ind:CULLISON_JOHN_D|43844",
+      "to": "C00065870",
+      "amount": 784.0,
+      "visibility": "disclosed",
+      "depth": 4,
+      "transaction_types": [
+        "15"
+      ],
+      "count": 6,
+      "date_range": [
+        "2023-06-30",
+        "2024-12-31"
+      ],
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00065870&two_year_transaction_period=2024&contributor_name=CULLISON%2C+JOHN+D"
+    },
+    {
+      "from": "ind:BERTOLONE_MICHAEL_R.|44077",
+      "to": "C00065870",
+      "amount": 784.0,
+      "visibility": "disclosed",
+      "depth": 4,
+      "transaction_types": [
+        "15"
+      ],
+      "count": 6,
+      "date_range": [
+        "2023-06-30",
+        "2024-12-31"
+      ],
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00065870&two_year_transaction_period=2024&contributor_name=BERTOLONE%2C+MICHAEL+R."
+    },
+    {
+      "from": "ind:UHL_FRANK_J_II|43130",
+      "to": "C00065870",
+      "amount": 784.0,
+      "visibility": "disclosed",
+      "depth": 4,
+      "transaction_types": [
+        "15"
+      ],
+      "count": 6,
+      "date_range": [
+        "2023-06-30",
+        "2024-12-31"
+      ],
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00065870&two_year_transaction_period=2024&contributor_name=UHL%2C+FRANK+J+II"
+    },
+    {
+      "from": "ind:LARKINS_THOMAS_E|43935",
+      "to": "C00065870",
+      "amount": 784.0,
+      "visibility": "disclosed",
+      "depth": 4,
+      "transaction_types": [
+        "15"
+      ],
+      "count": 6,
+      "date_range": [
+        "2023-06-30",
+        "2024-12-31"
+      ],
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00065870&two_year_transaction_period=2024&contributor_name=LARKINS%2C+THOMAS+E"
+    },
+    {
+      "from": "ind:CREEKS_CHAD|43056",
+      "to": "C00065870",
+      "amount": 784.0,
+      "visibility": "disclosed",
+      "depth": 4,
+      "transaction_types": [
+        "15"
+      ],
+      "count": 6,
+      "date_range": [
+        "2023-06-30",
+        "2024-12-31"
+      ],
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00065870&two_year_transaction_period=2024&contributor_name=CREEKS%2C+CHAD"
+    },
+    {
+      "from": "ind:HOOPES_DANIEL_W|44657",
+      "to": "C00065870",
+      "amount": 784.0,
+      "visibility": "disclosed",
+      "depth": 4,
+      "transaction_types": [
+        "15"
+      ],
+      "count": 6,
+      "date_range": [
+        "2023-06-30",
+        "2024-12-31"
+      ],
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00065870&two_year_transaction_period=2024&contributor_name=HOOPES%2C+DANIEL+W"
+    },
+    {
+      "from": "ind:SIESEL_KIPTON|44807",
+      "to": "C00065870",
+      "amount": 784.0,
+      "visibility": "disclosed",
+      "depth": 4,
+      "transaction_types": [
+        "15"
+      ],
+      "count": 6,
+      "date_range": [
+        "2023-06-30",
+        "2024-12-31"
+      ],
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00065870&two_year_transaction_period=2024&contributor_name=SIESEL%2C+KIPTON"
     },
     {
       "from": "ind:MORGAN_CLAY|45601",
@@ -8756,54 +8778,6 @@
       "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00219568&two_year_transaction_period=2024&contributor_name=BRAND%2C+LUCAS+W."
     },
     {
-      "from": "ind:MCCLEMENT_SARKIS|91103",
-      "to": "C00219568",
-      "amount": 1464.0,
-      "visibility": "disclosed",
-      "depth": 4,
-      "transaction_types": [
-        "15"
-      ],
-      "count": 14,
-      "date_range": [
-        "2023-02-01",
-        "2024-08-01"
-      ],
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00219568&two_year_transaction_period=2024&contributor_name=MCCLEMENT%2C+SARKIS"
-    },
-    {
-      "from": "ind:DIFRANCO_NICHOLAS_JR.|91103",
-      "to": "C00219568",
-      "amount": 1464.0,
-      "visibility": "disclosed",
-      "depth": 4,
-      "transaction_types": [
-        "15"
-      ],
-      "count": 14,
-      "date_range": [
-        "2023-02-01",
-        "2024-08-01"
-      ],
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00219568&two_year_transaction_period=2024&contributor_name=DIFRANCO%2C+NICHOLAS+JR."
-    },
-    {
-      "from": "ind:READ_MATT_J.|91103",
-      "to": "C00219568",
-      "amount": 1464.0,
-      "visibility": "disclosed",
-      "depth": 4,
-      "transaction_types": [
-        "15"
-      ],
-      "count": 14,
-      "date_range": [
-        "2023-02-01",
-        "2024-08-01"
-      ],
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00219568&two_year_transaction_period=2024&contributor_name=READ%2C+MATT+J."
-    },
-    {
       "from": "ind:COLLINS_MARTIN_R.|91103",
       "to": "C00219568",
       "amount": 1464.0,
@@ -8868,20 +8842,52 @@
       "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00219568&two_year_transaction_period=2024&contributor_name=ADAMS%2C+JOHN+W."
     },
     {
-      "from": "ind:KINSEY_SHAWN_O.|91103",
+      "from": "ind:MCCLEMENT_SARKIS|91103",
       "to": "C00219568",
-      "amount": 1446.0,
+      "amount": 1464.0,
       "visibility": "disclosed",
       "depth": 4,
       "transaction_types": [
         "15"
       ],
-      "count": 10,
+      "count": 14,
       "date_range": [
         "2023-02-01",
-        "2024-06-04"
+        "2024-08-01"
       ],
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00219568&two_year_transaction_period=2024&contributor_name=KINSEY%2C+SHAWN+O."
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00219568&two_year_transaction_period=2024&contributor_name=MCCLEMENT%2C+SARKIS"
+    },
+    {
+      "from": "ind:DIFRANCO_NICHOLAS_JR.|91103",
+      "to": "C00219568",
+      "amount": 1464.0,
+      "visibility": "disclosed",
+      "depth": 4,
+      "transaction_types": [
+        "15"
+      ],
+      "count": 14,
+      "date_range": [
+        "2023-02-01",
+        "2024-08-01"
+      ],
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00219568&two_year_transaction_period=2024&contributor_name=DIFRANCO%2C+NICHOLAS+JR."
+    },
+    {
+      "from": "ind:READ_MATT_J.|91103",
+      "to": "C00219568",
+      "amount": 1464.0,
+      "visibility": "disclosed",
+      "depth": 4,
+      "transaction_types": [
+        "15"
+      ],
+      "count": 14,
+      "date_range": [
+        "2023-02-01",
+        "2024-08-01"
+      ],
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00219568&two_year_transaction_period=2024&contributor_name=READ%2C+MATT+J."
     },
     {
       "from": "ind:HUNT_KENNETH_R.|91103",
@@ -8948,6 +8954,22 @@
       "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00219568&two_year_transaction_period=2024&contributor_name=GARBARINO%2C+DAVID+A."
     },
     {
+      "from": "ind:KINSEY_SHAWN_O.|91103",
+      "to": "C00219568",
+      "amount": 1446.0,
+      "visibility": "disclosed",
+      "depth": 4,
+      "transaction_types": [
+        "15"
+      ],
+      "count": 10,
+      "date_range": [
+        "2023-02-01",
+        "2024-06-04"
+      ],
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00219568&two_year_transaction_period=2024&contributor_name=KINSEY%2C+SHAWN+O."
+    },
+    {
       "from": "ind:TZEC_HUGO_A.|91103",
       "to": "C00219568",
       "amount": 1430.0,
@@ -9010,6 +9032,214 @@
         "2024-05-01"
       ],
       "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00219568&two_year_transaction_period=2024&contributor_name=SIKORSKI%2C+DAVID+K."
+    },
+    {
+      "from": "ind:FLOT_JOHN_V.|91103",
+      "to": "C00219568",
+      "amount": 1407.0,
+      "visibility": "disclosed",
+      "depth": 4,
+      "transaction_types": [
+        "15"
+      ],
+      "count": 14,
+      "date_range": [
+        "2023-02-01",
+        "2024-08-01"
+      ],
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00219568&two_year_transaction_period=2024&contributor_name=FLOT%2C+JOHN+V."
+    },
+    {
+      "from": "ind:FAULKNER_BRIAN|91103",
+      "to": "C00219568",
+      "amount": 1407.0,
+      "visibility": "disclosed",
+      "depth": 4,
+      "transaction_types": [
+        "15"
+      ],
+      "count": 14,
+      "date_range": [
+        "2023-02-01",
+        "2024-08-01"
+      ],
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00219568&two_year_transaction_period=2024&contributor_name=FAULKNER%2C+BRIAN"
+    },
+    {
+      "from": "ind:CROSS_LEONARD|91103",
+      "to": "C00219568",
+      "amount": 1407.0,
+      "visibility": "disclosed",
+      "depth": 4,
+      "transaction_types": [
+        "15"
+      ],
+      "count": 14,
+      "date_range": [
+        "2023-02-01",
+        "2024-08-01"
+      ],
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00219568&two_year_transaction_period=2024&contributor_name=CROSS%2C+LEONARD"
+    },
+    {
+      "from": "ind:JAMES_KEVIN|91103",
+      "to": "C00219568",
+      "amount": 1407.0,
+      "visibility": "disclosed",
+      "depth": 4,
+      "transaction_types": [
+        "15"
+      ],
+      "count": 14,
+      "date_range": [
+        "2023-02-01",
+        "2024-08-01"
+      ],
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00219568&two_year_transaction_period=2024&contributor_name=JAMES%2C+KEVIN"
+    },
+    {
+      "from": "ind:NEAL_DEON|91103",
+      "to": "C00219568",
+      "amount": 1407.0,
+      "visibility": "disclosed",
+      "depth": 4,
+      "transaction_types": [
+        "15"
+      ],
+      "count": 14,
+      "date_range": [
+        "2023-02-01",
+        "2024-08-01"
+      ],
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00219568&two_year_transaction_period=2024&contributor_name=NEAL%2C+DEON"
+    },
+    {
+      "from": "ind:FELLOWS_JEFFREY_D.|91103",
+      "to": "C00219568",
+      "amount": 1407.0,
+      "visibility": "disclosed",
+      "depth": 4,
+      "transaction_types": [
+        "15"
+      ],
+      "count": 14,
+      "date_range": [
+        "2023-02-01",
+        "2024-08-01"
+      ],
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00219568&two_year_transaction_period=2024&contributor_name=FELLOWS%2C+JEFFREY+D."
+    },
+    {
+      "from": "ind:ABBOTT_JOE|91103",
+      "to": "C00219568",
+      "amount": 1407.0,
+      "visibility": "disclosed",
+      "depth": 4,
+      "transaction_types": [
+        "15"
+      ],
+      "count": 14,
+      "date_range": [
+        "2023-02-01",
+        "2024-08-01"
+      ],
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00219568&two_year_transaction_period=2024&contributor_name=ABBOTT%2C+JOE"
+    },
+    {
+      "from": "ind:MATTHEWS_ROBERT_D|91103",
+      "to": "C00219568",
+      "amount": 1407.0,
+      "visibility": "disclosed",
+      "depth": 4,
+      "transaction_types": [
+        "15"
+      ],
+      "count": 14,
+      "date_range": [
+        "2023-02-01",
+        "2024-08-01"
+      ],
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00219568&two_year_transaction_period=2024&contributor_name=MATTHEWS%2C+ROBERT+D"
+    },
+    {
+      "from": "ind:MENDENHALL_JAMES|91103",
+      "to": "C00219568",
+      "amount": 1407.0,
+      "visibility": "disclosed",
+      "depth": 4,
+      "transaction_types": [
+        "15"
+      ],
+      "count": 14,
+      "date_range": [
+        "2023-02-01",
+        "2024-08-01"
+      ],
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00219568&two_year_transaction_period=2024&contributor_name=MENDENHALL%2C+JAMES"
+    },
+    {
+      "from": "ind:SAINZ_JOSE|91103",
+      "to": "C00219568",
+      "amount": 1407.0,
+      "visibility": "disclosed",
+      "depth": 4,
+      "transaction_types": [
+        "15"
+      ],
+      "count": 14,
+      "date_range": [
+        "2023-02-01",
+        "2024-08-01"
+      ],
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00219568&two_year_transaction_period=2024&contributor_name=SAINZ%2C+JOSE"
+    },
+    {
+      "from": "ind:HALL_JUSTIN|91103",
+      "to": "C00219568",
+      "amount": 1407.0,
+      "visibility": "disclosed",
+      "depth": 4,
+      "transaction_types": [
+        "15"
+      ],
+      "count": 14,
+      "date_range": [
+        "2023-02-01",
+        "2024-08-01"
+      ],
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00219568&two_year_transaction_period=2024&contributor_name=HALL%2C+JUSTIN"
+    },
+    {
+      "from": "ind:LAMB_RUSSELL|91103",
+      "to": "C00219568",
+      "amount": 1407.0,
+      "visibility": "disclosed",
+      "depth": 4,
+      "transaction_types": [
+        "15"
+      ],
+      "count": 14,
+      "date_range": [
+        "2023-02-01",
+        "2024-08-01"
+      ],
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00219568&two_year_transaction_period=2024&contributor_name=LAMB%2C+RUSSELL"
+    },
+    {
+      "from": "ind:SNODGRASS_DAVID|91103",
+      "to": "C00219568",
+      "amount": 1407.0,
+      "visibility": "disclosed",
+      "depth": 4,
+      "transaction_types": [
+        "15"
+      ],
+      "count": 14,
+      "date_range": [
+        "2023-02-01",
+        "2024-08-01"
+      ],
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00219568&two_year_transaction_period=2024&contributor_name=SNODGRASS%2C+DAVID"
     },
     {
       "from": "ind:BUNCH_ROSS_T.|91103",
@@ -9122,214 +9352,6 @@
         "2024-08-01"
       ],
       "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00219568&two_year_transaction_period=2024&contributor_name=STANLEY%2C+RYAN"
-    },
-    {
-      "from": "ind:THURWACHTER_JOEL_L.|91103",
-      "to": "C00219568",
-      "amount": 1407.0,
-      "visibility": "disclosed",
-      "depth": 4,
-      "transaction_types": [
-        "15"
-      ],
-      "count": 14,
-      "date_range": [
-        "2023-02-01",
-        "2024-08-01"
-      ],
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00219568&two_year_transaction_period=2024&contributor_name=THURWACHTER%2C+JOEL+L."
-    },
-    {
-      "from": "ind:BRIERLEY_MICHAEL|91103",
-      "to": "C00219568",
-      "amount": 1407.0,
-      "visibility": "disclosed",
-      "depth": 4,
-      "transaction_types": [
-        "15"
-      ],
-      "count": 14,
-      "date_range": [
-        "2023-02-01",
-        "2024-08-01"
-      ],
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00219568&two_year_transaction_period=2024&contributor_name=BRIERLEY%2C+MICHAEL"
-    },
-    {
-      "from": "ind:GRANGER_BRIAN|91103",
-      "to": "C00219568",
-      "amount": 1407.0,
-      "visibility": "disclosed",
-      "depth": 4,
-      "transaction_types": [
-        "15"
-      ],
-      "count": 14,
-      "date_range": [
-        "2023-02-01",
-        "2024-08-01"
-      ],
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00219568&two_year_transaction_period=2024&contributor_name=GRANGER%2C+BRIAN"
-    },
-    {
-      "from": "ind:BANUELOS_VICTOR|91103",
-      "to": "C00219568",
-      "amount": 1407.0,
-      "visibility": "disclosed",
-      "depth": 4,
-      "transaction_types": [
-        "15"
-      ],
-      "count": 14,
-      "date_range": [
-        "2023-02-01",
-        "2024-08-01"
-      ],
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00219568&two_year_transaction_period=2024&contributor_name=BANUELOS%2C+VICTOR"
-    },
-    {
-      "from": "ind:DRENNAN_THOMAS_C.|91103",
-      "to": "C00219568",
-      "amount": 1407.0,
-      "visibility": "disclosed",
-      "depth": 4,
-      "transaction_types": [
-        "15"
-      ],
-      "count": 14,
-      "date_range": [
-        "2023-02-01",
-        "2024-08-01"
-      ],
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00219568&two_year_transaction_period=2024&contributor_name=DRENNAN%2C+THOMAS+C."
-    },
-    {
-      "from": "ind:WOOD_JAKE|91103",
-      "to": "C00219568",
-      "amount": 1407.0,
-      "visibility": "disclosed",
-      "depth": 4,
-      "transaction_types": [
-        "15"
-      ],
-      "count": 14,
-      "date_range": [
-        "2023-02-01",
-        "2024-08-01"
-      ],
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00219568&two_year_transaction_period=2024&contributor_name=WOOD%2C+JAKE"
-    },
-    {
-      "from": "ind:GORT_RAYMOND|91103",
-      "to": "C00219568",
-      "amount": 1407.0,
-      "visibility": "disclosed",
-      "depth": 4,
-      "transaction_types": [
-        "15"
-      ],
-      "count": 14,
-      "date_range": [
-        "2023-02-01",
-        "2024-08-01"
-      ],
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00219568&two_year_transaction_period=2024&contributor_name=GORT%2C+RAYMOND"
-    },
-    {
-      "from": "ind:FLOT_JOHN_V.|91103",
-      "to": "C00219568",
-      "amount": 1407.0,
-      "visibility": "disclosed",
-      "depth": 4,
-      "transaction_types": [
-        "15"
-      ],
-      "count": 14,
-      "date_range": [
-        "2023-02-01",
-        "2024-08-01"
-      ],
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00219568&two_year_transaction_period=2024&contributor_name=FLOT%2C+JOHN+V."
-    },
-    {
-      "from": "ind:FAULKNER_BRIAN|91103",
-      "to": "C00219568",
-      "amount": 1407.0,
-      "visibility": "disclosed",
-      "depth": 4,
-      "transaction_types": [
-        "15"
-      ],
-      "count": 14,
-      "date_range": [
-        "2023-02-01",
-        "2024-08-01"
-      ],
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00219568&two_year_transaction_period=2024&contributor_name=FAULKNER%2C+BRIAN"
-    },
-    {
-      "from": "ind:CROSS_LEONARD|91103",
-      "to": "C00219568",
-      "amount": 1407.0,
-      "visibility": "disclosed",
-      "depth": 4,
-      "transaction_types": [
-        "15"
-      ],
-      "count": 14,
-      "date_range": [
-        "2023-02-01",
-        "2024-08-01"
-      ],
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00219568&two_year_transaction_period=2024&contributor_name=CROSS%2C+LEONARD"
-    },
-    {
-      "from": "ind:JAMES_KEVIN|91103",
-      "to": "C00219568",
-      "amount": 1407.0,
-      "visibility": "disclosed",
-      "depth": 4,
-      "transaction_types": [
-        "15"
-      ],
-      "count": 14,
-      "date_range": [
-        "2023-02-01",
-        "2024-08-01"
-      ],
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00219568&two_year_transaction_period=2024&contributor_name=JAMES%2C+KEVIN"
-    },
-    {
-      "from": "ind:NEAL_DEON|91103",
-      "to": "C00219568",
-      "amount": 1407.0,
-      "visibility": "disclosed",
-      "depth": 4,
-      "transaction_types": [
-        "15"
-      ],
-      "count": 14,
-      "date_range": [
-        "2023-02-01",
-        "2024-08-01"
-      ],
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00219568&two_year_transaction_period=2024&contributor_name=NEAL%2C+DEON"
-    },
-    {
-      "from": "ind:FELLOWS_JEFFREY_D.|91103",
-      "to": "C00219568",
-      "amount": 1407.0,
-      "visibility": "disclosed",
-      "depth": 4,
-      "transaction_types": [
-        "15"
-      ],
-      "count": 14,
-      "date_range": [
-        "2023-02-01",
-        "2024-08-01"
-      ],
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00219568&two_year_transaction_period=2024&contributor_name=FELLOWS%2C+JEFFREY+D."
     },
     {
       "from": "agg:other@C00219568",
@@ -9492,22 +9514,6 @@
       "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00348540&two_year_transaction_period=2024&contributor_name=RICHARDSON%2C+APRIA"
     },
     {
-      "from": "ind:BOZIL_LISE|11212",
-      "to": "C00348540",
-      "amount": 1200.0,
-      "visibility": "disclosed",
-      "depth": 4,
-      "transaction_types": [
-        "15"
-      ],
-      "count": 14,
-      "date_range": [
-        "2023-03-31",
-        "2023-11-30"
-      ],
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00348540&two_year_transaction_period=2024&contributor_name=BOZIL%2C+LISE"
-    },
-    {
       "from": "ind:GARCIA_ANTHONY|11706",
       "to": "C00348540",
       "amount": 1200.0,
@@ -9538,6 +9544,22 @@
         "2024-09-10"
       ],
       "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00348540&two_year_transaction_period=2024&contributor_name=ESCOSIA%2C+LIZETTE"
+    },
+    {
+      "from": "ind:BOZIL_LISE|11212",
+      "to": "C00348540",
+      "amount": 1200.0,
+      "visibility": "disclosed",
+      "depth": 4,
+      "transaction_types": [
+        "15"
+      ],
+      "count": 14,
+      "date_range": [
+        "2023-03-31",
+        "2023-11-30"
+      ],
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00348540&two_year_transaction_period=2024&contributor_name=BOZIL%2C+LISE"
     },
     {
       "from": "ind:HARTMAN_LAUREN|11216",
@@ -9652,22 +9674,6 @@
       "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00348540&two_year_transaction_period=2024&contributor_name=SAUSNER%2C+HARRIET"
     },
     {
-      "from": "ind:BEHROOZI_MITRA|12726",
-      "to": "C00348540",
-      "amount": 900.0,
-      "visibility": "disclosed",
-      "depth": 4,
-      "transaction_types": [
-        "15"
-      ],
-      "count": 7,
-      "date_range": [
-        "2023-02-28",
-        "2023-07-31"
-      ],
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00348540&two_year_transaction_period=2024&contributor_name=BEHROOZI%2C+MITRA"
-    },
-    {
       "from": "ind:SHAW_BRENDAN|07401",
       "to": "C00348540",
       "amount": 900.0,
@@ -9682,6 +9688,22 @@
         "2024-12-27"
       ],
       "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00348540&two_year_transaction_period=2024&contributor_name=SHAW%2C+BRENDAN"
+    },
+    {
+      "from": "ind:BEHROOZI_MITRA|12726",
+      "to": "C00348540",
+      "amount": 900.0,
+      "visibility": "disclosed",
+      "depth": 4,
+      "transaction_types": [
+        "15"
+      ],
+      "count": 7,
+      "date_range": [
+        "2023-02-28",
+        "2023-07-31"
+      ],
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00348540&two_year_transaction_period=2024&contributor_name=BEHROOZI%2C+MITRA"
     },
     {
       "from": "ind:SAADALLAH_NAJLA|07010",
@@ -9941,22 +9963,6 @@
       "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00355289&two_year_transaction_period=2024&contributor_name=JOHN%2C+PAMELA"
     },
     {
-      "from": "ind:FRIEDLAENDER_LENORE|11377",
-      "to": "C00355289",
-      "amount": 1760.0,
-      "visibility": "disclosed",
-      "depth": 4,
-      "transaction_types": [
-        "15"
-      ],
-      "count": 20,
-      "date_range": [
-        "2023-03-01",
-        "2024-12-27"
-      ],
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00355289&two_year_transaction_period=2024&contributor_name=FRIEDLAENDER%2C+LENORE"
-    },
-    {
       "from": "ind:HILL_ROBERT|11220",
       "to": "C00355289",
       "amount": 1760.0,
@@ -9987,6 +9993,22 @@
         "2024-12-27"
       ],
       "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00355289&two_year_transaction_period=2024&contributor_name=HOHENSTEIN%2C+MARYANNE"
+    },
+    {
+      "from": "ind:FRIEDLAENDER_LENORE|11377",
+      "to": "C00355289",
+      "amount": 1760.0,
+      "visibility": "disclosed",
+      "depth": 4,
+      "transaction_types": [
+        "15"
+      ],
+      "count": 20,
+      "date_range": [
+        "2023-03-01",
+        "2024-12-27"
+      ],
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00355289&two_year_transaction_period=2024&contributor_name=FRIEDLAENDER%2C+LENORE"
     },
     {
       "from": "ind:DEVITA_DEAN|11554",
@@ -10069,22 +10091,6 @@
       "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00355289&two_year_transaction_period=2024&contributor_name=SMITH%2C+ROBERT"
     },
     {
-      "from": "ind:ORME_LORI|11743",
-      "to": "C00355289",
-      "amount": 1185.0,
-      "visibility": "disclosed",
-      "depth": 4,
-      "transaction_types": [
-        "15"
-      ],
-      "count": 18,
-      "date_range": [
-        "2023-03-31",
-        "2024-12-27"
-      ],
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00355289&two_year_transaction_period=2024&contributor_name=ORME%2C+LORI"
-    },
-    {
       "from": "ind:SUGIMORI_AMY|11201",
       "to": "C00355289",
       "amount": 1185.0,
@@ -10099,6 +10105,22 @@
         "2024-12-27"
       ],
       "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00355289&two_year_transaction_period=2024&contributor_name=SUGIMORI%2C+AMY"
+    },
+    {
+      "from": "ind:ORME_LORI|11743",
+      "to": "C00355289",
+      "amount": 1185.0,
+      "visibility": "disclosed",
+      "depth": 4,
+      "transaction_types": [
+        "15"
+      ],
+      "count": 18,
+      "date_range": [
+        "2023-03-31",
+        "2024-12-27"
+      ],
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00355289&two_year_transaction_period=2024&contributor_name=ORME%2C+LORI"
     },
     {
       "from": "ind:BAILEY_DOUGLAS|64119",
@@ -10213,70 +10235,6 @@
       "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00355289&two_year_transaction_period=2024&contributor_name=FRAZIER%2C+FRANK"
     },
     {
-      "from": "ind:AULISIO_JOSEPH|07079",
-      "to": "C00355289",
-      "amount": 700.0,
-      "visibility": "disclosed",
-      "depth": 4,
-      "transaction_types": [
-        "15"
-      ],
-      "count": 16,
-      "date_range": [
-        "2023-05-09",
-        "2024-12-27"
-      ],
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00355289&two_year_transaction_period=2024&contributor_name=AULISIO%2C+JOSEPH"
-    },
-    {
-      "from": "ind:CONTRERAS_JAIME|20740",
-      "to": "C00355289",
-      "amount": 700.0,
-      "visibility": "disclosed",
-      "depth": 4,
-      "transaction_types": [
-        "15"
-      ],
-      "count": 16,
-      "date_range": [
-        "2023-05-09",
-        "2024-12-27"
-      ],
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00355289&two_year_transaction_period=2024&contributor_name=CONTRERAS%2C+JAIME"
-    },
-    {
-      "from": "ind:SALDANA_CLAUDIO|07042",
-      "to": "C00355289",
-      "amount": 700.0,
-      "visibility": "disclosed",
-      "depth": 4,
-      "transaction_types": [
-        "15"
-      ],
-      "count": 16,
-      "date_range": [
-        "2023-05-09",
-        "2024-12-27"
-      ],
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00355289&two_year_transaction_period=2024&contributor_name=SALDANA%2C+CLAUDIO"
-    },
-    {
-      "from": "ind:JOHNSTON_DENIS|07083",
-      "to": "C00355289",
-      "amount": 700.0,
-      "visibility": "disclosed",
-      "depth": 4,
-      "transaction_types": [
-        "15"
-      ],
-      "count": 16,
-      "date_range": [
-        "2023-05-09",
-        "2024-12-27"
-      ],
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00355289&two_year_transaction_period=2024&contributor_name=JOHNSTON%2C+DENIS"
-    },
-    {
       "from": "ind:COLLERD_SUZANNA|11415",
       "to": "C00355289",
       "amount": 700.0,
@@ -10357,6 +10315,70 @@
       "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00355289&two_year_transaction_period=2024&contributor_name=CRUZ%2C+DAISY"
     },
     {
+      "from": "ind:AULISIO_JOSEPH|07079",
+      "to": "C00355289",
+      "amount": 700.0,
+      "visibility": "disclosed",
+      "depth": 4,
+      "transaction_types": [
+        "15"
+      ],
+      "count": 16,
+      "date_range": [
+        "2023-05-09",
+        "2024-12-27"
+      ],
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00355289&two_year_transaction_period=2024&contributor_name=AULISIO%2C+JOSEPH"
+    },
+    {
+      "from": "ind:CONTRERAS_JAIME|20740",
+      "to": "C00355289",
+      "amount": 700.0,
+      "visibility": "disclosed",
+      "depth": 4,
+      "transaction_types": [
+        "15"
+      ],
+      "count": 16,
+      "date_range": [
+        "2023-05-09",
+        "2024-12-27"
+      ],
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00355289&two_year_transaction_period=2024&contributor_name=CONTRERAS%2C+JAIME"
+    },
+    {
+      "from": "ind:SALDANA_CLAUDIO|07042",
+      "to": "C00355289",
+      "amount": 700.0,
+      "visibility": "disclosed",
+      "depth": 4,
+      "transaction_types": [
+        "15"
+      ],
+      "count": 16,
+      "date_range": [
+        "2023-05-09",
+        "2024-12-27"
+      ],
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00355289&two_year_transaction_period=2024&contributor_name=SALDANA%2C+CLAUDIO"
+    },
+    {
+      "from": "ind:JOHNSTON_DENIS|07083",
+      "to": "C00355289",
+      "amount": 700.0,
+      "visibility": "disclosed",
+      "depth": 4,
+      "transaction_types": [
+        "15"
+      ],
+      "count": 16,
+      "date_range": [
+        "2023-05-09",
+        "2024-12-27"
+      ],
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00355289&two_year_transaction_period=2024&contributor_name=JOHNSTON%2C+DENIS"
+    },
+    {
       "from": "ind:PAGOULIDIS_IVONNE|11377",
       "to": "C00355289",
       "amount": 690.0,
@@ -10389,22 +10411,6 @@
       "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00355289&two_year_transaction_period=2024&contributor_name=SCHMIDT%2C+PETER"
     },
     {
-      "from": "ind:PASTERNAK_EUGENE|11238",
-      "to": "C00355289",
-      "amount": 620.0,
-      "visibility": "disclosed",
-      "depth": 4,
-      "transaction_types": [
-        "15"
-      ],
-      "count": 6,
-      "date_range": [
-        "2024-01-01",
-        "2024-10-31"
-      ],
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00355289&two_year_transaction_period=2024&contributor_name=PASTERNAK%2C+EUGENE"
-    },
-    {
       "from": "ind:FIELDS_RONALD|11692",
       "to": "C00355289",
       "amount": 620.0,
@@ -10419,6 +10425,22 @@
         "2024-10-31"
       ],
       "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00355289&two_year_transaction_period=2024&contributor_name=FIELDS%2C+RONALD"
+    },
+    {
+      "from": "ind:PASTERNAK_EUGENE|11238",
+      "to": "C00355289",
+      "amount": 620.0,
+      "visibility": "disclosed",
+      "depth": 4,
+      "transaction_types": [
+        "15"
+      ],
+      "count": 6,
+      "date_range": [
+        "2024-01-01",
+        "2024-10-31"
+      ],
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00355289&two_year_transaction_period=2024&contributor_name=PASTERNAK%2C+EUGENE"
     },
     {
       "from": "agg:other@C00355289",
@@ -10885,54 +10907,6 @@
       "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00148098&two_year_transaction_period=2024&contributor_name=FALTO%2C+VIVIAN"
     },
     {
-      "from": "ind:COOK_CHRISTINE_M|13027",
-      "to": "C00148098",
-      "amount": 660.0,
-      "visibility": "disclosed",
-      "depth": 4,
-      "transaction_types": [
-        "15"
-      ],
-      "count": 33,
-      "date_range": [
-        "2023-05-24",
-        "2024-12-31"
-      ],
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00148098&two_year_transaction_period=2024&contributor_name=COOK%2C+CHRISTINE+M"
-    },
-    {
-      "from": "ind:WELSH-LIEBROSS_JUDITH_L|11422",
-      "to": "C00148098",
-      "amount": 660.0,
-      "visibility": "disclosed",
-      "depth": 4,
-      "transaction_types": [
-        "15"
-      ],
-      "count": 33,
-      "date_range": [
-        "2023-05-24",
-        "2024-12-31"
-      ],
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00148098&two_year_transaction_period=2024&contributor_name=WELSH-LIEBROSS%2C+JUDITH+L"
-    },
-    {
-      "from": "ind:KULYS_TADAS_R|11421",
-      "to": "C00148098",
-      "amount": 660.0,
-      "visibility": "disclosed",
-      "depth": 4,
-      "transaction_types": [
-        "15"
-      ],
-      "count": 33,
-      "date_range": [
-        "2023-05-24",
-        "2024-12-31"
-      ],
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00148098&two_year_transaction_period=2024&contributor_name=KULYS%2C+TADAS+R"
-    },
-    {
       "from": "ind:LADAY-HILL_CHARLENE_L|12402",
       "to": "C00148098",
       "amount": 660.0,
@@ -10995,6 +10969,54 @@
         "2024-12-31"
       ],
       "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00148098&two_year_transaction_period=2024&contributor_name=MURRAY%2C+GERALD"
+    },
+    {
+      "from": "ind:COOK_CHRISTINE_M|13027",
+      "to": "C00148098",
+      "amount": 660.0,
+      "visibility": "disclosed",
+      "depth": 4,
+      "transaction_types": [
+        "15"
+      ],
+      "count": 33,
+      "date_range": [
+        "2023-05-24",
+        "2024-12-31"
+      ],
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00148098&two_year_transaction_period=2024&contributor_name=COOK%2C+CHRISTINE+M"
+    },
+    {
+      "from": "ind:WELSH-LIEBROSS_JUDITH_L|11422",
+      "to": "C00148098",
+      "amount": 660.0,
+      "visibility": "disclosed",
+      "depth": 4,
+      "transaction_types": [
+        "15"
+      ],
+      "count": 33,
+      "date_range": [
+        "2023-05-24",
+        "2024-12-31"
+      ],
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00148098&two_year_transaction_period=2024&contributor_name=WELSH-LIEBROSS%2C+JUDITH+L"
+    },
+    {
+      "from": "ind:KULYS_TADAS_R|11421",
+      "to": "C00148098",
+      "amount": 660.0,
+      "visibility": "disclosed",
+      "depth": 4,
+      "transaction_types": [
+        "15"
+      ],
+      "count": 33,
+      "date_range": [
+        "2023-05-24",
+        "2024-12-31"
+      ],
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00148098&two_year_transaction_period=2024&contributor_name=KULYS%2C+TADAS+R"
     },
     {
       "from": "ind:UYANNA_SUSAN_C|12065",
@@ -11125,6 +11147,22 @@
       "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00148098&two_year_transaction_period=2024&contributor_name=KARAMANOL%2C+PAUL+S"
     },
     {
+      "from": "ind:ROBERTS_WENDY|10466",
+      "to": "C00148098",
+      "amount": 580.0,
+      "visibility": "disclosed",
+      "depth": 4,
+      "transaction_types": [
+        "15"
+      ],
+      "count": 29,
+      "date_range": [
+        "2023-06-01",
+        "2024-11-14"
+      ],
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00148098&two_year_transaction_period=2024&contributor_name=ROBERTS%2C+WENDY"
+    },
+    {
       "from": "ind:BRISKEY_BENJAMIN_K|14094",
       "to": "C00148098",
       "amount": 580.0,
@@ -11155,22 +11193,6 @@
         "2024-12-26"
       ],
       "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00148098&two_year_transaction_period=2024&contributor_name=MACCLOUD-ROSEMOND%2C+FAWN"
-    },
-    {
-      "from": "ind:ROBERTS_WENDY|10466",
-      "to": "C00148098",
-      "amount": 580.0,
-      "visibility": "disclosed",
-      "depth": 4,
-      "transaction_types": [
-        "15"
-      ],
-      "count": 29,
-      "date_range": [
-        "2023-06-01",
-        "2024-11-14"
-      ],
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00148098&two_year_transaction_period=2024&contributor_name=ROBERTS%2C+WENDY"
     },
     {
       "from": "ind:LERNER_NATHALIE|12983",
@@ -11557,22 +11579,6 @@
       "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00214643&two_year_transaction_period=2024&contributor_name=ALVAREZ%2C+HENRY"
     },
     {
-      "from": "ind:KING_LARRY_D|07304",
-      "to": "C00214643",
-      "amount": 922.0,
-      "visibility": "disclosed",
-      "depth": 4,
-      "transaction_types": [
-        "15"
-      ],
-      "count": 14,
-      "date_range": [
-        "2023-04-04",
-        "2024-12-07"
-      ],
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00214643&two_year_transaction_period=2024&contributor_name=KING%2C+LARRY+D"
-    },
-    {
       "from": "ind:FERNANDES_MANNY|08724",
       "to": "C00214643",
       "amount": 922.0,
@@ -11587,6 +11593,22 @@
         "2024-12-11"
       ],
       "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00214643&two_year_transaction_period=2024&contributor_name=FERNANDES%2C+MANNY"
+    },
+    {
+      "from": "ind:KING_LARRY_D|07304",
+      "to": "C00214643",
+      "amount": 922.0,
+      "visibility": "disclosed",
+      "depth": 4,
+      "transaction_types": [
+        "15"
+      ],
+      "count": 14,
+      "date_range": [
+        "2023-04-04",
+        "2024-12-07"
+      ],
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00214643&two_year_transaction_period=2024&contributor_name=KING%2C+LARRY+D"
     },
     {
       "from": "ind:PIKALOV_OLEG|07204",
@@ -11798,6 +11820,22 @@
       "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00337733&two_year_transaction_period=2024&contributor_name=PAGUAY%2C+JOSE"
     },
     {
+      "from": "ind:ROSSITTO_GIUSEPPE|11354",
+      "to": "C00337733",
+      "amount": 1053.0,
+      "visibility": "disclosed",
+      "depth": 4,
+      "transaction_types": [
+        "15"
+      ],
+      "count": 14,
+      "date_range": [
+        "2023-05-10",
+        "2024-12-27"
+      ],
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00337733&two_year_transaction_period=2024&contributor_name=ROSSITTO%2C+GIUSEPPE"
+    },
+    {
       "from": "ind:ASTUDILLO_FREDDY|11369",
       "to": "C00337733",
       "amount": 1053.0,
@@ -11828,22 +11866,6 @@
         "2024-12-27"
       ],
       "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00337733&two_year_transaction_period=2024&contributor_name=COYLE%2C+THOMAS"
-    },
-    {
-      "from": "ind:ROSSITTO_GIUSEPPE|11354",
-      "to": "C00337733",
-      "amount": 1053.0,
-      "visibility": "disclosed",
-      "depth": 4,
-      "transaction_types": [
-        "15"
-      ],
-      "count": 14,
-      "date_range": [
-        "2023-05-10",
-        "2024-12-27"
-      ],
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00337733&two_year_transaction_period=2024&contributor_name=ROSSITTO%2C+GIUSEPPE"
     },
     {
       "from": "ind:JUELA_EDISON|10458",
@@ -11942,22 +11964,6 @@
       "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00337733&two_year_transaction_period=2024&contributor_name=KOZIKOWSKI%2C+JACEK"
     },
     {
-      "from": "ind:MENDEZ_JOSE|07083",
-      "to": "C00337733",
-      "amount": 1001.0,
-      "visibility": "disclosed",
-      "depth": 4,
-      "transaction_types": [
-        "15"
-      ],
-      "count": 18,
-      "date_range": [
-        "2023-04-06",
-        "2024-12-10"
-      ],
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00337733&two_year_transaction_period=2024&contributor_name=MENDEZ%2C+JOSE"
-    },
-    {
       "from": "ind:MANNING_PETER|11210",
       "to": "C00337733",
       "amount": 1001.0,
@@ -11974,20 +11980,20 @@
       "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00337733&two_year_transaction_period=2024&contributor_name=MANNING%2C+PETER"
     },
     {
-      "from": "ind:MARINO_JOHN|11576",
+      "from": "ind:MENDEZ_JOSE|07083",
       "to": "C00337733",
-      "amount": 1000.0,
+      "amount": 1001.0,
       "visibility": "disclosed",
       "depth": 4,
       "transaction_types": [
         "15"
       ],
-      "count": 17,
+      "count": 18,
       "date_range": [
-        "2023-05-15",
-        "2024-12-13"
+        "2023-04-06",
+        "2024-12-10"
       ],
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00337733&two_year_transaction_period=2024&contributor_name=MARINO%2C+JOHN"
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00337733&two_year_transaction_period=2024&contributor_name=MENDEZ%2C+JOSE"
     },
     {
       "from": "ind:ST.BERNARD_KENRICK|11207",
@@ -12004,6 +12010,22 @@
         "2024-12-16"
       ],
       "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00337733&two_year_transaction_period=2024&contributor_name=ST.BERNARD%2C+KENRICK"
+    },
+    {
+      "from": "ind:MARINO_JOHN|11576",
+      "to": "C00337733",
+      "amount": 1000.0,
+      "visibility": "disclosed",
+      "depth": 4,
+      "transaction_types": [
+        "15"
+      ],
+      "count": 17,
+      "date_range": [
+        "2023-05-15",
+        "2024-12-13"
+      ],
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00337733&two_year_transaction_period=2024&contributor_name=MARINO%2C+JOHN"
     },
     {
       "from": "ind:BARNABY_ANDREW|11004",
@@ -12407,6 +12429,22 @@
       "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00342907&two_year_transaction_period=2024&contributor_name=SPARKS%2C+BRIAN"
     },
     {
+      "from": "ind:SPARKS_SCOTT_A|46307",
+      "to": "C00342907",
+      "amount": 3271.0,
+      "visibility": "disclosed",
+      "depth": 4,
+      "transaction_types": [
+        "15"
+      ],
+      "count": 22,
+      "date_range": [
+        "2023-02-15",
+        "2024-12-19"
+      ],
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00342907&two_year_transaction_period=2024&contributor_name=SPARKS%2C+SCOTT+A"
+    },
+    {
       "from": "ind:HENSON_RICKY_R._JR.|46322",
       "to": "C00342907",
       "amount": 3271.0,
@@ -12437,22 +12475,6 @@
         "2024-12-19"
       ],
       "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00342907&two_year_transaction_period=2024&contributor_name=ROACH%2C+DONALD"
-    },
-    {
-      "from": "ind:SPARKS_SCOTT_A|46307",
-      "to": "C00342907",
-      "amount": 3271.0,
-      "visibility": "disclosed",
-      "depth": 4,
-      "transaction_types": [
-        "15"
-      ],
-      "count": 22,
-      "date_range": [
-        "2023-02-15",
-        "2024-12-19"
-      ],
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00342907&two_year_transaction_period=2024&contributor_name=SPARKS%2C+SCOTT+A"
     },
     {
       "from": "ind:DILLINGHAM_RONNY|46383",
@@ -13159,22 +13181,6 @@
       "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00253294&two_year_transaction_period=2024&contributor_name=PATTERSON%2C+RICHARD"
     },
     {
-      "from": "ind:MATEJA_JOSEPH|19123",
-      "to": "C00253294",
-      "amount": 2107.0,
-      "visibility": "disclosed",
-      "depth": 5,
-      "transaction_types": [
-        "15"
-      ],
-      "count": 13,
-      "date_range": [
-        "2023-12-08",
-        "2024-12-26"
-      ],
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00253294&two_year_transaction_period=2024&contributor_name=MATEJA%2C+JOSEPH"
-    },
-    {
       "from": "ind:BERROCAL_ELVIS|19123",
       "to": "C00253294",
       "amount": 2107.0,
@@ -13189,6 +13195,22 @@
         "2024-12-26"
       ],
       "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00253294&two_year_transaction_period=2024&contributor_name=BERROCAL%2C+ELVIS"
+    },
+    {
+      "from": "ind:MATEJA_JOSEPH|19123",
+      "to": "C00253294",
+      "amount": 2107.0,
+      "visibility": "disclosed",
+      "depth": 5,
+      "transaction_types": [
+        "15"
+      ],
+      "count": 13,
+      "date_range": [
+        "2023-12-08",
+        "2024-12-26"
+      ],
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00253294&two_year_transaction_period=2024&contributor_name=MATEJA%2C+JOSEPH"
     },
     {
       "from": "ind:ROBINSON_JULIUS|19123",
@@ -13608,10 +13630,10 @@
   ],
   "summary": {
     "total_in": 2662180.0,
-    "disclosed_share": 0.207,
+    "disclosed_share": 0.2074,
     "inferable_share": 0.0,
     "unwalked_share": 0.0029,
-    "dark_share": 0.7901,
+    "dark_share": 0.7898,
     "max_depth": 5,
     "terminus_counts": {
       "dark": 6,

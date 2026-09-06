@@ -48,7 +48,7 @@ def test_overrides_beat_regex_and_invalid_classes_are_ignored(tmp_path, monkeypa
     (hand / "org_classes.json").write_text('{"classes":[{"name":"TRUIST","org_class":"union"}]}')
     monkeypatch.setattr(orgs, "DATA", tmp_path)
     overrides = orgs.load_org_overrides("race")
-    assert overrides == {"TRUIST": "union"}
+    assert overrides == {"TRUIST": ("union", "verified")}
     assert classify_organization("TRUIST", overrides) == "union"
     assert classify_organization("COINBASE", {}) == "unknown"
 

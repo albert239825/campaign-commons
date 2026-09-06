@@ -40,7 +40,8 @@
       "visibility": "dark",
       "transaction_type": "10",
       "limit": "unlimited",
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00541433&two_year_transaction_period=2024&contributor_name=SAFARI+CLUB+INTERNATIONAL"
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00541433&two_year_transaction_period=2024&contributor_name=SAFARI+CLUB+INTERNATIONAL",
+      "class_basis": "inferred"
     },
     {
       "transfer_id": "C00541433-in-ind:ANDERSON_DENNIS|92817",
@@ -70,7 +71,8 @@
       "visibility": "dark",
       "transaction_type": "10",
       "limit": "unlimited",
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00541433&two_year_transaction_period=2024&contributor_name=LOUISIANA+ACADIANA+SCI+CHAPTER"
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00541433&two_year_transaction_period=2024&contributor_name=LOUISIANA+ACADIANA+SCI+CHAPTER",
+      "class_basis": "rule"
     },
     {
       "transfer_id": "C00541433-in-ind:INGRAM_MICHAEL|85258",
@@ -100,7 +102,8 @@
       "visibility": "dark",
       "transaction_type": "10",
       "limit": "unlimited",
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00541433&two_year_transaction_period=2024&contributor_name=ATWOOD+%26+ASSOCIATES"
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00541433&two_year_transaction_period=2024&contributor_name=ATWOOD+%26+ASSOCIATES",
+      "class_basis": "rule"
     },
     {
       "transfer_id": "C00541433-in-ind:SMITH_J._ALAIN|98053",

@@ -23,8 +23,8 @@
     "independent_expenditures": 0,
     "from_individuals": 313725.0,
     "from_committees": 0.0,
-    "from_organizations": 0.0,
-    "from_undisclosed": 252900.0
+    "from_organizations": 252900.0,
+    "from_undisclosed": 0.0
   },
   "inflows": [
     {
@@ -37,10 +37,11 @@
       "date": "2023-04-13",
       "first_date": "2023-04-13",
       "count": 1,
-      "visibility": "dark",
+      "visibility": "disclosed",
       "transaction_type": "11",
       "limit": null,
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00831750&two_year_transaction_period=2024&contributor_name=AGUA+CALIENTE+BAND+OF+CAHUILLA+INDIANS"
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00831750&two_year_transaction_period=2024&contributor_name=AGUA+CALIENTE+BAND+OF+CAHUILLA+INDIANS",
+      "class_basis": "inferred"
     },
     {
       "transfer_id": "C00831750-in-org:TWENTY-NINE_PALMS_BAND_OF_MISSION_INDIANS",
@@ -52,10 +53,11 @@
       "date": "2023-03-23",
       "first_date": "2023-03-23",
       "count": 1,
-      "visibility": "dark",
+      "visibility": "disclosed",
       "transaction_type": "11",
       "limit": null,
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00831750&two_year_transaction_period=2024&contributor_name=TWENTY-NINE+PALMS+BAND+OF+MISSION+INDIANS"
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00831750&two_year_transaction_period=2024&contributor_name=TWENTY-NINE+PALMS+BAND+OF+MISSION+INDIANS",
+      "class_basis": "inferred"
     },
     {
       "transfer_id": "C00831750-in-ind:MUNGER_PHILIP_R|10011",
@@ -112,10 +114,11 @@
       "date": "2023-03-23",
       "first_date": "2023-03-23",
       "count": 1,
-      "visibility": "dark",
+      "visibility": "disclosed",
       "transaction_type": "11",
       "limit": null,
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00831750&two_year_transaction_period=2024&contributor_name=SAN+MANUEL+BAND+OF+MISSION+INDIANS"
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00831750&two_year_transaction_period=2024&contributor_name=SAN+MANUEL+BAND+OF+MISSION+INDIANS",
+      "class_basis": "inferred"
     },
     {
       "transfer_id": "C00831750-in-ind:GARCIA_DOMINGO|75208",

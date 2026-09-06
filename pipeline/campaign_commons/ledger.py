@@ -35,6 +35,7 @@ from .orgs import (
     committee_name_index,
     load_org_overrides,
     match_committee,
+    organization_classification,
     organization_visibility,
 )
 from .util import (
@@ -242,8 +243,9 @@ def _transfer(
     source_url: str,
     count: int,
     first_date: str | None,
+    class_basis: str | None = None,
 ) -> dict:
-    return {
+    row = {
         "transfer_id": transfer_id,
         "from_entity_id": from_id,
         "from_name": from_name,
@@ -258,6 +260,9 @@ def _transfer(
         "limit": limit,
         "source_url": source_url,
     }
+    if class_basis is not None:
+        row["class_basis"] = class_basis
+    return row
 
 
 def _top_counterparties(
@@ -282,7 +287,7 @@ def _top_counterparties(
     return top.merge(modal_tt[[*keys, "tt"]], on=keys, how="left")
 
 
-def entity_inflows(t: Tables, cid: str, name: str, cycle: int, overrides: dict[str, str] | None = None) -> list[dict]:
+def entity_inflows(t: Tables, cid: str, name: str, cycle: int, overrides: dict | None = None) -> list[dict]:
     """Top counterparties paying into `cid`: committees (transfers), individuals and organizations (Sched A)."""
     limit = "unlimited" if t.committee_type(cid) in UNLIMITED_RECEIVER_TYPES else None
     rows: list[dict] = []
@@ -362,6 +367,7 @@ def entity_inflows(t: Tables, cid: str, name: str, cycle: int, overrides: dict[s
         org_rows, ["NAME"], "TRANSACTION_AMT", "LAST_DT", "TRANSACTION_TP", "NAME", "FIRST_DT", "N_TRANSACTIONS"
     )
     for r in orgs.itertuples():
+        org_class, class_basis = organization_classification(str(r.NAME), overrides)
         rows.append(
             _transfer(
                 f"{cid}-in-{organization_id(str(r.NAME))}",
@@ -371,12 +377,13 @@ def entity_inflows(t: Tables, cid: str, name: str, cycle: int, overrides: dict[s
                 name,
                 r.amount,
                 _date(r.last_dt),
-                organization_visibility(classify_organization(str(r.NAME))),
+                organization_visibility(org_class),
                 _str(r.tt),
                 limit,
                 fec_contributor_receipts_url(cid, str(r.NAME), cycle),
                 int(r.n),
                 _date(r.first_dt),
+                class_basis,
             )
         )
     return sorted(rows, key=lambda r: r["amount"], reverse=True)[:TOP_N_FLOWS]
@@ -429,7 +436,7 @@ def entity_ies(t: Tables, cid: str, name: str, race: Race) -> list[dict]:
     ]
 
 
-def entity_totals(t: Tables, cid: str, ies: list[dict], overrides: dict[str, str] | None = None) -> dict:
+def entity_totals(t: Tables, cid: str, ies: list[dict], overrides: dict | None = None) -> dict:
     """Summary-file totals when the FEC publishes them for this committee, else itemized sums."""
     sched_a = t.sched_a(cid)
     _, orgs, misfiled = t.sched_a_split(cid)
@@ -474,7 +481,7 @@ def entity_totals(t: Tables, cid: str, ies: list[dict], overrides: dict[str, str
     }
 
 
-def entity(t: Tables, cid: str, race: Race, overrides: dict[str, str] | None = None) -> dict:
+def entity(t: Tables, cid: str, race: Race, overrides: dict | None = None) -> dict:
     row = t.committees.loc[cid]
     name = str(row["CMTE_NM"])
     tp = t.committee_type(cid)

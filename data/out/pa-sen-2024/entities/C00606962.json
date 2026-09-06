@@ -23,8 +23,8 @@
     "independent_expenditures": 8051011.8,
     "from_individuals": 0.0,
     "from_committees": 0.0,
-    "from_organizations": 535000.0,
-    "from_undisclosed": 2523435.0
+    "from_organizations": 635000.0,
+    "from_undisclosed": 2423435.0
   },
   "inflows": [
     {
@@ -70,7 +70,8 @@
       "visibility": "dark",
       "transaction_type": "10",
       "limit": null,
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00606962&two_year_transaction_period=2024&contributor_name=WORKING+FAMILIES+ORGANIZATION"
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00606962&two_year_transaction_period=2024&contributor_name=WORKING+FAMILIES+ORGANIZATION",
+      "class_basis": "rule"
     },
     {
       "transfer_id": "C00606962-in-org:ACCOUNTABLE_JUSTICE_ACTION_FUND",
@@ -205,7 +206,8 @@
       "visibility": "disclosed",
       "transaction_type": "10",
       "limit": null,
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00606962&two_year_transaction_period=2024&contributor_name=SEIU+PA+STATE+COUNCIL"
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00606962&two_year_transaction_period=2024&contributor_name=SEIU+PA+STATE+COUNCIL",
+      "class_basis": "rule"
     },
     {
       "transfer_id": "C00606962-in-org:SHERIFFS_FOR_TRUSTING_COMMUNITIES",
@@ -741,7 +743,7 @@
     {
       "id": "dead_end_dark",
       "label": "Chain ends at undisclosed donors",
-      "detail": "30% of WORKING FAMILIES PARTY PAC's receipts stop at organizations whose own funding is not on file (advocacy nonprofits, LLCs, trusts) rather than at named individuals, businesses or unions.",
+      "detail": "29% of WORKING FAMILIES PARTY PAC's receipts stop at organizations whose own funding is not on file (advocacy nonprofits, LLCs, trusts) rather than at named individuals, businesses or unions.",
       "evidence_url": "https://www.fec.gov/data/committee/C00606962/?cycle=2024"
     }
   ],

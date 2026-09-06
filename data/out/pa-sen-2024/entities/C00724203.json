@@ -40,7 +40,8 @@
       "visibility": "dark",
       "transaction_type": "10",
       "limit": "unlimited",
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00724203&two_year_transaction_period=2024&contributor_name=FORWARD+ACTION+FUND"
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00724203&two_year_transaction_period=2024&contributor_name=FORWARD+ACTION+FUND",
+      "class_basis": "rule"
     },
     {
       "transfer_id": "C00724203-in-C00669259",
@@ -70,7 +71,8 @@
       "visibility": "dark",
       "transaction_type": "10",
       "limit": "unlimited",
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00724203&two_year_transaction_period=2024&contributor_name=AMERICA+VOTES"
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00724203&two_year_transaction_period=2024&contributor_name=AMERICA+VOTES",
+      "class_basis": "rule"
     },
     {
       "transfer_id": "C00724203-in-org:MAP_USA",
@@ -85,7 +87,8 @@
       "visibility": "dark",
       "transaction_type": "10",
       "limit": "unlimited",
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00724203&two_year_transaction_period=2024&contributor_name=MAP+USA"
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00724203&two_year_transaction_period=2024&contributor_name=MAP+USA",
+      "class_basis": "inferred"
     },
     {
       "transfer_id": "C00724203-in-C00492520",
@@ -130,7 +133,8 @@
       "visibility": "dark",
       "transaction_type": "10",
       "limit": "unlimited",
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00724203&two_year_transaction_period=2024&contributor_name=NEVADA+ALLIANCE"
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00724203&two_year_transaction_period=2024&contributor_name=NEVADA+ALLIANCE",
+      "class_basis": "rule"
     },
     {
       "transfer_id": "C00724203-in-C00486845",
@@ -160,7 +164,8 @@
       "visibility": "dark",
       "transaction_type": "10",
       "limit": "unlimited",
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00724203&two_year_transaction_period=2024&contributor_name=WELLNESS+ADVOCACY+FUND"
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00724203&two_year_transaction_period=2024&contributor_name=WELLNESS+ADVOCACY+FUND",
+      "class_basis": "rule"
     },
     {
       "transfer_id": "C00724203-in-org:NORTH_CAROLINA_FAMILIES_FIRST",
@@ -175,7 +180,8 @@
       "visibility": "dark",
       "transaction_type": "10",
       "limit": "unlimited",
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00724203&two_year_transaction_period=2024&contributor_name=NORTH+CAROLINA+FAMILIES+FIRST"
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00724203&two_year_transaction_period=2024&contributor_name=NORTH+CAROLINA+FAMILIES+FIRST",
+      "class_basis": "rule"
     },
     {
       "transfer_id": "C00724203-in-org:AFSCME_WORKING_FAMILIES_FUND",
@@ -190,7 +196,8 @@
       "visibility": "disclosed",
       "transaction_type": "10",
       "limit": "unlimited",
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00724203&two_year_transaction_period=2024&contributor_name=AFSCME+WORKING+FAMILIES+FUND"
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00724203&two_year_transaction_period=2024&contributor_name=AFSCME+WORKING+FAMILIES+FUND",
+      "class_basis": "rule"
     },
     {
       "transfer_id": "C00724203-in-C00484642",
@@ -235,7 +242,8 @@
       "visibility": "dark",
       "transaction_type": "10",
       "limit": "unlimited",
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00724203&two_year_transaction_period=2024&contributor_name=SIXTEEN+THIRTY+FUND"
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00724203&two_year_transaction_period=2024&contributor_name=SIXTEEN+THIRTY+FUND",
+      "class_basis": "rule"
     },
     {
       "transfer_id": "C00724203-in-org:FAMILY_FRIENDLY_ACTION_FUND",
@@ -250,7 +258,8 @@
       "visibility": "dark",
       "transaction_type": "10",
       "limit": "unlimited",
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00724203&two_year_transaction_period=2024&contributor_name=FAMILY+FRIENDLY+ACTION+FUND"
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00724203&two_year_transaction_period=2024&contributor_name=FAMILY+FRIENDLY+ACTION+FUND",
+      "class_basis": "rule"
     },
     {
       "transfer_id": "C00724203-in-C00489815",
@@ -340,7 +349,8 @@
       "visibility": "dark",
       "transaction_type": "10",
       "limit": "unlimited",
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00724203&two_year_transaction_period=2024&contributor_name=REBUILD+USA"
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00724203&two_year_transaction_period=2024&contributor_name=REBUILD+USA",
+      "class_basis": "rule"
     },
     {
       "transfer_id": "C00724203-in-ind:TORRES_TOMAS|77027",

@@ -2,7 +2,7 @@
   "root_entity_id": "C00742635",
   "root_name": "GUN RIGHTS AMERICA",
   "race_id": "pa-sen-2024",
-  "generated_at": "2026-09-06T04:49:10+00:00",
+  "generated_at": "2026-09-06T05:02:45+00:00",
   "data_status": "real",
   "nodes": [
     {
@@ -28,7 +28,8 @@
       "is_terminus": true,
       "terminus_reason": "dark",
       "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00742635&two_year_transaction_period=2024&contributor_name=NATIONAL+ASSOCIATION+FOR+GUN+RIGHTS",
-      "organization_class": "nonprofit"
+      "organization_class": "nonprofit",
+      "class_basis": "rule"
     },
     {
       "id": "agg:other@C00742635",
@@ -178,7 +179,8 @@
         "2023-02-10",
         "2024-12-31"
       ],
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00742635&two_year_transaction_period=2024&contributor_name=NATIONAL+ASSOCIATION+FOR+GUN+RIGHTS"
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00742635&two_year_transaction_period=2024&contributor_name=NATIONAL+ASSOCIATION+FOR+GUN+RIGHTS",
+      "class_basis": "rule"
     },
     {
       "from": "agg:other@C00742635",

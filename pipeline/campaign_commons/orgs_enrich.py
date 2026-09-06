@@ -1,4 +1,4 @@
-"""Read unknown Schedule A organizations with Grok's live web search and keep only quoted, fetched evidence."""
+"""Read unknown Schedule A organizations with Grok's live web search and keep sourced model classifications."""
 
 from __future__ import annotations
 
@@ -12,9 +12,8 @@ from typing import Any
 import requests
 
 from .config import DATA, RACES, RAW, XAI_API_KEY, XAI_ORGS_MODEL
-from .issues_enrich import Page, fetch_pages, normalize
 from .ledger import Tables
-from .orgs import _norm, classify_organization, load_org_overrides
+from .orgs import classify_organization
 from .util import now_iso, read_json, write_json
 
 SYSTEM = (
@@ -114,21 +113,6 @@ def model_classification(
     return _parse_classification(payload)
 
 
-def guard_classification(row: dict[str, Any], pages: list[Page]) -> dict[str, Any] | None:
-    org_class = row.get("org_class")
-    quote = row.get("quote")
-    source_url = row.get("source_url")
-    if org_class not in ALLOWED_CLASSES or not isinstance(source_url, str) or not source_url:
-        return None
-    if not isinstance(quote, str) or not quote.strip() or len(quote) > 200:
-        return None
-    normalized_quote = normalize(quote)
-    for page in pages:
-        if normalize(page.text).find(normalized_quote) >= 0:
-            return {**row, "source_url": page.url, "quote": quote}
-    return None
-
-
 def collect_unknown(tables: Tables, min_amount: float) -> list[dict[str, Any]]:
     by_name: dict[str, dict[str, Any]] = {}
     for cid in tables.committees.index:
@@ -162,18 +146,28 @@ def collect_unknown(tables: Tables, min_amount: float) -> list[dict[str, Any]]:
     ]
 
 
+def model_row(candidate: dict[str, Any], kept: dict[str, str]) -> dict[str, Any]:
+    return {
+        "name": candidate["name"],
+        "org_class": kept["org_class"],
+        "basis": "inferred",
+        "source_url": kept["source_url"],
+        "quote": kept["quote"],
+        "tagged_by": XAI_ORGS_MODEL,
+        "verified": False,
+        "amount": round(candidate["amount"], 2),
+    }
+
+
 def run(race_id: str, limit: int | None = None, min_amount: float = 10_000, refetch: bool = False) -> dict[str, Any]:
     race = RACES[race_id]
     tables = Tables(race)
     candidates = collect_unknown(tables, min_amount)
     if limit is not None:
         candidates = candidates[:limit]
-    overrides = load_org_overrides(race_id)
     classes: list[dict[str, Any]] = []
     dropped = 0
     for candidate in candidates:
-        if _norm(candidate["name"]) in overrides:
-            continue
         try:
             model = model_classification(
                 race_id,
@@ -184,25 +178,14 @@ def run(race_id: str, limit: int | None = None, min_amount: float = 10_000, refe
                 race.cycle,
                 refetch=refetch,
             )
-            pages = fetch_pages(race_id, f"org:{candidate['name']}", [model.get("source_url", "")])
-            kept = guard_classification(model, pages)
+            kept = model if model.get("org_class") in ALLOWED_CLASSES else None
         except Exception as exc:
             print(f"{candidate['name']}: enrichment failed: {exc}", file=sys.stderr)
             kept = None
         if kept is None:
             dropped += 1
             continue
-        classes.append(
-            {
-                "name": candidate["name"],
-                "org_class": kept["org_class"],
-                "basis": "inferred",
-                "source_url": kept["source_url"],
-                "quote": kept["quote"],
-                "tagged_by": XAI_ORGS_MODEL,
-                "amount": round(candidate["amount"], 2),
-            }
-        )
+        classes.append(model_row(candidate, kept))
     result = {
         "race_id": race_id,
         "generated_at": now_iso(),

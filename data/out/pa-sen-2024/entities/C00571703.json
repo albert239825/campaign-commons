@@ -40,7 +40,8 @@
       "visibility": "dark",
       "transaction_type": "10",
       "limit": "unlimited",
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00571703&two_year_transaction_period=2024&contributor_name=ONE+NATION"
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00571703&two_year_transaction_period=2024&contributor_name=ONE+NATION",
+      "class_basis": "inferred"
     },
     {
       "transfer_id": "C00571703-in-ind:GRIFFIN_KENNETH_C.|33131",
@@ -265,7 +266,8 @@
       "visibility": "disclosed",
       "transaction_type": "10",
       "limit": "unlimited",
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00571703&two_year_transaction_period=2024&contributor_name=CHEVRON+CORPORATION"
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00571703&two_year_transaction_period=2024&contributor_name=CHEVRON+CORPORATION",
+      "class_basis": "rule"
     },
     {
       "transfer_id": "C00571703-in-org:OCCIDENTAL_PETROLEUM_CORP",
@@ -280,7 +282,8 @@
       "visibility": "disclosed",
       "transaction_type": "10",
       "limit": "unlimited",
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00571703&two_year_transaction_period=2024&contributor_name=OCCIDENTAL+PETROLEUM+CORP"
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00571703&two_year_transaction_period=2024&contributor_name=OCCIDENTAL+PETROLEUM+CORP",
+      "class_basis": "rule"
     },
     {
       "transfer_id": "C00571703-in-org:ALTRIA_CLIENT_SERVICES_LLC",
@@ -295,7 +298,8 @@
       "visibility": "dark",
       "transaction_type": "10",
       "limit": "unlimited",
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00571703&two_year_transaction_period=2024&contributor_name=ALTRIA+CLIENT+SERVICES+LLC"
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00571703&two_year_transaction_period=2024&contributor_name=ALTRIA+CLIENT+SERVICES+LLC",
+      "class_basis": "rule"
     },
     {
       "transfer_id": "C00571703-in-ind:DUCHOSSOIS_CRAIG|60606",
@@ -325,7 +329,8 @@
       "visibility": "dark",
       "transaction_type": "10",
       "limit": "unlimited",
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00571703&two_year_transaction_period=2024&contributor_name=AMERICAN+PETROLEUM+INSTITUTE"
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00571703&two_year_transaction_period=2024&contributor_name=AMERICAN+PETROLEUM+INSTITUTE",
+      "class_basis": "rule"
     },
     {
       "transfer_id": "C00571703-in-org:HILLWOOD_DEVELOPMENT_COMPANY_LLC",
@@ -340,7 +345,8 @@
       "visibility": "dark",
       "transaction_type": "10",
       "limit": "unlimited",
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00571703&two_year_transaction_period=2024&contributor_name=HILLWOOD+DEVELOPMENT+COMPANY+LLC"
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00571703&two_year_transaction_period=2024&contributor_name=HILLWOOD+DEVELOPMENT+COMPANY+LLC",
+      "class_basis": "rule"
     },
     {
       "transfer_id": "C00571703-in-org:RAI_SERVICES_COMPANY",
@@ -355,7 +361,8 @@
       "visibility": "disclosed",
       "transaction_type": "10",
       "limit": "unlimited",
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00571703&two_year_transaction_period=2024&contributor_name=RAI+SERVICES+COMPANY"
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00571703&two_year_transaction_period=2024&contributor_name=RAI+SERVICES+COMPANY",
+      "class_basis": "rule"
     },
     {
       "transfer_id": "C00571703-in-ind:FISHER_KENNETH_L.|75093",
@@ -385,7 +392,8 @@
       "visibility": "disclosed",
       "transaction_type": "10",
       "limit": "unlimited",
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00571703&two_year_transaction_period=2024&contributor_name=MELALEUCA+INC."
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00571703&two_year_transaction_period=2024&contributor_name=MELALEUCA+INC.",
+      "class_basis": "rule"
     },
     {
       "transfer_id": "C00571703-in-ind:MURDOCH_K._RUPERT|10036",

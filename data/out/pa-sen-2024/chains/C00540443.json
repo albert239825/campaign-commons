@@ -2,7 +2,7 @@
   "root_entity_id": "C00540443",
   "root_name": "GIFFORDS PAC",
   "race_id": "pa-sen-2024",
-  "generated_at": "2026-09-06T04:49:10+00:00",
+  "generated_at": "2026-09-06T05:02:45+00:00",
   "data_status": "real",
   "nodes": [
     {
@@ -28,7 +28,8 @@
       "is_terminus": true,
       "terminus_reason": "dark",
       "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00540443&two_year_transaction_period=2024&contributor_name=GIFFORDS",
-      "organization_class": "unknown"
+      "organization_class": "nonprofit",
+      "class_basis": "inferred"
     },
     {
       "id": "agg:other@C00540443",
@@ -175,7 +176,8 @@
         "2024-08-22",
         "2024-10-18"
       ],
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00540443&two_year_transaction_period=2024&contributor_name=GIFFORDS"
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00540443&two_year_transaction_period=2024&contributor_name=GIFFORDS",
+      "class_basis": "inferred"
     },
     {
       "from": "agg:other@C00540443",
@@ -309,10 +311,10 @@
   ],
   "summary": {
     "total_in": 6973470.0,
-    "disclosed_share": 0.5362,
+    "disclosed_share": 0.5427,
     "inferable_share": 0.0,
     "unwalked_share": 0.0,
-    "dark_share": 0.4638,
+    "dark_share": 0.4573,
     "max_depth": 1,
     "terminus_counts": {
       "dark": 1,

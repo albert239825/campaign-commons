@@ -85,7 +85,8 @@
       "visibility": "dark",
       "transaction_type": "10",
       "limit": "unlimited",
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00884262&two_year_transaction_period=2024&contributor_name=ALTRIA+CLIENT+SERVICES+LLC"
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00884262&two_year_transaction_period=2024&contributor_name=ALTRIA+CLIENT+SERVICES+LLC",
+      "class_basis": "rule"
     },
     {
       "transfer_id": "C00884262-in-org:RAI_SERVICES_COMPANY",
@@ -100,7 +101,8 @@
       "visibility": "disclosed",
       "transaction_type": "10",
       "limit": "unlimited",
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00884262&two_year_transaction_period=2024&contributor_name=RAI+SERVICES+COMPANY"
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00884262&two_year_transaction_period=2024&contributor_name=RAI+SERVICES+COMPANY",
+      "class_basis": "rule"
     },
     {
       "transfer_id": "C00884262-in-org:ENERGY_TRANSFER_LP",
@@ -115,7 +117,8 @@
       "visibility": "dark",
       "transaction_type": "10",
       "limit": "unlimited",
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00884262&two_year_transaction_period=2024&contributor_name=ENERGY+TRANSFER+LP"
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00884262&two_year_transaction_period=2024&contributor_name=ENERGY+TRANSFER+LP",
+      "class_basis": "rule"
     },
     {
       "transfer_id": "C00884262-in-org:JUNIPER_GLOBAL_INVESTMENTS_LLC",
@@ -130,7 +133,8 @@
       "visibility": "dark",
       "transaction_type": "10",
       "limit": "unlimited",
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00884262&two_year_transaction_period=2024&contributor_name=JUNIPER+GLOBAL+INVESTMENTS+LLC"
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00884262&two_year_transaction_period=2024&contributor_name=JUNIPER+GLOBAL+INVESTMENTS+LLC",
+      "class_basis": "rule"
     }
   ],
   "outflows": [

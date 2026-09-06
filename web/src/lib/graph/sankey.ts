@@ -19,6 +19,7 @@ export const SankeyLinkSchema = z.object({
   rel: z.enum(["GAVE", "PAID", "PLACED", "TARGETED", "CAMPAIGN_OF"]),
   amount: z.number().positive(),
   visibility: z.enum(["disclosed", "inferable", "dark"]),
+  class_basis: z.enum(["rule", "inferred", "verified"]).nullable().optional(),
   support_oppose: z.enum(["S", "O"]).nullable(),
   source_url: z.string().nullable(),
 });
@@ -77,6 +78,7 @@ export function sankeyFromRows(rows: readonly ExploreRow[], context: readonly Gr
       rel: f.rel,
       amount: f.amount,
       visibility: f.visibility,
+      class_basis: f.class_basis ?? null,
       support_oppose: f.support_oppose,
       source_url: f.source_url,
     };
@@ -88,7 +90,10 @@ export function sankeyFromRows(rows: readonly ExploreRow[], context: readonly Gr
     const key = `${source}\u0000${target}\u0000${f.rel}`;
     const prior = byKey.get(key);
     if (prior === undefined) byKey.set(key, link);
-    else if (f.visibility === "dark" && prior.visibility !== "dark") prior.visibility = "dark";
+    else {
+      if (f.visibility === "dark" && prior.visibility !== "dark") prior.visibility = "dark";
+      if (f.class_basis === "inferred") prior.class_basis = "inferred";
+    }
   }
   const links = [...byKey.values()];
   if (links.length === 0) return { ok: false, reason: "no_amounts", message: UNAVAILABLE_COPY.no_amounts };

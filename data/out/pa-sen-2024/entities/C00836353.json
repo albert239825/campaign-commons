@@ -23,8 +23,8 @@
     "independent_expenditures": 0,
     "from_individuals": 8808696.92,
     "from_committees": 137000.0,
-    "from_organizations": 1584400.0,
-    "from_undisclosed": 1825600.0
+    "from_organizations": 2203600.0,
+    "from_undisclosed": 1206400.0
   },
   "inflows": [
     {
@@ -52,10 +52,11 @@
       "date": "2023-04-17",
       "first_date": "2023-03-30",
       "count": 6,
-      "visibility": "dark",
+      "visibility": "disclosed",
       "transaction_type": "10",
       "limit": null,
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00836353&two_year_transaction_period=2024&contributor_name=SANTA+YNEZ+BAND+OF+MISSION+INDIANS"
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00836353&two_year_transaction_period=2024&contributor_name=SANTA+YNEZ+BAND+OF+MISSION+INDIANS",
+      "class_basis": "inferred"
     },
     {
       "transfer_id": "C00836353-in-org:SOBOBA_BAND_OF_LUISENO_INDIANS",
@@ -67,10 +68,11 @@
       "date": "2023-04-17",
       "first_date": "2023-03-30",
       "count": 4,
-      "visibility": "dark",
+      "visibility": "disclosed",
       "transaction_type": "10",
       "limit": null,
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00836353&two_year_transaction_period=2024&contributor_name=SOBOBA+BAND+OF+LUISENO+INDIANS"
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00836353&two_year_transaction_period=2024&contributor_name=SOBOBA+BAND+OF+LUISENO+INDIANS",
+      "class_basis": "inferred"
     },
     {
       "transfer_id": "C00836353-in-ind:COATES_LINDA|94111",

@@ -54,7 +54,7 @@ const NODE = "{id: $n.id, name: $n.name, kind: $n.kind, href: $n.href}";
 const node = (v: string) => NODE.replaceAll("$n", v);
 export const edge = (a: string, r: string, b: string, path = "null") =>
   `{from: ${node(a)}, to: ${node(b)}, rel: type(${r}), amount: ${r}.amount, count: ${r}.count, support_oppose: ${r}.support_oppose,
-    visibility: ${r}.visibility, first_date: ${r}.first_date, last_date: ${r}.last_date, source_url: ${r}.source_url, path: ${path}}`;
+    visibility: ${r}.visibility, class_basis: ${r}.class_basis, first_date: ${r}.first_date, last_date: ${r}.last_date, source_url: ${r}.source_url, path: ${path}}`;
 
 const E = `:${ENTITY}`;
 

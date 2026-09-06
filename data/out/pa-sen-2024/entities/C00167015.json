@@ -23,8 +23,8 @@
     "independent_expenditures": 0,
     "from_individuals": 458264.24,
     "from_committees": 5921235.17,
-    "from_organizations": 255008.0,
-    "from_undisclosed": 233998.0
+    "from_organizations": 285008.0,
+    "from_undisclosed": 203998.0
   },
   "inflows": [
     {
@@ -370,7 +370,8 @@
       "visibility": "disclosed",
       "transaction_type": "10",
       "limit": null,
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00167015&two_year_transaction_period=2024&contributor_name=TEAMSTERS+LOCAL+705+PAC"
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00167015&two_year_transaction_period=2024&contributor_name=TEAMSTERS+LOCAL+705+PAC",
+      "class_basis": "rule"
     },
     {
       "transfer_id": "C00167015-in-ind:VAZQUEZ_SOCORRO|60462",

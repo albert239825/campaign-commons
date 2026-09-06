@@ -23,8 +23,8 @@
     "independent_expenditures": 7256780.19,
     "from_individuals": 0.0,
     "from_committees": 0.0,
-    "from_organizations": 0.0,
-    "from_undisclosed": 3234072.0
+    "from_organizations": 44842.0,
+    "from_undisclosed": 3189230.0
   },
   "inflows": [
     {
@@ -40,7 +40,8 @@
       "visibility": "dark",
       "transaction_type": "10",
       "limit": null,
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00540443&two_year_transaction_period=2024&contributor_name=GIFFORDS"
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00540443&two_year_transaction_period=2024&contributor_name=GIFFORDS",
+      "class_basis": "inferred"
     },
     {
       "transfer_id": "C00540443-in-org:HOUSE_MAJORITY_PAC",
@@ -67,10 +68,11 @@
       "date": "2023-07-10",
       "first_date": "2023-07-10",
       "count": 1,
-      "visibility": "dark",
+      "visibility": "disclosed",
       "transaction_type": "10",
       "limit": null,
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00540443&two_year_transaction_period=2024&contributor_name=DC+HEALTHLINK"
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00540443&two_year_transaction_period=2024&contributor_name=DC+HEALTHLINK",
+      "class_basis": "inferred"
     },
     {
       "transfer_id": "C00540443-in-org:ROB_BONTA_FOR_CA_ATTORNEY_GENERAL_2026",

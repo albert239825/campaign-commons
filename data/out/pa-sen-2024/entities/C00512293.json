@@ -23,8 +23,8 @@
     "independent_expenditures": 0,
     "from_individuals": 0.0,
     "from_committees": 0.0,
-    "from_organizations": 0.0,
-    "from_undisclosed": 1736500.0
+    "from_organizations": 1736500.0,
+    "from_undisclosed": 0.0
   },
   "inflows": [
     {
@@ -37,10 +37,11 @@
       "date": "2024-12-31",
       "first_date": "2023-04-21",
       "count": 9,
-      "visibility": "dark",
+      "visibility": "disclosed",
       "transaction_type": "10",
       "limit": "unlimited",
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00512293&two_year_transaction_period=2024&contributor_name=NATIONAL+AFGE+HEADQUARTERS"
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00512293&two_year_transaction_period=2024&contributor_name=NATIONAL+AFGE+HEADQUARTERS",
+      "class_basis": "inferred"
     }
   ],
   "outflows": [

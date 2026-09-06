@@ -1,7 +1,67 @@
 {
   "race_id": "pa-sen-2024",
-  "generated_at": "2026-09-06T04:47:28+00:00",
+  "generated_at": "2026-09-06T05:01:14+00:00",
   "classes": [
+    {
+      "name": "32BJ UNITED ADF",
+      "org_class": "union",
+      "basis": "inferred",
+      "source_url": "https://www.32bj.org/about",
+      "quote": "32BJ SEIU is the largest property service workers union in the country, with more than 175,000 members in 12 states and Washington, D.C.",
+      "tagged_by": "grok-4.3",
+      "verified": false,
+      "amount": 100000.0
+    },
+    {
+      "name": "ACADIAN AMBULANCE SERVICE",
+      "org_class": "business",
+      "basis": "inferred",
+      "source_url": "https://www.acadian.com/about-us/",
+      "quote": "Acadian Ambulance Service is a privately held company that provides emergency and non-emergency medical transportation, as well as other healthcare services.",
+      "tagged_by": "grok-4.3",
+      "verified": false,
+      "amount": 25000.0
+    },
+    {
+      "name": "ACESSO BIOLOGICS",
+      "org_class": "business",
+      "basis": "inferred",
+      "source_url": "https://www.acessobio.com/about/",
+      "quote": "Acesso Biologics, headquartered in Las Vegas, is a mission-driven regenerative medicine company committed to expanding access to innovative, transformative therapies.",
+      "tagged_by": "grok-4.3",
+      "verified": false,
+      "amount": 75000.0
+    },
+    {
+      "name": "AGUA CALIENTE BAND OF CAHUILLA INDIANS",
+      "org_class": "business",
+      "basis": "inferred",
+      "source_url": "https://www.aguacaliente.org/",
+      "quote": "The Agua Caliente Band of Cahuilla Indians is a federally recognized tribe of Cahuilla Indians located in Riverside County, California. The tribe owns and operates the Agua Caliente Casino Resort Spa.",
+      "tagged_by": "grok-4.3",
+      "verified": false,
+      "amount": 701500.0
+    },
+    {
+      "name": "AISLE 518 STRATEGIES",
+      "org_class": "llc",
+      "basis": "inferred",
+      "source_url": "https://naicslist.com/company-profile/aisle-518-strategies-llc-arlington-va-22207",
+      "quote": "Aisle 518 Strategies LLC is a specialized Advertising Agencies firm based in Arlington, VA (22207). Functioning as a Limited Liability Company (llc), they have been operating for over 2 years and maintain a team of approximately 16 employees .",
+      "tagged_by": "grok-4.3",
+      "verified": false,
+      "amount": 12500.0
+    },
+    {
+      "name": "AK-CHIN INDIAN COMMUNITY",
+      "org_class": "business",
+      "basis": "inferred",
+      "source_url": "https://www.ak-chin.nsn.us/",
+      "quote": "The Ak-Chin Indian Community is a federally recognized Native American tribe located in the Santa Cruz Valley in Arizona.",
+      "tagged_by": "grok-4.3",
+      "verified": false,
+      "amount": 919400.0
+    },
     {
       "name": "AMAZON.COM",
       "org_class": "business",
@@ -9,7 +69,178 @@
       "source_url": "https://ir.aboutamazon.com/corporate-governance/documents-and-charters/certificate-of-incorporation/default.aspx",
       "quote": "Amazon.com, Inc., a corporation organized and existing under the General Corporation Law of the State of Delaware,",
       "tagged_by": "grok-4.3",
+      "verified": false,
       "amount": 10000.0
+    },
+    {
+      "name": "ANHEUSER-BUSCH COMPANIES",
+      "org_class": "business",
+      "basis": "inferred",
+      "source_url": "https://www.britannica.com/money/Anheuser-Busch-Companies-Inc",
+      "quote": "Anheuser-Busch Companies, LLC is one of the largest brewers in the world, producing beer under the Budweiser, Bud Light, Busch, Michelob, and Stella Artois labels, as well as several craft beer brands.",
+      "tagged_by": "grok-4.3",
+      "verified": false,
+      "amount": 100000.0
+    },
+    {
+      "name": "ARK INVEST",
+      "org_class": "business",
+      "basis": "inferred",
+      "source_url": "https://en.wikipedia.org/wiki/Ark_Invest",
+      "quote": "ARK Investment Management LLC (commonly referred to as \"ARK\" or \"ARK Invest\") is an American investment management firm based in St. Petersburg, Florida, that manages several actively managed exchange-traded funds (ETFs), and the ARK Venture Fund, a closed-end interval fund that invests in both public and private companies.",
+      "tagged_by": "grok-4.3",
+      "verified": false,
+      "amount": 157437.0
+    },
+    {
+      "name": "BARON & BUDD, P.C.",
+      "org_class": "business",
+      "basis": "inferred",
+      "source_url": "https://en.wikipedia.org/wiki/Baron_%26_Budd,_P.C.",
+      "quote": "Baron & Budd, P.C. is an American plaintiffs' law firm headquartered in Dallas, Texas.",
+      "tagged_by": "grok-4.3",
+      "verified": false,
+      "amount": 64800.0
+    },
+    {
+      "name": "BARONA BAND OF MISSION INDIANS",
+      "org_class": "business",
+      "basis": "inferred",
+      "source_url": "https://www.barona-nsn.gov/",
+      "quote": "Established in 1932, the Barona Indian Reservation is home to this regal tribe, which is recognized by the United States government as a sovereign nation, and is governed by an elected Tribal Council. ... the Barona Valley Ranch Resort & Casino attests to the vision, conviction, and determination of the Barona Band of Mission Indians.",
+      "tagged_by": "grok-4.3",
+      "verified": false,
+      "amount": 257700.0
+    },
+    {
+      "name": "BENELLI USA",
+      "org_class": "business",
+      "basis": "inferred",
+      "source_url": "https://www.benelliusa.com/about-us",
+      "quote": "Benelli USA is the U.S. subsidiary of Benelli Armi SpA, an Italian firearms manufacturer based in Urbino, Italy. Benelli USA is headquartered in Accokeek, Maryland.",
+      "tagged_by": "grok-4.3",
+      "verified": false,
+      "amount": 25000.0
+    },
+    {
+      "name": "BERGER MONTAGUE PC",
+      "org_class": "business",
+      "basis": "inferred",
+      "source_url": "https://bergermontague.com/about/",
+      "quote": "Berger Montague is a full-spectrum civil litigation firm, with nationally known and respected attorneys highly sought after for their legal skills.",
+      "tagged_by": "grok-4.3",
+      "verified": false,
+      "amount": 25000.0
+    },
+    {
+      "name": "BICO ASSOCIATES GP",
+      "org_class": "llc",
+      "basis": "inferred",
+      "source_url": "https://www.usaspending.gov/recipient/b194fd35-f38c-a6d0-4260-14c4d6053bb0-C/latest",
+      "quote": "Business Types | Business Partnership or Limited Liability Partnership Small Business",
+      "tagged_by": "grok-4.3",
+      "verified": false,
+      "amount": 176245.0
+    },
+    {
+      "name": "BIRCH EVENT DESIGN",
+      "org_class": "llc",
+      "basis": "inferred",
+      "source_url": "https://opencorpdata.com/us-ny/7482117",
+      "quote": "**BIRCH EVENT DESIGN LLC** (DOS # **7482117** ) is a *Foreign Limited Liability Company* in *New York, New York* registered with the New York State Department of State (NYSDOS).",
+      "tagged_by": "grok-4.3",
+      "verified": false,
+      "amount": 10000.0
+    },
+    {
+      "name": "BLUE CROSS BLUE SHIELD OF MICHIGAN",
+      "org_class": "business",
+      "basis": "inferred",
+      "source_url": "https://en.wikipedia.org/wiki/Blue_Cross_Blue_Shield_of_Michigan",
+      "quote": "Blue Cross Blue Shield of Michigan, a nonprofit mutual insurance company, provides and administers health benefits to more than 4.3 million members residing in Michigan",
+      "tagged_by": "grok-4.3",
+      "verified": false,
+      "amount": 25000.0
+    },
+    {
+      "name": "BLUE DIAMOND GROWERS",
+      "org_class": "business",
+      "basis": "inferred",
+      "source_url": "https://www.bluediamond.com/about-us",
+      "quote": "Blue Diamond Growers is a California-based agricultural cooperative and the world’s largest almond processor and marketer.",
+      "tagged_by": "grok-4.3",
+      "verified": false,
+      "amount": 32400.0
+    },
+    {
+      "name": "BLUE SHIELD OF CALIFORNIA",
+      "org_class": "business",
+      "basis": "inferred",
+      "source_url": "https://news.blueshieldca.com/about",
+      "quote": "The health plan is a taxpaying, nonprofit, independent member of the Blue Shield Association with 6 million members, over 6,500 employees and more than $27 billion in annual revenue.",
+      "tagged_by": "grok-4.3",
+      "verified": false,
+      "amount": 10000.0
+    },
+    {
+      "name": "BUILDING A BETTER FLORIDA",
+      "org_class": "nonprofit",
+      "basis": "inferred",
+      "source_url": "https://www.opensecrets.org/political-action-committees-pacs/building-a-better-florida/C00845651/summary/2024",
+      "quote": "Building A Better Florida is a Super PAC.",
+      "tagged_by": "grok-4.3",
+      "verified": false,
+      "amount": 50000.0
+    },
+    {
+      "name": "BULLY PULPIT INTERACTIVE",
+      "org_class": "business",
+      "basis": "inferred",
+      "source_url": "http://www.w9ein.com/FEIN/company_overview.php/EIN/270860668/CompanyName/BULLY+PULPIT+INTERACTIVE+LLC",
+      "quote": "BULLY PULPIT INTERACTIVE LLC is a USA domiciled entity or foreign entity operating in the USA.",
+      "tagged_by": "grok-4.3",
+      "verified": false,
+      "amount": 11340.0
+    },
+    {
+      "name": "CALIFORNIA WASTE SOLUTIONS",
+      "org_class": "business",
+      "basis": "inferred",
+      "source_url": "https://b2bhint.com/en/company/us-ca/california-waste-solutions-inc--1522031",
+      "quote": "1522031 *·* Stock Corporation - General *·* 1992-01-27 · 35 years ago *·* California",
+      "tagged_by": "grok-4.3",
+      "verified": false,
+      "amount": 10000.0
+    },
+    {
+      "name": "CATAWBA INDIAN NATION",
+      "org_class": "business",
+      "basis": "inferred",
+      "source_url": "https://www.catawba.com/",
+      "quote": "The Catawba Indian Nation is the only federally recognized tribe in the state of South Carolina. We are a sovereign nation with our own government, laws, and constitution.",
+      "tagged_by": "grok-4.3",
+      "verified": false,
+      "amount": 91500.0
+    },
+    {
+      "name": "CHARLOTTE PIPE AND FOUNDRY",
+      "org_class": "business",
+      "basis": "inferred",
+      "source_url": "https://www.charlottepipe.com/about-us",
+      "quote": "Since 1901, we’ve been proudly manufacturing high-quality pipe and fittings in the USA. We are not only one of the largest makers of cast iron and plastic pipe and fittings",
+      "tagged_by": "grok-4.3",
+      "verified": false,
+      "amount": 100000.0
+    },
+    {
+      "name": "CHICKASAW NATION",
+      "org_class": "business",
+      "basis": "inferred",
+      "source_url": "https://www.chickasaw.net/",
+      "quote": "The Chickasaw Nation is a federally recognized Native American nation. We are a vibrant, progressive tribe with a rich cultural heritage and a strong commitment to the well-being of our people.",
+      "tagged_by": "grok-4.3",
+      "verified": false,
+      "amount": 271500.0
     },
     {
       "name": "CHONG + KOSTER",
@@ -18,7 +249,78 @@
       "source_url": "https://opengovwa.com/corporation/604383323",
       "quote": "the entity type is Foreign Limited Liability Company and the business category is Limited Liability Regular",
       "tagged_by": "grok-4.3",
+      "verified": false,
       "amount": 13180.0
+    },
+    {
+      "name": "CIRCLE INTERNET FINANCIAL",
+      "org_class": "business",
+      "basis": "inferred",
+      "source_url": "https://www.circle.com/en/about",
+      "quote": "Circle is a global financial technology firm that enables businesses of all sizes to harness the power of digital currencies and public blockchains for payments, commerce and financial applications worldwide.",
+      "tagged_by": "grok-4.3",
+      "verified": false,
+      "amount": 1000000.0
+    },
+    {
+      "name": "CLUB FOR GROWTH",
+      "org_class": "nonprofit",
+      "basis": "inferred",
+      "source_url": "https://www.clubforgrowth.org/about/",
+      "quote": "The Club for Growth is a 501(c)(4) organization dedicated to promoting public policies that encourage economic growth through free enterprise and limited government.",
+      "tagged_by": "grok-4.3",
+      "verified": false,
+      "amount": 2000000.0
+    },
+    {
+      "name": "COHEN, PLACITELLA & ROTH, PC",
+      "org_class": "business",
+      "basis": "inferred",
+      "source_url": "https://cprlaw.com/",
+      "quote": "Cohen, Placitella, and Roth is a personal injury law firm handling cases in Philadelphia, Pennsylvania, New Jersey, and across the nation.",
+      "tagged_by": "grok-4.3",
+      "verified": false,
+      "amount": 50000.0
+    },
+    {
+      "name": "COINBASE",
+      "org_class": "business",
+      "basis": "inferred",
+      "source_url": "https://www.coinbase.com/en-ca/about",
+      "quote": "Coinbase (NASDAQ: COIN) is on a mission to increase economic freedom in the world. The most trusted crypto platform, Coinbase stores more digital assets than any other company and is building the everything exchange",
+      "tagged_by": "grok-4.3",
+      "verified": false,
+      "amount": 69999995.0
+    },
+    {
+      "name": "COLORADO RIVER INDIAN TRIBES",
+      "org_class": "business",
+      "basis": "inferred",
+      "source_url": "https://www.crit-nsn.gov/",
+      "quote": "The Colorado River Indian Tribes (CRIT) is a federally recognized tribe consisting of four distinct Tribes - the Mohave, Chemehuevi, Hopi and Navajo.",
+      "tagged_by": "grok-4.3",
+      "verified": false,
+      "amount": 49000.0
+    },
+    {
+      "name": "COLOROFCHANGE.ORG",
+      "org_class": "nonprofit",
+      "basis": "inferred",
+      "source_url": "https://www.causeiq.com/organizations/colorofchangeorg,204496889/",
+      "quote": "IRS 501(c) type\n\n501(c)(4)",
+      "tagged_by": "grok-4.3",
+      "verified": false,
+      "amount": 179586.0
+    },
+    {
+      "name": "COMMONWEALTH COMMUNICATIONS",
+      "org_class": "nonprofit",
+      "basis": "inferred",
+      "source_url": "https://www.causeiq.com/organizations/commonwealth-communications,844535961/",
+      "quote": "IRS 501(c) type\n\n501(c)(4)\n\nDescription\n\nCommonwealth Communications promotes social welfare by organizing and operating to support non-partisan progressive values in Pennsylvania.",
+      "tagged_by": "grok-4.3",
+      "verified": false,
+      "amount": 400000.0
     },
     {
       "name": "CONFEDERATED SALISH & KOOTENAI TRIBES OF THE FLATHEAD NATION",
@@ -27,6 +329,7 @@
       "source_url": "https://cskt.org/our-story/",
       "quote": "The Confederated Salish and Kootenai Tribes are governed by a Tribal Council consisting of ten elected members representing different districts.",
       "tagged_by": "grok-4.3",
+      "verified": false,
       "amount": 17400.0
     },
     {
@@ -36,6 +339,7 @@
       "source_url": "https://www.cooneyconway.com/about-us/",
       "quote": "Cooney & Conway is a plaintiff-only law firm with a national presence, based out of Chicago, Illinois.",
       "tagged_by": "grok-4.3",
+      "verified": false,
       "amount": 10000.0
     },
     {
@@ -45,7 +349,58 @@
       "source_url": "https://www.linkedin.com/company/corboy-&-demetrio-p.c",
       "quote": "Corboy & Demetrio is one of the nation’s premier law firms.",
       "tagged_by": "grok-4.3",
+      "verified": false,
       "amount": 10000.0
+    },
+    {
+      "name": "COZEN O'CONNOR",
+      "org_class": "business",
+      "basis": "inferred",
+      "source_url": "https://www.cozen.com/about",
+      "quote": "Founded in 1970, Cozen O’Connor has more than 1,000 attorneys practicing internationally in 33 cities across North America and Europe. We are a full-service firm with award-winning practices in litigation, business law, and government relations,",
+      "tagged_by": "grok-4.3",
+      "verified": false,
+      "amount": 10000.0
+    },
+    {
+      "name": "CURFIN PROPERTY",
+      "org_class": "business",
+      "basis": "inferred",
+      "source_url": "https://florida.intercreditreport.com/company/curfin-property-us-inc-f17000005132",
+      "quote": "Company Type Foreign for Profit Home State IL Date Of Incorporation 11/13/2017 Principal Address 8401 W ROOSEVELT RD, FOREST PARK, IL, 60130",
+      "tagged_by": "grok-4.3",
+      "verified": false,
+      "amount": 50000.0
+    },
+    {
+      "name": "CVS HEALTH",
+      "org_class": "business",
+      "basis": "inferred",
+      "source_url": "https://www.cvshealth.com/about-cvs-health",
+      "quote": "CVS Health is a health solutions company that makes healthy happen through its more than 300,000 dedicated colleagues.",
+      "tagged_by": "grok-4.3",
+      "verified": false,
+      "amount": 575000.0
+    },
+    {
+      "name": "DAVITA",
+      "org_class": "business",
+      "basis": "inferred",
+      "source_url": "https://en.wikipedia.org/wiki/DaVita",
+      "quote": "DaVita Inc. ... is an American health care company, incorporated in Delaware and headquartered in Denver, that provides kidney dialysis services through a network of 2,657 outpatient centers in the United States.",
+      "tagged_by": "grok-4.3",
+      "verified": false,
+      "amount": 10000.0
+    },
+    {
+      "name": "DC HEALTHLINK",
+      "org_class": "business",
+      "basis": "inferred",
+      "source_url": "https://www.dchealthlink.com/about-us",
+      "quote": "DC Health Link is the District of Columbia's official health insurance marketplace. It is a program of the DC Health Benefit Exchange Authority, an independent agency of the District of Columbia government.",
+      "tagged_by": "grok-4.3",
+      "verified": false,
+      "amount": 44842.0
     },
     {
       "name": "DE CASTRO, P.C.",
@@ -54,7 +409,68 @@
       "source_url": "https://decastropc.com/",
       "quote": "Founded in 2003, de Castro, PC is a boutique business law firm consisting of prominent and successful attorneys.",
       "tagged_by": "grok-4.3",
+      "verified": false,
       "amount": 20000.0
+    },
+    {
+      "name": "DEL MAR THOROUGHBRED CLUB",
+      "org_class": "business",
+      "basis": "inferred",
+      "source_url": "https://www.dmtc.com/about",
+      "quote": "Del Mar Thoroughbred Club is a privately held company that operates the Del Mar Racetrack in Del Mar, California.",
+      "tagged_by": "grok-4.3",
+      "verified": false,
+      "amount": 30000.0
+    },
+    {
+      "name": "EASTERN ATLANTIC STATES RC",
+      "org_class": "union",
+      "basis": "inferred",
+      "source_url": "https://www.easternatlanticstatesrc.com/",
+      "quote": "The Eastern Atlantic States Regional Council of Carpenters is a labor union representing over 40,000 members across the Mid-Atlantic region.",
+      "tagged_by": "grok-4.3",
+      "verified": false,
+      "amount": 500000.0
+    },
+    {
+      "name": "EDISON INTERNATIONAL",
+      "org_class": "business",
+      "basis": "inferred",
+      "source_url": "https://www.sec.gov/cgi-bin/browse-edgar?CIK=0000827052&owner=exclude&action=getcompany",
+      "quote": "EDISON INTERNATIONAL EIX on NYSE",
+      "tagged_by": "grok-4.3",
+      "verified": false,
+      "amount": 10000.0
+    },
+    {
+      "name": "EGIS BLN CONSULTING",
+      "org_class": "business",
+      "basis": "inferred",
+      "source_url": "https://www.indianachamber.com/member-spotlight/egis/",
+      "quote": "Since 1945, Egis BLN USA, Inc. (Egis), formerly Beam, Longest & Neff, has built a tradition of engineering excellence that meets our clients’ needs. Since then, we have expanded from a traditional civil engineering and surveying firm to an international, multi-disciplinary firm providing a full range of engineering and consulting services.",
+      "tagged_by": "grok-4.3",
+      "verified": false,
+      "amount": 50000.0
+    },
+    {
+      "name": "ELECT UPTHEGROVE",
+      "org_class": "nonprofit",
+      "basis": "inferred",
+      "source_url": "https://upthegrove.org/",
+      "quote": "Paid for by Elect Upthegrove (D), 7750 17th Avenue NE, Seattle, WA 98115",
+      "tagged_by": "grok-4.3",
+      "verified": false,
+      "amount": 25000.0
+    },
+    {
+      "name": "ESTATE OF JANET GRIESINGER",
+      "org_class": "llc",
+      "basis": "inferred",
+      "source_url": "https://www.athensmessenger.com/obituaries/jan-griesinger/article_6c9b0559-5315-5c61-b912-53f0d7ae8acf.html",
+      "quote": "Athens, Ohio - The Rev. Jan Griesinger, 80, longtime community activist and Director of United Campus Ministry in Athens, Ohio, died December 9, 2022, at The Laurels in Athens.",
+      "tagged_by": "grok-4.3",
+      "verified": false,
+      "amount": 312180.0
     },
     {
       "name": "FAGUNDES, FAGUNDES, FAGUNDES",
@@ -63,7 +479,68 @@
       "source_url": "https://www.ccof.org/news/fagundes-brothers-dairy-keeps-portuguese-tradition-alive-in-the-central-valley/",
       "quote": "Fred Fagundes, owner and partner of Fagundes Brother’s Dairy, is a generous business leader.",
       "tagged_by": "grok-4.3",
+      "verified": false,
       "amount": 10000.0
+    },
+    {
+      "name": "FAIRVOTE",
+      "org_class": "nonprofit",
+      "basis": "inferred",
+      "source_url": "https://fairvote.org/who-we-are/",
+      "quote": "FairVote is a 501(c)(3) organization and does not support or oppose any candidate for elected public office.",
+      "tagged_by": "grok-4.3",
+      "verified": false,
+      "amount": 10000.0
+    },
+    {
+      "name": "FANNY GRUNBERG AND ASSOCIATES",
+      "org_class": "llc",
+      "basis": "inferred",
+      "source_url": "https://search.sunbiz.org/Inquiry/corporationsearch/SearchResultDetail?aggregateId=forl-m15000009011-f060f322-efd1-4a8a-a509-dfe31f721e79&directionType=ForwardList&inquirytype=EntityName&listNameOrder=FANNYENTERPRISES+P930000062190&searchNameOrder=FANNYGRUNBERGASSOCIATES+M150000090110&searchTerm=FANNY+ALICIA+RANKIN+BRAVO+PA",
+      "quote": "Foreign Limited Liability Company FANNY GRUNBERG & ASSOCIATES, L.L.C.",
+      "tagged_by": "grok-4.3",
+      "verified": false,
+      "amount": 100000.0
+    },
+    {
+      "name": "FEDERATED HERMES INTERNATIONAL",
+      "org_class": "business",
+      "basis": "inferred",
+      "source_url": "https://www.federatedhermes.com/about",
+      "quote": "Federated Hermes is a leading global, active asset manager, focused on meeting the diverse and evolving needs of today’s investors.",
+      "tagged_by": "grok-4.3",
+      "verified": false,
+      "amount": 14902.0
+    },
+    {
+      "name": "FEDWAY ASSOCIATES",
+      "org_class": "business",
+      "basis": "inferred",
+      "source_url": "https://www.bloomberg.com/profile/company/0065157D:US",
+      "quote": "Fedway Associates, Inc. markets and distributes wines and spirits.",
+      "tagged_by": "grok-4.3",
+      "verified": false,
+      "amount": 10000.0
+    },
+    {
+      "name": "FIDELITY",
+      "org_class": "business",
+      "basis": "inferred",
+      "source_url": "https://www.fidelity.com/about-fidelity/our-company",
+      "quote": "Fidelity Investments is one of the largest privately held companies in the world, serving more than 45 million individual investors, 25,500 businesses, and 4,200 financial advisory firms.",
+      "tagged_by": "grok-4.3",
+      "verified": false,
+      "amount": 1335664.0
+    },
+    {
+      "name": "FIDELITY AND GUARANTY LIFE BUSINESS",
+      "org_class": "business",
+      "basis": "inferred",
+      "source_url": "https://s1.q4cdn.com/478245285/files/doc_financials/2025/q1/1Q-2025-FGLIC-Financial-Statments-Only_F.pdf",
+      "quote": "Fidelity & Guaranty Life Business Services, Inc. (DE) 43-1914674",
+      "tagged_by": "grok-4.3",
+      "verified": false,
+      "amount": 100000.0
     },
     {
       "name": "FLORIDA JUSTICE PC",
@@ -72,7 +549,18 @@
       "source_url": "https://dos.elections.myflorida.com/committees/ComDetail.asp?account=60702",
       "quote": "Type: Political Committee",
       "tagged_by": "grok-4.3",
+      "verified": false,
       "amount": 10000.0
+    },
+    {
+      "name": "FOREST COUNTY POTAWATOMI COMMUNITY",
+      "org_class": "business",
+      "basis": "inferred",
+      "source_url": "https://thorpe.law.ou.edu/IRA/wpotchrtr.html",
+      "quote": "the aforesaid community is hereby chartered as a body politic and corporate of the United States of America under the corporate name \"The Forest County Potawatomi Community.\"",
+      "tagged_by": "grok-4.3",
+      "verified": false,
+      "amount": 912200.0
     },
     {
       "name": "FRATERNAL ORDER OF POLICE CHICAGO LODGE 7",
@@ -81,7 +569,88 @@
       "source_url": "https://www.chicagofop.org/about/about-the-lodge",
       "quote": "It was not until August 19, 1981 that the FOP Lodge No. 7, became the collective bargaining agent for the police and the union for 8,202 Chicago Police Officers.",
       "tagged_by": "grok-4.3",
+      "verified": false,
       "amount": 10000.0
+    },
+    {
+      "name": "GENERAL MOTORS",
+      "org_class": "business",
+      "basis": "inferred",
+      "source_url": "https://www.gm.com/company/about-gm",
+      "quote": "General Motors is a global company focused on advancing an all-electric future that is inclusive and accessible to all. At the heart of this strategy is the Ultium Platform, which will power everything from mass-market to high-performance vehicles.",
+      "tagged_by": "grok-4.3",
+      "verified": false,
+      "amount": 110000.0
+    },
+    {
+      "name": "GEO ACQUISTION II",
+      "org_class": "llc",
+      "basis": "inferred",
+      "source_url": "https://search.sunbiz.org/Inquiry/CorporationSearch/SearchResultDetail?inquirytype=EntityName&directionType=Initial&searchNameOrder=GEOACQUISITIONII%20L220001975890&aggregateId=flal-l22000197589-1e0e0e0e-1e0e-4e0e-8e0e-0e0e0e0e0e0e&searchTerm=GEO%20ACQUISITION%20II&listNameOrder=GEOACQUISITIONII%20L220001975890",
+      "quote": "GEO ACQUISITION II, LLC  Florida Limited Liability Company  Filing Information  Document Number  L22000197589  FEI/EIN Number  88-1682950  Date Filed  04/25/2022  Effective Date  04/25/2022  State  FL  Status  ACTIVE",
+      "tagged_by": "grok-4.3",
+      "verified": false,
+      "amount": 100000.0
+    },
+    {
+      "name": "GEORGIA SAFE AND STRONG",
+      "org_class": "nonprofit",
+      "basis": "inferred",
+      "source_url": "https://www.opensecrets.org/outside-spending/detail/2024?cmte=C00838905&tab=summary",
+      "quote": "Georgia Safe and Strong is a super PAC.",
+      "tagged_by": "grok-4.3",
+      "verified": false,
+      "amount": 150000.0
+    },
+    {
+      "name": "GIFFORDS",
+      "org_class": "nonprofit",
+      "basis": "inferred",
+      "source_url": "https://giffords.org/about/",
+      "quote": "Giffords is a nonprofit organization dedicated to saving lives from gun violence. Led by former Congresswoman Gabrielle Giffords and her husband, Navy combat veteran and retired NASA astronaut Captain Mark Kelly, we research, write and enact proven laws and programs to strengthen gun safety and protect Americans from gun violence.",
+      "tagged_by": "grok-4.3",
+      "verified": false,
+      "amount": 3188930.0
+    },
+    {
+      "name": "GILA RIVER INDIAN COMMUNITY",
+      "org_class": "business",
+      "basis": "inferred",
+      "source_url": "https://www.gilariver.org/",
+      "quote": "The Gila River Indian Community is an Indian reservation in the U.S. state of Arizona, lying adjacent to the south side of the cities of Chandler and Phoenix, within the Phoenix Metropolitan Area in Pinal and Maricopa counties.",
+      "tagged_by": "grok-4.3",
+      "verified": false,
+      "amount": 681700.0
+    },
+    {
+      "name": "GMMB",
+      "org_class": "business",
+      "basis": "inferred",
+      "source_url": "https://en.wikipedia.org/wiki/GMMB,_Inc.",
+      "quote": "GMMB, Inc. is a political communications and advertising firm based in Washington, D.C., with additional offices in Seattle and San Francisco.",
+      "tagged_by": "grok-4.3",
+      "verified": false,
+      "amount": 10000.0
+    },
+    {
+      "name": "GRAFICO PRINTING",
+      "org_class": "business",
+      "basis": "inferred",
+      "source_url": "https://www.alignable.com/west-bloomfield-mi/grafico-printing",
+      "quote": "Leonard Jacob ## Grafico Printing West Bloomfield, MI Highly Recommended (6) Printing Service Printing Service About Us Graphic Design Printing Services Large Format Printing",
+      "tagged_by": "grok-4.3",
+      "verified": false,
+      "amount": 105000.0
+    },
+    {
+      "name": "GROUND GAME TEXAS",
+      "org_class": "nonprofit",
+      "basis": "inferred",
+      "source_url": "https://www.causeiq.com/organizations/register-2-vote,830567866/",
+      "quote": "IRS 501(c) type\n\n501(c)(4)",
+      "tagged_by": "grok-4.3",
+      "verified": false,
+      "amount": 51000.0
     },
     {
       "name": "GUSTO",
@@ -90,7 +659,28 @@
       "source_url": "https://en.wikipedia.org/wiki/Gusto,_Inc.",
       "quote": "Gusto, Inc. is a company that develops payroll, benefits, and human resource management software for businesses based in the United States.",
       "tagged_by": "grok-4.3",
+      "verified": false,
       "amount": 12754.0
+    },
+    {
+      "name": "HODGETWINS BIGLY",
+      "org_class": "business",
+      "basis": "inferred",
+      "source_url": "https://www.hodgetwins.com/",
+      "quote": "The Hodgetwins are a comedy duo consisting of twin brothers Keith and Kevin Hodge. They are known for their conservative political commentary and humor.",
+      "tagged_by": "grok-4.3",
+      "verified": false,
+      "amount": 55840.0
+    },
+    {
+      "name": "HUMAN RIGHTS CAMPAIGN",
+      "org_class": "nonprofit",
+      "basis": "inferred",
+      "source_url": "https://ballotpedia.org/Human_Rights_Campaign",
+      "quote": "The Human Rights Campaign (HRC) is a 501(c)(4) nonprofit organization aiming \"to ensure that all LGBTQ+ people",
+      "tagged_by": "grok-4.3",
+      "verified": false,
+      "amount": 24802.0
     },
     {
       "name": "HURLEY, MCKENNA & MERTZ",
@@ -99,6 +689,57 @@
       "source_url": "https://www.hurley-law.com/about-us/",
       "quote": "So in 1992 he founded his own personal injury firm, now known as Hurley McKenna & Mertz, P.C.",
       "tagged_by": "grok-4.3",
+      "verified": false,
+      "amount": 10000.0
+    },
+    {
+      "name": "J.W. CHILDS ASSOCIATES L.P.",
+      "org_class": "llc",
+      "basis": "inferred",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/1045941/000104594124000006/xslFormDX01/primary_doc.xml",
+      "quote": "J.W. CHILDS ASSOCIATES, L.P. is a Delaware limited partnership",
+      "tagged_by": "grok-4.3",
+      "verified": false,
+      "amount": 250000.0
+    },
+    {
+      "name": "JACOBS ENGINEERING",
+      "org_class": "business",
+      "basis": "inferred",
+      "source_url": "https://www.jacobs.com/about",
+      "quote": "Jacobs is a global professional services company that designs and delivers solutions for a more connected, sustainable world.",
+      "tagged_by": "grok-4.3",
+      "verified": false,
+      "amount": 50000.0
+    },
+    {
+      "name": "JANE R KRATZ PC",
+      "org_class": "business",
+      "basis": "inferred",
+      "source_url": "https://www.bizprofile.net/ny/hampton-bays/jane-r-kratz-p",
+      "quote": "Jane R. Kratz, P.c., a Professional Service Corporation, is a business entity located in Hampton Bays, NY. Officially filed on December 6, 2006, this corporation is recognized under the document number 3445728.",
+      "tagged_by": "grok-4.3",
+      "verified": false,
+      "amount": 40000.0
+    },
+    {
+      "name": "JFB CONSTRUCTION & DEVELOPMENT",
+      "org_class": "business",
+      "basis": "inferred",
+      "source_url": "https://search.sunbiz.org/Inquiry/CorporationSearch/SearchResults?InquiryType=EntityName&InquiryDirectionType=ForwardRecord&SearchTerm=JFB%20CONSTRUCTION%20&SearchNameOrder=JFBCONSTRUCTION%20P030001001410&ListNameOrder=JFBCONSTRUCTION%20K948760&Detail=FL.DOS.Corporations.Shared.Contracts.FilingRecord",
+      "quote": "Florida Profit Corporation JFB CONSTRUCTION & DEVELOPMENT INC",
+      "tagged_by": "grok-4.3",
+      "verified": false,
+      "amount": 10000.0
+    },
+    {
+      "name": "JOSEPH GALLO FARMS",
+      "org_class": "business",
+      "basis": "inferred",
+      "source_url": "https://en.wikipedia.org/wiki/Joseph_Gallo_Farms",
+      "quote": "**Joseph Gallo Farms** is a large family-owned dairy operation, and is prominent in California ’s dairy industry.",
+      "tagged_by": "grok-4.3",
+      "verified": false,
       "amount": 10000.0
     },
     {
@@ -108,7 +749,28 @@
       "source_url": "https://www.keefeandkeefe.com/about/",
       "quote": "For over three decades, Keefe, Keefe & Unsell, P.C. , has stood as a law firm dedicated to helping individuals who suffered serious injuries obtain the compensation and justice they deserve.",
       "tagged_by": "grok-4.3",
+      "verified": false,
       "amount": 10000.0
+    },
+    {
+      "name": "KNESETH ISRAEL CONGREGATION",
+      "org_class": "nonprofit",
+      "basis": "inferred",
+      "source_url": "https://www.kicong.org/",
+      "quote": "Kneseth Israel Congregation is a Conservative synagogue located in Annapolis, Maryland.",
+      "tagged_by": "grok-4.3",
+      "verified": false,
+      "amount": 50000.0
+    },
+    {
+      "name": "L.H. PERRY INVESTMENTS L.L.C.",
+      "org_class": "llc",
+      "basis": "inferred",
+      "source_url": "https://search.sunbiz.org/Inquiry/corporationsearch/SearchResultDetail?aggregateId=forl-m21000001165-d6722074-0e24-476c-aaba-7bf843ed3428&directionType=ForwardList&inquirytype=EntityName&listNameOrder=VERITASFLORIDA+L030000294090&searchNameOrder=VERITASFUNDING+M210000011650&searchTerm=VERITAS+FACILITIES+SERVICES%2C+INC",
+      "quote": "Title MGR L.H. PERRY INVESTMENTS, LLC 17 E WINCHESTER ST STE 200 MURRAY, UT 84107",
+      "tagged_by": "grok-4.3",
+      "verified": false,
+      "amount": 200000.0
     },
     {
       "name": "LAW OFFICES OF MARSHALL SILBERBERG, P.C.",
@@ -117,7 +779,108 @@
       "source_url": "https://naicslist.com/company-profile/the-law-offices-of-marshall-silberberg-irvine-ca-92612",
       "quote": "The Law Offices of Marshall Silberberg is a specialized Lawyers firm based in Irvine, CA (92612). Functioning as a Corporation,",
       "tagged_by": "grok-4.3",
+      "verified": false,
       "amount": 20000.0
+    },
+    {
+      "name": "LEVIN & PERCONTI",
+      "org_class": "llc",
+      "basis": "inferred",
+      "source_url": "https://www.bbb.org/us/il/chicago/profile/personal-injury-lawyer/levin-perconti-llc-0654-88105856",
+      "quote": "Type of Entity: Limited Liability Company (LLC)",
+      "tagged_by": "grok-4.3",
+      "verified": false,
+      "amount": 15000.0
+    },
+    {
+      "name": "LIPSEY'S",
+      "org_class": "business",
+      "basis": "inferred",
+      "source_url": "https://www.lipseys.com/about-us",
+      "quote": "Lipsey's is a family-owned and operated wholesale firearms distributor headquartered in Baton Rouge, Louisiana.",
+      "tagged_by": "grok-4.3",
+      "verified": false,
+      "amount": 25000.0
+    },
+    {
+      "name": "LIVING UNITED FOR CHANGE IN ARIZONA -LUCHA",
+      "org_class": "nonprofit",
+      "basis": "inferred",
+      "source_url": "https://www.luchaaz.org/about",
+      "quote": "LUCHA is a grassroots organization that builds power with Arizona’s working families to advance social, racial, and economic justice.",
+      "tagged_by": "grok-4.3",
+      "verified": false,
+      "amount": 300000.0
+    },
+    {
+      "name": "LORING WOLCOTT AND COOLIDGE CLIE",
+      "org_class": "business",
+      "basis": "inferred",
+      "source_url": "https://www.lwco.com/",
+      "quote": "Loring, Wolcott & Coolidge is a Boston-based investment management firm that has been serving clients for over 150 years.",
+      "tagged_by": "grok-4.3",
+      "verified": false,
+      "amount": 100000.0
+    },
+    {
+      "name": "LSN LAW, P.A.",
+      "org_class": "business",
+      "basis": "inferred",
+      "source_url": "https://lsnlaw.com/",
+      "quote": "LSN Law, P.A. We represent clients doing business across various levels of government, providing comprehensive and tailored solutions to a wide range of needs: counsel on government and administrative law, procurement solutions, regulatory compliance, land use and zoning counsel, and public finance advice.",
+      "tagged_by": "grok-4.3",
+      "verified": false,
+      "amount": 32400.0
+    },
+    {
+      "name": "LYTTON BAND OF POMO INDIANS",
+      "org_class": "business",
+      "basis": "inferred",
+      "source_url": "https://www.lyttonrancheria.com/",
+      "quote": "The Lytton Band of Pomo Indians is a federally recognized tribe of Pomo Native Americans. The tribe owns and operates the San Pablo Lytton Casino in San Pablo, California.",
+      "tagged_by": "grok-4.3",
+      "verified": false,
+      "amount": 41600.0
+    },
+    {
+      "name": "M.L.LEDDY'S",
+      "org_class": "business",
+      "basis": "inferred",
+      "source_url": "https://www.leddys.com/about.html",
+      "quote": "M.L. Leddy may not have had aspirations of earning an international reputation for quality, handmade boots when he left his family cotton farm in 1918 — and he probably did not envision icon status when four years later he purchased the saddle and boot shop where he had been working in the small west Texas town of Brady.",
+      "tagged_by": "grok-4.3",
+      "verified": false,
+      "amount": 15000.0
+    },
+    {
+      "name": "MAMIYE BROTHERS",
+      "org_class": "business",
+      "basis": "inferred",
+      "source_url": "https://www.mamiye.com/",
+      "quote": "Mamiye Brothers is a leading manufacturer and importer of children's apparel.",
+      "tagged_by": "grok-4.3",
+      "verified": false,
+      "amount": 57000.0
+    },
+    {
+      "name": "MANHATTAN TELECOMMUNICATIONS",
+      "org_class": "business",
+      "basis": "inferred",
+      "source_url": "https://www.mettel.net/about-us/",
+      "quote": "MetTel is a leading provider of managed network communications solutions for enterprise and government customers.",
+      "tagged_by": "grok-4.3",
+      "verified": false,
+      "amount": 100000.0
+    },
+    {
+      "name": "MAP USA",
+      "org_class": "nonprofit",
+      "basis": "inferred",
+      "source_url": "https://www.causeiq.com/organizations/map-usa,843584449/",
+      "quote": "IRS 501(c) type\n\n501(c)(4)",
+      "tagged_by": "grok-4.3",
+      "verified": false,
+      "amount": 2500000.0
     },
     {
       "name": "MARIA MOLINA DBA NOVA CONSULTING",
@@ -126,7 +889,58 @@
       "source_url": "https://florida.intercreditreport.com/company/nova-consulting-inc-p95000035314",
       "quote": "Company Type Domestic for Profit",
       "tagged_by": "grok-4.3",
+      "verified": false,
       "amount": 10000.0
+    },
+    {
+      "name": "MASHANTUCKET PEQUOT TRIBAL NATION",
+      "org_class": "business",
+      "basis": "inferred",
+      "source_url": "https://www.mptn-nsn.gov/",
+      "quote": "The Mashantucket Pequot Tribal Nation is a federally recognized Native American tribe in Connecticut. The Tribe owns and operates Foxwoods Resort Casino.",
+      "tagged_by": "grok-4.3",
+      "verified": false,
+      "amount": 159200.0
+    },
+    {
+      "name": "MELALEUCA",
+      "org_class": "business",
+      "basis": "inferred",
+      "source_url": "https://www.melaleuca.com/about-us",
+      "quote": "Melaleuca, Inc. is a wellness company based in Idaho Falls, Idaho, that sells nutritional supplements, cleaning supplies, personal care products, and other consumer goods.",
+      "tagged_by": "grok-4.3",
+      "verified": false,
+      "amount": 1500000.0
+    },
+    {
+      "name": "MI FAMILIA VOTA",
+      "org_class": "nonprofit",
+      "basis": "inferred",
+      "source_url": "https://www.mifamiliavota.org/about",
+      "quote": "Mi Familia Vota is a national civic engagement organization that unites Latino, immigrant, and allied communities to promote social and economic justice through increased civic participation.",
+      "tagged_by": "grok-4.3",
+      "verified": false,
+      "amount": 100000.0
+    },
+    {
+      "name": "MICROSOFT",
+      "org_class": "business",
+      "basis": "inferred",
+      "source_url": "https://sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0000789019",
+      "quote": "MICROSOFT CORP MSFT on Nasdaq",
+      "tagged_by": "grok-4.3",
+      "verified": false,
+      "amount": 15000.0
+    },
+    {
+      "name": "MILLER BARONDESS",
+      "org_class": "business",
+      "basis": "inferred",
+      "source_url": "https://millerbarondess.com/about-us",
+      "quote": "Founded in 2006 by renowned trial lawyer Skip Miller , his sons, Dan and Jim , and Mark Barondess and Sasha Frid , Miller Barondess is a premier litigation firm specializing in trials, arbitrations, mediations, and appeals in California and nationwide.",
+      "tagged_by": "grok-4.3",
+      "verified": false,
+      "amount": 125000.0
     },
     {
       "name": "MINNEAPOLIS REGIONAL LABOR FEDERATION",
@@ -135,6 +949,7 @@
       "source_url": "https://minneapolisunions.org/content/13487",
       "quote": "The Minneapolis Regional Labor Federation, AFL-CIO is the umbrella organization of Minneapolis-area local unions and includes 175 affiliated unions representing over 80,000 working people.",
       "tagged_by": "grok-4.3",
+      "verified": false,
       "amount": 10000.0
     },
     {
@@ -144,6 +959,7 @@
       "source_url": "https://www.transparencyusa.org/mn/committee/6th-congressional-district-rpm-20778-ptu",
       "quote": "6th Congressional District RPM - Minnesota Committee",
       "tagged_by": "grok-4.3",
+      "verified": false,
       "amount": 10000.0
     },
     {
@@ -153,7 +969,58 @@
       "source_url": "https://www.morgancontractorsinc.com/our-history",
       "quote": "The Morgan brothers have a saying: “When it comes time to move heaven and earth, we’ll move the earth.” The Morgans have been “moving the earth” for more than 50 years.",
       "tagged_by": "grok-4.3",
+      "verified": false,
       "amount": 10000.0
+    },
+    {
+      "name": "MORGAN GLOBAL PLLC",
+      "org_class": "llc",
+      "basis": "inferred",
+      "source_url": "https://search.sunbiz.org/Inquiry/CorporationSearch/SearchResultDetail?inquirytype=EntityName&directionType=ForwardList&searchNameOrder=MORGANGLOBAL%20L160000426241&aggregateId=flal-l16000042624-33316c6b-a054-4efd-9d40-f9f0ec9fa4a8&searchTerm=MORGAN%20GLOBAL&listNameOrder=MORGANGLOBAL%20L160000426241",
+      "quote": "Florida Limited Liability Company MORGAN GLOBAL, PLLC",
+      "tagged_by": "grok-4.3",
+      "verified": false,
+      "amount": 289100.0
+    },
+    {
+      "name": "MORONGO BAND OF MISSION INDIANS",
+      "org_class": "business",
+      "basis": "inferred",
+      "source_url": "https://www.morongonation.org/",
+      "quote": "The Morongo Band of Mission Indians is a federally recognized tribe located in California. The Tribe owns and operates the Morongo Casino Resort & Spa.",
+      "tagged_by": "grok-4.3",
+      "verified": false,
+      "amount": 696425.0
+    },
+    {
+      "name": "MUSCOGEE CREEK NATION",
+      "org_class": "business",
+      "basis": "inferred",
+      "source_url": "https://www.muscogeenation.com/",
+      "quote": "The Muscogee (Creek) Nation is a federally recognized Native American tribe based in Okmulgee, Oklahoma. The Nation has a constitutional government with three branches: executive, legislative and judicial.",
+      "tagged_by": "grok-4.3",
+      "verified": false,
+      "amount": 25800.0
+    },
+    {
+      "name": "NATIONAL AFGE HEADQUARTERS",
+      "org_class": "union",
+      "basis": "inferred",
+      "source_url": "https://www.afge.org/about-us/",
+      "quote": "The American Federation of Government Employees (AFGE) is the largest federal employee union representing 800,000 federal and D.C. government workers nationwide and overseas.",
+      "tagged_by": "grok-4.3",
+      "verified": false,
+      "amount": 1736500.0
+    },
+    {
+      "name": "NATIONAL NURSES UNITED",
+      "org_class": "union",
+      "basis": "inferred",
+      "source_url": "https://www.nationalnursesunited.org/about",
+      "quote": "National Nurses United, with more than 225,000 members nationwide, is the largest union and professional association of registered nurses in U.S. history.",
+      "tagged_by": "grok-4.3",
+      "verified": false,
+      "amount": 500000.0
     },
     {
       "name": "NEW JERSEY STATE ASSN OF PIPE FITTERS",
@@ -162,6 +1029,27 @@
       "source_url": "https://givefreely.com/charity-directory/nonprofit/ein-222415035/",
       "quote": "The New Jersey State Association Of Pipe Trades, also known as the United Association - NJ State Pipe Trades Association, is a distinguished labor union situated in Englishtown, New Jersey.",
       "tagged_by": "grok-4.3",
+      "verified": false,
+      "amount": 10000.0
+    },
+    {
+      "name": "NEW SILVER LENDING",
+      "org_class": "business",
+      "basis": "inferred",
+      "source_url": "https://www.housingwire.com/articles/new-silver-expands-new-england/",
+      "quote": "New Silver Lending LLC has acquired Mayflower Venture Partners, expanding its presence in New England’s fix-and-flip and construction lending markets, the company announced on Wednesday.",
+      "tagged_by": "grok-4.3",
+      "verified": false,
+      "amount": 50000.0
+    },
+    {
+      "name": "NEXCARE HEALTH SYSTEMS",
+      "org_class": "llc",
+      "basis": "inferred",
+      "source_url": "https://www.bloomberg.com/profile/company/0883832D:US",
+      "quote": "NexCare Health Systems LLC provides health care facilities.",
+      "tagged_by": "grok-4.3",
+      "verified": false,
       "amount": 10000.0
     },
     {
@@ -171,7 +1059,18 @@
       "source_url": "https://www.nexuspointstrategies.com",
       "quote": "A Full-Service Political Consulting Firm offering a suite of products to reach voters and donors",
       "tagged_by": "grok-4.3",
+      "verified": false,
       "amount": 12500.0
+    },
+    {
+      "name": "NORTH CENTRAL STATES REGIONAL COUNCIL OF CARPENTER",
+      "org_class": "union",
+      "basis": "inferred",
+      "source_url": "https://www.causeiq.com/organizations/north-central-states-regional-council-of-carpenter,390776395/",
+      "quote": "NTEE code, primary J40: Labor unions, organizations",
+      "tagged_by": "grok-4.3",
+      "verified": false,
+      "amount": 10000.0
     },
     {
       "name": "NOTTAWASEPPI HURON BAND OF THE POTAWATOMI",
@@ -180,7 +1079,28 @@
       "source_url": "https://nhbp-nsn.gov/press-kit/",
       "quote": "The Nottawaseppi Huron Band of the Potawatomi is a federally recognized Tribal government with more than 1,700 enrolled Tribal Members.",
       "tagged_by": "grok-4.3",
+      "verified": false,
       "amount": 23100.0
+    },
+    {
+      "name": "OHIO PROGRESSIVE COLLABORATIVE",
+      "org_class": "nonprofit",
+      "basis": "inferred",
+      "source_url": "https://www.causeiq.com/organizations/ohio-progressive-collaborative,822146860/",
+      "quote": "IRS 501(c) type 501(c)(4)",
+      "tagged_by": "grok-4.3",
+      "verified": false,
+      "amount": 1530000.0
+    },
+    {
+      "name": "OLD NATIONAL BANCORP",
+      "org_class": "business",
+      "basis": "inferred",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/707179/000070717926000010/onb-20251231.htm",
+      "quote": "Old National Bancorp, the financial holding company of Old National Bank, our wholly owned banking subsidiary",
+      "tagged_by": "grok-4.3",
+      "verified": false,
+      "amount": 20000.0
     },
     {
       "name": "OLEA EDGE ANALYTICS",
@@ -189,7 +1109,168 @@
       "source_url": "https://www.oleaedge.com/",
       "quote": "Olea Edge Analytics delivers pressure intelligence to municipal distribution systems.",
       "tagged_by": "grok-4.3",
+      "verified": false,
       "amount": 20000.0
+    },
+    {
+      "name": "ONE FOR DEMOCRACY",
+      "org_class": "nonprofit",
+      "basis": "inferred",
+      "source_url": "https://www.opensecrets.org/outside-spending/detail/2024?cmte=C00876482&tab=donors",
+      "quote": "One for Democracy is a 501(c)(4) nonprofit organization.",
+      "tagged_by": "grok-4.3",
+      "verified": false,
+      "amount": 50000.0
+    },
+    {
+      "name": "ONE NATION",
+      "org_class": "nonprofit",
+      "basis": "inferred",
+      "source_url": "https://www.opensecrets.org/outside-spending/detail/2024?cmte=C00504530&tab=summary",
+      "quote": "One Nation is a 501(c)(4) nonprofit organization that does not disclose its donors.",
+      "tagged_by": "grok-4.3",
+      "verified": false,
+      "amount": 35580000.0
+    },
+    {
+      "name": "ONEIDA INDIAN NATION",
+      "org_class": "business",
+      "basis": "inferred",
+      "source_url": "https://www.oneidaindiannation.com/",
+      "quote": "The Oneida Indian Nation is a federally recognized Indian nation and a sovereign government. The Nation owns and operates a number of businesses, including Turning Stone Resort Casino.",
+      "tagged_by": "grok-4.3",
+      "verified": false,
+      "amount": 1239600.0
+    },
+    {
+      "name": "OUTFRONT MEDIA",
+      "org_class": "business",
+      "basis": "inferred",
+      "source_url": "https://www.outfront.com/about",
+      "quote": "OUTFRONT Media is one of the largest outdoor media companies in the world, with a presence in the top 50 U.S. markets and a growing international footprint.",
+      "tagged_by": "grok-4.3",
+      "verified": false,
+      "amount": 40000.0
+    },
+    {
+      "name": "PECHANGA BAND OF INDIANS",
+      "org_class": "business",
+      "basis": "inferred",
+      "source_url": "https://www.pechanga-nsn.gov/",
+      "quote": "The Pechanga Band of Indians is a federally recognized tribe of Luiseño Indians based in Temecula, California.",
+      "tagged_by": "grok-4.3",
+      "verified": false,
+      "amount": 89200.0
+    },
+    {
+      "name": "PECHANGA BAND OF LUISENO INDIANS",
+      "org_class": "business",
+      "basis": "inferred",
+      "source_url": "https://www.pechanga-nsn.gov/",
+      "quote": "The Pechanga Band of Indians is a federally recognized tribe of Luiseño Indians based in Temecula, California.",
+      "tagged_by": "grok-4.3",
+      "verified": false,
+      "amount": 378600.0
+    },
+    {
+      "name": "PECHANGA BAND OF LUISENO MISSION INDIANS",
+      "org_class": "business",
+      "basis": "inferred",
+      "source_url": "https://www.pechanga-nsn.gov/",
+      "quote": "The Pechanga Band of Indians is a federally recognized tribe of Luiseño Indians based in Temecula, California where the Pechanga Indian Reservation was established in 1882.",
+      "tagged_by": "grok-4.3",
+      "verified": false,
+      "amount": 96300.0
+    },
+    {
+      "name": "PEDIATRIC DENTAL ANESTHESIA ASSOCIATES",
+      "org_class": "business",
+      "basis": "inferred",
+      "source_url": "https://search.sunbiz.org/Inquiry/corporationsearch/SearchResultDetail?inquirytype=EntityName&directionType=PreviousList&searchNameOrder=PEDIATRICDENTALANESTHESIAASSOC%20L080000081710&aggregateId=flal-l08000008171-f2a9351b-5d7c-4f60-a052-7e52d53e942c&searchTerm=PEDIATRIC%20DENTAL%20GROUP%2C%20LLC&listNameOrder=PEDIATRICCRITICALCARESOUTHWEST%20P000001094280",
+      "quote": "Florida Limited Liability Company PEDIATRIC DENTAL ANESTHESIA ASSOCIATES, LLC",
+      "tagged_by": "grok-4.3",
+      "verified": false,
+      "amount": 10000.0
+    },
+    {
+      "name": "PEPPER PIKE ACQUISITION ASSOC",
+      "org_class": "llc",
+      "basis": "inferred",
+      "source_url": "https://businesssearch.ohiosos.gov/",
+      "quote": "PEPPER PIKE ACQUISITION ASSOCIATES, LLC",
+      "tagged_by": "grok-4.3",
+      "verified": false,
+      "amount": 25000.0
+    },
+    {
+      "name": "POARCH BAND OF CREEK INDIANS",
+      "org_class": "business",
+      "basis": "inferred",
+      "source_url": "https://www.poarchcreekindians.org/",
+      "quote": "The Poarch Band of Creek Indians is a federally recognized Native American Tribe located in southern Alabama.",
+      "tagged_by": "grok-4.3",
+      "verified": false,
+      "amount": 965900.0
+    },
+    {
+      "name": "PRO-DEMOCRACY CAMPAIGN",
+      "org_class": "nonprofit",
+      "basis": "inferred",
+      "source_url": "https://www.prodemocracy.us",
+      "quote": "The Pro-Democracy Campaign, a 501(c)(4), is a sustained strategy launched in the Fall of 2021 in response to the increasing and widespread attacks on voting rights and democratic institutions.",
+      "tagged_by": "grok-4.3",
+      "verified": false,
+      "amount": 50000.0
+    },
+    {
+      "name": "RANGE USA",
+      "org_class": "llc",
+      "basis": "inferred",
+      "source_url": "https://www.bbb.org/us/il/mokena/profile/shooting-range/range-usa-mokena-0654-1000047820",
+      "quote": "Type of Entity: Limited Liability Company (LLC)",
+      "tagged_by": "grok-4.3",
+      "verified": false,
+      "amount": 10000.0
+    },
+    {
+      "name": "REPUBLICAN WOMEN'S CLUB OF JEFFERSON PARISH",
+      "org_class": "nonprofit",
+      "basis": "inferred",
+      "source_url": "https://projects.propublica.org/527-explorer/orgs/883679601",
+      "quote": "A 527 is a nonprofit formed under Section 527 of the Internal Revenue Code, which grants tax-exempt status to organizations whose primary purpose is attempting to influence the election of one or more people to public office at the national, state or local level.",
+      "tagged_by": "grok-4.3",
+      "verified": false,
+      "amount": 15000.0
+    },
+    {
+      "name": "RICKMAN KESSINGER LIMITED PARTNERSHIP",
+      "org_class": "llc",
+      "basis": "inferred",
+      "source_url": "https://opencorporates.com/companies/us_ar/800123456",
+      "quote": "RICKMAN KESSINGER LIMITED PARTNERSHIP is a Limited Partnership registered in Arkansas.",
+      "tagged_by": "grok-4.3",
+      "verified": false,
+      "amount": 25000.0
+    },
+    {
+      "name": "RIZIO LIPINSKY LAW FIRM",
+      "org_class": "business",
+      "basis": "inferred",
+      "source_url": "https://www.riziolawfirm.com/",
+      "quote": "Rizio Lipinsky Heiting is an award-winning California plaintiffs personal injury and employment law firm that has recovered hundreds of millions of dollars for victims of personal injuries, workplace injustices and discrimination",
+      "tagged_by": "grok-4.3",
+      "verified": false,
+      "amount": 30000.0
+    },
+    {
+      "name": "ROMANO LAW, PL",
+      "org_class": "business",
+      "basis": "inferred",
+      "source_url": "https://www.bbb.org/us/ny/new-york/profile/business-law-attorney/romano-law-pllc-0121-130844",
+      "quote": "Type of Entity: Professional Limited Liability Company (PLLC)",
+      "tagged_by": "grok-4.3",
+      "verified": false,
+      "amount": 10000.0
     },
     {
       "name": "RONALD L. BOOK PA",
@@ -198,7 +1279,58 @@
       "source_url": "https://rlbookpa.com/about/",
       "quote": "Mr. Book is President and Chief Executive Officer of Ronald L. Book, P.A. Since founding the firm in 1987",
       "tagged_by": "grok-4.3",
+      "verified": false,
       "amount": 13500.0
+    },
+    {
+      "name": "RUFFIN FLIGHT DEPARTMENT",
+      "org_class": "business",
+      "basis": "inferred",
+      "source_url": "https://en.wikipedia.org/wiki/Phil_Ruffin",
+      "quote": "Trump traveled to Mexico City on August 31, 2016 aboard a Boeing 737 (registration N43PR) operated by a company owned by Phil Ruffin.",
+      "tagged_by": "grok-4.3",
+      "verified": false,
+      "amount": 210000.0
+    },
+    {
+      "name": "SAFARI CLUB INTERNATIONAL",
+      "org_class": "nonprofit",
+      "basis": "inferred",
+      "source_url": "https://projects.propublica.org/nonprofits/organizations/860974183",
+      "quote": "Designated as a Civic leagues, social welfare organizations and local associations of employees, created to promote community welfare for charitable, educational or recreational purposes. Donations to this organization are not tax deductible.",
+      "tagged_by": "grok-4.3",
+      "verified": false,
+      "amount": 139258.0
+    },
+    {
+      "name": "SAFE STREETS SAFE COMMUNITIES",
+      "org_class": "nonprofit",
+      "basis": "inferred",
+      "source_url": "https://www.causeiq.com/organizations/safe-streets-safe-communities,831916378/",
+      "quote": "IRS 501(c) type 501(c)(4) ... Safe Streets Safe Communities promotes public policies that keep communities across the United States safe and strong.",
+      "tagged_by": "grok-4.3",
+      "verified": false,
+      "amount": 250000.0
+    },
+    {
+      "name": "SALT RIVER PIMA MARICOPA INDIAN COMMUNITY",
+      "org_class": "business",
+      "basis": "inferred",
+      "source_url": "https://www.srpmic-nsn.gov/",
+      "quote": "The Salt River Pima-Maricopa Indian Community is a sovereign Native American tribe located in the Phoenix metropolitan area.",
+      "tagged_by": "grok-4.3",
+      "verified": false,
+      "amount": 182100.0
+    },
+    {
+      "name": "SALT RIVER PIMA-MARICOPA INDIAN COMMUNITY",
+      "org_class": "business",
+      "basis": "inferred",
+      "source_url": "https://www.srpmic-nsn.gov/",
+      "quote": "The Salt River Pima-Maricopa Indian Community is a sovereign Native American tribe located in the Phoenix metropolitan area.",
+      "tagged_by": "grok-4.3",
+      "verified": false,
+      "amount": 71300.0
     },
     {
       "name": "SALVI, SCHOSTOK & PRITCHARD",
@@ -207,7 +1339,148 @@
       "source_url": "https://www.salvilaw.com/about-us/",
       "quote": "Today, Salvi, Schostok & Pritchard has over 20 lawyers and is supported by more than 35 staff members. The firm has earned a reputation as one of the top-ranked firms in Illinois.",
       "tagged_by": "grok-4.3",
+      "verified": false,
       "amount": 10000.0
+    },
+    {
+      "name": "SAN MANUEL BAND OF MISSION INDIANS",
+      "org_class": "business",
+      "basis": "inferred",
+      "source_url": "https://www.sanmanuel-nsn.gov/",
+      "quote": "The San Manuel Band of Mission Indians is a federally recognized American Indian tribe located in San Bernardino County, California.",
+      "tagged_by": "grok-4.3",
+      "verified": false,
+      "amount": 556700.0
+    },
+    {
+      "name": "SANTA YNEZ BAND OF CHUMASH INDIANS",
+      "org_class": "business",
+      "basis": "inferred",
+      "source_url": "https://www.santaynezchumash.org/",
+      "quote": "The Santa Ynez Band of Chumash Indians is a federally recognized tribe located in Santa Barbara County, California. The Tribe operates the Chumash Casino Resort.",
+      "tagged_by": "grok-4.3",
+      "verified": false,
+      "amount": 85500.0
+    },
+    {
+      "name": "SANTA YNEZ BAND OF CHUMASH MISSION INDIANS",
+      "org_class": "business",
+      "basis": "inferred",
+      "source_url": "https://www.chumash.gov/",
+      "quote": "The Santa Ynez Band of Chumash Indians is a federally recognized Native American tribe located in Santa Barbara County, California. The Tribe owns and operates the Chumash Casino Resort.",
+      "tagged_by": "grok-4.3",
+      "verified": false,
+      "amount": 157200.0
+    },
+    {
+      "name": "SANTA YNEZ BAND OF MISSION INDIANS",
+      "org_class": "business",
+      "basis": "inferred",
+      "source_url": "https://www.santaynezchumash.org/",
+      "quote": "The Santa Ynez Band of Chumash Indians is a federally recognized tribe of Chumash people. The Tribe owns and operates the Chumash Casino Resort",
+      "tagged_by": "grok-4.3",
+      "verified": false,
+      "amount": 457400.0
+    },
+    {
+      "name": "SAVING TEXAS",
+      "org_class": "nonprofit",
+      "basis": "inferred",
+      "source_url": "https://www.opensecrets.org/political-action-committees-pacs/saving-texas/C00812370/summary/2024",
+      "quote": "Saving Texas is a Super PAC.",
+      "tagged_by": "grok-4.3",
+      "verified": false,
+      "amount": 1795000.0
+    },
+    {
+      "name": "SEMINOLE GAMING",
+      "org_class": "business",
+      "basis": "inferred",
+      "source_url": "https://www.seminolegaming.com/",
+      "quote": "Seminole Gaming is the gaming and hospitality enterprise of the Seminole Tribe of Florida.",
+      "tagged_by": "grok-4.3",
+      "verified": false,
+      "amount": 1000000.0
+    },
+    {
+      "name": "SHAKOPEE MDEWAKANTON SIOUX",
+      "org_class": "business",
+      "basis": "inferred",
+      "source_url": "https://shakopeedakota.org/",
+      "quote": "The Shakopee Mdewakanton Sioux Community is a federally recognized, sovereign Indian tribe located in Prior Lake, Minnesota.",
+      "tagged_by": "grok-4.3",
+      "verified": false,
+      "amount": 92600.0
+    },
+    {
+      "name": "SHAKOPEE MDEWAKANTON SIOUX COMMUNITY",
+      "org_class": "business",
+      "basis": "inferred",
+      "source_url": "https://shakopeedakota.org/",
+      "quote": "The Shakopee Mdewakanton Sioux Community is a federally recognized, sovereign Indian tribe located in Prior Lake, Minnesota.",
+      "tagged_by": "grok-4.3",
+      "verified": false,
+      "amount": 764900.0
+    },
+    {
+      "name": "SHINGLE SPRING BAND OF MIWOK INDIANS",
+      "org_class": "business",
+      "basis": "inferred",
+      "source_url": "https://www.shinglespringsrancheria.com/",
+      "quote": "The Shingle Springs Band of Miwok Indians is a federally recognized tribe located in El Dorado County, California. The Tribe operates the Red Hawk Casino and other enterprises.",
+      "tagged_by": "grok-4.3",
+      "verified": false,
+      "amount": 81300.0
+    },
+    {
+      "name": "SHINGLE SPRINGS BAND MIWOK INDIANS",
+      "org_class": "business",
+      "basis": "inferred",
+      "source_url": "https://www.shinglespringsrancheria.com/",
+      "quote": "The Shingle Springs Band of Miwok Indians is a federally recognized tribe located in El Dorado County, California. The Tribe operates the Red Hawk Casino and other enterprises.",
+      "tagged_by": "grok-4.3",
+      "verified": false,
+      "amount": 80600.0
+    },
+    {
+      "name": "SILENCER SHOP",
+      "org_class": "business",
+      "basis": "inferred",
+      "source_url": "https://www.silencershop.com/why-silencer-shop",
+      "quote": "From a kitchen table in Texas in 2010, Dave and his wife started Silencer Shop with a simple promise: make it easy for people to protect their hearing, enjoy shooting more, and exercise their second amendment right. Boxes of suppressors stuffed in closets and under furniture turned into a storefront. The storefront turned into the nation’s largest suppressor distributor.",
+      "tagged_by": "grok-4.3",
+      "verified": false,
+      "amount": 25000.0
+    },
+    {
+      "name": "SIMMONS HANLY CONROY",
+      "org_class": "business",
+      "basis": "inferred",
+      "source_url": "https://simmonsfirm.com/",
+      "quote": "Simmons Hanly Conroy is one of the nation’s largest mass tort law firms, dedicated to helping victims of mesothelioma and asbestos-related cancers.",
+      "tagged_by": "grok-4.3",
+      "verified": false,
+      "amount": 10000.0
+    },
+    {
+      "name": "SOBOBA BAND OF LUISENO INDIANS",
+      "org_class": "business",
+      "basis": "inferred",
+      "source_url": "https://www.soboba-nsn.gov/",
+      "quote": "The Soboba Band of Luiseño Indians is a federally recognized tribe of Luiseño people. The tribe's reservation is located in Riverside County, California.",
+      "tagged_by": "grok-4.3",
+      "verified": false,
+      "amount": 425200.0
+    },
+    {
+      "name": "STEBNER GERTLER GUADAGNI & KAWAMOTO, APLC",
+      "org_class": "business",
+      "basis": "inferred",
+      "source_url": "https://trellis.law/doc/227171731/notice-change-firm-name-final",
+      "quote": "STEBNER GERTLER GUADAGNI & KAWAMOTO, A Professional Law Corporation",
+      "tagged_by": "grok-4.3",
+      "verified": false,
+      "amount": 20000.0
     },
     {
       "name": "STEINGER, GREENE AND FEINER",
@@ -216,7 +1489,28 @@
       "source_url": "https://www.injurylawyers.com/who-we-are/",
       "quote": "Our firm, Steinger, Greene & Feiner, has been serving and defending the rights of personal injury victims and their families since 1997.",
       "tagged_by": "grok-4.3",
+      "verified": false,
       "amount": 10000.0
+    },
+    {
+      "name": "SUNBELT BEVERAGE",
+      "org_class": "business",
+      "basis": "inferred",
+      "source_url": "https://www.sunbeltbeverage.com/",
+      "quote": "Sunbelt Beverage is a leading beverage alcohol distributor serving the Southeastern United States.",
+      "tagged_by": "grok-4.3",
+      "verified": false,
+      "amount": 500000.0
+    },
+    {
+      "name": "SURF OR SOUND REALTY",
+      "org_class": "business",
+      "basis": "inferred",
+      "source_url": "https://www.surforsound.com/about-us/",
+      "quote": "Surf or Sound Realty is a premier property management and real estate sales company located on Hatteras Island, North Carolina.",
+      "tagged_by": "grok-4.3",
+      "verified": false,
+      "amount": 50000.0
     },
     {
       "name": "SWANSON STREET ASSOCIATES",
@@ -225,7 +1519,228 @@
       "source_url": "https://www.opensecrets.org/search?field=contrib&page=4&q=Swanson&type=donors",
       "quote": "SWANSON ASSOCIATES BLUE BELL, PA 19422 Swanson Associates REAL ESTATE DEVELOPERS",
       "tagged_by": "grok-4.3",
+      "verified": false,
       "amount": 12900.0
+    },
+    {
+      "name": "SWINOMISH TRIBAL COMMUNITY",
+      "org_class": "business",
+      "basis": "inferred",
+      "source_url": "https://www.swinomish-nsn.gov/who-we-are",
+      "quote": "The Swinomish Indian Tribal Community is a federally-recognized tribe that occupies the Swinomish Reservation in the state of Washington. We are committed to improving the lives and wellbeing of our tribal members through social and cultural programs, education, economic development, and resource protection.",
+      "tagged_by": "grok-4.3",
+      "verified": false,
+      "amount": 25200.0
+    },
+    {
+      "name": "SYCUAN BAND OF THE KUMEYAAY NATION",
+      "org_class": "business",
+      "basis": "inferred",
+      "source_url": "https://sycuantribe.com/",
+      "quote": "The Sycuan Band of the Kumeyaay Nation is a federally recognized Indian tribe located in San Diego County, California. The Tribe operates the Sycuan Casino Resort.",
+      "tagged_by": "grok-4.3",
+      "verified": false,
+      "amount": 493600.0
+    },
+    {
+      "name": "TAYLOR FARMS",
+      "org_class": "business",
+      "basis": "inferred",
+      "source_url": "https://www.taylorfarms.com/about/",
+      "quote": "Taylor Farms is the world’s leading producer of salads and healthy fresh foods. We are a family-owned company that has been growing and innovating for over 25 years.",
+      "tagged_by": "grok-4.3",
+      "verified": false,
+      "amount": 250500.0
+    },
+    {
+      "name": "TEXAS DEMOCRATIC PARTY - FEDERAL ACCOUNT",
+      "org_class": "nonprofit",
+      "basis": "inferred",
+      "source_url": "https://en.wikipedia.org/wiki/Texas_Democratic_Party",
+      "quote": "The Texas Democratic Party is the affiliate of the Democratic Party in the U.S. state of Texas and one of the two major political parties in the state.",
+      "tagged_by": "grok-4.3",
+      "verified": false,
+      "amount": 37096.0
+    },
+    {
+      "name": "THE ARNS LAW FIRM",
+      "org_class": "business",
+      "basis": "inferred",
+      "source_url": "https://www.arnslaw.com/about",
+      "quote": "He founded the firm more than 40 years ago in San Francisco on a premise that still drives everything we do: ordinary people deserve the same caliber of legal representation as the insurance companies and corporations opposing them.",
+      "tagged_by": "grok-4.3",
+      "verified": false,
+      "amount": 20000.0
+    },
+    {
+      "name": "THE CHICKASAW NATION",
+      "org_class": "business",
+      "basis": "inferred",
+      "source_url": "https://www.chickasaw.net/",
+      "quote": "The Chickasaw Nation is a federally recognized Native American nation. We are a progressive tribe, dedicated to the preservation of our culture and the advancement of our people.",
+      "tagged_by": "grok-4.3",
+      "verified": false,
+      "amount": 658800.0
+    },
+    {
+      "name": "THE CONFEDERATED TRIBES OF THE COLVILLE RESERVATION",
+      "org_class": "nonprofit",
+      "basis": "inferred",
+      "source_url": "https://en.wikipedia.org/wiki/Confederated_Tribes_of_the_Colville_Reservation",
+      "quote": "is the federally recognized tribe that controls the Colville Indian Reservation, which is located in northeastern Washington, United States. It is the government for its people",
+      "tagged_by": "grok-4.3",
+      "verified": false,
+      "amount": 10900.0
+    },
+    {
+      "name": "THE GORI LAW FIRM, PC",
+      "org_class": "business",
+      "basis": "inferred",
+      "source_url": "https://www.bbb.org/us/fl/orlando/profile/mesothelioma-lawyer/the-gori-law-firm-pc-inc-0733-235968527",
+      "quote": "Type of Entity: Professional Corporation (PC)",
+      "tagged_by": "grok-4.3",
+      "verified": false,
+      "amount": 10000.0
+    },
+    {
+      "name": "THE LAW OFFICES OF ARASH KHORSANDI, PC.",
+      "org_class": "business",
+      "basis": "inferred",
+      "source_url": "https://www.lawyers.com/los-angeles/california/the-law-office-of-arash-khorsandi-pc-35585848-f/",
+      "quote": "The Law Office of Arash Khorsandi, PC is a law firm established in 2008 with an office in Los Angeles, CA.",
+      "tagged_by": "grok-4.3",
+      "verified": false,
+      "amount": 20000.0
+    },
+    {
+      "name": "THE TULALIP TRIBES OF WASHINGTON",
+      "org_class": "business",
+      "basis": "inferred",
+      "source_url": "https://www.tulaliptribes-nsn.gov/",
+      "quote": "The Tulalip Tribes is a federally recognized Indian tribe located on the Tulalip Reservation in the mid-Puget Sound area of Washington State.",
+      "tagged_by": "grok-4.3",
+      "verified": false,
+      "amount": 354028.0
+    },
+    {
+      "name": "THOROUGHBRED OWNERS OF CALIFORNIA",
+      "org_class": "nonprofit",
+      "basis": "inferred",
+      "source_url": "https://www.toconline.com/about",
+      "quote": "The Thoroughbred Owners of California (TOC) is a non-profit organization that represents the interests of Thoroughbred owners in California.",
+      "tagged_by": "grok-4.3",
+      "verified": false,
+      "amount": 40000.0
+    },
+    {
+      "name": "TO PROTECT OUR HERITAGE",
+      "org_class": "nonprofit",
+      "basis": "inferred",
+      "source_url": "https://www.fec.gov/data/committee/C00135541/",
+      "quote": "Committee type: PAC - Qualified",
+      "tagged_by": "grok-4.3",
+      "verified": false,
+      "amount": 10000.0
+    },
+    {
+      "name": "TRIPP SCOTT",
+      "org_class": "business",
+      "basis": "inferred",
+      "source_url": "https://www.bloomberg.com/profile/company/0412897D:US",
+      "quote": "Tripp Scott, P.A. operates as a law firm. The Firm offers services in the practice areas of finance and corporate, aviation, banking, construction, bankruptcy, environmental, healthcare, family, estate planning, cannabis, and maritime law.",
+      "tagged_by": "grok-4.3",
+      "verified": false,
+      "amount": 35000.0
+    },
+    {
+      "name": "TRUIST",
+      "org_class": "business",
+      "basis": "inferred",
+      "source_url": "https://www.truist.com/about-us",
+      "quote": "Truist Financial Corporation is a purpose-driven financial services company committed to inspiring and building better lives and communities.",
+      "tagged_by": "grok-4.3",
+      "verified": false,
+      "amount": 3072643.0
+    },
+    {
+      "name": "TULALIP TRIBES",
+      "org_class": "business",
+      "basis": "inferred",
+      "source_url": "https://www.tulaliptribes-nsn.gov/",
+      "quote": "The Tulalip Tribes is a federally recognized Indian tribe located on the Tulalip Reservation in the mid-Puget Sound area of Washington State.",
+      "tagged_by": "grok-4.3",
+      "verified": false,
+      "amount": 44900.0
+    },
+    {
+      "name": "TULALIP TRIBES OF WASHINGTON",
+      "org_class": "business",
+      "basis": "inferred",
+      "source_url": "https://www.tulaliptribes-nsn.gov/",
+      "quote": "The Tulalip Tribes is a federally recognized Indian tribe located on the Tulalip Reservation in the mid-Puget Sound area of Washington State.",
+      "tagged_by": "grok-4.3",
+      "verified": false,
+      "amount": 157898.0
+    },
+    {
+      "name": "TURO",
+      "org_class": "business",
+      "basis": "inferred",
+      "source_url": "https://www.bbb.org/us/ca/los-angeles/profile/car-rental/turo-1216-1533147",
+      "quote": "Type of Entity: Corporation",
+      "tagged_by": "grok-4.3",
+      "verified": false,
+      "amount": 20000.0
+    },
+    {
+      "name": "TWENTY-NINE PALMS BAND OF MISSION INDIANS",
+      "org_class": "business",
+      "basis": "inferred",
+      "source_url": "https://www.29palmstribe.org/",
+      "quote": "The Twenty-Nine Palms Band of Mission Indians is a federally recognized tribe of Mission Indians located in Southern California.",
+      "tagged_by": "grok-4.3",
+      "verified": false,
+      "amount": 264900.0
+    },
+    {
+      "name": "UNITED AIRLINES",
+      "org_class": "business",
+      "basis": "inferred",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/100517/000010051725000046/ual-20241231.htm",
+      "quote": "United Airlines Holdings, Inc. (together with its consolidated subsidiaries, \"UAL\" or the \"Company\") is a holding company and its wholly-owned subsidiary is United Airlines, Inc.",
+      "tagged_by": "grok-4.3",
+      "verified": false,
+      "amount": 20000.0
+    },
+    {
+      "name": "UNITED AUBURN INDIAN COMMUNITY",
+      "org_class": "business",
+      "basis": "inferred",
+      "source_url": "https://en.wikipedia.org/wiki/United_Auburn_Indian_Community",
+      "quote": "The United Auburn Indian Community (UAIC) is a federally recognized Native America tribe consisting mostly of Miwok Indians indigenous to the Sacramento Valley region. The Tribe owns the Thunder Valley Casino Resort outside Lincoln, California",
+      "tagged_by": "grok-4.3",
+      "verified": false,
+      "amount": 25000.0
+    },
+    {
+      "name": "VIEJAS BAND OF KUMEYAAY INDIANS",
+      "org_class": "business",
+      "basis": "inferred",
+      "source_url": "https://viejasbandofkumeyaay.org/",
+      "quote": "The Viejas Band of Kumeyaay Indians is a federally recognized Indian tribe located in Alpine, California. The Tribe owns and operates the Viejas Casino & Resort.",
+      "tagged_by": "grok-4.3",
+      "verified": false,
+      "amount": 33300.0
+    },
+    {
+      "name": "VIEJAS TRIBAL GOVERNMENT",
+      "org_class": "business",
+      "basis": "inferred",
+      "source_url": "https://viejasbandofkumeyaay.org/",
+      "quote": "The Viejas Band of Kumeyaay Indians is a federally recognized Indian tribe located in Alpine, California. The Tribe operates the Viejas Casino & Resort",
+      "tagged_by": "grok-4.3",
+      "verified": false,
+      "amount": 40000.0
     },
     {
       "name": "VITAS HEALTHCARE",
@@ -234,6 +1749,37 @@
       "source_url": "https://www.vitas.com/about-us/parent-company",
       "quote": "VITAS® Healthcare is a wholly owned subsidiary of the Chemed Corporation , which is publicly traded on the New York Stock Exchange under the symbol CHE.",
       "tagged_by": "grok-4.3",
+      "verified": false,
+      "amount": 10000.0
+    },
+    {
+      "name": "WALDMAN LAW FIRM P.A.",
+      "org_class": "business",
+      "basis": "inferred",
+      "source_url": "https://bisprofiles.com/fl/waldman-law-firm-p-a-s41090",
+      "quote": "WALDMAN LAW FIRM, P.A. is an Active company incorporated on March 27, 1991 with the registered number S41090. This Domestic for Profit company is located at 450 E. Las Olas Blvd.,, Fort Lauderdale, FL, 33301, US",
+      "tagged_by": "grok-4.3",
+      "verified": false,
+      "amount": 30000.0
+    },
+    {
+      "name": "WATERFRONT STRATEGIES",
+      "org_class": "business",
+      "basis": "inferred",
+      "source_url": "https://www.opensecrets.org/outsidespending/detail.php?cmte=C00441375&cycle=2024",
+      "quote": "Waterfront Strategies is a media buying firm that works with Democratic clients.",
+      "tagged_by": "grok-4.3",
+      "verified": false,
+      "amount": 2534375.0
+    },
+    {
+      "name": "WEIDNER APARTMENT HOMES",
+      "org_class": "business",
+      "basis": "inferred",
+      "source_url": "https://www.linkedin.com/company/weidner-apartment-homes",
+      "quote": "Founded by W. Dean Weidner in 1977, Weidner Apartment Homes is a multi-faceted real estate investment and management company recognized industry-wide as an efficient provider of quality rental homes and a creative developer of new housing.",
+      "tagged_by": "grok-4.3",
+      "verified": false,
       "amount": 10000.0
     },
     {
@@ -243,6 +1789,7 @@
       "source_url": "https://perrycommercial.net/services/",
       "quote": "Founded in 1976 by William Perry III, Perry Commercial has developed over 3 million square feet of residential and commercial spaces throughout the Mountain West.",
       "tagged_by": "grok-4.3",
+      "verified": false,
       "amount": 100000.0
     },
     {
@@ -252,7 +1799,28 @@
       "source_url": "https://www.wwdlaw.com/firm/",
       "quote": "Willig, Williams & Davidson is one of the largest and most respected union-side labor law firms in the United States.",
       "tagged_by": "grok-4.3",
+      "verified": false,
       "amount": 10000.0
+    },
+    {
+      "name": "WILSON MEANY L.P.",
+      "org_class": "business",
+      "basis": "inferred",
+      "source_url": "https://www.bloomberg.com/profile/company/3942300Z:US",
+      "quote": "Wilson Meany Sullivan LP operates as a real estate investment and development firm. The Company develops residential, retail, office, mixed use, and specialty use properties.",
+      "tagged_by": "grok-4.3",
+      "verified": false,
+      "amount": 10000.0
+    },
+    {
+      "name": "YUMA PROPERTIES L.P.",
+      "org_class": "llc",
+      "basis": "inferred",
+      "source_url": "https://fintel.io/doc/sec-iht-innsuites-hospitality-trust-ex101-2017-february-21-18430-123",
+      "quote": "YUMA HOSPITALITY PROPERTIES LIMITED PARTNERSHIP, an Arizona Limited Partnership (“Yuma”)",
+      "tagged_by": "grok-4.3",
+      "verified": false,
+      "amount": 21500.0
     }
   ]
 }

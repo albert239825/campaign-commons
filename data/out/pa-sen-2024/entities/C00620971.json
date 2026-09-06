@@ -40,7 +40,8 @@
       "visibility": "dark",
       "transaction_type": "10",
       "limit": "unlimited",
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00620971&two_year_transaction_period=2024&contributor_name=FOR+OUR+FUTURE+ACTION+FUND"
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00620971&two_year_transaction_period=2024&contributor_name=FOR+OUR+FUTURE+ACTION+FUND",
+      "class_basis": "rule"
     },
     {
       "transfer_id": "C00620971-in-C00004036",
@@ -130,7 +131,8 @@
       "visibility": "dark",
       "transaction_type": "10",
       "limit": "unlimited",
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00620971&two_year_transaction_period=2024&contributor_name=NEVADA+ALLIANCE"
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00620971&two_year_transaction_period=2024&contributor_name=NEVADA+ALLIANCE",
+      "class_basis": "rule"
     },
     {
       "transfer_id": "C00620971-in-org:FOR_FLORIDA'S_FUTURE_PC",
@@ -160,7 +162,8 @@
       "visibility": "disclosed",
       "transaction_type": "10",
       "limit": "unlimited",
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00620971&two_year_transaction_period=2024&contributor_name=AFT+SOLIDARITY+527"
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00620971&two_year_transaction_period=2024&contributor_name=AFT+SOLIDARITY+527",
+      "class_basis": "rule"
     },
     {
       "transfer_id": "C00620971-in-C00873901",

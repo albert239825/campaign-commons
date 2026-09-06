@@ -12,7 +12,12 @@ from dataclasses import dataclass, field
 import duckdb
 
 from .config import KNOWN_CONDUITS
-from .orgs import classify_organization, committee_name_index, match_committee, organization_visibility
+from .orgs import (
+    committee_name_index,
+    match_committee,
+    organization_classification,
+    organization_visibility,
+)
 from .util import individual_id, organization_id
 
 # Sched A codes on the individuals side that are receipts (not refunds / conduit pass-through)
@@ -40,6 +45,7 @@ class Edge:
     last: str | None
     mismatch: bool = False
     organization_class: str | None = None  # kind == organization only (orgs.py)
+    class_basis: str | None = None
 
     @property
     def dark(self) -> bool:
@@ -63,7 +69,7 @@ def _date(value: object) -> str | None:
     return None if value is None else str(value)[:10]
 
 
-def build_graph(con: duckdb.DuckDBPyConnection, overrides: dict[str, str] | None = None) -> Graph:
+def build_graph(con: duckdb.DuckDBPyConnection, overrides: dict | None = None) -> Graph:
     g = Graph()
     for cid, tp, name in con.execute("SELECT CMTE_ID, CMTE_TP, CMTE_NM FROM committees").fetchall():
         g.committee_type[cid] = tp
@@ -107,6 +113,7 @@ def build_graph(con: duckdb.DuckDBPyConnection, overrides: dict[str, str] | None
                 cid, g.committee_name[cid], "committee", round(amt, 2), int(n), tuple(tts), _date(first), _date(last)
             )
         elif is_org:
+            org_class, class_basis = organization_classification(name, overrides)
             edge = Edge(
                 organization_id(name),
                 name,
@@ -116,7 +123,8 @@ def build_graph(con: duckdb.DuckDBPyConnection, overrides: dict[str, str] | None
                 tuple(tts),
                 _date(first),
                 _date(last),
-                organization_class=classify_organization(name, overrides),
+                organization_class=org_class,
+                class_basis=class_basis,
             )
         else:
             edge = Edge(
@@ -152,6 +160,7 @@ class Node:
     refers_to: str | None = None  # cycle nodes: the already-visited committee they stand for
     dark_amount: float = 0.0  # pruned aggregates: dark dollars inside the bucket
     organization_class: str | None = None
+    class_basis: str | None = None
 
 
 @dataclass
@@ -164,6 +173,7 @@ class WalkEdge:
     count: int
     first: str | None
     last: str | None
+    class_basis: str | None = None
 
 
 @dataclass
@@ -234,7 +244,17 @@ def walk(
             child = _classify(graph, w, visited, node, e)
             w.nodes[child.id] = child
             w.edges.append(
-                WalkEdge(child.id, node_id, e.amount, child.visibility, e.transaction_types, e.count, e.first, e.last)
+                WalkEdge(
+                    child.id,
+                    node_id,
+                    e.amount,
+                    child.visibility,
+                    e.transaction_types,
+                    e.count,
+                    e.first,
+                    e.last,
+                    child.class_basis,
+                )
             )
             if child.terminus_reason is None:
                 visited.add(child.id)
@@ -294,6 +314,7 @@ def _classify(graph: Graph, w: Walk, visited: set[str], parent: Node, e: Edge) -
             e.amount,
             "dark" if visibility == "dark" else "organization",
             organization_class=e.organization_class,
+            class_basis=e.class_basis,
         )
     if e.kind == "conduit":
         return Node(

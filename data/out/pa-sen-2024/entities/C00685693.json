@@ -40,7 +40,8 @@
       "visibility": "dark",
       "transaction_type": "10",
       "limit": "unlimited",
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00685693&two_year_transaction_period=2024&contributor_name=CASA+IN+ACTION"
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00685693&two_year_transaction_period=2024&contributor_name=CASA+IN+ACTION",
+      "class_basis": "rule"
     },
     {
       "transfer_id": "C00685693-in-C00728360",
@@ -70,7 +71,8 @@
       "visibility": "dark",
       "transaction_type": "10",
       "limit": "unlimited",
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00685693&two_year_transaction_period=2024&contributor_name=CLEAN+VIRGINIA+FUND"
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00685693&two_year_transaction_period=2024&contributor_name=CLEAN+VIRGINIA+FUND",
+      "class_basis": "rule"
     },
     {
       "transfer_id": "C00685693-in-C00697755",
@@ -100,7 +102,8 @@
       "visibility": "dark",
       "transaction_type": "10",
       "limit": "unlimited",
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00685693&two_year_transaction_period=2024&contributor_name=VIRGINIA+PLUS+PAC"
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00685693&two_year_transaction_period=2024&contributor_name=VIRGINIA+PLUS+PAC",
+      "class_basis": "rule"
     },
     {
       "transfer_id": "C00685693-in-C00488486",
@@ -145,7 +148,8 @@
       "visibility": "dark",
       "transaction_type": "10",
       "limit": "unlimited",
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00685693&two_year_transaction_period=2024&contributor_name=WELLNESS+ADVOCACY+FUND"
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00685693&two_year_transaction_period=2024&contributor_name=WELLNESS+ADVOCACY+FUND",
+      "class_basis": "rule"
     },
     {
       "transfer_id": "C00685693-in-ind:SMITH_S._SONJIA|22901",
@@ -190,7 +194,8 @@
       "visibility": "disclosed",
       "transaction_type": "10",
       "limit": "unlimited",
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00685693&two_year_transaction_period=2024&contributor_name=COMMUNICATIONS+WORKERS+OF+AMERICA+WORKING+VOICES"
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00685693&two_year_transaction_period=2024&contributor_name=COMMUNICATIONS+WORKERS+OF+AMERICA+WORKING+VOICES",
+      "class_basis": "rule"
     },
     {
       "transfer_id": "C00685693-in-org:COMMONWEALTH_COMMUNICATIONS",
@@ -205,7 +210,8 @@
       "visibility": "dark",
       "transaction_type": "10",
       "limit": "unlimited",
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00685693&two_year_transaction_period=2024&contributor_name=COMMONWEALTH+COMMUNICATIONS"
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00685693&two_year_transaction_period=2024&contributor_name=COMMONWEALTH+COMMUNICATIONS",
+      "class_basis": "inferred"
     },
     {
       "transfer_id": "C00685693-in-C00828178",
@@ -250,7 +256,8 @@
       "visibility": "disclosed",
       "transaction_type": "10",
       "limit": "unlimited",
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00685693&two_year_transaction_period=2024&contributor_name=CARE+IN+ACTION%2C+INC."
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00685693&two_year_transaction_period=2024&contributor_name=CARE+IN+ACTION%2C+INC.",
+      "class_basis": "rule"
     },
     {
       "transfer_id": "C00685693-in-C00686832",
@@ -340,7 +347,8 @@
       "visibility": "disclosed",
       "transaction_type": "10",
       "limit": "unlimited",
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00685693&two_year_transaction_period=2024&contributor_name=SEIU+VIRGINIA"
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00685693&two_year_transaction_period=2024&contributor_name=SEIU+VIRGINIA",
+      "class_basis": "rule"
     },
     {
       "transfer_id": "C00685693-in-org:CASH-ON-HAND_ADJUSTMENT",
@@ -355,7 +363,8 @@
       "visibility": "dark",
       "transaction_type": "10",
       "limit": "unlimited",
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00685693&two_year_transaction_period=2024&contributor_name=CASH-ON-HAND+ADJUSTMENT"
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00685693&two_year_transaction_period=2024&contributor_name=CASH-ON-HAND+ADJUSTMENT",
+      "class_basis": "rule"
     },
     {
       "transfer_id": "C00685693-in-ind:CALLENDER_WES|22066",
@@ -400,7 +409,8 @@
       "visibility": "disclosed",
       "transaction_type": "10",
       "limit": "unlimited",
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00685693&two_year_transaction_period=2024&contributor_name=UNIVISION+MANAGEMENT+COMPANY"
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00685693&two_year_transaction_period=2024&contributor_name=UNIVISION+MANAGEMENT+COMPANY",
+      "class_basis": "rule"
     }
   ],
   "outflows": [],

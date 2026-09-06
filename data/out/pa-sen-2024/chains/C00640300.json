@@ -2,7 +2,7 @@
   "root_entity_id": "C00640300",
   "root_name": "ACTIVATE AMERICA",
   "race_id": "pa-sen-2024",
-  "generated_at": "2026-09-06T04:49:10+00:00",
+  "generated_at": "2026-09-06T05:02:45+00:00",
   "data_status": "real",
   "nodes": [
     {
@@ -28,7 +28,8 @@
       "is_terminus": true,
       "terminus_reason": "dark",
       "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00640300&two_year_transaction_period=2024&contributor_name=CHALTEN+TRUST",
-      "organization_class": "llc"
+      "organization_class": "llc",
+      "class_basis": "rule"
     },
     {
       "id": "ind:GAGUINE_BRUCE_ALEXANDER|95060",
@@ -79,18 +80,6 @@
       "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00640300&two_year_transaction_period=2024&contributor_name=ALLEN%2C+EDITH"
     },
     {
-      "id": "ind:SCHUCHAT_SAMUEL|94618",
-      "name": "SCHUCHAT, SAMUEL",
-      "kind": "individual",
-      "committee_type": null,
-      "depth": 1,
-      "visibility": "disclosed",
-      "amount_in": 20000.0,
-      "is_terminus": true,
-      "terminus_reason": "individual",
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00640300&two_year_transaction_period=2024&contributor_name=SCHUCHAT%2C+SAMUEL"
-    },
-    {
       "id": "ind:DOUGLAS_ROBBINS_STEPHEN|49060",
       "name": "DOUGLAS ROBBINS, STEPHEN",
       "kind": "individual",
@@ -101,6 +90,18 @@
       "is_terminus": true,
       "terminus_reason": "individual",
       "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00640300&two_year_transaction_period=2024&contributor_name=DOUGLAS+ROBBINS%2C+STEPHEN"
+    },
+    {
+      "id": "ind:SCHUCHAT_SAMUEL|94618",
+      "name": "SCHUCHAT, SAMUEL",
+      "kind": "individual",
+      "committee_type": null,
+      "depth": 1,
+      "visibility": "disclosed",
+      "amount_in": 20000.0,
+      "is_terminus": true,
+      "terminus_reason": "individual",
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00640300&two_year_transaction_period=2024&contributor_name=SCHUCHAT%2C+SAMUEL"
     },
     {
       "id": "ind:STONE_DONALD|94618",
@@ -238,7 +239,8 @@
         "2024-02-06",
         "2024-02-06"
       ],
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00640300&two_year_transaction_period=2024&contributor_name=CHALTEN+TRUST"
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00640300&two_year_transaction_period=2024&contributor_name=CHALTEN+TRUST",
+      "class_basis": "rule"
     },
     {
       "from": "ind:GAGUINE_BRUCE_ALEXANDER|95060",
@@ -305,22 +307,6 @@
       "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00640300&two_year_transaction_period=2024&contributor_name=ALLEN%2C+EDITH"
     },
     {
-      "from": "ind:SCHUCHAT_SAMUEL|94618",
-      "to": "C00640300",
-      "amount": 20000.0,
-      "visibility": "disclosed",
-      "depth": 1,
-      "transaction_types": [
-        "10"
-      ],
-      "count": 3,
-      "date_range": [
-        "2023-11-10",
-        "2024-09-24"
-      ],
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00640300&two_year_transaction_period=2024&contributor_name=SCHUCHAT%2C+SAMUEL"
-    },
-    {
       "from": "ind:DOUGLAS_ROBBINS_STEPHEN|49060",
       "to": "C00640300",
       "amount": 20000.0,
@@ -335,6 +321,22 @@
         "2023-09-28"
       ],
       "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00640300&two_year_transaction_period=2024&contributor_name=DOUGLAS+ROBBINS%2C+STEPHEN"
+    },
+    {
+      "from": "ind:SCHUCHAT_SAMUEL|94618",
+      "to": "C00640300",
+      "amount": 20000.0,
+      "visibility": "disclosed",
+      "depth": 1,
+      "transaction_types": [
+        "10"
+      ],
+      "count": 3,
+      "date_range": [
+        "2023-11-10",
+        "2024-09-24"
+      ],
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00640300&two_year_transaction_period=2024&contributor_name=SCHUCHAT%2C+SAMUEL"
     },
     {
       "from": "ind:STONE_DONALD|94618",

@@ -23,8 +23,8 @@
     "independent_expenditures": 26409657.61,
     "from_individuals": 10899591.58,
     "from_committees": 17151567.33,
-    "from_organizations": 30000.0,
-    "from_undisclosed": 3676967.0
+    "from_organizations": 417953.0,
+    "from_undisclosed": 3289014.0
   },
   "inflows": [
     {
@@ -70,7 +70,8 @@
       "visibility": "dark",
       "transaction_type": "10",
       "limit": "unlimited",
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00473918&two_year_transaction_period=2024&contributor_name=PIVOTAL+VENTURES+LLC"
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00473918&two_year_transaction_period=2024&contributor_name=PIVOTAL+VENTURES+LLC",
+      "class_basis": "rule"
     },
     {
       "transfer_id": "C00473918-in-ind:DELANEY_MARY|94612",
@@ -277,10 +278,11 @@
       "date": "2023-12-11",
       "first_date": "2023-08-03",
       "count": 2,
-      "visibility": "dark",
+      "visibility": "disclosed",
       "transaction_type": "10",
       "limit": "unlimited",
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00473918&two_year_transaction_period=2024&contributor_name=WATERFRONT+STRATEGIES"
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00473918&two_year_transaction_period=2024&contributor_name=WATERFRONT+STRATEGIES",
+      "class_basis": "inferred"
     },
     {
       "transfer_id": "C00473918-in-ind:QUILLIN_PATTY|95060",

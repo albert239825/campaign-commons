@@ -31,6 +31,7 @@ export type GraphNodeRow = {
   kind: Chain["nodes"][number]["kind"];
   committee_type: string | null;
   visibility: Chain["nodes"][number]["visibility"];
+  class_basis: "rule" | "inferred" | "verified" | null;
   source_url: string | null;
   href: string | null;
 };
@@ -44,6 +45,7 @@ export type GraphEdgeRow = {
   amount: number;
   count: number;
   visibility: Chain["edges"][number]["visibility"];
+  class_basis: "rule" | "inferred" | "verified" | null;
   transaction_types: string[];
   first_date: string | null;
   last_date: string | null;
@@ -102,7 +104,12 @@ export function graphRows(src: GraphSources): { nodes: GraphNodeRow[]; edges: Gr
   const putNode = (row: GraphNodeRow) => {
     const prev = nodes.get(row.id);
     if (prev && prev.source_url !== null) return;
-    nodes.set(row.id, { ...row, source_url: row.source_url ?? prev?.source_url ?? null, href: row.href ?? prev?.href ?? hrefFor(row.kind, row.id) });
+    nodes.set(row.id, {
+      ...row,
+      class_basis: row.class_basis ?? prev?.class_basis ?? null,
+      source_url: row.source_url ?? prev?.source_url ?? null,
+      href: row.href ?? prev?.href ?? hrefFor(row.kind, row.id),
+    });
   };
   const putEdge = (row: Omit<GraphEdgeRow, "key" | "chains">, chain: string | null) => {
     const key = `${row.type}|${row.from}|${row.to}|${row.type === REL.TARGETED || row.type === REL.CAMPAIGN_OF ? (row.support_oppose ?? "") : [...row.transaction_types].sort().join(",")}`;
@@ -111,6 +118,7 @@ export function graphRows(src: GraphSources): { nodes: GraphNodeRow[]; edges: Gr
       if (row.amount > prev.amount) prev.amount = row.amount;
       if (row.count > prev.count) prev.count = row.count;
       if (prev.source_url === null) prev.source_url = row.source_url;
+      prev.class_basis ??= row.class_basis;
       prev.first_date ??= row.first_date;
       prev.last_date ??= row.last_date;
       if (chain && !prev.chains.includes(chain)) prev.chains.push(chain);
@@ -131,18 +139,19 @@ export function graphRows(src: GraphSources): { nodes: GraphNodeRow[]; edges: Gr
       last_date: null,
       support_oppose: null,
       basis: null,
+      class_basis: null,
       source_url,
       ...extra,
     }) satisfies Omit<GraphEdgeRow, "key" | "chains">;
 
   for (const c of ledger?.candidates ?? []) {
-    putNode({ id: c.candidate_id, name: c.name, name_lc: c.name.toLowerCase(), kind: "candidate", committee_type: null, visibility: "disclosed", source_url: c.outside.source_url, href: null });
+    putNode({ id: c.candidate_id, name: c.name, name_lc: c.name.toLowerCase(), kind: "candidate", committee_type: null, visibility: "disclosed", class_basis: null, source_url: c.outside.source_url, href: null });
   }
 
   for (const chain of chains) {
     const side = new Map(chain.nodes.map((n) => [n.id, n.side ?? "in"] as const));
     for (const n of chain.nodes) {
-      putNode({ id: n.id, name: n.name, name_lc: n.name.toLowerCase(), kind: n.kind, committee_type: n.committee_type, visibility: n.visibility, source_url: n.source_url ?? null, href: n.href ?? null });
+      putNode({ id: n.id, name: n.name, name_lc: n.name.toLowerCase(), kind: n.kind, committee_type: n.committee_type, visibility: n.visibility, class_basis: n.class_basis ?? null, source_url: n.source_url ?? null, href: n.href ?? null });
     }
     for (const e of chain.edges) {
       putEdge(
@@ -154,6 +163,7 @@ export function graphRows(src: GraphSources): { nodes: GraphNodeRow[]; edges: Gr
           last_date: e.date_range?.[1] ?? null,
           support_oppose: e.support_oppose ?? null,
           basis: e.basis?.basis ?? null,
+          class_basis: e.class_basis ?? null,
         }),
         chain.root_entity_id,
       );
@@ -161,10 +171,10 @@ export function graphRows(src: GraphSources): { nodes: GraphNodeRow[]; edges: Gr
   }
 
   for (const ent of entities) {
-    putNode({ id: ent.entity_id, name: ent.name, name_lc: ent.name.toLowerCase(), kind: ent.kind, committee_type: ent.committee_type, visibility: ent.visibility, source_url: ent.source_url, href: null });
+    putNode({ id: ent.entity_id, name: ent.name, name_lc: ent.name.toLowerCase(), kind: ent.kind, committee_type: ent.committee_type, visibility: ent.visibility, class_basis: null, source_url: ent.source_url, href: null });
     for (const t of [...ent.inflows, ...ent.outflows]) {
-      putNode({ id: t.from_entity_id, name: t.from_name, name_lc: t.from_name.toLowerCase(), kind: kindOf(t.from_entity_id), committee_type: null, visibility: "disclosed", source_url: null, href: null });
-      putNode({ id: t.to_entity_id, name: t.to_name, name_lc: t.to_name.toLowerCase(), kind: kindOf(t.to_entity_id), committee_type: null, visibility: "disclosed", source_url: null, href: null });
+      putNode({ id: t.from_entity_id, name: t.from_name, name_lc: t.from_name.toLowerCase(), kind: kindOf(t.from_entity_id), committee_type: null, visibility: "disclosed", class_basis: t.class_basis ?? null, source_url: null, href: null });
+      putNode({ id: t.to_entity_id, name: t.to_name, name_lc: t.to_name.toLowerCase(), kind: kindOf(t.to_entity_id), committee_type: null, visibility: "disclosed", class_basis: null, source_url: null, href: null });
       putEdge(
         money(REL.GAVE, t.from_entity_id, t.to_entity_id, t.amount, t.source_url, {
           count: t.count ?? 0,
@@ -172,6 +182,7 @@ export function graphRows(src: GraphSources): { nodes: GraphNodeRow[]; edges: Gr
           transaction_types: t.transaction_type ? [t.transaction_type] : [],
           first_date: t.first_date ?? t.date,
           last_date: t.date,
+          class_basis: t.class_basis ?? null,
         }),
         null,
       );
@@ -180,7 +191,7 @@ export function graphRows(src: GraphSources): { nodes: GraphNodeRow[]; edges: Gr
 
   for (const d of donors) {
     for (const n of d.nodes) {
-      putNode({ id: n.id, name: n.name, name_lc: n.name.toLowerCase(), kind: n.kind, committee_type: n.committee_type, visibility: "disclosed", source_url: n.source_url, href: null });
+      putNode({ id: n.id, name: n.name, name_lc: n.name.toLowerCase(), kind: n.kind, committee_type: n.committee_type, visibility: "disclosed", class_basis: null, source_url: n.source_url, href: null });
     }
     for (const e of d.edges) {
       // only the donor's own gifts: deeper donor-page edges are pooled totals the chains and ledger already carry
@@ -192,7 +203,7 @@ export function graphRows(src: GraphSources): { nodes: GraphNodeRow[]; edges: Gr
   for (const c of ledger?.candidates ?? []) {
     const committee = trails?.subjects.find((s) => s.id === c.principal_committee_id);
     if (committee) {
-      putNode({ id: committee.id, name: committee.name, name_lc: committee.name.toLowerCase(), kind: "committee", committee_type: null, visibility: "disclosed", source_url: c.campaign.source_url, href: null });
+      putNode({ id: committee.id, name: committee.name, name_lc: committee.name.toLowerCase(), kind: "committee", committee_type: null, visibility: "disclosed", class_basis: null, source_url: c.campaign.source_url, href: null });
     }
     if (!nodes.has(c.principal_committee_id)) continue;
     putEdge(money(REL.CAMPAIGN_OF, c.principal_committee_id, c.candidate_id, c.campaign.receipts, c.campaign.source_url), null);
@@ -200,10 +211,10 @@ export function graphRows(src: GraphSources): { nodes: GraphNodeRow[]; edges: Gr
   for (const ad of ads) {
     if (ad.matched_entity_id === null) continue;
     if (!nodes.has(ad.matched_entity_id)) {
-      putNode({ id: ad.matched_entity_id, name: ad.advertiser_name, name_lc: ad.advertiser_name.toLowerCase(), kind: "committee", committee_type: null, visibility: "disclosed", source_url: null, href: null });
+      putNode({ id: ad.matched_entity_id, name: ad.advertiser_name, name_lc: ad.advertiser_name.toLowerCase(), kind: "committee", committee_type: null, visibility: "disclosed", class_basis: null, source_url: null, href: null });
     }
     const name = adName(ad);
-    putNode({ id: ad.ad_id, name, name_lc: name.toLowerCase(), kind: "ad", committee_type: null, visibility: "disclosed", source_url: ad.source_url, href: `/races/${raceId}/ads/${ad.ad_id}` });
+    putNode({ id: ad.ad_id, name, name_lc: name.toLowerCase(), kind: "ad", committee_type: null, visibility: "disclosed", class_basis: null, source_url: ad.source_url, href: `/races/${raceId}/ads/${ad.ad_id}` });
     const spend = adSpend(ad);
     putEdge(money(REL.PLACED, ad.matched_entity_id, ad.ad_id, spend, ad.source_url, { count: 1, first_date: ad.first_shown, last_date: ad.last_shown, basis: "inferred" }), null);
     if (ad.support_oppose === null) continue;
@@ -214,7 +225,7 @@ export function graphRows(src: GraphSources): { nodes: GraphNodeRow[]; edges: Gr
   }
 
   for (const s of ledger?.top_outside_spenders ?? []) {
-    putNode({ id: s.entity_id, name: s.name, name_lc: s.name.toLowerCase(), kind: "committee", committee_type: s.committee_type, visibility: "disclosed", source_url: s.source_url, href: null });
+    putNode({ id: s.entity_id, name: s.name, name_lc: s.name.toLowerCase(), kind: "committee", committee_type: s.committee_type, visibility: "disclosed", class_basis: null, source_url: s.source_url, href: null });
     for (const b of s.by_candidate) {
       if (!nodes.has(b.candidate_id)) continue;
       putEdge(money(REL.TARGETED, s.entity_id, b.candidate_id, b.amount, s.source_url, { support_oppose: b.support_oppose }), null);

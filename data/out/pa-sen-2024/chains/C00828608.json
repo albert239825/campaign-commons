@@ -2,7 +2,7 @@
   "root_entity_id": "C00828608",
   "root_name": "HARDWORKING AMERICANS INC.",
   "race_id": "pa-sen-2024",
-  "generated_at": "2026-09-06T04:49:10+00:00",
+  "generated_at": "2026-09-06T05:02:45+00:00",
   "data_status": "real",
   "nodes": [
     {
@@ -40,7 +40,8 @@
       "is_terminus": true,
       "terminus_reason": "organization",
       "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00828608&two_year_transaction_period=2024&contributor_name=SOUTH+DEVELOPMENT+CORP.",
-      "organization_class": "business"
+      "organization_class": "business",
+      "class_basis": "rule"
     },
     {
       "id": "ind:COOPER_DERICK|32964",
@@ -79,18 +80,6 @@
       "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00828608&two_year_transaction_period=2024&contributor_name=HORNSTEIN%2C+STEVEN"
     },
     {
-      "id": "ind:MCLANE_JAMES_S._MR.|35243",
-      "name": "MCLANE, JAMES S. MR.",
-      "kind": "individual",
-      "committee_type": null,
-      "depth": 1,
-      "visibility": "disclosed",
-      "amount_in": 30000.0,
-      "is_terminus": true,
-      "terminus_reason": "individual",
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00828608&two_year_transaction_period=2024&contributor_name=MCLANE%2C+JAMES+S.+MR."
-    },
-    {
       "id": "org:MAVERICK_QUANTUM",
       "name": "MAVERICK QUANTUM",
       "kind": "organization",
@@ -101,81 +90,20 @@
       "is_terminus": true,
       "terminus_reason": "dark",
       "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00828608&two_year_transaction_period=2024&contributor_name=MAVERICK+QUANTUM",
-      "organization_class": "unknown"
+      "organization_class": "unknown",
+      "class_basis": "rule"
     },
     {
-      "id": "ind:HILDEBRAND_MELINDA|77019",
-      "name": "HILDEBRAND, MELINDA",
+      "id": "ind:MCLANE_JAMES_S._MR.|35243",
+      "name": "MCLANE, JAMES S. MR.",
       "kind": "individual",
       "committee_type": null,
       "depth": 1,
       "visibility": "disclosed",
-      "amount_in": 25000.0,
+      "amount_in": 30000.0,
       "is_terminus": true,
       "terminus_reason": "individual",
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00828608&two_year_transaction_period=2024&contributor_name=HILDEBRAND%2C+MELINDA"
-    },
-    {
-      "id": "ind:KODURU_KARTHIK|75078",
-      "name": "KODURU, KARTHIK",
-      "kind": "individual",
-      "committee_type": null,
-      "depth": 1,
-      "visibility": "disclosed",
-      "amount_in": 25000.0,
-      "is_terminus": true,
-      "terminus_reason": "individual",
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00828608&two_year_transaction_period=2024&contributor_name=KODURU%2C+KARTHIK"
-    },
-    {
-      "id": "org:MTX_GROUP_INC.",
-      "name": "MTX GROUP INC.",
-      "kind": "organization",
-      "committee_type": null,
-      "depth": 1,
-      "visibility": "disclosed",
-      "amount_in": 25000.0,
-      "is_terminus": true,
-      "terminus_reason": "organization",
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00828608&two_year_transaction_period=2024&contributor_name=MTX+GROUP+INC.",
-      "organization_class": "business"
-    },
-    {
-      "id": "ind:STRAVINSKI_PETER_T._MR.|75225",
-      "name": "STRAVINSKI, PETER T. MR.",
-      "kind": "individual",
-      "committee_type": null,
-      "depth": 1,
-      "visibility": "disclosed",
-      "amount_in": 25000.0,
-      "is_terminus": true,
-      "terminus_reason": "individual",
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00828608&two_year_transaction_period=2024&contributor_name=STRAVINSKI%2C+PETER+T.+MR."
-    },
-    {
-      "id": "org:THREE_GALLERIA_TOWER",
-      "name": "THREE GALLERIA TOWER",
-      "kind": "organization",
-      "committee_type": null,
-      "depth": 1,
-      "visibility": "dark",
-      "amount_in": 25000.0,
-      "is_terminus": true,
-      "terminus_reason": "dark",
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00828608&two_year_transaction_period=2024&contributor_name=THREE+GALLERIA+TOWER",
-      "organization_class": "unknown"
-    },
-    {
-      "id": "ind:SEAY_GEORGE|75204",
-      "name": "SEAY, GEORGE",
-      "kind": "individual",
-      "committee_type": null,
-      "depth": 1,
-      "visibility": "disclosed",
-      "amount_in": 25000.0,
-      "is_terminus": true,
-      "terminus_reason": "individual",
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00828608&two_year_transaction_period=2024&contributor_name=SEAY%2C+GEORGE"
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00828608&two_year_transaction_period=2024&contributor_name=MCLANE%2C+JAMES+S.+MR."
     },
     {
       "id": "ind:STANARD_JAMES_N.|44114",
@@ -238,6 +166,82 @@
       "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00828608&two_year_transaction_period=2024&contributor_name=CARMICHAEL%2C+JEFFREY"
     },
     {
+      "id": "ind:HILDEBRAND_MELINDA|77019",
+      "name": "HILDEBRAND, MELINDA",
+      "kind": "individual",
+      "committee_type": null,
+      "depth": 1,
+      "visibility": "disclosed",
+      "amount_in": 25000.0,
+      "is_terminus": true,
+      "terminus_reason": "individual",
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00828608&two_year_transaction_period=2024&contributor_name=HILDEBRAND%2C+MELINDA"
+    },
+    {
+      "id": "ind:KODURU_KARTHIK|75078",
+      "name": "KODURU, KARTHIK",
+      "kind": "individual",
+      "committee_type": null,
+      "depth": 1,
+      "visibility": "disclosed",
+      "amount_in": 25000.0,
+      "is_terminus": true,
+      "terminus_reason": "individual",
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00828608&two_year_transaction_period=2024&contributor_name=KODURU%2C+KARTHIK"
+    },
+    {
+      "id": "org:MTX_GROUP_INC.",
+      "name": "MTX GROUP INC.",
+      "kind": "organization",
+      "committee_type": null,
+      "depth": 1,
+      "visibility": "disclosed",
+      "amount_in": 25000.0,
+      "is_terminus": true,
+      "terminus_reason": "organization",
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00828608&two_year_transaction_period=2024&contributor_name=MTX+GROUP+INC.",
+      "organization_class": "business",
+      "class_basis": "rule"
+    },
+    {
+      "id": "ind:STRAVINSKI_PETER_T._MR.|75225",
+      "name": "STRAVINSKI, PETER T. MR.",
+      "kind": "individual",
+      "committee_type": null,
+      "depth": 1,
+      "visibility": "disclosed",
+      "amount_in": 25000.0,
+      "is_terminus": true,
+      "terminus_reason": "individual",
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00828608&two_year_transaction_period=2024&contributor_name=STRAVINSKI%2C+PETER+T.+MR."
+    },
+    {
+      "id": "org:THREE_GALLERIA_TOWER",
+      "name": "THREE GALLERIA TOWER",
+      "kind": "organization",
+      "committee_type": null,
+      "depth": 1,
+      "visibility": "dark",
+      "amount_in": 25000.0,
+      "is_terminus": true,
+      "terminus_reason": "dark",
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00828608&two_year_transaction_period=2024&contributor_name=THREE+GALLERIA+TOWER",
+      "organization_class": "unknown",
+      "class_basis": "rule"
+    },
+    {
+      "id": "ind:SEAY_GEORGE|75204",
+      "name": "SEAY, GEORGE",
+      "kind": "individual",
+      "committee_type": null,
+      "depth": 1,
+      "visibility": "disclosed",
+      "amount_in": 25000.0,
+      "is_terminus": true,
+      "terminus_reason": "individual",
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00828608&two_year_transaction_period=2024&contributor_name=SEAY%2C+GEORGE"
+    },
+    {
       "id": "org:DIALCARE_LLC",
       "name": "DIALCARE LLC",
       "kind": "organization",
@@ -248,7 +252,8 @@
       "is_terminus": true,
       "terminus_reason": "dark",
       "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00828608&two_year_transaction_period=2024&contributor_name=DIALCARE+LLC",
-      "organization_class": "llc"
+      "organization_class": "llc",
+      "class_basis": "rule"
     },
     {
       "id": "agg:other@C00828608",
@@ -342,7 +347,8 @@
         "2024-09-19",
         "2024-09-19"
       ],
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00828608&two_year_transaction_period=2024&contributor_name=SOUTH+DEVELOPMENT+CORP."
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00828608&two_year_transaction_period=2024&contributor_name=SOUTH+DEVELOPMENT+CORP.",
+      "class_basis": "rule"
     },
     {
       "from": "ind:COOPER_DERICK|32964",
@@ -393,6 +399,23 @@
       "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00828608&two_year_transaction_period=2024&contributor_name=HORNSTEIN%2C+STEVEN"
     },
     {
+      "from": "org:MAVERICK_QUANTUM",
+      "to": "C00828608",
+      "amount": 30000.0,
+      "visibility": "dark",
+      "depth": 1,
+      "transaction_types": [
+        "10"
+      ],
+      "count": 1,
+      "date_range": [
+        "2024-10-16",
+        "2024-10-16"
+      ],
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00828608&two_year_transaction_period=2024&contributor_name=MAVERICK+QUANTUM",
+      "class_basis": "rule"
+    },
+    {
       "from": "ind:MCLANE_JAMES_S._MR.|35243",
       "to": "C00828608",
       "amount": 30000.0,
@@ -407,118 +430,6 @@
         "2024-08-26"
       ],
       "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00828608&two_year_transaction_period=2024&contributor_name=MCLANE%2C+JAMES+S.+MR."
-    },
-    {
-      "from": "org:MAVERICK_QUANTUM",
-      "to": "C00828608",
-      "amount": 30000.0,
-      "visibility": "dark",
-      "depth": 1,
-      "transaction_types": [
-        "10"
-      ],
-      "count": 1,
-      "date_range": [
-        "2024-10-16",
-        "2024-10-16"
-      ],
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00828608&two_year_transaction_period=2024&contributor_name=MAVERICK+QUANTUM"
-    },
-    {
-      "from": "ind:HILDEBRAND_MELINDA|77019",
-      "to": "C00828608",
-      "amount": 25000.0,
-      "visibility": "disclosed",
-      "depth": 1,
-      "transaction_types": [
-        "10"
-      ],
-      "count": 1,
-      "date_range": [
-        "2024-10-11",
-        "2024-10-11"
-      ],
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00828608&two_year_transaction_period=2024&contributor_name=HILDEBRAND%2C+MELINDA"
-    },
-    {
-      "from": "ind:KODURU_KARTHIK|75078",
-      "to": "C00828608",
-      "amount": 25000.0,
-      "visibility": "disclosed",
-      "depth": 1,
-      "transaction_types": [
-        "10"
-      ],
-      "count": 1,
-      "date_range": [
-        "2024-11-04",
-        "2024-11-04"
-      ],
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00828608&two_year_transaction_period=2024&contributor_name=KODURU%2C+KARTHIK"
-    },
-    {
-      "from": "org:MTX_GROUP_INC.",
-      "to": "C00828608",
-      "amount": 25000.0,
-      "visibility": "disclosed",
-      "depth": 1,
-      "transaction_types": [
-        "10"
-      ],
-      "count": 1,
-      "date_range": [
-        "2024-10-17",
-        "2024-10-17"
-      ],
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00828608&two_year_transaction_period=2024&contributor_name=MTX+GROUP+INC."
-    },
-    {
-      "from": "ind:STRAVINSKI_PETER_T._MR.|75225",
-      "to": "C00828608",
-      "amount": 25000.0,
-      "visibility": "disclosed",
-      "depth": 1,
-      "transaction_types": [
-        "10"
-      ],
-      "count": 1,
-      "date_range": [
-        "2024-09-16",
-        "2024-09-16"
-      ],
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00828608&two_year_transaction_period=2024&contributor_name=STRAVINSKI%2C+PETER+T.+MR."
-    },
-    {
-      "from": "org:THREE_GALLERIA_TOWER",
-      "to": "C00828608",
-      "amount": 25000.0,
-      "visibility": "dark",
-      "depth": 1,
-      "transaction_types": [
-        "10"
-      ],
-      "count": 1,
-      "date_range": [
-        "2023-11-14",
-        "2023-11-14"
-      ],
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00828608&two_year_transaction_period=2024&contributor_name=THREE+GALLERIA+TOWER"
-    },
-    {
-      "from": "ind:SEAY_GEORGE|75204",
-      "to": "C00828608",
-      "amount": 25000.0,
-      "visibility": "disclosed",
-      "depth": 1,
-      "transaction_types": [
-        "10"
-      ],
-      "count": 1,
-      "date_range": [
-        "2024-10-30",
-        "2024-10-30"
-      ],
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00828608&two_year_transaction_period=2024&contributor_name=SEAY%2C+GEORGE"
     },
     {
       "from": "ind:STANARD_JAMES_N.|44114",
@@ -601,6 +512,104 @@
       "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00828608&two_year_transaction_period=2024&contributor_name=CARMICHAEL%2C+JEFFREY"
     },
     {
+      "from": "ind:HILDEBRAND_MELINDA|77019",
+      "to": "C00828608",
+      "amount": 25000.0,
+      "visibility": "disclosed",
+      "depth": 1,
+      "transaction_types": [
+        "10"
+      ],
+      "count": 1,
+      "date_range": [
+        "2024-10-11",
+        "2024-10-11"
+      ],
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00828608&two_year_transaction_period=2024&contributor_name=HILDEBRAND%2C+MELINDA"
+    },
+    {
+      "from": "ind:KODURU_KARTHIK|75078",
+      "to": "C00828608",
+      "amount": 25000.0,
+      "visibility": "disclosed",
+      "depth": 1,
+      "transaction_types": [
+        "10"
+      ],
+      "count": 1,
+      "date_range": [
+        "2024-11-04",
+        "2024-11-04"
+      ],
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00828608&two_year_transaction_period=2024&contributor_name=KODURU%2C+KARTHIK"
+    },
+    {
+      "from": "org:MTX_GROUP_INC.",
+      "to": "C00828608",
+      "amount": 25000.0,
+      "visibility": "disclosed",
+      "depth": 1,
+      "transaction_types": [
+        "10"
+      ],
+      "count": 1,
+      "date_range": [
+        "2024-10-17",
+        "2024-10-17"
+      ],
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00828608&two_year_transaction_period=2024&contributor_name=MTX+GROUP+INC.",
+      "class_basis": "rule"
+    },
+    {
+      "from": "ind:STRAVINSKI_PETER_T._MR.|75225",
+      "to": "C00828608",
+      "amount": 25000.0,
+      "visibility": "disclosed",
+      "depth": 1,
+      "transaction_types": [
+        "10"
+      ],
+      "count": 1,
+      "date_range": [
+        "2024-09-16",
+        "2024-09-16"
+      ],
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00828608&two_year_transaction_period=2024&contributor_name=STRAVINSKI%2C+PETER+T.+MR."
+    },
+    {
+      "from": "org:THREE_GALLERIA_TOWER",
+      "to": "C00828608",
+      "amount": 25000.0,
+      "visibility": "dark",
+      "depth": 1,
+      "transaction_types": [
+        "10"
+      ],
+      "count": 1,
+      "date_range": [
+        "2023-11-14",
+        "2023-11-14"
+      ],
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00828608&two_year_transaction_period=2024&contributor_name=THREE+GALLERIA+TOWER",
+      "class_basis": "rule"
+    },
+    {
+      "from": "ind:SEAY_GEORGE|75204",
+      "to": "C00828608",
+      "amount": 25000.0,
+      "visibility": "disclosed",
+      "depth": 1,
+      "transaction_types": [
+        "10"
+      ],
+      "count": 1,
+      "date_range": [
+        "2024-10-30",
+        "2024-10-30"
+      ],
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00828608&two_year_transaction_period=2024&contributor_name=SEAY%2C+GEORGE"
+    },
+    {
       "from": "org:DIALCARE_LLC",
       "to": "C00828608",
       "amount": 24000.0,
@@ -614,7 +623,8 @@
         "2024-10-16",
         "2024-10-16"
       ],
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00828608&two_year_transaction_period=2024&contributor_name=DIALCARE+LLC"
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00828608&two_year_transaction_period=2024&contributor_name=DIALCARE+LLC",
+      "class_basis": "rule"
     },
     {
       "from": "agg:other@C00828608",
@@ -684,10 +694,10 @@
   ],
   "summary": {
     "total_in": 1769257.0,
-    "disclosed_share": 0.9401,
+    "disclosed_share": 0.9457,
     "inferable_share": 0.0,
     "unwalked_share": 0.0,
-    "dark_share": 0.0599,
+    "dark_share": 0.0543,
     "max_depth": 1,
     "terminus_counts": {
       "individual": 14,

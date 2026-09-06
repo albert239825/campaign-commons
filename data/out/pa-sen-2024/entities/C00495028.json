@@ -23,8 +23,8 @@
     "independent_expenditures": 195994624.44,
     "from_individuals": 0.0,
     "from_committees": 17900.0,
-    "from_organizations": 12019377.0,
-    "from_undisclosed": 65450318.0
+    "from_organizations": 13084377.0,
+    "from_undisclosed": 64385318.0
   },
   "inflows": [
     {
@@ -40,7 +40,8 @@
       "visibility": "dark",
       "transaction_type": "10",
       "limit": null,
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00495028&two_year_transaction_period=2024&contributor_name=HOUSE+MAJORITY+FORWARD"
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00495028&two_year_transaction_period=2024&contributor_name=HOUSE+MAJORITY+FORWARD",
+      "class_basis": "rule"
     },
     {
       "transfer_id": "C00495028-in-C00490847",
@@ -115,7 +116,8 @@
       "visibility": "dark",
       "transaction_type": "10",
       "limit": null,
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00495028&two_year_transaction_period=2024&contributor_name=HMP"
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00495028&two_year_transaction_period=2024&contributor_name=HMP",
+      "class_basis": "rule"
     },
     {
       "transfer_id": "C00495028-in-C00693382",
@@ -160,7 +162,8 @@
       "visibility": "disclosed",
       "transaction_type": "10",
       "limit": null,
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00495028&two_year_transaction_period=2024&contributor_name=IBEW+PAC+EDUCATIONAL+FUND"
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00495028&two_year_transaction_period=2024&contributor_name=IBEW+PAC+EDUCATIONAL+FUND",
+      "class_basis": "rule"
     },
     {
       "transfer_id": "C00495028-in-ind:SIMONS_ELIZABETH_D.|94027",
@@ -220,7 +223,8 @@
       "visibility": "dark",
       "transaction_type": "10",
       "limit": null,
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00495028&two_year_transaction_period=2024&contributor_name=UNITED+ASSOCIATION+POLITICAL+ISSUES+FUND"
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00495028&two_year_transaction_period=2024&contributor_name=UNITED+ASSOCIATION+POLITICAL+ISSUES+FUND",
+      "class_basis": "rule"
     },
     {
       "transfer_id": "C00495028-in-ind:MANDEL_STEPHEN_F._JR.|06830",
@@ -310,7 +314,8 @@
       "visibility": "disclosed",
       "transaction_type": "10",
       "limit": null,
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00495028&two_year_transaction_period=2024&contributor_name=AFT+SOLIDARITY+527"
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00495028&two_year_transaction_period=2024&contributor_name=AFT+SOLIDARITY+527",
+      "class_basis": "rule"
     },
     {
       "transfer_id": "C00495028-in-C00002840",
@@ -355,7 +360,8 @@
       "visibility": "dark",
       "transaction_type": "10",
       "limit": null,
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00495028&two_year_transaction_period=2024&contributor_name=AMERICAN+FEDERATION+OF+STATE%2C+COUNTY+%26+MUNICIPAL+EMPLOYEES"
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00495028&two_year_transaction_period=2024&contributor_name=AMERICAN+FEDERATION+OF+STATE%2C+COUNTY+%26+MUNICIPAL+EMPLOYEES",
+      "class_basis": "rule"
     },
     {
       "transfer_id": "C00495028-in-ind:STEYER_TOM|94105",

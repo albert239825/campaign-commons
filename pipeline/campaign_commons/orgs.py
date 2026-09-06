@@ -54,9 +54,12 @@ def _norm(name: str) -> str:
     return re.sub(r"\s+", " ", re.sub(r"[^A-Z0-9&' .-]", " ", name.upper())).strip()
 
 
-def load_org_overrides(race_id: str) -> dict[str, str]:
+OrgOverride = tuple[str, str]
+
+
+def load_org_overrides(race_id: str) -> dict[str, OrgOverride]:
     """Load model classifications first, then let hand-verified rows override them."""
-    overrides: dict[str, str] = {}
+    overrides: dict[str, OrgOverride] = {}
     for path in (
         DATA / "hand" / race_id / "org_classes_model.json",
         DATA / "hand" / race_id / "org_classes.json",
@@ -73,25 +76,30 @@ def load_org_overrides(race_id: str) -> dict[str, str]:
             name = row.get("name")
             org_class = row.get("org_class")
             if isinstance(name, str) and org_class in ORGANIZATION_CLASSES:
-                overrides[_norm(name)] = org_class
+                basis = "verified" if path.name == "org_classes.json" else "inferred"
+                overrides[_norm(name)] = (org_class, basis)
     return overrides
 
 
-def classify_organization(name: str, overrides: dict[str, str] | None = None) -> str:
+def organization_classification(name: str, overrides: dict[str, OrgOverride] | None = None) -> OrgOverride:
     n = _norm(name)
     if overrides and n in overrides:
         return overrides[n]
     if _UNION.search(n):
-        return "union"
+        return "union", "rule"
     if _NONPROFIT.search(n):
-        return "nonprofit"
+        return "nonprofit", "rule"
     if _LLC.search(n):
-        return "llc"
+        return "llc", "rule"
     if _BUSINESS.search(n):
-        return "business"
+        return "business", "rule"
     if _NONPROFIT_WEAK.search(n):
-        return "nonprofit"
-    return "unknown"
+        return "nonprofit", "rule"
+    return "unknown", "rule"
+
+
+def classify_organization(name: str, overrides: dict[str, OrgOverride] | None = None) -> str:
+    return organization_classification(name, overrides)[0]
 
 
 def committee_name_index(committees: Iterable[tuple[str, str]]) -> dict[str, str]:

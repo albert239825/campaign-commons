@@ -23,8 +23,8 @@
     "independent_expenditures": 9322389.74,
     "from_individuals": 0.0,
     "from_committees": 20054912.78,
-    "from_organizations": 1367668.0,
-    "from_undisclosed": 3473597.0
+    "from_organizations": 1467668.0,
+    "from_undisclosed": 3373597.0
   },
   "inflows": [
     {
@@ -55,7 +55,8 @@
       "visibility": "dark",
       "transaction_type": "10",
       "limit": "unlimited",
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00754051&two_year_transaction_period=2024&contributor_name=NEVADA+ALLIANCE"
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00754051&two_year_transaction_period=2024&contributor_name=NEVADA+ALLIANCE",
+      "class_basis": "rule"
     },
     {
       "transfer_id": "C00754051-in-org:AMERICA_VOTES",
@@ -145,7 +146,8 @@
       "visibility": "disclosed",
       "transaction_type": "10",
       "limit": "unlimited",
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00754051&two_year_transaction_period=2024&contributor_name=UNITE+HERE+ACTION+FUND"
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00754051&two_year_transaction_period=2024&contributor_name=UNITE+HERE+ACTION+FUND",
+      "class_basis": "rule"
     },
     {
       "transfer_id": "C00754051-in-C00492520",
@@ -250,7 +252,8 @@
       "visibility": "dark",
       "transaction_type": "10",
       "limit": "unlimited",
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00754051&two_year_transaction_period=2024&contributor_name=OUR+AMERICAN+FUTURE+ACTION"
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00754051&two_year_transaction_period=2024&contributor_name=OUR+AMERICAN+FUTURE+ACTION",
+      "class_basis": "rule"
     },
     {
       "transfer_id": "C00754051-in-org:AFT_SOLIDARITY_527",
@@ -265,7 +268,8 @@
       "visibility": "disclosed",
       "transaction_type": "10",
       "limit": "unlimited",
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00754051&two_year_transaction_period=2024&contributor_name=AFT+SOLIDARITY+527"
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00754051&two_year_transaction_period=2024&contributor_name=AFT+SOLIDARITY+527",
+      "class_basis": "rule"
     },
     {
       "transfer_id": "C00754051-in-C00028860",
@@ -310,7 +314,8 @@
       "visibility": "disclosed",
       "transaction_type": "10",
       "limit": "unlimited",
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00754051&two_year_transaction_period=2024&contributor_name=AFSCME+WORKING+FAMILIES+FUND"
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00754051&two_year_transaction_period=2024&contributor_name=AFSCME+WORKING+FAMILIES+FUND",
+      "class_basis": "rule"
     },
     {
       "transfer_id": "C00754051-in-C00720029",
@@ -370,7 +375,8 @@
       "visibility": "dark",
       "transaction_type": "10",
       "limit": "unlimited",
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00754051&two_year_transaction_period=2024&contributor_name=NORTH+CAROLINA+ASSOCIATION+OF+EDUCATORS"
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00754051&two_year_transaction_period=2024&contributor_name=NORTH+CAROLINA+ASSOCIATION+OF+EDUCATORS",
+      "class_basis": "rule"
     },
     {
       "transfer_id": "C00754051-in-C00488486",

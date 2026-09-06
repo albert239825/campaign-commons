@@ -61,6 +61,20 @@ describe("buildComposeBody", () => {
   });
 });
 
+describe("organization classification provenance", () => {
+  it("labels inferred organization GAVE facts as model-read and unverified", () => {
+    const organization = node("org:TRUIST", "TRUIST", "organization");
+    const fact: GraphFact = {
+      ...facts[0],
+      from: organization,
+      to: slf,
+      visibility: "disclosed",
+      class_basis: "inferred",
+    };
+    expect(factSentence(fact)).toBe("TRUIST gave $10,000,000 to SENATE LEADERSHIP FUND (2 contributions) [disclosed — model-read, unverified].");
+  });
+});
+
 describe("validatePick (closed-set layer)", () => {
   it("accepts a known op with the right number of subjects, each an on-list id or a bounded mention", () => {
     expect(validatePick({ op: "shared_funders", subjects: [{ id: winsenate.id, mention: null }, { id: null, mention: " Women Vote " }] }, trails.subjects)).toEqual({

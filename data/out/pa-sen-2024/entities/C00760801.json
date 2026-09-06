@@ -40,7 +40,8 @@
       "visibility": "disclosed",
       "transaction_type": "10",
       "limit": "unlimited",
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00760801&two_year_transaction_period=2024&contributor_name=GREATER+PA+CARPENTERS+PEC"
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00760801&two_year_transaction_period=2024&contributor_name=GREATER+PA+CARPENTERS+PEC",
+      "class_basis": "rule"
     },
     {
       "transfer_id": "C00760801-in-C00884288",
@@ -85,7 +86,8 @@
       "visibility": "disclosed",
       "transaction_type": "10",
       "limit": "unlimited",
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00760801&two_year_transaction_period=2024&contributor_name=IBEW+LOCAL+UNION+164"
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00760801&two_year_transaction_period=2024&contributor_name=IBEW+LOCAL+UNION+164",
+      "class_basis": "rule"
     },
     {
       "transfer_id": "C00760801-in-org:NEW_YORK_HOTEL_TRADES_COUNCIL_&_UNITE_HERE_LOCAL_6_PAC",
@@ -115,7 +117,8 @@
       "visibility": "dark",
       "transaction_type": "10",
       "limit": "unlimited",
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00760801&two_year_transaction_period=2024&contributor_name=GROWING+ECONOMIC+OPPORTUNITIES"
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00760801&two_year_transaction_period=2024&contributor_name=GROWING+ECONOMIC+OPPORTUNITIES",
+      "class_basis": "rule"
     },
     {
       "transfer_id": "C00760801-in-org:AMERICAN_FEDERATION_OF_STATE,_COUNTY_AND_MUNICIPAL_EMPLOYEES,_AFL-CIO",
@@ -157,10 +160,11 @@
       "date": "2023-07-07",
       "first_date": "2023-05-04",
       "count": 2,
-      "visibility": "dark",
+      "visibility": "disclosed",
       "transaction_type": "10",
       "limit": "unlimited",
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00760801&two_year_transaction_period=2024&contributor_name=NEW+JERSEY+STATE+ASSN+OF+PIPE+FITTERS"
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00760801&two_year_transaction_period=2024&contributor_name=NEW+JERSEY+STATE+ASSN+OF+PIPE+FITTERS",
+      "class_basis": "inferred"
     },
     {
       "transfer_id": "C00760801-in-C00252056",
@@ -220,7 +224,8 @@
       "visibility": "dark",
       "transaction_type": "10",
       "limit": "unlimited",
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00760801&two_year_transaction_period=2024&contributor_name=DICRISTO+REAL+ESTATE"
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00760801&two_year_transaction_period=2024&contributor_name=DICRISTO+REAL+ESTATE",
+      "class_basis": "rule"
     },
     {
       "transfer_id": "C00760801-in-org:MAST_CONSTRUCTION_SERVICES,_INC.",
@@ -235,7 +240,8 @@
       "visibility": "disclosed",
       "transaction_type": "10",
       "limit": "unlimited",
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00760801&two_year_transaction_period=2024&contributor_name=MAST+CONSTRUCTION+SERVICES%2C+INC."
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00760801&two_year_transaction_period=2024&contributor_name=MAST+CONSTRUCTION+SERVICES%2C+INC.",
+      "class_basis": "rule"
     },
     {
       "transfer_id": "C00760801-in-org:PROGRESSIVE_VALUES_COMMITTEE",
@@ -250,7 +256,8 @@
       "visibility": "dark",
       "transaction_type": "10",
       "limit": "unlimited",
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00760801&two_year_transaction_period=2024&contributor_name=PROGRESSIVE+VALUES+COMMITTEE"
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00760801&two_year_transaction_period=2024&contributor_name=PROGRESSIVE+VALUES+COMMITTEE",
+      "class_basis": "rule"
     },
     {
       "transfer_id": "C00760801-in-org:TRIPLE'S_BUILDING_&_ELECTRICAL_SERVICE",
@@ -265,7 +272,8 @@
       "visibility": "dark",
       "transaction_type": "10",
       "limit": "unlimited",
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00760801&two_year_transaction_period=2024&contributor_name=TRIPLE%27S+BUILDING+%26+ELECTRICAL+SERVICE"
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00760801&two_year_transaction_period=2024&contributor_name=TRIPLE%27S+BUILDING+%26+ELECTRICAL+SERVICE",
+      "class_basis": "rule"
     },
     {
       "transfer_id": "C00760801-in-ind:SORIERO_PETER|06743",
@@ -295,7 +303,8 @@
       "visibility": "dark",
       "transaction_type": "10",
       "limit": "unlimited",
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00760801&two_year_transaction_period=2024&contributor_name=PS%26S"
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00760801&two_year_transaction_period=2024&contributor_name=PS%26S",
+      "class_basis": "rule"
     }
   ],
   "outflows": [

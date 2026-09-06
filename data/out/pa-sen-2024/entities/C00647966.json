@@ -235,7 +235,8 @@
       "visibility": "dark",
       "transaction_type": "10",
       "limit": "unlimited",
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00647966&two_year_transaction_period=2024&contributor_name=SCHUYLKILL+COUNTY+DEMOCRATIC+COMMITTE"
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00647966&two_year_transaction_period=2024&contributor_name=SCHUYLKILL+COUNTY+DEMOCRATIC+COMMITTE",
+      "class_basis": "rule"
     },
     {
       "transfer_id": "C00647966-in-org:BERKSHIRE_BRIGADES_PAC_(STATE_PAC)",
@@ -250,7 +251,8 @@
       "visibility": "dark",
       "transaction_type": "10",
       "limit": "unlimited",
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00647966&two_year_transaction_period=2024&contributor_name=BERKSHIRE+BRIGADES+PAC+%28STATE+PAC%29"
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00647966&two_year_transaction_period=2024&contributor_name=BERKSHIRE+BRIGADES+PAC+%28STATE+PAC%29",
+      "class_basis": "rule"
     },
     {
       "transfer_id": "C00647966-in-ind:WARK_KAREN|95112",

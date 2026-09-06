@@ -2,7 +2,7 @@
   "root_entity_id": "C00890087",
   "root_name": "DEFEND OUR CONSTITUTION PAC",
   "race_id": "pa-sen-2024",
-  "generated_at": "2026-09-06T04:49:10+00:00",
+  "generated_at": "2026-09-06T05:02:45+00:00",
   "data_status": "real",
   "nodes": [
     {
@@ -198,18 +198,6 @@
       "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00003632&two_year_transaction_period=2024&contributor_name=KAUFFMAN%2C+LESTER+III"
     },
     {
-      "id": "ind:OLSON_JEREMY|54016",
-      "name": "OLSON, JEREMY",
-      "kind": "individual",
-      "committee_type": null,
-      "depth": 2,
-      "visibility": "disclosed",
-      "amount_in": 3800.0,
-      "is_terminus": true,
-      "terminus_reason": "individual",
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00003632&two_year_transaction_period=2024&contributor_name=OLSON%2C+JEREMY"
-    },
-    {
       "id": "ind:VIK_ERIC|55956",
       "name": "VIK, ERIC",
       "kind": "individual",
@@ -232,6 +220,18 @@
       "is_terminus": true,
       "terminus_reason": "individual",
       "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00003632&two_year_transaction_period=2024&contributor_name=SCHROEDER%2C+DOUGLAS"
+    },
+    {
+      "id": "ind:OLSON_JEREMY|54016",
+      "name": "OLSON, JEREMY",
+      "kind": "individual",
+      "committee_type": null,
+      "depth": 2,
+      "visibility": "disclosed",
+      "amount_in": 3800.0,
+      "is_terminus": true,
+      "terminus_reason": "individual",
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00003632&two_year_transaction_period=2024&contributor_name=OLSON%2C+JEREMY"
     },
     {
       "id": "ind:PACZYNSKI_STANLEY|55810",
@@ -258,18 +258,6 @@
       "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00003632&two_year_transaction_period=2024&contributor_name=HOPKINS%2C+MATTHEW"
     },
     {
-      "id": "ind:GANZ_MICHAEL|55319",
-      "name": "GANZ, MICHAEL",
-      "kind": "individual",
-      "committee_type": null,
-      "depth": 2,
-      "visibility": "disclosed",
-      "amount_in": 3680.0,
-      "is_terminus": true,
-      "terminus_reason": "individual",
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00003632&two_year_transaction_period=2024&contributor_name=GANZ%2C+MICHAEL"
-    },
-    {
       "id": "ind:SCHMIDT_RODRICK|55371",
       "name": "SCHMIDT, RODRICK",
       "kind": "individual",
@@ -280,6 +268,18 @@
       "is_terminus": true,
       "terminus_reason": "individual",
       "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00003632&two_year_transaction_period=2024&contributor_name=SCHMIDT%2C+RODRICK"
+    },
+    {
+      "id": "ind:GANZ_MICHAEL|55319",
+      "name": "GANZ, MICHAEL",
+      "kind": "individual",
+      "committee_type": null,
+      "depth": 2,
+      "visibility": "disclosed",
+      "amount_in": 3680.0,
+      "is_terminus": true,
+      "terminus_reason": "individual",
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00003632&two_year_transaction_period=2024&contributor_name=GANZ%2C+MICHAEL"
     },
     {
       "id": "ind:VOLPENTESTA_MICHAEL|60418",
@@ -306,18 +306,6 @@
       "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00003632&two_year_transaction_period=2024&contributor_name=ROSSBOROUGH%2C+TIMOTHY"
     },
     {
-      "id": "ind:RIVAS_JEREMY|46368",
-      "name": "RIVAS, JEREMY",
-      "kind": "individual",
-      "committee_type": null,
-      "depth": 2,
-      "visibility": "disclosed",
-      "amount_in": 3387.0,
-      "is_terminus": true,
-      "terminus_reason": "individual",
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00003632&two_year_transaction_period=2024&contributor_name=RIVAS%2C+JEREMY"
-    },
-    {
       "id": "ind:COMPTON_DARIN|95123",
       "name": "COMPTON, DARIN",
       "kind": "individual",
@@ -340,6 +328,18 @@
       "is_terminus": true,
       "terminus_reason": "individual",
       "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00003632&two_year_transaction_period=2024&contributor_name=CATALANO%2C+ALBERT"
+    },
+    {
+      "id": "ind:RIVAS_JEREMY|46368",
+      "name": "RIVAS, JEREMY",
+      "kind": "individual",
+      "committee_type": null,
+      "depth": 2,
+      "visibility": "disclosed",
+      "amount_in": 3387.0,
+      "is_terminus": true,
+      "terminus_reason": "individual",
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00003632&two_year_transaction_period=2024&contributor_name=RIVAS%2C+JEREMY"
     },
     {
       "id": "ind:MCINTYRE_THOMAS|02132",
@@ -763,22 +763,6 @@
       "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00003632&two_year_transaction_period=2024&contributor_name=KAUFFMAN%2C+LESTER+III"
     },
     {
-      "from": "ind:OLSON_JEREMY|54016",
-      "to": "C00003632",
-      "amount": 3800.0,
-      "visibility": "disclosed",
-      "depth": 2,
-      "transaction_types": [
-        "15"
-      ],
-      "count": 21,
-      "date_range": [
-        "2023-02-14",
-        "2024-12-13"
-      ],
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00003632&two_year_transaction_period=2024&contributor_name=OLSON%2C+JEREMY"
-    },
-    {
       "from": "ind:VIK_ERIC|55956",
       "to": "C00003632",
       "amount": 3800.0,
@@ -809,6 +793,22 @@
         "2024-12-13"
       ],
       "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00003632&two_year_transaction_period=2024&contributor_name=SCHROEDER%2C+DOUGLAS"
+    },
+    {
+      "from": "ind:OLSON_JEREMY|54016",
+      "to": "C00003632",
+      "amount": 3800.0,
+      "visibility": "disclosed",
+      "depth": 2,
+      "transaction_types": [
+        "15"
+      ],
+      "count": 21,
+      "date_range": [
+        "2023-02-14",
+        "2024-12-13"
+      ],
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00003632&two_year_transaction_period=2024&contributor_name=OLSON%2C+JEREMY"
     },
     {
       "from": "ind:PACZYNSKI_STANLEY|55810",
@@ -843,22 +843,6 @@
       "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00003632&two_year_transaction_period=2024&contributor_name=HOPKINS%2C+MATTHEW"
     },
     {
-      "from": "ind:GANZ_MICHAEL|55319",
-      "to": "C00003632",
-      "amount": 3680.0,
-      "visibility": "disclosed",
-      "depth": 2,
-      "transaction_types": [
-        "15"
-      ],
-      "count": 21,
-      "date_range": [
-        "2023-02-14",
-        "2024-12-13"
-      ],
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00003632&two_year_transaction_period=2024&contributor_name=GANZ%2C+MICHAEL"
-    },
-    {
       "from": "ind:SCHMIDT_RODRICK|55371",
       "to": "C00003632",
       "amount": 3680.0,
@@ -873,6 +857,22 @@
         "2024-12-13"
       ],
       "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00003632&two_year_transaction_period=2024&contributor_name=SCHMIDT%2C+RODRICK"
+    },
+    {
+      "from": "ind:GANZ_MICHAEL|55319",
+      "to": "C00003632",
+      "amount": 3680.0,
+      "visibility": "disclosed",
+      "depth": 2,
+      "transaction_types": [
+        "15"
+      ],
+      "count": 21,
+      "date_range": [
+        "2023-02-14",
+        "2024-12-13"
+      ],
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00003632&two_year_transaction_period=2024&contributor_name=GANZ%2C+MICHAEL"
     },
     {
       "from": "ind:VOLPENTESTA_MICHAEL|60418",
@@ -907,22 +907,6 @@
       "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00003632&two_year_transaction_period=2024&contributor_name=ROSSBOROUGH%2C+TIMOTHY"
     },
     {
-      "from": "ind:RIVAS_JEREMY|46368",
-      "to": "C00003632",
-      "amount": 3387.0,
-      "visibility": "disclosed",
-      "depth": 2,
-      "transaction_types": [
-        "15"
-      ],
-      "count": 35,
-      "date_range": [
-        "2023-02-10",
-        "2024-12-27"
-      ],
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00003632&two_year_transaction_period=2024&contributor_name=RIVAS%2C+JEREMY"
-    },
-    {
       "from": "ind:COMPTON_DARIN|95123",
       "to": "C00003632",
       "amount": 3387.0,
@@ -953,6 +937,22 @@
         "2024-12-27"
       ],
       "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00003632&two_year_transaction_period=2024&contributor_name=CATALANO%2C+ALBERT"
+    },
+    {
+      "from": "ind:RIVAS_JEREMY|46368",
+      "to": "C00003632",
+      "amount": 3387.0,
+      "visibility": "disclosed",
+      "depth": 2,
+      "transaction_types": [
+        "15"
+      ],
+      "count": 35,
+      "date_range": [
+        "2023-02-10",
+        "2024-12-27"
+      ],
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00003632&two_year_transaction_period=2024&contributor_name=RIVAS%2C+JEREMY"
     },
     {
       "from": "ind:MCINTYRE_THOMAS|02132",

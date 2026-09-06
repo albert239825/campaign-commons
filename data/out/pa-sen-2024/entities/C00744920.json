@@ -40,7 +40,8 @@
       "visibility": "dark",
       "transaction_type": "10",
       "limit": null,
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00744920&two_year_transaction_period=2024&contributor_name=AMERICA+VOTES"
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00744920&two_year_transaction_period=2024&contributor_name=AMERICA+VOTES",
+      "class_basis": "rule"
     },
     {
       "transfer_id": "C00744920-in-org:PIVOTAL_VENTURES",
@@ -55,7 +56,8 @@
       "visibility": "disclosed",
       "transaction_type": "10",
       "limit": null,
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00744920&two_year_transaction_period=2024&contributor_name=PIVOTAL+VENTURES"
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00744920&two_year_transaction_period=2024&contributor_name=PIVOTAL+VENTURES",
+      "class_basis": "rule"
     },
     {
       "transfer_id": "C00744920-in-C00492520",
@@ -100,7 +102,8 @@
       "visibility": "dark",
       "transaction_type": "10",
       "limit": null,
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00744920&two_year_transaction_period=2024&contributor_name=GLOBAL+IMPACT+SOCIAL+WELFARE+FUND"
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00744920&two_year_transaction_period=2024&contributor_name=GLOBAL+IMPACT+SOCIAL+WELFARE+FUND",
+      "class_basis": "rule"
     },
     {
       "transfer_id": "C00744920-in-org:REBUILD_USA",
@@ -115,7 +118,8 @@
       "visibility": "dark",
       "transaction_type": "10",
       "limit": null,
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00744920&two_year_transaction_period=2024&contributor_name=REBUILD+USA"
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00744920&two_year_transaction_period=2024&contributor_name=REBUILD+USA",
+      "class_basis": "rule"
     },
     {
       "transfer_id": "C00744920-in-org:OHIO_PROGRESSIVE_COLLABORATIVE",
@@ -130,7 +134,8 @@
       "visibility": "dark",
       "transaction_type": "10",
       "limit": null,
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00744920&two_year_transaction_period=2024&contributor_name=OHIO+PROGRESSIVE+COLLABORATIVE"
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00744920&two_year_transaction_period=2024&contributor_name=OHIO+PROGRESSIVE+COLLABORATIVE",
+      "class_basis": "inferred"
     },
     {
       "transfer_id": "C00744920-in-org:FORWARD_ACTION_FUND",
@@ -145,7 +150,8 @@
       "visibility": "dark",
       "transaction_type": "10",
       "limit": null,
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00744920&two_year_transaction_period=2024&contributor_name=FORWARD+ACTION+FUND"
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00744920&two_year_transaction_period=2024&contributor_name=FORWARD+ACTION+FUND",
+      "class_basis": "rule"
     },
     {
       "transfer_id": "C00744920-in-org:SIXTEEN_THIRTY_FUND",
@@ -160,7 +166,8 @@
       "visibility": "dark",
       "transaction_type": "10",
       "limit": null,
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00744920&two_year_transaction_period=2024&contributor_name=SIXTEEN+THIRTY+FUND"
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00744920&two_year_transaction_period=2024&contributor_name=SIXTEEN+THIRTY+FUND",
+      "class_basis": "rule"
     },
     {
       "transfer_id": "C00744920-in-C00882100",
@@ -205,7 +212,8 @@
       "visibility": "dark",
       "transaction_type": "10",
       "limit": null,
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00744920&two_year_transaction_period=2024&contributor_name=MAP+USA"
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00744920&two_year_transaction_period=2024&contributor_name=MAP+USA",
+      "class_basis": "inferred"
     },
     {
       "transfer_id": "C00744920-in-C00697755",
@@ -265,7 +273,8 @@
       "visibility": "dark",
       "transaction_type": "10",
       "limit": null,
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00744920&two_year_transaction_period=2024&contributor_name=CLEAN+VIRGINIA+FUND"
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00744920&two_year_transaction_period=2024&contributor_name=CLEAN+VIRGINIA+FUND",
+      "class_basis": "rule"
     },
     {
       "transfer_id": "C00744920-in-C00344531",
@@ -355,7 +364,8 @@
       "visibility": "dark",
       "transaction_type": "10",
       "limit": null,
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00744920&two_year_transaction_period=2024&contributor_name=GEORGIA+INVESTOR+ACTION+FUND"
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00744920&two_year_transaction_period=2024&contributor_name=GEORGIA+INVESTOR+ACTION+FUND",
+      "class_basis": "rule"
     },
     {
       "transfer_id": "C00744920-in-ind:KERN_DEBORAH|53217",

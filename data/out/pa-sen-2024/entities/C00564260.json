@@ -23,8 +23,8 @@
     "independent_expenditures": 0,
     "from_individuals": 156793.0,
     "from_committees": 24000.0,
-    "from_organizations": 15000.0,
-    "from_undisclosed": 3000.0
+    "from_organizations": 18000.0,
+    "from_undisclosed": 0.0
   },
   "inflows": [
     {
@@ -115,7 +115,8 @@
       "visibility": "disclosed",
       "transaction_type": "11",
       "limit": null,
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00564260&two_year_transaction_period=2024&contributor_name=FEDERATED+INDIANS+OF+GRATON+RANCHERIA"
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00564260&two_year_transaction_period=2024&contributor_name=FEDERATED+INDIANS+OF+GRATON+RANCHERIA",
+      "class_basis": "rule"
     },
     {
       "transfer_id": "C00564260-in-ind:CULLEN_CARLEEN|94904",
@@ -295,7 +296,8 @@
       "visibility": "disclosed",
       "transaction_type": "15",
       "limit": null,
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00564260&two_year_transaction_period=2024&contributor_name=SAN+PABLO+LYTTON+CASINO"
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00564260&two_year_transaction_period=2024&contributor_name=SAN+PABLO+LYTTON+CASINO",
+      "class_basis": "rule"
     },
     {
       "transfer_id": "C00564260-in-ind:MCINERNEY_THOMAS|94960",

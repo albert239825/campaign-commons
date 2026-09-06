@@ -88,10 +88,11 @@ const ribbonPath = (r: Ribbon) => {
 
 const ribbonColor = (l: SankeyLink) => (l.rel === "TARGETED" ? TARGETING_COLOR : l.rel === "CAMPAIGN_OF" ? OWNERSHIP_COLOR : VISIBILITY_COLORS[l.visibility]);
 
-const ribbonTitle = (l: SankeyLink, from: SankeyNode, to: SankeyNode) => {
-  if (l.rel === "CAMPAIGN_OF") return `[${l.n}] ${from.name} is the campaign committee of ${to.name} (${money(l.amount)} reached it in these rows)`;
+export const ribbonTitle = (l: SankeyLink, from: SankeyNode, to: SankeyNode) => {
+  const basis = l.class_basis === "inferred" ? " · model-read, unverified" : "";
+  if (l.rel === "CAMPAIGN_OF") return `[${l.n}] ${from.name} is the campaign committee of ${to.name} (${money(l.amount)} reached it in these rows)${basis}`;
   const verb = l.rel === "GAVE" ? "gave" : l.rel === "PAID" ? "paid" : l.rel === "TARGETED" ? (l.support_oppose === "O" ? "spent against" : "spent supporting") : l.rel.toLowerCase();
-  return `[${l.n}] ${from.name} ${verb} ${money(l.amount)} → ${to.name} · ${VISIBILITY_LABELS[l.visibility]}`;
+  return `[${l.n}] ${from.name} ${verb} ${money(l.amount)} → ${to.name} · ${VISIBILITY_LABELS[l.visibility]}${basis}`;
 };
 
 function truncate(s: string, max = 26) {

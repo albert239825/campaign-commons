@@ -216,6 +216,14 @@
                   "dark"
                 ]
               },
+              "class_basis": {
+                "type": "string",
+                "enum": [
+                  "rule",
+                  "inferred",
+                  "verified"
+                ]
+              },
               "transaction_type": {
                 "type": [
                   "string",
@@ -305,6 +313,14 @@
                   "disclosed",
                   "inferable",
                   "dark"
+                ]
+              },
+              "class_basis": {
+                "type": "string",
+                "enum": [
+                  "rule",
+                  "inferred",
+                  "verified"
                 ]
               },
               "transaction_type": {

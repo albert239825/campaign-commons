@@ -2,7 +2,7 @@
   "root_entity_id": "C00011114",
   "root_name": "AMERICAN FEDERATION OF STATE COUNTY & MUNICIPAL EMPLOYEES  P E O P L E",
   "race_id": "pa-sen-2024",
-  "generated_at": "2026-09-06T04:49:10+00:00",
+  "generated_at": "2026-09-06T05:02:45+00:00",
   "data_status": "real",
   "nodes": [
     {
@@ -91,18 +91,6 @@
       "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00149211&two_year_transaction_period=2024&contributor_name=GARRIDO%2C+HENRY"
     },
     {
-      "id": "ind:ROACH_ROBIN|11435",
-      "name": "ROACH, ROBIN",
-      "kind": "individual",
-      "committee_type": null,
-      "depth": 2,
-      "visibility": "disclosed",
-      "amount_in": 1660.0,
-      "is_terminus": true,
-      "terminus_reason": "individual",
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00149211&two_year_transaction_period=2024&contributor_name=ROACH%2C+ROBIN"
-    },
-    {
       "id": "ind:INGRAM-EDMONDS_BARBARA|08550",
       "name": "INGRAM-EDMONDS, BARBARA",
       "kind": "individual",
@@ -115,6 +103,18 @@
       "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00149211&two_year_transaction_period=2024&contributor_name=INGRAM-EDMONDS%2C+BARBARA"
     },
     {
+      "id": "ind:ROACH_ROBIN|11435",
+      "name": "ROACH, ROBIN",
+      "kind": "individual",
+      "committee_type": null,
+      "depth": 2,
+      "visibility": "disclosed",
+      "amount_in": 1660.0,
+      "is_terminus": true,
+      "terminus_reason": "individual",
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00149211&two_year_transaction_period=2024&contributor_name=ROACH%2C+ROBIN"
+    },
+    {
       "id": "ind:NEGRON_EDWIN|10029",
       "name": "NEGRON, EDWIN",
       "kind": "individual",
@@ -125,30 +125,6 @@
       "is_terminus": true,
       "terminus_reason": "individual",
       "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00149211&two_year_transaction_period=2024&contributor_name=NEGRON%2C+EDWIN"
-    },
-    {
-      "id": "ind:KADLUB_AMY|10304",
-      "name": "KADLUB, AMY",
-      "kind": "individual",
-      "committee_type": null,
-      "depth": 2,
-      "visibility": "disclosed",
-      "amount_in": 650.0,
-      "is_terminus": true,
-      "terminus_reason": "individual",
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00149211&two_year_transaction_period=2024&contributor_name=KADLUB%2C+AMY"
-    },
-    {
-      "id": "ind:BANKHEAD_SHARON|10452",
-      "name": "BANKHEAD, SHARON",
-      "kind": "individual",
-      "committee_type": null,
-      "depth": 2,
-      "visibility": "disclosed",
-      "amount_in": 650.0,
-      "is_terminus": true,
-      "terminus_reason": "individual",
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00149211&two_year_transaction_period=2024&contributor_name=BANKHEAD%2C+SHARON"
     },
     {
       "id": "ind:JOSEPH_JAHMILA|11216",
@@ -199,16 +175,28 @@
       "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00149211&two_year_transaction_period=2024&contributor_name=NESBIT%2C+DONALD"
     },
     {
-      "id": "ind:BOYD_DAVID|10035",
-      "name": "BOYD, DAVID",
+      "id": "ind:KADLUB_AMY|10304",
+      "name": "KADLUB, AMY",
       "kind": "individual",
       "committee_type": null,
       "depth": 2,
       "visibility": "disclosed",
-      "amount_in": 620.0,
+      "amount_in": 650.0,
       "is_terminus": true,
       "terminus_reason": "individual",
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00149211&two_year_transaction_period=2024&contributor_name=BOYD%2C+DAVID"
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00149211&two_year_transaction_period=2024&contributor_name=KADLUB%2C+AMY"
+    },
+    {
+      "id": "ind:BANKHEAD_SHARON|10452",
+      "name": "BANKHEAD, SHARON",
+      "kind": "individual",
+      "committee_type": null,
+      "depth": 2,
+      "visibility": "disclosed",
+      "amount_in": 650.0,
+      "is_terminus": true,
+      "terminus_reason": "individual",
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00149211&two_year_transaction_period=2024&contributor_name=BANKHEAD%2C+SHARON"
     },
     {
       "id": "ind:ELIAS_ALEXANDER|10306",
@@ -221,6 +209,18 @@
       "is_terminus": true,
       "terminus_reason": "individual",
       "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00149211&two_year_transaction_period=2024&contributor_name=ELIAS%2C+ALEXANDER"
+    },
+    {
+      "id": "ind:BOYD_DAVID|10035",
+      "name": "BOYD, DAVID",
+      "kind": "individual",
+      "committee_type": null,
+      "depth": 2,
+      "visibility": "disclosed",
+      "amount_in": 620.0,
+      "is_terminus": true,
+      "terminus_reason": "individual",
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00149211&two_year_transaction_period=2024&contributor_name=BOYD%2C+DAVID"
     },
     {
       "id": "ind:SYKES_STEVEN|11021",
@@ -247,18 +247,6 @@
       "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00149211&two_year_transaction_period=2024&contributor_name=DOLAN%2C+MOIRA"
     },
     {
-      "id": "ind:SIMMONS_KYLE|18466",
-      "name": "SIMMONS, KYLE",
-      "kind": "individual",
-      "committee_type": null,
-      "depth": 2,
-      "visibility": "disclosed",
-      "amount_in": 600.0,
-      "is_terminus": true,
-      "terminus_reason": "individual",
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00149211&two_year_transaction_period=2024&contributor_name=SIMMONS%2C+KYLE"
-    },
-    {
       "id": "ind:IFILL_DENNIS|11422",
       "name": "IFILL, DENNIS",
       "kind": "individual",
@@ -269,6 +257,18 @@
       "is_terminus": true,
       "terminus_reason": "individual",
       "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00149211&two_year_transaction_period=2024&contributor_name=IFILL%2C+DENNIS"
+    },
+    {
+      "id": "ind:SIMMONS_KYLE|18466",
+      "name": "SIMMONS, KYLE",
+      "kind": "individual",
+      "committee_type": null,
+      "depth": 2,
+      "visibility": "disclosed",
+      "amount_in": 600.0,
+      "is_terminus": true,
+      "terminus_reason": "individual",
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00149211&two_year_transaction_period=2024&contributor_name=SIMMONS%2C+KYLE"
     },
     {
       "id": "ind:ALLEN_MIRIAM|11203",
@@ -503,22 +503,6 @@
       "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00149211&two_year_transaction_period=2024&contributor_name=GARRIDO%2C+HENRY"
     },
     {
-      "from": "ind:ROACH_ROBIN|11435",
-      "to": "C00149211",
-      "amount": 1660.0,
-      "visibility": "disclosed",
-      "depth": 2,
-      "transaction_types": [
-        "15"
-      ],
-      "count": 19,
-      "date_range": [
-        "2023-03-31",
-        "2024-12-31"
-      ],
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00149211&two_year_transaction_period=2024&contributor_name=ROACH%2C+ROBIN"
-    },
-    {
       "from": "ind:INGRAM-EDMONDS_BARBARA|08550",
       "to": "C00149211",
       "amount": 1660.0,
@@ -535,6 +519,22 @@
       "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00149211&two_year_transaction_period=2024&contributor_name=INGRAM-EDMONDS%2C+BARBARA"
     },
     {
+      "from": "ind:ROACH_ROBIN|11435",
+      "to": "C00149211",
+      "amount": 1660.0,
+      "visibility": "disclosed",
+      "depth": 2,
+      "transaction_types": [
+        "15"
+      ],
+      "count": 19,
+      "date_range": [
+        "2023-03-31",
+        "2024-12-31"
+      ],
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00149211&two_year_transaction_period=2024&contributor_name=ROACH%2C+ROBIN"
+    },
+    {
       "from": "ind:NEGRON_EDWIN|10029",
       "to": "C00149211",
       "amount": 900.0,
@@ -549,38 +549,6 @@
         "2024-12-31"
       ],
       "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00149211&two_year_transaction_period=2024&contributor_name=NEGRON%2C+EDWIN"
-    },
-    {
-      "from": "ind:KADLUB_AMY|10304",
-      "to": "C00149211",
-      "amount": 650.0,
-      "visibility": "disclosed",
-      "depth": 2,
-      "transaction_types": [
-        "15"
-      ],
-      "count": 15,
-      "date_range": [
-        "2023-05-31",
-        "2024-12-31"
-      ],
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00149211&two_year_transaction_period=2024&contributor_name=KADLUB%2C+AMY"
-    },
-    {
-      "from": "ind:BANKHEAD_SHARON|10452",
-      "to": "C00149211",
-      "amount": 650.0,
-      "visibility": "disclosed",
-      "depth": 2,
-      "transaction_types": [
-        "15"
-      ],
-      "count": 15,
-      "date_range": [
-        "2023-05-31",
-        "2024-12-31"
-      ],
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00149211&two_year_transaction_period=2024&contributor_name=BANKHEAD%2C+SHARON"
     },
     {
       "from": "ind:JOSEPH_JAHMILA|11216",
@@ -647,9 +615,9 @@
       "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00149211&two_year_transaction_period=2024&contributor_name=NESBIT%2C+DONALD"
     },
     {
-      "from": "ind:BOYD_DAVID|10035",
+      "from": "ind:KADLUB_AMY|10304",
       "to": "C00149211",
-      "amount": 620.0,
+      "amount": 650.0,
       "visibility": "disclosed",
       "depth": 2,
       "transaction_types": [
@@ -660,7 +628,23 @@
         "2023-05-31",
         "2024-12-31"
       ],
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00149211&two_year_transaction_period=2024&contributor_name=BOYD%2C+DAVID"
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00149211&two_year_transaction_period=2024&contributor_name=KADLUB%2C+AMY"
+    },
+    {
+      "from": "ind:BANKHEAD_SHARON|10452",
+      "to": "C00149211",
+      "amount": 650.0,
+      "visibility": "disclosed",
+      "depth": 2,
+      "transaction_types": [
+        "15"
+      ],
+      "count": 15,
+      "date_range": [
+        "2023-05-31",
+        "2024-12-31"
+      ],
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00149211&two_year_transaction_period=2024&contributor_name=BANKHEAD%2C+SHARON"
     },
     {
       "from": "ind:ELIAS_ALEXANDER|10306",
@@ -677,6 +661,22 @@
         "2024-12-31"
       ],
       "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00149211&two_year_transaction_period=2024&contributor_name=ELIAS%2C+ALEXANDER"
+    },
+    {
+      "from": "ind:BOYD_DAVID|10035",
+      "to": "C00149211",
+      "amount": 620.0,
+      "visibility": "disclosed",
+      "depth": 2,
+      "transaction_types": [
+        "15"
+      ],
+      "count": 15,
+      "date_range": [
+        "2023-05-31",
+        "2024-12-31"
+      ],
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00149211&two_year_transaction_period=2024&contributor_name=BOYD%2C+DAVID"
     },
     {
       "from": "ind:SYKES_STEVEN|11021",
@@ -711,22 +711,6 @@
       "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00149211&two_year_transaction_period=2024&contributor_name=DOLAN%2C+MOIRA"
     },
     {
-      "from": "ind:SIMMONS_KYLE|18466",
-      "to": "C00149211",
-      "amount": 600.0,
-      "visibility": "disclosed",
-      "depth": 2,
-      "transaction_types": [
-        "15"
-      ],
-      "count": 14,
-      "date_range": [
-        "2023-05-31",
-        "2024-12-31"
-      ],
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00149211&two_year_transaction_period=2024&contributor_name=SIMMONS%2C+KYLE"
-    },
-    {
       "from": "ind:IFILL_DENNIS|11422",
       "to": "C00149211",
       "amount": 600.0,
@@ -741,6 +725,22 @@
         "2024-12-31"
       ],
       "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00149211&two_year_transaction_period=2024&contributor_name=IFILL%2C+DENNIS"
+    },
+    {
+      "from": "ind:SIMMONS_KYLE|18466",
+      "to": "C00149211",
+      "amount": 600.0,
+      "visibility": "disclosed",
+      "depth": 2,
+      "transaction_types": [
+        "15"
+      ],
+      "count": 14,
+      "date_range": [
+        "2023-05-31",
+        "2024-12-31"
+      ],
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00149211&two_year_transaction_period=2024&contributor_name=SIMMONS%2C+KYLE"
     },
     {
       "from": "ind:ALLEN_MIRIAM|11203",

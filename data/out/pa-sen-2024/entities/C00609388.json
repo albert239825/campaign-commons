@@ -55,7 +55,8 @@
       "visibility": "dark",
       "transaction_type": "10",
       "limit": "unlimited",
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00609388&two_year_transaction_period=2024&contributor_name=AMERICA+VOTES"
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00609388&two_year_transaction_period=2024&contributor_name=AMERICA+VOTES",
+      "class_basis": "rule"
     },
     {
       "transfer_id": "C00609388-in-C00492520",
@@ -130,7 +131,8 @@
       "visibility": "dark",
       "transaction_type": "10",
       "limit": "unlimited",
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00609388&two_year_transaction_period=2024&contributor_name=OHIO+PROGRESSIVE+COLLABORATIVE"
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00609388&two_year_transaction_period=2024&contributor_name=OHIO+PROGRESSIVE+COLLABORATIVE",
+      "class_basis": "inferred"
     },
     {
       "transfer_id": "C00609388-in-C00669259",
@@ -205,7 +207,8 @@
       "visibility": "dark",
       "transaction_type": "10",
       "limit": "unlimited",
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00609388&two_year_transaction_period=2024&contributor_name=ADVOCACY+ACTION+FUND+INC."
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00609388&two_year_transaction_period=2024&contributor_name=ADVOCACY+ACTION+FUND+INC.",
+      "class_basis": "rule"
     },
     {
       "transfer_id": "C00609388-in-org:MAP_USA",
@@ -220,7 +223,8 @@
       "visibility": "dark",
       "transaction_type": "10",
       "limit": "unlimited",
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00609388&two_year_transaction_period=2024&contributor_name=MAP+USA"
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00609388&two_year_transaction_period=2024&contributor_name=MAP+USA",
+      "class_basis": "inferred"
     },
     {
       "transfer_id": "C00609388-in-ind:LAUFER_ERIC_D.|10011",
@@ -265,7 +269,8 @@
       "visibility": "disclosed",
       "transaction_type": "10",
       "limit": "unlimited",
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00609388&two_year_transaction_period=2024&contributor_name=EASTERN+ATLANTIC+STATES+REGIONAL+COUNCIL+OF+CARPENTERS"
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00609388&two_year_transaction_period=2024&contributor_name=EASTERN+ATLANTIC+STATES+REGIONAL+COUNCIL+OF+CARPENTERS",
+      "class_basis": "rule"
     },
     {
       "transfer_id": "C00609388-in-C00484642",

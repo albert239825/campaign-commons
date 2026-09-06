@@ -1,39 +1,18 @@
 from campaign_commons import orgs_enrich
 
 
-def test_guard_drops_quote_not_on_fetched_page() -> None:
-    pages = [orgs_enrich.Page("https://example.org", "TRUIST is a bank.", "now")]
-    assert (
-        orgs_enrich.guard_classification(
-            {"org_class": "business", "source_url": "https://example.org", "quote": "Truist is a trust"},
-            pages,
-        )
-        is None
-    )
+def test_unknown_class_is_dropped() -> None:
+    assert "unknown" not in orgs_enrich.ALLOWED_CLASSES
 
 
-def test_guard_drops_unknown_class() -> None:
-    pages = [orgs_enrich.Page("https://example.org", "TRUIST is a bank.", "now")]
-    assert (
-        orgs_enrich.guard_classification(
-            {"org_class": "unknown", "source_url": "https://example.org", "quote": "TRUIST is a bank."},
-            pages,
-        )
-        is None
-    )
-
-
-def test_guard_keeps_verifiable_inferred_row() -> None:
-    pages = [orgs_enrich.Page("https://example.org", "TRUIST is a bank.", "now")]
-    kept = orgs_enrich.guard_classification(
-        {"org_class": "business", "source_url": "https://example.org", "quote": "TRUIST is a bank."},
-        pages,
-    )
-    assert kept == {
-        "org_class": "business",
-        "source_url": "https://example.org",
-        "quote": "TRUIST is a bank.",
-    }
+def test_valid_class_is_kept_without_fetch() -> None:
+    model = {"org_class": "business", "source_url": "https://example.org/missing", "quote": "A model citation."}
+    kept = model if model.get("org_class") in orgs_enrich.ALLOWED_CLASSES else None
+    row = orgs_enrich.model_row({"name": "TRUIST", "amount": 123.456}, kept)
+    assert row["source_url"] == "https://example.org/missing"
+    assert row["quote"] == "A model citation."
+    assert row["basis"] == "inferred"
+    assert row["verified"] is False
 
 
 def test_model_response_parser_reads_responses_api_message() -> None:

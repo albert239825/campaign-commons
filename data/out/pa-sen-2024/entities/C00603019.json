@@ -23,8 +23,8 @@
     "independent_expenditures": 0,
     "from_individuals": 1040238.51,
     "from_committees": 236390.01,
-    "from_organizations": 25562.0,
-    "from_undisclosed": 26600.0
+    "from_organizations": 30562.0,
+    "from_undisclosed": 21600.0
   },
   "inflows": [
     {
@@ -115,7 +115,8 @@
       "visibility": "disclosed",
       "transaction_type": "11",
       "limit": null,
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00603019&two_year_transaction_period=2024&contributor_name=SAN+PABLO+LYTTON+TRIBE"
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00603019&two_year_transaction_period=2024&contributor_name=SAN+PABLO+LYTTON+TRIBE",
+      "class_basis": "rule"
     },
     {
       "transfer_id": "C00603019-in-ind:COURVILLE_JOHN|70810",

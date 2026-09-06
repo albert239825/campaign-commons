@@ -2,7 +2,7 @@
   "root_entity_id": "C00752691",
   "root_name": "ONE FOR ALL COMMITTEE",
   "race_id": "pa-sen-2024",
-  "generated_at": "2026-09-06T04:49:10+00:00",
+  "generated_at": "2026-09-06T05:02:45+00:00",
   "data_status": "real",
   "nodes": [
     {
@@ -40,7 +40,8 @@
       "is_terminus": true,
       "terminus_reason": "organization",
       "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00752691&two_year_transaction_period=2024&contributor_name=PIVOTAL+VENTURES",
-      "organization_class": "business"
+      "organization_class": "business",
+      "class_basis": "rule"
     },
     {
       "id": "org:ADVOCACY_ACTION_FUND",
@@ -53,7 +54,8 @@
       "is_terminus": true,
       "terminus_reason": "dark",
       "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00752691&two_year_transaction_period=2024&contributor_name=ADVOCACY+ACTION+FUND",
-      "organization_class": "nonprofit"
+      "organization_class": "nonprofit",
+      "class_basis": "rule"
     },
     {
       "id": "C00693382",
@@ -114,7 +116,8 @@
       "is_terminus": true,
       "terminus_reason": "dark",
       "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00752691&two_year_transaction_period=2024&contributor_name=GLOBAL+IMPACT+SOCIAL+WELFARE+FUND",
-      "organization_class": "nonprofit"
+      "organization_class": "nonprofit",
+      "class_basis": "rule"
     },
     {
       "id": "ind:SCRIPPS_SEBASTIAN|06840",
@@ -139,31 +142,6 @@
       "is_terminus": true,
       "terminus_reason": "individual",
       "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00752691&two_year_transaction_period=2024&contributor_name=STUTZMAN%2C+S.+MARK"
-    },
-    {
-      "id": "ind:MENNET_LISA|98118",
-      "name": "MENNET, LISA",
-      "kind": "individual",
-      "committee_type": null,
-      "depth": 1,
-      "visibility": "disclosed",
-      "amount_in": 250000.0,
-      "is_terminus": true,
-      "terminus_reason": "individual",
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00752691&two_year_transaction_period=2024&contributor_name=MENNET%2C+LISA"
-    },
-    {
-      "id": "org:BUELOW_BAMBINI_LLC",
-      "name": "BUELOW BAMBINI LLC",
-      "kind": "organization",
-      "committee_type": null,
-      "depth": 1,
-      "visibility": "dark",
-      "amount_in": 250000.0,
-      "is_terminus": true,
-      "terminus_reason": "dark",
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00752691&two_year_transaction_period=2024&contributor_name=BUELOW+BAMBINI+LLC",
-      "organization_class": "llc"
     },
     {
       "id": "ind:WALTON_KELLY_R.|76244",
@@ -212,7 +190,34 @@
       "is_terminus": true,
       "terminus_reason": "dark",
       "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00752691&two_year_transaction_period=2024&contributor_name=BRICK+BY+BRICK+FOUNDATION",
-      "organization_class": "nonprofit"
+      "organization_class": "nonprofit",
+      "class_basis": "rule"
+    },
+    {
+      "id": "ind:MENNET_LISA|98118",
+      "name": "MENNET, LISA",
+      "kind": "individual",
+      "committee_type": null,
+      "depth": 1,
+      "visibility": "disclosed",
+      "amount_in": 250000.0,
+      "is_terminus": true,
+      "terminus_reason": "individual",
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00752691&two_year_transaction_period=2024&contributor_name=MENNET%2C+LISA"
+    },
+    {
+      "id": "org:BUELOW_BAMBINI_LLC",
+      "name": "BUELOW BAMBINI LLC",
+      "kind": "organization",
+      "committee_type": null,
+      "depth": 1,
+      "visibility": "dark",
+      "amount_in": 250000.0,
+      "is_terminus": true,
+      "terminus_reason": "dark",
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00752691&two_year_transaction_period=2024&contributor_name=BUELOW+BAMBINI+LLC",
+      "organization_class": "llc",
+      "class_basis": "rule"
     },
     {
       "id": "ind:BLUMENTHAL_JABE|98122",
@@ -250,7 +255,8 @@
       "is_terminus": true,
       "terminus_reason": "dark",
       "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00693382&two_year_transaction_period=2024&contributor_name=FUND+FOR+POLICY+REFORM",
-      "organization_class": "nonprofit"
+      "organization_class": "nonprofit",
+      "class_basis": "rule"
     },
     {
       "id": "org:GEOSOR_CORPORATION",
@@ -263,7 +269,8 @@
       "is_terminus": true,
       "terminus_reason": "organization",
       "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00693382&two_year_transaction_period=2024&contributor_name=GEOSOR+CORPORATION",
-      "organization_class": "business"
+      "organization_class": "business",
+      "class_basis": "rule"
     },
     {
       "id": "org:GLOBAL_OAK_HOLDINGS_LLC",
@@ -276,7 +283,8 @@
       "is_terminus": true,
       "terminus_reason": "dark",
       "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00693382&two_year_transaction_period=2024&contributor_name=GLOBAL+OAK+HOLDINGS+LLC",
-      "organization_class": "llc"
+      "organization_class": "llc",
+      "class_basis": "rule"
     },
     {
       "id": "agg:other@C00693382",
@@ -418,7 +426,8 @@
         "2024-04-11",
         "2024-10-28"
       ],
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00752691&two_year_transaction_period=2024&contributor_name=PIVOTAL+VENTURES"
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00752691&two_year_transaction_period=2024&contributor_name=PIVOTAL+VENTURES",
+      "class_basis": "rule"
     },
     {
       "from": "org:ADVOCACY_ACTION_FUND",
@@ -434,7 +443,8 @@
         "2024-08-19",
         "2024-10-23"
       ],
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00752691&two_year_transaction_period=2024&contributor_name=ADVOCACY+ACTION+FUND"
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00752691&two_year_transaction_period=2024&contributor_name=ADVOCACY+ACTION+FUND",
+      "class_basis": "rule"
     },
     {
       "from": "C00693382",
@@ -514,7 +524,8 @@
         "2024-10-01",
         "2024-10-01"
       ],
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00752691&two_year_transaction_period=2024&contributor_name=GLOBAL+IMPACT+SOCIAL+WELFARE+FUND"
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00752691&two_year_transaction_period=2024&contributor_name=GLOBAL+IMPACT+SOCIAL+WELFARE+FUND",
+      "class_basis": "rule"
     },
     {
       "from": "ind:SCRIPPS_SEBASTIAN|06840",
@@ -547,38 +558,6 @@
         "2024-08-13"
       ],
       "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00752691&two_year_transaction_period=2024&contributor_name=STUTZMAN%2C+S.+MARK"
-    },
-    {
-      "from": "ind:MENNET_LISA|98118",
-      "to": "C00752691",
-      "amount": 250000.0,
-      "visibility": "disclosed",
-      "depth": 1,
-      "transaction_types": [
-        "10"
-      ],
-      "count": 1,
-      "date_range": [
-        "2024-09-03",
-        "2024-09-03"
-      ],
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00752691&two_year_transaction_period=2024&contributor_name=MENNET%2C+LISA"
-    },
-    {
-      "from": "org:BUELOW_BAMBINI_LLC",
-      "to": "C00752691",
-      "amount": 250000.0,
-      "visibility": "dark",
-      "depth": 1,
-      "transaction_types": [
-        "10"
-      ],
-      "count": 1,
-      "date_range": [
-        "2024-08-28",
-        "2024-08-28"
-      ],
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00752691&two_year_transaction_period=2024&contributor_name=BUELOW+BAMBINI+LLC"
     },
     {
       "from": "ind:WALTON_KELLY_R.|76244",
@@ -642,7 +621,41 @@
         "2024-09-27",
         "2024-09-27"
       ],
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00752691&two_year_transaction_period=2024&contributor_name=BRICK+BY+BRICK+FOUNDATION"
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00752691&two_year_transaction_period=2024&contributor_name=BRICK+BY+BRICK+FOUNDATION",
+      "class_basis": "rule"
+    },
+    {
+      "from": "ind:MENNET_LISA|98118",
+      "to": "C00752691",
+      "amount": 250000.0,
+      "visibility": "disclosed",
+      "depth": 1,
+      "transaction_types": [
+        "10"
+      ],
+      "count": 1,
+      "date_range": [
+        "2024-09-03",
+        "2024-09-03"
+      ],
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00752691&two_year_transaction_period=2024&contributor_name=MENNET%2C+LISA"
+    },
+    {
+      "from": "org:BUELOW_BAMBINI_LLC",
+      "to": "C00752691",
+      "amount": 250000.0,
+      "visibility": "dark",
+      "depth": 1,
+      "transaction_types": [
+        "10"
+      ],
+      "count": 1,
+      "date_range": [
+        "2024-08-28",
+        "2024-08-28"
+      ],
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00752691&two_year_transaction_period=2024&contributor_name=BUELOW+BAMBINI+LLC",
+      "class_basis": "rule"
     },
     {
       "from": "ind:BLUMENTHAL_JABE|98122",
@@ -692,7 +705,8 @@
         "2024-01-11",
         "2024-01-11"
       ],
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00693382&two_year_transaction_period=2024&contributor_name=FUND+FOR+POLICY+REFORM"
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00693382&two_year_transaction_period=2024&contributor_name=FUND+FOR+POLICY+REFORM",
+      "class_basis": "rule"
     },
     {
       "from": "org:GEOSOR_CORPORATION",
@@ -708,7 +722,8 @@
         "2024-09-19",
         "2024-09-19"
       ],
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00693382&two_year_transaction_period=2024&contributor_name=GEOSOR+CORPORATION"
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00693382&two_year_transaction_period=2024&contributor_name=GEOSOR+CORPORATION",
+      "class_basis": "rule"
     },
     {
       "from": "org:GLOBAL_OAK_HOLDINGS_LLC",
@@ -724,7 +739,8 @@
         "2024-01-31",
         "2024-06-28"
       ],
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00693382&two_year_transaction_period=2024&contributor_name=GLOBAL+OAK+HOLDINGS+LLC"
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00693382&two_year_transaction_period=2024&contributor_name=GLOBAL+OAK+HOLDINGS+LLC",
+      "class_basis": "rule"
     },
     {
       "from": "agg:other@C00693382",
