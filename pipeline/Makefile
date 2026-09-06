@@ -39,8 +39,8 @@ enrich-review:    ## Print pending machine ad classifications for human review
 enrich-spenders:  ## Classify spender self-descriptions (requires XAI_API_KEY and FEC_API_KEY; get a free key at api.open.fec.gov/developers)
 	$(PY) -m campaign_commons.enrich_spenders $(RACE)
 
-enrich-funders:   ## Classify upstream organization self-descriptions with open web search (requires XAI_API_KEY)
-	$(PY) -m campaign_commons.enrich_funders $(RACE)
+enrich-funders:   ## Classify upstream organization self-descriptions with open web search (requires XAI_API_KEY); ARGS="--min-total 10000 --concurrency 8"
+	$(PY) -m campaign_commons.enrich_funders $(RACE) $(ARGS)
 
 enrich-dossiers:  ## Classify candidate issue stances from web/news and optional X posts (requires XAI_API_KEY)
 	$(PY) -m campaign_commons.enrich_dossiers $(RACE)

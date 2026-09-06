@@ -3,10 +3,11 @@
  * answer panel): the operations, the source-backed fact shape, the response contract, and the one deterministic
  * sentence per fact. No I/O and nothing server-only lives here.
  */
+import { ISSUE_BY_ID, ISSUE_IDS, type IssueId } from "@campaign-commons/contracts";
 import { z } from "zod";
 import type { RelType } from "./schema";
 
-export const GRAPH_OPS = ["shared_funders", "money_path", "funder_reach", "upstream"] as const;
+export const GRAPH_OPS = ["shared_funders", "money_path", "funder_reach", "upstream", "funders_by_issue", "issue_funders"] as const;
 export type GraphOp = (typeof GRAPH_OPS)[number];
 
 export function isGraphOp(value: string): value is GraphOp {
@@ -18,7 +19,36 @@ export const GRAPH_OP_LABELS: Record<GraphOp, string> = {
   money_path: "Shortest filed paths from a funder",
   funder_reach: "Where a funder's money went",
   upstream: "Who funds a committee's funders",
+  funders_by_issue: "A committee's funders tagged on an issue",
+  issue_funders: "Funders in the race tagged on an issue",
 };
+
+export function isIssueId(value: string): value is IssueId {
+  return (ISSUE_IDS as readonly string[]).includes(value);
+}
+
+/**
+ * Where an issue tag on a funder came from. Neither layer is a filed record: `machine` is the D-82 machine layer
+ * (`x_enrichment.issue_focus`, read by the model from the organization's own website, pending human review) and
+ * `position` is the D-84 spender layer (`issue_positions`, a stance read from the spender's own site).
+ */
+export const TAG_LAYERS = ["machine", "position"] as const;
+export type TagLayer = (typeof TAG_LAYERS)[number];
+
+export const GraphTagSchema = z.object({
+  issue_id: z.enum(ISSUE_IDS),
+  layer: z.enum(TAG_LAYERS),
+  /** the machine row's own label ("Machine-tagged from the organization's own website (…); not part of the record"), when there is one */
+  label: z.string().nullable(),
+});
+export type GraphTag = z.infer<typeof GraphTagSchema>;
+
+export const TAG_PROVENANCE: Record<TagLayer, string> = {
+  machine: "machine-tagged, not part of the record",
+  position: "position read from the spender's own site",
+};
+
+export const issueLabel = (id: IssueId) => ISSUE_BY_ID[id].label;
 
 export const NODE_KINDS = ["committee", "individual", "aggregate", "organization", "conduit", "vendor", "ad", "candidate"] as const;
 export type NodeKind = (typeof NODE_KINDS)[number];
@@ -42,6 +72,8 @@ export const GraphFactSchema = z.object({
   source_url: z.string().nullable(),
   /** money_path only: which of the returned paths this hop belongs to (0-based) */
   path: z.number().int().nullable(),
+  /** issue operations only: the tag that selected this edge's funder, with its provenance layer; never a filed record */
+  tag: GraphTagSchema.nullable().optional(),
 });
 export type GraphFact = z.infer<typeof GraphFactSchema>;
 
@@ -60,6 +92,8 @@ export const AskGraphResponseSchema = z.discriminatedUnion("kind", [
     kind: z.literal("graph"),
     op: z.enum(GRAPH_OPS),
     subjects: z.array(GraphSubjectSchema),
+    /** issue operations only: the taxonomy id the question was about */
+    issue: z.enum(ISSUE_IDS).nullable().optional(),
     /** set when a candidate was read as their campaign committee for a funding-side operation */
     note: z.string().nullable(),
     facts: z.array(GraphFactSchema),
@@ -87,7 +121,7 @@ export function factSentence(f: GraphFact): string {
           : f.visibility === "disclosed"
             ? ""
             : ` [${f.visibility}]`;
-      return `${a} gave ${dollars(f.amount)} to ${b}${f.count && f.count > 1 ? ` (${f.count} contributions)` : ""}${suffix}.`;
+      return `${a} gave ${dollars(f.amount)} to ${b}${f.count && f.count > 1 ? ` (${f.count} contributions)` : ""}${suffix}.${f.tag ? ` ${tagSentence(a, f.tag)}` : ""}`;
     case "PAID":
       return `${a} paid ${dollars(f.amount)} to ${b}.`;
     case "PLACED":
@@ -99,4 +133,9 @@ export function factSentence(f: GraphFact): string {
     case "CAMPAIGN_OF":
       return `${a} is ${b}'s campaign committee; it raised ${dollars(f.amount)}.`;
   }
+}
+
+/** The tag's own sentence: the issue, and that it is a reading of the funder's website rather than a filed record. */
+export function tagSentence(name: string, tag: GraphTag): string {
+  return `${name} is tagged on ${issueLabel(tag.issue_id)} (${TAG_PROVENANCE[tag.layer]}).`;
 }

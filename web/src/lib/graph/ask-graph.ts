@@ -12,7 +12,7 @@
  */
 import { z } from "zod";
 import type { TrailSubject } from "@campaign-commons/contracts";
-import { type AskGraphResponse, type GraphFact, type GraphNodeRef, type GraphOp, type GraphSubject } from "./facts";
+import { TAG_PROVENANCE, type AskGraphResponse, type GraphFact, type GraphNodeRef, type GraphOp, type GraphSubject } from "./facts";
 import { classifyGraph, hasApiKey, narrate, type LlmOptions } from "./llm";
 import type { Runner } from "./neo4j";
 import { GRAPH_OP_SPEC, resolveSubject, runOperation } from "./queries";
@@ -35,6 +35,8 @@ const OP_LABEL: Record<GraphOp, string> = {
   money_path: "money path",
   funder_reach: "where a funder's money went",
   upstream: "upstream funders",
+  funders_by_issue: "funders tagged on an issue",
+  issue_funders: "funders in the race tagged on an issue",
 };
 
 export async function answerGraphQuestion(raceId: string, question: string, trailsSubjects: readonly TrailSubject[], deps: GraphDeps): Promise<AskGraphResponse> {
@@ -49,7 +51,7 @@ export async function answerGraphQuestion(raceId: string, question: string, trai
   if (pick === null) {
     return refuse(
       "no_operation",
-      "That does not match a graph question this site can run. It can find funders two committees share, trace the shortest filed path from a funder to a committee or candidate, list where a funder's money went, or show who funds a committee's funders.",
+      "That does not match a graph question this site can run. It can find funders two committees share, trace the shortest filed path from a funder to a committee or candidate, list where a funder's money went, show who funds a committee's funders, or list funders tagged on an issue (a committee's, or the whole race's).",
     );
   }
   const spec = GRAPH_OP_SPEC[pick.op];
@@ -91,11 +93,12 @@ export async function answerGraphQuestion(raceId: string, question: string, trai
 
   let facts: GraphFact[];
   try {
-    facts = await runOperation(deps.run, raceId, pick.op, subjects);
+    facts = await runOperation(deps.run, raceId, pick.op, subjects, pick.issue);
   } catch {
     return refuse("query_failed", "The graph could not be reached; try again shortly.");
   }
+  if (pick.issue !== null) notes.push(`Issue tags are read from each funder's own website (${TAG_PROVENANCE.machine}; ${TAG_PROVENANCE.position}), not from filings.`);
 
   const narrative = await narrate(question, facts, deps.llm);
-  return { kind: "graph", op: pick.op, subjects, note: notes.length > 0 ? notes.join(" ") : null, facts, narrative };
+  return { kind: "graph", op: pick.op, subjects, issue: pick.issue, note: notes.length > 0 ? notes.join(" ") : null, facts, narrative };
 }
