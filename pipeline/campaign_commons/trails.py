@@ -18,7 +18,7 @@ in the browser — then renders the matching answer. Rules the shape enforces:
   * ads hang off their *sponsor* (`TrailAdRun`) and funders hang off the sponsor too; there is no field that
     joins a funder to an ad, and the caveats say why (pooled dollars).
 
-Each answer also carries `graph` (D-79): a bounded selection copied from the chain files, re-rooted on the subject,
+Each answer also carries `graph` (D-80): a bounded selection copied from the chain files, re-rooted on the subject,
 with ≤ TOP_PER_LAYER nodes per layer and provenance kept.
 """
 

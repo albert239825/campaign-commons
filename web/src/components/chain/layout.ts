@@ -1,3 +1,4 @@
+import { TWO_ROW_H, isRootNode, nameFitsOneRow } from "./label";
 import type { ViewEdge, VisibleNode } from "./view";
 
 /**
@@ -17,6 +18,8 @@ const MIN_NODE_H = 28;
 const AD_H = 58;
 const PLOT_H = 380;
 const MARGIN_Y = 8;
+/** Extra room above the folded-ads node so it reads as a footnote to the ads column rather than one more ad. */
+const MISC_GAP = 12;
 /** Short chains are centred inside a three-column canvas so they don't scale up to poster size. */
 const MIN_COLUMNS = 3;
 /** Stroke width of placement / targeting spines. */
@@ -79,14 +82,22 @@ export function layoutChain(
     nodes: [],
   }));
   for (const n of nodes) columns[columnOf(n)].nodes.push(n);
+  // Biggest first; the spending side's "N more ads" roll-up sits under the ads it stands for.
+  const isMisc = (n: VisibleNode) => n.side === "out" && n.kind === "aggregate";
   for (const col of columns)
-    col.nodes.sort((a, b) => b.amount_in - a.amount_in);
+    col.nodes.sort(
+      (a, b) => Number(isMisc(a)) - Number(isMisc(b)) || b.amount_in - a.amount_in,
+    );
 
+  // A name that cannot share one row with its amount gets a second row, whatever its dollars say.
+  const minH = (n: VisibleNode) =>
+    isRootNode(n) || nameFitsOneRow(n, NODE_W) ? MIN_NODE_H : TWO_ROW_H;
   const fixedH = (n: VisibleNode): number | null => {
     if (n.kind === "ad") return AD_H;
-    if (n.side === "out" && n.kind !== "vendor") return MIN_NODE_H;
+    if (n.side === "out" && n.kind !== "vendor") return minH(n);
     return null;
   };
+  const gapBefore = (n: VisibleNode) => NODE_PAD + (isMisc(n) ? MISC_GAP : 0);
   const dollars = (n: VisibleNode) => (fixedH(n) === null ? n.amount_in : 0);
   // One dollar scale for every column: the tallest column (in dollars + fixed nodes + padding) must fit PLOT_H.
   const tallest = Math.max(...columns.map((c) => c.nodes.length));
@@ -106,11 +117,10 @@ export function layoutChain(
       ),
   );
   const heightOf = (n: VisibleNode) =>
-    fixedH(n) ?? Math.max(MIN_NODE_H, n.amount_in * scale);
+    fixedH(n) ?? Math.max(minH(n), n.amount_in * scale);
   // Minimum heights can push a crowded column past plotH; grow the plot so nothing is clipped.
   const columnH = (col: VisibleNode[]) =>
-    col.reduce((s, n) => s + heightOf(n), 0) +
-    Math.max(0, col.length - 1) * NODE_PAD;
+    col.reduce((s, n, i) => s + heightOf(n) + (i > 0 ? gapBefore(n) : 0), 0);
   const finalH = Math.max(plotH, ...columns.map((c) => columnH(c.nodes)));
 
   const drawnColumns = Math.max(MIN_COLUMNS, columnCount);
@@ -122,13 +132,14 @@ export function layoutChain(
     const x = xOffset + col.index * (NODE_W + COL_GAP);
     col.x = x;
     let y = MARGIN_Y + (finalH - columnH(col.nodes)) / 2;
-    for (const node of col.nodes) {
+    col.nodes.forEach((node, i) => {
+      if (i > 0) y += gapBefore(node);
       const h = heightOf(node);
       const ln = { node, x, y, h, column: col.index };
       laid.push(ln);
       byId.set(node.id, ln);
-      y += h + NODE_PAD;
-    }
+      y += h;
+    });
   }
 
   // Ribbons. Money edges stack at both ends (outgoing at the source, incoming at the target, sorted by the other end's y)

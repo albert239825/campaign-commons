@@ -1,4 +1,4 @@
-// OWNER: Money Trails (D-77). Graph mode: allowlisted Neo4j queries with a guarded model narrative; separate from /api/ask-route.
+// OWNER: Money Trails (D-78). Graph mode: allowlisted Neo4j queries with a guarded model narrative; separate from /api/ask-route.
 import { NextResponse } from "next/server";
 import { clientKey } from "@/lib/ask-limits";
 import { getTrails, hasTrails } from "@/lib/data";
