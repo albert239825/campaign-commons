@@ -32,6 +32,7 @@ it came from.
 | 16:30–17:30 | Repo move + round-2 fixes (master) | Single "Initial commit" on `DN-Hacks-2026`; PR #1 closes C-29..C-36; outside total $235.7M → $233.4M |
 | 17:30–18:30 | Whiteboard → ontology | Race nav, docs wiki (FAQ / QUESTIONS / DECISIONS), `ONTOLOGY.md` (questions × surfaces, ER diagram, sources, V0/V1/V2 scope) |
 | 20:30–21:30 | Money Trails (`feature/ask-money-trails`) | `TrailsSchema` + `trails.json`, deterministic question resolver, `/races/<race>/ask` answer pages (D-73) |
+| 23:00–00:30 | Money Trails LLM router (`feature/ask-llm-router`) | `/api/ask-route` + `ask-llm.ts`: Grok picks the route from the closed set, resolver still decides the page, deterministic fallback (D-74) |
 
 ## Challenges and how we overcame them
 
@@ -147,6 +148,33 @@ largest funder — aggregate nodes are now excluded from prose but kept as sourc
 object failed validation and was moved to answer caveats.
 **Numbers.** PA-Sen: 102 subjects, 104 answers (2 + 2 candidate, 100 committee), 1,937 FEC + 76 Google source links in one
 file, 1.2 MB; 14 pipeline tests + 23 resolver tests; static pages 2,147 → 2,252; validated files 2,142 → 2,143.
+
+### 14. Money Trails — let a model read the question, never write the answer (D-74)
+**Ask.** The D-73 resolver refuses anything it cannot alias-match: "who's bankrolling the attack ads on Casey", "AFP Action
+donors", "which super PACs are going after McCormick" all fall through. Add an LLM for recall without giving up the property
+that every rendered number and sentence is precomputed and source-linked.
+**Problem.** A model that answers can invent; a model that only *routes* cannot — but only if the route is checked, since
+structured output can still emit a well-formed id that is not in the race. And the site was fully static; this is the first
+request that runs code on Vercel.
+**How.** `web/src/lib/ask-llm.ts` sends xAI (`grok-4.5`, `reasoning_effort: low`) the three intents with their labels and the
+race's `{id, kind, name}` list, and constrains the reply with a strict `json_schema` whose enums *are* those two closed sets
+(`{route: {intent, subjectId} | null}`). Layer two re-validates the parsed values with `isIntent()` and `subjects.some()`.
+`web/src/app/api/ask-route/route.ts` (`runtime = "nodejs"`, `force-dynamic`) then re-seeds a valid route through the
+unchanged `resolveQuestion("<intent> <alias>")`, so candidate-funding still lands on the principal committee with its note and
+committee-spend still gets the typed refusal; anything less than a valid route (no key, 6 s timeout, 4xx/5xx, malformed body,
+off-set value) resolves the raw text exactly as the browser did. The ask box POSTs with its own 8 s budget and resolves locally
+if the call fails at all; suggestion chips never call the model. The response is a `Resolution` plus `via: "llm" | "fallback"`;
+no model text is in it. `answer.tsx`, `trails.json`, the resolver and its 23 tests are untouched. `next.config.ts` has no
+`output: "export"`, so the one route deploys as one serverless function and every page stays static.
+**Dead ends.** `grok-4.5` at its default reasoning effort took 4–8 s per route; `low` brings most asks to 2–3 s but two of ten
+live questions still took 7 s and 13 s — the budget is 6 s and those fall back rather than wait. The Next `route.ts` may export
+only handler fields, so the seed/fallback logic lives in `ask-router.ts` where it can be unit-tested; a `vitest.config.mts`
+mirrors the `@/` path alias for the handler test. One live miss: "who bankrolls bob" routed to *spending against* Casey
+(a real, sourced page, wrong intent) — the model can be wrong, it cannot fabricate.
+**Numbers.** Live with the key (PA-Sen): 8/10 questions routed, 2 correctly null ("tell me about casey", weather); p50 ≈ 2.8 s;
+2,638 prompt tokens per ask (2,560 served from cache on repeat), ~160 reasoning + 20 output tokens; at list price
+$2 / $6 per M ≈ $0.006 per ask cold, ≈ $0.002 cached. Tests 23 → 50 (16 classifier, 11 route handler, all offline with a
+mocked `fetch`); serverless functions 0 → 1; static pages unchanged.
 
 ## Research and dead ends worth mentioning
 
