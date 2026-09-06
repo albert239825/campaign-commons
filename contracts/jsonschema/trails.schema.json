@@ -88,6 +88,911 @@
                       "type": "string"
                     }
                   },
+                  "graph": {
+                    "anyOf": [
+                      {
+                        "type": "object",
+                        "properties": {
+                          "root_id": {
+                            "type": "string"
+                          },
+                          "nodes": {
+                            "type": "array",
+                            "items": {
+                              "anyOf": [
+                                {
+                                  "type": "object",
+                                  "properties": {
+                                    "id": {
+                                      "type": "string"
+                                    },
+                                    "name": {
+                                      "type": "string"
+                                    },
+                                    "committee_type": {
+                                      "anyOf": [
+                                        {
+                                          "type": "string",
+                                          "enum": [
+                                            "H",
+                                            "S",
+                                            "P",
+                                            "X",
+                                            "Y",
+                                            "Z",
+                                            "N",
+                                            "Q",
+                                            "O",
+                                            "U",
+                                            "V",
+                                            "W",
+                                            "D",
+                                            "E",
+                                            "I",
+                                            "C"
+                                          ]
+                                        },
+                                        {
+                                          "type": "null"
+                                        }
+                                      ]
+                                    },
+                                    "depth": {
+                                      "type": "integer",
+                                      "minimum": 0
+                                    },
+                                    "side": {
+                                      "type": "string",
+                                      "const": "out"
+                                    },
+                                    "visibility": {
+                                      "type": "string",
+                                      "enum": [
+                                        "disclosed",
+                                        "inferable",
+                                        "dark"
+                                      ]
+                                    },
+                                    "amount_in": {
+                                      "type": "number"
+                                    },
+                                    "is_terminus": {
+                                      "type": "boolean"
+                                    },
+                                    "terminus_reason": {
+                                      "anyOf": [
+                                        {
+                                          "type": "string",
+                                          "enum": [
+                                            "individual",
+                                            "organization",
+                                            "dark",
+                                            "inferable",
+                                            "cycle",
+                                            "depth_cap",
+                                            "pruned"
+                                          ]
+                                        },
+                                        {
+                                          "type": "null"
+                                        }
+                                      ]
+                                    },
+                                    "source_url": {
+                                      "anyOf": [
+                                        {
+                                          "type": "string",
+                                          "format": "uri"
+                                        },
+                                        {
+                                          "type": "null"
+                                        }
+                                      ]
+                                    },
+                                    "contributor_count": {
+                                      "type": "integer"
+                                    },
+                                    "organization_class": {
+                                      "type": "string",
+                                      "enum": [
+                                        "union",
+                                        "business",
+                                        "llc",
+                                        "nonprofit",
+                                        "unknown"
+                                      ]
+                                    },
+                                    "medium": {
+                                      "type": "string",
+                                      "enum": [
+                                        "tv",
+                                        "radio",
+                                        "digital",
+                                        "mail",
+                                        "phones",
+                                        "production",
+                                        "consulting",
+                                        "field",
+                                        "other"
+                                      ]
+                                    },
+                                    "thumbnail_path": {
+                                      "type": [
+                                        "string",
+                                        "null"
+                                      ]
+                                    },
+                                    "href": {
+                                      "type": "string"
+                                    },
+                                    "kind": {
+                                      "type": "string",
+                                      "enum": [
+                                        "vendor",
+                                        "ad",
+                                        "candidate"
+                                      ]
+                                    },
+                                    "basis": {
+                                      "anyOf": [
+                                        {
+                                          "type": "object",
+                                          "properties": {
+                                            "basis": {
+                                              "type": "string",
+                                              "const": "verified"
+                                            },
+                                            "rule": {
+                                              "type": "string",
+                                              "minLength": 1
+                                            },
+                                            "source_urls": {
+                                              "type": "array",
+                                              "items": {
+                                                "type": "string",
+                                                "format": "uri"
+                                              },
+                                              "minItems": 1
+                                            },
+                                            "checked_by": {
+                                              "type": "string",
+                                              "minLength": 1
+                                            },
+                                            "checked_at": {
+                                              "type": "string",
+                                              "minLength": 1
+                                            }
+                                          },
+                                          "required": [
+                                            "basis",
+                                            "rule",
+                                            "source_urls",
+                                            "checked_by",
+                                            "checked_at"
+                                          ],
+                                          "additionalProperties": false
+                                        },
+                                        {
+                                          "type": "object",
+                                          "properties": {
+                                            "basis": {
+                                              "type": "string",
+                                              "enum": [
+                                                "filed",
+                                                "inferred"
+                                              ]
+                                            },
+                                            "rule": {
+                                              "type": "string",
+                                              "minLength": 1
+                                            },
+                                            "source_urls": {
+                                              "type": "array",
+                                              "items": {
+                                                "type": "string",
+                                                "format": "uri"
+                                              }
+                                            },
+                                            "checked_by": {
+                                              "type": [
+                                                "string",
+                                                "null"
+                                              ]
+                                            },
+                                            "checked_at": {
+                                              "type": [
+                                                "string",
+                                                "null"
+                                              ]
+                                            }
+                                          },
+                                          "required": [
+                                            "basis",
+                                            "rule",
+                                            "source_urls",
+                                            "checked_by",
+                                            "checked_at"
+                                          ],
+                                          "additionalProperties": false
+                                        }
+                                      ]
+                                    }
+                                  },
+                                  "required": [
+                                    "id",
+                                    "name",
+                                    "committee_type",
+                                    "depth",
+                                    "side",
+                                    "visibility",
+                                    "amount_in",
+                                    "is_terminus",
+                                    "terminus_reason",
+                                    "source_url",
+                                    "kind",
+                                    "basis"
+                                  ],
+                                  "additionalProperties": false
+                                },
+                                {
+                                  "type": "object",
+                                  "properties": {
+                                    "id": {
+                                      "type": "string"
+                                    },
+                                    "name": {
+                                      "type": "string"
+                                    },
+                                    "committee_type": {
+                                      "anyOf": [
+                                        {
+                                          "type": "string",
+                                          "enum": [
+                                            "H",
+                                            "S",
+                                            "P",
+                                            "X",
+                                            "Y",
+                                            "Z",
+                                            "N",
+                                            "Q",
+                                            "O",
+                                            "U",
+                                            "V",
+                                            "W",
+                                            "D",
+                                            "E",
+                                            "I",
+                                            "C"
+                                          ]
+                                        },
+                                        {
+                                          "type": "null"
+                                        }
+                                      ]
+                                    },
+                                    "depth": {
+                                      "type": "integer",
+                                      "minimum": 0
+                                    },
+                                    "side": {
+                                      "type": "string",
+                                      "enum": [
+                                        "in",
+                                        "out"
+                                      ]
+                                    },
+                                    "visibility": {
+                                      "type": "string",
+                                      "enum": [
+                                        "disclosed",
+                                        "inferable",
+                                        "dark"
+                                      ]
+                                    },
+                                    "amount_in": {
+                                      "type": "number"
+                                    },
+                                    "is_terminus": {
+                                      "type": "boolean"
+                                    },
+                                    "terminus_reason": {
+                                      "anyOf": [
+                                        {
+                                          "type": "string",
+                                          "enum": [
+                                            "individual",
+                                            "organization",
+                                            "dark",
+                                            "inferable",
+                                            "cycle",
+                                            "depth_cap",
+                                            "pruned"
+                                          ]
+                                        },
+                                        {
+                                          "type": "null"
+                                        }
+                                      ]
+                                    },
+                                    "source_url": {
+                                      "anyOf": [
+                                        {
+                                          "type": "string",
+                                          "format": "uri"
+                                        },
+                                        {
+                                          "type": "null"
+                                        }
+                                      ]
+                                    },
+                                    "contributor_count": {
+                                      "type": "integer"
+                                    },
+                                    "organization_class": {
+                                      "type": "string",
+                                      "enum": [
+                                        "union",
+                                        "business",
+                                        "llc",
+                                        "nonprofit",
+                                        "unknown"
+                                      ]
+                                    },
+                                    "medium": {
+                                      "type": "string",
+                                      "enum": [
+                                        "tv",
+                                        "radio",
+                                        "digital",
+                                        "mail",
+                                        "phones",
+                                        "production",
+                                        "consulting",
+                                        "field",
+                                        "other"
+                                      ]
+                                    },
+                                    "thumbnail_path": {
+                                      "type": [
+                                        "string",
+                                        "null"
+                                      ]
+                                    },
+                                    "href": {
+                                      "type": "string"
+                                    },
+                                    "kind": {
+                                      "type": "string",
+                                      "enum": [
+                                        "committee",
+                                        "individual",
+                                        "organization",
+                                        "conduit",
+                                        "aggregate"
+                                      ]
+                                    },
+                                    "basis": {
+                                      "anyOf": [
+                                        {
+                                          "type": "object",
+                                          "properties": {
+                                            "basis": {
+                                              "type": "string",
+                                              "const": "verified"
+                                            },
+                                            "rule": {
+                                              "type": "string",
+                                              "minLength": 1
+                                            },
+                                            "source_urls": {
+                                              "type": "array",
+                                              "items": {
+                                                "type": "string",
+                                                "format": "uri"
+                                              },
+                                              "minItems": 1
+                                            },
+                                            "checked_by": {
+                                              "type": "string",
+                                              "minLength": 1
+                                            },
+                                            "checked_at": {
+                                              "type": "string",
+                                              "minLength": 1
+                                            }
+                                          },
+                                          "required": [
+                                            "basis",
+                                            "rule",
+                                            "source_urls",
+                                            "checked_by",
+                                            "checked_at"
+                                          ],
+                                          "additionalProperties": false
+                                        },
+                                        {
+                                          "type": "object",
+                                          "properties": {
+                                            "basis": {
+                                              "type": "string",
+                                              "enum": [
+                                                "filed",
+                                                "inferred"
+                                              ]
+                                            },
+                                            "rule": {
+                                              "type": "string",
+                                              "minLength": 1
+                                            },
+                                            "source_urls": {
+                                              "type": "array",
+                                              "items": {
+                                                "type": "string",
+                                                "format": "uri"
+                                              }
+                                            },
+                                            "checked_by": {
+                                              "type": [
+                                                "string",
+                                                "null"
+                                              ]
+                                            },
+                                            "checked_at": {
+                                              "type": [
+                                                "string",
+                                                "null"
+                                              ]
+                                            }
+                                          },
+                                          "required": [
+                                            "basis",
+                                            "rule",
+                                            "source_urls",
+                                            "checked_by",
+                                            "checked_at"
+                                          ],
+                                          "additionalProperties": false
+                                        }
+                                      ]
+                                    }
+                                  },
+                                  "required": [
+                                    "id",
+                                    "name",
+                                    "committee_type",
+                                    "depth",
+                                    "visibility",
+                                    "amount_in",
+                                    "is_terminus",
+                                    "terminus_reason",
+                                    "source_url",
+                                    "kind"
+                                  ],
+                                  "additionalProperties": false
+                                }
+                              ]
+                            }
+                          },
+                          "edges": {
+                            "type": "array",
+                            "items": {
+                              "anyOf": [
+                                {
+                                  "type": "object",
+                                  "properties": {
+                                    "from": {
+                                      "type": "string"
+                                    },
+                                    "to": {
+                                      "type": "string"
+                                    },
+                                    "amount": {
+                                      "type": "number"
+                                    },
+                                    "visibility": {
+                                      "type": "string",
+                                      "enum": [
+                                        "disclosed",
+                                        "inferable",
+                                        "dark"
+                                      ]
+                                    },
+                                    "depth": {
+                                      "type": "integer",
+                                      "minimum": 1
+                                    },
+                                    "transaction_types": {
+                                      "type": "array",
+                                      "items": {
+                                        "type": "string"
+                                      }
+                                    },
+                                    "count": {
+                                      "type": "integer"
+                                    },
+                                    "date_range": {
+                                      "anyOf": [
+                                        {
+                                          "type": "array",
+                                          "minItems": 2,
+                                          "maxItems": 2,
+                                          "items": [
+                                            {
+                                              "type": "string"
+                                            },
+                                            {
+                                              "type": "string"
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "type": "null"
+                                        }
+                                      ]
+                                    },
+                                    "source_url": {
+                                      "anyOf": [
+                                        {
+                                          "type": "string",
+                                          "format": "uri"
+                                        },
+                                        {
+                                          "type": "null"
+                                        }
+                                      ]
+                                    },
+                                    "support_oppose": {
+                                      "anyOf": [
+                                        {
+                                          "type": "string",
+                                          "enum": [
+                                            "S",
+                                            "O"
+                                          ]
+                                        },
+                                        {
+                                          "type": "null"
+                                        }
+                                      ]
+                                    },
+                                    "kind": {
+                                      "type": "string",
+                                      "const": "placement"
+                                    },
+                                    "basis": {
+                                      "anyOf": [
+                                        {
+                                          "type": "object",
+                                          "properties": {
+                                            "basis": {
+                                              "type": "string",
+                                              "const": "verified"
+                                            },
+                                            "rule": {
+                                              "type": "string",
+                                              "minLength": 1
+                                            },
+                                            "source_urls": {
+                                              "type": "array",
+                                              "items": {
+                                                "type": "string",
+                                                "format": "uri"
+                                              },
+                                              "minItems": 1
+                                            },
+                                            "checked_by": {
+                                              "type": "string",
+                                              "minLength": 1
+                                            },
+                                            "checked_at": {
+                                              "type": "string",
+                                              "minLength": 1
+                                            }
+                                          },
+                                          "required": [
+                                            "basis",
+                                            "rule",
+                                            "source_urls",
+                                            "checked_by",
+                                            "checked_at"
+                                          ],
+                                          "additionalProperties": false
+                                        },
+                                        {
+                                          "type": "object",
+                                          "properties": {
+                                            "basis": {
+                                              "type": "string",
+                                              "enum": [
+                                                "filed",
+                                                "inferred"
+                                              ]
+                                            },
+                                            "rule": {
+                                              "type": "string",
+                                              "minLength": 1
+                                            },
+                                            "source_urls": {
+                                              "type": "array",
+                                              "items": {
+                                                "type": "string",
+                                                "format": "uri"
+                                              }
+                                            },
+                                            "checked_by": {
+                                              "type": [
+                                                "string",
+                                                "null"
+                                              ]
+                                            },
+                                            "checked_at": {
+                                              "type": [
+                                                "string",
+                                                "null"
+                                              ]
+                                            }
+                                          },
+                                          "required": [
+                                            "basis",
+                                            "rule",
+                                            "source_urls",
+                                            "checked_by",
+                                            "checked_at"
+                                          ],
+                                          "additionalProperties": false
+                                        }
+                                      ]
+                                    }
+                                  },
+                                  "required": [
+                                    "from",
+                                    "to",
+                                    "amount",
+                                    "visibility",
+                                    "depth",
+                                    "transaction_types",
+                                    "count",
+                                    "date_range",
+                                    "source_url",
+                                    "kind",
+                                    "basis"
+                                  ],
+                                  "additionalProperties": false
+                                },
+                                {
+                                  "type": "object",
+                                  "properties": {
+                                    "from": {
+                                      "type": "string"
+                                    },
+                                    "to": {
+                                      "type": "string"
+                                    },
+                                    "amount": {
+                                      "type": "number"
+                                    },
+                                    "visibility": {
+                                      "type": "string",
+                                      "enum": [
+                                        "disclosed",
+                                        "inferable",
+                                        "dark"
+                                      ]
+                                    },
+                                    "depth": {
+                                      "type": "integer",
+                                      "minimum": 1
+                                    },
+                                    "transaction_types": {
+                                      "type": "array",
+                                      "items": {
+                                        "type": "string"
+                                      }
+                                    },
+                                    "count": {
+                                      "type": "integer"
+                                    },
+                                    "date_range": {
+                                      "anyOf": [
+                                        {
+                                          "type": "array",
+                                          "minItems": 2,
+                                          "maxItems": 2,
+                                          "items": [
+                                            {
+                                              "type": "string"
+                                            },
+                                            {
+                                              "type": "string"
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "type": "null"
+                                        }
+                                      ]
+                                    },
+                                    "source_url": {
+                                      "anyOf": [
+                                        {
+                                          "type": "string",
+                                          "format": "uri"
+                                        },
+                                        {
+                                          "type": "null"
+                                        }
+                                      ]
+                                    },
+                                    "support_oppose": {
+                                      "anyOf": [
+                                        {
+                                          "type": "string",
+                                          "enum": [
+                                            "S",
+                                            "O"
+                                          ]
+                                        },
+                                        {
+                                          "type": "null"
+                                        }
+                                      ]
+                                    },
+                                    "kind": {
+                                      "type": "string",
+                                      "enum": [
+                                        "money",
+                                        "targeting"
+                                      ]
+                                    },
+                                    "basis": {
+                                      "anyOf": [
+                                        {
+                                          "type": "object",
+                                          "properties": {
+                                            "basis": {
+                                              "type": "string",
+                                              "const": "verified"
+                                            },
+                                            "rule": {
+                                              "type": "string",
+                                              "minLength": 1
+                                            },
+                                            "source_urls": {
+                                              "type": "array",
+                                              "items": {
+                                                "type": "string",
+                                                "format": "uri"
+                                              },
+                                              "minItems": 1
+                                            },
+                                            "checked_by": {
+                                              "type": "string",
+                                              "minLength": 1
+                                            },
+                                            "checked_at": {
+                                              "type": "string",
+                                              "minLength": 1
+                                            }
+                                          },
+                                          "required": [
+                                            "basis",
+                                            "rule",
+                                            "source_urls",
+                                            "checked_by",
+                                            "checked_at"
+                                          ],
+                                          "additionalProperties": false
+                                        },
+                                        {
+                                          "type": "object",
+                                          "properties": {
+                                            "basis": {
+                                              "type": "string",
+                                              "enum": [
+                                                "filed",
+                                                "inferred"
+                                              ]
+                                            },
+                                            "rule": {
+                                              "type": "string",
+                                              "minLength": 1
+                                            },
+                                            "source_urls": {
+                                              "type": "array",
+                                              "items": {
+                                                "type": "string",
+                                                "format": "uri"
+                                              }
+                                            },
+                                            "checked_by": {
+                                              "type": [
+                                                "string",
+                                                "null"
+                                              ]
+                                            },
+                                            "checked_at": {
+                                              "type": [
+                                                "string",
+                                                "null"
+                                              ]
+                                            }
+                                          },
+                                          "required": [
+                                            "basis",
+                                            "rule",
+                                            "source_urls",
+                                            "checked_by",
+                                            "checked_at"
+                                          ],
+                                          "additionalProperties": false
+                                        }
+                                      ]
+                                    }
+                                  },
+                                  "required": [
+                                    "from",
+                                    "to",
+                                    "amount",
+                                    "visibility",
+                                    "depth",
+                                    "transaction_types",
+                                    "count",
+                                    "date_range",
+                                    "source_url"
+                                  ],
+                                  "additionalProperties": false
+                                }
+                              ]
+                            }
+                          },
+                          "truncated": {
+                            "type": "array",
+                            "items": {
+                              "type": "object",
+                              "properties": {
+                                "layer": {
+                                  "type": "string",
+                                  "enum": [
+                                    "funders_1",
+                                    "funders_2",
+                                    "spenders",
+                                    "sponsors",
+                                    "vendors",
+                                    "ads"
+                                  ]
+                                },
+                                "kept": {
+                                  "type": "integer",
+                                  "minimum": 0
+                                },
+                                "hidden": {
+                                  "type": "integer",
+                                  "minimum": 0
+                                }
+                              },
+                              "required": [
+                                "layer",
+                                "kept",
+                                "hidden"
+                              ],
+                              "additionalProperties": false
+                            }
+                          }
+                        },
+                        "required": [
+                          "root_id",
+                          "nodes",
+                          "edges",
+                          "truncated"
+                        ],
+                        "additionalProperties": false
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ]
+                  },
                   "intent": {
                     "type": "string",
                     "const": "candidate_spender"
@@ -209,6 +1114,7 @@
                   "subject_name",
                   "headline",
                   "caveats",
+                  "graph",
                   "intent",
                   "candidate_id",
                   "support",
@@ -235,6 +1141,911 @@
                     "items": {
                       "type": "string"
                     }
+                  },
+                  "graph": {
+                    "anyOf": [
+                      {
+                        "type": "object",
+                        "properties": {
+                          "root_id": {
+                            "type": "string"
+                          },
+                          "nodes": {
+                            "type": "array",
+                            "items": {
+                              "anyOf": [
+                                {
+                                  "type": "object",
+                                  "properties": {
+                                    "id": {
+                                      "type": "string"
+                                    },
+                                    "name": {
+                                      "type": "string"
+                                    },
+                                    "committee_type": {
+                                      "anyOf": [
+                                        {
+                                          "type": "string",
+                                          "enum": [
+                                            "H",
+                                            "S",
+                                            "P",
+                                            "X",
+                                            "Y",
+                                            "Z",
+                                            "N",
+                                            "Q",
+                                            "O",
+                                            "U",
+                                            "V",
+                                            "W",
+                                            "D",
+                                            "E",
+                                            "I",
+                                            "C"
+                                          ]
+                                        },
+                                        {
+                                          "type": "null"
+                                        }
+                                      ]
+                                    },
+                                    "depth": {
+                                      "type": "integer",
+                                      "minimum": 0
+                                    },
+                                    "side": {
+                                      "type": "string",
+                                      "const": "out"
+                                    },
+                                    "visibility": {
+                                      "type": "string",
+                                      "enum": [
+                                        "disclosed",
+                                        "inferable",
+                                        "dark"
+                                      ]
+                                    },
+                                    "amount_in": {
+                                      "type": "number"
+                                    },
+                                    "is_terminus": {
+                                      "type": "boolean"
+                                    },
+                                    "terminus_reason": {
+                                      "anyOf": [
+                                        {
+                                          "type": "string",
+                                          "enum": [
+                                            "individual",
+                                            "organization",
+                                            "dark",
+                                            "inferable",
+                                            "cycle",
+                                            "depth_cap",
+                                            "pruned"
+                                          ]
+                                        },
+                                        {
+                                          "type": "null"
+                                        }
+                                      ]
+                                    },
+                                    "source_url": {
+                                      "anyOf": [
+                                        {
+                                          "type": "string",
+                                          "format": "uri"
+                                        },
+                                        {
+                                          "type": "null"
+                                        }
+                                      ]
+                                    },
+                                    "contributor_count": {
+                                      "type": "integer"
+                                    },
+                                    "organization_class": {
+                                      "type": "string",
+                                      "enum": [
+                                        "union",
+                                        "business",
+                                        "llc",
+                                        "nonprofit",
+                                        "unknown"
+                                      ]
+                                    },
+                                    "medium": {
+                                      "type": "string",
+                                      "enum": [
+                                        "tv",
+                                        "radio",
+                                        "digital",
+                                        "mail",
+                                        "phones",
+                                        "production",
+                                        "consulting",
+                                        "field",
+                                        "other"
+                                      ]
+                                    },
+                                    "thumbnail_path": {
+                                      "type": [
+                                        "string",
+                                        "null"
+                                      ]
+                                    },
+                                    "href": {
+                                      "type": "string"
+                                    },
+                                    "kind": {
+                                      "type": "string",
+                                      "enum": [
+                                        "vendor",
+                                        "ad",
+                                        "candidate"
+                                      ]
+                                    },
+                                    "basis": {
+                                      "anyOf": [
+                                        {
+                                          "type": "object",
+                                          "properties": {
+                                            "basis": {
+                                              "type": "string",
+                                              "const": "verified"
+                                            },
+                                            "rule": {
+                                              "type": "string",
+                                              "minLength": 1
+                                            },
+                                            "source_urls": {
+                                              "type": "array",
+                                              "items": {
+                                                "type": "string",
+                                                "format": "uri"
+                                              },
+                                              "minItems": 1
+                                            },
+                                            "checked_by": {
+                                              "type": "string",
+                                              "minLength": 1
+                                            },
+                                            "checked_at": {
+                                              "type": "string",
+                                              "minLength": 1
+                                            }
+                                          },
+                                          "required": [
+                                            "basis",
+                                            "rule",
+                                            "source_urls",
+                                            "checked_by",
+                                            "checked_at"
+                                          ],
+                                          "additionalProperties": false
+                                        },
+                                        {
+                                          "type": "object",
+                                          "properties": {
+                                            "basis": {
+                                              "type": "string",
+                                              "enum": [
+                                                "filed",
+                                                "inferred"
+                                              ]
+                                            },
+                                            "rule": {
+                                              "type": "string",
+                                              "minLength": 1
+                                            },
+                                            "source_urls": {
+                                              "type": "array",
+                                              "items": {
+                                                "type": "string",
+                                                "format": "uri"
+                                              }
+                                            },
+                                            "checked_by": {
+                                              "type": [
+                                                "string",
+                                                "null"
+                                              ]
+                                            },
+                                            "checked_at": {
+                                              "type": [
+                                                "string",
+                                                "null"
+                                              ]
+                                            }
+                                          },
+                                          "required": [
+                                            "basis",
+                                            "rule",
+                                            "source_urls",
+                                            "checked_by",
+                                            "checked_at"
+                                          ],
+                                          "additionalProperties": false
+                                        }
+                                      ]
+                                    }
+                                  },
+                                  "required": [
+                                    "id",
+                                    "name",
+                                    "committee_type",
+                                    "depth",
+                                    "side",
+                                    "visibility",
+                                    "amount_in",
+                                    "is_terminus",
+                                    "terminus_reason",
+                                    "source_url",
+                                    "kind",
+                                    "basis"
+                                  ],
+                                  "additionalProperties": false
+                                },
+                                {
+                                  "type": "object",
+                                  "properties": {
+                                    "id": {
+                                      "type": "string"
+                                    },
+                                    "name": {
+                                      "type": "string"
+                                    },
+                                    "committee_type": {
+                                      "anyOf": [
+                                        {
+                                          "type": "string",
+                                          "enum": [
+                                            "H",
+                                            "S",
+                                            "P",
+                                            "X",
+                                            "Y",
+                                            "Z",
+                                            "N",
+                                            "Q",
+                                            "O",
+                                            "U",
+                                            "V",
+                                            "W",
+                                            "D",
+                                            "E",
+                                            "I",
+                                            "C"
+                                          ]
+                                        },
+                                        {
+                                          "type": "null"
+                                        }
+                                      ]
+                                    },
+                                    "depth": {
+                                      "type": "integer",
+                                      "minimum": 0
+                                    },
+                                    "side": {
+                                      "type": "string",
+                                      "enum": [
+                                        "in",
+                                        "out"
+                                      ]
+                                    },
+                                    "visibility": {
+                                      "type": "string",
+                                      "enum": [
+                                        "disclosed",
+                                        "inferable",
+                                        "dark"
+                                      ]
+                                    },
+                                    "amount_in": {
+                                      "type": "number"
+                                    },
+                                    "is_terminus": {
+                                      "type": "boolean"
+                                    },
+                                    "terminus_reason": {
+                                      "anyOf": [
+                                        {
+                                          "type": "string",
+                                          "enum": [
+                                            "individual",
+                                            "organization",
+                                            "dark",
+                                            "inferable",
+                                            "cycle",
+                                            "depth_cap",
+                                            "pruned"
+                                          ]
+                                        },
+                                        {
+                                          "type": "null"
+                                        }
+                                      ]
+                                    },
+                                    "source_url": {
+                                      "anyOf": [
+                                        {
+                                          "type": "string",
+                                          "format": "uri"
+                                        },
+                                        {
+                                          "type": "null"
+                                        }
+                                      ]
+                                    },
+                                    "contributor_count": {
+                                      "type": "integer"
+                                    },
+                                    "organization_class": {
+                                      "type": "string",
+                                      "enum": [
+                                        "union",
+                                        "business",
+                                        "llc",
+                                        "nonprofit",
+                                        "unknown"
+                                      ]
+                                    },
+                                    "medium": {
+                                      "type": "string",
+                                      "enum": [
+                                        "tv",
+                                        "radio",
+                                        "digital",
+                                        "mail",
+                                        "phones",
+                                        "production",
+                                        "consulting",
+                                        "field",
+                                        "other"
+                                      ]
+                                    },
+                                    "thumbnail_path": {
+                                      "type": [
+                                        "string",
+                                        "null"
+                                      ]
+                                    },
+                                    "href": {
+                                      "type": "string"
+                                    },
+                                    "kind": {
+                                      "type": "string",
+                                      "enum": [
+                                        "committee",
+                                        "individual",
+                                        "organization",
+                                        "conduit",
+                                        "aggregate"
+                                      ]
+                                    },
+                                    "basis": {
+                                      "anyOf": [
+                                        {
+                                          "type": "object",
+                                          "properties": {
+                                            "basis": {
+                                              "type": "string",
+                                              "const": "verified"
+                                            },
+                                            "rule": {
+                                              "type": "string",
+                                              "minLength": 1
+                                            },
+                                            "source_urls": {
+                                              "type": "array",
+                                              "items": {
+                                                "type": "string",
+                                                "format": "uri"
+                                              },
+                                              "minItems": 1
+                                            },
+                                            "checked_by": {
+                                              "type": "string",
+                                              "minLength": 1
+                                            },
+                                            "checked_at": {
+                                              "type": "string",
+                                              "minLength": 1
+                                            }
+                                          },
+                                          "required": [
+                                            "basis",
+                                            "rule",
+                                            "source_urls",
+                                            "checked_by",
+                                            "checked_at"
+                                          ],
+                                          "additionalProperties": false
+                                        },
+                                        {
+                                          "type": "object",
+                                          "properties": {
+                                            "basis": {
+                                              "type": "string",
+                                              "enum": [
+                                                "filed",
+                                                "inferred"
+                                              ]
+                                            },
+                                            "rule": {
+                                              "type": "string",
+                                              "minLength": 1
+                                            },
+                                            "source_urls": {
+                                              "type": "array",
+                                              "items": {
+                                                "type": "string",
+                                                "format": "uri"
+                                              }
+                                            },
+                                            "checked_by": {
+                                              "type": [
+                                                "string",
+                                                "null"
+                                              ]
+                                            },
+                                            "checked_at": {
+                                              "type": [
+                                                "string",
+                                                "null"
+                                              ]
+                                            }
+                                          },
+                                          "required": [
+                                            "basis",
+                                            "rule",
+                                            "source_urls",
+                                            "checked_by",
+                                            "checked_at"
+                                          ],
+                                          "additionalProperties": false
+                                        }
+                                      ]
+                                    }
+                                  },
+                                  "required": [
+                                    "id",
+                                    "name",
+                                    "committee_type",
+                                    "depth",
+                                    "visibility",
+                                    "amount_in",
+                                    "is_terminus",
+                                    "terminus_reason",
+                                    "source_url",
+                                    "kind"
+                                  ],
+                                  "additionalProperties": false
+                                }
+                              ]
+                            }
+                          },
+                          "edges": {
+                            "type": "array",
+                            "items": {
+                              "anyOf": [
+                                {
+                                  "type": "object",
+                                  "properties": {
+                                    "from": {
+                                      "type": "string"
+                                    },
+                                    "to": {
+                                      "type": "string"
+                                    },
+                                    "amount": {
+                                      "type": "number"
+                                    },
+                                    "visibility": {
+                                      "type": "string",
+                                      "enum": [
+                                        "disclosed",
+                                        "inferable",
+                                        "dark"
+                                      ]
+                                    },
+                                    "depth": {
+                                      "type": "integer",
+                                      "minimum": 1
+                                    },
+                                    "transaction_types": {
+                                      "type": "array",
+                                      "items": {
+                                        "type": "string"
+                                      }
+                                    },
+                                    "count": {
+                                      "type": "integer"
+                                    },
+                                    "date_range": {
+                                      "anyOf": [
+                                        {
+                                          "type": "array",
+                                          "minItems": 2,
+                                          "maxItems": 2,
+                                          "items": [
+                                            {
+                                              "type": "string"
+                                            },
+                                            {
+                                              "type": "string"
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "type": "null"
+                                        }
+                                      ]
+                                    },
+                                    "source_url": {
+                                      "anyOf": [
+                                        {
+                                          "type": "string",
+                                          "format": "uri"
+                                        },
+                                        {
+                                          "type": "null"
+                                        }
+                                      ]
+                                    },
+                                    "support_oppose": {
+                                      "anyOf": [
+                                        {
+                                          "type": "string",
+                                          "enum": [
+                                            "S",
+                                            "O"
+                                          ]
+                                        },
+                                        {
+                                          "type": "null"
+                                        }
+                                      ]
+                                    },
+                                    "kind": {
+                                      "type": "string",
+                                      "const": "placement"
+                                    },
+                                    "basis": {
+                                      "anyOf": [
+                                        {
+                                          "type": "object",
+                                          "properties": {
+                                            "basis": {
+                                              "type": "string",
+                                              "const": "verified"
+                                            },
+                                            "rule": {
+                                              "type": "string",
+                                              "minLength": 1
+                                            },
+                                            "source_urls": {
+                                              "type": "array",
+                                              "items": {
+                                                "type": "string",
+                                                "format": "uri"
+                                              },
+                                              "minItems": 1
+                                            },
+                                            "checked_by": {
+                                              "type": "string",
+                                              "minLength": 1
+                                            },
+                                            "checked_at": {
+                                              "type": "string",
+                                              "minLength": 1
+                                            }
+                                          },
+                                          "required": [
+                                            "basis",
+                                            "rule",
+                                            "source_urls",
+                                            "checked_by",
+                                            "checked_at"
+                                          ],
+                                          "additionalProperties": false
+                                        },
+                                        {
+                                          "type": "object",
+                                          "properties": {
+                                            "basis": {
+                                              "type": "string",
+                                              "enum": [
+                                                "filed",
+                                                "inferred"
+                                              ]
+                                            },
+                                            "rule": {
+                                              "type": "string",
+                                              "minLength": 1
+                                            },
+                                            "source_urls": {
+                                              "type": "array",
+                                              "items": {
+                                                "type": "string",
+                                                "format": "uri"
+                                              }
+                                            },
+                                            "checked_by": {
+                                              "type": [
+                                                "string",
+                                                "null"
+                                              ]
+                                            },
+                                            "checked_at": {
+                                              "type": [
+                                                "string",
+                                                "null"
+                                              ]
+                                            }
+                                          },
+                                          "required": [
+                                            "basis",
+                                            "rule",
+                                            "source_urls",
+                                            "checked_by",
+                                            "checked_at"
+                                          ],
+                                          "additionalProperties": false
+                                        }
+                                      ]
+                                    }
+                                  },
+                                  "required": [
+                                    "from",
+                                    "to",
+                                    "amount",
+                                    "visibility",
+                                    "depth",
+                                    "transaction_types",
+                                    "count",
+                                    "date_range",
+                                    "source_url",
+                                    "kind",
+                                    "basis"
+                                  ],
+                                  "additionalProperties": false
+                                },
+                                {
+                                  "type": "object",
+                                  "properties": {
+                                    "from": {
+                                      "type": "string"
+                                    },
+                                    "to": {
+                                      "type": "string"
+                                    },
+                                    "amount": {
+                                      "type": "number"
+                                    },
+                                    "visibility": {
+                                      "type": "string",
+                                      "enum": [
+                                        "disclosed",
+                                        "inferable",
+                                        "dark"
+                                      ]
+                                    },
+                                    "depth": {
+                                      "type": "integer",
+                                      "minimum": 1
+                                    },
+                                    "transaction_types": {
+                                      "type": "array",
+                                      "items": {
+                                        "type": "string"
+                                      }
+                                    },
+                                    "count": {
+                                      "type": "integer"
+                                    },
+                                    "date_range": {
+                                      "anyOf": [
+                                        {
+                                          "type": "array",
+                                          "minItems": 2,
+                                          "maxItems": 2,
+                                          "items": [
+                                            {
+                                              "type": "string"
+                                            },
+                                            {
+                                              "type": "string"
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "type": "null"
+                                        }
+                                      ]
+                                    },
+                                    "source_url": {
+                                      "anyOf": [
+                                        {
+                                          "type": "string",
+                                          "format": "uri"
+                                        },
+                                        {
+                                          "type": "null"
+                                        }
+                                      ]
+                                    },
+                                    "support_oppose": {
+                                      "anyOf": [
+                                        {
+                                          "type": "string",
+                                          "enum": [
+                                            "S",
+                                            "O"
+                                          ]
+                                        },
+                                        {
+                                          "type": "null"
+                                        }
+                                      ]
+                                    },
+                                    "kind": {
+                                      "type": "string",
+                                      "enum": [
+                                        "money",
+                                        "targeting"
+                                      ]
+                                    },
+                                    "basis": {
+                                      "anyOf": [
+                                        {
+                                          "type": "object",
+                                          "properties": {
+                                            "basis": {
+                                              "type": "string",
+                                              "const": "verified"
+                                            },
+                                            "rule": {
+                                              "type": "string",
+                                              "minLength": 1
+                                            },
+                                            "source_urls": {
+                                              "type": "array",
+                                              "items": {
+                                                "type": "string",
+                                                "format": "uri"
+                                              },
+                                              "minItems": 1
+                                            },
+                                            "checked_by": {
+                                              "type": "string",
+                                              "minLength": 1
+                                            },
+                                            "checked_at": {
+                                              "type": "string",
+                                              "minLength": 1
+                                            }
+                                          },
+                                          "required": [
+                                            "basis",
+                                            "rule",
+                                            "source_urls",
+                                            "checked_by",
+                                            "checked_at"
+                                          ],
+                                          "additionalProperties": false
+                                        },
+                                        {
+                                          "type": "object",
+                                          "properties": {
+                                            "basis": {
+                                              "type": "string",
+                                              "enum": [
+                                                "filed",
+                                                "inferred"
+                                              ]
+                                            },
+                                            "rule": {
+                                              "type": "string",
+                                              "minLength": 1
+                                            },
+                                            "source_urls": {
+                                              "type": "array",
+                                              "items": {
+                                                "type": "string",
+                                                "format": "uri"
+                                              }
+                                            },
+                                            "checked_by": {
+                                              "type": [
+                                                "string",
+                                                "null"
+                                              ]
+                                            },
+                                            "checked_at": {
+                                              "type": [
+                                                "string",
+                                                "null"
+                                              ]
+                                            }
+                                          },
+                                          "required": [
+                                            "basis",
+                                            "rule",
+                                            "source_urls",
+                                            "checked_by",
+                                            "checked_at"
+                                          ],
+                                          "additionalProperties": false
+                                        }
+                                      ]
+                                    }
+                                  },
+                                  "required": [
+                                    "from",
+                                    "to",
+                                    "amount",
+                                    "visibility",
+                                    "depth",
+                                    "transaction_types",
+                                    "count",
+                                    "date_range",
+                                    "source_url"
+                                  ],
+                                  "additionalProperties": false
+                                }
+                              ]
+                            }
+                          },
+                          "truncated": {
+                            "type": "array",
+                            "items": {
+                              "type": "object",
+                              "properties": {
+                                "layer": {
+                                  "type": "string",
+                                  "enum": [
+                                    "funders_1",
+                                    "funders_2",
+                                    "spenders",
+                                    "sponsors",
+                                    "vendors",
+                                    "ads"
+                                  ]
+                                },
+                                "kept": {
+                                  "type": "integer",
+                                  "minimum": 0
+                                },
+                                "hidden": {
+                                  "type": "integer",
+                                  "minimum": 0
+                                }
+                              },
+                              "required": [
+                                "layer",
+                                "kept",
+                                "hidden"
+                              ],
+                              "additionalProperties": false
+                            }
+                          }
+                        },
+                        "required": [
+                          "root_id",
+                          "nodes",
+                          "edges",
+                          "truncated"
+                        ],
+                        "additionalProperties": false
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ]
                   },
                   "intent": {
                     "type": "string",
@@ -653,6 +2464,7 @@
                   "subject_name",
                   "headline",
                   "caveats",
+                  "graph",
                   "intent",
                   "candidate_id",
                   "sponsors",
@@ -677,6 +2489,911 @@
                     "items": {
                       "type": "string"
                     }
+                  },
+                  "graph": {
+                    "anyOf": [
+                      {
+                        "type": "object",
+                        "properties": {
+                          "root_id": {
+                            "type": "string"
+                          },
+                          "nodes": {
+                            "type": "array",
+                            "items": {
+                              "anyOf": [
+                                {
+                                  "type": "object",
+                                  "properties": {
+                                    "id": {
+                                      "type": "string"
+                                    },
+                                    "name": {
+                                      "type": "string"
+                                    },
+                                    "committee_type": {
+                                      "anyOf": [
+                                        {
+                                          "type": "string",
+                                          "enum": [
+                                            "H",
+                                            "S",
+                                            "P",
+                                            "X",
+                                            "Y",
+                                            "Z",
+                                            "N",
+                                            "Q",
+                                            "O",
+                                            "U",
+                                            "V",
+                                            "W",
+                                            "D",
+                                            "E",
+                                            "I",
+                                            "C"
+                                          ]
+                                        },
+                                        {
+                                          "type": "null"
+                                        }
+                                      ]
+                                    },
+                                    "depth": {
+                                      "type": "integer",
+                                      "minimum": 0
+                                    },
+                                    "side": {
+                                      "type": "string",
+                                      "const": "out"
+                                    },
+                                    "visibility": {
+                                      "type": "string",
+                                      "enum": [
+                                        "disclosed",
+                                        "inferable",
+                                        "dark"
+                                      ]
+                                    },
+                                    "amount_in": {
+                                      "type": "number"
+                                    },
+                                    "is_terminus": {
+                                      "type": "boolean"
+                                    },
+                                    "terminus_reason": {
+                                      "anyOf": [
+                                        {
+                                          "type": "string",
+                                          "enum": [
+                                            "individual",
+                                            "organization",
+                                            "dark",
+                                            "inferable",
+                                            "cycle",
+                                            "depth_cap",
+                                            "pruned"
+                                          ]
+                                        },
+                                        {
+                                          "type": "null"
+                                        }
+                                      ]
+                                    },
+                                    "source_url": {
+                                      "anyOf": [
+                                        {
+                                          "type": "string",
+                                          "format": "uri"
+                                        },
+                                        {
+                                          "type": "null"
+                                        }
+                                      ]
+                                    },
+                                    "contributor_count": {
+                                      "type": "integer"
+                                    },
+                                    "organization_class": {
+                                      "type": "string",
+                                      "enum": [
+                                        "union",
+                                        "business",
+                                        "llc",
+                                        "nonprofit",
+                                        "unknown"
+                                      ]
+                                    },
+                                    "medium": {
+                                      "type": "string",
+                                      "enum": [
+                                        "tv",
+                                        "radio",
+                                        "digital",
+                                        "mail",
+                                        "phones",
+                                        "production",
+                                        "consulting",
+                                        "field",
+                                        "other"
+                                      ]
+                                    },
+                                    "thumbnail_path": {
+                                      "type": [
+                                        "string",
+                                        "null"
+                                      ]
+                                    },
+                                    "href": {
+                                      "type": "string"
+                                    },
+                                    "kind": {
+                                      "type": "string",
+                                      "enum": [
+                                        "vendor",
+                                        "ad",
+                                        "candidate"
+                                      ]
+                                    },
+                                    "basis": {
+                                      "anyOf": [
+                                        {
+                                          "type": "object",
+                                          "properties": {
+                                            "basis": {
+                                              "type": "string",
+                                              "const": "verified"
+                                            },
+                                            "rule": {
+                                              "type": "string",
+                                              "minLength": 1
+                                            },
+                                            "source_urls": {
+                                              "type": "array",
+                                              "items": {
+                                                "type": "string",
+                                                "format": "uri"
+                                              },
+                                              "minItems": 1
+                                            },
+                                            "checked_by": {
+                                              "type": "string",
+                                              "minLength": 1
+                                            },
+                                            "checked_at": {
+                                              "type": "string",
+                                              "minLength": 1
+                                            }
+                                          },
+                                          "required": [
+                                            "basis",
+                                            "rule",
+                                            "source_urls",
+                                            "checked_by",
+                                            "checked_at"
+                                          ],
+                                          "additionalProperties": false
+                                        },
+                                        {
+                                          "type": "object",
+                                          "properties": {
+                                            "basis": {
+                                              "type": "string",
+                                              "enum": [
+                                                "filed",
+                                                "inferred"
+                                              ]
+                                            },
+                                            "rule": {
+                                              "type": "string",
+                                              "minLength": 1
+                                            },
+                                            "source_urls": {
+                                              "type": "array",
+                                              "items": {
+                                                "type": "string",
+                                                "format": "uri"
+                                              }
+                                            },
+                                            "checked_by": {
+                                              "type": [
+                                                "string",
+                                                "null"
+                                              ]
+                                            },
+                                            "checked_at": {
+                                              "type": [
+                                                "string",
+                                                "null"
+                                              ]
+                                            }
+                                          },
+                                          "required": [
+                                            "basis",
+                                            "rule",
+                                            "source_urls",
+                                            "checked_by",
+                                            "checked_at"
+                                          ],
+                                          "additionalProperties": false
+                                        }
+                                      ]
+                                    }
+                                  },
+                                  "required": [
+                                    "id",
+                                    "name",
+                                    "committee_type",
+                                    "depth",
+                                    "side",
+                                    "visibility",
+                                    "amount_in",
+                                    "is_terminus",
+                                    "terminus_reason",
+                                    "source_url",
+                                    "kind",
+                                    "basis"
+                                  ],
+                                  "additionalProperties": false
+                                },
+                                {
+                                  "type": "object",
+                                  "properties": {
+                                    "id": {
+                                      "type": "string"
+                                    },
+                                    "name": {
+                                      "type": "string"
+                                    },
+                                    "committee_type": {
+                                      "anyOf": [
+                                        {
+                                          "type": "string",
+                                          "enum": [
+                                            "H",
+                                            "S",
+                                            "P",
+                                            "X",
+                                            "Y",
+                                            "Z",
+                                            "N",
+                                            "Q",
+                                            "O",
+                                            "U",
+                                            "V",
+                                            "W",
+                                            "D",
+                                            "E",
+                                            "I",
+                                            "C"
+                                          ]
+                                        },
+                                        {
+                                          "type": "null"
+                                        }
+                                      ]
+                                    },
+                                    "depth": {
+                                      "type": "integer",
+                                      "minimum": 0
+                                    },
+                                    "side": {
+                                      "type": "string",
+                                      "enum": [
+                                        "in",
+                                        "out"
+                                      ]
+                                    },
+                                    "visibility": {
+                                      "type": "string",
+                                      "enum": [
+                                        "disclosed",
+                                        "inferable",
+                                        "dark"
+                                      ]
+                                    },
+                                    "amount_in": {
+                                      "type": "number"
+                                    },
+                                    "is_terminus": {
+                                      "type": "boolean"
+                                    },
+                                    "terminus_reason": {
+                                      "anyOf": [
+                                        {
+                                          "type": "string",
+                                          "enum": [
+                                            "individual",
+                                            "organization",
+                                            "dark",
+                                            "inferable",
+                                            "cycle",
+                                            "depth_cap",
+                                            "pruned"
+                                          ]
+                                        },
+                                        {
+                                          "type": "null"
+                                        }
+                                      ]
+                                    },
+                                    "source_url": {
+                                      "anyOf": [
+                                        {
+                                          "type": "string",
+                                          "format": "uri"
+                                        },
+                                        {
+                                          "type": "null"
+                                        }
+                                      ]
+                                    },
+                                    "contributor_count": {
+                                      "type": "integer"
+                                    },
+                                    "organization_class": {
+                                      "type": "string",
+                                      "enum": [
+                                        "union",
+                                        "business",
+                                        "llc",
+                                        "nonprofit",
+                                        "unknown"
+                                      ]
+                                    },
+                                    "medium": {
+                                      "type": "string",
+                                      "enum": [
+                                        "tv",
+                                        "radio",
+                                        "digital",
+                                        "mail",
+                                        "phones",
+                                        "production",
+                                        "consulting",
+                                        "field",
+                                        "other"
+                                      ]
+                                    },
+                                    "thumbnail_path": {
+                                      "type": [
+                                        "string",
+                                        "null"
+                                      ]
+                                    },
+                                    "href": {
+                                      "type": "string"
+                                    },
+                                    "kind": {
+                                      "type": "string",
+                                      "enum": [
+                                        "committee",
+                                        "individual",
+                                        "organization",
+                                        "conduit",
+                                        "aggregate"
+                                      ]
+                                    },
+                                    "basis": {
+                                      "anyOf": [
+                                        {
+                                          "type": "object",
+                                          "properties": {
+                                            "basis": {
+                                              "type": "string",
+                                              "const": "verified"
+                                            },
+                                            "rule": {
+                                              "type": "string",
+                                              "minLength": 1
+                                            },
+                                            "source_urls": {
+                                              "type": "array",
+                                              "items": {
+                                                "type": "string",
+                                                "format": "uri"
+                                              },
+                                              "minItems": 1
+                                            },
+                                            "checked_by": {
+                                              "type": "string",
+                                              "minLength": 1
+                                            },
+                                            "checked_at": {
+                                              "type": "string",
+                                              "minLength": 1
+                                            }
+                                          },
+                                          "required": [
+                                            "basis",
+                                            "rule",
+                                            "source_urls",
+                                            "checked_by",
+                                            "checked_at"
+                                          ],
+                                          "additionalProperties": false
+                                        },
+                                        {
+                                          "type": "object",
+                                          "properties": {
+                                            "basis": {
+                                              "type": "string",
+                                              "enum": [
+                                                "filed",
+                                                "inferred"
+                                              ]
+                                            },
+                                            "rule": {
+                                              "type": "string",
+                                              "minLength": 1
+                                            },
+                                            "source_urls": {
+                                              "type": "array",
+                                              "items": {
+                                                "type": "string",
+                                                "format": "uri"
+                                              }
+                                            },
+                                            "checked_by": {
+                                              "type": [
+                                                "string",
+                                                "null"
+                                              ]
+                                            },
+                                            "checked_at": {
+                                              "type": [
+                                                "string",
+                                                "null"
+                                              ]
+                                            }
+                                          },
+                                          "required": [
+                                            "basis",
+                                            "rule",
+                                            "source_urls",
+                                            "checked_by",
+                                            "checked_at"
+                                          ],
+                                          "additionalProperties": false
+                                        }
+                                      ]
+                                    }
+                                  },
+                                  "required": [
+                                    "id",
+                                    "name",
+                                    "committee_type",
+                                    "depth",
+                                    "visibility",
+                                    "amount_in",
+                                    "is_terminus",
+                                    "terminus_reason",
+                                    "source_url",
+                                    "kind"
+                                  ],
+                                  "additionalProperties": false
+                                }
+                              ]
+                            }
+                          },
+                          "edges": {
+                            "type": "array",
+                            "items": {
+                              "anyOf": [
+                                {
+                                  "type": "object",
+                                  "properties": {
+                                    "from": {
+                                      "type": "string"
+                                    },
+                                    "to": {
+                                      "type": "string"
+                                    },
+                                    "amount": {
+                                      "type": "number"
+                                    },
+                                    "visibility": {
+                                      "type": "string",
+                                      "enum": [
+                                        "disclosed",
+                                        "inferable",
+                                        "dark"
+                                      ]
+                                    },
+                                    "depth": {
+                                      "type": "integer",
+                                      "minimum": 1
+                                    },
+                                    "transaction_types": {
+                                      "type": "array",
+                                      "items": {
+                                        "type": "string"
+                                      }
+                                    },
+                                    "count": {
+                                      "type": "integer"
+                                    },
+                                    "date_range": {
+                                      "anyOf": [
+                                        {
+                                          "type": "array",
+                                          "minItems": 2,
+                                          "maxItems": 2,
+                                          "items": [
+                                            {
+                                              "type": "string"
+                                            },
+                                            {
+                                              "type": "string"
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "type": "null"
+                                        }
+                                      ]
+                                    },
+                                    "source_url": {
+                                      "anyOf": [
+                                        {
+                                          "type": "string",
+                                          "format": "uri"
+                                        },
+                                        {
+                                          "type": "null"
+                                        }
+                                      ]
+                                    },
+                                    "support_oppose": {
+                                      "anyOf": [
+                                        {
+                                          "type": "string",
+                                          "enum": [
+                                            "S",
+                                            "O"
+                                          ]
+                                        },
+                                        {
+                                          "type": "null"
+                                        }
+                                      ]
+                                    },
+                                    "kind": {
+                                      "type": "string",
+                                      "const": "placement"
+                                    },
+                                    "basis": {
+                                      "anyOf": [
+                                        {
+                                          "type": "object",
+                                          "properties": {
+                                            "basis": {
+                                              "type": "string",
+                                              "const": "verified"
+                                            },
+                                            "rule": {
+                                              "type": "string",
+                                              "minLength": 1
+                                            },
+                                            "source_urls": {
+                                              "type": "array",
+                                              "items": {
+                                                "type": "string",
+                                                "format": "uri"
+                                              },
+                                              "minItems": 1
+                                            },
+                                            "checked_by": {
+                                              "type": "string",
+                                              "minLength": 1
+                                            },
+                                            "checked_at": {
+                                              "type": "string",
+                                              "minLength": 1
+                                            }
+                                          },
+                                          "required": [
+                                            "basis",
+                                            "rule",
+                                            "source_urls",
+                                            "checked_by",
+                                            "checked_at"
+                                          ],
+                                          "additionalProperties": false
+                                        },
+                                        {
+                                          "type": "object",
+                                          "properties": {
+                                            "basis": {
+                                              "type": "string",
+                                              "enum": [
+                                                "filed",
+                                                "inferred"
+                                              ]
+                                            },
+                                            "rule": {
+                                              "type": "string",
+                                              "minLength": 1
+                                            },
+                                            "source_urls": {
+                                              "type": "array",
+                                              "items": {
+                                                "type": "string",
+                                                "format": "uri"
+                                              }
+                                            },
+                                            "checked_by": {
+                                              "type": [
+                                                "string",
+                                                "null"
+                                              ]
+                                            },
+                                            "checked_at": {
+                                              "type": [
+                                                "string",
+                                                "null"
+                                              ]
+                                            }
+                                          },
+                                          "required": [
+                                            "basis",
+                                            "rule",
+                                            "source_urls",
+                                            "checked_by",
+                                            "checked_at"
+                                          ],
+                                          "additionalProperties": false
+                                        }
+                                      ]
+                                    }
+                                  },
+                                  "required": [
+                                    "from",
+                                    "to",
+                                    "amount",
+                                    "visibility",
+                                    "depth",
+                                    "transaction_types",
+                                    "count",
+                                    "date_range",
+                                    "source_url",
+                                    "kind",
+                                    "basis"
+                                  ],
+                                  "additionalProperties": false
+                                },
+                                {
+                                  "type": "object",
+                                  "properties": {
+                                    "from": {
+                                      "type": "string"
+                                    },
+                                    "to": {
+                                      "type": "string"
+                                    },
+                                    "amount": {
+                                      "type": "number"
+                                    },
+                                    "visibility": {
+                                      "type": "string",
+                                      "enum": [
+                                        "disclosed",
+                                        "inferable",
+                                        "dark"
+                                      ]
+                                    },
+                                    "depth": {
+                                      "type": "integer",
+                                      "minimum": 1
+                                    },
+                                    "transaction_types": {
+                                      "type": "array",
+                                      "items": {
+                                        "type": "string"
+                                      }
+                                    },
+                                    "count": {
+                                      "type": "integer"
+                                    },
+                                    "date_range": {
+                                      "anyOf": [
+                                        {
+                                          "type": "array",
+                                          "minItems": 2,
+                                          "maxItems": 2,
+                                          "items": [
+                                            {
+                                              "type": "string"
+                                            },
+                                            {
+                                              "type": "string"
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "type": "null"
+                                        }
+                                      ]
+                                    },
+                                    "source_url": {
+                                      "anyOf": [
+                                        {
+                                          "type": "string",
+                                          "format": "uri"
+                                        },
+                                        {
+                                          "type": "null"
+                                        }
+                                      ]
+                                    },
+                                    "support_oppose": {
+                                      "anyOf": [
+                                        {
+                                          "type": "string",
+                                          "enum": [
+                                            "S",
+                                            "O"
+                                          ]
+                                        },
+                                        {
+                                          "type": "null"
+                                        }
+                                      ]
+                                    },
+                                    "kind": {
+                                      "type": "string",
+                                      "enum": [
+                                        "money",
+                                        "targeting"
+                                      ]
+                                    },
+                                    "basis": {
+                                      "anyOf": [
+                                        {
+                                          "type": "object",
+                                          "properties": {
+                                            "basis": {
+                                              "type": "string",
+                                              "const": "verified"
+                                            },
+                                            "rule": {
+                                              "type": "string",
+                                              "minLength": 1
+                                            },
+                                            "source_urls": {
+                                              "type": "array",
+                                              "items": {
+                                                "type": "string",
+                                                "format": "uri"
+                                              },
+                                              "minItems": 1
+                                            },
+                                            "checked_by": {
+                                              "type": "string",
+                                              "minLength": 1
+                                            },
+                                            "checked_at": {
+                                              "type": "string",
+                                              "minLength": 1
+                                            }
+                                          },
+                                          "required": [
+                                            "basis",
+                                            "rule",
+                                            "source_urls",
+                                            "checked_by",
+                                            "checked_at"
+                                          ],
+                                          "additionalProperties": false
+                                        },
+                                        {
+                                          "type": "object",
+                                          "properties": {
+                                            "basis": {
+                                              "type": "string",
+                                              "enum": [
+                                                "filed",
+                                                "inferred"
+                                              ]
+                                            },
+                                            "rule": {
+                                              "type": "string",
+                                              "minLength": 1
+                                            },
+                                            "source_urls": {
+                                              "type": "array",
+                                              "items": {
+                                                "type": "string",
+                                                "format": "uri"
+                                              }
+                                            },
+                                            "checked_by": {
+                                              "type": [
+                                                "string",
+                                                "null"
+                                              ]
+                                            },
+                                            "checked_at": {
+                                              "type": [
+                                                "string",
+                                                "null"
+                                              ]
+                                            }
+                                          },
+                                          "required": [
+                                            "basis",
+                                            "rule",
+                                            "source_urls",
+                                            "checked_by",
+                                            "checked_at"
+                                          ],
+                                          "additionalProperties": false
+                                        }
+                                      ]
+                                    }
+                                  },
+                                  "required": [
+                                    "from",
+                                    "to",
+                                    "amount",
+                                    "visibility",
+                                    "depth",
+                                    "transaction_types",
+                                    "count",
+                                    "date_range",
+                                    "source_url"
+                                  ],
+                                  "additionalProperties": false
+                                }
+                              ]
+                            }
+                          },
+                          "truncated": {
+                            "type": "array",
+                            "items": {
+                              "type": "object",
+                              "properties": {
+                                "layer": {
+                                  "type": "string",
+                                  "enum": [
+                                    "funders_1",
+                                    "funders_2",
+                                    "spenders",
+                                    "sponsors",
+                                    "vendors",
+                                    "ads"
+                                  ]
+                                },
+                                "kept": {
+                                  "type": "integer",
+                                  "minimum": 0
+                                },
+                                "hidden": {
+                                  "type": "integer",
+                                  "minimum": 0
+                                }
+                              },
+                              "required": [
+                                "layer",
+                                "kept",
+                                "hidden"
+                              ],
+                              "additionalProperties": false
+                            }
+                          }
+                        },
+                        "required": [
+                          "root_id",
+                          "nodes",
+                          "edges",
+                          "truncated"
+                        ],
+                        "additionalProperties": false
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ]
                   },
                   "intent": {
                     "type": "string",
@@ -1118,6 +3835,7 @@
                   "subject_name",
                   "headline",
                   "caveats",
+                  "graph",
                   "intent",
                   "committee_id",
                   "committee_type_label",

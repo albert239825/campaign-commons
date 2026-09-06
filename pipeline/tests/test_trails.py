@@ -111,8 +111,10 @@ def _node(nid: str, name: str, kind: str, depth: int, vis: str, terminus: str | 
         "id": nid,
         "name": name,
         "kind": kind,
+        "committee_type": extra.pop("committee_type", None),
         "depth": depth,
         "visibility": vis,
+        "amount_in": extra.pop("amount_in", 0.0),
         "is_terminus": terminus is not None,
         "terminus_reason": terminus,
         "source_url": None if kind == "aggregate" else FEC + "/" + nid,
@@ -120,8 +122,28 @@ def _node(nid: str, name: str, kind: str, depth: int, vis: str, terminus: str | 
     }
 
 
-def _edge(frm: str, to: str, amount: float, depth: int, url: str | None = FEC + "/edge") -> dict[str, Any]:
-    return {"from": frm, "to": to, "amount": amount, "visibility": "disclosed", "depth": depth, "source_url": url}
+def _edge(
+    frm: str,
+    to: str,
+    amount: float,
+    depth: int,
+    url: str | None = FEC + "/edge",
+    kind: str = "money",
+    **extra: Any,
+) -> dict[str, Any]:
+    return {
+        "from": frm,
+        "to": to,
+        "kind": kind,
+        "amount": amount,
+        "visibility": "disclosed",
+        "depth": depth,
+        "transaction_types": ["24E" if kind == "money" else ""],
+        "count": 1,
+        "date_range": None,
+        "source_url": url,
+        **extra,
+    }
 
 
 def super_chain() -> dict[str, Any]:
@@ -138,14 +160,67 @@ def super_chain() -> dict[str, Any]:
         },
         "method": "synthetic",
         "nodes": [
-            _node(SUPER, "BIG SUPER PAC", "committee", 0, "disclosed", None, committee_type="O"),
-            _node(MID, "MID PAC", "committee", 1, "disclosed", None, committee_type="O"),
+            _node(SUPER, "BIG SUPER PAC", "committee", 0, "disclosed", None, committee_type="O", amount_in=100.0),
+            _node(MID, "MID PAC", "committee", 1, "disclosed", None, committee_type="O", amount_in=70.0),
             _node(
                 "agg:other@" + SUPER, "Other contributors", "aggregate", 1, "disclosed", "pruned", contributor_count=40
             ),
-            _node("org:DARK_LLC", "DARK LLC", "organization", 2, "dark", "dark", organization_class="llc"),
-            _node("ind:bob", "BOB, ROBERT", "individual", 2, "disclosed", "individual"),
-            _node("ind:alice", "ALICE, ANNE", "individual", 1, "disclosed", "individual"),
+            _node(
+                "org:DARK_LLC", "DARK LLC", "organization", 2, "dark", "dark", organization_class="llc", amount_in=30.0
+            ),
+            _node("ind:bob", "BOB, ROBERT", "individual", 2, "disclosed", "individual", amount_in=40.0),
+            _node("ind:alice", "ALICE, ANNE", "individual", 1, "disclosed", "individual", amount_in=10.0),
+            _node(
+                "vendor:v1",
+                "VENDOR ONE",
+                "vendor",
+                1,
+                "disclosed",
+                None,
+                amount_in=60.0,
+                side="out",
+                basis={
+                    "basis": "filed",
+                    "rule": "Schedule E payee",
+                    "source_urls": [FEC + "/vendor"],
+                    "checked_by": None,
+                    "checked_at": None,
+                },
+            ),
+            _node(
+                "ad:a1",
+                "AD ONE",
+                "ad",
+                2,
+                "disclosed",
+                None,
+                amount_in=1000.0,
+                side="out",
+                basis={
+                    "basis": "inferred",
+                    "rule": "Synthetic test placement",
+                    "source_urls": [FEC + "/ad"],
+                    "checked_by": None,
+                    "checked_at": None,
+                },
+            ),
+            _node(
+                CASEY,
+                "BOB CASEY",
+                "candidate",
+                2,
+                "disclosed",
+                None,
+                amount_in=90.0,
+                side="out",
+                basis={
+                    "basis": "filed",
+                    "rule": "Schedule E targeting",
+                    "source_urls": [FEC + "/candidate"],
+                    "checked_by": None,
+                    "checked_at": None,
+                },
+            ),
         ],
         "edges": [
             _edge(MID, SUPER, 70.0, 1),
@@ -153,6 +228,36 @@ def super_chain() -> dict[str, Any]:
             _edge("ind:alice", SUPER, 10.0, 1),
             _edge("org:DARK_LLC", MID, 30.0, 2),
             _edge("ind:bob", MID, 40.0, 2),
+            _edge(SUPER, "vendor:v1", 60.0, 1),
+            _edge(
+                "vendor:v1",
+                "ad:a1",
+                1000.0,
+                2,
+                kind="placement",
+                basis={
+                    "basis": "inferred",
+                    "rule": "Synthetic test placement",
+                    "source_urls": [FEC + "/ad"],
+                    "checked_by": None,
+                    "checked_at": None,
+                },
+            ),
+            _edge(
+                "vendor:v1",
+                CASEY,
+                90.0,
+                2,
+                kind="targeting",
+                support_oppose="O",
+                basis={
+                    "basis": "filed",
+                    "rule": "Schedule E targeting",
+                    "source_urls": [FEC + "/candidate"],
+                    "checked_by": None,
+                    "checked_at": None,
+                },
+            ),
         ],
     }
 
@@ -208,6 +313,8 @@ def test_every_number_carries_a_source_url() -> None:
     numeric_keys = {"amount", "min", "max", "total_in"}
     for path, d in _walk(trails["answers"]):
         if any(isinstance(d.get(k), (int, float)) for k in numeric_keys):
+            if ".graph.edges[" in path and d.get("source_url") is None:
+                continue
             assert str(d.get("source_url", "")).startswith("http"), f"{path} has a number without a source_url: {d}"
 
 
@@ -305,6 +412,112 @@ def test_committee_funding_unknown_is_none() -> None:
     assert committee_funding_answer(inputs(), "C99999999") is None
 
 
+def test_committee_graph_is_bounded_truncated_and_provenance_preserving() -> None:
+    inp = inputs()
+    chain = inp.chains[SUPER]
+    for i, amount in enumerate((9.0, 8.0, 7.0, 6.0), start=1):
+        funder_id = f"C0000001{i}"
+        chain["nodes"].append(_node(funder_id, f"FUNDER {i}", "committee", 1, "disclosed", None, amount_in=amount))
+        chain["edges"].append(_edge(funder_id, SUPER, amount, 1, url=FEC + f"/funder-{i}"))
+
+    answer = committee_funding_answer(inp, SUPER)
+    assert answer is not None
+    graph = answer["graph"]
+    assert graph["root_id"] == SUPER
+    root = next(n for n in graph["nodes"] if n["id"] == SUPER)
+    assert root["depth"] == 0 and "side" not in root
+    truncation = next(t for t in graph["truncated"] if t["layer"] == "funders_1")
+    assert truncation == {"layer": "funders_1", "kept": 5, "hidden": 2}
+    assert all(
+        e["from"] in {n["id"] for n in graph["nodes"]} and e["to"] in {n["id"] for n in graph["nodes"]}
+        for e in graph["edges"]
+    )
+
+    for edge in graph["edges"]:
+        raw = next(
+            candidate
+            for candidate in chain["edges"]
+            if candidate["from"] == edge["from"]
+            and candidate["to"] == edge["to"]
+            and candidate.get("kind", "money") == edge.get("kind", "money")
+        )
+        assert edge.get("source_url") == raw.get("source_url")
+        assert edge.get("basis") == raw.get("basis")
+    assert not any(
+        edge.get("kind", "money") == "money"
+        and next(n for n in graph["nodes"] if n["id"] == edge["to"])["kind"] == "ad"
+        for edge in graph["edges"]
+    )
+    funding_ids = {n["id"] for n in graph["nodes"] if n["id"] != SUPER and n.get("side") == "in"}
+    assert not any(
+        edge["from"] in funding_ids and next(n for n in graph["nodes"] if n["id"] == edge["to"])["kind"] == "ad"
+        for edge in graph["edges"]
+    )
+    assert len([n for n in graph["nodes"] if n.get("side") == "in" and n["depth"] == 1]) <= 5
+    assert len([n for n in graph["nodes"] if n.get("side") == "in" and n["depth"] == 2]) <= 5
+    assert len([n for n in graph["nodes"] if n.get("side") == "out" and n["kind"] == "vendor"]) <= 5
+    assert len([n for n in graph["nodes"] if n.get("side") == "out" and n["kind"] == "ad"]) <= 5
+
+
+def test_candidate_spender_graph_has_root_synthesized_spender_and_pooled_funders() -> None:
+    graph = candidate_spender_answer(inputs(), CASEY)["graph"]
+    root = next(n for n in graph["nodes"] if n["id"] == CASEY)
+    assert root["depth"] == 0 and root["side"] == "out"
+    assert root["amount_in"] == ledger()["candidates"][0]["outside"]["total"]
+    spenders = {n["id"]: n for n in graph["nodes"] if n.get("side") == "in" and n["depth"] == 1}
+    assert spenders[SUPER]["side"] == "in"
+    assert spenders[PARTY]["side"] == "in"  # no chain: synthesized from the ledger/entity
+    targeting = [e for e in graph["edges"] if e.get("kind") == "targeting"]
+    assert targeting and all(e["support_oppose"] in {"S", "O"} for e in targeting)
+    assert {n["id"] for n in graph["nodes"] if n.get("side") == "in" and n["depth"] == 2} >= {
+        MID,
+        "agg:other@" + SUPER,
+        "ind:alice",
+    }
+
+
+def test_candidate_spender_graph_keeps_spender_at_shallowest_depth() -> None:
+    inp = inputs()
+    inp.chains[PARTY] = {
+        "race_id": RACE.race_id,
+        "root_name": "PARTY COMMITTEE",
+        "summary": {
+            "total_in": 20.0,
+            "disclosed_share": 1.0,
+            "inferable_share": 0.0,
+            "dark_share": 0.0,
+            "max_depth": 1,
+        },
+        "method": "synthetic",
+        "nodes": [
+            _node(PARTY, "PARTY COMMITTEE", "committee", 0, "disclosed", None, committee_type="P", amount_in=20.0),
+            _node(SUPER, "BIG SUPER PAC", "committee", 1, "disclosed", None, committee_type="O", amount_in=20.0),
+        ],
+        "edges": [_edge(SUPER, PARTY, 20.0, 1)],
+    }
+    graph = candidate_spender_answer(inp, CASEY)["graph"]
+    super_node = next(n for n in graph["nodes"] if n["id"] == SUPER)
+    assert super_node["depth"] == 1 and super_node["side"] == "in"
+    assert any(e["from"] == SUPER and e["to"] == CASEY and e["kind"] == "targeting" for e in graph["edges"])
+    assert any(e["from"] == SUPER and e["to"] == PARTY and e["kind"] == "money" for e in graph["edges"])
+
+
+def test_candidate_ad_funding_graph_keeps_own_committee_and_ad_provenance() -> None:
+    graph = candidate_ad_funding_answer(inputs(), CASEY, ad_runs(inputs()))["graph"]
+    own = next(n for n in graph["nodes"] if n["id"] == CASEY_PCC)
+    assert own["depth"] == 1
+    assert not any(e["from"] == CASEY_PCC and e["to"] == CASEY for e in graph["edges"])
+    ads_in_graph = [n for n in graph["nodes"] if n["kind"] == "ad"]
+    assert ads_in_graph and all(n["basis"]["basis"] in {"verified", "inferred"} for n in ads_in_graph)
+    funder_ids = {n["id"] for n in graph["nodes"] if n.get("side") == "in" and n["depth"] == 2}
+    assert not any(e["from"] in funder_ids and e["to"] in {n["id"] for n in ads_in_graph} for e in graph["edges"])
+
+
+def test_committee_without_chain_has_no_graph() -> None:
+    answer = committee_funding_answer(inputs(), PARTY)
+    assert answer is not None and answer["graph"] is None
+
+
 def test_subjects_and_aliases() -> None:
     subs = subjects(inputs())
     by_id = {s["id"]: s for s in subs}
@@ -339,5 +552,6 @@ def test_build_is_deterministic() -> None:
     a = build_trails(inputs(), generated_at="2026-01-01T00:00:00+00:00")
     b = build_trails(inputs(), generated_at="2026-01-01T00:00:00+00:00")
     assert a == b
+    assert [answer["graph"] for answer in a["answers"]] == [answer["graph"] for answer in b["answers"]]
     assert [x["intent"] for x in a["answers"]][:4] == ["candidate_spender", "candidate_ad_funding"] * 2
     assert a["examples"][0] == "Who is spending against Bob Casey?"

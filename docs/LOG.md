@@ -904,3 +904,6 @@ paths or connections, geography or sector—now refuse the nearest fixed intent 
 ### 2026-09-06 — Shared race tab shell
 
 The race ledger, ads, and policies tabs now share one route-group layout: the seal, race title, election date, notable candidates, data-status banner, and Ledger · Ads · Policies navigation remain fixed while only the tab content changes. `RaceNav` derives its active tab from the pathname, so record pages keep the same parent-tab behavior without passing an active prop.
+
+## 2026-09-06 — D-87: bounded graph selections on Money Trails answers
+Each precomputed answer now carries a deterministic `graph` selection copied from the existing chain files. The selection is re-rooted for the question, capped at five nodes per layer, records truncation counts, and preserves copied basis, visibility and source URLs. Funding nodes never connect directly to ads; subjects with no chain and nothing to draw carry `graph: null`.

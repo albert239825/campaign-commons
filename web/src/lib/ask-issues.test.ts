@@ -29,6 +29,7 @@ const answer = {
   oppose: { amount: 400, source_url: "https://fec.example/oppose" },
   total: { amount: 800, source_url: "https://fec.example/total" },
   spenders,
+  graph: null,
 } as CandidateSpenderAnswer;
 
 const entities = new Map<string, Entity>([
