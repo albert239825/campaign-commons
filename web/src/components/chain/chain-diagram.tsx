@@ -152,6 +152,7 @@ function NodeBox({
   onSelect,
   onToggle,
   pointing,
+  rootLabel,
 }: {
   ln: LaidOutNode;
   txns: number;
@@ -160,6 +161,7 @@ function NodeBox({
   onSelect: (id: string) => void;
   onToggle: (n: VisibleNode) => void;
   pointing: Pointing;
+  rootLabel: string;
 }) {
   const { node: n, x, y, h } = ln;
   const isDark =
@@ -224,7 +226,7 @@ function NodeBox({
   const chipLines = isRoot ? fitLines(n.name, [NODE_W - 20, NODE_W - 20], 12) : [];
   const chipH = 8 + chipLines.length * 15;
   const term = terminusLabel(n);
-  const label = `${n.name} · ${kindLabel(n)}${isRoot ? " · the spender this page is about" : ""} · ${money(n.amount_in, { compact: false })}${term ? ` · ${term}` : ""} · click for details`;
+  const label = `${n.name} · ${kindLabel(n)}${isRoot ? ` · the ${rootLabel} this page is about` : ""} · ${money(n.amount_in, { compact: false })}${term ? ` · ${term}` : ""} · click for details`;
   const body: TipBody = { kind: "node", node: n, out };
   return (
     <g
@@ -302,7 +304,7 @@ function NodeBox({
             letterSpacing={1}
             fill={ROOT_COLOR}
           >
-            YOU ARE HERE · THE SPENDER
+            YOU ARE HERE · THE {rootLabel.toUpperCase()}
           </text>
           <text x={x + TEXT_X} y={y + chipH + 34} fontSize={SUB_FONT} fill="#737373">
             {ellipsize(subLabel(n, txns), innerW, SUB_FONT)}
@@ -732,6 +734,7 @@ export function ChainDiagram({
           <NodeBox
             key={ln.node.id}
             ln={ln}
+            rootLabel={rootLabel}
             txns={txnsFrom.get(ln.node.id) ?? 0}
             out={moneyOut.get(ln.node.id) ?? 0}
             selected={selectedNode?.id === ln.node.id}
