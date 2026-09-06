@@ -244,30 +244,6 @@
       }
     },
     {
-      "from": "vendor:V-skdknickerbocker",
-      "to": "CR07669584552859271169",
-      "kind": "placement",
-      "amount": 0,
-      "visibility": "disclosed",
-      "depth": 2,
-      "transaction_types": [],
-      "count": 2,
-      "date_range": [
-        "2024-10-10",
-        "2024-10-17"
-      ],
-      "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00540443&payee_name=SKDKNICKERBOCKER",
-      "basis": {
-        "basis": "adjacent",
-        "rule": "Ran Oct 10, 2024 – Oct 17, 2024. In that window (buys dated up to 7 days before first shown through last shown) GIFFORDS PAC reported tv buys to SKDKNICKERBOCKER ($497,750); the FEC does not record which buy placed which ad.",
-        "source_urls": [
-          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00540443&payee_name=SKDKNICKERBOCKER"
-        ],
-        "checked_by": null,
-        "checked_at": null
-      }
-    },
-    {
       "from": "C00540443",
       "to": "CR07669584552859271169",
       "kind": "placement",
@@ -280,33 +256,9 @@
       "source_url": "https://adstransparency.google.com/advertiser/AR13276242677898149889/creative/CR07669584552859271169?political=&region=US",
       "basis": {
         "basis": "inferred",
-        "rule": "Advertiser name matched to this committee by normalized name; Google shows the advertiser, not the paid-for-by line",
+        "rule": "Advertiser name matched to this committee by normalized name; Google's bulk data names the advertiser and carries no paid-for-by field for US ads",
         "source_urls": [
           "https://adstransparency.google.com/advertiser/AR13276242677898149889/creative/CR07669584552859271169?political=&region=US"
-        ],
-        "checked_by": null,
-        "checked_at": null
-      }
-    },
-    {
-      "from": "vendor:V-skdknickerbocker",
-      "to": "CR10627886558088265729",
-      "kind": "placement",
-      "amount": 0,
-      "visibility": "disclosed",
-      "depth": 2,
-      "transaction_types": [],
-      "count": 2,
-      "date_range": [
-        "2024-10-10",
-        "2024-10-17"
-      ],
-      "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00540443&payee_name=SKDKNICKERBOCKER",
-      "basis": {
-        "basis": "adjacent",
-        "rule": "Ran Oct 10, 2024 – Oct 17, 2024. In that window (buys dated up to 7 days before first shown through last shown) GIFFORDS PAC reported tv buys to SKDKNICKERBOCKER ($497,750); the FEC does not record which buy placed which ad.",
-        "source_urls": [
-          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00540443&payee_name=SKDKNICKERBOCKER"
         ],
         "checked_by": null,
         "checked_at": null
@@ -325,33 +277,9 @@
       "source_url": "https://adstransparency.google.com/advertiser/AR13276242677898149889/creative/CR10627886558088265729?political=&region=US",
       "basis": {
         "basis": "inferred",
-        "rule": "Advertiser name matched to this committee by normalized name; Google shows the advertiser, not the paid-for-by line",
+        "rule": "Advertiser name matched to this committee by normalized name; Google's bulk data names the advertiser and carries no paid-for-by field for US ads",
         "source_urls": [
           "https://adstransparency.google.com/advertiser/AR13276242677898149889/creative/CR10627886558088265729?political=&region=US"
-        ],
-        "checked_by": null,
-        "checked_at": null
-      }
-    },
-    {
-      "from": "vendor:V-skdknickerbocker",
-      "to": "CR09654827563599527937",
-      "kind": "placement",
-      "amount": 0,
-      "visibility": "disclosed",
-      "depth": 2,
-      "transaction_types": [],
-      "count": 2,
-      "date_range": [
-        "2024-10-10",
-        "2024-10-17"
-      ],
-      "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00540443&payee_name=SKDKNICKERBOCKER",
-      "basis": {
-        "basis": "adjacent",
-        "rule": "Ran Oct 10, 2024 – Oct 17, 2024. In that window (buys dated up to 7 days before first shown through last shown) GIFFORDS PAC reported tv buys to SKDKNICKERBOCKER ($497,750); the FEC does not record which buy placed which ad.",
-        "source_urls": [
-          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00540443&payee_name=SKDKNICKERBOCKER"
         ],
         "checked_by": null,
         "checked_at": null
@@ -370,7 +298,7 @@
       "source_url": "https://adstransparency.google.com/advertiser/AR13276242677898149889/creative/CR09654827563599527937?political=&region=US",
       "basis": {
         "basis": "inferred",
-        "rule": "Advertiser name matched to this committee by normalized name; Google shows the advertiser, not the paid-for-by line",
+        "rule": "Advertiser name matched to this committee by normalized name; Google's bulk data names the advertiser and carries no paid-for-by field for US ads",
         "source_urls": [
           "https://adstransparency.google.com/advertiser/AR13276242677898149889/creative/CR09654827563599527937?political=&region=US"
         ],

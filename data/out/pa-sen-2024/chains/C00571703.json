@@ -1496,30 +1496,6 @@
       }
     },
     {
-      "from": "vendor:V-main-street-media-group",
-      "to": "CR00368842737589420033",
-      "kind": "placement",
-      "amount": 0,
-      "visibility": "disclosed",
-      "depth": 2,
-      "transaction_types": [],
-      "count": 7,
-      "date_range": [
-        "2024-10-03",
-        "2024-10-12"
-      ],
-      "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00571703&payee_name=MAIN+STREET+MEDIA+GROUP",
-      "basis": {
-        "basis": "adjacent",
-        "rule": "Ran Oct 3, 2024 – Oct 12, 2024. In that window (buys dated up to 7 days before first shown through last shown) SENATE LEADERSHIP FUND reported tv buys to MAIN STREET MEDIA GROUP ($11,245,301); the FEC does not record which buy placed which ad.",
-        "source_urls": [
-          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00571703&payee_name=MAIN+STREET+MEDIA+GROUP"
-        ],
-        "checked_by": null,
-        "checked_at": null
-      }
-    },
-    {
       "from": "vendor:V-starboard-advertising",
       "to": "CR00368842737589420033",
       "kind": "placement",
@@ -1535,33 +1511,9 @@
       "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00571703&payee_name=STARBOARD+ADVERTISING",
       "basis": {
         "basis": "adjacent",
-        "rule": "Ran Oct 3, 2024 – Oct 12, 2024. In that window (buys dated up to 7 days before first shown through last shown) SENATE LEADERSHIP FUND reported digital buys to STARBOARD ADVERTISING ($2,466,680); the FEC does not record which buy placed which ad.",
+        "rule": "Ran Oct 3, 2024 – Oct 12, 2024. In that window (buys dated up to 7 days before first shown through last shown) SENATE LEADERSHIP FUND reported digital buys to STARBOARD ADVERTISING ($2,466,680); the FEC does not record which buy placed which ad. Same-window buys in media that cannot place a Google ad (TV, radio, mail, phones, field, consulting) are not listed.",
         "source_urls": [
           "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00571703&payee_name=STARBOARD+ADVERTISING"
-        ],
-        "checked_by": null,
-        "checked_at": null
-      }
-    },
-    {
-      "from": "vendor:V-connection-strategy",
-      "to": "CR00368842737589420033",
-      "kind": "placement",
-      "amount": 0,
-      "visibility": "disclosed",
-      "depth": 2,
-      "transaction_types": [],
-      "count": 2,
-      "date_range": [
-        "2024-10-03",
-        "2024-10-12"
-      ],
-      "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00571703&payee_name=CONNECTION+STRATEGY+LLC",
-      "basis": {
-        "basis": "adjacent",
-        "rule": "Ran Oct 3, 2024 – Oct 12, 2024. In that window (buys dated up to 7 days before first shown through last shown) SENATE LEADERSHIP FUND reported phones buys to CONNECTION STRATEGY LLC ($90,648); the FEC does not record which buy placed which ad.",
-        "source_urls": [
-          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00571703&payee_name=CONNECTION+STRATEGY+LLC"
         ],
         "checked_by": null,
         "checked_at": null
@@ -1583,7 +1535,7 @@
       "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00571703&payee_name=DMM+MEDIA",
       "basis": {
         "basis": "adjacent",
-        "rule": "Ran Oct 3, 2024 – Oct 12, 2024. In that window (buys dated up to 7 days before first shown through last shown) SENATE LEADERSHIP FUND reported production buys to DMM MEDIA ($33,103); the FEC does not record which buy placed which ad.",
+        "rule": "Ran Oct 3, 2024 – Oct 12, 2024. In that window (buys dated up to 7 days before first shown through last shown) SENATE LEADERSHIP FUND reported production buys to DMM MEDIA ($33,103); the FEC does not record which buy placed which ad. Same-window buys in media that cannot place a Google ad (TV, radio, mail, phones, field, consulting) are not listed.",
         "source_urls": [
           "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00571703&payee_name=DMM+MEDIA"
         ],
@@ -1607,7 +1559,7 @@
       "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00571703&payee_name=RICHARD+SALES+MEDIA",
       "basis": {
         "basis": "adjacent",
-        "rule": "Ran Oct 3, 2024 – Oct 12, 2024. In that window (buys dated up to 7 days before first shown through last shown) SENATE LEADERSHIP FUND reported digital buys to RICHARD SALES MEDIA ($8,000); the FEC does not record which buy placed which ad.",
+        "rule": "Ran Oct 3, 2024 – Oct 12, 2024. In that window (buys dated up to 7 days before first shown through last shown) SENATE LEADERSHIP FUND reported digital buys to RICHARD SALES MEDIA ($8,000); the FEC does not record which buy placed which ad. Same-window buys in media that cannot place a Google ad (TV, radio, mail, phones, field, consulting) are not listed.",
         "source_urls": [
           "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00571703&payee_name=RICHARD+SALES+MEDIA"
         ],
@@ -1640,30 +1592,6 @@
       }
     },
     {
-      "from": "vendor:V-main-street-media-group",
-      "to": "CR11789922739211468801",
-      "kind": "placement",
-      "amount": 0,
-      "visibility": "disclosed",
-      "depth": 2,
-      "transaction_types": [],
-      "count": 4,
-      "date_range": [
-        "2024-10-29",
-        "2024-11-06"
-      ],
-      "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00571703&payee_name=MAIN+STREET+MEDIA+GROUP",
-      "basis": {
-        "basis": "adjacent",
-        "rule": "Ran Oct 29, 2024 – Nov 6, 2024. In that window (buys dated up to 7 days before first shown through last shown) SENATE LEADERSHIP FUND reported tv buys to MAIN STREET MEDIA GROUP ($5,738,132); the FEC does not record which buy placed which ad.",
-        "source_urls": [
-          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00571703&payee_name=MAIN+STREET+MEDIA+GROUP"
-        ],
-        "checked_by": null,
-        "checked_at": null
-      }
-    },
-    {
       "from": "vendor:V-starboard-advertising",
       "to": "CR11789922739211468801",
       "kind": "placement",
@@ -1679,33 +1607,9 @@
       "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00571703&payee_name=STARBOARD+ADVERTISING",
       "basis": {
         "basis": "adjacent",
-        "rule": "Ran Oct 29, 2024 – Nov 6, 2024. In that window (buys dated up to 7 days before first shown through last shown) SENATE LEADERSHIP FUND reported digital buys to STARBOARD ADVERTISING ($3,944,705); the FEC does not record which buy placed which ad.",
+        "rule": "Ran Oct 29, 2024 – Nov 6, 2024. In that window (buys dated up to 7 days before first shown through last shown) SENATE LEADERSHIP FUND reported digital buys to STARBOARD ADVERTISING ($3,944,705); the FEC does not record which buy placed which ad. Same-window buys in media that cannot place a Google ad (TV, radio, mail, phones, field, consulting) are not listed.",
         "source_urls": [
           "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00571703&payee_name=STARBOARD+ADVERTISING"
-        ],
-        "checked_by": null,
-        "checked_at": null
-      }
-    },
-    {
-      "from": "vendor:V-connection-strategy",
-      "to": "CR11789922739211468801",
-      "kind": "placement",
-      "amount": 0,
-      "visibility": "disclosed",
-      "depth": 2,
-      "transaction_types": [],
-      "count": 2,
-      "date_range": [
-        "2024-10-29",
-        "2024-11-06"
-      ],
-      "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00571703&payee_name=CONNECTION+STRATEGY+LLC",
-      "basis": {
-        "basis": "adjacent",
-        "rule": "Ran Oct 29, 2024 – Nov 6, 2024. In that window (buys dated up to 7 days before first shown through last shown) SENATE LEADERSHIP FUND reported phones buys to CONNECTION STRATEGY LLC ($77,491); the FEC does not record which buy placed which ad.",
-        "source_urls": [
-          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00571703&payee_name=CONNECTION+STRATEGY+LLC"
         ],
         "checked_by": null,
         "checked_at": null
@@ -1727,7 +1631,7 @@
       "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00571703&payee_name=DMM+MEDIA",
       "basis": {
         "basis": "adjacent",
-        "rule": "Ran Oct 29, 2024 – Nov 6, 2024. In that window (buys dated up to 7 days before first shown through last shown) SENATE LEADERSHIP FUND reported production buys to DMM MEDIA ($33,824); the FEC does not record which buy placed which ad.",
+        "rule": "Ran Oct 29, 2024 – Nov 6, 2024. In that window (buys dated up to 7 days before first shown through last shown) SENATE LEADERSHIP FUND reported production buys to DMM MEDIA ($33,824); the FEC does not record which buy placed which ad. Same-window buys in media that cannot place a Google ad (TV, radio, mail, phones, field, consulting) are not listed.",
         "source_urls": [
           "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00571703&payee_name=DMM+MEDIA"
         ],
@@ -1751,7 +1655,7 @@
       "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00571703&payee_name=RICHARD+SALES+MEDIA",
       "basis": {
         "basis": "adjacent",
-        "rule": "Ran Oct 29, 2024 – Nov 6, 2024. In that window (buys dated up to 7 days before first shown through last shown) SENATE LEADERSHIP FUND reported digital buys to RICHARD SALES MEDIA ($8,000); the FEC does not record which buy placed which ad.",
+        "rule": "Ran Oct 29, 2024 – Nov 6, 2024. In that window (buys dated up to 7 days before first shown through last shown) SENATE LEADERSHIP FUND reported digital buys to RICHARD SALES MEDIA ($8,000); the FEC does not record which buy placed which ad. Same-window buys in media that cannot place a Google ad (TV, radio, mail, phones, field, consulting) are not listed.",
         "source_urls": [
           "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00571703&payee_name=RICHARD+SALES+MEDIA"
         ],
@@ -1772,33 +1676,9 @@
       "source_url": "https://adstransparency.google.com/advertiser/AR12988012301746438145/creative/CR11789922739211468801?political=&region=US",
       "basis": {
         "basis": "inferred",
-        "rule": "Advertiser name matched to this committee by normalized name; Google shows the advertiser, not the paid-for-by line",
+        "rule": "Advertiser name matched to this committee by normalized name; Google's bulk data names the advertiser and carries no paid-for-by field for US ads",
         "source_urls": [
           "https://adstransparency.google.com/advertiser/AR12988012301746438145/creative/CR11789922739211468801?political=&region=US"
-        ],
-        "checked_by": null,
-        "checked_at": null
-      }
-    },
-    {
-      "from": "vendor:V-main-street-media-group",
-      "to": "CR09843875118978170881",
-      "kind": "placement",
-      "amount": 0,
-      "visibility": "disclosed",
-      "depth": 2,
-      "transaction_types": [],
-      "count": 4,
-      "date_range": [
-        "2024-10-29",
-        "2024-11-06"
-      ],
-      "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00571703&payee_name=MAIN+STREET+MEDIA+GROUP",
-      "basis": {
-        "basis": "adjacent",
-        "rule": "Ran Oct 29, 2024 – Nov 6, 2024. In that window (buys dated up to 7 days before first shown through last shown) SENATE LEADERSHIP FUND reported tv buys to MAIN STREET MEDIA GROUP ($5,738,132); the FEC does not record which buy placed which ad.",
-        "source_urls": [
-          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00571703&payee_name=MAIN+STREET+MEDIA+GROUP"
         ],
         "checked_by": null,
         "checked_at": null
@@ -1820,33 +1700,9 @@
       "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00571703&payee_name=STARBOARD+ADVERTISING",
       "basis": {
         "basis": "adjacent",
-        "rule": "Ran Oct 29, 2024 – Nov 6, 2024. In that window (buys dated up to 7 days before first shown through last shown) SENATE LEADERSHIP FUND reported digital buys to STARBOARD ADVERTISING ($3,944,705); the FEC does not record which buy placed which ad.",
+        "rule": "Ran Oct 29, 2024 – Nov 6, 2024. In that window (buys dated up to 7 days before first shown through last shown) SENATE LEADERSHIP FUND reported digital buys to STARBOARD ADVERTISING ($3,944,705); the FEC does not record which buy placed which ad. Same-window buys in media that cannot place a Google ad (TV, radio, mail, phones, field, consulting) are not listed.",
         "source_urls": [
           "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00571703&payee_name=STARBOARD+ADVERTISING"
-        ],
-        "checked_by": null,
-        "checked_at": null
-      }
-    },
-    {
-      "from": "vendor:V-connection-strategy",
-      "to": "CR09843875118978170881",
-      "kind": "placement",
-      "amount": 0,
-      "visibility": "disclosed",
-      "depth": 2,
-      "transaction_types": [],
-      "count": 2,
-      "date_range": [
-        "2024-10-29",
-        "2024-11-06"
-      ],
-      "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00571703&payee_name=CONNECTION+STRATEGY+LLC",
-      "basis": {
-        "basis": "adjacent",
-        "rule": "Ran Oct 29, 2024 – Nov 6, 2024. In that window (buys dated up to 7 days before first shown through last shown) SENATE LEADERSHIP FUND reported phones buys to CONNECTION STRATEGY LLC ($77,491); the FEC does not record which buy placed which ad.",
-        "source_urls": [
-          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00571703&payee_name=CONNECTION+STRATEGY+LLC"
         ],
         "checked_by": null,
         "checked_at": null
@@ -1868,7 +1724,7 @@
       "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00571703&payee_name=DMM+MEDIA",
       "basis": {
         "basis": "adjacent",
-        "rule": "Ran Oct 29, 2024 – Nov 6, 2024. In that window (buys dated up to 7 days before first shown through last shown) SENATE LEADERSHIP FUND reported production buys to DMM MEDIA ($33,824); the FEC does not record which buy placed which ad.",
+        "rule": "Ran Oct 29, 2024 – Nov 6, 2024. In that window (buys dated up to 7 days before first shown through last shown) SENATE LEADERSHIP FUND reported production buys to DMM MEDIA ($33,824); the FEC does not record which buy placed which ad. Same-window buys in media that cannot place a Google ad (TV, radio, mail, phones, field, consulting) are not listed.",
         "source_urls": [
           "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00571703&payee_name=DMM+MEDIA"
         ],
@@ -1892,7 +1748,7 @@
       "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00571703&payee_name=RICHARD+SALES+MEDIA",
       "basis": {
         "basis": "adjacent",
-        "rule": "Ran Oct 29, 2024 – Nov 6, 2024. In that window (buys dated up to 7 days before first shown through last shown) SENATE LEADERSHIP FUND reported digital buys to RICHARD SALES MEDIA ($8,000); the FEC does not record which buy placed which ad.",
+        "rule": "Ran Oct 29, 2024 – Nov 6, 2024. In that window (buys dated up to 7 days before first shown through last shown) SENATE LEADERSHIP FUND reported digital buys to RICHARD SALES MEDIA ($8,000); the FEC does not record which buy placed which ad. Same-window buys in media that cannot place a Google ad (TV, radio, mail, phones, field, consulting) are not listed.",
         "source_urls": [
           "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00571703&payee_name=RICHARD+SALES+MEDIA"
         ],
@@ -1913,33 +1769,9 @@
       "source_url": "https://adstransparency.google.com/advertiser/AR12988012301746438145/creative/CR09843875118978170881?political=&region=US",
       "basis": {
         "basis": "inferred",
-        "rule": "Advertiser name matched to this committee by normalized name; Google shows the advertiser, not the paid-for-by line",
+        "rule": "Advertiser name matched to this committee by normalized name; Google's bulk data names the advertiser and carries no paid-for-by field for US ads",
         "source_urls": [
           "https://adstransparency.google.com/advertiser/AR12988012301746438145/creative/CR09843875118978170881?political=&region=US"
-        ],
-        "checked_by": null,
-        "checked_at": null
-      }
-    },
-    {
-      "from": "vendor:V-main-street-media-group",
-      "to": "CR04948514275950854145",
-      "kind": "placement",
-      "amount": 0,
-      "visibility": "disclosed",
-      "depth": 2,
-      "transaction_types": [],
-      "count": 7,
-      "date_range": [
-        "2024-10-23",
-        "2024-10-29"
-      ],
-      "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00571703&payee_name=MAIN+STREET+MEDIA+GROUP",
-      "basis": {
-        "basis": "adjacent",
-        "rule": "Ran Oct 23, 2024 – Oct 29, 2024. In that window (buys dated up to 7 days before first shown through last shown) SENATE LEADERSHIP FUND reported tv buys to MAIN STREET MEDIA GROUP ($10,643,264); the FEC does not record which buy placed which ad.",
-        "source_urls": [
-          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00571703&payee_name=MAIN+STREET+MEDIA+GROUP"
         ],
         "checked_by": null,
         "checked_at": null
@@ -1961,33 +1793,9 @@
       "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00571703&payee_name=STARBOARD+ADVERTISING",
       "basis": {
         "basis": "adjacent",
-        "rule": "Ran Oct 23, 2024 – Oct 29, 2024. In that window (buys dated up to 7 days before first shown through last shown) SENATE LEADERSHIP FUND reported digital buys to STARBOARD ADVERTISING ($3,944,705); the FEC does not record which buy placed which ad.",
+        "rule": "Ran Oct 23, 2024 – Oct 29, 2024. In that window (buys dated up to 7 days before first shown through last shown) SENATE LEADERSHIP FUND reported digital buys to STARBOARD ADVERTISING ($3,944,705); the FEC does not record which buy placed which ad. Same-window buys in media that cannot place a Google ad (TV, radio, mail, phones, field, consulting) are not listed.",
         "source_urls": [
           "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00571703&payee_name=STARBOARD+ADVERTISING"
-        ],
-        "checked_by": null,
-        "checked_at": null
-      }
-    },
-    {
-      "from": "vendor:V-connection-strategy",
-      "to": "CR04948514275950854145",
-      "kind": "placement",
-      "amount": 0,
-      "visibility": "disclosed",
-      "depth": 2,
-      "transaction_types": [],
-      "count": 2,
-      "date_range": [
-        "2024-10-23",
-        "2024-10-29"
-      ],
-      "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00571703&payee_name=CONNECTION+STRATEGY+LLC",
-      "basis": {
-        "basis": "adjacent",
-        "rule": "Ran Oct 23, 2024 – Oct 29, 2024. In that window (buys dated up to 7 days before first shown through last shown) SENATE LEADERSHIP FUND reported phones buys to CONNECTION STRATEGY LLC ($81,619); the FEC does not record which buy placed which ad.",
-        "source_urls": [
-          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00571703&payee_name=CONNECTION+STRATEGY+LLC"
         ],
         "checked_by": null,
         "checked_at": null
@@ -2009,7 +1817,7 @@
       "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00571703&payee_name=DMM+MEDIA",
       "basis": {
         "basis": "adjacent",
-        "rule": "Ran Oct 23, 2024 – Oct 29, 2024. In that window (buys dated up to 7 days before first shown through last shown) SENATE LEADERSHIP FUND reported production buys to DMM MEDIA ($33,824); the FEC does not record which buy placed which ad.",
+        "rule": "Ran Oct 23, 2024 – Oct 29, 2024. In that window (buys dated up to 7 days before first shown through last shown) SENATE LEADERSHIP FUND reported production buys to DMM MEDIA ($33,824); the FEC does not record which buy placed which ad. Same-window buys in media that cannot place a Google ad (TV, radio, mail, phones, field, consulting) are not listed.",
         "source_urls": [
           "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00571703&payee_name=DMM+MEDIA"
         ],
@@ -2033,7 +1841,7 @@
       "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00571703&payee_name=RICHARD+SALES+MEDIA",
       "basis": {
         "basis": "adjacent",
-        "rule": "Ran Oct 23, 2024 – Oct 29, 2024. In that window (buys dated up to 7 days before first shown through last shown) SENATE LEADERSHIP FUND reported digital buys to RICHARD SALES MEDIA ($8,000); the FEC does not record which buy placed which ad.",
+        "rule": "Ran Oct 23, 2024 – Oct 29, 2024. In that window (buys dated up to 7 days before first shown through last shown) SENATE LEADERSHIP FUND reported digital buys to RICHARD SALES MEDIA ($8,000); the FEC does not record which buy placed which ad. Same-window buys in media that cannot place a Google ad (TV, radio, mail, phones, field, consulting) are not listed.",
         "source_urls": [
           "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00571703&payee_name=RICHARD+SALES+MEDIA"
         ],
@@ -2054,33 +1862,9 @@
       "source_url": "https://adstransparency.google.com/advertiser/AR12988012301746438145/creative/CR04948514275950854145?political=&region=US",
       "basis": {
         "basis": "inferred",
-        "rule": "Advertiser name matched to this committee by normalized name; Google shows the advertiser, not the paid-for-by line",
+        "rule": "Advertiser name matched to this committee by normalized name; Google's bulk data names the advertiser and carries no paid-for-by field for US ads",
         "source_urls": [
           "https://adstransparency.google.com/advertiser/AR12988012301746438145/creative/CR04948514275950854145?political=&region=US"
-        ],
-        "checked_by": null,
-        "checked_at": null
-      }
-    },
-    {
-      "from": "vendor:V-main-street-media-group",
-      "to": "CR14846206348760186881",
-      "kind": "placement",
-      "amount": 0,
-      "visibility": "disclosed",
-      "depth": 2,
-      "transaction_types": [],
-      "count": 4,
-      "date_range": [
-        "2024-09-10",
-        "2024-09-17"
-      ],
-      "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00571703&payee_name=MAIN+STREET+MEDIA+GROUP",
-      "basis": {
-        "basis": "adjacent",
-        "rule": "Ran Sep 10, 2024 – Sep 17, 2024. In that window (buys dated up to 7 days before first shown through last shown) SENATE LEADERSHIP FUND reported tv buys to MAIN STREET MEDIA GROUP ($8,623,926); the FEC does not record which buy placed which ad.",
-        "source_urls": [
-          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00571703&payee_name=MAIN+STREET+MEDIA+GROUP"
         ],
         "checked_by": null,
         "checked_at": null
@@ -2102,33 +1886,9 @@
       "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00571703&payee_name=STARBOARD+ADVERTISING",
       "basis": {
         "basis": "adjacent",
-        "rule": "Ran Sep 10, 2024 – Sep 17, 2024. In that window (buys dated up to 7 days before first shown through last shown) SENATE LEADERSHIP FUND reported digital buys to STARBOARD ADVERTISING ($3,757,245); the FEC does not record which buy placed which ad.",
+        "rule": "Ran Sep 10, 2024 – Sep 17, 2024. In that window (buys dated up to 7 days before first shown through last shown) SENATE LEADERSHIP FUND reported digital buys to STARBOARD ADVERTISING ($3,757,245); the FEC does not record which buy placed which ad. Same-window buys in media that cannot place a Google ad (TV, radio, mail, phones, field, consulting) are not listed.",
         "source_urls": [
           "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00571703&payee_name=STARBOARD+ADVERTISING"
-        ],
-        "checked_by": null,
-        "checked_at": null
-      }
-    },
-    {
-      "from": "vendor:V-connection-strategy",
-      "to": "CR14846206348760186881",
-      "kind": "placement",
-      "amount": 0,
-      "visibility": "disclosed",
-      "depth": 2,
-      "transaction_types": [],
-      "count": 2,
-      "date_range": [
-        "2024-09-10",
-        "2024-09-17"
-      ],
-      "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00571703&payee_name=CONNECTION+STRATEGY+LLC",
-      "basis": {
-        "basis": "adjacent",
-        "rule": "Ran Sep 10, 2024 – Sep 17, 2024. In that window (buys dated up to 7 days before first shown through last shown) SENATE LEADERSHIP FUND reported phones buys to CONNECTION STRATEGY LLC ($101,744); the FEC does not record which buy placed which ad.",
-        "source_urls": [
-          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00571703&payee_name=CONNECTION+STRATEGY+LLC"
         ],
         "checked_by": null,
         "checked_at": null
@@ -2150,7 +1910,7 @@
       "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00571703&payee_name=DMM+MEDIA",
       "basis": {
         "basis": "adjacent",
-        "rule": "Ran Sep 10, 2024 – Sep 17, 2024. In that window (buys dated up to 7 days before first shown through last shown) SENATE LEADERSHIP FUND reported production buys to DMM MEDIA ($61,737); the FEC does not record which buy placed which ad.",
+        "rule": "Ran Sep 10, 2024 – Sep 17, 2024. In that window (buys dated up to 7 days before first shown through last shown) SENATE LEADERSHIP FUND reported production buys to DMM MEDIA ($61,737); the FEC does not record which buy placed which ad. Same-window buys in media that cannot place a Google ad (TV, radio, mail, phones, field, consulting) are not listed.",
         "source_urls": [
           "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00571703&payee_name=DMM+MEDIA"
         ],
@@ -2174,7 +1934,7 @@
       "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00571703&payee_name=RICHARD+SALES+MEDIA",
       "basis": {
         "basis": "adjacent",
-        "rule": "Ran Sep 10, 2024 – Sep 17, 2024. In that window (buys dated up to 7 days before first shown through last shown) SENATE LEADERSHIP FUND reported digital buys to RICHARD SALES MEDIA ($20,000); the FEC does not record which buy placed which ad.",
+        "rule": "Ran Sep 10, 2024 – Sep 17, 2024. In that window (buys dated up to 7 days before first shown through last shown) SENATE LEADERSHIP FUND reported digital buys to RICHARD SALES MEDIA ($20,000); the FEC does not record which buy placed which ad. Same-window buys in media that cannot place a Google ad (TV, radio, mail, phones, field, consulting) are not listed.",
         "source_urls": [
           "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00571703&payee_name=RICHARD+SALES+MEDIA"
         ],
@@ -2195,33 +1955,9 @@
       "source_url": "https://adstransparency.google.com/advertiser/AR12988012301746438145/creative/CR14846206348760186881?political=&region=US",
       "basis": {
         "basis": "inferred",
-        "rule": "Advertiser name matched to this committee by normalized name; Google shows the advertiser, not the paid-for-by line",
+        "rule": "Advertiser name matched to this committee by normalized name; Google's bulk data names the advertiser and carries no paid-for-by field for US ads",
         "source_urls": [
           "https://adstransparency.google.com/advertiser/AR12988012301746438145/creative/CR14846206348760186881?political=&region=US"
-        ],
-        "checked_by": null,
-        "checked_at": null
-      }
-    },
-    {
-      "from": "vendor:V-main-street-media-group",
-      "to": "CR16183465650688098305",
-      "kind": "placement",
-      "amount": 0,
-      "visibility": "disclosed",
-      "depth": 2,
-      "transaction_types": [],
-      "count": 4,
-      "date_range": [
-        "2024-10-29",
-        "2024-11-06"
-      ],
-      "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00571703&payee_name=MAIN+STREET+MEDIA+GROUP",
-      "basis": {
-        "basis": "adjacent",
-        "rule": "Ran Oct 29, 2024 – Nov 6, 2024. In that window (buys dated up to 7 days before first shown through last shown) SENATE LEADERSHIP FUND reported tv buys to MAIN STREET MEDIA GROUP ($5,738,132); the FEC does not record which buy placed which ad.",
-        "source_urls": [
-          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00571703&payee_name=MAIN+STREET+MEDIA+GROUP"
         ],
         "checked_by": null,
         "checked_at": null
@@ -2243,33 +1979,9 @@
       "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00571703&payee_name=STARBOARD+ADVERTISING",
       "basis": {
         "basis": "adjacent",
-        "rule": "Ran Oct 29, 2024 – Nov 6, 2024. In that window (buys dated up to 7 days before first shown through last shown) SENATE LEADERSHIP FUND reported digital buys to STARBOARD ADVERTISING ($3,944,705); the FEC does not record which buy placed which ad.",
+        "rule": "Ran Oct 29, 2024 – Nov 6, 2024. In that window (buys dated up to 7 days before first shown through last shown) SENATE LEADERSHIP FUND reported digital buys to STARBOARD ADVERTISING ($3,944,705); the FEC does not record which buy placed which ad. Same-window buys in media that cannot place a Google ad (TV, radio, mail, phones, field, consulting) are not listed.",
         "source_urls": [
           "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00571703&payee_name=STARBOARD+ADVERTISING"
-        ],
-        "checked_by": null,
-        "checked_at": null
-      }
-    },
-    {
-      "from": "vendor:V-connection-strategy",
-      "to": "CR16183465650688098305",
-      "kind": "placement",
-      "amount": 0,
-      "visibility": "disclosed",
-      "depth": 2,
-      "transaction_types": [],
-      "count": 2,
-      "date_range": [
-        "2024-10-29",
-        "2024-11-06"
-      ],
-      "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00571703&payee_name=CONNECTION+STRATEGY+LLC",
-      "basis": {
-        "basis": "adjacent",
-        "rule": "Ran Oct 29, 2024 – Nov 6, 2024. In that window (buys dated up to 7 days before first shown through last shown) SENATE LEADERSHIP FUND reported phones buys to CONNECTION STRATEGY LLC ($77,491); the FEC does not record which buy placed which ad.",
-        "source_urls": [
-          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00571703&payee_name=CONNECTION+STRATEGY+LLC"
         ],
         "checked_by": null,
         "checked_at": null
@@ -2291,7 +2003,7 @@
       "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00571703&payee_name=DMM+MEDIA",
       "basis": {
         "basis": "adjacent",
-        "rule": "Ran Oct 29, 2024 – Nov 6, 2024. In that window (buys dated up to 7 days before first shown through last shown) SENATE LEADERSHIP FUND reported production buys to DMM MEDIA ($33,824); the FEC does not record which buy placed which ad.",
+        "rule": "Ran Oct 29, 2024 – Nov 6, 2024. In that window (buys dated up to 7 days before first shown through last shown) SENATE LEADERSHIP FUND reported production buys to DMM MEDIA ($33,824); the FEC does not record which buy placed which ad. Same-window buys in media that cannot place a Google ad (TV, radio, mail, phones, field, consulting) are not listed.",
         "source_urls": [
           "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00571703&payee_name=DMM+MEDIA"
         ],
@@ -2315,7 +2027,7 @@
       "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00571703&payee_name=RICHARD+SALES+MEDIA",
       "basis": {
         "basis": "adjacent",
-        "rule": "Ran Oct 29, 2024 – Nov 6, 2024. In that window (buys dated up to 7 days before first shown through last shown) SENATE LEADERSHIP FUND reported digital buys to RICHARD SALES MEDIA ($8,000); the FEC does not record which buy placed which ad.",
+        "rule": "Ran Oct 29, 2024 – Nov 6, 2024. In that window (buys dated up to 7 days before first shown through last shown) SENATE LEADERSHIP FUND reported digital buys to RICHARD SALES MEDIA ($8,000); the FEC does not record which buy placed which ad. Same-window buys in media that cannot place a Google ad (TV, radio, mail, phones, field, consulting) are not listed.",
         "source_urls": [
           "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00571703&payee_name=RICHARD+SALES+MEDIA"
         ],
@@ -2336,33 +2048,9 @@
       "source_url": "https://adstransparency.google.com/advertiser/AR12988012301746438145/creative/CR16183465650688098305?political=&region=US",
       "basis": {
         "basis": "inferred",
-        "rule": "Advertiser name matched to this committee by normalized name; Google shows the advertiser, not the paid-for-by line",
+        "rule": "Advertiser name matched to this committee by normalized name; Google's bulk data names the advertiser and carries no paid-for-by field for US ads",
         "source_urls": [
           "https://adstransparency.google.com/advertiser/AR12988012301746438145/creative/CR16183465650688098305?political=&region=US"
-        ],
-        "checked_by": null,
-        "checked_at": null
-      }
-    },
-    {
-      "from": "vendor:V-main-street-media-group",
-      "to": "CR13454551182949220353",
-      "kind": "placement",
-      "amount": 0,
-      "visibility": "disclosed",
-      "depth": 2,
-      "transaction_types": [],
-      "count": 2,
-      "date_range": [
-        "2024-09-24",
-        "2024-09-30"
-      ],
-      "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00571703&payee_name=MAIN+STREET+MEDIA+GROUP",
-      "basis": {
-        "basis": "adjacent",
-        "rule": "Ran Sep 24, 2024 – Sep 30, 2024. In that window (buys dated up to 7 days before first shown through last shown) SENATE LEADERSHIP FUND reported tv buys to MAIN STREET MEDIA GROUP ($4,462,594); the FEC does not record which buy placed which ad.",
-        "source_urls": [
-          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00571703&payee_name=MAIN+STREET+MEDIA+GROUP"
         ],
         "checked_by": null,
         "checked_at": null
@@ -2384,33 +2072,9 @@
       "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00571703&payee_name=STARBOARD+ADVERTISING",
       "basis": {
         "basis": "adjacent",
-        "rule": "Ran Sep 24, 2024 – Sep 30, 2024. In that window (buys dated up to 7 days before first shown through last shown) SENATE LEADERSHIP FUND reported digital buys to STARBOARD ADVERTISING ($2,506,589); the FEC does not record which buy placed which ad.",
+        "rule": "Ran Sep 24, 2024 – Sep 30, 2024. In that window (buys dated up to 7 days before first shown through last shown) SENATE LEADERSHIP FUND reported digital buys to STARBOARD ADVERTISING ($2,506,589); the FEC does not record which buy placed which ad. Same-window buys in media that cannot place a Google ad (TV, radio, mail, phones, field, consulting) are not listed.",
         "source_urls": [
           "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00571703&payee_name=STARBOARD+ADVERTISING"
-        ],
-        "checked_by": null,
-        "checked_at": null
-      }
-    },
-    {
-      "from": "vendor:V-connection-strategy",
-      "to": "CR13454551182949220353",
-      "kind": "placement",
-      "amount": 0,
-      "visibility": "disclosed",
-      "depth": 2,
-      "transaction_types": [],
-      "count": 2,
-      "date_range": [
-        "2024-09-24",
-        "2024-09-30"
-      ],
-      "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00571703&payee_name=CONNECTION+STRATEGY+LLC",
-      "basis": {
-        "basis": "adjacent",
-        "rule": "Ran Sep 24, 2024 – Sep 30, 2024. In that window (buys dated up to 7 days before first shown through last shown) SENATE LEADERSHIP FUND reported phones buys to CONNECTION STRATEGY LLC ($93,015); the FEC does not record which buy placed which ad.",
-        "source_urls": [
-          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00571703&payee_name=CONNECTION+STRATEGY+LLC"
         ],
         "checked_by": null,
         "checked_at": null
@@ -2432,7 +2096,7 @@
       "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00571703&payee_name=DMM+MEDIA",
       "basis": {
         "basis": "adjacent",
-        "rule": "Ran Sep 24, 2024 – Sep 30, 2024. In that window (buys dated up to 7 days before first shown through last shown) SENATE LEADERSHIP FUND reported production buys to DMM MEDIA ($45,653); the FEC does not record which buy placed which ad.",
+        "rule": "Ran Sep 24, 2024 – Sep 30, 2024. In that window (buys dated up to 7 days before first shown through last shown) SENATE LEADERSHIP FUND reported production buys to DMM MEDIA ($45,653); the FEC does not record which buy placed which ad. Same-window buys in media that cannot place a Google ad (TV, radio, mail, phones, field, consulting) are not listed.",
         "source_urls": [
           "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00571703&payee_name=DMM+MEDIA"
         ],
@@ -2456,7 +2120,7 @@
       "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00571703&payee_name=RICHARD+SALES+MEDIA",
       "basis": {
         "basis": "adjacent",
-        "rule": "Ran Sep 24, 2024 – Sep 30, 2024. In that window (buys dated up to 7 days before first shown through last shown) SENATE LEADERSHIP FUND reported digital buys to RICHARD SALES MEDIA ($12,000); the FEC does not record which buy placed which ad.",
+        "rule": "Ran Sep 24, 2024 – Sep 30, 2024. In that window (buys dated up to 7 days before first shown through last shown) SENATE LEADERSHIP FUND reported digital buys to RICHARD SALES MEDIA ($12,000); the FEC does not record which buy placed which ad. Same-window buys in media that cannot place a Google ad (TV, radio, mail, phones, field, consulting) are not listed.",
         "source_urls": [
           "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00571703&payee_name=RICHARD+SALES+MEDIA"
         ],
@@ -2477,33 +2141,9 @@
       "source_url": "https://adstransparency.google.com/advertiser/AR12988012301746438145/creative/CR13454551182949220353?political=&region=US",
       "basis": {
         "basis": "inferred",
-        "rule": "Advertiser name matched to this committee by normalized name; Google shows the advertiser, not the paid-for-by line",
+        "rule": "Advertiser name matched to this committee by normalized name; Google's bulk data names the advertiser and carries no paid-for-by field for US ads",
         "source_urls": [
           "https://adstransparency.google.com/advertiser/AR12988012301746438145/creative/CR13454551182949220353?political=&region=US"
-        ],
-        "checked_by": null,
-        "checked_at": null
-      }
-    },
-    {
-      "from": "vendor:V-main-street-media-group",
-      "to": "CR05089673976771248129",
-      "kind": "placement",
-      "amount": 0,
-      "visibility": "disclosed",
-      "depth": 2,
-      "transaction_types": [],
-      "count": 7,
-      "date_range": [
-        "2024-10-23",
-        "2024-10-29"
-      ],
-      "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00571703&payee_name=MAIN+STREET+MEDIA+GROUP",
-      "basis": {
-        "basis": "adjacent",
-        "rule": "Ran Oct 23, 2024 – Oct 29, 2024. In that window (buys dated up to 7 days before first shown through last shown) SENATE LEADERSHIP FUND reported tv buys to MAIN STREET MEDIA GROUP ($10,643,264); the FEC does not record which buy placed which ad.",
-        "source_urls": [
-          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00571703&payee_name=MAIN+STREET+MEDIA+GROUP"
         ],
         "checked_by": null,
         "checked_at": null
@@ -2525,33 +2165,9 @@
       "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00571703&payee_name=STARBOARD+ADVERTISING",
       "basis": {
         "basis": "adjacent",
-        "rule": "Ran Oct 23, 2024 – Oct 29, 2024. In that window (buys dated up to 7 days before first shown through last shown) SENATE LEADERSHIP FUND reported digital buys to STARBOARD ADVERTISING ($3,944,705); the FEC does not record which buy placed which ad.",
+        "rule": "Ran Oct 23, 2024 – Oct 29, 2024. In that window (buys dated up to 7 days before first shown through last shown) SENATE LEADERSHIP FUND reported digital buys to STARBOARD ADVERTISING ($3,944,705); the FEC does not record which buy placed which ad. Same-window buys in media that cannot place a Google ad (TV, radio, mail, phones, field, consulting) are not listed.",
         "source_urls": [
           "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00571703&payee_name=STARBOARD+ADVERTISING"
-        ],
-        "checked_by": null,
-        "checked_at": null
-      }
-    },
-    {
-      "from": "vendor:V-connection-strategy",
-      "to": "CR05089673976771248129",
-      "kind": "placement",
-      "amount": 0,
-      "visibility": "disclosed",
-      "depth": 2,
-      "transaction_types": [],
-      "count": 2,
-      "date_range": [
-        "2024-10-23",
-        "2024-10-29"
-      ],
-      "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00571703&payee_name=CONNECTION+STRATEGY+LLC",
-      "basis": {
-        "basis": "adjacent",
-        "rule": "Ran Oct 23, 2024 – Oct 29, 2024. In that window (buys dated up to 7 days before first shown through last shown) SENATE LEADERSHIP FUND reported phones buys to CONNECTION STRATEGY LLC ($81,619); the FEC does not record which buy placed which ad.",
-        "source_urls": [
-          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00571703&payee_name=CONNECTION+STRATEGY+LLC"
         ],
         "checked_by": null,
         "checked_at": null
@@ -2573,7 +2189,7 @@
       "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00571703&payee_name=DMM+MEDIA",
       "basis": {
         "basis": "adjacent",
-        "rule": "Ran Oct 23, 2024 – Oct 29, 2024. In that window (buys dated up to 7 days before first shown through last shown) SENATE LEADERSHIP FUND reported production buys to DMM MEDIA ($33,824); the FEC does not record which buy placed which ad.",
+        "rule": "Ran Oct 23, 2024 – Oct 29, 2024. In that window (buys dated up to 7 days before first shown through last shown) SENATE LEADERSHIP FUND reported production buys to DMM MEDIA ($33,824); the FEC does not record which buy placed which ad. Same-window buys in media that cannot place a Google ad (TV, radio, mail, phones, field, consulting) are not listed.",
         "source_urls": [
           "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00571703&payee_name=DMM+MEDIA"
         ],
@@ -2597,7 +2213,7 @@
       "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00571703&payee_name=RICHARD+SALES+MEDIA",
       "basis": {
         "basis": "adjacent",
-        "rule": "Ran Oct 23, 2024 – Oct 29, 2024. In that window (buys dated up to 7 days before first shown through last shown) SENATE LEADERSHIP FUND reported digital buys to RICHARD SALES MEDIA ($8,000); the FEC does not record which buy placed which ad.",
+        "rule": "Ran Oct 23, 2024 – Oct 29, 2024. In that window (buys dated up to 7 days before first shown through last shown) SENATE LEADERSHIP FUND reported digital buys to RICHARD SALES MEDIA ($8,000); the FEC does not record which buy placed which ad. Same-window buys in media that cannot place a Google ad (TV, radio, mail, phones, field, consulting) are not listed.",
         "source_urls": [
           "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00571703&payee_name=RICHARD+SALES+MEDIA"
         ],
@@ -2618,33 +2234,9 @@
       "source_url": "https://adstransparency.google.com/advertiser/AR12988012301746438145/creative/CR05089673976771248129?political=&region=US",
       "basis": {
         "basis": "inferred",
-        "rule": "Advertiser name matched to this committee by normalized name; Google shows the advertiser, not the paid-for-by line",
+        "rule": "Advertiser name matched to this committee by normalized name; Google's bulk data names the advertiser and carries no paid-for-by field for US ads",
         "source_urls": [
           "https://adstransparency.google.com/advertiser/AR12988012301746438145/creative/CR05089673976771248129?political=&region=US"
-        ],
-        "checked_by": null,
-        "checked_at": null
-      }
-    },
-    {
-      "from": "vendor:V-main-street-media-group",
-      "to": "CR11296337950729568257",
-      "kind": "placement",
-      "amount": 0,
-      "visibility": "disclosed",
-      "depth": 2,
-      "transaction_types": [],
-      "count": 7,
-      "date_range": [
-        "2024-10-23",
-        "2024-10-29"
-      ],
-      "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00571703&payee_name=MAIN+STREET+MEDIA+GROUP",
-      "basis": {
-        "basis": "adjacent",
-        "rule": "Ran Oct 23, 2024 – Oct 29, 2024. In that window (buys dated up to 7 days before first shown through last shown) SENATE LEADERSHIP FUND reported tv buys to MAIN STREET MEDIA GROUP ($10,643,264); the FEC does not record which buy placed which ad.",
-        "source_urls": [
-          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00571703&payee_name=MAIN+STREET+MEDIA+GROUP"
         ],
         "checked_by": null,
         "checked_at": null
@@ -2666,33 +2258,9 @@
       "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00571703&payee_name=STARBOARD+ADVERTISING",
       "basis": {
         "basis": "adjacent",
-        "rule": "Ran Oct 23, 2024 – Oct 29, 2024. In that window (buys dated up to 7 days before first shown through last shown) SENATE LEADERSHIP FUND reported digital buys to STARBOARD ADVERTISING ($3,944,705); the FEC does not record which buy placed which ad.",
+        "rule": "Ran Oct 23, 2024 – Oct 29, 2024. In that window (buys dated up to 7 days before first shown through last shown) SENATE LEADERSHIP FUND reported digital buys to STARBOARD ADVERTISING ($3,944,705); the FEC does not record which buy placed which ad. Same-window buys in media that cannot place a Google ad (TV, radio, mail, phones, field, consulting) are not listed.",
         "source_urls": [
           "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00571703&payee_name=STARBOARD+ADVERTISING"
-        ],
-        "checked_by": null,
-        "checked_at": null
-      }
-    },
-    {
-      "from": "vendor:V-connection-strategy",
-      "to": "CR11296337950729568257",
-      "kind": "placement",
-      "amount": 0,
-      "visibility": "disclosed",
-      "depth": 2,
-      "transaction_types": [],
-      "count": 2,
-      "date_range": [
-        "2024-10-23",
-        "2024-10-29"
-      ],
-      "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00571703&payee_name=CONNECTION+STRATEGY+LLC",
-      "basis": {
-        "basis": "adjacent",
-        "rule": "Ran Oct 23, 2024 – Oct 29, 2024. In that window (buys dated up to 7 days before first shown through last shown) SENATE LEADERSHIP FUND reported phones buys to CONNECTION STRATEGY LLC ($81,619); the FEC does not record which buy placed which ad.",
-        "source_urls": [
-          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00571703&payee_name=CONNECTION+STRATEGY+LLC"
         ],
         "checked_by": null,
         "checked_at": null
@@ -2714,7 +2282,7 @@
       "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00571703&payee_name=DMM+MEDIA",
       "basis": {
         "basis": "adjacent",
-        "rule": "Ran Oct 23, 2024 – Oct 29, 2024. In that window (buys dated up to 7 days before first shown through last shown) SENATE LEADERSHIP FUND reported production buys to DMM MEDIA ($33,824); the FEC does not record which buy placed which ad.",
+        "rule": "Ran Oct 23, 2024 – Oct 29, 2024. In that window (buys dated up to 7 days before first shown through last shown) SENATE LEADERSHIP FUND reported production buys to DMM MEDIA ($33,824); the FEC does not record which buy placed which ad. Same-window buys in media that cannot place a Google ad (TV, radio, mail, phones, field, consulting) are not listed.",
         "source_urls": [
           "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00571703&payee_name=DMM+MEDIA"
         ],
@@ -2738,7 +2306,7 @@
       "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00571703&payee_name=RICHARD+SALES+MEDIA",
       "basis": {
         "basis": "adjacent",
-        "rule": "Ran Oct 23, 2024 – Oct 29, 2024. In that window (buys dated up to 7 days before first shown through last shown) SENATE LEADERSHIP FUND reported digital buys to RICHARD SALES MEDIA ($8,000); the FEC does not record which buy placed which ad.",
+        "rule": "Ran Oct 23, 2024 – Oct 29, 2024. In that window (buys dated up to 7 days before first shown through last shown) SENATE LEADERSHIP FUND reported digital buys to RICHARD SALES MEDIA ($8,000); the FEC does not record which buy placed which ad. Same-window buys in media that cannot place a Google ad (TV, radio, mail, phones, field, consulting) are not listed.",
         "source_urls": [
           "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00571703&payee_name=RICHARD+SALES+MEDIA"
         ],
@@ -2759,33 +2327,9 @@
       "source_url": "https://adstransparency.google.com/advertiser/AR12988012301746438145/creative/CR11296337950729568257?political=&region=US",
       "basis": {
         "basis": "inferred",
-        "rule": "Advertiser name matched to this committee by normalized name; Google shows the advertiser, not the paid-for-by line",
+        "rule": "Advertiser name matched to this committee by normalized name; Google's bulk data names the advertiser and carries no paid-for-by field for US ads",
         "source_urls": [
           "https://adstransparency.google.com/advertiser/AR12988012301746438145/creative/CR11296337950729568257?political=&region=US"
-        ],
-        "checked_by": null,
-        "checked_at": null
-      }
-    },
-    {
-      "from": "vendor:V-main-street-media-group",
-      "to": "CR09482672355114221569",
-      "kind": "placement",
-      "amount": 0,
-      "visibility": "disclosed",
-      "depth": 2,
-      "transaction_types": [],
-      "count": 4,
-      "date_range": [
-        "2024-10-29",
-        "2024-11-06"
-      ],
-      "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00571703&payee_name=MAIN+STREET+MEDIA+GROUP",
-      "basis": {
-        "basis": "adjacent",
-        "rule": "Ran Oct 29, 2024 – Nov 6, 2024. In that window (buys dated up to 7 days before first shown through last shown) SENATE LEADERSHIP FUND reported tv buys to MAIN STREET MEDIA GROUP ($5,738,132); the FEC does not record which buy placed which ad.",
-        "source_urls": [
-          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00571703&payee_name=MAIN+STREET+MEDIA+GROUP"
         ],
         "checked_by": null,
         "checked_at": null
@@ -2807,33 +2351,9 @@
       "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00571703&payee_name=STARBOARD+ADVERTISING",
       "basis": {
         "basis": "adjacent",
-        "rule": "Ran Oct 29, 2024 – Nov 6, 2024. In that window (buys dated up to 7 days before first shown through last shown) SENATE LEADERSHIP FUND reported digital buys to STARBOARD ADVERTISING ($3,944,705); the FEC does not record which buy placed which ad.",
+        "rule": "Ran Oct 29, 2024 – Nov 6, 2024. In that window (buys dated up to 7 days before first shown through last shown) SENATE LEADERSHIP FUND reported digital buys to STARBOARD ADVERTISING ($3,944,705); the FEC does not record which buy placed which ad. Same-window buys in media that cannot place a Google ad (TV, radio, mail, phones, field, consulting) are not listed.",
         "source_urls": [
           "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00571703&payee_name=STARBOARD+ADVERTISING"
-        ],
-        "checked_by": null,
-        "checked_at": null
-      }
-    },
-    {
-      "from": "vendor:V-connection-strategy",
-      "to": "CR09482672355114221569",
-      "kind": "placement",
-      "amount": 0,
-      "visibility": "disclosed",
-      "depth": 2,
-      "transaction_types": [],
-      "count": 2,
-      "date_range": [
-        "2024-10-29",
-        "2024-11-06"
-      ],
-      "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00571703&payee_name=CONNECTION+STRATEGY+LLC",
-      "basis": {
-        "basis": "adjacent",
-        "rule": "Ran Oct 29, 2024 – Nov 6, 2024. In that window (buys dated up to 7 days before first shown through last shown) SENATE LEADERSHIP FUND reported phones buys to CONNECTION STRATEGY LLC ($77,491); the FEC does not record which buy placed which ad.",
-        "source_urls": [
-          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00571703&payee_name=CONNECTION+STRATEGY+LLC"
         ],
         "checked_by": null,
         "checked_at": null
@@ -2855,7 +2375,7 @@
       "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00571703&payee_name=DMM+MEDIA",
       "basis": {
         "basis": "adjacent",
-        "rule": "Ran Oct 29, 2024 – Nov 6, 2024. In that window (buys dated up to 7 days before first shown through last shown) SENATE LEADERSHIP FUND reported production buys to DMM MEDIA ($33,824); the FEC does not record which buy placed which ad.",
+        "rule": "Ran Oct 29, 2024 – Nov 6, 2024. In that window (buys dated up to 7 days before first shown through last shown) SENATE LEADERSHIP FUND reported production buys to DMM MEDIA ($33,824); the FEC does not record which buy placed which ad. Same-window buys in media that cannot place a Google ad (TV, radio, mail, phones, field, consulting) are not listed.",
         "source_urls": [
           "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00571703&payee_name=DMM+MEDIA"
         ],
@@ -2879,7 +2399,7 @@
       "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00571703&payee_name=RICHARD+SALES+MEDIA",
       "basis": {
         "basis": "adjacent",
-        "rule": "Ran Oct 29, 2024 – Nov 6, 2024. In that window (buys dated up to 7 days before first shown through last shown) SENATE LEADERSHIP FUND reported digital buys to RICHARD SALES MEDIA ($8,000); the FEC does not record which buy placed which ad.",
+        "rule": "Ran Oct 29, 2024 – Nov 6, 2024. In that window (buys dated up to 7 days before first shown through last shown) SENATE LEADERSHIP FUND reported digital buys to RICHARD SALES MEDIA ($8,000); the FEC does not record which buy placed which ad. Same-window buys in media that cannot place a Google ad (TV, radio, mail, phones, field, consulting) are not listed.",
         "source_urls": [
           "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00571703&payee_name=RICHARD+SALES+MEDIA"
         ],
@@ -2900,7 +2420,7 @@
       "source_url": "https://adstransparency.google.com/advertiser/AR12988012301746438145/creative/CR09482672355114221569?political=&region=US",
       "basis": {
         "basis": "inferred",
-        "rule": "Advertiser name matched to this committee by normalized name; Google shows the advertiser, not the paid-for-by line",
+        "rule": "Advertiser name matched to this committee by normalized name; Google's bulk data names the advertiser and carries no paid-for-by field for US ads",
         "source_urls": [
           "https://adstransparency.google.com/advertiser/AR12988012301746438145/creative/CR09482672355114221569?political=&region=US"
         ],

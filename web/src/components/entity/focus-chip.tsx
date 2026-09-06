@@ -1,4 +1,5 @@
 import { ISSUE_BY_ID, type IssueFocus } from "@campaign-commons/contracts";
+import { BASIS_LABELS, BASIS_MEANING } from "@/lib/evidence";
 import { Chip, SourceLink } from "@/components/ui";
 import { FOCUS_KIND_LABELS } from "@/components/issues/focus-kind";
 
@@ -25,12 +26,15 @@ export function FocusChip({ focus }: { focus: IssueFocus }) {
           {focus.basis.source_urls.map((u) => (
             <SourceLink key={u} href={u} label={new URL(u).hostname.replace(/^www\./, "")} />
           ))}
-          <span className="text-[11px] text-neutral-500">
-            verified · checked by {focus.basis.checked_by} {focus.basis.checked_at}
+          <span className="text-[11px] text-neutral-500" title={BASIS_MEANING.verified}>
+            {BASIS_LABELS.verified} · checked by {focus.basis.checked_by} {focus.basis.checked_at}
           </span>
         </div>
       )}
-      <p className="mt-1 text-[11px] text-neutral-500">{focus.basis.rule}.</p>
+      <p className="mt-1 text-[11px] text-neutral-500">
+        {focus.basis.basis !== "verified" && <span title={BASIS_MEANING[focus.basis.basis]}>{BASIS_LABELS[focus.basis.basis]} · </span>}
+        {focus.basis.rule}.
+      </p>
     </div>
   );
 }

@@ -1054,7 +1054,7 @@
       "terminus_reason": null,
       "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00004036&payee_name=PENNSYLVANIA+STATE+COUNCIL+SEIU",
       "href": "/races/pa-sen-2024/vendors/V-pennsylvania-state-council-seiu",
-      "medium": "other",
+      "medium": "field",
       "basis": {
         "basis": "filed",
         "rule": "Schedule E payee, grouped by normalized vendor name (campaign_commons.vendors)",
@@ -1078,7 +1078,7 @@
       "terminus_reason": null,
       "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00004036&payee_name=SEIU+GENERAL+FUND",
       "href": "/races/pa-sen-2024/vendors/V-seiu-general-fund",
-      "medium": "other",
+      "medium": "field",
       "basis": {
         "basis": "filed",
         "rule": "Schedule E payee, grouped by normalized vendor name (campaign_commons.vendors)",
@@ -1102,7 +1102,7 @@
       "terminus_reason": null,
       "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00004036&payee_name=RESONANCE+CAMPAIGNS+LLC",
       "href": "/races/pa-sen-2024/vendors/V-resonance-campaigns",
-      "medium": "other",
+      "medium": "field",
       "basis": {
         "basis": "filed",
         "rule": "Schedule E payee, grouped by normalized vendor name (campaign_commons.vendors)",

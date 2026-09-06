@@ -167,15 +167,14 @@ def test_links_only_vendors_with_buys_in_window_and_reconcile_to_ie_rows() -> No
     entity = _entity()
     links = vendor_links(_ad(), entity, {})
     by_vendor = {str(link["vendor_id"]): link for link in links}
-    # 09-10 (= first - 7d) and 10-01 (= last) pixel buys, 10-01 broadcast buy; 09-01 and 10-20/10-25 fall outside
-    assert set(by_vendor) == {"vendor:pixel-placement", "vendor:broadcast-buyers"}
+    # 09-10 (= first - 7d) and 10-01 (= last) pixel buys are in the window; 09-01 and 10-20/10-25 fall outside.
+    # The 10-01 broadcast buy is in the window too but a TV buy cannot have placed a Google ad, so it is not offered as adjacent.
+    assert set(by_vendor) == {"vendor:pixel-placement"}
     assert by_vendor["vendor:pixel-placement"]["amount_in_window"] == 110000.0
     assert by_vendor["vendor:pixel-placement"]["buys_in_window"] == 2
-    assert by_vendor["vendor:broadcast-buyers"]["amount_in_window"] == 500000.0
-    assert by_vendor["vendor:broadcast-buyers"]["medium"] == "tv"
     ies = entity["independent_expenditures"]
     assert isinstance(ies, list)
-    in_win = [ie for ie in ies if "2024-09-10" <= ie["date"] <= "2024-10-01"]
+    in_win = [ie for ie in ies if "2024-09-10" <= ie["date"] <= "2024-10-01" and ie["medium"] == "digital"]
     assert sum(float(link["amount_in_window"]) for link in links) == sum(ie["amount"] for ie in in_win)
     assert sum(float(link["amount_in_window"]) for link in links) <= sum(ie["amount"] for ie in ies)
     for link in links:
@@ -191,25 +190,27 @@ def test_no_links_when_run_dates_are_missing() -> None:
 # --- basis ------------------------------------------------------------------------------------------------------------
 
 
-def test_single_digital_vendor_in_window_is_inferred_and_the_tv_vendor_stays_adjacent() -> None:
+def test_single_digital_vendor_in_window_is_inferred_and_the_tv_vendor_is_not_offered() -> None:
     links = vendor_links(_ad(), _entity(), {})
     by_vendor = {str(link["vendor_id"]): link["basis"] for link in links}
-    pixel, tv = by_vendor["vendor:pixel-placement"], by_vendor["vendor:broadcast-buyers"]
+    assert "vendor:broadcast-buyers" not in by_vendor  # same-window TV buy: not adjacent, not anything
+    pixel = by_vendor["vendor:pixel-placement"]
     assert pixel["basis"] == "inferred"
     assert "Only digital vendor EXAMPLE VICTORY FUND paid during this ad's run window" in str(pixel["rule"])
     assert "inferred, not filed" in str(pixel["rule"])
-    assert tv["basis"] == "adjacent"
-    assert str(tv["rule"]).startswith("Ran Sep 17, 2024 – Oct 1, 2024. In that window")
-    assert "the FEC does not record which buy placed which ad" in str(tv["rule"])
-    assert "$500,000" in str(tv["rule"])
-    assert pixel["checked_by"] is None and tv["checked_by"] is None
+    assert pixel["checked_by"] is None
     assert pixel["source_urls"] == [FIXTURE["vendors"][0]["source_url"]]
 
 
 def test_two_digital_vendors_in_window_are_both_adjacent() -> None:
     links = vendor_links(_ad(first="2024-10-18", last="2024-10-25"), _entity(), {})
-    assert {str(link["vendor_id"]) for link in links} == {"vendor:pixel-placement", "vendor:stream-ads"}
-    assert {str(link["basis"]["basis"]) for link in links} == {"adjacent"}
+    by_vendor = {str(link["vendor_id"]): link["basis"] for link in links}
+    assert set(by_vendor) == {"vendor:pixel-placement", "vendor:stream-ads"}
+    assert {str(b["basis"]) for b in by_vendor.values()} == {"adjacent"}
+    rule = str(by_vendor["vendor:pixel-placement"]["rule"])
+    assert rule.startswith("Ran Oct 18, 2024 – Oct 25, 2024. In that window")
+    assert "the FEC does not record which buy placed which ad" in rule
+    assert "cannot place a Google ad" in rule
 
 
 def test_hand_link_overrides_to_verified_and_sorts_first() -> None:
@@ -220,14 +221,11 @@ def test_hand_link_overrides_to_verified_and_sorts_first() -> None:
     assert verified["checked_by"] == "tester" and verified["checked_at"] == "2026-09-05"
     assert "Broadcast Buyers placed this ad" in str(verified["rule"])
     assert "We placed the fall flight" in str(verified["rule"])
-    # a hand link for a different ad does not leak
-    assert {
-        str(link["basis"]["basis"])
+    # a hand link for a different ad does not leak: CR9 gets only the inferred digital link, the TV vendor is not offered
+    assert [
+        (str(link["vendor_id"]), str(link["basis"]["basis"]))
         for link in vendor_links(_ad("CR9"), _entity(), {("CR1", "vendor:broadcast-buyers"): HAND_LINK})
-    } == {
-        "inferred",
-        "adjacent",
-    }
+    ] == [("vendor:pixel-placement", "inferred")]
 
 
 # --- no-op without vendors ---------------------------------------------------------------------------------------------
@@ -253,22 +251,20 @@ def test_no_vendor_rows_means_no_links_and_a_note_saying_so() -> None:
 
 
 def test_vendor_files_get_reverse_ads_deduped_and_enrich_is_idempotent() -> None:
+    stale_basis: JsonDict = {
+        "basis": "adjacent",
+        "rule": "stale",
+        "source_urls": [],
+        "checked_by": None,
+        "checked_at": None,
+    }
     vendors: dict[str, JsonDict] = {
         "vendor:pixel-placement": {"vendor_id": "vendor:pixel-placement", "ads": []},
         "vendor:broadcast-buyers": {
             "vendor_id": "vendor:broadcast-buyers",
             "ads": [
-                {
-                    "ad_id": "CR1",
-                    "sponsor_entity_id": SPONSOR,
-                    "basis": {
-                        "basis": "adjacent",
-                        "rule": "stale",
-                        "source_urls": [],
-                        "checked_by": None,
-                        "checked_at": None,
-                    },
-                }
+                {"ad_id": ad_id, "sponsor_entity_id": SPONSOR, "basis": stale_basis}
+                for ad_id in ("CR1", "CR-GONE")  # CR-GONE no longer links here and must be pruned
             ],
         },
     }
@@ -287,11 +283,11 @@ def test_vendor_files_get_reverse_ads_deduped_and_enrich_is_idempotent() -> None
     _validate_gallery(gallery)
     _validate_vendor_ads(vendors["vendor:broadcast-buyers"])
 
-    first_pass = json.dumps(gallery, sort_keys=True)
-    first_vendors = json.dumps(vendors, sort_keys=True)
+    first_pass = json.dumps(gallery)  # key order included: a rerun must not reorder ads.json on disk
+    first_vendors = json.dumps(vendors)
     counts2, changed2 = enrich(gallery, {SPONSOR: CHAIN}, entities, vendors, hand_tags, hand_links)
-    assert json.dumps(gallery, sort_keys=True) == first_pass
-    assert json.dumps(vendors, sort_keys=True) == first_vendors
+    assert json.dumps(gallery) == first_pass
+    assert json.dumps(vendors) == first_vendors
     assert changed2 == set() and counts2.links_by_basis == counts.links_by_basis
     notes = gallery["notes"]
     assert isinstance(notes, list)

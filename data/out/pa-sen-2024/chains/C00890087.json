@@ -1148,30 +1148,6 @@
       }
     },
     {
-      "from": "vendor:V-wavelength-strategy",
-      "to": "CR12426292856455430145",
-      "kind": "placement",
-      "amount": 0,
-      "visibility": "disclosed",
-      "depth": 2,
-      "transaction_types": [],
-      "count": 3,
-      "date_range": [
-        "2024-10-24",
-        "2024-11-05"
-      ],
-      "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00890087&payee_name=WAVELENGTH+STRATEGY+LLC",
-      "basis": {
-        "basis": "adjacent",
-        "rule": "Ran Oct 24, 2024 – Nov 5, 2024. In that window (buys dated up to 7 days before first shown through last shown) DEFEND OUR CONSTITUTION PAC reported tv buys to WAVELENGTH STRATEGY LLC ($595,000); the FEC does not record which buy placed which ad.",
-        "source_urls": [
-          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00890087&payee_name=WAVELENGTH+STRATEGY+LLC"
-        ],
-        "checked_by": null,
-        "checked_at": null
-      }
-    },
-    {
       "from": "C00890087",
       "to": "CR12426292856455430145",
       "kind": "placement",
@@ -1184,7 +1160,7 @@
       "source_url": "https://adstransparency.google.com/advertiser/AR16328758690595209217/creative/CR12426292856455430145?political=&region=US",
       "basis": {
         "basis": "inferred",
-        "rule": "Advertiser name matched to this committee by normalized name; Google shows the advertiser, not the paid-for-by line",
+        "rule": "Advertiser name matched to this committee by normalized name; Google's bulk data names the advertiser and carries no paid-for-by field for US ads",
         "source_urls": [
           "https://adstransparency.google.com/advertiser/AR16328758690595209217/creative/CR12426292856455430145?political=&region=US"
         ],

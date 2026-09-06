@@ -4,6 +4,7 @@
 //   Layer A (right) what the SPENDERS say they are for — about the spender, never about its dollars.
 import Link from "next/link";
 import { useState } from "react";
+import { BASIS_LABELS, BASIS_MEANING } from "@/lib/evidence";
 import {
   ISSUE_BY_ID,
   type AdIssueSpending,
@@ -148,8 +149,8 @@ function AdIssueRow({
           ))}
         </div>
       )}
-      <div className="mt-0.5 text-[11px] text-neutral-500" title={r.basis.rule}>
-        {r.basis.basis}
+      <div className="mt-0.5 text-[11px] text-neutral-500" title={BASIS_MEANING[r.basis.basis]}>
+        {BASIS_LABELS[r.basis.basis]}
         {r.basis.basis === "verified" && (
           <>
             {" "}

@@ -21,6 +21,7 @@ const LINK_BASIS: Record<LinkBasis, string> = {
   adjacent: "Only adjacent vendor links",
   none: "No vendor links",
 };
+const LINK_BASIS_ORDER: LinkBasis[] = ["any", "verified", "inferred", "adjacent", "none"];
 
 const hasLinkBasis = (ad: Ad, want: LinkBasis): boolean => {
   const links = ad.vendor_links ?? [];
@@ -45,20 +46,24 @@ export function AdGallery({
   const [matchedOnly, setMatchedOnly] = useState(false);
   const [verifiedOnly, setVerifiedOnly] = useState(false);
   const [sponsor, setSponsor] = useState<string | null>(null);
-  // `?sponsor=<committee_id>` is read after mount so the page stays fully static (no useSearchParams bail-out).
+  const [vendor, setVendor] = useState<string | null>(null);
+  // `?sponsor=<committee_id>` / `?vendor=<vendor_id>` are read after mount so the page stays fully static (no useSearchParams bail-out).
   const pendingHash = useRef<string | null>(null);
   useEffect(() => {
-    const fromUrl = new URLSearchParams(window.location.search).get("sponsor");
-    if (!fromUrl) return;
+    const params = new URLSearchParams(window.location.search);
+    const sponsorFromUrl = params.get("sponsor");
+    const vendorFromUrl = params.get("vendor");
+    if (!sponsorFromUrl && !vendorFromUrl) return;
     pendingHash.current = window.location.hash || null;
-    setSponsor(fromUrl);
+    if (sponsorFromUrl) setSponsor(sponsorFromUrl);
+    if (vendorFromUrl) setVendor(vendorFromUrl);
   }, []);
-  // Applying the URL sponsor filter remounts the cards; re-run the fragment navigation so `:target` and scroll land on the new card.
+  // Applying a URL filter remounts the cards; re-run the fragment navigation so `:target` and scroll land on the new card.
   useEffect(() => {
-    if (sponsor === null || pendingHash.current === null) return;
+    if ((sponsor === null && vendor === null) || pendingHash.current === null) return;
     window.location.replace(pendingHash.current);
     pendingHash.current = null;
-  }, [sponsor]);
+  }, [sponsor, vendor]);
   const [issue, setIssue] = useState<IssueId | "">("");
   const [linkBasis, setLinkBasis] = useState<LinkBasis | "">("");
   const [sort, setSort] = useState<Sort>("spend_desc");
@@ -68,22 +73,32 @@ export function AdGallery({
   const taggedCount = useMemo(() => ads.filter((a) => a.issues !== undefined).length, [ads]);
   const withSharesCount = useMemo(() => ads.filter((a) => darkShare(a) !== null).length, [ads]);
   const linkedCount = useMemo(() => ads.filter((a) => (a.vendor_links ?? []).length > 0).length, [ads]);
+  // Only offer link-basis filters that match at least one ad, so a reader never picks an always-empty option.
+  const linkBasisOptions = useMemo(
+    () => LINK_BASIS_ORDER.map((k) => [k, ads.filter((a) => hasLinkBasis(a, k)).length] as const).filter(([, n]) => n > 0),
+    [ads],
+  );
   const taggedIssues = useMemo(() => {
     const counts = new Map<IssueId, number>();
     for (const ad of ads) for (const id of ad.issues?.issue_ids ?? []) counts.set(id, (counts.get(id) ?? 0) + 1);
     return [...counts.entries()].sort((x, y) => y[1] - x[1]);
   }, [ads]);
   const sponsorName = useMemo(() => (sponsor ? ads.find((a) => a.matched_entity_id === sponsor)?.advertiser_name ?? sponsor : null), [ads, sponsor]);
+  const vendorName = useMemo(
+    () => (vendor ? ads.flatMap((a) => a.vendor_links ?? []).find((l) => l.vendor_id === vendor)?.vendor_name ?? vendor : null),
+    [ads, vendor],
+  );
   const shown = useMemo(
     () =>
       ads
         .filter((a) => !matchedOnly || a.matched_entity_id !== null)
         .filter((a) => !verifiedOnly || isVerified(a))
         .filter((a) => sponsor === null || a.matched_entity_id === sponsor)
+        .filter((a) => vendor === null || (a.vendor_links ?? []).some((l) => l.vendor_id === vendor))
         .filter((a) => issue === "" || (a.issues?.issue_ids ?? []).includes(issue))
         .filter((a) => linkBasis === "" || hasLinkBasis(a, linkBasis))
         .sort(SORTS[sort].cmp),
-    [ads, matchedOnly, verifiedOnly, sponsor, issue, linkBasis, sort],
+    [ads, matchedOnly, verifiedOnly, sponsor, vendor, issue, linkBasis, sort],
   );
 
   return (
@@ -112,9 +127,9 @@ export function AdGallery({
           Vendor links
           <select value={linkBasis} onChange={(e) => setLinkBasis(e.target.value as LinkBasis | "")} className="rounded-sm border border-neutral-300 bg-white px-2 py-1 text-sm text-neutral-900">
             <option value="">Any ({linkedCount} linked)</option>
-            {(Object.keys(LINK_BASIS) as LinkBasis[]).map((k) => (
+            {linkBasisOptions.map(([k, n]) => (
               <option key={k} value={k}>
-                {LINK_BASIS[k]}
+                {LINK_BASIS[k]} ({n})
               </option>
             ))}
           </select>
@@ -137,6 +152,16 @@ export function AdGallery({
           </span>
           <button type="button" onClick={() => setSponsor(null)} className="text-xs text-neutral-600 underline decoration-dotted underline-offset-2 hover:text-neutral-900">
             show all sponsors
+          </button>
+        </p>
+      )}
+      {vendor !== null && (
+        <p className="flex flex-wrap items-center gap-2 text-sm">
+          <span className="rounded-sm border border-neutral-300 bg-white px-2 py-0.5" title="Ads whose run window overlapped this vendor's reported buys; the link basis on each card says how">
+            Ran during buys by: <span className="font-medium">{vendorName}</span>
+          </span>
+          <button type="button" onClick={() => setVendor(null)} className="text-xs text-neutral-600 underline decoration-dotted underline-offset-2 hover:text-neutral-900">
+            show all vendors
           </button>
         </p>
       )}

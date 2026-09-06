@@ -18034,54 +18034,6 @@
       }
     },
     {
-      "from": "vendor:V-great-american-media",
-      "to": "CR02577931420798287873",
-      "kind": "placement",
-      "amount": 0,
-      "visibility": "disclosed",
-      "depth": 2,
-      "transaction_types": [],
-      "count": 4,
-      "date_range": [
-        "2024-08-20",
-        "2024-09-17"
-      ],
-      "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00042366&payee_name=GREAT+AMERICAN+MEDIA",
-      "basis": {
-        "basis": "adjacent",
-        "rule": "Ran Aug 20, 2024 – Sep 17, 2024. In that window (buys dated up to 7 days before first shown through last shown) DSCC reported tv buys to GREAT AMERICAN MEDIA ($5,315,830); the FEC does not record which buy placed which ad.",
-        "source_urls": [
-          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00042366&payee_name=GREAT+AMERICAN+MEDIA"
-        ],
-        "checked_by": null,
-        "checked_at": null
-      }
-    },
-    {
-      "from": "vendor:V-mvar-media",
-      "to": "CR02577931420798287873",
-      "kind": "placement",
-      "amount": 0,
-      "visibility": "disclosed",
-      "depth": 2,
-      "transaction_types": [],
-      "count": 8,
-      "date_range": [
-        "2024-08-20",
-        "2024-09-17"
-      ],
-      "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00042366&payee_name=MVAR+MEDIA+LLC",
-      "basis": {
-        "basis": "adjacent",
-        "rule": "Ran Aug 20, 2024 – Sep 17, 2024. In that window (buys dated up to 7 days before first shown through last shown) DSCC reported tv buys to MVAR MEDIA LLC ($1,232,364); the FEC does not record which buy placed which ad.",
-        "source_urls": [
-          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00042366&payee_name=MVAR+MEDIA+LLC"
-        ],
-        "checked_by": null,
-        "checked_at": null
-      }
-    },
-    {
       "from": "vendor:V-bryson-gillette",
       "to": "CR02577931420798287873",
       "kind": "placement",
@@ -18097,7 +18049,7 @@
       "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00042366&payee_name=BRYSON+GILLETTE%2C+LLC",
       "basis": {
         "basis": "adjacent",
-        "rule": "Ran Aug 20, 2024 – Sep 17, 2024. In that window (buys dated up to 7 days before first shown through last shown) DSCC reported production buys to BRYSON GILLETTE, LLC ($78,988); the FEC does not record which buy placed which ad.",
+        "rule": "Ran Aug 20, 2024 – Sep 17, 2024. In that window (buys dated up to 7 days before first shown through last shown) DSCC reported production buys to BRYSON GILLETTE, LLC ($78,988); the FEC does not record which buy placed which ad. Same-window buys in media that cannot place a Google ad (TV, radio, mail, phones, field, consulting) are not listed.",
         "source_urls": [
           "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00042366&payee_name=BRYSON+GILLETTE%2C+LLC"
         ],
@@ -18121,7 +18073,7 @@
       "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00042366&payee_name=MAGNUS+PEARSON+MEDIA",
       "basis": {
         "basis": "adjacent",
-        "rule": "Ran Aug 20, 2024 – Sep 17, 2024. In that window (buys dated up to 7 days before first shown through last shown) DSCC reported production buys to MAGNUS PEARSON MEDIA ($25,111); the FEC does not record which buy placed which ad.",
+        "rule": "Ran Aug 20, 2024 – Sep 17, 2024. In that window (buys dated up to 7 days before first shown through last shown) DSCC reported production buys to MAGNUS PEARSON MEDIA ($25,111); the FEC does not record which buy placed which ad. Same-window buys in media that cannot place a Google ad (TV, radio, mail, phones, field, consulting) are not listed.",
         "source_urls": [
           "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00042366&payee_name=MAGNUS+PEARSON+MEDIA"
         ],
@@ -18154,30 +18106,6 @@
       }
     },
     {
-      "from": "vendor:V-mvar-media",
-      "to": "CR17834934589508812801",
-      "kind": "placement",
-      "amount": 0,
-      "visibility": "disclosed",
-      "depth": 2,
-      "transaction_types": [],
-      "count": 6,
-      "date_range": [
-        "2024-10-08",
-        "2024-11-05"
-      ],
-      "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00042366&payee_name=MVAR+MEDIA+LLC",
-      "basis": {
-        "basis": "adjacent",
-        "rule": "Ran Oct 8, 2024 – Nov 5, 2024. In that window (buys dated up to 7 days before first shown through last shown) DSCC reported tv buys to MVAR MEDIA LLC ($689,406); the FEC does not record which buy placed which ad.",
-        "source_urls": [
-          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00042366&payee_name=MVAR+MEDIA+LLC"
-        ],
-        "checked_by": null,
-        "checked_at": null
-      }
-    },
-    {
       "from": "vendor:V-bryson-gillette",
       "to": "CR17834934589508812801",
       "kind": "placement",
@@ -18193,7 +18121,7 @@
       "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00042366&payee_name=BRYSON+GILLETTE%2C+LLC",
       "basis": {
         "basis": "adjacent",
-        "rule": "Ran Oct 8, 2024 – Nov 5, 2024. In that window (buys dated up to 7 days before first shown through last shown) DSCC reported production buys to BRYSON GILLETTE, LLC ($25,676); the FEC does not record which buy placed which ad.",
+        "rule": "Ran Oct 8, 2024 – Nov 5, 2024. In that window (buys dated up to 7 days before first shown through last shown) DSCC reported production buys to BRYSON GILLETTE, LLC ($25,676); the FEC does not record which buy placed which ad. Same-window buys in media that cannot place a Google ad (TV, radio, mail, phones, field, consulting) are not listed.",
         "source_urls": [
           "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00042366&payee_name=BRYSON+GILLETTE%2C+LLC"
         ],
@@ -18214,57 +18142,9 @@
       "source_url": "https://adstransparency.google.com/advertiser/AR00340999924898332673/creative/CR17834934589508812801?political=&region=US",
       "basis": {
         "basis": "inferred",
-        "rule": "Advertiser name matched to this committee by normalized name; Google shows the advertiser, not the paid-for-by line",
+        "rule": "Advertiser name matched to this committee by normalized name; Google's bulk data names the advertiser and carries no paid-for-by field for US ads",
         "source_urls": [
           "https://adstransparency.google.com/advertiser/AR00340999924898332673/creative/CR17834934589508812801?political=&region=US"
-        ],
-        "checked_by": null,
-        "checked_at": null
-      }
-    },
-    {
-      "from": "vendor:V-great-american-media",
-      "to": "CR06950645183998328833",
-      "kind": "placement",
-      "amount": 0,
-      "visibility": "disclosed",
-      "depth": 2,
-      "transaction_types": [],
-      "count": 4,
-      "date_range": [
-        "2024-08-20",
-        "2024-09-17"
-      ],
-      "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00042366&payee_name=GREAT+AMERICAN+MEDIA",
-      "basis": {
-        "basis": "adjacent",
-        "rule": "Ran Aug 20, 2024 – Sep 17, 2024. In that window (buys dated up to 7 days before first shown through last shown) DSCC reported tv buys to GREAT AMERICAN MEDIA ($5,315,830); the FEC does not record which buy placed which ad.",
-        "source_urls": [
-          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00042366&payee_name=GREAT+AMERICAN+MEDIA"
-        ],
-        "checked_by": null,
-        "checked_at": null
-      }
-    },
-    {
-      "from": "vendor:V-mvar-media",
-      "to": "CR06950645183998328833",
-      "kind": "placement",
-      "amount": 0,
-      "visibility": "disclosed",
-      "depth": 2,
-      "transaction_types": [],
-      "count": 8,
-      "date_range": [
-        "2024-08-20",
-        "2024-09-17"
-      ],
-      "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00042366&payee_name=MVAR+MEDIA+LLC",
-      "basis": {
-        "basis": "adjacent",
-        "rule": "Ran Aug 20, 2024 – Sep 17, 2024. In that window (buys dated up to 7 days before first shown through last shown) DSCC reported tv buys to MVAR MEDIA LLC ($1,232,364); the FEC does not record which buy placed which ad.",
-        "source_urls": [
-          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00042366&payee_name=MVAR+MEDIA+LLC"
         ],
         "checked_by": null,
         "checked_at": null
@@ -18286,7 +18166,7 @@
       "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00042366&payee_name=BRYSON+GILLETTE%2C+LLC",
       "basis": {
         "basis": "adjacent",
-        "rule": "Ran Aug 20, 2024 – Sep 17, 2024. In that window (buys dated up to 7 days before first shown through last shown) DSCC reported production buys to BRYSON GILLETTE, LLC ($78,988); the FEC does not record which buy placed which ad.",
+        "rule": "Ran Aug 20, 2024 – Sep 17, 2024. In that window (buys dated up to 7 days before first shown through last shown) DSCC reported production buys to BRYSON GILLETTE, LLC ($78,988); the FEC does not record which buy placed which ad. Same-window buys in media that cannot place a Google ad (TV, radio, mail, phones, field, consulting) are not listed.",
         "source_urls": [
           "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00042366&payee_name=BRYSON+GILLETTE%2C+LLC"
         ],
@@ -18310,7 +18190,7 @@
       "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00042366&payee_name=MAGNUS+PEARSON+MEDIA",
       "basis": {
         "basis": "adjacent",
-        "rule": "Ran Aug 20, 2024 – Sep 17, 2024. In that window (buys dated up to 7 days before first shown through last shown) DSCC reported production buys to MAGNUS PEARSON MEDIA ($25,111); the FEC does not record which buy placed which ad.",
+        "rule": "Ran Aug 20, 2024 – Sep 17, 2024. In that window (buys dated up to 7 days before first shown through last shown) DSCC reported production buys to MAGNUS PEARSON MEDIA ($25,111); the FEC does not record which buy placed which ad. Same-window buys in media that cannot place a Google ad (TV, radio, mail, phones, field, consulting) are not listed.",
         "source_urls": [
           "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00042366&payee_name=MAGNUS+PEARSON+MEDIA"
         ],
@@ -18331,33 +18211,9 @@
       "source_url": "https://adstransparency.google.com/advertiser/AR00340999924898332673/creative/CR06950645183998328833?political=&region=US",
       "basis": {
         "basis": "inferred",
-        "rule": "Advertiser name matched to this committee by normalized name; Google shows the advertiser, not the paid-for-by line",
+        "rule": "Advertiser name matched to this committee by normalized name; Google's bulk data names the advertiser and carries no paid-for-by field for US ads",
         "source_urls": [
           "https://adstransparency.google.com/advertiser/AR00340999924898332673/creative/CR06950645183998328833?political=&region=US"
-        ],
-        "checked_by": null,
-        "checked_at": null
-      }
-    },
-    {
-      "from": "vendor:V-mvar-media",
-      "to": "CR06975285291116396545",
-      "kind": "placement",
-      "amount": 0,
-      "visibility": "disclosed",
-      "depth": 2,
-      "transaction_types": [],
-      "count": 6,
-      "date_range": [
-        "2024-09-17",
-        "2024-10-08"
-      ],
-      "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00042366&payee_name=MVAR+MEDIA+LLC",
-      "basis": {
-        "basis": "adjacent",
-        "rule": "Ran Sep 17, 2024 – Oct 8, 2024. In that window (buys dated up to 7 days before first shown through last shown) DSCC reported tv buys to MVAR MEDIA LLC ($274,490); the FEC does not record which buy placed which ad.",
-        "source_urls": [
-          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00042366&payee_name=MVAR+MEDIA+LLC"
         ],
         "checked_by": null,
         "checked_at": null
@@ -18379,7 +18235,7 @@
       "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00042366&payee_name=BRYSON+GILLETTE%2C+LLC",
       "basis": {
         "basis": "adjacent",
-        "rule": "Ran Sep 17, 2024 – Oct 8, 2024. In that window (buys dated up to 7 days before first shown through last shown) DSCC reported production buys to BRYSON GILLETTE, LLC ($4,860); the FEC does not record which buy placed which ad.",
+        "rule": "Ran Sep 17, 2024 – Oct 8, 2024. In that window (buys dated up to 7 days before first shown through last shown) DSCC reported production buys to BRYSON GILLETTE, LLC ($4,860); the FEC does not record which buy placed which ad. Same-window buys in media that cannot place a Google ad (TV, radio, mail, phones, field, consulting) are not listed.",
         "source_urls": [
           "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00042366&payee_name=BRYSON+GILLETTE%2C+LLC"
         ],
@@ -18400,33 +18256,9 @@
       "source_url": "https://adstransparency.google.com/advertiser/AR00340999924898332673/creative/CR06975285291116396545?political=&region=US",
       "basis": {
         "basis": "inferred",
-        "rule": "Advertiser name matched to this committee by normalized name; Google shows the advertiser, not the paid-for-by line",
+        "rule": "Advertiser name matched to this committee by normalized name; Google's bulk data names the advertiser and carries no paid-for-by field for US ads",
         "source_urls": [
           "https://adstransparency.google.com/advertiser/AR00340999924898332673/creative/CR06975285291116396545?political=&region=US"
-        ],
-        "checked_by": null,
-        "checked_at": null
-      }
-    },
-    {
-      "from": "vendor:V-mvar-media",
-      "to": "CR04538465708022956033",
-      "kind": "placement",
-      "amount": 0,
-      "visibility": "disclosed",
-      "depth": 2,
-      "transaction_types": [],
-      "count": 5,
-      "date_range": [
-        "2024-10-12",
-        "2024-11-05"
-      ],
-      "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00042366&payee_name=MVAR+MEDIA+LLC",
-      "basis": {
-        "basis": "adjacent",
-        "rule": "Ran Oct 12, 2024 – Nov 5, 2024. In that window (buys dated up to 7 days before first shown through last shown) DSCC reported tv buys to MVAR MEDIA LLC ($565,656); the FEC does not record which buy placed which ad.",
-        "source_urls": [
-          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00042366&payee_name=MVAR+MEDIA+LLC"
         ],
         "checked_by": null,
         "checked_at": null
@@ -18448,7 +18280,7 @@
       "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00042366&payee_name=BRYSON+GILLETTE%2C+LLC",
       "basis": {
         "basis": "adjacent",
-        "rule": "Ran Oct 12, 2024 – Nov 5, 2024. In that window (buys dated up to 7 days before first shown through last shown) DSCC reported production buys to BRYSON GILLETTE, LLC ($25,676); the FEC does not record which buy placed which ad.",
+        "rule": "Ran Oct 12, 2024 – Nov 5, 2024. In that window (buys dated up to 7 days before first shown through last shown) DSCC reported production buys to BRYSON GILLETTE, LLC ($25,676); the FEC does not record which buy placed which ad. Same-window buys in media that cannot place a Google ad (TV, radio, mail, phones, field, consulting) are not listed.",
         "source_urls": [
           "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00042366&payee_name=BRYSON+GILLETTE%2C+LLC"
         ],
@@ -18469,57 +18301,9 @@
       "source_url": "https://adstransparency.google.com/advertiser/AR00340999924898332673/creative/CR04538465708022956033?political=&region=US",
       "basis": {
         "basis": "inferred",
-        "rule": "Advertiser name matched to this committee by normalized name; Google shows the advertiser, not the paid-for-by line",
+        "rule": "Advertiser name matched to this committee by normalized name; Google's bulk data names the advertiser and carries no paid-for-by field for US ads",
         "source_urls": [
           "https://adstransparency.google.com/advertiser/AR00340999924898332673/creative/CR04538465708022956033?political=&region=US"
-        ],
-        "checked_by": null,
-        "checked_at": null
-      }
-    },
-    {
-      "from": "vendor:V-great-american-media",
-      "to": "CR12208879223930093569",
-      "kind": "placement",
-      "amount": 0,
-      "visibility": "disclosed",
-      "depth": 2,
-      "transaction_types": [],
-      "count": 4,
-      "date_range": [
-        "2024-08-20",
-        "2024-09-17"
-      ],
-      "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00042366&payee_name=GREAT+AMERICAN+MEDIA",
-      "basis": {
-        "basis": "adjacent",
-        "rule": "Ran Aug 20, 2024 – Sep 17, 2024. In that window (buys dated up to 7 days before first shown through last shown) DSCC reported tv buys to GREAT AMERICAN MEDIA ($5,315,830); the FEC does not record which buy placed which ad.",
-        "source_urls": [
-          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00042366&payee_name=GREAT+AMERICAN+MEDIA"
-        ],
-        "checked_by": null,
-        "checked_at": null
-      }
-    },
-    {
-      "from": "vendor:V-mvar-media",
-      "to": "CR12208879223930093569",
-      "kind": "placement",
-      "amount": 0,
-      "visibility": "disclosed",
-      "depth": 2,
-      "transaction_types": [],
-      "count": 8,
-      "date_range": [
-        "2024-08-20",
-        "2024-09-17"
-      ],
-      "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00042366&payee_name=MVAR+MEDIA+LLC",
-      "basis": {
-        "basis": "adjacent",
-        "rule": "Ran Aug 20, 2024 – Sep 17, 2024. In that window (buys dated up to 7 days before first shown through last shown) DSCC reported tv buys to MVAR MEDIA LLC ($1,232,364); the FEC does not record which buy placed which ad.",
-        "source_urls": [
-          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00042366&payee_name=MVAR+MEDIA+LLC"
         ],
         "checked_by": null,
         "checked_at": null
@@ -18541,7 +18325,7 @@
       "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00042366&payee_name=BRYSON+GILLETTE%2C+LLC",
       "basis": {
         "basis": "adjacent",
-        "rule": "Ran Aug 20, 2024 – Sep 17, 2024. In that window (buys dated up to 7 days before first shown through last shown) DSCC reported production buys to BRYSON GILLETTE, LLC ($78,988); the FEC does not record which buy placed which ad.",
+        "rule": "Ran Aug 20, 2024 – Sep 17, 2024. In that window (buys dated up to 7 days before first shown through last shown) DSCC reported production buys to BRYSON GILLETTE, LLC ($78,988); the FEC does not record which buy placed which ad. Same-window buys in media that cannot place a Google ad (TV, radio, mail, phones, field, consulting) are not listed.",
         "source_urls": [
           "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00042366&payee_name=BRYSON+GILLETTE%2C+LLC"
         ],
@@ -18565,7 +18349,7 @@
       "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00042366&payee_name=MAGNUS+PEARSON+MEDIA",
       "basis": {
         "basis": "adjacent",
-        "rule": "Ran Aug 20, 2024 – Sep 17, 2024. In that window (buys dated up to 7 days before first shown through last shown) DSCC reported production buys to MAGNUS PEARSON MEDIA ($25,111); the FEC does not record which buy placed which ad.",
+        "rule": "Ran Aug 20, 2024 – Sep 17, 2024. In that window (buys dated up to 7 days before first shown through last shown) DSCC reported production buys to MAGNUS PEARSON MEDIA ($25,111); the FEC does not record which buy placed which ad. Same-window buys in media that cannot place a Google ad (TV, radio, mail, phones, field, consulting) are not listed.",
         "source_urls": [
           "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00042366&payee_name=MAGNUS+PEARSON+MEDIA"
         ],
@@ -18586,33 +18370,9 @@
       "source_url": "https://adstransparency.google.com/advertiser/AR00340999924898332673/creative/CR12208879223930093569?political=&region=US",
       "basis": {
         "basis": "inferred",
-        "rule": "Advertiser name matched to this committee by normalized name; Google shows the advertiser, not the paid-for-by line",
+        "rule": "Advertiser name matched to this committee by normalized name; Google's bulk data names the advertiser and carries no paid-for-by field for US ads",
         "source_urls": [
           "https://adstransparency.google.com/advertiser/AR00340999924898332673/creative/CR12208879223930093569?political=&region=US"
-        ],
-        "checked_by": null,
-        "checked_at": null
-      }
-    },
-    {
-      "from": "vendor:V-great-american-media",
-      "to": "CR05459179651152740353",
-      "kind": "placement",
-      "amount": 0,
-      "visibility": "disclosed",
-      "depth": 2,
-      "transaction_types": [],
-      "count": 2,
-      "date_range": [
-        "2024-08-20",
-        "2024-08-27"
-      ],
-      "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00042366&payee_name=GREAT+AMERICAN+MEDIA",
-      "basis": {
-        "basis": "adjacent",
-        "rule": "Ran Aug 20, 2024 – Aug 27, 2024. In that window (buys dated up to 7 days before first shown through last shown) DSCC reported tv buys to GREAT AMERICAN MEDIA ($2,744,874); the FEC does not record which buy placed which ad.",
-        "source_urls": [
-          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00042366&payee_name=GREAT+AMERICAN+MEDIA"
         ],
         "checked_by": null,
         "checked_at": null
@@ -18634,7 +18394,7 @@
       "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00042366&payee_name=MVAR+MEDIA+LLC",
       "basis": {
         "basis": "adjacent",
-        "rule": "Ran Aug 20, 2024 – Aug 27, 2024. In that window (buys dated up to 7 days before first shown through last shown) DSCC reported production buys to MVAR MEDIA LLC ($599,960); the FEC does not record which buy placed which ad.",
+        "rule": "Ran Aug 20, 2024 – Aug 27, 2024. In that window (buys dated up to 7 days before first shown through last shown) DSCC reported production buys to MVAR MEDIA LLC ($599,960); the FEC does not record which buy placed which ad. Same-window buys in media that cannot place a Google ad (TV, radio, mail, phones, field, consulting) are not listed.",
         "source_urls": [
           "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00042366&payee_name=MVAR+MEDIA+LLC"
         ],
@@ -18658,7 +18418,7 @@
       "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00042366&payee_name=BRYSON+GILLETTE%2C+LLC",
       "basis": {
         "basis": "adjacent",
-        "rule": "Ran Aug 20, 2024 – Aug 27, 2024. In that window (buys dated up to 7 days before first shown through last shown) DSCC reported production buys to BRYSON GILLETTE, LLC ($69,268); the FEC does not record which buy placed which ad.",
+        "rule": "Ran Aug 20, 2024 – Aug 27, 2024. In that window (buys dated up to 7 days before first shown through last shown) DSCC reported production buys to BRYSON GILLETTE, LLC ($69,268); the FEC does not record which buy placed which ad. Same-window buys in media that cannot place a Google ad (TV, radio, mail, phones, field, consulting) are not listed.",
         "source_urls": [
           "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00042366&payee_name=BRYSON+GILLETTE%2C+LLC"
         ],
@@ -18682,7 +18442,7 @@
       "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00042366&payee_name=MAGNUS+PEARSON+MEDIA",
       "basis": {
         "basis": "adjacent",
-        "rule": "Ran Aug 20, 2024 – Aug 27, 2024. In that window (buys dated up to 7 days before first shown through last shown) DSCC reported production buys to MAGNUS PEARSON MEDIA ($23,844); the FEC does not record which buy placed which ad.",
+        "rule": "Ran Aug 20, 2024 – Aug 27, 2024. In that window (buys dated up to 7 days before first shown through last shown) DSCC reported production buys to MAGNUS PEARSON MEDIA ($23,844); the FEC does not record which buy placed which ad. Same-window buys in media that cannot place a Google ad (TV, radio, mail, phones, field, consulting) are not listed.",
         "source_urls": [
           "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00042366&payee_name=MAGNUS+PEARSON+MEDIA"
         ],
@@ -18703,57 +18463,9 @@
       "source_url": "https://adstransparency.google.com/advertiser/AR00340999924898332673/creative/CR05459179651152740353?political=&region=US",
       "basis": {
         "basis": "inferred",
-        "rule": "Advertiser name matched to this committee by normalized name; Google shows the advertiser, not the paid-for-by line",
+        "rule": "Advertiser name matched to this committee by normalized name; Google's bulk data names the advertiser and carries no paid-for-by field for US ads",
         "source_urls": [
           "https://adstransparency.google.com/advertiser/AR00340999924898332673/creative/CR05459179651152740353?political=&region=US"
-        ],
-        "checked_by": null,
-        "checked_at": null
-      }
-    },
-    {
-      "from": "vendor:V-great-american-media",
-      "to": "CR07393968272317612033",
-      "kind": "placement",
-      "amount": 0,
-      "visibility": "disclosed",
-      "depth": 2,
-      "transaction_types": [],
-      "count": 4,
-      "date_range": [
-        "2024-08-20",
-        "2024-09-17"
-      ],
-      "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00042366&payee_name=GREAT+AMERICAN+MEDIA",
-      "basis": {
-        "basis": "adjacent",
-        "rule": "Ran Aug 20, 2024 – Sep 17, 2024. In that window (buys dated up to 7 days before first shown through last shown) DSCC reported tv buys to GREAT AMERICAN MEDIA ($5,315,830); the FEC does not record which buy placed which ad.",
-        "source_urls": [
-          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00042366&payee_name=GREAT+AMERICAN+MEDIA"
-        ],
-        "checked_by": null,
-        "checked_at": null
-      }
-    },
-    {
-      "from": "vendor:V-mvar-media",
-      "to": "CR07393968272317612033",
-      "kind": "placement",
-      "amount": 0,
-      "visibility": "disclosed",
-      "depth": 2,
-      "transaction_types": [],
-      "count": 8,
-      "date_range": [
-        "2024-08-20",
-        "2024-09-17"
-      ],
-      "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00042366&payee_name=MVAR+MEDIA+LLC",
-      "basis": {
-        "basis": "adjacent",
-        "rule": "Ran Aug 20, 2024 – Sep 17, 2024. In that window (buys dated up to 7 days before first shown through last shown) DSCC reported tv buys to MVAR MEDIA LLC ($1,232,364); the FEC does not record which buy placed which ad.",
-        "source_urls": [
-          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00042366&payee_name=MVAR+MEDIA+LLC"
         ],
         "checked_by": null,
         "checked_at": null
@@ -18775,7 +18487,7 @@
       "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00042366&payee_name=BRYSON+GILLETTE%2C+LLC",
       "basis": {
         "basis": "adjacent",
-        "rule": "Ran Aug 20, 2024 – Sep 17, 2024. In that window (buys dated up to 7 days before first shown through last shown) DSCC reported production buys to BRYSON GILLETTE, LLC ($78,988); the FEC does not record which buy placed which ad.",
+        "rule": "Ran Aug 20, 2024 – Sep 17, 2024. In that window (buys dated up to 7 days before first shown through last shown) DSCC reported production buys to BRYSON GILLETTE, LLC ($78,988); the FEC does not record which buy placed which ad. Same-window buys in media that cannot place a Google ad (TV, radio, mail, phones, field, consulting) are not listed.",
         "source_urls": [
           "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00042366&payee_name=BRYSON+GILLETTE%2C+LLC"
         ],
@@ -18799,7 +18511,7 @@
       "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00042366&payee_name=MAGNUS+PEARSON+MEDIA",
       "basis": {
         "basis": "adjacent",
-        "rule": "Ran Aug 20, 2024 – Sep 17, 2024. In that window (buys dated up to 7 days before first shown through last shown) DSCC reported production buys to MAGNUS PEARSON MEDIA ($25,111); the FEC does not record which buy placed which ad.",
+        "rule": "Ran Aug 20, 2024 – Sep 17, 2024. In that window (buys dated up to 7 days before first shown through last shown) DSCC reported production buys to MAGNUS PEARSON MEDIA ($25,111); the FEC does not record which buy placed which ad. Same-window buys in media that cannot place a Google ad (TV, radio, mail, phones, field, consulting) are not listed.",
         "source_urls": [
           "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00042366&payee_name=MAGNUS+PEARSON+MEDIA"
         ],
@@ -18820,33 +18532,9 @@
       "source_url": "https://adstransparency.google.com/advertiser/AR00340999924898332673/creative/CR07393968272317612033?political=&region=US",
       "basis": {
         "basis": "inferred",
-        "rule": "Advertiser name matched to this committee by normalized name; Google shows the advertiser, not the paid-for-by line",
+        "rule": "Advertiser name matched to this committee by normalized name; Google's bulk data names the advertiser and carries no paid-for-by field for US ads",
         "source_urls": [
           "https://adstransparency.google.com/advertiser/AR00340999924898332673/creative/CR07393968272317612033?political=&region=US"
-        ],
-        "checked_by": null,
-        "checked_at": null
-      }
-    },
-    {
-      "from": "vendor:V-mvar-media",
-      "to": "CR14038400103635484673",
-      "kind": "placement",
-      "amount": 0,
-      "visibility": "disclosed",
-      "depth": 2,
-      "transaction_types": [],
-      "count": 6,
-      "date_range": [
-        "2024-10-08",
-        "2024-11-05"
-      ],
-      "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00042366&payee_name=MVAR+MEDIA+LLC",
-      "basis": {
-        "basis": "adjacent",
-        "rule": "Ran Oct 8, 2024 – Nov 5, 2024. In that window (buys dated up to 7 days before first shown through last shown) DSCC reported tv buys to MVAR MEDIA LLC ($689,406); the FEC does not record which buy placed which ad.",
-        "source_urls": [
-          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00042366&payee_name=MVAR+MEDIA+LLC"
         ],
         "checked_by": null,
         "checked_at": null
@@ -18868,7 +18556,7 @@
       "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00042366&payee_name=BRYSON+GILLETTE%2C+LLC",
       "basis": {
         "basis": "adjacent",
-        "rule": "Ran Oct 8, 2024 – Nov 5, 2024. In that window (buys dated up to 7 days before first shown through last shown) DSCC reported production buys to BRYSON GILLETTE, LLC ($25,676); the FEC does not record which buy placed which ad.",
+        "rule": "Ran Oct 8, 2024 – Nov 5, 2024. In that window (buys dated up to 7 days before first shown through last shown) DSCC reported production buys to BRYSON GILLETTE, LLC ($25,676); the FEC does not record which buy placed which ad. Same-window buys in media that cannot place a Google ad (TV, radio, mail, phones, field, consulting) are not listed.",
         "source_urls": [
           "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00042366&payee_name=BRYSON+GILLETTE%2C+LLC"
         ],
@@ -18889,57 +18577,9 @@
       "source_url": "https://adstransparency.google.com/advertiser/AR00340999924898332673/creative/CR14038400103635484673?political=&region=US",
       "basis": {
         "basis": "inferred",
-        "rule": "Advertiser name matched to this committee by normalized name; Google shows the advertiser, not the paid-for-by line",
+        "rule": "Advertiser name matched to this committee by normalized name; Google's bulk data names the advertiser and carries no paid-for-by field for US ads",
         "source_urls": [
           "https://adstransparency.google.com/advertiser/AR00340999924898332673/creative/CR14038400103635484673?political=&region=US"
-        ],
-        "checked_by": null,
-        "checked_at": null
-      }
-    },
-    {
-      "from": "vendor:V-great-american-media",
-      "to": "CR14424650240596377601",
-      "kind": "placement",
-      "amount": 0,
-      "visibility": "disclosed",
-      "depth": 2,
-      "transaction_types": [],
-      "count": 4,
-      "date_range": [
-        "2024-08-20",
-        "2024-09-17"
-      ],
-      "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00042366&payee_name=GREAT+AMERICAN+MEDIA",
-      "basis": {
-        "basis": "adjacent",
-        "rule": "Ran Aug 20, 2024 – Sep 17, 2024. In that window (buys dated up to 7 days before first shown through last shown) DSCC reported tv buys to GREAT AMERICAN MEDIA ($5,315,830); the FEC does not record which buy placed which ad.",
-        "source_urls": [
-          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00042366&payee_name=GREAT+AMERICAN+MEDIA"
-        ],
-        "checked_by": null,
-        "checked_at": null
-      }
-    },
-    {
-      "from": "vendor:V-mvar-media",
-      "to": "CR14424650240596377601",
-      "kind": "placement",
-      "amount": 0,
-      "visibility": "disclosed",
-      "depth": 2,
-      "transaction_types": [],
-      "count": 8,
-      "date_range": [
-        "2024-08-20",
-        "2024-09-17"
-      ],
-      "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00042366&payee_name=MVAR+MEDIA+LLC",
-      "basis": {
-        "basis": "adjacent",
-        "rule": "Ran Aug 20, 2024 – Sep 17, 2024. In that window (buys dated up to 7 days before first shown through last shown) DSCC reported tv buys to MVAR MEDIA LLC ($1,232,364); the FEC does not record which buy placed which ad.",
-        "source_urls": [
-          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00042366&payee_name=MVAR+MEDIA+LLC"
         ],
         "checked_by": null,
         "checked_at": null
@@ -18961,7 +18601,7 @@
       "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00042366&payee_name=BRYSON+GILLETTE%2C+LLC",
       "basis": {
         "basis": "adjacent",
-        "rule": "Ran Aug 20, 2024 – Sep 17, 2024. In that window (buys dated up to 7 days before first shown through last shown) DSCC reported production buys to BRYSON GILLETTE, LLC ($78,988); the FEC does not record which buy placed which ad.",
+        "rule": "Ran Aug 20, 2024 – Sep 17, 2024. In that window (buys dated up to 7 days before first shown through last shown) DSCC reported production buys to BRYSON GILLETTE, LLC ($78,988); the FEC does not record which buy placed which ad. Same-window buys in media that cannot place a Google ad (TV, radio, mail, phones, field, consulting) are not listed.",
         "source_urls": [
           "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00042366&payee_name=BRYSON+GILLETTE%2C+LLC"
         ],
@@ -18985,7 +18625,7 @@
       "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00042366&payee_name=MAGNUS+PEARSON+MEDIA",
       "basis": {
         "basis": "adjacent",
-        "rule": "Ran Aug 20, 2024 – Sep 17, 2024. In that window (buys dated up to 7 days before first shown through last shown) DSCC reported production buys to MAGNUS PEARSON MEDIA ($25,111); the FEC does not record which buy placed which ad.",
+        "rule": "Ran Aug 20, 2024 – Sep 17, 2024. In that window (buys dated up to 7 days before first shown through last shown) DSCC reported production buys to MAGNUS PEARSON MEDIA ($25,111); the FEC does not record which buy placed which ad. Same-window buys in media that cannot place a Google ad (TV, radio, mail, phones, field, consulting) are not listed.",
         "source_urls": [
           "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00042366&payee_name=MAGNUS+PEARSON+MEDIA"
         ],
@@ -19006,7 +18646,7 @@
       "source_url": "https://adstransparency.google.com/advertiser/AR00340999924898332673/creative/CR14424650240596377601?political=&region=US",
       "basis": {
         "basis": "inferred",
-        "rule": "Advertiser name matched to this committee by normalized name; Google shows the advertiser, not the paid-for-by line",
+        "rule": "Advertiser name matched to this committee by normalized name; Google's bulk data names the advertiser and carries no paid-for-by field for US ads",
         "source_urls": [
           "https://adstransparency.google.com/advertiser/AR00340999924898332673/creative/CR14424650240596377601?political=&region=US"
         ],

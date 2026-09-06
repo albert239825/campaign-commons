@@ -17,7 +17,7 @@
   "count": 11,
   "media_mix": [
     {
-      "medium": "other",
+      "medium": "field",
       "amount": 601.34,
       "count": 11
     }
@@ -41,7 +41,7 @@
   "last_date": "2024-11-04",
   "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&payee_name=ASIAN+PACIFIC+ISLANDER+POLITICAL+ALLIANCE",
   "race_id": "pa-sen-2024",
-  "generated_at": "2026-09-05T19:53:50+00:00",
+  "generated_at": "2026-09-05T20:34:15+00:00",
   "data_status": "real",
   "expenditures": [
     {
@@ -57,7 +57,7 @@
       "payee": "ASIAN PACIFIC ISLANDER POLITICAL ALLIANCE",
       "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202607289894482423",
       "vendor_id": "V-asian-pacific-islander-political-alliance",
-      "medium": "other"
+      "medium": "field"
     },
     {
       "ie_id": "C00761064-ie-2002532-500088582",
@@ -72,7 +72,7 @@
       "payee": "ASIAN PACIFIC ISLANDER POLITICAL ALLIANCE",
       "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202607289894482418",
       "vendor_id": "V-asian-pacific-islander-political-alliance",
-      "medium": "other"
+      "medium": "field"
     },
     {
       "ie_id": "C00761064-ie-2002532-500086347",
@@ -87,7 +87,7 @@
       "payee": "ASIAN PACIFIC ISLANDER POLITICAL ALLIANCE",
       "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202607289894482443",
       "vendor_id": "V-asian-pacific-islander-political-alliance",
-      "medium": "other"
+      "medium": "field"
     },
     {
       "ie_id": "C00761064-ie-2002532-500086346",
@@ -102,7 +102,7 @@
       "payee": "ASIAN PACIFIC ISLANDER POLITICAL ALLIANCE",
       "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202607289894482438",
       "vendor_id": "V-asian-pacific-islander-political-alliance",
-      "medium": "other"
+      "medium": "field"
     },
     {
       "ie_id": "C00761064-ie-2002532-500086249",
@@ -117,7 +117,7 @@
       "payee": "ASIAN PACIFIC ISLANDER POLITICAL ALLIANCE",
       "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202607289894482454",
       "vendor_id": "V-asian-pacific-islander-political-alliance",
-      "medium": "other"
+      "medium": "field"
     },
     {
       "ie_id": "C00761064-ie-2002532-500086187",
@@ -132,7 +132,7 @@
       "payee": "ASIAN PACIFIC ISLANDER POLITICAL ALLIANCE",
       "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202607289894482446",
       "vendor_id": "V-asian-pacific-islander-political-alliance",
-      "medium": "other"
+      "medium": "field"
     },
     {
       "ie_id": "C00761064-ie-2002532-500086186",
@@ -147,7 +147,7 @@
       "payee": "ASIAN PACIFIC ISLANDER POLITICAL ALLIANCE",
       "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202607289894482440",
       "vendor_id": "V-asian-pacific-islander-political-alliance",
-      "medium": "other"
+      "medium": "field"
     },
     {
       "ie_id": "C00761064-ie-2002532-500086106",
@@ -162,7 +162,7 @@
       "payee": "ASIAN PACIFIC ISLANDER POLITICAL ALLIANCE",
       "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202607289894482435",
       "vendor_id": "V-asian-pacific-islander-political-alliance",
-      "medium": "other"
+      "medium": "field"
     },
     {
       "ie_id": "C00761064-ie-2002532-500086105",
@@ -177,7 +177,7 @@
       "payee": "ASIAN PACIFIC ISLANDER POLITICAL ALLIANCE",
       "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202607289894482429",
       "vendor_id": "V-asian-pacific-islander-political-alliance",
-      "medium": "other"
+      "medium": "field"
     },
     {
       "ie_id": "C00761064-ie-1867738-500085780",
@@ -192,7 +192,7 @@
       "payee": "ASIAN PACIFIC ISLANDER POLITICAL ALLIANCE",
       "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202501299748072209",
       "vendor_id": "V-asian-pacific-islander-political-alliance",
-      "medium": "other"
+      "medium": "field"
     },
     {
       "ie_id": "C00761064-ie-1860897-500085186",
@@ -207,9 +207,9 @@
       "payee": "ASIAN PACIFIC ISLANDER POLITICAL ALLIANCE",
       "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202412309740032163",
       "vendor_id": "V-asian-pacific-islander-political-alliance",
-      "medium": "other"
+      "medium": "field"
     }
   ],
   "ads": [],
-  "method": "Every Schedule E independent expenditure names a payee. Payee strings are normalised (case, punctuation, legal suffixes, token order), near-duplicates are folded with a difflib ratio ≥ 0.92 when their numeric tokens match, and hand alias rows from data/hand/<race>/vendor_aliases.json override the rule. Medium is classified from the purpose the spender filed (ordered keyword table in campaign_commons/vendors.py); the FEC does not record which buy placed which ad, so vendor ↔ ad links are empty until a human verifies one. Totals are the filed amounts, grouped, never re-estimated."
+  "method": "Every Schedule E independent expenditure names a payee. Payee strings are normalised (case, punctuation, legal suffixes, token order), near-duplicates are folded with a difflib ratio ≥ 0.92 when their numeric tokens match, and hand alias rows from data/hand/<race>/vendor_aliases.json override the rule. Medium is classified from the purpose the spender filed (ordered keyword table in campaign_commons/vendors.py). The FEC does not record which buy placed which ad: vendor ↔ ad links are date-window adjacency (or single-digital-vendor inference) from campaign_commons.ads_enrich, each with its basis, and are only `verified` when a person found a source naming both. Totals are the filed amounts, grouped, never re-estimated."
 }

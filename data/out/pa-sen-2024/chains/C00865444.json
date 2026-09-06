@@ -13869,54 +13869,6 @@
       }
     },
     {
-      "from": "vendor:V-waterfront-strategies",
-      "to": "CR10478813122326953985",
-      "kind": "placement",
-      "amount": 0,
-      "visibility": "disclosed",
-      "depth": 2,
-      "transaction_types": [],
-      "count": 12,
-      "date_range": [
-        "2024-09-18",
-        "2024-10-08"
-      ],
-      "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00865444&payee_name=WATERFRONT+STRATEGIES",
-      "basis": {
-        "basis": "adjacent",
-        "rule": "Ran Sep 18, 2024 – Oct 8, 2024. In that window (buys dated up to 7 days before first shown through last shown) WINSENATE reported tv buys to WATERFRONT STRATEGIES ($16,335,233); the FEC does not record which buy placed which ad.",
-        "source_urls": [
-          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00865444&payee_name=WATERFRONT+STRATEGIES"
-        ],
-        "checked_by": null,
-        "checked_at": null
-      }
-    },
-    {
-      "from": "vendor:V-impact-360",
-      "to": "CR10478813122326953985",
-      "kind": "placement",
-      "amount": 0,
-      "visibility": "disclosed",
-      "depth": 2,
-      "transaction_types": [],
-      "count": 2,
-      "date_range": [
-        "2024-09-18",
-        "2024-10-08"
-      ],
-      "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00865444&payee_name=IMPACT+360",
-      "basis": {
-        "basis": "adjacent",
-        "rule": "Ran Sep 18, 2024 – Oct 8, 2024. In that window (buys dated up to 7 days before first shown through last shown) WINSENATE reported tv buys to IMPACT 360 ($199,948); the FEC does not record which buy placed which ad.",
-        "source_urls": [
-          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00865444&payee_name=IMPACT+360"
-        ],
-        "checked_by": null,
-        "checked_at": null
-      }
-    },
-    {
       "from": "vendor:V-social-currant",
       "to": "CR10478813122326953985",
       "kind": "placement",
@@ -13932,7 +13884,7 @@
       "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00865444&payee_name=SOCIAL+CURRANT",
       "basis": {
         "basis": "adjacent",
-        "rule": "Ran Sep 18, 2024 – Oct 8, 2024. In that window (buys dated up to 7 days before first shown through last shown) WINSENATE reported production buys to SOCIAL CURRANT ($4,200); the FEC does not record which buy placed which ad.",
+        "rule": "Ran Sep 18, 2024 – Oct 8, 2024. In that window (buys dated up to 7 days before first shown through last shown) WINSENATE reported production buys to SOCIAL CURRANT ($4,200); the FEC does not record which buy placed which ad. Same-window buys in media that cannot place a Google ad (TV, radio, mail, phones, field, consulting) are not listed.",
         "source_urls": [
           "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00865444&payee_name=SOCIAL+CURRANT"
         ],
@@ -13965,30 +13917,6 @@
       }
     },
     {
-      "from": "vendor:V-waterfront-strategies",
-      "to": "CR05870211732231684097",
-      "kind": "placement",
-      "amount": 0,
-      "visibility": "disclosed",
-      "depth": 2,
-      "transaction_types": [],
-      "count": 5,
-      "date_range": [
-        "2024-07-23",
-        "2024-08-14"
-      ],
-      "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00865444&payee_name=WATERFRONT+STRATEGIES",
-      "basis": {
-        "basis": "adjacent",
-        "rule": "Ran Jul 23, 2024 – Aug 14, 2024. In that window (buys dated up to 7 days before first shown through last shown) WINSENATE reported tv buys to WATERFRONT STRATEGIES ($2,515,030); the FEC does not record which buy placed which ad.",
-        "source_urls": [
-          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00865444&payee_name=WATERFRONT+STRATEGIES"
-        ],
-        "checked_by": null,
-        "checked_at": null
-      }
-    },
-    {
       "from": "vendor:V-al-media",
       "to": "CR05870211732231684097",
       "kind": "placement",
@@ -14004,7 +13932,7 @@
       "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00865444&payee_name=AL+MEDIA+LLC",
       "basis": {
         "basis": "adjacent",
-        "rule": "Ran Jul 23, 2024 – Aug 14, 2024. In that window (buys dated up to 7 days before first shown through last shown) WINSENATE reported production buys to AL MEDIA LLC ($18,507); the FEC does not record which buy placed which ad.",
+        "rule": "Ran Jul 23, 2024 – Aug 14, 2024. In that window (buys dated up to 7 days before first shown through last shown) WINSENATE reported production buys to AL MEDIA LLC ($18,507); the FEC does not record which buy placed which ad. Same-window buys in media that cannot place a Google ad (TV, radio, mail, phones, field, consulting) are not listed.",
         "source_urls": [
           "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00865444&payee_name=AL+MEDIA+LLC"
         ],
@@ -14037,30 +13965,6 @@
       }
     },
     {
-      "from": "vendor:V-waterfront-strategies",
-      "to": "CR17813237325262487553",
-      "kind": "placement",
-      "amount": 0,
-      "visibility": "disclosed",
-      "depth": 2,
-      "transaction_types": [],
-      "count": 2,
-      "date_range": [
-        "2024-08-13",
-        "2024-08-27"
-      ],
-      "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00865444&payee_name=WATERFRONT+STRATEGIES",
-      "basis": {
-        "basis": "adjacent",
-        "rule": "Ran Aug 13, 2024 – Aug 27, 2024. In that window (buys dated up to 7 days before first shown through last shown) WINSENATE reported tv buys to WATERFRONT STRATEGIES ($1,629,450); the FEC does not record which buy placed which ad.",
-        "source_urls": [
-          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00865444&payee_name=WATERFRONT+STRATEGIES"
-        ],
-        "checked_by": null,
-        "checked_at": null
-      }
-    },
-    {
       "from": "vendor:V-gambit-strategies",
       "to": "CR16164832502010085377",
       "kind": "placement",
@@ -14085,30 +13989,6 @@
       }
     },
     {
-      "from": "vendor:V-waterfront-strategies",
-      "to": "CR16164832502010085377",
-      "kind": "placement",
-      "amount": 0,
-      "visibility": "disclosed",
-      "depth": 2,
-      "transaction_types": [],
-      "count": 11,
-      "date_range": [
-        "2024-10-16",
-        "2024-10-30"
-      ],
-      "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00865444&payee_name=WATERFRONT+STRATEGIES",
-      "basis": {
-        "basis": "adjacent",
-        "rule": "Ran Oct 16, 2024 – Oct 30, 2024. In that window (buys dated up to 7 days before first shown through last shown) WINSENATE reported tv buys to WATERFRONT STRATEGIES ($16,116,836); the FEC does not record which buy placed which ad.",
-        "source_urls": [
-          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00865444&payee_name=WATERFRONT+STRATEGIES"
-        ],
-        "checked_by": null,
-        "checked_at": null
-      }
-    },
-    {
       "from": "vendor:V-peters-consulting",
       "to": "CR16164832502010085377",
       "kind": "placement",
@@ -14124,7 +14004,7 @@
       "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00865444&payee_name=PETERS+CONSULTING+LLC",
       "basis": {
         "basis": "adjacent",
-        "rule": "Ran Oct 16, 2024 – Oct 30, 2024. In that window (buys dated up to 7 days before first shown through last shown) WINSENATE reported production buys to PETERS CONSULTING LLC ($100); the FEC does not record which buy placed which ad.",
+        "rule": "Ran Oct 16, 2024 – Oct 30, 2024. In that window (buys dated up to 7 days before first shown through last shown) WINSENATE reported production buys to PETERS CONSULTING LLC ($100); the FEC does not record which buy placed which ad. Same-window buys in media that cannot place a Google ad (TV, radio, mail, phones, field, consulting) are not listed.",
         "source_urls": [
           "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00865444&payee_name=PETERS+CONSULTING+LLC"
         ],
@@ -14157,54 +14037,6 @@
       }
     },
     {
-      "from": "vendor:V-waterfront-strategies",
-      "to": "CR15747662947024896001",
-      "kind": "placement",
-      "amount": 0,
-      "visibility": "disclosed",
-      "depth": 2,
-      "transaction_types": [],
-      "count": 34,
-      "date_range": [
-        "2024-09-04",
-        "2024-11-05"
-      ],
-      "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00865444&payee_name=WATERFRONT+STRATEGIES",
-      "basis": {
-        "basis": "adjacent",
-        "rule": "Ran Sep 4, 2024 – Nov 5, 2024. In that window (buys dated up to 7 days before first shown through last shown) WINSENATE reported tv buys to WATERFRONT STRATEGIES ($38,871,247); the FEC does not record which buy placed which ad.",
-        "source_urls": [
-          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00865444&payee_name=WATERFRONT+STRATEGIES"
-        ],
-        "checked_by": null,
-        "checked_at": null
-      }
-    },
-    {
-      "from": "vendor:V-impact-360",
-      "to": "CR15747662947024896001",
-      "kind": "placement",
-      "amount": 0,
-      "visibility": "disclosed",
-      "depth": 2,
-      "transaction_types": [],
-      "count": 2,
-      "date_range": [
-        "2024-09-04",
-        "2024-11-05"
-      ],
-      "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00865444&payee_name=IMPACT+360",
-      "basis": {
-        "basis": "adjacent",
-        "rule": "Ran Sep 4, 2024 – Nov 5, 2024. In that window (buys dated up to 7 days before first shown through last shown) WINSENATE reported tv buys to IMPACT 360 ($199,948); the FEC does not record which buy placed which ad.",
-        "source_urls": [
-          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00865444&payee_name=IMPACT+360"
-        ],
-        "checked_by": null,
-        "checked_at": null
-      }
-    },
-    {
       "from": "vendor:V-social-currant",
       "to": "CR15747662947024896001",
       "kind": "placement",
@@ -14220,7 +14052,7 @@
       "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00865444&payee_name=SOCIAL+CURRANT",
       "basis": {
         "basis": "adjacent",
-        "rule": "Ran Sep 4, 2024 – Nov 5, 2024. In that window (buys dated up to 7 days before first shown through last shown) WINSENATE reported production buys to SOCIAL CURRANT ($4,200); the FEC does not record which buy placed which ad.",
+        "rule": "Ran Sep 4, 2024 – Nov 5, 2024. In that window (buys dated up to 7 days before first shown through last shown) WINSENATE reported production buys to SOCIAL CURRANT ($4,200); the FEC does not record which buy placed which ad. Same-window buys in media that cannot place a Google ad (TV, radio, mail, phones, field, consulting) are not listed.",
         "source_urls": [
           "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00865444&payee_name=SOCIAL+CURRANT"
         ],
@@ -14244,7 +14076,7 @@
       "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00865444&payee_name=PETERS+CONSULTING+LLC",
       "basis": {
         "basis": "adjacent",
-        "rule": "Ran Sep 4, 2024 – Nov 5, 2024. In that window (buys dated up to 7 days before first shown through last shown) WINSENATE reported production buys to PETERS CONSULTING LLC ($100); the FEC does not record which buy placed which ad.",
+        "rule": "Ran Sep 4, 2024 – Nov 5, 2024. In that window (buys dated up to 7 days before first shown through last shown) WINSENATE reported production buys to PETERS CONSULTING LLC ($100); the FEC does not record which buy placed which ad. Same-window buys in media that cannot place a Google ad (TV, radio, mail, phones, field, consulting) are not listed.",
         "source_urls": [
           "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00865444&payee_name=PETERS+CONSULTING+LLC"
         ],
@@ -14277,30 +14109,6 @@
       }
     },
     {
-      "from": "vendor:V-waterfront-strategies",
-      "to": "CR03071815602860457985",
-      "kind": "placement",
-      "amount": 0,
-      "visibility": "disclosed",
-      "depth": 2,
-      "transaction_types": [],
-      "count": 11,
-      "date_range": [
-        "2024-09-04",
-        "2024-09-19"
-      ],
-      "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00865444&payee_name=WATERFRONT+STRATEGIES",
-      "basis": {
-        "basis": "adjacent",
-        "rule": "Ran Sep 4, 2024 – Sep 19, 2024. In that window (buys dated up to 7 days before first shown through last shown) WINSENATE reported tv buys to WATERFRONT STRATEGIES ($13,119,442); the FEC does not record which buy placed which ad.",
-        "source_urls": [
-          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00865444&payee_name=WATERFRONT+STRATEGIES"
-        ],
-        "checked_by": null,
-        "checked_at": null
-      }
-    },
-    {
       "from": "vendor:V-gambit-strategies",
       "to": "CR12341671143046905857",
       "kind": "placement",
@@ -14325,54 +14133,6 @@
       }
     },
     {
-      "from": "vendor:V-waterfront-strategies",
-      "to": "CR12341671143046905857",
-      "kind": "placement",
-      "amount": 0,
-      "visibility": "disclosed",
-      "depth": 2,
-      "transaction_types": [],
-      "count": 14,
-      "date_range": [
-        "2024-10-05",
-        "2024-10-29"
-      ],
-      "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00865444&payee_name=WATERFRONT+STRATEGIES",
-      "basis": {
-        "basis": "adjacent",
-        "rule": "Ran Oct 5, 2024 – Oct 29, 2024. In that window (buys dated up to 7 days before first shown through last shown) WINSENATE reported tv buys to WATERFRONT STRATEGIES ($25,161,866); the FEC does not record which buy placed which ad.",
-        "source_urls": [
-          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00865444&payee_name=WATERFRONT+STRATEGIES"
-        ],
-        "checked_by": null,
-        "checked_at": null
-      }
-    },
-    {
-      "from": "vendor:V-impact-360",
-      "to": "CR12341671143046905857",
-      "kind": "placement",
-      "amount": 0,
-      "visibility": "disclosed",
-      "depth": 2,
-      "transaction_types": [],
-      "count": 2,
-      "date_range": [
-        "2024-10-05",
-        "2024-10-29"
-      ],
-      "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00865444&payee_name=IMPACT+360",
-      "basis": {
-        "basis": "adjacent",
-        "rule": "Ran Oct 5, 2024 – Oct 29, 2024. In that window (buys dated up to 7 days before first shown through last shown) WINSENATE reported tv buys to IMPACT 360 ($199,948); the FEC does not record which buy placed which ad.",
-        "source_urls": [
-          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00865444&payee_name=IMPACT+360"
-        ],
-        "checked_by": null,
-        "checked_at": null
-      }
-    },
-    {
       "from": "vendor:V-social-currant",
       "to": "CR12341671143046905857",
       "kind": "placement",
@@ -14388,7 +14148,7 @@
       "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00865444&payee_name=SOCIAL+CURRANT",
       "basis": {
         "basis": "adjacent",
-        "rule": "Ran Oct 5, 2024 – Oct 29, 2024. In that window (buys dated up to 7 days before first shown through last shown) WINSENATE reported production buys to SOCIAL CURRANT ($4,200); the FEC does not record which buy placed which ad.",
+        "rule": "Ran Oct 5, 2024 – Oct 29, 2024. In that window (buys dated up to 7 days before first shown through last shown) WINSENATE reported production buys to SOCIAL CURRANT ($4,200); the FEC does not record which buy placed which ad. Same-window buys in media that cannot place a Google ad (TV, radio, mail, phones, field, consulting) are not listed.",
         "source_urls": [
           "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00865444&payee_name=SOCIAL+CURRANT"
         ],
@@ -14412,7 +14172,7 @@
       "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00865444&payee_name=PETERS+CONSULTING+LLC",
       "basis": {
         "basis": "adjacent",
-        "rule": "Ran Oct 5, 2024 – Oct 29, 2024. In that window (buys dated up to 7 days before first shown through last shown) WINSENATE reported production buys to PETERS CONSULTING LLC ($100); the FEC does not record which buy placed which ad.",
+        "rule": "Ran Oct 5, 2024 – Oct 29, 2024. In that window (buys dated up to 7 days before first shown through last shown) WINSENATE reported production buys to PETERS CONSULTING LLC ($100); the FEC does not record which buy placed which ad. Same-window buys in media that cannot place a Google ad (TV, radio, mail, phones, field, consulting) are not listed.",
         "source_urls": [
           "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00865444&payee_name=PETERS+CONSULTING+LLC"
         ],
@@ -14445,54 +14205,6 @@
       }
     },
     {
-      "from": "vendor:V-waterfront-strategies",
-      "to": "CR14255135835702689793",
-      "kind": "placement",
-      "amount": 0,
-      "visibility": "disclosed",
-      "depth": 2,
-      "transaction_types": [],
-      "count": 8,
-      "date_range": [
-        "2024-10-08",
-        "2024-10-16"
-      ],
-      "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00865444&payee_name=WATERFRONT+STRATEGIES",
-      "basis": {
-        "basis": "adjacent",
-        "rule": "Ran Oct 8, 2024 – Oct 16, 2024. In that window (buys dated up to 7 days before first shown through last shown) WINSENATE reported tv buys to WATERFRONT STRATEGIES ($14,044,700); the FEC does not record which buy placed which ad.",
-        "source_urls": [
-          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00865444&payee_name=WATERFRONT+STRATEGIES"
-        ],
-        "checked_by": null,
-        "checked_at": null
-      }
-    },
-    {
-      "from": "vendor:V-impact-360",
-      "to": "CR14255135835702689793",
-      "kind": "placement",
-      "amount": 0,
-      "visibility": "disclosed",
-      "depth": 2,
-      "transaction_types": [],
-      "count": 2,
-      "date_range": [
-        "2024-10-08",
-        "2024-10-16"
-      ],
-      "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00865444&payee_name=IMPACT+360",
-      "basis": {
-        "basis": "adjacent",
-        "rule": "Ran Oct 8, 2024 – Oct 16, 2024. In that window (buys dated up to 7 days before first shown through last shown) WINSENATE reported tv buys to IMPACT 360 ($199,948); the FEC does not record which buy placed which ad.",
-        "source_urls": [
-          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00865444&payee_name=IMPACT+360"
-        ],
-        "checked_by": null,
-        "checked_at": null
-      }
-    },
-    {
       "from": "vendor:V-social-currant",
       "to": "CR14255135835702689793",
       "kind": "placement",
@@ -14508,7 +14220,7 @@
       "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00865444&payee_name=SOCIAL+CURRANT",
       "basis": {
         "basis": "adjacent",
-        "rule": "Ran Oct 8, 2024 – Oct 16, 2024. In that window (buys dated up to 7 days before first shown through last shown) WINSENATE reported production buys to SOCIAL CURRANT ($4,200); the FEC does not record which buy placed which ad.",
+        "rule": "Ran Oct 8, 2024 – Oct 16, 2024. In that window (buys dated up to 7 days before first shown through last shown) WINSENATE reported production buys to SOCIAL CURRANT ($4,200); the FEC does not record which buy placed which ad. Same-window buys in media that cannot place a Google ad (TV, radio, mail, phones, field, consulting) are not listed.",
         "source_urls": [
           "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00865444&payee_name=SOCIAL+CURRANT"
         ],
@@ -14532,7 +14244,7 @@
       "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00865444&payee_name=PETERS+CONSULTING+LLC",
       "basis": {
         "basis": "adjacent",
-        "rule": "Ran Oct 8, 2024 – Oct 16, 2024. In that window (buys dated up to 7 days before first shown through last shown) WINSENATE reported production buys to PETERS CONSULTING LLC ($100); the FEC does not record which buy placed which ad.",
+        "rule": "Ran Oct 8, 2024 – Oct 16, 2024. In that window (buys dated up to 7 days before first shown through last shown) WINSENATE reported production buys to PETERS CONSULTING LLC ($100); the FEC does not record which buy placed which ad. Same-window buys in media that cannot place a Google ad (TV, radio, mail, phones, field, consulting) are not listed.",
         "source_urls": [
           "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00865444&payee_name=PETERS+CONSULTING+LLC"
         ],
@@ -14565,30 +14277,6 @@
       }
     },
     {
-      "from": "vendor:V-waterfront-strategies",
-      "to": "CR15884613992212070401",
-      "kind": "placement",
-      "amount": 0,
-      "visibility": "disclosed",
-      "depth": 2,
-      "transaction_types": [],
-      "count": 5,
-      "date_range": [
-        "2024-11-02",
-        "2024-11-05"
-      ],
-      "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00865444&payee_name=WATERFRONT+STRATEGIES",
-      "basis": {
-        "basis": "adjacent",
-        "rule": "Ran Nov 2, 2024 – Nov 5, 2024. In that window (buys dated up to 7 days before first shown through last shown) WINSENATE reported tv buys to WATERFRONT STRATEGIES ($489,162); the FEC does not record which buy placed which ad.",
-        "source_urls": [
-          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00865444&payee_name=WATERFRONT+STRATEGIES"
-        ],
-        "checked_by": null,
-        "checked_at": null
-      }
-    },
-    {
       "from": "vendor:V-gambit-strategies",
       "to": "CR14004507606169681921",
       "kind": "placement",
@@ -14613,30 +14301,6 @@
       }
     },
     {
-      "from": "vendor:V-waterfront-strategies",
-      "to": "CR14004507606169681921",
-      "kind": "placement",
-      "amount": 0,
-      "visibility": "disclosed",
-      "depth": 2,
-      "transaction_types": [],
-      "count": 11,
-      "date_range": [
-        "2024-07-25",
-        "2024-09-03"
-      ],
-      "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00865444&payee_name=WATERFRONT+STRATEGIES",
-      "basis": {
-        "basis": "adjacent",
-        "rule": "Ran Jul 25, 2024 – Sep 3, 2024. In that window (buys dated up to 7 days before first shown through last shown) WINSENATE reported tv buys to WATERFRONT STRATEGIES ($6,806,941); the FEC does not record which buy placed which ad.",
-        "source_urls": [
-          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00865444&payee_name=WATERFRONT+STRATEGIES"
-        ],
-        "checked_by": null,
-        "checked_at": null
-      }
-    },
-    {
       "from": "vendor:V-al-media",
       "to": "CR14004507606169681921",
       "kind": "placement",
@@ -14652,7 +14316,7 @@
       "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00865444&payee_name=AL+MEDIA+LLC",
       "basis": {
         "basis": "adjacent",
-        "rule": "Ran Jul 25, 2024 – Sep 3, 2024. In that window (buys dated up to 7 days before first shown through last shown) WINSENATE reported production buys to AL MEDIA LLC ($18,507); the FEC does not record which buy placed which ad.",
+        "rule": "Ran Jul 25, 2024 – Sep 3, 2024. In that window (buys dated up to 7 days before first shown through last shown) WINSENATE reported production buys to AL MEDIA LLC ($18,507); the FEC does not record which buy placed which ad. Same-window buys in media that cannot place a Google ad (TV, radio, mail, phones, field, consulting) are not listed.",
         "source_urls": [
           "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00865444&payee_name=AL+MEDIA+LLC"
         ],

@@ -7388,7 +7388,7 @@
       "terminus_reason": null,
       "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00761064&payee_name=BASE+BUILDER",
       "href": "/races/pa-sen-2024/vendors/V-base-builder",
-      "medium": "other",
+      "medium": "field",
       "basis": {
         "basis": "filed",
         "rule": "Schedule E payee, grouped by normalized vendor name (campaign_commons.vendors)",
@@ -7460,7 +7460,7 @@
       "terminus_reason": null,
       "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00761064&payee_name=ASIAN+PACIFIC+ISLANDER+POLITICAL+ALLIANCE",
       "href": "/races/pa-sen-2024/vendors/V-asian-pacific-islander-political-alliance",
-      "medium": "other",
+      "medium": "field",
       "basis": {
         "basis": "filed",
         "rule": "Schedule E payee, grouped by normalized vendor name (campaign_commons.vendors)",

@@ -147,8 +147,14 @@ def _dominant_medium(buys: list[Buy], vendor: JsonDict) -> str:
     return "other"
 
 
+# Media that can have placed or produced a Google creative. A same-window TV, mail or phone buy cannot have, so it is not
+# offered as an `adjacent` link; `other` is kept because it means "purpose string unclassified", not "not digital".
+ADJACENT_MEDIA = frozenset({"digital", "production", "other"})
+
+
 def vendor_links(ad: JsonDict, entity: JsonDict, hand_links: dict[tuple[str, str], JsonDict]) -> list[JsonDict]:
-    """One link per vendor the sponsor paid inside the ad's window, verified first, then by dollars in the window."""
+    """One link per vendor the sponsor paid inside the ad's window, verified first, then by dollars in the window.
+    Adjacent (co-occurrence only) links are limited to ADJACENT_MEDIA; verified and inferred links are never dropped."""
     first, last = _iso(ad.get("first_shown")), _iso(ad.get("last_shown"))
     vendors = _vendor_rows(entity)
     if first is None or last is None or not vendors:
@@ -192,12 +198,15 @@ def vendor_links(ad: JsonDict, entity: JsonDict, hand_links: dict[tuple[str, str
                 "checked_by": None,
                 "checked_at": None,
             }
+        elif medium not in ADJACENT_MEDIA:
+            continue
         else:
             basis = {
                 "basis": "adjacent",
                 "rule": f"{window_text}. In that window (buys dated up to {WINDOW_LEAD_DAYS} days before first shown through "
                 f"last shown) {sponsor} reported {medium} buys to {vendor_name} (${amount:,.0f}); the FEC does not record "
-                "which buy placed which ad.",
+                "which buy placed which ad. Same-window buys in media that cannot place a Google ad (TV, radio, mail, "
+                "phones, field, consulting) are not listed.",
                 "source_urls": source_urls,
                 "checked_by": None,
                 "checked_at": None,
@@ -239,6 +248,18 @@ def patch_vendor_ads(vendor: JsonDict, ad_id: str, sponsor_entity_id: str, basis
     return True
 
 
+def prune_vendor_ads(vendor: JsonDict, linked_ad_ids: set[str]) -> bool:
+    """Drop vendor.ads[] rows for ads that no longer link to this vendor; returns True when the file content changed."""
+    existing = vendor.get("ads")
+    if not isinstance(existing, list):
+        return False
+    kept = [a for a in existing if isinstance(a, dict) and a.get("ad_id") in linked_ad_ids]
+    if len(kept) == len(existing):
+        return False
+    vendor["ads"] = kept
+    return True
+
+
 # ---------------------------------------------------------------------------
 # orchestration
 
@@ -268,7 +289,8 @@ def enrich_notes(c: EnrichCounts, tagger_count: int) -> list[str]:
         NOTE_PREFIX
         + WINDOW_RULE
         + f" {links_total} vendor links ({by_basis}). 'adjacent' means only that the buy and the ad "
-        "overlap in time; 'inferred' means the sponsor paid exactly one digital vendor in the window; 'verified' means a person "
+        "overlap in time, and is offered only for digital, production or unclassified buys (a TV, mail or phone buy cannot "
+        "have placed a Google ad); 'inferred' means the sponsor paid exactly one digital vendor in the window; 'verified' means a person "
         "found a source naming both the sponsor and the vendor for this creative. The FEC does not record which buy placed "
         "which ad. " + vendor_note,
     ]
@@ -290,6 +312,7 @@ def enrich(
     counts = EnrichCounts(ads=len(ads))
     seen_sponsors: dict[str, bool] = {}
     changed_vendors: set[str] = set()
+    linked: dict[str, set[str]] = {vendor_id: set() for vendor_id in vendors}
     ad_ids = {str(a["ad_id"]) for a in ads}
     counts.untagged_rows = sorted(set(issue_rows) - ad_ids)
     for ad in ads:
@@ -302,6 +325,7 @@ def enrich(
             counts.with_shares += 1
         row = issue_rows.get(str(ad["ad_id"]))
         ad.pop("issues", None)
+        ad.pop("vendor_links", None)
         if row is not None:
             ad["issues"] = issue_tags(row, str(ad["creative_url"]))
             counts.tagged += 1
@@ -315,8 +339,13 @@ def enrich(
             counts.links_by_basis[str(basis["basis"])] += 1
             vendor_id = str(link["vendor_id"])
             vendor = vendors.get(vendor_id)
-            if vendor is not None and patch_vendor_ads(vendor, str(ad["ad_id"]), str(sponsor_id), basis):
-                changed_vendors.add(vendor_id)
+            if vendor is not None:
+                linked[vendor_id].add(str(ad["ad_id"]))
+                if patch_vendor_ads(vendor, str(ad["ad_id"]), str(sponsor_id), basis):
+                    changed_vendors.add(vendor_id)
+    for vendor_id, vendor in vendors.items():
+        if prune_vendor_ads(vendor, linked[vendor_id]):
+            changed_vendors.add(vendor_id)
     counts.sponsors_with_vendors = sum(1 for has in seen_sponsors.values() if has)
     counts.sponsors_without_vendors = sum(1 for has in seen_sponsors.values() if not has)
     counts.vendor_files_patched = len(changed_vendors)

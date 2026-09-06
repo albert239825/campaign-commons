@@ -15,7 +15,7 @@ Source of truth: [`contracts/src/schemas.ts`](../contracts/src/schemas.ts). This
 | `<race_id>/stories.json` | `Stories` | `campaign_commons.chains` | `/races/[raceId]/stories`, ledger strip |
 | `<race_id>/donors/<donor_key>.json` | `DonorView` | `campaign_commons.donors` | `/races/[raceId]/donors/[key]` |
 | `<race_id>/vendors.json` | `VendorIndex` | `campaign_commons.vendors` (Block 2) | entity page, vendor pages |
-| `<race_id>/vendors/<vendor_id>.json` | `Vendor` | `campaign_commons.vendors`; `campaign_commons.ads` fills `ads[]` | `/races/[raceId]/vendors/[vendorId]` |
+| `<race_id>/vendors/<vendor_id>.json` | `Vendor` | `campaign_commons.vendors`; `campaign_commons.ads_enrich` fills `ads[]` (vendors preserves it on re-run) | `/races/[raceId]/vendors/[vendorId]` |
 | `<race_id>/issues.json` | `IssueSpending` | `campaign_commons.issues` (Block 2) | ledger issue cards |
 | `search.json` | `SearchIndex` | `campaign_commons.search` (Block 2) | header search box (client) |
 

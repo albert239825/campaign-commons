@@ -929,78 +929,6 @@
       }
     },
     {
-      "from": "vendor:V-midatlantic-media",
-      "to": "CR00092178124250284033",
-      "kind": "placement",
-      "amount": 0,
-      "visibility": "disclosed",
-      "depth": 2,
-      "transaction_types": [],
-      "count": 1,
-      "date_range": [
-        "2024-10-23",
-        "2024-11-05"
-      ],
-      "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00710848&payee_name=MIDATLANTIC+MEDIA",
-      "basis": {
-        "basis": "adjacent",
-        "rule": "Ran Oct 23, 2024 – Nov 5, 2024. In that window (buys dated up to 7 days before first shown through last shown) DMFI PAC reported mail buys to MIDATLANTIC MEDIA ($2,500); the FEC does not record which buy placed which ad.",
-        "source_urls": [
-          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00710848&payee_name=MIDATLANTIC+MEDIA"
-        ],
-        "checked_by": null,
-        "checked_at": null
-      }
-    },
-    {
-      "from": "vendor:V-pittsburgh-jewish-chronicle",
-      "to": "CR00092178124250284033",
-      "kind": "placement",
-      "amount": 0,
-      "visibility": "disclosed",
-      "depth": 2,
-      "transaction_types": [],
-      "count": 1,
-      "date_range": [
-        "2024-10-23",
-        "2024-11-05"
-      ],
-      "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00710848&payee_name=PITTSBURGH+JEWISH+CHRONICLE",
-      "basis": {
-        "basis": "adjacent",
-        "rule": "Ran Oct 23, 2024 – Nov 5, 2024. In that window (buys dated up to 7 days before first shown through last shown) DMFI PAC reported mail buys to PITTSBURGH JEWISH CHRONICLE ($1,430); the FEC does not record which buy placed which ad.",
-        "source_urls": [
-          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00710848&payee_name=PITTSBURGH+JEWISH+CHRONICLE"
-        ],
-        "checked_by": null,
-        "checked_at": null
-      }
-    },
-    {
-      "from": "vendor:V-the-reporter-group",
-      "to": "CR00092178124250284033",
-      "kind": "placement",
-      "amount": 0,
-      "visibility": "disclosed",
-      "depth": 2,
-      "transaction_types": [],
-      "count": 1,
-      "date_range": [
-        "2024-10-23",
-        "2024-11-05"
-      ],
-      "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00710848&payee_name=THE+REPORTER+GROUP",
-      "basis": {
-        "basis": "adjacent",
-        "rule": "Ran Oct 23, 2024 – Nov 5, 2024. In that window (buys dated up to 7 days before first shown through last shown) DMFI PAC reported mail buys to THE REPORTER GROUP ($1,165); the FEC does not record which buy placed which ad.",
-        "source_urls": [
-          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00710848&payee_name=THE+REPORTER+GROUP"
-        ],
-        "checked_by": null,
-        "checked_at": null
-      }
-    },
-    {
       "from": "C00710848",
       "to": "CR00092178124250284033",
       "kind": "placement",
@@ -1013,7 +941,7 @@
       "source_url": "https://adstransparency.google.com/advertiser/AR17947319916411486209/creative/CR00092178124250284033?political=&region=US",
       "basis": {
         "basis": "inferred",
-        "rule": "Advertiser name matched to this committee by normalized name; Google shows the advertiser, not the paid-for-by line",
+        "rule": "Advertiser name matched to this committee by normalized name; Google's bulk data names the advertiser and carries no paid-for-by field for US ads",
         "source_urls": [
           "https://adstransparency.google.com/advertiser/AR17947319916411486209/creative/CR00092178124250284033?political=&region=US"
         ],

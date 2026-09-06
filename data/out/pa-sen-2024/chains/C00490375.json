@@ -895,54 +895,6 @@
       }
     },
     {
-      "from": "vendor:V-dspolitical",
-      "to": "CR17561041844983300097",
-      "kind": "placement",
-      "amount": 0,
-      "visibility": "disclosed",
-      "depth": 2,
-      "transaction_types": [],
-      "count": 1,
-      "date_range": [
-        "2024-10-09",
-        "2024-11-06"
-      ],
-      "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00490375&payee_name=DSPOLITICAL",
-      "basis": {
-        "basis": "adjacent",
-        "rule": "Ran Oct 9, 2024 – Nov 6, 2024. In that window (buys dated up to 7 days before first shown through last shown) NATIONAL NURSES UNITED FOR PATIENT PROTECTION reported tv buys to DSPOLITICAL ($125,000); the FEC does not record which buy placed which ad.",
-        "source_urls": [
-          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00490375&payee_name=DSPOLITICAL"
-        ],
-        "checked_by": null,
-        "checked_at": null
-      }
-    },
-    {
-      "from": "vendor:V-middle-seat-consulting",
-      "to": "CR17561041844983300097",
-      "kind": "placement",
-      "amount": 0,
-      "visibility": "disclosed",
-      "depth": 2,
-      "transaction_types": [],
-      "count": 1,
-      "date_range": [
-        "2024-10-09",
-        "2024-11-06"
-      ],
-      "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00490375&payee_name=MIDDLE+SEAT++CONSULTING+LLC",
-      "basis": {
-        "basis": "adjacent",
-        "rule": "Ran Oct 9, 2024 – Nov 6, 2024. In that window (buys dated up to 7 days before first shown through last shown) NATIONAL NURSES UNITED FOR PATIENT PROTECTION reported consulting buys to Middle Seat Consulting ($52,913); the FEC does not record which buy placed which ad.",
-        "source_urls": [
-          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00490375&payee_name=MIDDLE+SEAT++CONSULTING+LLC"
-        ],
-        "checked_by": null,
-        "checked_at": null
-      }
-    },
-    {
       "from": "vendor:V-adquick",
       "to": "CR17561041844983300097",
       "kind": "placement",
@@ -958,33 +910,9 @@
       "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00490375&payee_name=ADQUICK",
       "basis": {
         "basis": "adjacent",
-        "rule": "Ran Oct 9, 2024 – Nov 6, 2024. In that window (buys dated up to 7 days before first shown through last shown) NATIONAL NURSES UNITED FOR PATIENT PROTECTION reported other buys to ADQUICK ($19,714); the FEC does not record which buy placed which ad.",
+        "rule": "Ran Oct 9, 2024 – Nov 6, 2024. In that window (buys dated up to 7 days before first shown through last shown) NATIONAL NURSES UNITED FOR PATIENT PROTECTION reported other buys to ADQUICK ($19,714); the FEC does not record which buy placed which ad. Same-window buys in media that cannot place a Google ad (TV, radio, mail, phones, field, consulting) are not listed.",
         "source_urls": [
           "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00490375&payee_name=ADQUICK"
-        ],
-        "checked_by": null,
-        "checked_at": null
-      }
-    },
-    {
-      "from": "vendor:V-getthru",
-      "to": "CR17561041844983300097",
-      "kind": "placement",
-      "amount": 0,
-      "visibility": "disclosed",
-      "depth": 2,
-      "transaction_types": [],
-      "count": 1,
-      "date_range": [
-        "2024-10-09",
-        "2024-11-06"
-      ],
-      "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00490375&payee_name=GETTHRU",
-      "basis": {
-        "basis": "adjacent",
-        "rule": "Ran Oct 9, 2024 – Nov 6, 2024. In that window (buys dated up to 7 days before first shown through last shown) NATIONAL NURSES UNITED FOR PATIENT PROTECTION reported phones buys to GETTHRU ($19,437); the FEC does not record which buy placed which ad.",
-        "source_urls": [
-          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00490375&payee_name=GETTHRU"
         ],
         "checked_by": null,
         "checked_at": null
@@ -1006,7 +934,7 @@
       "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00490375&payee_name=FENTON+COMMUNICATIONS+INC.",
       "basis": {
         "basis": "adjacent",
-        "rule": "Ran Oct 9, 2024 – Nov 6, 2024. In that window (buys dated up to 7 days before first shown through last shown) NATIONAL NURSES UNITED FOR PATIENT PROTECTION reported production buys to FENTON COMMUNICATIONS INC. ($500); the FEC does not record which buy placed which ad.",
+        "rule": "Ran Oct 9, 2024 – Nov 6, 2024. In that window (buys dated up to 7 days before first shown through last shown) NATIONAL NURSES UNITED FOR PATIENT PROTECTION reported production buys to FENTON COMMUNICATIONS INC. ($500); the FEC does not record which buy placed which ad. Same-window buys in media that cannot place a Google ad (TV, radio, mail, phones, field, consulting) are not listed.",
         "source_urls": [
           "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00490375&payee_name=FENTON+COMMUNICATIONS+INC."
         ],

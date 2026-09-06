@@ -16,7 +16,7 @@ from pathlib import Path
 from typing import TypedDict
 
 from .config import OUT
-from .util import now_iso, read_json
+from .util import keep_generated_at, now_iso, read_json
 
 MAX_ALIASES = 8
 PARTY_LABELS = {
@@ -278,7 +278,7 @@ def build_index(out: Path = OUT) -> dict:
 def write_index(index: dict, path: Path) -> int:
     """Compact JSON (no indent): the file is fetched by the browser, not read by people."""
     path.parent.mkdir(parents=True, exist_ok=True)
-    text = json.dumps(index, separators=(",", ":"), ensure_ascii=False) + "\n"
+    text = json.dumps(keep_generated_at(path, index), separators=(",", ":"), ensure_ascii=False) + "\n"
     path.write_text(text)
     size = len(text.encode("utf-8"))
     print(f"wrote {path} ({size / 1024:.0f} KB)")

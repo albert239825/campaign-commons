@@ -46,7 +46,7 @@
   "last_date": "2024-10-21",
   "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&payee_name=THOMAS+GRAPHICS+INC",
   "race_id": "pa-sen-2024",
-  "generated_at": "2026-09-05T19:53:50+00:00",
+  "generated_at": "2026-09-05T20:34:15+00:00",
   "data_status": "real",
   "expenditures": [
     {
@@ -95,46 +95,6 @@
       "medium": "mail"
     }
   ],
-  "ads": [
-    {
-      "ad_id": "CR03103793249286881281",
-      "sponsor_entity_id": "C00528554",
-      "basis": {
-        "basis": "adjacent",
-        "rule": "Ran Oct 20, 2024 – Jan 30, 2025. In that window (buys dated up to 7 days before first shown through last shown) RJC VICTORY FUND reported mail buys to THOMAS GRAPHICS INC ($13,644); the FEC does not record which buy placed which ad.",
-        "source_urls": [
-          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00528554&payee_name=THOMAS+GRAPHICS+INC"
-        ],
-        "checked_by": null,
-        "checked_at": null
-      }
-    },
-    {
-      "ad_id": "CR00199343124563099649",
-      "sponsor_entity_id": "C00528554",
-      "basis": {
-        "basis": "adjacent",
-        "rule": "Ran Oct 17, 2024 – Dec 7, 2024. In that window (buys dated up to 7 days before first shown through last shown) RJC VICTORY FUND reported mail buys to THOMAS GRAPHICS INC ($13,644); the FEC does not record which buy placed which ad.",
-        "source_urls": [
-          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00528554&payee_name=THOMAS+GRAPHICS+INC"
-        ],
-        "checked_by": null,
-        "checked_at": null
-      }
-    },
-    {
-      "ad_id": "CR11154510846351114241",
-      "sponsor_entity_id": "C00528554",
-      "basis": {
-        "basis": "adjacent",
-        "rule": "Ran Oct 1, 2024 – Oct 21, 2024. In that window (buys dated up to 7 days before first shown through last shown) RJC VICTORY FUND reported mail buys to THOMAS GRAPHICS INC ($64,132); the FEC does not record which buy placed which ad.",
-        "source_urls": [
-          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00528554&payee_name=THOMAS+GRAPHICS+INC"
-        ],
-        "checked_by": null,
-        "checked_at": null
-      }
-    }
-  ],
-  "method": "Every Schedule E independent expenditure names a payee. Payee strings are normalised (case, punctuation, legal suffixes, token order), near-duplicates are folded with a difflib ratio ≥ 0.92 when their numeric tokens match, and hand alias rows from data/hand/<race>/vendor_aliases.json override the rule. Medium is classified from the purpose the spender filed (ordered keyword table in campaign_commons/vendors.py); the FEC does not record which buy placed which ad, so vendor ↔ ad links are empty until a human verifies one. Totals are the filed amounts, grouped, never re-estimated."
+  "ads": [],
+  "method": "Every Schedule E independent expenditure names a payee. Payee strings are normalised (case, punctuation, legal suffixes, token order), near-duplicates are folded with a difflib ratio ≥ 0.92 when their numeric tokens match, and hand alias rows from data/hand/<race>/vendor_aliases.json override the rule. Medium is classified from the purpose the spender filed (ordered keyword table in campaign_commons/vendors.py). The FEC does not record which buy placed which ad: vendor ↔ ad links are date-window adjacency (or single-digital-vendor inference) from campaign_commons.ads_enrich, each with its basis, and are only `verified` when a person found a source naming both. Totals are the filed amounts, grouped, never re-estimated."
 }

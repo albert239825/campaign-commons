@@ -43,7 +43,7 @@
       "terminus_reason": null,
       "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00162818&payee_name=NORTHERN+LIBERTY+PRESS",
       "href": "/races/pa-sen-2024/vendors/V-northern-liberty-press",
-      "medium": "other",
+      "medium": "field",
       "basis": {
         "basis": "filed",
         "rule": "Schedule E payee, grouped by normalized vendor name (campaign_commons.vendors)",
@@ -91,7 +91,7 @@
       "terminus_reason": null,
       "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00162818&payee_name=KENNEDY+PRINTING+CO.%2C+INC.",
       "href": "/races/pa-sen-2024/vendors/V-kennedy-printing",
-      "medium": "other",
+      "medium": "field",
       "basis": {
         "basis": "filed",
         "rule": "Schedule E payee, grouped by normalized vendor name (campaign_commons.vendors)",

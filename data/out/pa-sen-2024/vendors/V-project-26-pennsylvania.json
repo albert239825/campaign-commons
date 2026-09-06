@@ -17,7 +17,7 @@
   "count": 46,
   "media_mix": [
     {
-      "medium": "other",
+      "medium": "field",
       "amount": 191798.2,
       "count": 42
     },
@@ -51,7 +51,7 @@
   "last_date": "2024-11-05",
   "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&payee_name=PROJECT+26+PENNSYLVANIA",
   "race_id": "pa-sen-2024",
-  "generated_at": "2026-09-05T19:53:50+00:00",
+  "generated_at": "2026-09-05T20:34:15+00:00",
   "data_status": "real",
   "expenditures": [
     {
@@ -67,7 +67,7 @@
       "payee": "PROJECT 26 PENNSYLVANIA",
       "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202501089740082507",
       "vendor_id": "V-project-26-pennsylvania",
-      "medium": "other"
+      "medium": "field"
     },
     {
       "ie_id": "C00890053-ie-1862032-SE.4470",
@@ -82,7 +82,7 @@
       "payee": "PROJECT 26 PENNSYLVANIA",
       "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202501089740082506",
       "vendor_id": "V-project-26-pennsylvania",
-      "medium": "other"
+      "medium": "field"
     },
     {
       "ie_id": "C00890053-ie-1862032-SE.4494",
@@ -97,7 +97,7 @@
       "payee": "PROJECT 26 PENNSYLVANIA",
       "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202501089740082502",
       "vendor_id": "V-project-26-pennsylvania",
-      "medium": "other"
+      "medium": "field"
     },
     {
       "ie_id": "C00890053-ie-1862032-SE.4482",
@@ -112,7 +112,7 @@
       "payee": "PROJECT 26 PENNSYLVANIA",
       "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202501089740082502",
       "vendor_id": "V-project-26-pennsylvania",
-      "medium": "other"
+      "medium": "field"
     },
     {
       "ie_id": "C00890053-ie-1862032-SE.4493",
@@ -127,7 +127,7 @@
       "payee": "PROJECT 26 PENNSYLVANIA",
       "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202501089740082498",
       "vendor_id": "V-project-26-pennsylvania",
-      "medium": "other"
+      "medium": "field"
     },
     {
       "ie_id": "C00890053-ie-1862032-SE.4481",
@@ -142,7 +142,7 @@
       "payee": "PROJECT 26 PENNSYLVANIA",
       "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202501089740082498",
       "vendor_id": "V-project-26-pennsylvania",
-      "medium": "other"
+      "medium": "field"
     },
     {
       "ie_id": "C00890053-ie-1862032-SE.4492",
@@ -157,7 +157,7 @@
       "payee": "PROJECT 26 PENNSYLVANIA",
       "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202501089740082494",
       "vendor_id": "V-project-26-pennsylvania",
-      "medium": "other"
+      "medium": "field"
     },
     {
       "ie_id": "C00890053-ie-1862032-SE.4480",
@@ -172,7 +172,7 @@
       "payee": "PROJECT 26 PENNSYLVANIA",
       "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202501089740082493",
       "vendor_id": "V-project-26-pennsylvania",
-      "medium": "other"
+      "medium": "field"
     },
     {
       "ie_id": "C00890053-ie-1862032-SE.4596",
@@ -217,7 +217,7 @@
       "payee": "PROJECT 26 PENNSYLVANIA",
       "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202501089740082486",
       "vendor_id": "V-project-26-pennsylvania",
-      "medium": "other"
+      "medium": "field"
     },
     {
       "ie_id": "C00890053-ie-1862032-SE.4479",
@@ -232,7 +232,7 @@
       "payee": "PROJECT 26 PENNSYLVANIA",
       "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202501089740082486",
       "vendor_id": "V-project-26-pennsylvania",
-      "medium": "other"
+      "medium": "field"
     },
     {
       "ie_id": "C00890053-ie-1862032-SE.4576",
@@ -277,7 +277,7 @@
       "payee": "PROJECT 26 PENNSYLVANIA",
       "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202501089740082479",
       "vendor_id": "V-project-26-pennsylvania",
-      "medium": "other"
+      "medium": "field"
     },
     {
       "ie_id": "C00890053-ie-1862032-SE.4477",
@@ -292,7 +292,7 @@
       "payee": "PROJECT 26 PENNSYLVANIA",
       "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202501089740082479",
       "vendor_id": "V-project-26-pennsylvania",
-      "medium": "other"
+      "medium": "field"
     },
     {
       "ie_id": "C00890053-ie-1862032-SE.4489",
@@ -307,7 +307,7 @@
       "payee": "PROJECT 26 PENNSYLVANIA",
       "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202501089740082475",
       "vendor_id": "V-project-26-pennsylvania",
-      "medium": "other"
+      "medium": "field"
     },
     {
       "ie_id": "C00890053-ie-1862032-SE.4476",
@@ -322,7 +322,7 @@
       "payee": "PROJECT 26 PENNSYLVANIA",
       "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202501089740082474",
       "vendor_id": "V-project-26-pennsylvania",
-      "medium": "other"
+      "medium": "field"
     },
     {
       "ie_id": "C00890053-ie-1862032-SE.4488",
@@ -337,7 +337,7 @@
       "payee": "PROJECT 26 PENNSYLVANIA",
       "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202501089740082470",
       "vendor_id": "V-project-26-pennsylvania",
-      "medium": "other"
+      "medium": "field"
     },
     {
       "ie_id": "C00890053-ie-1862032-SE.4475",
@@ -352,7 +352,7 @@
       "payee": "PROJECT 26 PENNSYLVANIA",
       "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202501089740082470",
       "vendor_id": "V-project-26-pennsylvania",
-      "medium": "other"
+      "medium": "field"
     },
     {
       "ie_id": "C00890053-ie-1862032-SE.4474",
@@ -367,7 +367,7 @@
       "payee": "PROJECT 26 PENNSYLVANIA",
       "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202501089740082466",
       "vendor_id": "V-project-26-pennsylvania",
-      "medium": "other"
+      "medium": "field"
     },
     {
       "ie_id": "C00890053-ie-1862032-SE.4180",
@@ -382,7 +382,7 @@
       "payee": "PROJECT 26 PENNSYLVANIA",
       "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202501089740082465",
       "vendor_id": "V-project-26-pennsylvania",
-      "medium": "other"
+      "medium": "field"
     },
     {
       "ie_id": "C00890053-ie-1862032-SE.4487",
@@ -397,7 +397,7 @@
       "payee": "PROJECT 26 PENNSYLVANIA",
       "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202501089740082463",
       "vendor_id": "V-project-26-pennsylvania",
-      "medium": "other"
+      "medium": "field"
     },
     {
       "ie_id": "C00890053-ie-1862032-SE.4473",
@@ -412,7 +412,7 @@
       "payee": "PROJECT 26 PENNSYLVANIA",
       "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202501089740082463",
       "vendor_id": "V-project-26-pennsylvania",
-      "medium": "other"
+      "medium": "field"
     },
     {
       "ie_id": "C00890053-ie-1862032-SE.4486",
@@ -427,7 +427,7 @@
       "payee": "PROJECT 26 PENNSYLVANIA",
       "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202501089740082461",
       "vendor_id": "V-project-26-pennsylvania",
-      "medium": "other"
+      "medium": "field"
     },
     {
       "ie_id": "C00890053-ie-1862032-SE.4472",
@@ -442,7 +442,7 @@
       "payee": "PROJECT 26 PENNSYLVANIA",
       "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202501089740082461",
       "vendor_id": "V-project-26-pennsylvania",
-      "medium": "other"
+      "medium": "field"
     },
     {
       "ie_id": "C00890053-ie-1862032-SE.4485",
@@ -457,7 +457,7 @@
       "payee": "PROJECT 26 PENNSYLVANIA",
       "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202501089740082457",
       "vendor_id": "V-project-26-pennsylvania",
-      "medium": "other"
+      "medium": "field"
     },
     {
       "ie_id": "C00890053-ie-1862032-SE.4471",
@@ -472,7 +472,7 @@
       "payee": "PROJECT 26 PENNSYLVANIA",
       "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202501089740082457",
       "vendor_id": "V-project-26-pennsylvania",
-      "medium": "other"
+      "medium": "field"
     },
     {
       "ie_id": "C00890053-ie-1862032-SE.4484",
@@ -487,7 +487,7 @@
       "payee": "PROJECT 26 PENNSYLVANIA",
       "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202501089740082453",
       "vendor_id": "V-project-26-pennsylvania",
-      "medium": "other"
+      "medium": "field"
     },
     {
       "ie_id": "C00890053-ie-1862032-SE.4469",
@@ -502,7 +502,7 @@
       "payee": "PROJECT 26 PENNSYLVANIA",
       "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202501089740082452",
       "vendor_id": "V-project-26-pennsylvania",
-      "medium": "other"
+      "medium": "field"
     },
     {
       "ie_id": "C00890053-ie-1862032-SE.4483",
@@ -517,7 +517,7 @@
       "payee": "PROJECT 26 PENNSYLVANIA",
       "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202501089740082448",
       "vendor_id": "V-project-26-pennsylvania",
-      "medium": "other"
+      "medium": "field"
     },
     {
       "ie_id": "C00890053-ie-1862032-SE.4465",
@@ -532,7 +532,7 @@
       "payee": "PROJECT 26 PENNSYLVANIA",
       "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202501089740082448",
       "vendor_id": "V-project-26-pennsylvania",
-      "medium": "other"
+      "medium": "field"
     },
     {
       "ie_id": "C00890053-ie-1862032-SE.4442",
@@ -547,7 +547,7 @@
       "payee": "PROJECT 26 PENNSYLVANIA",
       "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202501089740082443",
       "vendor_id": "V-project-26-pennsylvania",
-      "medium": "other"
+      "medium": "field"
     },
     {
       "ie_id": "C00890053-ie-1862032-SE.4441",
@@ -562,7 +562,7 @@
       "payee": "PROJECT 26 PENNSYLVANIA",
       "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202501089740082443",
       "vendor_id": "V-project-26-pennsylvania",
-      "medium": "other"
+      "medium": "field"
     },
     {
       "ie_id": "C00890053-ie-1862032-SE.4157",
@@ -577,7 +577,7 @@
       "payee": "PROJECT 26 PENNSYLVANIA",
       "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202501089740082441",
       "vendor_id": "V-project-26-pennsylvania",
-      "medium": "other"
+      "medium": "field"
     },
     {
       "ie_id": "C00890053-ie-1862032-SE.4148",
@@ -592,7 +592,7 @@
       "payee": "PROJECT 26 PENNSYLVANIA",
       "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202501089740082438",
       "vendor_id": "V-project-26-pennsylvania",
-      "medium": "other"
+      "medium": "field"
     },
     {
       "ie_id": "C00890053-ie-1862032-SE.4440",
@@ -607,7 +607,7 @@
       "payee": "PROJECT 26 PENNSYLVANIA",
       "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202501089740082436",
       "vendor_id": "V-project-26-pennsylvania",
-      "medium": "other"
+      "medium": "field"
     },
     {
       "ie_id": "C00890053-ie-1862032-SE.4439",
@@ -622,7 +622,7 @@
       "payee": "PROJECT 26 PENNSYLVANIA",
       "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202501089740082436",
       "vendor_id": "V-project-26-pennsylvania",
-      "medium": "other"
+      "medium": "field"
     },
     {
       "ie_id": "C00890053-ie-1862032-SE.4438",
@@ -637,7 +637,7 @@
       "payee": "PROJECT 26 PENNSYLVANIA",
       "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202501089740082434",
       "vendor_id": "V-project-26-pennsylvania",
-      "medium": "other"
+      "medium": "field"
     },
     {
       "ie_id": "C00890053-ie-1862032-SE.4436",
@@ -652,7 +652,7 @@
       "payee": "PROJECT 26 PENNSYLVANIA",
       "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202501089740082434",
       "vendor_id": "V-project-26-pennsylvania",
-      "medium": "other"
+      "medium": "field"
     },
     {
       "ie_id": "C00890053-ie-1862032-SE.4437",
@@ -667,7 +667,7 @@
       "payee": "PROJECT 26 PENNSYLVANIA",
       "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202501089740082430",
       "vendor_id": "V-project-26-pennsylvania",
-      "medium": "other"
+      "medium": "field"
     },
     {
       "ie_id": "C00890053-ie-1862032-SE.4435",
@@ -682,7 +682,7 @@
       "payee": "PROJECT 26 PENNSYLVANIA",
       "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202501089740082430",
       "vendor_id": "V-project-26-pennsylvania",
-      "medium": "other"
+      "medium": "field"
     },
     {
       "ie_id": "C00890053-ie-1862032-SE.4392",
@@ -697,7 +697,7 @@
       "payee": "PROJECT 26 PENNSYLVANIA",
       "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202501089740082427",
       "vendor_id": "V-project-26-pennsylvania",
-      "medium": "other"
+      "medium": "field"
     },
     {
       "ie_id": "C00890053-ie-1862032-SE.4391",
@@ -712,7 +712,7 @@
       "payee": "PROJECT 26 PENNSYLVANIA",
       "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202501089740082426",
       "vendor_id": "V-project-26-pennsylvania",
-      "medium": "other"
+      "medium": "field"
     },
     {
       "ie_id": "C00890053-ie-1862031-SE.4131",
@@ -727,7 +727,7 @@
       "payee": "PROJECT 26 PENNSYLVANIA",
       "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202501089740082323",
       "vendor_id": "V-project-26-pennsylvania",
-      "medium": "other"
+      "medium": "field"
     },
     {
       "ie_id": "C00890053-ie-1862031-SE.4129",
@@ -742,140 +742,9 @@
       "payee": "PROJECT 26 PENNSYLVANIA",
       "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202501089740082322",
       "vendor_id": "V-project-26-pennsylvania",
-      "medium": "other"
+      "medium": "field"
     }
   ],
-  "ads": [
-    {
-      "ad_id": "CR03497255684309778433",
-      "sponsor_entity_id": "C00890053",
-      "basis": {
-        "basis": "adjacent",
-        "rule": "Ran Oct 26, 2024 – Nov 5, 2024. In that window (buys dated up to 7 days before first shown through last shown) FUTURE PENNSYLVANIA PAC reported other buys to PROJECT 26 PENNSYLVANIA ($170,729); the FEC does not record which buy placed which ad.",
-        "source_urls": [
-          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00890053&payee_name=PROJECT+26+PENNSYLVANIA"
-        ],
-        "checked_by": null,
-        "checked_at": null
-      }
-    },
-    {
-      "ad_id": "CR13298918060816596993",
-      "sponsor_entity_id": "C00890053",
-      "basis": {
-        "basis": "adjacent",
-        "rule": "Ran Oct 26, 2024 – Nov 4, 2024. In that window (buys dated up to 7 days before first shown through last shown) FUTURE PENNSYLVANIA PAC reported other buys to PROJECT 26 PENNSYLVANIA ($141,302); the FEC does not record which buy placed which ad.",
-        "source_urls": [
-          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00890053&payee_name=PROJECT+26+PENNSYLVANIA"
-        ],
-        "checked_by": null,
-        "checked_at": null
-      }
-    },
-    {
-      "ad_id": "CR04091469151355273217",
-      "sponsor_entity_id": "C00890053",
-      "basis": {
-        "basis": "adjacent",
-        "rule": "Ran Oct 14, 2024 – Oct 23, 2024. In that window (buys dated up to 7 days before first shown through last shown) FUTURE PENNSYLVANIA PAC reported other buys to PROJECT 26 PENNSYLVANIA ($50,412); the FEC does not record which buy placed which ad.",
-        "source_urls": [
-          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00890053&payee_name=PROJECT+26+PENNSYLVANIA"
-        ],
-        "checked_by": null,
-        "checked_at": null
-      }
-    },
-    {
-      "ad_id": "CR11268599471384035329",
-      "sponsor_entity_id": "C00890053",
-      "basis": {
-        "basis": "adjacent",
-        "rule": "Ran Oct 22, 2024 – Nov 3, 2024. In that window (buys dated up to 7 days before first shown through last shown) FUTURE PENNSYLVANIA PAC reported other buys to PROJECT 26 PENNSYLVANIA ($151,393); the FEC does not record which buy placed which ad.",
-        "source_urls": [
-          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00890053&payee_name=PROJECT+26+PENNSYLVANIA"
-        ],
-        "checked_by": null,
-        "checked_at": null
-      }
-    },
-    {
-      "ad_id": "CR08592898342772539393",
-      "sponsor_entity_id": "C00890053",
-      "basis": {
-        "basis": "adjacent",
-        "rule": "Ran Oct 22, 2024 – Nov 5, 2024. In that window (buys dated up to 7 days before first shown through last shown) FUTURE PENNSYLVANIA PAC reported other buys to PROJECT 26 PENNSYLVANIA ($195,729); the FEC does not record which buy placed which ad.",
-        "source_urls": [
-          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00890053&payee_name=PROJECT+26+PENNSYLVANIA"
-        ],
-        "checked_by": null,
-        "checked_at": null
-      }
-    },
-    {
-      "ad_id": "CR15931694255479717889",
-      "sponsor_entity_id": "C00890053",
-      "basis": {
-        "basis": "adjacent",
-        "rule": "Ran Oct 26, 2024 – Nov 5, 2024. In that window (buys dated up to 7 days before first shown through last shown) FUTURE PENNSYLVANIA PAC reported other buys to PROJECT 26 PENNSYLVANIA ($170,729); the FEC does not record which buy placed which ad.",
-        "source_urls": [
-          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00890053&payee_name=PROJECT+26+PENNSYLVANIA"
-        ],
-        "checked_by": null,
-        "checked_at": null
-      }
-    },
-    {
-      "ad_id": "CR01314437031127941121",
-      "sponsor_entity_id": "C00890053",
-      "basis": {
-        "basis": "adjacent",
-        "rule": "Ran Oct 14, 2024 – Oct 23, 2024. In that window (buys dated up to 7 days before first shown through last shown) FUTURE PENNSYLVANIA PAC reported other buys to PROJECT 26 PENNSYLVANIA ($50,412); the FEC does not record which buy placed which ad.",
-        "source_urls": [
-          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00890053&payee_name=PROJECT+26+PENNSYLVANIA"
-        ],
-        "checked_by": null,
-        "checked_at": null
-      }
-    },
-    {
-      "ad_id": "CR03056232774315802625",
-      "sponsor_entity_id": "C00890053",
-      "basis": {
-        "basis": "adjacent",
-        "rule": "Ran Oct 22, 2024 – Nov 5, 2024. In that window (buys dated up to 7 days before first shown through last shown) FUTURE PENNSYLVANIA PAC reported other buys to PROJECT 26 PENNSYLVANIA ($195,729); the FEC does not record which buy placed which ad.",
-        "source_urls": [
-          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00890053&payee_name=PROJECT+26+PENNSYLVANIA"
-        ],
-        "checked_by": null,
-        "checked_at": null
-      }
-    },
-    {
-      "ad_id": "CR15040874332702113793",
-      "sponsor_entity_id": "C00890053",
-      "basis": {
-        "basis": "adjacent",
-        "rule": "Ran Oct 22, 2024 – Nov 5, 2024. In that window (buys dated up to 7 days before first shown through last shown) FUTURE PENNSYLVANIA PAC reported other buys to PROJECT 26 PENNSYLVANIA ($195,729); the FEC does not record which buy placed which ad.",
-        "source_urls": [
-          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00890053&payee_name=PROJECT+26+PENNSYLVANIA"
-        ],
-        "checked_by": null,
-        "checked_at": null
-      }
-    },
-    {
-      "ad_id": "CR01010142790094422017",
-      "sponsor_entity_id": "C00890053",
-      "basis": {
-        "basis": "adjacent",
-        "rule": "Ran Oct 26, 2024 – Nov 5, 2024. In that window (buys dated up to 7 days before first shown through last shown) FUTURE PENNSYLVANIA PAC reported other buys to PROJECT 26 PENNSYLVANIA ($170,729); the FEC does not record which buy placed which ad.",
-        "source_urls": [
-          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00890053&payee_name=PROJECT+26+PENNSYLVANIA"
-        ],
-        "checked_by": null,
-        "checked_at": null
-      }
-    }
-  ],
-  "method": "Every Schedule E independent expenditure names a payee. Payee strings are normalised (case, punctuation, legal suffixes, token order), near-duplicates are folded with a difflib ratio ≥ 0.92 when their numeric tokens match, and hand alias rows from data/hand/<race>/vendor_aliases.json override the rule. Medium is classified from the purpose the spender filed (ordered keyword table in campaign_commons/vendors.py); the FEC does not record which buy placed which ad, so vendor ↔ ad links are empty until a human verifies one. Totals are the filed amounts, grouped, never re-estimated."
+  "ads": [],
+  "method": "Every Schedule E independent expenditure names a payee. Payee strings are normalised (case, punctuation, legal suffixes, token order), near-duplicates are folded with a difflib ratio ≥ 0.92 when their numeric tokens match, and hand alias rows from data/hand/<race>/vendor_aliases.json override the rule. Medium is classified from the purpose the spender filed (ordered keyword table in campaign_commons/vendors.py). The FEC does not record which buy placed which ad: vendor ↔ ad links are date-window adjacency (or single-digital-vendor inference) from campaign_commons.ads_enrich, each with its basis, and are only `verified` when a person found a source naming both. Totals are the filed amounts, grouped, never re-estimated."
 }

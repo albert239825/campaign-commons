@@ -326,7 +326,7 @@
       "terminus_reason": null,
       "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00687103&payee_name=CAMPAIGN+HEADQUARTERS&payee_name=CAMPAIGNHQ",
       "href": "/races/pa-sen-2024/vendors/V-campaignhq",
-      "medium": "other",
+      "medium": "field",
       "basis": {
         "basis": "filed",
         "rule": "Schedule E payee, grouped by normalized vendor name (campaign_commons.vendors)",
@@ -350,7 +350,7 @@
       "terminus_reason": null,
       "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00687103&payee_name=CANVASS+AMERICA&payee_name=CANVASS+AMERICA+LLC",
       "href": "/races/pa-sen-2024/vendors/V-canvass-america",
-      "medium": "other",
+      "medium": "field",
       "basis": {
         "basis": "filed",
         "rule": "Schedule E payee, grouped by normalized vendor name (campaign_commons.vendors)",
@@ -422,7 +422,7 @@
       "terminus_reason": null,
       "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00687103&payee_name=AMERICANS+FOR+PROSPERITY",
       "href": "/races/pa-sen-2024/vendors/V-americans-for-prosperity",
-      "medium": "other",
+      "medium": "field",
       "basis": {
         "basis": "filed",
         "rule": "Schedule E payee, grouped by normalized vendor name (campaign_commons.vendors)",
@@ -1636,7 +1636,7 @@
       "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00687103&payee_name=FP1+STRATEGIES+LLC",
       "basis": {
         "basis": "adjacent",
-        "rule": "Ran Jun 4, 2024 – Jul 8, 2024. In that window (buys dated up to 7 days before first shown through last shown) AMERICANS FOR PROSPERITY ACTION, INC. (AFP ACTION) DBA CVA ACTION AND DBA LIBRE ACTION reported production buys to FP1 STRATEGIES LLC ($22,250); the FEC does not record which buy placed which ad.",
+        "rule": "Ran Jun 4, 2024 – Jul 8, 2024. In that window (buys dated up to 7 days before first shown through last shown) AMERICANS FOR PROSPERITY ACTION, INC. (AFP ACTION) DBA CVA ACTION AND DBA LIBRE ACTION reported production buys to FP1 STRATEGIES LLC ($22,250); the FEC does not record which buy placed which ad. Same-window buys in media that cannot place a Google ad (TV, radio, mail, phones, field, consulting) are not listed.",
         "source_urls": [
           "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00687103&payee_name=FP1+STRATEGIES+LLC"
         ],
@@ -1660,33 +1660,9 @@
       "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00687103&payee_name=PEOPLE+WHO+THINK&payee_name=PEOPLE+WHO+THINK+LLC",
       "basis": {
         "basis": "adjacent",
-        "rule": "Ran Jun 4, 2024 – Jul 8, 2024. In that window (buys dated up to 7 days before first shown through last shown) AMERICANS FOR PROSPERITY ACTION, INC. (AFP ACTION) DBA CVA ACTION AND DBA LIBRE ACTION reported production buys to PEOPLE WHO THINK ($18,075); the FEC does not record which buy placed which ad.",
+        "rule": "Ran Jun 4, 2024 – Jul 8, 2024. In that window (buys dated up to 7 days before first shown through last shown) AMERICANS FOR PROSPERITY ACTION, INC. (AFP ACTION) DBA CVA ACTION AND DBA LIBRE ACTION reported production buys to PEOPLE WHO THINK ($18,075); the FEC does not record which buy placed which ad. Same-window buys in media that cannot place a Google ad (TV, radio, mail, phones, field, consulting) are not listed.",
         "source_urls": [
           "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00687103&payee_name=PEOPLE+WHO+THINK&payee_name=PEOPLE+WHO+THINK+LLC"
-        ],
-        "checked_by": null,
-        "checked_at": null
-      }
-    },
-    {
-      "from": "vendor:V-americans-for-prosperity",
-      "to": "CR04714034298817085441",
-      "kind": "placement",
-      "amount": 0,
-      "visibility": "disclosed",
-      "depth": 2,
-      "transaction_types": [],
-      "count": 1,
-      "date_range": [
-        "2024-06-04",
-        "2024-07-08"
-      ],
-      "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00687103&payee_name=AMERICANS+FOR+PROSPERITY",
-      "basis": {
-        "basis": "adjacent",
-        "rule": "Ran Jun 4, 2024 – Jul 8, 2024. In that window (buys dated up to 7 days before first shown through last shown) AMERICANS FOR PROSPERITY ACTION, INC. (AFP ACTION) DBA CVA ACTION AND DBA LIBRE ACTION reported other buys to AMERICANS FOR PROSPERITY ($5,000); the FEC does not record which buy placed which ad.",
-        "source_urls": [
-          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00687103&payee_name=AMERICANS+FOR+PROSPERITY"
         ],
         "checked_by": null,
         "checked_at": null
@@ -1708,57 +1684,9 @@
       "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00687103&payee_name=TARGETED+VICTORY+LLC",
       "basis": {
         "basis": "adjacent",
-        "rule": "Ran Jun 4, 2024 – Jul 8, 2024. In that window (buys dated up to 7 days before first shown through last shown) AMERICANS FOR PROSPERITY ACTION, INC. (AFP ACTION) DBA CVA ACTION AND DBA LIBRE ACTION reported production buys to TARGETED VICTORY LLC ($2,500); the FEC does not record which buy placed which ad.",
+        "rule": "Ran Jun 4, 2024 – Jul 8, 2024. In that window (buys dated up to 7 days before first shown through last shown) AMERICANS FOR PROSPERITY ACTION, INC. (AFP ACTION) DBA CVA ACTION AND DBA LIBRE ACTION reported production buys to TARGETED VICTORY LLC ($2,500); the FEC does not record which buy placed which ad. Same-window buys in media that cannot place a Google ad (TV, radio, mail, phones, field, consulting) are not listed.",
         "source_urls": [
           "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00687103&payee_name=TARGETED+VICTORY+LLC"
-        ],
-        "checked_by": null,
-        "checked_at": null
-      }
-    },
-    {
-      "from": "vendor:V-in-pursuit-of",
-      "to": "CR10045902907338915841",
-      "kind": "placement",
-      "amount": 0,
-      "visibility": "disclosed",
-      "depth": 2,
-      "transaction_types": [],
-      "count": 2,
-      "date_range": [
-        "2024-08-06",
-        "2024-09-04"
-      ],
-      "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00687103&payee_name=IN+PURSUIT+OF+LLC",
-      "basis": {
-        "basis": "adjacent",
-        "rule": "Ran Aug 6, 2024 – Sep 4, 2024. In that window (buys dated up to 7 days before first shown through last shown) AMERICANS FOR PROSPERITY ACTION, INC. (AFP ACTION) DBA CVA ACTION AND DBA LIBRE ACTION reported tv buys to IN PURSUIT OF LLC ($1,250,000); the FEC does not record which buy placed which ad.",
-        "source_urls": [
-          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00687103&payee_name=IN+PURSUIT+OF+LLC"
-        ],
-        "checked_by": null,
-        "checked_at": null
-      }
-    },
-    {
-      "from": "vendor:V-united-states-postal-service",
-      "to": "CR10045902907338915841",
-      "kind": "placement",
-      "amount": 0,
-      "visibility": "disclosed",
-      "depth": 2,
-      "transaction_types": [],
-      "count": 4,
-      "date_range": [
-        "2024-08-06",
-        "2024-09-04"
-      ],
-      "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00687103&payee_name=UNITED+STATES+POSTAL+SERVICE",
-      "basis": {
-        "basis": "adjacent",
-        "rule": "Ran Aug 6, 2024 – Sep 4, 2024. In that window (buys dated up to 7 days before first shown through last shown) AMERICANS FOR PROSPERITY ACTION, INC. (AFP ACTION) DBA CVA ACTION AND DBA LIBRE ACTION reported mail buys to United States Postal Service ($828,106); the FEC does not record which buy placed which ad.",
-        "source_urls": [
-          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00687103&payee_name=UNITED+STATES+POSTAL+SERVICE"
         ],
         "checked_by": null,
         "checked_at": null
@@ -1780,7 +1708,7 @@
       "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00687103&payee_name=PEOPLE+WHO+THINK&payee_name=PEOPLE+WHO+THINK+LLC",
       "basis": {
         "basis": "adjacent",
-        "rule": "Ran Aug 6, 2024 – Sep 4, 2024. In that window (buys dated up to 7 days before first shown through last shown) AMERICANS FOR PROSPERITY ACTION, INC. (AFP ACTION) DBA CVA ACTION AND DBA LIBRE ACTION reported production buys to PEOPLE WHO THINK ($397,208); the FEC does not record which buy placed which ad.",
+        "rule": "Ran Aug 6, 2024 – Sep 4, 2024. In that window (buys dated up to 7 days before first shown through last shown) AMERICANS FOR PROSPERITY ACTION, INC. (AFP ACTION) DBA CVA ACTION AND DBA LIBRE ACTION reported production buys to PEOPLE WHO THINK ($397,208); the FEC does not record which buy placed which ad. Same-window buys in media that cannot place a Google ad (TV, radio, mail, phones, field, consulting) are not listed.",
         "source_urls": [
           "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00687103&payee_name=PEOPLE+WHO+THINK&payee_name=PEOPLE+WHO+THINK+LLC"
         ],
@@ -1804,33 +1732,9 @@
       "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00687103&payee_name=TARGETED+VICTORY+LLC",
       "basis": {
         "basis": "adjacent",
-        "rule": "Ran Aug 6, 2024 – Sep 4, 2024. In that window (buys dated up to 7 days before first shown through last shown) AMERICANS FOR PROSPERITY ACTION, INC. (AFP ACTION) DBA CVA ACTION AND DBA LIBRE ACTION reported production buys to TARGETED VICTORY LLC ($23,246); the FEC does not record which buy placed which ad.",
+        "rule": "Ran Aug 6, 2024 – Sep 4, 2024. In that window (buys dated up to 7 days before first shown through last shown) AMERICANS FOR PROSPERITY ACTION, INC. (AFP ACTION) DBA CVA ACTION AND DBA LIBRE ACTION reported production buys to TARGETED VICTORY LLC ($23,246); the FEC does not record which buy placed which ad. Same-window buys in media that cannot place a Google ad (TV, radio, mail, phones, field, consulting) are not listed.",
         "source_urls": [
           "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00687103&payee_name=TARGETED+VICTORY+LLC"
-        ],
-        "checked_by": null,
-        "checked_at": null
-      }
-    },
-    {
-      "from": "vendor:V-americans-for-prosperity",
-      "to": "CR10045902907338915841",
-      "kind": "placement",
-      "amount": 0,
-      "visibility": "disclosed",
-      "depth": 2,
-      "transaction_types": [],
-      "count": 1,
-      "date_range": [
-        "2024-08-06",
-        "2024-09-04"
-      ],
-      "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00687103&payee_name=AMERICANS+FOR+PROSPERITY",
-      "basis": {
-        "basis": "adjacent",
-        "rule": "Ran Aug 6, 2024 – Sep 4, 2024. In that window (buys dated up to 7 days before first shown through last shown) AMERICANS FOR PROSPERITY ACTION, INC. (AFP ACTION) DBA CVA ACTION AND DBA LIBRE ACTION reported other buys to AMERICANS FOR PROSPERITY ($5,000); the FEC does not record which buy placed which ad.",
-        "source_urls": [
-          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00687103&payee_name=AMERICANS+FOR+PROSPERITY"
         ],
         "checked_by": null,
         "checked_at": null
@@ -1849,57 +1753,9 @@
       "source_url": "https://adstransparency.google.com/advertiser/AR15510028093073915905/creative/CR10045902907338915841?political=&region=US",
       "basis": {
         "basis": "inferred",
-        "rule": "Advertiser name matched to this committee by normalized name; Google shows the advertiser, not the paid-for-by line",
+        "rule": "Advertiser name matched to this committee by normalized name; Google's bulk data names the advertiser and carries no paid-for-by field for US ads",
         "source_urls": [
           "https://adstransparency.google.com/advertiser/AR15510028093073915905/creative/CR10045902907338915841?political=&region=US"
-        ],
-        "checked_by": null,
-        "checked_at": null
-      }
-    },
-    {
-      "from": "vendor:V-in-pursuit-of",
-      "to": "CR03308517864792653825",
-      "kind": "placement",
-      "amount": 0,
-      "visibility": "disclosed",
-      "depth": 2,
-      "transaction_types": [],
-      "count": 2,
-      "date_range": [
-        "2024-08-06",
-        "2024-09-04"
-      ],
-      "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00687103&payee_name=IN+PURSUIT+OF+LLC",
-      "basis": {
-        "basis": "adjacent",
-        "rule": "Ran Aug 6, 2024 – Sep 4, 2024. In that window (buys dated up to 7 days before first shown through last shown) AMERICANS FOR PROSPERITY ACTION, INC. (AFP ACTION) DBA CVA ACTION AND DBA LIBRE ACTION reported tv buys to IN PURSUIT OF LLC ($1,250,000); the FEC does not record which buy placed which ad.",
-        "source_urls": [
-          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00687103&payee_name=IN+PURSUIT+OF+LLC"
-        ],
-        "checked_by": null,
-        "checked_at": null
-      }
-    },
-    {
-      "from": "vendor:V-united-states-postal-service",
-      "to": "CR03308517864792653825",
-      "kind": "placement",
-      "amount": 0,
-      "visibility": "disclosed",
-      "depth": 2,
-      "transaction_types": [],
-      "count": 4,
-      "date_range": [
-        "2024-08-06",
-        "2024-09-04"
-      ],
-      "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00687103&payee_name=UNITED+STATES+POSTAL+SERVICE",
-      "basis": {
-        "basis": "adjacent",
-        "rule": "Ran Aug 6, 2024 – Sep 4, 2024. In that window (buys dated up to 7 days before first shown through last shown) AMERICANS FOR PROSPERITY ACTION, INC. (AFP ACTION) DBA CVA ACTION AND DBA LIBRE ACTION reported mail buys to United States Postal Service ($828,106); the FEC does not record which buy placed which ad.",
-        "source_urls": [
-          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00687103&payee_name=UNITED+STATES+POSTAL+SERVICE"
         ],
         "checked_by": null,
         "checked_at": null
@@ -1921,7 +1777,7 @@
       "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00687103&payee_name=PEOPLE+WHO+THINK&payee_name=PEOPLE+WHO+THINK+LLC",
       "basis": {
         "basis": "adjacent",
-        "rule": "Ran Aug 6, 2024 – Sep 4, 2024. In that window (buys dated up to 7 days before first shown through last shown) AMERICANS FOR PROSPERITY ACTION, INC. (AFP ACTION) DBA CVA ACTION AND DBA LIBRE ACTION reported production buys to PEOPLE WHO THINK ($397,208); the FEC does not record which buy placed which ad.",
+        "rule": "Ran Aug 6, 2024 – Sep 4, 2024. In that window (buys dated up to 7 days before first shown through last shown) AMERICANS FOR PROSPERITY ACTION, INC. (AFP ACTION) DBA CVA ACTION AND DBA LIBRE ACTION reported production buys to PEOPLE WHO THINK ($397,208); the FEC does not record which buy placed which ad. Same-window buys in media that cannot place a Google ad (TV, radio, mail, phones, field, consulting) are not listed.",
         "source_urls": [
           "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00687103&payee_name=PEOPLE+WHO+THINK&payee_name=PEOPLE+WHO+THINK+LLC"
         ],
@@ -1945,33 +1801,9 @@
       "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00687103&payee_name=TARGETED+VICTORY+LLC",
       "basis": {
         "basis": "adjacent",
-        "rule": "Ran Aug 6, 2024 – Sep 4, 2024. In that window (buys dated up to 7 days before first shown through last shown) AMERICANS FOR PROSPERITY ACTION, INC. (AFP ACTION) DBA CVA ACTION AND DBA LIBRE ACTION reported production buys to TARGETED VICTORY LLC ($23,246); the FEC does not record which buy placed which ad.",
+        "rule": "Ran Aug 6, 2024 – Sep 4, 2024. In that window (buys dated up to 7 days before first shown through last shown) AMERICANS FOR PROSPERITY ACTION, INC. (AFP ACTION) DBA CVA ACTION AND DBA LIBRE ACTION reported production buys to TARGETED VICTORY LLC ($23,246); the FEC does not record which buy placed which ad. Same-window buys in media that cannot place a Google ad (TV, radio, mail, phones, field, consulting) are not listed.",
         "source_urls": [
           "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00687103&payee_name=TARGETED+VICTORY+LLC"
-        ],
-        "checked_by": null,
-        "checked_at": null
-      }
-    },
-    {
-      "from": "vendor:V-americans-for-prosperity",
-      "to": "CR03308517864792653825",
-      "kind": "placement",
-      "amount": 0,
-      "visibility": "disclosed",
-      "depth": 2,
-      "transaction_types": [],
-      "count": 1,
-      "date_range": [
-        "2024-08-06",
-        "2024-09-04"
-      ],
-      "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00687103&payee_name=AMERICANS+FOR+PROSPERITY",
-      "basis": {
-        "basis": "adjacent",
-        "rule": "Ran Aug 6, 2024 – Sep 4, 2024. In that window (buys dated up to 7 days before first shown through last shown) AMERICANS FOR PROSPERITY ACTION, INC. (AFP ACTION) DBA CVA ACTION AND DBA LIBRE ACTION reported other buys to AMERICANS FOR PROSPERITY ($5,000); the FEC does not record which buy placed which ad.",
-        "source_urls": [
-          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00687103&payee_name=AMERICANS+FOR+PROSPERITY"
         ],
         "checked_by": null,
         "checked_at": null
@@ -1990,57 +1822,9 @@
       "source_url": "https://adstransparency.google.com/advertiser/AR15510028093073915905/creative/CR03308517864792653825?political=&region=US",
       "basis": {
         "basis": "inferred",
-        "rule": "Advertiser name matched to this committee by normalized name; Google shows the advertiser, not the paid-for-by line",
+        "rule": "Advertiser name matched to this committee by normalized name; Google's bulk data names the advertiser and carries no paid-for-by field for US ads",
         "source_urls": [
           "https://adstransparency.google.com/advertiser/AR15510028093073915905/creative/CR03308517864792653825?political=&region=US"
-        ],
-        "checked_by": null,
-        "checked_at": null
-      }
-    },
-    {
-      "from": "vendor:V-united-states-postal-service",
-      "to": "CR14071576217736183809",
-      "kind": "placement",
-      "amount": 0,
-      "visibility": "disclosed",
-      "depth": 2,
-      "transaction_types": [],
-      "count": 13,
-      "date_range": [
-        "2024-09-04",
-        "2024-10-01"
-      ],
-      "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00687103&payee_name=UNITED+STATES+POSTAL+SERVICE",
-      "basis": {
-        "basis": "adjacent",
-        "rule": "Ran Sep 4, 2024 – Oct 1, 2024. In that window (buys dated up to 7 days before first shown through last shown) AMERICANS FOR PROSPERITY ACTION, INC. (AFP ACTION) DBA CVA ACTION AND DBA LIBRE ACTION reported mail buys to United States Postal Service ($2,559,443); the FEC does not record which buy placed which ad.",
-        "source_urls": [
-          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00687103&payee_name=UNITED+STATES+POSTAL+SERVICE"
-        ],
-        "checked_by": null,
-        "checked_at": null
-      }
-    },
-    {
-      "from": "vendor:V-in-pursuit-of",
-      "to": "CR14071576217736183809",
-      "kind": "placement",
-      "amount": 0,
-      "visibility": "disclosed",
-      "depth": 2,
-      "transaction_types": [],
-      "count": 2,
-      "date_range": [
-        "2024-09-04",
-        "2024-10-01"
-      ],
-      "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00687103&payee_name=IN+PURSUIT+OF+LLC",
-      "basis": {
-        "basis": "adjacent",
-        "rule": "Ran Sep 4, 2024 – Oct 1, 2024. In that window (buys dated up to 7 days before first shown through last shown) AMERICANS FOR PROSPERITY ACTION, INC. (AFP ACTION) DBA CVA ACTION AND DBA LIBRE ACTION reported tv buys to IN PURSUIT OF LLC ($1,915,775); the FEC does not record which buy placed which ad.",
-        "source_urls": [
-          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00687103&payee_name=IN+PURSUIT+OF+LLC"
         ],
         "checked_by": null,
         "checked_at": null
@@ -2062,7 +1846,7 @@
       "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00687103&payee_name=PEOPLE+WHO+THINK&payee_name=PEOPLE+WHO+THINK+LLC",
       "basis": {
         "basis": "adjacent",
-        "rule": "Ran Sep 4, 2024 – Oct 1, 2024. In that window (buys dated up to 7 days before first shown through last shown) AMERICANS FOR PROSPERITY ACTION, INC. (AFP ACTION) DBA CVA ACTION AND DBA LIBRE ACTION reported production buys to PEOPLE WHO THINK ($928,420); the FEC does not record which buy placed which ad.",
+        "rule": "Ran Sep 4, 2024 – Oct 1, 2024. In that window (buys dated up to 7 days before first shown through last shown) AMERICANS FOR PROSPERITY ACTION, INC. (AFP ACTION) DBA CVA ACTION AND DBA LIBRE ACTION reported production buys to PEOPLE WHO THINK ($928,420); the FEC does not record which buy placed which ad. Same-window buys in media that cannot place a Google ad (TV, radio, mail, phones, field, consulting) are not listed.",
         "source_urls": [
           "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00687103&payee_name=PEOPLE+WHO+THINK&payee_name=PEOPLE+WHO+THINK+LLC"
         ],
@@ -2086,33 +1870,9 @@
       "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00687103&payee_name=FP1+STRATEGIES+LLC",
       "basis": {
         "basis": "adjacent",
-        "rule": "Ran Sep 4, 2024 – Oct 1, 2024. In that window (buys dated up to 7 days before first shown through last shown) AMERICANS FOR PROSPERITY ACTION, INC. (AFP ACTION) DBA CVA ACTION AND DBA LIBRE ACTION reported production buys to FP1 STRATEGIES LLC ($17,250); the FEC does not record which buy placed which ad.",
+        "rule": "Ran Sep 4, 2024 – Oct 1, 2024. In that window (buys dated up to 7 days before first shown through last shown) AMERICANS FOR PROSPERITY ACTION, INC. (AFP ACTION) DBA CVA ACTION AND DBA LIBRE ACTION reported production buys to FP1 STRATEGIES LLC ($17,250); the FEC does not record which buy placed which ad. Same-window buys in media that cannot place a Google ad (TV, radio, mail, phones, field, consulting) are not listed.",
         "source_urls": [
           "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00687103&payee_name=FP1+STRATEGIES+LLC"
-        ],
-        "checked_by": null,
-        "checked_at": null
-      }
-    },
-    {
-      "from": "vendor:V-americans-for-prosperity",
-      "to": "CR14071576217736183809",
-      "kind": "placement",
-      "amount": 0,
-      "visibility": "disclosed",
-      "depth": 2,
-      "transaction_types": [],
-      "count": 2,
-      "date_range": [
-        "2024-09-04",
-        "2024-10-01"
-      ],
-      "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00687103&payee_name=AMERICANS+FOR+PROSPERITY",
-      "basis": {
-        "basis": "adjacent",
-        "rule": "Ran Sep 4, 2024 – Oct 1, 2024. In that window (buys dated up to 7 days before first shown through last shown) AMERICANS FOR PROSPERITY ACTION, INC. (AFP ACTION) DBA CVA ACTION AND DBA LIBRE ACTION reported other buys to AMERICANS FOR PROSPERITY ($10,000); the FEC does not record which buy placed which ad.",
-        "source_urls": [
-          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00687103&payee_name=AMERICANS+FOR+PROSPERITY"
         ],
         "checked_by": null,
         "checked_at": null
@@ -2134,7 +1894,7 @@
       "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00687103&payee_name=TARGETED+VICTORY+LLC",
       "basis": {
         "basis": "adjacent",
-        "rule": "Ran Sep 4, 2024 – Oct 1, 2024. In that window (buys dated up to 7 days before first shown through last shown) AMERICANS FOR PROSPERITY ACTION, INC. (AFP ACTION) DBA CVA ACTION AND DBA LIBRE ACTION reported production buys to TARGETED VICTORY LLC ($7,000); the FEC does not record which buy placed which ad.",
+        "rule": "Ran Sep 4, 2024 – Oct 1, 2024. In that window (buys dated up to 7 days before first shown through last shown) AMERICANS FOR PROSPERITY ACTION, INC. (AFP ACTION) DBA CVA ACTION AND DBA LIBRE ACTION reported production buys to TARGETED VICTORY LLC ($7,000); the FEC does not record which buy placed which ad. Same-window buys in media that cannot place a Google ad (TV, radio, mail, phones, field, consulting) are not listed.",
         "source_urls": [
           "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00687103&payee_name=TARGETED+VICTORY+LLC"
         ],
@@ -2155,57 +1915,9 @@
       "source_url": "https://adstransparency.google.com/advertiser/AR15510028093073915905/creative/CR14071576217736183809?political=&region=US",
       "basis": {
         "basis": "inferred",
-        "rule": "Advertiser name matched to this committee by normalized name; Google shows the advertiser, not the paid-for-by line",
+        "rule": "Advertiser name matched to this committee by normalized name; Google's bulk data names the advertiser and carries no paid-for-by field for US ads",
         "source_urls": [
           "https://adstransparency.google.com/advertiser/AR15510028093073915905/creative/CR14071576217736183809?political=&region=US"
-        ],
-        "checked_by": null,
-        "checked_at": null
-      }
-    },
-    {
-      "from": "vendor:V-united-states-postal-service",
-      "to": "CR13232780787138428929",
-      "kind": "placement",
-      "amount": 0,
-      "visibility": "disclosed",
-      "depth": 2,
-      "transaction_types": [],
-      "count": 13,
-      "date_range": [
-        "2024-09-04",
-        "2024-10-01"
-      ],
-      "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00687103&payee_name=UNITED+STATES+POSTAL+SERVICE",
-      "basis": {
-        "basis": "adjacent",
-        "rule": "Ran Sep 4, 2024 – Oct 1, 2024. In that window (buys dated up to 7 days before first shown through last shown) AMERICANS FOR PROSPERITY ACTION, INC. (AFP ACTION) DBA CVA ACTION AND DBA LIBRE ACTION reported mail buys to United States Postal Service ($2,559,443); the FEC does not record which buy placed which ad.",
-        "source_urls": [
-          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00687103&payee_name=UNITED+STATES+POSTAL+SERVICE"
-        ],
-        "checked_by": null,
-        "checked_at": null
-      }
-    },
-    {
-      "from": "vendor:V-in-pursuit-of",
-      "to": "CR13232780787138428929",
-      "kind": "placement",
-      "amount": 0,
-      "visibility": "disclosed",
-      "depth": 2,
-      "transaction_types": [],
-      "count": 2,
-      "date_range": [
-        "2024-09-04",
-        "2024-10-01"
-      ],
-      "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00687103&payee_name=IN+PURSUIT+OF+LLC",
-      "basis": {
-        "basis": "adjacent",
-        "rule": "Ran Sep 4, 2024 – Oct 1, 2024. In that window (buys dated up to 7 days before first shown through last shown) AMERICANS FOR PROSPERITY ACTION, INC. (AFP ACTION) DBA CVA ACTION AND DBA LIBRE ACTION reported tv buys to IN PURSUIT OF LLC ($1,915,775); the FEC does not record which buy placed which ad.",
-        "source_urls": [
-          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00687103&payee_name=IN+PURSUIT+OF+LLC"
         ],
         "checked_by": null,
         "checked_at": null
@@ -2227,7 +1939,7 @@
       "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00687103&payee_name=PEOPLE+WHO+THINK&payee_name=PEOPLE+WHO+THINK+LLC",
       "basis": {
         "basis": "adjacent",
-        "rule": "Ran Sep 4, 2024 – Oct 1, 2024. In that window (buys dated up to 7 days before first shown through last shown) AMERICANS FOR PROSPERITY ACTION, INC. (AFP ACTION) DBA CVA ACTION AND DBA LIBRE ACTION reported production buys to PEOPLE WHO THINK ($928,420); the FEC does not record which buy placed which ad.",
+        "rule": "Ran Sep 4, 2024 – Oct 1, 2024. In that window (buys dated up to 7 days before first shown through last shown) AMERICANS FOR PROSPERITY ACTION, INC. (AFP ACTION) DBA CVA ACTION AND DBA LIBRE ACTION reported production buys to PEOPLE WHO THINK ($928,420); the FEC does not record which buy placed which ad. Same-window buys in media that cannot place a Google ad (TV, radio, mail, phones, field, consulting) are not listed.",
         "source_urls": [
           "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00687103&payee_name=PEOPLE+WHO+THINK&payee_name=PEOPLE+WHO+THINK+LLC"
         ],
@@ -2251,33 +1963,9 @@
       "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00687103&payee_name=FP1+STRATEGIES+LLC",
       "basis": {
         "basis": "adjacent",
-        "rule": "Ran Sep 4, 2024 – Oct 1, 2024. In that window (buys dated up to 7 days before first shown through last shown) AMERICANS FOR PROSPERITY ACTION, INC. (AFP ACTION) DBA CVA ACTION AND DBA LIBRE ACTION reported production buys to FP1 STRATEGIES LLC ($17,250); the FEC does not record which buy placed which ad.",
+        "rule": "Ran Sep 4, 2024 – Oct 1, 2024. In that window (buys dated up to 7 days before first shown through last shown) AMERICANS FOR PROSPERITY ACTION, INC. (AFP ACTION) DBA CVA ACTION AND DBA LIBRE ACTION reported production buys to FP1 STRATEGIES LLC ($17,250); the FEC does not record which buy placed which ad. Same-window buys in media that cannot place a Google ad (TV, radio, mail, phones, field, consulting) are not listed.",
         "source_urls": [
           "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00687103&payee_name=FP1+STRATEGIES+LLC"
-        ],
-        "checked_by": null,
-        "checked_at": null
-      }
-    },
-    {
-      "from": "vendor:V-americans-for-prosperity",
-      "to": "CR13232780787138428929",
-      "kind": "placement",
-      "amount": 0,
-      "visibility": "disclosed",
-      "depth": 2,
-      "transaction_types": [],
-      "count": 2,
-      "date_range": [
-        "2024-09-04",
-        "2024-10-01"
-      ],
-      "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00687103&payee_name=AMERICANS+FOR+PROSPERITY",
-      "basis": {
-        "basis": "adjacent",
-        "rule": "Ran Sep 4, 2024 – Oct 1, 2024. In that window (buys dated up to 7 days before first shown through last shown) AMERICANS FOR PROSPERITY ACTION, INC. (AFP ACTION) DBA CVA ACTION AND DBA LIBRE ACTION reported other buys to AMERICANS FOR PROSPERITY ($10,000); the FEC does not record which buy placed which ad.",
-        "source_urls": [
-          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00687103&payee_name=AMERICANS+FOR+PROSPERITY"
         ],
         "checked_by": null,
         "checked_at": null
@@ -2299,7 +1987,7 @@
       "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00687103&payee_name=TARGETED+VICTORY+LLC",
       "basis": {
         "basis": "adjacent",
-        "rule": "Ran Sep 4, 2024 – Oct 1, 2024. In that window (buys dated up to 7 days before first shown through last shown) AMERICANS FOR PROSPERITY ACTION, INC. (AFP ACTION) DBA CVA ACTION AND DBA LIBRE ACTION reported production buys to TARGETED VICTORY LLC ($7,000); the FEC does not record which buy placed which ad.",
+        "rule": "Ran Sep 4, 2024 – Oct 1, 2024. In that window (buys dated up to 7 days before first shown through last shown) AMERICANS FOR PROSPERITY ACTION, INC. (AFP ACTION) DBA CVA ACTION AND DBA LIBRE ACTION reported production buys to TARGETED VICTORY LLC ($7,000); the FEC does not record which buy placed which ad. Same-window buys in media that cannot place a Google ad (TV, radio, mail, phones, field, consulting) are not listed.",
         "source_urls": [
           "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00687103&payee_name=TARGETED+VICTORY+LLC"
         ],
@@ -2320,57 +2008,9 @@
       "source_url": "https://adstransparency.google.com/advertiser/AR15510028093073915905/creative/CR13232780787138428929?political=&region=US",
       "basis": {
         "basis": "inferred",
-        "rule": "Advertiser name matched to this committee by normalized name; Google shows the advertiser, not the paid-for-by line",
+        "rule": "Advertiser name matched to this committee by normalized name; Google's bulk data names the advertiser and carries no paid-for-by field for US ads",
         "source_urls": [
           "https://adstransparency.google.com/advertiser/AR15510028093073915905/creative/CR13232780787138428929?political=&region=US"
-        ],
-        "checked_by": null,
-        "checked_at": null
-      }
-    },
-    {
-      "from": "vendor:V-united-states-postal-service",
-      "to": "CR12542813051453177857",
-      "kind": "placement",
-      "amount": 0,
-      "visibility": "disclosed",
-      "depth": 2,
-      "transaction_types": [],
-      "count": 11,
-      "date_range": [
-        "2024-09-12",
-        "2024-10-01"
-      ],
-      "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00687103&payee_name=UNITED+STATES+POSTAL+SERVICE",
-      "basis": {
-        "basis": "adjacent",
-        "rule": "Ran Sep 12, 2024 – Oct 1, 2024. In that window (buys dated up to 7 days before first shown through last shown) AMERICANS FOR PROSPERITY ACTION, INC. (AFP ACTION) DBA CVA ACTION AND DBA LIBRE ACTION reported mail buys to United States Postal Service ($2,283,408); the FEC does not record which buy placed which ad.",
-        "source_urls": [
-          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00687103&payee_name=UNITED+STATES+POSTAL+SERVICE"
-        ],
-        "checked_by": null,
-        "checked_at": null
-      }
-    },
-    {
-      "from": "vendor:V-in-pursuit-of",
-      "to": "CR12542813051453177857",
-      "kind": "placement",
-      "amount": 0,
-      "visibility": "disclosed",
-      "depth": 2,
-      "transaction_types": [],
-      "count": 2,
-      "date_range": [
-        "2024-09-12",
-        "2024-10-01"
-      ],
-      "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00687103&payee_name=IN+PURSUIT+OF+LLC",
-      "basis": {
-        "basis": "adjacent",
-        "rule": "Ran Sep 12, 2024 – Oct 1, 2024. In that window (buys dated up to 7 days before first shown through last shown) AMERICANS FOR PROSPERITY ACTION, INC. (AFP ACTION) DBA CVA ACTION AND DBA LIBRE ACTION reported tv buys to IN PURSUIT OF LLC ($1,915,775); the FEC does not record which buy placed which ad.",
-        "source_urls": [
-          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00687103&payee_name=IN+PURSUIT+OF+LLC"
         ],
         "checked_by": null,
         "checked_at": null
@@ -2392,7 +2032,7 @@
       "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00687103&payee_name=PEOPLE+WHO+THINK&payee_name=PEOPLE+WHO+THINK+LLC",
       "basis": {
         "basis": "adjacent",
-        "rule": "Ran Sep 12, 2024 – Oct 1, 2024. In that window (buys dated up to 7 days before first shown through last shown) AMERICANS FOR PROSPERITY ACTION, INC. (AFP ACTION) DBA CVA ACTION AND DBA LIBRE ACTION reported production buys to PEOPLE WHO THINK ($752,178); the FEC does not record which buy placed which ad.",
+        "rule": "Ran Sep 12, 2024 – Oct 1, 2024. In that window (buys dated up to 7 days before first shown through last shown) AMERICANS FOR PROSPERITY ACTION, INC. (AFP ACTION) DBA CVA ACTION AND DBA LIBRE ACTION reported production buys to PEOPLE WHO THINK ($752,178); the FEC does not record which buy placed which ad. Same-window buys in media that cannot place a Google ad (TV, radio, mail, phones, field, consulting) are not listed.",
         "source_urls": [
           "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00687103&payee_name=PEOPLE+WHO+THINK&payee_name=PEOPLE+WHO+THINK+LLC"
         ],
@@ -2416,7 +2056,7 @@
       "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00687103&payee_name=FP1+STRATEGIES+LLC",
       "basis": {
         "basis": "adjacent",
-        "rule": "Ran Sep 12, 2024 – Oct 1, 2024. In that window (buys dated up to 7 days before first shown through last shown) AMERICANS FOR PROSPERITY ACTION, INC. (AFP ACTION) DBA CVA ACTION AND DBA LIBRE ACTION reported production buys to FP1 STRATEGIES LLC ($17,250); the FEC does not record which buy placed which ad.",
+        "rule": "Ran Sep 12, 2024 – Oct 1, 2024. In that window (buys dated up to 7 days before first shown through last shown) AMERICANS FOR PROSPERITY ACTION, INC. (AFP ACTION) DBA CVA ACTION AND DBA LIBRE ACTION reported production buys to FP1 STRATEGIES LLC ($17,250); the FEC does not record which buy placed which ad. Same-window buys in media that cannot place a Google ad (TV, radio, mail, phones, field, consulting) are not listed.",
         "source_urls": [
           "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00687103&payee_name=FP1+STRATEGIES+LLC"
         ],
@@ -2440,33 +2080,9 @@
       "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00687103&payee_name=TARGETED+VICTORY+LLC",
       "basis": {
         "basis": "adjacent",
-        "rule": "Ran Sep 12, 2024 – Oct 1, 2024. In that window (buys dated up to 7 days before first shown through last shown) AMERICANS FOR PROSPERITY ACTION, INC. (AFP ACTION) DBA CVA ACTION AND DBA LIBRE ACTION reported production buys to TARGETED VICTORY LLC ($7,000); the FEC does not record which buy placed which ad.",
+        "rule": "Ran Sep 12, 2024 – Oct 1, 2024. In that window (buys dated up to 7 days before first shown through last shown) AMERICANS FOR PROSPERITY ACTION, INC. (AFP ACTION) DBA CVA ACTION AND DBA LIBRE ACTION reported production buys to TARGETED VICTORY LLC ($7,000); the FEC does not record which buy placed which ad. Same-window buys in media that cannot place a Google ad (TV, radio, mail, phones, field, consulting) are not listed.",
         "source_urls": [
           "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00687103&payee_name=TARGETED+VICTORY+LLC"
-        ],
-        "checked_by": null,
-        "checked_at": null
-      }
-    },
-    {
-      "from": "vendor:V-americans-for-prosperity",
-      "to": "CR12542813051453177857",
-      "kind": "placement",
-      "amount": 0,
-      "visibility": "disclosed",
-      "depth": 2,
-      "transaction_types": [],
-      "count": 1,
-      "date_range": [
-        "2024-09-12",
-        "2024-10-01"
-      ],
-      "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00687103&payee_name=AMERICANS+FOR+PROSPERITY",
-      "basis": {
-        "basis": "adjacent",
-        "rule": "Ran Sep 12, 2024 – Oct 1, 2024. In that window (buys dated up to 7 days before first shown through last shown) AMERICANS FOR PROSPERITY ACTION, INC. (AFP ACTION) DBA CVA ACTION AND DBA LIBRE ACTION reported other buys to AMERICANS FOR PROSPERITY ($5,000); the FEC does not record which buy placed which ad.",
-        "source_urls": [
-          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00687103&payee_name=AMERICANS+FOR+PROSPERITY"
         ],
         "checked_by": null,
         "checked_at": null
@@ -2485,57 +2101,9 @@
       "source_url": "https://adstransparency.google.com/advertiser/AR15510028093073915905/creative/CR12542813051453177857?political=&region=US",
       "basis": {
         "basis": "inferred",
-        "rule": "Advertiser name matched to this committee by normalized name; Google shows the advertiser, not the paid-for-by line",
+        "rule": "Advertiser name matched to this committee by normalized name; Google's bulk data names the advertiser and carries no paid-for-by field for US ads",
         "source_urls": [
           "https://adstransparency.google.com/advertiser/AR15510028093073915905/creative/CR12542813051453177857?political=&region=US"
-        ],
-        "checked_by": null,
-        "checked_at": null
-      }
-    },
-    {
-      "from": "vendor:V-united-states-postal-service",
-      "to": "CR00979612100970151937",
-      "kind": "placement",
-      "amount": 0,
-      "visibility": "disclosed",
-      "depth": 2,
-      "transaction_types": [],
-      "count": 13,
-      "date_range": [
-        "2024-09-04",
-        "2024-10-01"
-      ],
-      "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00687103&payee_name=UNITED+STATES+POSTAL+SERVICE",
-      "basis": {
-        "basis": "adjacent",
-        "rule": "Ran Sep 4, 2024 – Oct 1, 2024. In that window (buys dated up to 7 days before first shown through last shown) AMERICANS FOR PROSPERITY ACTION, INC. (AFP ACTION) DBA CVA ACTION AND DBA LIBRE ACTION reported mail buys to United States Postal Service ($2,559,443); the FEC does not record which buy placed which ad.",
-        "source_urls": [
-          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00687103&payee_name=UNITED+STATES+POSTAL+SERVICE"
-        ],
-        "checked_by": null,
-        "checked_at": null
-      }
-    },
-    {
-      "from": "vendor:V-in-pursuit-of",
-      "to": "CR00979612100970151937",
-      "kind": "placement",
-      "amount": 0,
-      "visibility": "disclosed",
-      "depth": 2,
-      "transaction_types": [],
-      "count": 2,
-      "date_range": [
-        "2024-09-04",
-        "2024-10-01"
-      ],
-      "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00687103&payee_name=IN+PURSUIT+OF+LLC",
-      "basis": {
-        "basis": "adjacent",
-        "rule": "Ran Sep 4, 2024 – Oct 1, 2024. In that window (buys dated up to 7 days before first shown through last shown) AMERICANS FOR PROSPERITY ACTION, INC. (AFP ACTION) DBA CVA ACTION AND DBA LIBRE ACTION reported tv buys to IN PURSUIT OF LLC ($1,915,775); the FEC does not record which buy placed which ad.",
-        "source_urls": [
-          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00687103&payee_name=IN+PURSUIT+OF+LLC"
         ],
         "checked_by": null,
         "checked_at": null
@@ -2557,7 +2125,7 @@
       "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00687103&payee_name=PEOPLE+WHO+THINK&payee_name=PEOPLE+WHO+THINK+LLC",
       "basis": {
         "basis": "adjacent",
-        "rule": "Ran Sep 4, 2024 – Oct 1, 2024. In that window (buys dated up to 7 days before first shown through last shown) AMERICANS FOR PROSPERITY ACTION, INC. (AFP ACTION) DBA CVA ACTION AND DBA LIBRE ACTION reported production buys to PEOPLE WHO THINK ($928,420); the FEC does not record which buy placed which ad.",
+        "rule": "Ran Sep 4, 2024 – Oct 1, 2024. In that window (buys dated up to 7 days before first shown through last shown) AMERICANS FOR PROSPERITY ACTION, INC. (AFP ACTION) DBA CVA ACTION AND DBA LIBRE ACTION reported production buys to PEOPLE WHO THINK ($928,420); the FEC does not record which buy placed which ad. Same-window buys in media that cannot place a Google ad (TV, radio, mail, phones, field, consulting) are not listed.",
         "source_urls": [
           "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00687103&payee_name=PEOPLE+WHO+THINK&payee_name=PEOPLE+WHO+THINK+LLC"
         ],
@@ -2581,33 +2149,9 @@
       "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00687103&payee_name=FP1+STRATEGIES+LLC",
       "basis": {
         "basis": "adjacent",
-        "rule": "Ran Sep 4, 2024 – Oct 1, 2024. In that window (buys dated up to 7 days before first shown through last shown) AMERICANS FOR PROSPERITY ACTION, INC. (AFP ACTION) DBA CVA ACTION AND DBA LIBRE ACTION reported production buys to FP1 STRATEGIES LLC ($17,250); the FEC does not record which buy placed which ad.",
+        "rule": "Ran Sep 4, 2024 – Oct 1, 2024. In that window (buys dated up to 7 days before first shown through last shown) AMERICANS FOR PROSPERITY ACTION, INC. (AFP ACTION) DBA CVA ACTION AND DBA LIBRE ACTION reported production buys to FP1 STRATEGIES LLC ($17,250); the FEC does not record which buy placed which ad. Same-window buys in media that cannot place a Google ad (TV, radio, mail, phones, field, consulting) are not listed.",
         "source_urls": [
           "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00687103&payee_name=FP1+STRATEGIES+LLC"
-        ],
-        "checked_by": null,
-        "checked_at": null
-      }
-    },
-    {
-      "from": "vendor:V-americans-for-prosperity",
-      "to": "CR00979612100970151937",
-      "kind": "placement",
-      "amount": 0,
-      "visibility": "disclosed",
-      "depth": 2,
-      "transaction_types": [],
-      "count": 2,
-      "date_range": [
-        "2024-09-04",
-        "2024-10-01"
-      ],
-      "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00687103&payee_name=AMERICANS+FOR+PROSPERITY",
-      "basis": {
-        "basis": "adjacent",
-        "rule": "Ran Sep 4, 2024 – Oct 1, 2024. In that window (buys dated up to 7 days before first shown through last shown) AMERICANS FOR PROSPERITY ACTION, INC. (AFP ACTION) DBA CVA ACTION AND DBA LIBRE ACTION reported other buys to AMERICANS FOR PROSPERITY ($10,000); the FEC does not record which buy placed which ad.",
-        "source_urls": [
-          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00687103&payee_name=AMERICANS+FOR+PROSPERITY"
         ],
         "checked_by": null,
         "checked_at": null
@@ -2629,7 +2173,7 @@
       "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00687103&payee_name=TARGETED+VICTORY+LLC",
       "basis": {
         "basis": "adjacent",
-        "rule": "Ran Sep 4, 2024 – Oct 1, 2024. In that window (buys dated up to 7 days before first shown through last shown) AMERICANS FOR PROSPERITY ACTION, INC. (AFP ACTION) DBA CVA ACTION AND DBA LIBRE ACTION reported production buys to TARGETED VICTORY LLC ($7,000); the FEC does not record which buy placed which ad.",
+        "rule": "Ran Sep 4, 2024 – Oct 1, 2024. In that window (buys dated up to 7 days before first shown through last shown) AMERICANS FOR PROSPERITY ACTION, INC. (AFP ACTION) DBA CVA ACTION AND DBA LIBRE ACTION reported production buys to TARGETED VICTORY LLC ($7,000); the FEC does not record which buy placed which ad. Same-window buys in media that cannot place a Google ad (TV, radio, mail, phones, field, consulting) are not listed.",
         "source_urls": [
           "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00687103&payee_name=TARGETED+VICTORY+LLC"
         ],
@@ -2650,33 +2194,9 @@
       "source_url": "https://adstransparency.google.com/advertiser/AR15510028093073915905/creative/CR00979612100970151937?political=&region=US",
       "basis": {
         "basis": "inferred",
-        "rule": "Advertiser name matched to this committee by normalized name; Google shows the advertiser, not the paid-for-by line",
+        "rule": "Advertiser name matched to this committee by normalized name; Google's bulk data names the advertiser and carries no paid-for-by field for US ads",
         "source_urls": [
           "https://adstransparency.google.com/advertiser/AR15510028093073915905/creative/CR00979612100970151937?political=&region=US"
-        ],
-        "checked_by": null,
-        "checked_at": null
-      }
-    },
-    {
-      "from": "vendor:V-united-states-postal-service",
-      "to": "CR02909590358763503617",
-      "kind": "placement",
-      "amount": 0,
-      "visibility": "disclosed",
-      "depth": 2,
-      "transaction_types": [],
-      "count": 11,
-      "date_range": [
-        "2024-09-17",
-        "2024-10-01"
-      ],
-      "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00687103&payee_name=UNITED+STATES+POSTAL+SERVICE",
-      "basis": {
-        "basis": "adjacent",
-        "rule": "Ran Sep 17, 2024 – Oct 1, 2024. In that window (buys dated up to 7 days before first shown through last shown) AMERICANS FOR PROSPERITY ACTION, INC. (AFP ACTION) DBA CVA ACTION AND DBA LIBRE ACTION reported mail buys to United States Postal Service ($2,283,408); the FEC does not record which buy placed which ad.",
-        "source_urls": [
-          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00687103&payee_name=UNITED+STATES+POSTAL+SERVICE"
         ],
         "checked_by": null,
         "checked_at": null
@@ -2698,33 +2218,9 @@
       "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00687103&payee_name=PEOPLE+WHO+THINK&payee_name=PEOPLE+WHO+THINK+LLC",
       "basis": {
         "basis": "adjacent",
-        "rule": "Ran Sep 17, 2024 – Oct 1, 2024. In that window (buys dated up to 7 days before first shown through last shown) AMERICANS FOR PROSPERITY ACTION, INC. (AFP ACTION) DBA CVA ACTION AND DBA LIBRE ACTION reported production buys to PEOPLE WHO THINK ($752,178); the FEC does not record which buy placed which ad.",
+        "rule": "Ran Sep 17, 2024 – Oct 1, 2024. In that window (buys dated up to 7 days before first shown through last shown) AMERICANS FOR PROSPERITY ACTION, INC. (AFP ACTION) DBA CVA ACTION AND DBA LIBRE ACTION reported production buys to PEOPLE WHO THINK ($752,178); the FEC does not record which buy placed which ad. Same-window buys in media that cannot place a Google ad (TV, radio, mail, phones, field, consulting) are not listed.",
         "source_urls": [
           "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00687103&payee_name=PEOPLE+WHO+THINK&payee_name=PEOPLE+WHO+THINK+LLC"
-        ],
-        "checked_by": null,
-        "checked_at": null
-      }
-    },
-    {
-      "from": "vendor:V-americans-for-prosperity",
-      "to": "CR02909590358763503617",
-      "kind": "placement",
-      "amount": 0,
-      "visibility": "disclosed",
-      "depth": 2,
-      "transaction_types": [],
-      "count": 1,
-      "date_range": [
-        "2024-09-17",
-        "2024-10-01"
-      ],
-      "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00687103&payee_name=AMERICANS+FOR+PROSPERITY",
-      "basis": {
-        "basis": "adjacent",
-        "rule": "Ran Sep 17, 2024 – Oct 1, 2024. In that window (buys dated up to 7 days before first shown through last shown) AMERICANS FOR PROSPERITY ACTION, INC. (AFP ACTION) DBA CVA ACTION AND DBA LIBRE ACTION reported other buys to AMERICANS FOR PROSPERITY ($5,000); the FEC does not record which buy placed which ad.",
-        "source_urls": [
-          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00687103&payee_name=AMERICANS+FOR+PROSPERITY"
         ],
         "checked_by": null,
         "checked_at": null
@@ -2743,7 +2239,7 @@
       "source_url": "https://adstransparency.google.com/advertiser/AR15510028093073915905/creative/CR02909590358763503617?political=&region=US",
       "basis": {
         "basis": "inferred",
-        "rule": "Advertiser name matched to this committee by normalized name; Google shows the advertiser, not the paid-for-by line",
+        "rule": "Advertiser name matched to this committee by normalized name; Google's bulk data names the advertiser and carries no paid-for-by field for US ads",
         "source_urls": [
           "https://adstransparency.google.com/advertiser/AR15510028093073915905/creative/CR02909590358763503617?political=&region=US"
         ],
@@ -2776,30 +2272,6 @@
       }
     },
     {
-      "from": "vendor:V-canvass-america",
-      "to": "CR05774831160106418177",
-      "kind": "placement",
-      "amount": 0,
-      "visibility": "disclosed",
-      "depth": 2,
-      "transaction_types": [],
-      "count": 3,
-      "date_range": [
-        "2024-04-09",
-        "2024-05-01"
-      ],
-      "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00687103&payee_name=CANVASS+AMERICA&payee_name=CANVASS+AMERICA+LLC",
-      "basis": {
-        "basis": "adjacent",
-        "rule": "Ran Apr 9, 2024 – May 1, 2024. In that window (buys dated up to 7 days before first shown through last shown) AMERICANS FOR PROSPERITY ACTION, INC. (AFP ACTION) DBA CVA ACTION AND DBA LIBRE ACTION reported other buys to CANVASS AMERICA LLC ($90,000); the FEC does not record which buy placed which ad.",
-        "source_urls": [
-          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00687103&payee_name=CANVASS+AMERICA&payee_name=CANVASS+AMERICA+LLC"
-        ],
-        "checked_by": null,
-        "checked_at": null
-      }
-    },
-    {
       "from": "vendor:V-people-who-think",
       "to": "CR05774831160106418177",
       "kind": "placement",
@@ -2815,33 +2287,9 @@
       "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00687103&payee_name=PEOPLE+WHO+THINK&payee_name=PEOPLE+WHO+THINK+LLC",
       "basis": {
         "basis": "adjacent",
-        "rule": "Ran Apr 9, 2024 – May 1, 2024. In that window (buys dated up to 7 days before first shown through last shown) AMERICANS FOR PROSPERITY ACTION, INC. (AFP ACTION) DBA CVA ACTION AND DBA LIBRE ACTION reported production buys to PEOPLE WHO THINK ($32,090); the FEC does not record which buy placed which ad.",
+        "rule": "Ran Apr 9, 2024 – May 1, 2024. In that window (buys dated up to 7 days before first shown through last shown) AMERICANS FOR PROSPERITY ACTION, INC. (AFP ACTION) DBA CVA ACTION AND DBA LIBRE ACTION reported production buys to PEOPLE WHO THINK ($32,090); the FEC does not record which buy placed which ad. Same-window buys in media that cannot place a Google ad (TV, radio, mail, phones, field, consulting) are not listed.",
         "source_urls": [
           "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00687103&payee_name=PEOPLE+WHO+THINK&payee_name=PEOPLE+WHO+THINK+LLC"
-        ],
-        "checked_by": null,
-        "checked_at": null
-      }
-    },
-    {
-      "from": "vendor:V-americans-for-prosperity",
-      "to": "CR05774831160106418177",
-      "kind": "placement",
-      "amount": 0,
-      "visibility": "disclosed",
-      "depth": 2,
-      "transaction_types": [],
-      "count": 4,
-      "date_range": [
-        "2024-04-09",
-        "2024-05-01"
-      ],
-      "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00687103&payee_name=AMERICANS+FOR+PROSPERITY",
-      "basis": {
-        "basis": "adjacent",
-        "rule": "Ran Apr 9, 2024 – May 1, 2024. In that window (buys dated up to 7 days before first shown through last shown) AMERICANS FOR PROSPERITY ACTION, INC. (AFP ACTION) DBA CVA ACTION AND DBA LIBRE ACTION reported other buys to AMERICANS FOR PROSPERITY ($14,961); the FEC does not record which buy placed which ad.",
-        "source_urls": [
-          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00687103&payee_name=AMERICANS+FOR+PROSPERITY"
         ],
         "checked_by": null,
         "checked_at": null
@@ -2863,57 +2311,9 @@
       "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00687103&payee_name=TARGETED+VICTORY+LLC",
       "basis": {
         "basis": "adjacent",
-        "rule": "Ran Apr 9, 2024 – May 1, 2024. In that window (buys dated up to 7 days before first shown through last shown) AMERICANS FOR PROSPERITY ACTION, INC. (AFP ACTION) DBA CVA ACTION AND DBA LIBRE ACTION reported production buys to TARGETED VICTORY LLC ($2,500); the FEC does not record which buy placed which ad.",
+        "rule": "Ran Apr 9, 2024 – May 1, 2024. In that window (buys dated up to 7 days before first shown through last shown) AMERICANS FOR PROSPERITY ACTION, INC. (AFP ACTION) DBA CVA ACTION AND DBA LIBRE ACTION reported production buys to TARGETED VICTORY LLC ($2,500); the FEC does not record which buy placed which ad. Same-window buys in media that cannot place a Google ad (TV, radio, mail, phones, field, consulting) are not listed.",
         "source_urls": [
           "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00687103&payee_name=TARGETED+VICTORY+LLC"
-        ],
-        "checked_by": null,
-        "checked_at": null
-      }
-    },
-    {
-      "from": "vendor:V-in-pursuit-of",
-      "to": "CR02504343856330309633",
-      "kind": "placement",
-      "amount": 0,
-      "visibility": "disclosed",
-      "depth": 2,
-      "transaction_types": [],
-      "count": 2,
-      "date_range": [
-        "2024-08-06",
-        "2024-09-04"
-      ],
-      "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00687103&payee_name=IN+PURSUIT+OF+LLC",
-      "basis": {
-        "basis": "adjacent",
-        "rule": "Ran Aug 6, 2024 – Sep 4, 2024. In that window (buys dated up to 7 days before first shown through last shown) AMERICANS FOR PROSPERITY ACTION, INC. (AFP ACTION) DBA CVA ACTION AND DBA LIBRE ACTION reported tv buys to IN PURSUIT OF LLC ($1,250,000); the FEC does not record which buy placed which ad.",
-        "source_urls": [
-          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00687103&payee_name=IN+PURSUIT+OF+LLC"
-        ],
-        "checked_by": null,
-        "checked_at": null
-      }
-    },
-    {
-      "from": "vendor:V-united-states-postal-service",
-      "to": "CR02504343856330309633",
-      "kind": "placement",
-      "amount": 0,
-      "visibility": "disclosed",
-      "depth": 2,
-      "transaction_types": [],
-      "count": 4,
-      "date_range": [
-        "2024-08-06",
-        "2024-09-04"
-      ],
-      "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00687103&payee_name=UNITED+STATES+POSTAL+SERVICE",
-      "basis": {
-        "basis": "adjacent",
-        "rule": "Ran Aug 6, 2024 – Sep 4, 2024. In that window (buys dated up to 7 days before first shown through last shown) AMERICANS FOR PROSPERITY ACTION, INC. (AFP ACTION) DBA CVA ACTION AND DBA LIBRE ACTION reported mail buys to United States Postal Service ($828,106); the FEC does not record which buy placed which ad.",
-        "source_urls": [
-          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00687103&payee_name=UNITED+STATES+POSTAL+SERVICE"
         ],
         "checked_by": null,
         "checked_at": null
@@ -2935,7 +2335,7 @@
       "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00687103&payee_name=PEOPLE+WHO+THINK&payee_name=PEOPLE+WHO+THINK+LLC",
       "basis": {
         "basis": "adjacent",
-        "rule": "Ran Aug 6, 2024 – Sep 4, 2024. In that window (buys dated up to 7 days before first shown through last shown) AMERICANS FOR PROSPERITY ACTION, INC. (AFP ACTION) DBA CVA ACTION AND DBA LIBRE ACTION reported production buys to PEOPLE WHO THINK ($397,208); the FEC does not record which buy placed which ad.",
+        "rule": "Ran Aug 6, 2024 – Sep 4, 2024. In that window (buys dated up to 7 days before first shown through last shown) AMERICANS FOR PROSPERITY ACTION, INC. (AFP ACTION) DBA CVA ACTION AND DBA LIBRE ACTION reported production buys to PEOPLE WHO THINK ($397,208); the FEC does not record which buy placed which ad. Same-window buys in media that cannot place a Google ad (TV, radio, mail, phones, field, consulting) are not listed.",
         "source_urls": [
           "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00687103&payee_name=PEOPLE+WHO+THINK&payee_name=PEOPLE+WHO+THINK+LLC"
         ],
@@ -2959,33 +2359,9 @@
       "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00687103&payee_name=TARGETED+VICTORY+LLC",
       "basis": {
         "basis": "adjacent",
-        "rule": "Ran Aug 6, 2024 – Sep 4, 2024. In that window (buys dated up to 7 days before first shown through last shown) AMERICANS FOR PROSPERITY ACTION, INC. (AFP ACTION) DBA CVA ACTION AND DBA LIBRE ACTION reported production buys to TARGETED VICTORY LLC ($23,246); the FEC does not record which buy placed which ad.",
+        "rule": "Ran Aug 6, 2024 – Sep 4, 2024. In that window (buys dated up to 7 days before first shown through last shown) AMERICANS FOR PROSPERITY ACTION, INC. (AFP ACTION) DBA CVA ACTION AND DBA LIBRE ACTION reported production buys to TARGETED VICTORY LLC ($23,246); the FEC does not record which buy placed which ad. Same-window buys in media that cannot place a Google ad (TV, radio, mail, phones, field, consulting) are not listed.",
         "source_urls": [
           "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00687103&payee_name=TARGETED+VICTORY+LLC"
-        ],
-        "checked_by": null,
-        "checked_at": null
-      }
-    },
-    {
-      "from": "vendor:V-americans-for-prosperity",
-      "to": "CR02504343856330309633",
-      "kind": "placement",
-      "amount": 0,
-      "visibility": "disclosed",
-      "depth": 2,
-      "transaction_types": [],
-      "count": 1,
-      "date_range": [
-        "2024-08-06",
-        "2024-09-04"
-      ],
-      "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00687103&payee_name=AMERICANS+FOR+PROSPERITY",
-      "basis": {
-        "basis": "adjacent",
-        "rule": "Ran Aug 6, 2024 – Sep 4, 2024. In that window (buys dated up to 7 days before first shown through last shown) AMERICANS FOR PROSPERITY ACTION, INC. (AFP ACTION) DBA CVA ACTION AND DBA LIBRE ACTION reported other buys to AMERICANS FOR PROSPERITY ($5,000); the FEC does not record which buy placed which ad.",
-        "source_urls": [
-          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00687103&payee_name=AMERICANS+FOR+PROSPERITY"
         ],
         "checked_by": null,
         "checked_at": null
@@ -3004,7 +2380,7 @@
       "source_url": "https://adstransparency.google.com/advertiser/AR15510028093073915905/creative/CR02504343856330309633?political=&region=US",
       "basis": {
         "basis": "inferred",
-        "rule": "Advertiser name matched to this committee by normalized name; Google shows the advertiser, not the paid-for-by line",
+        "rule": "Advertiser name matched to this committee by normalized name; Google's bulk data names the advertiser and carries no paid-for-by field for US ads",
         "source_urls": [
           "https://adstransparency.google.com/advertiser/AR15510028093073915905/creative/CR02504343856330309633?political=&region=US"
         ],
