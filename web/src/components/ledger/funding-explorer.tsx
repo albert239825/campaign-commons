@@ -2,12 +2,11 @@
 
 import { useState, type KeyboardEvent } from "react";
 import Link from "next/link";
-import type { FundingView } from "@/lib/funding-view";
+import { pieSectors, pieSlices, type FundingView, type SliceGroup } from "@/lib/funding-view";
 import { money, pct, routes } from "@/lib/format";
 import { Money, SourceLink } from "@/components/ui";
 
-type Slice = "campaign" | "outside";
-const COLORS = { campaign: "#343f49", outside: "#b7ab98" };
+type Slice = SliceGroup;
 const VISIBILITY = [
   { key: "disclosed", label: "Disclosed", color: "#4c645c", detail: "Resolves to a named individual, business, or union in filings." },
   { key: "inferable", label: "Inferable", color: "#a68a5e", detail: "Potentially reconstructable from other public records." },
@@ -26,10 +25,28 @@ function sector(start: number, end: number) {
 export function FundingExplorer({ views, raceId }: { views: FundingView[]; raceId: string }) {
   const [index, setIndex] = useState(0);
   const [slice, setSlice] = useState<Slice>("outside");
+  const [detailed, setDetailed] = useState(false);
+  const [picked, setPicked] = useState<string | null>(null);
   const view = views[index];
   const total = view.campaign.receipts + view.outside.total;
-  const campaignShare = total > 0 ? view.campaign.receipts / total : 0;
-  const split = -Math.PI / 2 + campaignShare * Math.PI * 2;
+  const slices = pieSectors(pieSlices(view, detailed, views.filter(v => v.id !== "all")));
+  const sides = [...new Set(slices.map(s => s.side).filter((s): s is string => !!s))];
+  const bySide = sides.map(side => {
+    const own = slices.filter(s => s.side === side);
+    return { side, slices: own, total: own.reduce((sum, s) => sum + s.amount, 0) };
+  });
+  const pick = (s: { id: string; group: Slice; viewId?: string; pickId?: string }) => {
+    setSlice(s.group);
+    if (s.viewId) {
+      const target = views.findIndex(v => v.id === s.viewId);
+      if (target >= 0) setIndex(target);
+      setPicked(s.pickId ?? null);
+      return;
+    }
+    setPicked(detailed ? s.id : null);
+  };
+  const isPicked = (s: { id: string; group: Slice }) => (detailed ? picked === s.id : slice === s.group);
+  const toggleDetail = () => { setDetailed(!detailed); setPicked(null); };
   const selectTab = (event: KeyboardEvent<HTMLButtonElement>, i: number) => {
     let next = i;
     if (event.key === "ArrowRight") next = (i + 1) % views.length;
@@ -40,10 +57,6 @@ export function FundingExplorer({ views, raceId }: { views: FundingView[]; raceI
     event.preventDefault(); setIndex(next);
     document.getElementById(`funding-tab-${next}`)?.focus();
   };
-  const slices = [
-    { id: "campaign" as const, label: "Campaign receipts", amount: view.campaign.receipts, start: -Math.PI / 2, end: split },
-    { id: "outside" as const, label: "Outside spending", amount: view.outside.total, start: split, end: Math.PI * 1.5 },
-  ];
 
   return (
     <section className="funding-explorer" aria-label="Campaign receipts and outside spending by candidate">
@@ -62,27 +75,46 @@ export function FundingExplorer({ views, raceId }: { views: FundingView[]; raceI
             {total <= 0 && <circle cx="160" cy="160" r="144" fill="#d4d0c9"><title>No funding data available</title></circle>}
             {slices.filter(s => s.amount > 0).map(s => {
               const props = {
-                fill: COLORS[s.id], stroke: "#f2efeb", strokeWidth: 3,
-                role: "button", tabIndex: 0, "aria-pressed": slice === s.id,
-                "aria-label": `${s.label}: ${money(s.amount)}, ${pct(s.amount / total)}. Show details`,
-                onClick: () => setSlice(s.id),
-                onKeyDown: (e: KeyboardEvent<SVGElement>) => { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); setSlice(s.id); } },
+                fill: s.color, stroke: "#f2efeb", strokeWidth: 3,
+                role: "button", tabIndex: 0, "aria-pressed": isPicked(s),
+                "aria-label": `${s.label}: ${money(s.amount)}, ${pct(s.share)}. Show details`,
+                onClick: () => pick(s),
+                onKeyDown: (e: KeyboardEvent<SVGElement>) => { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); pick(s); } },
               };
-              return s.amount === total
+              return s.end - s.start >= Math.PI * 2 - 1e-9
                 ? <circle key={s.id} {...props} cx="160" cy="160" r="144"><title>{`${s.label}: ${money(s.amount)}`}</title></circle>
                 : <path key={s.id} {...props} d={sector(s.start, s.end)}><title>{`${s.label}: ${money(s.amount)}`}</title></path>;
             })}
           </svg>
           <div className="funding-chart-total"><Money amount={total} /><span>Campaign receipts + outside spending</span></div>
+          <div className="funding-detail-toggle">
+            <button type="button" aria-pressed={detailed} onClick={toggleDetail}>
+              {detailed ? "Show summary" : "Show detail"}
+            </button>
+            <span>{!detailed ? "Campaign receipts vs outside spending" : bySide.length > 1 ? "Money working for each side" : "Receipts by source · outside spending by stance"}</span>
+          </div>
           <div className="funding-slice-controls" aria-label="Choose a funding breakdown">
-            {slices.map(s => (
-              <button key={s.id} type="button" aria-pressed={slice === s.id} onClick={() => setSlice(s.id)}>
-                <span className="funding-swatch" style={{ background: COLORS[s.id] }} />
-                <span>{s.label}</span><strong><Money amount={s.amount} /></strong><span>{total > 0 ? pct(s.amount / total) : "—"}</span>
-              </button>
+            {(bySide.length > 1 ? bySide : [{ side: null, slices, total }]).map(b => (
+              <div key={b.side ?? "all"} className="funding-side">
+                {b.side && (
+                  <div className="funding-side-heading">
+                    <span>Working for {b.side}</span><strong><Money amount={b.total} /></strong><span>{total > 0 ? pct(b.total / total) : "—"}</span>
+                  </div>
+                )}
+                {b.slices.map(s => (
+                  <button key={s.id} type="button" aria-pressed={isPicked(s)} onClick={() => pick(s)}>
+                    <span className="funding-swatch" style={{ background: s.color }} />
+                    <span>{s.label}</span><strong><Money amount={s.amount} /></strong><span>{total > 0 ? pct(s.share) : "—"}</span>
+                  </button>
+                ))}
+              </div>
             ))}
           </div>
-          <p className="funding-caption">Select a slice to explore it. Outside spending supports or opposes candidates; it does not go to their campaigns. The combined amount is not a campaign fundraising total.</p>
+          <p className="funding-caption">
+            Select a slice to explore it. Outside spending supports or opposes candidates; it does not go to their campaigns. The combined amount is not a campaign fundraising total.
+            {detailed && bySide.length > 1 && " Each side groups money working for one candidate: each side has its own hue; the darkest shade is the campaign's receipts, lighter shades are outside spending supporting them and opposing their opponent. Only the receipts reach the campaign; a side total is a comparison figure, not a fundraising total. Selecting a slice opens the candidate record it comes from."}
+            {detailed && bySide.length <= 1 && " Darker slices are money to the campaign, by source; lighter slices are independent expenditures, by stance. Conduit receipts are already inside the individuals slice."}
+          </p>
         </div>
         <div className="funding-detail" aria-live="polite" aria-atomic="false">
           <div className="funding-detail-heading">
@@ -92,10 +124,10 @@ export function FundingExplorer({ views, raceId }: { views: FundingView[]; raceI
           {slice === "campaign" ? (
             <>
               <dl className="funding-lines">
-                <AmountLine label="From individuals" amount={view.campaign.individuals} />
+                <AmountLine label="From individuals" amount={view.campaign.individuals} selected={picked === "individuals"} />
                 <AmountLine label="Of which via conduits" amount={view.campaign.conduits} nested />
-                <AmountLine label="From committees (PACs, party)" amount={view.campaign.committees} />
-                <AmountLine label="Other receipts" amount={view.campaign.other} />
+                <AmountLine label="From committees (PACs, party)" amount={view.campaign.committees} selected={picked === "committees"} />
+                <AmountLine label="Other receipts" amount={view.campaign.other} selected={picked === "other"} />
                 <AmountLine label="Disbursements" amount={view.campaign.disbursements} />
                 <AmountLine label="Cash on hand" amount={view.campaign.cash} />
               </dl>
@@ -104,8 +136,8 @@ export function FundingExplorer({ views, raceId }: { views: FundingView[]; raceI
           ) : (
             <>
               <dl className="funding-lines funding-support">
-                <AmountLine label="Supporting candidates" amount={view.outside.support} />
-                <AmountLine label="Opposing candidates" amount={view.outside.oppose} />
+                <AmountLine label="Supporting candidates" amount={view.outside.support} selected={picked === "support"} />
+                <AmountLine label="Opposing candidates" amount={view.outside.oppose} selected={picked === "oppose"} />
               </dl>
               <h4>Where outside funding can be traced</h4>
               <p className="funding-caption">Preliminary source composition · percentages of outside spending</p>
@@ -144,6 +176,6 @@ export function FundingExplorer({ views, raceId }: { views: FundingView[]; raceI
   );
 }
 
-function AmountLine({ label, amount, nested = false }: { label: string; amount: number | null; nested?: boolean }) {
-  return <div className={nested ? "funding-line-nested" : ""}><dt>{label}</dt><dd>{amount === null ? "Not available" : <Money amount={amount} compact={false} />}</dd></div>;
+function AmountLine({ label, amount, nested = false, selected = false }: { label: string; amount: number | null; nested?: boolean; selected?: boolean }) {
+  return <div className={[nested && "funding-line-nested", selected && "funding-line-selected"].filter(Boolean).join(" ")} aria-current={selected || undefined}><dt>{label}</dt><dd>{amount === null ? "Not available" : <Money amount={amount} compact={false} />}</dd></div>;
 }
