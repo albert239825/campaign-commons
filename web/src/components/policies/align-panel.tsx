@@ -210,7 +210,7 @@ function FunderRows({ issue, candidate, response }: { issue: Issue; candidate: C
       <div>
         <h4>Gave to {surname(candidate.candidate)}&apos;s committee</h4>
         {response.candidate.length === 0 ? (
-          <p className="policies-empty">No funder tagged on {issue.label.toLowerCase()} reached the graph for this race.</p>
+          <p className="policies-empty">No funder tagged on {issue.label.toLowerCase()} reached the graph for this candidate.</p>
         ) : (
           <ol className="policies-align-funder-list">{response.candidate.map((funder) => <FunderRow key={funder.entity_id} funder={funder} issue={issue} />)}</ol>
         )}
@@ -218,7 +218,7 @@ function FunderRows({ issue, candidate, response }: { issue: Issue; candidate: C
       <div>
         <h4>Across the race</h4>
         {response.race.length === 0 ? (
-          <p className="policies-empty">No funder tagged on {issue.label.toLowerCase()} reached the graph for this candidate.</p>
+          <p className="policies-empty">No funder tagged on {issue.label.toLowerCase()} reached the graph for this race.</p>
         ) : (
           <ol className="policies-align-funder-list">{response.race.map((funder) => <FunderRow key={funder.entity_id} funder={funder} issue={issue} />)}</ol>
         )}
