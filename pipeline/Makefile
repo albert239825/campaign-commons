@@ -36,7 +36,7 @@ enrich-ads:       ## Classify cached ad transcripts with xAI (requires XAI_API_K
 enrich-review:    ## Print pending machine ad classifications for human review
 	$(PY) -m campaign_commons.enrich_review $(RACE)
 
-enrich-spenders:  ## Classify spender self-descriptions from their own websites (requires XAI_API_KEY)
+enrich-spenders:  ## Classify spender self-descriptions (requires XAI_API_KEY and FEC_API_KEY; get a free key at api.open.fec.gov/developers)
 	$(PY) -m campaign_commons.enrich_spenders $(RACE)
 
 issues:           ## Block 2: data/hand/$(RACE)/{issue_focus,ad_issues,ie_issues}.json -> issues.json; patches entities + ads

@@ -7,6 +7,7 @@ import hashlib
 import html.parser
 import json
 import sys
+import time
 from collections.abc import Callable
 from urllib.parse import urlsplit
 
@@ -14,7 +15,7 @@ import requests
 
 from .config import DATA, FEC_API, FEC_API_KEY, RACES, ROOT, XAI_API_KEY
 from .dossier import issue_ids
-from .enrich_common import _normalize
+from .enrich_common import is_normalized_substring
 from .util import now_iso, read_json, write_json
 from .xai_client import XaiClient, estimate_usd, output_text, response_cost_usd
 
@@ -58,14 +59,44 @@ def _domain(website: object) -> str | None:
     return host.removeprefix("www.")
 
 
-def _committee_fetch(entity_id: str) -> dict:
-    response = requests.get(
-        f"{FEC_API}/committee/{entity_id}/",
-        params={"api_key": FEC_API_KEY},
-        timeout=30,
-    )
-    response.raise_for_status()
-    return response.json()
+def _committee_batch_fetch(entity_ids: list[str]) -> list[dict]:
+    params: dict[str, object] = {
+        "api_key": FEC_API_KEY,
+        "per_page": 100,
+        "committee_id": entity_ids,
+    }
+    delays = (2, 4, 8, 16)
+    last_error = ""
+    for attempt, delay in enumerate(delays):
+        try:
+            response = requests.get(f"{FEC_API}/committees/", params=params, timeout=30)
+            status = response.status_code
+            if status == 429 or status >= 500:
+                last_error = f"HTTP {status}"
+                if attempt < len(delays) - 1:
+                    time.sleep(delay)
+                    continue
+                raise RuntimeError(
+                    f"FEC committee lookup failed after {len(delays)} attempts ({last_error}). "
+                    "Set FEC_API_KEY in .env; free keys are available at "
+                    "https://api.open.fec.gov/developers/."
+                )
+            if status >= 400:
+                raise RuntimeError(f"FEC committee lookup failed with HTTP {status}. Set FEC_API_KEY in .env.")
+            payload = response.json()
+            results = payload.get("results", []) if isinstance(payload, dict) else []
+            return [result for result in results if isinstance(result, dict)]
+        except requests.RequestException as exc:
+            last_error = str(exc)
+            if attempt < len(delays) - 1:
+                time.sleep(delay)
+                continue
+            raise RuntimeError(
+                f"FEC committee lookup failed after {len(delays)} attempts ({last_error}). "
+                "Set FEC_API_KEY in .env; free keys are available at "
+                "https://api.open.fec.gov/developers/."
+            ) from exc
+    raise RuntimeError(f"FEC committee lookup failed ({last_error}). Set FEC_API_KEY in .env.")
 
 
 def _committee_details(payload: object) -> dict[str, object]:
@@ -77,13 +108,28 @@ def _committee_details(payload: object) -> dict[str, object]:
     return payload
 
 
-def _committee_cache(entity_id: str, fetcher: Callable[[str], dict] | None) -> dict[str, object]:
-    path = DATA / "raw" / "fec" / "committee" / f"{entity_id}.json"
-    if path.exists():
-        return _committee_details(read_json(path))
-    payload = (fetcher or _committee_fetch)(entity_id)
-    write_json(path, payload)
-    return _committee_details(payload)
+def _committee_cache(
+    entity_ids: list[str], fetcher: Callable[[list[str]], list[dict]] | None
+) -> dict[str, dict[str, object]]:
+    cached: dict[str, dict[str, object]] = {}
+    uncached: list[str] = []
+    for entity_id in entity_ids:
+        path = DATA / "raw" / "fec" / "committee" / f"{entity_id}.json"
+        if path.exists():
+            cached[entity_id] = _committee_details(read_json(path))
+        else:
+            uncached.append(entity_id)
+    for offset in range(0, len(uncached), 100):
+        chunk = uncached[offset : offset + 100]
+        results = (fetcher or _committee_batch_fetch)(chunk)
+        by_id = {
+            str(result.get("committee_id")): result for result in results if isinstance(result.get("committee_id"), str)
+        }
+        for entity_id in chunk:
+            result = by_id.get(entity_id, {})
+            write_json(DATA / "raw" / "fec" / f"{entity_id}.json", result)
+            cached[entity_id] = result
+    return cached
 
 
 def _existing_rows(race_id: str) -> list[dict]:
@@ -100,7 +146,7 @@ def _plans(
     only: str | None,
     limit: int | None,
     refresh_reviewed: bool,
-    fec_fetcher: Callable[[str], dict] | None,
+    fec_fetcher: Callable[[list[str]], list[dict]] | None,
 ) -> list[dict[str, object]]:
     ledger = read_json(RACES[race_id].out_dir / "ledger.json")
     spenders = ledger.get("top_outside_spenders", []) if isinstance(ledger, dict) else []
@@ -128,12 +174,23 @@ def _plans(
             continue
         if not refresh_reviewed and entity_id in reviewed:
             continue
-        committee = _committee_cache(entity_id, fec_fetcher)
-        website = committee.get("website")
         candidates.append(
             {
                 "entity_id": entity_id,
                 "name": str(spender.get("name", entity_id)),
+            }
+        )
+    candidates = candidates[:limit] if limit is not None else candidates
+    committees = _committee_cache([str(candidate["entity_id"]) for candidate in candidates], fec_fetcher)
+    plans = []
+    for candidate in candidates:
+        entity_id = str(candidate["entity_id"])
+        committee = committees.get(entity_id, {})
+        website = committee.get("website")
+        plans.append(
+            {
+                "entity_id": entity_id,
+                "name": candidate["name"],
                 "website": website if isinstance(website, str) else None,
                 "affiliated": committee.get("affiliated_committee_name")
                 if isinstance(committee.get("affiliated_committee_name"), str)
@@ -141,7 +198,7 @@ def _plans(
                 "domain": _domain(website),
             }
         )
-    return candidates[:limit] if limit is not None else candidates
+    return plans
 
 
 def _schema(issue_ids_: list[str]) -> dict[str, object]:
@@ -319,7 +376,7 @@ def _fetch_verified_page(
     quote: str,
     page_fetcher: Callable[[str], tuple[int, str]] | None,
     wayback_fetcher: Callable[[str], str | None] | None,
-) -> tuple[str, str | None] | None:
+) -> tuple[bool, str | None]:
     page_fetcher = page_fetcher or _default_page_fetcher
     wayback_fetcher = wayback_fetcher or _default_wayback_fetcher
     direct = _cached_page(source_url)
@@ -337,15 +394,15 @@ def _fetch_verified_page(
     if (
         direct.get("status") == 200
         and isinstance(direct.get("text"), str)
-        and _normalize(quote) in _normalize(direct["text"])
+        and is_normalized_substring(quote, direct["text"])
     ):
-        return source_url, None
+        return True, None
     try:
         snapshot_url = wayback_fetcher(source_url)
     except Exception:
         snapshot_url = None
     if not snapshot_url:
-        return None
+        return False, None
     archived = _cached_page(snapshot_url)
     if archived is None:
         try:
@@ -361,10 +418,10 @@ def _fetch_verified_page(
     if (
         archived.get("status") == 200
         and isinstance(archived.get("text"), str)
-        and _normalize(quote) in _normalize(archived["text"])
+        and is_normalized_substring(quote, archived["text"])
     ):
-        return snapshot_url, snapshot_url
-    return None
+        return True, snapshot_url
+    return False, None
 
 
 def _row(
@@ -420,7 +477,7 @@ def run(
     model: str = "grok-4.3",
     refresh_reviewed: bool = False,
     client: XaiClient | None = None,
-    fec_fetcher: Callable[[str], dict] | None = None,
+    fec_fetcher: Callable[[list[str]], list[dict]] | None = None,
     page_fetcher: Callable[[str], tuple[int, str]] | None = None,
     wayback_fetcher: Callable[[str], str | None] | None = None,
 ) -> int:
@@ -515,11 +572,12 @@ def run(
             print(f"WARN {plan['entity_id']}: dropped classification ({error})", file=sys.stderr)
         else:
             source_url = str(result["source_url"])
-            verified = _fetch_verified_page(source_url, str(result["quote"]), page_fetcher, wayback_fetcher)
-            if verified is None:
+            verified, wayback_url = _fetch_verified_page(
+                source_url, str(result["quote"]), page_fetcher, wayback_fetcher
+            )
+            if not verified:
                 print(f"WARN {plan['entity_id']}: dropped classification (quote not verified on page)", file=sys.stderr)
             else:
-                verified_url, wayback_url = verified
                 citations = list(dict.fromkeys([*searched, source_url]))
                 rows_by_id[str(plan["entity_id"])] = _row(
                     plan, result, response, str(entry["retrieved_at"]), source_url, wayback_url, citations, model

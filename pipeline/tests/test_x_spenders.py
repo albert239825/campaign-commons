@@ -72,15 +72,15 @@ def _setup(monkeypatch: pytest.MonkeyPatch, tmp_path: Path) -> tuple[Path, Path]
     return out, hand
 
 
-def _fec(_: str) -> dict[str, object]:
-    return {
-        "results": [
-            {
-                "website": "WWW.EXAMPLE.ORG/about",
-                "affiliated_committee_name": "Example Connected Organization",
-            }
-        ]
-    }
+def _fec(entity_ids: list[str]) -> list[dict[str, object]]:
+    return [
+        {
+            "committee_id": entity_id,
+            "website": "WWW.EXAMPLE.ORG/about",
+            "affiliated_committee_name": "Example Connected Organization",
+        }
+        for entity_id in entity_ids
+    ]
 
 
 def _page(url: str) -> tuple[int, str]:
