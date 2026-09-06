@@ -182,3 +182,32 @@ def test_python_axes_ids_match_typescript() -> None:
         )
     )
     assert ids == set(issues_enrich.ISSUE_AXES)
+
+
+def test_discover_urls_caches_fec_websites(tmp_path: Path, monkeypatch: pytest.MonkeyPatch) -> None:
+    calls: list[object] = []
+
+    class Response:
+        def raise_for_status(self) -> None:
+            return None
+
+        def json(self) -> dict:
+            return {
+                "results": [
+                    {"committee_id": "C1", "website": "https://one.example"},
+                    {"committee_id": "C2", "website": None},
+                ],
+                "pagination": {"pages": 1},
+            }
+
+    def get(*args: object, **kwargs: object) -> Response:
+        calls.append((args, kwargs))
+        return Response()
+
+    monkeypatch.setattr(issues_enrich, "RAW", tmp_path)
+    monkeypatch.setattr(issues_enrich.requests, "get", get)
+    spenders = [{"entity_id": "C1"}, {"entity_id": "C2"}]
+    assert issues_enrich.discover_urls("race", spenders, []) == {"C1": ["https://one.example"], "C2": []}
+    assert len(calls) == 1
+    assert issues_enrich.discover_urls("race", spenders, []) == {"C1": ["https://one.example"], "C2": []}
+    assert len(calls) == 1

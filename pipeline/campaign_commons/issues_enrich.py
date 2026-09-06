@@ -195,7 +195,6 @@ def fetch_pages(
             child_text, _ = page_text(child_raw)
             if child_text:
                 pages.append(Page(child, child_text, now_iso()))
-        break
     total = 0
     capped: list[Page] = []
     for page in pages:
@@ -219,9 +218,27 @@ def discover_urls(race_id: str, spenders: list[dict], focus_rows: list[dict]) ->
             if isinstance(url, str) and _allowed_url(url) and url not in urls[entity_id]:
                 urls[entity_id].append(url)
     committees = [eid for eid in urls if not eid.startswith("org:")]
-    for start in range(0, len(committees), 100):
-        ids = committees[start : start + 100]
+    website_cache_path = RAW / "issues_enrich" / race_id / "websites.json"
+    try:
+        website_cache = read_json(website_cache_path)
+    except (FileNotFoundError, ValueError):
+        website_cache = {}
+    if not isinstance(website_cache, dict):
+        website_cache = {}
+
+    def add_website(entity_id: str, website: object) -> None:
+        if isinstance(website, str) and website and website not in urls[entity_id]:
+            urls[entity_id].append(website)
+
+    for entity_id in committees:
+        if entity_id in website_cache:
+            add_website(entity_id, website_cache[entity_id])
+
+    missing = [entity_id for entity_id in committees if entity_id not in website_cache]
+    for start in range(0, len(missing), 100):
+        ids = missing[start : start + 100]
         page = 1
+        fec_ok = True
         while True:
             try:
                 response = requests.get(
@@ -232,17 +249,26 @@ def discover_urls(race_id: str, spenders: list[dict], focus_rows: list[dict]) ->
                 response.raise_for_status()
                 payload = response.json()
             except Exception as exc:
-                print(f"FEC website discovery failed: {exc}", file=sys.stderr)
+                print(f"FEC website discovery failed ({type(exc).__name__})", file=sys.stderr)
+                fec_ok = False
                 break
             for result in payload.get("results", []):
                 entity_id = result.get("committee_id")
                 website = result.get("website")
-                if entity_id in urls and isinstance(website, str) and website and website not in urls[entity_id]:
-                    urls[entity_id].append(website)
+                if entity_id in urls:
+                    website_cache[entity_id] = website if isinstance(website, str) and website else None
+                    add_website(entity_id, website_cache[entity_id])
+            website_cache_path.parent.mkdir(parents=True, exist_ok=True)
+            write_json(website_cache_path, website_cache)
             pagination = payload.get("pagination", {})
             if not pagination.get("pages") or page >= pagination["pages"]:
                 break
             page += 1
+        if fec_ok:
+            for entity_id in ids:
+                website_cache.setdefault(entity_id, None)
+            website_cache_path.parent.mkdir(parents=True, exist_ok=True)
+            write_json(website_cache_path, website_cache)
     return urls
 
 
@@ -352,6 +378,7 @@ def run(race_id: str, refetch: bool = False, only: list[str] | None = None, dry_
     untouched = set(urls) - selected
     for entity_id in untouched:
         rows.extend(by_entity.get(entity_id, []))
+    pages_out.extend(page for page in previous.get("pages", []) if page.get("entity_id") in untouched)
     for spender in spenders:
         entity_id = str(spender["entity_id"])
         name = str(spender.get("name", entity_id))
