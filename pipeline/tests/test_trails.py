@@ -463,6 +463,7 @@ def test_candidate_spender_graph_has_root_synthesized_spender_and_pooled_funders
     graph = candidate_spender_answer(inputs(), CASEY)["graph"]
     root = next(n for n in graph["nodes"] if n["id"] == CASEY)
     assert root["depth"] == 0 and root["side"] == "out"
+    assert root["amount_in"] == ledger()["candidates"][0]["outside"]["total"]
     spenders = {n["id"]: n for n in graph["nodes"] if n.get("side") == "in" and n["depth"] == 1}
     assert spenders[SUPER]["side"] == "in"
     assert spenders[PARTY]["side"] == "in"  # no chain: synthesized from the ledger/entity
