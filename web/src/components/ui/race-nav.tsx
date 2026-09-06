@@ -10,6 +10,7 @@ export function RaceNav({ race, counts, active }: { race: RaceSummary; counts: {
   const items: Item[] = [
     { href: routes.race(raceId), label: "Ledger" },
     { href: routes.ads(raceId), label: "Ads", count: counts.ads },
+    { href: routes.policies(raceId), label: "Policies" },
   ];
   return (
     <nav aria-label="Race sections" className="flex flex-wrap gap-1 border-b border-neutral-200 text-sm">

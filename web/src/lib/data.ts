@@ -95,3 +95,5 @@ export const hasChain = (raceId: string, entityId: string) => existsSync(join(DA
 /** Hand-tagged self-described focus (D-66) for one entity; null when the entity file or the tag is absent. */
 export const getIssueFocus = (raceId: string, entityId: string) =>
   existsSync(join(DATA_OUT, raceId, "entities", `${entityId}.json`)) ? (getEntity(raceId, entityId).issue_focus ?? null) : null;
+export const hasEntity = (raceId: string, entityId: string) => existsSync(join(DATA_OUT, raceId, "entities", `${entityId}.json`));
+export const hasDossier = (raceId: string, candidateId: string) => existsSync(join(DATA_OUT, raceId, "dossiers", `${candidateId}.json`));
