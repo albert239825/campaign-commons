@@ -29,7 +29,12 @@ export function FundingExplorer({ views, raceId }: { views: FundingView[]; raceI
   const [picked, setPicked] = useState<string | null>(null);
   const view = views[index];
   const total = view.campaign.receipts + view.outside.total;
-  const slices = pieSectors(pieSlices(view, detailed));
+  const slices = pieSectors(pieSlices(view, detailed, views.filter(v => v.id !== "all")));
+  const sides = [...new Set(slices.map(s => s.side).filter((s): s is string => !!s))];
+  const bySide = sides.map(side => {
+    const own = slices.filter(s => s.side === side);
+    return { side, slices: own, total: own.reduce((sum, s) => sum + s.amount, 0), start: own[0].start };
+  });
   const pick = (s: { id: string; group: Slice }) => { setSlice(s.group); setPicked(detailed ? s.id : null); };
   const isPicked = (s: { id: string; group: Slice }) => (detailed ? picked === s.id : slice === s.group);
   const toggleDetail = () => { setDetailed(!detailed); setPicked(null); };
@@ -71,25 +76,38 @@ export function FundingExplorer({ views, raceId }: { views: FundingView[]; raceI
                 ? <circle key={s.id} {...props} cx="160" cy="160" r="144"><title>{`${s.label}: ${money(s.amount)}`}</title></circle>
                 : <path key={s.id} {...props} d={sector(s.start, s.end)}><title>{`${s.label}: ${money(s.amount)}`}</title></path>;
             })}
+            {bySide.length > 1 && bySide.map(b => (
+              <line key={b.side} x1={160} y1={160} x2={160 + 150 * Math.cos(b.start)} y2={160 + 150 * Math.sin(b.start)} stroke="#1b1b1a" strokeWidth={2} pointerEvents="none" />
+            ))}
           </svg>
           <div className="funding-chart-total"><Money amount={total} /><span>Campaign receipts + outside spending</span></div>
           <div className="funding-detail-toggle">
             <button type="button" aria-pressed={detailed} onClick={toggleDetail}>
               {detailed ? "Show summary" : "Show detail"}
             </button>
-            <span>{detailed ? "Receipts by source · outside spending by stance" : "Campaign receipts vs outside spending"}</span>
+            <span>{!detailed ? "Campaign receipts vs outside spending" : bySide.length > 1 ? "Money working for each side" : "Receipts by source · outside spending by stance"}</span>
           </div>
           <div className="funding-slice-controls" aria-label="Choose a funding breakdown">
-            {slices.map(s => (
-              <button key={s.id} type="button" aria-pressed={isPicked(s)} onClick={() => pick(s)}>
-                <span className="funding-swatch" style={{ background: s.color }} />
-                <span>{s.label}</span><strong><Money amount={s.amount} /></strong><span>{total > 0 ? pct(s.share) : "—"}</span>
-              </button>
+            {(bySide.length > 1 ? bySide : [{ side: null, slices, total, start: 0 }]).map(b => (
+              <div key={b.side ?? "all"} className="funding-side">
+                {b.side && (
+                  <div className="funding-side-heading">
+                    <span>Working for {b.side}</span><strong><Money amount={b.total} /></strong><span>{total > 0 ? pct(b.total / total) : "—"}</span>
+                  </div>
+                )}
+                {b.slices.map(s => (
+                  <button key={s.id} type="button" aria-pressed={isPicked(s)} onClick={() => pick(s)}>
+                    <span className="funding-swatch" style={{ background: s.color }} />
+                    <span>{s.label}</span><strong><Money amount={s.amount} /></strong><span>{total > 0 ? pct(s.share) : "—"}</span>
+                  </button>
+                ))}
+              </div>
             ))}
           </div>
           <p className="funding-caption">
             Select a slice to explore it. Outside spending supports or opposes candidates; it does not go to their campaigns. The combined amount is not a campaign fundraising total.
-            {detailed && " Darker slices are money to the campaign, by source; lighter slices are independent expenditures, by stance. Conduit receipts are already inside the individuals slice."}
+            {detailed && bySide.length > 1 && " Each side groups money working for one candidate: their campaign's receipts (dark), outside spending supporting them and outside spending opposing their opponent (light). Only the receipts reach the campaign; a side total is a comparison figure, not a fundraising total."}
+            {detailed && bySide.length <= 1 && " Darker slices are money to the campaign, by source; lighter slices are independent expenditures, by stance. Conduit receipts are already inside the individuals slice."}
           </p>
         </div>
         <div className="funding-detail" aria-live="polite" aria-atomic="false">

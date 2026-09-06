@@ -633,7 +633,10 @@ slice opens its group in the detail column and highlights the matching line (`ar
 lists the five slices with amounts and shares of the pie total. `funding-view.ts` gains `pieSlices(view, detailed)`,
 `pieSectors`, `GROUP_COLORS`; the component draws sectors from cumulative angles instead of one split angle. Summary
 view, tabs, captions, visibility bar, methodology `<details>` and source records are unchanged; no contract or data
-changes; `page.tsx` untouched. D-79.
+changes; `page.tsx` untouched. D-79. On the **all-candidates** tab, detail instead groups the pie by side (Albert): one
+contiguous half per candidate — their receipts, outside spending supporting them, outside spending opposing their
+opponent(s) — with an ink line at each side boundary and a "Working for <candidate>" subtotal heading in the legend
+(`sideSlices`). The caption says the side total is a comparison figure, not a fundraising total.
 
 **Challenge.** This is the third cut of the same PR: the Sep 5 critique asked for per-candidate support/oppose pairs,
 Albert then asked for one three-slice "Money working for <candidate>" pie per candidate, and Patrick settled on the
@@ -642,4 +645,5 @@ rewrite of `pieSlices`, not of the SVG. The receipts "other" line is `receipts �
 so in detail the three campaign slices can exceed the summary receipts by the floored amount; PA has none.
 
 **Numbers.** PA all-candidates: $94.1M receipts ($64.8M individuals, $4.0M committees, $25.3M other) + $233.4M outside
-($50.5M supporting, $182.9M opposing). Casey $58.1M / $125.9M; McCormick $36.0M / $107.5M. Lint, tsc, build green.
+($50.5M supporting, $182.9M opposing). Casey $58.1M / $125.9M; McCormick $36.0M / $107.5M. Sides: Casey $159.5M (49%) =
+58.1 + 22.2 + 79.2; McCormick $168.0M (51%) = 36.0 + 28.3 + 103.7. Lint, tsc, build green.

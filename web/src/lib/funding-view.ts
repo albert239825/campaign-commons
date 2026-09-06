@@ -62,10 +62,14 @@ export const GROUP_COLORS: Record<SliceGroup, string> = { campaign: "#343f49", o
 const CAMPAIGN_SHADES = ["#343f49", "#5b6874", "#8a95a0"];
 const OUTSIDE_SHADES = ["#8c7e6a", "#cbc1b0"];
 
-export type PieSlice = { id: string; group: SliceGroup; label: string; amount: number; color: string };
+export type PieSlice = { id: string; group: SliceGroup; label: string; amount: number; color: string; side?: string };
 
-/** Summary: receipts vs outside. Detailed: receipts by source (individuals / committees / other) and outside by stance (supporting / opposing). */
-export function pieSlices(view: FundingView, detailed: boolean): PieSlice[] {
+/**
+ * Summary: receipts vs outside. Detailed: receipts by source (individuals / committees / other) and outside by stance
+ * (supporting / opposing). For the all-candidates view, detail is instead grouped by side — see `sideSlices`.
+ */
+export function pieSlices(view: FundingView, detailed: boolean, candidates: FundingView[] = []): PieSlice[] {
+  if (detailed && view.id === "all" && candidates.length > 1) return sideSlices(candidates);
   if (!detailed) {
     return [
       { id: "campaign", group: "campaign", label: "Campaign receipts", amount: view.campaign.receipts, color: GROUP_COLORS.campaign },
@@ -79,6 +83,23 @@ export function pieSlices(view: FundingView, detailed: boolean): PieSlice[] {
     { id: "support", group: "outside", label: "Outside spending supporting", amount: view.outside.support, color: OUTSIDE_SHADES[0] },
     { id: "oppose", group: "outside", label: "Outside spending opposing", amount: view.outside.oppose, color: OUTSIDE_SHADES[1] },
   ];
+}
+
+/**
+ * One side per candidate, contiguous: that candidate's receipts, outside spending supporting them, and outside spending
+ * opposing their opponent(s) — "money working for" a side, never called a fundraising total (D-16 hues kept).
+ */
+export function sideSlices(candidates: FundingView[]): PieSlice[] {
+  return candidates.flatMap(c => {
+    const others = candidates.filter(o => o.id !== c.id);
+    const rival = others.length === 1 ? others[0].names : "opponents";
+    const side = c.names;
+    return [
+      { id: `${c.id}-campaign`, group: "campaign" as const, side, label: `Receipts, ${c.names}`, amount: c.campaign.receipts, color: CAMPAIGN_SHADES[0] },
+      { id: `${c.id}-support`, group: "outside" as const, side, label: `Supporting ${c.names}`, amount: c.outside.support, color: OUTSIDE_SHADES[0] },
+      { id: `${c.id}-oppose`, group: "outside" as const, side, label: `Opposing ${rival}`, amount: others.reduce((sum, o) => sum + o.outside.oppose, 0), color: OUTSIDE_SHADES[1] },
+    ];
+  });
 }
 
 /** Adds start/end angles (clockwise from 12 o'clock) so the pie can be drawn with hand-rolled sectors. */
