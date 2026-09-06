@@ -127,7 +127,7 @@ export function ExploreAnswer({ result, raceId, question }: { result: ExploreRes
         </div>
         <p className="mt-3 text-xs text-neutral-500">
           Showing {rows.length} rows{truncated ? " — more available" : ""}
-          {addedRange ? ` (rows ${addedRange.from}–${addedRange.to} added; the summary above covers the first ${firstPageRowCount} only)` : ""}.
+          {addedRange ? ` (rows ${addedRange.from}–${addedRange.to} added${result.narrative.status === "ok" ? `; the summary below covers the first ${firstPageRowCount} only` : ""})` : ""}.
         </p>
         {canShowMore && (
           <div className="mt-3 space-y-1">
