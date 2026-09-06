@@ -1,5 +1,5 @@
 /**
- * Money Trails graph (D-78): the shape of the Neo4j graph the loader (web/scripts/load-graph.ts) writes and the
+ * Money Trails graph (D-79): the shape of the Neo4j graph the loader (web/scripts/load-graph.ts) writes and the
  * allowlisted queries (./queries.ts) read. It is a straight re-projection of artifacts the pipeline already publishes
  * under data/out/<race>/ (chains/*.json, entities/*.json, donors/*.json, ads.json, ledger.json, trails.json) — every node and
  * edge keeps the `source_url` it was read from, and nothing is added that those files do not contain. One label, `Entity`, keyed by (race_id, id); the edge type says
