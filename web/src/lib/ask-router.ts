@@ -5,7 +5,7 @@
  */
 import { z } from "zod";
 import type { Trails } from "@campaign-commons/contracts";
-import { resolveQuestion, resolveRoute, type Resolution } from "./ask";
+import { beyondPageResolution, detectQualifier, matchSubjects, normalize, resolveQuestion, resolveRoute, stripSubjectAlias, type Resolution } from "./ask";
 import { classify, type ClassifyOptions, type Route } from "./ask-llm";
 
 export const AskRouteRequest = z.object({
@@ -27,6 +27,13 @@ export function seedResolution(question: string, route: Route | null, trails: Tr
   const subject = route === null ? undefined : trails.subjects.find((s) => s.id === route.subjectId);
   if (route === null || subject === undefined) {
     return { ...resolveQuestion(question, trails.subjects, trails.examples), via: "fallback" };
+  }
+  if (route.intent !== "spender_issue") {
+    const normalized = normalize(question);
+    const matched = matchSubjects(normalized, [subject])[0];
+    const qualifier = detectQualifier(matched === undefined ? normalized : stripSubjectAlias(normalized, matched.alias));
+    const issue = route.intent === "committee_funding" && subject.kind === "committee" && qualifier === "individual people";
+    if (qualifier !== null && !issue) return { ...beyondPageResolution(subject, qualifier), via: "llm" };
   }
   return { ...resolveRoute(route.intent, subject, trails.subjects, subject.id, route.issueId), via: "llm" };
 }

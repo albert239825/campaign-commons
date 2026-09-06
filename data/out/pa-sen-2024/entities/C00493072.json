@@ -23,8 +23,8 @@
     "independent_expenditures": 0,
     "from_individuals": 12750.0,
     "from_committees": 380285.0,
-    "from_organizations": 0.0,
-    "from_undisclosed": 37500.0
+    "from_organizations": 22500.0,
+    "from_undisclosed": 15000.0
   },
   "inflows": [
     {
@@ -310,7 +310,8 @@
       "visibility": "dark",
       "transaction_type": "11",
       "limit": null,
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00493072&two_year_transaction_period=2024&contributor_name=CHEROKEE+NATION"
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00493072&two_year_transaction_period=2024&contributor_name=CHEROKEE+NATION",
+      "class_basis": "rule"
     },
     {
       "transfer_id": "C00493072-in-C00096156",

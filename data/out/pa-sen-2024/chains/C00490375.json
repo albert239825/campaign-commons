@@ -2,7 +2,7 @@
   "root_entity_id": "C00490375",
   "root_name": "NATIONAL NURSES UNITED FOR PATIENT PROTECTION",
   "race_id": "pa-sen-2024",
-  "generated_at": "2026-09-05T19:53:48+00:00",
+  "generated_at": "2026-09-06T05:02:45+00:00",
   "data_status": "real",
   "nodes": [
     {
@@ -35,12 +35,13 @@
       "kind": "organization",
       "committee_type": null,
       "depth": 1,
-      "visibility": "dark",
+      "visibility": "disclosed",
       "amount_in": 500000.0,
       "is_terminus": true,
-      "terminus_reason": "dark",
+      "terminus_reason": "organization",
       "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00490375&two_year_transaction_period=2024&contributor_name=NATIONAL+NURSES+UNITED",
-      "organization_class": "unknown"
+      "organization_class": "union",
+      "class_basis": "inferred"
     },
     {
       "id": "cycle:C00731372@C00731372",
@@ -362,7 +363,7 @@
       "from": "org:NATIONAL_NURSES_UNITED",
       "to": "C00490375",
       "amount": 500000.0,
-      "visibility": "dark",
+      "visibility": "disclosed",
       "depth": 1,
       "transaction_types": [
         "10"
@@ -372,7 +373,8 @@
         "2024-06-27",
         "2024-06-27"
       ],
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00490375&two_year_transaction_period=2024&contributor_name=NATIONAL+NURSES+UNITED"
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00490375&two_year_transaction_period=2024&contributor_name=NATIONAL+NURSES+UNITED",
+      "class_basis": "inferred"
     },
     {
       "from": "cycle:C00731372@C00731372",
@@ -897,13 +899,13 @@
   ],
   "summary": {
     "total_in": 5520000.0,
-    "disclosed_share": 0.9094,
+    "disclosed_share": 1.0,
     "inferable_share": 0.0,
     "unwalked_share": 0.0,
-    "dark_share": 0.0906,
+    "dark_share": 0.0,
     "max_depth": 2,
     "terminus_counts": {
-      "dark": 1,
+      "organization": 1,
       "cycle": 1
     },
     "out_total": 729009.21,

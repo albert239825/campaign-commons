@@ -85,7 +85,8 @@
       "visibility": "dark",
       "transaction_type": "10",
       "limit": "unlimited",
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00544387&two_year_transaction_period=2024&contributor_name=AMERICAN+PRINCIPLES+PROJECT"
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00544387&two_year_transaction_period=2024&contributor_name=AMERICAN+PRINCIPLES+PROJECT",
+      "class_basis": "rule"
     },
     {
       "transfer_id": "C00544387-in-ind:HENDRICKSON_BRETT_ALLEN|76092",
@@ -115,7 +116,8 @@
       "visibility": "disclosed",
       "transaction_type": "10",
       "limit": "unlimited",
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00544387&two_year_transaction_period=2024&contributor_name=OUR+UNITED+VOICES%2C+INC."
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00544387&two_year_transaction_period=2024&contributor_name=OUR+UNITED+VOICES%2C+INC.",
+      "class_basis": "rule"
     },
     {
       "transfer_id": "C00544387-in-ind:LOEFFLER_KELLY|30305",
@@ -205,7 +207,8 @@
       "visibility": "dark",
       "transaction_type": "10",
       "limit": "unlimited",
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00544387&two_year_transaction_period=2024&contributor_name=POM+STORAGE+LLC"
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00544387&two_year_transaction_period=2024&contributor_name=POM+STORAGE+LLC",
+      "class_basis": "rule"
     },
     {
       "transfer_id": "C00544387-in-ind:WINDHAM_DEAN|44632",
@@ -468,39 +471,6 @@
       "first_date": "2024-08-23",
       "last_date": "2024-10-06",
       "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00544387&payee_name=LOGAN+CIRCLE+GROUP"
-    }
-  ],
-  "issue_focus": {
-    "kind": "single_issue",
-    "issue_ids": [
-      "healthcare"
-    ],
-    "description": "American Principles Project says its 'mission is to make the family the most powerful, respected, and well-represented voice in Washington, D.C.' and that it is 'the only national pro-family organization primarily dedicated to direct engagement in the political arena', naming parental rights and 'radical gender ideology' as its fights. Family/parental-rights policy has no id in the frozen taxonomy; healthcare is the closest available id and is a loose fit.",
-    "basis": {
-      "basis": "verified",
-      "rule": "Self-described focus from the organisation's own material; says what the org is for, not what its dollars bought",
-      "source_urls": [
-        "https://americanprinciplesproject.org/about/"
-      ],
-      "checked_by": "devin-block2-issues",
-      "checked_at": "2026-09-05"
-    }
-  },
-  "issue_positions": [
-    {
-      "issue_id": "tech_ai",
-      "direction": 2,
-      "quote": "Fighting to mandate age verification and hold platforms accountable for exposing children to harm.",
-      "source_url": "https://americanprinciplesproject.org/about/",
-      "basis": {
-        "basis": "inferred",
-        "rule": "Stated position read from the organisation's own site by a language model and kept only where the quote appears verbatim on the fetched page; says what the org says, not what its dollars bought",
-        "source_urls": [
-          "https://americanprinciplesproject.org/about/"
-        ],
-        "checked_by": "grok-4.5",
-        "checked_at": "2026-09-06"
-      }
     }
   ]
 }

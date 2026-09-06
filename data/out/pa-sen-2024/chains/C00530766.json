@@ -2,7 +2,7 @@
   "root_entity_id": "C00530766",
   "root_name": "WOMEN SPEAK OUT PAC",
   "race_id": "pa-sen-2024",
-  "generated_at": "2026-09-05T19:53:48+00:00",
+  "generated_at": "2026-09-06T05:02:45+00:00",
   "data_status": "real",
   "nodes": [
     {
@@ -89,7 +89,8 @@
       "is_terminus": true,
       "terminus_reason": "dark",
       "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00571588&two_year_transaction_period=2024&contributor_name=RESTORATION+OF+AMERICA",
-      "organization_class": "nonprofit"
+      "organization_class": "nonprofit",
+      "class_basis": "rule"
     },
     {
       "id": "org:AMERICAN_PRINCIPLES_PROJECT",
@@ -102,7 +103,8 @@
       "is_terminus": true,
       "terminus_reason": "dark",
       "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00571588&two_year_transaction_period=2024&contributor_name=AMERICAN+PRINCIPLES+PROJECT",
-      "organization_class": "nonprofit"
+      "organization_class": "nonprofit",
+      "class_basis": "rule"
     },
     {
       "id": "agg:other@C00571588",
@@ -285,7 +287,8 @@
         "2023-01-31",
         "2024-10-21"
       ],
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00571588&two_year_transaction_period=2024&contributor_name=RESTORATION+OF+AMERICA"
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00571588&two_year_transaction_period=2024&contributor_name=RESTORATION+OF+AMERICA",
+      "class_basis": "rule"
     },
     {
       "from": "org:AMERICAN_PRINCIPLES_PROJECT",
@@ -301,7 +304,8 @@
         "2024-11-27",
         "2024-11-27"
       ],
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00571588&two_year_transaction_period=2024&contributor_name=AMERICAN+PRINCIPLES+PROJECT"
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00571588&two_year_transaction_period=2024&contributor_name=AMERICAN+PRINCIPLES+PROJECT",
+      "class_basis": "rule"
     },
     {
       "from": "agg:other@C00571588",
@@ -393,10 +397,10 @@
   ],
   "summary": {
     "total_in": 11830622.0,
-    "disclosed_share": 0.9587,
+    "disclosed_share": 0.96,
     "inferable_share": 0.0,
     "unwalked_share": 0.0,
-    "dark_share": 0.0413,
+    "dark_share": 0.04,
     "max_depth": 2,
     "terminus_counts": {
       "individual": 3,

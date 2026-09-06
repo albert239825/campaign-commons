@@ -2,7 +2,7 @@
   "root_entity_id": "C00556274",
   "root_name": "USW WORKS",
   "race_id": "pa-sen-2024",
-  "generated_at": "2026-09-05T19:53:48+00:00",
+  "generated_at": "2026-09-06T05:02:45+00:00",
   "data_status": "real",
   "nodes": [
     {
@@ -28,7 +28,8 @@
       "is_terminus": true,
       "terminus_reason": "organization",
       "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00556274&two_year_transaction_period=2024&contributor_name=UNITED+STEELWORKERS",
-      "organization_class": "union"
+      "organization_class": "union",
+      "class_basis": "rule"
     },
     {
       "id": "vendor:V-tracy-sefl",
@@ -117,7 +118,8 @@
         "2023-03-14",
         "2024-12-18"
       ],
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00556274&two_year_transaction_period=2024&contributor_name=UNITED+STEELWORKERS"
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00556274&two_year_transaction_period=2024&contributor_name=UNITED+STEELWORKERS",
+      "class_basis": "rule"
     },
     {
       "from": "C00556274",

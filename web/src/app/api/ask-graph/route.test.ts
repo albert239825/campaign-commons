@@ -154,14 +154,14 @@ describe("POST /api/ask-graph spend guard", () => {
 describe("/api/ask-route is untouched by graph mode", () => {
   it("still answers as a Resolution with via, never opens the graph and never returns graph fields", async () => {
     const get = vi.spyOn(neo4j, "getDriver");
-    vi.stubGlobal("fetch", vi.fn<typeof fetch>(async () => completion({ route: { intent: "committee_funding", subjectId: winsenate.id } })));
+    vi.stubGlobal("fetch", vi.fn<typeof fetch>(async () => completion({ route: { intent: "committee_funding", subjectId: winsenate.id, issueId: null } })));
     const res = await routePOST(
       new Request("http://localhost/api/ask-route", { method: "POST", body: JSON.stringify({ raceId: "pa-sen-2024", question: "who funds winsenate" }), headers: { "content-type": "application/json" } }),
     );
     const body = (await res.json()) as Record<string, unknown>;
     expect(res.status).toBe(200);
     expect(body).toMatchObject({ kind: "answer", intent: "committee_funding", via: "llm" });
-    expect(Object.keys(body).sort()).toEqual(["intent", "kind", "matched", "note", "subject", "via"]);
+    expect(Object.keys(body).sort()).toEqual(["intent", "issueId", "kind", "matched", "note", "subject", "via"]);
     expect(get).not.toHaveBeenCalled();
   });
 });

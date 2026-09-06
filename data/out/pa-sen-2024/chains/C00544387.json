@@ -2,7 +2,7 @@
   "root_entity_id": "C00544387",
   "root_name": "AMERICAN PRINCIPLES PROJECT PAC",
   "race_id": "pa-sen-2024",
-  "generated_at": "2026-09-05T19:53:48+00:00",
+  "generated_at": "2026-09-06T05:02:45+00:00",
   "data_status": "real",
   "nodes": [
     {
@@ -64,7 +64,8 @@
       "is_terminus": true,
       "terminus_reason": "dark",
       "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00544387&two_year_transaction_period=2024&contributor_name=AMERICAN+PRINCIPLES+PROJECT",
-      "organization_class": "nonprofit"
+      "organization_class": "nonprofit",
+      "class_basis": "rule"
     },
     {
       "id": "ind:HENDRICKSON_BRETT_ALLEN|76092",
@@ -89,7 +90,8 @@
       "is_terminus": true,
       "terminus_reason": "organization",
       "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00544387&two_year_transaction_period=2024&contributor_name=OUR+UNITED+VOICES%2C+INC.",
-      "organization_class": "business"
+      "organization_class": "business",
+      "class_basis": "rule"
     },
     {
       "id": "agg:other@C00544387",
@@ -139,7 +141,8 @@
       "is_terminus": true,
       "terminus_reason": "dark",
       "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00571588&two_year_transaction_period=2024&contributor_name=RESTORATION+OF+AMERICA",
-      "organization_class": "nonprofit"
+      "organization_class": "nonprofit",
+      "class_basis": "rule"
     },
     {
       "id": "org:AMERICAN_PRINCIPLES_PROJECT@C00571588",
@@ -152,7 +155,8 @@
       "is_terminus": true,
       "terminus_reason": "dark",
       "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00571588&two_year_transaction_period=2024&contributor_name=AMERICAN+PRINCIPLES+PROJECT",
-      "organization_class": "nonprofit"
+      "organization_class": "nonprofit",
+      "class_basis": "rule"
     },
     {
       "id": "agg:other@C00571588",
@@ -190,7 +194,8 @@
       "is_terminus": true,
       "terminus_reason": "dark",
       "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00814624&two_year_transaction_period=2024&contributor_name=AMERICAN+PRINCIPLES+PROJECT",
-      "organization_class": "nonprofit"
+      "organization_class": "nonprofit",
+      "class_basis": "rule"
     },
     {
       "id": "ind:DUNN_TIMOTHY|79710",
@@ -362,7 +367,8 @@
         "2023-06-30",
         "2024-08-28"
       ],
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00544387&two_year_transaction_period=2024&contributor_name=AMERICAN+PRINCIPLES+PROJECT"
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00544387&two_year_transaction_period=2024&contributor_name=AMERICAN+PRINCIPLES+PROJECT",
+      "class_basis": "rule"
     },
     {
       "from": "ind:HENDRICKSON_BRETT_ALLEN|76092",
@@ -394,7 +400,8 @@
         "2023-10-20",
         "2023-10-20"
       ],
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00544387&two_year_transaction_period=2024&contributor_name=OUR+UNITED+VOICES%2C+INC."
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00544387&two_year_transaction_period=2024&contributor_name=OUR+UNITED+VOICES%2C+INC.",
+      "class_basis": "rule"
     },
     {
       "from": "agg:other@C00544387",
@@ -458,7 +465,8 @@
         "2023-01-31",
         "2024-10-21"
       ],
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00571588&two_year_transaction_period=2024&contributor_name=RESTORATION+OF+AMERICA"
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00571588&two_year_transaction_period=2024&contributor_name=RESTORATION+OF+AMERICA",
+      "class_basis": "rule"
     },
     {
       "from": "org:AMERICAN_PRINCIPLES_PROJECT@C00571588",
@@ -474,7 +482,8 @@
         "2024-11-27",
         "2024-11-27"
       ],
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00571588&two_year_transaction_period=2024&contributor_name=AMERICAN+PRINCIPLES+PROJECT"
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00571588&two_year_transaction_period=2024&contributor_name=AMERICAN+PRINCIPLES+PROJECT",
+      "class_basis": "rule"
     },
     {
       "from": "agg:other@C00571588",
@@ -523,7 +532,8 @@
         "2024-05-01",
         "2024-05-01"
       ],
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00814624&two_year_transaction_period=2024&contributor_name=AMERICAN+PRINCIPLES+PROJECT"
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00814624&two_year_transaction_period=2024&contributor_name=AMERICAN+PRINCIPLES+PROJECT",
+      "class_basis": "rule"
     },
     {
       "from": "ind:DUNN_TIMOTHY|79710",

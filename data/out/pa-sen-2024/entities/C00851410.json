@@ -23,8 +23,8 @@
     "independent_expenditures": 306666.0,
     "from_individuals": 88121.25,
     "from_committees": 0.0,
-    "from_organizations": 25500.0,
-    "from_undisclosed": 449779.0
+    "from_organizations": 100500.0,
+    "from_undisclosed": 374779.0
   },
   "inflows": [
     {
@@ -40,7 +40,8 @@
       "visibility": "dark",
       "transaction_type": "10",
       "limit": "unlimited",
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00851410&two_year_transaction_period=2024&contributor_name=NATIONAL+SHOOTING+SPORTS+FOUNDATION%2C+INC."
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00851410&two_year_transaction_period=2024&contributor_name=NATIONAL+SHOOTING+SPORTS+FOUNDATION%2C+INC.",
+      "class_basis": "rule"
     },
     {
       "transfer_id": "C00851410-in-org:BMADDOX_ENTERPRISES_LLC_DBA_SILENCER_CENTRAL",
@@ -55,7 +56,8 @@
       "visibility": "dark",
       "transaction_type": "10",
       "limit": "unlimited",
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00851410&two_year_transaction_period=2024&contributor_name=BMADDOX+ENTERPRISES+LLC+DBA+SILENCER+CENTRAL"
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00851410&two_year_transaction_period=2024&contributor_name=BMADDOX+ENTERPRISES+LLC+DBA+SILENCER+CENTRAL",
+      "class_basis": "rule"
     },
     {
       "transfer_id": "C00851410-in-ind:TUCKER_BRYAN|27409",
@@ -100,7 +102,8 @@
       "visibility": "disclosed",
       "transaction_type": "10",
       "limit": "unlimited",
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00851410&two_year_transaction_period=2024&contributor_name=BERETTA+U.S.A.+CORPORATION"
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00851410&two_year_transaction_period=2024&contributor_name=BERETTA+U.S.A.+CORPORATION",
+      "class_basis": "rule"
     },
     {
       "transfer_id": "C00851410-in-org:NATIONAL_ASSOCIATION_OF_SPORTING_GOODS_WHOLESALERS",
@@ -115,7 +118,8 @@
       "visibility": "dark",
       "transaction_type": "10",
       "limit": "unlimited",
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00851410&two_year_transaction_period=2024&contributor_name=NATIONAL+ASSOCIATION+OF+SPORTING+GOODS+WHOLESALERS"
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00851410&two_year_transaction_period=2024&contributor_name=NATIONAL+ASSOCIATION+OF+SPORTING+GOODS+WHOLESALERS",
+      "class_basis": "rule"
     },
     {
       "transfer_id": "C00851410-in-org:LIPSEY'S",
@@ -127,10 +131,11 @@
       "date": "2024-05-28",
       "first_date": "2024-05-28",
       "count": 1,
-      "visibility": "dark",
+      "visibility": "disclosed",
       "transaction_type": "10",
       "limit": "unlimited",
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00851410&two_year_transaction_period=2024&contributor_name=LIPSEY%27S"
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00851410&two_year_transaction_period=2024&contributor_name=LIPSEY%27S",
+      "class_basis": "inferred"
     },
     {
       "transfer_id": "C00851410-in-org:BENELLI_USA",
@@ -142,10 +147,11 @@
       "date": "2024-10-29",
       "first_date": "2024-10-29",
       "count": 1,
-      "visibility": "dark",
+      "visibility": "disclosed",
       "transaction_type": "10",
       "limit": "unlimited",
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00851410&two_year_transaction_period=2024&contributor_name=BENELLI+USA"
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00851410&two_year_transaction_period=2024&contributor_name=BENELLI+USA",
+      "class_basis": "inferred"
     },
     {
       "transfer_id": "C00851410-in-org:TAURUS_HOLDINGS,_INC",
@@ -160,7 +166,8 @@
       "visibility": "dark",
       "transaction_type": "10",
       "limit": "unlimited",
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00851410&two_year_transaction_period=2024&contributor_name=TAURUS+HOLDINGS%2C+INC"
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00851410&two_year_transaction_period=2024&contributor_name=TAURUS+HOLDINGS%2C+INC",
+      "class_basis": "rule"
     },
     {
       "transfer_id": "C00851410-in-org:SILENCER_SHOP",
@@ -172,10 +179,11 @@
       "date": "2024-08-12",
       "first_date": "2024-08-12",
       "count": 1,
-      "visibility": "dark",
+      "visibility": "disclosed",
       "transaction_type": "10",
       "limit": "unlimited",
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00851410&two_year_transaction_period=2024&contributor_name=SILENCER+SHOP"
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00851410&two_year_transaction_period=2024&contributor_name=SILENCER+SHOP",
+      "class_basis": "inferred"
     },
     {
       "transfer_id": "C00851410-in-ind:HERSHBERGER_MICHAEL|41076",
@@ -205,7 +213,8 @@
       "visibility": "dark",
       "transaction_type": "10",
       "limit": "unlimited",
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00851410&two_year_transaction_period=2024&contributor_name=GRASSO+HOLDINGS+INC"
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00851410&two_year_transaction_period=2024&contributor_name=GRASSO+HOLDINGS+INC",
+      "class_basis": "rule"
     },
     {
       "transfer_id": "C00851410-in-org:LUTH-AR_LLC",
@@ -220,7 +229,8 @@
       "visibility": "dark",
       "transaction_type": "10",
       "limit": "unlimited",
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00851410&two_year_transaction_period=2024&contributor_name=LUTH-AR+LLC"
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00851410&two_year_transaction_period=2024&contributor_name=LUTH-AR+LLC",
+      "class_basis": "rule"
     },
     {
       "transfer_id": "C00851410-in-org:RANGE_USA",
@@ -235,7 +245,8 @@
       "visibility": "dark",
       "transaction_type": "10",
       "limit": "unlimited",
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00851410&two_year_transaction_period=2024&contributor_name=RANGE+USA"
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00851410&two_year_transaction_period=2024&contributor_name=RANGE+USA",
+      "class_basis": "inferred"
     },
     {
       "transfer_id": "C00851410-in-org:TOPCO_AMERICA_LLC",
@@ -250,7 +261,8 @@
       "visibility": "dark",
       "transaction_type": "10",
       "limit": "unlimited",
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00851410&two_year_transaction_period=2024&contributor_name=TOPCO+AMERICA+LLC"
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00851410&two_year_transaction_period=2024&contributor_name=TOPCO+AMERICA+LLC",
+      "class_basis": "rule"
     },
     {
       "transfer_id": "C00851410-in-org:CAMPAIGN_&_ISSUE_MANAGEMENT_LLC",
@@ -265,7 +277,8 @@
       "visibility": "dark",
       "transaction_type": "10",
       "limit": "unlimited",
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00851410&two_year_transaction_period=2024&contributor_name=CAMPAIGN+%26+ISSUE+MANAGEMENT+LLC"
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00851410&two_year_transaction_period=2024&contributor_name=CAMPAIGN+%26+ISSUE+MANAGEMENT+LLC",
+      "class_basis": "rule"
     },
     {
       "transfer_id": "C00851410-in-ind:KNOTT_VIRGINIA|11765",
@@ -440,7 +453,7 @@
     {
       "id": "dead_end_dark",
       "label": "Chain ends at undisclosed donors",
-      "detail": "81% of PROTECT LIBERTY PAC's receipts stop at organizations whose own funding is not on file (advocacy nonprofits, LLCs, trusts) rather than at named individuals, businesses or unions.",
+      "detail": "68% of PROTECT LIBERTY PAC's receipts stop at organizations whose own funding is not on file (advocacy nonprofits, LLCs, trusts) rather than at named individuals, businesses or unions.",
       "evidence_url": "https://www.fec.gov/data/committee/C00851410/?cycle=2024"
     }
   ],

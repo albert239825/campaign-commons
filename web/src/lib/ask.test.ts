@@ -2,7 +2,7 @@ import { existsSync, readFileSync } from "node:fs";
 import { join } from "node:path";
 import { describe, expect, it } from "vitest";
 import { TrailsSchema, type TrailSubject } from "@campaign-commons/contracts";
-import { canonicalQuestion, detectIssue, detectIntent, matchSubjects, normalize, resolveQuestion, resolveRoute, titleCase } from "./ask";
+import { canonicalQuestion, detectIssue, detectIntent, detectQualifier, matchSubjects, normalize, resolveQuestion, resolveRoute, titleCase } from "./ask";
 
 const casey: TrailSubject = { id: "S1", kind: "candidate", name: "Bob Casey", aliases: ["bob casey", "casey"], type_label: null, principal_committee_id: "C1" };
 const mccormick: TrailSubject = { id: "S2", kind: "candidate", name: "Dave McCormick", aliases: ["dave mccormick", "mccormick"], type_label: null, principal_committee_id: null };
@@ -65,6 +65,14 @@ describe("detectIssue", () => {
   });
 });
 
+describe("detectQualifier", () => {
+  it("matches breakdown qualifiers in their fixed order", () => {
+    expect(detectQualifier(normalize("largest sources of dark money behind Casey"))).toBe("dark or undisclosed money");
+    expect(detectQualifier(normalize("which individuals support Casey"))).toBe("individual people");
+    expect(detectQualifier(normalize("who funds WinSenate"))).toBeNull();
+  });
+});
+
 describe("matchSubjects", () => {
   it("prefers the longest alias and orders by it", () => {
     const m = matchSubjects(normalize("who funds Bob Casey for Senate"), subjects);
@@ -86,6 +94,11 @@ describe("resolveQuestion", () => {
     expect(r.intent).toBe("candidate_spender");
     expect(r.subject.id).toBe("S1");
     expect(r.note).toBeNull();
+  });
+  it("refuses graph-only qualifiers before ordinary intent detection", () => {
+    expect(refusal("What are the largest sources of dark money in this race supporting Bob Casey?")).toMatchObject({ reason: "beyond_page", message: "The fixed pages do not break money down by dark or undisclosed money; that needs the filings graph." });
+    expect(refusal("individuals supporting Bob Casey").reason).toBe("beyond_page");
+    expect(refusal("Does Elon Musk's money reach Bob Casey").reason).toBe("beyond_page");
   });
   it("candidate ad funding", () => {
     const r = answer("who paid for the ads about mccormick");
@@ -109,6 +122,9 @@ describe("resolveQuestion", () => {
     expect(r.intent).toBe("committee_funding");
     expect(r.subject.id).toBe("C2");
   });
+  it("keeps individual donor questions for committees on the funding page", () => {
+    expect(answer("which individuals fund WinSenate")).toMatchObject({ intent: "committee_funding", subject: winsenate });
+  });
   it("committee id is an alias", () => {
     expect(answer("who is behind C2").subject.id).toBe("C2");
   });
@@ -126,12 +142,8 @@ describe("resolveQuestion", () => {
     expect(r.subject.id).toBe("C1");
     expect(r.note).toBeNull();
   });
-  it("a funding question about a candidate is read as the campaign committee, with a note", () => {
-    const r = answer("Who are Casey's donors?");
-    expect(r.intent).toBe("committee_funding");
-    expect(r.subject.id).toBe("C1");
-    expect(r.note).toContain("campaign committee");
-    expect(r.note).toContain("never reaches a candidate");
+  it("refuses individual-donor breakdowns about a candidate", () => {
+    expect(refusal("Who are Casey's donors?")).toMatchObject({ reason: "beyond_page", message: "The fixed pages do not break money down by individual people; that needs the filings graph." });
   });
   it("a funding question about a candidate with no committee on the ledger is refused", () => {
     const r = refusal("Who funds McCormick?");

@@ -847,8 +847,36 @@ Added `enrich_funders.py` for ranked upstream `org:` funders, open-web self-desc
 and `enrich-funders`/`enrich-review --kind funders`.
 Added `enrich_dossiers.py`, optional X-post verification, `x_accounts.json`, and dossier materialization for pending
 machine stance suggestions.
-## 2026-09-06 — D-85: bounded graph selections on Money Trails answers
-Each precomputed answer now carries a deterministic `graph` selection copied from the existing chain files. The selection
-is re-rooted for the question, capped at five nodes per layer, records truncation counts, and preserves copied basis,
-visibility and source URLs. Funding nodes never connect directly to ads; subjects with no chain and nothing to draw carry
-`graph: null`.
+
+## 2026-09-06 ~07:00 — Exploratory graph mode (Money Trails follow-up, D-85)
+
+**What changed.** Added a fallback after the route resolver and fixed graph operations refuse: Grok can compose one Cypher query
+over the documented filings graph. The server validates the query as read-only, allows only `$race`, caps it at 20 rows and 8
+seconds, runs it through a READ transaction, hydrates returned relationships with their source URLs, and shows the query and
+every returned row. A second model call narrates only those rows, with the same citation and number guard as fixed graph mode.
+
+**Trade-off.** Exploratory mode is labelled separately because the model may frame a question wrongly and cannot know what the
+graph does not contain. The query is shown as a hypothesis; the source-linked rows are the evidence. Existing route and fixed
+graph behavior remain unchanged.
+
+**Routing guard.** Questions asking for breakdowns the fixed pages do not provide—dark money, people behind a candidate, vendors,
+paths or connections, geography or sector—now refuse the nearest fixed intent and proceed to the filings graph instead.
+
+**Ask box.** The box is graph-first: every question goes to exploratory mode, with deterministic route/page matches shown as related-page links; fixed graph operations remain available at their endpoint.
+
+**Flow diagrams.** An `@graph` prefix asks exploration for whole, amount-bearing relationships and draws a Sankey from the returned rows; when those rows cannot form a flow, only the analysis refusal is shown.
+
+**Flow completion.** Graph mode now adds source-linked filed spending and campaign-ownership facts for committees returned by the model query, so the diagram can continue to candidate campaigns without changing the model's rows.
+
+**Answer paging.** Answer-mode exploratory results now offer “Show more” for additional validated query rows; graph-mode Sankey responses remain unchanged.
+
+**Sankey interaction.** Completion now stays within candidates reached by the model rows, and flow ribbons expose pointer tooltips plus inline labels for larger amounts.
+
+**Organization classes.** For `pa-sen-2024` the offline Grok pass considered 262 unknown organizations over $10,000, kept 182 valid model classifications totaling $150,323,620.00, and dropped 80 `unknown` rows; the cached rerun made zero API requests. Traceability dark fell from $61,914,229.99 to $61,031,422.96 (a reduction of $882,807.03). `TRUIST` is model-read as `business` from `https://www.truist.com/about-us`, with `verified: false`; its $3,072,643 inflow is now disclosed with `class_basis: inferred`.
+
+### 2026-09-06 — Shared race tab shell
+
+The race ledger, ads, and policies tabs now share one route-group layout: the seal, race title, election date, notable candidates, data-status banner, and Ledger · Ads · Policies navigation remain fixed while only the tab content changes. `RaceNav` derives its active tab from the pathname, so record pages keep the same parent-tab behavior without passing an active prop.
+
+## 2026-09-06 — D-87: bounded graph selections on Money Trails answers
+Each precomputed answer now carries a deterministic `graph` selection copied from the existing chain files. The selection is re-rooted for the question, capped at five nodes per layer, records truncation counts, and preserves copied basis, visibility and source URLs. Funding nodes never connect directly to ads; subjects with no chain and nothing to draw carry `graph: null`.

@@ -181,7 +181,7 @@ describe("POST /api/ask-route with a valid route (via: llm)", () => {
   it("4c. candidate + candidate_ad_funding routes straight to that candidate's ad-funding page", async () => {
     vi.stubEnv("XAI_API_KEY", "k");
     stubCompletion(route("candidate_ad_funding", casey.id));
-    const { body } = await ask("who's behind the tv spots about the senator");
+    const { body } = await ask("who paid for the tv spots about the senator");
     expect(body).toEqual({ ...resolveRoute("candidate_ad_funding", casey, trails.subjects), via: "llm" });
     expect(body.kind).toBe("answer");
     if (body.kind !== "answer") return;
@@ -194,6 +194,17 @@ describe("POST /api/ask-route with a valid route (via: llm)", () => {
     const { body } = await ask("where do the groups spending for Casey stand on abortion");
     expect(body).toEqual({ ...resolveRoute("spender_issue", casey, trails.subjects, casey.id, "abortion"), via: "llm" });
     expect(body).toMatchObject({ kind: "answer", intent: "spender_issue", issueId: "abortion", via: "llm" });
+  });
+  it("4e. qualifier guard refuses a model-selected candidate spender route", async () => {
+    vi.stubEnv("XAI_API_KEY", "k");
+    stubCompletion(route("candidate_spender", casey.id));
+    const { body } = await ask("What are the largest sources of dark money in this race supporting Bob Casey?");
+    expect(body).toMatchObject({
+      kind: "unsupported",
+      reason: "beyond_page",
+      via: "llm",
+      message: "The fixed pages do not break money down by dark or undisclosed money; that needs the filings graph.",
+    });
   });
   it("every valid (intent, subject) on the ledger seeds to that subject (or its principal committee), never to an ambiguity", () => {
     for (const subject of trails.subjects) {

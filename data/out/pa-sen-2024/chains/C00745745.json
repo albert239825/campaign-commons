@@ -2,7 +2,7 @@
   "root_entity_id": "C00745745",
   "root_name": "IN UNION USA",
   "race_id": "pa-sen-2024",
-  "generated_at": "2026-09-05T19:53:48+00:00",
+  "generated_at": "2026-09-06T05:02:45+00:00",
   "data_status": "real",
   "nodes": [
     {
@@ -174,7 +174,8 @@
       "is_terminus": true,
       "terminus_reason": "organization",
       "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00488486&two_year_transaction_period=2024&contributor_name=COMMUNICATIONS+WORKERS+OF+AMERICA",
-      "organization_class": "union"
+      "organization_class": "union",
+      "class_basis": "rule"
     },
     {
       "id": "agg:other@C00488486",
@@ -200,7 +201,8 @@
       "is_terminus": true,
       "terminus_reason": "organization",
       "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00556274&two_year_transaction_period=2024&contributor_name=UNITED+STEELWORKERS",
-      "organization_class": "union"
+      "organization_class": "union",
+      "class_basis": "rule"
     },
     {
       "id": "ind:NEA_ADVOCACY_FUND_ASSOCIATION|20005",
@@ -1498,7 +1500,8 @@
         "2023-03-27",
         "2024-12-10"
       ],
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00488486&two_year_transaction_period=2024&contributor_name=COMMUNICATIONS+WORKERS+OF+AMERICA"
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00488486&two_year_transaction_period=2024&contributor_name=COMMUNICATIONS+WORKERS+OF+AMERICA",
+      "class_basis": "rule"
     },
     {
       "from": "agg:other@C00488486",
@@ -1531,7 +1534,8 @@
         "2023-03-14",
         "2024-12-18"
       ],
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00556274&two_year_transaction_period=2024&contributor_name=UNITED+STEELWORKERS"
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00556274&two_year_transaction_period=2024&contributor_name=UNITED+STEELWORKERS",
+      "class_basis": "rule"
     },
     {
       "from": "ind:NEA_ADVOCACY_FUND_ASSOCIATION|20005",

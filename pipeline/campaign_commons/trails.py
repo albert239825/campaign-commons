@@ -18,7 +18,7 @@ in the browser — then renders the matching answer. Rules the shape enforces:
   * ads hang off their *sponsor* (`TrailAdRun`) and funders hang off the sponsor too; there is no field that
     joins a funder to an ad, and the caveats say why (pooled dollars).
 
-Each answer also carries `graph` (D-85): a bounded selection copied from the chain files, re-rooted on the subject,
+Each answer also carries `graph` (D-87): a bounded selection copied from the chain files, re-rooted on the subject,
 with ≤ TOP_PER_LAYER nodes per layer and provenance kept.
 """
 
@@ -210,6 +210,8 @@ def _chain_money_edges(chain: dict[str, Any], to_id: str) -> list[dict[str, Any]
             "depth": e["depth"],
             "source_url": e.get("source_url") or frm.get("source_url") or chain_receipts_url(chain, to_id),
         }
+        if frm.get("class_basis") is not None:
+            edge["class_basis"] = frm["class_basis"]
         if frm.get("contributor_count") is not None:
             edge["contributor_count"] = frm["contributor_count"]
         out.append(edge)
@@ -242,6 +244,8 @@ def _entity_money_edges(entity: dict[str, Any]) -> list[dict[str, Any]]:
                 "source_url": t["source_url"],
             }
         )
+        if t.get("class_basis") is not None:
+            out[-1]["class_basis"] = t["class_basis"]
     return sorted(out, key=lambda e: (-e["amount"], e["from_id"]))
 
 
@@ -312,6 +316,8 @@ def ultimate_sources(chain: dict[str, Any], limit: int) -> list[dict[str, Any]]:
         }
         if n.get("organization_class") is not None:
             row["organization_class"] = n["organization_class"]
+        if n.get("class_basis") is not None:
+            row["class_basis"] = n["class_basis"]
         prev = best.get(n["id"])
         if prev is None or row["amount"] > prev["amount"]:
             best[n["id"]] = row
