@@ -106,6 +106,98 @@
       "medium": "phones"
     }
   ],
-  "ads": [],
+  "ads": [
+    {
+      "ad_id": "CR06215613208334434305",
+      "sponsor_entity_id": "C00849489",
+      "basis": {
+        "basis": "adjacent",
+        "rule": "Ran Sep 25, 2023 – Sep 10, 2024. In that window (buys dated up to 7 days before first shown through last shown) KEYSTONE RENEWAL PAC reported phones buys to RED MAVERICK MEDIA LLC ($12,752); the FEC does not record which buy placed which ad.",
+        "source_urls": [
+          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00849489&payee_name=RED+MAVERICK+MEDIA+LLC"
+        ],
+        "checked_by": null,
+        "checked_at": null
+      }
+    },
+    {
+      "ad_id": "CR14211677638614843393",
+      "sponsor_entity_id": "C00879510",
+      "basis": {
+        "basis": "adjacent",
+        "rule": "Ran Oct 16, 2024 – Oct 26, 2024. In that window (buys dated up to 7 days before first shown through last shown) AMERICA PAC reported mail buys to RED MAVERICK MEDIA LLC ($6,693); the FEC does not record which buy placed which ad.",
+        "source_urls": [
+          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00879510&payee_name=RED+MAVERICK+MEDIA+LLC"
+        ],
+        "checked_by": null,
+        "checked_at": null
+      }
+    },
+    {
+      "ad_id": "CR02513366500287447041",
+      "sponsor_entity_id": "C00849489",
+      "basis": {
+        "basis": "adjacent",
+        "rule": "Ran Oct 16, 2024 – Nov 6, 2024. In that window (buys dated up to 7 days before first shown through last shown) KEYSTONE RENEWAL PAC reported phones buys to RED MAVERICK MEDIA LLC ($120,000); the FEC does not record which buy placed which ad.",
+        "source_urls": [
+          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00849489&payee_name=RED+MAVERICK+MEDIA+LLC"
+        ],
+        "checked_by": null,
+        "checked_at": null
+      }
+    },
+    {
+      "ad_id": "CR08536016208221175809",
+      "sponsor_entity_id": "C00879510",
+      "basis": {
+        "basis": "adjacent",
+        "rule": "Ran Oct 16, 2024 – Oct 26, 2024. In that window (buys dated up to 7 days before first shown through last shown) AMERICA PAC reported mail buys to RED MAVERICK MEDIA LLC ($6,693); the FEC does not record which buy placed which ad.",
+        "source_urls": [
+          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00879510&payee_name=RED+MAVERICK+MEDIA+LLC"
+        ],
+        "checked_by": null,
+        "checked_at": null
+      }
+    },
+    {
+      "ad_id": "CR14516585407136661505",
+      "sponsor_entity_id": "C00849489",
+      "basis": {
+        "basis": "adjacent",
+        "rule": "Ran Oct 16, 2024 – Nov 6, 2024. In that window (buys dated up to 7 days before first shown through last shown) KEYSTONE RENEWAL PAC reported phones buys to RED MAVERICK MEDIA LLC ($120,000); the FEC does not record which buy placed which ad.",
+        "source_urls": [
+          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00849489&payee_name=RED+MAVERICK+MEDIA+LLC"
+        ],
+        "checked_by": null,
+        "checked_at": null
+      }
+    },
+    {
+      "ad_id": "CR18357413444057038849",
+      "sponsor_entity_id": "C00849489",
+      "basis": {
+        "basis": "adjacent",
+        "rule": "Ran Nov 2, 2024 – Nov 5, 2024. In that window (buys dated up to 7 days before first shown through last shown) KEYSTONE RENEWAL PAC reported phones buys to RED MAVERICK MEDIA LLC ($120,000); the FEC does not record which buy placed which ad.",
+        "source_urls": [
+          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00849489&payee_name=RED+MAVERICK+MEDIA+LLC"
+        ],
+        "checked_by": null,
+        "checked_at": null
+      }
+    },
+    {
+      "ad_id": "CR17327423111871594497",
+      "sponsor_entity_id": "C00879510",
+      "basis": {
+        "basis": "adjacent",
+        "rule": "Ran Oct 25, 2024 – Oct 29, 2024. In that window (buys dated up to 7 days before first shown through last shown) AMERICA PAC reported mail buys to RED MAVERICK MEDIA LLC ($6,693); the FEC does not record which buy placed which ad.",
+        "source_urls": [
+          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00879510&payee_name=RED+MAVERICK+MEDIA+LLC"
+        ],
+        "checked_by": null,
+        "checked_at": null
+      }
+    }
+  ],
   "method": "Every Schedule E independent expenditure names a payee. Payee strings are normalised (case, punctuation, legal suffixes, token order), near-duplicates are folded with a difflib ratio ≥ 0.92 when their numeric tokens match, and hand alias rows from data/hand/<race>/vendor_aliases.json override the rule. Medium is classified from the purpose the spender filed (ordered keyword table in gotham/vendors.py); the FEC does not record which buy placed which ad, so vendor ↔ ad links are empty until a human verifies one. Totals are the filed amounts, grouped, never re-estimated."
 }

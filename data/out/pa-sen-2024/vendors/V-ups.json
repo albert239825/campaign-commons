@@ -60,6 +60,20 @@
       "medium": "other"
     }
   ],
-  "ads": [],
+  "ads": [
+    {
+      "ad_id": "CR11709071526052495361",
+      "sponsor_entity_id": "C00541433",
+      "basis": {
+        "basis": "adjacent",
+        "rule": "Ran Oct 9, 2024 – Oct 22, 2024. In that window (buys dated up to 7 days before first shown through last shown) HUNTER ACTION FUND (HAF) reported other buys to UPS ($8); the FEC does not record which buy placed which ad.",
+        "source_urls": [
+          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00541433&payee_name=UPS"
+        ],
+        "checked_by": null,
+        "checked_at": null
+      }
+    }
+  ],
   "method": "Every Schedule E independent expenditure names a payee. Payee strings are normalised (case, punctuation, legal suffixes, token order), near-duplicates are folded with a difflib ratio ≥ 0.92 when their numeric tokens match, and hand alias rows from data/hand/<race>/vendor_aliases.json override the rule. Medium is classified from the purpose the spender filed (ordered keyword table in gotham/vendors.py); the FEC does not record which buy placed which ad, so vendor ↔ ad links are empty until a human verifies one. Totals are the filed amounts, grouped, never re-estimated."
 }

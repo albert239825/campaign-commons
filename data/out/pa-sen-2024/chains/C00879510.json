@@ -41,6 +41,311 @@
       "terminus_reason": "pruned",
       "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00879510&two_year_transaction_period=2024",
       "contributor_count": 21
+    },
+    {
+      "id": "vendor:V-red-maverick-media",
+      "name": "RED MAVERICK MEDIA LLC",
+      "kind": "vendor",
+      "committee_type": null,
+      "depth": 1,
+      "side": "out",
+      "visibility": "disclosed",
+      "amount_in": 6692.6,
+      "is_terminus": false,
+      "terminus_reason": null,
+      "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00879510&payee_name=RED+MAVERICK+MEDIA+LLC",
+      "href": "/races/pa-sen-2024/vendors/V-red-maverick-media",
+      "medium": "mail",
+      "basis": {
+        "basis": "filed",
+        "rule": "Schedule E payee, grouped by normalized vendor name (gotham.vendors)",
+        "source_urls": [
+          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00879510&payee_name=RED+MAVERICK+MEDIA+LLC"
+        ],
+        "checked_by": null,
+        "checked_at": null
+      }
+    },
+    {
+      "id": "CR14211677638614843393",
+      "name": "Video ad · 2024-10-16 – 2024-10-26",
+      "kind": "ad",
+      "committee_type": null,
+      "depth": 2,
+      "side": "out",
+      "visibility": "disclosed",
+      "amount_in": 65000.0,
+      "is_terminus": false,
+      "terminus_reason": null,
+      "source_url": "https://adstransparency.google.com/advertiser/AR12671102917130846209/creative/CR14211677638614843393?political=&region=US",
+      "href": "/races/pa-sen-2024/ads#CR14211677638614843393",
+      "basis": {
+        "basis": "inferred",
+        "rule": "Google reports spend as a range ($60,000–$70,000); the midpoint is drawn",
+        "source_urls": [
+          "https://adstransparency.google.com/advertiser/AR12671102917130846209/creative/CR14211677638614843393?political=&region=US"
+        ],
+        "checked_by": null,
+        "checked_at": null
+      }
+    },
+    {
+      "id": "CR10983275104464535553",
+      "name": "Video ad · 2024-10-12 – 2024-10-16",
+      "kind": "ad",
+      "committee_type": null,
+      "depth": 2,
+      "side": "out",
+      "visibility": "disclosed",
+      "amount_in": 27500.0,
+      "is_terminus": false,
+      "terminus_reason": null,
+      "source_url": "https://adstransparency.google.com/advertiser/AR12671102917130846209/creative/CR10983275104464535553?political=&region=US",
+      "href": "/races/pa-sen-2024/ads#CR10983275104464535553",
+      "basis": {
+        "basis": "inferred",
+        "rule": "Google reports spend as a range ($25,000–$30,000); the midpoint is drawn",
+        "source_urls": [
+          "https://adstransparency.google.com/advertiser/AR12671102917130846209/creative/CR10983275104464535553?political=&region=US"
+        ],
+        "checked_by": null,
+        "checked_at": null
+      }
+    },
+    {
+      "id": "CR00563864214519676929",
+      "name": "Video ad · 2024-10-26 – 2024-11-06",
+      "kind": "ad",
+      "committee_type": null,
+      "depth": 2,
+      "side": "out",
+      "visibility": "disclosed",
+      "amount_in": 27500.0,
+      "is_terminus": false,
+      "terminus_reason": null,
+      "source_url": "https://adstransparency.google.com/advertiser/AR12671102917130846209/creative/CR00563864214519676929?political=&region=US",
+      "href": "/races/pa-sen-2024/ads#CR00563864214519676929",
+      "basis": {
+        "basis": "inferred",
+        "rule": "Google reports spend as a range ($25,000–$30,000); the midpoint is drawn",
+        "source_urls": [
+          "https://adstransparency.google.com/advertiser/AR12671102917130846209/creative/CR00563864214519676929?political=&region=US"
+        ],
+        "checked_by": null,
+        "checked_at": null
+      }
+    },
+    {
+      "id": "CR08536016208221175809",
+      "name": "Video ad · 2024-10-16 – 2024-10-26",
+      "kind": "ad",
+      "committee_type": null,
+      "depth": 2,
+      "side": "out",
+      "visibility": "disclosed",
+      "amount_in": 22500.0,
+      "is_terminus": false,
+      "terminus_reason": null,
+      "source_url": "https://adstransparency.google.com/advertiser/AR12671102917130846209/creative/CR08536016208221175809?political=&region=US",
+      "href": "/races/pa-sen-2024/ads#CR08536016208221175809",
+      "basis": {
+        "basis": "inferred",
+        "rule": "Google reports spend as a range ($20,000–$25,000); the midpoint is drawn",
+        "source_urls": [
+          "https://adstransparency.google.com/advertiser/AR12671102917130846209/creative/CR08536016208221175809?political=&region=US"
+        ],
+        "checked_by": null,
+        "checked_at": null
+      }
+    },
+    {
+      "id": "CR16623815659565875201",
+      "name": "Video ad · 2024-10-28 – 2024-11-01",
+      "kind": "ad",
+      "committee_type": null,
+      "depth": 2,
+      "side": "out",
+      "visibility": "disclosed",
+      "amount_in": 17500.0,
+      "is_terminus": false,
+      "terminus_reason": null,
+      "source_url": "https://adstransparency.google.com/advertiser/AR12671102917130846209/creative/CR16623815659565875201?political=&region=US",
+      "href": "/races/pa-sen-2024/ads#CR16623815659565875201",
+      "basis": {
+        "basis": "inferred",
+        "rule": "Google reports spend as a range ($15,000–$20,000); the midpoint is drawn",
+        "source_urls": [
+          "https://adstransparency.google.com/advertiser/AR12671102917130846209/creative/CR16623815659565875201?political=&region=US"
+        ],
+        "checked_by": null,
+        "checked_at": null
+      }
+    },
+    {
+      "id": "CR18247416101791072257",
+      "name": "Video ad · 2024-10-29 – 2024-11-01",
+      "kind": "ad",
+      "committee_type": null,
+      "depth": 2,
+      "side": "out",
+      "visibility": "disclosed",
+      "amount_in": 17500.0,
+      "is_terminus": false,
+      "terminus_reason": null,
+      "source_url": "https://adstransparency.google.com/advertiser/AR12671102917130846209/creative/CR18247416101791072257?political=&region=US",
+      "href": "/races/pa-sen-2024/ads#CR18247416101791072257",
+      "basis": {
+        "basis": "inferred",
+        "rule": "Google reports spend as a range ($15,000–$20,000); the midpoint is drawn",
+        "source_urls": [
+          "https://adstransparency.google.com/advertiser/AR12671102917130846209/creative/CR18247416101791072257?political=&region=US"
+        ],
+        "checked_by": null,
+        "checked_at": null
+      }
+    },
+    {
+      "id": "CR10859518198810673153",
+      "name": "Video ad · 2024-11-02 – 2024-11-06",
+      "kind": "ad",
+      "committee_type": null,
+      "depth": 2,
+      "side": "out",
+      "visibility": "disclosed",
+      "amount_in": 17500.0,
+      "is_terminus": false,
+      "terminus_reason": null,
+      "source_url": "https://adstransparency.google.com/advertiser/AR12671102917130846209/creative/CR10859518198810673153?political=&region=US",
+      "href": "/races/pa-sen-2024/ads#CR10859518198810673153",
+      "basis": {
+        "basis": "inferred",
+        "rule": "Google reports spend as a range ($15,000–$20,000); the midpoint is drawn",
+        "source_urls": [
+          "https://adstransparency.google.com/advertiser/AR12671102917130846209/creative/CR10859518198810673153?political=&region=US"
+        ],
+        "checked_by": null,
+        "checked_at": null
+      }
+    },
+    {
+      "id": "CR01935741090292301825",
+      "name": "Video ad · 2024-11-02 – 2024-11-05",
+      "kind": "ad",
+      "committee_type": null,
+      "depth": 2,
+      "side": "out",
+      "visibility": "disclosed",
+      "amount_in": 17500.0,
+      "is_terminus": false,
+      "terminus_reason": null,
+      "source_url": "https://adstransparency.google.com/advertiser/AR12671102917130846209/creative/CR01935741090292301825?political=&region=US",
+      "href": "/races/pa-sen-2024/ads#CR01935741090292301825",
+      "basis": {
+        "basis": "inferred",
+        "rule": "Google reports spend as a range ($15,000–$20,000); the midpoint is drawn",
+        "source_urls": [
+          "https://adstransparency.google.com/advertiser/AR12671102917130846209/creative/CR01935741090292301825?political=&region=US"
+        ],
+        "checked_by": null,
+        "checked_at": null
+      }
+    },
+    {
+      "id": "CR12566523195072446465",
+      "name": "Video ad · 2024-11-02 – 2024-11-06",
+      "kind": "ad",
+      "committee_type": null,
+      "depth": 2,
+      "side": "out",
+      "visibility": "disclosed",
+      "amount_in": 17500.0,
+      "is_terminus": false,
+      "terminus_reason": null,
+      "source_url": "https://adstransparency.google.com/advertiser/AR12671102917130846209/creative/CR12566523195072446465?political=&region=US",
+      "href": "/races/pa-sen-2024/ads#CR12566523195072446465",
+      "basis": {
+        "basis": "inferred",
+        "rule": "Google reports spend as a range ($15,000–$20,000); the midpoint is drawn",
+        "source_urls": [
+          "https://adstransparency.google.com/advertiser/AR12671102917130846209/creative/CR12566523195072446465?political=&region=US"
+        ],
+        "checked_by": null,
+        "checked_at": null
+      }
+    },
+    {
+      "id": "CR10903991245130956801",
+      "name": "Video ad · 2024-11-02 – 2024-11-06",
+      "kind": "ad",
+      "committee_type": null,
+      "depth": 2,
+      "side": "out",
+      "visibility": "disclosed",
+      "amount_in": 17500.0,
+      "is_terminus": false,
+      "terminus_reason": null,
+      "source_url": "https://adstransparency.google.com/advertiser/AR12671102917130846209/creative/CR10903991245130956801?political=&region=US",
+      "href": "/races/pa-sen-2024/ads#CR10903991245130956801",
+      "basis": {
+        "basis": "inferred",
+        "rule": "Google reports spend as a range ($15,000–$20,000); the midpoint is drawn",
+        "source_urls": [
+          "https://adstransparency.google.com/advertiser/AR12671102917130846209/creative/CR10903991245130956801?political=&region=US"
+        ],
+        "checked_by": null,
+        "checked_at": null
+      }
+    },
+    {
+      "id": "agg:ads@C00879510",
+      "name": "12 more ads",
+      "kind": "aggregate",
+      "committee_type": null,
+      "depth": 2,
+      "side": "out",
+      "visibility": "disclosed",
+      "amount_in": 210000.0,
+      "is_terminus": true,
+      "terminus_reason": "pruned",
+      "source_url": null,
+      "href": "/races/pa-sen-2024/ads",
+      "contributor_count": 12,
+      "basis": {
+        "basis": "inferred",
+        "rule": "Sum of Google spend-range midpoints for the ads not drawn individually",
+        "source_urls": [
+          "https://adstransparency.google.com/advertiser/AR12671102917130846209/creative/CR15525218825464184833?political=&region=US",
+          "https://adstransparency.google.com/advertiser/AR12671102917130846209/creative/CR09855321035023319041?political=&region=US",
+          "https://adstransparency.google.com/advertiser/AR12671102917130846209/creative/CR10074126047973998593?political=&region=US",
+          "https://adstransparency.google.com/advertiser/AR12671102917130846209/creative/CR04060468421010128897?political=&region=US",
+          "https://adstransparency.google.com/advertiser/AR12671102917130846209/creative/CR15613430444337397761?political=&region=US"
+        ],
+        "checked_by": null,
+        "checked_at": null
+      }
+    },
+    {
+      "id": "S2PA00661",
+      "name": "Dave McCormick",
+      "kind": "candidate",
+      "committee_type": null,
+      "depth": 3,
+      "side": "out",
+      "visibility": "disclosed",
+      "amount_in": 6692.6,
+      "is_terminus": true,
+      "terminus_reason": null,
+      "source_url": "https://www.fec.gov/data/candidate/S2PA00661/?cycle=2024&election_full=false",
+      "href": "/races/pa-sen-2024/candidates/S2PA00661",
+      "basis": {
+        "basis": "filed",
+        "rule": "Schedule E dollars naming this candidate as supported or opposed; nothing here reached the candidate",
+        "source_urls": [
+          "https://www.fec.gov/data/independent-expenditures/?committee_id=C00879510&cycle=2024&candidate_id=S2PA00661"
+        ],
+        "checked_by": null,
+        "checked_at": null
+      }
     }
   ],
   "edges": [
@@ -75,6 +380,337 @@
         "2024-10-07"
       ],
       "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00879510&two_year_transaction_period=2024"
+    },
+    {
+      "from": "C00879510",
+      "to": "vendor:V-red-maverick-media",
+      "kind": "money",
+      "amount": 6692.6,
+      "visibility": "disclosed",
+      "depth": 1,
+      "transaction_types": [
+        "24E"
+      ],
+      "count": 1,
+      "date_range": [
+        "2024-10-18",
+        "2024-10-18"
+      ],
+      "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00879510&payee_name=RED+MAVERICK+MEDIA+LLC",
+      "basis": {
+        "basis": "filed",
+        "rule": "Schedule E independent expenditure paid to this payee",
+        "source_urls": [
+          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00879510&payee_name=RED+MAVERICK+MEDIA+LLC"
+        ],
+        "checked_by": null,
+        "checked_at": null
+      }
+    },
+    {
+      "from": "vendor:V-red-maverick-media",
+      "to": "S2PA00661",
+      "kind": "targeting",
+      "amount": 6692.6,
+      "visibility": "disclosed",
+      "depth": 3,
+      "transaction_types": [],
+      "count": 0,
+      "date_range": null,
+      "source_url": "https://www.fec.gov/data/independent-expenditures/?committee_id=C00879510&cycle=2024&candidate_id=S2PA00661",
+      "support_oppose": "S",
+      "basis": {
+        "basis": "filed",
+        "rule": "Schedule E: this payee's buys named the candidate as supported/opposed",
+        "source_urls": [
+          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00879510&payee_name=RED+MAVERICK+MEDIA+LLC"
+        ],
+        "checked_by": null,
+        "checked_at": null
+      }
+    },
+    {
+      "from": "vendor:V-red-maverick-media",
+      "to": "CR14211677638614843393",
+      "kind": "placement",
+      "amount": 0,
+      "visibility": "disclosed",
+      "depth": 2,
+      "transaction_types": [],
+      "count": 1,
+      "date_range": [
+        "2024-10-16",
+        "2024-10-26"
+      ],
+      "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00879510&payee_name=RED+MAVERICK+MEDIA+LLC",
+      "basis": {
+        "basis": "adjacent",
+        "rule": "Ran Oct 16, 2024 – Oct 26, 2024. In that window (buys dated up to 7 days before first shown through last shown) AMERICA PAC reported mail buys to RED MAVERICK MEDIA LLC ($6,693); the FEC does not record which buy placed which ad.",
+        "source_urls": [
+          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00879510&payee_name=RED+MAVERICK+MEDIA+LLC"
+        ],
+        "checked_by": null,
+        "checked_at": null
+      }
+    },
+    {
+      "from": "C00879510",
+      "to": "CR14211677638614843393",
+      "kind": "placement",
+      "amount": 65000.0,
+      "visibility": "disclosed",
+      "depth": 2,
+      "transaction_types": [],
+      "count": 1,
+      "date_range": null,
+      "source_url": "https://adstransparency.google.com/advertiser/AR12671102917130846209/creative/CR14211677638614843393?political=&region=US",
+      "basis": {
+        "basis": "inferred",
+        "rule": "Advertiser name matched to this committee by normalized name; Google shows the advertiser, not the paid-for-by line",
+        "source_urls": [
+          "https://adstransparency.google.com/advertiser/AR12671102917130846209/creative/CR14211677638614843393?political=&region=US"
+        ],
+        "checked_by": null,
+        "checked_at": null
+      }
+    },
+    {
+      "from": "C00879510",
+      "to": "CR10983275104464535553",
+      "kind": "placement",
+      "amount": 27500.0,
+      "visibility": "disclosed",
+      "depth": 2,
+      "transaction_types": [],
+      "count": 1,
+      "date_range": null,
+      "source_url": "https://adstransparency.google.com/advertiser/AR12671102917130846209/creative/CR10983275104464535553?political=&region=US",
+      "basis": {
+        "basis": "inferred",
+        "rule": "Advertiser name matched to this committee by normalized name; Google shows the advertiser, not the paid-for-by line",
+        "source_urls": [
+          "https://adstransparency.google.com/advertiser/AR12671102917130846209/creative/CR10983275104464535553?political=&region=US"
+        ],
+        "checked_by": null,
+        "checked_at": null
+      }
+    },
+    {
+      "from": "C00879510",
+      "to": "CR00563864214519676929",
+      "kind": "placement",
+      "amount": 27500.0,
+      "visibility": "disclosed",
+      "depth": 2,
+      "transaction_types": [],
+      "count": 1,
+      "date_range": null,
+      "source_url": "https://adstransparency.google.com/advertiser/AR12671102917130846209/creative/CR00563864214519676929?political=&region=US",
+      "basis": {
+        "basis": "inferred",
+        "rule": "Advertiser name matched to this committee by normalized name; Google shows the advertiser, not the paid-for-by line",
+        "source_urls": [
+          "https://adstransparency.google.com/advertiser/AR12671102917130846209/creative/CR00563864214519676929?political=&region=US"
+        ],
+        "checked_by": null,
+        "checked_at": null
+      }
+    },
+    {
+      "from": "vendor:V-red-maverick-media",
+      "to": "CR08536016208221175809",
+      "kind": "placement",
+      "amount": 0,
+      "visibility": "disclosed",
+      "depth": 2,
+      "transaction_types": [],
+      "count": 1,
+      "date_range": [
+        "2024-10-16",
+        "2024-10-26"
+      ],
+      "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00879510&payee_name=RED+MAVERICK+MEDIA+LLC",
+      "basis": {
+        "basis": "adjacent",
+        "rule": "Ran Oct 16, 2024 – Oct 26, 2024. In that window (buys dated up to 7 days before first shown through last shown) AMERICA PAC reported mail buys to RED MAVERICK MEDIA LLC ($6,693); the FEC does not record which buy placed which ad.",
+        "source_urls": [
+          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00879510&payee_name=RED+MAVERICK+MEDIA+LLC"
+        ],
+        "checked_by": null,
+        "checked_at": null
+      }
+    },
+    {
+      "from": "C00879510",
+      "to": "CR08536016208221175809",
+      "kind": "placement",
+      "amount": 22500.0,
+      "visibility": "disclosed",
+      "depth": 2,
+      "transaction_types": [],
+      "count": 1,
+      "date_range": null,
+      "source_url": "https://adstransparency.google.com/advertiser/AR12671102917130846209/creative/CR08536016208221175809?political=&region=US",
+      "basis": {
+        "basis": "inferred",
+        "rule": "Advertiser name matched to this committee by normalized name; Google shows the advertiser, not the paid-for-by line",
+        "source_urls": [
+          "https://adstransparency.google.com/advertiser/AR12671102917130846209/creative/CR08536016208221175809?political=&region=US"
+        ],
+        "checked_by": null,
+        "checked_at": null
+      }
+    },
+    {
+      "from": "C00879510",
+      "to": "CR16623815659565875201",
+      "kind": "placement",
+      "amount": 17500.0,
+      "visibility": "disclosed",
+      "depth": 2,
+      "transaction_types": [],
+      "count": 1,
+      "date_range": null,
+      "source_url": "https://adstransparency.google.com/advertiser/AR12671102917130846209/creative/CR16623815659565875201?political=&region=US",
+      "basis": {
+        "basis": "inferred",
+        "rule": "Advertiser name matched to this committee by normalized name; Google shows the advertiser, not the paid-for-by line",
+        "source_urls": [
+          "https://adstransparency.google.com/advertiser/AR12671102917130846209/creative/CR16623815659565875201?political=&region=US"
+        ],
+        "checked_by": null,
+        "checked_at": null
+      }
+    },
+    {
+      "from": "C00879510",
+      "to": "CR18247416101791072257",
+      "kind": "placement",
+      "amount": 17500.0,
+      "visibility": "disclosed",
+      "depth": 2,
+      "transaction_types": [],
+      "count": 1,
+      "date_range": null,
+      "source_url": "https://adstransparency.google.com/advertiser/AR12671102917130846209/creative/CR18247416101791072257?political=&region=US",
+      "basis": {
+        "basis": "inferred",
+        "rule": "Advertiser name matched to this committee by normalized name; Google shows the advertiser, not the paid-for-by line",
+        "source_urls": [
+          "https://adstransparency.google.com/advertiser/AR12671102917130846209/creative/CR18247416101791072257?political=&region=US"
+        ],
+        "checked_by": null,
+        "checked_at": null
+      }
+    },
+    {
+      "from": "C00879510",
+      "to": "CR10859518198810673153",
+      "kind": "placement",
+      "amount": 17500.0,
+      "visibility": "disclosed",
+      "depth": 2,
+      "transaction_types": [],
+      "count": 1,
+      "date_range": null,
+      "source_url": "https://adstransparency.google.com/advertiser/AR12671102917130846209/creative/CR10859518198810673153?political=&region=US",
+      "basis": {
+        "basis": "inferred",
+        "rule": "Advertiser name matched to this committee by normalized name; Google shows the advertiser, not the paid-for-by line",
+        "source_urls": [
+          "https://adstransparency.google.com/advertiser/AR12671102917130846209/creative/CR10859518198810673153?political=&region=US"
+        ],
+        "checked_by": null,
+        "checked_at": null
+      }
+    },
+    {
+      "from": "C00879510",
+      "to": "CR01935741090292301825",
+      "kind": "placement",
+      "amount": 17500.0,
+      "visibility": "disclosed",
+      "depth": 2,
+      "transaction_types": [],
+      "count": 1,
+      "date_range": null,
+      "source_url": "https://adstransparency.google.com/advertiser/AR12671102917130846209/creative/CR01935741090292301825?political=&region=US",
+      "basis": {
+        "basis": "inferred",
+        "rule": "Advertiser name matched to this committee by normalized name; Google shows the advertiser, not the paid-for-by line",
+        "source_urls": [
+          "https://adstransparency.google.com/advertiser/AR12671102917130846209/creative/CR01935741090292301825?political=&region=US"
+        ],
+        "checked_by": null,
+        "checked_at": null
+      }
+    },
+    {
+      "from": "C00879510",
+      "to": "CR12566523195072446465",
+      "kind": "placement",
+      "amount": 17500.0,
+      "visibility": "disclosed",
+      "depth": 2,
+      "transaction_types": [],
+      "count": 1,
+      "date_range": null,
+      "source_url": "https://adstransparency.google.com/advertiser/AR12671102917130846209/creative/CR12566523195072446465?political=&region=US",
+      "basis": {
+        "basis": "inferred",
+        "rule": "Advertiser name matched to this committee by normalized name; Google shows the advertiser, not the paid-for-by line",
+        "source_urls": [
+          "https://adstransparency.google.com/advertiser/AR12671102917130846209/creative/CR12566523195072446465?political=&region=US"
+        ],
+        "checked_by": null,
+        "checked_at": null
+      }
+    },
+    {
+      "from": "C00879510",
+      "to": "CR10903991245130956801",
+      "kind": "placement",
+      "amount": 17500.0,
+      "visibility": "disclosed",
+      "depth": 2,
+      "transaction_types": [],
+      "count": 1,
+      "date_range": null,
+      "source_url": "https://adstransparency.google.com/advertiser/AR12671102917130846209/creative/CR10903991245130956801?political=&region=US",
+      "basis": {
+        "basis": "inferred",
+        "rule": "Advertiser name matched to this committee by normalized name; Google shows the advertiser, not the paid-for-by line",
+        "source_urls": [
+          "https://adstransparency.google.com/advertiser/AR12671102917130846209/creative/CR10903991245130956801?political=&region=US"
+        ],
+        "checked_by": null,
+        "checked_at": null
+      }
+    },
+    {
+      "from": "C00879510",
+      "to": "agg:ads@C00879510",
+      "kind": "placement",
+      "amount": 210000.0,
+      "visibility": "disclosed",
+      "depth": 2,
+      "transaction_types": [],
+      "count": 12,
+      "date_range": null,
+      "source_url": null,
+      "basis": {
+        "basis": "inferred",
+        "rule": "Advertiser name matched to this committee by normalized name",
+        "source_urls": [
+          "https://adstransparency.google.com/advertiser/AR12671102917130846209/creative/CR15525218825464184833?political=&region=US",
+          "https://adstransparency.google.com/advertiser/AR12671102917130846209/creative/CR09855321035023319041?political=&region=US",
+          "https://adstransparency.google.com/advertiser/AR12671102917130846209/creative/CR10074126047973998593?political=&region=US",
+          "https://adstransparency.google.com/advertiser/AR12671102917130846209/creative/CR04060468421010128897?political=&region=US",
+          "https://adstransparency.google.com/advertiser/AR12671102917130846209/creative/CR15613430444337397761?political=&region=US"
+        ],
+        "checked_by": null,
+        "checked_at": null
+      }
     }
   ],
   "summary": {
@@ -87,7 +723,9 @@
     "terminus_counts": {
       "individual": 1,
       "pruned": 1
-    }
+    },
+    "out_total": 6692.6,
+    "max_out_depth": 3
   },
   "flags": [
     {
@@ -97,5 +735,5 @@
       "evidence_url": "https://www.fec.gov/data/receipts/?committee_id=C00879510&two_year_transaction_period=2024"
     }
   ],
-  "method": "Backward walk over money edges only (Schedule A receipts from individuals and organizations, committee-to-committee transfers) into AMERICA PAC, 1 hop(s) deep; independent expenditures are targeting edges and never appear. The walk starts from $208,912,036 of itemized 2023–2024 receipts as loaded from FEC bulk data (unitemized receipts, loans and offsets are not edges), and every expanded committee conserves dollars: its inbound edges sum to its receipts. Inbound edges under 1% of a committee's receipts are rolled into one 'other contributors' node, which counts as disclosed except for the organization dollars inside it. Each dollar takes the visibility of where the walk stopped: named individuals (including earmarks through ActBlue/WinRed, attributed to the person) are disclosed. Organizations that are not registered committees are classified from their name alone (no IRS lookup): a union or a business giving from its own treasury is disclosed — the named entity is the source; an LLC, trust, advocacy nonprofit (501(c)(4)-style names) or unclassifiable organization is dark, because whoever funds it is not on file with the FEC. Visibility shares are preliminary; no 990 lookups were performed, so nothing is marked inferable."
+  "method": "Backward walk over money edges only (Schedule A receipts from individuals and organizations, committee-to-committee transfers) into AMERICA PAC, 1 hop(s) deep; independent expenditures are targeting edges and never appear. The walk starts from $208,912,036 of itemized 2023–2024 receipts as loaded from FEC bulk data (unitemized receipts, loans and offsets are not edges), and every expanded committee conserves dollars: its inbound edges sum to its receipts. Inbound edges under 1% of a committee's receipts are rolled into one 'other contributors' node, which counts as disclosed except for the organization dollars inside it. Each dollar takes the visibility of where the walk stopped: named individuals (including earmarks through ActBlue/WinRed, attributed to the person) are disclosed. Organizations that are not registered committees are classified from their name alone (no IRS lookup): a union or a business giving from its own treasury is disclosed — the named entity is the source; an LLC, trust, advocacy nonprofit (501(c)(4)-style names) or unclassifiable organization is dark, because whoever funds it is not on file with the FEC. Visibility shares are preliminary; no 990 lookups were performed, so nothing is marked inferable. Spending side (right of the spender): Schedule E payments to vendors are money edges; vendor → ad and spender → ad edges are placement (no dollars) and carry the evidence basis they were drawn on; edges into a candidate are targeting (for/against) and never carry money to the candidate. Ad dollars are the midpoint of the Google-reported spend range."
 }
