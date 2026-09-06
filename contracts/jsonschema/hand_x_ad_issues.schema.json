@@ -1,0 +1,194 @@
+{
+  "$ref": "#/definitions/hand_x_ad_issues",
+  "definitions": {
+    "hand_x_ad_issues": {
+      "type": "object",
+      "properties": {
+        "race_id": {
+          "type": "string"
+        },
+        "method": {
+          "type": "string"
+        },
+        "rows": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "ad_id": {
+                "type": "string"
+              },
+              "issue_ids": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "enum": [
+                    "healthcare",
+                    "energy_climate",
+                    "defense",
+                    "crypto_fintech",
+                    "immigration",
+                    "abortion",
+                    "guns",
+                    "tax_budget",
+                    "tech_ai",
+                    "labor_trade"
+                  ]
+                },
+                "maxItems": 2
+              },
+              "quote": {
+                "anyOf": [
+                  {
+                    "type": "string",
+                    "maxLength": 280
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "rationale": {
+                "type": "string",
+                "maxLength": 200
+              },
+              "transcript_kind": {
+                "type": "string",
+                "enum": [
+                  "auto_caption",
+                  "manual_caption",
+                  "whisper",
+                  "ad_text",
+                  "poster"
+                ]
+              },
+              "source_urls": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "format": "uri"
+                },
+                "minItems": 1
+              },
+              "provenance": {
+                "type": "object",
+                "properties": {
+                  "tagged_by": {
+                    "type": "string"
+                  },
+                  "tagged_at": {
+                    "type": "string"
+                  },
+                  "model": {
+                    "type": "string"
+                  },
+                  "prompt_version": {
+                    "type": "string"
+                  },
+                  "tools": {
+                    "type": "array",
+                    "items": {
+                      "type": "string",
+                      "enum": [
+                        "web_search",
+                        "x_search"
+                      ]
+                    }
+                  },
+                  "tool_filters": {
+                    "type": "object",
+                    "additionalProperties": {}
+                  },
+                  "response_id": {
+                    "type": [
+                      "string",
+                      "null"
+                    ]
+                  },
+                  "retrieved_at": {
+                    "type": "string"
+                  },
+                  "citations": {
+                    "type": "array",
+                    "items": {
+                      "type": "string",
+                      "format": "uri"
+                    }
+                  },
+                  "confidence": {
+                    "type": "string",
+                    "enum": [
+                      "high",
+                      "medium",
+                      "low"
+                    ]
+                  },
+                  "review_status": {
+                    "type": "string",
+                    "enum": [
+                      "pending",
+                      "accepted",
+                      "rejected"
+                    ]
+                  },
+                  "reviewed_by": {
+                    "type": [
+                      "string",
+                      "null"
+                    ]
+                  },
+                  "reviewed_at": {
+                    "type": [
+                      "string",
+                      "null"
+                    ]
+                  },
+                  "review_note": {
+                    "type": [
+                      "string",
+                      "null"
+                    ]
+                  }
+                },
+                "required": [
+                  "tagged_by",
+                  "tagged_at",
+                  "model",
+                  "prompt_version",
+                  "tools",
+                  "tool_filters",
+                  "response_id",
+                  "retrieved_at",
+                  "citations",
+                  "confidence",
+                  "review_status",
+                  "reviewed_by",
+                  "reviewed_at",
+                  "review_note"
+                ],
+                "additionalProperties": false
+              }
+            },
+            "required": [
+              "ad_id",
+              "issue_ids",
+              "quote",
+              "rationale",
+              "transcript_kind",
+              "source_urls",
+              "provenance"
+            ],
+            "additionalProperties": false
+          }
+        }
+      },
+      "required": [
+        "race_id",
+        "method",
+        "rows"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "$schema": "http://json-schema.org/draft-07/schema#"
+}

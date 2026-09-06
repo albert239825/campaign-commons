@@ -847,5 +847,57 @@
       "last_date": "2024-08-29",
       "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00003590&payee_name=UNITED+STEELWORKERS"
     }
-  ]
+  ],
+  "x_enrichment": {
+    "issue_focus": {
+      "kind": "labor",
+      "issue_ids": [],
+      "description": "USW PAC is a fund that USW members contribute to voluntarily each month to support our union’s efforts to elect pro-worker, pro-union lawmakers and uses the contributions it receives for political purposes such as addressing issues of public importance and making contributions and expenditures in connection with federal, state and local elections.",
+      "basis": {
+        "basis": "inferred",
+        "rule": "x_issue_focus",
+        "source_urls": [
+          "https://usw.org/2025-officers-report/political/",
+          "https://www.fec.gov/data/committee/C00003590/"
+        ],
+        "checked_by": null,
+        "checked_at": null
+      },
+      "label": "Machine-tagged from the committee's own website (grok-4.3, 2026-09-06); not part of the record",
+      "quote": "USW PAC uses the contributions it receives for political purposes, such as addressing issues of public importance and making contributions and expenditures in connection with federal, state and local elections.",
+      "provenance": {
+        "tagged_by": "xai-grok-4.3-2026-09-06",
+        "tagged_at": "2026-09-06",
+        "model": "grok-4.3",
+        "prompt_version": "classify_spender.v1",
+        "tools": [
+          "web_search"
+        ],
+        "tool_filters": {},
+        "response_id": "c0d68f9d-47d5-93f3-b89c-b46a0b2bf0fb",
+        "retrieved_at": "2026-09-06T03:37:55+00:00",
+        "citations": [
+          "https://usw.org/2025-officers-report/political/",
+          "https://usw.org/",
+          "https://pac.usw.org/donate/",
+          "https://usw.org/get-involved/",
+          "https://usw.org/news/usw-pac-leaders-advance-workers-agenda/",
+          "https://usw.org/get-involved/rapid-response/balancing-the-scales/",
+          "https://usw.org/usw-convention/resolution-no-28-all-in-on-political-power/",
+          "https://usw.org/2025-officers-report/legislative-and-policy/",
+          "https://usw.org/usw-convention/resolution-no-30-all-in-on-balancing-the-scales/",
+          "https://usw.org/2025-officers-report/steelworkers-humanity-fund/",
+          "https://www.fec.gov/data/committee/C00003590/",
+          "https://web.archive.org/web/20111027143447/http:/www.usw.ca/community/political/about",
+          "https://www.dailysignal.com/2026/06/09/exclusive-steelworkers-union-spent-millions-against-trump-agenda-showing-gap-with-membership/",
+          "https://usw.org/news/how-your-dues-dollars-are-used/"
+        ],
+        "confidence": "high",
+        "review_status": "pending",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "review_note": null
+      }
+    }
+  }
 }

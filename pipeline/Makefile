@@ -1,7 +1,7 @@
 RACE ?= pa-sen-2024
 PY ?= python3
 
-.PHONY: setup mock ingest ledger chains vendors ads ads-enrich issues issues-enrich dossier chains-out search trails validate all lint test
+.PHONY: setup mock ingest ledger chains vendors ads ads-enrich enrich-transcripts enrich-ads enrich-review enrich-spenders enrich-funders enrich-dossiers dossier-enrich issues search dossier validate all lint test issues-enrich
 
 setup:            ## install pipeline deps (creates .venv)
 	$(PY) -m venv .venv && . .venv/bin/activate && pip install -q -e ".[dev]"
@@ -27,7 +27,28 @@ ads:              ## Google political ads -> ads.json + cached creatives (downlo
 ads-enrich:       ## Block 2: patch ads.json in place with sponsor shares, hand issue tags, vendor links (+ vendors/*.json ads[]); no download
 	$(PY) -m campaign_commons.ads_enrich $(RACE)
 
-issues:           ## Block 2: hand issue tags + positions -> issues.json; patches entities + ads
+enrich-transcripts: ## Fetch YouTube captions locally; run from a residential IP because YouTube blocks cloud IPs
+	$(PY) -m campaign_commons.enrich_transcripts $(RACE)
+
+enrich-ads:       ## Classify cached ad transcripts with xAI (requires XAI_API_KEY)
+	$(PY) -m campaign_commons.enrich_ads $(RACE)
+
+enrich-review:    ## Print pending machine ad classifications for human review
+	$(PY) -m campaign_commons.enrich_review $(RACE)
+
+enrich-spenders:  ## Classify spender self-descriptions (requires XAI_API_KEY and FEC_API_KEY; get a free key at api.open.fec.gov/developers)
+	$(PY) -m campaign_commons.enrich_spenders $(RACE)
+
+enrich-funders:   ## Classify upstream organization self-descriptions with open web search (requires XAI_API_KEY)
+	$(PY) -m campaign_commons.enrich_funders $(RACE)
+
+enrich-dossiers:  ## Classify candidate issue stances from web/news and optional X posts (requires XAI_API_KEY)
+	$(PY) -m campaign_commons.enrich_dossiers $(RACE)
+
+dossier-enrich:   ## Materialize machine dossier stances into existing dossier files
+	$(PY) -m campaign_commons.dossier_enrich $(RACE)
+
+issues:           ## Block 2: data/hand/$(RACE)/{issue_focus,ad_issues,ie_issues}.json -> issues.json; patches entities + ads
 	$(PY) -m campaign_commons.issues $(RACE)
 
 issues-enrich:    ## Block 2: fetch spender sites and record model-read issue positions; needs network + XAI_API_KEY

@@ -246,5 +246,62 @@
       "last_date": "2024-10-03",
       "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00172361&payee_name=U.S.+POSTMASTER"
     }
-  ]
+  ],
+  "x_enrichment": {
+    "issue_focus": {
+      "kind": "single_issue",
+      "issue_ids": [
+        "abortion"
+      ],
+      "description": "The Pennsylvania Pro-Life Federation, Inc., is committed to promoting the dignity and value of human life from conception to natural death and to restoring legal protection for preborn children through legislation, political action, education and other legal means.",
+      "basis": {
+        "basis": "inferred",
+        "rule": "x_issue_focus",
+        "source_urls": [
+          "https://paprolife.org/about/",
+          "https://www.fec.gov/data/committee/C00172361/"
+        ],
+        "checked_by": null,
+        "checked_at": null
+      },
+      "label": "Machine-tagged from the committee's own website (grok-4.3, 2026-09-06); not part of the record",
+      "quote": "The Pennsylvania Pro-Life Federation, Inc., is committed to promoting the dignity and value of human life from conception to natural death and to restoring legal protection for preborn children. Through legislation, political action, education and other legal means, we proclaim the truth about abortion, infanticide, and euthanasia.",
+      "provenance": {
+        "tagged_by": "xai-grok-4.3-2026-09-06",
+        "tagged_at": "2026-09-06",
+        "model": "grok-4.3",
+        "prompt_version": "classify_spender.v1",
+        "tools": [
+          "web_search"
+        ],
+        "tool_filters": {},
+        "response_id": "877715eb-956a-9fa5-af8f-3f01193bed9b",
+        "retrieved_at": "2026-09-06T03:28:54+00:00",
+        "citations": [
+          "https://www.genarchives..com/Towne-Bowditch/g0/p716.htm",
+          "https://apexshield..com/",
+          "https://.com/more/dental-philosophy/treatment-plans-diagnosis-case-presentation/",
+          "https://www.genarchives..com/Towne-Bowditch/g0/p388.htm",
+          "https://.com/blog/democracy-v-liberty/",
+          "https://www.genarchives..com/Towne-Bowditch/g0/p586.htm",
+          "https://www.genarchives..com/Towne-Bowditch/g0/p78.htm",
+          "https://www.likedogsandcats..com/union-mills/pet-euthanasia-union-mills-in/",
+          "https://www.genarchives..com/Towne-Bowditch/g0/p710.htm",
+          "https://www.miamiherald..com/detour/article267451982.html",
+          "https://www.guidestar.org/profile/25-1285912",
+          "http://www.pennlife.org/about_history.html",
+          "https://paprolife.us/",
+          "https://paprolife.org/about/",
+          "https://paprolife.org/chapters/",
+          "https://www.fec.gov/data/committee/C00172361/",
+          "https://projects.propublica.org/itemizer/committee/C00172361/reports/YEAR-END"
+        ],
+        "confidence": "medium",
+        "review_status": "pending",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "review_note": null
+      }
+    }
+  }
 }

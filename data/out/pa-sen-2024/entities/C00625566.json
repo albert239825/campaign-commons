@@ -449,5 +449,58 @@
       "last_date": "2024-10-31",
       "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00625566&payee_name=BORROMEO+CONSULTING"
     }
-  ]
+  ],
+  "x_enrichment": {
+    "issue_focus": {
+      "kind": "general_partisan",
+      "issue_ids": [],
+      "description": "Valor America propels our nation forward by rallying support for principled Republican leaders.",
+      "basis": {
+        "basis": "inferred",
+        "rule": "x_issue_focus",
+        "source_urls": [
+          "https://valoramerica.org/about",
+          "https://www.fec.gov/data/committee/C00625566/"
+        ],
+        "checked_by": null,
+        "checked_at": null
+      },
+      "label": "Machine-tagged from the committee's own website (grok-4.3, 2026-09-06); not part of the record",
+      "quote": "Valor America propels our nation forward by rallying support for principled Republican leaders.",
+      "provenance": {
+        "tagged_by": "xai-grok-4.3-2026-09-06",
+        "tagged_at": "2026-09-06",
+        "model": "grok-4.3",
+        "prompt_version": "classify_spender.v1",
+        "tools": [
+          "web_search"
+        ],
+        "tool_filters": {},
+        "response_id": "57cb9770-36c8-952f-9dff-081b250d485a",
+        "retrieved_at": "2026-09-06T03:25:53+00:00",
+        "citations": [
+          "https://.com/blog/what-is-in-your-toothpaste/",
+          "https://www.genarchives..com/Towne-Bowditch/g0/p97.htm",
+          "https://.com/services/dental-anxiety-dental-fear/dental-phobia-dental-fear/",
+          "https://apexshield..com/",
+          "https://www.genarchives..com/Towne-Bowditch/g0/p4.htm",
+          "https://www.sacbee..com/guides/deals/daily/best-selling-beauty-products-on-sale/",
+          "https://www.genarchives..com/Towne-Bowditch/g0/p92.htm",
+          "https://.com/blog/author/jeff/page/24/",
+          "https://.com/services/cosmetic-dentistry/dental-restorations-using-composite-resin-fillings/",
+          "https://.com/female-infertility-franchise-company-in-india",
+          "https://www.opensecrets.org/political-action-committees-pacs/valor-america/C00625566/summary/2024",
+          "https://valoramerica.org/",
+          "https://valoramerica.org/about",
+          "https://www.stratml.us/pdfs/VLRA.pdf",
+          "https://valoramerica.org/our-method"
+        ],
+        "confidence": "high",
+        "review_status": "pending",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "review_note": null
+      }
+    }
+  }
 }

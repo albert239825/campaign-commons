@@ -825,5 +825,61 @@
       "last_date": "2024-10-16",
       "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00032979&payee_name=BERLIN+ROSEN+INC"
     }
-  ]
+  ],
+  "x_enrichment": {
+    "issue_focus": {
+      "kind": "labor",
+      "issue_ids": [],
+      "description": "Officially launched in 1960, D.R.I.V.E. has two main objectives: To elect candidates to public office who are friendly to the interests of Teamster members; Passage or defeat of legislation of special concern to Teamster families.",
+      "basis": {
+        "basis": "inferred",
+        "rule": "x_issue_focus",
+        "source_urls": [
+          "https://teamster.org/about/teamster-history/teamsters-and-drive/",
+          "https://www.fec.gov/data/committee/C00032979/"
+        ],
+        "checked_by": null,
+        "checked_at": null
+      },
+      "label": "Machine-tagged from the committee's own website (grok-4.3, 2026-09-06); not part of the record",
+      "quote": "Officially launched in 1960, D.R.I.V.E. has two main objectives: * To elect candidates to public office who are friendly to the interests of Teamster members; * Passage or defeat of legislation of special concern to Teamster families.",
+      "provenance": {
+        "tagged_by": "xai-grok-4.3-2026-09-06",
+        "tagged_at": "2026-09-06",
+        "model": "grok-4.3",
+        "prompt_version": "classify_spender.v1",
+        "tools": [
+          "web_search"
+        ],
+        "tool_filters": {},
+        "response_id": "b62800fd-2e64-9780-b9aa-757245bd2f44",
+        "retrieved_at": "2026-09-06T03:27:29+00:00",
+        "citations": [
+          "https://teamster.org/about/teamster-history/teamsters-and-drive/",
+          "https://teamster.org/2026/09/u-s-district-court-grants-end-to-37-year-federal-monitorship-of-teamsters-union/",
+          "https://teamster.org/tag/drive/",
+          "https://teamster.org/2024/09/history-segment-the-history-of-d-r-i-v-e-and-the-importance-of-teamster-involvement-in-elections/",
+          "https://teamster.org/2026/06/obrien-zuckerman-reelected-to-second-five-year-term-leading-teamsters/",
+          "https://teamster.org/about/teamster-departments/",
+          "https://teamster.org/so-called-paycheck-protection-laws/",
+          "https://teamster.org/sites/default/files/73119teamstersconstitution.pdf",
+          "https://teamster.org/2020/05/members-drive-increased-donations-teamsters-pac/",
+          "https://teamster.org/printers/",
+          "https://teamstersjc7.org/local-70/join-us-in-protecting-our-future-get-involved-with-d-r-i-v-e",
+          "https://web.archive.org/web/20250226100943id_/https:/teamster.org/wp-content/uploads/2024/08/71224MagTeamsterSUMMER2024.pdf",
+          "https://www.teamsters731.org/news-details/webview/what-is-drive/single/25057",
+          "https://teamsterslocal222.org/drive/",
+          "https://teamsters2010.org/drive/",
+          "http://docquery.fec.gov/cgi-bin/forms/C00032979/772641/",
+          "https://www.jc32.org/drive.html",
+          "https://teamsters315.com/get-involved/d-r-i-v-e/"
+        ],
+        "confidence": "high",
+        "review_status": "pending",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "review_note": null
+      }
+    }
+  }
 }

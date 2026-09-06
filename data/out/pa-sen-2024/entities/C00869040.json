@@ -217,5 +217,54 @@
       "last_date": "2024-07-01",
       "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00869040&payee_name=CATALIST+LLC"
     }
-  ]
+  ],
+  "x_enrichment": {
+    "issue_focus": {
+      "kind": "general_partisan",
+      "issue_ids": [],
+      "description": "BlueVote.org tackles low voter turnout with information and action. Our highly effective phonebanks and text banks educate, register, and motivate Pennsylvania progressive voters who decide elections in Pennsylvania and the nation.",
+      "basis": {
+        "basis": "inferred",
+        "rule": "x_issue_focus",
+        "source_urls": [
+          "https://www.bluevote.org/",
+          "https://www.fec.gov/data/committee/C00869040/"
+        ],
+        "checked_by": null,
+        "checked_at": null
+      },
+      "label": "Machine-tagged from the committee's own website (grok-4.3, 2026-09-06); not part of the record",
+      "quote": "BlueVote.org tackles low voter turnout with information and action. Our highly effective phonebanks and text banks educate, register, and motivate Pennsylvania progressive voters who decide elections in Pennsylvania and the nation.",
+      "provenance": {
+        "tagged_by": "xai-grok-4.3-2026-09-06",
+        "tagged_at": "2026-09-06",
+        "model": "grok-4.3",
+        "prompt_version": "classify_spender.v1",
+        "tools": [
+          "web_search"
+        ],
+        "tool_filters": {},
+        "response_id": "355847db-a553-9128-b565-f5e62d2e9b94",
+        "retrieved_at": "2026-09-06T03:35:48+00:00",
+        "citations": [
+          "https://www.bluevote.org/",
+          "https://www.bluevote.org/copy-of-articles",
+          "https://www.bluevote.org/voting-info",
+          "https://secure.actblue.com/donate/bluevote-org?refcode=directory",
+          "https://en.wikipedia.org/wiki/BlueVoice.org",
+          "https://www.youtube.com/watch?v=GrO5znaTz7s",
+          "https://www.vote.org/about",
+          "https://bsky.app/profile/bluevoterguide.bsky.social",
+          "https://www.cnn.com/2024/07/29/politics/voter-rolls-ballot-challenges-true-the-vote-elections",
+          "https://www.dailykos.com/stories/2023/6/1/2172665/elections/The-Downballot-How-progressives-are-organizing-blue-surge-voters-transcript/",
+          "https://bluevoterguide.org/about"
+        ],
+        "confidence": "high",
+        "review_status": "pending",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "review_note": null
+      }
+    }
+  }
 }

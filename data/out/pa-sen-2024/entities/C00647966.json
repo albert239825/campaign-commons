@@ -720,5 +720,58 @@
       "last_date": "2024-09-16",
       "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00647966&payee_name=VISTAPRINT"
     }
-  ]
+  ],
+  "x_enrichment": {
+    "issue_focus": {
+      "kind": "general_partisan",
+      "issue_ids": [],
+      "description": "The Rural Freedom Network is a grassroots media organization supporting Democratic candidates to reclaim our Democracy and to ensure it remains is safe and secure. We are a political action committee specializing in creating effective political media for our Democratic candidates and Democratic values.",
+      "basis": {
+        "basis": "inferred",
+        "rule": "x_issue_focus",
+        "source_urls": [
+          "https://ruralfreedomnetwork.org/about/",
+          "https://www.fec.gov/data/committee/C00647966/"
+        ],
+        "checked_by": null,
+        "checked_at": null
+      },
+      "label": "Machine-tagged from the committee's own website (grok-4.3, 2026-09-06); not part of the record",
+      "quote": "The Rural Freedom Network is a grassroots media organization supporting Democratic candidates to reclaim our Democracy and to ensure it remains is safe and secure. We are a political action committee specializing in creating effective political media for our Democratic candidates and Democratic values.",
+      "provenance": {
+        "tagged_by": "xai-grok-4.3-2026-09-06",
+        "tagged_at": "2026-09-06",
+        "model": "grok-4.3",
+        "prompt_version": "classify_spender.v1",
+        "tools": [
+          "web_search"
+        ],
+        "tool_filters": {},
+        "response_id": "958a59eb-2c81-9c2c-a194-84263aad4052",
+        "retrieved_at": "2026-09-06T03:36:03+00:00",
+        "citations": [
+          "https://www.genarchives..com/Towne-Bowditch/g0/p239.htm",
+          "https://www.genarchives..com/Towne-Bowditch/g0/p430.htm",
+          "https://www.genarchives..com/Towne-Bowditch/g0/p10.htm",
+          "https://www.genarchives..com/Towne-Bowditch/g0/p230.htm",
+          "https://www.genarchives..com/Towne-Bowditch/g0/p212.htm",
+          "https://.com/blog/tags/architecture",
+          "https://www.genarchives..com/Towne-Bowditch/g0/p58.htm",
+          "https://www.genarchives..com/Towne-Bowditch/g0/p466.htm",
+          "https://www.genarchives..com/Towne-Bowditch/g0/p213.htm",
+          "https://www.genarchives..com/Towne-Bowditch/g0/p33.htm",
+          "https://www.fec.gov/data/committee/C00647966/",
+          "https://projects.propublica.org/itemizer/committee/C00647966/reports/YEAR-END",
+          "https://ruralfreedomnetwork.org/about/",
+          "https://docquery.fec.gov/cgi-bin/forms/C00647966/1795998/",
+          "https://projects.propublica.org/itemizer/filing/1770831"
+        ],
+        "confidence": "high",
+        "review_status": "pending",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "review_note": null
+      }
+    }
+  }
 }

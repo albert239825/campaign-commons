@@ -1930,5 +1930,63 @@
       "last_date": "2024-11-04",
       "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00684969&payee_name=PITTSBURGH+JEWISH+CHRONICLE"
     }
-  ]
+  ],
+  "x_enrichment": {
+    "issue_focus": {
+      "kind": "general_partisan",
+      "issue_ids": [],
+      "description": "JDCA PAC is your portal to take political action to support Democratic candidates who align with our Jewish and Democratic values.",
+      "basis": {
+        "basis": "inferred",
+        "rule": "x_issue_focus",
+        "source_urls": [
+          "https://jdcapac.org/",
+          "https://www.fec.gov/data/committee/C00684969/"
+        ],
+        "checked_by": null,
+        "checked_at": null
+      },
+      "label": "Machine-tagged from the committee's own website (grok-4.3, 2026-09-06); not part of the record",
+      "quote": "JDCA PAC is your portal to take political action to support Democratic candidates who align with our Jewish and Democratic values.",
+      "provenance": {
+        "tagged_by": "xai-grok-4.3-2026-09-06",
+        "tagged_at": "2026-09-06",
+        "model": "grok-4.3",
+        "prompt_version": "classify_spender.v1",
+        "tools": [
+          "web_search"
+        ],
+        "tool_filters": {},
+        "response_id": "7c0fe0d3-68c4-963c-ba8a-0683a4de41ed",
+        "retrieved_at": "2026-09-06T03:15:04+00:00",
+        "citations": [
+          "https://www.fec.gov/data/committee/C00684969/",
+          "https://jdcapac.org/",
+          "https://en.m.wikipedia.org/wiki/Jewish_Democratic_Council_of_America",
+          "https://www.opensecrets.org/political-action-committees-pacs/C00684969/summary/2022",
+          "https://en.wikipedia.org/wiki/Juvenile_Diabetes_Cure_Alliance",
+          "http://docquery.fec.gov/cgi-bin/forms/C00684969/1745563/",
+          "https://jewishdems.org/wp-content/uploads/2023/01/JDCA-2023-Overview.pdf",
+          "https://jewishdems.org/about/",
+          "https://jewishdems.org/",
+          "https://www.charitynavigator.org/ein/821919054",
+          "https://.com/blog/retiring-dentists-might-sell-their-practice-to-the-highest-bidder/",
+          "https://www.genarchives..com/Towne-Bowditch/g0/p290.htm",
+          "https://www.genarchives..com/Towne-Bowditch/g0/p600.htm",
+          "https://.com/blog/author/jeff/page/10/",
+          "https://www.genarchives..com/Towne-Bowditch/g0/p563.htm",
+          "https://www.genarchives..com/Towne-Bowditch/g0/p634.htm",
+          "https://.com/blog/page/31/",
+          "https://www.genarchives..com/Towne-Bowditch/g0/p640.htm",
+          "https://www.genarchives..com/Towne-Bowditch/g0/p410.htm",
+          "https://.com/blog/category/dr-dorfman-says/page/5/"
+        ],
+        "confidence": "high",
+        "review_status": "pending",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "review_note": null
+      }
+    }
+  }
 }

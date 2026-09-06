@@ -4,6 +4,7 @@ import { date, money, routes } from "@/lib/format";
 import { AdjacencyNote, Breadcrumbs, Card, DataStatusBanner, Money, SourceLink, Stat } from "@/components/ui";
 import { DonorTree } from "@/components/donor/donor-tree";
 import { CommitteeAdsLinks } from "@/components/donor/committee-ads-links";
+import { MachineFocusChip } from "@/components/entity/machine-focus-chip";
 
 export const generateStaticParams = () => listRaceIds().flatMap((raceId) => listDonorKeys(raceId).map((donorId) => ({ raceId, donorId })));
 
@@ -27,6 +28,8 @@ export default async function DonorPage({ params }: { params: Promise<{ raceId: 
           <span className="text-xs text-neutral-500">Forward walk over 2024-cycle money edges, ending at independent expenditures in this race.</span>
         </div>
       </DetailHeader>
+
+      {view.x_enrichment?.issue_focus && <MachineFocusChip focus={view.x_enrichment.issue_focus} />}
 
       <Card>
         <div className="grid grid-cols-2 gap-4 md:grid-cols-4">

@@ -163,5 +163,58 @@
       "last_date": "2024-04-08",
       "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00779595&payee_name=CREATIVE+STRATEGIC+SOLUTIONS+LLC"
     }
-  ]
+  ],
+  "x_enrichment": {
+    "issue_focus": {
+      "kind": "general_partisan",
+      "issue_ids": [],
+      "description": "The Republican State Leadership Committee (RSLC) is focused on one goal: winning. We are the largest organization of Republican state leaders in the country and the only national committee whose mission is to elect Republicans to multiple down-ballot, state-level offices in all 50 states.",
+      "basis": {
+        "basis": "inferred",
+        "rule": "x_issue_focus",
+        "source_urls": [
+          "https://rslc.gop/about/",
+          "https://www.fec.gov/data/committee/C00779595/"
+        ],
+        "checked_by": null,
+        "checked_at": null
+      },
+      "label": "Machine-tagged from the committee's own website (grok-4.3, 2026-09-06); not part of the record",
+      "quote": "The Republican State Leadership Committee (RSLC) is focused on one goal: winning. We are the largest organization of Republican state leaders in the country and the only national committee whose mission is to elect Republicans to multiple down-ballot, state-level offices in all 50 states.",
+      "provenance": {
+        "tagged_by": "xai-grok-4.3-2026-09-06",
+        "tagged_at": "2026-09-06",
+        "model": "grok-4.3",
+        "prompt_version": "classify_spender.v1",
+        "tools": [
+          "web_search"
+        ],
+        "tool_filters": {},
+        "response_id": "57cbfb0f-22b8-914c-84cc-058fabdb3f6b",
+        "retrieved_at": "2026-09-06T03:35:38+00:00",
+        "citations": [
+          "https://www.fec.gov/data/committee/C00779595/",
+          "https://rslc.gop/about/",
+          "https://www.opensecrets.org/political-action-committees-pacs/rslc-pac/C00779595/expenditures/2024",
+          "https://rslc.gop/memo-how-the-rslc-flipped-the-virginia-house/",
+          "https://rslc.gop/memo-pa-mail-in-ballot-program-general-election-overview/",
+          "https://projects.propublica.org/527-explorer/orgs/050532524",
+          "https://www.oregonlive.com/politics/2022/10/political-ads-hide-the-identity-of-deep-pocket-donors-complaints-to-elections-office-claim.html",
+          "https://www.influencewatch.org/political-party/republican-state-leadership-committee-rslc/",
+          "https://rslc.gop/rslc-pac-releases-second-ad-of-republican-roadmap-series-targeting-battleground-states-with-top-issues-for-voters/",
+          "https://ballotpedia.org/Republican_State_Leadership_Committee",
+          "https://www.genarchives..com/Towne-Bowditch/g0/p239.htm",
+          "https://apexshield..com/",
+          "https://www.genarchives..com/Towne-Bowditch/g0/p589.htm",
+          "https://www.genarchives..com/Towne-Bowditch/g0/p727.htm",
+          "https://.com/services/tooth-pain-root-canal/about-root-canal-therapy-or-endodontics/"
+        ],
+        "confidence": "high",
+        "review_status": "pending",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "review_note": null
+      }
+    }
+  }
 }
