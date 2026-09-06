@@ -1,0 +1,150 @@
+{
+  "vendor_id": "V-erdman-advertising-marketing-design",
+  "name": "ERDMAN ADVERTISING, MARKETING & DESIGN",
+  "aliases": [
+    "ERDMAN ADVERTISING, MARKETING & DESIGN"
+  ],
+  "normalization": {
+    "basis": "inferred",
+    "rule": "case/punctuation/suffix normalisation + token-set ≥0.92 (numeric tokens must match); aliases file",
+    "source_urls": [
+      "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&payee_name=ERDMAN+ADVERTISING%2C+MARKETING+%26+DESIGN"
+    ],
+    "checked_by": null,
+    "checked_at": null
+  },
+  "total": 4176.58,
+  "count": 6,
+  "media_mix": [
+    {
+      "medium": "production",
+      "amount": 4114.79,
+      "count": 4
+    },
+    {
+      "medium": "mail",
+      "amount": 61.79,
+      "count": 2
+    }
+  ],
+  "spenders": [
+    {
+      "entity_id": "C00172361",
+      "name": "PENNSYLVANIA PRO-LIFE FEDERATION PAC",
+      "amount": 4176.58,
+      "count": 6
+    }
+  ],
+  "targets": [
+    {
+      "candidate_id": "S2PA00661",
+      "support_oppose": "S",
+      "amount": 2088.3
+    },
+    {
+      "candidate_id": "S6PA00217",
+      "support_oppose": "O",
+      "amount": 2088.28
+    }
+  ],
+  "first_date": "2024-04-03",
+  "last_date": "2024-12-19",
+  "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&payee_name=ERDMAN+ADVERTISING%2C+MARKETING+%26+DESIGN",
+  "race_id": "pa-sen-2024",
+  "generated_at": "2026-09-05T20:34:15+00:00",
+  "data_status": "real",
+  "expenditures": [
+    {
+      "ie_id": "C00172361-ie-1865762-SE.16940",
+      "spender_entity_id": "C00172361",
+      "spender_name": "PENNSYLVANIA PRO-LIFE FEDERATION PAC",
+      "candidate_id": "S6PA00217",
+      "candidate_name": "Bob Casey",
+      "support_oppose": "O",
+      "amount": 30.89,
+      "date": "2024-12-19",
+      "purpose": "LATE ADDITIONAL BILL FOR FALL VOTER'S GUIDE MAILING",
+      "payee": "ERDMAN ADVERTISING, MARKETING & DESIGN",
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202501259747761907",
+      "vendor_id": "V-erdman-advertising-marketing-design",
+      "medium": "mail"
+    },
+    {
+      "ie_id": "C00172361-ie-1865762-SE.16939",
+      "spender_entity_id": "C00172361",
+      "spender_name": "PENNSYLVANIA PRO-LIFE FEDERATION PAC",
+      "candidate_id": "S2PA00661",
+      "candidate_name": "Dave McCormick",
+      "support_oppose": "S",
+      "amount": 30.9,
+      "date": "2024-12-19",
+      "purpose": "LATE ADDITIONAL BILL FOR FALL VOTER'S GUIDE MAILING",
+      "payee": "ERDMAN ADVERTISING, MARKETING & DESIGN",
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202501259747761907",
+      "vendor_id": "V-erdman-advertising-marketing-design",
+      "medium": "mail"
+    },
+    {
+      "ie_id": "C00172361-ie-1838929-SE.16891",
+      "spender_entity_id": "C00172361",
+      "spender_name": "PENNSYLVANIA PRO-LIFE FEDERATION PAC",
+      "candidate_id": "S6PA00217",
+      "candidate_name": "Bob Casey",
+      "support_oppose": "O",
+      "amount": 1186.54,
+      "date": "2024-10-15",
+      "purpose": "DESIGN, PRINTING & MAILING OF FALL 2024 GEN ELECTION VOTERS GUIDE",
+      "payee": "ERDMAN ADVERTISING, MARKETING & DESIGN",
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202410249710311106",
+      "vendor_id": "V-erdman-advertising-marketing-design",
+      "medium": "production"
+    },
+    {
+      "ie_id": "C00172361-ie-1838929-SE.16889",
+      "spender_entity_id": "C00172361",
+      "spender_name": "PENNSYLVANIA PRO-LIFE FEDERATION PAC",
+      "candidate_id": "S2PA00661",
+      "candidate_name": "Dave McCormick",
+      "support_oppose": "S",
+      "amount": 1186.55,
+      "date": "2024-10-15",
+      "purpose": "DESIGN, PRINTING & MAILING OF FALL 2024 GEN ELECTION VOTERS GUIDE",
+      "payee": "ERDMAN ADVERTISING, MARKETING & DESIGN",
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202410249710311106",
+      "vendor_id": "V-erdman-advertising-marketing-design",
+      "medium": "production"
+    },
+    {
+      "ie_id": "C00172361-ie-1769054-SE.16775",
+      "spender_entity_id": "C00172361",
+      "spender_name": "PENNSYLVANIA PRO-LIFE FEDERATION PAC",
+      "candidate_id": "S6PA00217",
+      "candidate_name": "Bob Casey",
+      "support_oppose": "O",
+      "amount": 870.85,
+      "date": "2024-04-03",
+      "purpose": "SPRING VOTERS GUIDE PRINTING & DESIGN",
+      "payee": "ERDMAN ADVERTISING, MARKETING & DESIGN",
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202404099627502236",
+      "vendor_id": "V-erdman-advertising-marketing-design",
+      "medium": "production"
+    },
+    {
+      "ie_id": "C00172361-ie-1769054-SE.16773",
+      "spender_entity_id": "C00172361",
+      "spender_name": "PENNSYLVANIA PRO-LIFE FEDERATION PAC",
+      "candidate_id": "S2PA00661",
+      "candidate_name": "Dave McCormick",
+      "support_oppose": "S",
+      "amount": 870.85,
+      "date": "2024-04-03",
+      "purpose": "SPRING VOTERS GUIDE PRINTING & PACKAGE DESIGN",
+      "payee": "ERDMAN ADVERTISING, MARKETING & DESIGN",
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202404099627502234",
+      "vendor_id": "V-erdman-advertising-marketing-design",
+      "medium": "production"
+    }
+  ],
+  "ads": [],
+  "method": "Every Schedule E independent expenditure names a payee. Payee strings are normalised (case, punctuation, legal suffixes, token order), near-duplicates are folded with a difflib ratio ≥ 0.92 when their numeric tokens match, and hand alias rows from data/hand/<race>/vendor_aliases.json override the rule. Medium is classified from the purpose the spender filed (ordered keyword table in campaign_commons/vendors.py). The FEC does not record which buy placed which ad: vendor ↔ ad links are date-window adjacency (or single-digital-vendor inference) from campaign_commons.ads_enrich, each with its basis, and are only `verified` when a person found a source naming both. Totals are the filed amounts, grouped, never re-estimated."
+}

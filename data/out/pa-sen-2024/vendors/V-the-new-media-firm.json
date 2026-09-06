@@ -1,0 +1,146 @@
+{
+  "vendor_id": "V-the-new-media-firm",
+  "name": "THE NEW MEDIA FIRM",
+  "aliases": [
+    "THE NEW MEDIA FIRM"
+  ],
+  "normalization": {
+    "basis": "inferred",
+    "rule": "case/punctuation/suffix normalisation + token-set ≥0.92 (numeric tokens must match); aliases file",
+    "source_urls": [
+      "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&payee_name=THE+NEW+MEDIA+FIRM"
+    ],
+    "checked_by": null,
+    "checked_at": null
+  },
+  "total": 1269991.1,
+  "count": 6,
+  "media_mix": [
+    {
+      "medium": "digital",
+      "amount": 1269991.1,
+      "count": 6
+    }
+  ],
+  "spenders": [
+    {
+      "entity_id": "C00752691",
+      "name": "ONE FOR ALL COMMITTEE",
+      "amount": 1269606.48,
+      "count": 5
+    },
+    {
+      "entity_id": "C90018367",
+      "name": "MOMSRISING TOGETHER",
+      "amount": 384.62,
+      "count": 1
+    }
+  ],
+  "targets": [
+    {
+      "candidate_id": "S6PA00217",
+      "support_oppose": "S",
+      "amount": 1269991.1
+    }
+  ],
+  "first_date": "2024-09-06",
+  "last_date": "2024-10-24",
+  "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&payee_name=THE+NEW+MEDIA+FIRM",
+  "race_id": "pa-sen-2024",
+  "generated_at": "2026-09-05T20:34:15+00:00",
+  "data_status": "real",
+  "expenditures": [
+    {
+      "ie_id": "C90018367-ie-1870240-F57.4650",
+      "spender_entity_id": "C90018367",
+      "spender_name": "MOMSRISING TOGETHER",
+      "candidate_id": "S6PA00217",
+      "candidate_name": "Bob Casey",
+      "support_oppose": "S",
+      "amount": 384.62,
+      "date": "2024-10-24",
+      "purpose": "SOCIAL MEDIA AD BUY",
+      "payee": "THE NEW MEDIA FIRM",
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202501319748780440",
+      "vendor_id": "V-the-new-media-firm",
+      "medium": "digital"
+    },
+    {
+      "ie_id": "C00752691-ie-1871369-500707864",
+      "spender_entity_id": "C00752691",
+      "spender_name": "ONE FOR ALL COMMITTEE",
+      "candidate_id": "S6PA00217",
+      "candidate_name": "Bob Casey",
+      "support_oppose": "S",
+      "amount": 65969.76,
+      "date": "2024-10-08",
+      "purpose": "DIGITAL ADVERTISING",
+      "payee": "THE NEW MEDIA FIRM",
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202501319748876955",
+      "vendor_id": "V-the-new-media-firm",
+      "medium": "digital"
+    },
+    {
+      "ie_id": "C00752691-ie-1871335-500699033",
+      "spender_entity_id": "C00752691",
+      "spender_name": "ONE FOR ALL COMMITTEE",
+      "candidate_id": "S6PA00217",
+      "candidate_name": "Bob Casey",
+      "support_oppose": "S",
+      "amount": 1143455.0,
+      "date": "2024-09-27",
+      "purpose": "DIGITAL ADVERTISING",
+      "payee": "THE NEW MEDIA FIRM",
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202501319748875427",
+      "vendor_id": "V-the-new-media-firm",
+      "medium": "digital"
+    },
+    {
+      "ie_id": "C00752691-ie-1871335-500698198",
+      "spender_entity_id": "C00752691",
+      "spender_name": "ONE FOR ALL COMMITTEE",
+      "candidate_id": "S6PA00217",
+      "candidate_name": "Bob Casey",
+      "support_oppose": "S",
+      "amount": 16149.88,
+      "date": "2024-09-13",
+      "purpose": "DIGITAL ADVERTISING",
+      "payee": "THE NEW MEDIA FIRM",
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202501319748875420",
+      "vendor_id": "V-the-new-media-firm",
+      "medium": "digital"
+    },
+    {
+      "ie_id": "C00752691-ie-1871335-500693386",
+      "spender_entity_id": "C00752691",
+      "spender_name": "ONE FOR ALL COMMITTEE",
+      "candidate_id": "S6PA00217",
+      "candidate_name": "Bob Casey",
+      "support_oppose": "S",
+      "amount": 16283.0,
+      "date": "2024-09-06",
+      "purpose": "DIGITAL ADVERTISING",
+      "payee": "THE NEW MEDIA FIRM",
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202501319748875414",
+      "vendor_id": "V-the-new-media-firm",
+      "medium": "digital"
+    },
+    {
+      "ie_id": "C00752691-ie-1871335-500696269",
+      "spender_entity_id": "C00752691",
+      "spender_name": "ONE FOR ALL COMMITTEE",
+      "candidate_id": "S6PA00217",
+      "candidate_name": "Bob Casey",
+      "support_oppose": "S",
+      "amount": 27748.84,
+      "date": "2024-09-06",
+      "purpose": "DIGITAL ADVERTISING",
+      "payee": "THE NEW MEDIA FIRM",
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202501319748875416",
+      "vendor_id": "V-the-new-media-firm",
+      "medium": "digital"
+    }
+  ],
+  "ads": [],
+  "method": "Every Schedule E independent expenditure names a payee. Payee strings are normalised (case, punctuation, legal suffixes, token order), near-duplicates are folded with a difflib ratio ≥ 0.92 when their numeric tokens match, and hand alias rows from data/hand/<race>/vendor_aliases.json override the rule. Medium is classified from the purpose the spender filed (ordered keyword table in campaign_commons/vendors.py). The FEC does not record which buy placed which ad: vendor ↔ ad links are date-window adjacency (or single-digital-vendor inference) from campaign_commons.ads_enrich, each with its basis, and are only `verified` when a person found a source naming both. Totals are the filed amounts, grouped, never re-estimated."
+}

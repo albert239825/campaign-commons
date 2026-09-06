@@ -1,0 +1,392 @@
+{
+  "$ref": "#/definitions/vendors",
+  "definitions": {
+    "vendors": {
+      "type": "object",
+      "properties": {
+        "race_id": {
+          "type": "string"
+        },
+        "generated_at": {
+          "type": "string"
+        },
+        "data_status": {
+          "type": "string",
+          "enum": [
+            "real",
+            "mock",
+            "partial"
+          ]
+        },
+        "vendors": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "vendor_id": {
+                "type": "string"
+              },
+              "name": {
+                "type": "string"
+              },
+              "aliases": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "normalization": {
+                "anyOf": [
+                  {
+                    "type": "object",
+                    "properties": {
+                      "basis": {
+                        "type": "string",
+                        "const": "verified"
+                      },
+                      "rule": {
+                        "type": "string",
+                        "minLength": 1
+                      },
+                      "source_urls": {
+                        "type": "array",
+                        "items": {
+                          "type": "string",
+                          "format": "uri"
+                        },
+                        "minItems": 1
+                      },
+                      "checked_by": {
+                        "type": "string",
+                        "minLength": 1
+                      },
+                      "checked_at": {
+                        "type": "string",
+                        "minLength": 1
+                      }
+                    },
+                    "required": [
+                      "basis",
+                      "rule",
+                      "source_urls",
+                      "checked_by",
+                      "checked_at"
+                    ],
+                    "additionalProperties": false
+                  },
+                  {
+                    "type": "object",
+                    "properties": {
+                      "basis": {
+                        "type": "string",
+                        "enum": [
+                          "filed",
+                          "inferred"
+                        ]
+                      },
+                      "rule": {
+                        "type": "string",
+                        "minLength": 1
+                      },
+                      "source_urls": {
+                        "type": "array",
+                        "items": {
+                          "type": "string",
+                          "format": "uri"
+                        }
+                      },
+                      "checked_by": {
+                        "type": [
+                          "string",
+                          "null"
+                        ]
+                      },
+                      "checked_at": {
+                        "type": [
+                          "string",
+                          "null"
+                        ]
+                      }
+                    },
+                    "required": [
+                      "basis",
+                      "rule",
+                      "source_urls",
+                      "checked_by",
+                      "checked_at"
+                    ],
+                    "additionalProperties": false
+                  }
+                ]
+              },
+              "total": {
+                "type": "number"
+              },
+              "count": {
+                "type": "integer"
+              },
+              "media_mix": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "medium": {
+                      "type": "string",
+                      "enum": [
+                        "tv",
+                        "radio",
+                        "digital",
+                        "mail",
+                        "phones",
+                        "production",
+                        "consulting",
+                        "field",
+                        "other"
+                      ]
+                    },
+                    "amount": {
+                      "type": "number"
+                    },
+                    "count": {
+                      "type": "integer"
+                    }
+                  },
+                  "required": [
+                    "medium",
+                    "amount",
+                    "count"
+                  ],
+                  "additionalProperties": false
+                }
+              },
+              "spenders": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "entity_id": {
+                      "type": "string"
+                    },
+                    "name": {
+                      "type": "string"
+                    },
+                    "amount": {
+                      "type": "number"
+                    },
+                    "count": {
+                      "type": "integer"
+                    }
+                  },
+                  "required": [
+                    "entity_id",
+                    "name",
+                    "amount",
+                    "count"
+                  ],
+                  "additionalProperties": false
+                }
+              },
+              "targets": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "candidate_id": {
+                      "type": "string"
+                    },
+                    "support_oppose": {
+                      "type": "string",
+                      "enum": [
+                        "S",
+                        "O"
+                      ]
+                    },
+                    "amount": {
+                      "type": "number"
+                    }
+                  },
+                  "required": [
+                    "candidate_id",
+                    "support_oppose",
+                    "amount"
+                  ],
+                  "additionalProperties": false
+                }
+              },
+              "first_date": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "last_date": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "source_url": {
+                "type": "string",
+                "format": "uri"
+              }
+            },
+            "required": [
+              "vendor_id",
+              "name",
+              "aliases",
+              "normalization",
+              "total",
+              "count",
+              "media_mix",
+              "spenders",
+              "targets",
+              "first_date",
+              "last_date",
+              "source_url"
+            ],
+            "additionalProperties": false
+          }
+        },
+        "total": {
+          "type": "number"
+        },
+        "by_medium": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "medium": {
+                "type": "string",
+                "enum": [
+                  "tv",
+                  "radio",
+                  "digital",
+                  "mail",
+                  "phones",
+                  "production",
+                  "consulting",
+                  "field",
+                  "other"
+                ]
+              },
+              "amount": {
+                "type": "number"
+              },
+              "count": {
+                "type": "integer"
+              }
+            },
+            "required": [
+              "medium",
+              "amount",
+              "count"
+            ],
+            "additionalProperties": false
+          }
+        },
+        "medium_basis": {
+          "anyOf": [
+            {
+              "type": "object",
+              "properties": {
+                "basis": {
+                  "type": "string",
+                  "const": "verified"
+                },
+                "rule": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "source_urls": {
+                  "type": "array",
+                  "items": {
+                    "type": "string",
+                    "format": "uri"
+                  },
+                  "minItems": 1
+                },
+                "checked_by": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "checked_at": {
+                  "type": "string",
+                  "minLength": 1
+                }
+              },
+              "required": [
+                "basis",
+                "rule",
+                "source_urls",
+                "checked_by",
+                "checked_at"
+              ],
+              "additionalProperties": false
+            },
+            {
+              "type": "object",
+              "properties": {
+                "basis": {
+                  "type": "string",
+                  "enum": [
+                    "filed",
+                    "inferred"
+                  ]
+                },
+                "rule": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "source_urls": {
+                  "type": "array",
+                  "items": {
+                    "type": "string",
+                    "format": "uri"
+                  }
+                },
+                "checked_by": {
+                  "type": [
+                    "string",
+                    "null"
+                  ]
+                },
+                "checked_at": {
+                  "type": [
+                    "string",
+                    "null"
+                  ]
+                }
+              },
+              "required": [
+                "basis",
+                "rule",
+                "source_urls",
+                "checked_by",
+                "checked_at"
+              ],
+              "additionalProperties": false
+            }
+          ]
+        },
+        "notes": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      },
+      "required": [
+        "race_id",
+        "generated_at",
+        "data_status",
+        "vendors",
+        "total",
+        "by_medium",
+        "medium_basis",
+        "notes"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "$schema": "http://json-schema.org/draft-07/schema#"
+}

@@ -1,4 +1,4 @@
-import type { ChainNode } from "@citizen-gotham/contracts";
+import type { ChainNode } from "@campaign-commons/contracts";
 import { donorKey, routes } from "@/lib/format";
 
 /** Which chain nodes have a page of their own in this race. */
@@ -10,8 +10,15 @@ export type NodeLinks = {
   donorKeys: ReadonlySet<string>;
 };
 
-/** Internal page for the node when one exists (entity page, else donor forward view), otherwise null. */
-export function pageHref(n: Pick<ChainNode, "id" | "kind">, links: NodeLinks): string | null {
+/**
+ * Internal page for the node when one exists, otherwise null. Spending-side nodes carry their own `href` from the
+ * pipeline (vendor page, ad page, dossier); funding-side nodes resolve to the entity page or donor forward view.
+ */
+export function pageHref(
+  n: Pick<ChainNode, "id" | "kind" | "href">,
+  links: NodeLinks,
+): string | null {
+  if (n.href) return n.href;
   if (links.entityIds.has(n.id)) return routes.entity(links.raceId, n.id);
   if (n.kind === "individual" || n.kind === "organization") {
     const key = donorKey(n.id);

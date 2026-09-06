@@ -1,0 +1,200 @@
+{
+  "vendor_id": "V-americans-for-prosperity",
+  "name": "AMERICANS FOR PROSPERITY",
+  "aliases": [
+    "AMERICANS FOR PROSPERITY"
+  ],
+  "normalization": {
+    "basis": "inferred",
+    "rule": "case/punctuation/suffix normalisation + token-set ≥0.92 (numeric tokens must match); aliases file",
+    "source_urls": [
+      "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&payee_name=AMERICANS+FOR+PROSPERITY"
+    ],
+    "checked_by": null,
+    "checked_at": null
+  },
+  "total": 41738.0,
+  "count": 10,
+  "media_mix": [
+    {
+      "medium": "field",
+      "amount": 41738.0,
+      "count": 10
+    }
+  ],
+  "spenders": [
+    {
+      "entity_id": "C00687103",
+      "name": "AMERICANS FOR PROSPERITY ACTION, INC. (AFP ACTION) DBA CVA ACTION AND DBA LIBRE ACTION",
+      "amount": 41738.0,
+      "count": 10
+    }
+  ],
+  "targets": [
+    {
+      "candidate_id": "S2PA00661",
+      "support_oppose": "S",
+      "amount": 41738.0
+    }
+  ],
+  "first_date": "2024-04-22",
+  "last_date": "2024-09-30",
+  "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&payee_name=AMERICANS+FOR+PROSPERITY",
+  "race_id": "pa-sen-2024",
+  "generated_at": "2026-09-05T20:34:15+00:00",
+  "data_status": "real",
+  "expenditures": [
+    {
+      "ie_id": "C00687103-ie-1833909-SE24.31525",
+      "spender_entity_id": "C00687103",
+      "spender_name": "AMERICANS FOR PROSPERITY ACTION, INC. (AFP ACTION) DBA CVA ACTION AND DBA LIBRE ACTION",
+      "candidate_id": "S2PA00661",
+      "candidate_name": "Dave McCormick",
+      "support_oppose": "S",
+      "amount": 5000.0,
+      "date": "2024-09-30",
+      "purpose": "CANVASSING",
+      "payee": "AMERICANS FOR PROSPERITY",
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202410209709511547",
+      "vendor_id": "V-americans-for-prosperity",
+      "medium": "field"
+    },
+    {
+      "ie_id": "C00687103-ie-1818089-SE24.30980",
+      "spender_entity_id": "C00687103",
+      "spender_name": "AMERICANS FOR PROSPERITY ACTION, INC. (AFP ACTION) DBA CVA ACTION AND DBA LIBRE ACTION",
+      "candidate_id": "S2PA00661",
+      "candidate_name": "Dave McCormick",
+      "support_oppose": "S",
+      "amount": 5000.0,
+      "date": "2024-08-29",
+      "purpose": "CANVASSING",
+      "payee": "AMERICANS FOR PROSPERITY",
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202409209684604210",
+      "vendor_id": "V-americans-for-prosperity",
+      "medium": "field"
+    },
+    {
+      "ie_id": "C00687103-ie-1812320-SE24.29518",
+      "spender_entity_id": "C00687103",
+      "spender_name": "AMERICANS FOR PROSPERITY ACTION, INC. (AFP ACTION) DBA CVA ACTION AND DBA LIBRE ACTION",
+      "candidate_id": "S2PA00661",
+      "candidate_name": "Dave McCormick",
+      "support_oppose": "S",
+      "amount": 5000.0,
+      "date": "2024-07-16",
+      "purpose": "CANVASSING",
+      "payee": "AMERICANS FOR PROSPERITY",
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202408209674341964",
+      "vendor_id": "V-americans-for-prosperity",
+      "medium": "field"
+    },
+    {
+      "ie_id": "C00687103-ie-1805180-SE24.29405",
+      "spender_entity_id": "C00687103",
+      "spender_name": "AMERICANS FOR PROSPERITY ACTION, INC. (AFP ACTION) DBA CVA ACTION AND DBA LIBRE ACTION",
+      "candidate_id": "S2PA00661",
+      "candidate_name": "Dave McCormick",
+      "support_oppose": "S",
+      "amount": 5000.0,
+      "date": "2024-06-28",
+      "purpose": "CANVASSING",
+      "payee": "AMERICANS FOR PROSPERITY",
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202407209665370804",
+      "vendor_id": "V-americans-for-prosperity",
+      "medium": "field"
+    },
+    {
+      "ie_id": "C00687103-ie-1791790-SE24.28125",
+      "spender_entity_id": "C00687103",
+      "spender_name": "AMERICANS FOR PROSPERITY ACTION, INC. (AFP ACTION) DBA CVA ACTION AND DBA LIBRE ACTION",
+      "candidate_id": "S2PA00661",
+      "candidate_name": "Dave McCormick",
+      "support_oppose": "S",
+      "amount": 1777.22,
+      "date": "2024-05-16",
+      "purpose": "CANVASSING",
+      "payee": "AMERICANS FOR PROSPERITY",
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202406209652364712",
+      "vendor_id": "V-americans-for-prosperity",
+      "medium": "field"
+    },
+    {
+      "ie_id": "C00687103-ie-1791790-SE24.28017",
+      "spender_entity_id": "C00687103",
+      "spender_name": "AMERICANS FOR PROSPERITY ACTION, INC. (AFP ACTION) DBA CVA ACTION AND DBA LIBRE ACTION",
+      "candidate_id": "S2PA00661",
+      "candidate_name": "Dave McCormick",
+      "support_oppose": "S",
+      "amount": 5000.0,
+      "date": "2024-05-06",
+      "purpose": "CANVASSING",
+      "payee": "AMERICANS FOR PROSPERITY",
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202406209652364709",
+      "vendor_id": "V-americans-for-prosperity",
+      "medium": "field"
+    },
+    {
+      "ie_id": "C00687103-ie-1791790-SE24.28001",
+      "spender_entity_id": "C00687103",
+      "spender_name": "AMERICANS FOR PROSPERITY ACTION, INC. (AFP ACTION) DBA CVA ACTION AND DBA LIBRE ACTION",
+      "candidate_id": "S2PA00661",
+      "candidate_name": "Dave McCormick",
+      "support_oppose": "S",
+      "amount": 3554.44,
+      "date": "2024-05-01",
+      "purpose": "CANVASSING",
+      "payee": "AMERICANS FOR PROSPERITY",
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202406209652364706",
+      "vendor_id": "V-americans-for-prosperity",
+      "medium": "field"
+    },
+    {
+      "ie_id": "C00687103-ie-1785282-SE24.27930",
+      "spender_entity_id": "C00687103",
+      "spender_name": "AMERICANS FOR PROSPERITY ACTION, INC. (AFP ACTION) DBA CVA ACTION AND DBA LIBRE ACTION",
+      "candidate_id": "S2PA00661",
+      "candidate_name": "Dave McCormick",
+      "support_oppose": "S",
+      "amount": 1777.22,
+      "date": "2024-04-30",
+      "purpose": "CANVASSING",
+      "payee": "AMERICANS FOR PROSPERITY",
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202405209648569199",
+      "vendor_id": "V-americans-for-prosperity",
+      "medium": "field"
+    },
+    {
+      "ie_id": "C00687103-ie-1785282-SE24.27906",
+      "spender_entity_id": "C00687103",
+      "spender_name": "AMERICANS FOR PROSPERITY ACTION, INC. (AFP ACTION) DBA CVA ACTION AND DBA LIBRE ACTION",
+      "candidate_id": "S2PA00661",
+      "candidate_name": "Dave McCormick",
+      "support_oppose": "S",
+      "amount": 8000.0,
+      "date": "2024-04-30",
+      "purpose": "CANVASSING",
+      "payee": "AMERICANS FOR PROSPERITY",
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202405209648569194",
+      "vendor_id": "V-americans-for-prosperity",
+      "medium": "field"
+    },
+    {
+      "ie_id": "C00687103-ie-1785282-SE24.26800",
+      "spender_entity_id": "C00687103",
+      "spender_name": "AMERICANS FOR PROSPERITY ACTION, INC. (AFP ACTION) DBA CVA ACTION AND DBA LIBRE ACTION",
+      "candidate_id": "S2PA00661",
+      "candidate_name": "Dave McCormick",
+      "support_oppose": "S",
+      "amount": 1629.12,
+      "date": "2024-04-22",
+      "purpose": "CANVASSING",
+      "payee": "AMERICANS FOR PROSPERITY",
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202405209648569192",
+      "vendor_id": "V-americans-for-prosperity",
+      "medium": "field"
+    }
+  ],
+  "ads": [],
+  "method": "Every Schedule E independent expenditure names a payee. Payee strings are normalised (case, punctuation, legal suffixes, token order), near-duplicates are folded with a difflib ratio ≥ 0.92 when their numeric tokens match, and hand alias rows from data/hand/<race>/vendor_aliases.json override the rule. Medium is classified from the purpose the spender filed (ordered keyword table in campaign_commons/vendors.py). The FEC does not record which buy placed which ad: vendor ↔ ad links are date-window adjacency (or single-digital-vendor inference) from campaign_commons.ads_enrich, each with its basis, and are only `verified` when a person found a source naming both. Totals are the filed amounts, grouped, never re-estimated."
+}

@@ -56,7 +56,9 @@
       "date": "2024-09-16",
       "purpose": "DIGITAL POLITICAL AD",
       "payee": "GOOGLEADS",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202410079684813162"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202410079684813162",
+      "vendor_id": "V-google",
+      "medium": "digital"
     },
     {
       "ie_id": "C00740514-ie-1843309-SE.4705",
@@ -69,7 +71,9 @@
       "date": "2024-10-16",
       "purpose": "DIGITAL POLITICAL AD",
       "payee": "GOOGLEADS",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202410269719660475"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202410269719660475",
+      "vendor_id": "V-google",
+      "medium": "digital"
     },
     {
       "ie_id": "C00740514-ie-1820608-SE.4590",
@@ -82,7 +86,9 @@
       "date": "2024-04-29",
       "purpose": "DIGITAL POLITICAL AD",
       "payee": "GOOGLEADS",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202410059684795528"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202410059684795528",
+      "vendor_id": "V-google",
+      "medium": "digital"
     }
   ],
   "flags": [
@@ -95,5 +101,30 @@
   ],
   "has_chain": true,
   "source_url": "https://www.fec.gov/data/committee/C00740514/?cycle=2024",
-  "data_status": "real"
+  "data_status": "real",
+  "vendors": [
+    {
+      "vendor_id": "V-google",
+      "name": "Google",
+      "amount": 612.58,
+      "count": 3,
+      "media_mix": [
+        {
+          "medium": "digital",
+          "amount": 612.58,
+          "count": 3
+        }
+      ],
+      "targets": [
+        {
+          "candidate_id": "S6PA00217",
+          "support_oppose": "O",
+          "amount": 612.58
+        }
+      ],
+      "first_date": "2024-04-29",
+      "last_date": "2024-10-16",
+      "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00740514&payee_name=GOOGLEADS"
+    }
+  ]
 }

@@ -40,7 +40,9 @@
       "date": "2024-11-04",
       "purpose": "CANVASSING CAST YOUR VOTE",
       "payee": "POPULATION CONNECTION ACTION FUND",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202502059753258161"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202502059753258161",
+      "vendor_id": "V-population-connection-action-fund",
+      "medium": "field"
     },
     {
       "ie_id": "C90023037-ie-1874773-F57.000018",
@@ -53,7 +55,9 @@
       "date": "2024-11-02",
       "purpose": "CANVASSING CAST YOUR VOTE",
       "payee": "POPULATION CONNECTION ACTION FUND",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202502059753258160"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202502059753258160",
+      "vendor_id": "V-population-connection-action-fund",
+      "medium": "field"
     },
     {
       "ie_id": "C90023037-ie-1874773-F57.000019",
@@ -66,7 +70,9 @@
       "date": "2024-11-03",
       "purpose": "CANVASSING CAST YOUR VOTE",
       "payee": "POPULATION CONNECTION ACTION FUND",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202502059753258161"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202502059753258161",
+      "vendor_id": "V-population-connection-action-fund",
+      "medium": "field"
     },
     {
       "ie_id": "C90023037-ie-1874773-F57.000021",
@@ -79,7 +85,9 @@
       "date": "2024-11-05",
       "purpose": "CANVASSING CAST YOUR VOTE",
       "payee": "POPULATION CONNECTION ACTION FUND",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202502059753258161"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202502059753258161",
+      "vendor_id": "V-population-connection-action-fund",
+      "medium": "field"
     },
     {
       "ie_id": "C90023037-ie-1874773-F57.000017",
@@ -92,7 +100,9 @@
       "date": "2024-11-02",
       "purpose": "CANVASSING CAST YOUR VOTE",
       "payee": "POPULATION CONNECTION ACTION FUND",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202502059753258160"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202502059753258160",
+      "vendor_id": "V-population-connection-action-fund",
+      "medium": "field"
     }
   ],
   "flags": [
@@ -105,5 +115,30 @@
   ],
   "has_chain": false,
   "source_url": "https://www.fec.gov/data/committee/C90023037/?cycle=2024",
-  "data_status": "real"
+  "data_status": "real",
+  "vendors": [
+    {
+      "vendor_id": "V-population-connection-action-fund",
+      "name": "POPULATION CONNECTION ACTION FUND",
+      "amount": 2370.92,
+      "count": 5,
+      "media_mix": [
+        {
+          "medium": "field",
+          "amount": 2370.92,
+          "count": 5
+        }
+      ],
+      "targets": [
+        {
+          "candidate_id": "S6PA00217",
+          "support_oppose": "S",
+          "amount": 2370.92
+        }
+      ],
+      "first_date": "2024-11-02",
+      "last_date": "2024-11-05",
+      "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C90023037&payee_name=POPULATION+CONNECTION+ACTION+FUND"
+    }
+  ]
 }

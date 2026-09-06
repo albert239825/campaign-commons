@@ -371,7 +371,9 @@
       "date": "2024-10-18",
       "purpose": "PRINTING",
       "payee": "RED MAVERICK MEDIA LLC",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202412059738029938"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202412059738029938",
+      "vendor_id": "V-red-maverick-media",
+      "medium": "mail"
     }
   ],
   "flags": [
@@ -384,5 +386,30 @@
   ],
   "has_chain": true,
   "source_url": "https://www.fec.gov/data/committee/C00879510/?cycle=2024",
-  "data_status": "real"
+  "data_status": "real",
+  "vendors": [
+    {
+      "vendor_id": "V-red-maverick-media",
+      "name": "RED MAVERICK MEDIA LLC",
+      "amount": 6692.6,
+      "count": 1,
+      "media_mix": [
+        {
+          "medium": "mail",
+          "amount": 6692.6,
+          "count": 1
+        }
+      ],
+      "targets": [
+        {
+          "candidate_id": "S2PA00661",
+          "support_oppose": "S",
+          "amount": 6692.6
+        }
+      ],
+      "first_date": "2024-10-18",
+      "last_date": "2024-10-18",
+      "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00879510&payee_name=RED+MAVERICK+MEDIA+LLC"
+    }
+  ]
 }

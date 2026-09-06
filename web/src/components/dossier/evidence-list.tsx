@@ -1,4 +1,4 @@
-import { EVIDENCE_KINDS, type Evidence, type EvidenceKind } from "@citizen-gotham/contracts";
+import { EVIDENCE_KINDS, type Evidence, type EvidenceKind } from "@campaign-commons/contracts";
 import { date } from "@/lib/format";
 import { Chip, SourceLink } from "@/components/ui";
 

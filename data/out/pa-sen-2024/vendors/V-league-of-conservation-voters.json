@@ -1,0 +1,476 @@
+{
+  "vendor_id": "V-league-of-conservation-voters",
+  "name": "LEAGUE OF CONSERVATION VOTERS, INC.",
+  "aliases": [
+    "LEAGUE OF CONSERVATION VOTERS, INC."
+  ],
+  "normalization": {
+    "basis": "inferred",
+    "rule": "case/punctuation/suffix normalisation + token-set ≥0.92 (numeric tokens must match); aliases file",
+    "source_urls": [
+      "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&payee_name=LEAGUE+OF+CONSERVATION+VOTERS%2C+INC."
+    ],
+    "checked_by": null,
+    "checked_at": null
+  },
+  "total": 1990.6,
+  "count": 24,
+  "media_mix": [
+    {
+      "medium": "digital",
+      "amount": 1659.9,
+      "count": 16
+    },
+    {
+      "medium": "phones",
+      "amount": 138.07,
+      "count": 1
+    },
+    {
+      "medium": "other",
+      "amount": 110.85,
+      "count": 5
+    },
+    {
+      "medium": "production",
+      "amount": 81.78,
+      "count": 2
+    }
+  ],
+  "spenders": [
+    {
+      "entity_id": "C00486845",
+      "name": "LCV VICTORY FUND",
+      "amount": 1887.01,
+      "count": 13
+    },
+    {
+      "entity_id": "C00802389",
+      "name": "GIVEGREEN UNITED ACTION",
+      "amount": 103.59,
+      "count": 11
+    }
+  ],
+  "targets": [
+    {
+      "candidate_id": "S2PA00661",
+      "support_oppose": "O",
+      "amount": 1801.54
+    },
+    {
+      "candidate_id": "S6PA00217",
+      "support_oppose": "S",
+      "amount": 189.06
+    }
+  ],
+  "first_date": "2023-01-25",
+  "last_date": "2024-10-31",
+  "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&payee_name=LEAGUE+OF+CONSERVATION+VOTERS%2C+INC.",
+  "race_id": "pa-sen-2024",
+  "generated_at": "2026-09-05T20:34:15+00:00",
+  "data_status": "real",
+  "expenditures": [
+    {
+      "ie_id": "C00486845-ie-1945886-500464194",
+      "spender_entity_id": "C00486845",
+      "spender_name": "LCV VICTORY FUND",
+      "candidate_id": "S2PA00661",
+      "candidate_name": "Dave McCormick",
+      "support_oppose": "O",
+      "amount": 315.87,
+      "date": "2024-10-31",
+      "purpose": "STAFF TIME AND EMAILS FOR ONLINE MESSAGE (VIA DRAWDOWN)",
+      "payee": "LEAGUE OF CONSERVATION VOTERS, INC.",
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202602119834308700",
+      "vendor_id": "V-league-of-conservation-voters",
+      "medium": "digital"
+    },
+    {
+      "ie_id": "C00486845-ie-1945886-500464060",
+      "spender_entity_id": "C00486845",
+      "spender_name": "LCV VICTORY FUND",
+      "candidate_id": "S6PA00217",
+      "candidate_name": "Bob Casey",
+      "support_oppose": "S",
+      "amount": 16.99,
+      "date": "2024-10-29",
+      "purpose": "STAFF TIME FOR PRESS RELEASE (VIA DRAWDOWN)",
+      "payee": "LEAGUE OF CONSERVATION VOTERS, INC.",
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202602119834308696",
+      "vendor_id": "V-league-of-conservation-voters",
+      "medium": "other"
+    },
+    {
+      "ie_id": "C00486845-ie-1945886-500462285",
+      "spender_entity_id": "C00486845",
+      "spender_name": "LCV VICTORY FUND",
+      "candidate_id": "S2PA00661",
+      "candidate_name": "Dave McCormick",
+      "support_oppose": "O",
+      "amount": 77.57,
+      "date": "2024-10-21",
+      "purpose": "STAFF TIME FOR VIDEO PRODUCTION (VIA DRAWDOWN)",
+      "payee": "LEAGUE OF CONSERVATION VOTERS, INC.",
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202602119834308685",
+      "vendor_id": "V-league-of-conservation-voters",
+      "medium": "production"
+    },
+    {
+      "ie_id": "C00486845-ie-1945886-500462277",
+      "spender_entity_id": "C00486845",
+      "spender_name": "LCV VICTORY FUND",
+      "candidate_id": "S2PA00661",
+      "candidate_name": "Dave McCormick",
+      "support_oppose": "O",
+      "amount": 313.33,
+      "date": "2024-10-18",
+      "purpose": "STAFF TIME AND EMAILS FOR ONLINE MESSAGE (VIA DRAWDOWN)",
+      "payee": "LEAGUE OF CONSERVATION VOTERS, INC.",
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202602119834308684",
+      "vendor_id": "V-league-of-conservation-voters",
+      "medium": "digital"
+    },
+    {
+      "ie_id": "C00486845-ie-1841516-500460547",
+      "spender_entity_id": "C00486845",
+      "spender_name": "LCV VICTORY FUND",
+      "candidate_id": "S2PA00661",
+      "candidate_name": "Dave McCormick",
+      "support_oppose": "O",
+      "amount": 326.48,
+      "date": "2024-10-11",
+      "purpose": "STAFF TIME AND EMAILS FOR ONLINE MESSAGE (VIA DRAWDOWN)",
+      "payee": "LEAGUE OF CONSERVATION VOTERS, INC.",
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202410249713455110",
+      "vendor_id": "V-league-of-conservation-voters",
+      "medium": "digital"
+    },
+    {
+      "ie_id": "C00802389-ie-1838309-500462104",
+      "spender_entity_id": "C00802389",
+      "spender_name": "GIVEGREEN UNITED ACTION",
+      "candidate_id": "S6PA00217",
+      "candidate_name": "Bob Casey",
+      "support_oppose": "S",
+      "amount": 10.0,
+      "date": "2024-10-07",
+      "purpose": "STAFF TIME AND EMAILS FOR ONLINE MESSAGE (VIA DRAWDOWN)",
+      "payee": "LEAGUE OF CONSERVATION VOTERS, INC.",
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202410249710209716",
+      "vendor_id": "V-league-of-conservation-voters",
+      "medium": "digital"
+    },
+    {
+      "ie_id": "C00486845-ie-1841516-500458327",
+      "spender_entity_id": "C00486845",
+      "spender_name": "LCV VICTORY FUND",
+      "candidate_id": "S6PA00217",
+      "candidate_name": "Bob Casey",
+      "support_oppose": "S",
+      "amount": 63.7,
+      "date": "2024-10-03",
+      "purpose": "STAFF TIME FOR PRESS RELEASE (VIA DRAWDOWN)",
+      "payee": "LEAGUE OF CONSERVATION VOTERS, INC.",
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202410249713455104",
+      "vendor_id": "V-league-of-conservation-voters",
+      "medium": "other"
+    },
+    {
+      "ie_id": "C00486845-ie-1833718-500457180",
+      "spender_entity_id": "C00486845",
+      "spender_name": "LCV VICTORY FUND",
+      "candidate_id": "S2PA00661",
+      "candidate_name": "Dave McCormick",
+      "support_oppose": "O",
+      "amount": 4.21,
+      "date": "2024-09-24",
+      "purpose": "STAFF TIME FOR VIDEO PRODUCTION (VIA DRAWDOWN)",
+      "payee": "LEAGUE OF CONSERVATION VOTERS, INC.",
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202410209700747448",
+      "vendor_id": "V-league-of-conservation-voters",
+      "medium": "production"
+    },
+    {
+      "ie_id": "C00486845-ie-1833718-500457150",
+      "spender_entity_id": "C00486845",
+      "spender_name": "LCV VICTORY FUND",
+      "candidate_id": "S2PA00661",
+      "candidate_name": "Dave McCormick",
+      "support_oppose": "O",
+      "amount": 7.21,
+      "date": "2024-09-19",
+      "purpose": "STAFF TIME FOR PRESS RELEASE (VIA DRAWDOWN)",
+      "payee": "LEAGUE OF CONSERVATION VOTERS, INC.",
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202410209700747428",
+      "vendor_id": "V-league-of-conservation-voters",
+      "medium": "other"
+    },
+    {
+      "ie_id": "C00486845-ie-1833718-500457144",
+      "spender_entity_id": "C00486845",
+      "spender_name": "LCV VICTORY FUND",
+      "candidate_id": "S2PA00661",
+      "candidate_name": "Dave McCormick",
+      "support_oppose": "O",
+      "amount": 46.24,
+      "date": "2024-09-19",
+      "purpose": "STAFF TIME AND EMAILS FOR ONLINE MESSAGE (VIA DRAWDOWN)",
+      "payee": "LEAGUE OF CONSERVATION VOTERS, INC.",
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202410209700747425",
+      "vendor_id": "V-league-of-conservation-voters",
+      "medium": "digital"
+    },
+    {
+      "ie_id": "C00486845-ie-1833718-500457186",
+      "spender_entity_id": "C00486845",
+      "spender_name": "LCV VICTORY FUND",
+      "candidate_id": "S2PA00661",
+      "candidate_name": "Dave McCormick",
+      "support_oppose": "O",
+      "amount": 138.07,
+      "date": "2024-09-19",
+      "purpose": "STAFF TIME AND TEXT MESSAGES (VIA DRAWDOWN)",
+      "payee": "LEAGUE OF CONSERVATION VOTERS, INC.",
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202410209700747431",
+      "vendor_id": "V-league-of-conservation-voters",
+      "medium": "phones"
+    },
+    {
+      "ie_id": "C00486845-ie-1833718-500457136",
+      "spender_entity_id": "C00486845",
+      "spender_name": "LCV VICTORY FUND",
+      "candidate_id": "S2PA00661",
+      "candidate_name": "Dave McCormick",
+      "support_oppose": "O",
+      "amount": 554.39,
+      "date": "2024-09-10",
+      "purpose": "STAFF TIME AND EMAILS FOR ONLINE MESSAGE (VIA DRAWDOWN)",
+      "payee": "LEAGUE OF CONSERVATION VOTERS, INC.",
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202410209700747406",
+      "vendor_id": "V-league-of-conservation-voters",
+      "medium": "digital"
+    },
+    {
+      "ie_id": "C00486845-ie-1833718-500457110",
+      "spender_entity_id": "C00486845",
+      "spender_name": "LCV VICTORY FUND",
+      "candidate_id": "S6PA00217",
+      "candidate_name": "Bob Casey",
+      "support_oppose": "S",
+      "amount": 4.78,
+      "date": "2024-09-06",
+      "purpose": "STAFF TIME FOR PRESS RELEASE (VIA DRAWDOWN)",
+      "payee": "LEAGUE OF CONSERVATION VOTERS, INC.",
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202410209700747400",
+      "vendor_id": "V-league-of-conservation-voters",
+      "medium": "other"
+    },
+    {
+      "ie_id": "C00802389-ie-1812136-500450441",
+      "spender_entity_id": "C00802389",
+      "spender_name": "GIVEGREEN UNITED ACTION",
+      "candidate_id": "S6PA00217",
+      "candidate_name": "Bob Casey",
+      "support_oppose": "S",
+      "amount": 40.0,
+      "date": "2024-07-03",
+      "purpose": "STAFF TIME AND EMAILS FOR ONLINE MESSAGE (VIA DRAWDOWN)",
+      "payee": "LEAGUE OF CONSERVATION VOTERS, INC.",
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202408209666661480",
+      "vendor_id": "V-league-of-conservation-voters",
+      "medium": "digital"
+    },
+    {
+      "ie_id": "C00486845-ie-1850035-500447967",
+      "spender_entity_id": "C00486845",
+      "spender_name": "LCV VICTORY FUND",
+      "candidate_id": "S2PA00661",
+      "candidate_name": "Dave McCormick",
+      "support_oppose": "O",
+      "amount": 18.17,
+      "date": "2024-06-21",
+      "purpose": "STAFF TIME FOR PRESS RELEASE (VIA DRAWDOWN)",
+      "payee": "LEAGUE OF CONSERVATION VOTERS, INC.",
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202411269720050992",
+      "vendor_id": "V-league-of-conservation-voters",
+      "medium": "other"
+    },
+    {
+      "ie_id": "C00802389-ie-1783160-500441690",
+      "spender_entity_id": "C00802389",
+      "spender_name": "GIVEGREEN UNITED ACTION",
+      "candidate_id": "S6PA00217",
+      "candidate_name": "Bob Casey",
+      "support_oppose": "S",
+      "amount": 10.0,
+      "date": "2024-04-16",
+      "purpose": "STAFF TIME AND EMAILS FOR ONLINE MESSAGE (VIA DRAWDOWN)",
+      "payee": "LEAGUE OF CONSERVATION VOTERS, INC.",
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202405169646011788",
+      "vendor_id": "V-league-of-conservation-voters",
+      "medium": "digital"
+    },
+    {
+      "ie_id": "C00802389-ie-1765355-500434696",
+      "spender_entity_id": "C00802389",
+      "spender_name": "GIVEGREEN UNITED ACTION",
+      "candidate_id": "S6PA00217",
+      "candidate_name": "Bob Casey",
+      "support_oppose": "S",
+      "amount": 20.0,
+      "date": "2024-02-08",
+      "purpose": "STAFF TIME AND EMAILS FOR ONLINE MESSAGE (VIA DRAWDOWN)",
+      "payee": "LEAGUE OF CONSERVATION VOTERS, INC.",
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202403209622594812",
+      "vendor_id": "V-league-of-conservation-voters",
+      "medium": "digital"
+    },
+    {
+      "ie_id": "C00802389-ie-1752717-500430579",
+      "spender_entity_id": "C00802389",
+      "spender_name": "GIVEGREEN UNITED ACTION",
+      "candidate_id": "S6PA00217",
+      "candidate_name": "Bob Casey",
+      "support_oppose": "S",
+      "amount": 1.25,
+      "date": "2023-08-21",
+      "purpose": "EMAIL SERVICES (VIA DRAWDOWN)",
+      "payee": "LEAGUE OF CONSERVATION VOTERS, INC.",
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202401319618342886",
+      "vendor_id": "V-league-of-conservation-voters",
+      "medium": "digital"
+    },
+    {
+      "ie_id": "C00802389-ie-1752717-500430564",
+      "spender_entity_id": "C00802389",
+      "spender_name": "GIVEGREEN UNITED ACTION",
+      "candidate_id": "S6PA00217",
+      "candidate_name": "Bob Casey",
+      "support_oppose": "S",
+      "amount": 8.0,
+      "date": "2023-08-03",
+      "purpose": "STAFF TIME AND EMAILS FOR ONLINE MESSAGE (VIA DRAWDOWN)",
+      "payee": "LEAGUE OF CONSERVATION VOTERS, INC.",
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202401319618342879",
+      "vendor_id": "V-league-of-conservation-voters",
+      "medium": "digital"
+    },
+    {
+      "ie_id": "C00802389-ie-1720052-VVAG5ARX312",
+      "spender_entity_id": "C00802389",
+      "spender_name": "GIVEGREEN UNITED ACTION",
+      "candidate_id": "S6PA00217",
+      "candidate_name": "Bob Casey",
+      "support_oppose": "S",
+      "amount": 1.67,
+      "date": "2023-06-29",
+      "purpose": "EMAIL SERVICES (VIA DRAWDOWN)",
+      "payee": "LEAGUE OF CONSERVATION VOTERS, INC.",
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202307319584263138",
+      "vendor_id": "V-league-of-conservation-voters",
+      "medium": "digital"
+    },
+    {
+      "ie_id": "C00802389-ie-1720052-VVAG5ARX1G5",
+      "spender_entity_id": "C00802389",
+      "spender_name": "GIVEGREEN UNITED ACTION",
+      "candidate_id": "S6PA00217",
+      "candidate_name": "Bob Casey",
+      "support_oppose": "S",
+      "amount": 5.0,
+      "date": "2023-04-17",
+      "purpose": "EMAIL SERVICES (VIA DRAWDOWN)",
+      "payee": "LEAGUE OF CONSERVATION VOTERS, INC.",
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202307319584263113",
+      "vendor_id": "V-league-of-conservation-voters",
+      "medium": "digital"
+    },
+    {
+      "ie_id": "C00802389-ie-1720052-VVAG5ARX1F7",
+      "spender_entity_id": "C00802389",
+      "spender_name": "GIVEGREEN UNITED ACTION",
+      "candidate_id": "S6PA00217",
+      "candidate_name": "Bob Casey",
+      "support_oppose": "S",
+      "amount": 5.0,
+      "date": "2023-04-17",
+      "purpose": "EMAIL SERVICES (VIA DRAWDOWN)",
+      "payee": "LEAGUE OF CONSERVATION VOTERS, INC.",
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202307319584263113",
+      "vendor_id": "V-league-of-conservation-voters",
+      "medium": "digital"
+    },
+    {
+      "ie_id": "C00802389-ie-1720052-VVAG5ARX1E0",
+      "spender_entity_id": "C00802389",
+      "spender_name": "GIVEGREEN UNITED ACTION",
+      "candidate_id": "S6PA00217",
+      "candidate_name": "Bob Casey",
+      "support_oppose": "S",
+      "amount": 1.0,
+      "date": "2023-03-31",
+      "purpose": "EMAIL SERVICES (VIA DRAWDOWN)",
+      "payee": "LEAGUE OF CONSERVATION VOTERS, INC.",
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202307319584263112",
+      "vendor_id": "V-league-of-conservation-voters",
+      "medium": "digital"
+    },
+    {
+      "ie_id": "C00802389-ie-1719334-VVAG5ART1M5",
+      "spender_entity_id": "C00802389",
+      "spender_name": "GIVEGREEN UNITED ACTION",
+      "candidate_id": "S6PA00217",
+      "candidate_name": "Bob Casey",
+      "support_oppose": "S",
+      "amount": 1.67,
+      "date": "2023-01-25",
+      "purpose": "EMAIL SERVICES (VIA DRAWDOWN)",
+      "payee": "LEAGUE OF CONSERVATION VOTERS, INC.",
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202307319584207252",
+      "vendor_id": "V-league-of-conservation-voters",
+      "medium": "digital"
+    }
+  ],
+  "ads": [
+    {
+      "ad_id": "CR05367732770854404097",
+      "sponsor_entity_id": "C00486845",
+      "basis": {
+        "basis": "inferred",
+        "rule": "Only digital vendor LCV VICTORY FUND paid during this ad's run window (ran oct 2, 2024 – oct 22, 2024, counting buys dated up to 7 days before first shown) — inferred, not filed. LCV VICTORY FUND reported $781 in digital buys to LEAGUE OF CONSERVATION VOTERS, INC.; Google ads are digital placements.",
+        "source_urls": [
+          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00486845&payee_name=LEAGUE+OF+CONSERVATION+VOTERS%2C+INC."
+        ],
+        "checked_by": null,
+        "checked_at": null
+      }
+    },
+    {
+      "ad_id": "CR16821231048187707393",
+      "sponsor_entity_id": "C00486845",
+      "basis": {
+        "basis": "inferred",
+        "rule": "Only digital vendor LCV VICTORY FUND paid during this ad's run window (ran oct 2, 2024 – oct 22, 2024, counting buys dated up to 7 days before first shown) — inferred, not filed. LCV VICTORY FUND reported $781 in digital buys to LEAGUE OF CONSERVATION VOTERS, INC.; Google ads are digital placements.",
+        "source_urls": [
+          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00486845&payee_name=LEAGUE+OF+CONSERVATION+VOTERS%2C+INC."
+        ],
+        "checked_by": null,
+        "checked_at": null
+      }
+    },
+    {
+      "ad_id": "CR05194561888502939649",
+      "sponsor_entity_id": "C00486845",
+      "basis": {
+        "basis": "inferred",
+        "rule": "Only digital vendor LCV VICTORY FUND paid during this ad's run window (ran oct 8, 2024 – nov 5, 2024, counting buys dated up to 7 days before first shown) — inferred, not filed. LCV VICTORY FUND reported $1,114 in digital buys to LEAGUE OF CONSERVATION VOTERS, INC.; Google ads are digital placements.",
+        "source_urls": [
+          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00486845&payee_name=LEAGUE+OF+CONSERVATION+VOTERS%2C+INC."
+        ],
+        "checked_by": null,
+        "checked_at": null
+      }
+    }
+  ],
+  "method": "Every Schedule E independent expenditure names a payee. Payee strings are normalised (case, punctuation, legal suffixes, token order), near-duplicates are folded with a difflib ratio ≥ 0.92 when their numeric tokens match, and hand alias rows from data/hand/<race>/vendor_aliases.json override the rule. Medium is classified from the purpose the spender filed (ordered keyword table in campaign_commons/vendors.py). The FEC does not record which buy placed which ad: vendor ↔ ad links are date-window adjacency (or single-digital-vendor inference) from campaign_commons.ads_enrich, each with its basis, and are only `verified` when a person found a source naming both. Totals are the filed amounts, grouped, never re-estimated."
+}

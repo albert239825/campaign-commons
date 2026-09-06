@@ -207,7 +207,9 @@
       "date": "2024-10-31",
       "purpose": "PROJECTED CANVASS EXPENSES (PARTIAL PAYMENT ON PREVIOUSLY REPORTED ESTIMATE)",
       "payee": "MAKE THE ROAD ACTION INC.",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202503259754502716"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202503259754502716",
+      "vendor_id": "V-make-the-road-action",
+      "medium": "field"
     },
     {
       "ie_id": "C00689745-ie-1882464-SE.4310",
@@ -220,11 +222,38 @@
       "date": "2024-10-21",
       "purpose": "PROJECTED CANVASS EXPENSES (REMAINDER OF ESTIMATE)",
       "payee": "MAKE THE ROAD ACTION INC.",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202503259754502710"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202503259754502710",
+      "vendor_id": "V-make-the-road-action",
+      "medium": "field"
     }
   ],
   "flags": [],
   "has_chain": true,
   "source_url": "https://www.fec.gov/data/committee/C00689745/?cycle=2024",
-  "data_status": "real"
+  "data_status": "real",
+  "vendors": [
+    {
+      "vendor_id": "V-make-the-road-action",
+      "name": "MAKE THE ROAD ACTION INC.",
+      "amount": 121161.65,
+      "count": 2,
+      "media_mix": [
+        {
+          "medium": "field",
+          "amount": 121161.65,
+          "count": 2
+        }
+      ],
+      "targets": [
+        {
+          "candidate_id": "S6PA00217",
+          "support_oppose": "S",
+          "amount": 121161.65
+        }
+      ],
+      "first_date": "2024-10-21",
+      "last_date": "2024-10-31",
+      "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00689745&payee_name=MAKE+THE+ROAD+ACTION+INC."
+    }
+  ]
 }

@@ -1,0 +1,110 @@
+{
+  "vendor_id": "V-hilton-multimedia",
+  "name": "HILTON MULTIMEDIA",
+  "aliases": [
+    "HILTON MULTIMEDIA"
+  ],
+  "normalization": {
+    "basis": "inferred",
+    "rule": "case/punctuation/suffix normalisation + token-set ≥0.92 (numeric tokens must match); aliases file",
+    "source_urls": [
+      "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&payee_name=HILTON+MULTIMEDIA"
+    ],
+    "checked_by": null,
+    "checked_at": null
+  },
+  "total": 23620.0,
+  "count": 4,
+  "media_mix": [
+    {
+      "medium": "digital",
+      "amount": 23620.0,
+      "count": 4
+    }
+  ],
+  "spenders": [
+    {
+      "entity_id": "C00825885",
+      "name": "PATRIOTS FOR A BRIGHTER AMERICA",
+      "amount": 23620.0,
+      "count": 4
+    }
+  ],
+  "targets": [
+    {
+      "candidate_id": "S2PA00661",
+      "support_oppose": "S",
+      "amount": 23620.0
+    }
+  ],
+  "first_date": "2024-10-29",
+  "last_date": "2024-11-04",
+  "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&payee_name=HILTON+MULTIMEDIA",
+  "race_id": "pa-sen-2024",
+  "generated_at": "2026-09-05T20:34:15+00:00",
+  "data_status": "real",
+  "expenditures": [
+    {
+      "ie_id": "C00825885-ie-1869036-SE.4546",
+      "spender_entity_id": "C00825885",
+      "spender_name": "PATRIOTS FOR A BRIGHTER AMERICA",
+      "candidate_id": "S2PA00661",
+      "candidate_name": "Dave McCormick",
+      "support_oppose": "S",
+      "amount": 1980.0,
+      "date": "2024-11-04",
+      "purpose": "DIGITAL MEDIA",
+      "payee": "HILTON MULTIMEDIA",
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202501309748379591",
+      "vendor_id": "V-hilton-multimedia",
+      "medium": "digital"
+    },
+    {
+      "ie_id": "C00825885-ie-1869036-SE.4543",
+      "spender_entity_id": "C00825885",
+      "spender_name": "PATRIOTS FOR A BRIGHTER AMERICA",
+      "candidate_id": "S2PA00661",
+      "candidate_name": "Dave McCormick",
+      "support_oppose": "S",
+      "amount": 11520.0,
+      "date": "2024-11-04",
+      "purpose": "DIGITAL ADVERTSING",
+      "payee": "HILTON MULTIMEDIA",
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202501309748379589",
+      "vendor_id": "V-hilton-multimedia",
+      "medium": "digital"
+    },
+    {
+      "ie_id": "C00825885-ie-1869036-SE.4508",
+      "spender_entity_id": "C00825885",
+      "spender_name": "PATRIOTS FOR A BRIGHTER AMERICA",
+      "candidate_id": "S2PA00661",
+      "candidate_name": "Dave McCormick",
+      "support_oppose": "S",
+      "amount": 7700.0,
+      "date": "2024-11-01",
+      "purpose": "DIGITAL MEDIA",
+      "payee": "HILTON MULTIMEDIA",
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202501309748379582",
+      "vendor_id": "V-hilton-multimedia",
+      "medium": "digital"
+    },
+    {
+      "ie_id": "C00825885-ie-1869036-SE.4487",
+      "spender_entity_id": "C00825885",
+      "spender_name": "PATRIOTS FOR A BRIGHTER AMERICA",
+      "candidate_id": "S2PA00661",
+      "candidate_name": "Dave McCormick",
+      "support_oppose": "S",
+      "amount": 2420.0,
+      "date": "2024-10-29",
+      "purpose": "DIGITAL ADVERTISING",
+      "payee": "HILTON MULTIMEDIA",
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202501309748379578",
+      "vendor_id": "V-hilton-multimedia",
+      "medium": "digital"
+    }
+  ],
+  "ads": [],
+  "method": "Every Schedule E independent expenditure names a payee. Payee strings are normalised (case, punctuation, legal suffixes, token order), near-duplicates are folded with a difflib ratio ≥ 0.92 when their numeric tokens match, and hand alias rows from data/hand/<race>/vendor_aliases.json override the rule. Medium is classified from the purpose the spender filed (ordered keyword table in campaign_commons/vendors.py). The FEC does not record which buy placed which ad: vendor ↔ ad links are date-window adjacency (or single-digital-vendor inference) from campaign_commons.ads_enrich, each with its basis, and are only `verified` when a person found a source naming both. Totals are the filed amounts, grouped, never re-estimated."
+}

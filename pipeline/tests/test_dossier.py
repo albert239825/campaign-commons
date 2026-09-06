@@ -3,9 +3,9 @@ from pathlib import Path
 
 import pytest
 
-from gotham import dossier_curated as curated
-from gotham.dossier import MAX_EXCERPT_WORDS, compose_summary, issue_ids, record_confidence, statement_stance
-from gotham.dossier_sources import normalise, parse_roll_call
+from campaign_commons import dossier_curated as curated
+from campaign_commons.dossier import MAX_EXCERPT_WORDS, compose_summary, issue_ids, record_confidence, statement_stance
+from campaign_commons.dossier_sources import normalise, parse_roll_call
 
 FIXTURES = Path(__file__).parent / "fixtures"
 

@@ -40,7 +40,9 @@
       "date": "2024-10-26",
       "purpose": "TEXT MESSAGING",
       "payee": "CIVITECH",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202501319748780427"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202501319748780427",
+      "vendor_id": "V-civitech",
+      "medium": "phones"
     },
     {
       "ie_id": "C90018367-ie-1870240-F57.4832",
@@ -53,7 +55,9 @@
       "date": "2024-10-31",
       "purpose": "SOCIAL MEDIA AD BUY",
       "payee": "META",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202501319748780437"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202501319748780437",
+      "vendor_id": "V-meta-platforms",
+      "medium": "digital"
     },
     {
       "ie_id": "C90018367-ie-1870240-F57.4649",
@@ -66,7 +70,9 @@
       "date": "2024-10-22",
       "purpose": "SOCIAL MEDIA AD BUY",
       "payee": "META",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202501319748780434"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202501319748780434",
+      "vendor_id": "V-meta-platforms",
+      "medium": "digital"
     },
     {
       "ie_id": "C90018367-ie-1870240-F57.4650",
@@ -79,7 +85,9 @@
       "date": "2024-10-24",
       "purpose": "SOCIAL MEDIA AD BUY",
       "payee": "THE NEW MEDIA FIRM",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202501319748780440"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202501319748780440",
+      "vendor_id": "V-the-new-media-firm",
+      "medium": "digital"
     }
   ],
   "flags": [
@@ -92,5 +100,76 @@
   ],
   "has_chain": false,
   "source_url": "https://www.fec.gov/data/committee/C90018367/?cycle=2024",
-  "data_status": "real"
+  "data_status": "real",
+  "vendors": [
+    {
+      "vendor_id": "V-civitech",
+      "name": "CIVITECH",
+      "amount": 14317.53,
+      "count": 1,
+      "media_mix": [
+        {
+          "medium": "phones",
+          "amount": 14317.53,
+          "count": 1
+        }
+      ],
+      "targets": [
+        {
+          "candidate_id": "S6PA00217",
+          "support_oppose": "S",
+          "amount": 14317.53
+        }
+      ],
+      "first_date": "2024-10-26",
+      "last_date": "2024-10-26",
+      "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C90018367&payee_name=CIVITECH"
+    },
+    {
+      "vendor_id": "V-meta-platforms",
+      "name": "Meta Platforms",
+      "amount": 1500.0,
+      "count": 2,
+      "media_mix": [
+        {
+          "medium": "digital",
+          "amount": 1500.0,
+          "count": 2
+        }
+      ],
+      "targets": [
+        {
+          "candidate_id": "S6PA00217",
+          "support_oppose": "S",
+          "amount": 1500.0
+        }
+      ],
+      "first_date": "2024-10-22",
+      "last_date": "2024-10-31",
+      "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C90018367&payee_name=META"
+    },
+    {
+      "vendor_id": "V-the-new-media-firm",
+      "name": "THE NEW MEDIA FIRM",
+      "amount": 384.62,
+      "count": 1,
+      "media_mix": [
+        {
+          "medium": "digital",
+          "amount": 384.62,
+          "count": 1
+        }
+      ],
+      "targets": [
+        {
+          "candidate_id": "S6PA00217",
+          "support_oppose": "S",
+          "amount": 384.62
+        }
+      ],
+      "first_date": "2024-10-24",
+      "last_date": "2024-10-24",
+      "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C90018367&payee_name=THE+NEW+MEDIA+FIRM"
+    }
+  ]
 }

@@ -1,6 +1,6 @@
-from gotham.ads import select_rows, to_ad
-from gotham.ads_bundle import CreativeRow, parse_bucket, targets_pennsylvania
-from gotham.ads_match import SEED_COMMITTEES, AdvertiserMatcher, mentions_candidate, normalize_name
+from campaign_commons.ads import select_rows, to_ad
+from campaign_commons.ads_bundle import CreativeRow, parse_bucket, targets_pennsylvania
+from campaign_commons.ads_match import SEED_COMMITTEES, AdvertiserMatcher, mentions_candidate, normalize_name
 
 
 def _row(name: str, geo: str | None, ad_id: str = "CR1", spend_max: int | None = 1000) -> CreativeRow:

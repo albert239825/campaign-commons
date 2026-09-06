@@ -792,7 +792,9 @@
       "date": "2024-09-16",
       "purpose": "EVENT PRODUCTION , VEHICLE RENTAL",
       "payee": "WEYMOUTH WATSON LLC",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202410219710073480"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202410219710073480",
+      "vendor_id": "V-weymouth-watson",
+      "medium": "production"
     },
     {
       "ie_id": "C00341396-ie-1895567-500063941",
@@ -805,7 +807,9 @@
       "date": "2024-10-30",
       "purpose": "DIGITAL AD",
       "payee": "202 CONSULTING SOLUTIONS LLC",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202506169762172362"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202506169762172362",
+      "vendor_id": "V-202-consulting-solutions",
+      "medium": "digital"
     },
     {
       "ie_id": "C00341396-ie-1895567-500063871",
@@ -818,7 +822,9 @@
       "date": "2024-10-23",
       "purpose": "DIGITAL AD",
       "payee": "202 CONSULTING SOLUTIONS LLC",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202506169762172352"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202506169762172352",
+      "vendor_id": "V-202-consulting-solutions",
+      "medium": "digital"
     },
     {
       "ie_id": "C00341396-ie-1895551-500063870",
@@ -831,7 +837,9 @@
       "date": "2024-10-16",
       "purpose": "DIGITAL AD",
       "payee": "202 CONSULTING SOLUTIONS LLC",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202506169762160424"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202506169762160424",
+      "vendor_id": "V-202-consulting-solutions",
+      "medium": "digital"
     },
     {
       "ie_id": "C00341396-ie-1895551-500063869",
@@ -844,7 +852,9 @@
       "date": "2024-10-09",
       "purpose": "DIGITAL AD",
       "payee": "202 CONSULTING SOLUTIONS LLC",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202506169762160415"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202506169762160415",
+      "vendor_id": "V-202-consulting-solutions",
+      "medium": "digital"
     },
     {
       "ie_id": "C00341396-ie-1895567-500063942",
@@ -857,7 +867,9 @@
       "date": "2024-10-30",
       "purpose": "DIGITAL AD",
       "payee": "202 CONSULTING SOLUTIONS LLC",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202506169762172362"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202506169762172362",
+      "vendor_id": "V-202-consulting-solutions",
+      "medium": "digital"
     },
     {
       "ie_id": "C00341396-ie-1895567-500063872",
@@ -870,7 +882,9 @@
       "date": "2024-10-24",
       "purpose": "DIGITAL AD",
       "payee": "202 CONSULTING SOLUTIONS LLC",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202506169762172358"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202506169762172358",
+      "vendor_id": "V-202-consulting-solutions",
+      "medium": "digital"
     },
     {
       "ie_id": "C00341396-ie-1834871-500063504",
@@ -883,11 +897,84 @@
       "date": "2024-09-16",
       "purpose": "CATERING",
       "payee": "BEN & JERRY'S HOMEMADE, INC.",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202410219710073375"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202410219710073375",
+      "vendor_id": "V-ben-jerry-s-homemade",
+      "medium": "other"
     }
   ],
   "flags": [],
   "has_chain": true,
   "source_url": "https://www.fec.gov/data/committee/C00341396/?cycle=2024",
-  "data_status": "real"
+  "data_status": "real",
+  "vendors": [
+    {
+      "vendor_id": "V-202-consulting-solutions",
+      "name": "202 CONSULTING SOLUTIONS LLC",
+      "amount": 2281.8,
+      "count": 6,
+      "media_mix": [
+        {
+          "medium": "digital",
+          "amount": 2281.8,
+          "count": 6
+        }
+      ],
+      "targets": [
+        {
+          "candidate_id": "S6PA00217",
+          "support_oppose": "S",
+          "amount": 2281.8
+        }
+      ],
+      "first_date": "2024-10-09",
+      "last_date": "2024-10-30",
+      "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00341396&payee_name=202+CONSULTING+SOLUTIONS+LLC"
+    },
+    {
+      "vendor_id": "V-weymouth-watson",
+      "name": "WEYMOUTH WATSON LLC",
+      "amount": 649.5,
+      "count": 1,
+      "media_mix": [
+        {
+          "medium": "production",
+          "amount": 649.5,
+          "count": 1
+        }
+      ],
+      "targets": [
+        {
+          "candidate_id": "S6PA00217",
+          "support_oppose": "S",
+          "amount": 649.5
+        }
+      ],
+      "first_date": "2024-09-16",
+      "last_date": "2024-09-16",
+      "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00341396&payee_name=WEYMOUTH+WATSON+LLC"
+    },
+    {
+      "vendor_id": "V-ben-jerry-s-homemade",
+      "name": "BEN & JERRY'S HOMEMADE, INC.",
+      "amount": 74.8,
+      "count": 1,
+      "media_mix": [
+        {
+          "medium": "other",
+          "amount": 74.8,
+          "count": 1
+        }
+      ],
+      "targets": [
+        {
+          "candidate_id": "S6PA00217",
+          "support_oppose": "S",
+          "amount": 74.8
+        }
+      ],
+      "first_date": "2024-09-16",
+      "last_date": "2024-09-16",
+      "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00341396&payee_name=BEN+%26+JERRY%27S+HOMEMADE%2C+INC."
+    }
+  ]
 }

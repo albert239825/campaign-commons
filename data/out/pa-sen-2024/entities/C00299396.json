@@ -552,11 +552,38 @@
       "date": "2024-10-30",
       "purpose": "DIGITAL ADS & PRODUCTION",
       "payee": "CRESSEY STRATEGIES",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202412059720623313"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202412059720623313",
+      "vendor_id": "V-cressey-strategies",
+      "medium": "production"
     }
   ],
   "flags": [],
   "has_chain": true,
   "source_url": "https://www.fec.gov/data/committee/C00299396/?cycle=2024",
-  "data_status": "real"
+  "data_status": "real",
+  "vendors": [
+    {
+      "vendor_id": "V-cressey-strategies",
+      "name": "CRESSEY STRATEGIES",
+      "amount": 17850.0,
+      "count": 1,
+      "media_mix": [
+        {
+          "medium": "production",
+          "amount": 17850.0,
+          "count": 1
+        }
+      ],
+      "targets": [
+        {
+          "candidate_id": "S6PA00217",
+          "support_oppose": "S",
+          "amount": 17850.0
+        }
+      ],
+      "first_date": "2024-10-30",
+      "last_date": "2024-10-30",
+      "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00299396&payee_name=CRESSEY+STRATEGIES"
+    }
+  ]
 }

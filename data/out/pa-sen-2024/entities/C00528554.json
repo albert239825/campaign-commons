@@ -522,7 +522,9 @@
       "date": "2024-09-27",
       "purpose": "DIRECT MAIL",
       "payee": "THOMAS GRAPHICS INC",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202410149685244585"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202410149685244585",
+      "vendor_id": "V-thomas-graphics",
+      "medium": "mail"
     },
     {
       "ie_id": "C00528554-ie-1825044-SE.5152",
@@ -535,7 +537,9 @@
       "date": "2024-09-27",
       "purpose": "DIRECT MAIL",
       "payee": "18TH STREET MEDIA LLC",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202410149685244578"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202410149685244578",
+      "vendor_id": "V-18th-street-media",
+      "medium": "mail"
     },
     {
       "ie_id": "C00528554-ie-1839948-SE.5189",
@@ -548,7 +552,9 @@
       "date": "2024-10-01",
       "purpose": "TEXT MESSAGES",
       "payee": "CANVASS COMMUNICATIONS LLC",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202410249710460170"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202410249710460170",
+      "vendor_id": "V-canvass-communications",
+      "medium": "phones"
     },
     {
       "ie_id": "C00528554-ie-1839948-SE.5190",
@@ -561,7 +567,9 @@
       "date": "2024-10-01",
       "purpose": "TEXT MESSAGES",
       "payee": "CANVASS COMMUNICATIONS LLC",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202410249710460170"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202410249710460170",
+      "vendor_id": "V-canvass-communications",
+      "medium": "phones"
     },
     {
       "ie_id": "C00528554-ie-1856803-SE.5289",
@@ -574,7 +582,9 @@
       "date": "2024-10-21",
       "purpose": "DIRECT MAIL",
       "payee": "THOMAS GRAPHICS INC",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202412059730903622"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202412059730903622",
+      "vendor_id": "V-thomas-graphics",
+      "medium": "mail"
     },
     {
       "ie_id": "C00528554-ie-1856803-SE.5281",
@@ -587,7 +597,9 @@
       "date": "2024-10-21",
       "purpose": "DIRECT MAIL",
       "payee": "18TH STREET MEDIA LLC",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202412059730903615"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202412059730903615",
+      "vendor_id": "V-18th-street-media",
+      "medium": "mail"
     },
     {
       "ie_id": "C00528554-ie-1825044-SE.5161",
@@ -600,7 +612,9 @@
       "date": "2024-09-27",
       "purpose": "DIRECT MAIL",
       "payee": "THOMAS GRAPHICS INC",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202410149685244584"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202410149685244584",
+      "vendor_id": "V-thomas-graphics",
+      "medium": "mail"
     },
     {
       "ie_id": "C00528554-ie-1825044-SE.5153",
@@ -613,7 +627,9 @@
       "date": "2024-09-27",
       "purpose": "DIRECT MAIL",
       "payee": "18TH STREET MEDIA LLC",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202410149685244579"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202410149685244579",
+      "vendor_id": "V-18th-street-media",
+      "medium": "mail"
     },
     {
       "ie_id": "C00528554-ie-1825044-SE.5044",
@@ -626,7 +642,9 @@
       "date": "2024-09-15",
       "purpose": "DOORHANGERS",
       "payee": "18TH STREET MEDIA LLC",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202410149685244574"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202410149685244574",
+      "vendor_id": "V-18th-street-media",
+      "medium": "field"
     },
     {
       "ie_id": "C00528554-ie-1825044-SE.5042",
@@ -639,7 +657,9 @@
       "date": "2024-09-15",
       "purpose": "DOORHANGERS",
       "payee": "18TH STREET MEDIA LLC",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202410149685244573"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202410149685244573",
+      "vendor_id": "V-18th-street-media",
+      "medium": "field"
     }
   ],
   "flags": [
@@ -652,5 +672,96 @@
   ],
   "has_chain": true,
   "source_url": "https://www.fec.gov/data/committee/C00528554/?cycle=2024",
-  "data_status": "real"
+  "data_status": "real",
+  "vendors": [
+    {
+      "vendor_id": "V-thomas-graphics",
+      "name": "THOMAS GRAPHICS INC",
+      "amount": 64131.56,
+      "count": 3,
+      "media_mix": [
+        {
+          "medium": "mail",
+          "amount": 64131.56,
+          "count": 3
+        }
+      ],
+      "targets": [
+        {
+          "candidate_id": "S6PA00217",
+          "support_oppose": "O",
+          "amount": 54033.97
+        },
+        {
+          "candidate_id": "S2PA00661",
+          "support_oppose": "S",
+          "amount": 10097.59
+        }
+      ],
+      "first_date": "2024-09-27",
+      "last_date": "2024-10-21",
+      "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00528554&payee_name=THOMAS+GRAPHICS+INC"
+    },
+    {
+      "vendor_id": "V-18th-street-media",
+      "name": "18TH STREET MEDIA LLC",
+      "amount": 58832.01,
+      "count": 5,
+      "media_mix": [
+        {
+          "medium": "mail",
+          "amount": 56047.22,
+          "count": 3
+        },
+        {
+          "medium": "field",
+          "amount": 2784.79,
+          "count": 2
+        }
+      ],
+      "targets": [
+        {
+          "candidate_id": "S6PA00217",
+          "support_oppose": "O",
+          "amount": 48568.4
+        },
+        {
+          "candidate_id": "S2PA00661",
+          "support_oppose": "S",
+          "amount": 10263.61
+        }
+      ],
+      "first_date": "2024-09-15",
+      "last_date": "2024-10-21",
+      "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00528554&payee_name=18TH+STREET+MEDIA+LLC"
+    },
+    {
+      "vendor_id": "V-canvass-communications",
+      "name": "CANVASS COMMUNICATIONS LLC",
+      "amount": 35468.0,
+      "count": 2,
+      "media_mix": [
+        {
+          "medium": "phones",
+          "amount": 35468.0,
+          "count": 2
+        }
+      ],
+      "targets": [
+        {
+          "candidate_id": "S2PA00661",
+          "support_oppose": "S",
+          "amount": 17734.0
+        },
+        {
+          "candidate_id": "S6PA00217",
+          "support_oppose": "O",
+          "amount": 17734.0
+        }
+      ],
+      "first_date": "2024-10-01",
+      "last_date": "2024-10-01",
+      "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00528554&payee_name=CANVASS+COMMUNICATIONS+LLC"
+    }
+  ]
 }

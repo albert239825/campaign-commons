@@ -102,7 +102,9 @@
       "date": "2024-09-26",
       "purpose": "TV ADS",
       "payee": "DSPOLITICAL",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202502109753368231"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202502109753368231",
+      "vendor_id": "V-dspolitical",
+      "medium": "tv"
     },
     {
       "ie_id": "C00490375-ie-1906778-B890016",
@@ -115,7 +117,9 @@
       "date": "2024-10-23",
       "purpose": "TV ADS",
       "payee": "DSPOLITICAL",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202507299764308521"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202507299764308521",
+      "vendor_id": "V-dspolitical",
+      "medium": "tv"
     },
     {
       "ie_id": "C00490375-ie-1875388-B882836",
@@ -128,7 +132,9 @@
       "date": "2024-09-03",
       "purpose": "POSTAGE AND PROCESSING FOR POSTCARD MAILERS STARTING 9/22/24",
       "payee": "POSTAL SYSTEMS INC.",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202502109753368229"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202502109753368229",
+      "vendor_id": "V-postal-systems",
+      "medium": "mail"
     },
     {
       "ie_id": "C00490375-ie-1906778-B890007",
@@ -141,7 +147,9 @@
       "date": "2024-10-21",
       "purpose": "AD CONSULTING",
       "payee": "MIDDLE SEAT  CONSULTING LLC",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202507299764308521"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202507299764308521",
+      "vendor_id": "V-middle-seat-consulting",
+      "medium": "consulting"
     },
     {
       "ie_id": "C00490375-ie-1875388-B884306",
@@ -154,7 +162,9 @@
       "date": "2024-09-18",
       "purpose": "BILLBOARD RENTAL",
       "payee": "MIDDLE SEAT  CONSULTING LLC",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202502109753368231"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202502109753368231",
+      "vendor_id": "V-middle-seat-consulting",
+      "medium": "other"
     },
     {
       "ie_id": "C00490375-ie-1875388-B883769",
@@ -167,7 +177,9 @@
       "date": "2024-09-13",
       "purpose": "BILLBOARD RENTAL.",
       "payee": "ADQUICK",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202502109753368230"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202502109753368230",
+      "vendor_id": "V-adquick",
+      "medium": "other"
     },
     {
       "ie_id": "C00490375-ie-1875388-B882816",
@@ -180,7 +192,9 @@
       "date": "2024-09-03",
       "purpose": "BILLBOARD RENTAL.",
       "payee": "ADQUICK",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202502109753368228"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202502109753368228",
+      "vendor_id": "V-adquick",
+      "medium": "other"
     },
     {
       "ie_id": "C00490375-ie-1875388-B882642",
@@ -193,7 +207,9 @@
       "date": "2024-09-04",
       "purpose": "ESTIMATED COST FOR SOCIAL MEDIA ADS",
       "payee": "META PLATFORMS INC.",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202502109753368229"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202502109753368229",
+      "vendor_id": "V-meta-platforms",
+      "medium": "digital"
     },
     {
       "ie_id": "C00490375-ie-1906778-B890824",
@@ -206,7 +222,9 @@
       "date": "2024-10-28",
       "purpose": "BILLBOARD TRUCK RENTAL",
       "payee": "ADQUICK",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202507299764308522"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202507299764308522",
+      "vendor_id": "V-adquick",
+      "medium": "other"
     },
     {
       "ie_id": "C00490375-ie-1906778-B890751",
@@ -219,7 +237,9 @@
       "date": "2024-10-29",
       "purpose": "PHONE AND TEXT CAMPAIGN",
       "payee": "GETTHRU",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202507299764308523"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202507299764308523",
+      "vendor_id": "V-getthru",
+      "medium": "phones"
     },
     {
       "ie_id": "C00490375-ie-1875388-B886772",
@@ -232,7 +252,9 @@
       "date": "2024-10-01",
       "purpose": "REIMBURSEMENT FOR STAFF EXPENSES.",
       "payee": "CALIFORNIA NURSES ASSOCIATION",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202502109753368233"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202502109753368233",
+      "vendor_id": "V-california-nurses-association",
+      "medium": "other"
     },
     {
       "ie_id": "C00490375-ie-1875388-B882655",
@@ -245,7 +267,9 @@
       "date": "2024-09-06",
       "purpose": "SIGN PRINTING",
       "payee": "AUTUMN PRESS",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202502109753368230"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202502109753368230",
+      "vendor_id": "V-autumn-press",
+      "medium": "mail"
     },
     {
       "ie_id": "C00490375-ie-1875388-B882793",
@@ -258,7 +282,9 @@
       "date": "2024-09-30",
       "purpose": "PHONE AND TEXT CAMPAIGN BEGINNING 9/3/24. PRE-PAYMENTS REPORTED ON 2024 APRIL/JUNE QUARTERLY REPORTS",
       "payee": "GETTHRU",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202502109753368232"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202502109753368232",
+      "vendor_id": "V-getthru",
+      "medium": "phones"
     },
     {
       "ie_id": "C00490375-ie-1906778-B882642",
@@ -271,7 +297,9 @@
       "date": "2024-11-01",
       "purpose": "PARTIAL REIMBURSEMENT FOR META PLATFORMS ADS REPORTED ON 9/04/24 24-HR IE REPORT (TRANS ID:B882642)",
       "payee": "CALIFORNIA NURSES ASSOCIATION",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202507299764308524"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202507299764308524",
+      "vendor_id": "V-california-nurses-association",
+      "medium": "digital"
     },
     {
       "ie_id": "C00490375-ie-1906778-B890836",
@@ -284,7 +312,9 @@
       "date": "2024-10-28",
       "purpose": "REIMBURSEMENT FOR PHONE BANKING",
       "payee": "CALIFORNIA NURSES ASSOCIATION",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202507299764308523"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202507299764308523",
+      "vendor_id": "V-california-nurses-association",
+      "medium": "phones"
     },
     {
       "ie_id": "C00490375-ie-1906778-B891452",
@@ -297,7 +327,9 @@
       "date": "2024-11-01",
       "purpose": "REIMBURSEMENT FOR PHONE BANKING",
       "payee": "CALIFORNIA NURSES ASSOCIATION",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202507299764308524"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202507299764308524",
+      "vendor_id": "V-california-nurses-association",
+      "medium": "phones"
     },
     {
       "ie_id": "C00490375-ie-1875388-B882807",
@@ -310,7 +342,9 @@
       "date": "2024-09-03",
       "purpose": "BILLBOARD DESIGN.",
       "payee": "FENTON COMMUNICATIONS INC.",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202502109753368228"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202502109753368228",
+      "vendor_id": "V-fenton-communications",
+      "medium": "production"
     },
     {
       "ie_id": "C00490375-ie-1906778-B890735",
@@ -323,7 +357,9 @@
       "date": "2024-10-25",
       "purpose": "AD DESIGNS",
       "payee": "FENTON COMMUNICATIONS INC.",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202507299764308522"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202507299764308522",
+      "vendor_id": "V-fenton-communications",
+      "medium": "production"
     },
     {
       "ie_id": "C00490375-ie-1875388-B879770",
@@ -336,7 +372,9 @@
       "date": "2024-08-02",
       "purpose": "CONSULTING FEES",
       "payee": "TARGETSMART COMMUNICATIONS",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202502109753368227"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202502109753368227",
+      "vendor_id": "V-targetsmart-communications",
+      "medium": "consulting"
     },
     {
       "ie_id": "C00490375-ie-1875388-B882822",
@@ -349,7 +387,9 @@
       "date": "2024-09-30",
       "purpose": "REIMBURSEMENT FOR VIDEO CLIPS FOR ADS PRODUCTION",
       "payee": "CALIFORNIA NURSES ASSOCIATION",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202502109753368232"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202502109753368232",
+      "vendor_id": "V-california-nurses-association",
+      "medium": "production"
     }
   ],
   "flags": [
@@ -362,5 +402,275 @@
   ],
   "has_chain": true,
   "source_url": "https://www.fec.gov/data/committee/C00490375/?cycle=2024",
-  "data_status": "real"
+  "data_status": "real",
+  "vendors": [
+    {
+      "vendor_id": "V-dspolitical",
+      "name": "DSPOLITICAL",
+      "amount": 375183.0,
+      "count": 2,
+      "media_mix": [
+        {
+          "medium": "tv",
+          "amount": 375183.0,
+          "count": 2
+        }
+      ],
+      "targets": [
+        {
+          "candidate_id": "S6PA00217",
+          "support_oppose": "S",
+          "amount": 375183.0
+        }
+      ],
+      "first_date": "2024-09-26",
+      "last_date": "2024-10-23",
+      "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00490375&payee_name=DSPOLITICAL"
+    },
+    {
+      "vendor_id": "V-middle-seat-consulting",
+      "name": "Middle Seat Consulting",
+      "amount": 105825.96,
+      "count": 2,
+      "media_mix": [
+        {
+          "medium": "consulting",
+          "amount": 52912.98,
+          "count": 1
+        },
+        {
+          "medium": "other",
+          "amount": 52912.98,
+          "count": 1
+        }
+      ],
+      "targets": [
+        {
+          "candidate_id": "S6PA00217",
+          "support_oppose": "S",
+          "amount": 105825.96
+        }
+      ],
+      "first_date": "2024-09-18",
+      "last_date": "2024-10-21",
+      "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00490375&payee_name=MIDDLE+SEAT++CONSULTING+LLC"
+    },
+    {
+      "vendor_id": "V-adquick",
+      "name": "ADQUICK",
+      "amount": 88848.72,
+      "count": 3,
+      "media_mix": [
+        {
+          "medium": "other",
+          "amount": 88848.72,
+          "count": 3
+        }
+      ],
+      "targets": [
+        {
+          "candidate_id": "S6PA00217",
+          "support_oppose": "S",
+          "amount": 88848.72
+        }
+      ],
+      "first_date": "2024-09-03",
+      "last_date": "2024-10-28",
+      "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00490375&payee_name=ADQUICK"
+    },
+    {
+      "vendor_id": "V-postal-systems",
+      "name": "POSTAL SYSTEMS INC.",
+      "amount": 55999.79,
+      "count": 1,
+      "media_mix": [
+        {
+          "medium": "mail",
+          "amount": 55999.79,
+          "count": 1
+        }
+      ],
+      "targets": [
+        {
+          "candidate_id": "S6PA00217",
+          "support_oppose": "S",
+          "amount": 55999.79
+        }
+      ],
+      "first_date": "2024-09-03",
+      "last_date": "2024-09-03",
+      "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00490375&payee_name=POSTAL+SYSTEMS+INC."
+    },
+    {
+      "vendor_id": "V-california-nurses-association",
+      "name": "CALIFORNIA NURSES ASSOCIATION",
+      "amount": 35636.72,
+      "count": 5,
+      "media_mix": [
+        {
+          "medium": "other",
+          "amount": 15458.51,
+          "count": 1
+        },
+        {
+          "medium": "phones",
+          "amount": 12047.33,
+          "count": 2
+        },
+        {
+          "medium": "digital",
+          "amount": 8090.89,
+          "count": 1
+        },
+        {
+          "medium": "production",
+          "amount": 39.99,
+          "count": 1
+        }
+      ],
+      "targets": [
+        {
+          "candidate_id": "S6PA00217",
+          "support_oppose": "S",
+          "amount": 35636.72
+        }
+      ],
+      "first_date": "2024-09-30",
+      "last_date": "2024-11-01",
+      "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00490375&payee_name=CALIFORNIA+NURSES+ASSOCIATION"
+    },
+    {
+      "vendor_id": "V-getthru",
+      "name": "GETTHRU",
+      "amount": 30508.0,
+      "count": 2,
+      "media_mix": [
+        {
+          "medium": "phones",
+          "amount": 30508.0,
+          "count": 2
+        }
+      ],
+      "targets": [
+        {
+          "candidate_id": "S6PA00217",
+          "support_oppose": "S",
+          "amount": 30508.0
+        }
+      ],
+      "first_date": "2024-09-30",
+      "last_date": "2024-10-29",
+      "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00490375&payee_name=GETTHRU"
+    },
+    {
+      "vendor_id": "V-meta-platforms",
+      "name": "Meta Platforms",
+      "amount": 21111.2,
+      "count": 1,
+      "media_mix": [
+        {
+          "medium": "digital",
+          "amount": 21111.2,
+          "count": 1
+        }
+      ],
+      "targets": [
+        {
+          "candidate_id": "S6PA00217",
+          "support_oppose": "S",
+          "amount": 21111.2
+        }
+      ],
+      "first_date": "2024-09-04",
+      "last_date": "2024-09-04",
+      "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00490375&payee_name=META+PLATFORMS+INC."
+    },
+    {
+      "vendor_id": "V-autumn-press",
+      "name": "AUTUMN PRESS",
+      "amount": 12479.15,
+      "count": 1,
+      "media_mix": [
+        {
+          "medium": "mail",
+          "amount": 12479.15,
+          "count": 1
+        }
+      ],
+      "targets": [
+        {
+          "candidate_id": "S6PA00217",
+          "support_oppose": "S",
+          "amount": 12479.15
+        }
+      ],
+      "first_date": "2024-09-06",
+      "last_date": "2024-09-06",
+      "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00490375&payee_name=AUTUMN+PRESS"
+    },
+    {
+      "vendor_id": "V-fenton-communications",
+      "name": "FENTON COMMUNICATIONS INC.",
+      "amount": 3000.0,
+      "count": 2,
+      "media_mix": [
+        {
+          "medium": "production",
+          "amount": 3000.0,
+          "count": 2
+        }
+      ],
+      "targets": [
+        {
+          "candidate_id": "S6PA00217",
+          "support_oppose": "S",
+          "amount": 3000.0
+        }
+      ],
+      "first_date": "2024-09-03",
+      "last_date": "2024-10-25",
+      "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00490375&payee_name=FENTON+COMMUNICATIONS+INC."
+    },
+    {
+      "vendor_id": "V-targetsmart-communications",
+      "name": "TARGETSMART COMMUNICATIONS",
+      "amount": 416.67,
+      "count": 1,
+      "media_mix": [
+        {
+          "medium": "consulting",
+          "amount": 416.67,
+          "count": 1
+        }
+      ],
+      "targets": [
+        {
+          "candidate_id": "S6PA00217",
+          "support_oppose": "S",
+          "amount": 416.67
+        }
+      ],
+      "first_date": "2024-08-02",
+      "last_date": "2024-08-02",
+      "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00490375&payee_name=TARGETSMART+COMMUNICATIONS"
+    }
+  ],
+  "issue_focus": {
+    "kind": "labor",
+    "issue_ids": [
+      "healthcare",
+      "labor_trade"
+    ],
+    "description": "National Nurses United, 'with more than 225,000 members nationwide, is the largest union and professional association of registered nurses in U.S. history', founded 'to counter the national assault by the health care industry on patient care conditions and standards for nurses'. The committee is its independent-expenditure arm.",
+    "basis": {
+      "basis": "verified",
+      "rule": "Self-described focus from the organisation's own material; says what the org is for, not what its dollars bought",
+      "source_urls": [
+        "https://www.nationalnursesunited.org/about",
+        "https://www.fec.gov/data/committee/C00490375/"
+      ],
+      "checked_by": "devin-block2-issues",
+      "checked_at": "2026-09-05"
+    }
+  }
 }

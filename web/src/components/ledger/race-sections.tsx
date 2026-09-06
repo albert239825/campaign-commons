@@ -6,30 +6,32 @@ const SECTIONS = [
   { id: "funding", label: "Funding overview" },
   { id: "stories", label: "Funding highlights" },
   { id: "spenders", label: "Top outside spenders" },
+  { id: "issues", label: "Spending by issue" },
 ] as const;
 type Section = (typeof SECTIONS)[number]["id"];
 
-export function RaceSections({ funding, stories, spenders }: Record<Section, ReactNode>) {
+export function RaceSections({ funding, stories, spenders, issues }: Record<Section, ReactNode | undefined>) {
   const [selected, setSelected] = useState<Section>("funding");
   const prefix = useId();
-  const content = { funding, stories, spenders };
+  const content = { funding, stories, spenders, issues };
+  const sections = SECTIONS.filter((section) => content[section.id] !== undefined);
 
   function navigate(event: KeyboardEvent<HTMLButtonElement>, index: number) {
     let next = index;
-    if (event.key === "ArrowDown") next = (index + 1) % SECTIONS.length;
-    else if (event.key === "ArrowUp") next = (index - 1 + SECTIONS.length) % SECTIONS.length;
+    if (event.key === "ArrowDown") next = (index + 1) % sections.length;
+    else if (event.key === "ArrowUp") next = (index - 1 + sections.length) % sections.length;
     else if (event.key === "Home") next = 0;
-    else if (event.key === "End") next = SECTIONS.length - 1;
+    else if (event.key === "End") next = sections.length - 1;
     else return;
     event.preventDefault();
-    setSelected(SECTIONS[next].id);
-    document.getElementById(`${prefix}-${SECTIONS[next].id}-tab`)?.focus();
+    setSelected(sections[next].id);
+    document.getElementById(`${prefix}-${sections[next].id}-tab`)?.focus();
   }
 
   return (
     <div className="race-sections">
       <div className="race-section-tabs" role="tablist" aria-label="Race dashboard sections" aria-orientation="vertical">
-        {SECTIONS.map((section, index) => (
+        {sections.map((section, index) => (
           <button key={section.id} type="button" role="tab" id={`${prefix}-${section.id}-tab`}
             aria-controls={`${prefix}-${section.id}-panel`} aria-selected={selected === section.id}
             tabIndex={selected === section.id ? 0 : -1} onClick={() => setSelected(section.id)} onKeyDown={event => navigate(event, index)}>
@@ -37,7 +39,7 @@ export function RaceSections({ funding, stories, spenders }: Record<Section, Rea
           </button>
         ))}
       </div>
-      {SECTIONS.map(section => (
+      {sections.map(section => (
         <div key={section.id} className="race-section-panel" role="tabpanel" id={`${prefix}-${section.id}-panel`}
           aria-labelledby={`${prefix}-${section.id}-tab`} hidden={selected !== section.id} tabIndex={0}>
           {content[section.id]}

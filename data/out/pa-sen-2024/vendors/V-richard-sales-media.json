@@ -1,0 +1,200 @@
+{
+  "vendor_id": "V-richard-sales-media",
+  "name": "RICHARD SALES MEDIA",
+  "aliases": [
+    "RICHARD SALES MEDIA"
+  ],
+  "normalization": {
+    "basis": "inferred",
+    "rule": "case/punctuation/suffix normalisation + token-set ≥0.92 (numeric tokens must match); aliases file",
+    "source_urls": [
+      "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&payee_name=RICHARD+SALES+MEDIA"
+    ],
+    "checked_by": null,
+    "checked_at": null
+  },
+  "total": 40000.0,
+  "count": 10,
+  "media_mix": [
+    {
+      "medium": "digital",
+      "amount": 40000.0,
+      "count": 10
+    }
+  ],
+  "spenders": [
+    {
+      "entity_id": "C00571703",
+      "name": "SENATE LEADERSHIP FUND",
+      "amount": 40000.0,
+      "count": 10
+    }
+  ],
+  "targets": [
+    {
+      "candidate_id": "S6PA00217",
+      "support_oppose": "O",
+      "amount": 40000.0
+    }
+  ],
+  "first_date": "2024-09-03",
+  "last_date": "2024-10-29",
+  "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&payee_name=RICHARD+SALES+MEDIA",
+  "race_id": "pa-sen-2024",
+  "generated_at": "2026-09-05T20:34:15+00:00",
+  "data_status": "real",
+  "expenditures": [
+    {
+      "ie_id": "C00571703-ie-1857152-SE24.23501",
+      "spender_entity_id": "C00571703",
+      "spender_name": "SENATE LEADERSHIP FUND",
+      "candidate_id": "S6PA00217",
+      "candidate_name": "Bob Casey",
+      "support_oppose": "O",
+      "amount": 4000.0,
+      "date": "2024-10-29",
+      "purpose": "WEB AD - FILED ON 10/29/2024",
+      "payee": "RICHARD SALES MEDIA",
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202412059731145517",
+      "vendor_id": "V-richard-sales-media",
+      "medium": "digital"
+    },
+    {
+      "ie_id": "C00571703-ie-1857152-SE24.23496",
+      "spender_entity_id": "C00571703",
+      "spender_name": "SENATE LEADERSHIP FUND",
+      "candidate_id": "S6PA00217",
+      "candidate_name": "Bob Casey",
+      "support_oppose": "O",
+      "amount": 4000.0,
+      "date": "2024-10-23",
+      "purpose": "WEB AD - FILED ON 10/23/2024",
+      "payee": "RICHARD SALES MEDIA",
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202412059731145513",
+      "vendor_id": "V-richard-sales-media",
+      "medium": "digital"
+    },
+    {
+      "ie_id": "C00571703-ie-1840682-SE24.23208",
+      "spender_entity_id": "C00571703",
+      "spender_name": "SENATE LEADERSHIP FUND",
+      "candidate_id": "S6PA00217",
+      "candidate_name": "Bob Casey",
+      "support_oppose": "O",
+      "amount": 4000.0,
+      "date": "2024-10-11",
+      "purpose": "WEB AD - FILED ON 10/12/2024",
+      "payee": "RICHARD SALES MEDIA",
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202410249710570351",
+      "vendor_id": "V-richard-sales-media",
+      "medium": "digital"
+    },
+    {
+      "ie_id": "C00571703-ie-1840682-SE24.23200",
+      "spender_entity_id": "C00571703",
+      "spender_name": "SENATE LEADERSHIP FUND",
+      "candidate_id": "S6PA00217",
+      "candidate_name": "Bob Casey",
+      "support_oppose": "O",
+      "amount": 4000.0,
+      "date": "2024-10-02",
+      "purpose": "WEB AD - FILED ON 10/02/2024",
+      "payee": "RICHARD SALES MEDIA",
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202410249710570349",
+      "vendor_id": "V-richard-sales-media",
+      "medium": "digital"
+    },
+    {
+      "ie_id": "C00571703-ie-1827952-SE24.22942",
+      "spender_entity_id": "C00571703",
+      "spender_name": "SENATE LEADERSHIP FUND",
+      "candidate_id": "S6PA00217",
+      "candidate_name": "Bob Casey",
+      "support_oppose": "O",
+      "amount": 4000.0,
+      "date": "2024-09-24",
+      "purpose": "WEB AD - FILED ON 09/24/2024",
+      "payee": "RICHARD SALES MEDIA",
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202410159687740313",
+      "vendor_id": "V-richard-sales-media",
+      "medium": "digital"
+    },
+    {
+      "ie_id": "C00571703-ie-1827952-SE24.22935",
+      "spender_entity_id": "C00571703",
+      "spender_name": "SENATE LEADERSHIP FUND",
+      "candidate_id": "S6PA00217",
+      "candidate_name": "Bob Casey",
+      "support_oppose": "O",
+      "amount": 4000.0,
+      "date": "2024-09-17",
+      "purpose": "WEB AD - FILED ON 09/17/2024",
+      "payee": "RICHARD SALES MEDIA",
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202410159687740312",
+      "vendor_id": "V-richard-sales-media",
+      "medium": "digital"
+    },
+    {
+      "ie_id": "C00571703-ie-1827952-SE24.22934",
+      "spender_entity_id": "C00571703",
+      "spender_name": "SENATE LEADERSHIP FUND",
+      "candidate_id": "S6PA00217",
+      "candidate_name": "Bob Casey",
+      "support_oppose": "O",
+      "amount": 4000.0,
+      "date": "2024-09-17",
+      "purpose": "WEB AD - FILED ON 09/17/2024",
+      "payee": "RICHARD SALES MEDIA",
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202410159687740312",
+      "vendor_id": "V-richard-sales-media",
+      "medium": "digital"
+    },
+    {
+      "ie_id": "C00571703-ie-1827952-SE24.22924",
+      "spender_entity_id": "C00571703",
+      "spender_name": "SENATE LEADERSHIP FUND",
+      "candidate_id": "S6PA00217",
+      "candidate_name": "Bob Casey",
+      "support_oppose": "O",
+      "amount": 4000.0,
+      "date": "2024-09-10",
+      "purpose": "WEB AD - FILED ON 09/10/2024",
+      "payee": "RICHARD SALES MEDIA",
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202410159687740311",
+      "vendor_id": "V-richard-sales-media",
+      "medium": "digital"
+    },
+    {
+      "ie_id": "C00571703-ie-1827952-SE24.22916",
+      "spender_entity_id": "C00571703",
+      "spender_name": "SENATE LEADERSHIP FUND",
+      "candidate_id": "S6PA00217",
+      "candidate_name": "Bob Casey",
+      "support_oppose": "O",
+      "amount": 4000.0,
+      "date": "2024-09-03",
+      "purpose": "WEB AD - FILED ON 09/03/2024",
+      "payee": "RICHARD SALES MEDIA",
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202410159687740311",
+      "vendor_id": "V-richard-sales-media",
+      "medium": "digital"
+    },
+    {
+      "ie_id": "C00571703-ie-1827952-SE24.22915",
+      "spender_entity_id": "C00571703",
+      "spender_name": "SENATE LEADERSHIP FUND",
+      "candidate_id": "S6PA00217",
+      "candidate_name": "Bob Casey",
+      "support_oppose": "O",
+      "amount": 4000.0,
+      "date": "2024-09-03",
+      "purpose": "WEB AD - FILED ON 09/03/2024",
+      "payee": "RICHARD SALES MEDIA",
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202410159687740310",
+      "vendor_id": "V-richard-sales-media",
+      "medium": "digital"
+    }
+  ],
+  "ads": [],
+  "method": "Every Schedule E independent expenditure names a payee. Payee strings are normalised (case, punctuation, legal suffixes, token order), near-duplicates are folded with a difflib ratio ≥ 0.92 when their numeric tokens match, and hand alias rows from data/hand/<race>/vendor_aliases.json override the rule. Medium is classified from the purpose the spender filed (ordered keyword table in campaign_commons/vendors.py). The FEC does not record which buy placed which ad: vendor ↔ ad links are date-window adjacency (or single-digital-vendor inference) from campaign_commons.ads_enrich, each with its basis, and are only `verified` when a person found a source naming both. Totals are the filed amounts, grouped, never re-estimated."
+}

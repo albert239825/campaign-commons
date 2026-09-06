@@ -222,7 +222,9 @@
       "date": "2024-10-30",
       "purpose": "COVERING EXPENSES FOR CANVASSING AND VOTE CHASING",
       "payee": "WU, WEIWEI",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202412319740048527"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202412319740048527",
+      "vendor_id": "V-wu-weiwei",
+      "medium": "field"
     },
     {
       "ie_id": "C00891473-ie-1860935-SE.4187",
@@ -235,7 +237,9 @@
       "date": "2024-11-02",
       "purpose": "COVERING EXPENSES FOR CANVASSING AND VOTE CHASING",
       "payee": "QIAN, JOSEPH",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202412319740048520"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202412319740048520",
+      "vendor_id": "V-qian-joseph",
+      "medium": "field"
     },
     {
       "ie_id": "C00891473-ie-1860935-SE.4177",
@@ -248,7 +252,9 @@
       "date": "2024-11-04",
       "purpose": "COVERING EXPENSES FOR CANVASSING AND VOTE CHASING",
       "payee": "QIU, HELEN",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202412319740048523"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202412319740048523",
+      "vendor_id": "V-qiu-helen",
+      "medium": "field"
     },
     {
       "ie_id": "C00891473-ie-1860935-SE.4176",
@@ -261,7 +267,9 @@
       "date": "2024-10-26",
       "purpose": "COVERING EXPENSES FOR CANVASSING AND VOTER REGISTRATION",
       "payee": "QIU, HELEN",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202412319740048520"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202412319740048520",
+      "vendor_id": "V-qiu-helen",
+      "medium": "field"
     },
     {
       "ie_id": "C00891473-ie-1860935-SE.4188",
@@ -274,7 +282,9 @@
       "date": "2024-10-24",
       "purpose": "COVERING EXPENSES FOR CANVASSING AND VOTE CHASING",
       "payee": "WU, WEIWEI",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202412319740048525"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202412319740048525",
+      "vendor_id": "V-wu-weiwei",
+      "medium": "field"
     },
     {
       "ie_id": "C00891473-ie-1860935-SE.4189",
@@ -287,7 +297,9 @@
       "date": "2024-10-24",
       "purpose": "COVERING EXPENSES FOR CANVASSING AND VOTE CHASING",
       "payee": "WU, WEIWEI",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202412319740048526"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202412319740048526",
+      "vendor_id": "V-wu-weiwei",
+      "medium": "field"
     },
     {
       "ie_id": "C00891473-ie-1860935-SE.4186",
@@ -300,7 +312,9 @@
       "date": "2024-10-24",
       "purpose": "COVERING EXPENSES FOR CANVASSING AND VOTE CHASING",
       "payee": "LU, SHUPING",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202412319740048517"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202412319740048517",
+      "vendor_id": "V-lu-shuping",
+      "medium": "field"
     },
     {
       "ie_id": "C00891473-ie-1860935-SE.4305",
@@ -313,7 +327,9 @@
       "date": "2024-11-06",
       "purpose": "COVERING EXPENSES FOR VOTE CHASING AND CANVASSING",
       "payee": "QIU, HELEN",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202412319740048523"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202412319740048523",
+      "vendor_id": "V-qiu-helen",
+      "medium": "field"
     }
   ],
   "flags": [
@@ -326,5 +342,99 @@
   ],
   "has_chain": true,
   "source_url": "https://www.fec.gov/data/committee/C00891473/?cycle=2024",
-  "data_status": "real"
+  "data_status": "real",
+  "vendors": [
+    {
+      "vendor_id": "V-wu-weiwei",
+      "name": "WU, WEIWEI",
+      "amount": 2100.0,
+      "count": 3,
+      "media_mix": [
+        {
+          "medium": "field",
+          "amount": 2100.0,
+          "count": 3
+        }
+      ],
+      "targets": [
+        {
+          "candidate_id": "S2PA00661",
+          "support_oppose": "S",
+          "amount": 2100.0
+        }
+      ],
+      "first_date": "2024-10-24",
+      "last_date": "2024-10-30",
+      "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00891473&payee_name=WU%2C+WEIWEI"
+    },
+    {
+      "vendor_id": "V-qiu-helen",
+      "name": "QIU, HELEN",
+      "amount": 1450.0,
+      "count": 3,
+      "media_mix": [
+        {
+          "medium": "field",
+          "amount": 1450.0,
+          "count": 3
+        }
+      ],
+      "targets": [
+        {
+          "candidate_id": "S2PA00661",
+          "support_oppose": "S",
+          "amount": 1450.0
+        }
+      ],
+      "first_date": "2024-10-26",
+      "last_date": "2024-11-06",
+      "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00891473&payee_name=QIU%2C+HELEN"
+    },
+    {
+      "vendor_id": "V-qian-joseph",
+      "name": "QIAN, JOSEPH",
+      "amount": 1000.0,
+      "count": 1,
+      "media_mix": [
+        {
+          "medium": "field",
+          "amount": 1000.0,
+          "count": 1
+        }
+      ],
+      "targets": [
+        {
+          "candidate_id": "S2PA00661",
+          "support_oppose": "S",
+          "amount": 1000.0
+        }
+      ],
+      "first_date": "2024-11-02",
+      "last_date": "2024-11-02",
+      "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00891473&payee_name=QIAN%2C+JOSEPH"
+    },
+    {
+      "vendor_id": "V-lu-shuping",
+      "name": "LU, SHUPING",
+      "amount": 375.0,
+      "count": 1,
+      "media_mix": [
+        {
+          "medium": "field",
+          "amount": 375.0,
+          "count": 1
+        }
+      ],
+      "targets": [
+        {
+          "candidate_id": "S2PA00661",
+          "support_oppose": "S",
+          "amount": 375.0
+        }
+      ],
+      "first_date": "2024-10-24",
+      "last_date": "2024-10-24",
+      "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00891473&payee_name=LU%2C+SHUPING"
+    }
+  ]
 }

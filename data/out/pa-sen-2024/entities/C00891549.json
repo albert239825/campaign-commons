@@ -71,7 +71,9 @@
       "date": "2024-10-29",
       "purpose": "DIGITAL AD",
       "payee": "RAREFIED ATMOSPHERE, INC.",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202412059739515317"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202412059739515317",
+      "vendor_id": "V-rarefied-atmosphere",
+      "medium": "digital"
     },
     {
       "ie_id": "C00891549-ie-1858746-E6CDB2AEEC2E6439C85A",
@@ -84,7 +86,9 @@
       "date": "2024-10-30",
       "purpose": "VIDEO PRODUCTION",
       "payee": "45 FILMS, LLC",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202412059739515313"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202412059739515313",
+      "vendor_id": "V-45-films",
+      "medium": "production"
     },
     {
       "ie_id": "C00891549-ie-1858746-E3709BFAC08AD4B78B43",
@@ -97,7 +101,9 @@
       "date": "2024-11-08",
       "purpose": "VOTER CONTACT: TEXTS",
       "payee": "PROMPT.IO",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202412059739515316"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202412059739515316",
+      "vendor_id": "V-prompt-io",
+      "medium": "phones"
     }
   ],
   "flags": [
@@ -116,5 +122,76 @@
   ],
   "has_chain": true,
   "source_url": "https://www.fec.gov/data/committee/C00891549/?cycle=2024",
-  "data_status": "real"
+  "data_status": "real",
+  "vendors": [
+    {
+      "vendor_id": "V-rarefied-atmosphere",
+      "name": "RAREFIED ATMOSPHERE, INC.",
+      "amount": 10000.0,
+      "count": 1,
+      "media_mix": [
+        {
+          "medium": "digital",
+          "amount": 10000.0,
+          "count": 1
+        }
+      ],
+      "targets": [
+        {
+          "candidate_id": "S2PA00661",
+          "support_oppose": "S",
+          "amount": 10000.0
+        }
+      ],
+      "first_date": "2024-10-29",
+      "last_date": "2024-10-29",
+      "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00891549&payee_name=RAREFIED+ATMOSPHERE%2C+INC."
+    },
+    {
+      "vendor_id": "V-45-films",
+      "name": "45 FILMS, LLC",
+      "amount": 4000.0,
+      "count": 1,
+      "media_mix": [
+        {
+          "medium": "production",
+          "amount": 4000.0,
+          "count": 1
+        }
+      ],
+      "targets": [
+        {
+          "candidate_id": "S2PA00661",
+          "support_oppose": "S",
+          "amount": 4000.0
+        }
+      ],
+      "first_date": "2024-10-30",
+      "last_date": "2024-10-30",
+      "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00891549&payee_name=45+FILMS%2C+LLC"
+    },
+    {
+      "vendor_id": "V-prompt-io",
+      "name": "PROMPT.IO",
+      "amount": 44.45,
+      "count": 1,
+      "media_mix": [
+        {
+          "medium": "phones",
+          "amount": 44.45,
+          "count": 1
+        }
+      ],
+      "targets": [
+        {
+          "candidate_id": "S6PA00217",
+          "support_oppose": "O",
+          "amount": 44.45
+        }
+      ],
+      "first_date": "2024-11-08",
+      "last_date": "2024-11-08",
+      "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00891549&payee_name=PROMPT.IO"
+    }
+  ]
 }

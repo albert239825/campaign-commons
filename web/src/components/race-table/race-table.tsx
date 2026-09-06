@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
-import type { RaceSummary } from "@citizen-gotham/contracts";
+import type { RaceSummary } from "@campaign-commons/contracts";
 import { EmptyRow, Table, Th } from "@/components/ui/table";
 import { RaceRow } from "./race-row";
 

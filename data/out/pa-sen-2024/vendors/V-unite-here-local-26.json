@@ -1,0 +1,110 @@
+{
+  "vendor_id": "V-unite-here-local-26",
+  "name": "UNITE HERE LOCAL 26",
+  "aliases": [
+    "UNITE HERE LOCAL 26"
+  ],
+  "normalization": {
+    "basis": "inferred",
+    "rule": "case/punctuation/suffix normalisation + token-set ≥0.92 (numeric tokens must match); aliases file",
+    "source_urls": [
+      "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&payee_name=UNITE+HERE+LOCAL+26"
+    ],
+    "checked_by": null,
+    "checked_at": null
+  },
+  "total": 11539.24,
+  "count": 4,
+  "media_mix": [
+    {
+      "medium": "field",
+      "amount": 11539.24,
+      "count": 4
+    }
+  ],
+  "spenders": [
+    {
+      "entity_id": "C00754051",
+      "name": "WORKERS VOTE",
+      "amount": 11539.24,
+      "count": 4
+    }
+  ],
+  "targets": [
+    {
+      "candidate_id": "S6PA00217",
+      "support_oppose": "S",
+      "amount": 11539.24
+    }
+  ],
+  "first_date": "2024-07-09",
+  "last_date": "2024-10-22",
+  "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&payee_name=UNITE+HERE+LOCAL+26",
+  "race_id": "pa-sen-2024",
+  "generated_at": "2026-09-05T20:34:15+00:00",
+  "data_status": "real",
+  "expenditures": [
+    {
+      "ie_id": "C00754051-ie-1859402-B890303",
+      "spender_entity_id": "C00754051",
+      "spender_name": "WORKERS VOTE",
+      "candidate_id": "S6PA00217",
+      "candidate_name": "Bob Casey",
+      "support_oppose": "S",
+      "amount": 2826.25,
+      "date": "2024-10-22",
+      "purpose": "CANVASSER SALARIES AND BENEFITS FOR 10/22 - 11/5 IN PHILLY",
+      "payee": "UNITE HERE LOCAL 26",
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202412079739739996",
+      "vendor_id": "V-unite-here-local-26",
+      "medium": "field"
+    },
+    {
+      "ie_id": "C00754051-ie-1833966-B884394",
+      "spender_entity_id": "C00754051",
+      "spender_name": "WORKERS VOTE",
+      "candidate_id": "S6PA00217",
+      "candidate_name": "Bob Casey",
+      "support_oppose": "S",
+      "amount": 1451.3,
+      "date": "2024-09-17",
+      "purpose": "CANVASSER SALARIES AND BENEFITS FOR 9/16/2024 THROUGH 9/29/2024",
+      "payee": "UNITE HERE LOCAL 26",
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202410209709587542",
+      "vendor_id": "V-unite-here-local-26",
+      "medium": "field"
+    },
+    {
+      "ie_id": "C00754051-ie-1833966-B882615",
+      "spender_entity_id": "C00754051",
+      "spender_name": "WORKERS VOTE",
+      "candidate_id": "S6PA00217",
+      "candidate_name": "Bob Casey",
+      "support_oppose": "S",
+      "amount": 1452.34,
+      "date": "2024-09-05",
+      "purpose": "CANVASSER SALARIES AND BENEFITS FOR 9/3/2024 THROUGH 9/15/2024",
+      "payee": "UNITE HERE LOCAL 26",
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202410209709587537",
+      "vendor_id": "V-unite-here-local-26",
+      "medium": "field"
+    },
+    {
+      "ie_id": "C00754051-ie-1812264-B878085",
+      "spender_entity_id": "C00754051",
+      "spender_name": "WORKERS VOTE",
+      "candidate_id": "S6PA00217",
+      "candidate_name": "Bob Casey",
+      "support_oppose": "S",
+      "amount": 5809.35,
+      "date": "2024-07-09",
+      "purpose": "SALARIES AND BENEFITS FOR CANVASSERS FOR 7/12/24 - 8/31/2024",
+      "payee": "UNITE HERE LOCAL 26",
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202408209674147916",
+      "vendor_id": "V-unite-here-local-26",
+      "medium": "field"
+    }
+  ],
+  "ads": [],
+  "method": "Every Schedule E independent expenditure names a payee. Payee strings are normalised (case, punctuation, legal suffixes, token order), near-duplicates are folded with a difflib ratio ≥ 0.92 when their numeric tokens match, and hand alias rows from data/hand/<race>/vendor_aliases.json override the rule. Medium is classified from the purpose the spender filed (ordered keyword table in campaign_commons/vendors.py). The FEC does not record which buy placed which ad: vendor ↔ ad links are date-window adjacency (or single-digital-vendor inference) from campaign_commons.ads_enrich, each with its basis, and are only `verified` when a person found a source naming both. Totals are the filed amounts, grouped, never re-estimated."
+}

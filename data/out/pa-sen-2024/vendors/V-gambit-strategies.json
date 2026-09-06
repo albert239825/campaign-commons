@@ -1,0 +1,2071 @@
+{
+  "vendor_id": "V-gambit-strategies",
+  "name": "GAMBIT STRATEGIES",
+  "aliases": [
+    "GAMBIT STRATEGIES",
+    "GAMBIT STRATEGIES LLC"
+  ],
+  "normalization": {
+    "basis": "inferred",
+    "rule": "case/punctuation/suffix normalisation + token-set ≥0.92 (numeric tokens must match); aliases file",
+    "source_urls": [
+      "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&payee_name=GAMBIT+STRATEGIES&payee_name=GAMBIT+STRATEGIES+LLC"
+    ],
+    "checked_by": null,
+    "checked_at": null
+  },
+  "total": 23683928.86,
+  "count": 56,
+  "media_mix": [
+    {
+      "medium": "digital",
+      "amount": 20238440.59,
+      "count": 34
+    },
+    {
+      "medium": "production",
+      "amount": 3445488.27,
+      "count": 22
+    }
+  ],
+  "spenders": [
+    {
+      "entity_id": "C00865444",
+      "name": "WINSENATE",
+      "amount": 19673928.86,
+      "count": 48
+    },
+    {
+      "entity_id": "C00740225",
+      "name": "NRDC ACTION VOTES",
+      "amount": 2010000.0,
+      "count": 7
+    },
+    {
+      "entity_id": "C00486845",
+      "name": "LCV VICTORY FUND",
+      "amount": 2000000.0,
+      "count": 1
+    }
+  ],
+  "targets": [
+    {
+      "candidate_id": "S2PA00661",
+      "support_oppose": "O",
+      "amount": 23620969.36
+    },
+    {
+      "candidate_id": "S6PA00217",
+      "support_oppose": "S",
+      "amount": 62959.5
+    }
+  ],
+  "first_date": "2024-06-11",
+  "last_date": "2024-11-13",
+  "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&payee_name=GAMBIT+STRATEGIES&payee_name=GAMBIT+STRATEGIES+LLC",
+  "race_id": "pa-sen-2024",
+  "generated_at": "2026-09-05T20:34:15+00:00",
+  "data_status": "real",
+  "expenditures": [
+    {
+      "ie_id": "C00865444-ie-1876340-500174253",
+      "spender_entity_id": "C00865444",
+      "spender_name": "WINSENATE",
+      "candidate_id": "S2PA00661",
+      "candidate_name": "Dave McCormick",
+      "support_oppose": "O",
+      "amount": 2520.0,
+      "date": "2024-11-13",
+      "purpose": "DIGITAL MEDIA PRODUCTION COSTS",
+      "payee": "GAMBIT STRATEGIES",
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202502149753430684",
+      "vendor_id": "V-gambit-strategies",
+      "medium": "production"
+    },
+    {
+      "ie_id": "C00865444-ie-1876340-500174129",
+      "spender_entity_id": "C00865444",
+      "spender_name": "WINSENATE",
+      "candidate_id": "S2PA00661",
+      "candidate_name": "Dave McCormick",
+      "support_oppose": "O",
+      "amount": 5040.0,
+      "date": "2024-11-13",
+      "purpose": "DIGITAL MEDIA PRODUCTION COSTS",
+      "payee": "GAMBIT STRATEGIES",
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202502149753430736",
+      "vendor_id": "V-gambit-strategies",
+      "medium": "production"
+    },
+    {
+      "ie_id": "C00865444-ie-1876340-500174130",
+      "spender_entity_id": "C00865444",
+      "spender_name": "WINSENATE",
+      "candidate_id": "S6PA00217",
+      "candidate_name": "Bob Casey",
+      "support_oppose": "S",
+      "amount": 6300.0,
+      "date": "2024-11-13",
+      "purpose": "DIGITAL MEDIA PRODUCTION COSTS",
+      "payee": "GAMBIT STRATEGIES",
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202502149753430653",
+      "vendor_id": "V-gambit-strategies",
+      "medium": "production"
+    },
+    {
+      "ie_id": "C00865444-ie-1876340-500174128",
+      "spender_entity_id": "C00865444",
+      "spender_name": "WINSENATE",
+      "candidate_id": "S2PA00661",
+      "candidate_name": "Dave McCormick",
+      "support_oppose": "O",
+      "amount": 9450.0,
+      "date": "2024-11-13",
+      "purpose": "DIGITAL MEDIA PRODUCTION COSTS",
+      "payee": "GAMBIT STRATEGIES",
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202502149753430724",
+      "vendor_id": "V-gambit-strategies",
+      "medium": "production"
+    },
+    {
+      "ie_id": "C00865444-ie-1876340-500174273",
+      "spender_entity_id": "C00865444",
+      "spender_name": "WINSENATE",
+      "candidate_id": "S2PA00661",
+      "candidate_name": "Dave McCormick",
+      "support_oppose": "O",
+      "amount": 200000.0,
+      "date": "2024-11-01",
+      "purpose": "DIGITAL MEDIA BUY",
+      "payee": "GAMBIT STRATEGIES",
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202502149753430686",
+      "vendor_id": "V-gambit-strategies",
+      "medium": "digital"
+    },
+    {
+      "ie_id": "C00865444-ie-1876340-500174235",
+      "spender_entity_id": "C00865444",
+      "spender_name": "WINSENATE",
+      "candidate_id": "S2PA00661",
+      "candidate_name": "Dave McCormick",
+      "support_oppose": "O",
+      "amount": 1000000.0,
+      "date": "2024-10-30",
+      "purpose": "DIGITAL MEDIA BUY",
+      "payee": "GAMBIT STRATEGIES",
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202502149753430699",
+      "vendor_id": "V-gambit-strategies",
+      "medium": "digital"
+    },
+    {
+      "ie_id": "C00865444-ie-1876340-500174226",
+      "spender_entity_id": "C00865444",
+      "spender_name": "WINSENATE",
+      "candidate_id": "S2PA00661",
+      "candidate_name": "Dave McCormick",
+      "support_oppose": "O",
+      "amount": 6519.0,
+      "date": "2024-10-29",
+      "purpose": "DIGITAL MEDIA PRODUCTION COSTS",
+      "payee": "GAMBIT STRATEGIES",
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202502149753430707",
+      "vendor_id": "V-gambit-strategies",
+      "medium": "production"
+    },
+    {
+      "ie_id": "C00865444-ie-1876340-500174225",
+      "spender_entity_id": "C00865444",
+      "spender_name": "WINSENATE",
+      "candidate_id": "S2PA00661",
+      "candidate_name": "Dave McCormick",
+      "support_oppose": "O",
+      "amount": 50000.0,
+      "date": "2024-10-29",
+      "purpose": "DIGITAL MEDIA BUY",
+      "payee": "GAMBIT STRATEGIES",
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202502149753430699",
+      "vendor_id": "V-gambit-strategies",
+      "medium": "digital"
+    },
+    {
+      "ie_id": "C00865444-ie-1876340-500174192",
+      "spender_entity_id": "C00865444",
+      "spender_name": "WINSENATE",
+      "candidate_id": "S2PA00661",
+      "candidate_name": "Dave McCormick",
+      "support_oppose": "O",
+      "amount": 450000.0,
+      "date": "2024-10-29",
+      "purpose": "DIGITAL MEDIA BUY",
+      "payee": "GAMBIT STRATEGIES",
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202502149753430678",
+      "vendor_id": "V-gambit-strategies",
+      "medium": "digital"
+    },
+    {
+      "ie_id": "C00865444-ie-1876340-500174127",
+      "spender_entity_id": "C00865444",
+      "spender_name": "WINSENATE",
+      "candidate_id": "S6PA00217",
+      "candidate_name": "Bob Casey",
+      "support_oppose": "S",
+      "amount": 26616.84,
+      "date": "2024-10-25",
+      "purpose": "DIGITAL MEDIA BUY",
+      "payee": "GAMBIT STRATEGIES",
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202502149753430715",
+      "vendor_id": "V-gambit-strategies",
+      "medium": "digital"
+    },
+    {
+      "ie_id": "C00865444-ie-1876340-500174194",
+      "spender_entity_id": "C00865444",
+      "spender_name": "WINSENATE",
+      "candidate_id": "S6PA00217",
+      "candidate_name": "Bob Casey",
+      "support_oppose": "S",
+      "amount": 30042.66,
+      "date": "2024-10-25",
+      "purpose": "DIGITAL MEDIA BUY",
+      "payee": "GAMBIT STRATEGIES",
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202502149753430697",
+      "vendor_id": "V-gambit-strategies",
+      "medium": "digital"
+    },
+    {
+      "ie_id": "C00865444-ie-1876340-500174131",
+      "spender_entity_id": "C00865444",
+      "spender_name": "WINSENATE",
+      "candidate_id": "S2PA00661",
+      "candidate_name": "Dave McCormick",
+      "support_oppose": "O",
+      "amount": 425000.0,
+      "date": "2024-10-25",
+      "purpose": "DIGITAL MEDIA BUY",
+      "payee": "GAMBIT STRATEGIES",
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202502149753430663",
+      "vendor_id": "V-gambit-strategies",
+      "medium": "digital"
+    },
+    {
+      "ie_id": "C00865444-ie-1876340-500174193",
+      "spender_entity_id": "C00865444",
+      "spender_name": "WINSENATE",
+      "candidate_id": "S2PA00661",
+      "candidate_name": "Dave McCormick",
+      "support_oppose": "O",
+      "amount": 1313335.79,
+      "date": "2024-10-25",
+      "purpose": "DIGITAL MEDIA BUY",
+      "payee": "GAMBIT STRATEGIES",
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202502149753430688",
+      "vendor_id": "V-gambit-strategies",
+      "medium": "digital"
+    },
+    {
+      "ie_id": "C00740225-ie-1853130-500193026",
+      "spender_entity_id": "C00740225",
+      "spender_name": "NRDC ACTION VOTES",
+      "candidate_id": "S2PA00661",
+      "candidate_name": "Dave McCormick",
+      "support_oppose": "O",
+      "amount": 500.0,
+      "date": "2024-10-22",
+      "purpose": "AD PRODUCTION",
+      "payee": "GAMBIT STRATEGIES LLC",
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202412049720214762",
+      "vendor_id": "V-gambit-strategies",
+      "medium": "production"
+    },
+    {
+      "ie_id": "C00740225-ie-1853130-500193025",
+      "spender_entity_id": "C00740225",
+      "spender_name": "NRDC ACTION VOTES",
+      "candidate_id": "S2PA00661",
+      "candidate_name": "Dave McCormick",
+      "support_oppose": "O",
+      "amount": 9500.0,
+      "date": "2024-10-22",
+      "purpose": "DIGITAL AD BUY",
+      "payee": "GAMBIT STRATEGIES LLC",
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202412049720214761",
+      "vendor_id": "V-gambit-strategies",
+      "medium": "digital"
+    },
+    {
+      "ie_id": "C00865444-ie-1876340-500173938",
+      "spender_entity_id": "C00865444",
+      "spender_name": "WINSENATE",
+      "candidate_id": "S2PA00661",
+      "candidate_name": "Dave McCormick",
+      "support_oppose": "O",
+      "amount": 600000.0,
+      "date": "2024-10-21",
+      "purpose": "DIGITAL MEDIA BUY",
+      "payee": "GAMBIT STRATEGIES",
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202502149753430725",
+      "vendor_id": "V-gambit-strategies",
+      "medium": "digital"
+    },
+    {
+      "ie_id": "C00865444-ie-1876340-500173937",
+      "spender_entity_id": "C00865444",
+      "spender_name": "WINSENATE",
+      "candidate_id": "S2PA00661",
+      "candidate_name": "Dave McCormick",
+      "support_oppose": "O",
+      "amount": 600000.0,
+      "date": "2024-10-18",
+      "purpose": "DIGITAL MEDIA BUY",
+      "payee": "GAMBIT STRATEGIES",
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202502149753430717",
+      "vendor_id": "V-gambit-strategies",
+      "medium": "digital"
+    },
+    {
+      "ie_id": "C00865444-ie-1876340-500173401",
+      "spender_entity_id": "C00865444",
+      "spender_name": "WINSENATE",
+      "candidate_id": "S2PA00661",
+      "candidate_name": "Dave McCormick",
+      "support_oppose": "O",
+      "amount": 5040.0,
+      "date": "2024-10-17",
+      "purpose": "DIGITAL MEDIA PRODUCTION COSTS",
+      "payee": "GAMBIT STRATEGIES",
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202502149753430660",
+      "vendor_id": "V-gambit-strategies",
+      "medium": "production"
+    },
+    {
+      "ie_id": "C00865444-ie-1866233-500173366",
+      "spender_entity_id": "C00865444",
+      "spender_name": "WINSENATE",
+      "candidate_id": "S2PA00661",
+      "candidate_name": "Dave McCormick",
+      "support_oppose": "O",
+      "amount": 3520.0,
+      "date": "2024-10-15",
+      "purpose": "DIGITAL MEDIA PRODUCTION COSTS",
+      "payee": "GAMBIT STRATEGIES",
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202501279747798062",
+      "vendor_id": "V-gambit-strategies",
+      "medium": "production"
+    },
+    {
+      "ie_id": "C00865444-ie-1866233-500173367",
+      "spender_entity_id": "C00865444",
+      "spender_name": "WINSENATE",
+      "candidate_id": "S2PA00661",
+      "candidate_name": "Dave McCormick",
+      "support_oppose": "O",
+      "amount": 1289709.65,
+      "date": "2024-10-15",
+      "purpose": "DIGITAL MEDIA BUY",
+      "payee": "GAMBIT STRATEGIES",
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202501279747798063",
+      "vendor_id": "V-gambit-strategies",
+      "medium": "digital"
+    },
+    {
+      "ie_id": "C00740225-ie-1835203-500189982",
+      "spender_entity_id": "C00740225",
+      "spender_name": "NRDC ACTION VOTES",
+      "candidate_id": "S2PA00661",
+      "candidate_name": "Dave McCormick",
+      "support_oppose": "O",
+      "amount": 300000.0,
+      "date": "2024-10-09",
+      "purpose": "DIGITAL AD BUY",
+      "payee": "GAMBIT STRATEGIES LLC",
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202410229710081711",
+      "vendor_id": "V-gambit-strategies",
+      "medium": "digital"
+    },
+    {
+      "ie_id": "C00865444-ie-1866233-500172609",
+      "spender_entity_id": "C00865444",
+      "spender_name": "WINSENATE",
+      "candidate_id": "S2PA00661",
+      "candidate_name": "Dave McCormick",
+      "support_oppose": "O",
+      "amount": 5670.0,
+      "date": "2024-10-04",
+      "purpose": "DIGITAL MEDIA PRODUCTION COSTS",
+      "payee": "GAMBIT STRATEGIES",
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202501279747798061",
+      "vendor_id": "V-gambit-strategies",
+      "medium": "production"
+    },
+    {
+      "ie_id": "C00865444-ie-1866233-500172608",
+      "spender_entity_id": "C00865444",
+      "spender_name": "WINSENATE",
+      "candidate_id": "S2PA00661",
+      "candidate_name": "Dave McCormick",
+      "support_oppose": "O",
+      "amount": 227142.64,
+      "date": "2024-10-04",
+      "purpose": "DIGITAL MEDIA BUY",
+      "payee": "GAMBIT STRATEGIES",
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202501279747798061",
+      "vendor_id": "V-gambit-strategies",
+      "medium": "digital"
+    },
+    {
+      "ie_id": "C00865444-ie-1866233-500172620",
+      "spender_entity_id": "C00865444",
+      "spender_name": "WINSENATE",
+      "candidate_id": "S2PA00661",
+      "candidate_name": "Dave McCormick",
+      "support_oppose": "O",
+      "amount": 1270178.29,
+      "date": "2024-10-04",
+      "purpose": "DIGITAL MEDIA BUY",
+      "payee": "GAMBIT STRATEGIES",
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202501279747798062",
+      "vendor_id": "V-gambit-strategies",
+      "medium": "digital"
+    },
+    {
+      "ie_id": "C00486845-ie-1841516-500458322",
+      "spender_entity_id": "C00486845",
+      "spender_name": "LCV VICTORY FUND",
+      "candidate_id": "S2PA00661",
+      "candidate_name": "Dave McCormick",
+      "support_oppose": "O",
+      "amount": 2000000.0,
+      "date": "2024-10-02",
+      "purpose": "DIGITAL AD BUY & PRODUCTION",
+      "payee": "GAMBIT STRATEGIES",
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202410249713455095",
+      "vendor_id": "V-gambit-strategies",
+      "medium": "production"
+    },
+    {
+      "ie_id": "C00865444-ie-1866233-500172172",
+      "spender_entity_id": "C00865444",
+      "spender_name": "WINSENATE",
+      "candidate_id": "S2PA00661",
+      "candidate_name": "Dave McCormick",
+      "support_oppose": "O",
+      "amount": 15287.0,
+      "date": "2024-10-01",
+      "purpose": "DIGITAL MEDIA PRODUCTION COSTS",
+      "payee": "GAMBIT STRATEGIES",
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202501279747798060",
+      "vendor_id": "V-gambit-strategies",
+      "medium": "production"
+    },
+    {
+      "ie_id": "C00865444-ie-1866233-500172112",
+      "spender_entity_id": "C00865444",
+      "spender_name": "WINSENATE",
+      "candidate_id": "S2PA00661",
+      "candidate_name": "Dave McCormick",
+      "support_oppose": "O",
+      "amount": 167405.31,
+      "date": "2024-10-01",
+      "purpose": "DIGITAL MEDIA BUY",
+      "payee": "GAMBIT STRATEGIES",
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202501279747798059",
+      "vendor_id": "V-gambit-strategies",
+      "medium": "digital"
+    },
+    {
+      "ie_id": "C00865444-ie-1866233-500172113",
+      "spender_entity_id": "C00865444",
+      "spender_name": "WINSENATE",
+      "candidate_id": "S2PA00661",
+      "candidate_name": "Dave McCormick",
+      "support_oppose": "O",
+      "amount": 843120.5,
+      "date": "2024-10-01",
+      "purpose": "DIGITAL MEDIA BUY",
+      "payee": "GAMBIT STRATEGIES",
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202501279747798060",
+      "vendor_id": "V-gambit-strategies",
+      "medium": "digital"
+    },
+    {
+      "ie_id": "C00865444-ie-1833905-500171950",
+      "spender_entity_id": "C00865444",
+      "spender_name": "WINSENATE",
+      "candidate_id": "S2PA00661",
+      "candidate_name": "Dave McCormick",
+      "support_oppose": "O",
+      "amount": 350000.0,
+      "date": "2024-09-26",
+      "purpose": "DIGITAL MEDIA BUY",
+      "payee": "GAMBIT STRATEGIES",
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202410209709511217",
+      "vendor_id": "V-gambit-strategies",
+      "medium": "digital"
+    },
+    {
+      "ie_id": "C00865444-ie-1833905-500171444",
+      "spender_entity_id": "C00865444",
+      "spender_name": "WINSENATE",
+      "candidate_id": "S2PA00661",
+      "candidate_name": "Dave McCormick",
+      "support_oppose": "O",
+      "amount": 5769.0,
+      "date": "2024-09-23",
+      "purpose": "DIGITAL MEDIA PRODUCTION COSTS",
+      "payee": "GAMBIT STRATEGIES",
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202410209709511217",
+      "vendor_id": "V-gambit-strategies",
+      "medium": "production"
+    },
+    {
+      "ie_id": "C00865444-ie-1833905-500171650",
+      "spender_entity_id": "C00865444",
+      "spender_name": "WINSENATE",
+      "candidate_id": "S2PA00661",
+      "candidate_name": "Dave McCormick",
+      "support_oppose": "O",
+      "amount": 1672001.63,
+      "date": "2024-09-20",
+      "purpose": "DIGITAL MEDIA BUY",
+      "payee": "GAMBIT STRATEGIES",
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202410209709511216",
+      "vendor_id": "V-gambit-strategies",
+      "medium": "digital"
+    },
+    {
+      "ie_id": "C00740225-ie-1831691-500186351",
+      "spender_entity_id": "C00740225",
+      "spender_name": "NRDC ACTION VOTES",
+      "candidate_id": "S2PA00661",
+      "candidate_name": "Dave McCormick",
+      "support_oppose": "O",
+      "amount": 15000.0,
+      "date": "2024-09-14",
+      "purpose": "AD PRODUCTION",
+      "payee": "GAMBIT STRATEGIES LLC",
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202410189698667004",
+      "vendor_id": "V-gambit-strategies",
+      "medium": "production"
+    },
+    {
+      "ie_id": "C00740225-ie-1831691-500186350",
+      "spender_entity_id": "C00740225",
+      "spender_name": "NRDC ACTION VOTES",
+      "candidate_id": "S2PA00661",
+      "candidate_name": "Dave McCormick",
+      "support_oppose": "O",
+      "amount": 485000.0,
+      "date": "2024-09-14",
+      "purpose": "DIGITAL AD BUY",
+      "payee": "GAMBIT STRATEGIES LLC",
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202410189698667004",
+      "vendor_id": "V-gambit-strategies",
+      "medium": "digital"
+    },
+    {
+      "ie_id": "C00865444-ie-1833905-500170998",
+      "spender_entity_id": "C00865444",
+      "spender_name": "WINSENATE",
+      "candidate_id": "S2PA00661",
+      "candidate_name": "Dave McCormick",
+      "support_oppose": "O",
+      "amount": 8793.0,
+      "date": "2024-09-13",
+      "purpose": "DIGITAL MEDIA PRODUCTION COSTS",
+      "payee": "GAMBIT STRATEGIES",
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202410209709511216",
+      "vendor_id": "V-gambit-strategies",
+      "medium": "production"
+    },
+    {
+      "ie_id": "C00865444-ie-1833905-500171351",
+      "spender_entity_id": "C00865444",
+      "spender_name": "WINSENATE",
+      "candidate_id": "S2PA00661",
+      "candidate_name": "Dave McCormick",
+      "support_oppose": "O",
+      "amount": 1022001.63,
+      "date": "2024-09-12",
+      "purpose": "DIGITAL MEDIA BUY",
+      "payee": "GAMBIT STRATEGIES",
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202410209709511215",
+      "vendor_id": "V-gambit-strategies",
+      "medium": "digital"
+    },
+    {
+      "ie_id": "C00865444-ie-1833905-500171240",
+      "spender_entity_id": "C00865444",
+      "spender_name": "WINSENATE",
+      "candidate_id": "S2PA00661",
+      "candidate_name": "Dave McCormick",
+      "support_oppose": "O",
+      "amount": 1022001.63,
+      "date": "2024-09-06",
+      "purpose": "DIGITAL MEDIA BUY",
+      "payee": "GAMBIT STRATEGIES",
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202410209709511215",
+      "vendor_id": "V-gambit-strategies",
+      "medium": "digital"
+    },
+    {
+      "ie_id": "C00865444-ie-1833905-500170967",
+      "spender_entity_id": "C00865444",
+      "spender_name": "WINSENATE",
+      "candidate_id": "S2PA00661",
+      "candidate_name": "Dave McCormick",
+      "support_oppose": "O",
+      "amount": 1072915.44,
+      "date": "2024-09-03",
+      "purpose": "DIGITAL MEDIA BUY",
+      "payee": "GAMBIT STRATEGIES",
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202410209709511214",
+      "vendor_id": "V-gambit-strategies",
+      "medium": "digital"
+    },
+    {
+      "ie_id": "C00865444-ie-1818068-500170794",
+      "spender_entity_id": "C00865444",
+      "spender_name": "WINSENATE",
+      "candidate_id": "S2PA00661",
+      "candidate_name": "Dave McCormick",
+      "support_oppose": "O",
+      "amount": 5139.0,
+      "date": "2024-08-28",
+      "purpose": "DIGITAL MEDIA PRODUCTION COSTS",
+      "payee": "GAMBIT STRATEGIES",
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202409209684601449",
+      "vendor_id": "V-gambit-strategies",
+      "medium": "production"
+    },
+    {
+      "ie_id": "C00865444-ie-1818068-500170791",
+      "spender_entity_id": "C00865444",
+      "spender_name": "WINSENATE",
+      "candidate_id": "S2PA00661",
+      "candidate_name": "Dave McCormick",
+      "support_oppose": "O",
+      "amount": 479793.12,
+      "date": "2024-08-23",
+      "purpose": "DIGITAL MEDIA BUY",
+      "payee": "GAMBIT STRATEGIES",
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202409209684601448",
+      "vendor_id": "V-gambit-strategies",
+      "medium": "digital"
+    },
+    {
+      "ie_id": "C00865444-ie-1818068-500170639",
+      "spender_entity_id": "C00865444",
+      "spender_name": "WINSENATE",
+      "candidate_id": "S2PA00661",
+      "candidate_name": "Dave McCormick",
+      "support_oppose": "O",
+      "amount": 479793.12,
+      "date": "2024-08-20",
+      "purpose": "DIGITAL MEDIA BUY",
+      "payee": "GAMBIT STRATEGIES",
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202409209684601448",
+      "vendor_id": "V-gambit-strategies",
+      "medium": "digital"
+    },
+    {
+      "ie_id": "C00865444-ie-1818068-500170312",
+      "spender_entity_id": "C00865444",
+      "spender_name": "WINSENATE",
+      "candidate_id": "S2PA00661",
+      "candidate_name": "Dave McCormick",
+      "support_oppose": "O",
+      "amount": 8703.0,
+      "date": "2024-08-16",
+      "purpose": "DIGITAL MEDIA PRODUCTION COSTS",
+      "payee": "GAMBIT STRATEGIES",
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202409209684601447",
+      "vendor_id": "V-gambit-strategies",
+      "medium": "production"
+    },
+    {
+      "ie_id": "C00865444-ie-1818068-500170338",
+      "spender_entity_id": "C00865444",
+      "spender_name": "WINSENATE",
+      "candidate_id": "S2PA00661",
+      "candidate_name": "Dave McCormick",
+      "support_oppose": "O",
+      "amount": 9358.25,
+      "date": "2024-08-09",
+      "purpose": "DIGITAL MEDIA BUY",
+      "payee": "GAMBIT STRATEGIES",
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202409209684601446",
+      "vendor_id": "V-gambit-strategies",
+      "medium": "digital"
+    },
+    {
+      "ie_id": "C00865444-ie-1818068-500170339",
+      "spender_entity_id": "C00865444",
+      "spender_name": "WINSENATE",
+      "candidate_id": "S2PA00661",
+      "candidate_name": "Dave McCormick",
+      "support_oppose": "O",
+      "amount": 479793.12,
+      "date": "2024-08-09",
+      "purpose": "DIGITAL MEDIA BUY",
+      "payee": "GAMBIT STRATEGIES",
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202409209684601447",
+      "vendor_id": "V-gambit-strategies",
+      "medium": "digital"
+    },
+    {
+      "ie_id": "C00865444-ie-1818068-500170237",
+      "spender_entity_id": "C00865444",
+      "spender_name": "WINSENATE",
+      "candidate_id": "S2PA00661",
+      "candidate_name": "Dave McCormick",
+      "support_oppose": "O",
+      "amount": 9358.25,
+      "date": "2024-08-02",
+      "purpose": "DIGITAL MEDIA BUY",
+      "payee": "GAMBIT STRATEGIES",
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202409209684601445",
+      "vendor_id": "V-gambit-strategies",
+      "medium": "digital"
+    },
+    {
+      "ie_id": "C00865444-ie-1818068-500170238",
+      "spender_entity_id": "C00865444",
+      "spender_name": "WINSENATE",
+      "candidate_id": "S2PA00661",
+      "candidate_name": "Dave McCormick",
+      "support_oppose": "O",
+      "amount": 1254597.9,
+      "date": "2024-08-02",
+      "purpose": "DIGITAL MEDIA BUY",
+      "payee": "GAMBIT STRATEGIES",
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202409209684601446",
+      "vendor_id": "V-gambit-strategies",
+      "medium": "digital"
+    },
+    {
+      "ie_id": "C00865444-ie-1811761-500169736",
+      "spender_entity_id": "C00865444",
+      "spender_name": "WINSENATE",
+      "candidate_id": "S2PA00661",
+      "candidate_name": "Dave McCormick",
+      "support_oppose": "O",
+      "amount": 1045.0,
+      "date": "2024-07-29",
+      "purpose": "DIGITAL MEDIA PRODUCTION COSTS",
+      "payee": "GAMBIT STRATEGIES",
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202408209666563092",
+      "vendor_id": "V-gambit-strategies",
+      "medium": "production"
+    },
+    {
+      "ie_id": "C00865444-ie-1811761-500169975",
+      "spender_entity_id": "C00865444",
+      "spender_name": "WINSENATE",
+      "candidate_id": "S2PA00661",
+      "candidate_name": "Dave McCormick",
+      "support_oppose": "O",
+      "amount": 5873.0,
+      "date": "2024-07-29",
+      "purpose": "DIGITAL MEDIA PRODUCTION COSTS",
+      "payee": "GAMBIT STRATEGIES",
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202408209666563092",
+      "vendor_id": "V-gambit-strategies",
+      "medium": "production"
+    },
+    {
+      "ie_id": "C00865444-ie-1811761-500170016",
+      "spender_entity_id": "C00865444",
+      "spender_name": "WINSENATE",
+      "candidate_id": "S2PA00661",
+      "candidate_name": "Dave McCormick",
+      "support_oppose": "O",
+      "amount": 9358.25,
+      "date": "2024-07-26",
+      "purpose": "DIGITAL MEDIA BUY",
+      "payee": "GAMBIT STRATEGIES",
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202408209666563091",
+      "vendor_id": "V-gambit-strategies",
+      "medium": "digital"
+    },
+    {
+      "ie_id": "C00865444-ie-1811761-500170017",
+      "spender_entity_id": "C00865444",
+      "spender_name": "WINSENATE",
+      "candidate_id": "S2PA00661",
+      "candidate_name": "Dave McCormick",
+      "support_oppose": "O",
+      "amount": 1254597.9,
+      "date": "2024-07-26",
+      "purpose": "DIGITAL MEDIA BUY",
+      "payee": "GAMBIT STRATEGIES",
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202408209666563091",
+      "vendor_id": "V-gambit-strategies",
+      "medium": "digital"
+    },
+    {
+      "ie_id": "C00865444-ie-1811761-500169974",
+      "spender_entity_id": "C00865444",
+      "spender_name": "WINSENATE",
+      "candidate_id": "S2PA00661",
+      "candidate_name": "Dave McCormick",
+      "support_oppose": "O",
+      "amount": 12078.25,
+      "date": "2024-07-23",
+      "purpose": "DIGITAL MEDIA PRODUCTION COSTS",
+      "payee": "GAMBIT STRATEGIES",
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202408209666563090",
+      "vendor_id": "V-gambit-strategies",
+      "medium": "production"
+    },
+    {
+      "ie_id": "C00865444-ie-1811761-500169982",
+      "spender_entity_id": "C00865444",
+      "spender_name": "WINSENATE",
+      "candidate_id": "S2PA00661",
+      "candidate_name": "Dave McCormick",
+      "support_oppose": "O",
+      "amount": 158506.67,
+      "date": "2024-07-23",
+      "purpose": "DIGITAL MEDIA BUY",
+      "payee": "GAMBIT STRATEGIES",
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202408209666563090",
+      "vendor_id": "V-gambit-strategies",
+      "medium": "digital"
+    },
+    {
+      "ie_id": "C00865444-ie-1811761-500169973",
+      "spender_entity_id": "C00865444",
+      "spender_name": "WINSENATE",
+      "candidate_id": "S2PA00661",
+      "candidate_name": "Dave McCormick",
+      "support_oppose": "O",
+      "amount": 1294492.86,
+      "date": "2024-07-23",
+      "purpose": "DIGITAL MEDIA BUY AND PRODUCTION COSTS",
+      "payee": "GAMBIT STRATEGIES",
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202408209666563089",
+      "vendor_id": "V-gambit-strategies",
+      "medium": "production"
+    },
+    {
+      "ie_id": "C00865444-ie-1811761-500169735",
+      "spender_entity_id": "C00865444",
+      "spender_name": "WINSENATE",
+      "candidate_id": "S2PA00661",
+      "candidate_name": "Dave McCormick",
+      "support_oppose": "O",
+      "amount": 6061.16,
+      "date": "2024-07-12",
+      "purpose": "DIGITAL MEDIA PRODUCTION COSTS",
+      "payee": "GAMBIT STRATEGIES",
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202408209666563088",
+      "vendor_id": "V-gambit-strategies",
+      "medium": "production"
+    },
+    {
+      "ie_id": "C00865444-ie-1811761-500169737",
+      "spender_entity_id": "C00865444",
+      "spender_name": "WINSENATE",
+      "candidate_id": "S2PA00661",
+      "candidate_name": "Dave McCormick",
+      "support_oppose": "O",
+      "amount": 500000.0,
+      "date": "2024-07-12",
+      "purpose": "DIGITAL MEDIA BUY",
+      "payee": "GAMBIT STRATEGIES",
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202408209666563089",
+      "vendor_id": "V-gambit-strategies",
+      "medium": "digital"
+    },
+    {
+      "ie_id": "C00740225-ie-1804072-500180018",
+      "spender_entity_id": "C00740225",
+      "spender_name": "NRDC ACTION VOTES",
+      "candidate_id": "S2PA00661",
+      "candidate_name": "Dave McCormick",
+      "support_oppose": "O",
+      "amount": 22688.0,
+      "date": "2024-06-11",
+      "purpose": "AD PRODUCTION",
+      "payee": "GAMBIT STRATEGIES LLC",
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202407199661310878",
+      "vendor_id": "V-gambit-strategies",
+      "medium": "production"
+    },
+    {
+      "ie_id": "C00740225-ie-1804072-500180017",
+      "spender_entity_id": "C00740225",
+      "spender_name": "NRDC ACTION VOTES",
+      "candidate_id": "S2PA00661",
+      "candidate_name": "Dave McCormick",
+      "support_oppose": "O",
+      "amount": 1177312.0,
+      "date": "2024-06-11",
+      "purpose": "DIGITAL AD BUY",
+      "payee": "GAMBIT STRATEGIES LLC",
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202407199661310878",
+      "vendor_id": "V-gambit-strategies",
+      "medium": "digital"
+    }
+  ],
+  "ads": [
+    {
+      "ad_id": "CR10478813122326953985",
+      "sponsor_entity_id": "C00865444",
+      "basis": {
+        "basis": "inferred",
+        "rule": "Only digital vendor WINSENATE paid during this ad's run window (ran sep 18, 2024 – oct 8, 2024, counting buys dated up to 7 days before first shown) — inferred, not filed. WINSENATE reported $5,587,369 in digital buys to GAMBIT STRATEGIES; Google ads are digital placements.",
+        "source_urls": [
+          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00865444&payee_name=GAMBIT+STRATEGIES"
+        ],
+        "checked_by": null,
+        "checked_at": null
+      }
+    },
+    {
+      "ad_id": "CR05870211732231684097",
+      "sponsor_entity_id": "C00865444",
+      "basis": {
+        "basis": "inferred",
+        "rule": "Only digital vendor WINSENATE paid during this ad's run window (ran jul 23, 2024 – aug 14, 2024, counting buys dated up to 7 days before first shown) — inferred, not filed. WINSENATE reported $4,489,059 in digital buys to GAMBIT STRATEGIES; Google ads are digital placements.",
+        "source_urls": [
+          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00865444&payee_name=GAMBIT+STRATEGIES"
+        ],
+        "checked_by": null,
+        "checked_at": null
+      }
+    },
+    {
+      "ad_id": "CR17813237325262487553",
+      "sponsor_entity_id": "C00865444",
+      "basis": {
+        "basis": "inferred",
+        "rule": "Only digital vendor WINSENATE paid during this ad's run window (ran aug 13, 2024 – aug 27, 2024, counting buys dated up to 7 days before first shown) — inferred, not filed. WINSENATE reported $1,457,441 in digital buys to GAMBIT STRATEGIES; Google ads are digital placements.",
+        "source_urls": [
+          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00865444&payee_name=GAMBIT+STRATEGIES"
+        ],
+        "checked_by": null,
+        "checked_at": null
+      }
+    },
+    {
+      "ad_id": "CR16164832502010085377",
+      "sponsor_entity_id": "C00865444",
+      "basis": {
+        "basis": "inferred",
+        "rule": "Only digital vendor WINSENATE paid during this ad's run window (ran oct 16, 2024 – oct 30, 2024, counting buys dated up to 7 days before first shown) — inferred, not filed. WINSENATE reported $5,799,784 in digital buys to GAMBIT STRATEGIES; Google ads are digital placements.",
+        "source_urls": [
+          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00865444&payee_name=GAMBIT+STRATEGIES"
+        ],
+        "checked_by": null,
+        "checked_at": null
+      }
+    },
+    {
+      "ad_id": "CR15747662947024896001",
+      "sponsor_entity_id": "C00865444",
+      "basis": {
+        "basis": "inferred",
+        "rule": "Only digital vendor WINSENATE paid during this ad's run window (ran sep 4, 2024 – nov 5, 2024, counting buys dated up to 7 days before first shown) — inferred, not filed. WINSENATE reported $13,687,209 in digital buys to GAMBIT STRATEGIES; Google ads are digital placements.",
+        "source_urls": [
+          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00865444&payee_name=GAMBIT+STRATEGIES"
+        ],
+        "checked_by": null,
+        "checked_at": null
+      }
+    },
+    {
+      "ad_id": "CR13534678092823396353",
+      "sponsor_entity_id": "C00740225",
+      "basis": {
+        "basis": "inferred",
+        "rule": "Only digital vendor NRDC ACTION VOTES paid during this ad's run window (ran sep 13, 2024 – oct 22, 2024, counting buys dated up to 7 days before first shown) — inferred, not filed. NRDC ACTION VOTES reported $810,000 in digital buys to GAMBIT STRATEGIES; Google ads are digital placements.",
+        "source_urls": [
+          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00740225&payee_name=GAMBIT+STRATEGIES+LLC"
+        ],
+        "checked_by": null,
+        "checked_at": null
+      }
+    },
+    {
+      "ad_id": "CR03071815602860457985",
+      "sponsor_entity_id": "C00865444",
+      "basis": {
+        "basis": "inferred",
+        "rule": "Only digital vendor WINSENATE paid during this ad's run window (ran sep 4, 2024 – sep 19, 2024, counting buys dated up to 7 days before first shown) — inferred, not filed. WINSENATE reported $3,130,851 in digital buys to GAMBIT STRATEGIES; Google ads are digital placements.",
+        "source_urls": [
+          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00865444&payee_name=GAMBIT+STRATEGIES"
+        ],
+        "checked_by": null,
+        "checked_at": null
+      }
+    },
+    {
+      "ad_id": "CR12341671143046905857",
+      "sponsor_entity_id": "C00865444",
+      "basis": {
+        "basis": "inferred",
+        "rule": "Only digital vendor WINSENATE paid during this ad's run window (ran oct 5, 2024 – oct 29, 2024, counting buys dated up to 7 days before first shown) — inferred, not filed. WINSENATE reported $7,328,588 in digital buys to GAMBIT STRATEGIES; Google ads are digital placements.",
+        "source_urls": [
+          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00865444&payee_name=GAMBIT+STRATEGIES"
+        ],
+        "checked_by": null,
+        "checked_at": null
+      }
+    },
+    {
+      "ad_id": "CR14255135835702689793",
+      "sponsor_entity_id": "C00865444",
+      "basis": {
+        "basis": "inferred",
+        "rule": "Only digital vendor WINSENATE paid during this ad's run window (ran oct 8, 2024 – oct 16, 2024, counting buys dated up to 7 days before first shown) — inferred, not filed. WINSENATE reported $3,822,033 in digital buys to GAMBIT STRATEGIES; Google ads are digital placements.",
+        "source_urls": [
+          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00865444&payee_name=GAMBIT+STRATEGIES"
+        ],
+        "checked_by": null,
+        "checked_at": null
+      }
+    },
+    {
+      "ad_id": "CR15884613992212070401",
+      "sponsor_entity_id": "C00865444",
+      "basis": {
+        "basis": "inferred",
+        "rule": "Only digital vendor WINSENATE paid during this ad's run window (ran nov 2, 2024 – nov 5, 2024, counting buys dated up to 7 days before first shown) — inferred, not filed. WINSENATE reported $1,706,519 in digital buys to GAMBIT STRATEGIES; Google ads are digital placements.",
+        "source_urls": [
+          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00865444&payee_name=GAMBIT+STRATEGIES"
+        ],
+        "checked_by": null,
+        "checked_at": null
+      }
+    },
+    {
+      "ad_id": "CR14004507606169681921",
+      "sponsor_entity_id": "C00865444",
+      "basis": {
+        "basis": "inferred",
+        "rule": "Only digital vendor WINSENATE paid during this ad's run window (ran jul 25, 2024 – sep 3, 2024, counting buys dated up to 7 days before first shown) — inferred, not filed. WINSENATE reported $6,535,403 in digital buys to GAMBIT STRATEGIES; Google ads are digital placements.",
+        "source_urls": [
+          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00865444&payee_name=GAMBIT+STRATEGIES"
+        ],
+        "checked_by": null,
+        "checked_at": null
+      }
+    },
+    {
+      "ad_id": "CR03840237839694430209",
+      "sponsor_entity_id": "C00865444",
+      "basis": {
+        "basis": "inferred",
+        "rule": "Only digital vendor WINSENATE paid during this ad's run window (ran aug 27, 2024 – sep 3, 2024, counting buys dated up to 7 days before first shown) — inferred, not filed. WINSENATE reported $2,037,641 in digital buys to GAMBIT STRATEGIES; Google ads are digital placements.",
+        "source_urls": [
+          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00865444&payee_name=GAMBIT+STRATEGIES"
+        ],
+        "checked_by": null,
+        "checked_at": null
+      }
+    },
+    {
+      "ad_id": "CR16220568893905698817",
+      "sponsor_entity_id": "C00865444",
+      "basis": {
+        "basis": "inferred",
+        "rule": "Only digital vendor WINSENATE paid during this ad's run window (ran jul 26, 2024 – aug 13, 2024, counting buys dated up to 7 days before first shown) — inferred, not filed. WINSENATE reported $4,489,059 in digital buys to GAMBIT STRATEGIES; Google ads are digital placements.",
+        "source_urls": [
+          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00865444&payee_name=GAMBIT+STRATEGIES"
+        ],
+        "checked_by": null,
+        "checked_at": null
+      }
+    },
+    {
+      "ad_id": "CR05179166475151212545",
+      "sponsor_entity_id": "C00865444",
+      "basis": {
+        "basis": "inferred",
+        "rule": "Only digital vendor WINSENATE paid during this ad's run window (ran jul 12, 2024 – jul 23, 2024, counting buys dated up to 7 days before first shown) — inferred, not filed. WINSENATE reported $1,971,139 in production buys to GAMBIT STRATEGIES; Google ads are digital placements.",
+        "source_urls": [
+          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00865444&payee_name=GAMBIT+STRATEGIES"
+        ],
+        "checked_by": null,
+        "checked_at": null
+      }
+    },
+    {
+      "ad_id": "CR17444495536584392705",
+      "sponsor_entity_id": "C00865444",
+      "basis": {
+        "basis": "inferred",
+        "rule": "Only digital vendor WINSENATE paid during this ad's run window (ran oct 31, 2024 – nov 5, 2024, counting buys dated up to 7 days before first shown) — inferred, not filed. WINSENATE reported $3,501,514 in digital buys to GAMBIT STRATEGIES; Google ads are digital placements.",
+        "source_urls": [
+          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00865444&payee_name=GAMBIT+STRATEGIES"
+        ],
+        "checked_by": null,
+        "checked_at": null
+      }
+    },
+    {
+      "ad_id": "CR02170178134932979713",
+      "sponsor_entity_id": "C00865444",
+      "basis": {
+        "basis": "inferred",
+        "rule": "Only digital vendor WINSENATE paid during this ad's run window (ran oct 16, 2024 – oct 29, 2024, counting buys dated up to 7 days before first shown) — inferred, not filed. WINSENATE reported $4,799,784 in digital buys to GAMBIT STRATEGIES; Google ads are digital placements.",
+        "source_urls": [
+          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00865444&payee_name=GAMBIT+STRATEGIES"
+        ],
+        "checked_by": null,
+        "checked_at": null
+      }
+    },
+    {
+      "ad_id": "CR07452900497838571521",
+      "sponsor_entity_id": "C00865444",
+      "basis": {
+        "basis": "inferred",
+        "rule": "Only digital vendor WINSENATE paid during this ad's run window (ran oct 16, 2024 – nov 5, 2024, counting buys dated up to 7 days before first shown) — inferred, not filed. WINSENATE reported $5,999,784 in digital buys to GAMBIT STRATEGIES; Google ads are digital placements.",
+        "source_urls": [
+          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00865444&payee_name=GAMBIT+STRATEGIES"
+        ],
+        "checked_by": null,
+        "checked_at": null
+      }
+    },
+    {
+      "ad_id": "CR01871250335276728321",
+      "sponsor_entity_id": "C00865444",
+      "basis": {
+        "basis": "inferred",
+        "rule": "Only digital vendor WINSENATE paid during this ad's run window (ran oct 29, 2024 – nov 5, 2024, counting buys dated up to 7 days before first shown) — inferred, not filed. WINSENATE reported $3,501,514 in digital buys to GAMBIT STRATEGIES; Google ads are digital placements.",
+        "source_urls": [
+          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00865444&payee_name=GAMBIT+STRATEGIES"
+        ],
+        "checked_by": null,
+        "checked_at": null
+      }
+    },
+    {
+      "ad_id": "CR00279342491088453633",
+      "sponsor_entity_id": "C00865444",
+      "basis": {
+        "basis": "inferred",
+        "rule": "Only digital vendor WINSENATE paid during this ad's run window (ran oct 5, 2024 – oct 8, 2024, counting buys dated up to 7 days before first shown) — inferred, not filed. WINSENATE reported $2,528,804 in digital buys to GAMBIT STRATEGIES; Google ads are digital placements.",
+        "source_urls": [
+          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00865444&payee_name=GAMBIT+STRATEGIES"
+        ],
+        "checked_by": null,
+        "checked_at": null
+      }
+    },
+    {
+      "ad_id": "CR05421010431412011009",
+      "sponsor_entity_id": "C00865444",
+      "basis": {
+        "basis": "inferred",
+        "rule": "Only digital vendor WINSENATE paid during this ad's run window (ran oct 31, 2024 – nov 5, 2024, counting buys dated up to 7 days before first shown) — inferred, not filed. WINSENATE reported $3,501,514 in digital buys to GAMBIT STRATEGIES; Google ads are digital placements.",
+        "source_urls": [
+          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00865444&payee_name=GAMBIT+STRATEGIES"
+        ],
+        "checked_by": null,
+        "checked_at": null
+      }
+    },
+    {
+      "ad_id": "CR16672726609693769729",
+      "sponsor_entity_id": "C00865444",
+      "basis": {
+        "basis": "inferred",
+        "rule": "Only digital vendor WINSENATE paid during this ad's run window (ran oct 5, 2024 – oct 29, 2024, counting buys dated up to 7 days before first shown) — inferred, not filed. WINSENATE reported $7,328,588 in digital buys to GAMBIT STRATEGIES; Google ads are digital placements.",
+        "source_urls": [
+          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00865444&payee_name=GAMBIT+STRATEGIES"
+        ],
+        "checked_by": null,
+        "checked_at": null
+      }
+    },
+    {
+      "ad_id": "CR13008203887897739265",
+      "sponsor_entity_id": "C00865444",
+      "basis": {
+        "basis": "inferred",
+        "rule": "Only digital vendor WINSENATE paid during this ad's run window (ran oct 5, 2024 – oct 29, 2024, counting buys dated up to 7 days before first shown) — inferred, not filed. WINSENATE reported $7,328,588 in digital buys to GAMBIT STRATEGIES; Google ads are digital placements.",
+        "source_urls": [
+          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00865444&payee_name=GAMBIT+STRATEGIES"
+        ],
+        "checked_by": null,
+        "checked_at": null
+      }
+    },
+    {
+      "ad_id": "CR11668932204813090817",
+      "sponsor_entity_id": "C00865444",
+      "basis": {
+        "basis": "inferred",
+        "rule": "Only digital vendor WINSENATE paid during this ad's run window (ran sep 3, 2024 – sep 19, 2024, counting buys dated up to 7 days before first shown) — inferred, not filed. WINSENATE reported $3,130,851 in digital buys to GAMBIT STRATEGIES; Google ads are digital placements.",
+        "source_urls": [
+          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00865444&payee_name=GAMBIT+STRATEGIES"
+        ],
+        "checked_by": null,
+        "checked_at": null
+      }
+    },
+    {
+      "ad_id": "CR03252786695577272321",
+      "sponsor_entity_id": "C00865444",
+      "basis": {
+        "basis": "inferred",
+        "rule": "Only digital vendor WINSENATE paid during this ad's run window (ran oct 29, 2024 – nov 5, 2024, counting buys dated up to 7 days before first shown) — inferred, not filed. WINSENATE reported $3,501,514 in digital buys to GAMBIT STRATEGIES; Google ads are digital placements.",
+        "source_urls": [
+          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00865444&payee_name=GAMBIT+STRATEGIES"
+        ],
+        "checked_by": null,
+        "checked_at": null
+      }
+    },
+    {
+      "ad_id": "CR02455561600602472449",
+      "sponsor_entity_id": "C00865444",
+      "basis": {
+        "basis": "inferred",
+        "rule": "Only digital vendor WINSENATE paid during this ad's run window (ran oct 29, 2024 – nov 5, 2024, counting buys dated up to 7 days before first shown) — inferred, not filed. WINSENATE reported $3,501,514 in digital buys to GAMBIT STRATEGIES; Google ads are digital placements.",
+        "source_urls": [
+          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00865444&payee_name=GAMBIT+STRATEGIES"
+        ],
+        "checked_by": null,
+        "checked_at": null
+      }
+    },
+    {
+      "ad_id": "CR07690464003792830465",
+      "sponsor_entity_id": "C00865444",
+      "basis": {
+        "basis": "inferred",
+        "rule": "Only digital vendor WINSENATE paid during this ad's run window (ran oct 29, 2024 – nov 5, 2024, counting buys dated up to 7 days before first shown) — inferred, not filed. WINSENATE reported $3,501,514 in digital buys to GAMBIT STRATEGIES; Google ads are digital placements.",
+        "source_urls": [
+          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00865444&payee_name=GAMBIT+STRATEGIES"
+        ],
+        "checked_by": null,
+        "checked_at": null
+      }
+    },
+    {
+      "ad_id": "CR04588870619575091201",
+      "sponsor_entity_id": "C00865444",
+      "basis": {
+        "basis": "inferred",
+        "rule": "Only digital vendor WINSENATE paid during this ad's run window (ran oct 15, 2024 – oct 22, 2024, counting buys dated up to 7 days before first shown) — inferred, not filed. WINSENATE reported $2,498,270 in digital buys to GAMBIT STRATEGIES; Google ads are digital placements.",
+        "source_urls": [
+          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00865444&payee_name=GAMBIT+STRATEGIES"
+        ],
+        "checked_by": null,
+        "checked_at": null
+      }
+    },
+    {
+      "ad_id": "CR03091034189940654081",
+      "sponsor_entity_id": "C00740225",
+      "basis": {
+        "basis": "inferred",
+        "rule": "Only digital vendor NRDC ACTION VOTES paid during this ad's run window (ran jun 11, 2024 – aug 7, 2024, counting buys dated up to 7 days before first shown) — inferred, not filed. NRDC ACTION VOTES reported $1,200,000 in digital buys to GAMBIT STRATEGIES; Google ads are digital placements.",
+        "source_urls": [
+          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00740225&payee_name=GAMBIT+STRATEGIES+LLC"
+        ],
+        "checked_by": null,
+        "checked_at": null
+      }
+    },
+    {
+      "ad_id": "CR00706205890339930113",
+      "sponsor_entity_id": "C00865444",
+      "basis": {
+        "basis": "inferred",
+        "rule": "Only digital vendor WINSENATE paid during this ad's run window (ran oct 8, 2024 – oct 15, 2024, counting buys dated up to 7 days before first shown) — inferred, not filed. WINSENATE reported $3,822,033 in digital buys to GAMBIT STRATEGIES; Google ads are digital placements.",
+        "source_urls": [
+          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00865444&payee_name=GAMBIT+STRATEGIES"
+        ],
+        "checked_by": null,
+        "checked_at": null
+      }
+    },
+    {
+      "ad_id": "CR06943381861724848129",
+      "sponsor_entity_id": "C00865444",
+      "basis": {
+        "basis": "inferred",
+        "rule": "Only digital vendor WINSENATE paid during this ad's run window (ran sep 18, 2024 – oct 8, 2024, counting buys dated up to 7 days before first shown) — inferred, not filed. WINSENATE reported $5,587,369 in digital buys to GAMBIT STRATEGIES; Google ads are digital placements.",
+        "source_urls": [
+          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00865444&payee_name=GAMBIT+STRATEGIES"
+        ],
+        "checked_by": null,
+        "checked_at": null
+      }
+    },
+    {
+      "ad_id": "CR09737464658519916545",
+      "sponsor_entity_id": "C00865444",
+      "basis": {
+        "basis": "inferred",
+        "rule": "Only digital vendor WINSENATE paid during this ad's run window (ran oct 5, 2024 – oct 17, 2024, counting buys dated up to 7 days before first shown) — inferred, not filed. WINSENATE reported $3,827,073 in digital buys to GAMBIT STRATEGIES; Google ads are digital placements.",
+        "source_urls": [
+          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00865444&payee_name=GAMBIT+STRATEGIES"
+        ],
+        "checked_by": null,
+        "checked_at": null
+      }
+    },
+    {
+      "ad_id": "CR00605536529846108161",
+      "sponsor_entity_id": "C00865444",
+      "basis": {
+        "basis": "inferred",
+        "rule": "Only digital vendor WINSENATE paid during this ad's run window (ran oct 31, 2024 – nov 5, 2024, counting buys dated up to 7 days before first shown) — inferred, not filed. WINSENATE reported $3,501,514 in digital buys to GAMBIT STRATEGIES; Google ads are digital placements.",
+        "source_urls": [
+          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00865444&payee_name=GAMBIT+STRATEGIES"
+        ],
+        "checked_by": null,
+        "checked_at": null
+      }
+    },
+    {
+      "ad_id": "CR08113297418050600961",
+      "sponsor_entity_id": "C00865444",
+      "basis": {
+        "basis": "inferred",
+        "rule": "Only digital vendor WINSENATE paid during this ad's run window (ran sep 18, 2024 – oct 1, 2024, counting buys dated up to 7 days before first shown) — inferred, not filed. WINSENATE reported $4,084,378 in digital buys to GAMBIT STRATEGIES; Google ads are digital placements.",
+        "source_urls": [
+          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00865444&payee_name=GAMBIT+STRATEGIES"
+        ],
+        "checked_by": null,
+        "checked_at": null
+      }
+    },
+    {
+      "ad_id": "CR16084482064857956353",
+      "sponsor_entity_id": "C00740225",
+      "basis": {
+        "basis": "inferred",
+        "rule": "Only digital vendor NRDC ACTION VOTES paid during this ad's run window (ran jun 11, 2024 – aug 7, 2024, counting buys dated up to 7 days before first shown) — inferred, not filed. NRDC ACTION VOTES reported $1,200,000 in digital buys to GAMBIT STRATEGIES; Google ads are digital placements.",
+        "source_urls": [
+          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00740225&payee_name=GAMBIT+STRATEGIES+LLC"
+        ],
+        "checked_by": null,
+        "checked_at": null
+      }
+    },
+    {
+      "ad_id": "CR00445732358813908993",
+      "sponsor_entity_id": "C00740225",
+      "basis": {
+        "basis": "inferred",
+        "rule": "Only digital vendor NRDC ACTION VOTES paid during this ad's run window (ran jun 11, 2024 – aug 7, 2024, counting buys dated up to 7 days before first shown) — inferred, not filed. NRDC ACTION VOTES reported $1,200,000 in digital buys to GAMBIT STRATEGIES; Google ads are digital placements.",
+        "source_urls": [
+          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00740225&payee_name=GAMBIT+STRATEGIES+LLC"
+        ],
+        "checked_by": null,
+        "checked_at": null
+      }
+    },
+    {
+      "ad_id": "CR04924708474819969025",
+      "sponsor_entity_id": "C00865444",
+      "basis": {
+        "basis": "inferred",
+        "rule": "Only digital vendor WINSENATE paid during this ad's run window (ran oct 30, 2024 – nov 5, 2024, counting buys dated up to 7 days before first shown) — inferred, not filed. WINSENATE reported $3,501,514 in digital buys to GAMBIT STRATEGIES; Google ads are digital placements.",
+        "source_urls": [
+          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00865444&payee_name=GAMBIT+STRATEGIES"
+        ],
+        "checked_by": null,
+        "checked_at": null
+      }
+    },
+    {
+      "ad_id": "CR15759935094518710273",
+      "sponsor_entity_id": "C00865444",
+      "basis": {
+        "basis": "inferred",
+        "rule": "Only digital vendor WINSENATE paid during this ad's run window (ran jul 27, 2024 – aug 13, 2024, counting buys dated up to 7 days before first shown) — inferred, not filed. WINSENATE reported $4,489,059 in digital buys to GAMBIT STRATEGIES; Google ads are digital placements.",
+        "source_urls": [
+          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00865444&payee_name=GAMBIT+STRATEGIES"
+        ],
+        "checked_by": null,
+        "checked_at": null
+      }
+    },
+    {
+      "ad_id": "CR13755576026157547521",
+      "sponsor_entity_id": "C00865444",
+      "basis": {
+        "basis": "inferred",
+        "rule": "Only digital vendor WINSENATE paid during this ad's run window (ran oct 25, 2024 – nov 5, 2024, counting buys dated up to 7 days before first shown) — inferred, not filed. WINSENATE reported $4,701,514 in digital buys to GAMBIT STRATEGIES; Google ads are digital placements.",
+        "source_urls": [
+          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00865444&payee_name=GAMBIT+STRATEGIES"
+        ],
+        "checked_by": null,
+        "checked_at": null
+      }
+    },
+    {
+      "ad_id": "CR02611023473799069697",
+      "sponsor_entity_id": "C00865444",
+      "basis": {
+        "basis": "inferred",
+        "rule": "Only digital vendor WINSENATE paid during this ad's run window (ran sep 5, 2024 – sep 19, 2024, counting buys dated up to 7 days before first shown) — inferred, not filed. WINSENATE reported $3,125,712 in digital buys to GAMBIT STRATEGIES; Google ads are digital placements.",
+        "source_urls": [
+          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00865444&payee_name=GAMBIT+STRATEGIES"
+        ],
+        "checked_by": null,
+        "checked_at": null
+      }
+    },
+    {
+      "ad_id": "CR08551849175661150209",
+      "sponsor_entity_id": "C00865444",
+      "basis": {
+        "basis": "inferred",
+        "rule": "Only digital vendor WINSENATE paid during this ad's run window (ran oct 16, 2024 – oct 29, 2024, counting buys dated up to 7 days before first shown) — inferred, not filed. WINSENATE reported $4,799,784 in digital buys to GAMBIT STRATEGIES; Google ads are digital placements.",
+        "source_urls": [
+          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00865444&payee_name=GAMBIT+STRATEGIES"
+        ],
+        "checked_by": null,
+        "checked_at": null
+      }
+    },
+    {
+      "ad_id": "CR13525409708017451009",
+      "sponsor_entity_id": "C00865444",
+      "basis": {
+        "basis": "inferred",
+        "rule": "Only digital vendor WINSENATE paid during this ad's run window (ran jul 12, 2024 – jul 23, 2024, counting buys dated up to 7 days before first shown) — inferred, not filed. WINSENATE reported $1,971,139 in production buys to GAMBIT STRATEGIES; Google ads are digital placements.",
+        "source_urls": [
+          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00865444&payee_name=GAMBIT+STRATEGIES"
+        ],
+        "checked_by": null,
+        "checked_at": null
+      }
+    },
+    {
+      "ad_id": "CR12649963758114832385",
+      "sponsor_entity_id": "C00865444",
+      "basis": {
+        "basis": "inferred",
+        "rule": "Only digital vendor WINSENATE paid during this ad's run window (ran sep 24, 2024 – oct 1, 2024, counting buys dated up to 7 days before first shown) — inferred, not filed. WINSENATE reported $3,053,583 in digital buys to GAMBIT STRATEGIES; Google ads are digital placements.",
+        "source_urls": [
+          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00865444&payee_name=GAMBIT+STRATEGIES"
+        ],
+        "checked_by": null,
+        "checked_at": null
+      }
+    },
+    {
+      "ad_id": "CR02761561407508971521",
+      "sponsor_entity_id": "C00865444",
+      "basis": {
+        "basis": "inferred",
+        "rule": "Only digital vendor WINSENATE paid during this ad's run window (ran jul 26, 2024 – aug 13, 2024, counting buys dated up to 7 days before first shown) — inferred, not filed. WINSENATE reported $4,489,059 in digital buys to GAMBIT STRATEGIES; Google ads are digital placements.",
+        "source_urls": [
+          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00865444&payee_name=GAMBIT+STRATEGIES"
+        ],
+        "checked_by": null,
+        "checked_at": null
+      }
+    },
+    {
+      "ad_id": "CR01264763844564090881",
+      "sponsor_entity_id": "C00865444",
+      "basis": {
+        "basis": "inferred",
+        "rule": "Only digital vendor WINSENATE paid during this ad's run window (ran sep 5, 2024 – sep 10, 2024, counting buys dated up to 7 days before first shown) — inferred, not filed. WINSENATE reported $2,094,917 in digital buys to GAMBIT STRATEGIES; Google ads are digital placements.",
+        "source_urls": [
+          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00865444&payee_name=GAMBIT+STRATEGIES"
+        ],
+        "checked_by": null,
+        "checked_at": null
+      }
+    },
+    {
+      "ad_id": "CR09297534113328136193",
+      "sponsor_entity_id": "C00865444",
+      "basis": {
+        "basis": "inferred",
+        "rule": "Only digital vendor WINSENATE paid during this ad's run window (ran sep 12, 2024 – sep 17, 2024, counting buys dated up to 7 days before first shown) — inferred, not filed. WINSENATE reported $2,052,796 in digital buys to GAMBIT STRATEGIES; Google ads are digital placements.",
+        "source_urls": [
+          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00865444&payee_name=GAMBIT+STRATEGIES"
+        ],
+        "checked_by": null,
+        "checked_at": null
+      }
+    },
+    {
+      "ad_id": "CR02345125501657415681",
+      "sponsor_entity_id": "C00740225",
+      "basis": {
+        "basis": "inferred",
+        "rule": "Only digital vendor NRDC ACTION VOTES paid during this ad's run window (ran jun 11, 2024 – aug 7, 2024, counting buys dated up to 7 days before first shown) — inferred, not filed. NRDC ACTION VOTES reported $1,200,000 in digital buys to GAMBIT STRATEGIES; Google ads are digital placements.",
+        "source_urls": [
+          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00740225&payee_name=GAMBIT+STRATEGIES+LLC"
+        ],
+        "checked_by": null,
+        "checked_at": null
+      }
+    },
+    {
+      "ad_id": "CR01417236918738878465",
+      "sponsor_entity_id": "C00865444",
+      "basis": {
+        "basis": "inferred",
+        "rule": "Only digital vendor WINSENATE paid during this ad's run window (ran jul 26, 2024 – aug 13, 2024, counting buys dated up to 7 days before first shown) — inferred, not filed. WINSENATE reported $4,489,059 in digital buys to GAMBIT STRATEGIES; Google ads are digital placements.",
+        "source_urls": [
+          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00865444&payee_name=GAMBIT+STRATEGIES"
+        ],
+        "checked_by": null,
+        "checked_at": null
+      }
+    },
+    {
+      "ad_id": "CR14807351806857838593",
+      "sponsor_entity_id": "C00865444",
+      "basis": {
+        "basis": "inferred",
+        "rule": "Only digital vendor WINSENATE paid during this ad's run window (ran sep 4, 2024 – sep 19, 2024, counting buys dated up to 7 days before first shown) — inferred, not filed. WINSENATE reported $3,130,851 in digital buys to GAMBIT STRATEGIES; Google ads are digital placements.",
+        "source_urls": [
+          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00865444&payee_name=GAMBIT+STRATEGIES"
+        ],
+        "checked_by": null,
+        "checked_at": null
+      }
+    },
+    {
+      "ad_id": "CR05381018994486542337",
+      "sponsor_entity_id": "C00740225",
+      "basis": {
+        "basis": "inferred",
+        "rule": "Only digital vendor NRDC ACTION VOTES paid during this ad's run window (ran oct 29, 2024 – nov 5, 2024, counting buys dated up to 7 days before first shown) — inferred, not filed. NRDC ACTION VOTES reported $10,000 in digital buys to GAMBIT STRATEGIES; Google ads are digital placements.",
+        "source_urls": [
+          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00740225&payee_name=GAMBIT+STRATEGIES+LLC"
+        ],
+        "checked_by": null,
+        "checked_at": null
+      }
+    },
+    {
+      "ad_id": "CR04678071249157488641",
+      "sponsor_entity_id": "C00865444",
+      "basis": {
+        "basis": "inferred",
+        "rule": "Only digital vendor WINSENATE paid during this ad's run window (ran sep 18, 2024 – sep 24, 2024, counting buys dated up to 7 days before first shown) — inferred, not filed. WINSENATE reported $2,708,565 in digital buys to GAMBIT STRATEGIES; Google ads are digital placements.",
+        "source_urls": [
+          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00865444&payee_name=GAMBIT+STRATEGIES"
+        ],
+        "checked_by": null,
+        "checked_at": null
+      }
+    },
+    {
+      "ad_id": "CR10695007070039572481",
+      "sponsor_entity_id": "C00865444",
+      "basis": {
+        "basis": "inferred",
+        "rule": "Only digital vendor WINSENATE paid during this ad's run window (ran oct 31, 2024 – nov 5, 2024, counting buys dated up to 7 days before first shown) — inferred, not filed. WINSENATE reported $3,501,514 in digital buys to GAMBIT STRATEGIES; Google ads are digital placements.",
+        "source_urls": [
+          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00865444&payee_name=GAMBIT+STRATEGIES"
+        ],
+        "checked_by": null,
+        "checked_at": null
+      }
+    },
+    {
+      "ad_id": "CR17456537387931795457",
+      "sponsor_entity_id": "C00865444",
+      "basis": {
+        "basis": "inferred",
+        "rule": "Only digital vendor WINSENATE paid during this ad's run window (ran oct 30, 2024 – nov 5, 2024, counting buys dated up to 7 days before first shown) — inferred, not filed. WINSENATE reported $3,501,514 in digital buys to GAMBIT STRATEGIES; Google ads are digital placements.",
+        "source_urls": [
+          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00865444&payee_name=GAMBIT+STRATEGIES"
+        ],
+        "checked_by": null,
+        "checked_at": null
+      }
+    },
+    {
+      "ad_id": "CR12128375233107197953",
+      "sponsor_entity_id": "C00865444",
+      "basis": {
+        "basis": "inferred",
+        "rule": "Only digital vendor WINSENATE paid during this ad's run window (ran sep 19, 2024 – oct 1, 2024, counting buys dated up to 7 days before first shown) — inferred, not filed. WINSENATE reported $4,084,378 in digital buys to GAMBIT STRATEGIES; Google ads are digital placements.",
+        "source_urls": [
+          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00865444&payee_name=GAMBIT+STRATEGIES"
+        ],
+        "checked_by": null,
+        "checked_at": null
+      }
+    },
+    {
+      "ad_id": "CR18348311686802309121",
+      "sponsor_entity_id": "C00865444",
+      "basis": {
+        "basis": "inferred",
+        "rule": "Only digital vendor WINSENATE paid during this ad's run window (ran oct 31, 2024 – nov 5, 2024, counting buys dated up to 7 days before first shown) — inferred, not filed. WINSENATE reported $3,501,514 in digital buys to GAMBIT STRATEGIES; Google ads are digital placements.",
+        "source_urls": [
+          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00865444&payee_name=GAMBIT+STRATEGIES"
+        ],
+        "checked_by": null,
+        "checked_at": null
+      }
+    },
+    {
+      "ad_id": "CR17698293606600671233",
+      "sponsor_entity_id": "C00865444",
+      "basis": {
+        "basis": "inferred",
+        "rule": "Only digital vendor WINSENATE paid during this ad's run window (ran oct 29, 2024 – oct 31, 2024, counting buys dated up to 7 days before first shown) — inferred, not filed. WINSENATE reported $3,301,514 in digital buys to GAMBIT STRATEGIES; Google ads are digital placements.",
+        "source_urls": [
+          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00865444&payee_name=GAMBIT+STRATEGIES"
+        ],
+        "checked_by": null,
+        "checked_at": null
+      }
+    },
+    {
+      "ad_id": "CR13224696301477691393",
+      "sponsor_entity_id": "C00740225",
+      "basis": {
+        "basis": "inferred",
+        "rule": "Only digital vendor NRDC ACTION VOTES paid during this ad's run window (ran jun 11, 2024 – aug 7, 2024, counting buys dated up to 7 days before first shown) — inferred, not filed. NRDC ACTION VOTES reported $1,200,000 in digital buys to GAMBIT STRATEGIES; Google ads are digital placements.",
+        "source_urls": [
+          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00740225&payee_name=GAMBIT+STRATEGIES+LLC"
+        ],
+        "checked_by": null,
+        "checked_at": null
+      }
+    },
+    {
+      "ad_id": "CR01850292492600082433",
+      "sponsor_entity_id": "C00740225",
+      "basis": {
+        "basis": "inferred",
+        "rule": "Only digital vendor NRDC ACTION VOTES paid during this ad's run window (ran jun 11, 2024 – aug 7, 2024, counting buys dated up to 7 days before first shown) — inferred, not filed. NRDC ACTION VOTES reported $1,200,000 in digital buys to GAMBIT STRATEGIES; Google ads are digital placements.",
+        "source_urls": [
+          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00740225&payee_name=GAMBIT+STRATEGIES+LLC"
+        ],
+        "checked_by": null,
+        "checked_at": null
+      }
+    },
+    {
+      "ad_id": "CR15891043111577583617",
+      "sponsor_entity_id": "C00740225",
+      "basis": {
+        "basis": "inferred",
+        "rule": "Only digital vendor NRDC ACTION VOTES paid during this ad's run window (ran oct 20, 2024 – nov 6, 2024, counting buys dated up to 7 days before first shown) — inferred, not filed. NRDC ACTION VOTES reported $10,000 in digital buys to GAMBIT STRATEGIES; Google ads are digital placements.",
+        "source_urls": [
+          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00740225&payee_name=GAMBIT+STRATEGIES+LLC"
+        ],
+        "checked_by": null,
+        "checked_at": null
+      }
+    },
+    {
+      "ad_id": "CR01146283220334018561",
+      "sponsor_entity_id": "C00865444",
+      "basis": {
+        "basis": "inferred",
+        "rule": "Only digital vendor WINSENATE paid during this ad's run window (ran oct 8, 2024 – oct 15, 2024, counting buys dated up to 7 days before first shown) — inferred, not filed. WINSENATE reported $3,822,033 in digital buys to GAMBIT STRATEGIES; Google ads are digital placements.",
+        "source_urls": [
+          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00865444&payee_name=GAMBIT+STRATEGIES"
+        ],
+        "checked_by": null,
+        "checked_at": null
+      }
+    },
+    {
+      "ad_id": "CR11579097706777280513",
+      "sponsor_entity_id": "C00865444",
+      "basis": {
+        "basis": "inferred",
+        "rule": "Only digital vendor WINSENATE paid during this ad's run window (ran sep 5, 2024 – sep 19, 2024, counting buys dated up to 7 days before first shown) — inferred, not filed. WINSENATE reported $3,125,712 in digital buys to GAMBIT STRATEGIES; Google ads are digital placements.",
+        "source_urls": [
+          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00865444&payee_name=GAMBIT+STRATEGIES"
+        ],
+        "checked_by": null,
+        "checked_at": null
+      }
+    },
+    {
+      "ad_id": "CR08077905513142026241",
+      "sponsor_entity_id": "C00865444",
+      "basis": {
+        "basis": "inferred",
+        "rule": "Only digital vendor WINSENATE paid during this ad's run window (ran nov 2, 2024 – nov 5, 2024, counting buys dated up to 7 days before first shown) — inferred, not filed. WINSENATE reported $1,706,519 in digital buys to GAMBIT STRATEGIES; Google ads are digital placements.",
+        "source_urls": [
+          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00865444&payee_name=GAMBIT+STRATEGIES"
+        ],
+        "checked_by": null,
+        "checked_at": null
+      }
+    },
+    {
+      "ad_id": "CR12472098510868578305",
+      "sponsor_entity_id": "C00865444",
+      "basis": {
+        "basis": "inferred",
+        "rule": "Only digital vendor WINSENATE paid during this ad's run window (ran oct 22, 2024 – oct 29, 2024, counting buys dated up to 7 days before first shown) — inferred, not filed. WINSENATE reported $4,799,784 in digital buys to GAMBIT STRATEGIES; Google ads are digital placements.",
+        "source_urls": [
+          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00865444&payee_name=GAMBIT+STRATEGIES"
+        ],
+        "checked_by": null,
+        "checked_at": null
+      }
+    },
+    {
+      "ad_id": "CR04013292500230864897",
+      "sponsor_entity_id": "C00865444",
+      "basis": {
+        "basis": "inferred",
+        "rule": "Only digital vendor WINSENATE paid during this ad's run window (ran oct 30, 2024 – nov 5, 2024, counting buys dated up to 7 days before first shown) — inferred, not filed. WINSENATE reported $3,501,514 in digital buys to GAMBIT STRATEGIES; Google ads are digital placements.",
+        "source_urls": [
+          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00865444&payee_name=GAMBIT+STRATEGIES"
+        ],
+        "checked_by": null,
+        "checked_at": null
+      }
+    },
+    {
+      "ad_id": "CR03773329533487284225",
+      "sponsor_entity_id": "C00740225",
+      "basis": {
+        "basis": "inferred",
+        "rule": "Only digital vendor NRDC ACTION VOTES paid during this ad's run window (ran jun 11, 2024 – aug 7, 2024, counting buys dated up to 7 days before first shown) — inferred, not filed. NRDC ACTION VOTES reported $1,200,000 in digital buys to GAMBIT STRATEGIES; Google ads are digital placements.",
+        "source_urls": [
+          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00740225&payee_name=GAMBIT+STRATEGIES+LLC"
+        ],
+        "checked_by": null,
+        "checked_at": null
+      }
+    },
+    {
+      "ad_id": "CR14141389931880120321",
+      "sponsor_entity_id": "C00740225",
+      "basis": {
+        "basis": "inferred",
+        "rule": "Only digital vendor NRDC ACTION VOTES paid during this ad's run window (ran jun 11, 2024 – aug 7, 2024, counting buys dated up to 7 days before first shown) — inferred, not filed. NRDC ACTION VOTES reported $1,200,000 in digital buys to GAMBIT STRATEGIES; Google ads are digital placements.",
+        "source_urls": [
+          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00740225&payee_name=GAMBIT+STRATEGIES+LLC"
+        ],
+        "checked_by": null,
+        "checked_at": null
+      }
+    },
+    {
+      "ad_id": "CR04236317713686855681",
+      "sponsor_entity_id": "C00865444",
+      "basis": {
+        "basis": "inferred",
+        "rule": "Only digital vendor WINSENATE paid during this ad's run window (ran oct 5, 2024 – oct 17, 2024, counting buys dated up to 7 days before first shown) — inferred, not filed. WINSENATE reported $3,827,073 in digital buys to GAMBIT STRATEGIES; Google ads are digital placements.",
+        "source_urls": [
+          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00865444&payee_name=GAMBIT+STRATEGIES"
+        ],
+        "checked_by": null,
+        "checked_at": null
+      }
+    },
+    {
+      "ad_id": "CR06067496880265232385",
+      "sponsor_entity_id": "C00865444",
+      "basis": {
+        "basis": "inferred",
+        "rule": "Only digital vendor WINSENATE paid during this ad's run window (ran oct 30, 2024 – nov 5, 2024, counting buys dated up to 7 days before first shown) — inferred, not filed. WINSENATE reported $3,501,514 in digital buys to GAMBIT STRATEGIES; Google ads are digital placements.",
+        "source_urls": [
+          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00865444&payee_name=GAMBIT+STRATEGIES"
+        ],
+        "checked_by": null,
+        "checked_at": null
+      }
+    },
+    {
+      "ad_id": "CR01401037590588555265",
+      "sponsor_entity_id": "C00865444",
+      "basis": {
+        "basis": "inferred",
+        "rule": "Only digital vendor WINSENATE paid during this ad's run window (ran nov 2, 2024 – nov 5, 2024, counting buys dated up to 7 days before first shown) — inferred, not filed. WINSENATE reported $1,706,519 in digital buys to GAMBIT STRATEGIES; Google ads are digital placements.",
+        "source_urls": [
+          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00865444&payee_name=GAMBIT+STRATEGIES"
+        ],
+        "checked_by": null,
+        "checked_at": null
+      }
+    },
+    {
+      "ad_id": "CR14221923987474087937",
+      "sponsor_entity_id": "C00865444",
+      "basis": {
+        "basis": "inferred",
+        "rule": "Only digital vendor WINSENATE paid during this ad's run window (ran oct 5, 2024 – oct 17, 2024, counting buys dated up to 7 days before first shown) — inferred, not filed. WINSENATE reported $3,827,073 in digital buys to GAMBIT STRATEGIES; Google ads are digital placements.",
+        "source_urls": [
+          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00865444&payee_name=GAMBIT+STRATEGIES"
+        ],
+        "checked_by": null,
+        "checked_at": null
+      }
+    },
+    {
+      "ad_id": "CR03118299106192130049",
+      "sponsor_entity_id": "C00865444",
+      "basis": {
+        "basis": "inferred",
+        "rule": "Only digital vendor WINSENATE paid during this ad's run window (ran oct 5, 2024 – oct 17, 2024, counting buys dated up to 7 days before first shown) — inferred, not filed. WINSENATE reported $3,827,073 in digital buys to GAMBIT STRATEGIES; Google ads are digital placements.",
+        "source_urls": [
+          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00865444&payee_name=GAMBIT+STRATEGIES"
+        ],
+        "checked_by": null,
+        "checked_at": null
+      }
+    },
+    {
+      "ad_id": "CR00468396643536863233",
+      "sponsor_entity_id": "C00865444",
+      "basis": {
+        "basis": "inferred",
+        "rule": "Only digital vendor WINSENATE paid during this ad's run window (ran oct 30, 2024 – nov 5, 2024, counting buys dated up to 7 days before first shown) — inferred, not filed. WINSENATE reported $3,501,514 in digital buys to GAMBIT STRATEGIES; Google ads are digital placements.",
+        "source_urls": [
+          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00865444&payee_name=GAMBIT+STRATEGIES"
+        ],
+        "checked_by": null,
+        "checked_at": null
+      }
+    },
+    {
+      "ad_id": "CR00238872216849088513",
+      "sponsor_entity_id": "C00865444",
+      "basis": {
+        "basis": "inferred",
+        "rule": "Only digital vendor WINSENATE paid during this ad's run window (ran sep 19, 2024 – oct 1, 2024, counting buys dated up to 7 days before first shown) — inferred, not filed. WINSENATE reported $4,084,378 in digital buys to GAMBIT STRATEGIES; Google ads are digital placements.",
+        "source_urls": [
+          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00865444&payee_name=GAMBIT+STRATEGIES"
+        ],
+        "checked_by": null,
+        "checked_at": null
+      }
+    },
+    {
+      "ad_id": "CR14972508847170650113",
+      "sponsor_entity_id": "C00865444",
+      "basis": {
+        "basis": "inferred",
+        "rule": "Only digital vendor WINSENATE paid during this ad's run window (ran jul 26, 2024 – aug 13, 2024, counting buys dated up to 7 days before first shown) — inferred, not filed. WINSENATE reported $4,489,059 in digital buys to GAMBIT STRATEGIES; Google ads are digital placements.",
+        "source_urls": [
+          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00865444&payee_name=GAMBIT+STRATEGIES"
+        ],
+        "checked_by": null,
+        "checked_at": null
+      }
+    },
+    {
+      "ad_id": "CR11600169022489886721",
+      "sponsor_entity_id": "C00865444",
+      "basis": {
+        "basis": "inferred",
+        "rule": "Only digital vendor WINSENATE paid during this ad's run window (ran oct 30, 2024 – nov 5, 2024, counting buys dated up to 7 days before first shown) — inferred, not filed. WINSENATE reported $3,501,514 in digital buys to GAMBIT STRATEGIES; Google ads are digital placements.",
+        "source_urls": [
+          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00865444&payee_name=GAMBIT+STRATEGIES"
+        ],
+        "checked_by": null,
+        "checked_at": null
+      }
+    },
+    {
+      "ad_id": "CR16006340099889430529",
+      "sponsor_entity_id": "C00740225",
+      "basis": {
+        "basis": "inferred",
+        "rule": "Only digital vendor NRDC ACTION VOTES paid during this ad's run window (ran oct 15, 2024 – oct 22, 2024, counting buys dated up to 7 days before first shown) — inferred, not filed. NRDC ACTION VOTES reported $310,000 in digital buys to GAMBIT STRATEGIES; Google ads are digital placements.",
+        "source_urls": [
+          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00740225&payee_name=GAMBIT+STRATEGIES+LLC"
+        ],
+        "checked_by": null,
+        "checked_at": null
+      }
+    },
+    {
+      "ad_id": "CR16267268502811836417",
+      "sponsor_entity_id": "C00740225",
+      "basis": {
+        "basis": "inferred",
+        "rule": "Only digital vendor NRDC ACTION VOTES paid during this ad's run window (ran oct 8, 2024 – oct 15, 2024, counting buys dated up to 7 days before first shown) — inferred, not filed. NRDC ACTION VOTES reported $300,000 in digital buys to GAMBIT STRATEGIES; Google ads are digital placements.",
+        "source_urls": [
+          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00740225&payee_name=GAMBIT+STRATEGIES+LLC"
+        ],
+        "checked_by": null,
+        "checked_at": null
+      }
+    },
+    {
+      "ad_id": "CR13560923710256316417",
+      "sponsor_entity_id": "C00865444",
+      "basis": {
+        "basis": "inferred",
+        "rule": "Only digital vendor WINSENATE paid during this ad's run window (ran oct 30, 2024 – nov 5, 2024, counting buys dated up to 7 days before first shown) — inferred, not filed. WINSENATE reported $3,501,514 in digital buys to GAMBIT STRATEGIES; Google ads are digital placements.",
+        "source_urls": [
+          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00865444&payee_name=GAMBIT+STRATEGIES"
+        ],
+        "checked_by": null,
+        "checked_at": null
+      }
+    },
+    {
+      "ad_id": "CR13642990983275610113",
+      "sponsor_entity_id": "C00865444",
+      "basis": {
+        "basis": "inferred",
+        "rule": "Only digital vendor WINSENATE paid during this ad's run window (ran sep 6, 2024 – sep 19, 2024, counting buys dated up to 7 days before first shown) — inferred, not filed. WINSENATE reported $3,125,712 in digital buys to GAMBIT STRATEGIES; Google ads are digital placements.",
+        "source_urls": [
+          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00865444&payee_name=GAMBIT+STRATEGIES"
+        ],
+        "checked_by": null,
+        "checked_at": null
+      }
+    },
+    {
+      "ad_id": "CR13375204376574951425",
+      "sponsor_entity_id": "C00865444",
+      "basis": {
+        "basis": "inferred",
+        "rule": "Only digital vendor WINSENATE paid during this ad's run window (ran oct 16, 2024 – oct 29, 2024, counting buys dated up to 7 days before first shown) — inferred, not filed. WINSENATE reported $4,799,784 in digital buys to GAMBIT STRATEGIES; Google ads are digital placements.",
+        "source_urls": [
+          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00865444&payee_name=GAMBIT+STRATEGIES"
+        ],
+        "checked_by": null,
+        "checked_at": null
+      }
+    },
+    {
+      "ad_id": "CR07331196105515859969",
+      "sponsor_entity_id": "C00865444",
+      "basis": {
+        "basis": "inferred",
+        "rule": "Only digital vendor WINSENATE paid during this ad's run window (ran sep 6, 2024 – sep 19, 2024, counting buys dated up to 7 days before first shown) — inferred, not filed. WINSENATE reported $3,125,712 in digital buys to GAMBIT STRATEGIES; Google ads are digital placements.",
+        "source_urls": [
+          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00865444&payee_name=GAMBIT+STRATEGIES"
+        ],
+        "checked_by": null,
+        "checked_at": null
+      }
+    },
+    {
+      "ad_id": "CR06238434929378590721",
+      "sponsor_entity_id": "C00865444",
+      "basis": {
+        "basis": "inferred",
+        "rule": "Only digital vendor WINSENATE paid during this ad's run window (ran oct 25, 2024 – nov 5, 2024, counting buys dated up to 7 days before first shown) — inferred, not filed. WINSENATE reported $4,701,514 in digital buys to GAMBIT STRATEGIES; Google ads are digital placements.",
+        "source_urls": [
+          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00865444&payee_name=GAMBIT+STRATEGIES"
+        ],
+        "checked_by": null,
+        "checked_at": null
+      }
+    },
+    {
+      "ad_id": "CR03905720680615772161",
+      "sponsor_entity_id": "C00865444",
+      "basis": {
+        "basis": "inferred",
+        "rule": "Only digital vendor WINSENATE paid during this ad's run window (ran oct 29, 2024 – nov 5, 2024, counting buys dated up to 7 days before first shown) — inferred, not filed. WINSENATE reported $3,501,514 in digital buys to GAMBIT STRATEGIES; Google ads are digital placements.",
+        "source_urls": [
+          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00865444&payee_name=GAMBIT+STRATEGIES"
+        ],
+        "checked_by": null,
+        "checked_at": null
+      }
+    },
+    {
+      "ad_id": "CR17102582604718145537",
+      "sponsor_entity_id": "C00865444",
+      "basis": {
+        "basis": "inferred",
+        "rule": "Only digital vendor WINSENATE paid during this ad's run window (ran oct 30, 2024 – nov 6, 2024, counting buys dated up to 7 days before first shown) — inferred, not filed. WINSENATE reported $3,501,514 in digital buys to GAMBIT STRATEGIES; Google ads are digital placements.",
+        "source_urls": [
+          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00865444&payee_name=GAMBIT+STRATEGIES"
+        ],
+        "checked_by": null,
+        "checked_at": null
+      }
+    },
+    {
+      "ad_id": "CR09197140455374979073",
+      "sponsor_entity_id": "C00865444",
+      "basis": {
+        "basis": "inferred",
+        "rule": "Only digital vendor WINSENATE paid during this ad's run window (ran oct 11, 2024 – oct 15, 2024, counting buys dated up to 7 days before first shown) — inferred, not filed. WINSENATE reported $2,796,221 in digital buys to GAMBIT STRATEGIES; Google ads are digital placements.",
+        "source_urls": [
+          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00865444&payee_name=GAMBIT+STRATEGIES"
+        ],
+        "checked_by": null,
+        "checked_at": null
+      }
+    },
+    {
+      "ad_id": "CR01428789264073621505",
+      "sponsor_entity_id": "C00865444",
+      "basis": {
+        "basis": "inferred",
+        "rule": "Only digital vendor WINSENATE paid during this ad's run window (ran oct 30, 2024 – nov 5, 2024, counting buys dated up to 7 days before first shown) — inferred, not filed. WINSENATE reported $3,501,514 in digital buys to GAMBIT STRATEGIES; Google ads are digital placements.",
+        "source_urls": [
+          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00865444&payee_name=GAMBIT+STRATEGIES"
+        ],
+        "checked_by": null,
+        "checked_at": null
+      }
+    },
+    {
+      "ad_id": "CR12027220713107619841",
+      "sponsor_entity_id": "C00865444",
+      "basis": {
+        "basis": "inferred",
+        "rule": "Only digital vendor WINSENATE paid during this ad's run window (ran oct 16, 2024 – oct 29, 2024, counting buys dated up to 7 days before first shown) — inferred, not filed. WINSENATE reported $4,799,784 in digital buys to GAMBIT STRATEGIES; Google ads are digital placements.",
+        "source_urls": [
+          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00865444&payee_name=GAMBIT+STRATEGIES"
+        ],
+        "checked_by": null,
+        "checked_at": null
+      }
+    },
+    {
+      "ad_id": "CR15859783995999911937",
+      "sponsor_entity_id": "C00865444",
+      "basis": {
+        "basis": "inferred",
+        "rule": "Only digital vendor WINSENATE paid during this ad's run window (ran oct 16, 2024 – oct 29, 2024, counting buys dated up to 7 days before first shown) — inferred, not filed. WINSENATE reported $4,799,784 in digital buys to GAMBIT STRATEGIES; Google ads are digital placements.",
+        "source_urls": [
+          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00865444&payee_name=GAMBIT+STRATEGIES"
+        ],
+        "checked_by": null,
+        "checked_at": null
+      }
+    },
+    {
+      "ad_id": "CR00507887527793786881",
+      "sponsor_entity_id": "C00740225",
+      "basis": {
+        "basis": "inferred",
+        "rule": "Only digital vendor NRDC ACTION VOTES paid during this ad's run window (ran sep 17, 2024 – sep 24, 2024, counting buys dated up to 7 days before first shown) — inferred, not filed. NRDC ACTION VOTES reported $500,000 in digital buys to GAMBIT STRATEGIES; Google ads are digital placements.",
+        "source_urls": [
+          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00740225&payee_name=GAMBIT+STRATEGIES+LLC"
+        ],
+        "checked_by": null,
+        "checked_at": null
+      }
+    },
+    {
+      "ad_id": "CR14030363773148069889",
+      "sponsor_entity_id": "C00740225",
+      "basis": {
+        "basis": "inferred",
+        "rule": "Only digital vendor NRDC ACTION VOTES paid during this ad's run window (ran oct 19, 2024 – nov 5, 2024, counting buys dated up to 7 days before first shown) — inferred, not filed. NRDC ACTION VOTES reported $10,000 in digital buys to GAMBIT STRATEGIES; Google ads are digital placements.",
+        "source_urls": [
+          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00740225&payee_name=GAMBIT+STRATEGIES+LLC"
+        ],
+        "checked_by": null,
+        "checked_at": null
+      }
+    }
+  ],
+  "method": "Every Schedule E independent expenditure names a payee. Payee strings are normalised (case, punctuation, legal suffixes, token order), near-duplicates are folded with a difflib ratio ≥ 0.92 when their numeric tokens match, and hand alias rows from data/hand/<race>/vendor_aliases.json override the rule. Medium is classified from the purpose the spender filed (ordered keyword table in campaign_commons/vendors.py). The FEC does not record which buy placed which ad: vendor ↔ ad links are date-window adjacency (or single-digital-vendor inference) from campaign_commons.ads_enrich, each with its basis, and are only `verified` when a person found a source naming both. Totals are the filed amounts, grouped, never re-estimated."
+}

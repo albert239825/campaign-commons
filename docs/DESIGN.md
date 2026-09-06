@@ -1,4 +1,4 @@
-# Citizen Gotham — design-system research
+# Campaign Commons — design-system research
 
 Read-only research deliverable (branch `design/research`). Nothing here is applied to `web/`;
 the tokens in §3 and the plan in §5 are ready for a follow-up session to paste.

@@ -2,7 +2,7 @@
   "root_entity_id": "C00687103",
   "root_name": "AMERICANS FOR PROSPERITY ACTION, INC. (AFP ACTION) DBA CVA ACTION AND DBA LIBRE ACTION",
   "race_id": "pa-sen-2024",
-  "generated_at": "2026-09-05T15:46:45+00:00",
+  "generated_at": "2026-09-05T19:53:48+00:00",
   "data_status": "real",
   "nodes": [
     {
@@ -240,6 +240,527 @@
       "terminus_reason": "pruned",
       "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00687103&two_year_transaction_period=2024",
       "contributor_count": 1418
+    },
+    {
+      "id": "vendor:V-in-pursuit-of",
+      "name": "IN PURSUIT OF LLC",
+      "kind": "vendor",
+      "committee_type": null,
+      "depth": 1,
+      "side": "out",
+      "visibility": "disclosed",
+      "amount_in": 8165775.0,
+      "is_terminus": false,
+      "terminus_reason": null,
+      "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00687103&payee_name=IN+PURSUIT+OF+LLC",
+      "href": "/races/pa-sen-2024/vendors/V-in-pursuit-of",
+      "medium": "tv",
+      "basis": {
+        "basis": "filed",
+        "rule": "Schedule E payee, grouped by normalized vendor name (campaign_commons.vendors)",
+        "source_urls": [
+          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00687103&payee_name=IN+PURSUIT+OF+LLC"
+        ],
+        "checked_by": null,
+        "checked_at": null
+      }
+    },
+    {
+      "id": "vendor:V-united-states-postal-service",
+      "name": "United States Postal Service",
+      "kind": "vendor",
+      "committee_type": null,
+      "depth": 1,
+      "side": "out",
+      "visibility": "disclosed",
+      "amount_in": 7191077.51,
+      "is_terminus": false,
+      "terminus_reason": null,
+      "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00687103&payee_name=UNITED+STATES+POSTAL+SERVICE",
+      "href": "/races/pa-sen-2024/vendors/V-united-states-postal-service",
+      "medium": "mail",
+      "basis": {
+        "basis": "filed",
+        "rule": "Schedule E payee, grouped by normalized vendor name (campaign_commons.vendors)",
+        "source_urls": [
+          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00687103&payee_name=UNITED+STATES+POSTAL+SERVICE"
+        ],
+        "checked_by": null,
+        "checked_at": null
+      }
+    },
+    {
+      "id": "vendor:V-people-who-think",
+      "name": "PEOPLE WHO THINK",
+      "kind": "vendor",
+      "committee_type": null,
+      "depth": 1,
+      "side": "out",
+      "visibility": "disclosed",
+      "amount_in": 2650478.54,
+      "is_terminus": false,
+      "terminus_reason": null,
+      "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00687103&payee_name=PEOPLE+WHO+THINK&payee_name=PEOPLE+WHO+THINK+LLC",
+      "href": "/races/pa-sen-2024/vendors/V-people-who-think",
+      "medium": "production",
+      "basis": {
+        "basis": "filed",
+        "rule": "Schedule E payee, grouped by normalized vendor name (campaign_commons.vendors)",
+        "source_urls": [
+          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00687103&payee_name=PEOPLE+WHO+THINK&payee_name=PEOPLE+WHO+THINK+LLC"
+        ],
+        "checked_by": null,
+        "checked_at": null
+      }
+    },
+    {
+      "id": "vendor:V-campaignhq",
+      "name": "CampaignHQ",
+      "kind": "vendor",
+      "committee_type": null,
+      "depth": 1,
+      "side": "out",
+      "visibility": "disclosed",
+      "amount_in": 1127524.66,
+      "is_terminus": false,
+      "terminus_reason": null,
+      "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00687103&payee_name=CAMPAIGN+HEADQUARTERS&payee_name=CAMPAIGNHQ",
+      "href": "/races/pa-sen-2024/vendors/V-campaignhq",
+      "medium": "field",
+      "basis": {
+        "basis": "filed",
+        "rule": "Schedule E payee, grouped by normalized vendor name (campaign_commons.vendors)",
+        "source_urls": [
+          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00687103&payee_name=CAMPAIGN+HEADQUARTERS&payee_name=CAMPAIGNHQ"
+        ],
+        "checked_by": null,
+        "checked_at": null
+      }
+    },
+    {
+      "id": "vendor:V-canvass-america",
+      "name": "CANVASS AMERICA LLC",
+      "kind": "vendor",
+      "committee_type": null,
+      "depth": 1,
+      "side": "out",
+      "visibility": "disclosed",
+      "amount_in": 190000.0,
+      "is_terminus": false,
+      "terminus_reason": null,
+      "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00687103&payee_name=CANVASS+AMERICA&payee_name=CANVASS+AMERICA+LLC",
+      "href": "/races/pa-sen-2024/vendors/V-canvass-america",
+      "medium": "field",
+      "basis": {
+        "basis": "filed",
+        "rule": "Schedule E payee, grouped by normalized vendor name (campaign_commons.vendors)",
+        "source_urls": [
+          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00687103&payee_name=CANVASS+AMERICA&payee_name=CANVASS+AMERICA+LLC"
+        ],
+        "checked_by": null,
+        "checked_at": null
+      }
+    },
+    {
+      "id": "vendor:V-fp1-strategies",
+      "name": "FP1 STRATEGIES LLC",
+      "kind": "vendor",
+      "committee_type": null,
+      "depth": 1,
+      "side": "out",
+      "visibility": "disclosed",
+      "amount_in": 143000.0,
+      "is_terminus": false,
+      "terminus_reason": null,
+      "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00687103&payee_name=FP1+STRATEGIES+LLC",
+      "href": "/races/pa-sen-2024/vendors/V-fp1-strategies",
+      "medium": "production",
+      "basis": {
+        "basis": "filed",
+        "rule": "Schedule E payee, grouped by normalized vendor name (campaign_commons.vendors)",
+        "source_urls": [
+          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00687103&payee_name=FP1+STRATEGIES+LLC"
+        ],
+        "checked_by": null,
+        "checked_at": null
+      }
+    },
+    {
+      "id": "vendor:V-targeted-victory",
+      "name": "TARGETED VICTORY LLC",
+      "kind": "vendor",
+      "committee_type": null,
+      "depth": 1,
+      "side": "out",
+      "visibility": "disclosed",
+      "amount_in": 73508.5,
+      "is_terminus": false,
+      "terminus_reason": null,
+      "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00687103&payee_name=TARGETED+VICTORY+LLC",
+      "href": "/races/pa-sen-2024/vendors/V-targeted-victory",
+      "medium": "production",
+      "basis": {
+        "basis": "filed",
+        "rule": "Schedule E payee, grouped by normalized vendor name (campaign_commons.vendors)",
+        "source_urls": [
+          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00687103&payee_name=TARGETED+VICTORY+LLC"
+        ],
+        "checked_by": null,
+        "checked_at": null
+      }
+    },
+    {
+      "id": "vendor:V-americans-for-prosperity",
+      "name": "AMERICANS FOR PROSPERITY",
+      "kind": "vendor",
+      "committee_type": null,
+      "depth": 1,
+      "side": "out",
+      "visibility": "disclosed",
+      "amount_in": 41738.0,
+      "is_terminus": false,
+      "terminus_reason": null,
+      "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00687103&payee_name=AMERICANS+FOR+PROSPERITY",
+      "href": "/races/pa-sen-2024/vendors/V-americans-for-prosperity",
+      "medium": "field",
+      "basis": {
+        "basis": "filed",
+        "rule": "Schedule E payee, grouped by normalized vendor name (campaign_commons.vendors)",
+        "source_urls": [
+          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00687103&payee_name=AMERICANS+FOR+PROSPERITY"
+        ],
+        "checked_by": null,
+        "checked_at": null
+      }
+    },
+    {
+      "id": "vendor:V-touchdown-strategies",
+      "name": "TOUCHDOWN STRATEGIES LLC",
+      "kind": "vendor",
+      "committee_type": null,
+      "depth": 1,
+      "side": "out",
+      "visibility": "disclosed",
+      "amount_in": 9500.0,
+      "is_terminus": false,
+      "terminus_reason": null,
+      "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00687103&payee_name=TOUCHDOWN+STRATEGIES+LLC",
+      "href": "/races/pa-sen-2024/vendors/V-touchdown-strategies",
+      "medium": "production",
+      "basis": {
+        "basis": "filed",
+        "rule": "Schedule E payee, grouped by normalized vendor name (campaign_commons.vendors)",
+        "source_urls": [
+          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00687103&payee_name=TOUCHDOWN+STRATEGIES+LLC"
+        ],
+        "checked_by": null,
+        "checked_at": null
+      }
+    },
+    {
+      "id": "CR04714034298817085441",
+      "name": "Video ad · 2024-06-04 – 2024-07-08",
+      "kind": "ad",
+      "committee_type": null,
+      "depth": 2,
+      "side": "out",
+      "visibility": "disclosed",
+      "amount_in": 65000.0,
+      "is_terminus": false,
+      "terminus_reason": null,
+      "source_url": "https://adstransparency.google.com/advertiser/AR15510028093073915905/creative/CR04714034298817085441?political=&region=US",
+      "href": "/races/pa-sen-2024/ads/CR04714034298817085441",
+      "thumbnail_path": "/creatives/pa-sen-2024/CR04714034298817085441.jpg",
+      "basis": {
+        "basis": "inferred",
+        "rule": "Google reports spend as a range ($60,000–$70,000); the midpoint is drawn",
+        "source_urls": [
+          "https://adstransparency.google.com/advertiser/AR15510028093073915905/creative/CR04714034298817085441?political=&region=US"
+        ],
+        "checked_by": null,
+        "checked_at": null
+      }
+    },
+    {
+      "id": "CR10045902907338915841",
+      "name": "Video ad · 2024-08-06 – 2024-09-04",
+      "kind": "ad",
+      "committee_type": null,
+      "depth": 2,
+      "side": "out",
+      "visibility": "disclosed",
+      "amount_in": 55000.0,
+      "is_terminus": false,
+      "terminus_reason": null,
+      "source_url": "https://adstransparency.google.com/advertiser/AR15510028093073915905/creative/CR10045902907338915841?political=&region=US",
+      "href": "/races/pa-sen-2024/ads/CR10045902907338915841",
+      "basis": {
+        "basis": "inferred",
+        "rule": "Google reports spend as a range ($50,000–$60,000); the midpoint is drawn",
+        "source_urls": [
+          "https://adstransparency.google.com/advertiser/AR15510028093073915905/creative/CR10045902907338915841?political=&region=US"
+        ],
+        "checked_by": null,
+        "checked_at": null
+      }
+    },
+    {
+      "id": "CR03308517864792653825",
+      "name": "Video ad · 2024-08-06 – 2024-09-04",
+      "kind": "ad",
+      "committee_type": null,
+      "depth": 2,
+      "side": "out",
+      "visibility": "disclosed",
+      "amount_in": 55000.0,
+      "is_terminus": false,
+      "terminus_reason": null,
+      "source_url": "https://adstransparency.google.com/advertiser/AR15510028093073915905/creative/CR03308517864792653825?political=&region=US",
+      "href": "/races/pa-sen-2024/ads/CR03308517864792653825",
+      "basis": {
+        "basis": "inferred",
+        "rule": "Google reports spend as a range ($50,000–$60,000); the midpoint is drawn",
+        "source_urls": [
+          "https://adstransparency.google.com/advertiser/AR15510028093073915905/creative/CR03308517864792653825?political=&region=US"
+        ],
+        "checked_by": null,
+        "checked_at": null
+      }
+    },
+    {
+      "id": "CR14071576217736183809",
+      "name": "Video ad · 2024-09-04 – 2024-10-01",
+      "kind": "ad",
+      "committee_type": null,
+      "depth": 2,
+      "side": "out",
+      "visibility": "disclosed",
+      "amount_in": 55000.0,
+      "is_terminus": false,
+      "terminus_reason": null,
+      "source_url": "https://adstransparency.google.com/advertiser/AR15510028093073915905/creative/CR14071576217736183809?political=&region=US",
+      "href": "/races/pa-sen-2024/ads/CR14071576217736183809",
+      "basis": {
+        "basis": "inferred",
+        "rule": "Google reports spend as a range ($50,000–$60,000); the midpoint is drawn",
+        "source_urls": [
+          "https://adstransparency.google.com/advertiser/AR15510028093073915905/creative/CR14071576217736183809?political=&region=US"
+        ],
+        "checked_by": null,
+        "checked_at": null
+      }
+    },
+    {
+      "id": "CR13232780787138428929",
+      "name": "Video ad · 2024-09-04 – 2024-10-01",
+      "kind": "ad",
+      "committee_type": null,
+      "depth": 2,
+      "side": "out",
+      "visibility": "disclosed",
+      "amount_in": 55000.0,
+      "is_terminus": false,
+      "terminus_reason": null,
+      "source_url": "https://adstransparency.google.com/advertiser/AR15510028093073915905/creative/CR13232780787138428929?political=&region=US",
+      "href": "/races/pa-sen-2024/ads/CR13232780787138428929",
+      "basis": {
+        "basis": "inferred",
+        "rule": "Google reports spend as a range ($50,000–$60,000); the midpoint is drawn",
+        "source_urls": [
+          "https://adstransparency.google.com/advertiser/AR15510028093073915905/creative/CR13232780787138428929?political=&region=US"
+        ],
+        "checked_by": null,
+        "checked_at": null
+      }
+    },
+    {
+      "id": "CR12542813051453177857",
+      "name": "Video ad · 2024-09-12 – 2024-10-01",
+      "kind": "ad",
+      "committee_type": null,
+      "depth": 2,
+      "side": "out",
+      "visibility": "disclosed",
+      "amount_in": 47500.0,
+      "is_terminus": false,
+      "terminus_reason": null,
+      "source_url": "https://adstransparency.google.com/advertiser/AR15510028093073915905/creative/CR12542813051453177857?political=&region=US",
+      "href": "/races/pa-sen-2024/ads/CR12542813051453177857",
+      "basis": {
+        "basis": "inferred",
+        "rule": "Google reports spend as a range ($45,000–$50,000); the midpoint is drawn",
+        "source_urls": [
+          "https://adstransparency.google.com/advertiser/AR15510028093073915905/creative/CR12542813051453177857?political=&region=US"
+        ],
+        "checked_by": null,
+        "checked_at": null
+      }
+    },
+    {
+      "id": "CR00979612100970151937",
+      "name": "Video ad · 2024-09-04 – 2024-10-01",
+      "kind": "ad",
+      "committee_type": null,
+      "depth": 2,
+      "side": "out",
+      "visibility": "disclosed",
+      "amount_in": 42500.0,
+      "is_terminus": false,
+      "terminus_reason": null,
+      "source_url": "https://adstransparency.google.com/advertiser/AR15510028093073915905/creative/CR00979612100970151937?political=&region=US",
+      "href": "/races/pa-sen-2024/ads/CR00979612100970151937",
+      "basis": {
+        "basis": "inferred",
+        "rule": "Google reports spend as a range ($40,000–$45,000); the midpoint is drawn",
+        "source_urls": [
+          "https://adstransparency.google.com/advertiser/AR15510028093073915905/creative/CR00979612100970151937?political=&region=US"
+        ],
+        "checked_by": null,
+        "checked_at": null
+      }
+    },
+    {
+      "id": "CR02909590358763503617",
+      "name": "Video ad · 2024-09-17 – 2024-10-01",
+      "kind": "ad",
+      "committee_type": null,
+      "depth": 2,
+      "side": "out",
+      "visibility": "disclosed",
+      "amount_in": 37500.0,
+      "is_terminus": false,
+      "terminus_reason": null,
+      "source_url": "https://adstransparency.google.com/advertiser/AR15510028093073915905/creative/CR02909590358763503617?political=&region=US",
+      "href": "/races/pa-sen-2024/ads/CR02909590358763503617",
+      "basis": {
+        "basis": "inferred",
+        "rule": "Google reports spend as a range ($35,000–$40,000); the midpoint is drawn",
+        "source_urls": [
+          "https://adstransparency.google.com/advertiser/AR15510028093073915905/creative/CR02909590358763503617?political=&region=US"
+        ],
+        "checked_by": null,
+        "checked_at": null
+      }
+    },
+    {
+      "id": "CR05774831160106418177",
+      "name": "Video ad · 2024-04-09 – 2024-05-01",
+      "kind": "ad",
+      "committee_type": null,
+      "depth": 2,
+      "side": "out",
+      "visibility": "disclosed",
+      "amount_in": 37500.0,
+      "is_terminus": false,
+      "terminus_reason": null,
+      "source_url": "https://adstransparency.google.com/advertiser/AR15510028093073915905/creative/CR05774831160106418177?political=&region=US",
+      "href": "/races/pa-sen-2024/ads/CR05774831160106418177",
+      "basis": {
+        "basis": "inferred",
+        "rule": "Google reports spend as a range ($35,000–$40,000); the midpoint is drawn",
+        "source_urls": [
+          "https://adstransparency.google.com/advertiser/AR15510028093073915905/creative/CR05774831160106418177?political=&region=US"
+        ],
+        "checked_by": null,
+        "checked_at": null
+      }
+    },
+    {
+      "id": "CR02504343856330309633",
+      "name": "Video ad · 2024-08-06 – 2024-09-04",
+      "kind": "ad",
+      "committee_type": null,
+      "depth": 2,
+      "side": "out",
+      "visibility": "disclosed",
+      "amount_in": 37500.0,
+      "is_terminus": false,
+      "terminus_reason": null,
+      "source_url": "https://adstransparency.google.com/advertiser/AR15510028093073915905/creative/CR02504343856330309633?political=&region=US",
+      "href": "/races/pa-sen-2024/ads/CR02504343856330309633",
+      "basis": {
+        "basis": "inferred",
+        "rule": "Google reports spend as a range ($35,000–$40,000); the midpoint is drawn",
+        "source_urls": [
+          "https://adstransparency.google.com/advertiser/AR15510028093073915905/creative/CR02504343856330309633?political=&region=US"
+        ],
+        "checked_by": null,
+        "checked_at": null
+      }
+    },
+    {
+      "id": "agg:ads@C00687103",
+      "name": "18 more ads",
+      "kind": "aggregate",
+      "committee_type": null,
+      "depth": 2,
+      "side": "out",
+      "visibility": "disclosed",
+      "amount_in": 430000.0,
+      "is_terminus": true,
+      "terminus_reason": "pruned",
+      "source_url": null,
+      "href": "/races/pa-sen-2024/ads",
+      "contributor_count": 18,
+      "basis": {
+        "basis": "inferred",
+        "rule": "Sum of Google spend-range midpoints for the ads not drawn individually",
+        "source_urls": [
+          "https://adstransparency.google.com/advertiser/AR15510028093073915905/creative/CR03075334589825155073?political=&region=US",
+          "https://adstransparency.google.com/advertiser/AR15510028093073915905/creative/CR12691408749412220929?political=&region=US",
+          "https://adstransparency.google.com/advertiser/AR15510028093073915905/creative/CR18084280736944226305?political=&region=US",
+          "https://adstransparency.google.com/advertiser/AR15510028093073915905/creative/CR16050704655335817217?political=&region=US",
+          "https://adstransparency.google.com/advertiser/AR15510028093073915905/creative/CR14104717697220608001?political=&region=US"
+        ],
+        "checked_by": null,
+        "checked_at": null
+      }
+    },
+    {
+      "id": "S2PA00661",
+      "name": "Dave McCormick",
+      "kind": "candidate",
+      "committee_type": null,
+      "depth": 3,
+      "side": "out",
+      "visibility": "disclosed",
+      "amount_in": 12610479.71,
+      "is_terminus": true,
+      "terminus_reason": null,
+      "source_url": "https://www.fec.gov/data/candidate/S2PA00661/?cycle=2024&election_full=false",
+      "href": "/races/pa-sen-2024/candidates/S2PA00661",
+      "basis": {
+        "basis": "filed",
+        "rule": "Schedule E dollars naming this candidate as supported or opposed; nothing here reached the candidate",
+        "source_urls": [
+          "https://www.fec.gov/data/independent-expenditures/?committee_id=C00687103&cycle=2024&candidate_id=S2PA00661"
+        ],
+        "checked_by": null,
+        "checked_at": null
+      }
+    },
+    {
+      "id": "S6PA00217",
+      "name": "Bob Casey",
+      "kind": "candidate",
+      "committee_type": null,
+      "depth": 3,
+      "side": "out",
+      "visibility": "disclosed",
+      "amount_in": 6982122.5,
+      "is_terminus": true,
+      "terminus_reason": null,
+      "source_url": "https://www.fec.gov/data/candidate/S6PA00217/?cycle=2024&election_full=false",
+      "href": "/races/pa-sen-2024/candidates/S6PA00217",
+      "basis": {
+        "basis": "filed",
+        "rule": "Schedule E dollars naming this candidate as supported or opposed; nothing here reached the candidate",
+        "source_urls": [
+          "https://www.fec.gov/data/independent-expenditures/?committee_id=C00687103&cycle=2024&candidate_id=S6PA00217"
+        ],
+        "checked_by": null,
+        "checked_at": null
+      }
     }
   ],
   "edges": [
@@ -532,6 +1053,789 @@
         "2024-11-25"
       ],
       "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00687103&two_year_transaction_period=2024"
+    },
+    {
+      "from": "C00687103",
+      "to": "vendor:V-in-pursuit-of",
+      "kind": "money",
+      "amount": 8165775.0,
+      "visibility": "disclosed",
+      "depth": 1,
+      "transaction_types": [
+        "24E"
+      ],
+      "count": 14,
+      "date_range": [
+        "2024-02-29",
+        "2024-11-21"
+      ],
+      "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00687103&payee_name=IN+PURSUIT+OF+LLC",
+      "basis": {
+        "basis": "filed",
+        "rule": "Schedule E independent expenditure paid to this payee",
+        "source_urls": [
+          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00687103&payee_name=IN+PURSUIT+OF+LLC"
+        ],
+        "checked_by": null,
+        "checked_at": null
+      }
+    },
+    {
+      "from": "vendor:V-in-pursuit-of",
+      "to": "S2PA00661",
+      "kind": "targeting",
+      "amount": 4589762.5,
+      "visibility": "disclosed",
+      "depth": 3,
+      "transaction_types": [],
+      "count": 0,
+      "date_range": null,
+      "source_url": "https://www.fec.gov/data/independent-expenditures/?committee_id=C00687103&cycle=2024&candidate_id=S2PA00661",
+      "support_oppose": "S",
+      "basis": {
+        "basis": "filed",
+        "rule": "Schedule E: this payee's buys named the candidate as supported/opposed",
+        "source_urls": [
+          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00687103&payee_name=IN+PURSUIT+OF+LLC"
+        ],
+        "checked_by": null,
+        "checked_at": null
+      }
+    },
+    {
+      "from": "vendor:V-in-pursuit-of",
+      "to": "S6PA00217",
+      "kind": "targeting",
+      "amount": 3576012.5,
+      "visibility": "disclosed",
+      "depth": 3,
+      "transaction_types": [],
+      "count": 0,
+      "date_range": null,
+      "source_url": "https://www.fec.gov/data/independent-expenditures/?committee_id=C00687103&cycle=2024&candidate_id=S6PA00217",
+      "support_oppose": "O",
+      "basis": {
+        "basis": "filed",
+        "rule": "Schedule E: this payee's buys named the candidate as supported/opposed",
+        "source_urls": [
+          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00687103&payee_name=IN+PURSUIT+OF+LLC"
+        ],
+        "checked_by": null,
+        "checked_at": null
+      }
+    },
+    {
+      "from": "C00687103",
+      "to": "vendor:V-united-states-postal-service",
+      "kind": "money",
+      "amount": 7191077.51,
+      "visibility": "disclosed",
+      "depth": 1,
+      "transaction_types": [
+        "24E"
+      ],
+      "count": 35,
+      "date_range": [
+        "2024-08-20",
+        "2024-10-28"
+      ],
+      "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00687103&payee_name=UNITED+STATES+POSTAL+SERVICE",
+      "basis": {
+        "basis": "filed",
+        "rule": "Schedule E independent expenditure paid to this payee",
+        "source_urls": [
+          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00687103&payee_name=UNITED+STATES+POSTAL+SERVICE"
+        ],
+        "checked_by": null,
+        "checked_at": null
+      }
+    },
+    {
+      "from": "vendor:V-united-states-postal-service",
+      "to": "S2PA00661",
+      "kind": "targeting",
+      "amount": 4766521.8,
+      "visibility": "disclosed",
+      "depth": 3,
+      "transaction_types": [],
+      "count": 0,
+      "date_range": null,
+      "source_url": "https://www.fec.gov/data/independent-expenditures/?committee_id=C00687103&cycle=2024&candidate_id=S2PA00661",
+      "support_oppose": "S",
+      "basis": {
+        "basis": "filed",
+        "rule": "Schedule E: this payee's buys named the candidate as supported/opposed",
+        "source_urls": [
+          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00687103&payee_name=UNITED+STATES+POSTAL+SERVICE"
+        ],
+        "checked_by": null,
+        "checked_at": null
+      }
+    },
+    {
+      "from": "vendor:V-united-states-postal-service",
+      "to": "S6PA00217",
+      "kind": "targeting",
+      "amount": 2424555.71,
+      "visibility": "disclosed",
+      "depth": 3,
+      "transaction_types": [],
+      "count": 0,
+      "date_range": null,
+      "source_url": "https://www.fec.gov/data/independent-expenditures/?committee_id=C00687103&cycle=2024&candidate_id=S6PA00217",
+      "support_oppose": "O",
+      "basis": {
+        "basis": "filed",
+        "rule": "Schedule E: this payee's buys named the candidate as supported/opposed",
+        "source_urls": [
+          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00687103&payee_name=UNITED+STATES+POSTAL+SERVICE"
+        ],
+        "checked_by": null,
+        "checked_at": null
+      }
+    },
+    {
+      "from": "C00687103",
+      "to": "vendor:V-people-who-think",
+      "kind": "money",
+      "amount": 2650478.54,
+      "visibility": "disclosed",
+      "depth": 1,
+      "transaction_types": [
+        "24E"
+      ],
+      "count": 58,
+      "date_range": [
+        "2024-04-03",
+        "2024-10-31"
+      ],
+      "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00687103&payee_name=PEOPLE+WHO+THINK&payee_name=PEOPLE+WHO+THINK+LLC",
+      "basis": {
+        "basis": "filed",
+        "rule": "Schedule E independent expenditure paid to this payee",
+        "source_urls": [
+          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00687103&payee_name=PEOPLE+WHO+THINK&payee_name=PEOPLE+WHO+THINK+LLC"
+        ],
+        "checked_by": null,
+        "checked_at": null
+      }
+    },
+    {
+      "from": "vendor:V-people-who-think",
+      "to": "S2PA00661",
+      "kind": "targeting",
+      "amount": 1766118.75,
+      "visibility": "disclosed",
+      "depth": 3,
+      "transaction_types": [],
+      "count": 0,
+      "date_range": null,
+      "source_url": "https://www.fec.gov/data/independent-expenditures/?committee_id=C00687103&cycle=2024&candidate_id=S2PA00661",
+      "support_oppose": "S",
+      "basis": {
+        "basis": "filed",
+        "rule": "Schedule E: this payee's buys named the candidate as supported/opposed",
+        "source_urls": [
+          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00687103&payee_name=PEOPLE+WHO+THINK&payee_name=PEOPLE+WHO+THINK+LLC"
+        ],
+        "checked_by": null,
+        "checked_at": null
+      }
+    },
+    {
+      "from": "vendor:V-people-who-think",
+      "to": "S6PA00217",
+      "kind": "targeting",
+      "amount": 884359.79,
+      "visibility": "disclosed",
+      "depth": 3,
+      "transaction_types": [],
+      "count": 0,
+      "date_range": null,
+      "source_url": "https://www.fec.gov/data/independent-expenditures/?committee_id=C00687103&cycle=2024&candidate_id=S6PA00217",
+      "support_oppose": "O",
+      "basis": {
+        "basis": "filed",
+        "rule": "Schedule E: this payee's buys named the candidate as supported/opposed",
+        "source_urls": [
+          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00687103&payee_name=PEOPLE+WHO+THINK&payee_name=PEOPLE+WHO+THINK+LLC"
+        ],
+        "checked_by": null,
+        "checked_at": null
+      }
+    },
+    {
+      "from": "C00687103",
+      "to": "vendor:V-campaignhq",
+      "kind": "money",
+      "amount": 1127524.66,
+      "visibility": "disclosed",
+      "depth": 1,
+      "transaction_types": [
+        "24E"
+      ],
+      "count": 4,
+      "date_range": [
+        "2024-10-15",
+        "2024-11-07"
+      ],
+      "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00687103&payee_name=CAMPAIGN+HEADQUARTERS&payee_name=CAMPAIGNHQ",
+      "basis": {
+        "basis": "filed",
+        "rule": "Schedule E independent expenditure paid to this payee",
+        "source_urls": [
+          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00687103&payee_name=CAMPAIGN+HEADQUARTERS&payee_name=CAMPAIGNHQ"
+        ],
+        "checked_by": null,
+        "checked_at": null
+      }
+    },
+    {
+      "from": "vendor:V-campaignhq",
+      "to": "S2PA00661",
+      "kind": "targeting",
+      "amount": 1127524.66,
+      "visibility": "disclosed",
+      "depth": 3,
+      "transaction_types": [],
+      "count": 0,
+      "date_range": null,
+      "source_url": "https://www.fec.gov/data/independent-expenditures/?committee_id=C00687103&cycle=2024&candidate_id=S2PA00661",
+      "support_oppose": "S",
+      "basis": {
+        "basis": "filed",
+        "rule": "Schedule E: this payee's buys named the candidate as supported/opposed",
+        "source_urls": [
+          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00687103&payee_name=CAMPAIGN+HEADQUARTERS&payee_name=CAMPAIGNHQ"
+        ],
+        "checked_by": null,
+        "checked_at": null
+      }
+    },
+    {
+      "from": "C00687103",
+      "to": "vendor:V-canvass-america",
+      "kind": "money",
+      "amount": 190000.0,
+      "visibility": "disclosed",
+      "depth": 1,
+      "transaction_types": [
+        "24E"
+      ],
+      "count": 4,
+      "date_range": [
+        "2024-04-10",
+        "2024-05-16"
+      ],
+      "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00687103&payee_name=CANVASS+AMERICA&payee_name=CANVASS+AMERICA+LLC",
+      "basis": {
+        "basis": "filed",
+        "rule": "Schedule E independent expenditure paid to this payee",
+        "source_urls": [
+          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00687103&payee_name=CANVASS+AMERICA&payee_name=CANVASS+AMERICA+LLC"
+        ],
+        "checked_by": null,
+        "checked_at": null
+      }
+    },
+    {
+      "from": "vendor:V-canvass-america",
+      "to": "S2PA00661",
+      "kind": "targeting",
+      "amount": 190000.0,
+      "visibility": "disclosed",
+      "depth": 3,
+      "transaction_types": [],
+      "count": 0,
+      "date_range": null,
+      "source_url": "https://www.fec.gov/data/independent-expenditures/?committee_id=C00687103&cycle=2024&candidate_id=S2PA00661",
+      "support_oppose": "S",
+      "basis": {
+        "basis": "filed",
+        "rule": "Schedule E: this payee's buys named the candidate as supported/opposed",
+        "source_urls": [
+          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00687103&payee_name=CANVASS+AMERICA&payee_name=CANVASS+AMERICA+LLC"
+        ],
+        "checked_by": null,
+        "checked_at": null
+      }
+    },
+    {
+      "from": "C00687103",
+      "to": "vendor:V-fp1-strategies",
+      "kind": "money",
+      "amount": 143000.0,
+      "visibility": "disclosed",
+      "depth": 1,
+      "transaction_types": [
+        "24E"
+      ],
+      "count": 12,
+      "date_range": [
+        "2024-02-29",
+        "2024-10-16"
+      ],
+      "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00687103&payee_name=FP1+STRATEGIES+LLC",
+      "basis": {
+        "basis": "filed",
+        "rule": "Schedule E independent expenditure paid to this payee",
+        "source_urls": [
+          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00687103&payee_name=FP1+STRATEGIES+LLC"
+        ],
+        "checked_by": null,
+        "checked_at": null
+      }
+    },
+    {
+      "from": "vendor:V-fp1-strategies",
+      "to": "S2PA00661",
+      "kind": "targeting",
+      "amount": 71500.0,
+      "visibility": "disclosed",
+      "depth": 3,
+      "transaction_types": [],
+      "count": 0,
+      "date_range": null,
+      "source_url": "https://www.fec.gov/data/independent-expenditures/?committee_id=C00687103&cycle=2024&candidate_id=S2PA00661",
+      "support_oppose": "S",
+      "basis": {
+        "basis": "filed",
+        "rule": "Schedule E: this payee's buys named the candidate as supported/opposed",
+        "source_urls": [
+          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00687103&payee_name=FP1+STRATEGIES+LLC"
+        ],
+        "checked_by": null,
+        "checked_at": null
+      }
+    },
+    {
+      "from": "vendor:V-fp1-strategies",
+      "to": "S6PA00217",
+      "kind": "targeting",
+      "amount": 71500.0,
+      "visibility": "disclosed",
+      "depth": 3,
+      "transaction_types": [],
+      "count": 0,
+      "date_range": null,
+      "source_url": "https://www.fec.gov/data/independent-expenditures/?committee_id=C00687103&cycle=2024&candidate_id=S6PA00217",
+      "support_oppose": "O",
+      "basis": {
+        "basis": "filed",
+        "rule": "Schedule E: this payee's buys named the candidate as supported/opposed",
+        "source_urls": [
+          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00687103&payee_name=FP1+STRATEGIES+LLC"
+        ],
+        "checked_by": null,
+        "checked_at": null
+      }
+    },
+    {
+      "from": "C00687103",
+      "to": "vendor:V-targeted-victory",
+      "kind": "money",
+      "amount": 73508.5,
+      "visibility": "disclosed",
+      "depth": 1,
+      "transaction_types": [
+        "24E"
+      ],
+      "count": 37,
+      "date_range": [
+        "2023-10-03",
+        "2024-10-25"
+      ],
+      "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00687103&payee_name=TARGETED+VICTORY+LLC",
+      "basis": {
+        "basis": "filed",
+        "rule": "Schedule E independent expenditure paid to this payee",
+        "source_urls": [
+          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00687103&payee_name=TARGETED+VICTORY+LLC"
+        ],
+        "checked_by": null,
+        "checked_at": null
+      }
+    },
+    {
+      "from": "vendor:V-targeted-victory",
+      "to": "S2PA00661",
+      "kind": "targeting",
+      "amount": 47814.0,
+      "visibility": "disclosed",
+      "depth": 3,
+      "transaction_types": [],
+      "count": 0,
+      "date_range": null,
+      "source_url": "https://www.fec.gov/data/independent-expenditures/?committee_id=C00687103&cycle=2024&candidate_id=S2PA00661",
+      "support_oppose": "S",
+      "basis": {
+        "basis": "filed",
+        "rule": "Schedule E: this payee's buys named the candidate as supported/opposed",
+        "source_urls": [
+          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00687103&payee_name=TARGETED+VICTORY+LLC"
+        ],
+        "checked_by": null,
+        "checked_at": null
+      }
+    },
+    {
+      "from": "vendor:V-targeted-victory",
+      "to": "S6PA00217",
+      "kind": "targeting",
+      "amount": 25694.5,
+      "visibility": "disclosed",
+      "depth": 3,
+      "transaction_types": [],
+      "count": 0,
+      "date_range": null,
+      "source_url": "https://www.fec.gov/data/independent-expenditures/?committee_id=C00687103&cycle=2024&candidate_id=S6PA00217",
+      "support_oppose": "O",
+      "basis": {
+        "basis": "filed",
+        "rule": "Schedule E: this payee's buys named the candidate as supported/opposed",
+        "source_urls": [
+          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00687103&payee_name=TARGETED+VICTORY+LLC"
+        ],
+        "checked_by": null,
+        "checked_at": null
+      }
+    },
+    {
+      "from": "C00687103",
+      "to": "vendor:V-americans-for-prosperity",
+      "kind": "money",
+      "amount": 41738.0,
+      "visibility": "disclosed",
+      "depth": 1,
+      "transaction_types": [
+        "24E"
+      ],
+      "count": 10,
+      "date_range": [
+        "2024-04-22",
+        "2024-09-30"
+      ],
+      "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00687103&payee_name=AMERICANS+FOR+PROSPERITY",
+      "basis": {
+        "basis": "filed",
+        "rule": "Schedule E independent expenditure paid to this payee",
+        "source_urls": [
+          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00687103&payee_name=AMERICANS+FOR+PROSPERITY"
+        ],
+        "checked_by": null,
+        "checked_at": null
+      }
+    },
+    {
+      "from": "vendor:V-americans-for-prosperity",
+      "to": "S2PA00661",
+      "kind": "targeting",
+      "amount": 41738.0,
+      "visibility": "disclosed",
+      "depth": 3,
+      "transaction_types": [],
+      "count": 0,
+      "date_range": null,
+      "source_url": "https://www.fec.gov/data/independent-expenditures/?committee_id=C00687103&cycle=2024&candidate_id=S2PA00661",
+      "support_oppose": "S",
+      "basis": {
+        "basis": "filed",
+        "rule": "Schedule E: this payee's buys named the candidate as supported/opposed",
+        "source_urls": [
+          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00687103&payee_name=AMERICANS+FOR+PROSPERITY"
+        ],
+        "checked_by": null,
+        "checked_at": null
+      }
+    },
+    {
+      "from": "C00687103",
+      "to": "vendor:V-touchdown-strategies",
+      "kind": "money",
+      "amount": 9500.0,
+      "visibility": "disclosed",
+      "depth": 1,
+      "transaction_types": [
+        "24E"
+      ],
+      "count": 1,
+      "date_range": [
+        "2024-05-07",
+        "2024-05-07"
+      ],
+      "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00687103&payee_name=TOUCHDOWN+STRATEGIES+LLC",
+      "basis": {
+        "basis": "filed",
+        "rule": "Schedule E independent expenditure paid to this payee",
+        "source_urls": [
+          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00687103&payee_name=TOUCHDOWN+STRATEGIES+LLC"
+        ],
+        "checked_by": null,
+        "checked_at": null
+      }
+    },
+    {
+      "from": "vendor:V-touchdown-strategies",
+      "to": "S2PA00661",
+      "kind": "targeting",
+      "amount": 9500.0,
+      "visibility": "disclosed",
+      "depth": 3,
+      "transaction_types": [],
+      "count": 0,
+      "date_range": null,
+      "source_url": "https://www.fec.gov/data/independent-expenditures/?committee_id=C00687103&cycle=2024&candidate_id=S2PA00661",
+      "support_oppose": "S",
+      "basis": {
+        "basis": "filed",
+        "rule": "Schedule E: this payee's buys named the candidate as supported/opposed",
+        "source_urls": [
+          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00687103&payee_name=TOUCHDOWN+STRATEGIES+LLC"
+        ],
+        "checked_by": null,
+        "checked_at": null
+      }
+    },
+    {
+      "from": "vendor:V-in-pursuit-of",
+      "to": "CR04714034298817085441",
+      "kind": "placement",
+      "amount": 65000.0,
+      "visibility": "disclosed",
+      "depth": 2,
+      "transaction_types": [],
+      "count": 2,
+      "date_range": [
+        "2024-06-04",
+        "2024-07-08"
+      ],
+      "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00687103&payee_name=IN+PURSUIT+OF+LLC",
+      "basis": {
+        "basis": "inferred",
+        "rule": "Only digital vendor AMERICANS FOR PROSPERITY ACTION, INC. (AFP ACTION) DBA CVA ACTION AND DBA LIBRE ACTION paid during this ad's run window (ran jun 4, 2024 – jul 8, 2024, counting buys dated up to 7 days before first shown) — inferred, not filed. AMERICANS FOR PROSPERITY ACTION, INC. (AFP ACTION) DBA CVA ACTION AND DBA LIBRE ACTION reported $500,000 in digital buys to IN PURSUIT OF LLC; Google ads are digital placements.",
+        "source_urls": [
+          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00687103&payee_name=IN+PURSUIT+OF+LLC"
+        ],
+        "checked_by": null,
+        "checked_at": null
+      }
+    },
+    {
+      "from": "C00687103",
+      "to": "CR10045902907338915841",
+      "kind": "placement",
+      "amount": 55000.0,
+      "visibility": "disclosed",
+      "depth": 2,
+      "transaction_types": [],
+      "count": 1,
+      "date_range": null,
+      "source_url": "https://adstransparency.google.com/advertiser/AR15510028093073915905/creative/CR10045902907338915841?political=&region=US",
+      "basis": {
+        "basis": "inferred",
+        "rule": "Advertiser name matched to this committee by normalized name; Google's bulk data names the advertiser and carries no paid-for-by field for US ads",
+        "source_urls": [
+          "https://adstransparency.google.com/advertiser/AR15510028093073915905/creative/CR10045902907338915841?political=&region=US"
+        ],
+        "checked_by": null,
+        "checked_at": null
+      }
+    },
+    {
+      "from": "C00687103",
+      "to": "CR03308517864792653825",
+      "kind": "placement",
+      "amount": 55000.0,
+      "visibility": "disclosed",
+      "depth": 2,
+      "transaction_types": [],
+      "count": 1,
+      "date_range": null,
+      "source_url": "https://adstransparency.google.com/advertiser/AR15510028093073915905/creative/CR03308517864792653825?political=&region=US",
+      "basis": {
+        "basis": "inferred",
+        "rule": "Advertiser name matched to this committee by normalized name; Google's bulk data names the advertiser and carries no paid-for-by field for US ads",
+        "source_urls": [
+          "https://adstransparency.google.com/advertiser/AR15510028093073915905/creative/CR03308517864792653825?political=&region=US"
+        ],
+        "checked_by": null,
+        "checked_at": null
+      }
+    },
+    {
+      "from": "C00687103",
+      "to": "CR14071576217736183809",
+      "kind": "placement",
+      "amount": 55000.0,
+      "visibility": "disclosed",
+      "depth": 2,
+      "transaction_types": [],
+      "count": 1,
+      "date_range": null,
+      "source_url": "https://adstransparency.google.com/advertiser/AR15510028093073915905/creative/CR14071576217736183809?political=&region=US",
+      "basis": {
+        "basis": "inferred",
+        "rule": "Advertiser name matched to this committee by normalized name; Google's bulk data names the advertiser and carries no paid-for-by field for US ads",
+        "source_urls": [
+          "https://adstransparency.google.com/advertiser/AR15510028093073915905/creative/CR14071576217736183809?political=&region=US"
+        ],
+        "checked_by": null,
+        "checked_at": null
+      }
+    },
+    {
+      "from": "C00687103",
+      "to": "CR13232780787138428929",
+      "kind": "placement",
+      "amount": 55000.0,
+      "visibility": "disclosed",
+      "depth": 2,
+      "transaction_types": [],
+      "count": 1,
+      "date_range": null,
+      "source_url": "https://adstransparency.google.com/advertiser/AR15510028093073915905/creative/CR13232780787138428929?political=&region=US",
+      "basis": {
+        "basis": "inferred",
+        "rule": "Advertiser name matched to this committee by normalized name; Google's bulk data names the advertiser and carries no paid-for-by field for US ads",
+        "source_urls": [
+          "https://adstransparency.google.com/advertiser/AR15510028093073915905/creative/CR13232780787138428929?political=&region=US"
+        ],
+        "checked_by": null,
+        "checked_at": null
+      }
+    },
+    {
+      "from": "C00687103",
+      "to": "CR12542813051453177857",
+      "kind": "placement",
+      "amount": 47500.0,
+      "visibility": "disclosed",
+      "depth": 2,
+      "transaction_types": [],
+      "count": 1,
+      "date_range": null,
+      "source_url": "https://adstransparency.google.com/advertiser/AR15510028093073915905/creative/CR12542813051453177857?political=&region=US",
+      "basis": {
+        "basis": "inferred",
+        "rule": "Advertiser name matched to this committee by normalized name; Google's bulk data names the advertiser and carries no paid-for-by field for US ads",
+        "source_urls": [
+          "https://adstransparency.google.com/advertiser/AR15510028093073915905/creative/CR12542813051453177857?political=&region=US"
+        ],
+        "checked_by": null,
+        "checked_at": null
+      }
+    },
+    {
+      "from": "C00687103",
+      "to": "CR00979612100970151937",
+      "kind": "placement",
+      "amount": 42500.0,
+      "visibility": "disclosed",
+      "depth": 2,
+      "transaction_types": [],
+      "count": 1,
+      "date_range": null,
+      "source_url": "https://adstransparency.google.com/advertiser/AR15510028093073915905/creative/CR00979612100970151937?political=&region=US",
+      "basis": {
+        "basis": "inferred",
+        "rule": "Advertiser name matched to this committee by normalized name; Google's bulk data names the advertiser and carries no paid-for-by field for US ads",
+        "source_urls": [
+          "https://adstransparency.google.com/advertiser/AR15510028093073915905/creative/CR00979612100970151937?political=&region=US"
+        ],
+        "checked_by": null,
+        "checked_at": null
+      }
+    },
+    {
+      "from": "C00687103",
+      "to": "CR02909590358763503617",
+      "kind": "placement",
+      "amount": 37500.0,
+      "visibility": "disclosed",
+      "depth": 2,
+      "transaction_types": [],
+      "count": 1,
+      "date_range": null,
+      "source_url": "https://adstransparency.google.com/advertiser/AR15510028093073915905/creative/CR02909590358763503617?political=&region=US",
+      "basis": {
+        "basis": "inferred",
+        "rule": "Advertiser name matched to this committee by normalized name; Google's bulk data names the advertiser and carries no paid-for-by field for US ads",
+        "source_urls": [
+          "https://adstransparency.google.com/advertiser/AR15510028093073915905/creative/CR02909590358763503617?political=&region=US"
+        ],
+        "checked_by": null,
+        "checked_at": null
+      }
+    },
+    {
+      "from": "vendor:V-in-pursuit-of",
+      "to": "CR05774831160106418177",
+      "kind": "placement",
+      "amount": 37500.0,
+      "visibility": "disclosed",
+      "depth": 2,
+      "transaction_types": [],
+      "count": 2,
+      "date_range": [
+        "2024-04-09",
+        "2024-05-01"
+      ],
+      "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00687103&payee_name=IN+PURSUIT+OF+LLC",
+      "basis": {
+        "basis": "inferred",
+        "rule": "Only digital vendor AMERICANS FOR PROSPERITY ACTION, INC. (AFP ACTION) DBA CVA ACTION AND DBA LIBRE ACTION paid during this ad's run window (ran apr 9, 2024 – may 1, 2024, counting buys dated up to 7 days before first shown) — inferred, not filed. AMERICANS FOR PROSPERITY ACTION, INC. (AFP ACTION) DBA CVA ACTION AND DBA LIBRE ACTION reported $500,000 in digital buys to IN PURSUIT OF LLC; Google ads are digital placements.",
+        "source_urls": [
+          "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00687103&payee_name=IN+PURSUIT+OF+LLC"
+        ],
+        "checked_by": null,
+        "checked_at": null
+      }
+    },
+    {
+      "from": "C00687103",
+      "to": "CR02504343856330309633",
+      "kind": "placement",
+      "amount": 37500.0,
+      "visibility": "disclosed",
+      "depth": 2,
+      "transaction_types": [],
+      "count": 1,
+      "date_range": null,
+      "source_url": "https://adstransparency.google.com/advertiser/AR15510028093073915905/creative/CR02504343856330309633?political=&region=US",
+      "basis": {
+        "basis": "inferred",
+        "rule": "Advertiser name matched to this committee by normalized name; Google's bulk data names the advertiser and carries no paid-for-by field for US ads",
+        "source_urls": [
+          "https://adstransparency.google.com/advertiser/AR15510028093073915905/creative/CR02504343856330309633?political=&region=US"
+        ],
+        "checked_by": null,
+        "checked_at": null
+      }
+    },
+    {
+      "from": "C00687103",
+      "to": "agg:ads@C00687103",
+      "kind": "placement",
+      "amount": 430000.0,
+      "visibility": "disclosed",
+      "depth": 2,
+      "transaction_types": [],
+      "count": 18,
+      "date_range": null,
+      "source_url": null,
+      "basis": {
+        "basis": "inferred",
+        "rule": "Advertiser name matched to this committee by normalized name",
+        "source_urls": [
+          "https://adstransparency.google.com/advertiser/AR15510028093073915905/creative/CR03075334589825155073?political=&region=US",
+          "https://adstransparency.google.com/advertiser/AR15510028093073915905/creative/CR12691408749412220929?political=&region=US",
+          "https://adstransparency.google.com/advertiser/AR15510028093073915905/creative/CR18084280736944226305?political=&region=US",
+          "https://adstransparency.google.com/advertiser/AR15510028093073915905/creative/CR16050704655335817217?political=&region=US",
+          "https://adstransparency.google.com/advertiser/AR15510028093073915905/creative/CR14104717697220608001?political=&region=US"
+        ],
+        "checked_by": null,
+        "checked_at": null
+      }
     }
   ],
   "summary": {
@@ -546,7 +1850,9 @@
       "dark": 5,
       "individual": 10,
       "pruned": 1
-    }
+    },
+    "out_total": 19592602.21,
+    "max_out_depth": 3
   },
   "flags": [
     {
@@ -556,5 +1862,5 @@
       "evidence_url": "https://www.fec.gov/data/committee/C00687103/?cycle=2024"
     }
   ],
-  "method": "Backward walk over money edges only (Schedule A receipts from individuals and organizations, committee-to-committee transfers) into AMERICANS FOR PROSPERITY ACTION, INC. (AFP ACTION) DBA CVA ACTION AND DBA LIBRE ACTION, 1 hop(s) deep; independent expenditures are targeting edges and never appear. The walk starts from $176,190,145 of itemized 2023–2024 receipts as loaded from FEC bulk data (unitemized receipts, loans and offsets are not edges), and every expanded committee conserves dollars: its inbound edges sum to its receipts. Inbound edges under 1% of a committee's receipts are rolled into one 'other contributors' node, which counts as disclosed except for the organization dollars inside it. Each dollar takes the visibility of where the walk stopped: named individuals (including earmarks through ActBlue/WinRed, attributed to the person) are disclosed. Organizations that are not registered committees are classified from their name alone (no IRS lookup): a union or a business giving from its own treasury is disclosed — the named entity is the source; an LLC, trust, advocacy nonprofit (501(c)(4)-style names) or unclassifiable organization is dark, because whoever funds it is not on file with the FEC. Visibility shares are preliminary; no 990 lookups were performed, so nothing is marked inferable."
+  "method": "Backward walk over money edges only (Schedule A receipts from individuals and organizations, committee-to-committee transfers) into AMERICANS FOR PROSPERITY ACTION, INC. (AFP ACTION) DBA CVA ACTION AND DBA LIBRE ACTION, 1 hop(s) deep; independent expenditures are targeting edges and never appear. The walk starts from $176,190,145 of itemized 2023–2024 receipts as loaded from FEC bulk data (unitemized receipts, loans and offsets are not edges), and every expanded committee conserves dollars: its inbound edges sum to its receipts. Inbound edges under 1% of a committee's receipts are rolled into one 'other contributors' node, which counts as disclosed except for the organization dollars inside it. Each dollar takes the visibility of where the walk stopped: named individuals (including earmarks through ActBlue/WinRed, attributed to the person) are disclosed. Organizations that are not registered committees are classified from their name alone (no IRS lookup): a union or a business giving from its own treasury is disclosed — the named entity is the source; an LLC, trust, advocacy nonprofit (501(c)(4)-style names) or unclassifiable organization is dark, because whoever funds it is not on file with the FEC. Visibility shares are preliminary; no 990 lookups were performed, so nothing is marked inferable. Spending side (right of the spender): Schedule E payments to vendors are money edges; vendor → ad and spender → ad edges are placement (no dollars) and carry the evidence basis they were drawn on; edges into a candidate are targeting (for/against) and never carry money to the candidate. Ad dollars are the midpoint of the Google-reported spend range."
 }

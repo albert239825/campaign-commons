@@ -1,5 +1,5 @@
 import Link from "next/link";
-import type { Transfer } from "@citizen-gotham/contracts";
+import type { Transfer } from "@campaign-commons/contracts";
 import { date, money, routes } from "@/lib/format";
 import { Money, SourceLink, VisibilityDot } from "@/components/ui";
 import { EmptyRow, Table, Td, Th } from "@/components/ui/table";

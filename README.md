@@ -1,4 +1,4 @@
-# Citizen Gotham
+# Campaign Commons
 
 Political money & policy provenance engine. DNHacks 2026 (Sept 5–6), Station DC. Team: Eric, Albert, Patrick.
 
@@ -32,7 +32,7 @@ npm run jsonschema                              # regenerate contracts/jsonschem
 cp .env.example .env                            # add FEC_API_KEY, CONGRESS_GOV_API_KEY
 cd pipeline && make setup && . .venv/bin/activate
 make mock                                       # regenerate mock fixtures
-make ingest ledger chains ads dossier validate  # real pipeline, RACE=pa-sen-2024
+make all                                        # ingest ledger chains vendors ads ads-enrich issues dossier chains-out search validate (RACE=pa-sen-2024)
 ```
 
 ## Rules of the road

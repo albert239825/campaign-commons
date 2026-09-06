@@ -12,7 +12,7 @@ import {
   type Flag,
   type FlagId,
   type Visibility,
-} from "@citizen-gotham/contracts";
+} from "@campaign-commons/contracts";
 import { money } from "@/lib/format";
 
 export { Chip, type ChipTone } from "./chip";

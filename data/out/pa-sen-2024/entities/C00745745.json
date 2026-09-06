@@ -311,7 +311,9 @@
       "date": "2024-09-17",
       "purpose": "DIRECT MAIL PROGRAM",
       "payee": "DELIVER STRATEGIES, LLC",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202410129684895627"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202410129684895627",
+      "vendor_id": "V-deliver-strategies",
+      "medium": "mail"
     },
     {
       "ie_id": "C00745745-ie-1823453-SE.5111",
@@ -324,7 +326,9 @@
       "date": "2024-09-17",
       "purpose": "DIRECT MAIL PROGRAM",
       "payee": "DELIVER STRATEGIES, LLC",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202410129684895628"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202410129684895628",
+      "vendor_id": "V-deliver-strategies",
+      "medium": "mail"
     },
     {
       "ie_id": "C00745745-ie-1823453-SE.5148",
@@ -337,7 +341,9 @@
       "date": "2024-09-25",
       "purpose": "DIRECT MAIL PROGRAM",
       "payee": "DELIVER STRATEGIES, LLC",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202410129684895629"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202410129684895629",
+      "vendor_id": "V-deliver-strategies",
+      "medium": "mail"
     },
     {
       "ie_id": "C00745745-ie-1823453-SE.5149",
@@ -350,7 +356,9 @@
       "date": "2024-09-25",
       "purpose": "DIRECT MAIL PROGRAM",
       "payee": "DELIVER STRATEGIES, LLC",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202410129684895630"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202410129684895630",
+      "vendor_id": "V-deliver-strategies",
+      "medium": "mail"
     },
     {
       "ie_id": "C00745745-ie-1853145-SE.5219",
@@ -363,7 +371,9 @@
       "date": "2024-10-22",
       "purpose": "DIRECT MAIL PROGRAM",
       "payee": "DELIVER STRATEGIES, LLC",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202412049720215073"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202412049720215073",
+      "vendor_id": "V-deliver-strategies",
+      "medium": "mail"
     },
     {
       "ie_id": "C00745745-ie-1853145-SE.5218",
@@ -376,7 +386,9 @@
       "date": "2024-10-22",
       "purpose": "DIRECT MAIL PROGRAM",
       "payee": "DELIVER STRATEGIES, LLC",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202412049720215073"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202412049720215073",
+      "vendor_id": "V-deliver-strategies",
+      "medium": "mail"
     },
     {
       "ie_id": "C00745745-ie-1853145-SE.5236",
@@ -389,7 +401,9 @@
       "date": "2024-10-28",
       "purpose": "DIRECT MAIL PROGRAM",
       "payee": "DELIVER STRATEGIES, LLC",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202412049720215079"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202412049720215079",
+      "vendor_id": "V-deliver-strategies",
+      "medium": "mail"
     },
     {
       "ie_id": "C00745745-ie-1853145-SE.5235",
@@ -402,11 +416,61 @@
       "date": "2024-10-28",
       "purpose": "DIRECT MAIL PROGRAM",
       "payee": "DELIVER STRATEGIES, LLC",
-      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202412049720215079"
+      "source_url": "https://docquery.fec.gov/cgi-bin/fecimg/?202412049720215079",
+      "vendor_id": "V-deliver-strategies",
+      "medium": "mail"
     }
   ],
   "flags": [],
   "has_chain": true,
   "source_url": "https://www.fec.gov/data/committee/C00745745/?cycle=2024",
-  "data_status": "real"
+  "data_status": "real",
+  "vendors": [
+    {
+      "vendor_id": "V-deliver-strategies",
+      "name": "DELIVER STRATEGIES, LLC",
+      "amount": 659458.7,
+      "count": 8,
+      "media_mix": [
+        {
+          "medium": "mail",
+          "amount": 659458.7,
+          "count": 8
+        }
+      ],
+      "targets": [
+        {
+          "candidate_id": "S6PA00217",
+          "support_oppose": "S",
+          "amount": 329729.36
+        },
+        {
+          "candidate_id": "S2PA00661",
+          "support_oppose": "O",
+          "amount": 329729.34
+        }
+      ],
+      "first_date": "2024-09-17",
+      "last_date": "2024-10-28",
+      "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00745745&payee_name=DELIVER+STRATEGIES%2C+LLC"
+    }
+  ],
+  "issue_focus": {
+    "kind": "labor",
+    "issue_ids": [
+      "labor_trade",
+      "healthcare"
+    ],
+    "description": "In Union describes itself as 'Of By and For Working People' — 'a reliable source for people who want real news about the issues affecting our day-to-day lives—jobs and the economy, schools and education, health care, and so much more.' Its FEC filings list no connected organization.",
+    "basis": {
+      "basis": "verified",
+      "rule": "Self-described focus from the organisation's own material; says what the org is for, not what its dollars bought",
+      "source_urls": [
+        "https://inunionusa.com/about",
+        "https://www.fec.gov/data/committee/C00745745/"
+      ],
+      "checked_by": "devin-block2-issues",
+      "checked_at": "2026-09-05"
+    }
+  }
 }
