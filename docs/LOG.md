@@ -565,3 +565,4 @@ Added website-only `enrich_spenders.py`, cached FEC committee/page verification 
 `data/raw/xai`, the `enrich-spenders` target, and review output for spender rows. It supports `--dry-run`, `--limit`,
 `--only`, `--max-calls`, `--max-usd`, `--model`, and `--refresh-reviewed`; machine focus remains separate from human
 `issue_focus`, with pending/accepted provenance and Wayback fallback. 192 pipeline tests.
+Overlong or incomplete model outputs now get one cached, no-tools repair call before validation.

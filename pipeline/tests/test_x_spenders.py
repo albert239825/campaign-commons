@@ -30,13 +30,16 @@ def _response(result: dict[str, object], *, response_id: str = "resp-1") -> dict
 
 
 class FakeClient:
-    def __init__(self, result: dict[str, object]) -> None:
-        self.result = result
+    def __init__(self, result: dict[str, object] | list[dict[str, object]]) -> None:
+        self.results = result if isinstance(result, list) else [result]
         self.calls = 0
+        self.payloads: list[dict[str, object]] = []
 
     def create_response(self, payload: dict[str, object]) -> dict[str, object]:
+        self.payloads.append(payload)
+        result = self.results[self.calls]
         self.calls += 1
-        return _response(self.result, response_id=f"resp-{self.calls}")
+        return _response(result, response_id=f"resp-{self.calls}")
 
 
 def _setup(monkeypatch: pytest.MonkeyPatch, tmp_path: Path) -> tuple[Path, Path]:
@@ -123,8 +126,8 @@ def test_spender_happy_path_validates_and_skips_tagged(monkeypatch: pytest.Monke
         },
         {
             "found": True,
-            "kind": "single_issue",
-            "issue_ids": [],
+            "kind": "invalid_kind",
+            "issue_ids": ["healthcare"],
             "description": "desc",
             "quote": "We work to protect healthcare access.",
             "source_url": "https://example.org/about",
@@ -136,9 +139,11 @@ def test_spender_invalid_results_are_dropped(
     monkeypatch: pytest.MonkeyPatch, tmp_path: Path, result: dict[str, object], capsys: pytest.CaptureFixture[str]
 ) -> None:
     _, hand = _setup(monkeypatch, tmp_path)
-    assert enrich_spenders.run("race", client=FakeClient(result), fec_fetcher=_fec, page_fetcher=_page, limit=1) == 0
+    client = FakeClient(result)
+    assert enrich_spenders.run("race", client=client, fec_fetcher=_fec, page_fetcher=_page, limit=1) == 0
     assert json.loads((hand / "x_issue_focus.json").read_text())["rows"] == []
     assert "WARN C1" in capsys.readouterr().err
+    assert client.calls == 1
 
 
 def test_found_false_is_silent_and_cache_hit_makes_no_call(
@@ -158,6 +163,7 @@ def test_found_false_is_silent_and_cache_hit_makes_no_call(
     assert enrich_spenders.run("race", client=first, fec_fetcher=_fec, page_fetcher=_page, limit=1) == 0
     assert json.loads((hand / "x_issue_focus.json").read_text())["rows"] == []
     assert "WARN" not in capsys.readouterr().err
+    assert first.calls == 1
     second = FakeClient(found_false)
     assert enrich_spenders.run("race", client=second, fec_fetcher=_fec, page_fetcher=_page, limit=1) == 0
     assert second.calls == 0
@@ -193,6 +199,62 @@ def test_wayback_fallback_adds_snapshot_url(monkeypatch: pytest.MonkeyPatch, tmp
     )
     row = json.loads((hand / "x_issue_focus.json").read_text())["rows"][0]
     assert row["source_urls"][1].startswith("https://web.archive.org")
+
+
+def _valid_result() -> dict[str, object]:
+    return {
+        "found": True,
+        "kind": "single_issue",
+        "issue_ids": ["healthcare"],
+        "description": "The committee works to protect healthcare access.",
+        "quote": "We work to protect healthcare access.",
+        "source_url": "https://example.org/about",
+        "confidence": "high",
+    }
+
+
+def test_repair_writes_row_and_is_cached(monkeypatch: pytest.MonkeyPatch, tmp_path: Path) -> None:
+    _, hand = _setup(monkeypatch, tmp_path)
+    primary = _valid_result()
+    primary["description"] = "x" * 301
+    client = FakeClient([primary, _valid_result()])
+    assert enrich_spenders.run("race", client=client, fec_fetcher=_fec, page_fetcher=_page, limit=1) == 0
+    assert len(json.loads((hand / "x_issue_focus.json").read_text())["rows"]) == 1
+    assert client.calls == 2
+    assert "tools" not in client.payloads[1]
+    assert json.dumps(primary, ensure_ascii=False) in client.payloads[1]["input"][1]["content"]
+    repair_caches = list((tmp_path / "raw" / "xai").glob("*.repair.json"))
+    assert len(repair_caches) == 1
+    ledger = json.loads((tmp_path / "raw" / "xai" / "ledger.json").read_text())
+    assert [entry["stage"] for entry in ledger] == ["classify_spender", "classify_spender_repair"]
+
+
+def test_invalid_repair_is_dropped(
+    monkeypatch: pytest.MonkeyPatch, tmp_path: Path, capsys: pytest.CaptureFixture[str]
+) -> None:
+    _, hand = _setup(monkeypatch, tmp_path)
+    primary = _valid_result()
+    primary["description"] = "x" * 301
+    invalid_repair = _valid_result()
+    invalid_repair["description"] = "x" * 301
+    client = FakeClient([primary, invalid_repair])
+    assert enrich_spenders.run("race", client=client, fec_fetcher=_fec, page_fetcher=_page, limit=1) == 0
+    assert json.loads((hand / "x_issue_focus.json").read_text())["rows"] == []
+    assert "dropped classification after repair" in capsys.readouterr().err
+
+
+def test_repair_source_change_is_dropped(
+    monkeypatch: pytest.MonkeyPatch, tmp_path: Path, capsys: pytest.CaptureFixture[str]
+) -> None:
+    _, hand = _setup(monkeypatch, tmp_path)
+    primary = _valid_result()
+    primary["description"] = "x" * 301
+    changed = _valid_result()
+    changed["source_url"] = "https://other.example/about"
+    client = FakeClient([primary, changed])
+    assert enrich_spenders.run("race", client=client, fec_fetcher=_fec, page_fetcher=_page, limit=1) == 0
+    assert json.loads((hand / "x_issue_focus.json").read_text())["rows"] == []
+    assert "dropped classification after repair" in capsys.readouterr().err
 
 
 def test_budget_writes_partial_hand_file(monkeypatch: pytest.MonkeyPatch, tmp_path: Path) -> None:

@@ -17,7 +17,7 @@ from .config import DATA, FEC_API, FEC_API_KEY, RACES, ROOT, XAI_API_KEY
 from .dossier import issue_ids
 from .enrich_common import is_normalized_substring
 from .util import now_iso, read_json, write_json
-from .xai_client import XaiClient, estimate_usd, output_text, response_cost_usd
+from .xai_client import XaiClient, output_text, response_cost_usd
 
 PROMPT_VERSION = "classify_spender.v1"
 PROMPT_PATH = ROOT / "pipeline" / "campaign_commons" / "prompts" / "enrich" / f"{PROMPT_VERSION}.md"
@@ -30,6 +30,11 @@ FOCUS_KINDS = (
     "business_trade",
     "labor",
 )
+REPAIRABLE_ERRORS = {
+    "description is missing or too long",
+    "quote is missing or too long",
+    "issue_ids is required for issue focus",
+}
 
 
 def _taxonomy() -> tuple[list[str], str]:
@@ -255,6 +260,34 @@ def _payload(model: str, prompt: str, issue_ids_: list[str], plan: dict[str, obj
             }
         },
     }
+
+
+def _repair_payload(
+    model: str,
+    prompt: str,
+    issue_ids_: list[str],
+    plan: dict[str, object],
+    previous: dict[str, object],
+    error: str,
+) -> dict[str, object]:
+    payload = _payload(model, prompt, issue_ids_, plan)
+    payload.pop("tools", None)
+    payload["input"] = [
+        {"role": "system", "content": prompt},
+        {
+            "role": "user",
+            "content": (
+                f"Previous JSON output:\n{json.dumps(previous, ensure_ascii=False)}\n\n"
+                f"Your previous answer violated the output rules: {error}. Return the corrected JSON. Rules: "
+                "`description` at most 300 characters, in your own close paraphrase of the committee's "
+                "self-description; `quote` at most 400 characters and a verbatim, contiguous excerpt of the "
+                "page you already cited (shorten it, do not change words); if `kind` is single_issue or "
+                "multi_issue, `issue_ids` must contain 1–3 ids from the list — otherwise change `kind` to the "
+                "best other kind; keep `source_url` unchanged. Do not invent content."
+            ),
+        },
+    ]
+    return payload
 
 
 def _searched_urls(response: dict[str, object]) -> list[str]:
@@ -488,6 +521,10 @@ def run(
     cache_dir = DATA / "raw" / "xai"
     cache_dir.mkdir(parents=True, exist_ok=True)
     known_ids, _ = _taxonomy()
+    ledger_path = cache_dir / "ledger.json"
+    ledger = read_json(ledger_path) if ledger_path.exists() else []
+    if not isinstance(ledger, list):
+        ledger = []
     keyed = [
         (
             plan,
@@ -496,7 +533,15 @@ def run(
         for plan in plans
     ]
     to_call = sum(1 for _, key in keyed if not (cache_dir / f"{key}.json").exists())
-    estimated = to_call * estimate_usd(model, {"input_tokens": 1500, "output_tokens": 100})
+    historical_costs = [
+        float(entry["est_usd"])
+        for entry in ledger
+        if isinstance(entry, dict)
+        and entry.get("stage") == "classify_spender"
+        and isinstance(entry.get("est_usd"), (int, float))
+    ]
+    mean_cost = sum(historical_costs) / len(historical_costs) if historical_costs else 0.04
+    estimated = to_call * mean_cost
     print(f"planned {len(plans)} units; cached {len(plans) - to_call}; to-call {to_call}; estimated ${estimated:.6f}")
     if dry_run:
         return 0
@@ -510,10 +555,6 @@ def run(
     calls = 0
     spent = 0.0
     exit_code = 0
-    ledger_path = cache_dir / "ledger.json"
-    ledger = read_json(ledger_path) if ledger_path.exists() else []
-    if not isinstance(ledger, list):
-        ledger = []
     for plan, key in keyed:
         budget_hit = False
         cache_path = cache_dir / f"{key}.json"
@@ -570,20 +611,102 @@ def run(
             if budget_hit:
                 break
             continue
-        if error:
-            print(f"WARN {plan['entity_id']}: dropped classification ({error})", file=sys.stderr)
-        else:
-            source_url = str(result["source_url"])
-            verified, wayback_url = _fetch_verified_page(
-                source_url, str(result["quote"]), page_fetcher, wayback_fetcher
-            )
-            if not verified:
-                print(f"WARN {plan['entity_id']}: dropped classification (quote not verified on page)", file=sys.stderr)
+        repair_failed = False
+        if (
+            error in REPAIRABLE_ERRORS
+            and isinstance(result, dict)
+            and result.get("found") is True
+            and isinstance(result.get("source_url"), str)
+            and result["source_url"] in searched
+            and _host_allowed(result["source_url"], plan["domain"])
+        ):
+            repair_path = cache_dir / f"{key}.repair.json"
+            if repair_path.exists():
+                repair_entry = read_json(repair_path)
+            elif calls >= max_calls:
+                print(f"budget exhausted: {calls} calls used; remaining units are left unprocessed", file=sys.stderr)
+                exit_code = 3
+                budget_hit = True
+                repair_entry = None
             else:
-                citations = list(dict.fromkeys([*searched, source_url]))
-                rows_by_id[str(plan["entity_id"])] = _row(
-                    plan, result, response, str(entry["retrieved_at"]), source_url, wayback_url, citations, model
+                repair_request = _repair_payload(model, prompt, known_ids, plan, result, error)
+                repair_response = client.create_response(repair_request)
+                repair_retrieved_at = now_iso()
+                repair_entry = {
+                    "request": repair_request,
+                    "response": repair_response,
+                    "retrieved_at": repair_retrieved_at,
+                }
+                write_json(repair_path, repair_entry)
+                repair_cost = response_cost_usd(model, repair_response)
+                spent += repair_cost
+                repair_usage = repair_response.get("usage", {}) if isinstance(repair_response, dict) else {}
+                ledger.append(
+                    {
+                        "ts": repair_retrieved_at,
+                        "stage": "classify_spender_repair",
+                        "ad_id": None,
+                        "entity_id": plan["entity_id"],
+                        "model": model,
+                        "response_id": repair_response.get("id"),
+                        "input_tokens": repair_usage.get("input_tokens", 0) if isinstance(repair_usage, dict) else 0,
+                        "output_tokens": repair_usage.get("output_tokens", 0) if isinstance(repair_usage, dict) else 0,
+                        "est_usd": repair_cost,
+                    }
                 )
+                write_json(ledger_path, ledger)
+                calls += 1
+                if spent > max_usd:
+                    print(
+                        f"budget exhausted: ${spent:.6f} used, ${max(0.0, max_usd - spent):.6f} left",
+                        file=sys.stderr,
+                    )
+                    exit_code = 3
+                    budget_hit = True
+            if isinstance(repair_entry, dict):
+                repair_response = repair_entry.get("response", {})
+                try:
+                    repaired_result = json.loads(output_text(repair_response))
+                except (ValueError, json.JSONDecodeError) as exc:
+                    repaired_result = None
+                    repair_error = f"invalid repaired JSON ({exc})"
+                else:
+                    repair_error = _validate_result(repaired_result, searched, plan["domain"], set(known_ids))
+                    if repair_error is None and (
+                        not isinstance(repaired_result, dict)
+                        or repaired_result.get("found") is not True
+                        or repaired_result.get("source_url") != result.get("source_url")
+                    ):
+                        repair_error = "source_url changed during repair"
+                if repair_error is None:
+                    result = repaired_result
+                    error = None
+                else:
+                    print(
+                        f"WARN {plan['entity_id']}: dropped classification after repair ({repair_error})",
+                        file=sys.stderr,
+                    )
+                    repair_failed = True
+                    if budget_hit:
+                        break
+        if not repair_failed:
+            if error:
+                print(f"WARN {plan['entity_id']}: dropped classification ({error})", file=sys.stderr)
+            else:
+                source_url = str(result["source_url"])
+                verified, wayback_url = _fetch_verified_page(
+                    source_url, str(result["quote"]), page_fetcher, wayback_fetcher
+                )
+                if not verified:
+                    print(
+                        f"WARN {plan['entity_id']}: dropped classification (quote not verified on page)",
+                        file=sys.stderr,
+                    )
+                else:
+                    citations = list(dict.fromkeys([*searched, source_url]))
+                    rows_by_id[str(plan["entity_id"])] = _row(
+                        plan, result, response, str(entry["retrieved_at"]), source_url, wayback_url, citations, model
+                    )
         if budget_hit:
             break
     hand_path = DATA / "hand" / race_id / "x_issue_focus.json"

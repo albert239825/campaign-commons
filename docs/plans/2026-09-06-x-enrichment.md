@@ -63,7 +63,8 @@ on the 26 cached ads tells us.
 made); otherwise open web, row written only if the found page names the committee/FEC id. **No `x_search` for spenders**
 (Albert). Output mirrors `HandIssueFocusRow` (kind, ≤3 issues, description, quote, source_urls) +
 provenance → `entities/<id>.x_enrichment.issue_focus`; human `issue_focus` untouched; `by_spender_focus` counts human rows
-only unless Albert wants accepted rows in (Q5).
+only unless Albert wants accepted rows in (Q5). A single no-tools repair call may shorten overlong descriptions/quotes or
+add required issue ids while preserving the cited source URL.
 
 ## 4. Common machinery
 
