@@ -60,16 +60,17 @@ def _domain(website: object) -> str | None:
 
 
 def _committee_batch_fetch(entity_ids: list[str]) -> list[dict]:
-    params: dict[str, object] = {
-        "api_key": FEC_API_KEY,
-        "per_page": 100,
-        "committee_id": entity_ids,
-    }
+    # /committees/ (list) omits `website`; only the per-committee detail endpoint carries it.
+    return [_committee_detail_fetch(entity_id) for entity_id in entity_ids]
+
+
+def _committee_detail_fetch(entity_id: str) -> dict:
+    params: dict[str, object] = {"api_key": FEC_API_KEY}
     delays = (2, 4, 8, 16)
     last_error = ""
     for attempt, delay in enumerate(delays):
         try:
-            response = requests.get(f"{FEC_API}/committees/", params=params, timeout=30)
+            response = requests.get(f"{FEC_API}/committee/{entity_id}/", params=params, timeout=30)
             status = response.status_code
             if status == 429 or status >= 500:
                 last_error = f"HTTP {status}"
@@ -85,7 +86,7 @@ def _committee_batch_fetch(entity_ids: list[str]) -> list[dict]:
                 raise RuntimeError(f"FEC committee lookup failed with HTTP {status}. Set FEC_API_KEY in .env.")
             payload = response.json()
             results = payload.get("results", []) if isinstance(payload, dict) else []
-            return [result for result in results if isinstance(result, dict)]
+            return results[0] if results and isinstance(results[0], dict) else {}
         except requests.RequestException as exc:
             last_error = str(exc)
             if attempt < len(delays) - 1:
