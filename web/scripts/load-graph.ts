@@ -85,7 +85,7 @@ async function main() {
         `UNWIND $rows AS n
          MERGE (e:${ENTITY} {race_id: $race, id: n.id})
          SET e.name = n.name, e.name_lc = n.name_lc, e.kind = n.kind, e.committee_type = n.committee_type,
-             e.visibility = n.visibility, e.source_url = n.source_url, e.href = n.href`,
+             e.visibility = n.visibility, e.class_basis = n.class_basis, e.source_url = n.source_url, e.href = n.href`,
         { race: raceId, rows },
       );
     }
@@ -99,7 +99,7 @@ async function main() {
            MATCH (a:${ENTITY} {race_id: $race, id: r.from}), (b:${ENTITY} {race_id: $race, id: r.to})
            MERGE (a)-[x:${type} {key: r.key}]->(b)
            SET x.amount = r.amount, x.count = r.count, x.visibility = r.visibility, x.transaction_types = r.transaction_types,
-               x.first_date = r.first_date, x.last_date = r.last_date, x.support_oppose = r.support_oppose, x.basis = r.basis,
+               x.first_date = r.first_date, x.last_date = r.last_date, x.support_oppose = r.support_oppose, x.basis = r.basis, x.class_basis = r.class_basis,
                x.source_url = r.source_url, x.chains = r.chains`,
           { race: raceId, rows },
         );

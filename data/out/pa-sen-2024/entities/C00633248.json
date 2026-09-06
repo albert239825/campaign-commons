@@ -23,8 +23,8 @@
     "independent_expenditures": 5528165.37,
     "from_individuals": 5619916.16,
     "from_committees": 177167.02,
-    "from_organizations": 3094.0,
-    "from_undisclosed": 1622000.0
+    "from_organizations": 23094.0,
+    "from_undisclosed": 1602000.0
   },
   "inflows": [
     {
@@ -40,7 +40,8 @@
       "visibility": "dark",
       "transaction_type": "10",
       "limit": null,
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00633248&two_year_transaction_period=2024&contributor_name=314+ACTION"
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00633248&two_year_transaction_period=2024&contributor_name=314+ACTION",
+      "class_basis": "rule"
     },
     {
       "transfer_id": "C00633248-in-C00799031",

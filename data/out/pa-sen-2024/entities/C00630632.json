@@ -23,8 +23,8 @@
     "independent_expenditures": 0,
     "from_individuals": 7223559.97,
     "from_committees": 97150.0,
-    "from_organizations": 0.0,
-    "from_undisclosed": 150500.0
+    "from_organizations": 150000.0,
+    "from_undisclosed": 500.0
   },
   "inflows": [
     {
@@ -127,10 +127,11 @@
       "date": "2024-10-23",
       "first_date": "2024-04-30",
       "count": 2,
-      "visibility": "dark",
+      "visibility": "disclosed",
       "transaction_type": "15",
       "limit": null,
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00630632&two_year_transaction_period=2024&contributor_name=ONEIDA+INDIAN+NATION"
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00630632&two_year_transaction_period=2024&contributor_name=ONEIDA+INDIAN+NATION",
+      "class_basis": "inferred"
     },
     {
       "transfer_id": "C00630632-in-ind:CHAMBERS_NORMAN_C.|34996",

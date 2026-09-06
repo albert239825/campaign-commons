@@ -40,7 +40,8 @@
       "visibility": "dark",
       "transaction_type": "10",
       "limit": "unlimited",
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00486845&two_year_transaction_period=2024&contributor_name=LEAGUE+OF+CONSERVATION+VOTERS%2C+INC."
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00486845&two_year_transaction_period=2024&contributor_name=LEAGUE+OF+CONSERVATION+VOTERS%2C+INC.",
+      "class_basis": "rule"
     },
     {
       "transfer_id": "C00486845-in-C00492520",
@@ -85,7 +86,8 @@
       "visibility": "dark",
       "transaction_type": "10",
       "limit": "unlimited",
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00486845&two_year_transaction_period=2024&contributor_name=AMERICA+VOTES"
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00486845&two_year_transaction_period=2024&contributor_name=AMERICA+VOTES",
+      "class_basis": "rule"
     },
     {
       "transfer_id": "C00486845-in-ind:GRANTHAM_ROBERT|02108",
@@ -115,7 +117,8 @@
       "visibility": "disclosed",
       "transaction_type": "10",
       "limit": "unlimited",
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00486845&two_year_transaction_period=2024&contributor_name=SAVE+OUR+HOME+PLANET+ACTION+INC."
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00486845&two_year_transaction_period=2024&contributor_name=SAVE+OUR+HOME+PLANET+ACTION+INC.",
+      "class_basis": "rule"
     },
     {
       "transfer_id": "C00486845-in-ind:KARPLUS_BARBARA|91320",
@@ -160,7 +163,8 @@
       "visibility": "dark",
       "transaction_type": "10",
       "limit": "unlimited",
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00486845&two_year_transaction_period=2024&contributor_name=OUR+AMERICAN+FUTURE+ACTION"
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00486845&two_year_transaction_period=2024&contributor_name=OUR+AMERICAN+FUTURE+ACTION",
+      "class_basis": "rule"
     },
     {
       "transfer_id": "C00486845-in-ind:WINTER_NANCY|05091",
@@ -235,7 +239,8 @@
       "visibility": "dark",
       "transaction_type": "10",
       "limit": "unlimited",
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00486845&two_year_transaction_period=2024&contributor_name=GREEN+ADVOCACY+PROJECT"
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00486845&two_year_transaction_period=2024&contributor_name=GREEN+ADVOCACY+PROJECT",
+      "class_basis": "rule"
     },
     {
       "transfer_id": "C00486845-in-org:FAR_STAR_ACTION_FUND",
@@ -250,7 +255,8 @@
       "visibility": "dark",
       "transaction_type": "10",
       "limit": "unlimited",
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00486845&two_year_transaction_period=2024&contributor_name=FAR+STAR+ACTION+FUND"
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00486845&two_year_transaction_period=2024&contributor_name=FAR+STAR+ACTION+FUND",
+      "class_basis": "rule"
     },
     {
       "transfer_id": "C00486845-in-C00693382",
@@ -1463,40 +1469,6 @@
       "first_date": "2024-09-19",
       "last_date": "2024-11-27",
       "source_url": "https://www.fec.gov/data/independent-expenditures/?cycle=2024&data_type=processed&q_spender=C00486845&payee_name=LONG+VIEW+MEDIA+LLC"
-    }
-  ],
-  "issue_focus": {
-    "kind": "single_issue",
-    "issue_ids": [
-      "energy_climate"
-    ],
-    "description": "LCV Victory Fund 'runs independent campaigns to defeat federal candidates who will undermine environmental progress and elect environmental champions who will prioritize just and equitable climate solutions.'",
-    "basis": {
-      "basis": "verified",
-      "rule": "Self-described focus from the organisation's own material; says what the org is for, not what its dollars bought",
-      "source_urls": [
-        "https://www.lcv.org/lcv-victory-fund/",
-        "https://www.lcv.org/about/"
-      ],
-      "checked_by": "devin-block2-issues",
-      "checked_at": "2026-09-05"
-    }
-  },
-  "issue_positions": [
-    {
-      "issue_id": "energy_climate",
-      "direction": 2,
-      "quote": "elect environmental champions who will prioritize just and equitable climate solutions",
-      "source_url": "https://www.lcv.org/lcv-victory-fund/",
-      "basis": {
-        "basis": "inferred",
-        "rule": "Stated position read from the organisation's own site by a language model and kept only where the quote appears verbatim on the fetched page; says what the org says, not what its dollars bought",
-        "source_urls": [
-          "https://www.lcv.org/lcv-victory-fund/"
-        ],
-        "checked_by": "grok-4.5",
-        "checked_at": "2026-09-06"
-      }
     }
   ]
 }

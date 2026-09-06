@@ -2,7 +2,7 @@
   "root_entity_id": "C00428557",
   "root_name": "COLOROFCHANGE PAC",
   "race_id": "pa-sen-2024",
-  "generated_at": "2026-09-05T19:53:48+00:00",
+  "generated_at": "2026-09-06T05:02:45+00:00",
   "data_status": "real",
   "nodes": [
     {
@@ -40,7 +40,8 @@
       "is_terminus": true,
       "terminus_reason": "dark",
       "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00428557&two_year_transaction_period=2024&contributor_name=JORDAN%2FDELANEY+FAMILY+TRUST",
-      "organization_class": "llc"
+      "organization_class": "llc",
+      "class_basis": "rule"
     },
     {
       "id": "C00489815",
@@ -77,7 +78,8 @@
       "is_terminus": true,
       "terminus_reason": "dark",
       "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00428557&two_year_transaction_period=2024&contributor_name=PROPEL+CAPITAL+NETWORK",
-      "organization_class": "nonprofit"
+      "organization_class": "nonprofit",
+      "class_basis": "rule"
     },
     {
       "id": "org:AMERICA_VOTES",
@@ -90,7 +92,8 @@
       "is_terminus": true,
       "terminus_reason": "dark",
       "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00428557&two_year_transaction_period=2024&contributor_name=AMERICA+VOTES",
-      "organization_class": "nonprofit"
+      "organization_class": "nonprofit",
+      "class_basis": "rule"
     },
     {
       "id": "org:COLOROFCHANGE.ORG",
@@ -103,7 +106,8 @@
       "is_terminus": true,
       "terminus_reason": "dark",
       "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00428557&two_year_transaction_period=2024&contributor_name=COLOROFCHANGE.ORG",
-      "organization_class": "unknown"
+      "organization_class": "nonprofit",
+      "class_basis": "inferred"
     },
     {
       "id": "agg:other@C00428557",
@@ -129,7 +133,8 @@
       "is_terminus": true,
       "terminus_reason": "dark",
       "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00693382&two_year_transaction_period=2024&contributor_name=FUND+FOR+POLICY+REFORM",
-      "organization_class": "nonprofit"
+      "organization_class": "nonprofit",
+      "class_basis": "rule"
     },
     {
       "id": "org:GEOSOR_CORPORATION",
@@ -142,7 +147,8 @@
       "is_terminus": true,
       "terminus_reason": "organization",
       "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00693382&two_year_transaction_period=2024&contributor_name=GEOSOR+CORPORATION",
-      "organization_class": "business"
+      "organization_class": "business",
+      "class_basis": "rule"
     },
     {
       "id": "org:GLOBAL_OAK_HOLDINGS_LLC",
@@ -155,7 +161,8 @@
       "is_terminus": true,
       "terminus_reason": "dark",
       "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00693382&two_year_transaction_period=2024&contributor_name=GLOBAL+OAK+HOLDINGS+LLC",
-      "organization_class": "llc"
+      "organization_class": "llc",
+      "class_basis": "rule"
     },
     {
       "id": "agg:other@C00693382",
@@ -1285,7 +1292,8 @@
         "2024-02-23",
         "2024-02-23"
       ],
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00428557&two_year_transaction_period=2024&contributor_name=JORDAN%2FDELANEY+FAMILY+TRUST"
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00428557&two_year_transaction_period=2024&contributor_name=JORDAN%2FDELANEY+FAMILY+TRUST",
+      "class_basis": "rule"
     },
     {
       "from": "C00489815",
@@ -1333,7 +1341,8 @@
         "2023-03-20",
         "2024-06-20"
       ],
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00428557&two_year_transaction_period=2024&contributor_name=PROPEL+CAPITAL+NETWORK"
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00428557&two_year_transaction_period=2024&contributor_name=PROPEL+CAPITAL+NETWORK",
+      "class_basis": "rule"
     },
     {
       "from": "org:AMERICA_VOTES",
@@ -1349,7 +1358,8 @@
         "2024-10-30",
         "2024-10-30"
       ],
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00428557&two_year_transaction_period=2024&contributor_name=AMERICA+VOTES"
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00428557&two_year_transaction_period=2024&contributor_name=AMERICA+VOTES",
+      "class_basis": "rule"
     },
     {
       "from": "org:COLOROFCHANGE.ORG",
@@ -1365,7 +1375,8 @@
         "2023-03-29",
         "2024-08-14"
       ],
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00428557&two_year_transaction_period=2024&contributor_name=COLOROFCHANGE.ORG"
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00428557&two_year_transaction_period=2024&contributor_name=COLOROFCHANGE.ORG",
+      "class_basis": "inferred"
     },
     {
       "from": "agg:other@C00428557",
@@ -1397,7 +1408,8 @@
         "2024-01-11",
         "2024-01-11"
       ],
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00693382&two_year_transaction_period=2024&contributor_name=FUND+FOR+POLICY+REFORM"
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00693382&two_year_transaction_period=2024&contributor_name=FUND+FOR+POLICY+REFORM",
+      "class_basis": "rule"
     },
     {
       "from": "org:GEOSOR_CORPORATION",
@@ -1413,7 +1425,8 @@
         "2024-09-19",
         "2024-09-19"
       ],
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00693382&two_year_transaction_period=2024&contributor_name=GEOSOR+CORPORATION"
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00693382&two_year_transaction_period=2024&contributor_name=GEOSOR+CORPORATION",
+      "class_basis": "rule"
     },
     {
       "from": "org:GLOBAL_OAK_HOLDINGS_LLC",
@@ -1429,7 +1442,8 @@
         "2024-01-31",
         "2024-06-28"
       ],
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00693382&two_year_transaction_period=2024&contributor_name=GLOBAL+OAK+HOLDINGS+LLC"
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00693382&two_year_transaction_period=2024&contributor_name=GLOBAL+OAK+HOLDINGS+LLC",
+      "class_basis": "rule"
     },
     {
       "from": "agg:other@C00693382",

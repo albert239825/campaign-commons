@@ -23,8 +23,8 @@
     "independent_expenditures": 25897658.83,
     "from_individuals": 18187485.47,
     "from_committees": 8941800.0,
-    "from_organizations": 1939137.0,
-    "from_undisclosed": 7716864.0
+    "from_organizations": 1969137.0,
+    "from_undisclosed": 7686864.0
   },
   "inflows": [
     {
@@ -55,7 +55,8 @@
       "visibility": "dark",
       "transaction_type": "10",
       "limit": "unlimited",
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00796045&two_year_transaction_period=2024&contributor_name=CONCORD+FUND"
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00796045&two_year_transaction_period=2024&contributor_name=CONCORD+FUND",
+      "class_basis": "rule"
     },
     {
       "transfer_id": "C00796045-in-org:AMERICA_2076",
@@ -70,7 +71,8 @@
       "visibility": "dark",
       "transaction_type": "10",
       "limit": "unlimited",
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00796045&two_year_transaction_period=2024&contributor_name=AMERICA+2076"
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00796045&two_year_transaction_period=2024&contributor_name=AMERICA+2076",
+      "class_basis": "rule"
     },
     {
       "transfer_id": "C00796045-in-ind:ADELSON_MIRIAM_M.D.|89109",
@@ -100,7 +102,8 @@
       "visibility": "dark",
       "transaction_type": "10",
       "limit": "unlimited",
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00796045&two_year_transaction_period=2024&contributor_name=SAVING+TEXAS"
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00796045&two_year_transaction_period=2024&contributor_name=SAVING+TEXAS",
+      "class_basis": "inferred"
     },
     {
       "transfer_id": "C00796045-in-ind:PETERFFY_THOMAS_P.|33480",
@@ -160,7 +163,8 @@
       "visibility": "disclosed",
       "transaction_type": "10",
       "limit": "unlimited",
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00796045&two_year_transaction_period=2024&contributor_name=IHEART+MEDIA+MANAGEMENT+SERVICES+INC"
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00796045&two_year_transaction_period=2024&contributor_name=IHEART+MEDIA+MANAGEMENT+SERVICES+INC",
+      "class_basis": "rule"
     },
     {
       "transfer_id": "C00796045-in-ind:SIMMONS_ANNETTE_C.|75206",
@@ -280,7 +284,8 @@
       "visibility": "dark",
       "transaction_type": "10",
       "limit": "unlimited",
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00796045&two_year_transaction_period=2024&contributor_name=1000-+TRT+HOLDINGS+INC"
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00796045&two_year_transaction_period=2024&contributor_name=1000-+TRT+HOLDINGS+INC",
+      "class_basis": "rule"
     },
     {
       "transfer_id": "C00796045-in-ind:FIELDS_CLIVE|77027",
@@ -370,7 +375,8 @@
       "visibility": "dark",
       "transaction_type": "10",
       "limit": "unlimited",
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00796045&two_year_transaction_period=2024&contributor_name=ESA+FUND"
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00796045&two_year_transaction_period=2024&contributor_name=ESA+FUND",
+      "class_basis": "rule"
     },
     {
       "transfer_id": "C00796045-in-ind:SCHARBAUER_DOUGLAS_SR.|79702",

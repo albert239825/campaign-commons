@@ -23,8 +23,8 @@
     "independent_expenditures": 4390195.1,
     "from_individuals": 5947823.63,
     "from_committees": 2100000.0,
-    "from_organizations": 80000.0,
-    "from_undisclosed": 275000.0
+    "from_organizations": 155000.0,
+    "from_undisclosed": 200000.0
   },
   "inflows": [
     {
@@ -115,7 +115,8 @@
       "visibility": "dark",
       "transaction_type": "10",
       "limit": "unlimited",
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00888172&two_year_transaction_period=2024&contributor_name=TRINITY+TILE+HOLDINGS+LLC"
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00888172&two_year_transaction_period=2024&contributor_name=TRINITY+TILE+HOLDINGS+LLC",
+      "class_basis": "rule"
     },
     {
       "transfer_id": "C00888172-in-ind:CHEEK_CHAD|32839",
@@ -202,10 +203,11 @@
       "date": "2024-10-04",
       "first_date": "2024-10-04",
       "count": 1,
-      "visibility": "dark",
+      "visibility": "disclosed",
       "transaction_type": "10",
       "limit": "unlimited",
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00888172&two_year_transaction_period=2024&contributor_name=ACESSO+BIOLOGICS"
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00888172&two_year_transaction_period=2024&contributor_name=ACESSO+BIOLOGICS",
+      "class_basis": "inferred"
     },
     {
       "transfer_id": "C00888172-in-org:ANDY_LEAVITT_ENTERPRISES_INC.",
@@ -220,7 +222,8 @@
       "visibility": "disclosed",
       "transaction_type": "10",
       "limit": "unlimited",
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00888172&two_year_transaction_period=2024&contributor_name=ANDY+LEAVITT+ENTERPRISES+INC."
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00888172&two_year_transaction_period=2024&contributor_name=ANDY+LEAVITT+ENTERPRISES+INC.",
+      "class_basis": "rule"
     },
     {
       "transfer_id": "C00888172-in-ind:MAZZARELLI_ESTER|12545",
@@ -250,7 +253,8 @@
       "visibility": "dark",
       "transaction_type": "10",
       "limit": "unlimited",
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00888172&two_year_transaction_period=2024&contributor_name=GOLO+LLC"
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00888172&two_year_transaction_period=2024&contributor_name=GOLO+LLC",
+      "class_basis": "rule"
     },
     {
       "transfer_id": "C00888172-in-org:WELLNESS_WAY_ENTERPRISES_LLC",
@@ -265,7 +269,8 @@
       "visibility": "dark",
       "transaction_type": "10",
       "limit": "unlimited",
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00888172&two_year_transaction_period=2024&contributor_name=WELLNESS+WAY+ENTERPRISES+LLC"
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00888172&two_year_transaction_period=2024&contributor_name=WELLNESS+WAY+ENTERPRISES+LLC",
+      "class_basis": "rule"
     },
     {
       "transfer_id": "C00888172-in-ind:DUST_ANITA|46256",

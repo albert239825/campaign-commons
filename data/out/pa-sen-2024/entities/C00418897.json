@@ -23,8 +23,8 @@
     "independent_expenditures": 13645834.54,
     "from_individuals": 9161099.84,
     "from_committees": 342500.0,
-    "from_organizations": 1136000.0,
-    "from_undisclosed": 666812.0
+    "from_organizations": 1231000.0,
+    "from_undisclosed": 571812.0
   },
   "inflows": [
     {
@@ -145,7 +145,8 @@
       "visibility": "disclosed",
       "transaction_type": "10",
       "limit": null,
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00418897&two_year_transaction_period=2024&contributor_name=KLEIN+FINANCIAL+CORPORATION"
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00418897&two_year_transaction_period=2024&contributor_name=KLEIN+FINANCIAL+CORPORATION",
+      "class_basis": "rule"
     },
     {
       "transfer_id": "C00418897-in-ind:HOSTETTER_AMOS_B_JR|02110",
@@ -205,7 +206,8 @@
       "visibility": "disclosed",
       "transaction_type": "10",
       "limit": null,
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00418897&two_year_transaction_period=2024&contributor_name=IBEW+PAC+EDUCATIONAL+FUND"
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00418897&two_year_transaction_period=2024&contributor_name=IBEW+PAC+EDUCATIONAL+FUND",
+      "class_basis": "rule"
     },
     {
       "transfer_id": "C00418897-in-ind:STAD_MARC|90067",

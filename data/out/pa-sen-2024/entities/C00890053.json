@@ -70,7 +70,8 @@
       "visibility": "dark",
       "transaction_type": "10",
       "limit": "unlimited",
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00890053&two_year_transaction_period=2024&contributor_name=PROJECT+26+PENNSYLVANIA"
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00890053&two_year_transaction_period=2024&contributor_name=PROJECT+26+PENNSYLVANIA",
+      "class_basis": "rule"
     },
     {
       "transfer_id": "C00890053-in-org:DELIVER_STRATEGIES",
@@ -85,7 +86,8 @@
       "visibility": "dark",
       "transaction_type": "10",
       "limit": "unlimited",
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00890053&two_year_transaction_period=2024&contributor_name=DELIVER+STRATEGIES"
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00890053&two_year_transaction_period=2024&contributor_name=DELIVER+STRATEGIES",
+      "class_basis": "rule"
     }
   ],
   "outflows": [],

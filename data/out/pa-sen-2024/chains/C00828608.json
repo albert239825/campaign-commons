@@ -2,7 +2,7 @@
   "root_entity_id": "C00828608",
   "root_name": "HARDWORKING AMERICANS INC.",
   "race_id": "pa-sen-2024",
-  "generated_at": "2026-09-05T19:53:48+00:00",
+  "generated_at": "2026-09-06T05:02:45+00:00",
   "data_status": "real",
   "nodes": [
     {
@@ -40,7 +40,8 @@
       "is_terminus": true,
       "terminus_reason": "organization",
       "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00828608&two_year_transaction_period=2024&contributor_name=SOUTH+DEVELOPMENT+CORP.",
-      "organization_class": "business"
+      "organization_class": "business",
+      "class_basis": "rule"
     },
     {
       "id": "ind:COOPER_DERICK|32964",
@@ -89,7 +90,8 @@
       "is_terminus": true,
       "terminus_reason": "dark",
       "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00828608&two_year_transaction_period=2024&contributor_name=MAVERICK+QUANTUM",
-      "organization_class": "unknown"
+      "organization_class": "unknown",
+      "class_basis": "rule"
     },
     {
       "id": "ind:MCLANE_JAMES_S._MR.|35243",
@@ -198,7 +200,8 @@
       "is_terminus": true,
       "terminus_reason": "organization",
       "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00828608&two_year_transaction_period=2024&contributor_name=MTX+GROUP+INC.",
-      "organization_class": "business"
+      "organization_class": "business",
+      "class_basis": "rule"
     },
     {
       "id": "ind:STRAVINSKI_PETER_T._MR.|75225",
@@ -223,7 +226,8 @@
       "is_terminus": true,
       "terminus_reason": "dark",
       "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00828608&two_year_transaction_period=2024&contributor_name=THREE+GALLERIA+TOWER",
-      "organization_class": "unknown"
+      "organization_class": "unknown",
+      "class_basis": "rule"
     },
     {
       "id": "ind:SEAY_GEORGE|75204",
@@ -248,7 +252,8 @@
       "is_terminus": true,
       "terminus_reason": "dark",
       "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00828608&two_year_transaction_period=2024&contributor_name=DIALCARE+LLC",
-      "organization_class": "llc"
+      "organization_class": "llc",
+      "class_basis": "rule"
     },
     {
       "id": "agg:other@C00828608",
@@ -342,7 +347,8 @@
         "2024-09-19",
         "2024-09-19"
       ],
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00828608&two_year_transaction_period=2024&contributor_name=SOUTH+DEVELOPMENT+CORP."
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00828608&two_year_transaction_period=2024&contributor_name=SOUTH+DEVELOPMENT+CORP.",
+      "class_basis": "rule"
     },
     {
       "from": "ind:COOPER_DERICK|32964",
@@ -406,7 +412,8 @@
         "2024-10-16",
         "2024-10-16"
       ],
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00828608&two_year_transaction_period=2024&contributor_name=MAVERICK+QUANTUM"
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00828608&two_year_transaction_period=2024&contributor_name=MAVERICK+QUANTUM",
+      "class_basis": "rule"
     },
     {
       "from": "ind:MCLANE_JAMES_S._MR.|35243",
@@ -550,7 +557,8 @@
         "2024-10-17",
         "2024-10-17"
       ],
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00828608&two_year_transaction_period=2024&contributor_name=MTX+GROUP+INC."
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00828608&two_year_transaction_period=2024&contributor_name=MTX+GROUP+INC.",
+      "class_basis": "rule"
     },
     {
       "from": "ind:STRAVINSKI_PETER_T._MR.|75225",
@@ -582,7 +590,8 @@
         "2023-11-14",
         "2023-11-14"
       ],
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00828608&two_year_transaction_period=2024&contributor_name=THREE+GALLERIA+TOWER"
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00828608&two_year_transaction_period=2024&contributor_name=THREE+GALLERIA+TOWER",
+      "class_basis": "rule"
     },
     {
       "from": "ind:SEAY_GEORGE|75204",
@@ -614,7 +623,8 @@
         "2024-10-16",
         "2024-10-16"
       ],
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00828608&two_year_transaction_period=2024&contributor_name=DIALCARE+LLC"
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00828608&two_year_transaction_period=2024&contributor_name=DIALCARE+LLC",
+      "class_basis": "rule"
     },
     {
       "from": "agg:other@C00828608",
@@ -684,10 +694,10 @@
   ],
   "summary": {
     "total_in": 1769257.0,
-    "disclosed_share": 0.9401,
+    "disclosed_share": 0.9457,
     "inferable_share": 0.0,
     "unwalked_share": 0.0,
-    "dark_share": 0.0599,
+    "dark_share": 0.0543,
     "max_depth": 1,
     "terminus_counts": {
       "individual": 14,

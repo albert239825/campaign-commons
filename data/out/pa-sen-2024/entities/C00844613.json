@@ -100,7 +100,8 @@
       "visibility": "dark",
       "transaction_type": "10",
       "limit": "unlimited",
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00844613&two_year_transaction_period=2024&contributor_name=CLUB+FOR+GROWTH"
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00844613&two_year_transaction_period=2024&contributor_name=CLUB+FOR+GROWTH",
+      "class_basis": "inferred"
     },
     {
       "transfer_id": "C00844613-in-ind:CHILDS_JOHN_W.|32963",

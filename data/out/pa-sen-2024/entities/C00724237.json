@@ -23,8 +23,8 @@
     "independent_expenditures": 0,
     "from_individuals": 96899.69,
     "from_committees": 79000.0,
-    "from_organizations": 10000.0,
-    "from_undisclosed": 40317.0
+    "from_organizations": 32500.0,
+    "from_undisclosed": 17817.0
   },
   "inflows": [
     {
@@ -85,7 +85,8 @@
       "visibility": "dark",
       "transaction_type": "11",
       "limit": null,
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00724237&two_year_transaction_period=2024&contributor_name=HO-CHUNK+NATION"
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00724237&two_year_transaction_period=2024&contributor_name=HO-CHUNK+NATION",
+      "class_basis": "rule"
     },
     {
       "transfer_id": "C00724237-in-C00193433",
@@ -175,7 +176,8 @@
       "visibility": "disclosed",
       "transaction_type": "11",
       "limit": null,
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00724237&two_year_transaction_period=2024&contributor_name=CHOCTAW+NATION+OF+OKLAHOMA"
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00724237&two_year_transaction_period=2024&contributor_name=CHOCTAW+NATION+OF+OKLAHOMA",
+      "class_basis": "rule"
     },
     {
       "transfer_id": "C00724237-in-org:SHAKOPEE_MDEWAKANTON_SIOUX_COMMUNITY",
@@ -187,10 +189,11 @@
       "date": "2024-10-25",
       "first_date": "2024-10-25",
       "count": 1,
-      "visibility": "dark",
+      "visibility": "disclosed",
       "transaction_type": "11",
       "limit": null,
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00724237&two_year_transaction_period=2024&contributor_name=SHAKOPEE+MDEWAKANTON+SIOUX+COMMUNITY"
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00724237&two_year_transaction_period=2024&contributor_name=SHAKOPEE+MDEWAKANTON+SIOUX+COMMUNITY",
+      "class_basis": "inferred"
     },
     {
       "transfer_id": "C00724237-in-ind:ALSOP_JOSEPH_W.|94103",
@@ -310,7 +313,8 @@
       "visibility": "dark",
       "transaction_type": "11",
       "limit": null,
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00724237&two_year_transaction_period=2024&contributor_name=CHEROKEE+NATION"
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00724237&two_year_transaction_period=2024&contributor_name=CHEROKEE+NATION",
+      "class_basis": "rule"
     },
     {
       "transfer_id": "C00724237-in-org:SHINGLE_SPRINGS_BAND_MIWOK_INDIANS",
@@ -322,10 +326,11 @@
       "date": "2023-12-08",
       "first_date": "2023-12-08",
       "count": 1,
-      "visibility": "dark",
+      "visibility": "disclosed",
       "transaction_type": "11",
       "limit": null,
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00724237&two_year_transaction_period=2024&contributor_name=SHINGLE+SPRINGS+BAND+MIWOK+INDIANS"
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00724237&two_year_transaction_period=2024&contributor_name=SHINGLE+SPRINGS+BAND+MIWOK+INDIANS",
+      "class_basis": "inferred"
     },
     {
       "transfer_id": "C00724237-in-org:THE_TULALIP_TRIBES_OF_WASHINGTON",
@@ -337,10 +342,11 @@
       "date": "2024-07-10",
       "first_date": "2024-07-10",
       "count": 1,
-      "visibility": "dark",
+      "visibility": "disclosed",
       "transaction_type": "11",
       "limit": null,
-      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00724237&two_year_transaction_period=2024&contributor_name=THE+TULALIP+TRIBES+OF+WASHINGTON"
+      "source_url": "https://www.fec.gov/data/receipts/?committee_id=C00724237&two_year_transaction_period=2024&contributor_name=THE+TULALIP+TRIBES+OF+WASHINGTON",
+      "class_basis": "inferred"
     },
     {
       "transfer_id": "C00724237-in-C00685297",

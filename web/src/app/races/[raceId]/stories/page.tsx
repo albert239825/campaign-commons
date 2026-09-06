@@ -24,7 +24,7 @@ export default async function StoriesPage({ params }: { params: Promise<{ raceId
           chain data; {verified} of {stories.stories.length} have been checked by a person against fec.gov.
         </p>
       </DetailHeader>
-      <RaceNav race={race} counts={{ ads: getAds(raceId).ads.length }} active={routes.stories(raceId)} />
+      <RaceNav race={race} counts={{ ads: getAds(raceId).ads.length }} />
       {stories.stories.length === 0 && <p className="detail-empty">No funding highlights are available for this race yet.</p>}
       <div className="detail-stories-grid">
         {stories.stories.map((s) => (
