@@ -7,6 +7,7 @@ import type { TrailSubject } from "@campaign-commons/contracts";
 import { INTENT_LABELS, resolveQuestion, type Resolution } from "@/lib/ask";
 import { routes } from "@/lib/format";
 import { AskExploreResponseSchema, type AskExploreResponse } from "@/lib/graph/explore";
+import { AskProgress } from "./ask-progress";
 import { ExploreSankey } from "./explore-sankey";
 import { ExploreAnswer } from "./explore-answer";
 
@@ -101,13 +102,7 @@ export function AskBox({
       </form>
       <p className="text-xs text-neutral-500">Start with @graph to draw the answer as a flow diagram.</p>
 
-      {pending && (
-        <p className="text-xs text-neutral-500" role="status">
-          {graphMode
-            ? "Composing a read-only query over the filings graph and drawing its flows…"
-            : "Composing a read-only query over the filings graph…"}
-        </p>
-      )}
+      {pending && <AskProgress graphMode={graphMode} />}
 
       {!graphMode &&
         ((result?.kind === "unsupported" && explore?.kind !== "explore") ||

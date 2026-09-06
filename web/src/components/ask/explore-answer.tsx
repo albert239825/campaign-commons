@@ -5,6 +5,7 @@ import { useEffect, useState } from "react";
 import { Card, Chip, SourceLink } from "@/components/ui";
 import { factSentence } from "@/lib/graph/facts";
 import { AskExploreResponseSchema, exploreCellText, formatExploreNumber, type AskExploreResponse, type ExploreCell, type ExploreResult } from "@/lib/graph/explore";
+import { AskProgress } from "./ask-progress";
 
 const WITHHELD_COPY: Record<Extract<ExploreResult["narrative"], { status: "withheld" }>["reason"], string> = {
   empty: "the model returned nothing",
@@ -144,8 +145,9 @@ export function ExploreAnswer({ result, raceId, question }: { result: ExploreRes
               disabled={loading}
               className="rounded-md border border-neutral-300 bg-white px-3 py-1.5 text-xs font-medium text-neutral-700 hover:border-neutral-900 hover:text-neutral-900 disabled:opacity-50"
             >
-              {loading ? "Loading more rows…" : "Show more"}
+              Show more
             </button>
+            {loading && <AskProgress graphMode={false} label="Loading more rows…" />}
             {error && <p className="text-xs text-neutral-500">{error}</p>}
           </div>
         )}
