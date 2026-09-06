@@ -1,7 +1,7 @@
 RACE ?= pa-sen-2024
 PY ?= python3
 
-.PHONY: setup mock ingest ledger chains vendors ads ads-enrich issues dossier chains-out search trails validate all lint test
+.PHONY: setup mock ingest ledger chains vendors ads ads-enrich issues issues-enrich dossier chains-out search trails validate all lint test
 
 setup:            ## install pipeline deps (creates .venv)
 	$(PY) -m venv .venv && . .venv/bin/activate && pip install -q -e ".[dev]"
@@ -27,8 +27,11 @@ ads:              ## Google political ads -> ads.json + cached creatives (downlo
 ads-enrich:       ## Block 2: patch ads.json in place with sponsor shares, hand issue tags, vendor links (+ vendors/*.json ads[]); no download
 	$(PY) -m campaign_commons.ads_enrich $(RACE)
 
-issues:           ## Block 2: data/hand/$(RACE)/{issue_focus,ad_issues,ie_issues}.json -> issues.json; patches entities + ads
+issues:           ## Block 2: hand issue tags + positions -> issues.json; patches entities + ads
 	$(PY) -m campaign_commons.issues $(RACE)
+
+issues-enrich:    ## Block 2: fetch spender sites and record model-read issue positions; needs network + XAI_API_KEY
+	$(PY) -m campaign_commons.issues_enrich $(RACE)
 
 search:           ## Block 2: every page -> data/out/search.json (client-side index)
 	$(PY) -m campaign_commons.search

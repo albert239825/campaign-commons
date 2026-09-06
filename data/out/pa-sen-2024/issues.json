@@ -1,6 +1,6 @@
 {
   "race_id": "pa-sen-2024",
-  "generated_at": "2026-09-05T19:54:13+00:00",
+  "generated_at": "2026-09-06T01:41:20+00:00",
   "data_status": "partial",
   "by_ad_issue": [
     {
@@ -486,13 +486,15 @@
     "ads_tagged": 42,
     "ads_total": 500,
     "ies_tagged": 0,
-    "ie_dollars_tagged": 0
+    "ie_dollars_tagged": 0,
+    "spenders_with_positions": 0
   },
   "notes": [
     "Two layers, never summed: by_ad_issue is what tagged ads and filed notices were about (attributable to those records' dollars); by_spender_focus is what the spender says it exists for (about the spender, not the dollars). They are not comparable and must not be added.",
     "Google reports ad spend as a range. spend_min and spend_max are the summed bounds; spend_midpoint is the summed midpoint and is shown as an estimate. Midpoints are never added to FEC independent-expenditure dollars.",
     "A record tagged with more than one issue counts its full amount under every tag; dollars are not split. Issue rows therefore overlap and do not sum to a total. An ad aimed at several candidates counts its full midpoint under each.",
     "by_spender_focus primary_only=true counts each spender once (its first issue, or its kind when the kind names no issue), so those buckets partition the tagged dollars; primary_only=false counts a spender under every issue it names and overlaps.",
-    "General partisan / leadership committees say they exist to win seats or a majority, not for an issue; they carry issue_id null. Spenders with no sourced self-description are untagged and counted in coverage, not guessed."
+    "General partisan / leadership committees say they exist to win seats or a majority, not for an issue; they carry issue_id null. Spenders with no sourced self-description are untagged and counted in coverage, not guessed.",
+    "issue_positions on entities are model-read from each spender's own site (basis inferred until a person verifies); they are about the spender's stated views, never about what its ads or notices said."
   ]
 }
