@@ -1,5 +1,5 @@
 /**
- * Load one race's published artifacts (chains, entities, donors, ads, ledger, trails) into Neo4j (D-81). Idempotent: nodes and edges are MERGEd on their keys, so re-running
+ * Load one race's published artifacts (chains, entities, donors, ads, ledger, trails) into Neo4j (D-82). Idempotent: nodes and edges are MERGEd on their keys, so re-running
  * after a pipeline regenerate updates in place; pass --reset to drop the race's subgraph first.
  *
  *   cd web && node --env-file=.env.local --import tsx scripts/load-graph.ts pa-sen-2024 [--reset]

@@ -33,7 +33,7 @@ it came from.
 | 17:30–18:30 | Whiteboard → ontology | Race nav, docs wiki (FAQ / QUESTIONS / DECISIONS), `ONTOLOGY.md` (questions × surfaces, ER diagram, sources, V0/V1/V2 scope) |
 | 20:30–21:30 | Money Trails (`feature/ask-money-trails`) | `TrailsSchema` + `trails.json`, deterministic question resolver, `/races/<race>/ask` answer pages (D-73) |
 | 23:00–00:30 | Money Trails LLM router (`feature/ask-llm-router`) | `/api/ask-route` + `ask-llm.ts`: Grok picks the route from the closed set, resolver still decides the page, deterministic fallback (D-75) |
-| 01:00–03:00 | Money Trails graph mode (`feature/ask-graph`) | Local Neo4j loaded from `data/out`; `/api/ask-graph`: four allowlisted operations, source-backed facts, Grok narrates only from them and is withheld when it strays (D-81) |
+| 01:00–03:00 | Money Trails graph mode (`feature/ask-graph`) | Local Neo4j loaded from `data/out`; `/api/ask-graph`: four allowlisted operations, source-backed facts, Grok narrates only from them and is withheld when it strays (D-82) |
 
 ## Challenges and how we overcame them
 
@@ -188,7 +188,7 @@ this deploy, so it is per warm instance, and stated as such.
 $2 / $6 per M ≈ $0.006 per ask cold, ≈ $0.002 cached. Tests 23 → 57 (16 classifier, 15 route handler, 3 limiter, all offline with a
 mocked `fetch`); serverless functions 0 → 1; static pages unchanged.
 
-### 15. Money Trails — graph mode: the model may narrate, but only what the graph returned (D-81)
+### 15. Money Trails — graph mode: the model may narrate, but only what the graph returned (D-82)
 **Ask.** Two kinds of question the route resolver cannot serve even with D-75 behind it: traversal ("does Elon Musk's money
 reach Bob Casey?") and aggregation across subjects ("who do WinSenate and Women Vote share as funders?", "who funds
 McCormick's funders?"). No precomputed page holds those, and the router can only pick pages. The direction agreed: not
@@ -225,7 +225,7 @@ on every ask (6–11 s observed) — it has its own 15 s. Grok puts citations af
 uppercase names carry periods ("NAU, JOHN L. MR. III") and digits ("2024 THUNE …"), all of which the first guard rejected as
 uncited or unknown; the guard now normalises citation placement, does not split inside uppercase names, and allows digits
 that appear in a fact's name. Neo4j Community has no node-key constraints (`IS UNIQUE` instead) and no `CALL … IN
-TRANSACTIONS` inside an explicit transaction (reset is one `DETACH DELETE`). D-76–D-80 were taken meanwhile; this is D-81.
+TRANSACTIONS` inside an explicit transaction (reset is one `DETACH DELETE`). D-76–D-81 were taken meanwhile; this is D-82.
 **Numbers.** Live on PA-Sen: Musk → Casey `money_path` 8 facts, narrative ok; WinSenate ∩ Women Vote `shared_funders` → SMP,
 2 facts; McCormick `upstream` 30 facts; Yass `funder_reach` 17 facts. Classifier 2–4 s, narrator 6–11 s. Tests 59 → 126 (9
 schema on real artifacts, 14 queries, 23 classifier/narrator/guard, 13 orchestration, 8 endpoint incl. limiter and an
@@ -829,7 +829,33 @@ story-decorated; 23 with a self-described focus loaded from `entities/*.json` (3
 spenders). Dropdown: 4 highlight kinds, 5 flags, 6 focus kinds. Nav items 6 → 2. Lint, tsc and the static build pass; the
 `/stories` and `/vendors` routes are still emitted.
 
-## 2026-09-06 — D-83: bounded graph selections on Money Trails answers
+## 2026-09-06 ~09:30 — Block 3 child B: one pie, a "Show detail" toggle (child B)
+
+**What changed.** The ledger's "Funding overview" keeps its shape — one tab per view (all candidates, then each candidate),
+one pie per tab, campaign receipts vs outside spending, detail column on the right — and gains a **Show detail** button
+under the total. Detail re-cuts the same pie into five slices: receipts from individuals, from committees, other receipts
+(three shades of the campaign hue) and outside spending supporting / opposing (two shades of the outside hue), so the
+dark/light split still reads as "reached the campaign" vs "independent, never did" (D-16). Clicking or keying a detail
+slice opens its group in the detail column and highlights the matching line (`aria-current`); the legend under the pie
+lists the five slices with amounts and shares of the pie total. `funding-view.ts` gains `pieSlices(view, detailed)`,
+`pieSectors`, `GROUP_COLORS`; the component draws sectors from cumulative angles instead of one split angle. Summary
+view, tabs, captions, visibility bar, methodology `<details>` and source records are unchanged; no contract or data
+changes; `page.tsx` untouched. D-81. On the **all-candidates** tab, detail instead groups the pie by side (Albert): one
+contiguous half per candidate — their receipts, outside spending supporting them, outside spending opposing their
+opponent(s) — each side in its own non-party hue (teal-slate / umber-ochre; darkest shade = receipts, lighter = outside
+spending) and a "Working for <candidate>" subtotal heading in the legend (`sideSlices`, `SIDE_HUES`). The caption says the side total is a comparison figure, not a fundraising total. Review pass: by-side is two-candidate only (with N>2 an oppose total has no single side and would be counted N-1 times; the all-candidates detail falls back to the five-slice cut), and selecting a by-side slice opens the candidate record it comes from (`viewId`/`pickId`) instead of leaving the race-wide panel up.
+
+**Challenge.** This is the third cut of the same PR: the Sep 5 critique asked for per-candidate support/oppose pairs,
+Albert then asked for one three-slice "Money working for <candidate>" pie per candidate, and Patrick settled on the
+original single pie with more granularity behind a button. The slice model was made data-driven so the third cut was a
+rewrite of `pieSlices`, not of the SVG. The receipts "other" line is `receipts − individuals − committees` floored at 0,
+so in detail the three campaign slices can exceed the summary receipts by the floored amount; PA has none.
+
+**Numbers.** PA all-candidates: $94.1M receipts ($64.8M individuals, $4.0M committees, $25.3M other) + $233.4M outside
+($50.5M supporting, $182.9M opposing). Casey $58.1M / $125.9M; McCormick $36.0M / $107.5M. Sides: Casey $159.5M (49%) =
+58.1 + 22.2 + 79.2; McCormick $168.0M (51%) = 36.0 + 28.3 + 103.7. Lint, tsc, build green.
+
+## 2026-09-06 — D-84: bounded graph selections on Money Trails answers
 
 Each precomputed answer now carries a deterministic `graph` selection copied from the existing chain files. The selection
 is re-rooted for the question, capped at five nodes per layer, records truncation counts, and preserves copied basis,
