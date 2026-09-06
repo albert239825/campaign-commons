@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import React, { useEffect, useState, type SyntheticEvent } from "react";
+import React, { useEffect, useState, type FormEvent, type SyntheticEvent } from "react";
 import type { ISSUES } from "@campaign-commons/contracts";
 import { AdjacencyNote, Chip, Money, SourceLink } from "@/components/ui";
 import { PartyTag } from "@/components/ui/party-tag";
@@ -146,15 +146,22 @@ function ResearchBlock({ raceId, issue, candidate }: { raceId: string; issue: Is
   const [result, setResult] = useState<AskAlignResponse | null>(null);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<"rate" | "network" | null>(null);
+  const [question, setQuestion] = useState("");
+  const [focusedQuestion, setFocusedQuestion] = useState<string | null>(null);
 
-  async function research() {
+  async function research(event: FormEvent<HTMLFormElement>) {
+    event.preventDefault();
+    const trimmed = question.trim();
+    const focused = trimmed.length >= 3 ? trimmed : "";
     setLoading(true);
     setError(null);
+    setFocusedQuestion(focused || null);
     try {
       const next = await postJson<AskAlignResponse>("/api/ask-align", {
         raceId,
         issueId: issue.id,
         candidateId: candidate.candidate.candidate_id,
+        ...(focused ? { question: focused } : {}),
       });
       setResult(next);
     } catch (cause) {
@@ -172,11 +179,24 @@ function ResearchBlock({ raceId, issue, candidate }: { raceId: string; issue: Is
         Recent statements <small>model-found, unreviewed — Grok web search; only verbatim quotes with a source URL are shown</small>
       </h4>
       <OfflineStatements machine={candidate.machine} />
-      <button type="button" className="policies-align-action" onClick={research} disabled={loading}>
-        {loading ? "Researching…" : "Research with Grok"}
-      </button>
+      <form className="policies-align-research-form" onSubmit={research}>
+        <button type="submit" className="policies-align-action" disabled={loading}>
+          {loading ? "Researching…" : "Research with Grok"}
+        </button>
+        <input
+          type="text"
+          className="policies-align-question"
+          maxLength={200}
+          placeholder="Optional: focus the search, e.g. their vote on the 2022 bill"
+          aria-label="Research question"
+          value={question}
+          onChange={(event) => setQuestion(event.target.value)}
+          disabled={loading}
+        />
+      </form>
       {error === "rate" && <p className="policies-empty">Rate limited; try again in a minute.</p>}
       {error === "network" && <p className="policies-empty">Could not reach the server.</p>}
+      {result && focusedQuestion && <p className="policies-meta">Focused on: “{focusedQuestion}”</p>}
       {result && <LiveStatements result={result} issue={issue} />}
     </div>
   );

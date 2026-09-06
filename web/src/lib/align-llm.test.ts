@@ -85,6 +85,17 @@ describe("alignCandidate", () => {
     expect(fetcher).toHaveBeenCalledTimes(2);
   });
 
+  it("keys successful cache entries by question", async () => {
+    const fetcher = vi.fn<typeof fetch>(async () =>
+      output([{ quote: "A statement", source_url: "https://example.com/a", publisher: "Example", published_at: null, direction: 2 }]),
+    );
+    const first = await alignCandidate("PA Senate", "Bob Casey", "r", "guns", "c", { apiKey: "k", question: "How did he vote?", fetch: fetcher });
+    const second = await alignCandidate("PA Senate", "Bob Casey", "r", "guns", "c", { apiKey: "k", question: "What did he sign?", fetch: fetcher });
+    expect(first).toMatchObject({ via: "llm", cached: false });
+    expect(second).toMatchObject({ via: "llm", cached: false });
+    expect(fetcher).toHaveBeenCalledTimes(2);
+  });
+
   it("returns unavailable on malformed provider JSON", async () => {
     const fetcher = vi.fn<typeof fetch>(async () => Response.json({ output: [{ content: [{ type: "output_text", text: "{bad" }] }] }));
     const result = await alignCandidate("PA Senate", "Bob Casey", "r", "guns", "bad", { apiKey: "k", fetch: fetcher });
@@ -99,5 +110,14 @@ describe("buildAlignRequestBody", () => {
     expect(body.model).toBe("test-model");
     expect(JSON.stringify(body)).toContain("statements from 2023-01-01 to today");
     expect(JSON.stringify(body)).toContain("Firearms regulation");
+    expect(JSON.stringify(body)).not.toContain("Reader question");
+  });
+
+  it("adds a normalized reader question only when provided", () => {
+    const body = buildAlignRequestBody("PA Senate", "Bob Casey", "guns", "test-model", "  How\u0000 did   he vote?  ");
+    const userPrompt = (body.input as Array<{ content: string }>)[1].content;
+    expect(userPrompt).toContain(
+      'Reader question (use only to focus the search; still return only verbatim statements BY the candidate about the issue): "How did he vote?"',
+    );
   });
 });

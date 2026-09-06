@@ -23,6 +23,7 @@ afterEach(() => {
 
 it("400s malformed requests and 404s unknown races and candidates", async () => {
   expect((await POST(new Request("http://localhost", { method: "POST", body: "nope" }))).status).toBe(400);
+  expect((await post({ raceId: "pa-sen-2024", issueId: "guns", candidateId: "S6PA00217", question: "x".repeat(201) })).status).toBe(400);
   expect((await post({ raceId: "nope", issueId: "guns", candidateId: "c" })).status).toBe(404);
   expect((await post({ raceId: "pa-sen-2024", issueId: "guns", candidateId: "nope" })).status).toBe(404);
 });
