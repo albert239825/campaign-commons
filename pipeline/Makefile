@@ -1,7 +1,7 @@
 RACE ?= pa-sen-2024
 PY ?= python3
 
-.PHONY: setup mock ingest ledger chains vendors ads ads-enrich issues search dossier validate all lint test
+.PHONY: setup mock ingest ledger chains vendors ads ads-enrich enrich-transcripts enrich-ads enrich-review issues search dossier validate all lint test
 
 setup:            ## install pipeline deps (creates .venv)
 	$(PY) -m venv .venv && . .venv/bin/activate && pip install -q -e ".[dev]"
@@ -26,6 +26,15 @@ ads:              ## Google political ads -> ads.json + cached creatives (downlo
 
 ads-enrich:       ## Block 2: patch ads.json in place with sponsor shares, hand issue tags, vendor links (+ vendors/*.json ads[]); no download
 	$(PY) -m campaign_commons.ads_enrich $(RACE)
+
+enrich-transcripts: ## Fetch YouTube captions locally; run from a residential IP because YouTube blocks cloud IPs
+	$(PY) -m campaign_commons.enrich_transcripts $(RACE)
+
+enrich-ads:       ## Classify cached ad transcripts with xAI (requires XAI_API_KEY)
+	$(PY) -m campaign_commons.enrich_ads $(RACE)
+
+enrich-review:    ## Print pending machine ad classifications for human review
+	$(PY) -m campaign_commons.enrich_review $(RACE)
 
 issues:           ## Block 2: data/hand/$(RACE)/{issue_focus,ad_issues,ie_issues}.json -> issues.json; patches entities + ads
 	$(PY) -m campaign_commons.issues $(RACE)

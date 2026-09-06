@@ -29,6 +29,7 @@ Block 2 also *patches* existing files in place: `campaign_commons.vendors` adds 
 | --- | --- | --- | --- |
 | `issue_focus.json` | `HandIssueFocusFile` | issue-focus child, teammates | `campaign_commons.issues` → `Entity.issue_focus`, `issues.json.by_spender_focus` |
 | `ad_issues.json` | `HandAdIssuesFile` | media-wall child, teammates | `campaign_commons.issues` → `Ad.issues`, `issues.json.by_ad_issue` |
+| `x_ad_issues.json` | `HandXAdIssuesFile` | enrichment stage, reviewers | `campaign_commons.ads_enrich` → optional `Ad.machine_issues` (transcript, rationale, confidence, provenance, review status) |
 | `ie_issues.json` | `HandIeIssuesFile` | issue-focus child | `campaign_commons.issues` → IE `issues`, `issues.json.by_ad_issue.ie_*` |
 | `vendor_aliases.json` | `HandVendorAliasesFile` | vendors child | `campaign_commons.vendors` (folds after automatic normalisation) |
 | `vendor_ad_links.json` | `HandVendorAdLinksFile` | anyone with a source | `campaign_commons.ads` → `Ad.vendor_links[]` with `basis: verified` |

@@ -735,3 +735,11 @@ so in detail the three campaign slices can exceed the summary receipts by the fl
 **Numbers.** PA all-candidates: $94.1M receipts ($64.8M individuals, $4.0M committees, $25.3M other) + $233.4M outside
 ($50.5M supporting, $182.9M opposing). Casey $58.1M / $125.9M; McCormick $36.0M / $107.5M. Sides: Casey $159.5M (49%) =
 58.1 + 22.2 + 79.2; McCormick $168.0M (51%) = 36.0 + 28.3 + 103.7. Lint, tsc, build green.
+
+### 2026-09-06 — Phase 2a ad transcript enrichment
+
+Added `enrich_transcripts.py`, `enrich_ads.py`, `enrich_review.py`, and the `enrich-transcripts`, `enrich-ads`, and
+`enrich-review` targets. Classification supports `--dry-run`, `--limit`, `--only`, `--max-calls`, `--max-usd`, `--model`,
+and `--refresh-reviewed`; caches live under `data/raw/yt` and `data/raw/xai`. The transcript step runs locally because
+YouTube blocks cloud IPs. Machine rows remain separate from human issue tags, carry review status and response provenance,
+and are merged into optional `machine_issues` output only. 183 pipeline tests.
