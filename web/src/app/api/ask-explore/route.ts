@@ -20,7 +20,7 @@ export async function POST(req: Request): Promise<NextResponse> {
   if (!parsed.success) {
     return NextResponse.json({ error: "Expected { raceId: string, question: string (1–500 chars) }." }, { status: 400 });
   }
-  const { raceId, question } = parsed.data;
+  const { raceId, question, mode } = parsed.data;
   if (!hasTrails(raceId)) return NextResponse.json({ error: `No Money Trails for race ${raceId}.` }, { status: 404 });
 
   const release = graphLimiter.acquire();
@@ -33,7 +33,7 @@ export async function POST(req: Request): Promise<NextResponse> {
   try {
     const graph = getDriver();
     const run = graph ? typedRunnerFor(graph.driver, graph.database) : null;
-    const response = await exploreQuestion(raceId, question, getTrails(raceId).subjects, { run });
+    const response = await exploreQuestion(raceId, question, getTrails(raceId).subjects, { run }, mode);
     return NextResponse.json(response, { headers: { "cache-control": "no-store" } });
   } finally {
     release();

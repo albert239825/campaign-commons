@@ -122,8 +122,21 @@ describe("exploreQuestion", () => {
     const fetch = stubResponses([{ cypher: "MATCH (x:Entity {race_id: $race}) MERGE (x) RETURN x", description: "bad" }, { cypher: good, description: "A good result." }]);
     const run = vi.fn(async () => ({ records: [{ amount: 3 }], queryType: "r" }));
     const result = await exploreQuestion("race", "how much?", subjects, { run, llm: { apiKey: "key", fetch } });
-    expect(result).toMatchObject({ kind: "explore", description: "A good result.", rows: [{ n: 1 }], narrative: { status: "ok" } });
+    expect(result).toMatchObject({ kind: "explore", description: "A good result.", rows: [{ n: 1 }], narrative: { status: "ok" }, diagram: null });
     expect(run).toHaveBeenCalledTimes(1);
+  });
+
+  it("builds a Sankey diagram only in graph mode", async () => {
+    vi.spyOn(neo4j, "isPath").mockReturnValue(false);
+    vi.spyOn(neo4j, "isRelationship").mockImplementation((value) => value === relationship);
+    const fetch = stubResponses([{ cypher: good, description: "A flow." }], { narrative: "The query returned $1,234 [1]." });
+    const run = vi.fn(async (cypher: string) =>
+      cypher.includes("elementId(r)")
+        ? { records: [{ eid: "rel-1", edge: fact }], queryType: "r" }
+        : { records: [{ edge: relationship }], queryType: "r" },
+    );
+    const result = await exploreQuestion("race", "show flows", subjects, { run, llm: { apiKey: "key", fetch } }, "graph");
+    expect(result).toMatchObject({ kind: "explore", diagram: { ok: true, links: [{ n: 1, amount: 1234 }] } });
   });
 
   it("returns rejected_query after two invalid queries", async () => {

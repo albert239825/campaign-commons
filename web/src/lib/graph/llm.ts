@@ -299,11 +299,21 @@ export const COMPOSE_RESPONSE_SCHEMA = {
 
 export const COMPOSE_RETRY = "The previous query was rejected: {ERROR}. Return a corrected query that follows every rule, or an empty query if the question cannot be answered.";
 
-export function buildComposeBody(question: string, subjects: readonly TrailSubject[], model: string, retryError?: string) {
+export function buildComposeBody(
+  question: string,
+  subjects: readonly TrailSubject[],
+  model: string,
+  retryError?: string,
+  mode: "answer" | "graph" = "answer",
+) {
   const list = subjects.map((s) => `- ${s.id} (${s.kind}): ${s.name}`).join("\n");
+  const graphInstruction =
+    mode === "graph"
+      ? "The reader wants a flow diagram of this answer. Return whole relationships (GAVE, PAID, TARGETED) with their endpoints — not aggregates or bare names — so each row is one money flow with a filed amount, ordered by amount."
+      : "";
   const messages: { role: "system" | "user"; content: string }[] = [
     { role: "system", content: COMPOSE_SYSTEM },
-    { role: "user", content: `Schema:\n${COMPOSE_SCHEMA_TEXT}\n\nCandidates and committees:\n${list}\n\nQuestion: ${question}` },
+    { role: "user", content: `Schema:\n${COMPOSE_SCHEMA_TEXT}\n\nCandidates and committees:\n${list}\n\nQuestion: ${question}${graphInstruction ? `\n\n${graphInstruction}` : ""}` },
   ];
   if (retryError) messages.push({ role: "user", content: COMPOSE_RETRY.replace("{ERROR}", retryError.slice(0, 300)) });
   return {
@@ -317,8 +327,14 @@ export function buildComposeBody(question: string, subjects: readonly TrailSubje
 
 export type ExploreQuery = { cypher: string; description: string };
 
-export async function composeExplore(question: string, subjects: readonly TrailSubject[], opts: LlmOptions = {}, retryError?: string): Promise<ExploreQuery | null> {
-  const parsed = await complete(buildComposeBody(question, subjects, modelFor(opts), retryError), opts, opts.timeoutMs ?? COMPOSE_TIMEOUT_MS);
+export async function composeExplore(
+  question: string,
+  subjects: readonly TrailSubject[],
+  opts: LlmOptions = {},
+  retryError?: string,
+  mode: "answer" | "graph" = "answer",
+): Promise<ExploreQuery | null> {
+  const parsed = await complete(buildComposeBody(question, subjects, modelFor(opts), retryError, mode), opts, opts.timeoutMs ?? COMPOSE_TIMEOUT_MS);
   if (typeof parsed !== "object" || parsed === null) return null;
   const { cypher, description } = parsed as Record<string, unknown>;
   if (typeof cypher !== "string" || typeof description !== "string") return null;

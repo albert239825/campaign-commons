@@ -686,3 +686,5 @@ graph behavior remain unchanged.
 paths or connections, geography or sector—now refuse the nearest fixed intent and proceed to the filings graph instead.
 
 **Ask box.** The box is graph-first: every question goes to exploratory mode, with deterministic route/page matches shown as related-page links; fixed graph operations remain available at their endpoint.
+
+**Flow diagrams.** An `@graph` prefix asks exploration for whole, amount-bearing relationships and draws a Sankey from the returned rows; when those rows cannot form a flow, only the analysis refusal is shown.

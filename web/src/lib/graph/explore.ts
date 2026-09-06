@@ -6,6 +6,7 @@ import { composeExplore, narrateExplore, type LlmOptions, type Narration } from 
 import { edge } from "./queries";
 import { type TypedRunner } from "./neo4j";
 import { ENTITY } from "./schema";
+import { sankeyFromRows, SankeyDataSchema, type SankeyData } from "./sankey";
 export { exploreCellText, formatExploreNumber, rowSentence } from "./explore-format";
 
 export const MAX_ROWS = 20;
@@ -27,6 +28,7 @@ export type ExploreResult = {
   rows: ExploreRow[];
   narrative: Narration;
   truncated: boolean;
+  diagram: SankeyData | null;
 };
 export type ExploreRefusal = {
   kind: "unsupported";
@@ -57,6 +59,7 @@ export const AskExploreResponseSchema = z.discriminatedUnion("kind", [
     rows: z.array(z.object({ n: z.number().int().min(1), cells: z.record(ExploreCellSchema) })),
     narrative: ExploreNarrationSchema,
     truncated: z.boolean(),
+    diagram: SankeyDataSchema.nullable(),
   }),
   z.object({
     kind: z.literal("unsupported"),
@@ -67,6 +70,7 @@ export const AskExploreResponseSchema = z.discriminatedUnion("kind", [
 export const AskExploreRequest = z.object({
   raceId: z.string().min(1).max(64),
   question: z.string().trim().min(1).max(500),
+  mode: z.enum(["answer", "graph"]).default("answer"),
 });
 
 const HYDRATE = `MATCH (a${`:${ENTITY}`} {race_id: $race})-[r]->(b${`:${ENTITY}`} {race_id: $race})
@@ -178,11 +182,17 @@ const refuse = (reason: ExploreRefusal["reason"], message: string): ExploreRefus
 
 export type ExploreDeps = { run: TypedRunner | null; llm?: LlmOptions };
 
-export async function exploreQuestion(raceId: string, question: string, subjects: readonly TrailSubject[], deps: ExploreDeps): Promise<AskExploreResponse> {
+export async function exploreQuestion(
+  raceId: string,
+  question: string,
+  subjects: readonly TrailSubject[],
+  deps: ExploreDeps,
+  mode: "answer" | "graph" = "answer",
+): Promise<AskExploreResponse> {
   if (deps.run === null || !(deps.llm?.apiKey ?? process.env.XAI_API_KEY)) {
     return refuse("explore_unavailable", "Exploratory graph mode is not configured on this deployment.");
   }
-  let composed = await composeExplore(question, subjects, deps.llm);
+  let composed = await composeExplore(question, subjects, deps.llm, undefined, mode);
   if (composed === null) return refuse("no_query", "That question cannot be answered from the filed records in this graph.");
   if (!composed.cypher.trim()) return refuse("no_query", `That question cannot be answered from the filed records in this graph. ${cleanDescription(composed.description)}`.trim());
 
@@ -191,7 +201,7 @@ export async function exploreQuestion(raceId: string, question: string, subjects
   if (!checked.ok) {
     retried = true;
     const validationError = checked.reason;
-    composed = await composeExplore(question, subjects, deps.llm, validationError);
+    composed = await composeExplore(question, subjects, deps.llm, validationError, mode);
     if (composed === null || !composed.cypher.trim()) return refuse("rejected_query", "The exploratory query did not meet the graph's read-only rules.");
     checked = validateCypher(composed.cypher);
     if (!checked.ok) return refuse("rejected_query", "The exploratory query did not meet the graph's read-only rules.");
@@ -223,7 +233,7 @@ export async function exploreQuestion(raceId: string, question: string, subjects
     if (retried) return refuse("query_failed", "The exploratory query could not be run against the filings graph.");
     retried = true;
     const retryError = error instanceof Error ? error.message.slice(0, 300) : "the graph query failed";
-    composed = await composeExplore(question, subjects, deps.llm, retryError);
+    composed = await composeExplore(question, subjects, deps.llm, retryError, mode);
     if (composed === null || !composed.cypher.trim()) return refuse("query_failed", "The exploratory query could not be run against the filings graph.");
     checked = validateCypher(composed.cypher);
     if (!checked.ok) return refuse("rejected_query", "The exploratory query did not meet the graph's read-only rules.");
@@ -245,5 +255,6 @@ export async function exploreQuestion(raceId: string, question: string, subjects
     rows: execution.rows,
     narrative,
     truncated: execution.truncated,
+    diagram: mode === "graph" ? sankeyFromRows(execution.rows) : null,
   };
 }

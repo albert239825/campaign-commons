@@ -22,6 +22,7 @@ describe("POST /api/ask-explore", () => {
   it("returns 400 for malformed input and 404 for an unknown race", async () => {
     expect((await post("not json", true)).status).toBe(400);
     expect((await post({ raceId: "pa-sen-2024" })).status).toBe(400);
+    expect((await post({ raceId: "pa-sen-2024", question: "who?", mode: "invalid" })).status).toBe(400);
     expect((await post({ raceId: "nope-2024", question: "who?" })).status).toBe(404);
   });
 

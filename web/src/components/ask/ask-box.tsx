@@ -7,6 +7,7 @@ import type { TrailSubject } from "@campaign-commons/contracts";
 import { INTENT_LABELS, resolveQuestion, type Resolution } from "@/lib/ask";
 import { routes } from "@/lib/format";
 import { AskExploreResponseSchema, type AskExploreResponse } from "@/lib/graph/explore";
+import { ExploreSankey } from "./explore-sankey";
 import { ExploreAnswer } from "./explore-answer";
 
 const ASK_EXPLORE_TIMEOUT_MS = 60_000;
@@ -36,28 +37,34 @@ export function AskBox({
   const [result, setResult] = useState<Resolution | null>(null);
   const [explore, setExplore] = useState<AskExploreResponse | null>(null);
   const [pending, setPending] = useState<null | "explore">(null);
+  const [graphMode, setGraphMode] = useState(false);
+  const diagram = explore?.kind === "explore" ? explore.diagram : null;
 
   const submit = async (e: FormEvent) => {
     e.preventDefault();
     if (pending) return;
     setResult(null);
     setExplore(null);
-    const related = resolveQuestion(question, subjects, examples);
+    const trimmed = question.trim();
+    const nextGraphMode = /^@graph(?:\s|$)/i.test(trimmed);
+    const graphQuestion = nextGraphMode ? trimmed.replace(/^@graph(?:\s|$)/i, "").trim() : trimmed;
+    setGraphMode(nextGraphMode);
+    const related = resolveQuestion(graphQuestion, subjects, examples);
     setResult(related);
-    if (question.trim() === "") {
+    if (graphQuestion === "") {
       setPending(null);
       return;
     }
     setPending("explore");
     let x: AskExploreResponse | null = null;
     try {
-      x = await askExplore(raceId, question);
+      x = await askExplore(raceId, graphQuestion, nextGraphMode ? "graph" : "answer");
     } catch {
-      x = null;
+      x = { kind: "unsupported", reason: "explore_unavailable", message: "Exploratory graph mode is unavailable." };
     }
     setPending(null);
     setExplore(x);
-    if (!x || (x.kind === "unsupported" && x.reason === "explore_unavailable")) {
+    if (!nextGraphMode && x.kind === "unsupported" && x.reason === "explore_unavailable") {
       if (related.kind === "answer") {
         router.push(relatedPageHref(raceId, related));
       }
@@ -74,6 +81,7 @@ export function AskBox({
             setQuestion(e.target.value);
             setResult(null);
             setExplore(null);
+            setGraphMode(false);
           }}
           placeholder={examples[0] ?? "Who funds …?"}
           autoFocus={autoFocus}
@@ -88,15 +96,19 @@ export function AskBox({
           Ask
         </button>
       </form>
+      <p className="text-xs text-neutral-500">Start with @graph to draw the answer as a flow diagram.</p>
 
       {pending && (
         <p className="text-xs text-neutral-500" role="status">
-          Composing a read-only query over the filings graph…
+          {graphMode
+            ? "Composing a read-only query over the filings graph and drawing its flows…"
+            : "Composing a read-only query over the filings graph…"}
         </p>
       )}
 
-      {((result?.kind === "unsupported" && explore?.kind !== "explore") ||
-        (explore?.kind === "unsupported" && EXPLORE_REFUSAL_SHOWN.has(explore.reason))) && (
+      {!graphMode &&
+        ((result?.kind === "unsupported" && explore?.kind !== "explore") ||
+          (explore?.kind === "unsupported" && EXPLORE_REFUSAL_SHOWN.has(explore.reason))) && (
         <div className="ask-box-refusal rounded-md border border-amber-300 bg-amber-50 p-3 text-sm text-amber-900">
           {result?.kind === "unsupported" && <p>{result.message}</p>}
           {explore?.kind === "unsupported" && EXPLORE_REFUSAL_SHOWN.has(explore.reason) && <p className="ask-box-graph-refusal mt-2">{explore.message}</p>}
@@ -112,12 +124,37 @@ export function AskBox({
         </div>
       )}
 
-      {explore?.kind === "explore" && (
+      {graphMode && explore?.kind === "unsupported" && (
+        <div className="ask-box-refusal rounded-md border border-amber-300 bg-amber-50 p-3 text-sm text-amber-900">
+          <p>This analysis cannot be done: {explore.message}</p>
+        </div>
+      )}
+      {graphMode && diagram !== null && !diagram.ok && (
+        <div className="ask-box-refusal rounded-md border border-amber-300 bg-amber-50 p-3 text-sm text-amber-900">
+          <p>{diagram.message}</p>
+        </div>
+      )}
+      {explore?.kind === "explore" && (!graphMode || diagram?.ok === true) && (
         <div className="ask-box-graph rounded-md border border-neutral-200 bg-white p-4">
+          {graphMode && diagram?.ok === true && <ExploreSankey data={diagram} />}
           <ExploreAnswer result={explore} />
         </div>
       )}
-      {result?.kind === "answer" && (
+      {result?.kind === "unsupported" && graphMode && explore === null && pending === null && (
+        <div className="ask-box-refusal rounded-md border border-amber-300 bg-amber-50 p-3 text-sm text-neutral-900">
+          <p>{result.message}</p>
+          {result.suggestions.length > 0 && (
+            <ul className="mt-2 flex flex-wrap gap-2">
+              {result.suggestions.map((s) => (
+                <li key={s}>
+                  <SuggestionLink raceId={raceId} subjects={subjects} question={s} />
+                </li>
+              ))}
+            </ul>
+          )}
+        </div>
+      )}
+      {result?.kind === "answer" && (!graphMode || diagram?.ok === true) && (
         <p className="text-xs text-neutral-500">
           Related precomputed page:{" "}
           <Link href={relatedPageHref(raceId, result)} className="underline decoration-dotted underline-offset-2 hover:text-neutral-900">
@@ -130,14 +167,14 @@ export function AskBox({
   );
 }
 
-async function askExplore(raceId: string, question: string): Promise<AskExploreResponse> {
+async function askExplore(raceId: string, question: string, mode: "answer" | "graph"): Promise<AskExploreResponse> {
   const controller = new AbortController();
   const timer = setTimeout(() => controller.abort(), ASK_EXPLORE_TIMEOUT_MS);
   try {
     const res = await fetch("/api/ask-explore", {
       method: "POST",
       headers: { "content-type": "application/json" },
-      body: JSON.stringify({ raceId, question }),
+      body: JSON.stringify({ raceId, question, mode }),
       signal: controller.signal,
     });
     if (!res.ok) throw new Error(`ask-explore ${res.status}`);
