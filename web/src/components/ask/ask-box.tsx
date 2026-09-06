@@ -34,7 +34,7 @@ const AskRouteBody = z.discriminatedUnion("kind", [
   }),
   z.object({
     kind: z.literal("unsupported"),
-    reason: z.enum(["empty", "no_subject", "ambiguous_subject", "no_intent", "wrong_kind"]),
+    reason: z.enum(["empty", "no_subject", "ambiguous_subject", "no_intent", "wrong_kind", "beyond_page"]),
     message: z.string(),
     suggestions: z.array(z.string()),
   }),

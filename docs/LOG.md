@@ -647,3 +647,6 @@ every returned row. A second model call narrates only those rows, with the same 
 **Trade-off.** Exploratory mode is labelled separately because the model may frame a question wrongly and cannot know what the
 graph does not contain. The query is shown as a hypothesis; the source-linked rows are the evidence. Existing route and fixed
 graph behavior remain unchanged.
+
+**Routing guard.** Questions asking for breakdowns the fixed pages do not provide—dark money, people behind a candidate, vendors,
+paths or connections, geography or sector—now refuse the nearest fixed intent and proceed to the filings graph instead.
