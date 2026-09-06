@@ -904,3 +904,9 @@ paths or connections, geography or sector—now refuse the nearest fixed intent 
 ### 2026-09-06 — Shared race tab shell
 
 The race ledger, ads, and policies tabs now share one route-group layout: the seal, race title, election date, notable candidates, data-status banner, and Ledger · Ads · Policies navigation remain fixed while only the tab content changes. `RaceNav` derives its active tab from the pathname, so record pages keep the same parent-tab behavior without passing an active prop.
+
+### 2026-09-06 — Policies alignment views
+
+Built the two stacked alignment-view PRs. PR 1 added the deterministic verdict helper, Grok Responses API research endpoint with strict quote/source filtering and limits, and graph/static funder plumbing. PR 2 adds the Policies alignment panel: browser-local -2..2 views shared with personalization, record-first verdicts with model-proposed fallback, offline x_stances rows, on-demand Grok research, and lazy issue-tagged funders with graph/static fallback and adjacency copy. The panel keeps model-found material labelled unreviewed and does not send the user’s view to the server.
+
+Open items: the research cache is per process instance, and HEAD checks may be blocked by some source hosts; network errors therefore keep a candidate URL rather than hiding it.
